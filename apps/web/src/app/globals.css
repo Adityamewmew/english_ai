@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-plus-jakarta: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-dm-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  font-family: var(--font-dm-sans);
+  background-color: #FFFFFF;
+  color: #1E293B;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-plus-jakarta);
+}
+
+@keyframes orb-speak {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 35px rgba(147, 197, 253, 0.45));
+  }
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 65px rgba(147, 197, 253, 0.85));
+  }
+}
+
+@keyframes orb-breathe {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 25px rgba(147, 197, 253, 0.3));
+  }
+  50% {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 45px rgba(147, 197, 253, 0.55));
+  }
+}
+
+@keyframes nebula-spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.12);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes ripple-wave {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+.animate-orb-speak {
+  animation: orb-speak 1.6s ease-in-out infinite;
+}
+
+.animate-orb-breathe {
+  animation: orb-breathe 3.5s ease-in-out infinite;
+}
+
+.animate-nebula-spin {
+  animation: nebula-spin 24s linear infinite;
+}
+
+.animate-ripple {
+  animation: ripple-wave 2.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+

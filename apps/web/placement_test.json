@@ -1,0 +1,606 @@
+{
+  "test_metadata": {
+    "title": "EDDY'S AI - Dynamic CEFR Placement Test Bank",
+    "version": "2.0",
+    "description": "Question pool for randomized placement testing. The test engine randomly selects a subset for each student session.",
+    "target_levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+    "sampling_rules": {
+      "grammar_vocab": "Pick 2 random questions per level (Total 12 questions per student)",
+      "listening": "Pick 1 random scenario per student",
+      "writing": "Pick 1 random prompt per student",
+      "speaking": "Pick 1 random prompt per student"
+    },
+    "total_duration_minutes": 15
+  },
+  "sections": {
+    "grammar_vocab": [
+      {
+        "id": "gv_a1_01",
+        "level": "A1",
+        "question": "Hello, my name _____ Sarah. What is your name?",
+        "options": ["is", "am", "are", "be"],
+        "answer": "is"
+      },
+      {
+        "id": "gv_a1_02",
+        "level": "A1",
+        "question": "Where _____ you live?",
+        "options": ["are", "do", "does", "is"],
+        "answer": "do"
+      },
+      {
+        "id": "gv_a1_03",
+        "level": "A1",
+        "question": "They _____ students at Jakarta University.",
+        "options": ["is", "am", "are", "be"],
+        "answer": "are"
+      },
+      {
+        "id": "gv_a1_04",
+        "level": "A1",
+        "question": "I have _____ apple and two bananas in my bag.",
+        "options": ["a", "an", "the", "some"],
+        "answer": "an"
+      },
+      {
+        "id": "gv_a1_05",
+        "level": "A1",
+        "question": "What time _____ you wake up in the morning?",
+        "options": ["do", "does", "are", "is"],
+        "answer": "do"
+      },
+      {
+        "id": "gv_a1_06",
+        "level": "A1",
+        "question": "This is my sister. _____ name is Maya.",
+        "options": ["His", "Her", "She", "Hers"],
+        "answer": "Her"
+      },
+      {
+        "id": "gv_a1_07",
+        "level": "A1",
+        "question": "Can you _____ English?",
+        "options": ["speak", "speaks", "speaking", "spoke"],
+        "answer": "speak"
+      },
+      {
+        "id": "gv_a1_08",
+        "level": "A1",
+        "question": "There _____ four chairs in the classroom.",
+        "options": ["is", "are", "was", "be"],
+        "answer": "are"
+      },
+      {
+        "id": "gv_a1_09",
+        "level": "A1",
+        "question": "He _____ coffee every morning.",
+        "options": ["drink", "drinks", "drinking", "drank"],
+        "answer": "drinks"
+      },
+      {
+        "id": "gv_a1_10",
+        "level": "A1",
+        "question": "Excuse me, how much _____ this shirt cost?",
+        "options": ["do", "does", "is", "are"],
+        "answer": "does"
+      },
+      {
+        "id": "gv_a2_01",
+        "level": "A2",
+        "question": "Yesterday, we _____ to the beach and had a picnic.",
+        "options": ["go", "gone", "went", "going"],
+        "answer": "went"
+      },
+      {
+        "id": "gv_a2_02",
+        "level": "A2",
+        "question": "She is _____ than her older brother.",
+        "options": ["tall", "taller", "tallest", "more tall"],
+        "answer": "taller"
+      },
+      {
+        "id": "gv_a2_03",
+        "level": "A2",
+        "question": "While I _____ my homework, the phone rang.",
+        "options": ["was doing", "did", "am doing", "do"],
+        "answer": "was doing"
+      },
+      {
+        "id": "gv_a2_04",
+        "level": "A2",
+        "question": "You _____ wear a helmet when you ride a motorbike. It's the law.",
+        "options": ["must", "can", "might", "may"],
+        "answer": "must"
+      },
+      {
+        "id": "gv_a2_05",
+        "level": "A2",
+        "question": "We haven't got _____ milk left in the fridge.",
+        "options": ["any", "some", "many", "a few"],
+        "answer": "any"
+      },
+      {
+        "id": "gv_a2_06",
+        "level": "A2",
+        "question": "I usually go to work _____ train.",
+        "options": ["by", "with", "on", "in"],
+        "answer": "by"
+      },
+      {
+        "id": "gv_a2_07",
+        "level": "A2",
+        "question": "What _____ you do last weekend?",
+        "options": ["did", "do", "done", "were"],
+        "answer": "did"
+      },
+      {
+        "id": "gv_a2_08",
+        "level": "A2",
+        "question": "He is interested _____ learning graphic design.",
+        "options": ["in", "on", "at", "with"],
+        "answer": "in"
+      },
+      {
+        "id": "gv_a2_09",
+        "level": "A2",
+        "question": "This book is not as _____ as the movie.",
+        "options": ["exciting", "more exciting", "most exciting", "excited"],
+        "answer": "exciting"
+      },
+      {
+        "id": "gv_a2_10",
+        "level": "A2",
+        "question": "She didn't come to school because she _____ sick.",
+        "options": ["was", "is", "were", "has been"],
+        "answer": "was"
+      },
+      {
+        "id": "gv_b1_01",
+        "level": "B1",
+        "question": "I haven't seen David _____ last summer.",
+        "options": ["for", "since", "from", "during"],
+        "answer": "since"
+      },
+      {
+        "id": "gv_b1_02",
+        "level": "B1",
+        "question": "If it rains tomorrow, we _____ stay at home.",
+        "options": ["would", "will", "did", "have"],
+        "answer": "will"
+      },
+      {
+        "id": "gv_b1_03",
+        "level": "B1",
+        "question": "She asked me where I _____ my new shoes.",
+        "options": ["bought", "had bought", "have bought", "buy"],
+        "answer": "had bought"
+      },
+      {
+        "id": "gv_b1_04",
+        "level": "B1",
+        "question": "You don't need to come if you _____ want to.",
+        "options": ["don't", "won't", "didn't", "aren't"],
+        "answer": "don't"
+      },
+      {
+        "id": "gv_b1_05",
+        "level": "B1",
+        "question": "The flight was delayed _____ the heavy fog.",
+        "options": ["because of", "despite", "although", "in spite"],
+        "answer": "because of"
+      },
+      {
+        "id": "gv_b1_06",
+        "level": "B1",
+        "question": "He has been working at this company _____ five years.",
+        "options": ["for", "since", "during", "ago"],
+        "answer": "for"
+      },
+      {
+        "id": "gv_b1_07",
+        "level": "B1",
+        "question": "I'm looking forward to _____ you at the conference.",
+        "options": ["seeing", "see", "saw", "seen"],
+        "answer": "seeing"
+      },
+      {
+        "id": "gv_b1_08",
+        "level": "B1",
+        "question": "Could you please tell me where the nearest station _____?",
+        "options": ["is", "is it", "it is", "was"],
+        "answer": "is"
+      },
+      {
+        "id": "gv_b1_09",
+        "level": "B1",
+        "question": "If I _____ more free time, I would travel around Europe.",
+        "options": ["had", "have", "will have", "would have"],
+        "answer": "had"
+      },
+      {
+        "id": "gv_b1_10",
+        "level": "B1",
+        "question": "The bridge _____ built in 1995.",
+        "options": ["was", "is", "has been", "were"],
+        "answer": "was"
+      },
+      {
+        "id": "gv_b2_01",
+        "level": "B2",
+        "question": "If I _____ known about the traffic, I would have taken the train.",
+        "options": ["had", "have", "would have", "was"],
+        "answer": "had"
+      },
+      {
+        "id": "gv_b2_02",
+        "level": "B2",
+        "question": "The company decided to _____ the project due to budget cuts.",
+        "options": ["call off", "put off", "take off", "get off"],
+        "answer": "call off"
+      },
+      {
+        "id": "gv_b2_03",
+        "level": "B2",
+        "question": "By the end of next month, she _____ here for a decade.",
+        "options": [
+          "will have worked",
+          "will work",
+          "is working",
+          "has worked"
+        ],
+        "answer": "will have worked"
+      },
+      {
+        "id": "gv_b2_04",
+        "level": "B2",
+        "question": "He was accused of _____ confidential documents to competitors.",
+        "options": ["leaking", "leak", "to leak", "having leak"],
+        "answer": "leaking"
+      },
+      {
+        "id": "gv_b2_05",
+        "level": "B2",
+        "question": "Hardly had the meeting started _____ the power went out.",
+        "options": ["when", "than", "then", "as"],
+        "answer": "when"
+      },
+      {
+        "id": "gv_b2_06",
+        "level": "B2",
+        "question": "The manager insists that everyone _____ on time tomorrow.",
+        "options": ["be", "is", "are", "will be"],
+        "answer": "be"
+      },
+      {
+        "id": "gv_b2_07",
+        "level": "B2",
+        "question": "Despite _____ heavily, the marathon continued without interruption.",
+        "options": ["raining", "it rained", "rain", "rained"],
+        "answer": "raining"
+      },
+      {
+        "id": "gv_b2_08",
+        "level": "B2",
+        "question": "You should have your car _____ before the long trip.",
+        "options": ["serviced", "service", "servicing", "to service"],
+        "answer": "serviced"
+      },
+      {
+        "id": "gv_b2_09",
+        "level": "B2",
+        "question": "The findings were deemed statistically _____ by the research committee.",
+        "options": ["significant", "significance", "signify", "significantly"],
+        "answer": "significant"
+      },
+      {
+        "id": "gv_b2_10",
+        "level": "B2",
+        "question": "Not only _____ the contract, but they also expanded the scope.",
+        "options": [
+          "did they renew",
+          "they renewed",
+          "they did renew",
+          "have they renew"
+        ],
+        "answer": "did they renew"
+      },
+      {
+        "id": "gv_c1_01",
+        "level": "C1",
+        "question": "Seldom _____ such a breathtaking performance in contemporary theatre.",
+        "options": [
+          "have I witnessed",
+          "I have witnessed",
+          "I witnessed",
+          "did I witnessed"
+        ],
+        "answer": "have I witnessed"
+      },
+      {
+        "id": "gv_c1_02",
+        "level": "C1",
+        "question": "The candidate's remarks were completely _____ to the debate topic.",
+        "options": ["extraneous", "incoherent", "incompatible", "erroneous"],
+        "answer": "extraneous"
+      },
+      {
+        "id": "gv_c1_03",
+        "level": "C1",
+        "question": "Were it not for her swift intervention, the negotiation _____ collapsed.",
+        "options": [
+          "would have",
+          "will have",
+          "should be",
+          "would be"
+        ],
+        "answer": "would have"
+      },
+      {
+        "id": "gv_c1_04",
+        "level": "C1",
+        "question": "The economic downturn has cast a _____ over future growth prospects.",
+        "options": ["pall", "veil", "shroud", "shade"],
+        "answer": "pall"
+      },
+      {
+        "id": "gv_c1_05",
+        "level": "C1",
+        "question": "No sooner _____ than the audience erupted into applause.",
+        "options": [
+          "had he finished speaking",
+          "he had finished speaking",
+          "did he finish speaking",
+          "he finished speaking"
+        ],
+        "answer": "had he finished speaking"
+      },
+      {
+        "id": "gv_c1_06",
+        "level": "C1",
+        "question": "The author's latest essay offers a _____ critique of modern consumerism.",
+        "options": ["trenchant", "fragile", "dormant", "rudimentary"],
+        "answer": "trenchant"
+      },
+      {
+        "id": "gv_c1_07",
+        "level": "C1",
+        "question": "Under no circumstances _____ confidential client information without authorization.",
+        "options": [
+          "should staff disclose",
+          "staff should disclose",
+          "staff discloses",
+          "should disclose staff"
+        ],
+        "answer": "should staff disclose"
+      },
+      {
+        "id": "gv_c1_08",
+        "level": "C1",
+        "question": "The discrepancy in the financial audit proved to be entirely _____.",
+        "options": ["coincidental", "fortuitous", "inadvertent", "discretionary"],
+        "answer": "inadvertent"
+      },
+      {
+        "id": "gv_c1_09",
+        "level": "C1",
+        "question": "His explanations were so convoluted that they served only to _____ the issue further.",
+        "options": ["obfuscate", "elucidate", "mitigate", "exonerate"],
+        "answer": "obfuscate"
+      },
+      {
+        "id": "gv_c1_10",
+        "level": "C1",
+        "question": "Much _____ he tried, he could not replicate the original experiment's results.",
+        "options": ["as", "though", "since", "while"],
+        "answer": "as"
+      },
+      {
+        "id": "gv_c2_01",
+        "level": "C2",
+        "question": "He was granted immunity, _____ preventing further criminal prosecution.",
+        "options": ["thereby", "whereas", "nonetheless", "notwithstanding"],
+        "answer": "thereby"
+      },
+      {
+        "id": "gv_c2_02",
+        "level": "C2",
+        "question": "Her argument was so subtle that its true implications were _____ even to seasoned academics.",
+        "options": ["inscrutable", "opaque", "imperceptible", "elusive"],
+        "answer": "inscrutable"
+      },
+      {
+        "id": "gv_c2_03",
+        "level": "C2",
+        "question": "The minister's speech was dismissed as mere _____ designed to placate critics.",
+        "options": ["platitude", "sobriquet", "pastiche", "paradigm"],
+        "answer": "platitude"
+      },
+      {
+        "id": "gv_c2_04",
+        "level": "C2",
+        "question": "Such uncorroborated assertions are completely _____ of factual evidence.",
+        "options": ["devoid", "bereft", "destitute", "bankrupt"],
+        "answer": "devoid"
+      },
+      {
+        "id": "gv_c2_05",
+        "level": "C2",
+        "question": "The treaty remained in limbo, its ratification _____ by partisan dispute.",
+        "options": ["stymied", "buttressed", "expedited", "galvanized"],
+        "answer": "stymied"
+      },
+      {
+        "id": "gv_c2_06",
+        "level": "C2",
+        "question": "She possesses an _____ knack for diffusing heated diplomatic standoffs.",
+        "options": ["uncanny", "unruly", "unwieldy", "unscrupulous"],
+        "answer": "uncanny"
+      },
+      {
+        "id": "gv_c2_07",
+        "level": "C2",
+        "question": "Far from being an act of altruism, his generosity had a distinctly _____ motivation.",
+        "options": ["mercenary", "judicious", "austere", "punctilious"],
+        "answer": "mercenary"
+      },
+      {
+        "id": "gv_c2_08",
+        "level": "C2",
+        "question": "The philosophical treatise is notorious for its dense, almost _____ prose style.",
+        "options": ["impenetrable", "invariable", "indefatigable", "incommensurable"],
+        "answer": "impenetrable"
+      },
+      {
+        "id": "gv_c2_09",
+        "level": "C2",
+        "question": "He was treated with supreme deference, _____ to that accorded to royalty.",
+        "options": ["tantamount", "synonymous", "congruent", "equivalent"],
+        "answer": "tantamount"
+      },
+      {
+        "id": "gv_c2_10",
+        "level": "C2",
+        "question": "The evidence presented was insufficient to _____ the defendant's alibi.",
+        "options": ["vitiate", "substantiate", "vindicate", "extenuate"],
+        "answer": "vitiate"
+      }
+    ],
+    "listening": [
+      {
+        "id": "lis_01",
+        "title": "At the Hotel (A1)",
+        "audio_url": "/audio/L-A1-01.mp3",
+        "audio_script": "Receptionist: Hello. What is your name?\nGuest: My name is Anna. A-N-N-A.\nReceptionist: Where are you from?\nGuest: I am from Italy.\nReceptionist: What is your room number?\nGuest: Room five. Number five.",
+        "question": "What is the guest's name?",
+        "options": ["Maria", "Anna", "Emma", "Sara"],
+        "answer": "Anna",
+        "target_level": "A1"
+      },
+      {
+        "id": "lis_02",
+        "title": "Train Announcement (A2)",
+        "audio_url": "/audio/L-A2-01.mp3",
+        "audio_script": "Announcement: The train to Manchester leaves from platform four at ten fifteen. Please have your tickets ready. The journey takes two hours. Food and drinks are available in carriage three.",
+        "question": "Which platform does the train leave from?",
+        "options": [
+          "Platform 2",
+          "Platform 3",
+          "Platform 4",
+          "Platform 5"
+        ],
+        "answer": "Platform 4",
+        "target_level": "A2"
+      },
+      {
+        "id": "lis_03",
+        "title": "Travel Experience (B1)",
+        "audio_url": "/audio/L-B1-01.mp3",
+        "audio_script": "Host: Today we talk about travel. Have you ever missed a flight?\nGuest: Yes, last year I was travelling to Scotland. My train was delayed due to heavy snow, so I arrived at the airport 20 minutes after departure.",
+        "question": "Why did the guest miss the flight?",
+        "options": [
+          "Forgot passport",
+          "Train delayed due to snow",
+          "Traffic jam",
+          "Overslept"
+        ],
+        "answer": "Train delayed due to snow",
+        "target_level": "B1"
+      },
+      {
+        "id": "lis_04",
+        "title": "Urbanisation Lecture (B2)",
+        "audio_url": "/audio/L-B2-01.mp3",
+        "audio_script": "Lecturer: Urbanisation is not simply people moving to cities. In developing nations, this transition is occurring at unprecedented speeds — taking roughly three decades compared to the century-long process observed in Europe.",
+        "question": "What point does the lecturer emphasize regarding developing nations?",
+        "options": [
+          "Urbanisation is slower than in Europe",
+          "Same speed as in European history",
+          "Much faster — 3 decades vs a century",
+          "Only younger generations relocate"
+        ],
+        "answer": "Much faster — 3 decades vs a century",
+        "target_level": "B2"
+      },
+      {
+        "id": "lis_05",
+        "title": "AI Debate Discussion (C1)",
+        "audio_url": "/audio/L-C1-01.mp3",
+        "audio_script": "Moderator: Should we anthropomorphise AI?\nPanellist 1: We already do — and that's precisely the danger. Users easily infer empathy and intentionality where there is merely sophisticated statistical pattern matching.",
+        "question": "According to Panellist 1, what risk arises when people anthropomorphise AI?",
+        "options": [
+          "AI responses become technically slower",
+          "Users infer empathy where only pattern matching exists",
+          "AI infrastructure becomes prohibitively expensive",
+          "Legal regulation becomes impossible"
+        ],
+        "answer": "Users infer empathy where only pattern matching exists",
+        "target_level": "C1"
+      }
+    ],
+    "writing": [
+      {
+        "id": "wri_01",
+        "topic": "Personal Challenge & Growth",
+        "prompt": "Describe a difficult challenge or memorable experience you had recently. Explain what happened, how you dealt with it, and what you learned from it. (Write 60 - 120 words)",
+        "evaluation_type": "gemini_llm"
+      },
+      {
+        "id": "wri_02",
+        "topic": "Remote Work vs Office",
+        "prompt": "Many companies now permit employees to work from anywhere. Do you believe remote work is better than working in a traditional office? Give reasons and examples. (Write 60 - 120 words)",
+        "evaluation_type": "gemini_llm"
+      },
+      {
+        "id": "wri_03",
+        "topic": "Technology in Education",
+        "prompt": "Artificial intelligence and digital tools are transforming how students learn. Discuss one benefit and one potential downside of using AI in classrooms. (Write 60 - 120 words)",
+        "evaluation_type": "gemini_llm"
+      },
+      {
+        "id": "wri_04",
+        "topic": "Memorable Journey",
+        "prompt": "Write about a trip or journey that made a strong impression on you. Where did you go, who were you with, and why was it memorable? (Write 60 - 120 words)",
+        "evaluation_type": "gemini_llm"
+      }
+    ],
+    "speaking": [
+      {
+        "id": "spk_01",
+        "topic": "Self Introduction & Ambition",
+        "prompt": "Speak for 60 to 90 seconds: Introduce yourself briefly, and describe a personal goal you are currently working towards. Why is this goal meaningful to you?",
+        "evaluation_type": "gemini_audio_transcription"
+      },
+      {
+        "id": "spk_02",
+        "topic": "Overcoming Obstacles",
+        "prompt": "Speak for 60 to 90 seconds: Talk about a time when something did not go as planned. How did you react, what steps did you take to fix it, and what was the outcome?",
+        "evaluation_type": "gemini_audio_transcription"
+      },
+      {
+        "id": "spk_03",
+        "topic": "Hometown & Cultural Traditions",
+        "prompt": "Speak for 60 to 90 seconds: Describe your hometown or city to someone who has never been there. Highlight a tradition, landmark, or food that makes it unique.",
+        "evaluation_type": "gemini_audio_transcription"
+      },
+      {
+        "id": "spk_04",
+        "topic": "Technology & Daily Habits",
+        "prompt": "Speak for 60 to 90 seconds: Which modern device or application can you not live without? Explain how it shapes your daily productivity and lifestyle.",
+        "evaluation_type": "gemini_audio_transcription"
+      }
+    ]
+  },
+  "scoring_engine": {
+    "mcq_weight": 0.4,
+    "writing_weight": 0.3,
+    "speaking_weight": 0.3,
+    "level_thresholds": {
+      "A1": "0-25%",
+      "A2": "26-45%",
+      "B1": "46-65%",
+      "B2": "66-80%",
+      "C1": "81-92%",
+      "C2": "93-100%"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "english-ai",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:api": "bun --filter api dev",
+    "dev:web": "bun --filter web dev",
+    "dev": "bun --filter \"*\" --parallel dev",
+    "build": "bun --filter web build",
+    "db:push": "bun --filter api db:push",
+    "db:seed": "bun --filter api db:seed"
+  }
+}
