@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getSession } from "@/lib/session";
 import { doLogout } from "@/app/(auth)/auth.actions";
 import { Button } from "@/components/ui/button";
-import { Award, PhoneCall, BookOpen, LogOut, ArrowRight } from "lucide-react";
+import { Award, PhoneCall, LogOut, ArrowRight } from "lucide-react";
 import { redirect } from "next/navigation";
 
 export default async function DashboardPage() {
@@ -14,14 +14,6 @@ export default async function DashboardPage() {
 
   const student = session;
   const API_URL = process.env.API_URL || "http://localhost:3001";
-
-  let allModules: any[] = [];
-  try {
-    const modulesRes = await fetch(`${API_URL}/api/curriculum/modules`, { cache: "no-store" }).then(r => r.json());
-    if (modulesRes.success) allModules = modulesRes.data || [];
-  } catch (e) {
-    console.error("Dashboard fetch modules error:", e);
-  }
 
   let latestTest: any = null;
   try {
@@ -121,59 +113,6 @@ export default async function DashboardPage() {
                 Tes Penempatan
               </Button>
             </Link>
-          </div>
-        </div>
-
-        {/* Curriculum Modules Catalog */}
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h2 className="text-xl font-bold text-primary">Katalog 36 Modul Kurikulum</h2>
-              <p className="text-xs text-slate-500">Struktur materi sistematis dari level A1 hingga C2.</p>
-            </div>
-            <span className="text-xs font-semibold px-3 py-1 bg-slate-100 text-slate-600 rounded-full">
-              {allModules.length} Modul Terdaftar
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {allModules.map((m: any) => (
-              <div
-                key={m.id}
-                className="bg-white border border-slate-200/80 rounded-2xl p-5 hover:border-secondary transition-all hover:shadow-md flex flex-col justify-between space-y-4 group"
-              >
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-extrabold text-secondary tracking-wide">{m.id}</span>
-                    <span
-                      className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                        m.cefr === "A1" || m.cefr === "A2"
-                          ? "bg-emerald-50 text-emerald-700"
-                          : m.cefr === "B1" || m.cefr === "B2"
-                          ? "bg-amber-50 text-amber-700"
-                          : "bg-purple-50 text-purple-700"
-                      }`}
-                    >
-                      {m.cefr}
-                    </span>
-                  </div>
-                  <h3 className="font-bold text-sm text-primary group-hover:text-secondary transition-colors">
-                    {m.title}
-                  </h3>
-                  <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{m.objective}</p>
-                </div>
-
-                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
-                  <span className="flex items-center gap-1">
-                    <BookOpen className="w-3 h-3" />
-                    {m.lessonsCount || 1} Pelajaran
-                  </span>
-                  <span className="font-medium text-primary hover:text-secondary cursor-pointer">
-                    Pelajari &rarr;
-                  </span>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </main>
