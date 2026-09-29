@@ -7,3 +7,7 @@ export * from "./SectionQuiz";
 export * from "./ModuleAIAssistant";
 export * from "./ModuleVoiceOrb";
 export * from "./ModuleVoiceDock";
+export * from "./SectionSpeakingLab";
+export * from "./SpeakingLabDrill";
+export * from "./SpeakingLabRoleplay";
+export * from "./SpeakingLabChallenge";

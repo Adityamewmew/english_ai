@@ -15,6 +15,7 @@ import {
   SectionTheory,
   SectionVocab,
   SectionDialogue,
+  SectionSpeakingLab,
   SectionQuiz,
   QuestionResult,
   ModuleVoiceDock,
@@ -282,6 +283,16 @@ export default function ModuleDetailPage() {
                   context={currentSection.content?.context}
                   dialogue={currentSection.content?.lines || currentSection.content?.dialogue || []}
                   onSpeak={tutor.playTutorAudio}
+                />
+              )}
+
+              {currentSection.sectionType === "practice" && (
+                <SectionSpeakingLab
+                  title={currentSection.title}
+                  drills={currentSection.content?.drills || []}
+                  roleplay={currentSection.content?.roleplay || { context: "", roles: [], turns: [] }}
+                  challenge={currentSection.content?.challenge || { scenario: "" }}
+                  onPlayAudio={tutor.playTutorAudio}
                 />
               )}
 

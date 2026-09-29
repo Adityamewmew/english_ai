@@ -1,5 +1,6 @@
 import { db } from "./index";
 import { curriculumLevels, curriculumModules, moduleSections } from "./schema";
+import { eq } from "drizzle-orm";
 import fs from "fs";
 import path from "path";
 import crypto from "crypto";
@@ -71,6 +72,8 @@ async function runSeedLevelModules() {
 
     // Clean old sections for this module
     if (m.sections && Array.isArray(m.sections)) {
+      await db.delete(moduleSections).where(eq(moduleSections.moduleId, m.id));
+
       for (let i = 0; i < m.sections.length; i++) {
         const sec = m.sections[i];
         const sectionId = `${m.id}-SEC-${i + 1}`;
@@ -83,14 +86,6 @@ async function runSeedLevelModules() {
             title: sec.title,
             content: sec.content,
             orderIndex: i + 1,
-          })
-          .onConflictDoUpdate({
-            target: moduleSections.id,
-            set: {
-              title: sec.title,
-              content: sec.content,
-              orderIndex: i + 1,
-            },
           });
       }
     }
