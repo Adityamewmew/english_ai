@@ -9,13 +9,48 @@ export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
     return await curriculumService.getAll();
   })
   .get(
-    "/:id",
-    async ({ params }) => {
-      return await curriculumService.getById(params.id);
+    "/levels",
+    async ({ query }) => {
+      const userId = (query as any)?.userId || "";
+      return await curriculumService.getLevelsWithProgress(userId);
+    },
+    {
+      query: t.Optional(
+        t.Object({
+          userId: t.Optional(t.String()),
+        })
+      ),
+    }
+  )
+  .get(
+    "/modules/:id",
+    async ({ params, query }) => {
+      const userId = (query as any)?.userId || "";
+      return await curriculumService.getModuleDetail(params.id, userId);
     },
     {
       params: t.Object({
         id: t.String(),
+      }),
+      query: t.Optional(
+        t.Object({
+          userId: t.Optional(t.String()),
+        })
+      ),
+    }
+  )
+  .post(
+    "/modules/:id/submit",
+    async ({ params, body }) => {
+      return await curriculumService.submitQuiz(body.userId, params.id, body.answers);
+    },
+    {
+      params: t.Object({
+        id: t.String(),
+      }),
+      body: t.Object({
+        userId: t.String(),
+        answers: t.Record(t.String(), t.Number()),
       }),
     }
   );

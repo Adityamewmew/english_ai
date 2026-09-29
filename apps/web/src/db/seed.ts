@@ -5,43 +5,51 @@ import fs from "fs";
 import path from "path";
 
 async function runSeed() {
-  console.log("🌱 Memulai seeding data resmi kurikulum & bank soal EDDY'S AI...");
+  console.log("Memulai seeding data resmi kurikulum & bank soal EDDY'S AI...");
 
-  const dataDir = path.resolve(process.cwd(), "data");
+  const dataDir = path.resolve(process.cwd(), "../../data");
 
-  // 1. Seed Curriculum Modules (36 Modul)
-  const modulesPath = path.join(dataDir, "curriculum_modules.json");
+  // 1. Seed Curriculum Modules
+  const modulesPath = path.join(dataDir, "level_a1_modules.json");
   if (fs.existsSync(modulesPath)) {
-    console.log("📚 Mengimpor 36 modul kurikulum...");
-    const modulesData = JSON.parse(fs.readFileSync(modulesPath, "utf8"));
+    console.log("Mengimpor modul kurikulum...");
+    const parsed = JSON.parse(fs.readFileSync(modulesPath, "utf8"));
+    const modulesData = parsed.modules || [];
     for (const m of modulesData) {
       await db
         .insert(curriculumModules)
         .values({
           id: m.id,
+          levelId: m.levelId || "A1.1",
           title: m.title,
           cefr: m.cefr,
           group: m.group,
           objective: m.objective,
-          points: m.points,
-          vocab: m.vocab,
-          tests: m.tests,
-          lessonsCount: m.lessons || 1,
+          complexity: m.complexity || "medium",
+          estimatedMinutes: m.estimatedMinutes || 15,
+          isExam: m.isExam || false,
+          passingScore: m.passingScore || 70,
+          orderIndex: m.orderIndex || 1,
         })
-        .onDuplicateKeyUpdate({
+        .onConflictDoUpdate({
+          target: curriculumModules.id,
           set: { title: m.title, objective: m.objective },
         });
     }
-    console.log(`✅ ${modulesData.length} modul resmi berhasil diimpor.`);
+    console.log(`${modulesData.length} modul resmi berhasil diimpor.`);
   }
 
-  // 2. Seed Item Bank (226 Soal)
+  // 2. Seed Item Bank
   const itemBankPath = path.join(dataDir, "item_bank.json");
   if (fs.existsSync(itemBankPath)) {
-    console.log("📝 Mengimpor 226 bank soal...");
+    console.log("Mengimpor bank soal...");
     const itemsData = JSON.parse(fs.readFileSync(itemBankPath, "utf8"));
     let inserted = 0;
     for (const item of itemsData) {
+      const questionText = item.question || item.prompt || item.instruction || "Prompt";
+      const answerText = item.answer || item.text || "";
+      const explanationText = item.explanation || item.note || null;
+
       await db
         .insert(itemBank)
         .values({
@@ -49,23 +57,24 @@ async function runSeed() {
           skill: item.skill,
           cefr: item.cefr,
           type: item.type || "MCQ",
-          question: item.question,
+          question: questionText,
           options: item.options || [],
-          answer: item.answer || "",
+          answer: answerText,
           audioScript: item.audio_script || null,
           audioUrl: item.audio_file || null,
-          explanation: item.explanation || null,
+          explanation: explanationText,
         })
-        .onDuplicateKeyUpdate({
-          set: { question: item.question, answer: item.answer || "" },
+        .onConflictDoUpdate({
+          target: itemBank.id,
+          set: { question: questionText, answer: answerText },
         });
       inserted++;
     }
-    console.log(`✅ ${inserted} soal resmi berhasil diimpor.`);
+    console.log(`${inserted} soal resmi berhasil diimpor.`);
   }
 
   // 3. Seed Default Admin Account
-  console.log("👤 Memeriksa akun Administrator default...");
+  console.log("Memeriksa akun Administrator default...");
   const adminEmail = "admin@eddy.ai";
   const [existingAdmin] = await db
     .select()
@@ -74,26 +83,29 @@ async function runSeed() {
     .limit(1);
 
   if (!existingAdmin) {
+    const adminPasswordHash = await Bun.password.hash("admin123", {
+      algorithm: "bcrypt",
+      cost: 10,
+    });
+
     await db.insert(users).values({
-      id: "admin-default-001",
-      name: "Administrator",
+      id: crypto.randomUUID(),
+      name: "Administrator EDDY'S AI",
       email: adminEmail,
-      password: "admin123",
+      password: adminPasswordHash,
       role: "admin",
       currentCefr: "C2",
-      createdAt: new Date(),
-      updatedAt: new Date(),
     });
-    console.log("✅ Akun admin default berhasil dibuat: admin@eddy.ai / admin123");
+    console.log("Akun Admin default berhasil dibuat (admin@eddy.ai / admin123).");
   } else {
-    console.log("ℹ️ Akun admin default sudah ada.");
+    console.log("Akun Admin default sudah ada.");
   }
 
-  console.log("🎉 Seeding data selesai!");
+  console.log("Proses seed selesai.");
   process.exit(0);
 }
 
 runSeed().catch((err) => {
-  console.error("❌ Error saat seeding:", err);
+  console.error("Gagal melakukan seed database:", err);
   process.exit(1);
 });

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getSession } from "@/lib/session";
 import { doLogout } from "@/app/(auth)/auth.actions";
 import { Button } from "@/components/ui/button";
-import { Award, PhoneCall, LogOut, ArrowRight } from "lucide-react";
+import { Award, PhoneCall, LogOut, ArrowRight, BookOpen } from "lucide-react";
 import { redirect } from "next/navigation";
 
 export default async function DashboardPage() {
@@ -88,27 +88,51 @@ export default async function DashboardPage() {
         </div>
 
         {/* Quick Hero Actions */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
             <div className="space-y-1">
-              <h2 className="text-base font-bold text-primary">Latihan Percakapan Langsung</h2>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded">
+                Level A1.1
+              </span>
+              <h2 className="text-base font-bold text-primary">Modul Pembelajaran</h2>
+              <p className="text-xs text-slate-500">
+                13 modul terstruktur dari pronouns, to be, hingga ujian kelulusan level.
+              </p>
+            </div>
+            <Link href="/modules">
+              <Button variant="primary" className="w-full">
+                <BookOpen className="w-4 h-4 mr-1.5" />
+                Buka Kurikulum
+              </Button>
+            </Link>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
+            <div className="space-y-1">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">
+                Voice AI
+              </span>
+              <h2 className="text-base font-bold text-primary">Latihan Percakapan</h2>
               <p className="text-xs text-slate-500">Telepon Mr. Khoirul untuk melatih speaking tanpa rasa takut.</p>
             </div>
             <Link href="/call">
-              <Button variant="secondary">
+              <Button variant="secondary" className="w-full">
                 Mulai Call
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
             </Link>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between">
+          <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between gap-4">
             <div className="space-y-1">
-              <h2 className="text-base font-bold text-primary">Uji Level Kemampuan</h2>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2 py-0.5 rounded">
+                Assessment
+              </span>
+              <h2 className="text-base font-bold text-primary">Uji Level CEFR</h2>
               <p className="text-xs text-slate-500">Ikuti Tes Penempatan adaptif untuk memperbarui CEFR grade.</p>
             </div>
             <Link href="/placement">
-              <Button variant="outline">
+              <Button variant="outline" className="w-full">
                 <Award className="w-4 h-4 mr-1 text-secondary" />
                 Tes Penempatan
               </Button>

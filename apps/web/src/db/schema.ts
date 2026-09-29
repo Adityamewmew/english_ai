@@ -1,4 +1,4 @@
-import { pgTable, varchar, integer, text, jsonb, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, varchar, integer, text, jsonb, timestamp, boolean } from "drizzle-orm/pg-core";
 
 export interface UserMemory {
   preferredName?: string;
@@ -31,19 +31,51 @@ export const users = pgTable("users", {
   deletedBy: varchar("deleted_by", { length: 36 }),
 });
 
+export const curriculumLevels = pgTable("curriculum_levels", {
+  id: varchar("id", { length: 20 }).primaryKey(), // "A1.1", "A1.2"
+  cefr: varchar("cefr", { length: 10 }).notNull(), // "A1"
+  title: varchar("title", { length: 150 }).notNull(),
+  description: text("description"),
+  orderIndex: integer("order_index").notNull().default(1),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
 export const curriculumModules = pgTable("curriculum_modules", {
-  id: varchar("id", { length: 10 }).primaryKey(), // M01, M02, ...
+  id: varchar("id", { length: 20 }).primaryKey(), // "A1-M01", "A1-M02"
+  levelId: varchar("level_id", { length: 20 }).notNull().default("A1.1"),
   title: varchar("title", { length: 150 }).notNull(),
   cefr: varchar("cefr", { length: 10 }).notNull(), // A1, A2, B1, ...
-  group: varchar("group", { length: 50 }).notNull(), // A - Basic, etc.
+  group: varchar("group", { length: 50 }).notNull(),
   objective: text("objective").notNull(),
-  points: jsonb("points").$type<string[]>().notNull(),
-  vocab: jsonb("vocab").$type<string[]>().notNull(),
-  tests: jsonb("tests").$type<string[]>().notNull(),
-  lessonsCount: integer("lessons_count").notNull().default(1),
+  complexity: varchar("complexity", { length: 20 }).notNull().default("medium"), // short, medium, deep
+  estimatedMinutes: integer("estimated_minutes").notNull().default(15),
+  isExam: boolean("is_exam").notNull().default(false),
+  passingScore: integer("passing_score").notNull().default(70),
+  orderIndex: integer("order_index").notNull().default(1),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
   deletedAt: timestamp("deleted_at"),
+});
+
+export const moduleSections = pgTable("module_sections", {
+  id: varchar("id", { length: 36 }).primaryKey(),
+  moduleId: varchar("module_id", { length: 20 }).notNull(),
+  sectionType: varchar("section_type", { length: 30 }).notNull(), // "theory" | "vocab" | "dialogue" | "quiz"
+  title: varchar("title", { length: 150 }).notNull(),
+  content: jsonb("content").$type<any>().notNull(),
+  orderIndex: integer("order_index").notNull().default(1),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const userModuleProgress = pgTable("user_module_progress", {
+  id: varchar("id", { length: 36 }).primaryKey(),
+  userId: varchar("user_id", { length: 36 }).notNull(),
+  moduleId: varchar("module_id", { length: 20 }).notNull(),
+  status: varchar("status", { length: 20 }).notNull().default("locked"), // "locked" | "unlocked" | "completed"
+  score: integer("score"),
+  completedAt: timestamp("completed_at"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
 export const itemBank = pgTable("item_bank", {
@@ -94,7 +126,10 @@ export const callSessions = pgTable("call_sessions", {
 });
 
 export type User = typeof users.$inferSelect;
+export type CurriculumLevel = typeof curriculumLevels.$inferSelect;
 export type CurriculumModule = typeof curriculumModules.$inferSelect;
+export type ModuleSection = typeof moduleSections.$inferSelect;
+export type UserModuleProgress = typeof userModuleProgress.$inferSelect;
 export type ItemBank = typeof itemBank.$inferSelect;
 export type PlacementResult = typeof placementResults.$inferSelect;
 export type CallSession = typeof callSessions.$inferSelect;
