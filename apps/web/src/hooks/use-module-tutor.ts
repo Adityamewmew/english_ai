@@ -63,7 +63,8 @@ export function useModuleTutor({ moduleId, studentName = "" }: UseModuleTutorPro
 
     setIsSpeaking(true);
 
-    const encoded = encodeURIComponent(text.slice(0, 300));
+    const clean = text.replace(/[*_#]/g, "").trim();
+    const encoded = encodeURIComponent(clean.slice(0, 800));
     const audio = new Audio(`/api/voice/tts?text=${encoded}`);
     audioRef.current = audio;
 
@@ -74,11 +75,14 @@ export function useModuleTutor({ moduleId, studentName = "" }: UseModuleTutorPro
       }
     };
 
-    audio.onerror = () => {
+    audio.onerror = (e) => {
+      console.warn("TTS audio element error, checking speech synthesis fallback:", e);
       if ("speechSynthesis" in window) {
         window.speechSynthesis.cancel();
-        const utt = new SpeechSynthesisUtterance(text);
-        utt.lang = "en-US";
+        const utt = new SpeechSynthesisUtterance(clean);
+        // Autodetect Indonesian vs English content so Indonesian words are not anglicized
+        const hasIndonesian = /\b(halo|saya|ini|kita|kamu|anda|dan|di|ke|yang|adalah|bisa|belajar|dengan|untuk|sudah|latihan|tutor|modul)\b/i.test(clean);
+        utt.lang = hasIndonesian ? "id-ID" : "en-US";
         utt.rate = 0.95;
         utt.onend = () => {
           setIsSpeaking(false);

@@ -13,11 +13,11 @@ export class GeminiTtsService {
     const cleanText = sanitizeRepeatedChars(text);
     if (!baseUrl || !cleanText || cleanText.trim() === "") return null;
 
-    // Strictly lock to ElevenLabs Roger (Mr. Khoirul) - NEVER use combo 'audio' models which default to female voices
+    // Strictly lock to ElevenLabs Roger (Mr. Khoirul) with multilingual v2 for authentic bilingual Indonesian + English
     const mrKhoirulVoice = process.env.AI_AUDIO_VOICE || "CwhRBWXzGAHq8TQ4Fs17";
     const candidates = [
-      { model: "elevenlabs/eleven_turbo_v2_5", voice: mrKhoirulVoice },
       { model: "elevenlabs/eleven_multilingual_v2", voice: mrKhoirulVoice },
+      { model: "elevenlabs/eleven_turbo_v2_5", voice: mrKhoirulVoice },
     ];
 
     const endpoint = `${baseUrl.replace(/\/+$/, "")}/audio/speech`;
@@ -64,11 +64,11 @@ export class GeminiTtsService {
     const cleanText = sanitizeRepeatedChars(text);
     if (!baseUrl || !cleanText || cleanText.trim() === "") return null;
 
-    // Strictly lock to ElevenLabs Roger (Mr. Khoirul) - NEVER use combo 'audio' models which default to female voices
+    // Strictly lock to ElevenLabs Roger (Mr. Khoirul) with multilingual v2 for authentic bilingual Indonesian + English
     const mrKhoirulVoice = process.env.AI_AUDIO_VOICE || "CwhRBWXzGAHq8TQ4Fs17";
     const candidates = [
-      { model: "elevenlabs/eleven_turbo_v2_5", voice: mrKhoirulVoice },
       { model: "elevenlabs/eleven_multilingual_v2", voice: mrKhoirulVoice },
+      { model: "elevenlabs/eleven_turbo_v2_5", voice: mrKhoirulVoice },
     ];
 
     const endpoint = `${baseUrl.replace(/\/+$/, "")}/audio/speech`;
