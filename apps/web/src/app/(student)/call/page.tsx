@@ -20,8 +20,6 @@ export default function VoiceCallPage() {
   const [aiSpeechState, setAiSpeechState] = useState<
     "idle" | "speaking" | "listening" | "thinking"
   >("idle");
-  const [feedback, setFeedback] = useState<any>(null);
-  const [isShortCall, setIsShortCall] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const [conversationHistory, setConversationHistory] = useState<ChatMessage[]>([]);
@@ -238,8 +236,6 @@ export default function VoiceCallPage() {
   // Start call handler
   const handleStartCall = async () => {
     setErrorMsg(null);
-    setFeedback(null);
-    setIsShortCall(false);
     setDuration(0);
     setLiveTranscript("");
     setCallStatus("connecting");
@@ -283,8 +279,8 @@ export default function VoiceCallPage() {
     }
   };
 
-  // End call handler with evaluation
-  const handleEndCall = async () => {
+  // End call handler
+  const handleEndCall = () => {
     abortSpeech();
     audioQueue.halt();
     if (streamAbortRef.current) {
@@ -294,40 +290,20 @@ export default function VoiceCallPage() {
       streamAbortRef.current = null;
     }
 
-    const studentTurns = conversationHistoryRef.current.filter((m) => m.role === "user");
-    const totalStudentWords = studentTurns
-      .map((m) => m.content)
-      .join(" ")
-      .split(/\s+/)
-      .filter(Boolean).length;
-
-    if (studentTurns.length === 0 || totalStudentWords < 4 || duration < 6) {
-      setIsShortCall(true);
-      setFeedback(null);
-      setCallStatus("ended");
-      return;
-    }
-
-    setCallStatus("evaluating");
-
     const fullTranscript = conversationHistoryRef.current
       .map((m) => `${m.role === "assistant" ? "Mr. Khoirul" : "Student"}: ${m.content}`)
       .join("\n");
 
-    const res = await processAndSaveCallSession({
-      topic: defaultTopic,
-      durationSeconds: duration,
-      transcript: fullTranscript,
-    });
-
-    if (res.success && res.data?.evaluation) {
-      setFeedback(res.data.evaluation);
-      setIsShortCall(false);
-      setCallStatus("ended");
-    } else {
-      setErrorMsg(res.message || "Gagal mengevaluasi percakapan.");
-      setCallStatus("idle");
+    // Save session in background without blocking user
+    if (duration >= 3 && conversationHistoryRef.current.length > 1) {
+      processAndSaveCallSession({
+        topic: defaultTopic,
+        durationSeconds: duration,
+        transcript: fullTranscript,
+      }).catch((e) => console.warn("Background save session error:", e));
     }
+
+    setCallStatus("ended");
   };
 
   const handleOrbClick = () => {
@@ -360,22 +336,8 @@ export default function VoiceCallPage() {
           </div>
         )}
 
-        {callStatus === "evaluating" && (
-          <div className="text-center space-y-4 animate-fadeIn">
-            <div className="w-20 h-20 rounded-full border-4 border-blue-500 border-t-transparent animate-spin mx-auto shadow-2xl" />
-            <h3 className="text-base font-semibold text-zinc-200">
-              Mr. Khoirul sedang menganalisis percakapan...
-            </h3>
-            <p className="text-xs text-zinc-500">
-              Menghitung skor Fluency, Vocabulary, Grammar &amp; Pronunciation
-            </p>
-          </div>
-        )}
-
         {callStatus === "ended" && (
           <CallEvaluationModal
-            isShortCall={isShortCall}
-            feedback={feedback}
             duration={duration}
             onNewCall={() => {
               setCallStatus("idle");
@@ -384,7 +346,7 @@ export default function VoiceCallPage() {
           />
         )}
 
-        {callStatus !== "evaluating" && callStatus !== "ended" && (
+        {callStatus !== "ended" && (
           <div className="flex flex-col items-center justify-center space-y-6">
             <VoiceOrb
               state={
