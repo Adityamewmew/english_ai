@@ -1,13 +1,14 @@
 import { db } from "@/db";
 import { curriculumModules, moduleSections } from "@/db/schema";
-import { eq, and } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 import { Response, ServiceResult } from "@/lib/response";
 import { GeminiService } from "@/lib/gemini";
 import { sanitizeRepeatedChars } from "@/lib/gemini-chat";
 
 export class ModuleTutorService {
   /**
-   * Menghasilkan salam pembuka interaktif yang strictly terikat dengan materi modul
+   * Menghasilkan salam pembuka interaktif yang langsung mengajar konsep pertama modul
+   * dengan panduan pengucapan (cara baca) dan ajakan latihan singkat (1-2 kalimat).
    */
   async getGreeting(moduleId: string, studentName?: string): Promise<ServiceResult<any>> {
     try {
@@ -24,13 +25,29 @@ export class ModuleTutorService {
         .from(moduleSections)
         .where(eq(moduleSections.moduleId, moduleId));
 
-      const theorySection = sections.find((s) => s.sectionType === "theory");
-      const trap = theorySection?.content?.commonTrap;
+      const theorySec = sections.find((s) => s.sectionType === "theory");
+      const rules = theorySec?.content?.rules || [];
+      const trap = theorySec?.content?.commonTrap;
 
       const namePart = studentName ? `Halo ${studentName.split(" ")[0]}!` : "Halo!";
-      const greeting = `${namePart} Saya Mr. Khoirul, tutor pribadi Anda untuk modul "${module.title}". Di modul ini, kita akan melatih ${module.objective.toLowerCase()}. ${
-        trap?.trapTitle ? `Kita juga akan bedah ${trap.trapTitle.toLowerCase()} agar Anda makin percaya diri.` : ""
-      } Ada yang ingin Anda tanyakan atau mau kita langsung coba latihan kalimat bersama?`;
+
+      // Buat instruksi awal yang sangat praktis dan mendidik pemula secara bertahap
+      let starterDrill = "";
+      if (moduleId === "A1-M01") {
+        starterDrill = `Di modul kata ganti ini, kita mulai dari dasar: 'She' (dibaca 'syi' untuk dia perempuan) dan 'He' (dibaca 'hii' untuk dia laki-laki). Coba tirukan saya: 'She is a student'.`;
+      } else if (moduleId === "A1-M02") {
+        starterDrill = `Di modul to be ini, ingat rumus dasarnya: 'I am', 'You are', dan 'He is'. Ingat, jangan bilang 'I am agree' ya! Coba ucapkan: 'I am ready'.`;
+      } else if (rules.length > 0) {
+        const firstRule = rules[0];
+        const key = Object.keys(firstRule)[0];
+        const val = firstRule[key];
+        const ex = firstRule.example || "";
+        starterDrill = `Kita mulai modul ${module.title}. Fokus pertama kita adalah '${val}'${ex ? `, contohnya: '${ex}'` : ""}. Coba tirukan saya mengucapkannya!`;
+      } else {
+        starterDrill = `Selamat datang di modul ${module.title}! Kita akan kuasai langkah demi langkah. Coba sapa saya dalam bahasa Inggris!`;
+      }
+
+      const greeting = `${namePart} Saya Mr. Khoirul. ${starterDrill}`;
 
       return Response.buildSuccess({
         moduleId,
@@ -44,7 +61,8 @@ export class ModuleTutorService {
   }
 
   /**
-   * Menjawab pertanyaan / percakapan siswa strictly di dalam ruang lingkup modul
+   * Menjawab percakapan siswa sebagai tutor privat aktif yang membimbing pemula:
+   * Mengajari pengucapan (cara baca), melatih kalimat, dan respons ringkas (1-2 kalimat)
    */
   async chatWithTutor(
     moduleId: string,
@@ -70,27 +88,36 @@ export class ModuleTutorService {
       const vocabSec = sections.find((s) => s.sectionType === "vocab");
       const dialogueSec = sections.find((s) => s.sectionType === "dialogue");
 
-      const systemPrompt = `You are Mr. Khoirul, a friendly, encouraging, and highly practical bilingual (Indonesian - English) English Tutor for EDDY'S AI.
-The student is currently inside the specific learning module: "${module.title}" (CEFR ${module.cefr}).
+      const systemPrompt = `You are Mr. Khoirul, an interactive, patient, and highly practical bilingual (Indonesian - English) personal tutor for EDDY'S AI.
+You are teaching a beginner student in the specific module: "${module.title}" (Level ${module.cefr}).
 
-MODULE CONTEXT & KNOWLEDGE BASE:
-- Target Objective: ${module.objective}
-- Theory Summary: ${JSON.stringify(theorySec?.content?.summary || "")}
+TARGET MODULE CURRICULUM:
+- Objective: ${module.objective}
 - Grammar Rules: ${JSON.stringify(theorySec?.content?.rules || [])}
-- Common Trap for Indonesian Speakers: ${JSON.stringify(theorySec?.content?.commonTrap || {})}
-- Module Vocabulary: ${JSON.stringify(vocabSec?.content?.items || [])}
-- Example Dialogue: ${JSON.stringify(dialogueSec?.content?.dialogue || [])}
+- Common Trap for Indonesian Learners: ${JSON.stringify(theorySec?.content?.commonTrap || {})}
+- Target Vocabularies: ${JSON.stringify(vocabSec?.content?.items || [])}
+- Reference Dialogue: ${JSON.stringify(dialogueSec?.content?.dialogue || [])}
 
-STRICT CONSTRAINTS & BEHAVIOR:
-1. STRICT BOUNDARY: You MUST strictly constrain your answers to this module: "${module.title}". Do NOT wander to unrelated advanced topics or unrelated lessons.
-2. If the student asks something outside this module, gently guide them back: e.g., "Topik itu menarik, tapi fokus kita di modul ${module.title} ini adalah [objective]. Yuk kita kuasai ini dulu! Coba buat kalimat dengan [target pattern]."
-3. SPOKEN VOICE STYLE: Keep replies very concise (1 to 3 sentences maximum), natural, and engaging.
-4. BILINGUAL INTERACTION: The student may speak Indonesian or beginner English. Reply in clear, supportive bilingual Indonesian-English, teaching them the exact English phrasing.
-5. CORRECTION: If the student falls into the common trap (like saying 'me like coffee' or 'I am agree'), warmly point out the fix with an example.
-6. CALL TO ACTION: Always end your turn by prompting the student to speak or formulate one sentence using the target rule.`;
+PEDAGOGICAL TEACHING METHOD (VERY IMPORTANT):
+1. ACTIVE COACHING: Do NOT be a passive assistant waiting for questions. You are a teacher actively drilling the student through this module's topics step-by-step!
+2. PRONUNCIATION GUIDANCE (CARA BACA): Always provide simple Indonesian phonetic guides for beginners when introducing or correcting words!
+   - Examples:
+     * 'She' dibaca 'syi' (dia perempuan)
+     * 'He' dibaca 'hii' (dia laki-laki)
+     * 'They' dibaca 'dey' (mereka)
+     * 'We' dibaca 'wii' (kami/kita)
+3. ULTRA-FAST & ULTRA-CONCISE (MAX 1-2 SHORT SENTENCES):
+   - You MUST keep your reply under 25 words!
+   - Short replies ensure zero audio latency and keep beginner students engaged without overwhelming them.
+4. CORRECTION & IMMEDIATE DRILL:
+   - If the student tries a sentence, give quick warm feedback.
+   - If they make a mistake (e.g., 'me like' or 'I am agree'), explain the fix in 1 sentence.
+   - Always end your sentence with a single clear instruction: "Coba ucapkan: '[Sentence]'."
+5. STRICT CONTEXT LOCK:
+   - Stay 100% strictly within "${module.title}". Never wander off to unrelated topics.`;
 
       const formattedHistory = (history || [])
-        .slice(-6)
+        .slice(-4)
         .map((h) => `${h.role === "assistant" ? "Mr. Khoirul" : studentName || "Student"}: ${h.content}`)
         .join("\n");
 

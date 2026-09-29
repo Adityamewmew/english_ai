@@ -39,8 +39,6 @@ export class GeminiChatService {
 
     const proxyModels = Array.from(
       new Set([
-        primaryModel,
-        "gemini/gemini-3.1-flash-lite",
         "antigravity/gemini-3.7-flash-low",
         "gemini/gemini-2.5-flash-lite",
         "antigravity/gemini-3.7-flash-high",
@@ -60,7 +58,7 @@ export class GeminiChatService {
             body: JSON.stringify({
               model: m,
               stream: false,
-              max_tokens: 800,
+              max_tokens: 180,
               temperature: 0.6,
               frequency_penalty: 0.3,
               presence_penalty: 0.2,
@@ -69,7 +67,7 @@ export class GeminiChatService {
                 { role: "user", content: userPrompt },
               ],
             }),
-            signal: AbortSignal.timeout(12000),
+            signal: AbortSignal.timeout(4500),
           });
 
           if (res.ok) {
