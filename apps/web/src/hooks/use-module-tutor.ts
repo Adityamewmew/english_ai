@@ -9,7 +9,7 @@ interface UseModuleTutorProps {
 }
 
 export function useModuleTutor({ moduleId, studentName = "" }: UseModuleTutorProps) {
-  const [isAssistantOpen, setIsAssistantOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
   const [isCalling, setIsCalling] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isListening, setIsListening] = useState(false);
@@ -42,8 +42,6 @@ export function useModuleTutor({ moduleId, studentName = "" }: UseModuleTutorPro
                 timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
               },
             ]);
-            // Automatically open tutor widget on module entrance
-            setIsAssistantOpen(true);
           }
         }
       } catch (err) {
@@ -211,7 +209,6 @@ export function useModuleTutor({ moduleId, studentName = "" }: UseModuleTutorPro
       setIsSpeaking(false);
     } else {
       setIsCalling(true);
-      setIsAssistantOpen(true);
       const lastAssistantMsg = [...tutorMessages].reverse().find((m) => m.role === "assistant");
       if (lastAssistantMsg) {
         playTutorAudio(lastAssistantMsg.text);
@@ -229,9 +226,13 @@ export function useModuleTutor({ moduleId, studentName = "" }: UseModuleTutorPro
     }
   };
 
+  const handleToggleChat = () => {
+    setIsChatOpen((prev) => !prev);
+  };
+
   return {
-    isAssistantOpen,
-    setIsAssistantOpen,
+    isChatOpen,
+    setIsChatOpen,
     isCalling,
     isSpeaking,
     isListening,
@@ -242,6 +243,7 @@ export function useModuleTutor({ moduleId, studentName = "" }: UseModuleTutorPro
     handleSendTutorMessage,
     handleToggleCall,
     handleToggleMic,
+    handleToggleChat,
     playTutorAudio,
   };
 }

@@ -5,3 +5,5 @@ export * from "./SectionVocab";
 export * from "./SectionDialogue";
 export * from "./SectionQuiz";
 export * from "./ModuleAIAssistant";
+export * from "./ModuleVoiceOrb";
+export * from "./ModuleVoiceDock";

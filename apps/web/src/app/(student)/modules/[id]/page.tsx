@@ -17,7 +17,7 @@ import {
   SectionDialogue,
   SectionQuiz,
   QuestionResult,
-  ModuleAIAssistant,
+  ModuleVoiceDock,
 } from "@/components/modules";
 import { useModuleTutor } from "@/hooks/use-module-tutor";
 
@@ -258,7 +258,7 @@ export default function ModuleDetailPage() {
         </div>
 
         {/* Section Main View */}
-        <main className="max-w-4xl mx-auto px-4 py-8">
+        <main className="max-w-4xl mx-auto px-4 py-8 pb-36">
           {currentSection && (
             <div>
               {currentSection.sectionType === "theory" && (
@@ -307,26 +307,26 @@ export default function ModuleDetailPage() {
         </main>
       </div>
 
-      {/* Embedded Floating AI Tutor Assistant Component */}
-      <ModuleAIAssistant
-        isOpen={tutor.isAssistantOpen}
+      {/* Centered Bottom Voice Orb Dock with Manual Chatbot Toggle */}
+      <ModuleVoiceDock
+        moduleTitle={moduleData.title}
         isCalling={tutor.isCalling}
         isSpeaking={tutor.isSpeaking}
         isListening={tutor.isListening}
         isThinking={tutor.isThinking}
-        moduleTitle={moduleData.title}
+        isChatOpen={tutor.isChatOpen}
         messages={tutor.tutorMessages}
         inputText={tutor.inputText}
         onInputChange={tutor.setInputText}
         onSendMessage={() => tutor.handleSendTutorMessage()}
-        onToggleOpen={() => tutor.setIsAssistantOpen((prev) => !prev)}
         onToggleCall={tutor.handleToggleCall}
         onToggleMic={tutor.handleToggleMic}
+        onToggleChat={tutor.handleToggleChat}
         onPlayAudio={tutor.playTutorAudio}
       />
 
       {/* Bottom Floating Step Nav */}
-      <footer className="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-3.5 sticky bottom-0 z-30">
+      <footer className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-t border-slate-200 dark:border-slate-800 py-3 pb-24 sticky bottom-0 z-30">
         <div className="max-w-4xl mx-auto px-4 flex items-center justify-between">
           <button
             type="button"
