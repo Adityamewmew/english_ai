@@ -106,7 +106,6 @@ export default async function ModulesRoadmapPage() {
                         score: m.score,
                         orderIndex: m.orderIndex,
                       }}
-                      onSelect={() => {}}
                     />
                   </Link>
                 ))}

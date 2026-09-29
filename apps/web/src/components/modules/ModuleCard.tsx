@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Lock, CheckCircle2, Award, Clock, ArrowRight, BookOpen } from "lucide-react";
 
@@ -18,7 +20,7 @@ export interface ModuleItemProps {
 
 interface ModuleCardProps {
   module: ModuleItemProps;
-  onSelect: (moduleId: string) => void;
+  onSelect?: (moduleId: string) => void;
 }
 
 export function ModuleCard({ module, onSelect }: ModuleCardProps) {
@@ -122,7 +124,7 @@ export function ModuleCard({ module, onSelect }: ModuleCardProps) {
         <button
           type="button"
           disabled={isLocked}
-          onClick={() => onSelect(module.id)}
+          onClick={onSelect ? () => onSelect(module.id) : undefined}
           className={`inline-flex items-center gap-1 font-medium px-3 py-1.5 rounded-lg text-xs transition-colors ${
             isLocked
               ? "cursor-not-allowed bg-slate-200 text-slate-400 dark:bg-slate-800 dark:text-slate-600"

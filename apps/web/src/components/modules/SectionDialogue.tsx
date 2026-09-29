@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { MessageSquare, Volume2 } from "lucide-react";
 

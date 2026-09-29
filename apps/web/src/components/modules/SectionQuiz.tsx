@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { HelpCircle, CheckCircle2, XCircle, Award, RotateCcw, ArrowRight } from "lucide-react";
 
