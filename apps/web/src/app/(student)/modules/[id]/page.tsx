@@ -9,9 +9,7 @@ import {
   Award,
   ChevronLeft,
   ChevronRight,
-  CheckCircle2,
-  Lock,
-  RotateCcw,
+  PhoneCall,
 } from "lucide-react";
 import {
   SectionTheory,
@@ -19,7 +17,9 @@ import {
   SectionDialogue,
   SectionQuiz,
   QuestionResult,
+  ModuleAIAssistant,
 } from "@/components/modules";
+import { useModuleTutor } from "@/hooks/use-module-tutor";
 
 export default function ModuleDetailPage() {
   const params = useParams();
@@ -30,6 +30,7 @@ export default function ModuleDetailPage() {
   const [moduleData, setModuleData] = useState<any>(null);
   const [sections, setSections] = useState<any[]>([]);
   const [activeSectionIdx, setActiveSectionIdx] = useState(0);
+  const [studentName, setStudentName] = useState("");
 
   // Quiz state
   const [userAnswers, setUserAnswers] = useState<Record<string, number>>({});
@@ -46,17 +47,23 @@ export default function ModuleDetailPage() {
     results: [],
   });
 
+  // AI Tutor Hook
+  const tutor = useModuleTutor({
+    moduleId,
+    studentName,
+  });
+
   // Load Module Data
   useEffect(() => {
     async function loadData() {
       try {
         setLoading(true);
-        // Ambil data user session
         const sessRes = await fetch("/api/user/profile").catch(() => null);
         let userId = "";
         if (sessRes && sessRes.ok) {
           const sessData = await sessRes.json();
           userId = sessData?.data?.id || "";
+          setStudentName(sessData?.data?.name || "");
         }
 
         const res = await fetch(`/api/curriculum/modules/${moduleId}?userId=${userId}`);
@@ -86,17 +93,6 @@ export default function ModuleDetailPage() {
       loadData();
     }
   }, [moduleId]);
-
-  // Audio pronunciation via native browser speech synthesis
-  const handleSpeak = (text: string) => {
-    if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = "en-US";
-      utterance.rate = 0.9;
-      window.speechSynthesis.speak(utterance);
-    }
-  };
 
   const handleSelectAnswer = (qId: number, optionIndex: number) => {
     setUserAnswers((prev) => ({
@@ -182,7 +178,7 @@ export default function ModuleDetailPage() {
   const isLastSection = activeSectionIdx === sections.length - 1;
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col justify-between">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col justify-between relative">
       <div>
         {/* Top Navbar */}
         <header className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-40">
@@ -206,12 +202,24 @@ export default function ModuleDetailPage() {
               </div>
             </div>
 
-            {moduleData.isExam && (
-              <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 dark:bg-amber-950/60 dark:text-amber-200 border border-amber-300 dark:border-amber-800">
-                <Award className="w-3.5 h-3.5" />
-                Ujian Kelulusan
-              </span>
-            )}
+            <div className="flex items-center gap-2">
+              {moduleData.isExam && (
+                <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 dark:bg-amber-950/60 dark:text-amber-200 border border-amber-300 dark:border-amber-800">
+                  <Award className="w-3.5 h-3.5" />
+                  Ujian Kelulusan
+                </span>
+              )}
+
+              <button
+                type="button"
+                onClick={tutor.handleToggleCall}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 rounded-lg text-xs font-semibold transition-colors"
+                title="Panggilan AI Tutor"
+              >
+                <PhoneCall className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">AI Tutor Call</span>
+              </button>
+            </div>
           </div>
         </header>
 
@@ -264,7 +272,7 @@ export default function ModuleDetailPage() {
                 <SectionVocab
                   title={currentSection.title}
                   items={currentSection.content?.items || []}
-                  onSpeak={handleSpeak}
+                  onSpeak={tutor.playTutorAudio}
                 />
               )}
 
@@ -272,7 +280,7 @@ export default function ModuleDetailPage() {
                 <SectionDialogue
                   title={currentSection.title}
                   dialogue={currentSection.content?.dialogue || []}
-                  onSpeak={handleSpeak}
+                  onSpeak={tutor.playTutorAudio}
                 />
               )}
 
@@ -298,6 +306,24 @@ export default function ModuleDetailPage() {
           )}
         </main>
       </div>
+
+      {/* Embedded Floating AI Tutor Assistant Component */}
+      <ModuleAIAssistant
+        isOpen={tutor.isAssistantOpen}
+        isCalling={tutor.isCalling}
+        isSpeaking={tutor.isSpeaking}
+        isListening={tutor.isListening}
+        isThinking={tutor.isThinking}
+        moduleTitle={moduleData.title}
+        messages={tutor.tutorMessages}
+        inputText={tutor.inputText}
+        onInputChange={tutor.setInputText}
+        onSendMessage={() => tutor.handleSendTutorMessage()}
+        onToggleOpen={() => tutor.setIsAssistantOpen((prev) => !prev)}
+        onToggleCall={tutor.handleToggleCall}
+        onToggleMic={tutor.handleToggleMic}
+        onPlayAudio={tutor.playTutorAudio}
+      />
 
       {/* Bottom Floating Step Nav */}
       <footer className="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-3.5 sticky bottom-0 z-30">

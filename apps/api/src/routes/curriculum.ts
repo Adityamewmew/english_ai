@@ -1,5 +1,6 @@
 import { Elysia, t } from "elysia";
 import { curriculumService } from "../services/curriculum.service";
+import { moduleTutorService } from "../services/module-tutor.service";
 
 export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
   .get("/", async () => {
@@ -51,6 +52,50 @@ export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
       body: t.Object({
         userId: t.String(),
         answers: t.Record(t.String(), t.Number()),
+      }),
+    }
+  )
+  // Dedicated Module AI Tutor endpoints (strictly bound to module context)
+  .get(
+    "/modules/:id/tutor/greeting",
+    async ({ params, query }) => {
+      const studentName = (query as any)?.studentName || "";
+      return await moduleTutorService.getGreeting(params.id, studentName);
+    },
+    {
+      params: t.Object({
+        id: t.String(),
+      }),
+      query: t.Optional(
+        t.Object({
+          studentName: t.Optional(t.String()),
+        })
+      ),
+    }
+  )
+  .post(
+    "/modules/:id/tutor/chat",
+    async ({ params, body }) => {
+      return await moduleTutorService.chatWithTutor(
+        params.id,
+        body.message,
+        body.history as any,
+        body.studentName
+      );
+    },
+    {
+      params: t.Object({
+        id: t.String(),
+      }),
+      body: t.Object({
+        message: t.String(),
+        history: t.Array(
+          t.Object({
+            role: t.Union([t.Literal("assistant"), t.Literal("user")]),
+            content: t.String(),
+          })
+        ),
+        studentName: t.Optional(t.String()),
       }),
     }
   );
