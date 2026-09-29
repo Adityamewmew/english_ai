@@ -94,7 +94,7 @@ export default function ModuleDetailPage() {
     }
   }, [moduleId]);
 
-  const handleSelectAnswer = (qId: number, optionIndex: number) => {
+  const handleSelectAnswer = (qId: string | number, optionIndex: number) => {
     setUserAnswers((prev) => ({
       ...prev,
       [qId.toString()]: optionIndex,
@@ -279,7 +279,8 @@ export default function ModuleDetailPage() {
               {currentSection.sectionType === "dialogue" && (
                 <SectionDialogue
                   title={currentSection.title}
-                  dialogue={currentSection.content?.dialogue || []}
+                  context={currentSection.content?.context}
+                  dialogue={currentSection.content?.lines || currentSection.content?.dialogue || []}
                   onSpeak={tutor.playTutorAudio}
                 />
               )}

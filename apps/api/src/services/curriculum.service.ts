@@ -184,14 +184,20 @@ export class CurriculumService {
 
       for (const q of questions) {
         const selected = answers[q.id.toString()] ?? answers[q.id];
-        const isCorrect = selected === q.answerIndex;
+        const correctIndex =
+          typeof q.answerIndex === "number"
+            ? q.answerIndex
+            : Array.isArray(q.options) && q.answer
+            ? q.options.indexOf(q.answer)
+            : -1;
+        const isCorrect = selected === correctIndex;
         if (isCorrect) correctCount++;
 
         questionResults.push({
           questionId: q.id,
           question: q.question,
           selectedAnswer: selected,
-          correctAnswer: q.answerIndex,
+          correctAnswer: correctIndex,
           isCorrect,
           explanation: q.explanation,
         });

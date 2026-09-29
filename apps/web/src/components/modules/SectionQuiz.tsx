@@ -4,14 +4,14 @@ import React from "react";
 import { HelpCircle, CheckCircle2, XCircle, Award, RotateCcw, ArrowRight } from "lucide-react";
 
 export interface QuizQuestion {
-  id: number;
+  id: string | number;
   question: string;
   options: string[];
   explanation?: string;
 }
 
 export interface QuestionResult {
-  questionId: number;
+  questionId: string | number;
   selectedAnswer: number;
   correctAnswer: number;
   isCorrect: boolean;
@@ -29,7 +29,7 @@ interface SectionQuizProps {
   passed?: boolean;
   results?: QuestionResult[];
   isExam?: boolean;
-  onSelectAnswer: (questionId: number, optionIndex: number) => void;
+  onSelectAnswer: (questionId: string | number, optionIndex: number) => void;
   onSubmit: () => void;
   onRetry?: () => void;
   onContinue?: () => void;
@@ -54,8 +54,8 @@ export function SectionQuiz({
   const answeredCount = Object.keys(userAnswers).length;
   const isAllAnswered = questions.length > 0 && answeredCount === questions.length;
 
-  const getResultForQuestion = (qId: number) => {
-    return results?.find((r) => r.questionId === qId);
+  const getResultForQuestion = (qId: string | number) => {
+    return results?.find((r) => r.questionId.toString() === qId.toString());
   };
 
   return (
