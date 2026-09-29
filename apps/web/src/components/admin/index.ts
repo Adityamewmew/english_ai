@@ -4,7 +4,6 @@ export * from "./AdminStatCard";
 export * from "./ModuleListTable";
 export * from "./ModuleDetailModal";
 export * from "./QuestionListTable";
-export * from "./CallSessionListTable";
 export * from "./search-bar";
 export * from "./user-delete-button";
 export * from "./user-form";

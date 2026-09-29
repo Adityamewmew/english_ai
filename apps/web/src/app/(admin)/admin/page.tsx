@@ -4,7 +4,7 @@ import {
   Users,
   BookOpen,
   HelpCircle,
-  PhoneCall,
+  Award,
   UserPlus,
   ArrowRight,
   TrendingUp,
@@ -26,8 +26,8 @@ export default async function AdminDashboardPage() {
     totalModules: 0,
     totalLevels: 0,
     totalQuestions: 0,
-    totalCalls: 0,
-    totalCallDurationMinutes: 0,
+    totalCompletedModules: 0,
+    totalInProgressModules: 0,
     recentStudents: [],
     cefrDistribution: { A1: 0, A2: 0, B1: 0, B2: 0, C1: 0, C2: 0 },
   };
@@ -90,10 +90,10 @@ export default async function AdminDashboardPage() {
           color="amber"
         />
         <AdminStatCard
-          title="Sesi Panggilan AI"
-          value={stats.totalCalls}
-          description={`Total durasi: ~${stats.totalCallDurationMinutes} menit bicara`}
-          icon={PhoneCall}
+          title="Modul Diselesaikan"
+          value={stats.totalCompletedModules}
+          description={`${stats.totalInProgressModules} modul sedang dipelajari siswa`}
+          icon={Award}
           color="purple"
         />
       </div>

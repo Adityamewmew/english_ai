@@ -60,7 +60,8 @@ export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
     "/modules/:id/tutor/greeting",
     async ({ params, query }) => {
       const studentName = (query as any)?.studentName || "";
-      return await moduleTutorService.getGreeting(params.id, studentName);
+      const userId = (query as any)?.userId || "";
+      return await moduleTutorService.getGreeting(params.id, studentName, userId);
     },
     {
       params: t.Object({
@@ -69,6 +70,7 @@ export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
       query: t.Optional(
         t.Object({
           studentName: t.Optional(t.String()),
+          userId: t.Optional(t.String()),
         })
       ),
     }
@@ -80,7 +82,8 @@ export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
         params.id,
         body.message,
         body.history as any,
-        body.studentName
+        body.studentName,
+        body.userId
       );
     },
     {
@@ -96,6 +99,7 @@ export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
           })
         ),
         studentName: t.Optional(t.String()),
+        userId: t.Optional(t.String()),
       }),
     }
   );

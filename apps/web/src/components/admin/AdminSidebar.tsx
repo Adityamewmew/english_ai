@@ -51,12 +51,6 @@ export function AdminSidebar({
       icon: Users,
       active: pathname.startsWith("/users"),
     },
-    {
-      title: "Sesi Panggilan AI",
-      href: "/admin/calls",
-      icon: PhoneCall,
-      active: pathname.startsWith("/admin/calls"),
-    },
   ];
 
   return (

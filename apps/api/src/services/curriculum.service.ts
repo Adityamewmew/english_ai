@@ -1,5 +1,5 @@
 import { db } from "@/db";
-import { curriculumLevels, curriculumModules, moduleSections, userModuleProgress } from "@/db/schema";
+import { curriculumLevels, curriculumModules, moduleSections, userModuleProgress, users } from "@/db/schema";
 import { eq, asc, isNull, and } from "drizzle-orm";
 import { Response, ServiceResult } from "@/lib/response";
 import crypto from "crypto";
@@ -235,6 +235,38 @@ export class CurriculumService {
           score,
           completedAt,
         });
+      }
+
+      // Update persistent module memory on student record
+      try {
+        const [u] = await db
+          .select({ memory: users.memory })
+          .from(users)
+          .where(eq(users.id, userId))
+          .limit(1);
+
+        if (u) {
+          const mem = u.memory || { facts: [], interests: [], weaknesses: [], totalCalls: 0 };
+          const modMems = mem.moduleMemories || {};
+          const prevMem = modMems[moduleId] || {};
+
+          modMems[moduleId] = {
+            ...prevMem,
+            attempts: (prevMem.attempts || 0) + 1,
+            lastScore: score,
+            lastPracticedAt: new Date().toISOString(),
+            summary: passed
+              ? `Lulus evaluasi modul dengan skor ${score}%. Menguasai materi inti.`
+              : `Mencoba kuis modul dengan skor ${score}%. Perlu review tambahan.`,
+          };
+
+          await db
+            .update(users)
+            .set({ memory: { ...mem, moduleMemories: modMems } })
+            .where(eq(users.id, userId));
+        }
+      } catch (memErr) {
+        console.warn("Gagal memperbarui memori modul user:", memErr);
       }
 
       return Response.buildSuccess({

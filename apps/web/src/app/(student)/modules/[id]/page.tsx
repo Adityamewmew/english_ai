@@ -32,6 +32,7 @@ export default function ModuleDetailPage() {
   const [sections, setSections] = useState<any[]>([]);
   const [activeSectionIdx, setActiveSectionIdx] = useState(0);
   const [studentName, setStudentName] = useState("");
+  const [userId, setUserId] = useState("");
 
   // Quiz state
   const [userAnswers, setUserAnswers] = useState<Record<string, number>>({});
@@ -48,10 +49,11 @@ export default function ModuleDetailPage() {
     results: [],
   });
 
-  // AI Tutor Hook
+  // AI Tutor Hook with memory support
   const tutor = useModuleTutor({
     moduleId,
     studentName,
+    userId,
   });
 
   // Load Module Data
@@ -60,14 +62,15 @@ export default function ModuleDetailPage() {
       try {
         setLoading(true);
         const sessRes = await fetch("/api/user/profile").catch(() => null);
-        let userId = "";
+        let uid = "";
         if (sessRes && sessRes.ok) {
           const sessData = await sessRes.json();
-          userId = sessData?.data?.id || "";
+          uid = sessData?.data?.id || "";
+          setUserId(uid);
           setStudentName(sessData?.data?.name || "");
         }
 
-        const res = await fetch(`/api/curriculum/modules/${moduleId}?userId=${userId}`);
+        const res = await fetch(`/api/curriculum/modules/${moduleId}?userId=${uid}`);
         const json = await res.json();
 
         if (json.success && json.data) {

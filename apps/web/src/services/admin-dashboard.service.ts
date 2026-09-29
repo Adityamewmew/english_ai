@@ -1,5 +1,5 @@
 import { db } from "@/db";
-import { users, curriculumModules, curriculumLevels, itemBank, callSessions } from "@/db/schema";
+import { users, curriculumModules, curriculumLevels, itemBank, userModuleProgress } from "@/db/schema";
 import { isNull, desc, count, sql, eq } from "drizzle-orm";
 import { Response, ServiceResult } from "@/lib/response";
 
@@ -10,8 +10,8 @@ export interface AdminDashboardStats {
   totalModules: number;
   totalLevels: number;
   totalQuestions: number;
-  totalCalls: number;
-  totalCallDurationMinutes: number;
+  totalCompletedModules: number;
+  totalInProgressModules: number;
   recentStudents: Array<{
     id: string;
     name: string;
@@ -51,13 +51,13 @@ export class AdminDashboardService {
         .from(itemBank)
         .where(isNull(itemBank.deletedAt));
 
-      // 4. Call Sessions
-      const [callCounts] = await db
+      // 4. Progress metrics
+      const [progressCounts] = await db
         .select({
-          totalCalls: count(),
-          totalDuration: sql<number>`coalesce(sum(${callSessions.durationSeconds}), 0)`,
+          totalCompleted: sql<number>`count(*) filter (where ${userModuleProgress.status} = 'completed')`,
+          totalInProgress: sql<number>`count(*) filter (where ${userModuleProgress.status} = 'in_progress')`,
         })
-        .from(callSessions);
+        .from(userModuleProgress);
 
       // 5. Recent 5 Students
       const recentStudents = await db
@@ -105,8 +105,8 @@ export class AdminDashboardService {
         totalModules: Number(moduleCounts?.total || 0),
         totalLevels: Number(levelCounts?.total || 0),
         totalQuestions: Number(questionCounts?.total || 0),
-        totalCalls: Number(callCounts?.totalCalls || 0),
-        totalCallDurationMinutes: Math.round(Number(callCounts?.totalDuration || 0) / 60),
+        totalCompletedModules: Number(progressCounts?.totalCompleted || 0),
+        totalInProgressModules: Number(progressCounts?.totalInProgress || 0),
         recentStudents: recentStudents || [],
         cefrDistribution,
       });

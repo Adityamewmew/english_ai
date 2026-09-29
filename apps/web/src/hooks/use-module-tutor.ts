@@ -6,9 +6,10 @@ import { ChatMessage } from "@/components/modules/ModuleAIAssistant";
 interface UseModuleTutorProps {
   moduleId: string;
   studentName?: string;
+  userId?: string;
 }
 
-export function useModuleTutor({ moduleId, studentName = "" }: UseModuleTutorProps) {
+export function useModuleTutor({ moduleId, studentName = "", userId = "" }: UseModuleTutorProps) {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isCalling, setIsCalling] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -28,7 +29,7 @@ export function useModuleTutor({ moduleId, studentName = "" }: UseModuleTutorPro
         const greetRes = await fetch(
           `/api/curriculum/modules/${moduleId}/tutor/greeting?studentName=${encodeURIComponent(
             studentName
-          )}`
+          )}&userId=${encodeURIComponent(userId)}`
         ).catch(() => null);
 
         if (greetRes && greetRes.ok) {
@@ -176,6 +177,7 @@ export function useModuleTutor({ moduleId, studentName = "" }: UseModuleTutorPro
           message: textToSend,
           history: historyPayload,
           studentName,
+          userId: userId || undefined,
         }),
       });
 

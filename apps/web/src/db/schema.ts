@@ -7,6 +7,16 @@ export interface UserMemory {
   weaknesses: string[];
   totalCalls: number;
   lastSpokenAt?: string;
+  moduleMemories?: Record<
+    string,
+    {
+      attempts?: number;
+      lastScore?: number;
+      summary?: string;
+      weaknesses?: string[];
+      lastPracticedAt?: string;
+    }
+  >;
 }
 
 export const users = pgTable("users", {
