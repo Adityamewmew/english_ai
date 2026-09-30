@@ -38,6 +38,7 @@ export class UserService {
           name: users.name,
           email: users.email,
           role: users.role,
+          accessType: users.accessType,
           currentCefr: users.currentCefr,
           createdAt: users.createdAt,
           updatedAt: users.updatedAt,
@@ -140,7 +141,8 @@ export class UserService {
       }
 
       const newId = crypto.randomUUID();
-      const role = "role" in payload && payload.role ? payload.role : "student";
+      const role = "role" in payload && payload.role ? payload.role : ("accessType" in payload && (payload as any).accessType === 1 ? "admin" : "student");
+      const accessType = "accessType" in payload && (payload as any).accessType ? Number((payload as any).accessType) : (role === "admin" ? 1 : 2);
       const currentCefr = "currentCefr" in payload && payload.currentCefr ? payload.currentCefr : "A1";
 
       await db.insert(users).values({
@@ -149,13 +151,14 @@ export class UserService {
         email: payload.email,
         password: payload.password,
         role,
+        accessType,
         currentCefr,
         createdBy: adminId || null,
         createdAt: new Date(),
         updatedAt: new Date(),
       });
 
-      return Response.buildSuccessCreated({ id: newId, name: payload.name, email: payload.email, role });
+      return Response.buildSuccessCreated({ id: newId, name: payload.name, email: payload.email, role, accessType });
     } catch (e) {
       console.error(e);
       return Response.buildErrorService((e as Error).message);
@@ -187,10 +190,14 @@ export class UserService {
         }
       }
 
+      const role = payload.role ?? ("accessType" in payload && (payload as any).accessType === 1 ? "admin" : "student");
+      const accessType = "accessType" in payload && (payload as any).accessType ? Number((payload as any).accessType) : (role === "admin" ? 1 : 2);
+
       const updateData: Record<string, any> = {
         name: payload.name,
         email: payload.email,
-        role: payload.role,
+        role,
+        accessType,
         currentCefr: payload.currentCefr,
         updatedBy: adminId || null,
         updatedAt: new Date(),

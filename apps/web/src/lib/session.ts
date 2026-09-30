@@ -5,6 +5,7 @@ export interface SessionUser {
   name: string;
   email: string;
   role: string;
+  accessType: number; // 1 = Admin, 2 = Student (Siswa)
   currentCefr: string;
 }
 

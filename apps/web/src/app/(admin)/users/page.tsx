@@ -104,13 +104,13 @@ export default async function UsersPage({
                   </TableCell>
 
                   <TableCell>
-                    {user.role === "admin" ? (
+                    {user.accessType === 1 || user.role === "admin" ? (
                       <Badge variant="secondary" size="sm">
-                        ADMIN
+                        ADMIN (Type 1)
                       </Badge>
                     ) : (
                       <Badge variant="primary" size="sm">
-                        STUDENT
+                        SISWA (Type 2)
                       </Badge>
                     )}
                   </TableCell>

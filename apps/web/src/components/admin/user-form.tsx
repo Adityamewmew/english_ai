@@ -13,6 +13,7 @@ interface UserFormProps {
     name?: string;
     email?: string;
     role?: string;
+    accessType?: number;
     currentCefr?: string;
   };
 }
@@ -92,15 +93,15 @@ export function UserForm({ mode, initialData }: UserFormProps) {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="space-y-1.5">
           <label className="block text-xs font-semibold uppercase tracking-wider text-slate-700">
-            Role Pengguna <span className="text-red-500">*</span>
+            Hak Akses & Role <span className="text-red-500">*</span>
           </label>
           <select
             name="role"
-            defaultValue={initialData?.role || "student"}
+            defaultValue={initialData?.role || (initialData?.accessType === 1 ? "admin" : "student")}
             className="w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-900 transition focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary"
           >
-            <option value="student">Student (Siswa)</option>
-            <option value="admin">Admin (Pengelola)</option>
+            <option value="admin">Admin (Akses Tipe 1)</option>
+            <option value="student">Siswa / Student (Akses Tipe 2)</option>
           </select>
         </div>
 

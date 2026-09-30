@@ -48,6 +48,7 @@ export default async function EditUserPage({
               name: user.name,
               email: user.email,
               role: user.role,
+              accessType: user.accessType,
               currentCefr: user.currentCefr,
             }}
           />

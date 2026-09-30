@@ -25,6 +25,7 @@ export const users = pgTable("users", {
   email: varchar("email", { length: 100 }).notNull().unique(),
   password: varchar("password", { length: 255 }).notNull(),
   role: varchar("role", { length: 20 }).notNull().default("student"),
+  accessType: integer("access_type").notNull().default(2), // 1 = Admin, 2 = Student (Siswa)
   currentCefr: varchar("current_cefr", { length: 10 }).notNull().default("A1"),
   avatarUrl: varchar("avatar_url", { length: 255 }),
   memory: jsonb("memory").$type<UserMemory>().default({

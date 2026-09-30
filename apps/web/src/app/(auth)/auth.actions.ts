@@ -19,15 +19,17 @@ export async function doLogin(formData: FormData) {
   }
 
   const user = result.data;
+  const accessType = user.accessType ?? (user.role === "admin" ? 1 : 2);
   await setSession({
     userId: user.id,
     name: user.name,
     email: user.email,
     role: user.role,
+    accessType,
     currentCefr: user.currentCefr,
   });
 
-  if (user.role === "admin") {
+  if (accessType === 1 || user.role === "admin") {
     redirect("/users");
   } else {
     redirect("/dashboard");
@@ -53,6 +55,7 @@ export async function doRegister(formData: FormData) {
     name: user.name,
     email: user.email,
     role: "student",
+    accessType: 2,
     currentCefr: "A1",
   });
 

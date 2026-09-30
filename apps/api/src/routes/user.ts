@@ -75,6 +75,7 @@ export const userRoutes = new Elysia({ prefix: "/api/user" })
         email: t.String(),
         password: t.String(),
         role: t.Optional(t.String()),
+        accessType: t.Optional(t.Numeric()),
         currentCefr: t.Optional(t.String()),
       }),
     }
@@ -95,6 +96,7 @@ export const userRoutes = new Elysia({ prefix: "/api/user" })
         email: t.Optional(t.String()),
         password: t.Optional(t.String()),
         role: t.Optional(t.String()),
+        accessType: t.Optional(t.Numeric()),
         currentCefr: t.Optional(t.String()),
       }),
     }
