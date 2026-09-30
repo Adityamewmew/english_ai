@@ -4,8 +4,24 @@ import { useState, useRef, useEffect, useCallback } from "react";
 
 export interface SpeechRecorderCallbackOptions {
   onTextResult: (text: string) => void;
-  onAudioResult: (audioUrl: string) => void;
+  onAudioResult: (audioUrl: string, audioBlob?: Blob) => void;
   onEnd?: () => void;
+}
+
+/**
+ * Konversi Blob audio menjadi base64 string untuk dikirim ke backend AI STT
+ */
+export function blobToBase64(blob: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const dataUrl = reader.result as string;
+      const base64 = dataUrl.split(",")[1] || "";
+      resolve(base64);
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
 }
 
 export function useSpeechRecorder() {
@@ -113,7 +129,7 @@ export function useSpeechRecorder() {
               const blob = new Blob(audioChunksRef.current, { type: mimeType });
               const url = URL.createObjectURL(blob);
               registeredUrlsRef.current.add(url);
-              onAudioResult(url);
+              onAudioResult(url, blob);
             }
           };
 

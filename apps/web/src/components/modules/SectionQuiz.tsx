@@ -26,6 +26,8 @@ interface SectionQuizProps {
   isSubmitted: boolean;
   isSubmitting?: boolean;
   score?: number | null;
+  quizScore?: number;
+  speakingScore?: number | null;
   passed?: boolean;
   results?: QuestionResult[];
   isExam?: boolean;
@@ -43,6 +45,8 @@ export function SectionQuiz({
   isSubmitted,
   isSubmitting,
   score,
+  quizScore,
+  speakingScore,
   passed,
   results,
   isExam,
@@ -92,8 +96,8 @@ export function SectionQuiz({
               : "bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800/40 text-red-900 dark:text-red-200"
           }`}
         >
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3.5">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div className="flex items-start sm:items-center gap-3.5">
               {passed ? (
                 <div className="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center flex-shrink-0 shadow-md">
                   <CheckCircle2 className="w-7 h-7" />
@@ -111,36 +115,50 @@ export function SectionQuiz({
                       : "Luar Biasa! Anda Berhasil Lulus Modul Ini"
                     : "Belum Mencapai Nilai Kelulusan"}
                 </h3>
-                <p className="text-xs md:text-sm opacity-90">
+                <p className="text-xs md:text-sm opacity-90 mt-0.5">
                   {passed
-                    ? `Skor Anda: ${score}%. Modul berikutnya telah terbuka.`
-                    : `Skor Anda: ${score}%. Target minimal ${passingScore}%. Pelajari kembali materi dan coba lagi.`}
+                    ? `Skor Akhir: ${score}%. Selamat, modul berikutnya telah terbuka!`
+                    : `Skor Akhir: ${score}%. Target minimal ${passingScore}%. Pelajari kembali materi dan coba lagi.`}
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-2.5 w-full md:w-auto">
-              {!passed && onRetry && (
-                <button
-                  type="button"
-                  onClick={onRetry}
-                  className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-200 dark:border-slate-700 hover:bg-slate-50 transition-colors shadow-sm"
-                >
-                  <RotateCcw className="w-3.5 h-3.5" />
-                  <span>Ulangi Kuis</span>
-                </button>
+            {/* Hybrid Evaluation Score Badges */}
+            <div className="flex flex-wrap items-center gap-2 w-full md:w-auto pt-2 md:pt-0">
+              {speakingScore !== undefined && speakingScore !== null && (
+                <div className="flex flex-col items-center justify-center px-3 py-1.5 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 shadow-sm min-w-[90px]">
+                  <span className="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400">
+                    Speaking (60%)
+                  </span>
+                  <span className="text-sm font-black text-blue-600 dark:text-blue-400">
+                    {speakingScore}%
+                  </span>
+                </div>
               )}
 
-              {passed && onContinue && (
-                <button
-                  type="button"
-                  onClick={onContinue}
-                  className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white transition-colors shadow-md"
-                >
-                  <span>Lanjut ke Roadmap</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+              {quizScore !== undefined && quizScore !== null && (
+                <div className="flex flex-col items-center justify-center px-3 py-1.5 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 shadow-sm min-w-[90px]">
+                  <span className="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400">
+                    Kuis (40%)
+                  </span>
+                  <span className="text-sm font-black text-amber-600 dark:text-amber-400">
+                    {quizScore}%
+                  </span>
+                </div>
               )}
+
+              <div
+                className={`flex flex-col items-center justify-center px-3.5 py-1.5 rounded-xl text-white shadow-sm min-w-[90px] ${
+                  passed ? "bg-emerald-600" : "bg-red-600"
+                }`}
+              >
+                <span className="text-[10px] uppercase font-bold opacity-90">
+                  Nilai Akhir
+                </span>
+                <span className="text-base font-black">
+                  {score}%
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -277,6 +295,43 @@ export function SectionQuiz({
             <span>{isSubmitting ? "Memproses..." : "Kirim Jawaban"}</span>
             <ArrowRight className="w-4 h-4" />
           </button>
+        </div>
+      )}
+
+      {/* Completion Action Bar placed at the bottom below questions review */}
+      {isSubmitted && (
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm">
+          <div className="text-xs text-slate-600 dark:text-slate-400">
+            {passed
+              ? "Anda telah menyelesaikan seluruh materi dan evaluasi pada modul ini."
+              : "Periksa kembali pembahasan jawaban di atas sebelum mengulang kuis."}
+          </div>
+          <div className="flex items-center gap-3 w-full sm:w-auto">
+            {!passed && onRetry && (
+              <button
+                type="button"
+                onClick={onRetry}
+                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-200 dark:border-slate-700 hover:bg-slate-50 transition-colors shadow-sm"
+              >
+                <RotateCcw className="w-4 h-4" />
+                <span>Ulangi Kuis</span>
+              </button>
+            )}
+            {onContinue && (
+              <button
+                type="button"
+                onClick={onContinue}
+                className={`flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold text-white transition-all shadow-md ${
+                  passed
+                    ? "bg-emerald-600 hover:bg-emerald-700"
+                    : "bg-slate-700 hover:bg-slate-800"
+                }`}
+              >
+                <span>Kembali ke Daftar Modul</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            )}
+          </div>
         </div>
       )}
     </div>

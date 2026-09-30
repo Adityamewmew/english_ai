@@ -3,6 +3,7 @@ import { curriculumModules, moduleSections, userModuleProgress, users } from "@/
 import { eq, and } from "drizzle-orm";
 import { Response, ServiceResult } from "@/lib/response";
 import { GeminiService } from "@/lib/gemini";
+import { GeminiEvalService } from "@/lib/gemini-eval";
 import { sanitizeRepeatedChars } from "@/lib/gemini-chat";
 
 export class ModuleTutorService {
@@ -337,6 +338,36 @@ INSTRUCTIONS:
       });
     } catch (e) {
       console.error("ModuleTutorService evaluateSpeech error:", e);
+      return Response.buildErrorService((e as Error).message);
+    }
+  }
+
+  /**
+   * Mentranskripsikan ucapan audio siswa menggunakan AI Audio STT (Gemini)
+   * dengan konteks kalimat target agar akurat untuk aksen Indonesia.
+   */
+  async transcribeSpeech(params: {
+    audioBase64: string;
+    mimeType?: string;
+    targetText?: string;
+  }): Promise<ServiceResult<{ transcript: string }>> {
+    try {
+      const { audioBase64, mimeType = "audio/webm", targetText } = params;
+      if (!audioBase64 || audioBase64.trim().length === 0) {
+        return Response.buildErrorBadRequest("Data audio tidak boleh kosong");
+      }
+
+      const transcript = await GeminiEvalService.transcribeAudioSpeakingLab(
+        audioBase64,
+        mimeType,
+        targetText
+      );
+
+      return Response.buildSuccess({
+        transcript,
+      });
+    } catch (e) {
+      console.error("ModuleTutorService transcribeSpeech error:", e);
       return Response.buildErrorService((e as Error).message);
     }
   }

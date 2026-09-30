@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Lock, CheckCircle2 } from "lucide-react";
 import { useSpeechRecorder } from "@/hooks/use-speech-recorder";
 import { SpeakingLabDrill, DrillItem } from "./SpeakingLabDrill";
 import { SpeakingLabRoleplay, RoleplayData } from "./SpeakingLabRoleplay";
@@ -17,6 +17,8 @@ interface SectionSpeakingLabProps {
   moduleId?: string;
   userId?: string;
   onPlayAudio?: (text: string) => void;
+  onSpeakingComplete?: (speakingScore: number, isComplete: boolean) => void;
+  onAdvanceToQuiz?: () => void;
 }
 
 export function SectionSpeakingLab({
@@ -27,8 +29,17 @@ export function SectionSpeakingLab({
   moduleId,
   userId,
   onPlayAudio,
+  onSpeakingComplete,
+  onAdvanceToQuiz,
 }: SectionSpeakingLabProps) {
   const [activeTab, setActiveTab] = useState<"drill" | "roleplay" | "challenge">("drill");
+  const [isDrillDone, setIsDrillDone] = useState(false);
+  const [isRoleplayDone, setIsRoleplayDone] = useState(false);
+  const [isChallengeDone, setIsChallengeDone] = useState(false);
+
+  const [drillScore, setDrillScore] = useState<number>(80);
+  const [roleplayScore, setRoleplayScore] = useState<number>(80);
+  const [challengeScore, setChallengeScore] = useState<number>(85);
 
   // Hook perekam terpadu (Audio Blob + Speech Recognition STT)
   const {
@@ -38,6 +49,27 @@ export function SectionSpeakingLab({
     stopStudentAudio,
     currentlyPlayingUrl,
   } = useSpeechRecorder();
+
+  const handleDrillComplete = (avgScore: number) => {
+    setIsDrillDone(true);
+    setDrillScore(avgScore);
+  };
+
+  const handleRoleplayComplete = (avgScore: number) => {
+    setIsRoleplayDone(true);
+    setRoleplayScore(avgScore);
+  };
+
+  const handleChallengeComplete = (score: number) => {
+    setIsChallengeDone(true);
+    setChallengeScore(score);
+
+    // Hitung rata-rata praktikum berbicara (Speaking Lab)
+    const overallSpeaking = Math.round(
+      drillScore * 0.4 + roleplayScore * 0.35 + score * 0.25
+    );
+    onSpeakingComplete?.(overallSpeaking, true);
+  };
 
   return (
     <div className="space-y-6">
@@ -53,40 +85,61 @@ export function SectionSpeakingLab({
           </h3>
         </div>
 
-        {/* 3-Stage Tab Navigation */}
+        {/* 3-Stage Progressive Tab Navigation with Locks */}
         <div className="inline-flex p-1 bg-slate-100 dark:bg-slate-800/80 rounded-xl text-xs font-semibold">
           <button
             type="button"
             onClick={() => setActiveTab("drill")}
-            className={`px-3 py-1.5 rounded-lg transition-all ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
               activeTab === "drill"
                 ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm"
                 : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
             }`}
           >
-            1. Pemanasan (Drill)
+            {isDrillDone && <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />}
+            <span>1. Pemanasan (Drill)</span>
           </button>
+
           <button
             type="button"
-            onClick={() => setActiveTab("roleplay")}
-            className={`px-3 py-1.5 rounded-lg transition-all ${
+            disabled={!isDrillDone}
+            onClick={() => isDrillDone && setActiveTab("roleplay")}
+            title={!isDrillDone ? "Selesaikan seluruh kalimat pemanasan terlebih dahulu" : ""}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
               activeTab === "roleplay"
                 ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm"
+                : !isDrillDone
+                ? "text-slate-400 dark:text-slate-600 cursor-not-allowed opacity-60"
                 : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
             }`}
           >
-            2. Simulasi Peran
+            {!isDrillDone ? (
+              <Lock className="w-3.5 h-3.5 text-slate-400" />
+            ) : isRoleplayDone ? (
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+            ) : null}
+            <span>2. Simulasi Peran</span>
           </button>
+
           <button
             type="button"
-            onClick={() => setActiveTab("challenge")}
-            className={`px-3 py-1.5 rounded-lg transition-all ${
+            disabled={!isRoleplayDone}
+            onClick={() => isRoleplayDone && setActiveTab("challenge")}
+            title={!isRoleplayDone ? "Selesaikan simulasi peran terlebih dahulu" : ""}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
               activeTab === "challenge"
                 ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm"
+                : !isRoleplayDone
+                ? "text-slate-400 dark:text-slate-600 cursor-not-allowed opacity-60"
                 : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
             }`}
           >
-            3. Tantangan Spontan
+            {!isRoleplayDone ? (
+              <Lock className="w-3.5 h-3.5 text-slate-400" />
+            ) : isChallengeDone ? (
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+            ) : null}
+            <span>3. Tantangan Spontan</span>
           </button>
         </div>
       </div>
@@ -103,6 +156,11 @@ export function SectionSpeakingLab({
           onStopStudentAudio={stopStudentAudio}
           startListening={startListening}
           stopListening={stopListening}
+          onStageComplete={handleDrillComplete}
+          onNextStage={() => {
+            setIsDrillDone(true);
+            setActiveTab("roleplay");
+          }}
         />
       )}
 
@@ -118,6 +176,11 @@ export function SectionSpeakingLab({
           onStopStudentAudio={stopStudentAudio}
           startListening={startListening}
           stopListening={stopListening}
+          onStageComplete={handleRoleplayComplete}
+          onNextStage={() => {
+            setIsRoleplayDone(true);
+            setActiveTab("challenge");
+          }}
         />
       )}
 
@@ -133,6 +196,15 @@ export function SectionSpeakingLab({
           onStopStudentAudio={stopStudentAudio}
           startListening={startListening}
           stopListening={stopListening}
+          onStageComplete={handleChallengeComplete}
+          onNextStage={() => {
+            setIsChallengeDone(true);
+            const overallSpeaking = Math.round(
+              drillScore * 0.4 + roleplayScore * 0.35 + challengeScore * 0.25
+            );
+            onSpeakingComplete?.(overallSpeaking, true);
+            onAdvanceToQuiz?.();
+          }}
         />
       )}
     </div>

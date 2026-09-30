@@ -166,6 +166,121 @@ YOUR TASK:
     return "";
   }
 
+  static async transcribeAudioSpeakingLab(
+    base64Audio: string,
+    mimeType: string = "audio/webm",
+    targetText?: string
+  ): Promise<string> {
+    const baseUrl = process.env.AI_BASE_URL;
+    const apiKey = process.env.AI_API_KEY || process.env.GEMINI_API_KEY || "";
+    const modelName = process.env.GEMINI_EVAL_MODEL || "gemini/gemini-3-flash-preview";
+
+    let format = "webm";
+    if (mimeType.includes("mp3")) format = "mp3";
+    else if (mimeType.includes("wav")) format = "wav";
+    else if (mimeType.includes("ogg")) format = "ogg";
+    else if (mimeType.includes("mp4") || mimeType.includes("m4a")) format = "mp4";
+
+    const targetSnippet = targetText ? `Target Reference Sentence: "${targetText}"\n` : "";
+    const systemPrompt = `You are Mr. Khoirul's expert bilingual (Indonesian - English) speech transcriber for Indonesian students practicing spoken English.
+The student is practicing English pronunciation.
+${targetSnippet}
+CRITICAL TRANSCRIPTION RULES:
+1. Listen carefully to the student's actual audio articulation.
+2. Indonesian learners often start words softly or pronounce 'We' (/wiː/) gently. Do NOT mistake 'We' for 'You', 'They', or 'He'. If the student articulated /wiː/, accurately transcribe "We".
+3. Transcribe only what the student actually spoke. If they clearly mispronounced or substituted a word, transcribe what was truly articulated.
+4. Do NOT hallucinate words that were not spoken.
+5. Return ONLY the clean transcribed English sentence/words. No preamble, no quotation marks, no markdown explanations.`;
+
+    if (baseUrl) {
+      const transcribeModels = Array.from(new Set([modelName, "gemini/gemini-3-flash-preview"]));
+      for (const m of transcribeModels) {
+        try {
+          const endpoint = `${baseUrl.replace(/\/+$/, "")}/chat/completions`;
+          const res = await fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${apiKey}`,
+            },
+            body: JSON.stringify({
+              model: m,
+              stream: false,
+              messages: [
+                { role: "system", content: systemPrompt },
+                {
+                  role: "user",
+                  content: [
+                    {
+                      type: "text",
+                      text: `Transcribe this Indonesian student's spoken English audio accurately.${targetText ? ` Target was: "${targetText}".` : ""}`,
+                    },
+                    {
+                      type: "input_audio",
+                      input_audio: {
+                        data: base64Audio,
+                        format,
+                      },
+                    },
+                  ],
+                },
+              ],
+            }),
+            signal: AbortSignal.timeout(10000),
+          });
+
+          if (res.ok) {
+            const data = (await res.json()) as any;
+            const rawContent = data.choices?.[0]?.message?.content;
+            let text = "";
+            if (typeof rawContent === "string") {
+              text = rawContent;
+            } else if (Array.isArray(rawContent)) {
+              text = rawContent.map((c: any) => c.text || "").join(" ");
+            }
+            text = text.replace(/```[a-z]*\n?|\n?```/gi, "").replace(/^["']|["']$/g, "").trim();
+            if (text.length > 0) return text;
+          }
+        } catch (proxyErr: any) {
+          console.warn(`Proxy transcribe SpeakingLab audio [${m}] error:`, proxyErr?.message || proxyErr);
+        }
+      }
+    }
+
+    const directKey = process.env.GEMINI_API_KEY;
+    if (directKey && directKey.trim().length > 10) {
+      const cleanMime = mimeType.split(";")[0].trim();
+      const fallbackModels = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"];
+
+      for (const modelId of fallbackModels) {
+        try {
+          const directGenAI = new GoogleGenerativeAI(directKey);
+          const model = directGenAI.getGenerativeModel({
+            model: modelId,
+            systemInstruction: systemPrompt,
+          });
+
+          const result = await model.generateContent([
+            {
+              inlineData: {
+                mimeType: cleanMime,
+                data: base64Audio,
+              },
+            },
+            `Transcribe this spoken English audio accurately.${targetText ? ` Target sentence was: "${targetText}".` : ""}`,
+          ]);
+
+          let text = result.response.text().replace(/^["']|["']$/g, "").trim();
+          if (text && text.length > 0) return text;
+        } catch (sdkErr: any) {
+          console.warn(`Direct Google Gemini [${modelId}] transcribe SpeakingLab error:`, sdkErr?.message || sdkErr);
+        }
+      }
+    }
+
+    return "";
+  }
+
   static async evaluateSpeakingSelfIntro(transcript: string): Promise<any> {
     const systemPrompt = `You are Mr. Khoirul, personal English tutor & CEFR Speaking Evaluator at EDDY'S AI.
 Your task is to analyze the student's spoken self-introduction based on official CEFR descriptors and calibration anchors.

@@ -43,7 +43,12 @@ export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
   .post(
     "/modules/:id/submit",
     async ({ params, body }) => {
-      return await curriculumService.submitQuiz(body.userId, params.id, body.answers);
+      return await curriculumService.submitQuiz(
+        body.userId,
+        params.id,
+        body.answers,
+        body.speakingScore
+      );
     },
     {
       params: t.Object({
@@ -52,6 +57,7 @@ export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
       body: t.Object({
         userId: t.String(),
         answers: t.Record(t.String(), t.Number()),
+        speakingScore: t.Optional(t.Number()),
       }),
     }
   )
@@ -125,6 +131,23 @@ export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
         score: t.Number(),
         missedWords: t.Optional(t.Array(t.String())),
         userId: t.Optional(t.String()),
+      }),
+    }
+  )
+  .post(
+    "/transcribe-speech",
+    async ({ body }) => {
+      return await moduleTutorService.transcribeSpeech({
+        audioBase64: body.audioBase64,
+        mimeType: body.mimeType,
+        targetText: body.targetText,
+      });
+    },
+    {
+      body: t.Object({
+        audioBase64: t.String(),
+        mimeType: t.Optional(t.String()),
+        targetText: t.Optional(t.String()),
       }),
     }
   );

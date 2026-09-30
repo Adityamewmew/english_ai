@@ -1,14 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   Mic,
   Volume2,
   Users,
   Info,
+  Loader2,
+  ChevronRight,
 } from "lucide-react";
 import { evaluateSpeechDiff, SpeechDiffResult } from "@/lib/speech-diff";
-import { SpeechRecorderCallbackOptions } from "@/hooks/use-speech-recorder";
+import { SpeechRecorderCallbackOptions, blobToBase64 } from "@/hooks/use-speech-recorder";
 import { SpeechScoreCard } from "./SpeechScoreCard";
 
 export interface RoleplayTurn {
@@ -34,6 +36,8 @@ interface SpeakingLabRoleplayProps {
   onStopStudentAudio?: () => void;
   startListening: (options: SpeechRecorderCallbackOptions) => void;
   stopListening: () => void;
+  onStageComplete?: (averageScore: number) => void;
+  onNextStage?: () => void;
 }
 
 export function SpeakingLabRoleplay({
@@ -46,6 +50,8 @@ export function SpeakingLabRoleplay({
   onStopStudentAudio,
   startListening,
   stopListening,
+  onStageComplete,
+  onNextStage,
 }: SpeakingLabRoleplayProps) {
   const defaultRole = roleplay.defaultUserRole || roleplay.roles[0] || "Reza";
   const [selectedRole, setSelectedRole] = useState<string>(defaultRole);
@@ -57,6 +63,9 @@ export function SpeakingLabRoleplay({
   const [turnTips, setTurnTips] = useState<Record<number, string>>({});
   const [loadingTips, setLoadingTips] = useState<Record<number, boolean>>({});
   const [isRecording, setIsRecording] = useState(false);
+  const [analyzingTurnIdx, setAnalyzingTurnIdx] = useState<number | null>(null);
+
+  const browserTranscriptRef = useRef<string>("");
 
   const handleSpeechResult = async (turnIdx: number, spokenText: string) => {
     const turn = roleplay.turns[turnIdx];
@@ -66,8 +75,26 @@ export function SpeakingLabRoleplay({
 
     // Evaluasi instan kata per kata
     const diff = evaluateSpeechDiff(turn.text, spokenText);
-    setTurnResults((prev) => ({ ...prev, [turnIdx]: diff }));
-    setCompletedTurns((prev) => (prev.includes(turnIdx) ? prev : [...prev, turnIdx]));
+    const updatedTurnResults = { ...turnResults, [turnIdx]: diff };
+    setTurnResults(updatedTurnResults);
+    const updatedCompletedTurns = completedTurns.includes(turnIdx)
+      ? completedTurns
+      : [...completedTurns, turnIdx];
+    setCompletedTurns(updatedCompletedTurns);
+
+    const userTurnIndices = roleplay.turns
+      .map((t, i) => (t.speaker === selectedRole ? i : -1))
+      .filter((i) => i !== -1);
+
+    const isAllUserTurnsCompleted =
+      userTurnIndices.length > 0 &&
+      userTurnIndices.every((idx) => updatedCompletedTurns.includes(idx));
+
+    if (isAllUserTurnsCompleted) {
+      const userScores = userTurnIndices.map((idx) => updatedTurnResults[idx]?.score ?? diff.score);
+      const avg = Math.round(userScores.reduce((a, b) => a + b, 0) / userScores.length);
+      onStageComplete?.(avg);
+    }
 
     // Async evaluasi ke backend untuk tips fonetik & RAG memory
     if (moduleId && spokenText.trim().length > 0) {
@@ -101,15 +128,51 @@ export function SpeakingLabRoleplay({
       stopListening();
       setIsRecording(false);
     } else {
+      const turn = roleplay.turns[turnIdx];
       setIsRecording(true);
       setActiveTurnIdx(turnIdx);
+      browserTranscriptRef.current = "";
+
       startListening({
         onTextResult: (spokenText) => {
-          setIsRecording(false);
-          handleSpeechResult(turnIdx, spokenText);
+          browserTranscriptRef.current = spokenText;
         },
-        onAudioResult: (audioUrl) => {
+        onAudioResult: async (audioUrl, audioBlob) => {
           setStudentTurnAudioUrls((prev) => ({ ...prev, [turnIdx]: audioUrl }));
+          setIsRecording(false);
+
+          let resolvedTranscript = browserTranscriptRef.current;
+
+          if (audioBlob && audioBlob.size > 0 && turn) {
+            try {
+              setAnalyzingTurnIdx(turnIdx);
+              const base64Audio = await blobToBase64(audioBlob);
+              const res = await fetch("/api/curriculum/transcribe-speech", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  audioBase64: base64Audio,
+                  mimeType: audioBlob.type,
+                  targetText: turn.text,
+                }),
+              });
+
+              if (res.ok) {
+                const data = await res.json();
+                if (data.success && data.data?.transcript && data.data.transcript.trim().length > 0) {
+                  resolvedTranscript = data.data.transcript.trim();
+                }
+              }
+            } catch (err) {
+              console.warn("AI Audio STT roleplay error, fallback to Web Speech:", err);
+            } finally {
+              setAnalyzingTurnIdx(null);
+            }
+          }
+
+          if (resolvedTranscript.trim().length > 0) {
+            handleSpeechResult(turnIdx, resolvedTranscript);
+          }
         },
         onEnd: () => setIsRecording(false),
       });
@@ -248,23 +311,35 @@ export function SpeakingLabRoleplay({
                       </span>
                       <button
                         type="button"
+                        disabled={analyzingTurnIdx === idx}
                         onClick={() => handleToggleMic(idx)}
                         className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-[11px] font-bold transition-all ${
-                          isRecording && activeTurnIdx === idx
+                          analyzingTurnIdx === idx
+                            ? "bg-indigo-600 text-white cursor-wait opacity-90"
+                            : isRecording && activeTurnIdx === idx
                             ? "bg-rose-500 text-white animate-pulse"
                             : isTurnCompleted
                             ? "bg-white text-blue-700 hover:bg-blue-50"
                             : "bg-white/20 text-white hover:bg-white/30"
                         }`}
                       >
-                        <Mic className="w-3 h-3" />
-                        <span>
-                          {isRecording && activeTurnIdx === idx
-                            ? "Merekam..."
-                            : isTurnCompleted
-                            ? "Bicara Lagi"
-                            : "Bicara Sekarang"}
-                        </span>
+                        {analyzingTurnIdx === idx ? (
+                          <>
+                            <Loader2 className="w-3 h-3 animate-spin" />
+                            <span>Menganalisis...</span>
+                          </>
+                        ) : (
+                          <>
+                            <Mic className="w-3 h-3" />
+                            <span>
+                              {isRecording && activeTurnIdx === idx
+                                ? "Merekam..."
+                                : isTurnCompleted
+                                ? "Bicara Lagi"
+                                : "Bicara Sekarang"}
+                            </span>
+                          </>
+                        )}
                       </button>
                     </div>
                   )}
@@ -303,6 +378,24 @@ export function SpeakingLabRoleplay({
           );
         })}
       </div>
+
+      {roleplay.turns.filter((t) => t.speaker === selectedRole).length > 0 &&
+        roleplay.turns
+          .map((t, i) => (t.speaker === selectedRole ? i : -1))
+          .filter((i) => i !== -1)
+          .every((i) => completedTurns.includes(i)) &&
+        onNextStage && (
+          <div className="flex justify-end pt-3">
+            <button
+              type="button"
+              onClick={onNextStage}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-md animate-pulse"
+            >
+              <span>Lanjut ke Tantangan Spontan</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+        )}
     </div>
   );
 }

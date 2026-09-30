@@ -1,15 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   Mic,
   MicOff,
   Volume2,
   ChevronRight,
   Info,
+  Loader2,
 } from "lucide-react";
 import { evaluateSpeechDiff, SpeechDiffResult } from "@/lib/speech-diff";
-import { SpeechRecorderCallbackOptions } from "@/hooks/use-speech-recorder";
+import { SpeechRecorderCallbackOptions, blobToBase64 } from "@/hooks/use-speech-recorder";
 import { SpeechScoreCard } from "./SpeechScoreCard";
 
 export interface DrillItem {
@@ -29,6 +30,8 @@ interface SpeakingLabDrillProps {
   onStopStudentAudio?: () => void;
   startListening: (options: SpeechRecorderCallbackOptions) => void;
   stopListening: () => void;
+  onStageComplete?: (averageScore: number) => void;
+  onNextStage?: () => void;
 }
 
 export function SpeakingLabDrill({
@@ -41,6 +44,8 @@ export function SpeakingLabDrill({
   onStopStudentAudio,
   startListening,
   stopListening,
+  onStageComplete,
+  onNextStage,
 }: SpeakingLabDrillProps) {
   const [activeDrillIdx, setActiveDrillIdx] = useState(0);
   const [drillTranscripts, setDrillTranscripts] = useState<Record<number, string>>({});
@@ -49,6 +54,9 @@ export function SpeakingLabDrill({
   const [drillTips, setDrillTips] = useState<Record<number, string>>({});
   const [loadingTips, setLoadingTips] = useState<Record<number, boolean>>({});
   const [isDrillRecording, setIsDrillRecording] = useState(false);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+
+  const browserTranscriptRef = useRef<string>("");
 
   const currentDrill = drills[activeDrillIdx];
   const drillResultText = drillTranscripts[activeDrillIdx] || "";
@@ -64,7 +72,15 @@ export function SpeakingLabDrill({
 
     // 1. Evaluasi instan visual kata per kata (0ms latency)
     const diff = evaluateSpeechDiff(currentDrill.targetText, spokenText);
-    setDrillResults((prev) => ({ ...prev, [activeDrillIdx]: diff }));
+    const updatedResults = { ...drillResults, [activeDrillIdx]: diff };
+    setDrillResults(updatedResults);
+
+    const isAllRecorded = drills.length > 0 && drills.every((_, i) => Boolean(updatedResults[i]));
+    if (isAllRecorded) {
+      const totalScore = drills.reduce((sum, _, i) => sum + (updatedResults[i]?.score || 70), 0);
+      const avg = Math.round(totalScore / drills.length);
+      onStageComplete?.(avg);
+    }
 
     // 2. Jika ada moduleId, panggil async backend untuk tips fonetik & simpan RAG memory
     if (moduleId && spokenText.trim().length > 0) {
@@ -100,15 +116,52 @@ export function SpeakingLabDrill({
       setIsDrillRecording(false);
     } else {
       setIsDrillRecording(true);
+      browserTranscriptRef.current = "";
       startListening({
         onTextResult: (text) => {
-          setIsDrillRecording(false);
-          handleSpeechResult(text);
+          browserTranscriptRef.current = text;
         },
-        onAudioResult: (audioUrl) => {
+        onAudioResult: async (audioUrl, audioBlob) => {
           setStudentAudioUrls((prev) => ({ ...prev, [activeDrillIdx]: audioUrl }));
+          setIsDrillRecording(false);
+
+          let resolvedTranscript = browserTranscriptRef.current;
+
+          // Kirim audioBlob ke AI Audio STT (Gemini) untuk akurasi artikulasi maksimal
+          if (audioBlob && audioBlob.size > 0 && currentDrill) {
+            try {
+              setIsAnalyzing(true);
+              const base64Audio = await blobToBase64(audioBlob);
+              const res = await fetch("/api/curriculum/transcribe-speech", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  audioBase64: base64Audio,
+                  mimeType: audioBlob.type,
+                  targetText: currentDrill.targetText,
+                }),
+              });
+
+              if (res.ok) {
+                const data = await res.json();
+                if (data.success && data.data?.transcript && data.data.transcript.trim().length > 0) {
+                  resolvedTranscript = data.data.transcript.trim();
+                }
+              }
+            } catch (err) {
+              console.warn("AI Audio STT gagal/timeout, fallback ke Web Speech:", err);
+            } finally {
+              setIsAnalyzing(false);
+            }
+          }
+
+          if (resolvedTranscript.trim().length > 0) {
+            handleSpeechResult(resolvedTranscript);
+          }
         },
-        onEnd: () => setIsDrillRecording(false),
+        onEnd: () => {
+          setIsDrillRecording(false);
+        },
       });
     }
   };
@@ -203,14 +256,22 @@ export function SpeakingLabDrill({
 
           <button
             type="button"
+            disabled={isAnalyzing}
             onClick={handleToggleDrillMic}
             className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-white transition-all shadow-sm ${
-              isDrillRecording
+              isAnalyzing
+                ? "bg-indigo-600 opacity-90 cursor-wait"
+                : isDrillRecording
                 ? "bg-rose-600 animate-pulse hover:bg-rose-700"
                 : "bg-blue-600 hover:bg-blue-700"
             }`}
           >
-            {isDrillRecording ? (
+            {isAnalyzing ? (
+              <>
+                <Loader2 className="w-4 h-4 animate-spin" />
+                <span>Menganalisis artikulasi...</span>
+              </>
+            ) : isDrillRecording ? (
               <>
                 <MicOff className="w-4 h-4" />
                 <span>Mendengarkan... (Klik untuk Berhenti)</span>
@@ -247,16 +308,27 @@ export function SpeakingLabDrill({
       </div>
 
       {/* Navigation Buttons */}
-      <div className="flex justify-end gap-2">
+      <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
         <button
           type="button"
           disabled={activeDrillIdx === drills.length - 1}
           onClick={() => setActiveDrillIdx((prev) => Math.min(drills.length - 1, prev + 1))}
-          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 disabled:opacity-40 text-white text-xs font-semibold transition-all shadow-sm"
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 disabled:opacity-40 text-slate-800 dark:text-slate-200 text-xs font-semibold transition-all"
         >
           <span>Kalimat Berikutnya</span>
           <ChevronRight className="w-3.5 h-3.5" />
         </button>
+
+        {drills.length > 0 && drills.every((_, i) => Boolean(drillResults[i])) && onNextStage && (
+          <button
+            type="button"
+            onClick={onNextStage}
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-md animate-pulse"
+          >
+            <span>Lanjut ke Simulasi Peran</span>
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        )}
       </div>
     </div>
   );

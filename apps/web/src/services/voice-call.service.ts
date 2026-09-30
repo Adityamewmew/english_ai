@@ -158,32 +158,35 @@ export class VoiceCallService {
     topic: string;
     durationSeconds: number;
     transcript?: string;
+    skipEvaluation?: boolean;
   }): Promise<ServiceResult<any>> {
     try {
       let realEvaluation = null;
-      try {
-        const ragEvalContext = await ragService.buildEvaluationContext({
-          topic: payload.topic,
-        });
+      if (!payload.skipEvaluation) {
+        try {
+          const ragEvalContext = await ragService.buildEvaluationContext({
+            topic: payload.topic,
+          });
 
-        realEvaluation = await GeminiService.evaluateConversation(
-          payload.topic,
-          payload.transcript || "General speaking practice on " + payload.topic,
-          payload.durationSeconds,
-          ragEvalContext
-        );
-      } catch (aiErr) {
-        console.warn("AI Conversation Evaluation fallback:", aiErr);
-        realEvaluation = {
-          fluency: 4.5,
-          lexical: 4.0,
-          grammar: 4.0,
-          pronunciation: 4.5,
-          overallBand: 4.5,
-          cefr: "A2",
-          feedback_id: "Percakapan sudah baik dan berani! Terus latih kelancaran dan pengucapan.",
-          feedback_en: "Good effort in expressing your thoughts! Keep practicing to speak with more ease.",
-        };
+          realEvaluation = await GeminiService.evaluateConversation(
+            payload.topic,
+            payload.transcript || "General speaking practice on " + payload.topic,
+            payload.durationSeconds,
+            ragEvalContext
+          );
+        } catch (aiErr) {
+          console.warn("AI Conversation Evaluation fallback:", aiErr);
+          realEvaluation = {
+            fluency: 4.5,
+            lexical: 4.0,
+            grammar: 4.0,
+            pronunciation: 4.5,
+            overallBand: 4.5,
+            cefr: "A2",
+            feedback_id: "Percakapan sudah baik dan berani! Terus latih kelancaran dan pengucapan.",
+            feedback_en: "Good effort in expressing your thoughts! Keep practicing to speak with more ease.",
+          };
+        }
       }
 
       const sessionId = crypto.randomUUID();

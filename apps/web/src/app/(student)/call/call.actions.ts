@@ -99,6 +99,7 @@ export async function processAndSaveCallSession(payload: {
   durationSeconds: number;
   transcript: string;
   moduleId?: string;
+  skipEvaluation?: boolean;
 }) {
   const session = await getSession();
   const userId = session?.userId;

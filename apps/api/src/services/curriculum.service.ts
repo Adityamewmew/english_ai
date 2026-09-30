@@ -212,7 +212,8 @@ export class CurriculumService {
   async submitQuiz(
     userId: string,
     moduleId: string,
-    answers: Record<string, number>
+    answers: Record<string, number>,
+    speakingScore?: number
   ): Promise<ServiceResult<any>> {
     try {
       const [module] = await db
@@ -258,8 +259,14 @@ export class CurriculumService {
         });
       }
 
-      const score = Math.round((correctCount / questions.length) * 100);
-      const passed = score >= (module.passingScore || 70);
+      const quizScore = Math.round((correctCount / questions.length) * 100);
+      let finalScore = quizScore;
+      if (typeof speakingScore === "number" && !isNaN(speakingScore)) {
+        // Bobot: 60% Nilai Praktikum Berbicara + 40% Nilai Kuis Evaluasi
+        finalScore = Math.round((speakingScore * 0.6) + (quizScore * 0.4));
+      }
+
+      const passed = finalScore >= (module.passingScore || 70);
 
       // Simpan progress jika lulus atau perbarui skor
       const [existing] = await db
@@ -276,7 +283,7 @@ export class CurriculumService {
           .update(userModuleProgress)
           .set({
             status,
-            score: Math.max(existing.score || 0, score),
+            score: Math.max(existing.score || 0, finalScore),
             completedAt,
             updatedAt: new Date(),
           })
@@ -287,7 +294,7 @@ export class CurriculumService {
           userId,
           moduleId,
           status,
-          score,
+          score: finalScore,
           completedAt,
         });
       }
@@ -308,11 +315,11 @@ export class CurriculumService {
           modMems[moduleId] = {
             ...prevMem,
             attempts: (prevMem.attempts || 0) + 1,
-            lastScore: score,
+            lastScore: finalScore,
             lastPracticedAt: new Date().toISOString(),
             summary: passed
-              ? `Lulus evaluasi modul dengan skor ${score}%. Menguasai materi inti.`
-              : `Mencoba kuis modul dengan skor ${score}%. Perlu review tambahan.`,
+              ? `Lulus evaluasi modul dengan skor ${finalScore}%. Menguasai materi inti.`
+              : `Mencoba kuis modul dengan skor ${finalScore}%. Perlu review tambahan.`,
           };
 
           await db
@@ -326,7 +333,9 @@ export class CurriculumService {
 
       return Response.buildSuccess({
         moduleId,
-        score,
+        score: finalScore,
+        quizScore,
+        speakingScore: speakingScore ?? null,
         passingScore: module.passingScore || 70,
         passed,
         correctCount,

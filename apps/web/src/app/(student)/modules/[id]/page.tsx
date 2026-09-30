@@ -10,6 +10,7 @@ import {
   ChevronLeft,
   ChevronRight,
   PhoneCall,
+  Lock,
 } from "lucide-react";
 import {
   SectionTheory,
@@ -21,6 +22,10 @@ import {
   ModuleVoiceDock,
 } from "@/components/modules";
 import { useModuleTutor } from "@/hooks/use-module-tutor";
+import {
+  getModuleDetailAction,
+  submitModuleQuizAction,
+} from "../modules.actions";
 
 export default function ModuleDetailPage() {
   const params = useParams();
@@ -34,12 +39,19 @@ export default function ModuleDetailPage() {
   const [studentName, setStudentName] = useState("");
   const [userId, setUserId] = useState("");
 
+  // Speaking completion & score state for 60/40 hybrid evaluation
+  const [isSpeakingComplete, setIsSpeakingComplete] = useState(false);
+  const [speakingScore, setSpeakingScore] = useState<number>(85);
+  const [gatingNotice, setGatingNotice] = useState<string | null>(null);
+
   // Quiz state
   const [userAnswers, setUserAnswers] = useState<Record<string, number>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [quizResult, setQuizResult] = useState<{
     submitted: boolean;
     score: number | null;
+    quizScore?: number;
+    speakingScore?: number | null;
     passed: boolean;
     results: QuestionResult[];
   }>({
@@ -61,26 +73,21 @@ export default function ModuleDetailPage() {
     async function loadData() {
       try {
         setLoading(true);
-        const sessRes = await fetch("/api/user/profile").catch(() => null);
-        let uid = "";
-        if (sessRes && sessRes.ok) {
-          const sessData = await sessRes.json();
-          uid = sessData?.data?.id || "";
-          setUserId(uid);
-          setStudentName(sessData?.data?.name || "");
-        }
+        const res = await getModuleDetailAction(moduleId);
 
-        const res = await fetch(`/api/curriculum/modules/${moduleId}?userId=${uid}`);
-        const json = await res.json();
+        if (res.success && res.data) {
+          setModuleData(res.data.module);
+          setSections(res.data.sections || []);
+          if (res.user) {
+            setUserId(res.user.id);
+            setStudentName(res.user.name);
+          }
 
-        if (json.success && json.data) {
-          setModuleData(json.data.module);
-          setSections(json.data.sections || []);
-
-          if (json.data.userProgress?.status === "completed") {
+          if (res.data.userProgress?.status === "completed") {
+            setIsSpeakingComplete(true);
             setQuizResult({
               submitted: true,
-              score: json.data.userProgress.score,
+              score: res.data.userProgress.score,
               passed: true,
               results: [],
             });
@@ -108,30 +115,19 @@ export default function ModuleDetailPage() {
   const handleSubmitQuiz = async () => {
     try {
       setIsSubmitting(true);
-      const sessRes = await fetch("/api/user/profile").catch(() => null);
-      let userId = "";
-      if (sessRes && sessRes.ok) {
-        const sessData = await sessRes.json();
-        userId = sessData?.data?.id || "";
-      }
+      const res = await submitModuleQuizAction(moduleId, userAnswers, speakingScore);
 
-      const res = await fetch(`/api/curriculum/modules/${moduleId}/submit`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          userId,
-          answers: userAnswers,
-        }),
-      });
-
-      const json = await res.json();
-      if (json.success && json.data) {
+      if (res.success && res.data) {
         setQuizResult({
           submitted: true,
-          score: json.data.score,
-          passed: json.data.passed,
-          results: json.data.results || [],
+          score: res.data.score,
+          quizScore: res.data.quizScore,
+          speakingScore: res.data.speakingScore,
+          passed: res.data.passed,
+          results: res.data.results || [],
         });
+      } else {
+        alert(res.error || "Gagal mengirim kuis");
       }
     } catch (err) {
       console.error("Gagal mengirim kuis:", err);
@@ -233,14 +229,26 @@ export default function ModuleDetailPage() {
             <div className="flex items-center gap-2 overflow-x-auto py-2.5 scrollbar-none">
               {sections.map((sec, idx) => {
                 const isActive = activeSectionIdx === idx;
+                const isLocked = sec.sectionType === "quiz" && !isSpeakingComplete;
                 return (
                   <button
                     key={sec.id}
                     type="button"
-                    onClick={() => setActiveSectionIdx(idx)}
+                    onClick={() => {
+                      if (isLocked) {
+                        setGatingNotice(
+                          "Selesaikan seluruh tahapan Praktikum Berbicara (Drill, Simulasi Peran, dan Tantangan) sebelum membuka Kuis Evaluasi."
+                        );
+                        return;
+                      }
+                      setGatingNotice(null);
+                      setActiveSectionIdx(idx);
+                    }}
                     className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
                       isActive
                         ? "bg-blue-600 text-white shadow-sm"
+                        : isLocked
+                        ? "text-slate-400 dark:text-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800/40"
                         : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
                     }`}
                   >
@@ -248,12 +256,15 @@ export default function ModuleDetailPage() {
                       className={`w-4 h-4 rounded-full text-[10px] font-bold flex items-center justify-center ${
                         isActive
                           ? "bg-white/20 text-white"
+                          : isLocked
+                          ? "bg-slate-100 dark:bg-slate-800 text-slate-400"
                           : "bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
                       }`}
                     >
                       {idx + 1}
                     </span>
                     <span>{sec.title}</span>
+                    {isLocked && <Lock className="w-3.5 h-3.5 text-slate-400" />}
                   </button>
                 );
               })}
@@ -263,6 +274,22 @@ export default function ModuleDetailPage() {
 
         {/* Section Main View */}
         <main className="max-w-4xl mx-auto px-4 py-8 pb-36">
+          {gatingNotice && (
+            <div className="mb-6 p-4 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-xs flex items-center justify-between gap-3 animate-in fade-in">
+              <div className="flex items-center gap-2.5">
+                <Lock className="w-4 h-4 flex-shrink-0 text-amber-600 dark:text-amber-400" />
+                <span className="font-medium">{gatingNotice}</span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setGatingNotice(null)}
+                className="text-amber-700 dark:text-amber-300 font-bold hover:underline flex-shrink-0"
+              >
+                Tutup
+              </button>
+            </div>
+          )}
+
           {currentSection && (
             <div>
               {currentSection.sectionType === "theory" && (
@@ -298,6 +325,19 @@ export default function ModuleDetailPage() {
                   moduleId={moduleId}
                   userId={userId}
                   onPlayAudio={tutor.playTutorAudio}
+                  onSpeakingComplete={(score, isComplete) => {
+                    setSpeakingScore(score);
+                    setIsSpeakingComplete(isComplete);
+                    setGatingNotice(null);
+                  }}
+                  onAdvanceToQuiz={() => {
+                    const quizIdx = sections.findIndex((s) => s.sectionType === "quiz");
+                    if (quizIdx !== -1) {
+                      setActiveSectionIdx(quizIdx);
+                    } else {
+                      setActiveSectionIdx((prev) => Math.min(sections.length - 1, prev + 1));
+                    }
+                  }}
                 />
               )}
 
@@ -310,6 +350,8 @@ export default function ModuleDetailPage() {
                   isSubmitted={quizResult.submitted}
                   isSubmitting={isSubmitting}
                   score={quizResult.score}
+                  quizScore={quizResult.quizScore}
+                  speakingScore={quizResult.speakingScore ?? (isSpeakingComplete ? speakingScore : null)}
                   passed={quizResult.passed}
                   results={quizResult.results}
                   isExam={moduleData.isExam}
@@ -348,7 +390,10 @@ export default function ModuleDetailPage() {
           <button
             type="button"
             disabled={activeSectionIdx === 0}
-            onClick={() => setActiveSectionIdx((prev) => Math.max(0, prev - 1))}
+            onClick={() => {
+              setGatingNotice(null);
+              setActiveSectionIdx((prev) => Math.max(0, prev - 1));
+            }}
             className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
               activeSectionIdx === 0
                 ? "text-slate-300 dark:text-slate-700 cursor-not-allowed"
@@ -366,7 +411,20 @@ export default function ModuleDetailPage() {
           <button
             type="button"
             disabled={isLastSection}
-            onClick={() => setActiveSectionIdx((prev) => Math.min(sections.length - 1, prev + 1))}
+            onClick={() => {
+              const nextIdx = activeSectionIdx + 1;
+              if (nextIdx < sections.length) {
+                const nextSec = sections[nextIdx];
+                if (nextSec.sectionType === "quiz" && !isSpeakingComplete) {
+                  setGatingNotice(
+                    "Selesaikan seluruh tahapan Praktikum Berbicara (Drill, Simulasi Peran, dan Tantangan) sebelum membuka Kuis Evaluasi."
+                  );
+                  return;
+                }
+                setGatingNotice(null);
+                setActiveSectionIdx(nextIdx);
+              }
+            }}
             className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
               isLastSection
                 ? "text-slate-300 dark:text-slate-700 cursor-not-allowed"

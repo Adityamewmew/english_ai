@@ -30,6 +30,14 @@ function cleanWord(str: string): string {
 }
 
 /**
+ * Bersihkan tanda baca di awal/akhir kata untuk tampilan visual chip (misal: "together." -> "together")
+ */
+export function cleanDisplayWord(str: string): string {
+  const cleaned = str.replace(/^[^\w']+|[^\w']+$/g, "").trim();
+  return cleaned.length > 0 ? cleaned : str;
+}
+
+/**
  * Levenshtein distance sederhana untuk mengukur kemiripan dua kata
  */
 function levenshteinDistance(a: string, b: string): number {
@@ -129,7 +137,7 @@ export function evaluateSpeechDiff(targetSentence: string, spokenTranscript: str
       // Exact / High Match
       spokenMatched.add(bestIndex);
       evaluatedWords.push({
-        word: rawTarget,
+        word: cleanDisplayWord(rawTarget),
         status: "matched",
         spokenWord: spokenTokens[bestIndex],
       });
@@ -138,7 +146,7 @@ export function evaluateSpeechDiff(targetSentence: string, spokenTranscript: str
       // Close / Minor Miss
       spokenMatched.add(bestIndex);
       evaluatedWords.push({
-        word: rawTarget,
+        word: cleanDisplayWord(rawTarget),
         status: "similar",
         spokenWord: spokenTokens[bestIndex],
       });
@@ -147,7 +155,7 @@ export function evaluateSpeechDiff(targetSentence: string, spokenTranscript: str
     } else {
       // Missing
       evaluatedWords.push({
-        word: rawTarget,
+        word: cleanDisplayWord(rawTarget),
         status: "missing",
       });
       missedWords.push(cleanT);

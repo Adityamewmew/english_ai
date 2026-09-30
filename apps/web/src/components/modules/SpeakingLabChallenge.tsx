@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   Mic,
   MicOff,
@@ -10,9 +10,11 @@ import {
   HelpCircle,
   Award,
   Square,
+  Loader2,
+  ChevronRight,
 } from "lucide-react";
 import { evaluateSpeechDiff, SpeechDiffResult } from "@/lib/speech-diff";
-import { SpeechRecorderCallbackOptions } from "@/hooks/use-speech-recorder";
+import { SpeechRecorderCallbackOptions, blobToBase64 } from "@/hooks/use-speech-recorder";
 import { SpeechScoreCard } from "./SpeechScoreCard";
 
 export interface ChallengeData {
@@ -31,6 +33,8 @@ interface SpeakingLabChallengeProps {
   onStopStudentAudio?: () => void;
   startListening: (options: SpeechRecorderCallbackOptions) => void;
   stopListening: () => void;
+  onStageComplete?: (score: number) => void;
+  onNextStage?: () => void;
 }
 
 export function SpeakingLabChallenge({
@@ -43,14 +47,19 @@ export function SpeakingLabChallenge({
   onStopStudentAudio,
   startListening,
   stopListening,
+  onStageComplete,
+  onNextStage,
 }: SpeakingLabChallengeProps) {
   const [showHint, setShowHint] = useState(false);
   const [challengeTranscript, setChallengeTranscript] = useState("");
   const [studentAudioUrl, setStudentAudioUrl] = useState<string | null>(null);
   const [isRecording, setIsRecording] = useState(false);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [challengeFeedback, setChallengeFeedback] = useState<string | null>(null);
   const [diffResult, setDiffResult] = useState<SpeechDiffResult | null>(null);
   const [isEvaluating, setIsEvaluating] = useState(false);
+
+  const browserTranscriptRef = useRef<string>("");
 
   const isPlayingThisAudio = currentlyPlayingUrl === studentAudioUrl;
 
@@ -62,14 +71,49 @@ export function SpeakingLabChallenge({
       setIsRecording(true);
       setChallengeFeedback(null);
       setDiffResult(null);
+      browserTranscriptRef.current = "";
+
       startListening({
         onTextResult: (text) => {
-          setChallengeTranscript(text);
-          setIsRecording(false);
-          evaluateChallengeSpoken(text);
+          browserTranscriptRef.current = text;
         },
-        onAudioResult: (audioUrl) => {
+        onAudioResult: async (audioUrl, audioBlob) => {
           setStudentAudioUrl(audioUrl);
+          setIsRecording(false);
+
+          let resolvedTranscript = browserTranscriptRef.current;
+
+          if (audioBlob && audioBlob.size > 0) {
+            try {
+              setIsAnalyzing(true);
+              const base64Audio = await blobToBase64(audioBlob);
+              const res = await fetch("/api/curriculum/transcribe-speech", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  audioBase64: base64Audio,
+                  mimeType: audioBlob.type,
+                  targetText: challenge.exampleAnswer || undefined,
+                }),
+              });
+
+              if (res.ok) {
+                const data = await res.json();
+                if (data.success && data.data?.transcript && data.data.transcript.trim().length > 0) {
+                  resolvedTranscript = data.data.transcript.trim();
+                }
+              }
+            } catch (err) {
+              console.warn("AI Audio STT challenge error, fallback to Web Speech:", err);
+            } finally {
+              setIsAnalyzing(false);
+            }
+          }
+
+          if (resolvedTranscript.trim().length > 0) {
+            setChallengeTranscript(resolvedTranscript);
+            evaluateChallengeSpoken(resolvedTranscript);
+          }
         },
         onEnd: () => setIsRecording(false),
       });
@@ -87,6 +131,11 @@ export function SpeakingLabChallenge({
 
     try {
       setIsEvaluating(true);
+      const calculatedScore = challenge.exampleAnswer
+        ? evaluateSpeechDiff(challenge.exampleAnswer, text).score
+        : 85;
+      onStageComplete?.(calculatedScore);
+
       const targetMod = moduleId || "A1-M01";
       const res = await fetch(`/api/curriculum/modules/${targetMod}/tutor/chat`, {
         method: "POST",
@@ -163,14 +212,19 @@ export function SpeakingLabChallenge({
         <div className="pt-2 flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 space-y-3">
           <button
             type="button"
+            disabled={isAnalyzing}
             onClick={handleToggleChallengeMic}
             className={`w-16 h-16 rounded-full flex items-center justify-center text-white transition-all shadow-lg ${
-              isRecording
+              isAnalyzing
+                ? "bg-indigo-600 opacity-90 cursor-wait"
+                : isRecording
                 ? "bg-rose-600 scale-110 animate-ping ring-4 ring-rose-300"
                 : "bg-blue-600 hover:bg-blue-700 hover:scale-105"
             }`}
           >
-            {isRecording ? (
+            {isAnalyzing ? (
+              <Loader2 className="w-6 h-6 animate-spin" />
+            ) : isRecording ? (
               <MicOff className="w-6 h-6" />
             ) : (
               <Mic className="w-6 h-6" />
@@ -178,7 +232,9 @@ export function SpeakingLabChallenge({
           </button>
 
           <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
-            {isRecording
+            {isAnalyzing
+              ? "Menganalisis Artikulasimu..."
+              : isRecording
               ? "Sedang Merekam Suaramu... (Klik untuk Selesai)"
               : challengeTranscript
               ? "Klik untuk Merekam Ulang"
@@ -280,6 +336,19 @@ export function SpeakingLabChallenge({
             <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-medium">
               {challengeFeedback}
             </p>
+          </div>
+        )}
+
+        {challengeTranscript && onNextStage && (
+          <div className="flex justify-end pt-3">
+            <button
+              type="button"
+              onClick={onNextStage}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-md animate-pulse"
+            >
+              <span>Lanjut ke Kuis Evaluasi</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
           </div>
         )}
       </div>
