@@ -27,7 +27,7 @@ async function runSeed() {
           vocab: m.vocab,
           tests: m.tests,
           lessonsCount: m.lessons || 1,
-        })
+        } as any)
         .onConflictDoUpdate({
           target: curriculumModules.id,
           set: { title: m.title, objective: m.objective },

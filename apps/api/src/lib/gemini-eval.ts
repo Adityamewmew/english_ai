@@ -115,7 +115,7 @@ YOUR TASK:
           });
 
           if (res.ok) {
-            const data = await res.json();
+            const data = (await res.json()) as any;
             const rawContent = data.choices?.[0]?.message?.content;
             let text = "";
             if (typeof rawContent === "string") {

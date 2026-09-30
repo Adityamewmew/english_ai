@@ -82,6 +82,8 @@ export default async function ModulesRoadmapPage() {
                 completedCount={lvl.completedModules}
                 totalCount={lvl.totalModules}
                 progressPercent={lvl.progressPercent}
+                isUnlocked={lvl.isUnlocked}
+                lockReason={lvl.lockReason}
               />
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

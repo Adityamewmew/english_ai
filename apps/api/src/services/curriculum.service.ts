@@ -53,7 +53,17 @@ export class CurriculumService {
 
       // 3. Ambil riwayat progress user jika userId diberikan
       let userProgressMap: Record<string, { status: string; score: number | null; completedAt: any }> = {};
+      let userCefr: string = "A1";
+
       if (userId) {
+        const [u] = await db
+          .select({ currentCefr: users.currentCefr })
+          .from(users)
+          .where(eq(users.id, userId))
+          .limit(1);
+
+        if (u?.currentCefr) userCefr = u.currentCefr;
+
         const progresses = await db
           .select()
           .from(userModuleProgress)
@@ -68,42 +78,58 @@ export class CurriculumService {
         }
       }
 
-      // 4. Hitung unlock status per modul secara sekuensial
-      let previousCompleted = true; // Modul pertama selalu terbuka
-      const enrichedModules = modules.map((m, index) => {
-        const progress = userProgressMap[m.id];
-        let status: "locked" | "unlocked" | "completed" = "locked";
-        let score: number | null = null;
+      // Evaluasi unlock level:
+      // A1.1 (orderIndex 1) selalu terbuka.
+      // A1.2 terbuka jika A1-M13 completed dengan skor >= 75 OR placement test >= A1.2.
+      const a1_1Passed =
+        userProgressMap["A1-M13"]?.status === "completed" &&
+        (userProgressMap["A1-M13"]?.score ?? 0) >= 75;
+      const cefrHigherThanA1_1 = ["A1.2", "A2", "B1", "B2", "C1", "C2"].some((c) =>
+        userCefr.toUpperCase().includes(c)
+      );
+      const a1_2Unlocked = a1_1Passed || cefrHigherThanA1_1;
 
-        if (progress && progress.status === "completed") {
-          status = "completed";
-          score = progress.score;
-        } else if (index === 0 || previousCompleted) {
-          status = "unlocked";
-        } else {
-          status = "locked";
-        }
-
-        // Modul berikutnya hanya unlock jika modul ini sudah completed
-        previousCompleted = status === "completed";
-
-        return {
-          ...m,
-          status,
-          score,
-          completedAt: progress?.completedAt || null,
-        };
-      });
-
-      // 5. Kelompokkan modul ke dalam level masing-masing
+      // 4. Enrich modules per level secara sekuensial
       const result = levels.map((lvl) => {
-        const lvlModules = enrichedModules.filter((m) => m.levelId === lvl.id);
-        const completedCount = lvlModules.filter((m) => m.status === "completed").length;
-        const totalCount = lvlModules.length;
+        const lvlModules = modules.filter((m) => m.levelId === lvl.id);
+        const isLevelUnlocked = lvl.id === "A1.1" ? true : lvl.id === "A1.2" ? a1_2Unlocked : false;
+
+        let prevCompletedInLevel = isLevelUnlocked;
+        const enrichedLvlModules = lvlModules.map((m, idx) => {
+          const progress = userProgressMap[m.id];
+          let status: "locked" | "unlocked" | "completed" = "locked";
+          let score: number | null = null;
+
+          if (progress && progress.status === "completed") {
+            status = "completed";
+            score = progress.score;
+          } else if (isLevelUnlocked && (idx === 0 || prevCompletedInLevel)) {
+            status = "unlocked";
+          } else {
+            status = "locked";
+          }
+
+          // Modul berikutnya di level ini hanya unlock jika modul ini sudah completed
+          prevCompletedInLevel = status === "completed";
+
+          return {
+            ...m,
+            status,
+            score,
+            completedAt: progress?.completedAt || null,
+          };
+        });
+
+        const completedCount = enrichedLvlModules.filter((m) => m.status === "completed").length;
+        const totalCount = enrichedLvlModules.length;
 
         return {
           ...lvl,
-          modules: lvlModules,
+          isUnlocked: isLevelUnlocked,
+          lockReason: !isLevelUnlocked
+            ? "Selesaikan Ujian Akhir Level A1.1 (skor min 75%) atau Placement Test untuk membuka level ini."
+            : null,
+          modules: enrichedLvlModules,
           totalModules: totalCount,
           completedModules: completedCount,
           progressPercent: totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0,
