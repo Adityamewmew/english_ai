@@ -5,9 +5,10 @@
     "apps/*"
   ],
   "scripts": {
+    "clean": "bun -e \"import fs from 'fs'; fs.rmSync('apps/web/.next', { recursive: true, force: true })\"",
     "dev:api": "bun --filter api dev",
     "dev:web": "bun --filter web dev",
-    "dev": "bun --filter \"*\" --parallel dev",
+    "dev": "bun run clean && bun --filter \"*\" --parallel dev",
     "build": "bun --filter web build",
     "db:push": "bun --filter api db:push",
     "db:seed": "bun --filter api db:seed"
