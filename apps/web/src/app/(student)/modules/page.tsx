@@ -2,16 +2,27 @@ import React from "react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/session";
-import { LevelHeader, ModuleCard } from "@/components/modules";
+import {
+  LevelHeader,
+  ModuleCard,
+  LevelCompletionCard,
+  LevelLockedCard,
+  LevelTabSelector,
+} from "@/components/modules";
 import { ArrowLeft, BookOpen, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default async function ModulesRoadmapPage() {
+export default async function ModulesRoadmapPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ level?: string }>;
+}) {
   const session = await getSession();
   if (!session) {
     redirect("/login");
   }
 
+  const { level: requestedLevel } = await searchParams;
   const isAdmin = session.role === "admin" || session.accessType === 1;
   const API_URL = process.env.API_URL || "http://localhost:3001";
   let levels: any[] = [];
@@ -27,6 +38,32 @@ export default async function ModulesRoadmapPage() {
   } catch (error) {
     console.error("Gagal mengambil data modul kurikulum:", error);
   }
+
+  const level1 = levels.find((l) => l.id === "A1.1");
+  const level2 = levels.find((l) => l.id === "A1.2");
+
+  const isLevel1Completed =
+    Boolean(
+      level1 &&
+        level1.totalModules > 0 &&
+        level1.completedModules === level1.totalModules
+    ) ||
+    Boolean(level2?.isUnlocked) ||
+    isAdmin;
+
+  // Tentukan level mana yang aktif ditampilkan
+  let activeLevelId = "A1.1";
+  if (requestedLevel) {
+    const target = levels.find((l) => l.id === requestedLevel);
+    if (target && (isAdmin || target.isUnlocked)) {
+      activeLevelId = target.id;
+    }
+  } else if (isLevel1Completed && level2?.isUnlocked && !isAdmin) {
+    // Jika siswa sudah menuntaskan Level 1 dan membuka Level 2, arahkan ke level aktifnya
+    activeLevelId = "A1.2";
+  }
+
+  const activeLevel = levels.find((l) => l.id === activeLevelId) || level1;
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
@@ -62,7 +99,7 @@ export default async function ModulesRoadmapPage() {
       </header>
 
       {/* Main Roadmap Content */}
-      <main className="max-w-6xl mx-auto px-4 py-8 space-y-10">
+      <main className="max-w-6xl mx-auto px-4 py-8 space-y-8">
         {levels.length === 0 ? (
           <div className="p-8 text-center bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
             <BookOpen className="w-10 h-10 text-slate-400 mx-auto mb-3" />
@@ -74,50 +111,91 @@ export default async function ModulesRoadmapPage() {
             </p>
           </div>
         ) : (
-          levels.map((lvl) => (
-            <section key={lvl.id} className="space-y-6">
-              <LevelHeader
-                levelTitle={lvl.title}
-                cefr={lvl.cefr}
-                description={lvl.description}
-                completedCount={lvl.completedModules}
-                totalCount={lvl.totalModules}
-                progressPercent={lvl.progressPercent}
-                isUnlocked={isAdmin ? true : lvl.isUnlocked}
-                lockReason={isAdmin ? null : lvl.lockReason}
+          <div className="space-y-8">
+            {/* Level Tab Switcher */}
+            {levels.length > 1 && (
+              <LevelTabSelector
+                levels={levels.map((lvl) => ({
+                  id: lvl.id,
+                  cefr: lvl.cefr,
+                  title: lvl.title,
+                  isUnlocked: isAdmin ? true : Boolean(lvl.isUnlocked),
+                  progressPercent: lvl.progressPercent,
+                  completedModules: lvl.completedModules,
+                  totalModules: lvl.totalModules,
+                }))}
+                activeLevelId={activeLevelId}
               />
+            )}
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {lvl.modules.map((m: any) => {
-                  const isLocked = !isAdmin && m.status === "locked";
-                  return (
-                    <Link
-                      key={m.id}
-                      href={isLocked ? "#" : `/modules/${m.id}`}
-                      className={isLocked ? "pointer-events-none" : "block"}
-                    >
-                      <ModuleCard
-                        module={{
-                          id: m.id,
-                          title: m.title,
-                          cefr: m.cefr,
-                          group: m.group,
-                          objective: m.objective,
-                          complexity: m.complexity,
-                          estimatedMinutes: m.estimatedMinutes,
-                          isExam: m.isExam,
-                          passingScore: m.passingScore,
-                          status: isAdmin && m.status === "locked" ? "unlocked" : m.status,
-                          score: m.score,
-                          orderIndex: m.orderIndex,
-                        }}
+            {/* Active Level Header & Content */}
+            {activeLevel && (
+              <section key={activeLevel.id} className="space-y-6">
+                <LevelHeader
+                  levelTitle={activeLevel.title}
+                  cefr={activeLevel.cefr}
+                  description={activeLevel.description}
+                  completedCount={activeLevel.completedModules}
+                  totalCount={activeLevel.totalModules}
+                  progressPercent={activeLevel.progressPercent}
+                  isUnlocked={isAdmin ? true : activeLevel.isUnlocked}
+                  lockReason={isAdmin ? null : activeLevel.lockReason}
+                />
+
+                {/* Modules Grid for Active Level */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {activeLevel.modules.map((m: any) => {
+                    const isLocked = !isAdmin && m.status === "locked";
+                    return (
+                      <Link
+                        key={m.id}
+                        href={isLocked ? "#" : `/modules/${m.id}`}
+                        className={isLocked ? "pointer-events-none" : "block"}
+                      >
+                        <ModuleCard
+                          module={{
+                            id: m.id,
+                            title: m.title,
+                            cefr: m.cefr,
+                            group: m.group,
+                            objective: m.objective,
+                            complexity: m.complexity,
+                            estimatedMinutes: m.estimatedMinutes,
+                            isExam: m.isExam,
+                            passingScore: m.passingScore,
+                            status: isAdmin && m.status === "locked" ? "unlocked" : m.status,
+                            score: m.score,
+                            orderIndex: m.orderIndex,
+                          }}
+                        />
+                      </Link>
+                    );
+                  })}
+                </div>
+
+                {/* Level 1 Milestone Completion Banner with "Buka Level 2" Button */}
+                {activeLevel.id === "A1.1" && level2 && (
+                  <>
+                    {isLevel1Completed ? (
+                      <LevelCompletionCard
+                        completedLevelTitle={level1.title}
+                        nextLevelTitle={level2.title}
+                        nextLevelId={level2.id}
+                        firstNextModuleId="A1-M14"
                       />
-                    </Link>
-                  );
-                })}
-              </div>
-            </section>
-          ))
+                    ) : (
+                      <LevelLockedCard
+                        levelTitle={level2.title}
+                        cefr={level2.cefr}
+                        description={level2.description}
+                        lockReason={level2.lockReason}
+                      />
+                    )}
+                  </>
+                )}
+              </section>
+            )}
+          </div>
         )}
       </main>
     </div>

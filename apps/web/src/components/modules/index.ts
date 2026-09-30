@@ -11,3 +11,6 @@ export * from "./SectionSpeakingLab";
 export * from "./SpeakingLabDrill";
 export * from "./SpeakingLabRoleplay";
 export * from "./SpeakingLabChallenge";
+export * from "./LevelCompletionCard";
+export * from "./LevelLockedCard";
+export * from "./LevelTabSelector";
