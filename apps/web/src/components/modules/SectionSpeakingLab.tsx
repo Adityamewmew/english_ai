@@ -13,6 +13,8 @@ interface SectionSpeakingLabProps {
   drills?: DrillItem[];
   roleplay?: RoleplayData;
   challenge?: ChallengeData;
+  moduleId?: string;
+  userId?: string;
   onPlayAudio?: (text: string) => void;
 }
 
@@ -21,6 +23,8 @@ export function SectionSpeakingLab({
   drills = [],
   roleplay = { context: "", roles: [], turns: [] },
   challenge = { scenario: "" },
+  moduleId,
+  userId,
   onPlayAudio,
 }: SectionSpeakingLabProps) {
   const [activeTab, setActiveTab] = useState<"drill" | "roleplay" | "challenge">("drill");
@@ -135,6 +139,8 @@ export function SectionSpeakingLab({
       {activeTab === "drill" && (
         <SpeakingLabDrill
           drills={drills}
+          moduleId={moduleId}
+          userId={userId}
           onPlayAudio={onPlayAudio}
           startListening={startListening}
           stopListening={stopListening}
@@ -145,6 +151,8 @@ export function SectionSpeakingLab({
       {activeTab === "roleplay" && (
         <SpeakingLabRoleplay
           roleplay={roleplay}
+          moduleId={moduleId}
+          userId={userId}
           onPlayAudio={onPlayAudio}
           startListening={startListening}
           stopListening={stopListening}
@@ -155,6 +163,8 @@ export function SectionSpeakingLab({
       {activeTab === "challenge" && (
         <SpeakingLabChallenge
           challenge={challenge}
+          moduleId={moduleId}
+          userId={userId}
           onPlayAudio={onPlayAudio}
           startListening={startListening}
           stopListening={stopListening}

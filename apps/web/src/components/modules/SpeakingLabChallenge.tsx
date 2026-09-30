@@ -10,6 +10,8 @@ import {
   HelpCircle,
   Award,
 } from "lucide-react";
+import { evaluateSpeechDiff, SpeechDiffResult } from "@/lib/speech-diff";
+import { SpeechScoreCard } from "./SpeechScoreCard";
 
 export interface ChallengeData {
   scenario: string;
@@ -19,6 +21,8 @@ export interface ChallengeData {
 
 interface SpeakingLabChallengeProps {
   challenge: ChallengeData;
+  moduleId?: string;
+  userId?: string;
   onPlayAudio?: (text: string) => void;
   startListening: (onResult: (text: string) => void, onEnd: () => void) => void;
   stopListening: () => void;
@@ -26,6 +30,8 @@ interface SpeakingLabChallengeProps {
 
 export function SpeakingLabChallenge({
   challenge,
+  moduleId,
+  userId,
   onPlayAudio,
   startListening,
   stopListening,
@@ -34,6 +40,7 @@ export function SpeakingLabChallenge({
   const [challengeTranscript, setChallengeTranscript] = useState("");
   const [isRecording, setIsRecording] = useState(false);
   const [challengeFeedback, setChallengeFeedback] = useState<string | null>(null);
+  const [diffResult, setDiffResult] = useState<SpeechDiffResult | null>(null);
   const [isEvaluating, setIsEvaluating] = useState(false);
 
   const handleToggleChallengeMic = () => {
@@ -43,6 +50,7 @@ export function SpeakingLabChallenge({
     } else {
       setIsRecording(true);
       setChallengeFeedback(null);
+      setDiffResult(null);
       startListening(
         (text) => {
           setChallengeTranscript(text);
@@ -56,22 +64,29 @@ export function SpeakingLabChallenge({
 
   const evaluateChallengeSpoken = async (text: string) => {
     if (!text) return;
+
+    // Jika ada contoh kalimat, lakukan diff analisis
+    if (challenge.exampleAnswer) {
+      const diff = evaluateSpeechDiff(challenge.exampleAnswer, text);
+      setDiffResult(diff);
+    }
+
     try {
       setIsEvaluating(true);
-      const res = await fetch("/api/curriculum/modules/A1-M01/tutor/chat", {
+      const targetMod = moduleId || "A1-M01";
+      const res = await fetch(`/api/curriculum/modules/${targetMod}/tutor/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          studentMessage: `[PRAKTIKUM SPONTAN] Skenario: "${challenge.scenario}". Target Grammar: "${challenge.targetGrammar || ""}". Kalimat saya: "${text}". Berikan evaluasi 1-2 kalimat apakah penggunaan grammar saya tepat.`,
+          message: `[PRAKTIKUM SPONTAN] Skenario: "${challenge.scenario}". Target Grammar: "${challenge.targetGrammar || ""}". Kalimat saya: "${text}". Berikan evaluasi 1-2 kalimat apakah penggunaan grammar saya tepat.`,
           history: [],
+          userId: userId || undefined,
         }),
       });
       const data = await res.json();
-      if (data.success && data.data?.message) {
-        setChallengeFeedback(data.data.message);
-        if (onPlayAudio) {
-          onPlayAudio(data.data.message);
-        }
+      if (data.success && (data.data?.reply || data.data?.message)) {
+        const replyText = data.data.reply || data.data.message;
+        setChallengeFeedback(replyText);
       } else {
         setChallengeFeedback("Bagus sekali! Pelafalan kamu sudah jelas dan sesuai konteks materi.");
       }
@@ -80,6 +95,12 @@ export function SpeakingLabChallenge({
     } finally {
       setIsEvaluating(false);
     }
+  };
+
+  const handleRetry = () => {
+    setChallengeTranscript("");
+    setChallengeFeedback(null);
+    setDiffResult(null);
   };
 
   return (
@@ -160,6 +181,23 @@ export function SpeakingLabChallenge({
             </div>
           )}
         </div>
+
+        {/* Example Match Diff Card */}
+        {diffResult && challenge.exampleAnswer && (
+          <div className="space-y-2">
+            <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
+              Perbandingan dengan Kalimat Rekomendasi:
+            </span>
+            <SpeechScoreCard
+              score={diffResult.score}
+              passed={diffResult.passed}
+              statusText={diffResult.statusText}
+              words={diffResult.words}
+              spokenText={challengeTranscript}
+              onRetry={handleRetry}
+            />
+          </div>
+        )}
 
         {/* AI Evaluation */}
         {isEvaluating && (

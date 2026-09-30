@@ -236,6 +236,110 @@ Mr. Khoirul:`;
       return Response.buildErrorService((e as Error).message);
     }
   }
+
+  /**
+   * Mengevaluasi ucapan siswa di Speaking Lab:
+   * Menghasilkan panduan cara baca fonetik Indonesia dan menyimpan kelemahan kata ke memori RAG
+   */
+  async evaluateSpeech(params: {
+    moduleId: string;
+    targetText: string;
+    spokenText: string;
+    missedWords?: string[];
+    score: number;
+    userId?: string;
+  }): Promise<ServiceResult<{ tip: string; phoneticGuide?: string }>> {
+    try {
+      const { moduleId, targetText, spokenText, missedWords = [], score, userId } = params;
+
+      // Ambil modul untuk konteks
+      const [module] = await db
+        .select({ title: curriculumModules.title, cefr: curriculumModules.cefr })
+        .from(curriculumModules)
+        .where(eq(curriculumModules.id, moduleId))
+        .limit(1);
+
+      const moduleTitle = module?.title || "Speaking Practice";
+
+      let tip = "";
+
+      if (score >= 85 || missedWords.length === 0) {
+        tip = "Pengucapanmu sangat akurat dan alami! Ritme dan artikulasi katamu sudah tepat.";
+      } else {
+        const wordsList = missedWords.slice(0, 3).join(", ");
+        const systemPrompt = `You are Mr. Khoirul, an encouraging bilingual English tutor for Indonesian beginners.
+The student practiced the sentence: "${targetText}"
+The student said: "${spokenText}"
+The problematic or missed words are: [${wordsList}].
+Module: "${moduleTitle}".
+
+INSTRUCTIONS:
+1. Provide ONE concise, practical Indonesian tip (max 2 short sentences, under 30 words) focusing on the phonetic pronunciation guide (cara baca) for the hardest word.
+   Example: "Ingat, 'thought' dibaca 'thot' (bukan 'tong'). Lidah menyentuh gigi depan saat melafalkannya!"
+2. Strictly NO emojis.
+3. Keep the tone warm, clear, and focused on mouth articulation.`;
+
+        const userPrompt = `Berikan tips cara baca singkat untuk kata: ${wordsList}`;
+
+        try {
+          const rawTip = await GeminiService.callAI(systemPrompt, userPrompt);
+          tip = sanitizeRepeatedChars(rawTip.replace(/^Mr\.\s*Khoirul:\s*/i, "").trim());
+        } catch (aiErr) {
+          console.warn("AI generation failed for speech tip, using fallback:", aiErr);
+          tip = `Perhatikan artikulasi kata '${missedWords[0]}'. Dengarkan audio contoh dan latih kembali gerakan bibirmu.`;
+        }
+      }
+
+      // Simpan kelemahan kata ke users.memory untuk memori RAG jangka panjang
+      if (userId && missedWords.length > 0) {
+        try {
+          const [u] = await db
+            .select({ memory: users.memory })
+            .from(users)
+            .where(eq(users.id, userId))
+            .limit(1);
+
+          if (u) {
+            const mem = u.memory || { facts: [], interests: [], weaknesses: [], totalCalls: 0 };
+            const currentWeaknesses = new Set(mem.weaknesses || []);
+            missedWords.forEach((w) => currentWeaknesses.add(w.toLowerCase()));
+
+            const modMems = mem.moduleMemories || {};
+            const prevMod = modMems[moduleId] || {};
+            const modWeaknesses = new Set(prevMod.weaknesses || []);
+            missedWords.forEach((w) => modWeaknesses.add(w.toLowerCase()));
+
+            modMems[moduleId] = {
+              ...prevMod,
+              weaknesses: Array.from(modWeaknesses).slice(-15),
+              lastPracticedAt: new Date().toISOString(),
+              summary: `Latihan speaking di ${moduleTitle}. Kata yang perlu dilatih: ${missedWords.slice(0, 5).join(", ")}.`,
+            };
+
+            await db
+              .update(users)
+              .set({
+                memory: {
+                  ...mem,
+                  weaknesses: Array.from(currentWeaknesses).slice(-25),
+                  moduleMemories: modMems,
+                },
+              })
+              .where(eq(users.id, userId));
+          }
+        } catch (memErr) {
+          console.warn("Gagal menyimpan kelemahan ucapan ke memori:", memErr);
+        }
+      }
+
+      return Response.buildSuccess({
+        tip,
+      });
+    } catch (e) {
+      console.error("ModuleTutorService evaluateSpeech error:", e);
+      return Response.buildErrorService((e as Error).message);
+    }
+  }
 }
 
 export const moduleTutorService = new ModuleTutorService();

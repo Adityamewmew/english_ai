@@ -14,3 +14,5 @@ export * from "./SpeakingLabChallenge";
 export * from "./LevelCompletionCard";
 export * from "./LevelLockedCard";
 export * from "./LevelTabSelector";
+export * from "./SpeechScoreCard";
+

@@ -102,4 +102,30 @@ export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
         userId: t.Optional(t.String()),
       }),
     }
+  )
+  .post(
+    "/modules/:id/evaluate-speech",
+    async ({ params, body }) => {
+      return await moduleTutorService.evaluateSpeech({
+        moduleId: params.id,
+        targetText: body.targetText,
+        spokenText: body.spokenText,
+        score: body.score,
+        missedWords: body.missedWords,
+        userId: body.userId,
+      });
+    },
+    {
+      params: t.Object({
+        id: t.String(),
+      }),
+      body: t.Object({
+        targetText: t.String(),
+        spokenText: t.String(),
+        score: t.Number(),
+        missedWords: t.Optional(t.Array(t.String())),
+        userId: t.Optional(t.String()),
+      }),
+    }
   );
+

@@ -5,10 +5,11 @@ import {
   Mic,
   MicOff,
   Volume2,
-  CheckCircle2,
   ChevronRight,
   Info,
 } from "lucide-react";
+import { evaluateSpeechDiff, SpeechDiffResult } from "@/lib/speech-diff";
+import { SpeechScoreCard } from "./SpeechScoreCard";
 
 export interface DrillItem {
   id: string;
@@ -19,6 +20,8 @@ export interface DrillItem {
 
 interface SpeakingLabDrillProps {
   drills: DrillItem[];
+  moduleId?: string;
+  userId?: string;
   onPlayAudio?: (text: string) => void;
   startListening: (onResult: (text: string) => void, onEnd: () => void) => void;
   stopListening: () => void;
@@ -26,16 +29,61 @@ interface SpeakingLabDrillProps {
 
 export function SpeakingLabDrill({
   drills,
+  moduleId,
+  userId,
   onPlayAudio,
   startListening,
   stopListening,
 }: SpeakingLabDrillProps) {
   const [activeDrillIdx, setActiveDrillIdx] = useState(0);
   const [drillTranscripts, setDrillTranscripts] = useState<Record<number, string>>({});
+  const [drillResults, setDrillResults] = useState<Record<number, SpeechDiffResult>>({});
+  const [drillTips, setDrillTips] = useState<Record<number, string>>({});
+  const [loadingTips, setLoadingTips] = useState<Record<number, boolean>>({});
   const [isDrillRecording, setIsDrillRecording] = useState(false);
 
   const currentDrill = drills[activeDrillIdx];
   const drillResultText = drillTranscripts[activeDrillIdx] || "";
+  const currentDiffResult = drillResults[activeDrillIdx];
+  const currentTip = drillTips[activeDrillIdx];
+  const isLoadingCurrentTip = loadingTips[activeDrillIdx] || false;
+
+  const handleSpeechResult = async (spokenText: string) => {
+    if (!currentDrill) return;
+
+    setDrillTranscripts((prev) => ({ ...prev, [activeDrillIdx]: spokenText }));
+
+    // 1. Evaluasi instan visual kata per kata (0ms latency)
+    const diff = evaluateSpeechDiff(currentDrill.targetText, spokenText);
+    setDrillResults((prev) => ({ ...prev, [activeDrillIdx]: diff }));
+
+    // 2. Jika ada moduleId, panggil async backend untuk tips fonetik & simpan RAG memory
+    if (moduleId && spokenText.trim().length > 0) {
+      try {
+        setLoadingTips((prev) => ({ ...prev, [activeDrillIdx]: true }));
+        const res = await fetch(`/api/curriculum/modules/${moduleId}/evaluate-speech`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            targetText: currentDrill.targetText,
+            spokenText,
+            score: diff.score,
+            missedWords: diff.missedWords,
+            userId: userId || undefined,
+          }),
+        });
+
+        const json = await res.json();
+        if (json.success && json.data?.tip) {
+          setDrillTips((prev) => ({ ...prev, [activeDrillIdx]: json.data.tip }));
+        }
+      } catch (err) {
+        console.warn("Gagal mengambil tips Mr. Khoirul:", err);
+      } finally {
+        setLoadingTips((prev) => ({ ...prev, [activeDrillIdx]: false }));
+      }
+    }
+  };
 
   const handleToggleDrillMic = () => {
     if (isDrillRecording) {
@@ -45,18 +93,37 @@ export function SpeakingLabDrill({
       setIsDrillRecording(true);
       startListening(
         (text) => {
-          setDrillTranscripts((prev) => ({ ...prev, [activeDrillIdx]: text }));
           setIsDrillRecording(false);
+          handleSpeechResult(text);
         },
         () => setIsDrillRecording(false)
       );
     }
   };
 
+  const handleRetry = () => {
+    setDrillTranscripts((prev) => {
+      const next = { ...prev };
+      delete next[activeDrillIdx];
+      return next;
+    });
+    setDrillResults((prev) => {
+      const next = { ...prev };
+      delete next[activeDrillIdx];
+      return next;
+    });
+    setDrillTips((prev) => {
+      const next = { ...prev };
+      delete next[activeDrillIdx];
+      return next;
+    });
+  };
+
   if (!currentDrill) return null;
 
   return (
     <div className="space-y-4">
+      {/* Header & Step Dots */}
       <div className="flex items-center justify-between">
         <span className="text-xs font-semibold text-slate-500">
           Kalimat {activeDrillIdx + 1} dari {drills.length}
@@ -70,8 +137,10 @@ export function SpeakingLabDrill({
               className={`w-2.5 h-2.5 rounded-full transition-all ${
                 activeDrillIdx === i
                   ? "bg-blue-600 w-6"
-                  : drillTranscripts[i]
+                  : drillResults[i]?.passed
                   ? "bg-emerald-500"
+                  : drillResults[i]
+                  ? "bg-amber-500"
                   : "bg-slate-300 dark:bg-slate-700"
               }`}
             />
@@ -79,6 +148,7 @@ export function SpeakingLabDrill({
         </div>
       </div>
 
+      {/* Main Card */}
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-5">
         <div className="space-y-2">
           <span className="text-[11px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
@@ -137,22 +207,23 @@ export function SpeakingLabDrill({
           </button>
         </div>
 
-        {drillResultText && (
-          <div className="p-4 bg-emerald-50/70 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800/40 rounded-xl space-y-2">
-            <div className="flex items-center gap-2 text-emerald-800 dark:text-emerald-300 font-bold text-xs">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span>Ucapan Terdeteksi:</span>
-            </div>
-            <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 italic">
-              &ldquo;{drillResultText}&rdquo;
-            </p>
-            <p className="text-[11px] text-emerald-700 dark:text-emerald-400">
-              Luar biasa! Otot mulutmu sudah terbiasa dengan ritme kalimat ini.
-            </p>
-          </div>
+        {/* Real-Time Speech Score & Word Analysis Card */}
+        {currentDiffResult && (
+          <SpeechScoreCard
+            score={currentDiffResult.score}
+            passed={currentDiffResult.passed}
+            statusText={currentDiffResult.statusText}
+            words={currentDiffResult.words}
+            spokenText={drillResultText}
+            tip={currentTip}
+            isLoadingTip={isLoadingCurrentTip}
+            onRetry={handleRetry}
+            onPlayTipAudio={onPlayAudio}
+          />
         )}
       </div>
 
+      {/* Navigation Buttons */}
       <div className="flex justify-end gap-2">
         <button
           type="button"

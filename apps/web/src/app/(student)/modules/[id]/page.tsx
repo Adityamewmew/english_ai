@@ -295,6 +295,8 @@ export default function ModuleDetailPage() {
                   drills={currentSection.content?.drills || []}
                   roleplay={currentSection.content?.roleplay || { context: "", roles: [], turns: [] }}
                   challenge={currentSection.content?.challenge || { scenario: "" }}
+                  moduleId={moduleId}
+                  userId={userId}
                   onPlayAudio={tutor.playTutorAudio}
                 />
               )}
