@@ -8,6 +8,7 @@ import {
   Info,
 } from "lucide-react";
 import { evaluateSpeechDiff, SpeechDiffResult } from "@/lib/speech-diff";
+import { SpeechRecorderCallbackOptions } from "@/hooks/use-speech-recorder";
 import { SpeechScoreCard } from "./SpeechScoreCard";
 
 export interface RoleplayTurn {
@@ -27,8 +28,11 @@ interface SpeakingLabRoleplayProps {
   roleplay: RoleplayData;
   moduleId?: string;
   userId?: string;
+  currentlyPlayingUrl?: string | null;
   onPlayAudio?: (text: string) => void;
-  startListening: (onResult: (text: string) => void, onEnd: () => void) => void;
+  onPlayStudentAudio?: (url: string) => void;
+  onStopStudentAudio?: () => void;
+  startListening: (options: SpeechRecorderCallbackOptions) => void;
   stopListening: () => void;
 }
 
@@ -36,7 +40,10 @@ export function SpeakingLabRoleplay({
   roleplay,
   moduleId,
   userId,
+  currentlyPlayingUrl,
   onPlayAudio,
+  onPlayStudentAudio,
+  onStopStudentAudio,
   startListening,
   stopListening,
 }: SpeakingLabRoleplayProps) {
@@ -45,6 +52,7 @@ export function SpeakingLabRoleplay({
   const [activeTurnIdx, setActiveTurnIdx] = useState(0);
   const [completedTurns, setCompletedTurns] = useState<number[]>([]);
   const [turnTranscripts, setTurnTranscripts] = useState<Record<number, string>>({});
+  const [studentTurnAudioUrls, setStudentTurnAudioUrls] = useState<Record<number, string>>({});
   const [turnResults, setTurnResults] = useState<Record<number, SpeechDiffResult>>({});
   const [turnTips, setTurnTips] = useState<Record<number, string>>({});
   const [loadingTips, setLoadingTips] = useState<Record<number, boolean>>({});
@@ -95,18 +103,26 @@ export function SpeakingLabRoleplay({
     } else {
       setIsRecording(true);
       setActiveTurnIdx(turnIdx);
-      startListening(
-        (spokenText) => {
+      startListening({
+        onTextResult: (spokenText) => {
           setIsRecording(false);
           handleSpeechResult(turnIdx, spokenText);
         },
-        () => setIsRecording(false)
-      );
+        onAudioResult: (audioUrl) => {
+          setStudentTurnAudioUrls((prev) => ({ ...prev, [turnIdx]: audioUrl }));
+        },
+        onEnd: () => setIsRecording(false),
+      });
     }
   };
 
   const handleRetryTurn = (turnIdx: number) => {
     setTurnTranscripts((prev) => {
+      const next = { ...prev };
+      delete next[turnIdx];
+      return next;
+    });
+    setStudentTurnAudioUrls((prev) => {
       const next = { ...prev };
       delete next[turnIdx];
       return next;
@@ -169,6 +185,7 @@ export function SpeakingLabRoleplay({
           const diffResult = turnResults[idx];
           const tip = turnTips[idx];
           const isLoadingTip = loadingTips[idx] || false;
+          const studentAudio = studentTurnAudioUrls[idx] || null;
 
           return (
             <div
@@ -260,7 +277,7 @@ export function SpeakingLabRoleplay({
                 )}
               </div>
 
-              {/* Speech Evaluation Score Card for User Turn */}
+              {/* Speech Evaluation Score Card with Audio Comparison */}
               {isUserRole && diffResult && (
                 <div className="max-w-md w-full mr-11">
                   <SpeechScoreCard
@@ -269,9 +286,15 @@ export function SpeakingLabRoleplay({
                     statusText={diffResult.statusText}
                     words={diffResult.words}
                     spokenText={turnTranscripts[idx] || ""}
+                    targetText={turn.text}
+                    studentAudioUrl={studentAudio}
+                    isPlayingStudentAudio={currentlyPlayingUrl === studentAudio}
                     tip={tip}
                     isLoadingTip={isLoadingTip}
                     onRetry={() => handleRetryTurn(idx)}
+                    onPlayStudentAudio={onPlayStudentAudio}
+                    onStopStudentAudio={onStopStudentAudio}
+                    onPlayNativeAudio={onPlayAudio}
                     onPlayTipAudio={onPlayAudio}
                   />
                 </div>

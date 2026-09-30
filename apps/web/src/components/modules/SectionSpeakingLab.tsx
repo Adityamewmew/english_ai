@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { Sparkles } from "lucide-react";
+import { useSpeechRecorder } from "@/hooks/use-speech-recorder";
 import { SpeakingLabDrill, DrillItem } from "./SpeakingLabDrill";
 import { SpeakingLabRoleplay, RoleplayData } from "./SpeakingLabRoleplay";
 import { SpeakingLabChallenge, ChallengeData } from "./SpeakingLabChallenge";
@@ -28,60 +29,15 @@ export function SectionSpeakingLab({
   onPlayAudio,
 }: SectionSpeakingLabProps) {
   const [activeTab, setActiveTab] = useState<"drill" | "roleplay" | "challenge">("drill");
-  const recognitionRef = useRef<any>(null);
 
-  useEffect(() => {
-    return () => {
-      if (recognitionRef.current) {
-        try {
-          recognitionRef.current.abort();
-        } catch {}
-      }
-    };
-  }, []);
-
-  const startListening = (onResult: (text: string) => void, onEnd: () => void) => {
-    if (typeof window === "undefined") return;
-    const SpeechRecognition =
-      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-
-    if (!SpeechRecognition) {
-      alert("Browser Anda belum mendukung speech recognition mikrofon.");
-      onEnd();
-      return;
-    }
-
-    try {
-      if (recognitionRef.current) {
-        recognitionRef.current.abort();
-      }
-      const recognition = new SpeechRecognition();
-      recognition.lang = "en-US";
-      recognition.continuous = false;
-      recognition.interimResults = false;
-
-      recognition.onresult = (event: any) => {
-        const text = event.results[0][0].transcript;
-        onResult(text);
-      };
-
-      recognition.onerror = () => onEnd();
-      recognition.onend = () => onEnd();
-
-      recognitionRef.current = recognition;
-      recognition.start();
-    } catch {
-      onEnd();
-    }
-  };
-
-  const stopListening = () => {
-    if (recognitionRef.current) {
-      try {
-        recognitionRef.current.stop();
-      } catch {}
-    }
-  };
+  // Hook perekam terpadu (Audio Blob + Speech Recognition STT)
+  const {
+    startListening,
+    stopListening,
+    playStudentAudio,
+    stopStudentAudio,
+    currentlyPlayingUrl,
+  } = useSpeechRecorder();
 
   return (
     <div className="space-y-6">
@@ -141,7 +97,10 @@ export function SectionSpeakingLab({
           drills={drills}
           moduleId={moduleId}
           userId={userId}
+          currentlyPlayingUrl={currentlyPlayingUrl}
           onPlayAudio={onPlayAudio}
+          onPlayStudentAudio={playStudentAudio}
+          onStopStudentAudio={stopStudentAudio}
           startListening={startListening}
           stopListening={stopListening}
         />
@@ -153,7 +112,10 @@ export function SectionSpeakingLab({
           roleplay={roleplay}
           moduleId={moduleId}
           userId={userId}
+          currentlyPlayingUrl={currentlyPlayingUrl}
           onPlayAudio={onPlayAudio}
+          onPlayStudentAudio={playStudentAudio}
+          onStopStudentAudio={stopStudentAudio}
           startListening={startListening}
           stopListening={stopListening}
         />
@@ -165,7 +127,10 @@ export function SectionSpeakingLab({
           challenge={challenge}
           moduleId={moduleId}
           userId={userId}
+          currentlyPlayingUrl={currentlyPlayingUrl}
           onPlayAudio={onPlayAudio}
+          onPlayStudentAudio={playStudentAudio}
+          onStopStudentAudio={stopStudentAudio}
           startListening={startListening}
           stopListening={stopListening}
         />

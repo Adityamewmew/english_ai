@@ -9,6 +9,7 @@ import {
   Info,
 } from "lucide-react";
 import { evaluateSpeechDiff, SpeechDiffResult } from "@/lib/speech-diff";
+import { SpeechRecorderCallbackOptions } from "@/hooks/use-speech-recorder";
 import { SpeechScoreCard } from "./SpeechScoreCard";
 
 export interface DrillItem {
@@ -22,8 +23,11 @@ interface SpeakingLabDrillProps {
   drills: DrillItem[];
   moduleId?: string;
   userId?: string;
+  currentlyPlayingUrl?: string | null;
   onPlayAudio?: (text: string) => void;
-  startListening: (onResult: (text: string) => void, onEnd: () => void) => void;
+  onPlayStudentAudio?: (url: string) => void;
+  onStopStudentAudio?: () => void;
+  startListening: (options: SpeechRecorderCallbackOptions) => void;
   stopListening: () => void;
 }
 
@@ -31,12 +35,16 @@ export function SpeakingLabDrill({
   drills,
   moduleId,
   userId,
+  currentlyPlayingUrl,
   onPlayAudio,
+  onPlayStudentAudio,
+  onStopStudentAudio,
   startListening,
   stopListening,
 }: SpeakingLabDrillProps) {
   const [activeDrillIdx, setActiveDrillIdx] = useState(0);
   const [drillTranscripts, setDrillTranscripts] = useState<Record<number, string>>({});
+  const [studentAudioUrls, setStudentAudioUrls] = useState<Record<number, string>>({});
   const [drillResults, setDrillResults] = useState<Record<number, SpeechDiffResult>>({});
   const [drillTips, setDrillTips] = useState<Record<number, string>>({});
   const [loadingTips, setLoadingTips] = useState<Record<number, boolean>>({});
@@ -45,6 +53,7 @@ export function SpeakingLabDrill({
   const currentDrill = drills[activeDrillIdx];
   const drillResultText = drillTranscripts[activeDrillIdx] || "";
   const currentDiffResult = drillResults[activeDrillIdx];
+  const currentStudentAudio = studentAudioUrls[activeDrillIdx] || null;
   const currentTip = drillTips[activeDrillIdx];
   const isLoadingCurrentTip = loadingTips[activeDrillIdx] || false;
 
@@ -91,18 +100,26 @@ export function SpeakingLabDrill({
       setIsDrillRecording(false);
     } else {
       setIsDrillRecording(true);
-      startListening(
-        (text) => {
+      startListening({
+        onTextResult: (text) => {
           setIsDrillRecording(false);
           handleSpeechResult(text);
         },
-        () => setIsDrillRecording(false)
-      );
+        onAudioResult: (audioUrl) => {
+          setStudentAudioUrls((prev) => ({ ...prev, [activeDrillIdx]: audioUrl }));
+        },
+        onEnd: () => setIsDrillRecording(false),
+      });
     }
   };
 
   const handleRetry = () => {
     setDrillTranscripts((prev) => {
+      const next = { ...prev };
+      delete next[activeDrillIdx];
+      return next;
+    });
+    setStudentAudioUrls((prev) => {
       const next = { ...prev };
       delete next[activeDrillIdx];
       return next;
@@ -207,7 +224,7 @@ export function SpeakingLabDrill({
           </button>
         </div>
 
-        {/* Real-Time Speech Score & Word Analysis Card */}
+        {/* Real-Time Speech Score & Word Analysis Card with Side-by-Side Playback */}
         {currentDiffResult && (
           <SpeechScoreCard
             score={currentDiffResult.score}
@@ -215,9 +232,15 @@ export function SpeakingLabDrill({
             statusText={currentDiffResult.statusText}
             words={currentDiffResult.words}
             spokenText={drillResultText}
+            targetText={currentDrill.targetText}
+            studentAudioUrl={currentStudentAudio}
+            isPlayingStudentAudio={currentlyPlayingUrl === currentStudentAudio}
             tip={currentTip}
             isLoadingTip={isLoadingCurrentTip}
             onRetry={handleRetry}
+            onPlayStudentAudio={onPlayStudentAudio}
+            onStopStudentAudio={onStopStudentAudio}
+            onPlayNativeAudio={onPlayAudio}
             onPlayTipAudio={onPlayAudio}
           />
         )}
