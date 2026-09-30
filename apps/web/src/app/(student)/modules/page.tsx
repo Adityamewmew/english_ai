@@ -173,25 +173,35 @@ export default async function ModulesRoadmapPage({
                   })}
                 </div>
 
-                {/* Level 1 Milestone Completion Banner with "Buka Level 2" Button */}
-                {activeLevel.id === "A1.1" && level2 && (
-                  <>
-                    {isLevel1Completed ? (
-                      <LevelCompletionCard
-                        completedLevelTitle={level1.title}
-                        nextLevelTitle={level2.title}
-                        nextLevelId={level2.id}
-                        firstNextModuleId="A1-M14"
-                      />
-                    ) : (
-                      <LevelLockedCard
-                        levelTitle={level2.title}
-                        cefr={level2.cefr}
-                        description={level2.description}
-                        lockReason={level2.lockReason}
-                      />
-                    )}
-                  </>
+                {/* Level 1 Bottom Action: Hanya tampil jika Level 1 SUDAH SELESAI untuk pindah ke Level 2 */}
+                {activeLevel.id === "A1.1" && level2 && isLevel1Completed && (
+                  <LevelCompletionCard
+                    completedLevelTitle={level1.title}
+                    nextLevelTitle={level2.title}
+                    nextLevelId={level2.id}
+                    firstNextModuleId="A1-M14"
+                  />
+                )}
+
+                {/* Level 2 Bottom Navigation: Tombol kembali ke Level 1 */}
+                {activeLevel.id === "A1.2" && level1 && (
+                  <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                    <Link
+                      href={`/modules?level=${level1.id}`}
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-white dark:hover:bg-slate-900 text-xs font-semibold text-slate-700 dark:text-slate-300 transition-colors shadow-sm"
+                    >
+                      <ArrowLeft className="w-4 h-4 text-blue-600" />
+                      <span>Kembali ke Tab Level 1</span>
+                    </Link>
+
+                    <Link
+                      href="/call"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-100 text-xs font-semibold text-blue-600 dark:text-blue-400 transition-colors"
+                    >
+                      <PhoneCall className="w-3.5 h-3.5" />
+                      <span>Praktik Bicara Bebas AI</span>
+                    </Link>
+                  </div>
                 )}
               </section>
             )}
