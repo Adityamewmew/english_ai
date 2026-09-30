@@ -42,7 +42,7 @@ export function LevelLockedCard({
         <div className="shrink-0 w-full sm:w-auto">
           <div className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 text-slate-500 text-xs font-semibold border border-slate-700/50 cursor-not-allowed w-full sm:w-auto">
             <Lock className="w-3.5 h-3.5" />
-            <span>Modul Level 2 Masih Terkunci</span>
+            <span>Modul {cefr} Masih Terkunci</span>
           </div>
         </div>
       </div>

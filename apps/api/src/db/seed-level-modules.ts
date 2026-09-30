@@ -11,6 +11,7 @@ async function runSeedLevelModules() {
   const dataFiles = [
     "data/level_a1_modules.json",
     "data/level_a1_2_modules.json",
+    "data/level_a1_3_modules.json",
   ];
 
   for (const relPath of dataFiles) {

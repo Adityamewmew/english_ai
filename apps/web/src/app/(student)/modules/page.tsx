@@ -41,6 +41,7 @@ export default async function ModulesRoadmapPage({
 
   const level1 = levels.find((l) => l.id === "A1.1");
   const level2 = levels.find((l) => l.id === "A1.2");
+  const level3 = levels.find((l) => l.id === "A1.3");
 
   const isLevel1Completed =
     Boolean(
@@ -51,19 +52,30 @@ export default async function ModulesRoadmapPage({
     Boolean(level2?.isUnlocked) ||
     isAdmin;
 
+  const isLevel2Completed =
+    Boolean(
+      level2 &&
+        level2.totalModules > 0 &&
+        level2.completedModules === level2.totalModules
+    ) ||
+    Boolean(level3?.isUnlocked) ||
+    isAdmin;
+
   // Tentukan level mana yang aktif ditampilkan
   let activeLevelId = "A1.1";
   if (requestedLevel) {
     const target = levels.find((l) => l.id === requestedLevel);
-    if (target && (isAdmin || target.isUnlocked)) {
+    if (target) {
       activeLevelId = target.id;
     }
+  } else if (isLevel2Completed && level3?.isUnlocked && !isAdmin) {
+    activeLevelId = "A1.3";
   } else if (isLevel1Completed && level2?.isUnlocked && !isAdmin) {
-    // Jika siswa sudah menuntaskan Level 1 dan membuka Level 2, arahkan ke level aktifnya
     activeLevelId = "A1.2";
   }
 
   const activeLevel = levels.find((l) => l.id === activeLevelId) || level1;
+  const isCurrentLevelUnlocked = isAdmin || Boolean(activeLevel?.isUnlocked);
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
@@ -128,7 +140,7 @@ export default async function ModulesRoadmapPage({
               />
             )}
 
-            {/* Active Level Header & Content */}
+            {/* Active Level Content */}
             {activeLevel && (
               <section key={activeLevel.id} className="space-y-6">
                 <LevelHeader
@@ -138,70 +150,131 @@ export default async function ModulesRoadmapPage({
                   completedCount={activeLevel.completedModules}
                   totalCount={activeLevel.totalModules}
                   progressPercent={activeLevel.progressPercent}
-                  isUnlocked={isAdmin ? true : activeLevel.isUnlocked}
+                  isUnlocked={isCurrentLevelUnlocked}
                   lockReason={isAdmin ? null : activeLevel.lockReason}
                 />
 
-                {/* Modules Grid for Active Level */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {activeLevel.modules.map((m: any) => {
-                    const isLocked = !isAdmin && m.status === "locked";
-                    return (
+                {!isCurrentLevelUnlocked ? (
+                  /* Jika Level Terkunci */
+                  <div className="space-y-6">
+                    <LevelLockedCard
+                      levelTitle={activeLevel.title}
+                      cefr={activeLevel.cefr}
+                      description={activeLevel.description}
+                      lockReason={activeLevel.lockReason}
+                    />
+
+                    <div className="pt-4 flex items-center justify-between">
                       <Link
-                        key={m.id}
-                        href={isLocked ? "#" : `/modules/${m.id}`}
-                        className={isLocked ? "pointer-events-none" : "block"}
+                        href={`/modules?level=${level1?.id || "A1.1"}`}
+                        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-white dark:hover:bg-slate-900 text-xs font-semibold text-slate-700 dark:text-slate-300 transition-colors shadow-sm"
                       >
-                        <ModuleCard
-                          module={{
-                            id: m.id,
-                            title: m.title,
-                            cefr: m.cefr,
-                            group: m.group,
-                            objective: m.objective,
-                            complexity: m.complexity,
-                            estimatedMinutes: m.estimatedMinutes,
-                            isExam: m.isExam,
-                            passingScore: m.passingScore,
-                            status: isAdmin && m.status === "locked" ? "unlocked" : m.status,
-                            score: m.score,
-                            orderIndex: m.orderIndex,
-                          }}
-                        />
+                        <ArrowLeft className="w-4 h-4 text-blue-600" />
+                        <span>Kembali ke Level 1</span>
                       </Link>
-                    );
-                  })}
-                </div>
-
-                {/* Level 1 Bottom Action: Hanya tampil jika Level 1 SUDAH SELESAI untuk pindah ke Level 2 */}
-                {activeLevel.id === "A1.1" && level2 && isLevel1Completed && (
-                  <LevelCompletionCard
-                    completedLevelTitle={level1.title}
-                    nextLevelTitle={level2.title}
-                    nextLevelId={level2.id}
-                    firstNextModuleId="A1-M14"
-                  />
-                )}
-
-                {/* Level 2 Bottom Navigation: Tombol kembali ke Level 1 */}
-                {activeLevel.id === "A1.2" && level1 && (
-                  <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
-                    <Link
-                      href={`/modules?level=${level1.id}`}
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-white dark:hover:bg-slate-900 text-xs font-semibold text-slate-700 dark:text-slate-300 transition-colors shadow-sm"
-                    >
-                      <ArrowLeft className="w-4 h-4 text-blue-600" />
-                      <span>Kembali ke Tab Level 1</span>
-                    </Link>
-
-                    <Link
-                      href="/call"
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-100 text-xs font-semibold text-blue-600 dark:text-blue-400 transition-colors"
-                    >
-                      <PhoneCall className="w-3.5 h-3.5" />
-                      <span>Praktik Bicara Bebas AI</span>
-                    </Link>
+                    </div>
                   </div>
+                ) : (
+                  /* Jika Level Terbuka */
+                  <>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {activeLevel.modules.map((m: any) => {
+                        const isLocked = !isAdmin && m.status === "locked";
+                        return (
+                          <Link
+                            key={m.id}
+                            href={isLocked ? "#" : `/modules/${m.id}`}
+                            className={isLocked ? "pointer-events-none" : "block"}
+                          >
+                            <ModuleCard
+                              module={{
+                                id: m.id,
+                                title: m.title,
+                                cefr: m.cefr,
+                                group: m.group,
+                                objective: m.objective,
+                                complexity: m.complexity,
+                                estimatedMinutes: m.estimatedMinutes,
+                                isExam: m.isExam,
+                                passingScore: m.passingScore,
+                                status: isAdmin && m.status === "locked" ? "unlocked" : m.status,
+                                score: m.score,
+                                orderIndex: m.orderIndex,
+                              }}
+                            />
+                          </Link>
+                        );
+                      })}
+                    </div>
+
+                    {/* Milestone Level 1 -> Level 2 */}
+                    {activeLevel.id === "A1.1" && level2 && isLevel1Completed && (
+                      <LevelCompletionCard
+                        completedLevelTitle={level1.title}
+                        nextLevelTitle={level2.title}
+                        nextLevelId={level2.id}
+                        firstNextModuleId="A1-M14"
+                        description="Fondasi dasar komunikasi telah kamu kuasai. Buka dan lanjutkan pembelajaran ke Level 2 untuk mempelajari bentuk lampau, penunjuk arah, dan percakapan kontekstual lanjutan."
+                        nextLevelButtonText="Buka Level 2"
+                        firstModuleButtonText="Mulai Modul 14"
+                      />
+                    )}
+
+                    {/* Milestone Level 2 -> Level 3 */}
+                    {activeLevel.id === "A1.2" && level3 && isLevel2Completed && (
+                      <LevelCompletionCard
+                        completedLevelTitle={level2.title}
+                        nextLevelTitle={level3.title}
+                        nextLevelId={level3.id}
+                        firstNextModuleId="A1-M27"
+                        description="Komunikasi dasar dan ekspresi lampau telah kamu kuasai dengan baik! Buka Level 3 untuk memperluas kosakata kerja, sosial, dan kelancaran percakapan sehari-hari."
+                        nextLevelButtonText="Buka Level 3"
+                        firstModuleButtonText="Mulai Modul 27"
+                      />
+                    )}
+
+                    {/* Bottom Navigation Per Level Tab */}
+                    {activeLevel.id === "A1.2" && level1 && (
+                      <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                        <Link
+                          href={`/modules?level=${level1.id}`}
+                          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-white dark:hover:bg-slate-900 text-xs font-semibold text-slate-700 dark:text-slate-300 transition-colors shadow-sm"
+                        >
+                          <ArrowLeft className="w-4 h-4 text-blue-600" />
+                          <span>Kembali ke Tab Level 1</span>
+                        </Link>
+
+                        {isLevel2Completed && level3 && (
+                          <Link
+                            href={`/modules?level=${level3.id}`}
+                            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-xs font-semibold text-white transition-colors shadow-sm"
+                          >
+                            <span>Lanjut ke Tab Level 3</span>
+                          </Link>
+                        )}
+                      </div>
+                    )}
+
+                    {activeLevel.id === "A1.3" && level2 && (
+                      <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                        <Link
+                          href={`/modules?level=${level2.id}`}
+                          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-white dark:hover:bg-slate-900 text-xs font-semibold text-slate-700 dark:text-slate-300 transition-colors shadow-sm"
+                        >
+                          <ArrowLeft className="w-4 h-4 text-blue-600" />
+                          <span>Kembali ke Tab Level 2</span>
+                        </Link>
+
+                        <Link
+                          href="/call"
+                          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-100 text-xs font-semibold text-blue-600 dark:text-blue-400 transition-colors"
+                        >
+                          <PhoneCall className="w-3.5 h-3.5" />
+                          <span>Praktik Bicara Bebas AI</span>
+                        </Link>
+                      </div>
+                    )}
+                  </>
                 )}
               </section>
             )}

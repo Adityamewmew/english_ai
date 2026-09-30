@@ -87,20 +87,43 @@ export class CurriculumService {
       }
 
       // Evaluasi unlock level:
-      // A1.1 (orderIndex 1) selalu terbuka.
-      // A1.2 terbuka jika A1-M13 completed dengan skor >= 75 OR placement test >= A1.2 OR user adalah admin.
+      // A1.1 selalu terbuka.
       const a1_1Passed =
         userProgressMap["A1-M13"]?.status === "completed" &&
         (userProgressMap["A1-M13"]?.score ?? 0) >= 75;
-      const cefrHigherThanA1_1 = ["A1.2", "A2", "B1", "B2", "C1", "C2"].some((c) =>
+      const cefrHigherThanA1_1 = ["A1.2", "A1.3", "A2", "B1", "B2", "C1", "C2"].some((c) =>
         userCefr.toUpperCase().includes(c)
       );
       const a1_2Unlocked = isAdmin || a1_1Passed || cefrHigherThanA1_1;
 
+      // A1.3 terbuka jika A1-M26 lulus (skor >= 75) OR placement >= A1.3 OR admin.
+      const a1_2Passed =
+        userProgressMap["A1-M26"]?.status === "completed" &&
+        (userProgressMap["A1-M26"]?.score ?? 0) >= 75;
+      const cefrHigherThanA1_2 = ["A1.3", "A2", "B1", "B2", "C1", "C2"].some((c) =>
+        userCefr.toUpperCase().includes(c)
+      );
+      const a1_3Unlocked = isAdmin || a1_2Passed || cefrHigherThanA1_2;
+
       // 4. Enrich modules per level secara sekuensial (admin bebas buka semua)
       const result = levels.map((lvl) => {
         const lvlModules = modules.filter((m) => m.levelId === lvl.id);
-        const isLevelUnlocked = isAdmin || lvl.id === "A1.1" ? true : lvl.id === "A1.2" ? a1_2Unlocked : false;
+        const isLevelUnlocked =
+          isAdmin ||
+          lvl.id === "A1.1" ||
+          (lvl.id === "A1.2" && a1_2Unlocked) ||
+          (lvl.id === "A1.3" && a1_3Unlocked);
+
+        let lockReason: string | null = null;
+        if (!isLevelUnlocked) {
+          if (lvl.id === "A1.2") {
+            lockReason = "Selesaikan Ujian Akhir Level A1.1 (A1-M13, skor min 75%) atau Placement Test untuk membuka level ini.";
+          } else if (lvl.id === "A1.3") {
+            lockReason = "Selesaikan Ujian Akhir Level A1.2 (A1-M26, skor min 75%) atau Placement Test untuk membuka level ini.";
+          } else {
+            lockReason = "Selesaikan level sebelumnya untuk membuka level ini.";
+          }
+        }
 
         let prevCompletedInLevel = isLevelUnlocked;
         const enrichedLvlModules = lvlModules.map((m, idx) => {
@@ -134,9 +157,7 @@ export class CurriculumService {
         return {
           ...lvl,
           isUnlocked: isLevelUnlocked,
-          lockReason: !isLevelUnlocked
-            ? "Selesaikan Ujian Akhir Level A1.1 (skor min 75%) atau Placement Test untuk membuka level ini."
-            : null,
+          lockReason,
           modules: enrichedLvlModules,
           totalModules: totalCount,
           completedModules: completedCount,
