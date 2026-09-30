@@ -12,6 +12,7 @@ export default async function ModulesRoadmapPage() {
     redirect("/login");
   }
 
+  const isAdmin = session.role === "admin" || session.accessType === 1;
   const API_URL = process.env.API_URL || "http://localhost:3001";
   let levels: any[] = [];
 
@@ -82,35 +83,38 @@ export default async function ModulesRoadmapPage() {
                 completedCount={lvl.completedModules}
                 totalCount={lvl.totalModules}
                 progressPercent={lvl.progressPercent}
-                isUnlocked={lvl.isUnlocked}
-                lockReason={lvl.lockReason}
+                isUnlocked={isAdmin ? true : lvl.isUnlocked}
+                lockReason={isAdmin ? null : lvl.lockReason}
               />
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {lvl.modules.map((m: any) => (
-                  <Link
-                    key={m.id}
-                    href={m.status === "locked" ? "#" : `/modules/${m.id}`}
-                    className={m.status === "locked" ? "pointer-events-none" : "block"}
-                  >
-                    <ModuleCard
-                      module={{
-                        id: m.id,
-                        title: m.title,
-                        cefr: m.cefr,
-                        group: m.group,
-                        objective: m.objective,
-                        complexity: m.complexity,
-                        estimatedMinutes: m.estimatedMinutes,
-                        isExam: m.isExam,
-                        passingScore: m.passingScore,
-                        status: m.status,
-                        score: m.score,
-                        orderIndex: m.orderIndex,
-                      }}
-                    />
-                  </Link>
-                ))}
+                {lvl.modules.map((m: any) => {
+                  const isLocked = !isAdmin && m.status === "locked";
+                  return (
+                    <Link
+                      key={m.id}
+                      href={isLocked ? "#" : `/modules/${m.id}`}
+                      className={isLocked ? "pointer-events-none" : "block"}
+                    >
+                      <ModuleCard
+                        module={{
+                          id: m.id,
+                          title: m.title,
+                          cefr: m.cefr,
+                          group: m.group,
+                          objective: m.objective,
+                          complexity: m.complexity,
+                          estimatedMinutes: m.estimatedMinutes,
+                          isExam: m.isExam,
+                          passingScore: m.passingScore,
+                          status: isAdmin && m.status === "locked" ? "unlocked" : m.status,
+                          score: m.score,
+                          orderIndex: m.orderIndex,
+                        }}
+                      />
+                    </Link>
+                  );
+                })}
               </div>
             </section>
           ))

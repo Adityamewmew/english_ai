@@ -54,15 +54,23 @@ export class CurriculumService {
       // 3. Ambil riwayat progress user jika userId diberikan
       let userProgressMap: Record<string, { status: string; score: number | null; completedAt: any }> = {};
       let userCefr: string = "A1";
+      let isAdmin = false;
 
       if (userId) {
         const [u] = await db
-          .select({ currentCefr: users.currentCefr })
+          .select({
+            currentCefr: users.currentCefr,
+            role: users.role,
+            accessType: users.accessType,
+          })
           .from(users)
           .where(eq(users.id, userId))
           .limit(1);
 
-        if (u?.currentCefr) userCefr = u.currentCefr;
+        if (u) {
+          if (u.currentCefr) userCefr = u.currentCefr;
+          if (u.role === "admin" || u.accessType === 1) isAdmin = true;
+        }
 
         const progresses = await db
           .select()
@@ -80,19 +88,19 @@ export class CurriculumService {
 
       // Evaluasi unlock level:
       // A1.1 (orderIndex 1) selalu terbuka.
-      // A1.2 terbuka jika A1-M13 completed dengan skor >= 75 OR placement test >= A1.2.
+      // A1.2 terbuka jika A1-M13 completed dengan skor >= 75 OR placement test >= A1.2 OR user adalah admin.
       const a1_1Passed =
         userProgressMap["A1-M13"]?.status === "completed" &&
         (userProgressMap["A1-M13"]?.score ?? 0) >= 75;
       const cefrHigherThanA1_1 = ["A1.2", "A2", "B1", "B2", "C1", "C2"].some((c) =>
         userCefr.toUpperCase().includes(c)
       );
-      const a1_2Unlocked = a1_1Passed || cefrHigherThanA1_1;
+      const a1_2Unlocked = isAdmin || a1_1Passed || cefrHigherThanA1_1;
 
-      // 4. Enrich modules per level secara sekuensial
+      // 4. Enrich modules per level secara sekuensial (admin bebas buka semua)
       const result = levels.map((lvl) => {
         const lvlModules = modules.filter((m) => m.levelId === lvl.id);
-        const isLevelUnlocked = lvl.id === "A1.1" ? true : lvl.id === "A1.2" ? a1_2Unlocked : false;
+        const isLevelUnlocked = isAdmin || lvl.id === "A1.1" ? true : lvl.id === "A1.2" ? a1_2Unlocked : false;
 
         let prevCompletedInLevel = isLevelUnlocked;
         const enrichedLvlModules = lvlModules.map((m, idx) => {
@@ -103,7 +111,7 @@ export class CurriculumService {
           if (progress && progress.status === "completed") {
             status = "completed";
             score = progress.score;
-          } else if (isLevelUnlocked && (idx === 0 || prevCompletedInLevel)) {
+          } else if (isAdmin || (isLevelUnlocked && (idx === 0 || prevCompletedInLevel))) {
             status = "unlocked";
           } else {
             status = "locked";
