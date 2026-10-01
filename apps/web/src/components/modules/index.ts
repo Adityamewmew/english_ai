@@ -15,4 +15,6 @@ export * from "./LevelCompletionCard";
 export * from "./LevelLockedCard";
 export * from "./LevelTabSelector";
 export * from "./SpeechScoreCard";
-
+export * from "./SectionTheoryUnified";
+export * from "./TheoryMiniTrial";
+export * from "./RoleplayBriefing";

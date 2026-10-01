@@ -24,7 +24,7 @@ export default async function ModulesRoadmapPage({
 
   const { level: requestedLevel } = await searchParams;
   const isAdmin = session.role === "admin" || session.accessType === 1;
-  const API_URL = process.env.API_URL || "http://localhost:3001";
+  const API_URL = process.env.API_URL || "http://localhost:3003";
   let levels: any[] = [];
 
   try {

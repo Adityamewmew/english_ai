@@ -36,7 +36,7 @@ export const app = new Elysia()
   .use(placementRoutes)
   .use(curriculumRoutes)
   .use(userRoutes)
-  .listen(Number(process.env.PORT || 3001));
+  .listen(Number(process.env.PORT || 3003));
 
 console.log(
   `🚀 Elysia Backend running at http://${app.server?.hostname}:${app.server?.port}`

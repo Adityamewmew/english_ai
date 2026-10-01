@@ -16,8 +16,9 @@ export async function getCallInitialGreeting(topic: string, hasCalledBeforeClien
       ...(hasCalledBeforeClient ? { hasCalledBefore: "true" } : {}),
     });
 
+    const API_URL = process.env.API_URL || "http://localhost:3003";
     try {
-      const res = await fetch(`http://localhost:3001/api/voice/initial-greeting?${queryParams.toString()}`, {
+      const res = await fetch(`${API_URL}/api/voice/initial-greeting?${queryParams.toString()}`, {
         next: { revalidate: 0 },
         signal: AbortSignal.timeout(2000),
       });
@@ -112,8 +113,9 @@ export async function processAndSaveCallSession(payload: {
     };
   }
 
+  const API_URL = process.env.API_URL || "http://localhost:3003";
   try {
-    const res = await fetch("http://localhost:3001/api/voice/session", {
+    const res = await fetch(`${API_URL}/api/voice/session`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

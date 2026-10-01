@@ -6,13 +6,16 @@ import { Mic, PhoneCall, PhoneOff } from "lucide-react";
 interface ModuleVoiceOrbProps {
   state: "idle" | "connecting" | "speaking" | "listening" | "thinking";
   isCalling: boolean;
+  size?: "sm" | "md";
   onClick: () => void;
 }
 
-export function ModuleVoiceOrb({ state, isCalling, onClick }: ModuleVoiceOrbProps) {
+export function ModuleVoiceOrb({ state, isCalling, size = "sm", onClick }: ModuleVoiceOrbProps) {
   const isSpeaking = state === "speaking";
   const isThinking = state === "thinking";
   const isListening = state === "listening";
+
+  const isSm = size === "sm";
 
   return (
     <div
@@ -31,9 +34,15 @@ export function ModuleVoiceOrb({ state, isCalling, onClick }: ModuleVoiceOrbProp
       {/* Soundwave ripples when speaking */}
       {isSpeaking && (
         <>
-          <div className="absolute w-28 h-28 sm:w-32 sm:h-32 rounded-full border border-blue-400/40 animate-ping pointer-events-none" />
           <div
-            className="absolute w-36 h-36 sm:w-40 sm:h-40 rounded-full border border-sky-300/30 animate-pulse pointer-events-none"
+            className={`absolute rounded-full border border-blue-400/40 animate-ping pointer-events-none ${
+              isSm ? "w-20 h-20 sm:w-24 sm:h-24" : "w-28 h-28 sm:w-32 sm:h-32"
+            }`}
+          />
+          <div
+            className={`absolute rounded-full border border-sky-300/30 animate-pulse pointer-events-none ${
+              isSm ? "w-24 h-24 sm:w-28 sm:h-28" : "w-36 h-36 sm:w-40 sm:h-40"
+            }`}
             style={{ animationDuration: "1.5s" }}
           />
         </>
@@ -41,7 +50,9 @@ export function ModuleVoiceOrb({ state, isCalling, onClick }: ModuleVoiceOrbProp
 
       {/* Atmospheric Soft Aura Glow */}
       <div
-        className={`absolute w-32 h-32 sm:w-36 sm:h-36 rounded-full blur-2xl transition-all duration-500 pointer-events-none ${
+        className={`absolute rounded-full blur-xl sm:blur-2xl transition-all duration-500 pointer-events-none ${
+          isSm ? "w-22 h-22 sm:w-26 sm:h-26" : "w-32 h-32 sm:w-36 sm:h-36"
+        } ${
           isSpeaking
             ? "bg-blue-500/50 scale-125 animate-pulse"
             : isListening
@@ -56,7 +67,9 @@ export function ModuleVoiceOrb({ state, isCalling, onClick }: ModuleVoiceOrbProp
 
       {/* Core Glowing Orb Sphere */}
       <div
-        className={`relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden transition-all duration-300 shadow-xl border border-white/40 ${
+        className={`relative rounded-full overflow-hidden transition-all duration-300 shadow-xl border border-white/40 ${
+          isSm ? "w-14 h-14 sm:w-16 sm:h-16" : "w-20 h-20 sm:w-24 sm:h-24"
+        } ${
           isSpeaking
             ? "scale-105"
             : isListening
@@ -86,18 +99,18 @@ export function ModuleVoiceOrb({ state, isCalling, onClick }: ModuleVoiceOrbProp
         <div className="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">
           {isCalling ? (
             isListening ? (
-              <Mic className="w-7 h-7 text-white animate-pulse" />
+              <Mic className={`${isSm ? "w-5 h-5" : "w-7 h-7"} text-white animate-pulse`} />
             ) : isSpeaking ? (
               <div className="flex items-center gap-1">
-                <span className="w-1 h-4 bg-white rounded-full animate-bounce" />
-                <span className="w-1 h-6 bg-white rounded-full animate-bounce [animation-delay:0.15s]" />
-                <span className="w-1 h-4 bg-white rounded-full animate-bounce [animation-delay:0.3s]" />
+                <span className={`w-1 ${isSm ? "h-3" : "h-4"} bg-white rounded-full animate-bounce`} />
+                <span className={`w-1 ${isSm ? "h-5" : "h-6"} bg-white rounded-full animate-bounce [animation-delay:0.15s]`} />
+                <span className={`w-1 ${isSm ? "h-3" : "h-4"} bg-white rounded-full animate-bounce [animation-delay:0.3s]`} />
               </div>
             ) : (
-              <PhoneCall className="w-6 h-6 text-white animate-pulse" />
+              <PhoneCall className={`${isSm ? "w-5 h-5" : "w-6 h-6"} text-white animate-pulse`} />
             )
           ) : (
-            <PhoneCall className="w-6 h-6 text-white/90 group-hover:scale-110 transition-transform" />
+            <PhoneCall className={`${isSm ? "w-5 h-5" : "w-6 h-6"} text-white/90 group-hover:scale-110 transition-transform`} />
           )}
         </div>
       </div>

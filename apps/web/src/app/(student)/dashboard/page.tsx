@@ -13,7 +13,7 @@ export default async function DashboardPage() {
     redirect("/login");
   }
 
-  const API_URL = process.env.API_URL || "http://localhost:3001";
+  const API_URL = process.env.API_URL || "http://localhost:3003";
   const userId = session.userId;
 
   let levels: any[] = [];

@@ -151,8 +151,8 @@
             "roleplay": {
               "context": "Kamu sedang di kafe dan temanmu bertanya apa kegiatanmu saat ini.",
               "roles": [
-                "Tutor",
-                "Student"
+                "Mr. Khoirul",
+                "You"
               ],
               "turns": [
                 {
@@ -167,7 +167,8 @@
                   "text": "I am having coffee and studying my English notes.",
                   "translation": "Saya sedang minum kopi dan mempelajari catatan bahasa Inggris saya."
                 }
-              ]
+              ],
+              "defaultUserRole": "You"
             },
             "challenge": {
               "scenario": "Jelaskan apa yang sedang kamu dan orang-orang di sekitarmu lakukan sekarang dalam 2 kalimat bahasa Inggris.",
@@ -190,7 +191,8 @@
                   "I reading am a novel."
                 ],
                 "answerIndex": 1,
-                "explanation": "Present continuous membutuhkan To Be 'am' sebelum verb-ing."
+                "explanation": "Present continuous membutuhkan To Be 'am' sebelum verb-ing.",
+                "answer": "I am reading a novel."
               },
               {
                 "id": 2,
@@ -202,7 +204,8 @@
                   "played"
                 ],
                 "answerIndex": 2,
-                "explanation": "Subjek jamak 'the children' menggunakan to be 'are' + verb-ing."
+                "explanation": "Subjek jamak 'the children' menggunakan to be 'are' + verb-ing.",
+                "answer": "are playing"
               },
               {
                 "id": 3,
@@ -214,7 +217,8 @@
                   "She isn't cook."
                 ],
                 "answerIndex": 0,
-                "explanation": "Negasi continuous dibentuk dengan menambahkan 'not' setelah to be: 'is not cooking'."
+                "explanation": "Negasi continuous dibentuk dengan menambahkan 'not' setelah to be: 'is not cooking'.",
+                "answer": "She is not cooking."
               },
               {
                 "id": 4,
@@ -226,7 +230,8 @@
                   "Are what you doing?"
                 ],
                 "answerIndex": 1,
-                "explanation": "Rumus kalimat tanya WH: WH + to be + Subject + V-ing."
+                "explanation": "Rumus kalimat tanya WH: WH + to be + Subject + V-ing.",
+                "answer": "What are you doing?"
               },
               {
                 "id": 5,
@@ -238,7 +243,8 @@
                   "Hujan selalu turun di luar."
                 ],
                 "answerIndex": 1,
-                "explanation": "'Is raining' menyatakan kejadian yang sedang berlangsung saat ini."
+                "explanation": "'Is raining' menyatakan kejadian yang sedang berlangsung saat ini.",
+                "answer": "Di luar sedang hujan."
               }
             ]
           }
@@ -389,8 +395,8 @@
             "roleplay": {
               "context": "Tutor bertanya tentang kebiasaan harianmu vs apa yang sedang kamu lakukan minggu ini.",
               "roles": [
-                "Tutor",
-                "Student"
+                "Mr. Khoirul",
+                "You"
               ],
               "turns": [
                 {
@@ -405,7 +411,8 @@
                   "text": "I usually rest at home, but this weekend I am traveling with my family.",
                   "translation": "Saya biasanya istirahat di rumah, tapi akhir pekan ini saya sedang bepergian bersama keluarga saya."
                 }
-              ]
+              ],
+              "defaultUserRole": "You"
             },
             "challenge": {
               "scenario": "Bandingkan 1 hal yang biasa kamu lakukan setiap hari dengan 1 hal khusus yang sedang kamu kerjakan hari ini.",
@@ -428,7 +435,8 @@
                   "She teaching English every Tuesday."
                 ],
                 "answerIndex": 1,
-                "explanation": "Kebiasaan atau jadwal rutin 'every Tuesday' menggunakan Present Simple (teaches)."
+                "explanation": "Kebiasaan atau jadwal rutin 'every Tuesday' menggunakan Present Simple (teaches).",
+                "answer": "She teaches English every Tuesday."
               },
               {
                 "id": 2,
@@ -440,7 +448,8 @@
                   "gone"
                 ],
                 "answerIndex": 1,
-                "explanation": "Keterangan waktu 'right now' menandakan aksi sedang berlangsung (is going)."
+                "explanation": "Keterangan waktu 'right now' menandakan aksi sedang berlangsung (is going).",
+                "answer": "is going"
               },
               {
                 "id": 3,
@@ -452,7 +461,8 @@
                   "Tidak pernah tinggal di Bali."
                 ],
                 "answerIndex": 1,
-                "explanation": "Present continuous pada kata kerja live menyatakan kondisi tempat tinggal sementara."
+                "explanation": "Present continuous pada kata kerja live menyatakan kondisi tempat tinggal sementara.",
+                "answer": "Tinggal sementara waktu."
               },
               {
                 "id": 4,
@@ -464,7 +474,8 @@
                   "knocked"
                 ],
                 "answerIndex": 1,
-                "explanation": "Perintah 'Listen!' menunjukkan peristiwa sedang terjadi saat berbicara."
+                "explanation": "Perintah 'Listen!' menunjukkan peristiwa sedang terjadi saat berbicara.",
+                "answer": "is knocking"
               },
               {
                 "id": 5,
@@ -476,7 +487,8 @@
                   "I know the answer."
                 ],
                 "answerIndex": 2,
-                "explanation": "Kata kerja stative 'know' umumnya tidak digunakan dalam bentuk continuous (bukan 'am knowing')."
+                "explanation": "Kata kerja stative 'know' umumnya tidak digunakan dalam bentuk continuous (bukan 'am knowing').",
+                "answer": "I am knowing the answer."
               }
             ]
           }
@@ -627,8 +639,8 @@
             "roleplay": {
               "context": "Tutor bertanya tentang rencana liburan atau akhir pekanmu.",
               "roles": [
-                "Tutor",
-                "Student"
+                "Mr. Khoirul",
+                "You"
               ],
               "turns": [
                 {
@@ -643,7 +655,8 @@
                   "text": "I am going to clean my room and watch a movie with my friends.",
                   "translation": "Saya akan membersihkan kamar saya dan menonton film bersama teman-teman saya."
                 }
-              ]
+              ],
+              "defaultUserRole": "You"
             },
             "challenge": {
               "scenario": "Jelaskan 2 rencana pasti yang akan kamu lakukan dalam 7 hari ke depan dengan pola 'be going to'.",
@@ -666,7 +679,8 @@
                   "She is going buy a ticket."
                 ],
                 "answerIndex": 0,
-                "explanation": "Rumus lengkap: Subject + is/am/are + going to + V1."
+                "explanation": "Rumus lengkap: Subject + is/am/are + going to + V1.",
+                "answer": "She is going to buy a ticket."
               },
               {
                 "id": 2,
@@ -678,7 +692,8 @@
                   "going"
                 ],
                 "answerIndex": 2,
-                "explanation": "Subjek 'We' menggunakan to be 'are'."
+                "explanation": "Subjek 'We' menggunakan to be 'are'.",
+                "answer": "are going"
               },
               {
                 "id": 3,
@@ -690,7 +705,8 @@
                   "They not are going to move."
                 ],
                 "answerIndex": 0,
-                "explanation": "Negasi disisipkan setelah to be: 'are not going to'."
+                "explanation": "Negasi disisipkan setelah to be: 'are not going to'.",
+                "answer": "They are not going to move."
               },
               {
                 "id": 4,
@@ -702,7 +718,8 @@
                   "Untuk fakta ilmiah umum."
                 ],
                 "answerIndex": 1,
-                "explanation": "'Be going to' digunakan untuk rencana atau niatan yang sudah dibuat sebelumnya."
+                "explanation": "'Be going to' digunakan untuk rencana atau niatan yang sudah dibuat sebelumnya.",
+                "answer": "Untuk rencana yang sudah diputuskan sebelumnya."
               },
               {
                 "id": 5,
@@ -714,7 +731,8 @@
                   "Did"
                 ],
                 "answerIndex": 1,
-                "explanation": "Pertanyaan Yes/No untuk 'be going to' diawali dengan To Be (Are you going to...)."
+                "explanation": "Pertanyaan Yes/No untuk 'be going to' diawali dengan To Be (Are you going to...).",
+                "answer": "Are"
               }
             ]
           }
@@ -865,8 +883,8 @@
             "roleplay": {
               "context": "Tutor membutuhkan bantuan dan kamu menawarkan bantuan spontan dengan kata 'will'.",
               "roles": [
-                "Tutor",
-                "Student"
+                "Mr. Khoirul",
+                "You"
               ],
               "turns": [
                 {
@@ -881,7 +899,8 @@
                   "text": "Don't worry, I will get it for you right now.",
                   "translation": "Jangan khawatir, saya akan mengambilkannya untuk Anda sekarang juga."
                 }
-              ]
+              ],
+              "defaultUserRole": "You"
             },
             "challenge": {
               "scenario": "Bayangkan seseorang sedang membawa barang berat atau kedinginan. Buat 2 kalimat tawaran bantuan spontan menggunakan 'will'.",
@@ -904,7 +923,8 @@
                   "I opened it."
                 ],
                 "answerIndex": 0,
-                "explanation": "Keputusan spontan pada saat berbicara menggunakan 'will + V1' (I will open it)."
+                "explanation": "Keputusan spontan pada saat berbicara menggunakan 'will + V1' (I will open it).",
+                "answer": "I will open it."
               },
               {
                 "id": 2,
@@ -916,7 +936,8 @@
                   "I don't will"
                 ],
                 "answerIndex": 1,
-                "explanation": "Bentuk kontraksi baku dari will not adalah won't."
+                "explanation": "Bentuk kontraksi baku dari will not adalah won't.",
+                "answer": "I won't"
               },
               {
                 "id": 3,
@@ -928,7 +949,8 @@
                   "don't"
                 ],
                 "answerIndex": 1,
-                "explanation": "Konteks janji tidak membeberkan rahasia memakai 'won't' (will not)."
+                "explanation": "Konteks janji tidak membeberkan rahasia memakai 'won't' (will not).",
+                "answer": "won't"
               },
               {
                 "id": 4,
@@ -940,7 +962,8 @@
                   "I work at seven."
                 ],
                 "answerIndex": 1,
-                "explanation": "Frasa 'I think ... will win' adalah ungkapan prediksi masa depan."
+                "explanation": "Frasa 'I think ... will win' adalah ungkapan prediksi masa depan.",
+                "answer": "I think Manchester United will win tonight."
               },
               {
                 "id": 5,
@@ -952,7 +975,8 @@
                   "You will come to my party?"
                 ],
                 "answerIndex": 0,
-                "explanation": "Inversi pertanyaan dengan modal will: Will + Subject + V1."
+                "explanation": "Inversi pertanyaan dengan modal will: Will + Subject + V1.",
+                "answer": "Will you come to my party?"
               }
             ]
           }
@@ -1103,8 +1127,8 @@
             "roleplay": {
               "context": "Bandingkan dua handphone atau dua jenis makanan dengan bantuan tutor.",
               "roles": [
-                "Tutor",
-                "Student"
+                "Mr. Khoirul",
+                "You"
               ],
               "turns": [
                 {
@@ -1119,7 +1143,8 @@
                   "text": "I prefer coffee because it makes me feel more energetic in the morning.",
                   "translation": "Saya lebih memilih kopi karena itu membuat saya merasa lebih berenergi di pagi hari."
                 }
-              ]
+              ],
+              "defaultUserRole": "You"
             },
             "challenge": {
               "scenario": "Bandingkan dua kota di Indonesia (misal Jakarta vs Yogyakarta) dalam hal harga, cuaca, atau kepadatan lalu lintas dalam 2 kalimat.",
@@ -1142,7 +1167,8 @@
                   "more faster"
                 ],
                 "answerIndex": 1,
-                "explanation": "Kata sifat 1 suku kata ditambah akhiran '-er' (faster)."
+                "explanation": "Kata sifat 1 suku kata ditambah akhiran '-er' (faster).",
+                "answer": "faster"
               },
               {
                 "id": 2,
@@ -1154,7 +1180,8 @@
                   "Gold is as expensive than silver."
                 ],
                 "answerIndex": 0,
-                "explanation": "'Expensive' terdiri dari 3 suku kata, sehingga menggunakan 'more expensive than'."
+                "explanation": "'Expensive' terdiri dari 3 suku kata, sehingga menggunakan 'more expensive than'.",
+                "answer": "Gold is more expensive than silver."
               },
               {
                 "id": 3,
@@ -1166,7 +1193,8 @@
                   "best"
                 ],
                 "answerIndex": 1,
-                "explanation": "'Good' adalah kata sifat ireguler; bentuk perbandingannya adalah 'better'."
+                "explanation": "'Good' adalah kata sifat ireguler; bentuk perbandingannya adalah 'better'.",
+                "answer": "better"
               },
               {
                 "id": 4,
@@ -1178,7 +1206,8 @@
                   "easiest"
                 ],
                 "answerIndex": 2,
-                "explanation": "Kata berakhiran huruf -y seperti 'easy' berubah menjadi '-ier' (easier)."
+                "explanation": "Kata berakhiran huruf -y seperti 'easy' berubah menjadi '-ier' (easier).",
+                "answer": "easier"
               },
               {
                 "id": 5,
@@ -1190,7 +1219,8 @@
                   "Skor saya paling sempurna."
                 ],
                 "answerIndex": 1,
-                "explanation": "'Worse' adalah bentuk perbandingan dari 'bad' yang berarti lebih buruk."
+                "explanation": "'Worse' adalah bentuk perbandingan dari 'bad' yang berarti lebih buruk.",
+                "answer": "Skor saya lebih buruk dari skor dia."
               }
             ]
           }
@@ -1341,8 +1371,8 @@
             "roleplay": {
               "context": "Tutor bertanya tentang pengalaman terbaik atau tempat terbaik yang pernah kamu kunjungi.",
               "roles": [
-                "Tutor",
-                "Student"
+                "Mr. Khoirul",
+                "You"
               ],
               "turns": [
                 {
@@ -1357,7 +1387,8 @@
                   "text": "The most beautiful place I have visited is Labuan Bajo because of its sunsets.",
                   "translation": "Tempat paling indah yang pernah saya kunjungi adalah Labuan Bajo karena pemandangan matahari terbenamnya."
                 }
-              ]
+              ],
+              "defaultUserRole": "You"
             },
             "challenge": {
               "scenario": "Sebutkan 1 hal yang paling kamu sukai di kotamu (makanan, tempat, atau orang) dengan pola superlatif.",
@@ -1380,7 +1411,8 @@
                   "the most smallest"
                 ],
                 "answerIndex": 1,
-                "explanation": "Kata sifat 1 suku kata superlatif memakai 'the -est' (the smallest)."
+                "explanation": "Kata sifat 1 suku kata superlatif memakai 'the -est' (the smallest).",
+                "answer": "the smallest"
               },
               {
                 "id": 2,
@@ -1392,7 +1424,8 @@
                   "most fastest"
                 ],
                 "answerIndex": 1,
-                "explanation": "Superlatif wajib menggunakan artikel 'the' (the fastest)."
+                "explanation": "Superlatif wajib menggunakan artikel 'the' (the fastest).",
+                "answer": "the fastest"
               },
               {
                 "id": 3,
@@ -1404,7 +1437,8 @@
                   "the most good"
                 ],
                 "answerIndex": 2,
-                "explanation": "'Good' bentuk superlatif iregulernya adalah 'the best'."
+                "explanation": "'Good' bentuk superlatif iregulernya adalah 'the best'.",
+                "answer": "the best"
               },
               {
                 "id": 4,
@@ -1416,7 +1450,8 @@
                   "the difficulter"
                 ],
                 "answerIndex": 2,
-                "explanation": "'Difficult' bersuku kata 3, sehingga bentuknya 'the most difficult'."
+                "explanation": "'Difficult' bersuku kata 3, sehingga bentuknya 'the most difficult'.",
+                "answer": "the most"
               },
               {
                 "id": 5,
@@ -1428,7 +1463,8 @@
                   "She is more prettiest girl."
                 ],
                 "answerIndex": 1,
-                "explanation": "Kata berakhiran -y memakai '-iest' dengan 'the' tanpa tambahan kata 'most' (the prettiest)."
+                "explanation": "Kata berakhiran -y memakai '-iest' dengan 'the' tanpa tambahan kata 'most' (the prettiest).",
+                "answer": "She is the prettiest girl."
               }
             ]
           }
@@ -1579,8 +1615,8 @@
             "roleplay": {
               "context": "Tutor mengeluh sering lupa kosakata baru. Berikan saran menggunakan 'should'.",
               "roles": [
-                "Tutor",
-                "Student"
+                "Mr. Khoirul",
+                "You"
               ],
               "turns": [
                 {
@@ -1595,7 +1631,8 @@
                   "text": "You should practice speaking them every day and write them in a small notebook.",
                   "translation": "Anda sebaiknya mempraktikkan pengucapannya setiap hari dan menuliskannya di buku catatan kecil."
                 }
-              ]
+              ],
+              "defaultUserRole": "You"
             },
             "challenge": {
               "scenario": "Berikan 2 saran kesehatan bagi teman yang sering bekerja lembur dan kurang tidur.",
@@ -1618,7 +1655,8 @@
                   "You should saw a doctor."
                 ],
                 "answerIndex": 2,
-                "explanation": "Modal 'should' selalu diikuti Verb 1 murni tanpa 'to' (should see)."
+                "explanation": "Modal 'should' selalu diikuti Verb 1 murni tanpa 'to' (should see).",
+                "answer": "You should see a doctor."
               },
               {
                 "id": 2,
@@ -1630,7 +1668,8 @@
                   "don't should"
                 ],
                 "answerIndex": 1,
-                "explanation": "'Shouldn't' (sebaiknya tidak) digunakan untuk menasihati agar tidak menyetir saat mengantuk."
+                "explanation": "'Shouldn't' (sebaiknya tidak) digunakan untuk menasihati agar tidak menyetir saat mengantuk.",
+                "answer": "shouldn't"
               },
               {
                 "id": 3,
@@ -1642,7 +1681,8 @@
                   "Do I should what?"
                 ],
                 "answerIndex": 0,
-                "explanation": "Inversi pertanyaan modal: WH + should + Subject + V1."
+                "explanation": "Inversi pertanyaan modal: WH + should + Subject + V1.",
+                "answer": "What should I do?"
               },
               {
                 "id": 4,
@@ -1654,7 +1694,8 @@
                   "Kamu wajib bayar buah."
                 ],
                 "answerIndex": 1,
-                "explanation": "'Should' menyatakan saran atau rekomendasi yang baik untuk dilakukan."
+                "explanation": "'Should' menyatakan saran atau rekomendasi yang baik untuk dilakukan.",
+                "answer": "Kamu disarankan makan lebih banyak buah."
               },
               {
                 "id": 5,
@@ -1666,7 +1707,8 @@
                   "I should go now."
                 ],
                 "answerIndex": 1,
-                "explanation": "Penggunaan 'should to study' salah karena modal tidak boleh diikuti 'to'."
+                "explanation": "Penggunaan 'should to study' salah karena modal tidak boleh diikuti 'to'.",
+                "answer": "They should to study."
               }
             ]
           }
@@ -1817,8 +1859,8 @@
             "roleplay": {
               "context": "Diskusikan peraturan di tempat kerja atau sekolah bersama tutor.",
               "roles": [
-                "Tutor",
-                "Student"
+                "Mr. Khoirul",
+                "You"
               ],
               "turns": [
                 {
@@ -1833,7 +1875,8 @@
                   "text": "We must arrive before eight o'clock, and we mustn't be noisy in the meeting room.",
                   "translation": "Kami harus tiba sebelum jam delapan, dan kami dilarang berisik di ruang rapat."
                 }
-              ]
+              ],
+              "defaultUserRole": "You"
             },
             "challenge": {
               "scenario": "Sebutkan 1 hal yang wajib (must) dan 1 hal yang dilarang (must not) di tempat umum seperti perpustakaan atau pesawat.",
@@ -1856,7 +1899,8 @@
                   "should to"
                 ],
                 "answerIndex": 2,
-                "explanation": "Karena gratis, kamu 'tidak perlu / tidak harus' bayar (don't have to)."
+                "explanation": "Karena gratis, kamu 'tidak perlu / tidak harus' bayar (don't have to).",
+                "answer": "don't have to"
               },
               {
                 "id": 2,
@@ -1868,7 +1912,8 @@
                   "have to"
                 ],
                 "answerIndex": 0,
-                "explanation": "Tanda larangan keras menggunakan 'mustn't' (must not)."
+                "explanation": "Tanda larangan keras menggunakan 'mustn't' (must not).",
+                "answer": "mustn't"
               },
               {
                 "id": 3,
@@ -1880,7 +1925,8 @@
                   "not have to"
                 ],
                 "answerIndex": 0,
-                "explanation": "Kewajiban keselamatan mutlak menggunakan 'must'."
+                "explanation": "Kewajiban keselamatan mutlak menggunakan 'must'.",
+                "answer": "must"
               },
               {
                 "id": 4,
@@ -1892,7 +1938,8 @@
                   "must to"
                 ],
                 "answerIndex": 0,
-                "explanation": "Subjek 'She' menggunakan bentuk negatif 'doesn't have to'."
+                "explanation": "Subjek 'She' menggunakan bentuk negatif 'doesn't have to'.",
+                "answer": "doesn't have to"
               },
               {
                 "id": 5,
@@ -1904,7 +1951,8 @@
                   "Don't have to adalah bentuk lampau."
                 ],
                 "answerIndex": 1,
-                "explanation": "Mustn't berarti larangan mutlak, sedangkan don't have to berarti tidak ada keharusan."
+                "explanation": "Mustn't berarti larangan mutlak, sedangkan don't have to berarti tidak ada keharusan.",
+                "answer": "Mustn't = dilarang, Don't have to = tidak wajib/tidak perlu."
               }
             ]
           }
@@ -2055,8 +2103,8 @@
             "roleplay": {
               "context": "Kamu kehilangan kunci atau kacamata dan meminta bantuan teman.",
               "roles": [
-                "Tutor",
-                "Student"
+                "Mr. Khoirul",
+                "You"
               ],
               "turns": [
                 {
@@ -2071,7 +2119,8 @@
                   "text": "Yes, I am looking for my house keys. I dropped them a minute ago.",
                   "translation": "Ya, saya sedang mencari kunci rumah saya. Saya menjatuhkannya semenit yang lalu."
                 }
-              ]
+              ],
+              "defaultUserRole": "You"
             },
             "challenge": {
               "scenario": "Ceritakan urutan rutinitas pagimu memakai minimal 3 phrasal verb (misal: wake up, turn on, put on).",
@@ -2094,7 +2143,8 @@
                   "give up"
                 ],
                 "answerIndex": 0,
-                "explanation": "'Put on' berarti memakai (pakaian/jaket)."
+                "explanation": "'Put on' berarti memakai (pakaian/jaket).",
+                "answer": "put on"
               },
               {
                 "id": 2,
@@ -2106,7 +2156,8 @@
                   "wake up"
                 ],
                 "answerIndex": 1,
-                "explanation": "'Turn off' bermakna mematikan perangkat elektronik."
+                "explanation": "'Turn off' bermakna mematikan perangkat elektronik.",
+                "answer": "turn off"
               },
               {
                 "id": 3,
@@ -2118,7 +2169,8 @@
                   "turning up"
                 ],
                 "answerIndex": 0,
-                "explanation": "'Looking for' berarti mencari arah atau barang."
+                "explanation": "'Looking for' berarti mencari arah atau barang.",
+                "answer": "looking for"
               },
               {
                 "id": 4,
@@ -2130,7 +2182,8 @@
                   "wake up"
                 ],
                 "answerIndex": 1,
-                "explanation": "Lawan kata 'put on' pakaian adalah 'take off' (melepas)."
+                "explanation": "Lawan kata 'put on' pakaian adalah 'take off' (melepas).",
+                "answer": "take off"
               },
               {
                 "id": 5,
@@ -2142,7 +2195,8 @@
                   "Wake up hanya dipakai malam hari."
                 ],
                 "answerIndex": 1,
-                "explanation": "Wake up adalah membuka mata/terjaga, sedangkan get up adalah bangkit berdiri dari ranjang."
+                "explanation": "Wake up adalah membuka mata/terjaga, sedangkan get up adalah bangkit berdiri dari ranjang.",
+                "answer": "Wake up = sadar dari tidur, Get up = bangkit beranjak dari kasur."
               }
             ]
           }
@@ -2293,8 +2347,8 @@
             "roleplay": {
               "context": "Jelaskan alasan mengapa kamu menyukai kopi atau teh dengan kata penghubung.",
               "roles": [
-                "Tutor",
-                "Student"
+                "Mr. Khoirul",
+                "You"
               ],
               "turns": [
                 {
@@ -2309,7 +2363,8 @@
                   "text": "I like learning online because it is flexible, but I must stay disciplined.",
                   "translation": "Saya suka belajar online karena fleksibel, tetapi saya harus tetap disiplin."
                 }
-              ]
+              ],
+              "defaultUserRole": "You"
             },
             "challenge": {
               "scenario": "Buat 1 kalimat sebab-akibat (menggunakan 'because' atau 'so') dan 1 kalimat kontras (menggunakan 'but' atau 'although').",
@@ -2332,7 +2387,8 @@
                   "but"
                 ],
                 "answerIndex": 1,
-                "explanation": "'So' digunakan untuk menghubungkan sebab ke akibat/hasil."
+                "explanation": "'So' digunakan untuk menghubungkan sebab ke akibat/hasil.",
+                "answer": "so"
               },
               {
                 "id": 2,
@@ -2344,7 +2400,8 @@
                   "and"
                 ],
                 "answerIndex": 0,
-                "explanation": "'Although' (meskipun) digunakan untuk menunjukkan kontras yang mengejutkan."
+                "explanation": "'Although' (meskipun) digunakan untuk menunjukkan kontras yang mengejutkan.",
+                "answer": "although"
               },
               {
                 "id": 3,
@@ -2356,7 +2413,8 @@
                   "Because why it rained, so we stayed."
                 ],
                 "answerIndex": 1,
-                "explanation": "Jangan gunakan 'because' bersamaan dengan 'so' dalam satu kalimat."
+                "explanation": "Jangan gunakan 'because' bersamaan dengan 'so' dalam satu kalimat.",
+                "answer": "Because it rained, we cancelled the match."
               },
               {
                 "id": 4,
@@ -2368,7 +2426,8 @@
                   "or"
                 ],
                 "answerIndex": 1,
-                "explanation": "'But' digunakan untuk menghubungkan dua ide yang bertolak belakang."
+                "explanation": "'But' digunakan untuk menghubungkan dua ide yang bertolak belakang.",
+                "answer": "but"
               },
               {
                 "id": 5,
@@ -2380,7 +2439,8 @@
                   "although"
                 ],
                 "answerIndex": 0,
-                "explanation": "'Because' menjelaskan alasan mengapa mereka tinggal di rumah."
+                "explanation": "'Because' menjelaskan alasan mengapa mereka tinggal di rumah.",
+                "answer": "because"
               }
             ]
           }
@@ -2531,8 +2591,8 @@
             "roleplay": {
               "context": "Simulasikan pemesanan makanan dan pembayaran tagihan dengan tutor sebagai pelayan restoran.",
               "roles": [
-                "Tutor",
-                "Student"
+                "Mr. Khoirul (Waiter)",
+                "You (Guest)"
               ],
               "turns": [
                 {
@@ -2547,7 +2607,8 @@
                   "text": "Yes, could I have an iced tea, and could I also see the dinner menu?",
                   "translation": "Ya, bisakah saya pesan es teh, dan bisakah saya melihat menu makan malamnya?"
                 }
-              ]
+              ],
+              "defaultUserRole": "You (Guest)"
             },
             "challenge": {
               "scenario": "Pesanlah 1 hidangan utama dan 1 minuman, lalu mintalah nota tagihan dengan sopan dalam bahasa Inggris.",
@@ -2570,7 +2631,8 @@
                   "I must take coffee."
                 ],
                 "answerIndex": 1,
-                "explanation": "'Could I have ... please?' adalah bentuk kesopanan universal di restoran."
+                "explanation": "'Could I have ... please?' adalah bentuk kesopanan universal di restoran.",
+                "answer": "Could I have a cappuccino, please?"
               },
               {
                 "id": 2,
@@ -2582,7 +2644,8 @@
                   "I want bill now."
                 ],
                 "answerIndex": 1,
-                "explanation": "'Could we have the bill, please?' adalah frasa baku meminta struk pembayaran."
+                "explanation": "'Could we have the bill, please?' adalah frasa baku meminta struk pembayaran.",
+                "answer": "Could we have the bill, please?"
               },
               {
                 "id": 3,
@@ -2594,7 +2657,8 @@
                   "Yes, bill please."
                 ],
                 "answerIndex": 0,
-                "explanation": "'Could we have a few more minutes, please?' meminta waktu tambahan untuk memilih menu."
+                "explanation": "'Could we have a few more minutes, please?' meminta waktu tambahan untuk memilih menu.",
+                "answer": "Could we have a few more minutes, please?"
               },
               {
                 "id": 4,
@@ -2606,7 +2670,8 @@
                   "Tagihan meja"
                 ],
                 "answerIndex": 1,
-                "explanation": "Main course adalah hidangan utama dalam rangkaian jamuan makan."
+                "explanation": "Main course adalah hidangan utama dalam rangkaian jamuan makan.",
+                "answer": "Hidangan utama"
               },
               {
                 "id": 5,
@@ -2618,7 +2683,8 @@
                   "Must I credit card?"
                 ],
                 "answerIndex": 0,
-                "explanation": "'Do you accept credit cards?' adalah frasa lazim menanyakan metode pembayaran kartu."
+                "explanation": "'Do you accept credit cards?' adalah frasa lazim menanyakan metode pembayaran kartu.",
+                "answer": "Do you accept credit cards?"
               }
             ]
           }
@@ -2769,8 +2835,8 @@
             "roleplay": {
               "context": "Diskusikan rencana liburan impianmu bersama tutor: tentukan kota tujuan, akomodasi, dan transportasi.",
               "roles": [
-                "Tutor",
-                "Student"
+                "Mr. Khoirul",
+                "You"
               ],
               "turns": [
                 {
@@ -2785,7 +2851,8 @@
                   "text": "We should go to Malang because the weather is cooler and there are many beautiful apple orchards.",
                   "translation": "Kita sebaiknya pergi ke Malang karena udaranya lebih sejuk dan ada banyak kebun apel yang indah."
                 }
-              ]
+              ],
+              "defaultUserRole": "You"
             },
             "challenge": {
               "scenario": "Rencanakan liburan 3 hari: sebutkan tujuanmu, mengapa tempat itu lebih baik dari tempat lain, dan apa yang akan kamu lakukan di sana.",
@@ -2808,7 +2875,8 @@
                   "Bali nicer, so we go."
                 ],
                 "answerIndex": 0,
-                "explanation": "'Nicer than' (comparative) digabung dengan 'are going to go' (rencana)."
+                "explanation": "'Nicer than' (comparative) digabung dengan 'are going to go' (rencana).",
+                "answer": "Bali is nicer than Bogor, so we are going to go there."
               },
               {
                 "id": 2,
@@ -2820,7 +2888,8 @@
                   "I don't book."
                 ],
                 "answerIndex": 0,
-                "explanation": "Keputusan spontan menanggapi kabar tiket langsung menggunakan 'will + V1'."
+                "explanation": "Keputusan spontan menanggapi kabar tiket langsung menggunakan 'will + V1'.",
+                "answer": "I will book them right away!"
               },
               {
                 "id": 3,
@@ -2832,7 +2901,8 @@
                   "Luggage"
                 ],
                 "answerIndex": 0,
-                "explanation": "Itinerary adalah jadwal rencana detail kegiatan perjalanan."
+                "explanation": "Itinerary adalah jadwal rencana detail kegiatan perjalanan.",
+                "answer": "Itinerary"
               },
               {
                 "id": 4,
@@ -2844,7 +2914,8 @@
                   "the faster"
                 ],
                 "answerIndex": 0,
-                "explanation": "Kata sifat 1 suku kata 'fast' menjadi 'faster than'."
+                "explanation": "Kata sifat 1 suku kata 'fast' menjadi 'faster than'.",
+                "answer": "faster"
               },
               {
                 "id": 5,
@@ -2856,7 +2927,8 @@
                   "Memesan makanan di kafe."
                 ],
                 "answerIndex": 1,
-                "explanation": "'I think it will...' adalah ungkapan baku menyampaikan prediksi."
+                "explanation": "'I think it will...' adalah ungkapan baku menyampaikan prediksi.",
+                "answer": "Menyampaikan prediksi cuaca masa depan."
               }
             ]
           }
@@ -2978,8 +3050,8 @@
             "roleplay": {
               "context": "Ujian akhir berbicara kelulusan bersama Mr. Khoirul.",
               "roles": [
-                "Tutor",
-                "Student"
+                "Mr. Khoirul",
+                "You"
               ],
               "turns": [
                 {
@@ -2994,7 +3066,8 @@
                   "text": "I work every day. Yesterday I studied grammar, and tomorrow I am going to celebrate my graduation.",
                   "translation": "Saya bekerja setiap hari. Kemarin saya belajar tata bahasa, dan besok saya akan merayakan kelulusan saya."
                 }
-              ]
+              ],
+              "defaultUserRole": "You"
             },
             "challenge": {
               "scenario": "Pidato kelulusan singkat: ceritakan kemajuan bicaramu dari awal sampai hari ini dalam 3 kalimat lengkap bahasa Inggris.",
@@ -3017,7 +3090,8 @@
                   "sleeping"
                 ],
                 "answerIndex": 1,
-                "explanation": "Present continuous membutuhkan to be 'is' + verb-ing untuk subjek tunggal."
+                "explanation": "Present continuous membutuhkan to be 'is' + verb-ing untuk subjek tunggal.",
+                "answer": "is sleeping"
               },
               {
                 "id": 2,
@@ -3029,7 +3103,8 @@
                   "drove"
                 ],
                 "answerIndex": 0,
-                "explanation": "Rutinitas harian 'every day' menggunakan Present Simple (drives)."
+                "explanation": "Rutinitas harian 'every day' menggunakan Present Simple (drives).",
+                "answer": "drives"
               },
               {
                 "id": 3,
@@ -3041,7 +3116,8 @@
                   "going to"
                 ],
                 "answerIndex": 1,
-                "explanation": "Rencana yang sudah dibeli tiketnya menggunakan 'be going to'."
+                "explanation": "Rencana yang sudah dibeli tiketnya menggunakan 'be going to'.",
+                "answer": "are going to"
               },
               {
                 "id": 4,
@@ -3053,7 +3129,8 @@
                   "am"
                 ],
                 "answerIndex": 0,
-                "explanation": "Keputusan spontan seketika menggunakan 'will'."
+                "explanation": "Keputusan spontan seketika menggunakan 'will'.",
+                "answer": "will"
               },
               {
                 "id": 5,
@@ -3065,7 +3142,8 @@
                   "more crowdeder"
                 ],
                 "answerIndex": 1,
-                "explanation": "Kata sifat 'crowded' menggunakan 'more crowded than' untuk komparatif."
+                "explanation": "Kata sifat 'crowded' menggunakan 'more crowded than' untuk komparatif.",
+                "answer": "more crowded"
               },
               {
                 "id": 6,
@@ -3077,7 +3155,8 @@
                   "magnificenter"
                 ],
                 "answerIndex": 0,
-                "explanation": "Superlatif kata sifat panjang menggunakan 'the most + adj'."
+                "explanation": "Superlatif kata sifat panjang menggunakan 'the most + adj'.",
+                "answer": "the most magnificent"
               },
               {
                 "id": 7,
@@ -3089,7 +3168,8 @@
                   "don't should"
                 ],
                 "answerIndex": 0,
-                "explanation": "Saran sopan menggunakan modal 'should + V1'."
+                "explanation": "Saran sopan menggunakan modal 'should + V1'.",
+                "answer": "should"
               },
               {
                 "id": 8,
@@ -3101,7 +3181,8 @@
                   "could"
                 ],
                 "answerIndex": 0,
-                "explanation": "Larangan mutlak menggunakan 'mustn't' (must not)."
+                "explanation": "Larangan mutlak menggunakan 'mustn't' (must not).",
+                "answer": "mustn't"
               },
               {
                 "id": 9,
@@ -3113,7 +3194,8 @@
                   "should to"
                 ],
                 "answerIndex": 1,
-                "explanation": "Tidak ada kewajiban karena hari libur menggunakan 'don't have to'."
+                "explanation": "Tidak ada kewajiban karena hari libur menggunakan 'don't have to'.",
+                "answer": "don't have to"
               },
               {
                 "id": 10,
@@ -3125,7 +3207,8 @@
                   "look for"
                 ],
                 "answerIndex": 0,
-                "explanation": "'Take off' berarti melepas pakaian/sepatu."
+                "explanation": "'Take off' berarti melepas pakaian/sepatu.",
+                "answer": "take off"
               },
               {
                 "id": 11,
@@ -3137,7 +3220,8 @@
                   "getting up"
                 ],
                 "answerIndex": 0,
-                "explanation": "'Looking for' berarti mencari barang yang hilang."
+                "explanation": "'Looking for' berarti mencari barang yang hilang.",
+                "answer": "looking for"
               },
               {
                 "id": 12,
@@ -3149,7 +3233,8 @@
                   "but"
                 ],
                 "answerIndex": 0,
-                "explanation": "'So' menunjukkan hubungan akibat/konsekuensi logis."
+                "explanation": "'So' menunjukkan hubungan akibat/konsekuensi logis.",
+                "answer": "so"
               },
               {
                 "id": 13,
@@ -3161,7 +3246,8 @@
                   "the recipe"
                 ],
                 "answerIndex": 0,
-                "explanation": "'The bill' adalah nota pembayaran di restoran."
+                "explanation": "'The bill' adalah nota pembayaran di restoran.",
+                "answer": "the bill"
               },
               {
                 "id": 14,
@@ -3173,7 +3259,8 @@
                   "more bad"
                 ],
                 "answerIndex": 1,
-                "explanation": "Bentuk komparatif ireguler dari 'bad' adalah 'worse'."
+                "explanation": "Bentuk komparatif ireguler dari 'bad' adalah 'worse'.",
+                "answer": "worse"
               },
               {
                 "id": 15,
@@ -3185,7 +3272,8 @@
                   "most good"
                 ],
                 "answerIndex": 2,
-                "explanation": "Bentuk superlatif ireguler dari 'good' adalah 'the best'."
+                "explanation": "Bentuk superlatif ireguler dari 'good' adalah 'the best'.",
+                "answer": "the best"
               }
             ]
           }

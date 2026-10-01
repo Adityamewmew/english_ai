@@ -13,9 +13,7 @@ import {
   Lock,
 } from "lucide-react";
 import {
-  SectionTheory,
-  SectionVocab,
-  SectionDialogue,
+  SectionTheoryUnified,
   SectionSpeakingLab,
   SectionQuiz,
   QuestionResult,
@@ -35,9 +33,12 @@ export default function ModuleDetailPage() {
   const [loading, setLoading] = useState(true);
   const [moduleData, setModuleData] = useState<any>(null);
   const [sections, setSections] = useState<any[]>([]);
-  const [activeSectionIdx, setActiveSectionIdx] = useState(0);
   const [studentName, setStudentName] = useState("");
   const [userId, setUserId] = useState("");
+
+  // 1-Page 2-Phase Progressive States
+  const [activePhase, setActivePhase] = useState<"theory" | "practice">("theory");
+  const [isPracticeUnlocked, setIsPracticeUnlocked] = useState(false);
 
   // Speaking completion & score state for 60/40 hybrid evaluation
   const [isSpeakingComplete, setIsSpeakingComplete] = useState(false);
@@ -84,6 +85,7 @@ export default function ModuleDetailPage() {
           }
 
           if (res.data.userProgress?.status === "completed") {
+            setIsPracticeUnlocked(true);
             setIsSpeakingComplete(true);
             setQuizResult({
               submitted: true,
@@ -174,8 +176,21 @@ export default function ModuleDetailPage() {
     );
   }
 
-  const currentSection = sections[activeSectionIdx];
-  const isLastSection = activeSectionIdx === sections.length - 1;
+  // Extract Section by Type
+  const theorySection = sections.find((s) => s.sectionType === "theory");
+  const vocabSection = sections.find((s) => s.sectionType === "vocab");
+  const dialogueSection = sections.find((s) => s.sectionType === "dialogue");
+  const practiceSection = sections.find((s) => s.sectionType === "practice");
+  const quizSection = sections.find((s) => s.sectionType === "quiz");
+
+  const handleUnlockPractice = () => {
+    setIsPracticeUnlocked(true);
+    setActivePhase("practice");
+    setGatingNotice(null);
+    setTimeout(() => {
+      document.getElementById("phase-practice")?.scrollIntoView({ behavior: "smooth" });
+    }, 120);
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col justify-between relative">
@@ -223,59 +238,67 @@ export default function ModuleDetailPage() {
           </div>
         </header>
 
-        {/* Stepper Navigation */}
+        {/* 2-Phase Progressive Progress Indicator */}
         <div className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="flex items-center gap-2 overflow-x-auto py-2.5 scrollbar-none">
-              {sections.map((sec, idx) => {
-                const isActive = activeSectionIdx === idx;
-                const isLocked = sec.sectionType === "quiz" && !isSpeakingComplete;
-                return (
-                  <button
-                    key={sec.id}
-                    type="button"
-                    onClick={() => {
-                      if (isLocked) {
-                        setGatingNotice(
-                          "Selesaikan seluruh tahapan Praktikum Berbicara (Drill, Simulasi Peran, dan Tantangan) sebelum membuka Kuis Evaluasi."
-                        );
-                        return;
-                      }
-                      setGatingNotice(null);
-                      setActiveSectionIdx(idx);
-                    }}
-                    className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
-                      isActive
-                        ? "bg-blue-600 text-white shadow-sm"
-                        : isLocked
-                        ? "text-slate-400 dark:text-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800/40"
-                        : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
-                    }`}
-                  >
-                    <span
-                      className={`w-4 h-4 rounded-full text-[10px] font-bold flex items-center justify-center ${
-                        isActive
-                          ? "bg-white/20 text-white"
-                          : isLocked
-                          ? "bg-slate-100 dark:bg-slate-800 text-slate-400"
-                          : "bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
-                      }`}
-                    >
-                      {idx + 1}
-                    </span>
-                    <span>{sec.title}</span>
-                    {isLocked && <Lock className="w-3.5 h-3.5 text-slate-400" />}
-                  </button>
-                );
-              })}
+          <div className="max-w-4xl mx-auto px-4 py-2.5 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
+              <button
+                type="button"
+                onClick={() => {
+                  setActivePhase("theory");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className={`flex-1 sm:flex-initial flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  activePhase === "theory"
+                    ? "bg-blue-600 text-white shadow-sm"
+                    : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
+                }`}
+              >
+                <span className="w-4 h-4 rounded-full bg-white/20 text-white flex items-center justify-center text-[10px]">
+                  1
+                </span>
+                <span>Fase 1: Teori & Pemahaman</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  if (!isPracticeUnlocked) {
+                    setGatingNotice(
+                      "Selesaikan percobaan di bagian Teori terlebih dahulu untuk membuka Fase Praktikum & Evaluasi."
+                    );
+                    return;
+                  }
+                  setActivePhase("practice");
+                  setGatingNotice(null);
+                  document.getElementById("phase-practice")?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className={`flex-1 sm:flex-initial flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  activePhase === "practice"
+                    ? "bg-blue-600 text-white shadow-sm"
+                    : !isPracticeUnlocked
+                    ? "bg-slate-100 dark:bg-slate-800/40 text-slate-400 dark:text-slate-600 cursor-not-allowed"
+                    : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
+                }`}
+              >
+                <span className="w-4 h-4 rounded-full bg-white/20 text-white flex items-center justify-center text-[10px]">
+                  2
+                </span>
+                <span>Fase 2: Praktikum & Evaluasi</span>
+                {!isPracticeUnlocked && <Lock className="w-3.5 h-3.5 text-slate-400" />}
+              </button>
             </div>
+
+            <span className="hidden sm:inline-block text-xs font-medium text-slate-500 dark:text-slate-400">
+              {isPracticeUnlocked ? "Semua Fase Terbuka" : "Fase 1 Aktif"}
+            </span>
           </div>
         </div>
 
-        {/* Section Main View */}
-        <main className="max-w-4xl mx-auto px-4 py-8 pb-36">
+        {/* 1-Page Main Content View */}
+        <main className="max-w-4xl mx-auto px-4 py-8 pb-20 space-y-12">
           {gatingNotice && (
-            <div className="mb-6 p-4 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-xs flex items-center justify-between gap-3 animate-in fade-in">
+            <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-xs flex items-center justify-between gap-3 animate-in fade-in">
               <div className="flex items-center gap-2.5">
                 <Lock className="w-4 h-4 flex-shrink-0 text-amber-600 dark:text-amber-400" />
                 <span className="font-medium">{gatingNotice}</span>
@@ -290,38 +313,47 @@ export default function ModuleDetailPage() {
             </div>
           )}
 
-          {currentSection && (
-            <div>
-              {currentSection.sectionType === "theory" && (
-                <SectionTheory
-                  title={currentSection.title}
-                  content={currentSection.content}
-                />
-              )}
+          {/* FASE 1: TEORI & PEMAHAMAN (READING, LISTENING, WRITING & SPEAKING TRIAL) */}
+          <section id="phase-theory" className="space-y-6">
+            <SectionTheoryUnified
+              title={theorySection?.title || moduleData.title}
+              theoryContent={theorySection?.content}
+              vocabItems={vocabSection?.content?.items || []}
+              dialogueContext={dialogueSection?.content?.context}
+              dialogueLines={dialogueSection?.content?.lines || dialogueSection?.content?.dialogue || []}
+              onPlayAudio={tutor.playTutorAudio}
+              onAdvanceToPractice={handleUnlockPractice}
+              isPracticeUnlocked={isPracticeUnlocked}
+            />
+          </section>
 
-              {currentSection.sectionType === "vocab" && (
-                <SectionVocab
-                  title={currentSection.title}
-                  items={currentSection.content?.items || []}
-                  onSpeak={tutor.playTutorAudio}
-                />
-              )}
+          {/* FASE 2: PRAKTIKUM BERBICARA & KUIS EVALUASI */}
+          {isPracticeUnlocked && (
+            <section
+              id="phase-practice"
+              className="pt-8 border-t-2 border-slate-200 dark:border-slate-800 space-y-8 animate-in fade-in slide-in-from-bottom-4"
+            >
+              <div className="flex items-center gap-3">
+                <span className="w-7 h-7 rounded-xl bg-blue-600 text-white text-xs font-bold flex items-center justify-center shadow-sm">
+                  2
+                </span>
+                <div>
+                  <h2 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+                    Fase 2: Praktikum Berbicara & Evaluasi
+                  </h2>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                    Praktikkan materi secara langsung di Speaking Lab, kemudian ikuti kuis evaluasi.
+                  </p>
+                </div>
+              </div>
 
-              {currentSection.sectionType === "dialogue" && (
-                <SectionDialogue
-                  title={currentSection.title}
-                  context={currentSection.content?.context}
-                  dialogue={currentSection.content?.lines || currentSection.content?.dialogue || []}
-                  onSpeak={tutor.playTutorAudio}
-                />
-              )}
-
-              {currentSection.sectionType === "practice" && (
+              {/* Speaking Lab */}
+              {practiceSection && (
                 <SectionSpeakingLab
-                  title={currentSection.title}
-                  drills={currentSection.content?.drills || []}
-                  roleplay={currentSection.content?.roleplay || { context: "", roles: [], turns: [] }}
-                  challenge={currentSection.content?.challenge || { scenario: "" }}
+                  title={practiceSection.title}
+                  drills={practiceSection.content?.drills || []}
+                  roleplay={practiceSection.content?.roleplay || { context: "", roles: [], turns: [] }}
+                  challenge={practiceSection.content?.challenge || { scenario: "" }}
                   moduleId={moduleId}
                   userId={userId}
                   onPlayAudio={tutor.playTutorAudio}
@@ -331,42 +363,40 @@ export default function ModuleDetailPage() {
                     setGatingNotice(null);
                   }}
                   onAdvanceToQuiz={() => {
-                    const quizIdx = sections.findIndex((s) => s.sectionType === "quiz");
-                    if (quizIdx !== -1) {
-                      setActiveSectionIdx(quizIdx);
-                    } else {
-                      setActiveSectionIdx((prev) => Math.min(sections.length - 1, prev + 1));
-                    }
+                    document.getElementById("section-quiz")?.scrollIntoView({ behavior: "smooth" });
                   }}
                 />
               )}
 
-              {currentSection.sectionType === "quiz" && (
-                <SectionQuiz
-                  title={currentSection.title}
-                  questions={currentSection.content?.questions || []}
-                  passingScore={moduleData.passingScore || 70}
-                  userAnswers={userAnswers}
-                  isSubmitted={quizResult.submitted}
-                  isSubmitting={isSubmitting}
-                  score={quizResult.score}
-                  quizScore={quizResult.quizScore}
-                  speakingScore={quizResult.speakingScore ?? (isSpeakingComplete ? speakingScore : null)}
-                  passed={quizResult.passed}
-                  results={quizResult.results}
-                  isExam={moduleData.isExam}
-                  onSelectAnswer={handleSelectAnswer}
-                  onSubmit={handleSubmitQuiz}
-                  onRetry={handleRetryQuiz}
-                  onContinue={() => router.push("/modules")}
-                />
+              {/* Kuis Evaluasi */}
+              {quizSection && isSpeakingComplete && (
+                <div id="section-quiz" className="pt-6 border-t border-slate-200 dark:border-slate-800">
+                  <SectionQuiz
+                    title={quizSection.title}
+                    questions={quizSection.content?.questions || []}
+                    passingScore={moduleData.passingScore || 70}
+                    userAnswers={userAnswers}
+                    isSubmitted={quizResult.submitted}
+                    isSubmitting={isSubmitting}
+                    score={quizResult.score}
+                    quizScore={quizResult.quizScore}
+                    speakingScore={quizResult.speakingScore ?? (isSpeakingComplete ? speakingScore : null)}
+                    passed={quizResult.passed}
+                    results={quizResult.results}
+                    isExam={moduleData.isExam}
+                    onSelectAnswer={handleSelectAnswer}
+                    onSubmit={handleSubmitQuiz}
+                    onRetry={handleRetryQuiz}
+                    onContinue={() => router.push("/modules")}
+                  />
+                </div>
               )}
-            </div>
+            </section>
           )}
         </main>
       </div>
 
-      {/* Centered Bottom Voice Orb Dock with Manual Chatbot Toggle */}
+      {/* Unified Bottom Footer Navigation with Centered Voice Orb */}
       <ModuleVoiceDock
         moduleTitle={moduleData.title}
         isCalling={tutor.isCalling}
@@ -382,60 +412,29 @@ export default function ModuleDetailPage() {
         onToggleMic={tutor.handleToggleMic}
         onToggleChat={tutor.handleToggleChat}
         onPlayAudio={tutor.playTutorAudio}
-      />
-
-      {/* Bottom Floating Step Nav */}
-      <footer className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-t border-slate-200 dark:border-slate-800 py-3 pb-24 sticky bottom-0 z-30">
-        <div className="max-w-4xl mx-auto px-4 flex items-center justify-between">
-          <button
-            type="button"
-            disabled={activeSectionIdx === 0}
-            onClick={() => {
-              setGatingNotice(null);
-              setActiveSectionIdx((prev) => Math.max(0, prev - 1));
-            }}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
-              activeSectionIdx === 0
-                ? "text-slate-300 dark:text-slate-700 cursor-not-allowed"
-                : "text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
-            }`}
-          >
-            <ChevronLeft className="w-4 h-4" />
-            <span>Sebelumnya</span>
-          </button>
-
-          <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-            Langkah {activeSectionIdx + 1} dari {sections.length}
-          </span>
-
-          <button
-            type="button"
-            disabled={isLastSection}
-            onClick={() => {
-              const nextIdx = activeSectionIdx + 1;
-              if (nextIdx < sections.length) {
-                const nextSec = sections[nextIdx];
-                if (nextSec.sectionType === "quiz" && !isSpeakingComplete) {
-                  setGatingNotice(
-                    "Selesaikan seluruh tahapan Praktikum Berbicara (Drill, Simulasi Peran, dan Tantangan) sebelum membuka Kuis Evaluasi."
-                  );
-                  return;
-                }
-                setGatingNotice(null);
-                setActiveSectionIdx(nextIdx);
+        onBack={() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          setActivePhase("theory");
+        }}
+        backLabel="Kembali ke Atas (Teori)"
+        onForward={
+          isPracticeUnlocked
+            ? () => {
+                const el = document.getElementById(isSpeakingComplete ? "section-quiz" : "phase-practice");
+                el?.scrollIntoView({ behavior: "smooth" });
+                setActivePhase("practice");
               }
-            }}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
-              isLastSection
-                ? "text-slate-300 dark:text-slate-700 cursor-not-allowed"
-                : "bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
-            }`}
-          >
-            <span>Selanjutnya</span>
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        </div>
-      </footer>
+            : handleUnlockPractice
+        }
+        forwardLabel={
+          isPracticeUnlocked
+            ? isSpeakingComplete
+              ? "Ke Kuis Evaluasi"
+              : "Ke Praktikum Lab"
+            : "Lanjut ke Praktikum"
+        }
+        phaseBadge={isPracticeUnlocked ? "Fase 2 Aktif" : "Fase 1: Teori"}
+      />
     </div>
   );
 }

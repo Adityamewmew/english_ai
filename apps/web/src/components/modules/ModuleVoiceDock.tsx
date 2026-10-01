@@ -2,7 +2,6 @@
 
 import React, { useRef, useEffect } from "react";
 import {
-  PhoneCall,
   PhoneOff,
   Mic,
   MicOff,
@@ -10,6 +9,8 @@ import {
   Volume2,
   MessageSquare,
   X,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { ModuleVoiceOrb } from "./ModuleVoiceOrb";
 import { ChatMessage } from "./ModuleAIAssistant";
@@ -29,6 +30,11 @@ interface ModuleVoiceDockProps {
   onToggleMic: () => void;
   onToggleChat: () => void;
   onPlayAudio: (text: string) => void;
+  onBack?: () => void;
+  backLabel?: string;
+  onForward?: () => void;
+  forwardLabel?: string;
+  phaseBadge?: string;
 }
 
 export function ModuleVoiceDock({
@@ -46,6 +52,10 @@ export function ModuleVoiceDock({
   onToggleMic,
   onToggleChat,
   onPlayAudio,
+  onBack,
+  backLabel = "Kembali ke Atas (Teori)",
+  onForward,
+  forwardLabel = "Lanjut ke Praktikum",
 }: ModuleVoiceDockProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -67,86 +77,116 @@ export function ModuleVoiceDock({
 
   return (
     <>
-      {/* Centered Bottom Floating Voice Dock */}
-      <div className="fixed bottom-4 inset-x-0 z-40 flex justify-center pointer-events-none px-4">
-        <div className="pointer-events-auto bg-slate-900/95 backdrop-blur-md border border-slate-700/80 rounded-full shadow-2xl px-5 py-2.5 flex items-center gap-4 sm:gap-6 max-w-xl w-full justify-between">
-          {/* Left Info */}
-          <div className="flex flex-col text-left max-w-[140px] sm:max-w-[170px]">
-            <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-xs font-bold text-white truncate">Mr. Khoirul</span>
-            </div>
-            <span className="text-[11px] text-slate-300 truncate mt-0.5">
-              {isSpeaking
-                ? "Sedang berbicara..."
-                : isListening
-                ? "Mendengarkan Anda..."
-                : isThinking
-                ? "Sedang berpikir..."
-                : isCalling
-                ? "Panggilan aktif"
-                : "Tanya Tutor Modul"}
-            </span>
+      {/* Unified Bottom Footer Navigation Bar with Centered Voice Orb */}
+      <footer className="sticky bottom-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 shadow-lg py-2">
+        <div className="max-w-4xl mx-auto px-4 flex items-center justify-between gap-2 sm:gap-4">
+          {/* Sisi Kiri: Tombol Navigasi Kembali */}
+          <div className="flex items-center min-w-[100px] sm:min-w-[150px]">
+            {onBack && (
+              <button
+                type="button"
+                onClick={onBack}
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                <span className="hidden sm:inline">{backLabel}</span>
+                <span className="sm:hidden">Kembali</span>
+              </button>
+            )}
           </div>
 
-          {/* Center Voice Orb */}
-          <div className="flex-shrink-0 -mt-6 sm:-mt-8">
-            <ModuleVoiceOrb
-              state={orbState}
-              isCalling={isCalling}
-              onClick={onToggleCall}
-            />
-          </div>
-
-          {/* Right Controls */}
-          <div className="flex items-center gap-2">
+          {/* Bagian Tengah: Voice Orb Mr. Khoirul & Call Controls */}
+          <div className="flex items-center justify-center gap-2 sm:gap-3 flex-1 max-w-[280px]">
+            {/* Tombol Mute / Unmute Mic (Muncul Mengapit saat Panggilan Aktif) */}
             {isCalling && (
               <button
                 type="button"
                 onClick={onToggleMic}
-                className={`p-2 rounded-full text-xs transition-colors ${
+                className={`p-2 rounded-full transition-all shadow-sm ${
                   isListening
-                    ? "bg-emerald-500/20 text-emerald-300 border border-emerald-400/40"
-                    : "bg-slate-800 text-slate-400 border border-slate-700"
+                    ? "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-400/50"
+                    : "bg-slate-100 dark:bg-slate-800 text-slate-400 border border-slate-300 dark:border-slate-700"
                 }`}
                 title={isListening ? "Matikan Mic" : "Nyalakan Mic"}
               >
-                {isListening ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
+                {isListening ? <Mic className="w-3.5 h-3.5" /> : <MicOff className="w-3.5 h-3.5" />}
               </button>
             )}
 
-            {isCalling ? (
+            {/* Glowing Voice Orb */}
+            <div className="relative -my-3 sm:-my-4 flex flex-col items-center">
+              <ModuleVoiceOrb
+                state={orbState}
+                isCalling={isCalling}
+                size="sm"
+                onClick={onToggleCall}
+              />
+              <div className="flex items-center gap-1 mt-0.5">
+                <span
+                  className={`w-1.5 h-1.5 rounded-full ${
+                    isCalling ? "bg-emerald-500 animate-ping" : "bg-blue-500"
+                  }`}
+                />
+                <span className="text-[10px] font-semibold text-slate-600 dark:text-slate-300 whitespace-nowrap">
+                  {isSpeaking
+                    ? "Mr. Khoirul bicara..."
+                    : isListening
+                    ? "Mendengarkan..."
+                    : isThinking
+                    ? "Berpikir..."
+                    : isCalling
+                    ? "Panggilan aktif"
+                    : "Tanya Tutor"}
+                </span>
+              </div>
+            </div>
+
+            {/* Tombol Akhiri Panggilan (Muncul Mengapit saat Panggilan Aktif) */}
+            {isCalling && (
               <button
                 type="button"
                 onClick={onToggleCall}
-                className="p-2.5 bg-red-600 hover:bg-red-700 text-white rounded-full transition-colors shadow-md"
+                className="p-2 bg-rose-600 hover:bg-rose-700 text-white rounded-full transition-all shadow-md active:scale-95"
                 title="Akhiri Panggilan"
               >
-                <PhoneOff className="w-4 h-4" />
+                <PhoneOff className="w-3.5 h-3.5" />
               </button>
-            ) : null}
+            )}
+          </div>
 
-            {/* Manual Chatbot Toggle */}
+          {/* Sisi Kanan: Chat Teks & Tombol Navigasi Lanjut */}
+          <div className="flex items-center justify-end gap-1.5 sm:gap-2 min-w-[100px] sm:min-w-[150px]">
             <button
               type="button"
               onClick={onToggleChat}
-              className={`p-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-colors ${
+              className={`p-2 sm:px-3 sm:py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors ${
                 isChatOpen
-                  ? "bg-blue-600 text-white"
-                  : "bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700"
+                  ? "bg-blue-600 text-white shadow-sm"
+                  : "bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700"
               }`}
-              title="Buka Chatbot Teks Manual"
+              title="Buka Chatbot Teks"
             >
-              <MessageSquare className="w-4 h-4" />
-              <span className="hidden sm:inline text-[11px]">Chat Teks</span>
+              <MessageSquare className="w-3.5 h-3.5" />
+              <span className="hidden md:inline">Chat Teks</span>
             </button>
+
+            {onForward && (
+              <button
+                type="button"
+                onClick={onForward}
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-colors whitespace-nowrap"
+              >
+                <span>{forwardLabel}</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            )}
           </div>
         </div>
-      </div>
+      </footer>
 
-      {/* Manual Chatbot Drawer / Modal (Appears only when user toggles manually) */}
+      {/* Manual Chatbot Drawer / Modal (Muncul saat tombol Chat Teks diklik) */}
       {isChatOpen && (
-        <div className="fixed bottom-24 right-4 sm:right-8 z-50 w-[350px] sm:w-[390px] h-[480px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
+        <div className="fixed bottom-20 right-4 sm:right-8 z-50 w-[340px] sm:w-[380px] h-[460px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
           {/* Header */}
           <div className="p-3.5 bg-slate-900 text-white flex items-center justify-between flex-shrink-0">
             <div>

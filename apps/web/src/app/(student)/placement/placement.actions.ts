@@ -2,7 +2,7 @@
 
 import { getSession } from "@/lib/session";
 
-const API_URL = process.env.API_URL || "http://localhost:3001";
+const API_URL = process.env.API_URL || "http://localhost:3003";
 
 export async function getDynamicPlacementTest() {
   try {

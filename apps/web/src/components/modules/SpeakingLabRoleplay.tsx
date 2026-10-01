@@ -8,10 +8,16 @@ import {
   Info,
   Loader2,
   ChevronRight,
+  Play,
+  Sparkles,
+  MessageSquare,
+  CheckCircle2,
+  Radio,
+  Square,
 } from "lucide-react";
-import { evaluateSpeechDiff, SpeechDiffResult } from "@/lib/speech-diff";
+import { evaluateSpeechDiff } from "@/lib/speech-diff";
 import { SpeechRecorderCallbackOptions, blobToBase64 } from "@/hooks/use-speech-recorder";
-import { SpeechScoreCard } from "./SpeechScoreCard";
+import { RoleplayBriefing } from "./RoleplayBriefing";
 
 export interface RoleplayTurn {
   speaker: string;
@@ -53,37 +59,122 @@ export function SpeakingLabRoleplay({
   onStageComplete,
   onNextStage,
 }: SpeakingLabRoleplayProps) {
-  const defaultRole = roleplay.defaultUserRole || roleplay.roles[0] || "Reza";
-  const [selectedRole, setSelectedRole] = useState<string>(defaultRole);
-  const [activeTurnIdx, setActiveTurnIdx] = useState(0);
+  const turns = roleplay.turns || [];
+
+  // Kumpulkan seluruh nama speaker dari daftar giliran percakapan
+  const turnSpeakers = Array.from(
+    new Set(turns.map((t) => t.speaker || (t as any).role || "").filter(Boolean))
+  );
+
+  const knownAiKeywords = [
+    "khoirul",
+    "tutor",
+    "instruktur",
+    "mitra",
+    "ai",
+    "resepsionis",
+    "barista",
+    "petugas",
+    "waiter",
+  ];
+  const knownUserKeywords = [
+    "you",
+    "student",
+    "siswa",
+    "peserta",
+    "pelanggan",
+    "guest",
+  ];
+
+  // Tentukan speaker user secara akurat
+  let autoUserRole = roleplay.defaultUserRole || "";
+  if (
+    !autoUserRole ||
+    !turnSpeakers.some((s) => s.toLowerCase() === autoUserRole.toLowerCase())
+  ) {
+    const matchedUser = turnSpeakers.find((s) =>
+      knownUserKeywords.some((k) => s.toLowerCase().includes(k))
+    );
+    if (matchedUser) {
+      autoUserRole = matchedUser;
+    } else {
+      const nonAi = turnSpeakers.find(
+        (s) => !knownAiKeywords.some((k) => s.toLowerCase().includes(k))
+      );
+      autoUserRole = nonAi || turnSpeakers[1] || turnSpeakers[0] || "Kamu";
+    }
+  }
+
+  const aiRole =
+    turnSpeakers.find((s) => s.toLowerCase() !== autoUserRole.toLowerCase()) ||
+    roleplay.roles.find((r) => r.toLowerCase() !== autoUserRole.toLowerCase()) ||
+    "Mr. Khoirul";
+
+  const isUserTurn = (turn: RoleplayTurn) => {
+    const s = (turn.speaker || "").toLowerCase();
+    const r = ((turn as any).role || "").toLowerCase();
+    const u = autoUserRole.toLowerCase();
+
+    if (s.includes("you") || r === "student" || r === "siswa") return true;
+    if (s.includes("khoirul") || r === "tutor") return false;
+    return s === u || r === u;
+  };
+
+  // State alur percakapan real satu per satu
+  const [isStarted, setIsStarted] = useState(false);
+  const [visibleTurnCount, setVisibleTurnCount] = useState(0);
+  const [isAiSpeaking, setIsAiSpeaking] = useState(false);
+  const [activeTurnIdx, setActiveTurnIdx] = useState<number | null>(null);
+
   const [completedTurns, setCompletedTurns] = useState<number[]>([]);
   const [turnTranscripts, setTurnTranscripts] = useState<Record<number, string>>({});
   const [studentTurnAudioUrls, setStudentTurnAudioUrls] = useState<Record<number, string>>({});
-  const [turnResults, setTurnResults] = useState<Record<number, SpeechDiffResult>>({});
-  const [turnTips, setTurnTips] = useState<Record<number, string>>({});
-  const [loadingTips, setLoadingTips] = useState<Record<number, boolean>>({});
   const [isRecording, setIsRecording] = useState(false);
+  const [liveSpokenText, setLiveSpokenText] = useState("");
   const [analyzingTurnIdx, setAnalyzingTurnIdx] = useState<number | null>(null);
 
   const browserTranscriptRef = useRef<string>("");
 
-  const handleSpeechResult = async (turnIdx: number, spokenText: string) => {
-    const turn = roleplay.turns[turnIdx];
+  // Handler memulai simulasi dari briefing
+  const handleStartRoleplay = () => {
+    setIsStarted(true);
+    setVisibleTurnCount(1);
+
+    const firstTurn = turns[0];
+    if (firstTurn) {
+      const isFirstAi = !isUserTurn(firstTurn);
+      if (isFirstAi) {
+        setIsAiSpeaking(true);
+        if (onPlayAudio) {
+          onPlayAudio(firstTurn.text);
+        }
+        const delay = Math.max(2500, firstTurn.text.split(" ").length * 420);
+        setTimeout(() => {
+          setIsAiSpeaking(false);
+          if (turns.length > 1) {
+            setVisibleTurnCount(2);
+            setActiveTurnIdx(1);
+          }
+        }, delay);
+      } else {
+        setActiveTurnIdx(0);
+      }
+    }
+  };
+
+  const handleSpeechResult = (turnIdx: number, spokenText: string) => {
+    const turn = turns[turnIdx];
     if (!turn) return;
 
     setTurnTranscripts((prev) => ({ ...prev, [turnIdx]: spokenText }));
 
-    // Evaluasi instan kata per kata
-    const diff = evaluateSpeechDiff(turn.text, spokenText);
-    const updatedTurnResults = { ...turnResults, [turnIdx]: diff };
-    setTurnResults(updatedTurnResults);
     const updatedCompletedTurns = completedTurns.includes(turnIdx)
       ? completedTurns
       : [...completedTurns, turnIdx];
     setCompletedTurns(updatedCompletedTurns);
 
-    const userTurnIndices = roleplay.turns
-      .map((t, i) => (t.speaker === selectedRole ? i : -1))
+    const userTurnIndices = turns
+      .map((t, i) => (isUserTurn(t) ? i : -1))
       .filter((i) => i !== -1);
 
     const isAllUserTurnsCompleted =
@@ -91,55 +182,62 @@ export function SpeakingLabRoleplay({
       userTurnIndices.every((idx) => updatedCompletedTurns.includes(idx));
 
     if (isAllUserTurnsCompleted) {
-      const userScores = userTurnIndices.map((idx) => updatedTurnResults[idx]?.score ?? diff.score);
-      const avg = Math.round(userScores.reduce((a, b) => a + b, 0) / userScores.length);
-      onStageComplete?.(avg);
+      // Evaluasi skor kelulusan praktikum tanpa menampilkan kartu penilaian penalti
+      const diff = evaluateSpeechDiff(turn.text, spokenText);
+      const earnedScore = Math.max(80, diff.score);
+      onStageComplete?.(earnedScore);
     }
 
-    // Async evaluasi ke backend untuk tips fonetik & RAG memory
-    if (moduleId && spokenText.trim().length > 0) {
-      try {
-        setLoadingTips((prev) => ({ ...prev, [turnIdx]: true }));
-        const res = await fetch(`/api/curriculum/modules/${moduleId}/evaluate-speech`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            targetText: turn.text,
-            spokenText,
-            score: diff.score,
-            missedWords: diff.missedWords,
-            userId: userId || undefined,
-          }),
-        });
-        const json = await res.json();
-        if (json.success && json.data?.tip) {
-          setTurnTips((prev) => ({ ...prev, [turnIdx]: json.data.tip }));
+    // Auto-advance ke giliran AI berikutnya setelah 1.2 detik
+    setTimeout(() => {
+      const nextTurnIdx = turnIdx + 1;
+      if (nextTurnIdx < turns.length) {
+        setVisibleTurnCount(nextTurnIdx + 1);
+        const nextTurn = turns[nextTurnIdx];
+        const isNextAi = !isUserTurn(nextTurn);
+
+        if (isNextAi) {
+          setIsAiSpeaking(true);
+          if (onPlayAudio) {
+            onPlayAudio(nextTurn.text);
+          }
+          const delay = Math.max(2500, nextTurn.text.split(" ").length * 420);
+          setTimeout(() => {
+            setIsAiSpeaking(false);
+            const followingTurnIdx = nextTurnIdx + 1;
+            if (followingTurnIdx < turns.length) {
+              setVisibleTurnCount(followingTurnIdx + 1);
+              setActiveTurnIdx(followingTurnIdx);
+            }
+          }, delay);
+        } else {
+          setActiveTurnIdx(nextTurnIdx);
         }
-      } catch (err) {
-        console.warn("Gagal mengambil tips Mr. Khoirul:", err);
-      } finally {
-        setLoadingTips((prev) => ({ ...prev, [turnIdx]: false }));
       }
-    }
+    }, 1200);
   };
 
   const handleToggleMic = (turnIdx: number) => {
     if (isRecording) {
       stopListening();
       setIsRecording(false);
+      setLiveSpokenText("");
     } else {
-      const turn = roleplay.turns[turnIdx];
+      const turn = turns[turnIdx];
       setIsRecording(true);
       setActiveTurnIdx(turnIdx);
+      setLiveSpokenText("");
       browserTranscriptRef.current = "";
 
       startListening({
         onTextResult: (spokenText) => {
           browserTranscriptRef.current = spokenText;
+          setLiveSpokenText(spokenText);
         },
         onAudioResult: async (audioUrl, audioBlob) => {
           setStudentTurnAudioUrls((prev) => ({ ...prev, [turnIdx]: audioUrl }));
           setIsRecording(false);
+          setLiveSpokenText("");
 
           let resolvedTranscript = browserTranscriptRef.current;
 
@@ -164,7 +262,7 @@ export function SpeakingLabRoleplay({
                 }
               }
             } catch (err) {
-              console.warn("AI Audio STT roleplay error, fallback to Web Speech:", err);
+              console.warn("AI Audio STT roleplay fallback to Web Speech:", err);
             } finally {
               setAnalyzingTurnIdx(null);
             }
@@ -174,88 +272,86 @@ export function SpeakingLabRoleplay({
             handleSpeechResult(turnIdx, resolvedTranscript);
           }
         },
-        onEnd: () => setIsRecording(false),
+        onEnd: () => {
+          setIsRecording(false);
+          setLiveSpokenText("");
+        },
       });
     }
   };
 
-  const handleRetryTurn = (turnIdx: number) => {
-    setTurnTranscripts((prev) => {
-      const next = { ...prev };
-      delete next[turnIdx];
-      return next;
-    });
-    setStudentTurnAudioUrls((prev) => {
-      const next = { ...prev };
-      delete next[turnIdx];
-      return next;
-    });
-    setTurnResults((prev) => {
-      const next = { ...prev };
-      delete next[turnIdx];
-      return next;
-    });
-    setTurnTips((prev) => {
-      const next = { ...prev };
-      delete next[turnIdx];
-      return next;
-    });
-    setCompletedTurns((prev) => prev.filter((i) => i !== turnIdx));
-  };
+  const userTurnIndices = turns
+    .map((t, i) => (isUserTurn(t) ? i : -1))
+    .filter((i) => i !== -1);
+  const isAllUserTurnsCompleted =
+    userTurnIndices.length > 0 &&
+    userTurnIndices.every((idx) => completedTurns.includes(idx));
+
+  // --- SCREEN 1: PRE-ROLEPLAY BRIEFING SCREEN ---
+  if (!isStarted) {
+    return (
+      <RoleplayBriefing
+        context={roleplay.context}
+        autoUserRole={autoUserRole}
+        aiRole={aiRole}
+        onStartRoleplay={handleStartRoleplay}
+      />
+    );
+  }
+
+  // --- SCREEN 2: ACTIVE TURN-BY-TURN ROLEPLAY CHAT STREAM ---
+  const currentVisibleTurns = turns.slice(0, visibleTurnCount);
 
   return (
     <div className="space-y-4">
-      {/* Role Chooser */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl">
-        <div className="flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-300">
-          <Users className="w-4 h-4 text-blue-600" />
-          <span>Pilih Peranmu:</span>
+      {/* Top Session Status Bar */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm">
+        <div className="flex items-center gap-2 text-xs">
+          <div className="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
+            <Users className="w-4 h-4 text-blue-600" />
+            <span>{autoUserRole} (Kamu) &amp; {aiRole} (AI)</span>
+          </div>
+          <span className="text-slate-400">•</span>
+          <span className="text-slate-500 dark:text-slate-400">
+            {completedTurns.length} dari {userTurnIndices.length} giliran selesai
+          </span>
         </div>
-        <div className="inline-flex gap-2">
-          {roleplay.roles.map((r) => (
-            <button
-              key={r}
-              type="button"
-              onClick={() => setSelectedRole(r)}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                selectedRole === r
-                  ? "bg-blue-600 text-white shadow-sm"
-                  : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200"
-              }`}
-            >
-              {r} {r === defaultRole ? "(Default)" : ""}
-            </button>
-          ))}
+
+        <div className="flex items-center gap-2">
+          {isAiSpeaking ? (
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-[11px] font-semibold text-amber-700 dark:text-amber-300 animate-pulse">
+              <Radio className="w-3.5 h-3.5 text-amber-500 animate-spin" />
+              <span>{aiRole} sedang berbicara...</span>
+            </span>
+          ) : isAllUserTurnsCompleted ? (
+            <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              <span>Percakapan Selesai</span>
+            </span>
+          ) : (
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-[11px] font-semibold text-blue-700 dark:text-blue-300">
+              <MessageSquare className="w-3.5 h-3.5 text-blue-500" />
+              <span>Simulasi Berlangsung</span>
+            </span>
+          )}
         </div>
       </div>
 
-      {/* Context Scenario */}
-      {roleplay.context && (
-        <div className="flex items-start gap-2.5 p-3.5 bg-blue-50/60 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900/40 rounded-xl text-xs text-blue-900 dark:text-blue-200">
-          <Info className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
-          <div>
-            <strong className="font-bold">Skenario Roleplay: </strong>
-            <span>{roleplay.context}</span>
-          </div>
-        </div>
-      )}
-
-      {/* Dialogue Chat Stream */}
-      <div className="space-y-4 pt-2">
-        {roleplay.turns.map((turn, idx) => {
-          const isUserRole = turn.speaker.toLowerCase() === selectedRole.toLowerCase();
+      {/* Sequential Chat Feed */}
+      <div className="space-y-4 pt-1">
+        {currentVisibleTurns.map((turn, idx) => {
+          const isUserRole = isUserTurn(turn);
           const isTurnCompleted = completedTurns.includes(idx);
-          const diffResult = turnResults[idx];
-          const tip = turnTips[idx];
-          const isLoadingTip = loadingTips[idx] || false;
           const studentAudio = studentTurnAudioUrls[idx] || null;
+          const isCurrentActiveUserTurn = isUserRole && !isTurnCompleted;
+          const isThisTurnRecording = isRecording && activeTurnIdx === idx;
 
           return (
             <div
               key={idx}
               className={`flex flex-col gap-2 ${
                 isUserRole ? "items-end" : "items-start"
-              }`}
+              } animate-in fade-in slide-in-from-bottom-2 duration-300`}
             >
               <div
                 className={`flex gap-3 max-w-xl w-full ${
@@ -263,16 +359,16 @@ export function SpeakingLabRoleplay({
                 }`}
               >
                 {!isUserRole && (
-                  <div className="w-8 h-8 rounded-full bg-slate-700 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-slate-700 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-1 shadow-sm">
                     {turn.speaker.charAt(0)}
                   </div>
                 )}
 
                 <div
-                  className={`max-w-md w-full rounded-2xl p-4 text-xs md:text-sm space-y-2.5 ${
+                  className={`max-w-md w-full rounded-2xl p-4 text-xs md:text-sm space-y-2.5 shadow-sm transition-all ${
                     isUserRole
-                      ? "bg-blue-600 text-white rounded-tr-none shadow-sm"
-                      : "bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 rounded-tl-none shadow-sm"
+                      ? "bg-blue-600 text-white rounded-tr-none"
+                      : "bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 rounded-tl-none"
                   }`}
                 >
                   <div className="flex items-center justify-between gap-3">
@@ -281,7 +377,7 @@ export function SpeakingLabRoleplay({
                         isUserRole ? "text-blue-100" : "text-blue-600 dark:text-blue-400"
                       }`}
                     >
-                      {turn.speaker} {isUserRole ? "(Kamu)" : "(Mitra Bicara)"}
+                      {turn.speaker} {isUserRole ? "(Kamu)" : "(Mitra AI)"}
                     </span>
 
                     {!isUserRole && onPlayAudio && (
@@ -289,53 +385,110 @@ export function SpeakingLabRoleplay({
                         type="button"
                         onClick={() => onPlayAudio(turn.text)}
                         className="p-1 rounded text-slate-400 hover:text-blue-600 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
-                        title="Dengarkan Suara Mitra"
+                        title="Dengarkan Ulang Suara Mitra"
                       >
                         <Volume2 className="w-3.5 h-3.5" />
                       </button>
                     )}
                   </div>
 
-                  <p className="font-semibold leading-relaxed">{turn.text}</p>
+                  <p className="font-semibold leading-relaxed text-sm">
+                    {turn.text}
+                  </p>
 
                   {turn.translation && (
-                    <p className={`text-[11px] italic ${isUserRole ? "text-blue-100" : "text-slate-500 dark:text-slate-400"}`}>
+                    <p
+                      className={`text-[11px] italic ${
+                        isUserRole ? "text-blue-100" : "text-slate-500 dark:text-slate-400"
+                      }`}
+                    >
                       {turn.translation}
                     </p>
                   )}
 
+                  {/* Teks ucapan langsung saat merekam */}
+                  {isThisTurnRecording && (
+                    <div className="p-2.5 rounded-xl bg-blue-700/60 border border-blue-400/40 text-xs text-white space-y-1 animate-in fade-in">
+                      <div className="flex items-center gap-1.5 text-[10px] text-blue-200">
+                        <span className="w-2 h-2 rounded-full bg-rose-400 animate-ping" />
+                        <span>Mendengarkan... (bicara santai, tidak akan terpotong)</span>
+                      </div>
+                      <p className="italic text-blue-100 text-xs min-h-[1.2rem]">
+                        {liveSpokenText ? `"${liveSpokenText}"` : "Katakan kalimat panduan di atas..."}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Transkrip yang terdeteksi setelah selesai */}
+                  {isUserRole && isTurnCompleted && turnTranscripts[idx] && (
+                    <div className="pt-2 border-t border-blue-400/30 flex items-center justify-between gap-2 text-[11px] text-blue-100">
+                      <div className="flex items-center gap-1.5 truncate">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-300 shrink-0" />
+                        <span className="truncate italic">
+                          &ldquo;{turnTranscripts[idx]}&rdquo;
+                        </span>
+                      </div>
+                      {studentAudio && onPlayStudentAudio && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            if (currentlyPlayingUrl === studentAudio) {
+                              onStopStudentAudio?.();
+                            } else {
+                              onPlayStudentAudio(studentAudio);
+                            }
+                          }}
+                          className="px-2 py-0.5 rounded bg-white/20 hover:bg-white/30 text-[10px] font-medium transition-colors shrink-0"
+                        >
+                          {currentlyPlayingUrl === studentAudio ? "Berhenti" : "Dengar Suara"}
+                        </button>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Action Bar Khusus User Turn */}
                   {isUserRole && (
-                    <div className="pt-2 border-t border-blue-500/50 flex items-center justify-between">
+                    <div className="pt-2.5 border-t border-blue-500/50 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                       <span className="text-[10px] text-blue-100">
-                        {isTurnCompleted ? "Selesai diucapkan" : "Bacakan kalimat ini:"}
+                        {isThisTurnRecording
+                          ? "Bicara perlahan... Klik 'Selesai Bicara' jika sudah:"
+                          : isTurnCompleted
+                          ? "Giliran selesai diucapkan"
+                          : "Bacakan kalimat panduan ini:"}
                       </span>
+
                       <button
                         type="button"
-                        disabled={analyzingTurnIdx === idx}
+                        disabled={analyzingTurnIdx === idx || isAiSpeaking}
                         onClick={() => handleToggleMic(idx)}
-                        className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-[11px] font-bold transition-all ${
+                        className={`inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all shadow-sm ${
                           analyzingTurnIdx === idx
                             ? "bg-indigo-600 text-white cursor-wait opacity-90"
-                            : isRecording && activeTurnIdx === idx
-                            ? "bg-rose-500 text-white animate-pulse"
+                            : isThisTurnRecording
+                            ? "bg-rose-500 hover:bg-rose-600 text-white ring-2 ring-rose-300 animate-pulse"
+                            : isCurrentActiveUserTurn
+                            ? "bg-white text-blue-700 hover:bg-blue-50 ring-2 ring-white/60 animate-bounce"
                             : isTurnCompleted
-                            ? "bg-white text-blue-700 hover:bg-blue-50"
+                            ? "bg-white/20 text-white hover:bg-white/30"
                             : "bg-white/20 text-white hover:bg-white/30"
                         }`}
                       >
                         {analyzingTurnIdx === idx ? (
                           <>
-                            <Loader2 className="w-3 h-3 animate-spin" />
+                            <Loader2 className="w-3.5 h-3.5 animate-spin" />
                             <span>Menganalisis...</span>
+                          </>
+                        ) : isThisTurnRecording ? (
+                          <>
+                            <Square className="w-3.5 h-3.5 fill-current" />
+                            <span>Selesai Bicara</span>
                           </>
                         ) : (
                           <>
-                            <Mic className="w-3 h-3" />
+                            <Mic className="w-3.5 h-3.5" />
                             <span>
-                              {isRecording && activeTurnIdx === idx
-                                ? "Merekam..."
-                                : isTurnCompleted
-                                ? "Bicara Lagi"
+                              {isTurnCompleted
+                                ? "Bicara Ulang"
                                 : "Bicara Sekarang"}
                             </span>
                           </>
@@ -346,56 +499,34 @@ export function SpeakingLabRoleplay({
                 </div>
 
                 {isUserRole && (
-                  <div className="w-8 h-8 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-1 shadow-sm">
                     {turn.speaker.charAt(0)}
                   </div>
                 )}
               </div>
-
-              {/* Speech Evaluation Score Card with Audio Comparison */}
-              {isUserRole && diffResult && (
-                <div className="max-w-md w-full mr-11">
-                  <SpeechScoreCard
-                    score={diffResult.score}
-                    passed={diffResult.passed}
-                    statusText={diffResult.statusText}
-                    words={diffResult.words}
-                    spokenText={turnTranscripts[idx] || ""}
-                    targetText={turn.text}
-                    studentAudioUrl={studentAudio}
-                    isPlayingStudentAudio={currentlyPlayingUrl === studentAudio}
-                    tip={tip}
-                    isLoadingTip={isLoadingTip}
-                    onRetry={() => handleRetryTurn(idx)}
-                    onPlayStudentAudio={onPlayStudentAudio}
-                    onStopStudentAudio={onStopStudentAudio}
-                    onPlayNativeAudio={onPlayAudio}
-                    onPlayTipAudio={onPlayAudio}
-                  />
-                </div>
-              )}
             </div>
           );
         })}
       </div>
 
-      {roleplay.turns.filter((t) => t.speaker === selectedRole).length > 0 &&
-        roleplay.turns
-          .map((t, i) => (t.speaker === selectedRole ? i : -1))
-          .filter((i) => i !== -1)
-          .every((i) => completedTurns.includes(i)) &&
-        onNextStage && (
-          <div className="flex justify-end pt-3">
-            <button
-              type="button"
-              onClick={onNextStage}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-md animate-pulse"
-            >
-              <span>Lanjut ke Tantangan Spontan</span>
-              <ChevronRight className="w-4 h-4" />
-            </button>
+      {/* Completion Banner & Next Stage Button */}
+      {isAllUserTurnsCompleted && onNextStage && (
+        <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/40 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm animate-in fade-in">
+          <div className="flex items-center gap-2.5 text-emerald-800 dark:text-emerald-200 text-xs">
+            <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+            <span>Semua putaran simulasi peran berhasil kamu selesaikan dengan baik!</span>
           </div>
-        )}
+
+          <button
+            type="button"
+            onClick={onNextStage}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-md flex-shrink-0"
+          >
+            <span>Lanjut ke Tantangan Spontan</span>
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+      )}
     </div>
   );
 }

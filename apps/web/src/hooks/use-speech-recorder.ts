@@ -34,10 +34,15 @@ export function useSpeechRecorder() {
   const audioChunksRef = useRef<Blob[]>([]);
   const activeAudioElementRef = useRef<HTMLAudioElement | null>(null);
   const registeredUrlsRef = useRef<Set<string>>(new Set());
+  const silenceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const maxRecordingTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isManualStopRef = useRef<boolean>(false);
 
   // Bersihkan semua URL objek dan media saat unmount
   useEffect(() => {
     return () => {
+      if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
+      if (maxRecordingTimerRef.current) clearTimeout(maxRecordingTimerRef.current);
       if (recognitionRef.current) {
         try {
           recognitionRef.current.abort();
@@ -63,7 +68,17 @@ export function useSpeechRecorder() {
   }, []);
 
   const stopListening = useCallback(() => {
+    isManualStopRef.current = true;
     setIsRecording(false);
+
+    if (silenceTimerRef.current) {
+      clearTimeout(silenceTimerRef.current);
+      silenceTimerRef.current = null;
+    }
+    if (maxRecordingTimerRef.current) {
+      clearTimeout(maxRecordingTimerRef.current);
+      maxRecordingTimerRef.current = null;
+    }
 
     if (recognitionRef.current) {
       try {
@@ -89,6 +104,7 @@ export function useSpeechRecorder() {
 
       // Hentikan proses aktif jika ada
       stopListening();
+      isManualStopRef.current = false;
       audioChunksRef.current = [];
 
       const SpeechRecognition =
@@ -139,26 +155,60 @@ export function useSpeechRecorder() {
         console.warn("MediaRecorder mikrofon tidak tersedia, fallback ke STT saja:", err);
       }
 
-      // 2. Aktifkan SpeechRecognition untuk deteksi teks
+      // Timer pengaman maksimal 35 detik agar mic tidak aktif selamanya
+      maxRecordingTimerRef.current = setTimeout(() => {
+        stopListening();
+      }, 35000);
+
+      // 2. Aktifkan SpeechRecognition dengan mode continuous agar ramah pemula yang bicara lambat
       if (SpeechRecognition) {
         try {
           const recognition = new SpeechRecognition();
           recognition.lang = "en-US";
-          recognition.continuous = false;
-          recognition.interimResults = false;
+          recognition.continuous = true;
+          recognition.interimResults = true;
 
-          recognition.onresult = (event: any) => {
-            const text = event.results[0][0].transcript;
-            onTextResult(text);
+          const resetSilenceTimeout = (ms: number = 3500) => {
+            if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
+            silenceTimerRef.current = setTimeout(() => {
+              stopListening();
+            }, ms);
           };
 
-          recognition.onerror = () => {
+          recognition.onresult = (event: any) => {
+            let finalTranscript = "";
+            let interimTranscript = "";
+
+            for (let i = 0; i < event.results.length; ++i) {
+              const res = event.results[i];
+              if (res.isFinal) {
+                finalTranscript += res[0].transcript + " ";
+              } else {
+                interimTranscript += res[0].transcript;
+              }
+            }
+
+            const fullText = (finalTranscript + interimTranscript).trim().replace(/\s+/g, " ");
+            if (fullText.length > 0) {
+              onTextResult(fullText);
+              // Berikan jeda hening 3.5 detik agar pemula bisa mengambil napas / jeda antar kata tanpa terpotong
+              resetSilenceTimeout(3500);
+            }
+          };
+
+          recognition.onerror = (e: any) => {
+            // Jangan hentikan rekaman jika hanya jeda sejenak di awal ("no-speech")
+            if (e.error === "no-speech") {
+              return;
+            }
             stopListening();
             onEnd?.();
           };
 
           recognition.onend = () => {
-            stopListening();
+            if (!isManualStopRef.current) {
+              stopListening();
+            }
             onEnd?.();
           };
 
@@ -170,7 +220,6 @@ export function useSpeechRecorder() {
           onEnd?.();
         }
       } else {
-        // Jika SpeechRecognition tidak ada tapi MediaRecorder ada
         setIsRecording(true);
       }
     },
