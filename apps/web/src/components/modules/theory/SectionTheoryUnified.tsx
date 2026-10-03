@@ -268,7 +268,7 @@ export function SectionTheoryUnified({
               commonTrap={commonTrap}
               vocabItems={vocabItems}
               onNext={() => handleUnlockAndScroll(6)}
-              onCompleteStep={() => setUnlockedStep((prev) => Math.max(prev, 5))}
+              onCompleteStep={() => setUnlockedStep((prev) => Math.max(prev, 6))}
               onAwardXp={game.awardXp}
               onPenalizeWrong={game.penalizeWrong}
             />

@@ -139,13 +139,12 @@ export function TheoryReadinessCheck({
       }
     }
 
-    setAnswers((prev) => {
-      const updated = { ...prev, [qId]: optIdx };
-      if (Object.keys(updated).length >= activeQuestions.length) {
-        onCompleteStep?.();
-      }
-      return updated;
-    });
+    const nextAnswers = { ...answers, [qId]: optIdx };
+    setAnswers(nextAnswers);
+
+    if (Object.keys(nextAnswers).length >= activeQuestions.length) {
+      onCompleteStep?.();
+    }
   };
 
   return (
