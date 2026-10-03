@@ -148,26 +148,26 @@ export function TheoryReadinessCheck({
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       {/* Container Card using shadcn Card */}
-      <Card className="bg-gradient-to-br from-indigo-50/50 via-white to-blue-50/30 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-950/20 border-indigo-200/80 dark:border-indigo-900/50 p-5 sm:p-6 shadow-sm space-y-4">
+      <Card className="bg-gradient-to-br from-indigo-50/50 via-white to-blue-50/30 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-950/20 border-indigo-200/80 dark:border-indigo-900/50 p-6 sm:p-8 md:p-10 shadow-xs space-y-6 rounded-2xl">
         {/* Header */}
         <div className="flex items-center justify-between flex-wrap gap-2">
           <div className="flex items-center gap-2 text-indigo-700 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider">
             <CheckCircle2 className="w-4 h-4" />
             <span>Cek Kesiapan Belajar (3 Pertanyaan Kilat)</span>
           </div>
-          <Badge variant="primary" className="font-semibold text-xs">
+          <Badge variant="primary" className="font-semibold text-xs px-3 py-1">
             {Object.keys(answers).length} dari {activeQuestions.length} Terjawab
           </Badge>
         </div>
 
-        <p className="text-xs text-slate-600 dark:text-slate-400">
+        <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
           Uji pemahamanmu sebelum melangkah ke latihan mandiri dan Speaking Lab bersama Mr. Khoirul:
         </p>
 
         {/* 3 Questions Flow */}
-        <div className="space-y-4 pt-1">
+        <div className="space-y-6 sm:space-y-8 pt-1">
           {activeQuestions.map((q) => {
             const selectedOpt = answers[q.id];
             const isAnswered = selectedOpt !== undefined;
@@ -178,37 +178,37 @@ export function TheoryReadinessCheck({
                 key={q.id}
                 onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
                 onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-                className="p-4 sm:p-5 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/90 shadow-sm space-y-3 will-change-transform"
+                className="p-6 sm:p-7 border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900/90 shadow-xs space-y-4 rounded-2xl will-change-transform"
               >
                 <div className="flex items-center justify-between gap-2">
-                  <Badge variant="secondary" size="sm" className="font-bold uppercase tracking-wider">
+                  <Badge variant="secondary" size="sm" className="font-bold uppercase tracking-wider text-[11px] px-2.5 py-0.5">
                     Soal {q.id} • {q.category}
                   </Badge>
                   {isAnswered && (
                     <span
-                      className={`text-[11px] font-bold flex items-center gap-1 ${
+                      className={`text-xs font-bold flex items-center gap-1 ${
                         isCorrect ? "text-emerald-600 dark:text-emerald-400" : "text-amber-600 dark:text-amber-400"
                       }`}
                     >
                       {isCorrect ? (
                         <>
-                          <Check className="w-3.5 h-3.5" /> Benar
+                          <Check className="w-4 h-4" /> Benar
                         </>
                       ) : (
                         <>
-                          <AlertCircle className="w-3.5 h-3.5" /> Pelajari Penjelasan
+                          <AlertCircle className="w-4 h-4" /> Pelajari Penjelasan
                         </>
                       )}
                     </span>
                   )}
                 </div>
 
-                <p className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white">
+                <p className="text-sm sm:text-base font-semibold text-slate-900 dark:text-white leading-relaxed">
                   {q.prompt}
                 </p>
 
                 {/* Options */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 pt-1">
                   {q.options.map((opt, idx) => {
                     const isOptionSelected = selectedOpt === idx;
                     const isOptionCorrect = idx === q.correctIndex;
@@ -218,24 +218,24 @@ export function TheoryReadinessCheck({
                         key={idx}
                         type="button"
                         onClick={(e) => handleSelect(q.id, idx, e)}
-                        className={`p-3 rounded-xl text-left text-xs font-semibold border transition-all flex items-center justify-between gap-2 select-none cursor-pointer border-b-4 will-change-transform ${
+                        className={`p-4 sm:p-5 rounded-2xl text-left text-xs sm:text-sm font-semibold border transition-all flex items-center justify-between gap-3 select-none cursor-pointer border-b-4 will-change-transform min-h-[58px] ${
                           isOptionSelected
                             ? isOptionCorrect
                               ? "border-emerald-500 border-b-emerald-700 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 ring-2 ring-emerald-400/40 animate-pop-bounce"
                               : "border-amber-500 border-b-amber-700 bg-amber-50 dark:bg-amber-950/40 text-amber-900 dark:text-amber-200 animate-tactile-shake"
                             : isAnswered && isOptionCorrect
                             ? "border-emerald-400 border-b-emerald-600 bg-emerald-50/40 text-emerald-800 font-bold"
-                            : "border-slate-200 dark:border-slate-800 border-b-slate-300 dark:border-b-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-indigo-400 active:border-b-0 active:translate-y-0.5 shadow-xs"
+                            : "border-slate-200 dark:border-slate-800 border-b-slate-300 dark:border-b-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-indigo-400 active:border-b-0 active:translate-y-1 shadow-xs"
                         }`}
                       >
-                        <div className="flex items-center gap-2">
-                          <span className="w-4 h-4 rounded-full bg-slate-100 dark:bg-slate-800 text-[10px] font-bold flex items-center justify-center shrink-0">
+                        <div className="flex items-center gap-2.5">
+                          <span className="w-5 h-5 rounded-full bg-slate-100 dark:bg-slate-800 text-[10px] font-bold flex items-center justify-center shrink-0">
                             {String.fromCharCode(65 + idx)}
                           </span>
                           <span>{opt}</span>
                         </div>
                         {isOptionSelected && (
-                          isOptionCorrect ? <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" /> : <X className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                          isOptionCorrect ? <Check className="w-4 h-4 text-emerald-600 shrink-0" /> : <X className="w-4 h-4 text-amber-600 shrink-0" />
                         )}
                       </button>
                     );
@@ -245,14 +245,14 @@ export function TheoryReadinessCheck({
                 {/* Educational Feedback */}
                 {isAnswered && (
                   <div
-                    className={`p-3 rounded-xl border flex items-start gap-2.5 text-xs animate-in fade-in ${
+                    className={`p-4 sm:p-5 rounded-2xl border flex items-start gap-3 text-xs sm:text-sm animate-in fade-in ${
                       isCorrect
                         ? "bg-emerald-50/70 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200"
                         : "bg-amber-50/70 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200"
                     }`}
                   >
-                    <Bot className="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
-                    <div className="space-y-0.5">
+                    <Bot className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
+                    <div className="space-y-1">
                       <span className="font-bold block">
                         {isCorrect ? "Mantap! Alasan kamu benar: " : "Yuk pelajari konsepnya: "}
                       </span>
@@ -270,9 +270,9 @@ export function TheoryReadinessCheck({
       <div className="pt-2 flex justify-end">
         <Button
           onClick={onNext}
-          className="gap-2 px-5 py-2.5 shadow-sm"
+          className="gap-2 px-6 py-3 min-h-[48px] text-sm font-bold shadow-md border-b-4 border-blue-800 active:border-b-0 active:translate-y-1"
         >
-          <span>Lanjut ke Uji Mandiri (Writing & Speaking)</span>
+          <span>Lanjut ke Uji Mandiri (Writing &amp; Speaking)</span>
           <ArrowRight className="w-4 h-4" />
         </Button>
       </div>

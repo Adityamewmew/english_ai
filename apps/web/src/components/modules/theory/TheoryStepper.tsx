@@ -67,7 +67,7 @@ export function TheoryStepper({
   };
 
   return (
-    <div className="w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-800 rounded-2xl p-3 sm:p-4 shadow-sm sticky top-16 z-30 transition-all relative space-y-2.5">
+    <div className="w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200/90 dark:border-slate-800 rounded-2xl px-3.5 py-2.5 sm:px-5 sm:py-3 shadow-xs sticky top-16 z-30 transition-all relative space-y-2">
       {/* Floating XP Animation Bubbles */}
       <div className="absolute -top-3 right-8 pointer-events-none z-50 flex flex-col items-end gap-1">
         {floatingList.map((notice) => (
@@ -82,16 +82,16 @@ export function TheoryStepper({
       </div>
 
       {/* Gamification Live HUD Header Card */}
-      <div className="flex items-center justify-between px-1 pb-2 border-b border-slate-100 dark:border-slate-800/80">
+      <div className="flex items-center justify-between pb-1.5 border-b border-slate-100 dark:border-slate-800/60">
         <div className="flex items-center gap-2">
           {/* XP Badge Card using shadcn Badge */}
           <Badge
             variant="accent"
             onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
             onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-            className="flex items-center gap-1.5 px-3 py-1 cursor-pointer will-change-transform"
+            className="flex items-center gap-1.5 px-3 py-1 cursor-pointer will-change-transform font-bold"
           >
-            <Zap className="w-3.5 h-3.5 text-amber-500 fill-amber-500 animate-pulse" />
+            <Zap className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
             <span ref={xpRef}>{xp} XP</span>
           </Badge>
 
@@ -101,10 +101,10 @@ export function TheoryStepper({
               variant="warning"
               onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
               onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-              className="flex items-center gap-1 px-2.5 py-1 animate-bounce cursor-pointer will-change-transform"
+              className="flex items-center gap-1 px-2.5 py-1 cursor-pointer will-change-transform font-bold"
             >
               <Flame className="w-3.5 h-3.5 text-orange-500 fill-orange-500" />
-              <span>{streak}x Combo!</span>
+              <span>{streak}x Combo</span>
             </Badge>
           )}
         </div>
@@ -123,7 +123,7 @@ export function TheoryStepper({
                 animeButtonPop(e.currentTarget);
                 onToggleMute();
               }}
-              className="h-8 w-8 rounded-lg border border-slate-200 dark:border-slate-800"
+              className="h-7 w-7 rounded-lg border border-slate-200 dark:border-slate-800"
               title={isMuted ? "Aktifkan Efek Suara" : "Matikan Efek Suara"}
             >
               {isMuted ? <VolumeX className="w-3.5 h-3.5 text-slate-400" /> : <Volume2 className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />}

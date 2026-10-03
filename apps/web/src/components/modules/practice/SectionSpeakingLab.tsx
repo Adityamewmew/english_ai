@@ -75,34 +75,34 @@ export function SectionSpeakingLab({
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8 sm:space-y-10">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-800 pb-4">
-        <div>
-          <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-xs uppercase tracking-wider mb-1">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-6 sm:pb-8">
+        <div className="space-y-1.5">
+          <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-xs uppercase tracking-wider">
             <Sparkles className="w-4 h-4" />
             <Badge variant="primary" className="text-xs">Interactive Speaking Lab</Badge>
           </div>
-          <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+          <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             {title}
           </h3>
         </div>
 
         {/* 3-Stage Progressive Tab Navigation with Locks */}
-        <div className="inline-flex p-1 bg-slate-100 dark:bg-slate-800/80 rounded-xl text-xs font-semibold gap-1">
+        <div className="inline-flex p-1.5 bg-slate-100 dark:bg-slate-800/80 rounded-2xl text-xs sm:text-sm font-semibold gap-1.5 self-start sm:self-auto overflow-x-auto max-w-full">
           <button
             type="button"
             onClick={(e) => {
               animeButtonPop(e.currentTarget);
               setActiveTab("drill");
             }}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer will-change-transform ${
+            className={`flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl min-h-[42px] transition-all cursor-pointer will-change-transform shrink-0 ${
               activeTab === "drill"
-                ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm font-bold"
-                : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
+                ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-xs font-bold"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
             }`}
           >
-            {isDrillDone && <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />}
+            {isDrillDone && <CheckCircle2 className="w-4 h-4 text-emerald-500" />}
             <span>1. Pemanasan (Drill)</span>
           </button>
 
@@ -117,18 +117,18 @@ export function SectionSpeakingLab({
               }
             }}
             title={!isDrillDone ? "Selesaikan seluruh kalimat pemanasan terlebih dahulu" : ""}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all will-change-transform ${
+            className={`flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl min-h-[42px] transition-all will-change-transform shrink-0 ${
               activeTab === "roleplay"
-                ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm font-bold cursor-pointer"
+                ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-xs font-bold cursor-pointer"
                 : !isDrillDone
                 ? "text-slate-400 dark:text-slate-600 cursor-not-allowed opacity-60"
-                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 cursor-pointer"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 cursor-pointer"
             }`}
           >
             {!isDrillDone ? (
-              <Lock className="w-3.5 h-3.5 text-slate-400" />
+              <Lock className="w-4 h-4 text-slate-400" />
             ) : isRoleplayDone ? (
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
             ) : null}
             <span>2. Simulasi Peran</span>
           </button>
@@ -144,18 +144,18 @@ export function SectionSpeakingLab({
               }
             }}
             title={!isRoleplayDone ? "Selesaikan simulasi peran terlebih dahulu" : ""}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all will-change-transform ${
+            className={`flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl min-h-[42px] transition-all will-change-transform shrink-0 ${
               activeTab === "challenge"
-                ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm font-bold cursor-pointer"
+                ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-xs font-bold cursor-pointer"
                 : !isRoleplayDone
                 ? "text-slate-400 dark:text-slate-600 cursor-not-allowed opacity-60"
-                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 cursor-pointer"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 cursor-pointer"
             }`}
           >
             {!isRoleplayDone ? (
-              <Lock className="w-3.5 h-3.5 text-slate-400" />
+              <Lock className="w-4 h-4 text-slate-400" />
             ) : isChallengeDone ? (
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
             ) : null}
             <span>3. Tantangan Spontan</span>
           </button>

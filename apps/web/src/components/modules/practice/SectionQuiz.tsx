@@ -115,14 +115,14 @@ export function SectionQuiz({
   };
 
   return (
-    <div ref={containerRef} className="space-y-6">
+    <div ref={containerRef} className="space-y-8 sm:space-y-10">
       {/* Quiz Header Banner Card using shadcn Card */}
       <Card
         onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
         onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-        className="flex items-center justify-between p-5 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-sm will-change-transform"
+        className="flex items-center justify-between p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-xs will-change-transform"
       >
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3.5">
           {isExam ? (
             <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center">
               <Award className="w-5 h-5" />
@@ -151,7 +151,7 @@ export function SectionQuiz({
       {isSubmitted && (
         <Card
           ref={resultCardRef}
-          className={`p-6 shadow-sm will-change-transform ${
+          className={`p-6 sm:p-8 rounded-2xl shadow-xs will-change-transform ${
             passed
               ? "bg-emerald-50 dark:bg-emerald-950/20 border-emerald-200 dark:border-emerald-800/40 text-emerald-900 dark:text-emerald-200"
               : "bg-rose-50 dark:bg-rose-950/20 border-rose-200 dark:border-rose-800/40 text-rose-900 dark:text-rose-200"
@@ -226,7 +226,7 @@ export function SectionQuiz({
       )}
 
       {/* Questions List as Staggered Tactile Cards */}
-      <div className="space-y-4">
+      <div className="space-y-6 sm:space-y-8">
         {questions.map((q, qIndex) => {
           const qId = q.id ?? qIndex;
           const selectedOption = userAnswers[qId.toString()];
@@ -237,7 +237,7 @@ export function SectionQuiz({
               key={qId.toString()}
               onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
               onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-              className={`quiz-question-card p-5 sm:p-6 rounded-2xl transition-all will-change-transform shadow-xs ${
+              className={`quiz-question-card p-6 sm:p-8 rounded-2xl transition-all will-change-transform shadow-xs space-y-5 ${
                 isSubmitted
                   ? qResult?.isCorrect
                     ? "border-emerald-200 bg-white dark:border-emerald-800/40 dark:bg-slate-900"
@@ -254,7 +254,7 @@ export function SectionQuiz({
                 return (
                   <div>
                     {skillTag && (
-                      <div className="mb-2">
+                      <div className="mb-2.5">
                         <Badge
                           variant={
                             skillTag.toLowerCase().includes("listening")
@@ -280,12 +280,12 @@ export function SectionQuiz({
                         </Badge>
                       </div>
                     )}
-                    <div className="flex items-start justify-between gap-3 mb-3">
-                      <div className="flex items-start gap-2.5">
-                        <span className="w-6 h-6 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="flex items-start justify-between gap-4 mb-4">
+                      <div className="flex items-start gap-3.5">
+                        <span className="w-7 h-7 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
                           {qIndex + 1}
                         </span>
-                        <p className="font-bold text-sm md:text-base text-slate-900 dark:text-white leading-relaxed">
+                        <p className="font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-relaxed">
                           {cleanQuestionText}
                         </p>
                       </div>
@@ -311,7 +311,7 @@ export function SectionQuiz({
               })()}
 
               {/* Options as Tactile Cards */}
-              <div className="grid grid-cols-1 gap-2.5 mt-4">
+              <div className="grid grid-cols-1 gap-3 sm:gap-3.5 mt-5">
                 {q.options.map((opt, optIndex) => {
                   const isSelected = selectedOption === optIndex;
                   const isCorrectAnswer = isSubmitted && qResult?.correctAnswer === optIndex;
@@ -320,7 +320,7 @@ export function SectionQuiz({
                   const letter = String.fromCharCode(65 + optIndex);
 
                   let optionStyles =
-                    "border-slate-200 bg-slate-50/50 hover:border-slate-300 dark:border-slate-800 dark:bg-slate-800/40 dark:hover:border-slate-700 text-slate-800 dark:text-slate-200";
+                    "border-slate-200/90 bg-slate-50/60 hover:border-slate-300 dark:border-slate-800 dark:bg-slate-800/40 dark:hover:border-slate-700 text-slate-800 dark:text-slate-200";
 
                   if (isSelected && !isSubmitted) {
                     optionStyles =
@@ -339,10 +339,10 @@ export function SectionQuiz({
                       type="button"
                       disabled={isSubmitted}
                       onClick={(e) => handleOptionClick(e, qId, optIndex)}
-                      className={`flex items-center gap-3 p-3 sm:p-3.5 rounded-xl border text-left text-xs md:text-sm transition-all cursor-pointer select-none active:scale-98 will-change-transform ${optionStyles}`}
+                      className={`flex items-center gap-3.5 p-4 sm:p-4.5 rounded-2xl border text-left text-sm md:text-base min-h-[58px] transition-all cursor-pointer select-none active:scale-98 will-change-transform ${optionStyles}`}
                     >
                       <span
-                        className={`w-6 h-6 rounded-lg text-xs font-bold flex items-center justify-center flex-shrink-0 ${
+                        className={`w-7 h-7 sm:w-8 sm:h-8 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center flex-shrink-0 ${
                           isSelected && !isSubmitted
                             ? "bg-blue-600 text-white"
                             : isCorrectAnswer
@@ -354,7 +354,7 @@ export function SectionQuiz({
                       >
                         {letter}
                       </span>
-                      <span className="flex-1 font-medium">{opt}</span>
+                      <span className="flex-1 font-medium leading-relaxed">{opt}</span>
                     </button>
                   );
                 })}
@@ -362,10 +362,11 @@ export function SectionQuiz({
 
               {/* Explanation Note after submit */}
               {isSubmitted && (q.explanation || qResult?.explanation) && (
-                <div className="mt-4 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal flex items-start gap-2">
-                  <Info className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                <div className="mt-5 p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal flex items-start gap-3">
+                  <Info className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
                   <div>
-                    <strong>Penjelasan:</strong> {qResult?.explanation || q.explanation}
+                    <strong className="font-semibold text-slate-800 dark:text-slate-200">Penjelasan:</strong>{" "}
+                    {qResult?.explanation || q.explanation}
                   </div>
                 </div>
               )}
@@ -376,8 +377,8 @@ export function SectionQuiz({
 
       {/* Submit Action Bar */}
       {!isSubmitted && (
-        <Card className="flex items-center justify-between p-5 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-sm">
-          <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+        <Card className="flex items-center justify-between p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-xs">
+          <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">
             {isAllAnswered
               ? "Semua pertanyaan telah dijawab. Klik kirim untuk melihat skor akhir."
               : `Tersisa ${questions.length - answeredCount} pertanyaan yang belum dijawab.`}
@@ -398,8 +399,8 @@ export function SectionQuiz({
 
       {/* Completion Action Bar */}
       {isSubmitted && (
-        <Card className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-sm">
-          <div className="text-xs text-slate-600 dark:text-slate-400">
+        <Card className="flex flex-col sm:flex-row items-center justify-between gap-4 p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-xs">
+          <div className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
             {passed
               ? "Anda telah menyelesaikan seluruh materi dan evaluasi pada modul ini."
               : "Periksa kembali pembahasan jawaban di atas sebelum mengulang kuis."}

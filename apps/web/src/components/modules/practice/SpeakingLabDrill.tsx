@@ -218,16 +218,16 @@ export function SpeakingLabDrill({
   if (!currentDrill) return null;
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6 sm:space-y-8">
       {/* Header & Step Dots Card using shadcn Card */}
-      <Card className="flex items-center justify-between p-3.5 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-xs">
-        <div className="flex items-center gap-2">
+      <Card className="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-xs">
+        <div className="flex items-center gap-2.5">
           <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-          <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
+          <span className="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200">
             Latihan Berbicara: Kalimat {activeDrillIdx + 1} dari {drills.length}
           </span>
         </div>
-        <div className="flex gap-1.5">
+        <div className="flex gap-2">
           {drills.map((_, i) => (
             <button
               key={i}
@@ -236,14 +236,14 @@ export function SpeakingLabDrill({
                 animeButtonPop(e.currentTarget);
                 setActiveDrillIdx(i);
               }}
-              className={`h-2.5 rounded-full transition-all cursor-pointer ${
+              className={`h-3 rounded-full transition-all cursor-pointer ${
                 activeDrillIdx === i
-                  ? "bg-blue-600 w-6"
+                  ? "bg-blue-600 w-7"
                   : drillResults[i]?.passed
-                  ? "bg-emerald-500 w-2.5"
+                  ? "bg-emerald-500 w-3"
                   : drillResults[i]
-                  ? "bg-amber-500 w-2.5"
-                  : "bg-slate-300 dark:bg-slate-700 w-2.5"
+                  ? "bg-amber-500 w-3"
+                  : "bg-slate-300 dark:bg-slate-700 w-3"
               }`}
               title={`Buka Kalimat ${i + 1}`}
             />
@@ -256,13 +256,13 @@ export function SpeakingLabDrill({
         ref={mainCardRef}
         onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
         onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-        className="bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 p-6 sm:p-7 shadow-sm space-y-5 will-change-transform"
+        className="bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xs space-y-6 sm:space-y-7 will-change-transform"
       >
-        <div className="space-y-2">
+        <div className="space-y-2.5">
           <Badge variant="primary" size="sm" className="font-bold uppercase tracking-wider">
             Target Kalimat
           </Badge>
-          <h4 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white leading-relaxed font-mono">
+          <h4 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white leading-relaxed font-mono">
             &ldquo;{currentDrill.targetText}&rdquo;
           </h4>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">
@@ -271,7 +271,7 @@ export function SpeakingLabDrill({
         </div>
 
         {currentDrill.hint && (
-          <div className="flex items-start gap-2.5 p-3.5 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/40 rounded-xl text-xs text-amber-900 dark:text-amber-200 font-medium">
+          <div className="flex items-start gap-3 p-4 sm:p-5 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/40 rounded-2xl text-xs sm:text-sm text-amber-900 dark:text-amber-200 font-medium">
             <Info className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
             <span>
               <strong className="font-bold">Tips Pengucapan: </strong>
@@ -280,7 +280,7 @@ export function SpeakingLabDrill({
           </div>
         )}
 
-        <div className="flex flex-wrap items-center gap-3 pt-2">
+        <div className="flex flex-wrap items-center gap-3.5 pt-3">
           {onPlayAudio && (
             <Button
               variant="outline"
@@ -350,7 +350,7 @@ export function SpeakingLabDrill({
       </Card>
 
       {/* Navigation Buttons */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+      <div className="flex flex-wrap items-center justify-between gap-3 pt-3">
         <Button
           variant="outline"
           disabled={activeDrillIdx === drills.length - 1}
@@ -370,7 +370,7 @@ export function SpeakingLabDrill({
               animeButtonPop(e.currentTarget);
               onNextStage();
             }}
-            className="bg-emerald-600 hover:bg-emerald-700 text-white gap-2 shadow-md animate-pulse"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white gap-2 shadow-md active:translate-y-0.5 will-change-transform"
           >
             <span>Lanjut ke Simulasi Peran</span>
             <ChevronRight className="w-4 h-4" />

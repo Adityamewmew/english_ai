@@ -55,34 +55,34 @@ export function TheoryVocabStep({
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8 sm:space-y-10">
       <div className="flex items-center justify-between flex-wrap gap-2">
         <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-xs uppercase tracking-wider">
           <Volume2 className="w-4 h-4" />
           <span>Kosakata Kunci dalam Konteks Kalimat</span>
         </div>
-        <Badge variant="secondary" className="font-semibold text-xs">
+        <Badge variant="secondary" className="font-semibold text-xs px-3 py-1">
           {vocabItems.length} Kata Tersedia
         </Badge>
       </div>
 
       {/* Vocab Cards Grid using shadcn Card */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
         {vocabItems.map((v, idx) => (
           <Card
             key={idx}
             onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
             onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-            className="vocab-card-item flex flex-col justify-between p-4 sm:p-5 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/90 hover:border-blue-400 dark:hover:border-blue-600 transition-colors shadow-sm group will-change-transform cursor-pointer"
+            className="vocab-card-item flex flex-col justify-between p-6 sm:p-7 border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900/90 hover:border-blue-400 dark:hover:border-blue-600 transition-colors shadow-xs rounded-2xl group will-change-transform cursor-pointer"
           >
             <div>
-              <div className="flex items-center justify-between gap-2 mb-2">
-                <div className="flex items-baseline gap-2 flex-wrap">
-                  <span className="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white">
+              <div className="flex items-center justify-between gap-3 mb-3">
+                <div className="flex items-baseline gap-2.5 flex-wrap">
+                  <span className="font-extrabold text-lg sm:text-xl text-slate-900 dark:text-white">
                     {v.word}
                   </span>
                   {v.ipa && (
-                    <Badge variant="outline" size="sm" className="font-mono text-slate-500 dark:text-slate-400">
+                    <Badge variant="outline" size="sm" className="font-mono text-slate-500 dark:text-slate-400 text-xs">
                       {v.ipa}
                     </Badge>
                   )}
@@ -96,7 +96,7 @@ export function TheoryVocabStep({
                       animeButtonPop(e.currentTarget);
                       onPlayAudio(v.word);
                     }}
-                    className="min-h-[44px] min-w-[44px] sm:h-8 sm:w-8 rounded-lg text-slate-500 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors shrink-0"
+                    className="min-h-[44px] min-w-[44px] sm:h-9 sm:w-9 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors shrink-0"
                     title={`Dengarkan pelafalan "${v.word}"`}
                   >
                     <Volume2 className="w-4 h-4" />
@@ -104,17 +104,17 @@ export function TheoryVocabStep({
                 )}
               </div>
 
-              <p className="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300 mb-3">
+              <p className="text-sm font-semibold text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                 {v.meaning}
               </p>
             </div>
 
             {v.collocation && (
-              <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 text-xs">
-                <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400 block uppercase tracking-wider mb-1">
+              <div className="p-4 rounded-xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 text-xs sm:text-sm">
+                <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400 block uppercase tracking-wider mb-1.5">
                   Contoh Penggunaan Nyata:
                 </span>
-                <p className="font-medium text-slate-800 dark:text-slate-200 italic">
+                <p className="font-medium text-slate-800 dark:text-slate-200 italic leading-relaxed">
                   &ldquo;{v.collocation}&rdquo;
                 </p>
               </div>
@@ -125,17 +125,17 @@ export function TheoryVocabStep({
 
       {/* Mini Vocab Check using shadcn Card */}
       {quizTarget && quizOptions.length > 1 && (
-        <Card className="vocab-card-item bg-gradient-to-br from-indigo-50/60 via-slate-50 to-white dark:from-indigo-950/20 dark:via-slate-900 dark:to-slate-900 border-indigo-200/80 dark:border-indigo-900/50 p-5 sm:p-6 shadow-sm space-y-3 will-change-transform">
+        <Card className="vocab-card-item bg-gradient-to-br from-indigo-50/60 via-slate-50 to-white dark:from-indigo-950/20 dark:via-slate-900 dark:to-slate-900 border-indigo-200/80 dark:border-indigo-900/50 p-6 sm:p-8 md:p-10 shadow-xs space-y-4 rounded-2xl will-change-transform">
           <div className="flex items-center gap-2 text-indigo-700 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider">
             <HelpCircle className="w-4 h-4" />
             <span>Cek Kilat Kosakata</span>
           </div>
 
-          <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+          <p className="text-sm sm:text-base text-slate-700 dark:text-slate-300">
             Apa arti dari kata <strong className="text-indigo-600 dark:text-indigo-400 font-bold">&ldquo;{quizTarget.word}&rdquo;</strong>?
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 pt-1">
             {quizOptions.map((opt, i) => {
               const isSelected = selectedAnswer === opt;
               const isCorrect = opt === quizTarget.meaning;
@@ -145,7 +145,7 @@ export function TheoryVocabStep({
                   key={i}
                   type="button"
                   onClick={(e) => handleSelectAnswer(opt, e)}
-                  className={`p-3.5 rounded-xl text-left border border-b-4 text-xs font-bold transition-all flex items-center justify-between cursor-pointer select-none will-change-transform ${
+                  className={`p-4 sm:p-5 rounded-2xl text-left border border-b-4 text-xs sm:text-sm font-bold transition-all flex items-center justify-between cursor-pointer select-none will-change-transform min-h-[56px] ${
                     isSelected
                       ? isCorrect
                         ? "border-emerald-500 border-b-emerald-700 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 font-bold"
@@ -155,7 +155,7 @@ export function TheoryVocabStep({
                 >
                   <span>{opt}</span>
                   {isSelected && (
-                    isCorrect ? <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" /> : <X className="w-3.5 h-3.5 text-rose-600 shrink-0" />
+                    isCorrect ? <Check className="w-4 h-4 text-emerald-600 shrink-0" /> : <X className="w-4 h-4 text-rose-600 shrink-0" />
                   )}
                 </button>
               );
@@ -163,8 +163,8 @@ export function TheoryVocabStep({
           </div>
 
           {selectedAnswer && (
-            <div className="text-[11px] text-slate-600 dark:text-slate-400 pt-1 flex items-center gap-1.5">
-              <Bot className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
+            <div className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 pt-2 flex items-center gap-2">
+              <Bot className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0" />
               <span>
                 {selectedAnswer === quizTarget.meaning
                   ? `Mantap! "${quizTarget.word}" berarti "${quizTarget.meaning}".`

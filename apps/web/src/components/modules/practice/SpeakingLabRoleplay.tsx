@@ -309,9 +309,9 @@ export function SpeakingLabRoleplay({
       <Card
         onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
         onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-        className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 shadow-sm border-slate-200 dark:border-slate-800 will-change-transform"
+        className="flex flex-col sm:flex-row sm:items-center justify-between gap-3.5 p-4 sm:p-5 rounded-2xl shadow-xs border-slate-200 dark:border-slate-800 will-change-transform"
       >
-        <div className="flex items-center gap-2 text-xs">
+        <div className="flex items-center gap-2.5 text-xs sm:text-sm">
           <div className="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
             <Users className="w-4 h-4 text-blue-600" />
             <span>{autoUserRole} (Kamu) &amp; {aiRole} (AI)</span>
@@ -324,17 +324,17 @@ export function SpeakingLabRoleplay({
 
         <div className="flex items-center gap-2">
           {isAiSpeaking ? (
-            <Badge variant="warning" className="gap-1.5 text-[11px] animate-pulse">
+            <Badge variant="warning" className="gap-1.5 text-xs animate-pulse">
               <Radio className="w-3.5 h-3.5 text-amber-500 animate-spin" />
               <span>{aiRole} sedang berbicara...</span>
             </Badge>
           ) : isAllUserTurnsCompleted ? (
-            <Badge variant="success" className="gap-1 text-[11px] font-bold">
+            <Badge variant="success" className="gap-1 text-xs font-bold">
               <CheckCircle2 className="w-3.5 h-3.5" />
               <span>Percakapan Selesai</span>
             </Badge>
           ) : (
-            <Badge variant="primary" className="gap-1.5 text-[11px] font-semibold">
+            <Badge variant="primary" className="gap-1.5 text-xs font-semibold">
               <MessageSquare className="w-3.5 h-3.5" />
               <span>Simulasi Berlangsung</span>
             </Badge>
@@ -343,7 +343,7 @@ export function SpeakingLabRoleplay({
       </Card>
 
       {/* Sequential Chat Feed */}
-      <div className="space-y-4 pt-1">
+      <div className="space-y-6 pt-2">
         {currentVisibleTurns.map((turn, idx) => {
           const isUserRole = isUserTurn(turn);
           const isTurnCompleted = completedTurns.includes(idx);
@@ -359,18 +359,18 @@ export function SpeakingLabRoleplay({
               } animate-in fade-in slide-in-from-bottom-2 duration-300`}
             >
               <div
-                className={`flex gap-3 max-w-xl w-full ${
+                className={`flex gap-3.5 max-w-2xl w-full ${
                   isUserRole ? "justify-end" : "justify-start"
                 }`}
               >
                 {!isUserRole && (
-                  <div className="w-8 h-8 rounded-full bg-slate-700 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-1 shadow-sm">
+                  <div className="w-9 h-9 rounded-full bg-slate-700 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-1 shadow-xs">
                     {turn.speaker.charAt(0)}
                   </div>
                 )}
 
                 <div
-                  className={`max-w-md w-full rounded-2xl p-4 text-xs md:text-sm space-y-2.5 shadow-sm transition-all ${
+                  className={`max-w-xl w-full rounded-2xl p-5 sm:p-6 text-sm md:text-base space-y-3 shadow-xs transition-all ${
                     isUserRole
                       ? "bg-blue-600 text-white rounded-tr-none"
                       : "bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 rounded-tl-none"
@@ -472,7 +472,7 @@ export function SpeakingLabRoleplay({
                             : isThisTurnRecording
                             ? "bg-rose-500 hover:bg-rose-600 text-white ring-2 ring-rose-300 animate-pulse"
                             : isCurrentActiveUserTurn
-                            ? "bg-white text-blue-700 hover:bg-blue-50 ring-2 ring-white/60 animate-bounce"
+                            ? "bg-white text-blue-700 hover:bg-blue-50 ring-2 ring-white/60 font-bold"
                             : isTurnCompleted
                             ? "bg-white/20 text-white hover:bg-white/30"
                             : "bg-white/20 text-white hover:bg-white/30"
@@ -516,14 +516,14 @@ export function SpeakingLabRoleplay({
 
       {/* Completion Banner & Next Stage Button */}
       {isAllUserTurnsCompleted && onNextStage && (
-        <Card className="p-4 bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800/40 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm animate-in fade-in">
-          <div className="flex items-center gap-2.5 text-emerald-800 dark:text-emerald-200 text-xs">
+        <Card className="p-5 sm:p-6 rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800/40 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs animate-in fade-in">
+          <div className="flex items-center gap-3 text-emerald-800 dark:text-emerald-200 text-xs sm:text-sm">
             <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
             <span className="font-semibold">Semua putaran simulasi peran berhasil kamu selesaikan dengan baik!</span>
           </div>
 
           <Button
-            size="sm"
+            size="md"
             onClick={(e) => {
               animeButtonPop(e.currentTarget);
               onNextStage();

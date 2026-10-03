@@ -129,79 +129,79 @@ export function TheoryActionSandbox({
   }, [selectedSubjectId, selectedCompId]);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       {/* Interactive Stage Card */}
-      <Card className="bg-gradient-to-br from-indigo-50/80 via-white to-blue-50/40 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-950/20 border-indigo-200/80 dark:border-indigo-900/50 p-5 sm:p-6 shadow-sm space-y-5">
-        <div className="flex items-center justify-between flex-wrap gap-2">
+      <Card className="bg-gradient-to-br from-indigo-50/80 via-white to-blue-50/40 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-950/20 border-indigo-200/80 dark:border-indigo-900/50 p-6 sm:p-8 md:p-10 shadow-xs space-y-7 rounded-2xl">
+        <div className="flex items-center justify-between flex-wrap gap-3">
           <div className="flex items-center gap-2 text-indigo-700 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider">
             <Sparkles className="w-4 h-4 text-amber-500" />
             <span>Arena Aksi Interaktif (Live Action Sandbox)</span>
           </div>
-          <Badge variant="accent" className="font-extrabold text-[11px]">
+          <Badge variant="accent" className="font-extrabold text-xs px-3 py-1">
             {testedCombinations.size} / 9 Pola Dicoba (+{testedCombinations.size * 10} XP)
           </Badge>
         </div>
 
-        <p className="text-xs text-slate-600 dark:text-slate-300">
+        <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
           Ubah subjek atau pelengkap di bawah untuk melihat bagaimana perubahan bentuk kata kerja bantu (to be) terjadi secara instan dan alami:
         </p>
 
         {/* Character Reaction Stage & Dynamic Bubble */}
-        <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-800/80 border border-indigo-100 dark:border-indigo-900/40 shadow-xs flex flex-col sm:flex-row items-center gap-4">
+        <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-800/80 border border-indigo-100 dark:border-indigo-900/40 shadow-xs flex flex-col sm:flex-row items-center gap-6">
           <div className="shrink-0 flex flex-col items-center">
             <AnimatedCharacter
               persona={currentSubject.persona}
               state={characterState}
             />
-            <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400 mt-1 uppercase">
+            <span className="text-[11px] font-bold text-slate-600 dark:text-slate-400 mt-2 uppercase tracking-wider">
               {currentSubject.label.split(" ")[0]}
             </span>
           </div>
 
-          <div className="flex-1 w-full space-y-3">
+          <div className="flex-1 w-full space-y-4">
             <div className="flex items-center justify-between flex-wrap gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
                 Kalimat Hasil Rangkaian:
               </span>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={handleSpeakSentence}
-                className="h-7 text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 p-1"
+                className="h-8 text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 px-2.5 rounded-lg"
                 title="Dengarkan pengucapan kalimat"
               >
-                <Volume2 className="w-3.5 h-3.5" />
+                <Volume2 className="w-4 h-4 mr-1.5" />
                 <span>Ucapkan Kalimat</span>
               </Button>
             </div>
 
             {/* Live Formula Display */}
-            <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-wrap items-center gap-2">
-              <span className="sandbox-formula-pill px-3 py-1.5 rounded-lg bg-blue-600 text-white font-mono font-bold text-sm shadow-xs will-change-transform">
+            <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-wrap items-center gap-3">
+              <span className="sandbox-formula-pill px-4 py-2 rounded-xl bg-blue-600 text-white font-mono font-bold text-sm sm:text-base shadow-xs will-change-transform">
                 {currentSubject.subjectWord}
               </span>
-              <span className="text-slate-500 font-bold">+</span>
-              <span className="sandbox-formula-pill px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-mono font-bold text-sm shadow-xs ring-2 ring-indigo-300 dark:ring-indigo-700 will-change-transform">
+              <span className="text-slate-400 dark:text-slate-500 font-black text-lg">+</span>
+              <span className="sandbox-formula-pill px-4 py-2 rounded-xl bg-indigo-600 text-white font-mono font-bold text-sm sm:text-base shadow-xs ring-2 ring-indigo-300 dark:ring-indigo-700 will-change-transform">
                 {currentSubject.correctToBe}
               </span>
-              <span className="text-slate-500 font-bold">+</span>
-              <span className="sandbox-formula-pill px-3 py-1.5 rounded-lg bg-emerald-600 text-white font-mono font-bold text-sm shadow-xs will-change-transform">
+              <span className="text-slate-400 dark:text-slate-500 font-black text-lg">+</span>
+              <span className="sandbox-formula-pill px-4 py-2 rounded-xl bg-emerald-600 text-white font-mono font-bold text-sm sm:text-base shadow-xs will-change-transform">
                 {currentComplement.complementText}
               </span>
             </div>
 
-            <p className="text-sm sm:text-base font-bold text-slate-900 dark:text-white font-mono">
+            <p className="text-base sm:text-lg font-bold text-slate-900 dark:text-white font-mono leading-relaxed pt-1">
               &ldquo;{constructedSentence}&rdquo;
             </p>
           </div>
         </div>
 
         {/* Selector 1: Subjek Kalimat */}
-        <div className="space-y-1.5">
-          <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider block">
+        <div className="space-y-3 pt-2">
+          <span className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider block">
             1. Pilih Subjek (Pelaku):
           </span>
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4">
             {DEFAULT_SUBJECTS.map((sub) => {
               const isSelected = selectedSubjectId === sub.id;
               return (
@@ -209,20 +209,20 @@ export function TheoryActionSandbox({
                   key={sub.id}
                   type="button"
                   onClick={(e) => handleSelectSubject(sub.id, e)}
-                  className={`p-2.5 sm:p-3 rounded-xl border border-b-4 text-left transition-all flex items-center gap-2 select-none cursor-pointer will-change-transform ${
+                  className={`p-4 sm:p-5 rounded-2xl border border-b-4 text-left transition-all flex items-center gap-3 select-none cursor-pointer will-change-transform min-h-[64px] ${
                     isSelected
                       ? "border-blue-600 border-b-blue-800 bg-blue-600 text-white shadow-md"
                       : "border-slate-200 dark:border-slate-700 border-b-slate-300 dark:border-b-slate-600 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:border-blue-400 active:border-b-0 active:translate-y-1 shadow-xs"
                   }`}
                 >
-                  <span className="shrink-0">
+                  <span className="shrink-0 p-1.5 rounded-xl bg-white/10">
                     {sub.type === "female" && <User className={`w-5 h-5 ${isSelected ? "text-white" : "text-indigo-500"}`} />}
                     {sub.type === "self" && <UserCheck className={`w-5 h-5 ${isSelected ? "text-white" : "text-blue-500"}`} />}
                     {sub.type === "plural" && <Users className={`w-5 h-5 ${isSelected ? "text-white" : "text-emerald-500"}`} />}
                   </span>
                   <div className="truncate">
-                    <span className="font-extrabold text-xs sm:text-sm block truncate">{sub.subjectWord}</span>
-                    <span className={`text-[10px] block truncate ${isSelected ? "text-blue-100" : "text-slate-600 dark:text-slate-400"}`}>
+                    <span className="font-extrabold text-sm block truncate">{sub.subjectWord}</span>
+                    <span className={`text-xs block truncate mt-0.5 ${isSelected ? "text-blue-100" : "text-slate-500 dark:text-slate-400"}`}>
                       To Be: &apos;{sub.correctToBe}&apos;
                     </span>
                   </div>
@@ -233,11 +233,11 @@ export function TheoryActionSandbox({
         </div>
 
         {/* Selector 2: Pelengkap / Kosakata Modul */}
-        <div className="space-y-1.5">
-          <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider block">
+        <div className="space-y-3 pt-2">
+          <span className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider block">
             2. Pilih Kata Target (Complement / Vocabulary):
           </span>
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4">
             {dynamicComplements.map((comp) => {
               const isSelected = selectedCompId === comp.id;
               return (
@@ -245,16 +245,16 @@ export function TheoryActionSandbox({
                   key={comp.id}
                   type="button"
                   onClick={(e) => handleSelectComplement(comp.id, e)}
-                  className={`p-2.5 sm:p-3 rounded-xl border border-b-4 text-left transition-all flex items-center gap-2 select-none cursor-pointer will-change-transform ${
+                  className={`p-4 sm:p-5 rounded-2xl border border-b-4 text-left transition-all flex items-center gap-3 select-none cursor-pointer will-change-transform min-h-[64px] ${
                     isSelected
                       ? "border-emerald-600 border-b-emerald-800 bg-emerald-600 text-white shadow-md"
                       : "border-slate-200 dark:border-slate-700 border-b-slate-300 dark:border-b-slate-600 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:border-emerald-400 active:border-b-0 active:translate-y-1 shadow-xs"
                   }`}
                 >
-                  <span className="text-lg shrink-0">{comp.badge}</span>
+                  <span className="text-xl shrink-0">{comp.badge}</span>
                   <div className="truncate">
-                    <span className="font-extrabold text-xs sm:text-sm block truncate">{comp.label}</span>
-                    <span className={`text-[10px] block truncate ${isSelected ? "text-emerald-100" : "text-slate-600 dark:text-slate-400"}`}>
+                    <span className="font-extrabold text-sm block truncate">{comp.label}</span>
+                    <span className={`text-xs block truncate mt-0.5 ${isSelected ? "text-emerald-100" : "text-slate-500 dark:text-slate-400"}`}>
                       {comp.cityName}
                     </span>
                   </div>

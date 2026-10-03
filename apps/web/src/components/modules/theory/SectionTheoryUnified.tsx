@@ -167,8 +167,8 @@ export function SectionTheoryUnified({
       />
 
       {/* 1-PAGE PROGRESSIVE VERTICAL TEACHING JOURNEY */}
-      <div className="space-y-12">
-        {/* Blok 1: Orientasi & Learning Map */}
+      <div className="space-y-16 sm:space-y-20">
+        {/* Blok 1: Orientasi & Konteks Nyata */}
         <div id="theory-step-1" className="scroll-mt-36">
           <TheoryGoalCard
             title={title}
@@ -191,7 +191,7 @@ export function SectionTheoryUnified({
         {unlockedStep >= 2 && (
           <div
             id="theory-step-2"
-            className="scroll-mt-36 pt-6 border-t border-slate-200 dark:border-slate-800 animate-spring-reveal"
+            className="scroll-mt-36 pt-16 sm:pt-20 border-t border-slate-200/80 dark:border-slate-800 animate-spring-reveal"
           >
             <TheoryConceptDeep
               title={title}
@@ -213,7 +213,7 @@ export function SectionTheoryUnified({
         {unlockedStep >= 3 && (
           <div
             id="theory-step-3"
-            className="scroll-mt-36 pt-6 border-t border-slate-200 dark:border-slate-800 animate-spring-reveal"
+            className="scroll-mt-36 pt-16 sm:pt-20 border-t border-slate-200/80 dark:border-slate-800 animate-spring-reveal"
           >
             <TheoryThreeTierExamples
               rules={rules}
@@ -232,7 +232,7 @@ export function SectionTheoryUnified({
         {unlockedStep >= 4 && (
           <div
             id="theory-step-4"
-            className="scroll-mt-36 pt-6 border-t border-slate-200 dark:border-slate-800 space-y-8 animate-spring-reveal"
+            className="scroll-mt-36 pt-16 sm:pt-20 border-t border-slate-200/80 dark:border-slate-800 space-y-12 sm:space-y-16 animate-spring-reveal"
           >
             <TheoryVocabStep
               vocabItems={vocabItems}
@@ -244,7 +244,7 @@ export function SectionTheoryUnified({
               onCompleteStep={() => setUnlockedStep((prev) => Math.max(prev, 4))}
             />
 
-            <div id="substep-dialogue" className="pt-6 border-t border-slate-100 dark:border-slate-800">
+            <div id="substep-dialogue" className="pt-12 sm:pt-16 border-t border-slate-200/70 dark:border-slate-800">
               <TheoryDialogueStep
                 context={dialogueContext}
                 lines={dialogueLines}
@@ -260,7 +260,7 @@ export function SectionTheoryUnified({
         {unlockedStep >= 5 && (
           <div
             id="theory-step-5"
-            className="scroll-mt-36 pt-6 border-t border-slate-200 dark:border-slate-800 animate-spring-reveal"
+            className="scroll-mt-36 pt-16 sm:pt-20 border-t border-slate-200/80 dark:border-slate-800 animate-spring-reveal"
           >
             <TheoryReadinessCheck
               questions={theoryContent?.readinessQuestions}
@@ -279,7 +279,7 @@ export function SectionTheoryUnified({
         {unlockedStep >= 6 && (
           <div
             id="theory-step-6"
-            className="scroll-mt-36 pt-6 border-t border-slate-200 dark:border-slate-800 animate-spring-reveal"
+            className="scroll-mt-36 pt-16 sm:pt-20 border-t border-slate-200/80 dark:border-slate-800 animate-spring-reveal"
           >
             <TheoryMiniTrial
               exampleSentence={bestExample}

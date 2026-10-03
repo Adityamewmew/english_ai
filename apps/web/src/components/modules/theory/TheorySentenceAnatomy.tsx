@@ -66,25 +66,25 @@ export function TheorySentenceAnatomy({
     <Card
       onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
       onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-      className="bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-sm space-y-4 will-change-transform"
+      className="bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 p-6 sm:p-8 md:p-10 shadow-xs space-y-6 rounded-2xl will-change-transform"
     >
       <div className="flex items-center justify-between flex-wrap gap-2">
         <div className="flex items-center gap-2 text-violet-700 dark:text-violet-400 font-bold text-xs uppercase tracking-wider">
           <MousePointerClick className="w-4 h-4" />
           <span>Anatomi Kalimat Interaktif (Klik Setiap Balok)</span>
         </div>
-        <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1">
-          <Sparkles className="w-3 h-3 text-violet-500" />
-          Klik balok untuk mendengar suara & fungsinya
+        <span className="text-xs font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+          <Sparkles className="w-3.5 h-3.5 text-violet-500" />
+          Klik balok untuk mendengar pelafalan &amp; fungsinya
         </span>
       </div>
 
-      <p className="text-xs text-slate-600 dark:text-slate-400">
+      <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
         Perhatikan bagaimana setiap bagian kata memainkan peran penting dalam membentuk kalimat utuh:
       </p>
 
       {/* Clickable Blocks Flow */}
-      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 py-3">
+      <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 py-4">
         {segments.map((seg, idx) => {
           const isActive = activeSegmentIdx === idx;
 
@@ -93,7 +93,7 @@ export function TheorySentenceAnatomy({
               <button
                 type="button"
                 onClick={(e) => handleSegmentClick(e, idx, seg.text)}
-                className={`group px-5 py-3.5 rounded-2xl border transition-all flex flex-col items-center gap-1.5 cursor-pointer select-none active:scale-95 will-change-transform ${
+                className={`group px-6 py-4 rounded-2xl border transition-all flex flex-col items-center gap-2 cursor-pointer select-none active:scale-95 will-change-transform min-h-[76px] ${
                   isActive
                     ? seg.roleCode === "SUBJECT"
                       ? "bg-blue-600 text-white border-blue-500 shadow-md ring-2 ring-blue-300 dark:ring-blue-700 scale-105"
@@ -107,19 +107,19 @@ export function TheorySentenceAnatomy({
                   <span className="text-base sm:text-lg font-bold font-mono tracking-tight">
                     {seg.text}
                   </span>
-                  <Volume2 className={`w-3.5 h-3.5 ${isActive ? "text-white/80" : "text-slate-400 group-hover:text-violet-600"}`} />
+                  <Volume2 className={`w-4 h-4 ${isActive ? "text-white/80" : "text-slate-400 group-hover:text-violet-600"}`} />
                 </div>
                 <Badge
                   variant={isActive ? "secondary" : "outline"}
                   size="sm"
-                  className={isActive ? "bg-white/20 text-white border-transparent" : ""}
+                  className={`text-[10px] font-bold px-2 py-0.5 ${isActive ? "bg-white/20 text-white border-transparent" : ""}`}
                 >
                   {seg.roleCode}
                 </Badge>
               </button>
 
               {idx < segments.length - 1 && (
-                <span className="text-xl font-black text-slate-300 dark:text-slate-700 select-none px-1">
+                <span className="text-2xl font-black text-slate-300 dark:text-slate-700 select-none px-1">
                   +
                 </span>
               )}
@@ -132,12 +132,12 @@ export function TheorySentenceAnatomy({
       {activeSegment && (
         <div
           ref={detailCardRef}
-          className="p-4.5 rounded-2xl bg-violet-50/70 dark:bg-violet-950/30 border border-violet-200/80 dark:border-violet-900/40 flex items-start gap-3 shadow-xs will-change-transform"
+          className="p-5 sm:p-6 rounded-2xl bg-violet-50/70 dark:bg-violet-950/30 border border-violet-200/80 dark:border-violet-900/40 flex items-start gap-4 shadow-xs will-change-transform"
         >
           <Info className="w-5 h-5 text-violet-600 dark:text-violet-400 shrink-0 mt-0.5" />
-          <div className="space-y-1 text-xs">
+          <div className="space-y-1.5 text-xs sm:text-sm">
             <div className="flex items-center gap-2">
-              <span className="font-extrabold text-violet-900 dark:text-violet-200 text-sm">
+              <span className="font-extrabold text-violet-900 dark:text-violet-200 text-sm sm:text-base">
                 &ldquo;{activeSegment.text}&rdquo;
               </span>
               <Badge variant="primary" size="sm">

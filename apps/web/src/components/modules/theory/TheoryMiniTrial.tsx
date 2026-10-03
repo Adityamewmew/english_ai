@@ -135,65 +135,65 @@ export function TheoryMiniTrial({
     selectedWritingOpt?.toLowerCase() === targetWord.toLowerCase();
 
   return (
-    <div ref={containerRef} className="pt-4 space-y-5">
+    <div ref={containerRef} className="pt-4 space-y-8">
       {/* Trial Header Card using shadcn Card */}
       <Card
         onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
         onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-        className="trial-interactive-card p-5 sm:p-6 bg-gradient-to-br from-indigo-50/70 via-blue-50/40 to-slate-50 dark:from-indigo-950/30 dark:via-blue-950/20 dark:to-slate-900 border-blue-200 dark:border-blue-900/50 shadow-sm space-y-5 will-change-transform"
+        className="trial-interactive-card p-6 sm:p-8 md:p-10 bg-gradient-to-br from-indigo-50/70 via-blue-50/40 to-slate-50 dark:from-indigo-950/30 dark:via-blue-950/20 dark:to-slate-900 border-blue-200 dark:border-blue-900/50 shadow-xs space-y-7 rounded-2xl will-change-transform"
       >
-        <div className="flex items-center justify-between flex-wrap gap-2">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-indigo-600 text-white flex items-center justify-center shadow-xs">
-              <Sparkles className="w-4 h-4" />
+        <div className="flex items-center justify-between flex-wrap gap-3">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center shadow-xs shrink-0">
+              <Sparkles className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white">
+              <h4 className="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white">
                 Percobaan Pemula Sebelum Masuk Praktikum
               </h4>
-              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">
                 Coba 2 latihan ringan di bawah ini agar kamu percaya diri sebelum berbicara dengan AI Tutor
               </p>
             </div>
           </div>
-          <Badge variant="accent">
+          <Badge variant="accent" className="text-xs px-3 py-1 font-bold">
             Pemanasan Santai
           </Badge>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
           {/* Latihan 1: Writing Trial Card using shadcn Card */}
           <Card
             onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
             onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-            className="trial-interactive-card p-5 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-sm space-y-4 will-change-transform"
+            className="trial-interactive-card p-6 sm:p-7 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-xs space-y-5 rounded-2xl will-change-transform"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 text-xs font-bold text-slate-800 dark:text-slate-200">
                 <PenTool className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                 <span>Percobaan 1: Menulis (Writing Trial)</span>
               </div>
-              <Badge variant="primary" size="sm">
+              <Badge variant="primary" size="sm" className="font-semibold text-[11px] px-2.5 py-0.5">
                 Pilihan Ganda
               </Badge>
             </div>
 
-            <div className="p-3.5 bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 rounded-xl text-xs space-y-1">
-              <span className="text-slate-500 dark:text-slate-400 block text-[11px]">
+            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 rounded-xl text-xs sm:text-sm space-y-1.5">
+              <span className="text-slate-500 dark:text-slate-400 block text-xs">
                 Lengkapi kalimat berikut:
               </span>
-              <p className="font-bold text-sm text-slate-900 dark:text-white font-mono">
+              <p className="font-bold text-base text-slate-900 dark:text-white font-mono leading-relaxed">
                 {sentenceWithBlank}
               </p>
               {exampleMeaning && (
-                <span className="text-[11px] text-slate-500 italic block">
+                <span className="text-xs text-slate-500 italic block pt-0.5">
                   Artinya: &ldquo;{exampleMeaning}&rdquo;
                 </span>
               )}
             </div>
 
             {/* Opsi Pilihan Kata */}
-            <div className="grid grid-cols-2 gap-2.5">
+            <div className="grid grid-cols-2 gap-3">
               {writingOptions.map((opt) => {
                 const isSelected = selectedWritingOpt === opt;
                 return (
@@ -201,7 +201,7 @@ export function TheoryMiniTrial({
                     key={opt}
                     type="button"
                     onClick={(e) => handleSelectWriting(e, opt)}
-                    className={`p-2.5 rounded-xl text-xs font-bold border transition-all cursor-pointer select-none active:scale-95 ${
+                    className={`p-3.5 sm:p-4 rounded-xl text-xs sm:text-sm font-bold border transition-all cursor-pointer select-none active:scale-95 min-h-[48px] ${
                       isSelected
                         ? isWritingCorrect
                           ? "bg-emerald-600 text-white border-emerald-600 shadow-sm"
@@ -218,7 +218,7 @@ export function TheoryMiniTrial({
             {/* Feedback Writing */}
             {isWritingAnswered && (
               <div
-                className={`p-3 rounded-xl text-xs flex items-center gap-2.5 animate-in fade-in duration-200 ${
+                className={`p-3.5 rounded-xl text-xs sm:text-sm flex items-center gap-2.5 animate-in fade-in duration-200 ${
                   isWritingCorrect
                     ? "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/40"
                     : "bg-rose-50 dark:bg-rose-950/40 text-rose-800 dark:text-rose-300 border border-rose-200 dark:border-rose-800/40"
@@ -243,21 +243,21 @@ export function TheoryMiniTrial({
           <Card
             onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
             onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-            className="trial-interactive-card p-5 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-sm space-y-4 will-change-transform"
+            className="trial-interactive-card p-6 sm:p-7 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-xs space-y-5 rounded-2xl will-change-transform"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 text-xs font-bold text-slate-800 dark:text-slate-200">
                 <Mic className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
                 <span>Percobaan 2: Berbicara (Speaking Trial)</span>
               </div>
-              <Badge variant="secondary" size="sm">
+              <Badge variant="secondary" size="sm" className="font-semibold text-[11px] px-2.5 py-0.5">
                 Mikrofon Langsung
               </Badge>
             </div>
 
-            <div className="p-3.5 bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 rounded-xl text-xs space-y-1.5">
+            <div className="p-4 bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 rounded-xl text-xs sm:text-sm space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-slate-500 dark:text-slate-400 text-[11px]">
+                <span className="text-slate-500 dark:text-slate-400 text-xs">
                   Coba lafalkan kalimat ini:
                 </span>
                 {onPlayAudio && (
@@ -268,43 +268,43 @@ export function TheoryMiniTrial({
                       animeButtonPop(e.currentTarget);
                       onPlayAudio(exampleSentence);
                     }}
-                    className="h-auto p-0 text-blue-600 dark:text-blue-400"
+                    className="h-auto p-0 text-blue-600 dark:text-blue-400 font-semibold text-xs"
                   >
-                    <Volume2 className="w-3.5 h-3.5" />
+                    <Volume2 className="w-3.5 h-3.5 mr-1" />
                     <span>Dengar Suara</span>
                   </Button>
                 )}
               </div>
-              <p className="font-bold text-sm text-slate-900 dark:text-white">
+              <p className="font-bold text-base text-slate-900 dark:text-white leading-relaxed">
                 &ldquo;{exampleSentence}&rdquo;
               </p>
             </div>
 
             {/* Action Mic Button */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3.5 pt-1">
               <Button
                 ref={micButtonRef}
                 onClick={handleToggleRecord}
                 className={
                   isRecording
-                    ? "bg-rose-600 hover:bg-rose-700 text-white animate-pulse ring-2 ring-rose-400"
-                    : "bg-indigo-600 hover:bg-indigo-700 text-white"
+                    ? "bg-rose-600 hover:bg-rose-700 text-white animate-pulse ring-2 ring-rose-400 min-h-[44px] px-4"
+                    : "bg-indigo-600 hover:bg-indigo-700 text-white min-h-[44px] px-4 font-bold"
                 }
               >
                 {isRecording ? (
                   <>
-                    <MicOff className="w-4 h-4" />
+                    <MicOff className="w-4 h-4 mr-1.5" />
                     <span>Berhenti Merekam</span>
                   </>
                 ) : (
                   <>
-                    <Mic className="w-4 h-4" />
-                    <span>Tekan & Lafalkan</span>
+                    <Mic className="w-4 h-4 mr-1.5" />
+                    <span>Tekan &amp; Lafalkan</span>
                   </>
                 )}
               </Button>
 
-              <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+              <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">
                 {isRecording
                   ? "Mendengarkan suaramu..."
                   : isSpeakingTrialDone
@@ -315,7 +315,7 @@ export function TheoryMiniTrial({
 
             {/* Feedback Speaking */}
             {spokenText && (
-              <div className="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/40 text-xs text-emerald-900 dark:text-emerald-200 flex items-start gap-2.5 animate-in fade-in duration-200">
+              <div className="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/40 text-xs sm:text-sm text-emerald-900 dark:text-emerald-200 flex items-start gap-2.5 animate-in fade-in duration-200">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                 <div>
                   <span className="block font-semibold">Suaramu berhasil terdeteksi:</span>
@@ -331,18 +331,18 @@ export function TheoryMiniTrial({
       <Card
         onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
         onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-        className="trial-interactive-card p-5 sm:p-6 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 will-change-transform"
+        className="trial-interactive-card p-6 sm:p-8 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-5 rounded-2xl will-change-transform"
       >
-        <div className="space-y-1 text-center sm:text-left">
-          <div className="flex items-center gap-2 justify-center sm:justify-start">
-            <Award className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-            <h5 className="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white">
+        <div className="space-y-1.5 text-center sm:text-left">
+          <div className="flex items-center gap-2.5 justify-center sm:justify-start">
+            <Award className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <h5 className="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white">
               {isPracticeUnlocked
                 ? "Fase Praktikum & Evaluasi Telah Terbuka"
                 : "Sudah Paham Teori & Siap Praktikum?"}
             </h5>
           </div>
-          <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-xl">
             {isPracticeUnlocked
               ? "Scroll ke bawah untuk melanjutkan sesi berbicara di Speaking Lab dan kuis evaluasi."
               : "Lanjutkan ke Fase 2 untuk mempraktikkan percakapan secara langsung bersama AI Tutor."}
@@ -355,9 +355,9 @@ export function TheoryMiniTrial({
             animeButtonPop(e.currentTarget);
             onAdvanceToPractice();
           }}
-          className="w-full sm:w-auto shadow-md"
+          className="w-full sm:w-auto shadow-md px-6 py-3 min-h-[48px] text-sm font-bold gap-2 shrink-0 border-b-4 border-blue-800 active:border-b-0 active:translate-y-1"
         >
-          <span>Lanjut ke Praktikum & Evaluasi</span>
+          <span>Lanjut ke Praktikum &amp; Evaluasi</span>
           <ArrowDown className="w-4 h-4" />
         </Button>
       </Card>

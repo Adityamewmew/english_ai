@@ -187,16 +187,16 @@ export function SpeakingLabChallenge({
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6 sm:space-y-8">
       {/* Header Info Card using shadcn Card */}
-      <Card className="flex items-center justify-between p-3.5 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-xs">
-        <div className="flex items-center gap-2">
+      <Card className="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-xs">
+        <div className="flex items-center gap-2.5">
           <Award className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-          <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
+          <span className="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200">
             Tantangan Bebas (Free Challenge)
           </span>
         </div>
-        <Badge variant="secondary" className="font-bold text-[10px]">
+        <Badge variant="secondary" className="font-bold text-xs">
           Uji Spontanitas
         </Badge>
       </Card>
@@ -206,19 +206,19 @@ export function SpeakingLabChallenge({
         ref={mainCardRef}
         onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
         onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-        className="bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 p-6 sm:p-7 shadow-sm space-y-5 will-change-transform"
+        className="bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xs space-y-6 sm:space-y-7 will-change-transform"
       >
-        <div className="space-y-2">
+        <div className="space-y-2.5">
           <Badge variant="secondary" size="sm" className="font-bold uppercase tracking-wider">
             Skenario Bebas
           </Badge>
-          <h4 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-relaxed">
+          <h4 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white leading-relaxed">
             {challenge.scenario}
           </h4>
         </div>
 
         {challenge.targetGrammar && (
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 text-[11px] font-semibold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 text-xs font-semibold">
             <span>Target Tata Bahasa:</span>
             <span className="font-bold">{challenge.targetGrammar}</span>
           </div>
@@ -233,13 +233,13 @@ export function SpeakingLabChallenge({
                 animeButtonPop(e.currentTarget);
                 setShowHint(!showHint);
               }}
-              className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 font-semibold cursor-pointer"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 font-semibold cursor-pointer"
             >
-              <HelpCircle className="w-3.5 h-3.5" />
+              <HelpCircle className="w-4 h-4" />
               <span>{showHint ? "Sembunyikan Contoh" : "Butuh Inspirasi Kalimat?"}</span>
             </button>
             {showHint && (
-              <div className="mt-2 p-3.5 bg-slate-50 dark:bg-slate-800/50 rounded-xl text-xs text-slate-600 dark:text-slate-400 italic border border-slate-200 dark:border-slate-700 animate-in fade-in">
+              <div className="mt-3 p-4 sm:p-5 bg-slate-50 dark:bg-slate-800/50 rounded-2xl text-xs sm:text-sm text-slate-600 dark:text-slate-400 italic border border-slate-200 dark:border-slate-700 animate-in fade-in">
                 Contoh: &ldquo;{challenge.exampleAnswer}&rdquo;
               </div>
             )}
@@ -247,7 +247,7 @@ export function SpeakingLabChallenge({
         )}
 
         {/* Recording Area */}
-        <div className="pt-2 flex flex-col items-center justify-center p-6 sm:p-7 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 space-y-3.5">
+        <div className="pt-2 flex flex-col items-center justify-center p-8 sm:p-10 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 space-y-4">
           <button
             ref={micButtonRef}
             type="button"
@@ -302,7 +302,7 @@ export function SpeakingLabChallenge({
                         : onPlayStudentAudio(studentAudioUrl);
                     }}
                     className={`gap-1.5 shadow-xs ${
-                      isPlayingThisAudio ? "bg-amber-600 text-white animate-pulse" : ""
+                      isPlayingThisAudio ? "bg-amber-600 text-white" : ""
                     }`}
                   >
                     {isPlayingThisAudio ? (
@@ -325,8 +325,8 @@ export function SpeakingLabChallenge({
 
         {/* Example Match Diff Card with Comparison */}
         {diffResult && challenge.exampleAnswer && (
-          <div className="space-y-2">
-            <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
+          <div className="space-y-3 pt-2">
+            <span className="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-300">
               Perbandingan dengan Kalimat Rekomendasi:
             </span>
             <SpeechScoreCard
@@ -348,7 +348,7 @@ export function SpeakingLabChallenge({
 
         {/* AI Evaluation */}
         {isEvaluating && (
-          <div className="flex items-center gap-2.5 p-4 bg-blue-50 dark:bg-blue-950/30 rounded-xl text-xs text-blue-700 dark:text-blue-300 font-medium">
+          <div className="flex items-center gap-3 p-4 sm:p-5 bg-blue-50 dark:bg-blue-950/30 rounded-2xl text-xs sm:text-sm text-blue-700 dark:text-blue-300 font-medium">
             <RotateCcw className="w-4 h-4 animate-spin text-blue-600" />
             <span>Mr. Khoirul sedang mendengarkan dan mengevaluasi jawabanmu...</span>
           </div>
@@ -357,10 +357,10 @@ export function SpeakingLabChallenge({
         {challengeFeedback && (
           <Card
             ref={feedbackCardRef}
-            className="p-4.5 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800 space-y-2 shadow-xs will-change-transform"
+            className="p-5 sm:p-6 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800 space-y-3 shadow-xs will-change-transform"
           >
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-emerald-800 dark:text-emerald-300 font-bold text-xs">
+              <div className="flex items-center gap-2 text-emerald-800 dark:text-emerald-300 font-bold text-xs sm:text-sm">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                 <span>Evaluasi AI Tutor:</span>
               </div>
@@ -386,13 +386,13 @@ export function SpeakingLabChallenge({
         )}
 
         {challengeTranscript && onNextStage && (
-          <div className="flex justify-end pt-3">
+          <div className="flex justify-end pt-4">
             <Button
               onClick={(e) => {
                 animeButtonPop(e.currentTarget);
                 onNextStage();
               }}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white gap-2 shadow-sm"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white gap-2 shadow-sm active:translate-y-0.5 will-change-transform"
             >
               <span>Lanjut ke Kuis Evaluasi</span>
               <ChevronRight className="w-4 h-4" />
