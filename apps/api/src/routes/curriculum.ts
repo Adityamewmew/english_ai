@@ -6,9 +6,20 @@ export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
   .get("/", async () => {
     return await curriculumService.getAll();
   })
-  .get("/modules", async () => {
-    return await curriculumService.getAll();
-  })
+  .get(
+    "/modules",
+    async ({ query }) => {
+      const levelId = (query as any)?.levelId;
+      return await curriculumService.getAll(levelId);
+    },
+    {
+      query: t.Optional(
+        t.Object({
+          levelId: t.Optional(t.String()),
+        })
+      ),
+    }
+  )
   .get(
     "/levels",
     async ({ query }) => {

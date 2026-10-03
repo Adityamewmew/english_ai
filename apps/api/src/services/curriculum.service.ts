@@ -5,12 +5,16 @@ import { Response, ServiceResult } from "@/lib/response";
 import crypto from "crypto";
 
 export class CurriculumService {
-  async getAll(): Promise<ServiceResult<any>> {
+  async getAll(levelId?: string): Promise<ServiceResult<any>> {
     try {
       const data = await db
         .select()
         .from(curriculumModules)
-        .where(isNull(curriculumModules.deletedAt))
+        .where(
+          levelId
+            ? and(isNull(curriculumModules.deletedAt), eq(curriculumModules.levelId, levelId))
+            : isNull(curriculumModules.deletedAt)
+        )
         .orderBy(asc(curriculumModules.orderIndex));
 
       return Response.buildSuccess(data);
@@ -86,43 +90,41 @@ export class CurriculumService {
         }
       }
 
-      // Evaluasi unlock level:
-      // A1.1 selalu terbuka.
-      const a1_1Passed =
-        userProgressMap["A1-M13"]?.status === "completed" &&
-        (userProgressMap["A1-M13"]?.score ?? 0) >= 75;
-      const cefrHigherThanA1_1 = ["A1.2", "A1.3", "A2", "B1", "B2", "C1", "C2"].some((c) =>
-        userCefr.toUpperCase().includes(c)
-      );
-      const a1_2Unlocked = isAdmin || a1_1Passed || cefrHigherThanA1_1;
-
-      // A1.3 terbuka jika A1-M26 lulus (skor >= 75) OR placement >= A1.3 OR admin.
-      const a1_2Passed =
-        userProgressMap["A1-M26"]?.status === "completed" &&
-        (userProgressMap["A1-M26"]?.score ?? 0) >= 75;
-      const cefrHigherThanA1_2 = ["A1.3", "A2", "B1", "B2", "C1", "C2"].some((c) =>
-        userCefr.toUpperCase().includes(c)
-      );
-      const a1_3Unlocked = isAdmin || a1_2Passed || cefrHigherThanA1_2;
-
       // 4. Enrich modules per level secara sekuensial (admin bebas buka semua)
-      const result = levels.map((lvl) => {
+      const cefrOrder = ["A1", "A2", "B1", "B2", "C1", "C2"];
+      const userRank = cefrOrder.indexOf(userCefr.toUpperCase().slice(0, 2));
+
+      const result = levels.map((lvl, lvlIdx) => {
         const lvlModules = modules.filter((m) => m.levelId === lvl.id);
+        const lvlRank = cefrOrder.indexOf(lvl.cefr.toUpperCase().slice(0, 2));
+
+        // Cek apakah level sebelumnya telah diselesaikan
+        let prevLevelCompleted = true;
+        if (lvlIdx > 0) {
+          const prevLvl = levels[lvlIdx - 1];
+          const prevLvlMods = modules.filter((m) => m.levelId === prevLvl.id);
+          const prevLastMod = prevLvlMods[prevLvlMods.length - 1];
+          if (prevLastMod) {
+            const lastProg = userProgressMap[prevLastMod.id];
+            prevLevelCompleted = Boolean(
+              lastProg &&
+              lastProg.status === "completed" &&
+              (lastProg.score ?? 0) >= (prevLastMod.passingScore || 70)
+            );
+          }
+        }
+
+        const isFirstSubLevelOfCefr = lvl.id.endsWith(".1") || lvlIdx === 0;
         const isLevelUnlocked =
           isAdmin ||
-          lvl.id === "A1.1" ||
-          (lvl.id === "A1.2" && a1_2Unlocked) ||
-          (lvl.id === "A1.3" && a1_3Unlocked);
+          lvlIdx === 0 ||
+          prevLevelCompleted ||
+          (userRank > lvlRank && lvlRank !== -1) ||
+          (userRank === lvlRank && isFirstSubLevelOfCefr);
 
         let lockReason: string | null = null;
         if (!isLevelUnlocked) {
-          if (lvl.id === "A1.2") {
-            lockReason = "Selesaikan Ujian Akhir Level A1.1 (A1-M13, skor min 75%) atau Placement Test untuk membuka level ini.";
-          } else if (lvl.id === "A1.3") {
-            lockReason = "Selesaikan Ujian Akhir Level A1.2 (A1-M26, skor min 75%) atau Placement Test untuk membuka level ini.";
-          } else {
-            lockReason = "Selesaikan level sebelumnya untuk membuka level ini.";
-          }
+          lockReason = `Selesaikan ujian akhir sub-level sebelumnya atau placement test untuk membuka ${lvl.title}.`;
         }
 
         let prevCompletedInLevel = isLevelUnlocked;
@@ -238,8 +240,15 @@ export class CurriculumService {
       let correctCount = 0;
       const questionResults = [];
 
-      for (const q of questions) {
-        const selected = answers[q.id.toString()] ?? answers[q.id];
+      for (let i = 0; i < questions.length; i++) {
+        const q = questions[i];
+        const qId = q.id ?? `q-${i}`;
+        const selected =
+          answers[qId.toString()] ??
+          (q.id !== undefined && q.id !== null ? answers[q.id.toString()] : undefined) ??
+          answers[i.toString()] ??
+          (q.id !== undefined ? answers[q.id] : undefined);
+
         const correctIndex =
           typeof q.answerIndex === "number"
             ? q.answerIndex
@@ -250,7 +259,7 @@ export class CurriculumService {
         if (isCorrect) correctCount++;
 
         questionResults.push({
-          questionId: q.id,
+          questionId: qId,
           question: q.question,
           selectedAnswer: selected,
           correctAnswer: correctIndex,

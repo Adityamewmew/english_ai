@@ -108,9 +108,10 @@ export default function ModuleDetailPage() {
   }, [moduleId]);
 
   const handleSelectAnswer = (qId: string | number, optionIndex: number) => {
+    const key = qId !== undefined && qId !== null ? qId.toString() : optionIndex.toString();
     setUserAnswers((prev) => ({
       ...prev,
-      [qId.toString()]: optionIndex,
+      [key]: optionIndex,
     }));
   };
 
@@ -200,7 +201,7 @@ export default function ModuleDetailPage() {
           <div className="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Link
-                href="/modules"
+                href={moduleData.levelId ? `/modules?level=${moduleData.levelId}` : "/modules"}
                 className="p-2 text-slate-500 hover:text-slate-900 dark:hover:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
               >
                 <ArrowLeft className="w-5 h-5" />
@@ -324,6 +325,9 @@ export default function ModuleDetailPage() {
               onPlayAudio={tutor.playTutorAudio}
               onAdvanceToPractice={handleUnlockPractice}
               isPracticeUnlocked={isPracticeUnlocked}
+              objective={moduleData.objective}
+              cefr={moduleData.cefr}
+              orderIndex={moduleData.orderIndex}
             />
           </section>
 
@@ -387,7 +391,7 @@ export default function ModuleDetailPage() {
                     onSelectAnswer={handleSelectAnswer}
                     onSubmit={handleSubmitQuiz}
                     onRetry={handleRetryQuiz}
-                    onContinue={() => router.push("/modules")}
+                    onContinue={() => router.push(moduleData.levelId ? `/modules?level=${moduleData.levelId}` : "/modules")}
                   />
                 </div>
               )}

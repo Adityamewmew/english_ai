@@ -1,0 +1,2642 @@
+{
+  "level": {
+    "id": "A1",
+    "cefr": "A1",
+    "title": "A1 - Beginner English",
+    "description": "Fondasi tata bahasa dasar, kosakata kehidupan sehari-hari, dan percakapan esensial dari kurikulum resmi Think Starter.",
+    "orderIndex": 1
+  },
+  "modules": [
+    {
+      "id": "A1-M01",
+      "levelId": "A1",
+      "title": "One World: Countries, Nationalities & To Be",
+      "cefr": "A1",
+      "group": "Foundations",
+      "objective": "Mampu memperkenalkan diri dengan menyebutkan nama, asal negara, kewarganegaraan, dan usia menggunakan verb 'to be' dengan benar",
+      "orderIndex": 1,
+      "sections": {
+        "theory": {
+          "summary": "Di unit pertama ini, kamu akan belajar cara memperkenalkan diri dalam bahasa Inggris. Kamu akan menguasai penggunaan verb 'to be' (am, is, are) yang merupakan kata kerja paling dasar dan penting. Dengan menguasai ini, kamu bisa berkenalan dengan siapa saja dari berbagai negara!",
+          "rules": [
+            "Verb 'to be' berubah sesuai subjek: I am, You/We/They are, He/She/It is",
+            "Bentuk kontraksi: I am = I'm, You are = You're, He is = He's, She is = She's, We are = We're, They are = They're",
+            "Untuk membentuk pertanyaan, letakkan 'to be' di depan subjek: Are you from Spain? Is he American?",
+            "Kata tanya: What (apa), Where (di mana), Who (siapa), Why (mengapa), How (bagaimana)",
+            "Nacionalitas dibentuk dengan akhiran: -an (Brazilian, American), -ish (British, Spanish), -ese (Japanese, Chinese)"
+          ],
+          "commonTrap": {
+            "trapTitle": "Kesalahan Umum Pemula",
+            "explanation": "Banyak pemula lupa mengubah bentuk 'to be' sesuai subjeknya, atau salah menggunakan kata tanya",
+            "wrong": "I are from Indonesia. Where you from?",
+            "correct": "I am from Indonesia. Where are you from?"
+          }
+        },
+        "vocab": [
+          {
+            "word": "country",
+            "ipa": "/ˈkʌntri/",
+            "meaning": "negara",
+            "collocation": "Spain is a beautiful country."
+          },
+          {
+            "word": "nationality",
+            "ipa": "/ˌnæʃəˈnæləti/",
+            "meaning": "kewarganegaraan",
+            "collocation": "I'm Brazilian. What's your nationality?"
+          },
+          {
+            "word": "athlete",
+            "ipa": "/ˈæθliːt/",
+            "meaning": "atlet",
+            "collocation": "Who's your favourite athlete?"
+          },
+          {
+            "word": "favourite",
+            "ipa": "/ˈfeɪvərɪt/",
+            "meaning": "favorit, kesukaan",
+            "collocation": "Usain Bolt is my favourite athlete."
+          },
+          {
+            "word": "amazing",
+            "ipa": "/əˈmeɪzɪŋ/",
+            "meaning": "luar biasa, mengagumkan",
+            "collocation": "Because he's amazing!"
+          },
+          {
+            "word": "swimmer",
+            "ipa": "/ˈswɪmə(r)/",
+            "meaning": "perenang",
+            "collocation": "She's a swimmer."
+          },
+          {
+            "word": "runner",
+            "ipa": "/ˈrʌnə(r)/",
+            "meaning": "pelari",
+            "collocation": "Mariya Savinova. She's a runner."
+          },
+          {
+            "word": "flag",
+            "ipa": "/flæɡ/",
+            "meaning": "bendera",
+            "collocation": "This flag is red and blue."
+          }
+        ],
+        "dialogue": {
+          "context": "Dua remaja, Jamie dan Marta, bertemu di depan sekolah dan saling berkenalan",
+          "lines": [
+            {
+              "speaker": "Jamie",
+              "text": "Nice shirt.",
+              "translation": "Bagus bajunya."
+            },
+            {
+              "speaker": "Marta",
+              "text": "Thank you. It's the new Barcelona shirt.",
+              "translation": "Terima kasih. Ini kaos Barcelona yang baru."
+            },
+            {
+              "speaker": "Jamie",
+              "text": "I know. I'm a Barcelona fan, too. So what's your name?",
+              "translation": "Aku tahu. Aku juga penggemar Barcelona. Jadi siapa namamu?"
+            },
+            {
+              "speaker": "Marta",
+              "text": "Marta. And what's your name?",
+              "translation": "Marta. Dan siapa namamu?"
+            },
+            {
+              "speaker": "Jamie",
+              "text": "I'm Jamie. Nice to meet you, Jamie.",
+              "translation": "Aku Jamie. Senang bertemu denganmu, Jamie."
+            },
+            {
+              "speaker": "Marta",
+              "text": "Nice to meet you, too. Where are you from, Marta?",
+              "translation": "Senang bertemu denganmu juga. Kamu dari mana, Marta?"
+            },
+            {
+              "speaker": "Jamie",
+              "text": "I'm from Spain. I'm from a small town called Teruel.",
+              "translation": "Aku dari Spanyol. Aku dari kota kecil bernama Teruel."
+            },
+            {
+              "speaker": "Marta",
+              "text": "Spain is a beautiful country.",
+              "translation": "Spanyol negara yang indah."
+            }
+          ]
+        },
+        "speakingLab": {
+          "context": "Kamu bertemu Mr. Khoirul, seorang guru bahasa Inggris yang ramah, di sekolah untuk pertama kalinya. Dia ingin berkenalan denganmu.",
+          "roles": [
+            "Mr. Khoirul",
+            "You"
+          ],
+          "defaultUserRole": "You",
+          "turns": [
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Hello! Nice to meet you. What's your name?"
+            },
+            {
+              "speaker": "You",
+              "text": "Hi! My name is [your name]. Nice to meet you too."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "That's a nice name. Where are you from?"
+            },
+            {
+              "speaker": "You",
+              "text": "I'm from Indonesia. I'm from Jakarta."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Great! How old are you?"
+            },
+            {
+              "speaker": "You",
+              "text": "I'm 16 years old."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Wonderful! Who's your favourite athlete?"
+            },
+            {
+              "speaker": "You",
+              "text": "My favourite athlete is [athlete name]. He's/She's amazing!"
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "I ___ from London.",
+            "options": [
+              "am",
+              "is",
+              "are"
+            ],
+            "answer": "am",
+            "explanation": "Gunakan 'am' setelah subjek 'I'. Rumusnya: I am / I'm"
+          },
+          {
+            "question": "___ old are you?",
+            "options": [
+              "What",
+              "How",
+              "Where"
+            ],
+            "answer": "How",
+            "explanation": "Untuk menanyakan usia, gunakan 'How old'. Contoh: How old are you?"
+          },
+          {
+            "question": "They ___ from Rio de Janeiro in Brazil.",
+            "options": [
+              "am",
+              "is",
+              "are"
+            ],
+            "answer": "are",
+            "explanation": "Gunakan 'are' untuk subjek jamak (they, we) atau 'you'. Rumusnya: They are / They're"
+          },
+          {
+            "question": "___ is he from?",
+            "options": [
+              "What",
+              "Where",
+              "Who"
+            ],
+            "answer": "Where",
+            "explanation": "Untuk menanyakan asal atau lokasi, gunakan 'Where'. Contoh: Where are you from?"
+          },
+          {
+            "question": "She ___ a famous actor.",
+            "options": [
+              "am",
+              "is",
+              "are"
+            ],
+            "answer": "is",
+            "explanation": "Gunakan 'is' untuk subjek tunggal (he, she, it). Rumusnya: She is / She's"
+          },
+          {
+            "question": "Complete: I'm Brazilian. I'm from a city called Belo Horizonte. Nationality suffix:",
+            "options": [
+              "-an",
+              "-ish",
+              "-ese"
+            ],
+            "answer": "-an",
+            "explanation": "Kewarganegaraan Brazil menggunakan akhiran '-an' menjadi 'Brazilian'. Contoh lain: American, Mexican, Russian"
+          }
+        ]
+      }
+    },
+    {
+      "id": "A1-M02",
+      "levelId": "A1",
+      "title": "Unit 2: I Feel Happy: Feelings, Adjectives & Questions",
+      "cefr": "A1",
+      "group": "Core Units",
+      "objective": "Mampu mengungkapkan perasaan menggunakan kata sifat, membentuk kalimat negatif dengan 'to be', mengajukan pertanyaan sederhana, dan menyatakan kesukaan atau ketidaksukaan dengan struktur kalimat yang tepat.",
+      "orderIndex": 2,
+      "sections": {
+        "theory": {
+          "summary": "Unit ini mengajarkan cara mengekspresikan perasaan dan membuat pertanyaan dasar dalam bahasa Inggris. Kamu akan belajar kata sifat untuk menggambarkan perasaan (seperti happy, sad, tired), cara membuat kalimat negatif menggunakan 'to be' (am not, isn't, aren't), dan cara membentuk pertanyaan dengan 'to be'. Kamu juga akan belajar menggunakan object pronouns (me, you, him, her, it, us, them) dan cara menyatakan kesukaan dengan 'I like' atau ketidaksukaan dengan 'I don't like'.",
+          "rules": [
+            "Bentuk negatif 'to be': Subject + be + not + adjective. Contoh: I am not sad. / She isn't happy. / They aren't worried.",
+            "Bentuk pertanyaan dengan 'to be': Be + subject + adjective/noun? Contoh: Are you hot? / Is he your teacher? / Are they tired?",
+            "Jawaban pendek: Yes, + subject + be / No, + subject + be + not. Contoh: Yes, I am. / No, she isn't. / Yes, they are.",
+            "Object pronouns menggantikan objek: I → me, you → you, he → him, she → her, it → it, we → us, they → them. Contoh: I like him. / Do you like her?",
+            "Menyatakan kesukaan: I like + noun/person. Contoh: I like Shakira. / I like ice cream.",
+            "Menyatakan ketidaksukaan: I don't like + noun/person. Contoh: I don't like Taylor Swift. / I don't like them."
+          ],
+          "commonTrap": {
+            "trapTitle": "Kesalahan Umum: Lupa 'not' atau Urutan Kata yang Salah",
+            "explanation": "Pemula sering lupa menambahkan 'not' setelah 'be' dalam kalimat negatif, atau salah menyusun urutan kata dalam pertanyaan. Dalam pertanyaan, 'be' harus di depan subjek, bukan setelahnya.",
+            "wrong": "She is not happy? / You is cold? / They not are tired.",
+            "correct": "She isn't happy. / Are you cold? / They aren't tired."
+          }
+        },
+        "vocab": [
+          {
+            "word": "happy",
+            "ipa": "/ˈhæp.i/",
+            "meaning": "bahagia, senang",
+            "collocation": "I'm very happy."
+          },
+          {
+            "word": "sad",
+            "ipa": "/sæd/",
+            "meaning": "sedih",
+            "collocation": "She's very sad."
+          },
+          {
+            "word": "tired",
+            "ipa": "/taɪəd/",
+            "meaning": "lelah, capek",
+            "collocation": "I'm just tired."
+          },
+          {
+            "word": "worried",
+            "ipa": "/ˈwʌr.id/",
+            "meaning": "khawatir, cemas",
+            "collocation": "I'm a little worried."
+          },
+          {
+            "word": "angry",
+            "ipa": "/ˈæŋ.ɡri/",
+            "meaning": "marah",
+            "collocation": "He's angry."
+          },
+          {
+            "word": "bored",
+            "ipa": "/bɔːd/",
+            "meaning": "bosan",
+            "collocation": "I'm bored."
+          },
+          {
+            "word": "excited",
+            "ipa": "/ɪkˈsaɪ.tɪd/",
+            "meaning": "bersemangat, antusias",
+            "collocation": "I'm excited."
+          },
+          {
+            "word": "cold",
+            "ipa": "/kəʊld/",
+            "meaning": "dingin (merasa kedinginan)",
+            "collocation": "Are you cold?"
+          }
+        ],
+        "dialogue": {
+          "context": "Nick dan Connor sedang membicarakan rencana kegiatan akhir pekan. Nick merasa bosan dan tidak tertarik dengan berbagai pilihan yang ditawarkan Connor.",
+          "lines": [
+            {
+              "speaker": "Connor",
+              "text": "What's the matter, Nick? Are you tired?",
+              "translation": "Ada apa, Nick? Kamu lelah?"
+            },
+            {
+              "speaker": "Nick",
+              "text": "Tired? No, no, I'm not tired. I'm bored.",
+              "translation": "Lelah? Tidak, tidak, aku tidak lelah. Aku bosan."
+            },
+            {
+              "speaker": "Connor",
+              "text": "Why are you bored?",
+              "translation": "Kenapa kamu bosan?"
+            },
+            {
+              "speaker": "Nick",
+              "text": "Because there's nothing to do. Nothing to do at all.",
+              "translation": "Karena tidak ada yang bisa dilakukan. Tidak ada sama sekali."
+            },
+            {
+              "speaker": "Connor",
+              "text": "Well, there's a Formula One race at five. It's on TV.",
+              "translation": "Hmm, ada balapan Formula One jam lima. Di TV."
+            },
+            {
+              "speaker": "Nick",
+              "text": "Formula One? I don't like it.",
+              "translation": "Formula One? Aku tidak suka."
+            },
+            {
+              "speaker": "Connor",
+              "text": "Really? What about a film? There's a new film on at the cinema.",
+              "translation": "Benarkah? Bagaimana dengan film? Ada film baru di bioskop."
+            },
+            {
+              "speaker": "Nick",
+              "text": "A film? Who's in it?",
+              "translation": "Film? Siapa yang main?"
+            },
+            {
+              "speaker": "Connor",
+              "text": "Ben Stiller. He's so funny.",
+              "translation": "Ben Stiller. Dia sangat lucu."
+            },
+            {
+              "speaker": "Nick",
+              "text": "Ben Stiller? I don't like him. He's not funny. He's terrible.",
+              "translation": "Ben Stiller? Aku tidak suka dia. Dia tidak lucu. Dia buruk."
+            }
+          ]
+        },
+        "speakingLab": {
+          "context": "Kamu sedang berbincang dengan Mr. Khoirul tentang perasaan dan kegiatan harianmu. Mr. Khoirul akan bertanya tentang kabar dan kegiatanmu, dan kamu akan menjawab dengan jujur menggunakan kata sifat perasaan dan struktur kalimat yang sudah dipelajari.",
+          "roles": [
+            "Mr. Khoirul",
+            "You"
+          ],
+          "defaultUserRole": "You",
+          "turns": [
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Hi there! How are you today? Are you happy?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, I'm happy. / No, I'm not happy. I'm a little tired."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Oh, I see. Are you at school now or at home?"
+            },
+            {
+              "speaker": "You",
+              "text": "I'm at home. / I'm at school."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "That's good. Do you like your English class?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, I like it. / Yes, I like my English class."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Wonderful! Are you excited about learning new things today?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, I'm excited. / Yes, I am."
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Manakah bentuk negatif yang benar dari 'They are very friendly'?",
+            "options": [
+              "They not are very friendly.",
+              "They aren't very friendly.",
+              "They isn't very friendly."
+            ],
+            "answer": "They aren't very friendly.",
+            "explanation": "Bentuk negatif untuk subjek jamak 'they' menggunakan 'aren't' (are + not). Strukturnya: They + aren't + adjective."
+          },
+          {
+            "question": "Lengkapi kalimat berikut: '_____ you cold?' - 'No, I'm not.'",
+            "options": [
+              "Is",
+              "Are",
+              "Am"
+            ],
+            "answer": "Are",
+            "explanation": "Untuk membentuk pertanyaan dengan subjek 'you', gunakan 'Are' di awal kalimat. Struktur: Are + you + adjective?"
+          },
+          {
+            "question": "Pilih object pronoun yang tepat: 'I like Jennifer Lopez. I like _____.'",
+            "options": [
+              "she",
+              "her",
+              "him"
+            ],
+            "answer": "her",
+            "explanation": "Object pronoun untuk 'she' adalah 'her'. Object pronoun digunakan setelah kata kerja seperti 'like'. Jennifer Lopez adalah perempuan, jadi gunakan 'her'."
+          },
+          {
+            "question": "Manakah kalimat yang benar untuk menyatakan ketidaksukaan?",
+            "options": [
+              "I no like Taylor Swift.",
+              "I don't like Taylor Swift.",
+              "I not like Taylor Swift."
+            ],
+            "answer": "I don't like Taylor Swift.",
+            "explanation": "Untuk menyatakan ketidaksukaan, gunakan struktur: I + don't like + noun/person. 'Don't' adalah bentuk negatif dari 'do'."
+          },
+          {
+            "question": "Lengkapi jawaban pendek: 'Is she your teacher?' - 'No, _____.'",
+            "options": [
+              "she isn't",
+              "she not",
+              "isn't she"
+            ],
+            "answer": "she isn't",
+            "explanation": "Jawaban pendek negatif untuk pertanyaan dengan 'Is she' adalah 'No, she isn't'. Struktur: No, + subject + be + not."
+          },
+          {
+            "question": "Pilih kata sifat yang tepat: 'Hi, I'm at the stadium. The players aren't good. I'm _____.'",
+            "options": [
+              "excited",
+              "happy",
+              "sad"
+            ],
+            "answer": "sad",
+            "explanation": "Konteks menunjukkan situasi negatif (para pemain tidak bagus), jadi perasaan yang sesuai adalah 'sad' (sedih). 'Excited' dan 'happy' menunjukkan perasaan positif."
+          }
+        ]
+      }
+    },
+    {
+      "id": "A1-M03",
+      "levelId": "A1",
+      "title": "Unit 3: Me and My Family: Family Members & Possessives",
+      "cefr": "A1",
+      "group": "Core Units",
+      "objective": "Mampu memperkenalkan anggota keluarga, mendeskripsikan kualitas baik seseorang, menggunakan possessive 's dan possessive adjectives (this/that/these/those), serta memberikan pujian sederhana dalam bahasa Inggris.",
+      "orderIndex": 3,
+      "sections": {
+        "theory": {
+          "summary": "Unit ini mengajarkan cara membicarakan keluarga dengan menggunakan kata benda yang menunjukkan kepemilikan (possessive 's) dan kata sifat kepemilikan (my, your, his, her, its, our, their). Kamu juga akan belajar menggunakan this/that untuk benda tunggal dan these/those untuk benda jamak, serta cara mendeskripsikan anggota keluarga dengan kata sifat positif.",
+          "rules": [
+            "Possessive 's: Untuk menunjukkan kepemilikan, tambahkan 's setelah nama orang. Contoh: Kate's family (keluarga Kate), William's father (ayah William), my sister's phone (telepon kakak perempuanku).",
+            "Possessive adjectives: Gunakan my, your, his, her, its, our, their sebelum kata benda untuk menunjukkan kepemilikan. Contoh: my brother (saudaraku laki-laki), her mother (ibunya), their apartment (apartemen mereka).",
+            "This/That untuk tunggal: Gunakan 'this' untuk benda yang dekat ('ini') dan 'that' untuk benda yang jauh ('itu'). Contoh: This is my sister (Ini kakak perempuanku), That's my brother (Itu kakak laki-lakiku).",
+            "These/Those untuk jamak: Gunakan 'these' untuk benda jamak yang dekat ('ini semua') dan 'those' untuk benda jamak yang jauh ('itu semua'). Contoh: These are my pens (Ini pulpen-pulpenku), Those are my friends (Itu teman-temanku)."
+          ],
+          "commonTrap": {
+            "trapTitle": "Kesalahan Umum: Lupa Menambahkan 's pada Possessive",
+            "explanation": "Pemula sering lupa menambahkan 's ketika menunjukkan kepemilikan pada nama orang. Mereka juga kadang bingung membedakan 'his' dan 'her', atau salah menempatkan possessive adjective.",
+            "wrong": "Tom house is big. / William father is Prince Charles. / She cousin is nice.",
+            "correct": "Tom's house is big. / William's father is Prince Charles. / Her cousin is nice."
+          }
+        },
+        "vocab": [
+          {
+            "word": "brother",
+            "ipa": "/ˈbrʌðə(r)/",
+            "meaning": "saudara laki-laki",
+            "collocation": "My uncle Antonio is my mother's brother."
+          },
+          {
+            "word": "sister",
+            "ipa": "/ˈsɪstə(r)/",
+            "meaning": "saudara perempuan",
+            "collocation": "Kate has a sister called Pippa."
+          },
+          {
+            "word": "father",
+            "ipa": "/ˈfɑːðə(r)/",
+            "meaning": "ayah",
+            "collocation": "William's father is Prince Charles."
+          },
+          {
+            "word": "mother",
+            "ipa": "/ˈmʌðə(r)/",
+            "meaning": "ibu",
+            "collocation": "A good mother is patient and kind."
+          },
+          {
+            "word": "grandfather",
+            "ipa": "/ˈɡrænfɑːðə(r)/",
+            "meaning": "kakek",
+            "collocation": "A good grandfather is generous and helpful."
+          },
+          {
+            "word": "cousin",
+            "ipa": "/ˈkʌzn/",
+            "meaning": "sepupu",
+            "collocation": "She's my cousin. (She is my cousin.)"
+          },
+          {
+            "word": "apartment",
+            "ipa": "/əˈpɑːtmənt/",
+            "meaning": "apartemen",
+            "collocation": "Kate and William's apartment is really big."
+          },
+          {
+            "word": "bedroom",
+            "ipa": "/ˈbedruːm/",
+            "meaning": "kamar tidur",
+            "collocation": "This is my bedroom. Do you like it?"
+          }
+        ],
+        "dialogue": {
+          "context": "Steve bertemu dengan Jane dan Renata. Renata memperkenalkan keluarganya yang berasal dari Brazil dan berbicara bahasa Portugis sebagai bahasa pertama.",
+          "lines": [
+            {
+              "speaker": "Steve",
+              "text": "Hello. My name's Steve. What's your name?",
+              "translation": "Halo. Namaku Steve. Siapa namamu?"
+            },
+            {
+              "speaker": "Jane",
+              "text": "Hi, I'm Jane and this is Renata. She's Brazilian. She's here on holiday with her mother and father.",
+              "translation": "Hai, aku Jane dan ini Renata. Dia orang Brazil. Dia di sini berlibur bersama ibu dan ayahnya."
+            },
+            {
+              "speaker": "Steve",
+              "text": "Hi, Renata.",
+              "translation": "Hai, Renata."
+            },
+            {
+              "speaker": "Renata",
+              "text": "Hi, Steve. How are you?",
+              "translation": "Hai, Steve. Apa kabar?"
+            },
+            {
+              "speaker": "Steve",
+              "text": "Fine, thanks. So, you and your parents are from Brazil?",
+              "translation": "Baik, terima kasih. Jadi, kamu dan orang tuamu dari Brazil?"
+            },
+            {
+              "speaker": "Renata",
+              "text": "That's right – we speak Portuguese. It's our first language.",
+              "translation": "Betul – kami berbicara bahasa Portugis. Itu bahasa pertama kami."
+            },
+            {
+              "speaker": "Jane",
+              "text": "Have you got any brothers or sisters?",
+              "translation": "Apakah kamu punya saudara laki-laki atau perempuan?"
+            },
+            {
+              "speaker": "Renata",
+              "text": "No, just me! And you?",
+              "translation": "Tidak, hanya aku! Dan kamu?"
+            },
+            {
+              "speaker": "Jane",
+              "text": "Yes, I've got two brothers. Their names are Alex and Ricky. They love football! And they love Brazilian football!",
+              "translation": "Ya, aku punya dua saudara laki-laki. Nama mereka Alex dan Ricky. Mereka suka sepak bola! Dan mereka suka sepak bola Brazil!"
+            },
+            {
+              "speaker": "Renata",
+              "text": "Great! My father is a football fan, too – his favourite team is Flamengo.",
+              "translation": "Bagus! Ayahku juga penggemar sepak bola – tim favoritnya adalah Flamengo."
+            }
+          ]
+        },
+        "speakingLab": {
+          "context": "Kamu berlatih memperkenalkan keluargamu kepada Mr. Khoirul. Dia akan bertanya tentang anggota keluargamu dan kamu akan menjawab dengan informasi yang sesuai.",
+          "roles": [
+            "Mr. Khoirul",
+            "You"
+          ],
+          "defaultUserRole": "You",
+          "turns": [
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Hello! Tell me about your family. Have you got any brothers or sisters?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, I have one brother. His name is Ahmad."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "That's nice! What is your brother like? Can you describe him with a good adjective?"
+            },
+            {
+              "speaker": "You",
+              "text": "He is very kind and helpful. He always helps me with my homework."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Wonderful! And what about your parents? Where are they from?"
+            },
+            {
+              "speaker": "You",
+              "text": "My mother and father are from Indonesia. My mother's favourite hobby is cooking."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Excellent! Now, can you tell me about your house? What is your favourite room?"
+            },
+            {
+              "speaker": "You",
+              "text": "My favourite room is my bedroom. It's really nice and comfortable."
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Which sentence is correct?",
+            "options": [
+              "Kate family is from England.",
+              "Kate's family is from England.",
+              "Kates family is from England."
+            ],
+            "answer": "Kate's family is from England.",
+            "explanation": "Untuk menunjukkan kepemilikan, kita harus menambahkan 's setelah nama orang. Jadi yang benar adalah 'Kate's family'."
+          },
+          {
+            "question": "Complete the sentence: William and Kate have a son. ____ son's name is George.",
+            "options": [
+              "They",
+              "Their",
+              "Them"
+            ],
+            "answer": "Their",
+            "explanation": "Kita menggunakan possessive adjective 'their' sebelum kata benda untuk menunjukkan kepemilikan oleh lebih dari satu orang."
+          },
+          {
+            "question": "Which demonstrative is correct? '____ is my sister.' (pointing to someone near you)",
+            "options": [
+              "That",
+              "This",
+              "Those"
+            ],
+            "answer": "This",
+            "explanation": "Gunakan 'this' untuk menunjuk orang atau benda tunggal yang dekat dengan kita. 'That' untuk yang jauh, sedangkan 'those' untuk jamak."
+          },
+          {
+            "question": "Complete: '____ are my friends.' (pointing to people far away)",
+            "options": [
+              "This",
+              "These",
+              "Those"
+            ],
+            "answer": "Those",
+            "explanation": "'Those' digunakan untuk menunjuk orang atau benda jamak (lebih dari satu) yang jauh dari kita. 'These' untuk yang dekat."
+          },
+          {
+            "question": "Which sentence uses possessive 's correctly?",
+            "options": [
+              "My sister phone is new.",
+              "My sister's phone is new.",
+              "My sisters phone is new."
+            ],
+            "answer": "My sister's phone is new.",
+            "explanation": "Possessive 's (apostrophe + s) menunjukkan bahwa telepon itu milik kakak perempuanku. Tanpa apostrophe, artinya menjadi salah."
+          },
+          {
+            "question": "Choose the correct possessive adjective: 'She likes ____ room. It's very big.'",
+            "options": [
+              "she",
+              "her",
+              "his"
+            ],
+            "answer": "her",
+            "explanation": "Possessive adjective untuk 'she' adalah 'her'. Kita gunakan 'her' sebelum kata benda (room) untuk menunjukkan kepemilikan."
+          }
+        ]
+      }
+    },
+    {
+      "id": "A1-M04",
+      "levelId": "A1",
+      "title": "Unit 4: In the City: Places in Town & There is / There are",
+      "cefr": "A1",
+      "group": "Core Units",
+      "objective": "Mampu berbicara tentang tempat-tempat di kota, memberikan petunjuk arah, dan berbelanja menggunakan struktur 'there is / there are' serta kata kerja imperatif",
+      "orderIndex": 4,
+      "sections": {
+        "theory": {
+          "summary": "Unit ini mengajarkan cara menyebutkan tempat-tempat di kota (bank, museum, toko, restoran), menjelaskan keberadaan sesuatu menggunakan 'there is / there are', memberikan petunjuk arah dengan kata kerja imperatif (turn, go, don't open), serta berbelanja dengan angka 100+.",
+          "rules": [
+            "There is + kata benda tunggal (singular noun): There is a park called Window of the World. / There is a museum in your town?",
+            "There are + kata benda jamak (plural noun): There are six bridges in the city. / There are some restaurants in the park.",
+            "Some / any: Gunakan 'some' dalam kalimat positif, gunakan 'any' dalam kalimat negatif dan pertanyaan: There aren't any people living in the park. / Are there any fun activities?",
+            "Imperative (kata kerja perintah): Gunakan bentuk dasar kata kerja tanpa 'to' untuk memberi perintah: Turn right. Go down the street. Don't open the door.",
+            "Prepositions of place: behind (di belakang), between (di antara), in front of (di depan), next to (di sebelah), opposite (di seberang): The bank is opposite the library."
+          ],
+          "commonTrap": {
+            "trapTitle": "Kesalahan Umum Pemula",
+            "explanation": "Pemula sering lupa membedakan 'there is' untuk singular dan 'there are' untuk plural, atau menggunakan 'some' di kalimat negatif padahal seharusnya 'any'.",
+            "wrong": "There is many parks in London. / There are some people? / There aren't some shops here.",
+            "correct": "There are many parks in London. / Are there any people? / There aren't any shops here."
+          }
+        },
+        "vocab": [
+          {
+            "word": "park",
+            "ipa": "/pɑːk/",
+            "meaning": "taman",
+            "collocation": "There is a park called Window of the World."
+          },
+          {
+            "word": "museum",
+            "ipa": "/mjuːˈziːəm/",
+            "meaning": "museum",
+            "collocation": "Is there a museum in your town?"
+          },
+          {
+            "word": "restaurant",
+            "ipa": "/ˈrestərɒnt/",
+            "meaning": "restoran",
+            "collocation": "There are some restaurants and cafés in the park."
+          },
+          {
+            "word": "train station",
+            "ipa": "/treɪn ˈsteɪʃən/",
+            "meaning": "stasiun kereta",
+            "collocation": "There is a train station in the park."
+          },
+          {
+            "word": "supermarket",
+            "ipa": "/ˈsuːpəmɑːkɪt/",
+            "meaning": "supermarket",
+            "collocation": "You buy milk in a supermarket."
+          },
+          {
+            "word": "library",
+            "ipa": "/ˈlaɪbrəri/",
+            "meaning": "perpustakaan",
+            "collocation": "The bank is opposite the library."
+          },
+          {
+            "word": "post office",
+            "ipa": "/pəʊst ˈɒfɪs/",
+            "meaning": "kantor pos",
+            "collocation": "You send letters in a post office."
+          },
+          {
+            "word": "chemist's",
+            "ipa": "/ˈkemɪsts/",
+            "meaning": "apotek",
+            "collocation": "You buy medicine in a chemist's."
+          }
+        ],
+        "dialogue": {
+          "context": "Dua orang sedang berbelanja di toko buku dan mendiskusikan harga tiket kereta ke London",
+          "lines": [
+            {
+              "speaker": "Man",
+              "text": "Morning. Can I help you?",
+              "translation": "Pagi. Bisa saya bantu?"
+            },
+            {
+              "speaker": "Girl",
+              "text": "Yes, please. A ticket to London, please. Return?",
+              "translation": "Ya, tolong. Satu tiket ke London. Pulang pergi?"
+            },
+            {
+              "speaker": "Man",
+              "text": "Yes, please – a day return. Is it?",
+              "translation": "Ya – tiket pulang pergi satu hari. Itu saja?"
+            },
+            {
+              "speaker": "Girl",
+              "text": "Well, it's £27.50 – but you can't come back between four o'clock and seven o'clock.",
+              "translation": "Nah, harganya £27.50 – tapi Anda tidak bisa pulang antara jam empat dan jam tujuh."
+            },
+            {
+              "speaker": "Man",
+              "text": "Oh, no problem. Here you are – thirty pounds.",
+              "translation": "Oh, tidak masalah. Ini dia – tiga puluh pound."
+            },
+            {
+              "speaker": "Girl",
+              "text": "Thank you. And … two pounds fifty change.",
+              "translation": "Terima kasih. Dan… kembalian dua pound lima puluh."
+            }
+          ]
+        },
+        "speakingLab": {
+          "context": "Anda sedang berlatih memberikan petunjuk arah dan menjelaskan tempat-tempat di kota bersama tutor Mr. Khoirul",
+          "roles": [
+            "Mr. Khoirul",
+            "You"
+          ],
+          "defaultUserRole": "You",
+          "turns": [
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Hello! Let's practice giving directions. Imagine you're at the restaurant on the map. Can you tell me how to get to the supermarket?"
+            },
+            {
+              "speaker": "You",
+              "text": "OK, turn right and go down King Street. The supermarket is on the right."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Perfect! That's very clear. Now, can you tell me: are there any parks near the supermarket?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, there is. There is a park next to the supermarket on Green Street."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Excellent! You're doing great. One more question: Is there a library in your town? Where is it?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, there is. The library is opposite the restaurant, behind the bank."
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Complete the sentence: '_____ a museum in your town?'",
+            "options": [
+              "Is there",
+              "There is",
+              "Are there"
+            ],
+            "answer": "Is there",
+            "explanation": "Gunakan 'Is there' untuk membentuk pertanyaan dengan kata benda tunggal (a museum). Struktur: Is there + singular noun?"
+          },
+          {
+            "question": "Which sentence is correct?",
+            "options": [
+              "There are six bridges in the city.",
+              "There is six bridges in the city.",
+              "There are a bridge in the city."
+            ],
+            "answer": "There are six bridges in the city.",
+            "explanation": "Gunakan 'There are' untuk kata benda jamak (bridges). 'Six bridges' adalah bentuk jamak, jadi harus menggunakan 'are'."
+          },
+          {
+            "question": "Complete: 'There aren't _____ shops in this street.'",
+            "options": [
+              "any",
+              "some",
+              "a"
+            ],
+            "answer": "any",
+            "explanation": "Gunakan 'any' dalam kalimat negatif dengan kata benda jamak. 'Some' hanya digunakan dalam kalimat positif."
+          },
+          {
+            "question": "Which is the correct imperative form?",
+            "options": [
+              "Turn right into High Street.",
+              "To turn right into High Street.",
+              "Turning right into High Street."
+            ],
+            "answer": "Turn right into High Street.",
+            "explanation": "Bentuk imperatif menggunakan kata kerja dasar tanpa 'to' atau '-ing'. Cukup: Turn right."
+          },
+          {
+            "question": "Where do you buy medicine?",
+            "options": [
+              "In a chemist's.",
+              "In a library.",
+              "In a museum."
+            ],
+            "answer": "In a chemist's.",
+            "explanation": "Chemist's adalah apotek dalam bahasa Inggris British. Anda membeli obat di apotek, bukan di perpustakaan atau museum."
+          },
+          {
+            "question": "Complete: 'The bank is _____ the library.'",
+            "options": [
+              "opposite",
+              "in",
+              "at"
+            ],
+            "answer": "opposite",
+            "explanation": "'Opposite' berarti 'di seberang'. Preposisi ini digunakan untuk menunjukkan posisi berhadapan dengan sesuatu."
+          }
+        ]
+      }
+    },
+    {
+      "id": "A1-M05",
+      "levelId": "A1",
+      "title": "Unit 5: In My Free Time: Present Simple & Adverbs of Frequency",
+      "cefr": "A1",
+      "group": "Core Units",
+      "objective": "Mampu berbicara tentang kebiasaan dan aktivitas waktu luang, menggunakan Present Simple dalam bentuk positif, negatif, dan pertanyaan, serta menggunakan adverbs of frequency untuk menjelaskan seberapa sering melakukan aktivitas.",
+      "orderIndex": 5,
+      "sections": {
+        "theory": {
+          "summary": "Unit ini mengajarkan cara membicarakan aktivitas waktu luang dan kebiasaan sehari-hari menggunakan Present Simple. Kamu akan belajar membentuk kalimat positif, negatif, dan pertanyaan, serta menggunakan kata keterangan frekuensi seperti always, often, sometimes, dan never untuk menjelaskan seberapa sering kamu melakukan sesuatu.",
+          "rules": [
+            "Present Simple Positif: Subjek + verb (tambah -s/-es untuk he/she/it). Contoh: I love Glee club. She teaches Maths.",
+            "Present Simple Negatif: Subjek + don't/doesn't + base verb. Contoh: I don't like Maths. He doesn't cost a lot of money.",
+            "Present Simple Pertanyaan: Do/Does + subjek + base verb? Contoh: Do you watch TV? Does your dad cook?",
+            "Adverbs of Frequency: Letaknya sebelum verb utama (I never play games) atau setelah verb 'to be' (She is always happy). Urutan dari 100% ke 0%: always - often - sometimes - never."
+          ],
+          "commonTrap": {
+            "trapTitle": "Kesalahan Umum: Lupa menambah -s/-es pada orang ketiga tunggal",
+            "explanation": "Pemula sering lupa bahwa untuk he/she/it, verb harus ditambah -s atau -es. Selain itu, dalam bentuk negatif dan pertanyaan, jangan tambahkan -s pada verb utama karena sudah ada pada does/doesn't.",
+            "wrong": "She teach Maths. He don't likes music. Does she teaches piano?",
+            "correct": "She teaches Maths. He doesn't like music. Does she teach piano?"
+          }
+        },
+        "vocab": [
+          {
+            "word": "chat to friends online",
+            "ipa": "/tʃæt tuː frendz ˈɒnlaɪn/",
+            "meaning": "mengobrol dengan teman secara online",
+            "collocation": "I chat to my friends online after school."
+          },
+          {
+            "word": "do homework",
+            "ipa": "/duː ˈhəʊmwɜːk/",
+            "meaning": "mengerjakan pekerjaan rumah",
+            "collocation": "Tim sometimes uses the tablet to do his homework."
+          },
+          {
+            "word": "hang out with friends",
+            "ipa": "/hæŋ aʊt wɪð frendz/",
+            "meaning": "nongkrong bersama teman",
+            "collocation": "I often hang out with my friends in the park."
+          },
+          {
+            "word": "play computer games",
+            "ipa": "/pleɪ kəmˈpjuːtə ɡeɪmz/",
+            "meaning": "bermain game komputer",
+            "collocation": "I never play computer games in the morning."
+          },
+          {
+            "word": "listen to music",
+            "ipa": "/ˈlɪsn tuː ˈmjuːzɪk/",
+            "meaning": "mendengarkan musik",
+            "collocation": "I listen to music on my own."
+          },
+          {
+            "word": "watch TV",
+            "ipa": "/wɒtʃ ˌtiːˈviː/",
+            "meaning": "menonton televisi",
+            "collocation": "Shona doesn't often watch TV with her family."
+          },
+          {
+            "word": "go shopping",
+            "ipa": "/ɡəʊ ˈʃɒpɪŋ/",
+            "meaning": "pergi berbelanja",
+            "collocation": "I sometimes go shopping with my friends."
+          },
+          {
+            "word": "play sport",
+            "ipa": "/pleɪ spɔːt/",
+            "meaning": "berolahraga",
+            "collocation": "We meet every Tuesday at lunchtime and every Friday after school."
+          }
+        ],
+        "dialogue": {
+          "context": "Newsletter klub Glee di sekolah yang membahas tentang kegiatan klub menyanyi dan kenapa klub ini sangat menyenangkan",
+          "lines": [
+            {
+              "speaker": "Newsletter",
+              "text": "Our school has a Glee club and it's brilliant. I know this because I'm a member!",
+              "translation": "Sekolah kami punya klub Glee dan itu luar biasa. Saya tahu ini karena saya anggotanya!"
+            },
+            {
+              "speaker": "Newsletter",
+              "text": "Miss Higgins is the club leader. She chooses the songs and helps us to sing them.",
+              "translation": "Miss Higgins adalah pemimpin klub. Dia memilih lagu-lagu dan membantu kami menyanyikannya."
+            },
+            {
+              "speaker": "Newsletter",
+              "text": "We often sing popular songs from films but we sometimes sing old songs from the 1960s and 1970s.",
+              "translation": "Kami sering menyanyikan lagu populer dari film tetapi kadang kami menyanyikan lagu lama dari tahun 1960an dan 1970an."
+            },
+            {
+              "speaker": "Newsletter",
+              "text": "We meet in the school hall every Tuesday at lunchtime and every Friday after school.",
+              "translation": "Kami bertemu di aula sekolah setiap Selasa saat makan siang dan setiap Jumat setelah sekolah."
+            },
+            {
+              "speaker": "Newsletter",
+              "text": "The Glee club gives two concerts every year. The Glee club is for all ages.",
+              "translation": "Klub Glee mengadakan dua konser setiap tahun. Klub Glee untuk semua usia."
+            }
+          ]
+        },
+        "speakingLab": {
+          "context": "Simulasi percakapan dengan Mr. Khoirul tentang aktivitas waktu luang kamu. Tutor akan bertanya tentang kebiasaan dan hobimu.",
+          "roles": [
+            "Mr. Khoirul",
+            "You"
+          ],
+          "defaultUserRole": "You",
+          "turns": [
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Hello! I'd like to know about your free time activities. What do you usually do after school?"
+            },
+            {
+              "speaker": "You",
+              "text": "I usually do my homework and then I chat to my friends online."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "That sounds nice! Do you play any computer games?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, I sometimes play computer games in the evening with my friends."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Great! And what about music? Do you listen to music?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, I always listen to music. I love it!"
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Wonderful! One more question - do you watch TV with your family?"
+            },
+            {
+              "speaker": "You",
+              "text": "I sometimes watch TV with my family at the weekend."
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "She _____ the piano very well.",
+            "options": [
+              "play",
+              "plays",
+              "playes"
+            ],
+            "answer": "plays",
+            "explanation": "Untuk subjek she (orang ketiga tunggal), kita harus menambahkan -s pada verb. 'Play' menjadi 'plays'."
+          },
+          {
+            "question": "My brother _____ his homework after school.",
+            "options": [
+              "doesn't do",
+              "don't do",
+              "doesn't does"
+            ],
+            "answer": "doesn't do",
+            "explanation": "Untuk membuat kalimat negatif dengan he/she/it, gunakan doesn't + base verb (tanpa -s). Jadi: doesn't do."
+          },
+          {
+            "question": "_____ you watch TV every day?",
+            "options": [
+              "Do",
+              "Does",
+              "Are"
+            ],
+            "answer": "Do",
+            "explanation": "Untuk membuat pertanyaan dengan subjek you/I/we/they, gunakan 'Do' di awal kalimat."
+          },
+          {
+            "question": "I _____ play computer games in the morning.",
+            "options": [
+              "never",
+              "doesn't",
+              "don't never"
+            ],
+            "answer": "never",
+            "explanation": "Adverb of frequency 'never' diletakkan sebelum verb utama. Jangan gunakan don't + never karena itu double negative."
+          },
+          {
+            "question": "They _____ to music in the kitchen.",
+            "options": [
+              "often listen",
+              "listen often",
+              "often listens"
+            ],
+            "answer": "often listen",
+            "explanation": "Adverb of frequency seperti 'often' diletakkan sebelum verb utama. Untuk subjek they, gunakan 'listen' tanpa -s."
+          },
+          {
+            "question": "_____ your dad cook at the weekend?",
+            "options": [
+              "Do",
+              "Does",
+              "Is"
+            ],
+            "answer": "Does",
+            "explanation": "Untuk membuat pertanyaan dengan subjek he/she/it (your dad = he), gunakan 'Does' di awal kalimat, diikuti base verb."
+          }
+        ]
+      }
+    },
+    {
+      "id": "A1-M06",
+      "levelId": "A1",
+      "title": "Unit 6: Free Time: Hobbies, Like + -ing & Can / Can't",
+      "cefr": "A1",
+      "group": "Core Units",
+      "objective": "Mampu berbicara tentang hobi dan waktu luang, menggunakan pola 'like + -ing', serta menggunakan 'have/has got' untuk menyatakan kepemilikan dan 'can/can't' untuk kemampuan.",
+      "orderIndex": 6,
+      "sections": {
+        "theory": {
+          "summary": "Unit ini mengajarkan cara membicarakan hobi dan aktivitas waktu luang. Kamu akan belajar menggunakan pola 'like + verb-ing' untuk menyatakan kesukaan, 'have/has got' untuk kepemilikan (positif, negatif, dan pertanyaan), serta kata benda yang dapat dihitung dan tidak dapat dihitung.",
+          "rules": [
+            "Like + -ing: Gunakan 'like' + kata kerja dengan akhiran '-ing' untuk menyatakan kesukaan. Contoh: I like playing football. / She likes reading books.",
+            "Have/Has Got (Positif): I/You/We/They have got. He/She/It has got. Contoh: I've got a tablet. / She's got long hair.",
+            "Have/Has Got (Negatif): I/You/We/They haven't got. He/She/It hasn't got. Contoh: I haven't got any sisters. / He hasn't got a smartphone.",
+            "Have/Has Got (Pertanyaan): Have I/you/we/they got...? Has he/she/it got...? Contoh: Have you got a hobby? / Has your sister got a smartphone?",
+            "Countable nouns (dapat dihitung): Bisa dihitung satu per satu. Singular: a friend, an arm. Plural: some bikes, two friends.",
+            "Uncountable nouns (tidak dapat dihitung): Tidak bisa dihitung satu per satu. Contoh: some time, some money. Gunakan 'some' atau tanpa artikel."
+          ],
+          "commonTrap": {
+            "trapTitle": "Kesalahan Umum: Lupa Menambahkan '-ing' atau Salah Gunakan 'Got'",
+            "explanation": "Pemula sering lupa menambahkan '-ing' setelah 'like', atau menggunakan 'have' tanpa 'got' dalam konteks British English yang diajarkan di buku ini.",
+            "wrong": "I like play football. / I have a sister.",
+            "correct": "I like playing football. / I've got a sister."
+          }
+        },
+        "vocab": [
+          {
+            "word": "tablet",
+            "ipa": "/ˈtæblət/",
+            "meaning": "tablet (komputer kecil layar sentuh)",
+            "collocation": "I use a tablet every day."
+          },
+          {
+            "word": "headphones",
+            "ipa": "/ˈhedfəʊnz/",
+            "meaning": "headphone (alat dengar musik)",
+            "collocation": "I use my headphones to listen to music."
+          },
+          {
+            "word": "smartphone",
+            "ipa": "/ˈsmɑːtfəʊn/",
+            "meaning": "smartphone (telepon pintar)",
+            "collocation": "I use my smartphone to talk to my friends."
+          },
+          {
+            "word": "games console",
+            "ipa": "/ɡeɪmz ˈkɒnsəʊl/",
+            "meaning": "konsol permainan",
+            "collocation": "I use my games console to play computer games."
+          },
+          {
+            "word": "e-reader",
+            "ipa": "/ˈiː riːdə(r)/",
+            "meaning": "e-reader (alat baca buku digital)",
+            "collocation": "I use my e-reader to read books and magazines."
+          },
+          {
+            "word": "laptop",
+            "ipa": "/ˈlæptɒp/",
+            "meaning": "laptop (komputer jinjing)",
+            "collocation": "I don't use a laptop every day."
+          },
+          {
+            "word": "friendship band",
+            "ipa": "/ˈfrendʃɪp bænd/",
+            "meaning": "gelang persahabatan",
+            "collocation": "Ella's got five or six friendship bands."
+          },
+          {
+            "word": "hobby",
+            "ipa": "/ˈhɒbi/",
+            "meaning": "hobi",
+            "collocation": "Have you got a hobby?"
+          }
+        ],
+        "dialogue": {
+          "context": "Olivia menceritakan kepada Chloe tentang teman baru kakaknya bernama Freddie.",
+          "lines": [
+            {
+              "speaker": "Olivia",
+              "text": "Hey, Chloe. How are you?",
+              "translation": "Hai, Chloe. Apa kabar?"
+            },
+            {
+              "speaker": "Chloe",
+              "text": "Hi, Olivia. I'm fine. How are you?",
+              "translation": "Hai, Olivia. Aku baik-baik saja. Bagaimana denganmu?"
+            },
+            {
+              "speaker": "Olivia",
+              "text": "I'm happy. You know my brother, Patrick, right? Well, he's got a new friend. He's really cool.",
+              "translation": "Aku senang. Kamu kenal kakakku, Patrick, kan? Dia punya teman baru. Dia sangat keren."
+            },
+            {
+              "speaker": "Chloe",
+              "text": "Really? Who is he? What does he look like?",
+              "translation": "Benarkah? Siapa dia? Seperti apa dia?"
+            },
+            {
+              "speaker": "Olivia",
+              "text": "Well, he's got black hair. It's short and it's curly.",
+              "translation": "Dia memiliki rambut hitam. Rambutnya pendek dan keriting."
+            },
+            {
+              "speaker": "Chloe",
+              "text": "Is he tall or short?",
+              "translation": "Apakah dia tinggi atau pendek?"
+            },
+            {
+              "speaker": "Olivia",
+              "text": "Quite tall, and good-looking. He's got brown eyes and he wears glasses.",
+              "translation": "Cukup tinggi, dan tampan. Dia memiliki mata cokelat dan memakai kacamata."
+            },
+            {
+              "speaker": "Chloe",
+              "text": "Brown eyes and glasses?",
+              "translation": "Mata cokelat dan kacamata?"
+            },
+            {
+              "speaker": "Olivia",
+              "text": "Erm ... yes, and he's got a very nice smile. He's so friendly.",
+              "translation": "Mm... ya, dan dia memiliki senyum yang sangat manis. Dia sangat ramah."
+            }
+          ]
+        },
+        "speakingLab": {
+          "context": "Latihan berbicara tentang hobi dan gadget yang kamu gunakan sehari-hari dengan Mr. Khoirul.",
+          "roles": [
+            "Mr. Khoirul",
+            "You"
+          ],
+          "defaultUserRole": "You",
+          "turns": [
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Hello! Let's talk about your free time. Have you got a hobby?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, I have. I like playing football."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "That's great! What gadgets do you use every day? Do you use a tablet or a laptop?"
+            },
+            {
+              "speaker": "You",
+              "text": "I use a tablet every day. I use it to watch videos and do my homework."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Excellent! Have you got a smartphone?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, I've got a smartphone. I use it to talk to my friends."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Very good! What do you like doing in your free time?"
+            },
+            {
+              "speaker": "You",
+              "text": "I like listening to music and reading books."
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Lengkapi kalimat: 'I _____ playing computer games in my free time.'",
+            "options": [
+              "like",
+              "likes",
+              "liking"
+            ],
+            "answer": "like",
+            "explanation": "Gunakan 'like' + verb-ing untuk menyatakan kesukaan. Subjek 'I' menggunakan 'like', bukan 'likes'."
+          },
+          {
+            "question": "Pilih kalimat yang benar:",
+            "options": [
+              "She's got a big family.",
+              "She got a big family.",
+              "She have got a big family."
+            ],
+            "answer": "She's got a big family.",
+            "explanation": "Untuk subjek 'she/he/it', gunakan 'has got' (bentuk singkat: 's got). Kalimat 'She's got a big family' sudah tepat."
+          },
+          {
+            "question": "Bentuk negatif dari 'I have got a laptop' adalah:",
+            "options": [
+              "I haven't got a laptop.",
+              "I hasn't got a laptop.",
+              "I don't have got a laptop."
+            ],
+            "answer": "I haven't got a laptop.",
+            "explanation": "Bentuk negatif 'have got' untuk I/you/we/they adalah 'haven't got'."
+          },
+          {
+            "question": "Manakah yang merupakan uncountable noun?",
+            "options": [
+              "time",
+              "bike",
+              "friend"
+            ],
+            "answer": "time",
+            "explanation": "'Time' adalah uncountable noun (tidak dapat dihitung). 'Bike' dan 'friend' adalah countable nouns."
+          },
+          {
+            "question": "Bentuk pertanyaan yang benar adalah:",
+            "options": [
+              "Has your sister got a smartphone?",
+              "Have your sister got a smartphone?",
+              "Does your sister has got a smartphone?"
+            ],
+            "answer": "Has your sister got a smartphone?",
+            "explanation": "Untuk subjek she/he/it, gunakan 'Has' di awal pertanyaan. 'Has your sister got a smartphone?' adalah bentuk yang tepat."
+          },
+          {
+            "question": "I use my headphones _____ listen to music.",
+            "options": [
+              "to",
+              "for",
+              "at"
+            ],
+            "answer": "to",
+            "explanation": "Gunakan 'to' untuk menyatakan tujuan: 'I use my headphones to listen to music.'"
+          }
+        ]
+      }
+    },
+    {
+      "id": "A1-M07",
+      "levelId": "A1",
+      "title": "Unit 7: Sport & Health: Sports & Adverbs of Frequency",
+      "cefr": "A1",
+      "group": "Core Units",
+      "objective": "Mampu berbicara tentang kemampuan dan ketidakmampuan menggunakan 'can' dan 'can't', menyebutkan nama-nama olahraga, serta mendeskripsikan rutinitas dan kebiasaan olahraga sederhana.",
+      "orderIndex": 7,
+      "sections": {
+        "theory": {
+          "summary": "Unit ini mengajarkan cara mengungkapkan kemampuan (ability) menggunakan kata 'can' dan 'can't'. Kamu akan belajar berbicara tentang olahraga yang bisa atau tidak bisa kamu lakukan, serta memahami preposisi waktu sederhana untuk menyatakan jadwal dan rutinitas.",
+          "rules": [
+            "Positive: Subject + can + verb (contoh: I can swim. / She can play tennis.)",
+            "Negative: Subject + cannot/can't + verb (contoh: I can't play volleyball. / He can't read or write.)",
+            "Question: Can + subject + verb? (contoh: Can you count to 20 in English?)",
+            "Short answer: Yes, I/you/we/they can. / No, I/you/we/they can't.",
+            "Catatan: 'can' tidak berubah bentuk untuk semua subjek (I, you, he, she, it, we, they). Setelah 'can' selalu gunakan bentuk dasar kata kerja tanpa 'to'."
+          ],
+          "commonTrap": {
+            "trapTitle": "Kesalahan Menggunakan 'do/does' dengan 'can'",
+            "explanation": "Banyak pemula masih menggunakan 'do/does' ketika membuat pertanyaan atau kalimat negatif dengan 'can'. Padahal 'can' adalah modal verb yang tidak memerlukan auxiliary verb 'do/does'.",
+            "wrong": "Do you can swim? / He doesn't can play guitar.",
+            "correct": "Can you swim? / He can't play guitar."
+          }
+        },
+        "vocab": [
+          {
+            "word": "skateboard",
+            "ipa": "/ˈskeɪt.bɔːd/",
+            "meaning": "papan luncur",
+            "collocation": "Tillman can skateboard like a person."
+          },
+          {
+            "word": "gymnastics",
+            "ipa": "/dʒɪmˈnæs.tɪks/",
+            "meaning": "senam",
+            "collocation": "The Firecrackers can do gymnastics very well."
+          },
+          {
+            "word": "golf",
+            "ipa": "/ɡɒlf/",
+            "meaning": "golf",
+            "collocation": "Xavier likes to read golf magazines."
+          },
+          {
+            "word": "ice-skate",
+            "ipa": "/ˈaɪs.skeɪt/",
+            "meaning": "seluncur es",
+            "collocation": "I can ice-skate but I can't play volleyball."
+          },
+          {
+            "word": "cycle",
+            "ipa": "/ˈsaɪ.kəl/",
+            "meaning": "bersepeda",
+            "collocation": "Do you cycle to school every day?"
+          },
+          {
+            "word": "taekwondo",
+            "ipa": "/ˌtaɪ.kwɒnˈdəʊ/",
+            "meaning": "taekwondo (seni bela diri Korea)",
+            "collocation": "She does taekwondo twice a week."
+          },
+          {
+            "word": "somersault",
+            "ipa": "/ˈsʌm.ə.sɒlt/",
+            "meaning": "jungkir balik",
+            "collocation": "They can jump and spin and do somersaults."
+          },
+          {
+            "word": "spell",
+            "ipa": "/spel/",
+            "meaning": "mengeja",
+            "collocation": "Can you spell your name in English?"
+          }
+        ],
+        "dialogue": {
+          "context": "Dua teman sedang membicarakan kemampuan olahraga mereka",
+          "lines": [
+            {
+              "speaker": "Alex",
+              "text": "Can you play basketball?",
+              "translation": "Bisakah kamu bermain basket?"
+            },
+            {
+              "speaker": "Jamie",
+              "text": "Yes, I can. I play basketball every weekend.",
+              "translation": "Ya, aku bisa. Aku bermain basket setiap akhir pekan."
+            },
+            {
+              "speaker": "Alex",
+              "text": "That's great! Can you do taekwondo too?",
+              "translation": "Bagus sekali! Bisakah kamu juga melakukan taekwondo?"
+            },
+            {
+              "speaker": "Jamie",
+              "text": "No, I can't. But I can swim very well.",
+              "translation": "Tidak, aku tidak bisa. Tapi aku bisa berenang dengan sangat baik."
+            }
+          ]
+        },
+        "speakingLab": {
+          "context": "Berlatih percakapan dengan Mr. Khoirul tentang kemampuan olahraga yang kamu miliki",
+          "roles": [
+            "Mr. Khoirul",
+            "You"
+          ],
+          "defaultUserRole": "You",
+          "turns": [
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Hello! Tell me, what sports can you do?"
+            },
+            {
+              "speaker": "You",
+              "text": "I can play football and I can swim."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "That's wonderful! Can you play tennis too?"
+            },
+            {
+              "speaker": "You",
+              "text": "No, I can't play tennis, but I can ride a bike."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Great! How often do you play football?"
+            },
+            {
+              "speaker": "You",
+              "text": "I play football twice a week, on Tuesday and Thursday."
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Pilih kalimat yang benar untuk mengungkapkan kemampuan:",
+            "options": [
+              "She cans play volleyball very well.",
+              "She can plays volleyball very well.",
+              "She can play volleyball very well."
+            ],
+            "answer": "She can play volleyball very well.",
+            "explanation": "Setelah 'can', kata kerja harus dalam bentuk dasar (base form) tanpa tambahan -s atau perubahan lainnya."
+          },
+          {
+            "question": "Bagaimana cara membuat pertanyaan dari kalimat: 'He can swim'?",
+            "options": [
+              "Does he can swim?",
+              "Can he swim?",
+              "Do he can swim?"
+            ],
+            "answer": "Can he swim?",
+            "explanation": "Untuk membuat pertanyaan dengan 'can', letakkan 'can' di awal kalimat diikuti subjek dan kata kerja. Jangan gunakan 'do/does'."
+          },
+          {
+            "question": "Manakah bentuk negatif yang benar?",
+            "options": [
+              "I don't can play guitar.",
+              "I can't play guitar.",
+              "I not can play guitar."
+            ],
+            "answer": "I can't play guitar.",
+            "explanation": "Bentuk negatif dari 'can' adalah 'cannot' atau 'can't'. Tidak menggunakan 'do not' atau 'don't'."
+          },
+          {
+            "question": "Which sport uses a skateboard?",
+            "options": [
+              "Gymnastics",
+              "Skateboarding",
+              "Ice-skating"
+            ],
+            "answer": "Skateboarding",
+            "explanation": "Skateboarding adalah olahraga yang menggunakan papan luncur (skateboard)."
+          },
+          {
+            "question": "Complete: '_____ you count to 20 in English?'",
+            "options": [
+              "Do",
+              "Can",
+              "Are"
+            ],
+            "answer": "Can",
+            "explanation": "Gunakan 'Can' untuk menanyakan kemampuan seseorang melakukan sesuatu."
+          },
+          {
+            "question": "Tillman is an English bulldog. What can he do?",
+            "options": [
+              "He can read books.",
+              "He can skateboard.",
+              "He can play football."
+            ],
+            "answer": "He can skateboard.",
+            "explanation": "Berdasarkan teks, Tillman adalah seekor anjing bulldog Inggris yang bisa bermain skateboard."
+          }
+        ]
+      }
+    },
+    {
+      "id": "A1-M08",
+      "levelId": "A1",
+      "title": "Unit 8: Dance to the Music",
+      "cefr": "A1",
+      "group": "Core Units",
+      "objective": "Mampu berbicara tentang musik dan perasaan, mendeskripsikan kejadian yang sedang berlangsung menggunakan Present Continuous, serta memahami kosakata tentang pakaian dan aktivitas sehari-hari",
+      "orderIndex": 8,
+      "sections": {
+        "theory": {
+          "summary": "Unit ini mengajarkan Present Continuous untuk mendeskripsikan aktivitas yang sedang terjadi sekarang. Kamu akan belajar bagaimana menceritakan apa yang sedang dilakukan seseorang menggunakan 'to be' + verb-ing. Selain itu, kamu juga akan belajar kosakata tentang alat musik, waktu, dan cara memberikan saran.",
+          "rules": [
+            "Present Continuous Positif: Subject + am/is/are + verb-ing. Contoh: I am listening to music. She is playing the violin. They are singing.",
+            "Present Continuous Negatif: Subject + am not/isn't/aren't + verb-ing. Contoh: I'm not listening. He isn't wearing special clothes. They aren't thinking about food.",
+            "Present Continuous Pertanyaan: Am/Is/Are + subject + verb-ing? Contoh: Are you listening? Is she playing? What are they doing?",
+            "Spelling -ing form: Kebanyakan verb + -ing (play → playing), verb berakhiran -e hilangkan -e lalu + -ing (live → living), verb pendek berakhiran konsonan-vokal-konsonan gandakan konsonan terakhir + -ing (swim → swimming, sit → sitting)"
+          ],
+          "commonTrap": {
+            "trapTitle": "Kesalahan Lupa Menggunakan 'to be'",
+            "explanation": "Kesalahan pemula yang paling sering adalah lupa menggunakan am/is/are sebelum verb-ing. Present Continuous membutuhkan dua bagian: to be dan verb-ing.",
+            "wrong": "She playing the violin now.",
+            "correct": "She is playing the violin now."
+          }
+        },
+        "vocab": [
+          {
+            "word": "concert",
+            "ipa": "/ˈkɒn.sət/",
+            "meaning": "konser",
+            "collocation": "They're giving a concert in the supermarket."
+          },
+          {
+            "word": "musician",
+            "ipa": "/mjuːˈzɪʃ.ən/",
+            "meaning": "musisi, pemain musik",
+            "collocation": "The musicians and singers are leaving."
+          },
+          {
+            "word": "singer",
+            "ipa": "/ˈsɪŋ.ər/",
+            "meaning": "penyanyi",
+            "collocation": "Four people are singing now."
+          },
+          {
+            "word": "trumpet",
+            "ipa": "/ˈtrʌm.pɪt/",
+            "meaning": "terompet",
+            "collocation": "They're playing music on violins and trumpets."
+          },
+          {
+            "word": "violin",
+            "ipa": "/ˌvaɪəˈlɪn/",
+            "meaning": "biola",
+            "collocation": "A woman is sitting on a chair and she's playing a violin."
+          },
+          {
+            "word": "bored",
+            "ipa": "/bɔːd/",
+            "meaning": "bosan",
+            "collocation": "I'm bored. How about we watch a film?"
+          },
+          {
+            "word": "supermarket",
+            "ipa": "/ˈsuː.pə.mɑː.kɪt/",
+            "meaning": "supermarket",
+            "collocation": "Saturday am. In the supermarket with Mum."
+          },
+          {
+            "word": "happening",
+            "ipa": "/ˈhæp.ən.ɪŋ/",
+            "meaning": "terjadi, berlangsung",
+            "collocation": "Something is happening. Why is this happening?"
+          }
+        ],
+        "dialogue": {
+          "context": "Alex sedang berada di supermarket dan melihat kejadian menarik: ada konser musik dadakan di sana. Dia men-tweet kejadian yang sedang berlangsung.",
+          "lines": [
+            {
+              "speaker": "Alex",
+              "text": "Saturday am. In the supermarket with Mum. We're doing some shopping.",
+              "translation": "Sabtu pagi. Di supermarket bersama Ibu. Kami sedang berbelanja."
+            },
+            {
+              "speaker": "Alex",
+              "text": "Hey, something is happening. A woman is sitting on a chair and she's playing a violin. What's this?! It's a flash mob in the supermarket!",
+              "translation": "Hei, sesuatu sedang terjadi. Seorang wanita duduk di kursi dan dia sedang memainkan biola. Apa ini?! Ini flash mob di supermarket!"
+            },
+            {
+              "speaker": "Alex",
+              "text": "Now four people are singing! They're giving a concert but they aren't wearing special clothes. Why is this happening? I don't know!",
+              "translation": "Sekarang empat orang sedang bernyanyi! Mereka mengadakan konser tapi mereka tidak mengenakan pakaian khusus. Mengapa ini terjadi? Saya tidak tahu!"
+            },
+            {
+              "speaker": "Alex",
+              "text": "OK, it's over. All the people here are smiling and talking about the music. The musicians and singers are leaving. What a great morning!",
+              "translation": "OK, sudah selesai. Semua orang di sini tersenyum dan berbicara tentang musiknya. Para musisi dan penyanyi sedang pergi. Pagi yang luar biasa!"
+            }
+          ]
+        },
+        "speakingLab": {
+          "context": "Kamu sedang ngobrol dengan Mr. Khoirul tentang apa yang sedang kamu lakukan sekarang dan kegiatan favoritmu",
+          "roles": [
+            "Mr. Khoirul",
+            "You"
+          ],
+          "defaultUserRole": "You",
+          "turns": [
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Hello! What are you doing right now? Are you studying English with me?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, I'm studying English with you now."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Great! Do you like listening to music? Where do you usually listen to music?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, I like listening to music. I usually listen to music in my room and on the bus."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "That's nice! What kind of music do you like? And what are you wearing today?"
+            },
+            {
+              "speaker": "You",
+              "text": "I like pop music. Today I'm wearing a blue shirt and jeans."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Excellent! You're doing really well. Keep practicing your Present Continuous!"
+            },
+            {
+              "speaker": "You",
+              "text": "Thank you, Mr. Khoirul!"
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Choose the correct sentence in Present Continuous:",
+            "options": [
+              "She play the violin now.",
+              "She is playing the violin now.",
+              "She playing the violin now."
+            ],
+            "answer": "She is playing the violin now.",
+            "explanation": "Present Continuous membutuhkan 'to be' (am/is/are) + verb-ing. Karena subjeknya 'she', kita gunakan 'is', lalu tambahkan 'playing'."
+          },
+          {
+            "question": "What is the correct -ing form of 'swim'?",
+            "options": [
+              "swiming",
+              "swimming",
+              "swimeing"
+            ],
+            "answer": "swimming",
+            "explanation": "Kata 'swim' adalah kata pendek dengan pola konsonan-vokal-konsonan. Kita harus menggandakan konsonan terakhir (m) sebelum menambahkan -ing, sehingga menjadi 'swimming'."
+          },
+          {
+            "question": "They _____ special clothes for the concert.",
+            "options": [
+              "aren't wearing",
+              "isn't wearing",
+              "not wearing"
+            ],
+            "answer": "aren't wearing",
+            "explanation": "Subjek 'they' membutuhkan 'are' dalam bentuk negatif menjadi 'aren't'. Jadi kalimat lengkapnya: They aren't wearing."
+          },
+          {
+            "question": "_____ you listening to music right now?",
+            "options": [
+              "Is",
+              "Are",
+              "Am"
+            ],
+            "answer": "Are",
+            "explanation": "Untuk membuat pertanyaan Present Continuous dengan subjek 'you', kita gunakan 'Are' di awal kalimat. Are you listening...?"
+          },
+          {
+            "question": "A: I'm bored. B: How about _____ watch a film?",
+            "options": [
+              "we",
+              "let's",
+              "why don't"
+            ],
+            "answer": "we",
+            "explanation": "Untuk memberi saran, kita bisa menggunakan 'How about we + verb'. Contoh lengkap: 'How about we watch a film?'"
+          },
+          {
+            "question": "What is the correct -ing form of 'live'?",
+            "options": [
+              "liveing",
+              "living",
+              "livving"
+            ],
+            "answer": "living",
+            "explanation": "Kata yang berakhiran -e, kita hilangkan -e tersebut sebelum menambahkan -ing. Jadi 'live' menjadi 'living'."
+          }
+        ]
+      }
+    },
+    {
+      "id": "A1-M09",
+      "levelId": "A1",
+      "title": "Unit 9: Food & Drink: Countable / Uncountable & Some / Any",
+      "cefr": "A1",
+      "group": "Core Units",
+      "objective": "Mampu berbicara tentang makanan dan minuman, meminta dan menawarkan sesuatu dengan sopan, serta menggunakan must/mustn't dan can untuk menyatakan keharusan dan izin",
+      "orderIndex": 9,
+      "sections": {
+        "theory": {
+          "summary": "Unit ini mengajarkan cara membicarakan makanan dan kebiasaan makan, cara meminta dan menawarkan sesuatu dengan sopan menggunakan 'Would you like...?', serta penggunaan modal verbs 'must/mustn't' untuk menyatakan keharusan dan larangan, dan 'can' untuk meminta izin.",
+          "rules": [
+            "Must/Mustn't: Gunakan 'must' untuk menyatakan keharusan dan 'mustn't' untuk larangan. Contoh: 'Children must be ten years old.' / 'The chefs' hands must be clean.' / 'You mustn't talk loudly.'",
+            "Can (asking for permission): Gunakan 'can' untuk meminta izin. Contoh: 'Can I borrow your book?' / 'Can you help me?'",
+            "Would you like...?: Gunakan untuk menawarkan sesuatu dengan sopan. Contoh: 'Would you like dessert?' / 'I'd like a salad, please.'",
+            "I like / I don't like + -ing: Gunakan untuk membicarakan aktivitas yang disukai atau tidak disukai. Contoh: 'I really like dancing.' / 'I don't like dancing very much.'"
+          ],
+          "commonTrap": {
+            "trapTitle": "Kesalahan Umum: Mencampur Must dan Can",
+            "explanation": "Pemula sering bingung kapan menggunakan 'must' (keharusan) dan 'can' (kemampuan/izin). 'Must' digunakan untuk aturan atau hal yang wajib dilakukan, sedangkan 'can' untuk kemampuan atau meminta izin.",
+            "wrong": "You can be quiet in the library. (salah konteks)",
+            "correct": "You must be quiet in the library. (benar - ini adalah keharusan/aturan)"
+          }
+        },
+        "vocab": [
+          {
+            "word": "chef",
+            "ipa": "/ʃef/",
+            "meaning": "koki",
+            "collocation": "He wants to be a star chef."
+          },
+          {
+            "word": "carrot cake",
+            "ipa": "/ˈkærət keɪk/",
+            "meaning": "kue wortel",
+            "collocation": "Would you like some carrot cake for dessert?"
+          },
+          {
+            "word": "omelette",
+            "ipa": "/ˈɒmlət/",
+            "meaning": "telur dadar",
+            "collocation": "I like eating an omelette for breakfast."
+          },
+          {
+            "word": "tomato soup",
+            "ipa": "/təˈmɑːtəʊ suːp/",
+            "meaning": "sup tomat",
+            "collocation": "I'd like some tomato soup, please."
+          },
+          {
+            "word": "steak",
+            "ipa": "/steɪk/",
+            "meaning": "steak, daging panggang",
+            "collocation": "The chef is cooking a delicious steak."
+          },
+          {
+            "word": "salad",
+            "ipa": "/ˈsæləd/",
+            "meaning": "salad",
+            "collocation": "I'd like a green salad with my meal."
+          },
+          {
+            "word": "plate",
+            "ipa": "/pleɪt/",
+            "meaning": "piring",
+            "collocation": "Put the food on a clean plate."
+          },
+          {
+            "word": "dessert",
+            "ipa": "/dɪˈzɜːt/",
+            "meaning": "makanan penutup",
+            "collocation": "Would you like dessert after dinner?"
+          }
+        ],
+        "dialogue": {
+          "context": "Harry adalah seorang anak berusia sepuluh tahun yang ingin menjadi koki terkenal. Dia sedang mengikuti acara kompetisi memasak anak-anak di TV bersama adik perempuannya dan anak-anak lain.",
+          "lines": [
+            {
+              "speaker": "Narrator",
+              "text": "Harry is ten years old and he's from New York.",
+              "translation": "Harry berusia sepuluh tahun dan dia berasal dari New York."
+            },
+            {
+              "speaker": "Harry",
+              "text": "He wants to be a star chef.",
+              "translation": "Dia ingin menjadi koki terkenal."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "His sister likes cooking too, but she's not very good.",
+              "translation": "Adik perempuannya juga suka memasak, tapi dia tidak terlalu pandai."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "The other children on the TV show aren't very good cooks.",
+              "translation": "Anak-anak lain di acara TV itu bukanlah koki yang sangat baik."
+            },
+            {
+              "speaker": "Rule",
+              "text": "Children must be ten years old to be on Star Junior Chefs.",
+              "translation": "Anak-anak harus berusia sepuluh tahun untuk ikut di Star Junior Chefs."
+            },
+            {
+              "speaker": "Rule",
+              "text": "The chefs' hands must be clean.",
+              "translation": "Tangan para koki harus bersih."
+            },
+            {
+              "speaker": "Rule",
+              "text": "It's OK for the children to eat the food they are cooking.",
+              "translation": "Tidak masalah bagi anak-anak untuk memakan makanan yang mereka masak."
+            },
+            {
+              "speaker": "Narrator",
+              "text": "After the TV show Harry goes home to study.",
+              "translation": "Setelah acara TV, Harry pulang ke rumah untuk belajar."
+            }
+          ]
+        },
+        "speakingLab": {
+          "context": "Kamu sedang berbincang dengan Mr. Khoirul tentang makanan dan minuman favoritmu. Mr. Khoirul ingin tahu apa yang kamu suka dan tidak suka, serta kebiasaan makanmu.",
+          "roles": [
+            "Mr. Khoirul",
+            "You"
+          ],
+          "defaultUserRole": "You",
+          "turns": [
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Hello! Let's talk about food. What food do you like and don't like?"
+            },
+            {
+              "speaker": "You",
+              "text": "I like pizza and hamburgers, but I don't like tomato soup."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "That's interesting! Would you like some dessert after your meal? What dessert do you like?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, I'd like some carrot cake, please. It's my favorite dessert."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Great choice! Can you tell me what your family likes eating?"
+            },
+            {
+              "speaker": "You",
+              "text": "My family likes eating omelette for breakfast and steak for dinner."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Wonderful! One more question - do you like cooking? What can you cook?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, I like cooking. I can cook simple dishes like fried rice and salad."
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Children _____ be ten years old to be on the cooking show.",
+            "options": [
+              "can",
+              "must",
+              "like"
+            ],
+            "answer": "must",
+            "explanation": "Gunakan 'must' untuk menyatakan keharusan atau aturan yang wajib diikuti. Dalam konteks ini, anak-anak wajib berusia sepuluh tahun untuk mengikuti acara memasak."
+          },
+          {
+            "question": "Complete: 'I really like _____ to parties.' (go)",
+            "options": [
+              "go",
+              "going",
+              "goes"
+            ],
+            "answer": "going",
+            "explanation": "Setelah 'like', kita menggunakan verb + -ing untuk menyatakan aktivitas yang disukai. Jadi: 'I like going' bukan 'I like go'."
+          },
+          {
+            "question": "'_____ you like some dessert?' - 'Yes, I'd like some carrot cake, please.'",
+            "options": [
+              "Do",
+              "Would",
+              "Can"
+            ],
+            "answer": "Would",
+            "explanation": "Gunakan 'Would you like...?' untuk menawarkan sesuatu dengan sopan. Ini lebih sopan daripada 'Do you like...?' yang menanyakan kesukaan secara umum."
+          },
+          {
+            "question": "The chefs' hands _____ be clean when they cook.",
+            "options": [
+              "can",
+              "must",
+              "like"
+            ],
+            "answer": "must",
+            "explanation": "'Must' digunakan untuk menyatakan keharusan atau aturan penting. Tangan koki wajib bersih saat memasak untuk alasan kesehatan dan kebersihan."
+          },
+          {
+            "question": "'_____ I borrow your book?' - 'Yes, of course.'",
+            "options": [
+              "Must",
+              "Would",
+              "Can"
+            ],
+            "answer": "Can",
+            "explanation": "Gunakan 'Can I...?' untuk meminta izin melakukan sesuatu. Ini adalah cara sopan untuk meminta izin dalam situasi informal."
+          },
+          {
+            "question": "I don't like _____ on the bus. I prefer walking.",
+            "options": [
+              "sit",
+              "sitting",
+              "sits"
+            ],
+            "answer": "sitting",
+            "explanation": "Setelah 'like' atau 'don't like', gunakan verb + -ing. Jadi: 'I don't like sitting' untuk menyatakan aktivitas yang tidak disukai."
+          }
+        ]
+      }
+    },
+    {
+      "id": "A1-M10",
+      "levelId": "A1",
+      "title": "Unit 10: High Flyers - Past Simple & Famous People",
+      "cefr": "A1",
+      "group": "Core Units",
+      "objective": "Mampu berbicara tentang pencapaian dan kejadian masa lalu, bertanya informasi tentang masa lampau, serta menggunakan bentuk lampau 'was/were' dan kata kerja bentuk lampau sederhana",
+      "orderIndex": 10,
+      "sections": {
+        "theory": {
+          "summary": "Unit ini mengajarkan cara berbicara tentang masa lalu menggunakan 'was/were' dan Past Simple untuk menceritakan pencapaian atau kejadian yang sudah terjadi. Kita juga belajar ekspresi waktu lampau dan cara bertanya tentang orang-orang terkenal.",
+          "rules": [
+            "Past Simple 'was/were': I was, you were, he/she/it was, we/they were. Contoh: 'Valentina Tereshkova was in space for three days.'",
+            "Past Simple 'was/were' (negatif): wasn't (was not), weren't (were not). Contoh: 'There was a competition' / 'There weren't many astronauts.'",
+            "Past Simple questions: Was he...? / Were you...? Contoh: 'Was she famous?' / 'Were they from Russia?'",
+            "Past Simple regular verbs: verb + -ed. Contoh: 'She worked hard.' / 'They arrived yesterday.'"
+          ],
+          "commonTrap": {
+            "trapTitle": "Kesalahan Umum: Was vs Were",
+            "explanation": "Pemula sering salah menggunakan 'was' untuk subjek jamak atau 'were' untuk subjek tunggal. Ingat: I/he/she/it → was; you/we/they → were",
+            "wrong": "They was famous athletes.",
+            "correct": "They were famous athletes."
+          }
+        },
+        "vocab": [
+          {
+            "word": "achievement",
+            "ipa": "/əˈtʃiːvmənt/",
+            "meaning": "pencapaian, prestasi",
+            "collocation": "Valentina Tereshkova's achievement was amazing."
+          },
+          {
+            "word": "astronaut",
+            "ipa": "/ˈæstrənɔːt/",
+            "meaning": "astronot, angkasawan",
+            "collocation": "There was a competition to find new astronauts."
+          },
+          {
+            "word": "spacecraft",
+            "ipa": "/ˈspeɪskrɑːft/",
+            "meaning": "pesawat luar angkasa",
+            "collocation": "The spacecraft traveled to the moon."
+          },
+          {
+            "word": "factory",
+            "ipa": "/ˈfæktəri/",
+            "meaning": "pabrik",
+            "collocation": "She worked in a factory before becoming famous."
+          },
+          {
+            "word": "stamp",
+            "ipa": "/stæmp/",
+            "meaning": "perangko",
+            "collocation": "She was the carrier of the Olympic flag and stamps."
+          },
+          {
+            "word": "sky diving",
+            "ipa": "/skaɪ ˈdaɪvɪŋ/",
+            "meaning": "terjun payung",
+            "collocation": "Sky diving is an extreme sport."
+          },
+          {
+            "word": "famous",
+            "ipa": "/ˈfeɪməs/",
+            "meaning": "terkenal",
+            "collocation": "Why is Valentina Tereshkova famous?"
+          },
+          {
+            "word": "century",
+            "ipa": "/ˈsentʃəri/",
+            "meaning": "abad, seratus tahun",
+            "collocation": "She was named 'Woman of the Century'."
+          }
+        ],
+        "dialogue": {
+          "context": "Dialog tentang membaca artikel orang terkenal dan mendiskusikan pencapaian mereka",
+          "lines": [
+            {
+              "speaker": "Teacher",
+              "text": "What are the names of the two people in the photos?",
+              "translation": "Siapa nama dua orang di foto-foto ini?"
+            },
+            {
+              "speaker": "Student",
+              "text": "They are Mother Teresa and Nelson Mandela.",
+              "translation": "Mereka adalah Ibu Teresa dan Nelson Mandela."
+            },
+            {
+              "speaker": "Teacher",
+              "text": "Where were they from?",
+              "translation": "Mereka berasal dari mana?"
+            },
+            {
+              "speaker": "Student",
+              "text": "Mother Teresa was from Albania and Nelson Mandela was from South Africa.",
+              "translation": "Ibu Teresa berasal dari Albania dan Nelson Mandela berasal dari Afrika Selatan."
+            },
+            {
+              "speaker": "Teacher",
+              "text": "Why are they famous?",
+              "translation": "Mengapa mereka terkenal?"
+            },
+            {
+              "speaker": "Student",
+              "text": "They were famous because they helped many people.",
+              "translation": "Mereka terkenal karena telah membantu banyak orang."
+            }
+          ]
+        },
+        "speakingLab": {
+          "context": "Berlatih bertanya dan menjawab tentang orang-orang terkenal dan pencapaian mereka di masa lalu",
+          "roles": [
+            "Mr. Khoirul",
+            "You"
+          ],
+          "defaultUserRole": "You",
+          "turns": [
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Hello! Today we're going to talk about famous people. Can you name a famous person from your country?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, I can. One famous person from my country is..."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Great choice! Where was he or she from? And when was he or she born?"
+            },
+            {
+              "speaker": "You",
+              "text": "He/She was from... He/She was born in..."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Excellent! Now tell me, why is this person famous? What was his or her achievement?"
+            },
+            {
+              "speaker": "You",
+              "text": "He/She is famous because... His/Her achievement was..."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Well done! That's very interesting. Were there any challenges this person faced?"
+            },
+            {
+              "speaker": "You",
+              "text": "Yes, there were. He/She had to..."
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Valentina Tereshkova ___ in space for three days.",
+            "options": [
+              "was",
+              "were",
+              "is"
+            ],
+            "answer": "was",
+            "explanation": "Kita menggunakan 'was' untuk subjek tunggal (she) dalam Past Simple. 'Valentina' adalah orang ketiga tunggal."
+          },
+          {
+            "question": "There ___ a competition to find new astronauts.",
+            "options": [
+              "was",
+              "were",
+              "are"
+            ],
+            "answer": "was",
+            "explanation": "'There was' digunakan untuk benda tunggal di masa lampau. 'A competition' adalah kata benda tunggal."
+          },
+          {
+            "question": "Mother Teresa and Nelson Mandela ___ famous people.",
+            "options": [
+              "was",
+              "were",
+              "is"
+            ],
+            "answer": "were",
+            "explanation": "Kita menggunakan 'were' untuk subjek jamak (they) dalam Past Simple. Dua orang = jamak."
+          },
+          {
+            "question": "Where ___ Valentina Tereshkova born?",
+            "options": [
+              "was",
+              "were",
+              "is"
+            ],
+            "answer": "was",
+            "explanation": "Pertanyaan Past Simple dengan subjek tunggal (she) menggunakan 'was'. Pola: Was + subjek + ...?"
+          },
+          {
+            "question": "She ___ named 'Woman of the Century'.",
+            "options": [
+              "was",
+              "were",
+              "is"
+            ],
+            "answer": "was",
+            "explanation": "Past Simple passive voice untuk subjek tunggal menggunakan 'was'. Pola: was + past participle (named)."
+          },
+          {
+            "question": "Why ___ they famous?",
+            "options": [
+              "was",
+              "were",
+              "are"
+            ],
+            "answer": "were",
+            "explanation": "Pertanyaan Past Simple dengan subjek jamak (they) menggunakan 'were'. Pola: Were + subjek + ...?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "A1-M11",
+      "levelId": "A1",
+      "title": "Unit 11: Animal World: Past Simple Regular Verbs",
+      "cefr": "A1",
+      "group": "Core Units",
+      "objective": "Mampu menggunakan Past Simple untuk menceritakan kejadian di masa lampau menggunakan kata kerja beraturan (regular verbs), serta mampu bertanya dan menjawab tentang aktivitas masa lalu.",
+      "orderIndex": 11,
+      "sections": {
+        "theory": {
+          "summary": "Past Simple adalah bentuk kata kerja yang digunakan untuk menceritakan kejadian yang sudah selesai di masa lampau. Untuk regular verbs (kata kerja beraturan), kita menambahkan -ed pada akhir kata kerja dasar.",
+          "rules": [
+            "Positive: Subject + verb + -ed (I helped my friend yesterday / She worked in a factory)",
+            "Negative: Subject + didn't + base verb (I didn't help / She didn't work)",
+            "Question: Did + subject + base verb? (Did you help? / Did she work?)",
+            "Was/Were untuk be: I/He/She/It was, You/We/They were (I was at home / They were happy)",
+            "Aturan penambahan -ed: Jika kata kerja berakhiran -e, tambahkan -d saja (move → moved). Jika berakhiran konsonan + y, ubah y menjadi i lalu tambahkan -ed (try → tried). Jika berakhiran konsonan pendek setelah vokal pendek, gandakan konsonan terakhir (stop → stopped)"
+          ],
+          "commonTrap": {
+            "trapTitle": "Kesalahan Umum Pemula",
+            "explanation": "Pemula sering lupa menghilangkan -ed saat menggunakan didn't atau did, karena bentuk negatif dan tanya sudah menggunakan auxiliary verb 'did'.",
+            "wrong": "I didn't helped my friend / Did you worked yesterday?",
+            "correct": "I didn't help my friend / Did you work yesterday?"
+          }
+        },
+        "vocab": [
+          {
+            "word": "astronaut",
+            "ipa": "/ˈæstrənɔːt/",
+            "meaning": "astronot, orang yang pergi ke luar angkasa",
+            "collocation": "It was her dream to be an astronaut."
+          },
+          {
+            "word": "competition",
+            "ipa": "/ˌkɒmpəˈtɪʃən/",
+            "meaning": "kompetisi, perlombaan",
+            "collocation": "There were 400 people interested in going to space in the competition."
+          },
+          {
+            "word": "training programme",
+            "ipa": "/ˈtreɪnɪŋ ˈprəʊɡræm/",
+            "meaning": "program pelatihan",
+            "collocation": "The training programme wasn't very easy."
+          },
+          {
+            "word": "difficult",
+            "ipa": "/ˈdɪfɪkəlt/",
+            "meaning": "sulit, susah",
+            "collocation": "The flight was very difficult because there were many technical problems."
+          },
+          {
+            "word": "famous",
+            "ipa": "/ˈfeɪməs/",
+            "meaning": "terkenal",
+            "collocation": "After that she was very famous all over the world."
+          },
+          {
+            "word": "lucky",
+            "ipa": "/ˈlʌki/",
+            "meaning": "beruntung",
+            "collocation": "She was the lucky one."
+          },
+          {
+            "word": "crashed",
+            "ipa": "/kræʃt/",
+            "meaning": "jatuh, menabrak (past simple dari crash)",
+            "collocation": "One day a plane crashed into their house."
+          },
+          {
+            "word": "helped",
+            "ipa": "/helpt/",
+            "meaning": "membantu (past simple dari help)",
+            "collocation": "He helped the people he liked."
+          }
+        ],
+        "dialogue": {
+          "context": "Jenny kehilangan ponselnya dan menelepon Pedro untuk bertanya apakah ponselnya ada di rumah Pedro atau di toko sepatu.",
+          "lines": [
+            {
+              "speaker": "Jenny",
+              "text": "Oh, no!",
+              "translation": "Oh, tidak!"
+            },
+            {
+              "speaker": "Pedro",
+              "text": "What's the matter?",
+              "translation": "Ada apa?"
+            },
+            {
+              "speaker": "Jenny",
+              "text": "My phone? Where is it? It was in my jacket!",
+              "translation": "Ponselku? Di mana? Tadi ada di jaketku!"
+            },
+            {
+              "speaker": "Pedro",
+              "text": "OK, calm down. Where were you this morning?",
+              "translation": "OK, tenang. Kamu di mana tadi pagi?"
+            },
+            {
+              "speaker": "Jenny",
+              "text": "Well, I was at home from nine o'clock to ten o'clock.",
+              "translation": "Yah, aku di rumah dari jam sembilan sampai jam sepuluh."
+            },
+            {
+              "speaker": "Pedro",
+              "text": "And then? Were you in town?",
+              "translation": "Lalu? Apakah kamu di kota?"
+            },
+            {
+              "speaker": "Jenny",
+              "text": "Yes, I was at the shopping centre. And I'm 100% sure that my phone was in my pocket.",
+              "translation": "Ya, aku di pusat perbelanjaan. Dan aku 100% yakin ponselku ada di sakuku."
+            },
+            {
+              "speaker": "Pedro",
+              "text": "And then? Was Steve or Maisie with you?",
+              "translation": "Lalu? Apakah Steve atau Maisie bersamamu?"
+            },
+            {
+              "speaker": "Jenny",
+              "text": "No, they weren't. I was in the shoe shop. I bought some new shoes.",
+              "translation": "Tidak. Aku di toko sepatu. Aku membeli sepatu baru."
+            },
+            {
+              "speaker": "Pedro",
+              "text": "Wait a minute. Let me call you.",
+              "translation": "Tunggu sebentar. Biar aku telepon kamu."
+            },
+            {
+              "speaker": "Jenny",
+              "text": "It's ringing! Oh, look! It's in the shoe bag! It was there all the time!",
+              "translation": "Berdering! Oh, lihat! Ada di kantong sepatu! Ternyata ada di sana!"
+            }
+          ]
+        },
+        "speakingLab": {
+          "context": "Latihan percakapan tentang aktivitas masa lalu dengan Mr. Khoirul. Siswa akan menceritakan kegiatan kemarin menggunakan Past Simple.",
+          "roles": [
+            "Mr. Khoirul",
+            "You"
+          ],
+          "defaultUserRole": "You",
+          "turns": [
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Hello! How are you today? Let's talk about yesterday. Where were you yesterday morning?"
+            },
+            {
+              "speaker": "You",
+              "text": "I was at home yesterday morning."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "That's nice. What did you do at home? Did you watch TV or help your family?"
+            },
+            {
+              "speaker": "You",
+              "text": "I helped my mother in the kitchen and I watched TV after that."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Great! And what about the afternoon? Were you at home or did you go somewhere?"
+            },
+            {
+              "speaker": "You",
+              "text": "I visited my friend's house in the afternoon. We played games together."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Wonderful! It sounds like you had a nice day. What time did you arrive back home?"
+            },
+            {
+              "speaker": "You",
+              "text": "I arrived home at six o'clock in the evening."
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Valentina Tereshkova ___ born in Russia on 6th March, 1937.",
+            "options": [
+              "is",
+              "was",
+              "were"
+            ],
+            "answer": "was",
+            "explanation": "Gunakan 'was' karena subjeknya singular (Valentina) dan kalimatnya tentang masa lampau."
+          },
+          {
+            "question": "The training programme ___ very easy, but Tereshkova was hard working.",
+            "options": [
+              "wasn't",
+              "weren't",
+              "didn't"
+            ],
+            "answer": "wasn't",
+            "explanation": "Gunakan 'wasn't' (was not) karena subjeknya singular (the training programme) dan ini adalah bentuk negatif dari 'was'."
+          },
+          {
+            "question": "Storm's story ___ in New York.",
+            "options": [
+              "start",
+              "started",
+              "starts"
+            ],
+            "answer": "started",
+            "explanation": "Gunakan 'started' karena ini adalah Past Simple (cerita dimulai di masa lampau). Regular verb 'start' + -ed."
+          },
+          {
+            "question": "Percy and Tyson ___ to help each other.",
+            "options": [
+              "try",
+              "tried",
+              "tryed"
+            ],
+            "answer": "tried",
+            "explanation": "Gunakan 'tried' karena Past Simple. Kata 'try' berakhiran konsonan + y, maka y diubah menjadi i lalu ditambah -ed."
+          },
+          {
+            "question": "Did you ___ at the shopping centre yesterday?",
+            "options": [
+              "was",
+              "were",
+              "be"
+            ],
+            "answer": "be",
+            "explanation": "Setelah 'Did' gunakan base form (bentuk dasar). Base form dari was/were adalah 'be'."
+          },
+          {
+            "question": "My friends and I ___ at the cinema last night.",
+            "options": [
+              "was",
+              "were",
+              "are"
+            ],
+            "answer": "were",
+            "explanation": "Gunakan 'were' karena subjeknya plural (my friends and I) dan kalimatnya tentang masa lampau (last night)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "A1-M12",
+      "levelId": "A1",
+      "title": "Getting About: Transport, Comparatives & Getting Around",
+      "cefr": "A1",
+      "group": "Foundations",
+      "objective": "Mampu berbicara tentang berbagai jenis transportasi, membandingkan hal-hal menggunakan comparative adjectives (lebih cepat, lebih murah), dan menanyakan informasi perjalanan di stasiun kereta.",
+      "orderIndex": 12,
+      "sections": {
+        "theory": {
+          "summary": "Di unit ini, kamu akan belajar cara membandingkan dua hal menggunakan comparative adjectives. Ini sangat berguna saat kamu ingin mengatakan bahwa satu hal lebih baik, lebih cepat, atau lebih murah dari yang lain. Misalnya, 'Sepeda lebih sehat daripada mobil' atau 'Kereta lebih cepat daripada bus'. Kamu juga akan belajar kosakata tentang transportasi dan cara bertanya informasi di stasiun.",
+          "rules": [
+            "Adjective pendek (1 suku kata): Tambahkan -er, lalu 'than'. Contoh: quick → quicker, cheap → cheaper. 'Bikes are cheaper than cars.'",
+            "Adjective yang berakhiran konsonan + y: Ubah y menjadi i, tambahkan -er. Contoh: easy → easier, healthy → healthier. 'Bikes are healthier than cars.'",
+            "Adjective yang berakhiran vokal + konsonan: Gandakan konsonan akhir, tambahkan -er. Contoh: big → bigger.",
+            "Adjective panjang (2+ suku kata): Gunakan 'more' sebelum adjective, lalu 'than'. Contoh: expensive → more expensive, dangerous → more dangerous. 'Cars are more dangerous than bikes.'",
+            "Irregular adjectives: good → better, bad → worse. 'This is better than that.'"
+          ],
+          "commonTrap": {
+            "trapTitle": "Jangan Campurkan Pola!",
+            "explanation": "Kesalahan umum pemula adalah menggunakan 'more' untuk adjective pendek, atau menambahkan -er pada adjective panjang. Ingat: adjective pendek pakai -er, adjective panjang pakai 'more'.",
+            "wrong": "Bikes are more cheap than cars. / Cars are expensiver than bikes.",
+            "correct": "Bikes are cheaper than cars. / Cars are more expensive than bikes."
+          }
+        },
+        "vocab": [
+          {
+            "word": "train",
+            "ipa": "/treɪn/",
+            "meaning": "kereta api",
+            "collocation": "It takes about four hours but I don't mind the time by train."
+          },
+          {
+            "word": "bike",
+            "ipa": "/baɪk/",
+            "meaning": "sepeda",
+            "collocation": "The bike was quicker than all the other types of transport."
+          },
+          {
+            "word": "ferry",
+            "ipa": "/ˈferi/",
+            "meaning": "kapal feri",
+            "collocation": "We can take the ferry across the water."
+          },
+          {
+            "word": "helicopter",
+            "ipa": "/ˈhelɪkɒptə(r)/",
+            "meaning": "helikopter",
+            "collocation": "The helicopter flies over the city."
+          },
+          {
+            "word": "motorbike",
+            "ipa": "/ˈməʊtəbaɪk/",
+            "meaning": "sepeda motor",
+            "collocation": "I love being on her motorbike with my mum."
+          },
+          {
+            "word": "taxi",
+            "ipa": "/ˈtæksi/",
+            "meaning": "taksi",
+            "collocation": "We can take a taxi to the airport."
+          },
+          {
+            "word": "platform",
+            "ipa": "/ˈplætfɔːm/",
+            "meaning": "peron (stasiun)",
+            "collocation": "What platform does the train leave from?"
+          },
+          {
+            "word": "journey",
+            "ipa": "/ˈdʒɜːni/",
+            "meaning": "perjalanan",
+            "collocation": "I love the journey there by train."
+          }
+        ],
+        "dialogue": {
+          "context": "Amy sedang di stasiun kereta London Victoria dan ingin membeli tiket ke Brighton. Dia bertanya kepada petugas stasiun tentang waktu keberangkatan, harga, dan peron kereta.",
+          "lines": [
+            {
+              "speaker": "Amy",
+              "text": "What time is the next train to Brighton?",
+              "translation": "Jam berapa kereta berikutnya ke Brighton?"
+            },
+            {
+              "speaker": "Sales Assistant",
+              "text": "It leaves at 10.45.",
+              "translation": "Berangkat jam 10.45."
+            },
+            {
+              "speaker": "Amy",
+              "text": "How much is a ticket to Brighton?",
+              "translation": "Berapa harga tiket ke Brighton?"
+            },
+            {
+              "speaker": "Sales Assistant",
+              "text": "Do you want a single or a return?",
+              "translation": "Anda ingin tiket sekali jalan atau pulang-pergi?"
+            },
+            {
+              "speaker": "Amy",
+              "text": "A return, please.",
+              "translation": "Pulang-pergi."
+            },
+            {
+              "speaker": "Sales Assistant",
+              "text": "That's £16.40, please.",
+              "translation": "£16.40."
+            },
+            {
+              "speaker": "Amy",
+              "text": "What platform does the train leave from?",
+              "translation": "Keretanya berangkat dari peron berapa?"
+            },
+            {
+              "speaker": "Sales Assistant",
+              "text": "Platform 9. Have a good journey.",
+              "translation": "Peron 9. Selamat jalan."
+            }
+          ]
+        },
+        "speakingLab": {
+          "context": "Kamu sedang belajar membandingkan jenis-jenis transportasi dengan Mr. Khoirul. Dia akan menanyakan pendapatmu tentang transportasi yang berbeda.",
+          "roles": [
+            "Mr. Khoirul",
+            "You"
+          ],
+          "defaultUserRole": "You",
+          "turns": [
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Hello! Let's talk about transport. Which do you think is better for the environment, bikes or cars?"
+            },
+            {
+              "speaker": "You",
+              "text": "I think bikes are better than cars for the environment."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Good! Now, can you compare bikes and public transport? Which is healthier?"
+            },
+            {
+              "speaker": "You",
+              "text": "Bikes are healthier than public transport because you exercise when you ride."
+            },
+            {
+              "speaker": "Mr. Khoirul",
+              "text": "Excellent! One more question. What's quicker in a big city - a car or the underground?"
+            },
+            {
+              "speaker": "You",
+              "text": "The underground is quicker than a car in a big city."
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Which form is correct? 'Bikes are _____ than public transport.'",
+            "options": [
+              "cheap",
+              "cheaper",
+              "more cheap"
+            ],
+            "answer": "cheaper",
+            "explanation": "Kata 'cheap' adalah adjective pendek (1 suku kata), jadi kita menambahkan -er untuk bentuk comparative: cheaper."
+          },
+          {
+            "question": "Complete the sentence: 'Cars are _____ dangerous than bikes.'",
+            "options": [
+              "more",
+              "dangerouser",
+              "most"
+            ],
+            "answer": "more",
+            "explanation": "Kata 'dangerous' adalah adjective panjang (3 suku kata), jadi kita menggunakan 'more' sebelum adjective: more dangerous."
+          },
+          {
+            "question": "Which sentence is correct?",
+            "options": [
+              "Bikes are healthier for you than cars.",
+              "Bikes are more healthy for you than cars.",
+              "Bikes are health than cars."
+            ],
+            "answer": "Bikes are healthier for you than cars.",
+            "explanation": "Kata 'healthy' berakhiran -y, jadi kita ubah y menjadi i dan tambahkan -er: healthier. Jangan lupa kata 'than' setelah comparative adjective."
+          },
+          {
+            "question": "What do you say at the train station if you want to buy a ticket to go there and come back?",
+            "options": [
+              "A single, please.",
+              "A return, please.",
+              "A platform, please."
+            ],
+            "answer": "A return, please.",
+            "explanation": "'A return' artinya tiket pulang-pergi (go and come back). 'A single' artinya tiket sekali jalan saja."
+          }
+        ]
+      },
+      "isExam": true
+    }
+  ]
+}

@@ -79,3 +79,42 @@ h1, h2, h3, h4, h5, h6 {
   animation: ripple-wave 2.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
+@keyframes tactile-shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+@keyframes pop-bounce {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.animate-tactile-shake {
+  animation: tactile-shake 0.35s ease-in-out;
+}
+
+.animate-pop-bounce {
+  animation: pop-bounce 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes card-spring-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(28px) scale(0.96);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-spring-reveal {
+  animation: card-spring-reveal 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+

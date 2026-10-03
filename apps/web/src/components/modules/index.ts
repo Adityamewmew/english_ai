@@ -1,20 +1,19 @@
+// Sub-domains: Theory and Practice
+export * from "./theory";
+export * from "./practice";
+
+// Shared Module Presentation & Interactive Components
 export * from "./ModuleCard";
 export * from "./LevelHeader";
-export * from "./SectionTheory";
-export * from "./SectionVocab";
-export * from "./SectionDialogue";
-export * from "./SectionQuiz";
-export * from "./ModuleAIAssistant";
-export * from "./ModuleVoiceOrb";
-export * from "./ModuleVoiceDock";
-export * from "./SectionSpeakingLab";
-export * from "./SpeakingLabDrill";
-export * from "./SpeakingLabRoleplay";
-export * from "./SpeakingLabChallenge";
 export * from "./LevelCompletionCard";
 export * from "./LevelLockedCard";
 export * from "./LevelTabSelector";
-export * from "./SpeechScoreCard";
-export * from "./SectionTheoryUnified";
-export * from "./TheoryMiniTrial";
-export * from "./RoleplayBriefing";
+export * from "./ModuleAIAssistant";
+export * from "./ModuleVoiceOrb";
+export * from "./ModuleVoiceDock";
+export * from "./AnimatedCharacter";
+
+// Standalone Section Components
+export * from "./SectionTheory";
+export * from "./SectionVocab";
+export * from "./SectionDialogue";
