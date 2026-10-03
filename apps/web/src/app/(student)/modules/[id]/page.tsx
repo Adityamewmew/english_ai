@@ -368,6 +368,7 @@ export default function ModuleDetailPage() {
                   drills={practiceSection.content?.drills || []}
                   roleplay={practiceSection.content?.roleplay || { context: "", roles: [], turns: [] }}
                   challenge={practiceSection.content?.challenge || { scenario: "" }}
+                  vocabItems={vocabSection?.content?.items || []}
                   moduleId={moduleId}
                   userId={userId}
                   onPlayAudio={tutor.playTutorAudio}

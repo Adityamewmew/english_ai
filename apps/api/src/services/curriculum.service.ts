@@ -184,11 +184,13 @@ export class CurriculumService {
 
       if (!module) return Response.buildErrorNotFound("Modul tidak ditemukan");
 
-      const sections = await db
+      const rawSections = await db
         .select()
         .from(moduleSections)
         .where(eq(moduleSections.moduleId, moduleId))
         .orderBy(asc(moduleSections.orderIndex));
+
+      const sections = enrichPracticeSections(rawSections, module.title);
 
       let userProgress = null;
       if (userId) {
@@ -359,3 +361,94 @@ export class CurriculumService {
 }
 
 export const curriculumService = new CurriculumService();
+
+function enrichPracticeSections(sections: any[], moduleTitle?: string) {
+  const vocabSec = sections.find((s) => s.sectionType === "vocab");
+  const theorySec = sections.find((s) => s.sectionType === "theory");
+
+  return sections.map((sec) => {
+    if (sec.sectionType !== "practice") return sec;
+
+    const content = sec.content || {};
+    const drills = Array.isArray(content.drills) ? content.drills : [];
+    const roleplay = content.roleplay || { context: "", roles: ["Mr. Khoirul", "You"], turns: [] };
+    const challenge = content.challenge || {};
+
+    let enrichedDrills = [...drills];
+
+    // If drills empty, synthesize from vocab collocations or roleplay turns
+    if (enrichedDrills.length === 0) {
+      const vocabItems = vocabSec?.content?.items || [];
+      if (Array.isArray(vocabItems) && vocabItems.length > 0) {
+        enrichedDrills = vocabItems.slice(0, 3).map((v: any, idx: number) => {
+          const rawCollocation = v.collocation || `I am ${v.word}.`;
+          const cleanText = rawCollocation.includes(" / ")
+            ? rawCollocation.split(" / ")[0].trim()
+            : rawCollocation.trim();
+          return {
+            id: `drill-vocab-${idx + 1}`,
+            targetText: cleanText,
+            focus: `Pelafalan: "${v.word}" (${v.meaning || ""})`,
+            hint: v.ipa ? `Panduan fonetik: ${v.ipa}` : `Fokus pada intonasi natural`,
+          };
+        });
+      }
+
+      if (enrichedDrills.length === 0 && Array.isArray(roleplay.turns)) {
+        const userTurns = roleplay.turns.filter((t: any) => {
+          const sp = (t.speaker || "").toLowerCase();
+          return sp.includes("you") || sp.includes("student") || sp.includes("kamu");
+        });
+        const sourceTurns = userTurns.length > 0 ? userTurns : roleplay.turns;
+        enrichedDrills = sourceTurns.slice(0, 3).map((t: any, idx: number) => {
+          const cleanText = t.text.includes(" / ") ? t.text.split(" / ")[0].trim() : t.text.trim();
+          return {
+            id: `drill-turn-${idx + 1}`,
+            targetText: cleanText,
+            focus: `Kelancaran berbicara & intonasi`,
+            hint: `Ucapkan kalimat ini dengan percaya diri dan artikulasi jelas`,
+          };
+        });
+      }
+    }
+
+    // Ensure challenge has scenario, exampleAnswer, and targetGrammar
+    let exampleAnswer = challenge.exampleAnswer;
+    if (!exampleAnswer && Array.isArray(roleplay.turns)) {
+      const userTurns = roleplay.turns.filter((t: any) => {
+        const sp = (t.speaker || "").toLowerCase();
+        return sp.includes("you") || sp.includes("student");
+      });
+      const targetTurn = userTurns[userTurns.length - 1] || userTurns[0] || roleplay.turns[1];
+      if (targetTurn?.text) {
+        exampleAnswer = targetTurn.text.includes(" / ")
+          ? targetTurn.text.split(" / ")[0].trim()
+          : targetTurn.text.trim();
+      } else if (enrichedDrills[0]?.targetText) {
+        exampleAnswer = enrichedDrills[0].targetText;
+      }
+    }
+
+    const enrichedChallenge = {
+      scenario:
+        challenge.scenario ||
+        roleplay.context ||
+        "Praktikkan percakapan secara spontan berdasarkan materi unit ini.",
+      exampleAnswer: exampleAnswer || "I can speak English with confidence.",
+      targetGrammar:
+        challenge.targetGrammar ||
+        (Array.isArray(theorySec?.content?.rules) && theorySec.content.rules[0]) ||
+        `Gunakan pola kalimat dari ${moduleTitle || "unit ini"}`,
+    };
+
+    return {
+      ...sec,
+      content: {
+        ...content,
+        roleplay,
+        drills: enrichedDrills,
+        challenge: enrichedChallenge,
+      },
+    };
+  });
+}

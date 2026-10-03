@@ -12,11 +12,19 @@ import { animeButtonPop, animeShake } from "@/lib/anime-effects";
 
 export type { DrillItem, RoleplayData, ChallengeData };
 
+export interface VocabItemForDrill {
+  word: string;
+  ipa?: string;
+  meaning?: string;
+  collocation?: string;
+}
+
 interface SectionSpeakingLabProps {
   title: string;
   drills?: DrillItem[];
   roleplay?: RoleplayData;
   challenge?: ChallengeData;
+  vocabItems?: VocabItemForDrill[];
   moduleId?: string;
   userId?: string;
   onPlayAudio?: (text: string) => void;
@@ -29,14 +37,103 @@ export function SectionSpeakingLab({
   drills = [],
   roleplay = { context: "", roles: [], turns: [] },
   challenge = { scenario: "" },
+  vocabItems = [],
   moduleId,
   userId,
   onPlayAudio,
   onSpeakingComplete,
   onAdvanceToQuiz,
 }: SectionSpeakingLabProps) {
-  const [activeTab, setActiveTab] = useState<"drill" | "roleplay" | "challenge">("drill");
-  const [isDrillDone, setIsDrillDone] = useState(false);
+  // 1. Resolve Drills: synthesize from vocab collocations or roleplay turns if empty
+  const resolvedDrills = React.useMemo(() => {
+    if (drills && drills.length > 0) return drills;
+
+    // Source A: Vocab items with collocations or words
+    if (vocabItems && vocabItems.length > 0) {
+      const candidates = vocabItems.filter((v) => v.collocation || v.word);
+      if (candidates.length > 0) {
+        return candidates.slice(0, 3).map((v, idx) => {
+          const rawCollocation = v.collocation || `I am ${v.word}.`;
+          const cleanText = rawCollocation.includes(" / ")
+            ? rawCollocation.split(" / ")[0].trim()
+            : rawCollocation.trim();
+          return {
+            id: `drill-vocab-${idx + 1}`,
+            targetText: cleanText,
+            focus: `Pelafalan: "${v.word}" (${v.meaning || ""})`,
+            hint: v.ipa ? `Panduan fonetik: ${v.ipa}` : `Fokus pada intonasi natural`,
+          };
+        });
+      }
+    }
+
+    // Source B: Roleplay conversation turns
+    const turns = roleplay?.turns || [];
+    if (turns.length > 0) {
+      const userTurns = turns.filter((t) => {
+        const sp = (t.speaker || "").toLowerCase();
+        return sp.includes("you") || sp.includes("student") || sp.includes("kamu");
+      });
+      const selectedTurns = userTurns.length > 0 ? userTurns : turns;
+
+      return selectedTurns.slice(0, 3).map((t, idx) => {
+        const cleanText = t.text.includes(" / ")
+          ? t.text.split(" / ")[0].trim()
+          : t.text.trim();
+        return {
+          id: `drill-turn-${idx + 1}`,
+          targetText: cleanText,
+          focus: `Kelancaran berbicara & intonasi`,
+          hint: `Ucapkan kalimat ini dengan percaya diri dan artikulasi jelas`,
+        };
+      });
+    }
+
+    return [];
+  }, [drills, vocabItems, roleplay]);
+
+  // 2. Resolve Challenge: synthesize scenario & example answer if incomplete
+  const resolvedChallenge = React.useMemo(() => {
+    const scenario =
+      challenge?.scenario ||
+      roleplay?.context ||
+      "Praktikkan materi unit ini dengan berbicara secara spontan bersama Mr. Khoirul.";
+
+    let exampleAnswer = challenge?.exampleAnswer;
+    if (!exampleAnswer) {
+      const turns = roleplay?.turns || [];
+      const userTurns = turns.filter((t) => {
+        const sp = (t.speaker || "").toLowerCase();
+        return sp.includes("you") || sp.includes("student");
+      });
+      const targetTurn = userTurns[userTurns.length - 1] || userTurns[0] || turns[1];
+      if (targetTurn?.text) {
+        exampleAnswer = targetTurn.text.includes(" / ")
+          ? targetTurn.text.split(" / ")[0].trim()
+          : targetTurn.text.trim();
+      } else if (resolvedDrills[0]?.targetText) {
+        exampleAnswer = resolvedDrills[0].targetText;
+      } else {
+        exampleAnswer = "Yes, I understand and I can speak English with confidence.";
+      }
+    }
+
+    const targetGrammar =
+      challenge?.targetGrammar ||
+      `Gunakan struktur kalimat dan kosakata dari ${title}`;
+
+    return {
+      scenario,
+      exampleAnswer,
+      targetGrammar,
+    };
+  }, [challenge, roleplay, resolvedDrills, title]);
+
+  const hasDrills = resolvedDrills.length > 0;
+  const [activeTab, setActiveTab] = useState<"drill" | "roleplay" | "challenge">(
+    hasDrills ? "drill" : "roleplay"
+  );
+  const [isDrillDone, setIsDrillDone] = useState(!hasDrills);
   const [isRoleplayDone, setIsRoleplayDone] = useState(false);
   const [isChallengeDone, setIsChallengeDone] = useState(false);
 
@@ -165,7 +262,7 @@ export function SectionSpeakingLab({
       {/* --- STAGE 1: SHADOWING DRILL --- */}
       {activeTab === "drill" && (
         <SpeakingLabDrill
-          drills={drills}
+          drills={resolvedDrills}
           moduleId={moduleId}
           userId={userId}
           currentlyPlayingUrl={currentlyPlayingUrl}
@@ -205,7 +302,7 @@ export function SectionSpeakingLab({
       {/* --- STAGE 3: SPONTANEOUS CHALLENGE --- */}
       {activeTab === "challenge" && (
         <SpeakingLabChallenge
-          challenge={challenge}
+          challenge={resolvedChallenge}
           moduleId={moduleId}
           userId={userId}
           currentlyPlayingUrl={currentlyPlayingUrl}

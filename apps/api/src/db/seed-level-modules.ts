@@ -156,6 +156,61 @@ async function runSeedLevelModules() {
 
       // Handle New Object-style sections
       if (m.sections && !Array.isArray(m.sections) && typeof m.sections === "object") {
+        const speakingLabData = m.sections.speakingLab || { context: "", roles: ["Mr. Khoirul", "You"], turns: [] };
+        const vocabList = Array.isArray(m.sections.vocab) ? m.sections.vocab : [];
+        const theoryData = m.sections.theory || {};
+
+        const drills: any[] = [];
+        if (vocabList.length > 0) {
+          vocabList.slice(0, 3).forEach((v: any, idx: number) => {
+            const raw = v.collocation || `I am ${v.word}.`;
+            const cleanText = raw.includes(" / ") ? raw.split(" / ")[0].trim() : raw.trim();
+            drills.push({
+              id: `drill-${idx + 1}`,
+              targetText: cleanText,
+              focus: `Pelafalan: "${v.word}" (${v.meaning || ""})`,
+              hint: v.ipa ? `Panduan fonetik: ${v.ipa}` : `Fokus pada intonasi natural`,
+            });
+          });
+        }
+        if (drills.length === 0 && Array.isArray(speakingLabData.turns)) {
+          const userTurns = speakingLabData.turns.filter((t: any) => {
+            const sp = (t.speaker || "").toLowerCase();
+            return sp.includes("you") || sp.includes("student") || sp.includes("kamu");
+          });
+          const sourceTurns = userTurns.length > 0 ? userTurns : speakingLabData.turns;
+          sourceTurns.slice(0, 3).forEach((t: any, idx: number) => {
+            const cleanText = t.text.includes(" / ") ? t.text.split(" / ")[0].trim() : t.text.trim();
+            drills.push({
+              id: `drill-${idx + 1}`,
+              targetText: cleanText,
+              focus: `Kelancaran berbicara & intonasi`,
+              hint: `Ucapkan kalimat ini dengan percaya diri dan artikulasi jelas`,
+            });
+          });
+        }
+
+        let challengeExample = "";
+        if (Array.isArray(speakingLabData.turns)) {
+          const userTurns = speakingLabData.turns.filter((t: any) => {
+            const sp = (t.speaker || "").toLowerCase();
+            return sp.includes("you") || sp.includes("student");
+          });
+          const targetTurn = userTurns[userTurns.length - 1] || userTurns[0] || speakingLabData.turns[1];
+          if (targetTurn?.text) {
+            challengeExample = targetTurn.text.includes(" / ") ? targetTurn.text.split(" / ")[0].trim() : targetTurn.text.trim();
+          }
+        }
+        if (!challengeExample && drills[0]?.targetText) {
+          challengeExample = drills[0].targetText;
+        }
+
+        const challengeData = {
+          scenario: speakingLabData.context || m.objective || "Lakukan percakapan spontan berdasarkan materi unit ini.",
+          exampleAnswer: challengeExample || "I can speak English with confidence.",
+          targetGrammar: (Array.isArray(theoryData.rules) && theoryData.rules[0]) || `Gunakan tata bahasa yang tepat dari ${m.title}`,
+        };
+
         const sectionDefs = [
           {
             type: "theory",
@@ -176,9 +231,9 @@ async function runSeedLevelModules() {
             type: "practice",
             title: "Praktikum Berbicara (Speaking Lab)",
             content: {
-              roleplay: m.sections.speakingLab || { context: "", roles: ["Mr. Khoirul", "You"], turns: [] },
-              drills: [],
-              challenge: { scenario: m.sections.speakingLab?.context || "" },
+              roleplay: speakingLabData,
+              drills,
+              challenge: challengeData,
             },
           },
           {

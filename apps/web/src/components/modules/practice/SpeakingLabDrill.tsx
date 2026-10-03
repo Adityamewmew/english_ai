@@ -215,7 +215,35 @@ export function SpeakingLabDrill({
     });
   };
 
-  if (!currentDrill) return null;
+  if (!currentDrill) {
+    return (
+      <Card className="p-8 text-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl space-y-4 shadow-xs">
+        <div className="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 flex items-center justify-center mx-auto">
+          <Sparkles className="w-6 h-6" />
+        </div>
+        <div className="space-y-1">
+          <h4 className="text-base font-bold text-slate-900 dark:text-white">
+            Pemanasan Siap Dilompati
+          </h4>
+          <p className="text-xs text-slate-500 max-w-md mx-auto">
+            Tidak ada kalimat drill khusus untuk bagian ini. Kamu dapat langsung memulai sesi Simulasi Peran (Roleplay) bersama Mr. Khoirul.
+          </p>
+        </div>
+        <div className="pt-2">
+          <Button
+            onClick={() => {
+              onStageComplete?.(85);
+              onNextStage?.();
+            }}
+            className="bg-blue-600 hover:bg-blue-700 text-white gap-2 shadow-xs"
+          >
+            <span>Mulai Simulasi Peran</span>
+            <ChevronRight className="w-4 h-4" />
+          </Button>
+        </div>
+      </Card>
+    );
+  }
 
   return (
     <div className="space-y-6 sm:space-y-8">
