@@ -17,3 +17,7 @@ export * from "./AnimatedCharacter";
 export * from "./SectionTheory";
 export * from "./SectionVocab";
 export * from "./SectionDialogue";
+
+// Two-Column Learning Workspace
+export * from "./ModuleLessonSidebar";
+export * from "./ModuleStepFooter";

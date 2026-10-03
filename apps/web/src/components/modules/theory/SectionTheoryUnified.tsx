@@ -39,6 +39,9 @@ export interface SectionTheoryUnifiedProps {
   objective?: string;
   cefr?: string;
   orderIndex?: number;
+  activeStep?: number;
+  onStepComplete?: (step: number) => void;
+  onNextStep?: () => void;
 }
 
 export function SectionTheoryUnified({
@@ -53,6 +56,9 @@ export function SectionTheoryUnified({
   objective,
   cefr,
   orderIndex,
+  activeStep,
+  onStepComplete,
+  onNextStep,
 }: SectionTheoryUnifiedProps) {
   // Gamification state & Web Audio synthesizer
   const game = useGamification();
@@ -151,6 +157,144 @@ export function SectionTheoryUnified({
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
+  // If activeStep is specified (Two-Column Workspace Mode), render ONLY that step!
+  if (activeStep !== undefined) {
+    return (
+      <div className="space-y-6">
+        {/* Gamification Floating HUD & Audio Toggle */}
+        <div className="flex items-center justify-between pb-2">
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-bold px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">
+              ⚡ {game.xp} XP
+            </span>
+            {game.streak > 0 && (
+              <span className="text-xs font-bold px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300">
+                🔥 {game.streak} Hari
+              </span>
+            )}
+          </div>
+          <button
+            type="button"
+            onClick={game.toggleMute}
+            className="text-xs font-semibold text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+          >
+            {game.isMuted ? "🔇 Suara Mati" : "🔊 Efek Suara Aktif"}
+          </button>
+        </div>
+
+        {/* Step 1: Goal & Scenario */}
+        {activeStep === 1 && (
+          <div className="animate-in fade-in duration-300">
+            <TheoryGoalCard
+              title={title}
+              summary={summaryText}
+              objective={objective}
+              cefr={cefr}
+              orderIndex={orderIndex}
+              unlockedStep={unlockedStep}
+              isPracticeUnlocked={isPracticeUnlocked}
+              onScrollToStep={() => {}}
+              onNext={onNextStep || (() => {})}
+              onPlayAudio={onPlayAudio}
+              rules={rules}
+              targetSentence={bestExample}
+              targetSentenceMeaning={exampleMeaning}
+            />
+          </div>
+        )}
+
+        {/* Step 2: Action Sandbox Kalimat & Common Mistakes */}
+        {activeStep === 2 && (
+          <div className="animate-in fade-in duration-300">
+            <TheoryConceptDeep
+              title={title}
+              summary={summaryText}
+              rules={rules}
+              vocabItems={vocabItems}
+              commonTrap={commonTrap}
+              onNext={onNextStep || (() => {})}
+              onCompleteStep={() => onStepComplete?.(2)}
+              onAwardXp={game.awardXp}
+              onPenalizeWrong={game.penalizeWrong}
+              onPlayAudio={onPlayAudio}
+              onPlaySnap={game.playSnap}
+            />
+          </div>
+        )}
+
+        {/* Step 3: Rumus & Tangga Contoh */}
+        {activeStep === 3 && (
+          <div className="animate-in fade-in duration-300">
+            <TheoryThreeTierExamples
+              rules={rules}
+              onPlayAudio={onPlayAudio}
+              onNext={onNextStep || (() => {})}
+              onAwardXp={game.awardXp}
+              onPenalizeWrong={game.penalizeWrong}
+              onPlaySnap={game.playSnap}
+              targetSentence={bestExample}
+              targetSentenceMeaning={exampleMeaning}
+            />
+          </div>
+        )}
+
+        {/* Step 4: Kosakata Kunci */}
+        {activeStep === 4 && (
+          <div className="animate-in fade-in duration-300">
+            <TheoryVocabStep
+              vocabItems={vocabItems}
+              onPlayAudio={onPlayAudio}
+              onNext={onNextStep || (() => {})}
+              onCompleteStep={() => onStepComplete?.(4)}
+            />
+          </div>
+        )}
+
+        {/* Step 5: Percakapan Nyata */}
+        {activeStep === 5 && (
+          <div className="animate-in fade-in duration-300">
+            <TheoryDialogueStep
+              context={dialogueContext}
+              lines={dialogueLines}
+              analysis={theoryContent?.contextualAnalysis}
+              onPlayAudio={onPlayAudio}
+              onNext={onNextStep || (() => {})}
+            />
+          </div>
+        )}
+
+        {/* Step 6: Uji Kesiapan & Mini Trial */}
+        {activeStep === 6 && (
+          <div className="space-y-12 sm:space-y-16 animate-in fade-in duration-300">
+            <TheoryReadinessCheck
+              questions={theoryContent?.readinessQuestions}
+              rules={rules}
+              commonTrap={commonTrap}
+              vocabItems={vocabItems}
+              onNext={() => {}}
+              onCompleteStep={() => onStepComplete?.(6)}
+              onAwardXp={game.awardXp}
+              onPenalizeWrong={game.penalizeWrong}
+            />
+
+            <div className="pt-12 sm:pt-16 border-t border-slate-200/80 dark:border-slate-800">
+              <TheoryMiniTrial
+                exampleSentence={bestExample}
+                exampleMeaning={exampleMeaning}
+                onPlayAudio={onPlayAudio}
+                onAdvanceToPractice={() => {
+                  game.awardMilestoneCelebrate();
+                  onAdvanceToPractice();
+                }}
+                isPracticeUnlocked={isPracticeUnlocked}
+              />
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-10">
