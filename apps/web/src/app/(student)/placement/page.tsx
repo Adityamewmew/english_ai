@@ -15,6 +15,7 @@ import {
   Mic,
   CheckCircle,
   MessageSquare,
+  Info,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -187,8 +188,9 @@ export default function PlacementPage() {
                           <span className="text-emerald-700 font-semibold font-mono text-[11px]">{corr.better}</span>
                         </div>
                         {corr.explanation && (
-                          <p className="text-[11px] text-slate-500 pl-[60px] italic">
-                            💡 {corr.explanation}
+                          <p className="text-[11px] text-slate-600 dark:text-slate-400 pl-[60px] italic flex items-center gap-1.5">
+                            <Info className="w-3.5 h-3.5 text-blue-500 shrink-0" />
+                            <span>{corr.explanation}</span>
                           </p>
                         )}
                       </div>
@@ -352,7 +354,7 @@ export default function PlacementPage() {
               value={writingText}
               onChange={(e) => setWritingText(e.target.value)}
               placeholder="Tuliskan jawabanmu dalam Bahasa Inggris di sini (minimal 3-5 kalimat)..."
-              className="w-full p-3.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+              className="w-full p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 dark:bg-slate-900 text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:border-blue-600 transition-all"
             />
           </div>
         )}

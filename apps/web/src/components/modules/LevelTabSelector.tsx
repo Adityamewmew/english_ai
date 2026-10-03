@@ -64,7 +64,7 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
   return (
     <div className="space-y-3">
       {/* Tier 1: CEFR Level Selector */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+      <div className="flex items-center gap-2 overflow-x-auto touch-pan-x overscroll-x-contain pb-2 scrollbar-none">
         {cefrGroups.map((grp) => {
           const isCefrActive = grp.cefr === activeCefr;
 
@@ -73,7 +73,7 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
               <div
                 key={grp.cefr}
                 onClick={(e) => animeShake(e.currentTarget)}
-                className="flex items-center gap-2 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/70 dark:bg-slate-900/40 text-slate-400 dark:text-slate-500 cursor-not-allowed text-xs font-semibold select-none shrink-0 will-change-transform"
+                className="flex items-center gap-2 px-3.5 py-2.5 min-h-[44px] rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/70 dark:bg-slate-900/40 text-slate-400 dark:text-slate-500 cursor-not-allowed text-xs font-semibold select-none shrink-0 will-change-transform"
                 title="Selesaikan level sebelumnya untuk membuka"
               >
                 <Lock className="w-3.5 h-3.5 text-amber-500" />
@@ -87,7 +87,7 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
               key={grp.cefr}
               href={`/modules?level=${grp.firstTargetId}`}
               onClick={(e) => animeButtonPop(e.currentTarget)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-xs font-bold transition-all shrink-0 will-change-transform ${
+              className={`flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-xl border text-xs font-bold transition-all shrink-0 will-change-transform ${
                 isCefrActive
                   ? "bg-slate-900 dark:bg-white text-white dark:text-slate-900 border-slate-900 dark:border-white shadow-sm"
                   : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800"
@@ -103,7 +103,7 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
                 className={`px-1.5 py-0.5 rounded text-[10px] font-semibold ${
                   isCefrActive
                     ? "bg-white/20 text-white dark:bg-black/10 dark:text-slate-900"
-                    : "bg-slate-100 dark:bg-slate-800 text-slate-500"
+                    : "bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400"
                 }`}
               >
                 {grp.completed}/{grp.total}
@@ -115,7 +115,7 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
 
       {/* Tier 2: Sub-Level Pills for Active CEFR */}
       {currentSubLevels.length > 1 && (
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none p-1.5 rounded-2xl bg-slate-100/80 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80">
+        <div className="flex items-center gap-2 overflow-x-auto touch-pan-x overscroll-x-contain pb-1 scrollbar-none p-1.5 rounded-2xl bg-slate-100/80 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80">
           {currentSubLevels.map((subLvl) => {
             const isSubActive = subLvl.id === activeLevelId;
             const isCompleted = subLvl.completedModules === subLvl.totalModules && subLvl.totalModules > 0;
@@ -125,7 +125,7 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
                 <div
                   key={subLvl.id}
                   onClick={(e) => animeShake(e.currentTarget)}
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-xl text-slate-400 dark:text-slate-600 cursor-not-allowed text-xs font-medium select-none shrink-0 will-change-transform"
+                  className="flex items-center gap-2 px-3 py-2 min-h-[40px] rounded-xl text-slate-400 dark:text-slate-500 cursor-not-allowed text-xs font-medium select-none shrink-0 will-change-transform"
                   title="Selesaikan sub-level sebelumnya untuk membuka"
                 >
                   <Lock className="w-3 h-3 text-amber-500/70" />
@@ -139,7 +139,7 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
                 key={subLvl.id}
                 href={`/modules?level=${subLvl.id}`}
                 onClick={(e) => animeButtonPop(e.currentTarget)}
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all shrink-0 will-change-transform ${
+                className={`flex items-center gap-2 px-3.5 py-2 min-h-[40px] rounded-xl text-xs font-semibold transition-all shrink-0 will-change-transform ${
                   isSubActive
                     ? "bg-blue-600 text-white shadow-sm shadow-blue-600/25"
                     : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/60 border border-slate-200/60 dark:border-slate-700/60"

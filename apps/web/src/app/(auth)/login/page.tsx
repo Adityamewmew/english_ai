@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { doLogin } from "../auth.actions";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card } from "@/components/ui/card";
 
 export default function LoginPage() {
   const [error, setError] = useState<string | null>(null);
@@ -24,57 +26,63 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-surface">
-      <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+      <Card className="w-full max-w-md bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800">
         <div className="text-center mb-8">
-          <span className="w-12 h-12 rounded-2xl bg-primary inline-flex items-center justify-center text-white font-bold text-xl mb-3 shadow">
+          <span className="w-12 h-12 rounded-2xl bg-blue-600 inline-flex items-center justify-center text-white font-bold text-xl mb-3 shadow-sm">
             E
           </span>
-          <h1 className="text-2xl font-bold text-primary">Masuk ke EDDY&apos;S AI</h1>
-          <p className="text-xs text-slate-500 mt-1">Lanjutkan sesi belajarmu bersama Mr. Khoirul</p>
+          <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Masuk ke EDDY&apos;S AI</h1>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Lanjutkan sesi belajarmu bersama Mr. Khoirul</p>
         </div>
 
         {error && (
-          <div className="mb-4 p-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-xs font-medium">
+          <div className="mb-4 p-3 rounded-xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-300 text-xs font-medium">
             {error}
           </div>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1">Email</label>
-            <input
+            <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Email</label>
+            <Input
               name="email"
               type="email"
               required
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+              autoComplete="email"
               placeholder="nama@email.com"
+              className="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-blue-600"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1">Password</label>
-            <input
+            <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Password</label>
+            <Input
               name="password"
               type="password"
               required
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+              autoComplete="current-password"
               placeholder="Masukkan password"
+              className="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-blue-600"
             />
           </div>
 
-          <Button type="submit" variant="primary" disabled={loading} className="w-full mt-2">
+          <Button
+            type="submit"
+            disabled={loading}
+            className="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-sm"
+          >
             {loading ? "Memproses..." : "Masuk Sekarang"}
           </Button>
         </form>
 
-        <div className="mt-6 text-center text-xs text-slate-500">
+        <div className="mt-6 text-center text-xs text-slate-500 dark:text-slate-400">
           Belum punya akun?{" "}
-          <Link href="/register" className="text-secondary font-semibold hover:underline">
+          <Link href="/register" className="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
             Daftar Akun Baru
           </Link>
         </div>
-      </div>
+      </Card>
     </div>
   );
 }

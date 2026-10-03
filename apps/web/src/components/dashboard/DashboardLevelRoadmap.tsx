@@ -140,7 +140,11 @@ export function DashboardLevelRoadmap({ levels }: DashboardLevelRoadmapProps) {
                 >
                   <Link href={`/modules?level=${lvl.id}`}>
                     <span>{isCompleted ? "Ulangi Latihan Level" : !isLocked ? "Buka Tab Modul" : "Lihat Syarat Buka"}</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    {isLocked ? (
+                      <Lock className="w-3.5 h-3.5 text-slate-400" />
+                    ) : (
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    )}
                   </Link>
                 </Button>
               </div>

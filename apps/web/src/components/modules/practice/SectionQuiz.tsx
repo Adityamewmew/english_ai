@@ -12,6 +12,7 @@ import {
   BookOpen,
   PenTool,
   MessageSquare,
+  Info,
 } from "lucide-react";
 import {
   animeCardStagger,
@@ -361,8 +362,11 @@ export function SectionQuiz({
 
               {/* Explanation Note after submit */}
               {isSubmitted && (q.explanation || qResult?.explanation) && (
-                <div className="mt-4 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-                  💡 <strong>Penjelasan:</strong> {qResult?.explanation || q.explanation}
+                <div className="mt-4 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal flex items-start gap-2">
+                  <Info className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                  <div>
+                    <strong>Penjelasan:</strong> {qResult?.explanation || q.explanation}
+                  </div>
                 </div>
               )}
             </Card>

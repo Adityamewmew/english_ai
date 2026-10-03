@@ -251,7 +251,7 @@ export function AnimatedCharacter({
                   animeButtonPop(e.currentTarget);
                   onSpeechClick();
                 }}
-                className="h-7 w-7 p-0 rounded-lg bg-blue-100 dark:bg-blue-900/60 text-blue-600 dark:text-blue-300 hover:bg-blue-200 shrink-0 transition-colors"
+                className="min-h-[44px] min-w-[44px] sm:h-8 sm:w-8 p-1.5 rounded-lg bg-blue-100 dark:bg-blue-900/60 text-blue-600 dark:text-blue-300 hover:bg-blue-200 shrink-0 transition-colors"
                 title="Dengarkan suara"
               >
                 <Volume2 className="w-4 h-4" />

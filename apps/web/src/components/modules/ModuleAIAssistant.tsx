@@ -156,7 +156,7 @@ export function ModuleAIAssistant({
                   animeButtonPop(e.currentTarget);
                   onToggleOpen();
                 }}
-                className="h-7 w-7 text-slate-400 hover:text-white hover:bg-slate-800"
+                className="min-h-[44px] min-w-[44px] sm:h-8 sm:w-8 text-slate-400 hover:text-white hover:bg-slate-800"
                 title="Sembunyikan"
               >
                 <X className="w-4 h-4" />

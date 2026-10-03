@@ -74,12 +74,12 @@ export function TheoryDiscoverNotice({
         {/* Header Badge */}
         <div className="flex items-center gap-2 text-violet-700 dark:text-violet-400 font-bold text-xs uppercase tracking-wider">
           <Eye className="w-4 h-4" />
-          <span>👁️ 04. Amati Polanya (Discover & Notice)</span>
+          <span>Amati Polanya (Discover &amp; Notice)</span>
         </div>
 
         {/* Target Sentence Spotlight */}
         <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-violet-200/60 dark:border-violet-800/40 text-center shadow-xs">
-          <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 block mb-1">
+          <span className="text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 block mb-1">
             Contoh Kalimat Nyata:
           </span>
           <p className="text-lg sm:text-xl font-black text-slate-900 dark:text-white font-mono tracking-tight">
@@ -139,7 +139,7 @@ export function TheoryDiscoverNotice({
             <Bot className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
             <div className="space-y-1 text-xs">
               <span className="font-bold block">
-                {isCorrect ? "Pengamatan yang Hebat! 💡" : "Hampir Tepat! Simak Petunjuk Ini: 💡"}
+                {isCorrect ? "Pengamatan yang Hebat!" : "Hampir Tepat! Simak Petunjuk Ini:"}
               </span>
               <p className="leading-relaxed opacity-95">{noticeData.explanation}</p>
             </div>

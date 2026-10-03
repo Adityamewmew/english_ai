@@ -56,12 +56,12 @@ export function VoiceOrb({ state, onClick, isMuted }: VoiceOrbProps) {
 
       {/* Core Glowing Orb Sphere */}
       <div
-        className={`relative w-52 h-52 sm:w-60 sm:h-60 rounded-full overflow-hidden transition-all duration-500 shadow-2xl ${
+        className={`relative w-52 h-52 sm:w-60 sm:h-60 rounded-full overflow-hidden transition-all duration-500 shadow-xl ${
           isSpeaking
             ? "animate-orb-speak"
             : isThinking
             ? "animate-orb-breathe"
-            : "animate-orb-breathe"
+            : ""
         }`}
         style={{
           background:
@@ -72,7 +72,9 @@ export function VoiceOrb({ state, onClick, isMuted }: VoiceOrbProps) {
       >
         {/* Internal Nebular Cloud Layer (gives organic fluid movement like ChatGPT Voice) */}
         <div
-          className="absolute inset-0 opacity-75 mix-blend-overlay filter blur-md animate-nebula-spin pointer-events-none"
+          className={`absolute inset-0 opacity-75 mix-blend-overlay filter blur-md pointer-events-none ${
+            isSpeaking || isThinking ? "animate-nebula-spin" : ""
+          }`}
           style={{
             background:
               "radial-gradient(ellipse at 70% 65%, rgba(255, 255, 255, 0.95) 0%, rgba(186, 230, 253, 0.7) 35%, rgba(59, 130, 246, 0.4) 65%, transparent 100%)",

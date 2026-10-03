@@ -71,7 +71,7 @@ export function TheorySentenceAnatomy({
       <div className="flex items-center justify-between flex-wrap gap-2">
         <div className="flex items-center gap-2 text-violet-700 dark:text-violet-400 font-bold text-xs uppercase tracking-wider">
           <MousePointerClick className="w-4 h-4" />
-          <span>🔍 Anatomi Kalimat Interaktif (Klik Setiap Balok)</span>
+          <span>Anatomi Kalimat Interaktif (Klik Setiap Balok)</span>
         </div>
         <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1">
           <Sparkles className="w-3 h-3 text-violet-500" />

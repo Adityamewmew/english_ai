@@ -84,7 +84,7 @@ export function TheoryConceptDeep({
           <div className="flex items-center justify-between flex-wrap gap-2">
             <div className="flex items-center gap-2 text-amber-700 dark:text-amber-400 font-bold text-xs uppercase tracking-wider">
               <ShieldAlert className="w-4 h-4" />
-              <span>🚨 12. Tantangan Jebakan Umum (Common Mistakes)</span>
+              <span>Tantangan Jebakan Umum (Common Mistakes)</span>
             </div>
             <Badge variant="accent" className="font-bold">
               Uji Cepat (+15 XP)

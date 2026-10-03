@@ -95,9 +95,11 @@ export function ModuleVoiceOrb({ state, isCalling, size = "sm", onClick }: Modul
       >
         {/* Internal Nebular Fluid Layer */}
         <div
-          className="absolute inset-0 opacity-80 mix-blend-overlay filter blur-sm pointer-events-none animate-spin"
+          className={`absolute inset-0 opacity-80 mix-blend-overlay filter blur-sm pointer-events-none ${
+            isSpeaking ? "animate-spin" : ""
+          }`}
           style={{
-            animationDuration: isSpeaking ? "4s" : "12s",
+            animationDuration: "4s",
             background:
               "radial-gradient(ellipse at 70% 65%, rgba(255, 255, 255, 0.95) 0%, rgba(186, 230, 253, 0.7) 35%, rgba(59, 130, 246, 0.4) 65%, transparent 100%)",
           }}
@@ -107,7 +109,7 @@ export function ModuleVoiceOrb({ state, isCalling, size = "sm", onClick }: Modul
         <div className="absolute inset-0 flex items-center justify-center text-white drop-shadow-md">
           {isCalling ? (
             isListening ? (
-              <Mic className={`${isSm ? "w-5 h-5" : "w-7 h-7"} text-white animate-pulse`} />
+              <Mic className={`${isSm ? "w-5 h-5" : "w-7 h-7"} text-white`} />
             ) : isSpeaking ? (
               <div className="flex items-center gap-1">
                 <span className={`w-1 ${isSm ? "h-3" : "h-4"} bg-white rounded-full animate-bounce`} />
@@ -115,7 +117,7 @@ export function ModuleVoiceOrb({ state, isCalling, size = "sm", onClick }: Modul
                 <span className={`w-1 ${isSm ? "h-3" : "h-4"} bg-white rounded-full animate-bounce [animation-delay:0.3s]`} />
               </div>
             ) : (
-              <PhoneCall className={`${isSm ? "w-5 h-5" : "w-6 h-6"} text-white animate-pulse`} />
+              <PhoneCall className={`${isSm ? "w-5 h-5" : "w-6 h-6"} text-white`} />
             )
           ) : (
             <PhoneCall className={`${isSm ? "w-5 h-5" : "w-6 h-6"} text-white/90 group-hover:scale-110 transition-transform`} />

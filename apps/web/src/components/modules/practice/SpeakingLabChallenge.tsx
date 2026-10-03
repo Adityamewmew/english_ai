@@ -372,7 +372,7 @@ export function SpeakingLabChallenge({
                     animeButtonPop(e.currentTarget);
                     onPlayAudio(challengeFeedback);
                   }}
-                  className="h-7 w-7 text-emerald-700 hover:text-emerald-900"
+                  className="min-h-[44px] min-w-[44px] sm:h-8 sm:w-8 text-emerald-700 hover:text-emerald-900"
                   title="Dengarkan Suara Evaluasi"
                 >
                   <Volume2 className="w-4 h-4" />
@@ -392,7 +392,7 @@ export function SpeakingLabChallenge({
                 animeButtonPop(e.currentTarget);
                 onNextStage();
               }}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white gap-2 shadow-md animate-pulse"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white gap-2 shadow-sm"
             >
               <span>Lanjut ke Kuis Evaluasi</span>
               <ChevronRight className="w-4 h-4" />

@@ -104,7 +104,7 @@ export function TheoryReadinessCheck({
     generated.push({
       id: 3,
       category: "Penerapan Konteks",
-      prompt: `Lengkapi dialog: "Are you from Jakarta?" — "No, [...]"`,
+      prompt: `Lengkapi dialog: "Are you from Jakarta?" : "No, [...]"`,
       options: [
         "I'm from Bandung.",
         "I is from Bandung.",
@@ -156,7 +156,7 @@ export function TheoryReadinessCheck({
         <div className="flex items-center justify-between flex-wrap gap-2">
           <div className="flex items-center gap-2 text-indigo-700 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider">
             <CheckCircle2 className="w-4 h-4" />
-            <span>🧠 16. Cek Kesiapan Belajar (3-Question Readiness Check)</span>
+            <span>Cek Kesiapan Belajar (3 Pertanyaan Kilat)</span>
           </div>
           <Badge variant="primary" className="font-semibold text-xs">
             {Object.keys(answers).length} dari {activeQuestions.length} Terjawab

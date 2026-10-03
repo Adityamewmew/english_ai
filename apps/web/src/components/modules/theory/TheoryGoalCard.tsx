@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { Target, ArrowRight, CheckCircle2, Sparkles, Volume2, Layers } from "lucide-react";
+import { Target, ArrowRight, CheckCircle2, Sparkles, Volume2, Layers, GraduationCap, UserCheck } from "lucide-react";
 import { TheoryLearningMap } from "./TheoryLearningMap";
 import { animeCardStagger, animeCardHover, animeButtonPop } from "@/lib/anime-effects";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
@@ -61,7 +61,7 @@ export function TheoryGoalCard({
           <div className="flex items-center justify-between flex-wrap gap-2">
             <div className="flex items-center gap-2 text-indigo-700 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider">
               <Target className="w-4 h-4" />
-              <span>🎯 01. Panggung Pembuka: Story Dialogue & Berkas Tata Bahasa</span>
+              <span>Panggung Pembuka: Story Dialogue &amp; Berkas Tata Bahasa</span>
             </div>
             {cefr && (
               <Badge variant="primary" className="font-mono text-xs">
@@ -90,14 +90,14 @@ export function TheoryGoalCard({
           >
             <div className="flex items-center gap-2 text-xs font-bold text-indigo-700 dark:text-indigo-400 uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-              <span>Obrolan Pengantar: Situasi Nyata & Kenapa Ini Penting</span>
+              <span>Obrolan Pengantar: Situasi Nyata &amp; Kenapa Ini Penting</span>
             </div>
 
             <div className="space-y-3">
               {/* Turn 1: Maya asks question */}
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/60 flex items-center justify-center text-xl shrink-0 border border-amber-300 shadow-xs">
-                  👧
+                <div className="w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/60 flex items-center justify-center shrink-0 border border-amber-300 dark:border-amber-700 shadow-xs">
+                  <GraduationCap className="w-5 h-5 text-amber-700 dark:text-amber-400" />
                 </div>
                 <div className="flex-1 p-3 rounded-2xl rounded-tl-none bg-amber-50/80 dark:bg-amber-950/30 border border-amber-200/80 dark:border-amber-900/40 text-xs sm:text-sm text-amber-950 dark:text-amber-100 space-y-1">
                   <span className="font-extrabold text-amber-700 dark:text-amber-400 text-xs block">
@@ -111,8 +111,8 @@ export function TheoryGoalCard({
 
               {/* Turn 2: Mr. Khoirul explains warmly */}
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/60 flex items-center justify-center text-xl shrink-0 border border-blue-300 shadow-xs">
-                  👨‍🏫
+                <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/60 flex items-center justify-center shrink-0 border border-blue-300 dark:border-blue-700 shadow-xs">
+                  <UserCheck className="w-5 h-5 text-blue-700 dark:text-blue-400" />
                 </div>
                 <div className="flex-1 p-3 rounded-2xl rounded-tl-none bg-blue-50/90 dark:bg-blue-950/30 border border-blue-200/80 dark:border-blue-900/40 text-xs sm:text-sm text-blue-950 dark:text-blue-100 space-y-1">
                   <div className="flex items-center justify-between">

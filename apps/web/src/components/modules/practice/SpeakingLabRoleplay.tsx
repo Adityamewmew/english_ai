@@ -125,7 +125,6 @@ export function SpeakingLabRoleplay({
     return s === u || r === u;
   };
 
-  // State alur percakapan real satu per satu
   const [isStarted, setIsStarted] = useState(false);
   const [visibleTurnCount, setVisibleTurnCount] = useState(0);
   const [isAiSpeaking, setIsAiSpeaking] = useState(false);
@@ -140,7 +139,6 @@ export function SpeakingLabRoleplay({
 
   const browserTranscriptRef = useRef<string>("");
 
-  // Handler memulai simulasi dari briefing
   const handleStartRoleplay = () => {
     setIsStarted(true);
     setVisibleTurnCount(1);
@@ -292,7 +290,6 @@ export function SpeakingLabRoleplay({
     userTurnIndices.length > 0 &&
     userTurnIndices.every((idx) => completedTurns.includes(idx));
 
-  // --- SCREEN 1: PRE-ROLEPLAY BRIEFING SCREEN ---
   if (!isStarted) {
     return (
       <RoleplayBriefing
@@ -304,7 +301,6 @@ export function SpeakingLabRoleplay({
     );
   }
 
-  // --- SCREEN 2: ACTIVE TURN-BY-TURN ROLEPLAY CHAT STREAM ---
   const currentVisibleTurns = turns.slice(0, visibleTurnCount);
 
   return (

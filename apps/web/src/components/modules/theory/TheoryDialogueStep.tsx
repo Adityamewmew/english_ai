@@ -134,7 +134,7 @@ export function TheoryDialogueStep({
                         variant="ghost"
                         size="icon"
                         onClick={(e) => handleAudioClick(e, turn.text)}
-                        className="h-7 w-7 text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg"
+                        className="h-11 w-11 sm:h-9 sm:w-9 text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg shrink-0"
                         title={`Dengarkan ucapan ${turn.speaker}`}
                       >
                         <Volume2 className="w-4 h-4" />
@@ -166,7 +166,7 @@ export function TheoryDialogueStep({
       >
         <div className="flex items-center gap-2 text-indigo-700 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider">
           <Search className="w-4 h-4" />
-          <span>🔍 Bedah Kalimat Kontekstual (Let&apos;s Analyze)</span>
+          <span>Bedah Kalimat Kontekstual (Let&apos;s Analyze)</span>
         </div>
 
         <div className="p-4 rounded-xl bg-gradient-to-r from-indigo-50/70 to-slate-50 dark:from-indigo-950/40 dark:to-slate-900 border border-indigo-100 dark:border-indigo-900/40 text-xs sm:text-sm font-bold text-slate-900 dark:text-white font-mono flex items-center justify-between">
@@ -176,7 +176,7 @@ export function TheoryDialogueStep({
               variant="ghost"
               size="icon"
               onClick={(e) => handleAudioClick(e, effectiveAnalysis.keySentence)}
-              className="h-7 w-7 text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400"
+              className="h-11 w-11 sm:h-9 sm:w-9 text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg shrink-0"
               title="Dengarkan kalimat fokus ini"
             >
               <Volume2 className="w-4 h-4" />
@@ -196,8 +196,9 @@ export function TheoryDialogueStep({
           ))}
         </div>
 
-        <div className="p-3.5 rounded-xl bg-indigo-50/80 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-900/40 text-[11px] text-indigo-900 dark:text-indigo-200 font-medium">
-          💡 <strong>Intisari Pembelajaran:</strong> {effectiveAnalysis.takeaway}
+        <div className="p-3.5 rounded-xl bg-indigo-50/80 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-900/40 text-[11px] text-indigo-900 dark:text-indigo-200 font-medium flex items-center gap-2">
+          <Sparkles className="w-4 h-4 text-amber-500 shrink-0" />
+          <span><strong>Intisari Pembelajaran:</strong> {effectiveAnalysis.takeaway}</span>
         </div>
       </Card>
 

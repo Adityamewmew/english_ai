@@ -251,7 +251,7 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
             Teks yang Terekam dari Suaramu:
           </label>
           <div className="flex items-center gap-2">
-            <span className="text-[11px] text-slate-400">
+            <span className="text-[11px] text-slate-600 dark:text-slate-400">
               (Bisa diedit atau diketik langsung)
             </span>
             {transcript && (
@@ -267,20 +267,20 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
         </div>
 
         {isTranscribing && (
-          <div className="flex items-center gap-2 p-2.5 bg-secondary/10 border border-secondary/20 rounded-xl text-xs text-secondary font-medium animate-pulse">
+          <div className="flex items-center gap-2 p-2.5 bg-secondary/10 border border-secondary/20 rounded-xl text-xs text-secondary font-medium">
             <Loader2 className="w-4 h-4 animate-spin text-secondary" />
             <span>AI Gemini sedang menganalisis audio (menyesuaikan nama, daerah &amp; pengucapan)...</span>
           </div>
         )}
 
         {audioUrl && (
-          <div className="p-3 bg-surface rounded-xl border border-slate-200 space-y-1.5">
-            <div className="flex items-center justify-between text-[11px] font-semibold text-slate-700">
+          <div className="p-3 bg-surface rounded-xl border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <div className="flex items-center justify-between text-[11px] font-semibold text-slate-700 dark:text-slate-200">
               <span className="flex items-center gap-1.5">
                 <Volume2 className="w-3.5 h-3.5 text-secondary" />
                 Dengarkan Ulang Rekaman Suaramu:
               </span>
-              <span className="text-[10px] text-slate-400">Tersimpan</span>
+              <span className="text-[10px] text-slate-500">Tersimpan</span>
             </div>
             <audio controls src={audioUrl} className="w-full h-8 rounded-lg" />
           </div>
@@ -293,15 +293,15 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
           onChange={(e) => setTranscript(e.target.value)}
           placeholder={
             isRecording
-              ? "🎙️ Sedang merekam suara... Bicaralah perkenalan dirimu dengan santai. Klik 'Selesai Bicara' jika sudah selesai."
+              ? "Sedang merekam suara... Bicaralah perkenalan dirimu dengan santai. Klik 'Selesai Bicara' jika sudah selesai."
               : isTranscribing
-              ? "✨ AI Mr. Khoirul sedang mendengarkan rekaman dan menyelaraskan kalimatmu..."
+              ? "AI Mr. Khoirul sedang mendengarkan rekaman dan menyelaraskan kalimatmu..."
               : "Klik tombol 'Mulai Rekam Suara' di atas dan ceritakan perkenalan dirimu. Kalimatmu akan otomatis diselaraskan oleh AI dan muncul di sini."
           }
-          className={`w-full p-3 rounded-xl border text-xs focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary font-sans transition-all ${
+          className={`w-full p-3 rounded-xl border text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:border-blue-600 font-sans transition-all ${
             isRecording || isTranscribing
-              ? "bg-slate-50 text-slate-500 border-slate-200 cursor-wait"
-              : "bg-white text-slate-800 border-slate-200"
+              ? "bg-slate-50 dark:bg-slate-900 text-slate-500 border-slate-200 dark:border-slate-800 cursor-wait"
+              : "bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 border-slate-200 dark:border-slate-800"
           }`}
         />
 

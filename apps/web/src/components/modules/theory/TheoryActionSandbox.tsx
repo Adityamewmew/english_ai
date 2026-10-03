@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Sparkles, Volume2, MoveRight, Check, Zap, Play } from "lucide-react";
+import { Sparkles, Volume2, MoveRight, Check, Zap, Play, User, Users, UserCheck } from "lucide-react";
 import { AnimatedCharacter, CharacterPersona, CharacterState } from "../AnimatedCharacter";
 import { VocabItem } from "../SectionVocab";
 import { animeButtonPop, animeStaggerChips } from "@/lib/anime-effects";
@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 interface SandboxSubject {
   id: string;
   label: string;
-  icon: string;
+  type: "female" | "self" | "plural";
   subjectWord: string;
   correctToBe: string;
   persona: CharacterPersona;
@@ -28,9 +28,9 @@ interface SandboxComplement {
 }
 
 const DEFAULT_SUBJECTS: SandboxSubject[] = [
-  { id: "she", label: "She (Dia Perempuan)", icon: "👩", subjectWord: "She", correctToBe: "is", persona: "student_female" },
-  { id: "i", label: "I (Saya)", icon: "👦", subjectWord: "I", correctToBe: "am", persona: "student" },
-  { id: "they", label: "They (Mereka)", icon: "👥", subjectWord: "They", correctToBe: "are", persona: "student" },
+  { id: "she", label: "She (Dia Perempuan)", type: "female", subjectWord: "She", correctToBe: "is", persona: "student_female" },
+  { id: "i", label: "I (Saya)", type: "self", subjectWord: "I", correctToBe: "am", persona: "student" },
+  { id: "they", label: "They (Mereka)", type: "plural", subjectWord: "They", correctToBe: "are", persona: "student" },
 ];
 
 interface TheoryActionSandboxProps {
@@ -135,14 +135,14 @@ export function TheoryActionSandbox({
         <div className="flex items-center justify-between flex-wrap gap-2">
           <div className="flex items-center gap-2 text-indigo-700 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider">
             <Sparkles className="w-4 h-4 text-amber-500" />
-            <span>🕹️ 07. Arena Aksi Interaktif (Live Action Sandbox)</span>
+            <span>Arena Aksi Interaktif (Live Action Sandbox)</span>
           </div>
           <Badge variant="accent" className="font-extrabold text-[11px]">
             {testedCombinations.size} / 9 Pola Dicoba (+{testedCombinations.size * 10} XP)
           </Badge>
         </div>
 
-        <p className="text-xs text-slate-600 dark:text-slate-400">
+        <p className="text-xs text-slate-600 dark:text-slate-300">
           Ubah subjek atau pelengkap di bawah untuk melihat bagaimana perubahan bentuk kata kerja bantu (to be) terjadi secara instan dan alami:
         </p>
 
@@ -153,14 +153,14 @@ export function TheoryActionSandbox({
               persona={currentSubject.persona}
               state={characterState}
             />
-            <span className="text-[10px] font-bold text-slate-400 mt-1 uppercase">
+            <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400 mt-1 uppercase">
               {currentSubject.label.split(" ")[0]}
             </span>
           </div>
 
           <div className="flex-1 w-full space-y-3">
             <div className="flex items-center justify-between flex-wrap gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
                 Kalimat Hasil Rangkaian:
               </span>
               <Button
@@ -180,11 +180,11 @@ export function TheoryActionSandbox({
               <span className="sandbox-formula-pill px-3 py-1.5 rounded-lg bg-blue-600 text-white font-mono font-bold text-sm shadow-xs will-change-transform">
                 {currentSubject.subjectWord}
               </span>
-              <span className="text-slate-400 font-bold">+</span>
-              <span className="sandbox-formula-pill px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-mono font-bold text-sm shadow-xs ring-2 ring-indigo-300 dark:ring-indigo-700 animate-pulse will-change-transform">
+              <span className="text-slate-500 font-bold">+</span>
+              <span className="sandbox-formula-pill px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-mono font-bold text-sm shadow-xs ring-2 ring-indigo-300 dark:ring-indigo-700 will-change-transform">
                 {currentSubject.correctToBe}
               </span>
-              <span className="text-slate-400 font-bold">+</span>
+              <span className="text-slate-500 font-bold">+</span>
               <span className="sandbox-formula-pill px-3 py-1.5 rounded-lg bg-emerald-600 text-white font-mono font-bold text-sm shadow-xs will-change-transform">
                 {currentComplement.complementText}
               </span>
@@ -198,7 +198,7 @@ export function TheoryActionSandbox({
 
         {/* Selector 1: Subjek Kalimat */}
         <div className="space-y-1.5">
-          <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
+          <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider block">
             1. Pilih Subjek (Pelaku):
           </span>
           <div className="grid grid-cols-3 gap-2">
@@ -215,10 +215,14 @@ export function TheoryActionSandbox({
                       : "border-slate-200 dark:border-slate-700 border-b-slate-300 dark:border-b-slate-600 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:border-blue-400 active:border-b-0 active:translate-y-1 shadow-xs"
                   }`}
                 >
-                  <span className="text-lg shrink-0">{sub.icon}</span>
+                  <span className="shrink-0">
+                    {sub.type === "female" && <User className={`w-5 h-5 ${isSelected ? "text-white" : "text-indigo-500"}`} />}
+                    {sub.type === "self" && <UserCheck className={`w-5 h-5 ${isSelected ? "text-white" : "text-blue-500"}`} />}
+                    {sub.type === "plural" && <Users className={`w-5 h-5 ${isSelected ? "text-white" : "text-emerald-500"}`} />}
+                  </span>
                   <div className="truncate">
                     <span className="font-extrabold text-xs sm:text-sm block truncate">{sub.subjectWord}</span>
-                    <span className={`text-[10px] block truncate ${isSelected ? "text-blue-100" : "text-slate-400"}`}>
+                    <span className={`text-[10px] block truncate ${isSelected ? "text-blue-100" : "text-slate-600 dark:text-slate-400"}`}>
                       To Be: &apos;{sub.correctToBe}&apos;
                     </span>
                   </div>
@@ -230,7 +234,7 @@ export function TheoryActionSandbox({
 
         {/* Selector 2: Pelengkap / Kosakata Modul */}
         <div className="space-y-1.5">
-          <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
+          <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider block">
             2. Pilih Kata Target (Complement / Vocabulary):
           </span>
           <div className="grid grid-cols-3 gap-2">
@@ -250,7 +254,7 @@ export function TheoryActionSandbox({
                   <span className="text-lg shrink-0">{comp.badge}</span>
                   <div className="truncate">
                     <span className="font-extrabold text-xs sm:text-sm block truncate">{comp.label}</span>
-                    <span className={`text-[10px] block truncate ${isSelected ? "text-emerald-100" : "text-slate-400"}`}>
+                    <span className={`text-[10px] block truncate ${isSelected ? "text-emerald-100" : "text-slate-600 dark:text-slate-400"}`}>
                       {comp.cityName}
                     </span>
                   </div>

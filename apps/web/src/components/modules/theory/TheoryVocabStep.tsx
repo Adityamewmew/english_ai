@@ -96,7 +96,7 @@ export function TheoryVocabStep({
                       animeButtonPop(e.currentTarget);
                       onPlayAudio(v.word);
                     }}
-                    className="h-8 w-8 rounded-lg text-slate-400 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors shrink-0"
+                    className="min-h-[44px] min-w-[44px] sm:h-8 sm:w-8 rounded-lg text-slate-500 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors shrink-0"
                     title={`Dengarkan pelafalan "${v.word}"`}
                   >
                     <Volume2 className="w-4 h-4" />
@@ -111,7 +111,7 @@ export function TheoryVocabStep({
 
             {v.collocation && (
               <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 text-xs">
-                <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 block uppercase tracking-wider mb-1">
+                <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400 block uppercase tracking-wider mb-1">
                   Contoh Penggunaan Nyata:
                 </span>
                 <p className="font-medium text-slate-800 dark:text-slate-200 italic">
@@ -128,7 +128,7 @@ export function TheoryVocabStep({
         <Card className="vocab-card-item bg-gradient-to-br from-indigo-50/60 via-slate-50 to-white dark:from-indigo-950/20 dark:via-slate-900 dark:to-slate-900 border-indigo-200/80 dark:border-indigo-900/50 p-5 sm:p-6 shadow-sm space-y-3 will-change-transform">
           <div className="flex items-center gap-2 text-indigo-700 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider">
             <HelpCircle className="w-4 h-4" />
-            <span>🎯 Cek Kilat Kosakata</span>
+            <span>Cek Kilat Kosakata</span>
           </div>
 
           <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">
@@ -163,11 +163,11 @@ export function TheoryVocabStep({
           </div>
 
           {selectedAnswer && (
-            <div className="text-[11px] text-slate-500 dark:text-slate-400 pt-1 flex items-center gap-1.5">
+            <div className="text-[11px] text-slate-600 dark:text-slate-400 pt-1 flex items-center gap-1.5">
               <Bot className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
               <span>
                 {selectedAnswer === quizTarget.meaning
-                  ? `Benar! "${quizTarget.word}" berarti "${quizTarget.meaning}".`
+                  ? `Mantap! "${quizTarget.word}" berarti "${quizTarget.meaning}".`
                   : `Hampir tepat! Arti yang benar dari "${quizTarget.word}" adalah "${quizTarget.meaning}".`}
               </span>
             </div>

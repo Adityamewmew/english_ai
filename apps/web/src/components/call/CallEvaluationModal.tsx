@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   PhoneOff,
@@ -10,6 +10,7 @@ import {
   MessageSquare,
   ChevronDown,
   ChevronUp,
+  Info,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { formatCallDuration } from "@/lib/call-utils";
@@ -32,12 +33,23 @@ export function CallEvaluationModal({
 }: CallEvaluationModalProps) {
   const [showTranscript, setShowTranscript] = useState(true);
 
+  // Keyboard Escape listener to dismiss/reset
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onNewCall();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onNewCall]);
+
   const studentTurnCount = conversationHistory.filter(
     (m) => m.role === "user"
   ).length;
 
   return (
-    <div className="w-full max-w-lg bg-zinc-950/95 border border-zinc-800 rounded-3xl p-6 sm:p-7 space-y-5 text-white shadow-2xl animate-fadeIn backdrop-blur-xl max-h-[88vh] overflow-y-auto custom-scrollbar">
+    <div className="w-full max-w-lg bg-zinc-950 border border-zinc-800 rounded-2xl p-6 sm:p-7 space-y-5 text-white shadow-xl animate-fadeIn max-h-[88vh] overflow-y-auto custom-scrollbar">
       {/* Top Header */}
       <div className="text-center space-y-2 border-b border-zinc-800/80 pb-5">
         <div className="w-12 h-12 rounded-2xl bg-zinc-900 border border-zinc-800 flex items-center justify-center mx-auto text-zinc-400 shadow-inner">
@@ -67,6 +79,16 @@ export function CallEvaluationModal({
             </span>
           </div>
         </div>
+
+        {/* Short Call Notice (< 60s) */}
+        {duration < 60 && (
+          <div className="mt-3 p-3 bg-amber-950/40 border border-amber-800/60 rounded-xl text-xs text-amber-200/90 text-left flex items-start gap-2">
+            <Info className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+            <span>
+              Panggilan berlangsung di bawah 1 menit sehingga skor CEFR belum dapat dihitung secara akurat. Lakukan percakapan minimal 2 menit untuk mendapatkan rubrik evaluasi lengkap.
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Transkrip Percakapan */}

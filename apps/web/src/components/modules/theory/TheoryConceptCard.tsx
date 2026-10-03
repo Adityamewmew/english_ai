@@ -159,7 +159,7 @@ export function TheoryConceptCard({
                 <div className="font-bold flex items-center gap-2">
                   <span>Mr. Khoirul (AI Tutor):</span>
                   {selectedOption === "correct" ? (
-                    <span className="text-emerald-700 dark:text-emerald-300 font-semibold">Tepat sekali! 🎉</span>
+                    <span className="text-emerald-700 dark:text-emerald-300 font-semibold">Tepat sekali!</span>
                   ) : (
                     <span className="text-amber-700 dark:text-amber-300 font-semibold">Perhatikan penjelasannya:</span>
                   )}

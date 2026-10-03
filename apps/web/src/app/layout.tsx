@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "EDDY'S AI — Your Personal AI English Tutor",
+  title: "EDDY'S AI: Your Personal AI English Tutor",
   description: "Belajar Bahasa Inggris interaktif dengan Mr. Khoirul. Real-time voice call, tes penempatan CEFR, dan kurikulum standar IELTS/TOEIC.",
 };
 
@@ -21,7 +21,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased bg-surface selection:bg-accent/20">
+      <body className="antialiased bg-surface dark:bg-slate-950 dark:text-slate-100 selection:bg-accent/20">
         {children}
       </body>
     </html>

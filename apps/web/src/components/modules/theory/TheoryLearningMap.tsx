@@ -55,7 +55,7 @@ export function TheoryLearningMap({
       <div className="flex items-center justify-between flex-wrap gap-2">
         <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-xs uppercase tracking-wider">
           <Compass className="w-4 h-4" />
-          <span>🗺️ Peta Mental Pembelajaran (Lesson Map)</span>
+          <span>Peta Mental Pembelajaran (Lesson Map)</span>
         </div>
         <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400">
           Klik langkah yang terbuka untuk melompat
@@ -105,7 +105,7 @@ export function TheoryLearningMap({
                   >
                     {isDone ? <CheckCircle2 className="w-3.5 h-3.5" /> : node.step}
                   </span>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
                     Step 0{node.step}
                   </span>
                 </div>

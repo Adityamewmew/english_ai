@@ -27,7 +27,7 @@ export function DashboardHeroResume({
   const cefrCardRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className="bg-gradient-to-r from-slate-900 via-blue-950 to-indigo-950 rounded-3xl p-6 md:p-8 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-lg border border-blue-900/30">
+    <div className="bg-gradient-to-r from-slate-900 via-blue-950 to-indigo-950 rounded-2xl p-6 md:p-8 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-md border border-blue-900/30">
       <div className="space-y-2">
         <Badge
           variant="secondary"
@@ -53,7 +53,7 @@ export function DashboardHeroResume({
         ref={cefrCardRef}
         onMouseEnter={() => cefrCardRef.current && animeCardHover(cefrCardRef.current, true)}
         onMouseLeave={() => cefrCardRef.current && animeCardHover(cefrCardRef.current, false)}
-        className="bg-white/10 border-white/15 backdrop-blur-md rounded-2xl p-5 text-center min-w-[170px] shrink-0 text-white"
+        className="bg-slate-900/85 border border-white/15 rounded-2xl p-5 text-center min-w-[170px] shrink-0 text-white shadow-sm"
       >
         <span className="text-xs font-medium text-slate-300 block">Level CEFR Aktif</span>
         <div className="text-4xl font-black text-amber-400 mt-1 tracking-tight">

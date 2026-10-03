@@ -96,9 +96,9 @@ export function SectionDialogue({
                           animeButtonPop(e.currentTarget);
                           onSpeak(turn.text);
                         }}
-                        className={`h-6 w-6 p-0 rounded transition-colors ${
+                        className={`min-h-[44px] min-w-[44px] sm:h-8 sm:w-8 p-1.5 rounded-lg transition-colors ${
                           isFirstSpeaker
-                            ? "text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-700"
+                            ? "text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-700"
                             : "text-blue-200 hover:text-white hover:bg-blue-700"
                         }`}
                         title="Dengarkan percakapan"

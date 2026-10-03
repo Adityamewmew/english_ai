@@ -114,7 +114,7 @@ export function ModuleVoiceDock({
                   animeButtonPop(e.currentTarget);
                   onToggleMic();
                 }}
-                className={`h-9 w-9 rounded-full shadow-sm will-change-transform ${
+                className={`min-h-[44px] min-w-[44px] sm:h-9 sm:w-9 rounded-full shadow-sm will-change-transform ${
                   isListening
                     ? "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-emerald-400/50"
                     : "text-slate-400"
@@ -162,7 +162,7 @@ export function ModuleVoiceDock({
                   animeButtonPop(e.currentTarget);
                   onToggleCall();
                 }}
-                className="h-9 w-9 rounded-full shadow-md will-change-transform"
+                className="min-h-[44px] min-w-[44px] sm:h-9 sm:w-9 rounded-full shadow-md will-change-transform"
                 title="Akhiri Panggilan"
               >
                 <PhoneOff className="w-3.5 h-3.5" />
@@ -205,7 +205,7 @@ export function ModuleVoiceDock({
 
       {/* Manual Chatbot Drawer / Modal */}
       {isChatOpen && (
-        <div className="fixed bottom-20 right-4 sm:right-8 z-50 w-[340px] sm:w-[380px] h-[460px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
+        <div className="fixed bottom-20 right-4 sm:right-8 z-50 w-[340px] sm:w-[380px] h-[460px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
           {/* Header */}
           <div className="p-3.5 bg-slate-900 text-white flex items-center justify-between flex-shrink-0">
             <div>
@@ -227,7 +227,7 @@ export function ModuleVoiceDock({
                 animeButtonPop(e.currentTarget);
                 onToggleChat();
               }}
-              className="h-7 w-7 text-slate-400 hover:text-white hover:bg-slate-800"
+              className="min-h-[44px] min-w-[44px] sm:h-8 sm:w-8 text-slate-400 hover:text-white hover:bg-slate-800"
               title="Tutup Chat"
             >
               <X className="w-4 h-4" />

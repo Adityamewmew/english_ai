@@ -163,7 +163,7 @@ export function TheorySentenceBuilder({
       <div className="flex items-center justify-between flex-wrap gap-2">
         <div className="flex items-center gap-2 text-indigo-700 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider">
           <Sparkles className="w-4 h-4 text-amber-500" />
-          <span>🧩 16 & 24. Balok Kata Interaktif (Interactive Sentence Builder)</span>
+          <span>Balok Kata Interaktif (Interactive Sentence Builder)</span>
         </div>
         <span className="text-[11px] font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 px-2.5 py-0.5 rounded-full border border-indigo-200 dark:border-indigo-800">
           Uji Sintaksis & Susunan
@@ -281,7 +281,7 @@ export function TheorySentenceBuilder({
           <Bot className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
           <div className="space-y-1 text-xs">
             <span className="font-bold block text-sm">
-              {isCorrect ? "Sempurna! Susunan Kalimatmu Tepat Sekali! 🎉" : "Hampir tepat, coba perhatikan: "}
+              {isCorrect ? "Sempurna! Susunan Kalimatmu Tepat Sekali!" : "Hampir tepat, coba perhatikan: "}
             </span>
             <p className="leading-relaxed opacity-95">
               {isCorrect

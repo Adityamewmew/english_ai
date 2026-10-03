@@ -101,7 +101,7 @@ export function TheoryThreeTierExamples({
         <div className="px-5 py-3.5 bg-gradient-to-r from-slate-50 to-blue-50/40 dark:from-slate-800/60 dark:to-blue-950/20 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
           <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-xs uppercase tracking-wider">
             <Sparkles className="w-4 h-4" />
-            <span>🧱 06. Rumus & Struktur Kalimat (How Does It Work?)</span>
+            <span>Rumus &amp; Struktur Kalimat (How Does It Work?)</span>
           </div>
           <Badge variant="secondary" size="sm">
             Formula Dasar
@@ -134,7 +134,7 @@ export function TheoryThreeTierExamples({
               >
                 {keys.map((k) => (
                   <div key={k} className="flex flex-col p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
-                    <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
+                    <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-1">
                       {k}
                     </span>
                     <span className="font-bold text-slate-900 dark:text-slate-100">
@@ -148,7 +148,7 @@ export function TheoryThreeTierExamples({
         </div>
       </Card>
 
-      {/* 2. Anatomi Kalimat Interaktif (Section 08 Sentence Breakdown) */}
+      {/* 2. Anatomi Kalimat Interaktif (Sentence Breakdown) */}
       <TheorySentenceAnatomy
         sentence={targetExampleSentence}
         onPlayAudio={onPlayAudio}
@@ -159,7 +159,7 @@ export function TheoryThreeTierExamples({
         <div className="flex items-center justify-between flex-wrap gap-2">
           <div className="flex items-center gap-2 text-indigo-700 dark:text-indigo-400 font-bold text-xs uppercase tracking-wider">
             <TrendingUp className="w-4 h-4" />
-            <span>🪜 08. Tangga Contoh Bertingkat (3-Tier Progression)</span>
+            <span>Tangga Contoh Bertingkat (3-Tier Progression)</span>
           </div>
           <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1">
             <Layers className="w-3.5 h-3.5" />
@@ -185,7 +185,7 @@ export function TheoryThreeTierExamples({
                     variant="ghost"
                     size="icon"
                     onClick={(e) => handleAudioClick(e, ex.sentence)}
-                    className="h-7 w-7 text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg"
+                    className="min-h-[44px] min-w-[44px] sm:h-9 sm:w-9 text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg"
                     title="Dengarkan pelafalan kalimat ini"
                   >
                     <Volume2 className="w-4 h-4" />
@@ -202,8 +202,8 @@ export function TheoryThreeTierExamples({
               </div>
 
               {ex.note && (
-                <div className="text-[11px] text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-200/60 dark:border-slate-800 font-medium flex items-center gap-1.5">
-                  <span>💡</span>
+                <div className="text-[11px] text-slate-600 dark:text-slate-400 pt-2 border-t border-slate-200/60 dark:border-slate-800 font-medium flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
                   <span>{ex.note}</span>
                 </div>
               )}
