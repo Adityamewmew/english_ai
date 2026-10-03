@@ -8,13 +8,13 @@ async function runSeedLevelModules() {
   console.log("Memulai seeding Kurikulum Level & Modul Progresif...");
 
   const dataFiles = [
-    // Official Client Curriculum extracted from client PDFs
+    // Official Client Curriculum extracted from client PDFs & AI generated sub-levels
     "data/client_curriculum/level_a1_all_sublevels.json",
     "data/client_curriculum/level_a2_all_sublevels.json",
     "data/client_curriculum/level_b1_all_sublevels.json",
     "data/client_curriculum/level_b2_all_sublevels.json",
-    "data/client_curriculum/level_c1_modules.json",
-    "data/client_curriculum/level_c2_modules.json",
+    "data/client_curriculum/level_c1_all_sublevels.json",
+    "data/client_curriculum/level_c2_all_sublevels.json",
   ];
 
   const SUB_LEVELS = [
@@ -34,20 +34,14 @@ async function runSeedLevelModules() {
     { id: "B2.1", cefr: "B2", title: "B2.1 - Vantage Foundations", description: "Rencana hidup, narasi masa lalu, dan pengkondisian lanjutan.", orderIndex: 10, unitRange: [1, 13] as [number, number] },
     { id: "B2.2", cefr: "B2", title: "B2.2 - Advanced Professional & Academic Fluency", description: "Etika bisnis, negosiasi, kausatif, inversi, klausa partisipel, dan riset akademik.", orderIndex: 11, unitRange: [1, 13] as [number, number] },
     { id: "B2.3", cefr: "B2", title: "B2.3 - Strategic Debate & Bridge to C1", description: "Tata kota, ekonomi perilaku, diplomasi krisis, cleft sentences, dan jembatan ke C1.", orderIndex: 12, unitRange: [1, 13] as [number, number] },
-    // C1 (6 sub-levels)
-    { id: "C1.1", cefr: "C1", title: "C1.1 - Survival & Journeys", description: "Ketahanan hidup dan petualangan eksplorasi.", orderIndex: 13, unitRange: [1, 2] as [number, number] },
-    { id: "C1.2", cefr: "C1", title: "C1.2 - Innovation & Thinking", description: "Generasi masa depan dan pemikiran lateral kreatif.", orderIndex: 14, unitRange: [3, 4] as [number, number] },
-    { id: "C1.3", cefr: "C1", title: "C1.3 - Technology & Community", description: "Dinamika layar digital dan rekonsiliasi sosial.", orderIndex: 15, unitRange: [5, 6] as [number, number] },
-    { id: "C1.4", cefr: "C1", title: "C1.4 - Mindset & Structure", description: "Optimisme masa depan dan pengorganisasian ide.", orderIndex: 16, unitRange: [7, 8] as [number, number] },
-    { id: "C1.5", cefr: "C1", title: "C1.5 - Personal Mastery & Media", description: "Pengembangan diri dan struktur pemberitaan publik.", orderIndex: 17, unitRange: [9, 10] as [number, number] },
-    { id: "C1.6", cefr: "C1", title: "C1.6 - Cosmos & Deep Discovery", description: "Penjelajahan antariksa dan penemuan makna mendalam.", orderIndex: 18, unitRange: [11, 12] as [number, number] },
-    // C2 (6 sub-levels)
-    { id: "C2.1", cefr: "C2", title: "C2.1 - Psychology & Sleep", description: "Dinamika kekeluargaan dan misteri bawah sadar tidur.", orderIndex: 19, unitRange: [1, 2] as [number, number] },
-    { id: "C2.2", cefr: "C2", title: "C2.2 - Probability & Rhetorical Wit", description: "Probabilitas keberuntungan dan retorika humor tingkat tinggi.", orderIndex: 20, unitRange: [3, 4] as [number, number] },
-    { id: "C2.3", cefr: "C2", title: "C2.3 - Extreme Risk & Biographies", description: "Sensasi bahaya ekstrem dan biografi tokoh bersejarah.", orderIndex: 21, unitRange: [5, 6] as [number, number] },
-    { id: "C2.4", cefr: "C2", title: "C2.4 - Aesthetics & Cryptography", description: "Persepsi keindahan dan penguraian kode bahasa rahasia.", orderIndex: 22, unitRange: [7, 8] as [number, number] },
-    { id: "C2.5", cefr: "C2", title: "C2.5 - Ethics & Academic Thought", description: "Keadilan sosial dan filsafat pembelajaran seumur hidup.", orderIndex: 23, unitRange: [9, 10] as [number, number] },
-    { id: "C2.6", cefr: "C2", title: "C2.6 - Modern Era & Heroism", description: "Dunia abad 21 dan esensi kepahlawanan sejati.", orderIndex: 24, unitRange: [11, 12] as [number, number] },
+    // C1 (3 sub-levels - 13 units each: 12 modules + 1 graduation exam)
+    { id: "C1.1", cefr: "C1", title: "C1.1 - Advanced Academic & Operational Fluency", description: "Penguasaan struktur kalimat kompleks, wacana akademis, dan ekspresi tingkat tinggi.", orderIndex: 13, unitRange: [1, 13] as [number, number] },
+    { id: "C1.2", cefr: "C1", title: "C1.2 - Strategic Oratory & Complex Syntax", description: "Hedging akademis, nominalisasi padat, esai diskursif, dan retorika publik persuasif.", orderIndex: 14, unitRange: [1, 13] as [number, number] },
+    { id: "C1.3", cefr: "C1", title: "C1.3 - Critical Dialectics & Bridge to C2", description: "Analisis geopolitik, debat etika filosofis, inversi stilistik, dan jembatan ke C2.", orderIndex: 15, unitRange: [1, 13] as [number, number] },
+    // C2 (3 sub-levels - 13 units each: 12 modules + 1 graduation exam)
+    { id: "C2.1", cefr: "C2", title: "C2.1 - Mastery Foundations & Rhetorical Wit", description: "Fondasi kemahiran mutlak, psikologi naratif, clefts, dan retorika humor berbobot.", orderIndex: 16, unitRange: [1, 13] as [number, number] },
+    { id: "C2.2", cefr: "C2", title: "C2.2 - Dialectical Precision & Semiotic Depth", description: "Semiotika tanda, yurisprudensi hukum, retorika klasik, dan dekonstruksi teks.", orderIndex: 17, unitRange: [1, 13] as [number, number] },
+    { id: "C2.3", cefr: "C2", title: "C2.3 - Ultimate Native Fluency & Grandmastery", description: "Kefasihan berdaulat (sovereign fluency), hermeneutika tingkat tinggi, dan kemahiran paripurna.", orderIndex: 18, unitRange: [1, 13] as [number, number] },
   ];
 
   // 1. Seed Progressive Sub-Levels
@@ -71,10 +65,15 @@ async function runSeedLevelModules() {
         },
       });
   }
-  console.log(`✓ ${SUB_LEVELS.length} Sub-Level (A1.1 s/d C2.6) berhasil disimpan.`);
+  console.log(`✓ ${SUB_LEVELS.length} Sub-Level (A1.1 s/d C2.3) berhasil disimpan.`);
 
-  // Clean Slate: Hapus level lama yang bukan sub-level (misal A1, A2, dll)
-  for (const legacyId of ["A1", "A2", "B1", "B2", "C1", "C2", "B1.4", "B2.4"]) {
+  // Clean Slate: Hapus level lama yang bukan sub-level resmi
+  for (const legacyId of [
+    "A1", "A2", "B1", "B2", "C1", "C2",
+    "B1.4", "B2.4",
+    "C1.4", "C1.5", "C1.6",
+    "C2.4", "C2.5", "C2.6"
+  ]) {
     await db.delete(curriculumLevels).where(eq(curriculumLevels.id, legacyId));
   }
   // Hapus modul A1 lama (A1-M01 s/d A1-M12)
@@ -100,6 +99,14 @@ async function runSeedLevelModules() {
     const legacyModId = `B2-M${i.toString().padStart(2, "0")}`;
     await db.delete(moduleSections).where(eq(moduleSections.moduleId, legacyModId));
     await db.delete(curriculumModules).where(eq(curriculumModules.id, legacyModId));
+  }
+  // Hapus modul C1 & C2 lama (C1-M01 s/d C1-M12 & C2-M01 s/d C2-M12)
+  for (let i = 1; i <= 12; i++) {
+    const pad = i.toString().padStart(2, "0");
+    await db.delete(moduleSections).where(eq(moduleSections.moduleId, `C1-M${pad}`));
+    await db.delete(curriculumModules).where(eq(curriculumModules.id, `C1-M${pad}`));
+    await db.delete(moduleSections).where(eq(moduleSections.moduleId, `C2-M${pad}`));
+    await db.delete(curriculumModules).where(eq(curriculumModules.id, `C2-M${pad}`));
   }
 
   for (const relPath of dataFiles) {

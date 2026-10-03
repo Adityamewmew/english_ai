@@ -1,0 +1,240 @@
+{
+  "id": "C2.3-M10",
+  "levelId": "C2.3",
+  "title": "Forensic Linguistic Analysis: Authorship Identification & Semantic Disambiguation",
+  "cefr": "C2",
+  "group": "C2.3 - Ultimate Native Fluency & Grandmastery",
+  "objective": "Menganalisis teks forensik pengadilan: idiolek penulis, analisis korpus stylometrik, dan pengungkapan ancaman terselubung.",
+  "complexity": "high",
+  "estimatedMinutes": 35,
+  "isExam": false,
+  "passingScore": 70,
+  "orderIndex": 10,
+  "sections": {
+    "theory": {
+      "summary": "Linguistik forensik pada tingkat C2 menuntut kemampuan membedah teks secara mikroskopis dan analitis. Disiplin ini melibatkan analisis idiolek (ciri khas bahasa individu), stylometri (pengukuran gaya bahasa secara kuantitatif), dan identifikasi penanda sintaksis untuk mengungkap makna terselubung. Penguasaan materi ini memungkinkan Anda untuk mendekonstruksi ancaman terselubung (covert threats), membedakan antara peringatan yang sah dan pemerasan, serta menentukan kepengarangan (authorship) sebuah dokumen hukum atau kriminal dengan presisi akademis tingkat tinggi.",
+      "rules": [
+        "Identifikasi Penanda Idiolek: Analisis deviasi leksikal, preferensi tanda baca yang tidak lazim, dan struktur klausa subordinat yang berfungsi sebagai 'sidik jari' linguistik seorang penulis.",
+        "Analisis Stylometrik Kuantitatif: Evaluasi frekuensi kata fungsi (function words) bawah sadar, panjang rata-rata kalimat, dan kekayaan leksikal (type-token ratio) untuk menentukan probabilitas kepengarangan secara empiris.",
+        "Disambiguasi Semantik dalam Ancaman: Bedah tindak tutur ilokusi (illocutionary acts) dan modalitas epistemik/deontik untuk menyingkap niat (intent) di balik eufemisme atau ambiguitas yang disengaja."
+      ],
+      "commonTrap": {
+        "trapTitle": "Peringatan Nuansa dan Ketepatan Pragmatik C2: Ambiguitas vs. Ancaman",
+        "explanation": "Penutur yang kurang mahir sering gagal membedakan antara peringatan kondisional yang netral dan ancaman terselubung. Penulis tingkat master menggunakan struktur pasif, inversi kondisional, atau modalitas epistemik untuk menyembunyikan niat jahat (plausible deniability), sehingga ancaman tidak terlihat eksplisit di mata hukum.",
+        "wrong": "If you don't pay the money, bad things will happen to your business and family.",
+        "correct": "It would be highly regrettable should your enterprise encounter unforeseen operational friction due to an oversight in our mutual financial arrangement."
+      }
+    },
+    "vocab": [
+      {
+        "word": "idiolect",
+        "ipa": "/ˈɪdiəlekt/",
+        "meaning": "kebiasaan berbahasa yang khas dan unik pada individu tertentu",
+        "collocation": "The forensic linguist identified the suspect's unique idiolect through his idiosyncratic use of semicolons."
+      },
+      {
+        "word": "stylometry",
+        "ipa": "/staɪˈlɒmɪtri/",
+        "meaning": "studi statistik mengenai gaya bahasa, sering digunakan untuk menentukan penulis",
+        "collocation": "Computational stylometry provided compelling evidence that the anonymous manifesto was authored by the defendant."
+      },
+      {
+        "word": "disambiguation",
+        "ipa": "/dɪsˌæmbɪɡjuˈeɪʃn/",
+        "meaning": "penghilangan ambiguitas; proses menentukan makna yang tepat dari sebuah teks",
+        "collocation": "Semantic disambiguation of the ransom note revealed a covert threat directed at the victim's family."
+      },
+      {
+        "word": "illocutionary",
+        "ipa": "/ˌɪləˈkjuːʃənəri/",
+        "meaning": "berkaitan dengan niat atau tindakan yang dilakukan melalui ucapan (tindak tutur)",
+        "collocation": "The illocutionary force of the defendant's statement was clearly intended as intimidation rather than a mere observation."
+      },
+      {
+        "word": "epistemic",
+        "ipa": "/ˌepɪˈstiːmɪk/",
+        "meaning": "berkaitan dengan pengetahuan atau tingkat keyakinan dalam linguistik",
+        "collocation": "The author's heavy reliance on epistemic modality suggested a deliberate attempt to maintain plausible deniability."
+      },
+      {
+        "word": "subterfuge",
+        "ipa": "/ˈsʌbtəfjuːdʒ/",
+        "meaning": "tipu daya atau dalih yang digunakan untuk menyembunyikan sesuatu",
+        "collocation": "The linguistic subterfuge employed in the contract was designed to obscure the true financial liabilities."
+      },
+      {
+        "word": "idiosyncratic",
+        "ipa": "/ˌɪdiəsɪŋˈkrætɪk/",
+        "meaning": "memiliki ciri khas yang aneh atau sangat spesifik pada seseorang",
+        "collocation": "Her idiosyncratic phrasing in the emails served as the primary linguistic fingerprint in the trial."
+      },
+      {
+        "word": "obfuscation",
+        "ipa": "/ˌɒbfʌsˈkeɪʃn/",
+        "meaning": "tindakan membuat sesuatu menjadi tidak jelas, kabur, atau membingungkan",
+        "collocation": "The deliberate obfuscation in the corporate memo was a calculated move to evade regulatory scrutiny."
+      },
+      {
+        "word": "exculpatory",
+        "ipa": "/ekˈskʌlpətəri/",
+        "meaning": "cenderung membebaskan dari kesalahan, tuduhan, atau rasa bersalah",
+        "collocation": "The defense attorney highlighted the exculpatory nuances in the recorded conversation to prove his client's innocence."
+      },
+      {
+        "word": "authorship",
+        "ipa": "/ˈɔːθəʃɪp/",
+        "meaning": "identitas penulis dari suatu karya atau dokumen",
+        "collocation": "The disputed authorship of the threatening letters was finally resolved through rigorous corpus analysis."
+      }
+    ],
+    "dialogue": {
+      "context": "Dua ahli linguistik forensik, Dr. Aris dan Dr. Elena, sedang berdebat secara akademis mengenai analisis sebuah surat ancaman anonim di ruang persiapan sidang.",
+      "lines": [
+        {
+          "speaker": "Dr. Aris",
+          "text": "Elena, if you examine the syntactic parsing of the third paragraph, the idiosyncratic deployment of the subjunctive mood strongly points to our primary suspect.",
+          "translation": "Elena, jika Anda memeriksa penguraian sintaksis pada paragraf ketiga, penggunaan modus subjungtif yang khas sangat mengarah pada tersangka utama kita."
+        },
+        {
+          "speaker": "Dr. Elena",
+          "text": "I concede the structural similarities, Aris, but the type-token ratio in this document deviates significantly from his established baseline corpus.",
+          "translation": "Saya mengakui kesamaan strukturalnya, Aris, tetapi rasio tipe-token dalam dokumen ini menyimpang secara signifikan dari korpus dasar yang telah ditetapkannya."
+        },
+        {
+          "speaker": "Dr. Aris",
+          "text": "Isn't it plausible that the author is engaging in deliberate linguistic obfuscation? The shift in register could be a calculated subterfuge.",
+          "translation": "Tidakkah masuk akal bahwa penulis sengaja melakukan pengaburan linguistik? Pergeseran laras bahasa itu bisa jadi merupakan tipu daya yang diperhitungkan."
+        },
+        {
+          "speaker": "Dr. Elena",
+          "text": "Plausible, yes, but stylometry relies on subconscious function word frequencies. It is exceedingly difficult to mask one's use of prepositions and determiners consistently.",
+          "translation": "Masuk akal, ya, tetapi stylometri bergantung pada frekuensi kata fungsi bawah sadar. Sangatlah sulit untuk menyembunyikan penggunaan preposisi dan determiner secara konsisten."
+        },
+        {
+          "speaker": "Dr. Aris",
+          "text": "Yet, the illocutionary force of the covert threats—specifically the conditional inversions—mirrors the exact phrasing he used during the interrogation.",
+          "translation": "Namun, daya ilokusi dari ancaman terselubung tersebut—khususnya inversi kondisionalnya—mencerminkan ungkapan persis yang ia gunakan selama interogasi."
+        },
+        {
+          "speaker": "Dr. Elena",
+          "text": "We must tread carefully. Semantic disambiguation in a legal context requires empirical rigor, not just striking coincidences in phrasing.",
+          "translation": "Kita harus melangkah dengan hati-hati. Disambiguasi semantik dalam konteks hukum membutuhkan ketelitian empiris, bukan sekadar kebetulan yang mencolok dalam ungkapan."
+        },
+        {
+          "speaker": "Dr. Aris",
+          "text": "I am not relying on mere coincidence. The epistemic modality here—the repeated use of 'might' and 'conceivably'—is his signature exculpatory tactic.",
+          "translation": "Saya tidak mengandalkan sekadar kebetulan. Modalitas epistemik di sini—penggunaan berulang kata 'might' dan 'conceivably'—adalah taktik pembebasan khasnya."
+        },
+        {
+          "speaker": "Dr. Elena",
+          "text": "Very well. Let us run a comparative n-gram analysis overnight. If the collocations align, I will support your testimony on the authorship.",
+          "translation": "Baiklah. Mari kita jalankan analisis n-gram komparatif malam ini. Jika kolokasinya selaras, saya akan mendukung kesaksian Anda mengenai kepengarangan tersebut."
+        }
+      ]
+    },
+    "speakingLab": {
+      "context": "Anda adalah seorang konsultan linguistik forensik yang sedang diwawancarai oleh Mr. Khoirul, seorang jaksa penuntut, mengenai temuan Anda pada sebuah dokumen pemerasan tingkat tinggi.",
+      "roles": [
+        "Mr. Khoirul",
+        "You"
+      ],
+      "defaultUserRole": "You",
+      "turns": [
+        {
+          "speaker": "Mr. Khoirul",
+          "text": "Thank you for joining us. Could you elucidate how you determined the authorship of this extortion letter with such a high degree of certainty?"
+        },
+        {
+          "speaker": "You",
+          "text": "Certainly. My conclusion is predicated on a rigorous stylometric analysis, specifically focusing on the author's idiosyncratic use of subordinate clauses and rare lexical choices."
+        },
+        {
+          "speaker": "Mr. Khoirul",
+          "text": "The defense argues that anyone could have mimicked his writing style. How do you counter the claim of deliberate linguistic subterfuge?"
+        },
+        {
+          "speaker": "You",
+          "text": "While conscious imitation of vocabulary is possible, it is nearly impossible to consistently replicate a person's subconscious frequency of function words, such as conjunctions and articles."
+        },
+        {
+          "speaker": "Mr. Khoirul",
+          "text": "Fascinating. And what about the alleged threats in the second paragraph? The defense claims they are merely business warnings."
+        },
+        {
+          "speaker": "You",
+          "text": "Through semantic disambiguation, it becomes evident that the illocutionary force of those statements constitutes a covert threat, masked by epistemic modality to maintain plausible deniability."
+        },
+        {
+          "speaker": "Mr. Khoirul",
+          "text": "So, you are prepared to testify that the linguistic fingerprint in this document unequivocally matches our defendant?"
+        },
+        {
+          "speaker": "You",
+          "text": "Indeed. The convergence of syntactic markers and the specific type-token ratio leaves no reasonable doubt regarding the document's authorship."
+        }
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Which term best describes the subconscious, unique linguistic habits of an individual used in forensic analysis?",
+        "options": [
+          "Stylometry",
+          "Idiolect",
+          "Obfuscation"
+        ],
+        "answer": "Idiolect",
+        "explanation": "'Idiolect' merujuk pada dialek atau kebiasaan berbahasa yang unik pada satu individu, yang berfungsi sebagai 'sidik jari' linguistik dalam analisis forensik."
+      },
+      {
+        "question": "In forensic linguistics, what is the primary purpose of analyzing 'function words' (like 'the', 'and', 'of')?",
+        "options": [
+          "To determine the emotional state of the author.",
+          "To identify subconscious patterns for authorship attribution.",
+          "To decode the explicit meaning of covert threats."
+        ],
+        "answer": "To identify subconscious patterns for authorship attribution.",
+        "explanation": "Kata fungsi digunakan secara tidak sadar dan frekuensinya sangat sulit dimanipulasi, menjadikannya metrik yang sangat andal dalam stylometri untuk menentukan kepengarangan."
+      },
+      {
+        "question": "Fill in the blank: The defense attorney argued that the ambiguous phrasing was not a threat, but rather a legitimate business warning, requiring careful semantic ___ by the expert.",
+        "options": [
+          "subterfuge",
+          "disambiguation",
+          "authorship"
+        ],
+        "answer": "disambiguation",
+        "explanation": "'Disambiguation' adalah proses menghilangkan ambiguitas untuk menentukan makna yang tepat, sangat krusial dalam membedakan antara peringatan bisnis dan ancaman."
+      },
+      {
+        "question": "Which sentence demonstrates a covert threat utilizing epistemic modality and passive construction to maintain plausible deniability?",
+        "options": [
+          "If you fail to transfer the funds, I will personally destroy your company's reputation.",
+          "It is highly probable that unforeseen complications might arise regarding your family's security should the contract be ignored.",
+          "Pay the ransom immediately, or you will face severe and irreversible consequences."
+        ],
+        "answer": "It is highly probable that unforeseen complications might arise regarding your family's security should the contract be ignored.",
+        "explanation": "Pilihan ini menggunakan modalitas epistemik ('highly probable', 'might') dan struktur pasif serta kondisional inversi untuk menyembunyikan ancaman secara halus, khas dalam teks pemerasan tingkat tinggi."
+      },
+      {
+        "question": "What does 'illocutionary force' refer to in the context of analyzing a ransom note?",
+        "options": [
+          "The grammatical correctness of the sentences used.",
+          "The literal, dictionary definition of the words written.",
+          "The underlying intent or action performed by the utterance, such as intimidating or demanding."
+        ],
+        "answer": "The underlying intent or action performed by the utterance, such as intimidating or demanding.",
+        "explanation": "Daya ilokusi (illocutionary force) berkaitan dengan niat pragmatik di balik sebuah ucapan, seperti mengancam atau menuntut, bukan sekadar makna harfiahnya."
+      },
+      {
+        "question": "Fill in the blank: The suspect attempted deliberate linguistic ___ by altering his vocabulary, but his syntactic patterns betrayed him.",
+        "options": [
+          "obfuscation",
+          "exculpatory",
+          "stylometry"
+        ],
+        "answer": "obfuscation",
+        "explanation": "'Obfuscation' berarti tindakan mengaburkan atau menyembunyikan sesuatu. Tersangka mencoba menyembunyikan identitasnya dengan mengubah kosakatanya secara sengaja."
+      }
+    ]
+  }
+}
