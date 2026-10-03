@@ -2,6 +2,10 @@
 
 import React from "react";
 import { Lock, CheckCircle2, Award, Clock, ArrowRight, BookOpen } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { animeCardHover, animeButtonPop } from "@/lib/anime-effects";
 
 export interface ModuleItemProps {
   id: string;
@@ -27,66 +31,53 @@ export function ModuleCard({ module, onSelect }: ModuleCardProps) {
   const isLocked = module.status === "locked";
   const isCompleted = module.status === "completed";
 
-  const getComplexityBadge = (c: string) => {
-    switch (c) {
-      case "short":
-        return "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300";
-      case "deep":
-        return "bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300";
-      default:
-        return "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300";
-    }
-  };
-
   return (
-    <div
-      className={`group relative flex flex-col justify-between rounded-xl border p-5 transition-all duration-200 ${
+    <Card
+      onMouseEnter={(e) => !isLocked && animeCardHover(e.currentTarget, true)}
+      onMouseLeave={(e) => !isLocked && animeCardHover(e.currentTarget, false)}
+      className={`module-item-card group relative flex flex-col justify-between p-5 transition-all will-change-transform ${
         isLocked
           ? "border-slate-200 bg-slate-50/75 opacity-70 dark:border-slate-800 dark:bg-slate-900/30"
           : isCompleted
-          ? "border-emerald-200 bg-emerald-50/20 hover:border-emerald-300 hover:shadow-sm dark:border-emerald-800/40 dark:bg-emerald-950/10"
-          : "border-slate-200 bg-white hover:border-blue-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
+          ? "border-emerald-200 bg-emerald-50/20 hover:border-emerald-300 hover:shadow-sm dark:border-emerald-800/40 dark:bg-emerald-950/10 cursor-pointer"
+          : "border-slate-200 bg-white hover:border-blue-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 cursor-pointer"
       }`}
     >
       <div>
         {/* Header row: CEFR / Exam badge & Status */}
         <div className="flex items-center justify-between gap-2 mb-3">
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="inline-flex items-center text-xs font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+            <Badge variant="secondary" className="font-semibold text-xs">
               Modul {module.orderIndex}
-            </span>
+            </Badge>
 
             {module.isExam ? (
-              <span className="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200 border border-amber-200 dark:border-amber-700/50">
+              <Badge variant="warning" className="gap-1 text-xs font-semibold">
                 <Award className="w-3 h-3" />
                 Ujian Kelulusan
-              </span>
+              </Badge>
             ) : (
-              <span
-                className={`text-xs font-medium px-2 py-0.5 rounded capitalize ${getComplexityBadge(
-                  module.complexity
-                )}`}
-              >
+              <Badge variant="outline" className="text-xs font-medium capitalize">
                 {module.complexity}
-              </span>
+              </Badge>
             )}
           </div>
 
           <div>
             {isCompleted ? (
-              <div className="flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-100/70 dark:bg-emerald-900/40 px-2 py-0.5 rounded-full">
+              <Badge variant="success" className="gap-1 text-xs font-medium">
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 <span>Lulus {module.score ? `(${module.score}%)` : ""}</span>
-              </div>
+              </Badge>
             ) : isLocked ? (
-              <div className="flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-200/60 dark:bg-slate-800 px-2 py-0.5 rounded-full">
+              <Badge variant="secondary" className="gap-1 text-xs font-medium opacity-80">
                 <Lock className="w-3 h-3" />
                 <span>Terkunci</span>
-              </div>
+              </Badge>
             ) : (
-              <div className="flex items-center gap-1 text-xs font-medium text-blue-600 dark:text-blue-400 bg-blue-100/70 dark:bg-blue-900/40 px-2 py-0.5 rounded-full">
+              <Badge variant="primary" className="text-xs font-medium">
                 <span>Terbuka</span>
-              </div>
+              </Badge>
             )}
           </div>
         </div>
@@ -121,22 +112,23 @@ export function ModuleCard({ module, onSelect }: ModuleCardProps) {
           </span>
         </div>
 
-        <button
-          type="button"
+        <Button
+          size="sm"
           disabled={isLocked}
-          onClick={onSelect ? () => onSelect(module.id) : undefined}
-          className={`inline-flex items-center gap-1 font-medium px-3 py-1.5 rounded-lg text-xs transition-colors ${
-            isLocked
-              ? "cursor-not-allowed bg-slate-200 text-slate-400 dark:bg-slate-800 dark:text-slate-600"
-              : isCompleted
-              ? "bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm"
-              : "bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
+          onClick={(e) => {
+            if (!isLocked) {
+              animeButtonPop(e.currentTarget);
+              onSelect?.(module.id);
+            }
+          }}
+          className={`gap-1 font-medium text-xs shadow-xs will-change-transform ${
+            isCompleted ? "bg-emerald-600 hover:bg-emerald-700 text-white" : ""
           }`}
         >
           <span>{isCompleted ? "Ulangi" : "Mulai"}</span>
           <ArrowRight className="w-3.5 h-3.5" />
-        </button>
+        </Button>
       </div>
-    </div>
+    </Card>
   );
 }

@@ -2,6 +2,10 @@
 
 import React from "react";
 import { Sparkles, Info, Play } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { animeCardHover, animeButtonPop } from "@/lib/anime-effects";
 
 interface RoleplayBriefingProps {
   context?: string;
@@ -17,12 +21,16 @@ export function RoleplayBriefing({
   onStartRoleplay,
 }: RoleplayBriefingProps) {
   return (
-    <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
+    <Card
+      onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
+      onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
+      className="p-6 sm:p-8 space-y-6 shadow-sm border-slate-200 dark:border-slate-800 will-change-transform"
+    >
       <div className="flex items-center gap-2.5 text-blue-600 dark:text-blue-400">
         <Sparkles className="w-5 h-5" />
-        <span className="text-xs font-bold uppercase tracking-wider">
+        <Badge variant="primary" className="text-xs font-bold uppercase tracking-wider">
           Simulasi Peran Interaktif (AI Roleplay)
-        </span>
+        </Badge>
       </div>
 
       <div>
@@ -91,15 +99,18 @@ export function RoleplayBriefing({
 
       {/* Tombol Mulai */}
       <div className="pt-2">
-        <button
-          type="button"
-          onClick={onStartRoleplay}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-95 text-white text-xs font-bold transition-all shadow-md"
+        <Button
+          size="lg"
+          onClick={(e) => {
+            animeButtonPop(e.currentTarget);
+            onStartRoleplay();
+          }}
+          className="w-full sm:w-auto gap-2 shadow-md active:translate-y-0.5 will-change-transform"
         >
           <Play className="w-4 h-4 fill-white" />
           <span>Mulai Simulasi Percakapan</span>
-        </button>
+        </Button>
       </div>
-    </div>
+    </Card>
   );
 }

@@ -6,6 +6,9 @@ import { useSpeechRecorder } from "@/hooks/use-speech-recorder";
 import { SpeakingLabDrill, DrillItem } from "./SpeakingLabDrill";
 import { SpeakingLabRoleplay, RoleplayData } from "./SpeakingLabRoleplay";
 import { SpeakingLabChallenge, ChallengeData } from "./SpeakingLabChallenge";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { animeButtonPop, animeShake } from "@/lib/anime-effects";
 
 export type { DrillItem, RoleplayData, ChallengeData };
 
@@ -78,7 +81,7 @@ export function SectionSpeakingLab({
         <div>
           <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-xs uppercase tracking-wider mb-1">
             <Sparkles className="w-4 h-4" />
-            <span>Interactive Speaking Lab</span>
+            <Badge variant="primary" className="text-xs">Interactive Speaking Lab</Badge>
           </div>
           <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
             {title}
@@ -86,13 +89,16 @@ export function SectionSpeakingLab({
         </div>
 
         {/* 3-Stage Progressive Tab Navigation with Locks */}
-        <div className="inline-flex p-1 bg-slate-100 dark:bg-slate-800/80 rounded-xl text-xs font-semibold">
+        <div className="inline-flex p-1 bg-slate-100 dark:bg-slate-800/80 rounded-xl text-xs font-semibold gap-1">
           <button
             type="button"
-            onClick={() => setActiveTab("drill")}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
+            onClick={(e) => {
+              animeButtonPop(e.currentTarget);
+              setActiveTab("drill");
+            }}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer will-change-transform ${
               activeTab === "drill"
-                ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm"
+                ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm font-bold"
                 : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
             }`}
           >
@@ -102,15 +108,21 @@ export function SectionSpeakingLab({
 
           <button
             type="button"
-            disabled={!isDrillDone}
-            onClick={() => isDrillDone && setActiveTab("roleplay")}
+            onClick={(e) => {
+              if (isDrillDone) {
+                animeButtonPop(e.currentTarget);
+                setActiveTab("roleplay");
+              } else {
+                animeShake(e.currentTarget);
+              }
+            }}
             title={!isDrillDone ? "Selesaikan seluruh kalimat pemanasan terlebih dahulu" : ""}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all will-change-transform ${
               activeTab === "roleplay"
-                ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm"
+                ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm font-bold cursor-pointer"
                 : !isDrillDone
                 ? "text-slate-400 dark:text-slate-600 cursor-not-allowed opacity-60"
-                : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 cursor-pointer"
             }`}
           >
             {!isDrillDone ? (
@@ -123,15 +135,21 @@ export function SectionSpeakingLab({
 
           <button
             type="button"
-            disabled={!isRoleplayDone}
-            onClick={() => isRoleplayDone && setActiveTab("challenge")}
+            onClick={(e) => {
+              if (isRoleplayDone) {
+                animeButtonPop(e.currentTarget);
+                setActiveTab("challenge");
+              } else {
+                animeShake(e.currentTarget);
+              }
+            }}
             title={!isRoleplayDone ? "Selesaikan simulasi peran terlebih dahulu" : ""}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all will-change-transform ${
               activeTab === "challenge"
-                ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm"
+                ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm font-bold cursor-pointer"
                 : !isRoleplayDone
                 ? "text-slate-400 dark:text-slate-600 cursor-not-allowed opacity-60"
-                : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 cursor-pointer"
             }`}
           >
             {!isRoleplayDone ? (

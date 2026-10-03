@@ -1,7 +1,8 @@
 "use client";
 
-import React from "react";
-import { Mic, PhoneCall, PhoneOff } from "lucide-react";
+import React, { useRef } from "react";
+import { Mic, PhoneCall } from "lucide-react";
+import { animeButtonPop, animeCardPulse } from "@/lib/anime-effects";
 
 interface ModuleVoiceOrbProps {
   state: "idle" | "connecting" | "speaking" | "listening" | "thinking";
@@ -14,15 +15,22 @@ export function ModuleVoiceOrb({ state, isCalling, size = "sm", onClick }: Modul
   const isSpeaking = state === "speaking";
   const isThinking = state === "thinking";
   const isListening = state === "listening";
+  const orbRef = useRef<HTMLDivElement>(null);
 
   const isSm = size === "sm";
 
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    animeButtonPop(e.currentTarget);
+    onClick();
+  };
+
   return (
     <div
-      onClick={onClick}
+      ref={orbRef}
+      onClick={handleClick}
       role="button"
       tabIndex={0}
-      className="relative flex items-center justify-center cursor-pointer select-none group"
+      className="relative flex items-center justify-center cursor-pointer select-none group will-change-transform"
       title={
         isCalling
           ? isSpeaking

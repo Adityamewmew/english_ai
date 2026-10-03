@@ -2,6 +2,8 @@
 
 import React, { useRef, useEffect } from "react";
 import { Volume2, Sparkles, HelpCircle } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { animeCharacterState, animeButtonPop } from "@/lib/anime-effects";
 
 export type CharacterState = "idle" | "walking" | "speaking" | "happy" | "puzzled";
@@ -202,9 +204,12 @@ export function AnimatedCharacter({
         </div>
 
         {/* Persona Tag */}
-        <span className="absolute -bottom-2 text-[10px] font-bold px-2 py-0.5 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 shadow-xs uppercase tracking-wider">
+        <Badge
+          variant="outline"
+          className="absolute -bottom-2 text-[10px] font-bold px-2 py-0.5 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 uppercase tracking-wider"
+        >
           {isTeacher ? "Mr. Khoirul" : isFemale ? "Maya" : "Budi"}
-        </span>
+        </Badge>
       </div>
 
       {/* Interactive Speech Bubble */}
@@ -238,13 +243,19 @@ export function AnimatedCharacter({
             </div>
 
             {onSpeechClick && (
-              <button
+              <Button
                 type="button"
-                className="p-1.5 rounded-lg bg-blue-100 dark:bg-blue-900/60 text-blue-600 dark:text-blue-300 hover:bg-blue-200 shrink-0 transition-colors"
+                variant="ghost"
+                size="sm"
+                onClick={(e) => {
+                  animeButtonPop(e.currentTarget);
+                  onSpeechClick();
+                }}
+                className="h-7 w-7 p-0 rounded-lg bg-blue-100 dark:bg-blue-900/60 text-blue-600 dark:text-blue-300 hover:bg-blue-200 shrink-0 transition-colors"
                 title="Dengarkan suara"
               >
                 <Volume2 className="w-4 h-4" />
-              </button>
+              </Button>
             )}
           </div>
         </div>

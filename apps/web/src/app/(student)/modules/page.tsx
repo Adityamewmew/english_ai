@@ -153,13 +153,12 @@ export default async function ModulesRoadmapPage({
                     />
 
                     <div className="pt-4 flex items-center justify-between">
-                      <Link
-                        href={`/modules?level=${levels[0]?.id || "A1"}`}
-                        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-white dark:hover:bg-slate-900 text-xs font-semibold text-slate-700 dark:text-slate-300 transition-colors shadow-sm"
-                      >
-                        <ArrowLeft className="w-4 h-4 text-blue-600" />
-                        <span>Kembali ke Level A1</span>
-                      </Link>
+                      <Button asChild variant="outline" size="sm" className="rounded-xl gap-2 shadow-sm">
+                        <Link href={`/modules?level=${levels[0]?.id || "A1"}`}>
+                          <ArrowLeft className="w-4 h-4 text-blue-600" />
+                          <span>Kembali ke Level A1</span>
+                        </Link>
+                      </Button>
                     </div>
                   </div>
                 ) : (
@@ -224,33 +223,30 @@ export default async function ModulesRoadmapPage({
                       return (
                         <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
                           {prevLvl ? (
-                            <Link
-                              href={`/modules?level=${prevLvl.id}`}
-                              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-white dark:hover:bg-slate-900 text-xs font-semibold text-slate-700 dark:text-slate-300 transition-colors shadow-sm"
-                            >
-                              <ArrowLeft className="w-4 h-4 text-blue-600" />
-                              <span>Kembali ke {prevLvl.title.split(" - ")[0]}</span>
-                            </Link>
+                            <Button asChild variant="outline" size="sm" className="rounded-xl gap-2 shadow-sm">
+                              <Link href={`/modules?level=${prevLvl.id}`}>
+                                <ArrowLeft className="w-4 h-4 text-blue-600" />
+                                <span>Kembali ke {prevLvl.title.split(" - ")[0]}</span>
+                              </Link>
+                            </Button>
                           ) : (
                             <div />
                           )}
 
                           {nextLvl && nextLvl.isUnlocked ? (
-                            <Link
-                              href={`/modules?level=${nextLvl.id}`}
-                              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-xs font-semibold text-white transition-colors shadow-sm"
-                            >
-                              <span>Lanjut ke {nextLvl.title.split(" - ")[0]}</span>
-                              <ArrowRight className="w-4 h-4" />
-                            </Link>
+                            <Button asChild variant="default" size="sm" className="rounded-xl gap-2 bg-blue-600 hover:bg-blue-700 text-white shadow-sm">
+                              <Link href={`/modules?level=${nextLvl.id}`}>
+                                <span>Lanjut ke {nextLvl.title.split(" - ")[0]}</span>
+                                <ArrowRight className="w-4 h-4" />
+                              </Link>
+                            </Button>
                           ) : (
-                            <Link
-                              href="/call"
-                              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-100 text-xs font-semibold text-blue-600 dark:text-blue-400 transition-colors"
-                            >
-                              <PhoneCall className="w-3.5 h-3.5" />
-                              <span>Praktik Bicara Bebas AI</span>
-                            </Link>
+                            <Button asChild variant="secondary" size="sm" className="rounded-xl gap-2 bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-100 text-blue-600 dark:text-blue-400">
+                              <Link href="/call">
+                                <PhoneCall className="w-3.5 h-3.5" />
+                                <span>Praktik Bicara Bebas AI</span>
+                              </Link>
+                            </Button>
                           )}
                         </div>
                       );

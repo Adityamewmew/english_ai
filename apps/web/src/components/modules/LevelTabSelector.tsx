@@ -1,6 +1,10 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { CheckCircle2, Lock, Sparkles } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { animeButtonPop, animeShake } from "@/lib/anime-effects";
 
 export interface LevelTabItem {
   id: string;
@@ -68,7 +72,8 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
             return (
               <div
                 key={grp.cefr}
-                className="flex items-center gap-2 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/70 dark:bg-slate-900/40 text-slate-400 dark:text-slate-500 cursor-not-allowed text-xs font-semibold select-none shrink-0"
+                onClick={(e) => animeShake(e.currentTarget)}
+                className="flex items-center gap-2 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/70 dark:bg-slate-900/40 text-slate-400 dark:text-slate-500 cursor-not-allowed text-xs font-semibold select-none shrink-0 will-change-transform"
                 title="Selesaikan level sebelumnya untuk membuka"
               >
                 <Lock className="w-3.5 h-3.5 text-amber-500" />
@@ -81,7 +86,8 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
             <Link
               key={grp.cefr}
               href={`/modules?level=${grp.firstTargetId}`}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-xs font-bold transition-all shrink-0 ${
+              onClick={(e) => animeButtonPop(e.currentTarget)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-xs font-bold transition-all shrink-0 will-change-transform ${
                 isCefrActive
                   ? "bg-slate-900 dark:bg-white text-white dark:text-slate-900 border-slate-900 dark:border-white shadow-sm"
                   : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800"
@@ -118,7 +124,8 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
               return (
                 <div
                   key={subLvl.id}
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-xl text-slate-400 dark:text-slate-600 cursor-not-allowed text-xs font-medium select-none shrink-0"
+                  onClick={(e) => animeShake(e.currentTarget)}
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-xl text-slate-400 dark:text-slate-600 cursor-not-allowed text-xs font-medium select-none shrink-0 will-change-transform"
                   title="Selesaikan sub-level sebelumnya untuk membuka"
                 >
                   <Lock className="w-3 h-3 text-amber-500/70" />
@@ -131,7 +138,8 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
               <Link
                 key={subLvl.id}
                 href={`/modules?level=${subLvl.id}`}
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all shrink-0 ${
+                onClick={(e) => animeButtonPop(e.currentTarget)}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all shrink-0 will-change-transform ${
                   isSubActive
                     ? "bg-blue-600 text-white shadow-sm shadow-blue-600/25"
                     : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/60 border border-slate-200/60 dark:border-slate-700/60"

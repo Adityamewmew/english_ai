@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Compass, CheckCircle2, Circle, ArrowDown, MapPin } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { animeCardStagger, animeCardHover, animeButtonPop } from "@/lib/anime-effects";
 
 export interface LearningMapNode {
   step: number;
@@ -33,9 +34,24 @@ export function TheoryLearningMap({
   isPracticeUnlocked = false,
 }: TheoryLearningMapProps) {
   const maxStep = isPracticeUnlocked ? 6 : unlockedStep;
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const items = containerRef.current.querySelectorAll<HTMLElement>(".map-node-item");
+      if (items.length > 0) {
+        animeCardStagger(items, 50);
+      }
+    }
+  }, []);
 
   return (
-    <Card className="bg-gradient-to-br from-slate-50 via-white to-blue-50/40 dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/20 border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-sm space-y-4">
+    <Card
+      ref={containerRef}
+      onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
+      onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
+      className="bg-gradient-to-br from-slate-50 via-white to-blue-50/40 dark:from-slate-900 dark:via-slate-900 dark:to-blue-950/20 border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-sm space-y-4 will-change-transform"
+    >
       <div className="flex items-center justify-between flex-wrap gap-2">
         <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-xs uppercase tracking-wider">
           <Compass className="w-4 h-4" />
@@ -61,17 +77,18 @@ export function TheoryLearningMap({
             <button
               key={node.step}
               type="button"
-              onClick={() => {
+              onClick={(e) => {
+                animeButtonPop(e.currentTarget);
                 if (isUnlocked) onScrollToStep(node.step);
               }}
               disabled={!isUnlocked}
-              className={`p-3.5 rounded-xl border text-left transition-all flex flex-col justify-between gap-2 cursor-pointer select-none ${
+              className={`map-node-item p-3.5 rounded-xl border text-left transition-all flex flex-col justify-between gap-2 select-none will-change-transform ${
                 isCurrent
-                  ? "bg-blue-50 dark:bg-blue-950/50 border-blue-400 dark:border-blue-600 shadow-sm ring-2 ring-blue-300 dark:ring-blue-800 scale-102"
+                  ? "bg-blue-50 dark:bg-blue-950/50 border-blue-400 dark:border-blue-600 shadow-sm ring-2 ring-blue-300 dark:ring-blue-800 scale-102 cursor-pointer"
                   : isDone
-                  ? "bg-emerald-50/50 dark:bg-emerald-950/20 border-emerald-300 dark:border-emerald-800 text-slate-900 dark:text-slate-100 hover:border-emerald-400"
+                  ? "bg-emerald-50/50 dark:bg-emerald-950/20 border-emerald-300 dark:border-emerald-800 text-slate-900 dark:text-slate-100 hover:border-emerald-400 cursor-pointer"
                   : isUnlocked
-                  ? "bg-white dark:bg-slate-800/80 border-slate-200 dark:border-slate-700 hover:border-blue-300"
+                  ? "bg-white dark:bg-slate-800/80 border-slate-200 dark:border-slate-700 hover:border-blue-300 cursor-pointer"
                   : "bg-slate-100/60 dark:bg-slate-800/40 border-slate-200/50 dark:border-slate-800/50 opacity-60 cursor-not-allowed"
               }`}
             >

@@ -14,6 +14,10 @@ import {
 } from "lucide-react";
 import { ModuleVoiceOrb } from "./ModuleVoiceOrb";
 import { ChatMessage } from "./ModuleAIAssistant";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { animeButtonPop, animeCardHover } from "@/lib/anime-effects";
 
 interface ModuleVoiceDockProps {
   moduleTitle: string;
@@ -83,34 +87,42 @@ export function ModuleVoiceDock({
           {/* Sisi Kiri: Tombol Navigasi Kembali */}
           <div className="flex items-center min-w-[100px] sm:min-w-[150px]">
             {onBack && (
-              <button
-                type="button"
-                onClick={onBack}
-                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={(e) => {
+                  animeButtonPop(e.currentTarget);
+                  onBack();
+                }}
+                className="gap-1.5 text-xs font-semibold text-slate-700 dark:text-slate-200 will-change-transform"
               >
                 <ChevronLeft className="w-4 h-4" />
                 <span className="hidden sm:inline">{backLabel}</span>
                 <span className="sm:hidden">Kembali</span>
-              </button>
+              </Button>
             )}
           </div>
 
           {/* Bagian Tengah: Voice Orb Mr. Khoirul & Call Controls */}
           <div className="flex items-center justify-center gap-2 sm:gap-3 flex-1 max-w-[280px]">
-            {/* Tombol Mute / Unmute Mic (Muncul Mengapit saat Panggilan Aktif) */}
+            {/* Tombol Mute / Unmute Mic */}
             {isCalling && (
-              <button
-                type="button"
-                onClick={onToggleMic}
-                className={`p-2 rounded-full transition-all shadow-sm ${
+              <Button
+                variant={isListening ? "secondary" : "outline"}
+                size="icon"
+                onClick={(e) => {
+                  animeButtonPop(e.currentTarget);
+                  onToggleMic();
+                }}
+                className={`h-9 w-9 rounded-full shadow-sm will-change-transform ${
                   isListening
-                    ? "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-400/50"
-                    : "bg-slate-100 dark:bg-slate-800 text-slate-400 border border-slate-300 dark:border-slate-700"
+                    ? "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-emerald-400/50"
+                    : "text-slate-400"
                 }`}
                 title={isListening ? "Matikan Mic" : "Nyalakan Mic"}
               >
                 {isListening ? <Mic className="w-3.5 h-3.5" /> : <MicOff className="w-3.5 h-3.5" />}
-              </button>
+              </Button>
             )}
 
             {/* Glowing Voice Orb */}
@@ -141,50 +153,57 @@ export function ModuleVoiceDock({
               </div>
             </div>
 
-            {/* Tombol Akhiri Panggilan (Muncul Mengapit saat Panggilan Aktif) */}
+            {/* Tombol Akhiri Panggilan */}
             {isCalling && (
-              <button
-                type="button"
-                onClick={onToggleCall}
-                className="p-2 bg-rose-600 hover:bg-rose-700 text-white rounded-full transition-all shadow-md active:scale-95"
+              <Button
+                variant="destructive"
+                size="icon"
+                onClick={(e) => {
+                  animeButtonPop(e.currentTarget);
+                  onToggleCall();
+                }}
+                className="h-9 w-9 rounded-full shadow-md will-change-transform"
                 title="Akhiri Panggilan"
               >
                 <PhoneOff className="w-3.5 h-3.5" />
-              </button>
+              </Button>
             )}
           </div>
 
           {/* Sisi Kanan: Chat Teks & Tombol Navigasi Lanjut */}
           <div className="flex items-center justify-end gap-1.5 sm:gap-2 min-w-[100px] sm:min-w-[150px]">
-            <button
-              type="button"
-              onClick={onToggleChat}
-              className={`p-2 sm:px-3 sm:py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors ${
-                isChatOpen
-                  ? "bg-blue-600 text-white shadow-sm"
-                  : "bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700"
-              }`}
+            <Button
+              variant={isChatOpen ? "primary" : "secondary"}
+              size="sm"
+              onClick={(e) => {
+                animeButtonPop(e.currentTarget);
+                onToggleChat();
+              }}
+              className="gap-1.5 text-xs font-semibold will-change-transform"
               title="Buka Chatbot Teks"
             >
               <MessageSquare className="w-3.5 h-3.5" />
               <span className="hidden md:inline">Chat Teks</span>
-            </button>
+            </Button>
 
             {onForward && (
-              <button
-                type="button"
-                onClick={onForward}
-                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-colors whitespace-nowrap"
+              <Button
+                size="sm"
+                onClick={(e) => {
+                  animeButtonPop(e.currentTarget);
+                  onForward();
+                }}
+                className="gap-1 text-xs font-semibold whitespace-nowrap will-change-transform"
               >
                 <span>{forwardLabel}</span>
                 <ChevronRight className="w-3.5 h-3.5" />
-              </button>
+              </Button>
             )}
           </div>
         </div>
       </footer>
 
-      {/* Manual Chatbot Drawer / Modal (Muncul saat tombol Chat Teks diklik) */}
+      {/* Manual Chatbot Drawer / Modal */}
       {isChatOpen && (
         <div className="fixed bottom-20 right-4 sm:right-8 z-50 w-[340px] sm:w-[380px] h-[460px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
           {/* Header */}
@@ -192,23 +211,27 @@ export function ModuleVoiceDock({
             <div>
               <div className="flex items-center gap-1.5">
                 <h4 className="text-xs font-bold text-white">Chat Tutor • Mr. Khoirul</h4>
-                <span className="text-[10px] text-blue-300 font-medium bg-blue-900/60 px-1.5 py-0.2 rounded">
+                <Badge variant="primary" className="text-[10px] px-1.5 py-0.2">
                   Modul
-                </span>
+                </Badge>
               </div>
               <p className="text-[10px] text-slate-400 truncate max-w-[240px] mt-0.5">
                 {moduleTitle}
               </p>
             </div>
 
-            <button
-              type="button"
-              onClick={onToggleChat}
-              className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={(e) => {
+                animeButtonPop(e.currentTarget);
+                onToggleChat();
+              }}
+              className="h-7 w-7 text-slate-400 hover:text-white hover:bg-slate-800"
               title="Tutup Chat"
             >
               <X className="w-4 h-4" />
-            </button>
+            </Button>
           </div>
 
           {/* Messages */}
@@ -238,7 +261,7 @@ export function ModuleVoiceDock({
                       <button
                         type="button"
                         onClick={() => onPlayAudio(msg.text)}
-                        className="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 ml-1 p-0.5"
+                        className="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 ml-1 p-0.5 cursor-pointer"
                         title="Dengarkan suara"
                       >
                         <Volume2 className="w-3 h-3" />
@@ -259,7 +282,7 @@ export function ModuleVoiceDock({
 
           {/* Input Footer */}
           <div className="p-3 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex items-center gap-2 flex-shrink-0">
-            <input
+            <Input
               type="text"
               value={inputText}
               onChange={(e) => onInputChange(e.target.value)}
@@ -270,22 +293,21 @@ export function ModuleVoiceDock({
                 }
               }}
               placeholder="Ketik pertanyaan untuk Mr. Khoirul..."
-              className="flex-1 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 text-xs px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="flex-1 text-xs"
             />
 
-            <button
-              type="button"
+            <Button
+              size="icon"
               disabled={!inputText.trim() || isThinking}
-              onClick={onSendMessage}
-              className={`p-2.5 rounded-xl font-bold transition-colors ${
-                inputText.trim() && !isThinking
-                  ? "bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
-                  : "bg-slate-200 dark:bg-slate-800 text-slate-400 cursor-not-allowed"
-              }`}
+              onClick={(e) => {
+                animeButtonPop(e.currentTarget);
+                onSendMessage();
+              }}
+              className="h-9 w-9 shrink-0 will-change-transform"
               title="Kirim pesan"
             >
               <Send className="w-4 h-4" />
-            </button>
+            </Button>
           </div>
         </div>
       )}

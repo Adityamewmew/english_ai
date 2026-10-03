@@ -8,6 +8,7 @@ import { VocabItem } from "../SectionVocab";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { animeCardHover, animeButtonPop, animeShake } from "@/lib/anime-effects";
 
 interface TheoryConceptDeepProps {
   title: string;
@@ -43,7 +44,14 @@ export function TheoryConceptDeep({
 }: TheoryConceptDeepProps) {
   const [selectedQuizOpt, setSelectedQuizOpt] = useState<"wrong" | "correct" | null>(null);
 
-  const handleSelectQuiz = (opt: "wrong" | "correct") => {
+  const handleSelectQuiz = (opt: "wrong" | "correct", e?: React.MouseEvent<HTMLButtonElement>) => {
+    if (e?.currentTarget) {
+      if (opt === "correct") {
+        animeButtonPop(e.currentTarget);
+      } else {
+        animeShake(e.currentTarget);
+      }
+    }
     if (selectedQuizOpt === null) {
       if (opt === "correct") {
         onAwardXp?.(15, "Mengenali Jebakan Umum!");
@@ -68,7 +76,11 @@ export function TheoryConceptDeep({
 
       {/* 2. Common Mistakes Interactive Challenge (Section 12) */}
       {commonTrap && (
-        <Card className="bg-gradient-to-br from-amber-50/60 via-slate-50 to-white dark:from-amber-950/20 dark:via-slate-900 dark:to-slate-900 border-amber-200/80 dark:border-amber-900/50 p-5 sm:p-6 shadow-sm space-y-4">
+        <Card
+          onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
+          onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
+          className="bg-gradient-to-br from-amber-50/60 via-slate-50 to-white dark:from-amber-950/20 dark:via-slate-900 dark:to-slate-900 border-amber-200/80 dark:border-amber-900/50 p-5 sm:p-6 shadow-sm space-y-4 will-change-transform"
+        >
           <div className="flex items-center justify-between flex-wrap gap-2">
             <div className="flex items-center gap-2 text-amber-700 dark:text-amber-400 font-bold text-xs uppercase tracking-wider">
               <ShieldAlert className="w-4 h-4" />
@@ -97,8 +109,8 @@ export function TheoryConceptDeep({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
             <button
               type="button"
-              onClick={() => handleSelectQuiz("wrong")}
-              className={`p-4 rounded-xl text-left border border-b-4 transition-all flex flex-col justify-between gap-2 select-none cursor-pointer ${
+              onClick={(e) => handleSelectQuiz("wrong", e)}
+              className={`p-4 rounded-xl text-left border border-b-4 transition-all flex flex-col justify-between gap-2 select-none cursor-pointer will-change-transform ${
                 selectedQuizOpt === "wrong"
                   ? "border-red-500 border-b-red-700 bg-red-50 dark:bg-red-950/40 ring-2 ring-red-400/40 animate-tactile-shake"
                   : selectedQuizOpt === "correct"
@@ -121,8 +133,8 @@ export function TheoryConceptDeep({
 
             <button
               type="button"
-              onClick={() => handleSelectQuiz("correct")}
-              className={`p-4 rounded-xl text-left border border-b-4 transition-all flex flex-col justify-between gap-2 select-none cursor-pointer ${
+              onClick={(e) => handleSelectQuiz("correct", e)}
+              className={`p-4 rounded-xl text-left border border-b-4 transition-all flex flex-col justify-between gap-2 select-none cursor-pointer will-change-transform ${
                 selectedQuizOpt === "correct"
                   ? "border-emerald-500 border-b-emerald-700 bg-emerald-50 dark:bg-emerald-950/40 ring-2 ring-emerald-400/40 animate-pop-bounce"
                   : selectedQuizOpt === "wrong"
@@ -150,8 +162,11 @@ export function TheoryConceptDeep({
       <div className="pt-2 flex justify-end">
         <Button
           size="lg"
-          onClick={onNext}
-          className="border-b-4 border-blue-800 active:border-b-0 active:translate-y-1 shadow-md"
+          onClick={(e) => {
+            animeButtonPop(e.currentTarget);
+            onNext();
+          }}
+          className="border-b-4 border-blue-800 active:border-b-0 active:translate-y-1 shadow-md will-change-transform"
         >
           <span>Pahami Rumus & Balok Kata</span>
           <ArrowRight className="w-4 h-4" />

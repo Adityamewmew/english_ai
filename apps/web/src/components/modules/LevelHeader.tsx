@@ -1,5 +1,10 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import { GraduationCap, CheckCircle2, Target, Lock } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { animeCardHover, animeCountUp } from "@/lib/anime-effects";
 
 interface LevelHeaderProps {
   levelTitle: string;
@@ -22,9 +27,19 @@ export function LevelHeader({
   isUnlocked = true,
   lockReason,
 }: LevelHeaderProps) {
+  const percentRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    if (percentRef.current) {
+      animeCountUp(percentRef.current, 0, progressPercent, "", "%");
+    }
+  }, [progressPercent]);
+
   return (
     <div
-      className={`rounded-2xl p-6 md:p-8 text-white shadow-lg mb-8 relative overflow-hidden transition-all duration-300 ${
+      onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
+      onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
+      className={`rounded-2xl p-6 md:p-8 text-white shadow-lg mb-8 relative overflow-hidden transition-all will-change-transform ${
         isUnlocked
           ? "bg-gradient-to-r from-blue-900 to-indigo-950"
           : "bg-gradient-to-r from-slate-800 to-slate-900 opacity-90 border border-slate-700/60"
@@ -32,12 +47,9 @@ export function LevelHeader({
     >
       <div className="relative z-10 max-w-3xl">
         <div className="flex items-center gap-2 mb-3">
-          <span
-            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border ${
-              isUnlocked
-                ? "bg-blue-500/20 text-blue-200 border-blue-400/30"
-                : "bg-slate-700/50 text-slate-300 border-slate-600/40"
-            }`}
+          <Badge
+            variant={isUnlocked ? "primary" : "secondary"}
+            className="gap-1.5 px-3 py-1 text-xs font-semibold"
           >
             {isUnlocked ? (
               <GraduationCap className="w-3.5 h-3.5" />
@@ -45,7 +57,7 @@ export function LevelHeader({
               <Lock className="w-3.5 h-3.5 text-amber-400" />
             )}
             Level {cefr}
-          </span>
+          </Badge>
           <span className="text-xs text-blue-200/80 font-medium">
             {isUnlocked ? "Kurikulum Bertingkat" : "Terkunci"}
           </span>
@@ -71,25 +83,22 @@ export function LevelHeader({
         )}
 
         {/* Progress bar and counter */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10 max-w-xl">
-          <div className="flex items-center justify-between text-xs mb-2">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10 max-w-xl space-y-2.5">
+          <div className="flex items-center justify-between text-xs">
             <div className="flex items-center gap-1.5 font-medium text-blue-100">
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
               <span>
                 {completedCount} dari {totalCount} modul selesai
               </span>
             </div>
-            <span className="font-bold text-white">{progressPercent}%</span>
+            <span ref={percentRef} className="font-bold text-white">
+              {progressPercent}%
+            </span>
           </div>
 
-          <div className="w-full bg-black/30 rounded-full h-2.5 overflow-hidden">
-            <div
-              className="bg-emerald-400 h-2.5 rounded-full transition-all duration-500"
-              style={{ width: `${progressPercent}%` }}
-            />
-          </div>
+          <Progress value={progressPercent} className="h-2.5 bg-black/30" />
 
-          <div className="flex items-center gap-1.5 mt-2.5 text-[11px] text-blue-200/80">
+          <div className="flex items-center gap-1.5 pt-0.5 text-[11px] text-blue-200/80">
             <Target className="w-3 h-3 text-amber-300" />
             <span>
               {isUnlocked

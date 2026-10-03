@@ -2,6 +2,10 @@
 
 import React from "react";
 import { Volume2, BookOpen } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { animeButtonPop, animeCardHover } from "@/lib/anime-effects";
 
 export interface VocabItem {
   word: string;
@@ -26,9 +30,11 @@ export function SectionVocab({ title, items, onSpeak }: SectionVocabProps) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
         {items.map((v, idx) => (
-          <div
+          <Card
             key={idx}
-            className="flex flex-col justify-between p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-blue-300 dark:hover:border-blue-700 transition-colors"
+            onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
+            onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
+            className="flex flex-col justify-between p-4 rounded-xl border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-blue-300 dark:hover:border-blue-700 transition-colors shadow-sm"
           >
             <div>
               <div className="flex items-center justify-between gap-2 mb-1.5">
@@ -37,21 +43,26 @@ export function SectionVocab({ title, items, onSpeak }: SectionVocabProps) {
                     {v.word}
                   </span>
                   {v.ipa && (
-                    <span className="text-xs font-mono text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">
+                    <Badge variant="secondary" className="text-xs font-mono px-1.5 py-0.5">
                       {v.ipa}
-                    </span>
+                    </Badge>
                   )}
                 </div>
 
                 {onSpeak && (
-                  <button
+                  <Button
                     type="button"
-                    onClick={() => onSpeak(v.word)}
-                    className="p-1.5 text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    variant="ghost"
+                    size="sm"
+                    onClick={(e) => {
+                      animeButtonPop(e.currentTarget);
+                      onSpeak(v.word);
+                    }}
+                    className="h-8 w-8 p-0 text-slate-400 hover:text-blue-600 dark:hover:text-blue-400"
                     title="Dengarkan Pengucapan"
                   >
                     <Volume2 className="w-4 h-4" />
-                  </button>
+                  </Button>
                 )}
               </div>
 
@@ -66,7 +77,7 @@ export function SectionVocab({ title, items, onSpeak }: SectionVocabProps) {
                 <span className="italic">{v.collocation}</span>
               </div>
             )}
-          </div>
+          </Card>
         ))}
       </div>
     </div>

@@ -1,7 +1,11 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import { Volume2, Sparkles, Square, CheckCircle2, BookOpen } from "lucide-react";
+import { Volume2, Sparkles, Square, CheckCircle2 } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { animeButtonPop, animeCardHover } from "@/lib/anime-effects";
 
 export interface DashboardWeakWordsWidgetProps {
   words: string[];
@@ -11,8 +15,12 @@ export function DashboardWeakWordsWidget({ words }: DashboardWeakWordsWidgetProp
   const [playingWord, setPlayingWord] = useState<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const handlePlayWordAudio = (word: string) => {
+  const handlePlayWordAudio = (word: string, targetEl?: HTMLElement) => {
     if (typeof window === "undefined") return;
+
+    if (targetEl) {
+      animeButtonPop(targetEl);
+    }
 
     if (audioRef.current) {
       audioRef.current.pause();
@@ -56,15 +64,18 @@ export function DashboardWeakWordsWidget({ words }: DashboardWeakWordsWidgetProp
   };
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+    <Card className="rounded-2xl p-6 border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div>
-          <div className="flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-1">
-            <Sparkles className="w-4 h-4" />
+          <Badge
+            variant="outline"
+            className="gap-1.5 text-xs font-bold text-amber-600 dark:text-amber-400 bg-amber-50/50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800 uppercase tracking-wider mb-1"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-amber-500" />
             <span>AI Long-Term Memory</span>
-          </div>
-          <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+          </Badge>
+          <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1">
             Kosakata & Pelafalan yang Perlu Dilatih
           </h3>
           <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -73,9 +84,12 @@ export function DashboardWeakWordsWidget({ words }: DashboardWeakWordsWidgetProp
         </div>
 
         {words.length > 0 && (
-          <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-300/40 self-start sm:self-center">
+          <Badge
+            variant="outline"
+            className="text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border-amber-300/40 self-start sm:self-center"
+          >
             {words.length} Kata Dicatat
-          </span>
+          </Badge>
         )}
       </div>
 
@@ -96,14 +110,16 @@ export function DashboardWeakWordsWidget({ words }: DashboardWeakWordsWidgetProp
             {words.map((w, idx) => {
               const isPlaying = playingWord === w;
               return (
-                <button
+                <Button
                   key={idx}
                   type="button"
-                  onClick={() => handlePlayWordAudio(w)}
-                  className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all shadow-sm ${
+                  variant={isPlaying ? "default" : "outline"}
+                  size="sm"
+                  onClick={(e) => handlePlayWordAudio(w, e.currentTarget)}
+                  className={`gap-2 rounded-xl text-xs font-semibold h-8 transition-all ${
                     isPlaying
-                      ? "bg-amber-500 text-white shadow-amber-500/20 scale-105"
-                      : "bg-amber-50/80 dark:bg-amber-950/30 text-amber-900 dark:text-amber-200 border border-amber-200/80 dark:border-amber-800/60 hover:bg-amber-100"
+                      ? "bg-amber-500 hover:bg-amber-600 text-white shadow-amber-500/20 scale-105"
+                      : "bg-amber-50/80 dark:bg-amber-950/30 text-amber-900 dark:text-amber-200 border-amber-200/80 dark:border-amber-800/60 hover:bg-amber-100"
                   }`}
                   title="Klik untuk mendengarkan pengucapan yang benar"
                 >
@@ -113,7 +129,7 @@ export function DashboardWeakWordsWidget({ words }: DashboardWeakWordsWidgetProp
                   ) : (
                     <Volume2 className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
                   )}
-                </button>
+                </Button>
               );
             })}
           </div>
@@ -123,6 +139,6 @@ export function DashboardWeakWordsWidget({ words }: DashboardWeakWordsWidgetProp
           </p>
         </div>
       )}
-    </div>
+    </Card>
   );
 }

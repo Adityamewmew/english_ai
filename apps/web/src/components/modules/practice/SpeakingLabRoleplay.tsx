@@ -18,6 +18,11 @@ import {
 import { evaluateSpeechDiff } from "@/lib/speech-diff";
 import { SpeechRecorderCallbackOptions, blobToBase64 } from "@/hooks/use-speech-recorder";
 import { RoleplayBriefing } from "./RoleplayBriefing";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
+import { animeCardHover, animeButtonPop, animeShake, animeCardPulse } from "@/lib/anime-effects";
 
 export interface RoleplayTurn {
   speaker: string;
@@ -305,7 +310,11 @@ export function SpeakingLabRoleplay({
   return (
     <div className="space-y-4">
       {/* Top Session Status Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm">
+      <Card
+        onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
+        onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
+        className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 shadow-sm border-slate-200 dark:border-slate-800 will-change-transform"
+      >
         <div className="flex items-center gap-2 text-xs">
           <div className="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
             <Users className="w-4 h-4 text-blue-600" />
@@ -319,23 +328,23 @@ export function SpeakingLabRoleplay({
 
         <div className="flex items-center gap-2">
           {isAiSpeaking ? (
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-[11px] font-semibold text-amber-700 dark:text-amber-300 animate-pulse">
+            <Badge variant="warning" className="gap-1.5 text-[11px] animate-pulse">
               <Radio className="w-3.5 h-3.5 text-amber-500 animate-spin" />
               <span>{aiRole} sedang berbicara...</span>
-            </span>
+            </Badge>
           ) : isAllUserTurnsCompleted ? (
-            <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
+            <Badge variant="success" className="gap-1 text-[11px] font-bold">
               <CheckCircle2 className="w-3.5 h-3.5" />
               <span>Percakapan Selesai</span>
-            </span>
+            </Badge>
           ) : (
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-[11px] font-semibold text-blue-700 dark:text-blue-300">
-              <MessageSquare className="w-3.5 h-3.5 text-blue-500" />
+            <Badge variant="primary" className="gap-1.5 text-[11px] font-semibold">
+              <MessageSquare className="w-3.5 h-3.5" />
               <span>Simulasi Berlangsung</span>
-            </span>
+            </Badge>
           )}
         </div>
-      </div>
+      </Card>
 
       {/* Sequential Chat Feed */}
       <div className="space-y-4 pt-1">
@@ -511,21 +520,24 @@ export function SpeakingLabRoleplay({
 
       {/* Completion Banner & Next Stage Button */}
       {isAllUserTurnsCompleted && onNextStage && (
-        <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/40 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm animate-in fade-in">
+        <Card className="p-4 bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800/40 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm animate-in fade-in">
           <div className="flex items-center gap-2.5 text-emerald-800 dark:text-emerald-200 text-xs">
             <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
-            <span>Semua putaran simulasi peran berhasil kamu selesaikan dengan baik!</span>
+            <span className="font-semibold">Semua putaran simulasi peran berhasil kamu selesaikan dengan baik!</span>
           </div>
 
-          <button
-            type="button"
-            onClick={onNextStage}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-md flex-shrink-0"
+          <Button
+            size="sm"
+            onClick={(e) => {
+              animeButtonPop(e.currentTarget);
+              onNextStage();
+            }}
+            className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white gap-2 shadow-sm flex-shrink-0 active:translate-y-0.5 will-change-transform"
           >
             <span>Lanjut ke Tantangan Spontan</span>
             <ChevronRight className="w-4 h-4" />
-          </button>
-        </div>
+          </Button>
+        </Card>
       )}
     </div>
   );

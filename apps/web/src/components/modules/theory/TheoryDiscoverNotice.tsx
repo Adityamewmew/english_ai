@@ -5,6 +5,7 @@ import { Eye, ArrowRight, Bot, Check, X, Sparkles } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { animeCardHover, animeButtonPop, animeShake } from "@/lib/anime-effects";
 
 export interface DiscoverNoticeData {
   targetSentence: string;
@@ -49,8 +50,15 @@ export function TheoryDiscoverNotice({
 
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
 
-  const handleSelect = (idx: number) => {
+  const handleSelect = (idx: number, e?: React.MouseEvent<HTMLButtonElement>) => {
     setSelectedIdx(idx);
+    if (e?.currentTarget) {
+      if (idx === noticeData.correctIndex) {
+        animeButtonPop(e.currentTarget);
+      } else {
+        animeShake(e.currentTarget);
+      }
+    }
     onCompleteStep?.();
   };
 
@@ -58,7 +66,11 @@ export function TheoryDiscoverNotice({
 
   return (
     <div className="space-y-6">
-      <Card className="bg-gradient-to-br from-violet-50/70 via-indigo-50/30 to-white dark:from-violet-950/20 dark:via-indigo-950/10 dark:to-slate-900 border-violet-200/80 dark:border-violet-900/40 p-6 shadow-sm space-y-5">
+      <Card
+        onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
+        onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
+        className="bg-gradient-to-br from-violet-50/70 via-indigo-50/30 to-white dark:from-violet-950/20 dark:via-indigo-950/10 dark:to-slate-900 border-violet-200/80 dark:border-violet-900/40 p-6 shadow-sm space-y-5 will-change-transform"
+      >
         {/* Header Badge */}
         <div className="flex items-center gap-2 text-violet-700 dark:text-violet-400 font-bold text-xs uppercase tracking-wider">
           <Eye className="w-4 h-4" />
@@ -90,8 +102,8 @@ export function TheoryDiscoverNotice({
                 <button
                   key={idx}
                   type="button"
-                  onClick={() => handleSelect(idx)}
-                  className={`p-3.5 rounded-xl text-left text-xs sm:text-sm font-medium border transition-all flex items-center justify-between gap-3 cursor-pointer select-none active:scale-98 ${
+                  onClick={(e) => handleSelect(idx, e)}
+                  className={`p-3.5 rounded-xl text-left text-xs sm:text-sm font-medium border transition-all flex items-center justify-between gap-3 cursor-pointer select-none active:scale-98 will-change-transform ${
                     isSelected
                       ? isOptionCorrect
                         ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 font-semibold ring-2 ring-emerald-300 dark:ring-emerald-800"
@@ -138,8 +150,11 @@ export function TheoryDiscoverNotice({
       {/* Navigation Footer */}
       <div className="pt-2 flex justify-end">
         <Button
-          onClick={onNext}
-          className="gap-2 px-5 py-2.5 shadow-sm"
+          onClick={(e) => {
+            animeButtonPop(e.currentTarget);
+            onNext();
+          }}
+          className="gap-2 px-5 py-2.5 shadow-sm active:translate-y-0.5 will-change-transform"
         >
           <span>Lanjut ke Penjelasan Konsep Mendalam</span>
           <ArrowRight className="w-4 h-4" />

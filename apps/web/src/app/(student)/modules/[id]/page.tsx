@@ -19,6 +19,10 @@ import {
   QuestionResult,
   ModuleVoiceDock,
 } from "@/components/modules";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { animeButtonPop, animeShake } from "@/lib/anime-effects";
 import { useModuleTutor } from "@/hooks/use-module-tutor";
 import {
   getModuleDetailAction,
@@ -202,7 +206,8 @@ export default function ModuleDetailPage() {
             <div className="flex items-center gap-3">
               <Link
                 href={moduleData.levelId ? `/modules?level=${moduleData.levelId}` : "/modules"}
-                className="p-2 text-slate-500 hover:text-slate-900 dark:hover:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                onClick={(e) => animeButtonPop(e.currentTarget)}
+                className="p-2 text-slate-500 hover:text-slate-900 dark:hover:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors inline-flex items-center justify-center"
               >
                 <ArrowLeft className="w-5 h-5" />
               </Link>
@@ -220,21 +225,25 @@ export default function ModuleDetailPage() {
 
             <div className="flex items-center gap-2">
               {moduleData.isExam && (
-                <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 dark:bg-amber-950/60 dark:text-amber-200 border border-amber-300 dark:border-amber-800">
+                <Badge variant="outline" className="gap-1 bg-amber-100 text-amber-900 dark:bg-amber-950/60 dark:text-amber-200 border-amber-300 dark:border-amber-800 font-semibold">
                   <Award className="w-3.5 h-3.5" />
                   Ujian Kelulusan
-                </span>
+                </Badge>
               )}
 
-              <button
-                type="button"
-                onClick={tutor.handleToggleCall}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 rounded-lg text-xs font-semibold transition-colors"
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={(e) => {
+                  animeButtonPop(e.currentTarget);
+                  tutor.handleToggleCall();
+                }}
+                className="gap-1.5 bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-800 text-xs font-semibold h-8 px-3"
                 title="Panggilan AI Tutor"
               >
                 <PhoneCall className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">AI Tutor Call</span>
-              </button>
+              </Button>
             </div>
           </div>
         </header>
@@ -243,15 +252,17 @@ export default function ModuleDetailPage() {
         <div className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
           <div className="max-w-4xl mx-auto px-4 py-2.5 flex items-center justify-between gap-3">
             <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
-              <button
-                type="button"
-                onClick={() => {
+              <Button
+                variant={activePhase === "theory" ? "default" : "secondary"}
+                size="sm"
+                onClick={(e) => {
+                  animeButtonPop(e.currentTarget);
                   setActivePhase("theory");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
-                className={`flex-1 sm:flex-initial flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                className={`flex-1 sm:flex-initial flex items-center justify-center gap-2 text-xs font-bold transition-all h-8 px-3.5 ${
                   activePhase === "theory"
-                    ? "bg-blue-600 text-white shadow-sm"
+                    ? "bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
                     : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
                 }`}
               >
@@ -259,24 +270,27 @@ export default function ModuleDetailPage() {
                   1
                 </span>
                 <span>Fase 1: Teori & Pemahaman</span>
-              </button>
+              </Button>
 
-              <button
-                type="button"
-                onClick={() => {
+              <Button
+                variant={activePhase === "practice" ? "default" : "secondary"}
+                size="sm"
+                onClick={(e) => {
                   if (!isPracticeUnlocked) {
+                    animeShake(e.currentTarget);
                     setGatingNotice(
                       "Selesaikan percobaan di bagian Teori terlebih dahulu untuk membuka Fase Praktikum & Evaluasi."
                     );
                     return;
                   }
+                  animeButtonPop(e.currentTarget);
                   setActivePhase("practice");
                   setGatingNotice(null);
                   document.getElementById("phase-practice")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className={`flex-1 sm:flex-initial flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                className={`flex-1 sm:flex-initial flex items-center justify-center gap-2 text-xs font-bold transition-all h-8 px-3.5 ${
                   activePhase === "practice"
-                    ? "bg-blue-600 text-white shadow-sm"
+                    ? "bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
                     : !isPracticeUnlocked
                     ? "bg-slate-100 dark:bg-slate-800/40 text-slate-400 dark:text-slate-600 cursor-not-allowed"
                     : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
@@ -287,31 +301,35 @@ export default function ModuleDetailPage() {
                 </span>
                 <span>Fase 2: Praktikum & Evaluasi</span>
                 {!isPracticeUnlocked && <Lock className="w-3.5 h-3.5 text-slate-400" />}
-              </button>
+              </Button>
             </div>
 
-            <span className="hidden sm:inline-block text-xs font-medium text-slate-500 dark:text-slate-400">
+            <Badge variant={isPracticeUnlocked ? "default" : "secondary"} className="hidden sm:inline-flex text-xs font-medium">
               {isPracticeUnlocked ? "Semua Fase Terbuka" : "Fase 1 Aktif"}
-            </span>
+            </Badge>
           </div>
         </div>
 
         {/* 1-Page Main Content View */}
         <main className="max-w-4xl mx-auto px-4 py-8 pb-20 space-y-12">
           {gatingNotice && (
-            <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-xs flex items-center justify-between gap-3 animate-in fade-in">
+            <Card className="p-4 bg-amber-50 dark:bg-amber-950/40 border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-xs flex items-center justify-between gap-3 animate-in fade-in">
               <div className="flex items-center gap-2.5">
                 <Lock className="w-4 h-4 flex-shrink-0 text-amber-600 dark:text-amber-400" />
                 <span className="font-medium">{gatingNotice}</span>
               </div>
-              <button
-                type="button"
-                onClick={() => setGatingNotice(null)}
-                className="text-amber-700 dark:text-amber-300 font-bold hover:underline flex-shrink-0"
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={(e) => {
+                  animeButtonPop(e.currentTarget);
+                  setGatingNotice(null);
+                }}
+                className="text-amber-700 dark:text-amber-300 font-bold hover:underline flex-shrink-0 h-auto p-1"
               >
                 Tutup
-              </button>
-            </div>
+              </Button>
+            </Card>
           )}
 
           {/* FASE 1: TEORI & PEMAHAMAN (READING, LISTENING, WRITING & SPEAKING TRIAL) */}

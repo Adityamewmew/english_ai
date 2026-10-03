@@ -5,6 +5,7 @@ import { Sparkles, Check, X, ArrowRight, HelpCircle, Bot, HelpCircle as WhyIcon 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { animeCardHover, animeButtonPop, animeShake } from "@/lib/anime-effects";
 
 interface CommonTrap {
   trapTitle?: string;
@@ -36,8 +37,15 @@ export function TheoryConceptCard({
 }: TheoryConceptCardProps) {
   const [selectedOption, setSelectedOption] = useState<"wrong" | "correct" | null>(null);
 
-  const handleSelectOption = (choice: "wrong" | "correct") => {
+  const handleSelectOption = (choice: "wrong" | "correct", e?: React.MouseEvent<HTMLButtonElement>) => {
     setSelectedOption(choice);
+    if (e?.currentTarget) {
+      if (choice === "correct") {
+        animeButtonPop(e.currentTarget);
+      } else {
+        animeShake(e.currentTarget);
+      }
+    }
     onCompleteStep?.();
   };
 
@@ -51,7 +59,11 @@ export function TheoryConceptCard({
   return (
     <div className="space-y-6">
       {/* 1. Why / Purpose (Section 05 Framework v2) */}
-      <Card className="bg-gradient-to-br from-amber-50/50 via-slate-50 to-white dark:from-amber-950/20 dark:via-slate-900 dark:to-slate-900 border-amber-200/80 dark:border-amber-900/50 p-5 sm:p-6 shadow-sm space-y-4">
+      <Card
+        onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
+        onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
+        className="bg-gradient-to-br from-amber-50/50 via-slate-50 to-white dark:from-amber-950/20 dark:via-slate-900 dark:to-slate-900 border-amber-200/80 dark:border-amber-900/50 p-5 sm:p-6 shadow-sm space-y-4 will-change-transform"
+      >
         <div className="flex items-center gap-2 text-amber-700 dark:text-amber-400 font-bold text-xs uppercase tracking-wider">
           <WhyIcon className="w-4 h-4" />
           <span>❓ Mengapa Kita Menggunakan Bentuk Ini? (Why & Purpose)</span>
@@ -85,7 +97,11 @@ export function TheoryConceptCard({
 
       {/* 2. Common Trap Challenge (Section 10 Framework v2) */}
       {commonTrap && commonTrap.wrong && commonTrap.correct && (
-        <Card className="bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-sm space-y-4">
+        <Card
+          onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
+          onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
+          className="bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-sm space-y-4 will-change-transform"
+        >
           <div className="flex items-center gap-2 text-rose-600 dark:text-rose-400 font-bold text-xs uppercase tracking-wider">
             <Sparkles className="w-4 h-4" />
             <span>⚠️ Jebakan Umum: Pilih Kalimat yang Tepat</span>
@@ -99,8 +115,8 @@ export function TheoryConceptCard({
             {/* Option A (Wrong) */}
             <button
               type="button"
-              onClick={() => handleSelectOption("wrong")}
-              className={`p-4 rounded-xl border text-left text-xs sm:text-sm font-semibold transition-all flex items-center justify-between gap-3 cursor-pointer select-none active:scale-98 ${
+              onClick={(e) => handleSelectOption("wrong", e)}
+              className={`p-4 rounded-xl border text-left text-xs sm:text-sm font-semibold transition-all flex items-center justify-between gap-3 cursor-pointer select-none active:scale-98 will-change-transform ${
                 selectedOption === "wrong"
                   ? "border-red-500 bg-red-50 dark:bg-red-950/40 text-red-900 dark:text-red-200 ring-2 ring-red-300 dark:ring-red-800"
                   : "border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/60 text-slate-800 dark:text-slate-200 hover:border-slate-300"
@@ -115,8 +131,8 @@ export function TheoryConceptCard({
             {/* Option B (Correct) */}
             <button
               type="button"
-              onClick={() => handleSelectOption("correct")}
-              className={`p-4 rounded-xl border text-left text-xs sm:text-sm font-semibold transition-all flex items-center justify-between gap-3 cursor-pointer select-none active:scale-98 ${
+              onClick={(e) => handleSelectOption("correct", e)}
+              className={`p-4 rounded-xl border text-left text-xs sm:text-sm font-semibold transition-all flex items-center justify-between gap-3 cursor-pointer select-none active:scale-98 will-change-transform ${
                 selectedOption === "correct"
                   ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 ring-2 ring-emerald-300 dark:ring-emerald-800"
                   : "border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/60 text-slate-800 dark:text-slate-200 hover:border-slate-300"
@@ -160,8 +176,11 @@ export function TheoryConceptCard({
       {/* Navigation Footer */}
       <div className="pt-2 flex justify-end">
         <Button
-          onClick={onNext}
-          className="gap-2 px-5 py-2.5 shadow-sm"
+          onClick={(e) => {
+            animeButtonPop(e.currentTarget);
+            onNext();
+          }}
+          className="gap-2 px-5 py-2.5 shadow-sm active:translate-y-0.5 will-change-transform"
         >
           <span>Pelajari Kosakata Kunci</span>
           <ArrowRight className="w-4 h-4" />
