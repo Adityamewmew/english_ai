@@ -82,3 +82,38 @@ export async function getModuleDetailAction(moduleId: string) {
     return { success: false, error: err.message || "Gagal memuat detail modul" };
   }
 }
+
+export interface StepProgressPayload {
+  currentStep: number;
+  unlockedStep: number;
+  completedSteps: number[];
+  isPracticeUnlocked: boolean;
+  isSpeakingComplete?: boolean;
+}
+
+export async function saveModuleStepProgressAction(
+  moduleId: string,
+  progress: StepProgressPayload
+) {
+  try {
+    const session = await getSession();
+    if (!session?.userId) return { success: false, error: "Unauthorized" };
+
+    const res = await fetch(`${API_URL}/api/curriculum/modules/${moduleId}/step-progress`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId: session.userId,
+        ...progress,
+      }),
+      cache: "no-store",
+    });
+
+    const json = await res.json();
+    return { success: json.success, data: json.data };
+  } catch (err: any) {
+    console.error("saveModuleStepProgressAction error:", err);
+    return { success: false, error: err.message };
+  }
+}
+

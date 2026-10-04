@@ -72,6 +72,31 @@ export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
       }),
     }
   )
+  .post(
+    "/modules/:id/step-progress",
+    async ({ params, body }) => {
+      return await curriculumService.saveStepProgress(body.userId, params.id, {
+        currentStep: body.currentStep,
+        unlockedStep: body.unlockedStep,
+        completedSteps: body.completedSteps,
+        isPracticeUnlocked: body.isPracticeUnlocked,
+        isSpeakingComplete: body.isSpeakingComplete ?? false,
+      });
+    },
+    {
+      params: t.Object({
+        id: t.String(),
+      }),
+      body: t.Object({
+        userId: t.String(),
+        currentStep: t.Number(),
+        unlockedStep: t.Number(),
+        completedSteps: t.Array(t.Number()),
+        isPracticeUnlocked: t.Boolean(),
+        isSpeakingComplete: t.Optional(t.Boolean()),
+      }),
+    }
+  )
   // Dedicated Module AI Tutor endpoints (strictly bound to module context)
   .get(
     "/modules/:id/tutor/greeting",

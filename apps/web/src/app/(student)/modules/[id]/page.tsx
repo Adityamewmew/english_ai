@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import {
@@ -26,6 +26,7 @@ import { useModuleTutor } from "@/hooks/use-module-tutor";
 import {
   getModuleDetailAction,
   submitModuleQuizAction,
+  saveModuleStepProgressAction,
 } from "../modules.actions";
 
 export default function ModuleDetailPage() {
@@ -49,6 +50,9 @@ export default function ModuleDetailPage() {
   const [isPracticeUnlocked, setIsPracticeUnlocked] = useState(false);
   const [isSpeakingComplete, setIsSpeakingComplete] = useState(false);
   const [speakingScore, setSpeakingScore] = useState<number>(85);
+
+  // Auto-save tracker
+  const isLoadedRef = useRef(false);
 
   // Quiz submission state
   const [userAnswers, setUserAnswers] = useState<Record<string, number>>({});
@@ -74,7 +78,7 @@ export default function ModuleDetailPage() {
     userId,
   });
 
-  // Load Module Detail
+  // Load Module Detail & Restore Checkpoint
   useEffect(() => {
     async function loadData() {
       try {
@@ -100,12 +104,43 @@ export default function ModuleDetailPage() {
               passed: true,
               results: [],
             });
+          } else {
+            // Restore from server DB stepProgress or LocalStorage
+            const dbProgress = res.data.userProgress?.stepProgress;
+            let localProgress = null;
+            try {
+              const saved = localStorage.getItem(`module_step_${moduleId}`);
+              if (saved) localProgress = JSON.parse(saved);
+            } catch {}
+
+            const activeProgress = dbProgress || localProgress;
+            if (activeProgress) {
+              if (activeProgress.unlockedStep) {
+                setUnlockedStep(Math.min(8, Math.max(1, activeProgress.unlockedStep)));
+              }
+              if (activeProgress.currentStep) {
+                setCurrentStep(Math.min(8, Math.max(1, activeProgress.currentStep)));
+              }
+              if (Array.isArray(activeProgress.completedSteps)) {
+                setCompletedSteps(activeProgress.completedSteps);
+              }
+              if (activeProgress.isPracticeUnlocked) {
+                setIsPracticeUnlocked(true);
+              }
+              if (activeProgress.isSpeakingComplete) {
+                setIsSpeakingComplete(true);
+              }
+            }
           }
         }
       } catch (err) {
         console.error("Gagal memuat detail modul:", err);
       } finally {
         setLoading(false);
+        // Izinkan auto-save setelah inisialisasi selesai
+        setTimeout(() => {
+          isLoadedRef.current = true;
+        }, 500);
       }
     }
 
@@ -113,6 +148,40 @@ export default function ModuleDetailPage() {
       loadData();
     }
   }, [moduleId]);
+
+  // Auto-Save Checkpoint: Instant LocalStorage + Debounced DB Save
+  useEffect(() => {
+    if (!isLoadedRef.current || loading || !moduleId || quizResult.passed) return;
+
+    const payload = {
+      currentStep,
+      unlockedStep,
+      completedSteps,
+      isPracticeUnlocked,
+      isSpeakingComplete,
+    };
+
+    try {
+      localStorage.setItem(`module_step_${moduleId}`, JSON.stringify(payload));
+    } catch {}
+
+    const timer = setTimeout(() => {
+      saveModuleStepProgressAction(moduleId, payload).catch((err) => {
+        console.warn("Auto-save progress error:", err);
+      });
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, [
+    currentStep,
+    unlockedStep,
+    completedSteps,
+    isPracticeUnlocked,
+    isSpeakingComplete,
+    loading,
+    moduleId,
+    quizResult.passed,
+  ]);
 
   const handleSelectAnswer = (qId: string | number, optionIndex: number) => {
     const key = qId !== undefined && qId !== null ? qId.toString() : optionIndex.toString();
@@ -138,6 +207,9 @@ export default function ModuleDetailPage() {
         });
         if (res.data.passed) {
           setCompletedSteps((prev) => Array.from(new Set([...prev, 8])));
+          try {
+            localStorage.removeItem(`module_step_${moduleId}`);
+          } catch {}
         }
       } else {
         alert(res.error || "Gagal mengirim kuis");

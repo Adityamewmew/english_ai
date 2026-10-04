@@ -84,6 +84,13 @@ export const userModuleProgress = pgTable("user_module_progress", {
   moduleId: varchar("module_id", { length: 20 }).notNull(),
   status: varchar("status", { length: 20 }).notNull().default("locked"), // "locked" | "unlocked" | "completed"
   score: integer("score"),
+  stepProgress: jsonb("step_progress").$type<{
+    currentStep: number;
+    unlockedStep: number;
+    completedSteps: number[];
+    isPracticeUnlocked: boolean;
+    isSpeakingComplete: boolean;
+  }>(),
   completedAt: timestamp("completed_at"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),

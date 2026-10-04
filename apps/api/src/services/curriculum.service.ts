@@ -358,6 +358,58 @@ export class CurriculumService {
       return Response.buildErrorService((e as Error).message);
     }
   }
+
+  async saveStepProgress(
+    userId: string,
+    moduleId: string,
+    stepProgress: {
+      currentStep: number;
+      unlockedStep: number;
+      completedSteps: number[];
+      isPracticeUnlocked: boolean;
+      isSpeakingComplete: boolean;
+    }
+  ): Promise<ServiceResult<any>> {
+    try {
+      const [existing] = await db
+        .select()
+        .from(userModuleProgress)
+        .where(
+          and(
+            eq(userModuleProgress.userId, userId),
+            eq(userModuleProgress.moduleId, moduleId)
+          )
+        )
+        .limit(1);
+
+      if (existing) {
+        const newStatus = existing.status === "completed" ? "completed" : "unlocked";
+        await db
+          .update(userModuleProgress)
+          .set({
+            status: newStatus,
+            stepProgress,
+            updatedAt: new Date(),
+          })
+          .where(eq(userModuleProgress.id, existing.id));
+      } else {
+        await db.insert(userModuleProgress).values({
+          id: crypto.randomUUID(),
+          userId,
+          moduleId,
+          status: "unlocked",
+          stepProgress,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        });
+      }
+
+      return Response.buildSuccess({ saved: true });
+    } catch (e) {
+      console.error("saveStepProgress error:", e);
+      return Response.buildErrorService((e as Error).message);
+    }
+  }
 }
 
 export const curriculumService = new CurriculumService();
