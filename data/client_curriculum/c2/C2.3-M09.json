@@ -23,7 +23,45 @@
         "explanation": "Penjelasan jebakan makna tersirat (subtext) atau pergeseran konotasi yang membedakan penutur mahir biasa dengan grandmaster C2.",
         "wrong": "Contoh kalimat yang terdengar kaku, klise, atau secara register kurang luwes",
         "correct": "Contoh kalimat berbobot sastra atau diplomasi Cambridge C2 Proficiency"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Philosophy of Mind, Epistemology & Radical Skepticism in Modern Science\"?",
+          "options": [
+            "Rule 1 with structural nuance and stylistic impact",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Penjelasan mendalam dalam bahasa Indonesia yang menguraikan hipotesis simulasi Bostrom, konsep solipsisme, keterbatasan empirisme, serta pertanyaan ontologis tentang realitas fisik, disertai contoh aplikasi retoris pada debat akademik tingkat C2."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Philosophy of Mind, Epistemology & Radical Skepticism in Modern Science\"?",
+          "options": [
+            "Contoh kalimat yang terdengar kaku",
+            "Contoh kalimat berbobot sastra atau diplomasi Cambridge C2 Proficiency",
+            "klise"
+          ],
+          "correctIndex": 1,
+          "explanation": "Penjelasan jebakan makna tersirat (subtext) atau pergeseran konotasi yang membedakan penutur mahir biasa dengan grandmaster C2."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nPerson A: \"The crux lies in the heuristic plausibility of computational substrates capable of rendering conscious experiences indistinguishable from ours.\"\nPerson B: \"[...]\"",
+          "options": [
+            "Nevertheless, the inexorable march of empirical methodology imposes a hard limit on such conjectures, demanding falsifiability.",
+            "Contoh kalimat yang terdengar kaku",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Nevertheless, the inexorable march of empirical methodology imposes a hard limit on such conjectures, demanding falsifiability.\" (\"Namun, kemajuan tak terelakkan metodologi empiris menuntut batas keras pada dugaan semacam itu, menuntut dapat difalsifikasi.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Person B."
+        }
+      ]
     },
     "vocab": [
       {

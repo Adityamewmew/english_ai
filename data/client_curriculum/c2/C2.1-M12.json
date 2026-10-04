@@ -20,7 +20,45 @@
         "explanation": "Pemula sering bingung kapan menggunakan future perfect (untuk tindakan yang akan selesai) dan future continuous (untuk tindakan yang akan sedang berlangsung). Future perfect menekankan penyelesaian, sedangkan future continuous menekankan proses yang sedang terjadi.",
         "wrong": "By next week, I will be finishing the project.",
         "correct": "By next week, I will have finished the project. (menekankan penyelesaian)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Mastery of Rhetoric, Nuance & Proficiency Exam\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Future Perfect: 'will have + past participle' untuk tindakan yang akan selesai sebelum ..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas penggunaan future perfect dan future continuous untuk membicarakan tindakan yang akan selesai atau sedang berlangsung di masa depan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Mastery of Rhetoric, Nuance & Proficiency Exam\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "By next week",
+            "I will be finishing the project",
+            "By next week"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering bingung kapan menggunakan future perfect (untuk tindakan yang akan selesai) dan future continuous (untuk tindakan yang akan sedang berlangsung). Future perfect menekankan penyelesaian, sedangkan future continuous menekankan proses yang sedang terjadi."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJake: \"Me too. Remind me what time we get there! I'm absolutely starving. Let's go for some fish and chips, doesn't it?\"\nMeg: \"[...]\"",
+          "options": [
+            "Ha, that's right! I'm dying to have some ice cream, too. But that'll have to wait until after our fish and chips – the bus is pulling over. Hang on, this is our stop. Why have we stopped just here?",
+            "Sorry, I forgot my keys at home.",
+            "By next week"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Ha, that's right! I'm dying to have some ice cream, too. But that'll have to wait until after our fish and chips – the bus is pulling over. Hang on, this is our stop. Why have we stopped just here?\" (\"Ha, benar! Aku sangat ingin makan es krim juga. Tapi itu harus menunggu setelah fish and chips kita – busnya sedang berhenti. Tunggu, ini perhentian kita. Kenapa kita berhenti di sini saja?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Meg."
+        }
+      ]
     },
     "vocab": [
       {

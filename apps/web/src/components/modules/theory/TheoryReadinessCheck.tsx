@@ -28,10 +28,46 @@ export interface TheoryReadinessCheckProps {
     correct: string;
   };
   vocabItems?: VocabItem[];
+  dialogueLines?: Array<{ speaker: string; text: string; translation?: string }>;
+  moduleTitle?: string;
+  orderIndex?: number;
+  summaryText?: string;
+  bestExample?: string;
   onNext: () => void;
   onCompleteStep?: () => void;
   onAwardXp?: (amount: number, reason?: string) => void;
   onPenalizeWrong?: () => void;
+}
+
+// Deterministic pseudo-random Fisher-Yates shuffle using numeric seed
+function deterministicShuffle<T>(
+  items: T[],
+  correctItem: T,
+  seed: number
+): { shuffled: T[]; correctIndex: number } {
+  const result = [...items];
+  if (!result.includes(correctItem)) {
+    result[0] = correctItem;
+  }
+
+  let state = Math.abs(seed) || 12345;
+  const nextRand = () => {
+    state = (state * 1664525 + 1013904223) % 4294967296;
+    return state / 4294967296;
+  };
+
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(nextRand() * (i + 1));
+    const temp = result[i];
+    result[i] = result[j];
+    result[j] = temp;
+  }
+
+  const foundIndex = result.indexOf(correctItem);
+  return {
+    shuffled: result,
+    correctIndex: foundIndex >= 0 ? foundIndex : 0,
+  };
 }
 
 export function TheoryReadinessCheck({
@@ -39,6 +75,11 @@ export function TheoryReadinessCheck({
   rules = [],
   commonTrap,
   vocabItems = [],
+  dialogueLines = [],
+  moduleTitle = "",
+  orderIndex = 1,
+  summaryText = "",
+  bestExample = "",
   onNext,
   onCompleteStep,
   onAwardXp,
@@ -49,73 +90,249 @@ export function TheoryReadinessCheck({
       return questions;
     }
 
-    // Dynamic Generation Engine for any module
+    const cleanTitle = moduleTitle.replace(/^(A\d-M\d+:|Module \d+:)\s*/i, "").trim() || "Materi Ini";
     const generated: ReadinessQuestion[] = [];
+    const baseSeed = (orderIndex || 1) * 313 + cleanTitle.length * 17;
 
-    // Q1: Pengenalan Bentuk (Form Recognition)
-    let q1Prompt = "Manakah pasangan subjek dan kata kerja bantu (to be) yang tepat?";
-    let q1Options = ["I are", "She is", "They is"];
-    let q1Explanation = "Subjek 'She' berpasangan dengan 'is', 'I' dengan 'am', dan 'They' dengan 'are'.";
+    // Helper: extract clean first clause or short sentence
+    const cleanSentence = (str: string) => {
+      const first = str.split(/[\/,;\n]/)[0]?.trim() || str.trim();
+      return first.replace(/[0-9.:]+$/, "").trim();
+    };
+
+    // =========================================================================
+    // Q1: Pengenalan Bentuk & Pola (Form Recognition) — Unik per modul
+    // =========================================================================
+    const q1Seed = baseSeed + 101;
+    let q1Prompt = `Berdasarkan topik "${cleanTitle}", manakah pola kalimat yang tepat?`;
+    let rawQ1Options = ["Subject + Verb", "Subject + Auxiliary + Verb", "Verb + Subject"];
+    let correctQ1 = "Subject + Auxiliary + Verb";
+    let q1Explanation = "Perhatikan struktur dan susunan kata yang telah dipelajari pada materi ini.";
 
     if (rules.length > 0) {
-      const firstRule = typeof rules[0] === "string" ? rules[0] : (rules[0] as any).rule || "";
-      if (firstRule.toLowerCase().includes("not") || firstRule.toLowerCase().includes("negative")) {
-        q1Prompt = "Bagaimana pola kalimat negatif yang benar?";
-        q1Options = ["Subject + to be + not + complement", "Subject + not + to be + complement", "To be + subject + not"];
-        q1Explanation = "Dalam bentuk negatif, kata 'not' diletakkan tepat setelah kata kerja bantu (to be).";
+      const r0 = rules[0] as any;
+      if (typeof r0 === "object" && r0 !== null) {
+        if (r0.pattern && r0.example) {
+          const promptStems = [
+            `Pada topik "${cleanTitle}", manakah kalimat yang benar sesuai pola "${r0.pattern}"?`,
+            `Perhatikan pola "${r0.pattern}". Manakah kalimat yang tepat menerapkannya?`,
+            `Berdasarkan kaidah "${cleanTitle}", manakah contoh kalimat yang benar?`,
+          ];
+          q1Prompt = promptStems[q1Seed % promptStems.length];
+
+          const correctEx = cleanSentence(r0.example);
+          correctQ1 = correctEx;
+          const wrongCandidate = commonTrap?.wrong ? cleanSentence(commonTrap.wrong) : "";
+          const distractor1 = wrongCandidate && wrongCandidate !== correctEx
+            ? wrongCandidate
+            : correctEx.replace(/\b(am|is|are|was|were|will|should|must)\b/i, "");
+          const distractor2 = correctEx.replace(/\b([a-zA-Z]+ing|[a-zA-Z]+ed)\b/i, "to $1");
+
+          rawQ1Options = [correctEx, distractor1 || "I studying now", distractor2 || "She to working"];
+          q1Explanation = `Pola yang tepat: "${r0.pattern}". Contoh: "${r0.example}". ${r0.meaning ? `(${r0.meaning})` : ""}`;
+        } else if (r0.pronoun && r0.example) {
+          const promptStems = [
+            `Manakah contoh penerapan yang benar untuk subjek "${r0.pronoun}"?`,
+            `Bagaimana kalimat yang tepat menggunakan subjek "${r0.pronoun}" pada materi ini?`,
+            `Pilihlah kalimat yang menggunakan pasangan subjek "${r0.pronoun}" secara benar:`,
+          ];
+          q1Prompt = promptStems[q1Seed % promptStems.length];
+
+          const correctEx = cleanSentence(r0.example);
+          correctQ1 = correctEx;
+          const distractor1 = correctEx.replace(/\b(was|were|am|is|are)\b/i, (m) =>
+            m.toLowerCase() === "was" ? "were" : m.toLowerCase() === "is" ? "are" : "is"
+          );
+          const distractor2 = commonTrap?.wrong ? cleanSentence(commonTrap.wrong) : "They was happy.";
+
+          rawQ1Options = [correctEx, distractor1, distractor2];
+          q1Explanation = `Subjek "${r0.pronoun}" ${r0.meaning ? `(${r0.meaning})` : ""} digunakan dalam kalimat: "${r0.example}".`;
+        } else if (r0.example) {
+          q1Prompt = `Manakah struktur kalimat yang benar pada topik "${cleanTitle}"?`;
+          const correctEx = cleanSentence(r0.example);
+          correctQ1 = correctEx;
+          const distractor1 = commonTrap?.wrong ? cleanSentence(commonTrap.wrong) : "Bentuk kalimat tanpa kata kerja";
+          const distractor2 = correctEx.replace(/\s+\w+$/, "");
+
+          rawQ1Options = [correctEx, distractor1, distractor2];
+          q1Explanation = `Bentuk yang benar: "${r0.example}".`;
+        }
+      } else if (typeof r0 === "string") {
+        q1Prompt = `Berdasarkan kaidah pada "${cleanTitle}", manakah pernyataan kaidah yang benar?`;
+        correctQ1 = r0.length > 90 ? r0.slice(0, 87) + "..." : r0;
+        rawQ1Options = [
+          correctQ1,
+          "Kaidah ini tidak memerlukan pasangan subjek dan predikat",
+          "Bentuk kalimat bebas tanpa memperhatikan pola tenses"
+        ];
+        q1Explanation = r0;
       }
+    } else if (bestExample) {
+      q1Prompt = `Manakah contoh kalimat yang tepat pada materi "${cleanTitle}"?`;
+      correctQ1 = bestExample;
+      rawQ1Options = [
+        bestExample,
+        bestExample.replace(/\b(is|are|was|were|am)\b/gi, ""),
+        bestExample.replace(/\b([a-z]+ing)\b/gi, "to $1")
+      ];
+      q1Explanation = `Contoh kalimat yang benar: "${bestExample}".`;
     }
 
+    const q1Shuffled = deterministicShuffle(rawQ1Options, correctQ1, q1Seed);
     generated.push({
       id: 1,
       category: "Pengenalan Bentuk",
       prompt: q1Prompt,
-      options: q1Options,
-      correctIndex: 1,
+      options: q1Shuffled.shuffled,
+      correctIndex: q1Shuffled.correctIndex,
       explanation: q1Explanation,
     });
 
-    // Q2: Pemahaman Aturan / Common Trap
+    // =========================================================================
+    // Q2: Pemahaman Aturan & Jebakan (Rule & Trap Mastery) — Unik per modul
+    // =========================================================================
+    const q2Seed = baseSeed + 202;
     if (commonTrap?.correct && commonTrap?.wrong) {
+      const promptStems = [
+        `Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik ini?`,
+        `Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku bahasa Inggris?`,
+        `Perhatikan peringatan jebakan materi ini. Manakah kalimat yang SUDAH TEPAT?`,
+      ];
+      const q2Prompt = promptStems[q2Seed % promptStems.length];
+
+      const correctSentence = cleanSentence(commonTrap.correct);
+      const wrongParts = commonTrap.wrong.split(/[\/,;\n]/).map((s) => cleanSentence(s)).filter(Boolean);
+      const wrongSentence1 = wrongParts[0] || cleanSentence(commonTrap.wrong);
+
+      let wrongSentence2 = wrongParts[1] || "";
+      if (!wrongSentence2 || wrongSentence2 === wrongSentence1) {
+        if (/\b(am|is|are)\b/i.test(correctSentence)) {
+          wrongSentence2 = correctSentence.replace(/\b(am|is|are)\b/gi, (m) => (m.toLowerCase() === "is" ? "are" : "is"));
+        } else if (/\b(was|were)\b/i.test(correctSentence)) {
+          wrongSentence2 = correctSentence.replace(/\b(was|were)\b/gi, (m) => (m.toLowerCase() === "was" ? "were" : "was"));
+        } else if (/\b(should|must)\b/i.test(correctSentence)) {
+          wrongSentence2 = correctSentence.replace(/\b(should|must)\b/gi, "$1 to");
+        } else if (/\b(than)\b/i.test(correctSentence)) {
+          wrongSentence2 = correctSentence.replace(/\bthan\b/gi, "then");
+        } else if (/\b(going to)\b/i.test(correctSentence)) {
+          wrongSentence2 = correctSentence.replace(/\bgoing to\b/gi, "going");
+        } else {
+          wrongSentence2 = wrongSentence1.length > 5 ? wrongSentence1 + " right now" : "Kalimat dengan urutan kata salah";
+        }
+      }
+
+      const q2Shuffled = deterministicShuffle([correctSentence, wrongSentence1, wrongSentence2], correctSentence, q2Seed);
       generated.push({
         id: 2,
         category: "Pemahaman Aturan",
-        prompt: `Manakah kalimat yang benar dan menghindari kesalahan umum pada modul ini?`,
-        options: [commonTrap.wrong, commonTrap.correct, "She don't from Japan"],
-        correctIndex: 1,
-        explanation: commonTrap.explanation || "Perhatikan pasangan subjek dan kata bantu yang sesuai aturan.",
+        prompt: q2Prompt,
+        options: q2Shuffled.shuffled,
+        correctIndex: q2Shuffled.correctIndex,
+        explanation: commonTrap.explanation || "Perhatikan pasangan kata dan struktur yang sesuai aturan tata bahasa baku.",
       });
     } else {
+      const summarySnippet = summaryText && summaryText.length > 20
+        ? summaryText.split(".")[0] + "."
+        : `Menyatakan fungsi dan pola komunikatif dari ${cleanTitle}`;
+
+      const q2Shuffled = deterministicShuffle(
+        [
+          summarySnippet,
+          "Hanya digunakan untuk perintah formal dan pengumuman resmi",
+          "Hanya digunakan dalam penulisan sastra kuno",
+        ],
+        summarySnippet,
+        q2Seed
+      );
+
       generated.push({
         id: 2,
         category: "Pemahaman Aturan",
-        prompt: "Kapan pola kalimat ini paling tepat digunakan?",
-        options: [
-          "Menceritakan identitas, asal, atau fakta dasar",
-          "Membicarakan rencana yang sudah pasti di masa depan",
-          "Mengungkapkan perintah tegas kepada orang lain",
-        ],
-        correctIndex: 0,
-        explanation: "Simple Present dengan to be digunakan untuk menyatakan fakta, identitas diri, dan kondisi saat ini.",
+        prompt: `Kapan pola kalimat pada topik "${cleanTitle}" ini paling tepat digunakan?`,
+        options: q2Shuffled.shuffled,
+        correctIndex: q2Shuffled.correctIndex,
+        explanation: summaryText || "Pola ini digunakan sesuai konteks dan fungsi komunikatif yang dipelajari.",
       });
     }
 
-    // Q3: Penerapan Konteks (Context Application)
+    // =========================================================================
+    // Q3: Penerapan Konteks (Context Application) — Unik dialog & skenario per modul
+    // =========================================================================
+    const q3Seed = baseSeed + 303;
+    let q3Prompt = `Lengkapi kalimat kontekstual berikut:`;
+    let rawQ3Options = ["Option A", "Option B", "Option C"];
+    let correctQ3 = "Option A";
+    let q3Explanation = "Pilihlah bentuk yang paling alami dan tepat sesuai konteks percakapan.";
+
+    if (dialogueLines && dialogueLines.length >= 2) {
+      // Variasikan giliran percakapan jika dialog panjang: odd modules ambil giliran 2-3 jika ada
+      const useLaterTurn = dialogueLines.length >= 4 && q3Seed % 2 === 1;
+      const lineA = useLaterTurn ? dialogueLines[2] : dialogueLines[0];
+      const lineB = useLaterTurn ? dialogueLines[3] : dialogueLines[1];
+
+      const promptStems = [
+        `Lengkapi dialog berikut sesuai alur percakapan:\n${lineA.speaker}: "${lineA.text}"\n${lineB.speaker}: "[...]"`,
+        `Dalam situasi percakapan berikut:\n${lineA.speaker}: "${lineA.text}"\nBagaimana respon ${lineB.speaker} yang paling alami?`,
+        `Pilihlah kelanjutan percakapan yang tepat:\n${lineA.speaker}: "${lineA.text}"\n${lineB.speaker}: "[...]"`,
+      ];
+      q3Prompt = promptStems[q3Seed % promptStems.length];
+
+      correctQ3 = lineB.text;
+      const distractorA = commonTrap?.wrong ? cleanSentence(commonTrap.wrong) : "I don't think so.";
+      const distractorB = "Sorry, I am not ready.";
+
+      rawQ3Options = [correctQ3, distractorA, distractorB];
+      q3Explanation = `Respon "${correctQ3}" ${lineB.translation ? `("${lineB.translation}")` : ""} adalah jawaban yang tepat dan alami sesuai alur percakapan.`;
+    } else if (vocabItems && vocabItems.length > 0) {
+      const vocabIndex = q3Seed % vocabItems.length;
+      const targetVocab = vocabItems.find((_, idx) => idx === vocabIndex && _.example) ||
+        vocabItems.find((v) => v.example && v.example.length > 10) ||
+        vocabItems[0];
+      const word = targetVocab.word;
+      const ex = targetVocab.example || `I practice with ${word} every day.`;
+      const regex = new RegExp(`\\b${word}\\b`, "i");
+      const blanked = ex.replace(regex, "[...]");
+
+      q3Prompt = `Lengkapi kalimat dengan kosakata yang tepat:\n"${blanked}" (Petunjuk arti: ${targetVocab.meaning || word})`;
+      correctQ3 = word;
+      const distractorA = word.endsWith("ing") ? word.replace(/ing$/, "") : word + "s";
+      const otherVocab = vocabItems.find((v) => v.word !== word);
+      const distractorB = otherVocab?.word || "other";
+
+      rawQ3Options = [correctQ3, distractorA, distractorB];
+      q3Explanation = `Kata yang tepat adalah "${correctQ3}" yang bermakna "${targetVocab.meaning || ""}".`;
+    } else if (bestExample) {
+      const match = bestExample.match(/\b(am|is|are|was|were|will|should|must|have|has)\b/i);
+      if (match) {
+        const aux = match[0];
+        const blanked = bestExample.replace(new RegExp(`\\b${aux}\\b`, "i"), "[...]");
+        q3Prompt = `Lengkapi kalimat kontekstual berikut:\n"${blanked}"`;
+        correctQ3 = aux;
+        const alt1 = aux.toLowerCase() === "was" ? "were" : aux.toLowerCase() === "is" ? "are" : aux.toLowerCase() === "am" ? "is" : "be";
+        const alt2 = aux.toLowerCase() === "were" ? "was" : aux.toLowerCase() === "are" ? "is" : "have";
+
+        rawQ3Options = [aux, alt1, alt2];
+        q3Explanation = `Bentuk yang benar adalah "${aux}" sesuai dengan subjek dan tata bahasa pada kalimat tersebut.`;
+      } else {
+        q3Prompt = `Perhatikan kalimat berikut: "${bestExample}". Manakah bentuk kalimat yang benar?`;
+        correctQ3 = bestExample;
+        rawQ3Options = [bestExample, bestExample.replace(/\s+\w+$/, ""), "Bentuk tata bahasa salah"];
+        q3Explanation = `Kalimat yang tepat adalah "${bestExample}".`;
+      }
+    }
+
+    const q3Shuffled = deterministicShuffle(rawQ3Options, correctQ3, q3Seed);
     generated.push({
       id: 3,
       category: "Penerapan Konteks",
-      prompt: `Lengkapi dialog: "Are you from Jakarta?" : "No, [...]"`,
-      options: [
-        "I'm from Bandung.",
-        "I is from Bandung.",
-        "I are from Bandung.",
-      ],
-      correctIndex: 0,
-      explanation: "Jawaban yang tepat menggunakan subjek 'I' dan to be 'am' (I'm).",
+      prompt: q3Prompt,
+      options: q3Shuffled.shuffled,
+      correctIndex: q3Shuffled.correctIndex,
+      explanation: q3Explanation,
     });
 
     return generated;
-  }, [questions, rules, commonTrap, vocabItems]);
+  }, [questions, rules, commonTrap, vocabItems, dialogueLines, moduleTitle, orderIndex, summaryText, bestExample]);
 
   const [answers, setAnswers] = useState<Record<number, number>>({});
 

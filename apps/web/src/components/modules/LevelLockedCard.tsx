@@ -11,6 +11,7 @@ interface LevelLockedCardProps {
   cefr: string;
   description: string;
   lockReason?: string | null;
+  remainingModules?: number;
 }
 
 export function LevelLockedCard({
@@ -18,6 +19,7 @@ export function LevelLockedCard({
   cefr,
   description,
   lockReason,
+  remainingModules,
 }: LevelLockedCardProps) {
   return (
     <Card
@@ -44,7 +46,10 @@ export function LevelLockedCard({
           <div className="flex items-center gap-2 text-xs text-amber-300/90 bg-amber-500/10 border border-amber-500/20 rounded-xl px-3.5 py-2.5 max-w-md">
             <ShieldAlert className="w-4 h-4 shrink-0 text-amber-400" />
             <span>
-              {lockReason || "Selesaikan seluruh modul Level 1 dan Ujian Akhir (skor min 75%) untuk membuka level ini."}
+              {lockReason ||
+                (remainingModules !== undefined && remainingModules > 0
+                  ? `Selesaikan ${remainingModules} modul lagi dan Ujian Akhir (skor min 75%) untuk membuka level ini.`
+                  : "Selesaikan seluruh modul sebelumnya dan Ujian Akhir (skor min 75%) untuk membuka level ini.")}
             </span>
           </div>
         </div>

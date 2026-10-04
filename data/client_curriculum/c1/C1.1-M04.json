@@ -20,7 +20,45 @@
         "explanation": "Banyak pemula bingung antara 'used to (do)' yang menunjukkan kebiasaan masa lalu yang sudah berhenti, dengan 'be/get used to (doing)' yang menunjukkan kebiasaan atau familiaritas saat ini. Perhatikan struktur setelah 'to': jika diikuti verb dasar, gunakan 'used to'. Jika diikuti gerund (verb-ing) atau noun, gunakan 'be/get used to'.",
         "wrong": "I used to wake up early, but now I'm used to wake up late.",
         "correct": "I used to wake up early, but now I'm used to waking up late."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Modals of Deduction & Speculation\"?",
+          "options": [
+            "'used to (do)' / 'be used to (doing)' - untuk membicarakan situasi di masa lalu yang se...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas perbedaan penting antara 'be/get used to (doing)' yang menunjukkan kebiasaan atau familiaritas dengan situasi, versus 'used to (do)' yang menjelaskan kebiasaan di masa lalu yang tidak lagi terjadi."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Modals of Deduction & Speculation\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I used to wake up early",
+            "I used to wake up early",
+            "but now I'm used to wake up late"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak pemula bingung antara 'used to (do)' yang menunjukkan kebiasaan masa lalu yang sudah berhenti, dengan 'be/get used to (doing)' yang menunjukkan kebiasaan atau familiaritas saat ini. Perhatikan struktur setelah 'to': jika diikuti verb dasar, gunakan 'used to'. Jika diikuti gerund (verb-ing) atau noun, gunakan 'be/get used to'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nTeacher: \"OK, everyone, so this is what I want you to do by Friday, OK? A short story, of five hundred words.\"\nEmma: \"[...]\"",
+          "options": [
+            "Five hundred words? We can't be serious!",
+            "I used to wake up early",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Five hundred words? We can't be serious!\" (\"Lima ratus kata? Kita tidak bisa serius!\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Emma."
+        }
+      ]
     },
     "vocab": [
       {

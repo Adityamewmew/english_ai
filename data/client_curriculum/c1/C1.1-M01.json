@@ -29,7 +29,45 @@
         "explanation": "Pemula sering bingung membedakan 'remember/forget + gerund' dan 'remember/forget + infinitive'. Yang perlu diingat: gerund untuk kejadian yang SUDAH terjadi (masa lalu), infinitive untuk yang BELUM/HARUS terjadi (masa depan atau kewajiban).",
         "wrong": "Don't forget buying food for my packed lunch tomorrow, Mum.",
         "correct": "Don't forget to buy food for my packed lunch tomorrow, Mum."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"Verbs with Gerund & Infinitive\", bagaimana perubahan atau padanan yang benar untuk \"imagine, feel like, suggest, practice, miss, can't stand, enjoy, detest, don't mind\"?",
+          "options": [
+            "Tidak ada perubahan tenses pada imagine, feel like, suggest, practice, miss, can't stand, enjoy, detest, don't mind",
+            "Contoh",
+            "imagine, feel like, suggest, practice, miss, can't stand, enjoy, detest, don't mind selalu dihilangkan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Dalam materi ini: imagine, feel like, suggest, practice, miss, can't stand, enjoy, detest, don't mind berubah atau berpadanan menjadi \"Contoh\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Verbs with Gerund & Infinitive\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "Don't forget to buy food for my packed lunch tomorrow",
+            "Don't forget buying food for my packed lunch tomorrow",
+            "Mum"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering bingung membedakan 'remember/forget + gerund' dan 'remember/forget + infinitive'. Yang perlu diingat: gerund untuk kejadian yang SUDAH terjadi (masa lalu), infinitive untuk yang BELUM/HARUS terjadi (masa depan atau kewajiban)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"It's been such a busy week.\"\nLiam: \"[...]\"",
+          "options": [
+            "Don't forget buying food for my packed lunch tomorrow",
+            "Sorry, I forgot my keys at home.",
+            "Too right. So many things to do."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Too right. So many things to do.\" (\"Benar sekali. Banyak hal yang harus dilakukan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Liam."
+        }
+      ]
     },
     "vocab": [
       {

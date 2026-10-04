@@ -23,7 +23,45 @@
         "explanation": "Penutur tingkat mahir sering menggunakan modal dengan benar secara gramatikal namun gagal menangkap gradasi epistemik halus yang membedakan argumen kuat dari argumen lemah. Misalnya, menggunakan 'may' ketika 'might conceivably' lebih tepat untuk menunjukkan kemungkinan yang sangat lemah, atau menggunakan 'must' ketika 'would necessarily' lebih sesuai untuk kebutuhan logis daripada empiris. Pada tingkat C2, Anda harus menguasai seluruh spektrum dari kepastian absolut hingga kemungkinan paling spekulatif, dan memilih instrumen modal yang tepat untuk setiap nuansa argumentatif.",
         "wrong": "The argument must be valid because the premises are true.",
         "correct": "The argument would necessarily be valid were the premises indeed to obtain, though one might reasonably question whether they do in fact obtain."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Masterful Epistemic & Deontic Modality in Philosophical Argumentation\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Modalitas epistemik tingkat tinggi menggunakan konstruksi berlapis untuk menunjukkan de..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Modalitas epistemik mengekspresikan gradasi kepastian pengetahuan (certainty, probability, possibility), sementara modalitas deontik mengkomunikasikan obligasi, permisi, dan larangan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Masterful Epistemic & Deontic Modality in Philosophical Argumentation\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "The argument would necessarily be valid was the premises indeed to obtain",
+            "The argument must be valid because the premises are true",
+            "The argument would necessarily be valid were the premises indeed to obtain"
+          ],
+          "correctIndex": 2,
+          "explanation": "Penutur tingkat mahir sering menggunakan modal dengan benar secara gramatikal namun gagal menangkap gradasi epistemik halus yang membedakan argumen kuat dari argumen lemah. Misalnya, menggunakan 'may' ketika 'might conceivably' lebih tepat untuk menunjukkan kemungkinan yang sangat lemah, atau menggunakan 'must' ketika 'would necessarily' lebih sesuai untuk kebutuhan logis daripada empiris. Pada tingkat C2, Anda harus menguasai seluruh spektrum dari kepastian absolut hingga kemungkinan paling spekulatif, dan memilih instrumen modal yang tepat untuk setiap nuansa argumentatif."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Ashworth: \"One might tentatively posit that the modal ontological argument suffers from a fatal equivocation between epistemic and metaphysical possibility.\"\nProf. Mehta: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I'm inclined to resist that characterization. Surely, if it is even conceivable that a maximally great being exists in some possible world, then by definition it must necessarily exist in all possible worlds, including the actual world.",
+            "The argument must be valid because the premises are true"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"I'm inclined to resist that characterization. Surely, if it is even conceivable that a maximally great being exists in some possible world, then by definition it must necessarily exist in all possible worlds, including the actual world.\" (\"Saya cenderung menolak karakterisasi tersebut. Tentu saja, jika bahkan dapat dibayangkan bahwa suatu makhluk dengan keagungan maksimal eksis di suatu dunia yang mungkin, maka menurut definisi ia harus niscaya eksis di semua dunia yang mungkin, termasuk dunia aktual.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Mehta."
+        }
+      ]
     },
     "vocab": [
       {

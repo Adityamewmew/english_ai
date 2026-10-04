@@ -21,7 +21,45 @@
         "explanation": "Pemula sering lupa menggunakan 'have + past participle' setelah modal verbs ketika berspekulasi tentang masa lalu. Mereka hanya menggunakan modal + verb biasa, yang sebenarnya untuk masa sekarang/masa depan.",
         "wrong": "They might visit us yesterday. (Salah - 'visit' adalah bentuk dasar, bukan past speculation)",
         "correct": "They might have visited us yesterday. (Benar - menggunakan 'might have + past participle' untuk spekulasi masa lalu)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Inversion with Negative Adverbials & Science\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Untuk spekulasi kemungkinan masa lalu: might have + past participle, may have + past pa...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara berspekulasi (speculating) menggunakan modal verbs untuk kejadian masa lalu, sekarang, dan masa depan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Inversion with Negative Adverbials & Science\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "They might visit us yesterday. (Salah - 'visit' adalah bentuk dasar",
+            "They might have visited us yesterday. (Benar - menggunakan 'might have + past participle' untuk spekulasi masa lalu)",
+            "bukan past speculation)"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering lupa menggunakan 'have + past participle' setelah modal verbs ketika berspekulasi tentang masa lalu. Mereka hanya menggunakan modal + verb biasa, yang sebenarnya untuk masa sekarang/masa depan."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJulie: \"We sleep very well in space. Can you imagine? You have a sleeping bag each, and when you get into it you float in the sleeping bag.\"\nTracy: \"[...]\"",
+          "options": [
+            "They might visit us yesterday. (Salah - 'visit' adalah bentuk dasar",
+            "Sorry, I forgot my keys at home.",
+            "Free-floating in the space station can be quite enjoyable, but the trips to and from the station can be a bit rough. I've heard it described as a train wreck followed by a car crash followed by falling off your bike."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Free-floating in the space station can be quite enjoyable, but the trips to and from the station can be a bit rough. I've heard it described as a train wreck followed by a car crash followed by falling off your bike.\" (\"Melayang bebas di stasiun luar angkasa bisa sangat menyenangkan, tapi perjalanan ke dan dari stasiun bisa cukup kasar. Aku pernah mendengarnya digambarkan seperti kecelakaan kereta diikuti kecelakaan mobil lalu jatuh dari sepeda.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tracy."
+        }
+      ]
     },
     "vocab": [
       {

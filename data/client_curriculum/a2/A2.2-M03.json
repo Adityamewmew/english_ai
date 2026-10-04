@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa menempatkan 'yet' di tengah kalimat seperti 'just' dan 'already'. Padahal 'yet' hampir selalu diletakkan di akhir kalimat, baik dalam kalimat tanya maupun negatif.",
         "wrong": "I haven't yet finished my homework.",
         "correct": "I haven't finished my homework yet."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Just, Already & Yet\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "JUST digunakan untuk kejadian yang baru saja terjadi (very recently). Formula: Subject ...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Present Perfect digunakan untuk menyampaikan kejadian yang baru saja terjadi atau pencapaian dalam hidup yang memiliki relevansi dengan saat ini."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Just, Already & Yet\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I haven't finished my homework yet",
+            "I haven't yet finished my homework always",
+            "I haven't yet finished my homework"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak siswa menempatkan 'yet' di tengah kalimat seperti 'just' dan 'already'. Padahal 'yet' hampir selalu diletakkan di akhir kalimat, baik dalam kalimat tanya maupun negatif."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Wow, congratulations! That's wonderful news. Have you moved to a new place yet?\"\nTom: \"[...]\"",
+          "options": [
+            "Yes, I have already found an apartment near the office. It's very convenient.",
+            "Sorry, I forgot my keys at home.",
+            "I haven't yet finished my homework"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Yes, I have already found an apartment near the office. It's very convenient.\" (\"Ya, aku sudah menemukan apartemen dekat kantor. Sangat praktis.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

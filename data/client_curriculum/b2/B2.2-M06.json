@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa level B2 secara otomatis menambahkan -s untuk orang ketiga tunggal atau menggunakan 'is/are' karena terbiasa dengan grammar biasa. Dalam subjunctive mood, SELALU gunakan bare infinitive tanpa perubahan apapun, tidak peduli subjeknya.",
         "wrong": "The committee demands that he submits his resignation immediately. / It is vital that she is informed of the changes.",
         "correct": "The committee demands that he SUBMIT his resignation immediately. / It is vital that she BE informed of the changes."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"It is Vital That He Be Informed\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Formula dasar: Subject + demand/insist/recommend/suggest/require + that + subject + BAR...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Subjunctive mood adalah bentuk khusus dalam bahasa Inggris formal yang digunakan untuk menyatakan tuntutan, rekomendasi, atau keharusan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"It is Vital That He Be Informed\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "The committee demands that he SUBMIT his resignation immediately",
+            "It is vital that she is informed of the changes",
+            "The committee demands that he submits his resignation immediately"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak siswa level B2 secara otomatis menambahkan -s untuk orang ketiga tunggal atau menggunakan 'is/are' karena terbiasa dengan grammar biasa. Dalam subjunctive mood, SELALU gunakan bare infinitive tanpa perubahan apapun, tidak peduli subjeknya."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nGeneral Counsel: \"We need to finalize the board resolution for the merger. It's imperative that every director be notified at least 48 hours in advance.\"\nCorporate Secretary: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Understood. The regulations also stipulate that the resolution be filed with the regulatory authority within five business days.",
+            "The committee demands that he submits his resignation immediately"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Understood. The regulations also stipulate that the resolution be filed with the regulatory authority within five business days.\" (\"Dimengerti. Peraturan juga menetapkan bahwa resolusi harus diajukan ke otoritas pengawas dalam lima hari kerja.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Corporate Secretary."
+        }
+      ]
     },
     "vocab": [
       {

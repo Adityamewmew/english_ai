@@ -20,7 +20,45 @@
         "explanation": "Pemula sering salah menggunakan Present Continuous untuk kata kerja yang menyatakan keadaan atau pikiran (stative verbs) seperti know, believe, understand, need, like, hate, want. Kata kerja ini biasanya hanya digunakan dalam bentuk simple.",
         "wrong": "I'm knowing the answer. / I'm liking this shirt.",
         "correct": "I know the answer. / I like this shirt."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Past Simple & Buying Things\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Present Continuous: Subject + am/is/are + verb-ing. Contoh: They're doing some shopping..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas Present Continuous untuk menggambarkan kegiatan yang sedang berlangsung saat ini, perbedaan dengan Present Simple yang digunakan untuk kebiasaan, serta Verbs of Perception (look, sound, smell, taste) untuk memberikan opini."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Past Simple & Buying Things\"?",
+          "options": [
+            "I'm knowing the answer",
+            "I'm liking this shirt",
+            "I know the answer"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pemula sering salah menggunakan Present Continuous untuk kata kerja yang menyatakan keadaan atau pikiran (stative verbs) seperti know, believe, understand, need, like, hate, want. Kata kerja ini biasanya hanya digunakan dalam bentuk simple."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nTom: \"Hi, Maddy. Where are Mum and Dad?\"\nMaddy: \"[...]\"",
+          "options": [
+            "I'm knowing the answer",
+            "Sorry, I forgot my keys at home.",
+            "They're out. At the supermarket, I think. They're doing some shopping or something."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"They're out. At the supermarket, I think. They're doing some shopping or something.\" (\"Mereka keluar. Di supermarket, kurasa. Mereka sedang berbelanja atau semacamnya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Maddy."
+        }
+      ]
     },
     "vocab": [
       {

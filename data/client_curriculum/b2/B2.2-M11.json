@@ -23,7 +23,45 @@
         "explanation": "Banyak pelajar level B2 memberikan konsesi tanpa syarat atau menggunakan bahasa yang terlalu langsung sehingga terdengar konfrontatif. Hindari memberikan konsesi secara absolut tanpa mendapatkan sesuatu sebagai balasan.",
         "wrong": "We can lower the price to $50,000. That's our final offer.",
         "correct": "We'd be prepared to lower the price to $50,000, provided that you're able to confirm the order by the end of this week."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Concessions, Leverage & Overcoming Deadlocks\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Conditional Concessions: Gunakan struktur 'If... then...' atau 'Provided that... we cou...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Negosiasi tingkat lanjut memerlukan kemampuan untuk memberikan konsesi secara strategis, memanfaatkan leverage (daya tawar), dan memecahkan deadlock (kebuntuan)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Concessions, Leverage & Overcoming Deadlocks\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "We can lower the price to $",
+            "We'd be prepared to lower the price to $",
+            "000. That's our final offer"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pelajar level B2 memberikan konsesi tanpa syarat atau menggunakan bahasa yang terlalu langsung sehingga terdengar konfrontatif. Hindari memberikan konsesi secara absolut tanpa mendapatkan sesuatu sebagai balasan."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Michael, we seem to have reached an impasse on the pricing. Your quote of $200,000 is simply beyond our approved budget.\"\nMichael: \"[...]\"",
+          "options": [
+            "We can lower the price to $",
+            "Sorry, I forgot my keys at home.",
+            "I understand your position, Sarah. However, given that our software includes premium features and 24/7 support, the price reflects the value we're offering. What if we were to explore a different approach?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"I understand your position, Sarah. However, given that our software includes premium features and 24/7 support, the price reflects the value we're offering. What if we were to explore a different approach?\" (\"Saya memahami posisi Anda, Sarah. Namun, mengingat perangkat lunak kami menyertakan fitur premium dan dukungan 24/7, harga tersebut mencerminkan nilai yang kami tawarkan. Bagaimana kalau kita coba pendekatan yang berbeda?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Michael."
+        }
+      ]
     },
     "vocab": [
       {

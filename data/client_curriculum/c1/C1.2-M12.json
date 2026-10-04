@@ -23,7 +23,45 @@
         "explanation": "Kesalahan paling umum adalah memulai parallel structure yang konsisten namun merusak pola di elemen terakhir dengan mengubah bentuk kata atau struktur kalimat. Ini menghancurkan ritme retoris dan membuat presentasi terdengar amatir. Perhatikan konsistensi bentuk kata: jika menggunakan gerund, semua elemen harus gerund; jika infinitive, semua harus infinitive; jika noun phrase, semua harus noun phrase dengan struktur serupa.",
         "wrong": "Our strategy focuses on reducing costs, to improve efficiency, and we will enhance customer satisfaction.",
         "correct": "Our strategy focuses on reducing costs, improving efficiency, and enhancing customer satisfaction."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Triads & Parallelism\"?",
+          "options": [
+            "Tricolon (Rule of Three): Kelompokkan ide dalam tiga elemen paralel untuk menciptakan r...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Retorika publik tingkat mahir memanfaatkan perangkat klasik yang telah terbukti efektif selama berabad-abad."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Triads & Parallelism\"?",
+          "options": [
+            "Our strategy focuses on reducing costs",
+            "Our strategy focuses on reducing costs",
+            "to improve efficiency"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kesalahan paling umum adalah memulai parallel structure yang konsisten namun merusak pola di elemen terakhir dengan mengubah bentuk kata atau struktur kalimat. Ini menghancurkan ritme retoris dan membuat presentasi terdengar amatir. Perhatikan konsistensi bentuk kata: jika menggunakan gerund, semua elemen harus gerund; jika infinitive, semua harus infinitive; jika noun phrase, semua harus noun phrase dengan struktur serupa."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"Good instinct, but let's refine the parallelism. Remove the repeated 'requires' after the first use—it creates unnecessary redundancy. Try: 'Digital transformation requires bold vision, strategic execution, and unwavering commitment.' See how the cadence flows more naturally?\"\nJames: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Our strategy focuses on reducing costs",
+            "That's significantly more elegant. What about incorporating antithesis to address stakeholder resistance? Many executives fear the cost of transformation."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"That's significantly more elegant. What about incorporating antithesis to address stakeholder resistance? Many executives fear the cost of transformation.\" (\"Itu jauh lebih elegan. Bagaimana dengan memasukkan antitesis untuk menangani resistensi stakeholder? Banyak eksekutif takut dengan biaya transformasi.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh James."
+        }
+      ]
     },
     "vocab": [
       {

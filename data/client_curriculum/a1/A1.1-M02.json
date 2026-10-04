@@ -22,7 +22,45 @@
         "explanation": "Pemula sering lupa menambahkan 'not' setelah 'be' dalam kalimat negatif, atau salah menyusun urutan kata dalam pertanyaan. Dalam pertanyaan, 'be' harus di depan subjek, bukan setelahnya.",
         "wrong": "She is not happy? / You is cold? / They not are tired.",
         "correct": "She isn't happy. / Are you cold? / They aren't tired."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Feelings, Adjectives & Questions\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Bentuk negatif 'to be': Subject + be + not + adjective. Contoh: I am not sad. / She isn..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara mengekspresikan perasaan dan membuat pertanyaan dasar dalam bahasa Inggris."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Feelings, Adjectives & Questions\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "She is not happy?",
+            "You is cold?",
+            "She isn't happy"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pemula sering lupa menambahkan 'not' setelah 'be' dalam kalimat negatif, atau salah menyusun urutan kata dalam pertanyaan. Dalam pertanyaan, 'be' harus di depan subjek, bukan setelahnya."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nConnor: \"Why are you bored?\"\nNick: \"[...]\"",
+          "options": [
+            "She is not happy?",
+            "Sorry, I forgot my keys at home.",
+            "Because there's nothing to do. Nothing to do at all."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Because there's nothing to do. Nothing to do at all.\" (\"Karena tidak ada yang bisa dilakukan. Tidak ada sama sekali.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Nick."
+        }
+      ]
     },
     "vocab": [
       {

@@ -25,7 +25,45 @@
         "explanation": "Banyak pelajar B2 menggunakan 'will' terlalu pasti untuk prediksi masa depan yang masih spekulatif. Dalam konteks debat AI dan tenaga kerja, gunakan 'may', 'might', 'could' untuk kemungkinan, dan 'will' hanya untuk prediksi yang sangat yakin atau fakta logis.",
         "wrong": "AI will definitely replace all human workers in the next decade.",
         "correct": "AI may replace certain categories of workers, though human roles will likely evolve rather than disappear entirely."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Artificial Intelligence, Automation & The Future of Human Labor\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Gunakan modal verbs untuk spekulasi masa depan: 'may/might/could replace', 'is likely t...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Modul ini membahas dampak revolusioner kecerdasan buatan (AI) dan otomatisasi terhadap pasar tenaga kerja global."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "AI may replace certain categories of workers",
+            "AI will definitely replace all human workers in the next decade always",
+            "AI will definitely replace all human workers in the next decade"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak pelajar B2 menggunakan 'will' terlalu pasti untuk prediksi masa depan yang masih spekulatif. Dalam konteks debat AI dan tenaga kerja, gunakan 'may', 'might', 'could' untuk kemungkinan, dan 'will' hanya untuk prediksi yang sangat yakin atau fakta logis."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMaya: \"Nevertheless, the transition period could be devastating for workers, particularly those in routine manual labor. What's your view on corporate responsibility in this disruption?\"\nDaniel: \"[...]\"",
+          "options": [
+            "AI will definitely replace all human workers in the next decade",
+            "Absolutely. Companies should invest in upskilling and reskilling programs. At our firm, we're committed to retraining employees whose positions are being automated rather than simply laying them off.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Absolutely. Companies should invest in upskilling and reskilling programs. At our firm, we're committed to retraining employees whose positions are being automated rather than simply laying them off.\" (\"Tentu saja. Perusahaan harus berinvestasi dalam program peningkatan dan pelatihan ulang keterampilan. Di perusahaan kami, kami berkomitmen untuk melatih kembali karyawan yang posisinya sedang diotomatisasi daripada hanya memberhentikan mereka.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Daniel."
+        }
+      ]
     },
     "vocab": [
       {

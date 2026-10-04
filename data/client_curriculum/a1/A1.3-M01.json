@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula mencampur aturan comparative dengan menambahkan more dan -er sekaligus, atau lupa menggunakan than setelah comparative adjective.",
         "wrong": "This bag is more cheaper than that one.",
         "correct": "This bag is cheaper than that one."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"Comparing People & Things\", bagaimana perubahan atau padanan yang benar untuk \"tall → taller than, big → bigger than, fast\"?",
+          "options": [
+            "Tidak ada perubahan tenses pada tall → taller than, big → bigger than, fast",
+            "faster than",
+            "tall → taller than, big → bigger than, fast selalu dihilangkan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Dalam materi ini: tall → taller than, big → bigger than, fast berubah atau berpadanan menjadi \"faster than\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Comparing People & Things\"?",
+          "options": [
+            "This bag is cheaper than that one",
+            "This bag is more cheaper than that one",
+            "This bag are cheaper than that one"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak pemula mencampur aturan comparative dengan menambahkan more dan -er sekaligus, atau lupa menggunakan than setelah comparative adjective."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLisa: \"How much did it cost? Is it more expensive than mine?\"\nAndi: \"[...]\"",
+          "options": [
+            "This bag is more cheaper than that one",
+            "Actually, it's cheaper than yours. I got it on sale.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Actually, it's cheaper than yours. I got it on sale.\" (\"Sebenarnya, lebih murah dari punyamu. Aku membelinya saat diskon.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Andi."
+        }
+      ]
     },
     "vocab": [
       {

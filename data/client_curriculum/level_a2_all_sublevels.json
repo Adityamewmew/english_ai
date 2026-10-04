@@ -34,7 +34,45 @@
             "explanation": "Banyak pemula lupa bahwa untuk subjek orang ketiga tunggal (he, she, it), verb harus ditambahkan -s atau -es. Begitu juga dalam kalimat negatif dan tanya, gunakan 'doesn't' bukan 'don't', dan jangan tambahkan -s pada verb setelah doesn't/does.",
             "wrong": "He play football. She don't like music. Does he plays guitar?",
             "correct": "He plays football. She doesn't like music. Does he play guitar?"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan kesukaan menggunakan aturan verb-ing?",
+              "options": [
+                "I love swimming.",
+                "I love to swimming.",
+                "I love swim."
+              ],
+              "correctIndex": 0,
+              "explanation": "Setelah kata kerja seperti 'love', 'like', 'hate', atau 'enjoy', kita harus menggunakan bentuk verb-ing (gerund) untuk menyatakan kesukaan."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang tepat untuk subjek orang ketiga tunggal (She) sesuai aturan Present Simple?",
+              "options": [
+                "She doesn't like playing tennis.",
+                "She doesn't likes playing tennis.",
+                "She don't like playing tennis."
+              ],
+              "correctIndex": 0,
+              "explanation": "Untuk subjek 'she', gunakan 'doesn't' dan kata kerja dasar 'like' (tanpa -s) setelahnya karena 'doesn't' sudah menunjukkan bentuk orang ketiga."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'What is your hobby?' 'I [...] collecting stamps.'",
+              "options": [
+                "enjoy",
+                "enjoy to",
+                "enjoy for"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kata kerja 'enjoy' diikuti langsung oleh bentuk -ing (gerund) untuk menyatakan kesukaan, tanpa tambahan kata depan seperti 'to' atau 'for'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -256,7 +294,45 @@
             "explanation": "Pemula sering salah menggunakan Present Continuous untuk kata kerja yang menyatakan keadaan atau pikiran (stative verbs) seperti know, believe, understand, need, like, hate, want. Kata kerja ini biasanya hanya digunakan dalam bentuk simple.",
             "wrong": "I'm knowing the answer. / I'm liking this shirt.",
             "correct": "I know the answer. / I like this shirt."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang menggunakan Present Continuous dengan benar untuk mendeskripsikan kegiatan yang sedang berlangsung saat ini.",
+              "options": [
+                "I am buying a new shirt at the department store right now.",
+                "I buy a new shirt at the department store right now.",
+                "I am buy a new shirt at the department store right now."
+              ],
+              "correctIndex": 0,
+              "explanation": "Present Continuous menggunakan pola 'am/is/are + verb-ing' untuk aksi yang sedang terjadi sekarang. Pilihan kedua salah karena menggunakan Present Simple, dan pilihan ketiga salah secara tata bahasa."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar dalam penggunaan kata kerja statif (stative verbs) seperti 'know' atau 'like'?",
+              "options": [
+                "I am knowing the price of this expensive bag.",
+                "I know the price of this expensive bag.",
+                "I am liking the color of this shirt very much."
+              ],
+              "correctIndex": 1,
+              "explanation": "Kata kerja statif seperti 'know' dan 'like' tidak digunakan dalam bentuk continuous. Bentuk yang benar adalah Present Simple: 'I know' dan 'I like'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'I'm looking for a gift for my sister. This blue shirt [...] great.'",
+              "options": [
+                "sounds",
+                "is sounding",
+                "sound"
+              ],
+              "correctIndex": 0,
+              "explanation": "Verbs of perception seperti 'sound' digunakan untuk memberikan opini dan tidak menggunakan bentuk continuous. Karena subjeknya 'This blue shirt' (singular), maka kata kerjanya adalah 'sounds'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -514,7 +590,45 @@
             "explanation": "Pemula sering salah menggunakan 'much' untuk countable nouns atau 'many' untuk uncountable nouns. Ingat: much untuk yang tidak bisa dihitung (air, gula, waktu), many untuk yang bisa dihitung (apel, mobil, orang).",
             "wrong": "How many sugar do you want? / There are much people here.",
             "correct": "How much sugar do you want? / There are many people here."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang menggunakan quantifier dengan tepat untuk benda yang bisa dihitung (countable) dan tidak bisa dihitung (uncountable)?",
+              "options": [
+                "I have an apple and some water.",
+                "I have a apples and any water.",
+                "I have some apple and a water."
+              ],
+              "correctIndex": 0,
+              "explanation": "An apple digunakan untuk countable singular, dan some water digunakan untuk uncountable noun dalam kalimat positif. Pilihan lain salah karena penggunaan a/an dan some/any yang tidak tepat."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang benar untuk menghindari kesalahan umum dalam penggunaan 'much' dan 'many'.",
+              "options": [
+                "How many sugar do you want in your coffee?",
+                "How much salt do you need for the recipe?",
+                "There are much people at the picnic."
+              ],
+              "correctIndex": 1,
+              "explanation": "Salt adalah uncountable noun, sehingga menggunakan 'how much' adalah tepat. Sugar seharusnya menggunakan 'how much', dan people seharusnya menggunakan 'many'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'The soup is [...]! I can't eat it because it burns my tongue.'",
+              "options": [
+                "too spicy",
+                "not enough spicy",
+                "too much spicy"
+              ],
+              "correctIndex": 0,
+              "explanation": "Struktur 'too + adjective' digunakan untuk menyatakan sesuatu yang berlebihan. 'Too spicy' adalah bentuk yang benar untuk menggambarkan rasa yang terlalu pedas."
+            }
+          ]
         },
         "vocab": [
           {
@@ -803,7 +917,45 @@
             "explanation": "Pemula sering salah menggunakan possessive adjective dan pronoun. Ingat: possessive adjective harus diikuti kata benda, sedangkan possessive pronoun berdiri sendiri tanpa kata benda.",
             "wrong": "That sandwich is my. / The book is your.",
             "correct": "That sandwich is mine. / The book is yours."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk menanyakan kepemilikan sebuah tas?",
+              "options": [
+                "Whose bag is this?",
+                "Whose this bag is?",
+                "Who's bag is this?"
+              ],
+              "correctIndex": 0,
+              "explanation": "Aturan 'Whose' adalah diikuti kata benda (Whose + noun). 'Who's' adalah singkatan dari 'who is', bukan kata tanya kepemilikan."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang benar untuk menyatakan bahwa buku itu adalah milikmu.",
+              "options": [
+                "The book is my.",
+                "The book is mine.",
+                "The book is your."
+              ],
+              "correctIndex": 1,
+              "explanation": "'Mine' adalah possessive pronoun yang berdiri sendiri, sedangkan 'my' dan 'your' adalah possessive adjective yang harus diikuti kata benda."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'Where were you yesterday?' 'I [...] at my aunt's house.'",
+              "options": [
+                "was",
+                "were",
+                "is"
+              ],
+              "correctIndex": 0,
+              "explanation": "Subjek 'I' menggunakan 'was' untuk menyatakan keadaan di masa lampau, sedangkan 'were' digunakan untuk 'you/we/they'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -1012,7 +1164,45 @@
             "explanation": "Pemula sering bingung kapan menggunakan adjective berakhiran -ed atau -ing. Ingat: -ed untuk perasaan orang (interested, bored, amazed), -ing untuk sifat benda/situasi yang menyebabkan perasaan itu (interesting, boring, amazing).",
             "wrong": "I'm boring when I wait for the bus.",
             "correct": "I'm bored when I wait for the bus. (karena yang merasa bosan adalah 'I', bukan 'bus' yang membosankan)"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan kejadian di masa lampau dalam bentuk negatif?",
+              "options": [
+                "We didn't finished the cleaning yesterday.",
+                "We didn't finish the cleaning yesterday.",
+                "We didn't to finish the cleaning yesterday."
+              ],
+              "correctIndex": 1,
+              "explanation": "Dalam Past Simple negatif, kita menggunakan 'didn't' diikuti oleh kata kerja bentuk dasar (base verb), bukan bentuk lampau (-ed) atau tambahan 'to'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang benar untuk menggambarkan perasaan seseorang terhadap sebuah situasi.",
+              "options": [
+                "I was really bored because the lecture was boring.",
+                "I was really boring because the lecture was bored.",
+                "I was really bored because the lecture was bored."
+              ],
+              "correctIndex": 0,
+              "explanation": "Adjective berakhiran -ed digunakan untuk perasaan seseorang (bored), sedangkan -ing digunakan untuk sifat situasi yang menyebabkan perasaan tersebut (boring)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'I can't find my keys anywhere. I am [...] them right now.'",
+              "options": [
+                "looking after",
+                "looking for",
+                "looking at"
+              ],
+              "correctIndex": 1,
+              "explanation": "'Looking for' berarti mencari sesuatu yang hilang, sedangkan 'looking at' berarti melihat sesuatu, dan 'looking after' berarti merawat."
+            }
+          ]
         },
         "vocab": [
           {
@@ -1220,7 +1410,45 @@
             "explanation": "Pemula sering lupa mengubah kata kerja menjadi bentuk lampau (verb 2) pada kalimat positif past simple, atau sebaliknya menggunakan verb 2 setelah 'didn't' pada kalimat negatif.",
             "wrong": "They go to Rome last year. / He didn't went to school yesterday.",
             "correct": "They went to Rome last year. / He didn't go to school yesterday."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang menggunakan struktur 'double genitive' dengan benar untuk menyatakan kepemilikan.",
+              "options": [
+                "She is a friend of mine.",
+                "She is a friend of me.",
+                "She is a my friend."
+              ],
+              "correctIndex": 0,
+              "explanation": "Struktur double genitive menggunakan kata ganti kepemilikan (mine, yours, hers, ours, theirs) setelah kata 'of' untuk menyatakan kepemilikan."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan kejadian di masa lampau dalam bentuk negatif?",
+              "options": [
+                "They didn't went to the party last night.",
+                "They didn't go to the party last night.",
+                "They not went to the party last night."
+              ],
+              "correctIndex": 1,
+              "explanation": "Dalam kalimat negatif Past Simple, kita harus menggunakan 'didn't' diikuti oleh kata kerja bentuk dasar (Verb 1), bukan Verb 2."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'Reporter: How did you meet? Sharon: Actually, we [...] in the water.'",
+              "options": [
+                "meet",
+                "met",
+                "meeting"
+              ],
+              "correctIndex": 1,
+              "explanation": "Karena pertanyaan menanyakan kejadian di masa lampau (menggunakan 'did'), jawaban harus menggunakan kata kerja bentuk lampau (Verb 2) dari 'meet', yaitu 'met'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -1442,7 +1670,45 @@
             "explanation": "Pemula sering tertukar antara 'mustn't' dan 'don't have to'. 'Mustn't' artinya DILARANG (prohibition), sedangkan 'don't have to' artinya TIDAK WAJIB tapi boleh dilakukan (no obligation).",
             "wrong": "You don't have to use mobile phones in class (maksudnya melarang)",
             "correct": "You mustn't use mobile phones in class (dilarang) ATAU You don't have to bring your laptop (tidak wajib, tapi boleh)"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang menggunakan modal verb 'should' dengan benar untuk memberikan saran?",
+              "options": [
+                "You should to clean your laptop screen.",
+                "You should clean your laptop screen.",
+                "You shoulds clean your laptop screen."
+              ],
+              "correctIndex": 1,
+              "explanation": "Setelah modal verb 'should', kita harus menggunakan kata kerja bentuk dasar (base form) tanpa tambahan 'to' atau akhiran '-s'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang tepat untuk menyatakan larangan keras (prohibition) di laboratorium komputer.",
+              "options": [
+                "You don't have to eat in the computer lab.",
+                "You don't have to bring food to the computer lab.",
+                "You mustn't eat in the computer lab."
+              ],
+              "correctIndex": 2,
+              "explanation": "'Mustn't' digunakan untuk menyatakan larangan keras (prohibition), sedangkan 'don't have to' berarti tidak wajib atau opsional."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi kalimat berikut untuk menyatakan kemiripan: \"That new device is very small and flat. It [...] a credit card.\"",
+              "options": [
+                "looks like",
+                "looks as",
+                "like looks"
+              ],
+              "correctIndex": 0,
+              "explanation": "'Looks like' adalah ekspresi yang tepat untuk menyatakan kemiripan visual (kelihatannya seperti)."
+            }
+          ]
         },
         "vocab": [
           {
@@ -1674,7 +1940,45 @@
             "explanation": "Pemula sering menggunakan past simple padahal ingin menggambarkan aksi yang sedang berlangsung di masa lalu. Past continuous harus dipakai untuk menunjukkan durasi atau aksi yang sedang terjadi.",
             "wrong": "Derek ran when he fell down",
             "correct": "Derek was running when he fell down"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang menggunakan Past Continuous dengan benar untuk menggambarkan aksi yang sedang berlangsung di masa lalu.",
+              "options": [
+                "They was playing football.",
+                "They were playing football.",
+                "They were play football."
+              ],
+              "correctIndex": 1,
+              "explanation": "Past Continuous menggunakan 'were' untuk subjek 'they' dan diikuti oleh kata kerja berakhiran -ing (playing)."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang tepat untuk menggambarkan aksi yang sedang berlangsung (latar belakang) saat aksi lain terjadi?",
+              "options": [
+                "I watched TV when the phone rang.",
+                "I was watching TV when the phone rang.",
+                "I was watch TV when the phone rang."
+              ],
+              "correctIndex": 1,
+              "explanation": "Gunakan Past Continuous (was watching) untuk aksi yang sedang berlangsung sebagai latar belakang, dan Past Simple (rang) untuk aksi yang memotongnya."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Pilih frasa yang benar untuk melengkapi kalimat: 'Every summer, my brother likes to [...] in the mountains.'",
+              "options": [
+                "go mountaineering",
+                "play mountaineering",
+                "do mountaineering"
+              ],
+              "correctIndex": 0,
+              "explanation": "Aturan untuk olahraga yang berakhiran -ing (seperti mountaineering) adalah menggunakan kata kerja 'go'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -1879,7 +2183,45 @@
             "explanation": "Banyak pemula salah menggunakan 'more' untuk semua kata sifat. Padahal kata sifat pendek (1 suku kata) hanya perlu tambahan -er, bukan 'more'.",
             "wrong": "Africa is more big than Europe.",
             "correct": "Africa is bigger than Europe."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilihlah kalimat yang menggunakan bentuk superlative yang tepat untuk kata sifat pendek.",
+              "options": [
+                "Mount Everest is the most high mountain in the world.",
+                "Mount Everest is the highest mountain in the world.",
+                "Mount Everest is the more high mountain in the world."
+              ],
+              "correctIndex": 1,
+              "explanation": "Untuk kata sifat pendek (1 suku kata), kita menambahkan akhiran '-est' (highest), bukan menggunakan 'most' atau 'more'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar untuk membandingkan suhu dua tempat?",
+              "options": [
+                "The Sahara desert is more hot than the local park.",
+                "The Sahara desert is hotter than the local park.",
+                "The Sahara desert is hoter than the local park."
+              ],
+              "correctIndex": 1,
+              "explanation": "Kata sifat pendek 'hot' memerlukan akhiran '-er' (hotter) saat membandingkan dua hal, bukan 'more'. Selain itu, ejaan yang benar adalah 'hotter' dengan dua huruf 't'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut tentang kemampuan bertahan hidup di alam liar: Tourist: 'Can you find water in the desert?' Guide: 'Yes, [...]'",
+              "options": [
+                "I can find it in the plants.",
+                "I can to find it in the plants.",
+                "I can finding it in the plants."
+              ],
+              "correctIndex": 0,
+              "explanation": "Setelah kata kerja bantu 'can', kita harus menggunakan kata kerja bentuk dasar (verb 1) tanpa tambahan 'to' atau akhiran '-ing'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -2096,7 +2438,45 @@
             "explanation": "Pemula sering bingung kapan menggunakan 'be going to' dan kapan menggunakan present continuous. Gunakan 'be going to' untuk rencana atau niat umum, tetapi gunakan present continuous untuk janji atau pengaturan spesifik yang sudah dibuat (biasanya dengan waktu yang jelas).",
             "wrong": "I go to the cinema tonight. / I'm going watch a movie.",
             "correct": "I'm going to the cinema tonight. (sudah ada rencana pasti) / I'm going to watch a movie. (niat umum)"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar dalam menggunakan struktur 'be going to' untuk menyatakan rencana masa depan?",
+              "options": [
+                "She is going to visit the harbour tomorrow.",
+                "She is go to visit the harbour tomorrow.",
+                "She going to visit the harbour tomorrow."
+              ],
+              "correctIndex": 0,
+              "explanation": "Struktur 'be going to' memerlukan bentuk 'be' (is/am/are) diikuti oleh 'going to' dan kata kerja dasar (base form). Pilihan pertama adalah yang paling tepat secara tata bahasa."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang paling tepat untuk menyatakan pengaturan yang sudah pasti (fixed arrangement) untuk malam ini.",
+              "options": [
+                "We are having dinner at the restaurant tonight.",
+                "We are have dinner at the restaurant tonight.",
+                "We have dinner at the restaurant tonight."
+              ],
+              "correctIndex": 0,
+              "explanation": "Untuk janji atau pengaturan yang sudah pasti, kita menggunakan present continuous (subject + am/is/are + verb-ing). 'We are having' adalah bentuk yang benar, sedangkan pilihan lainnya salah secara tata bahasa."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Seseorang mengajakmu: 'Do you want to go to the concert hall tonight?' Manakah respon yang sopan dan benar?",
+              "options": [
+                "That would be great.",
+                "I'm going to concert hall.",
+                "I'm not doing concert hall."
+              ],
+              "correctIndex": 0,
+              "explanation": "'That would be great' adalah ungkapan yang sopan dan natural untuk menerima ajakan dalam percakapan bahasa Inggris, sedangkan pilihan lainnya tidak sesuai konteks atau salah secara tata bahasa."
+            }
+          ]
         },
         "vocab": [
           {
@@ -2322,7 +2702,45 @@
             "explanation": "Banyak pemula salah menggunakan 'will' setelah when/as soon as dalam kalimat tentang masa depan. Padahal setelah when/as soon as harus menggunakan present simple, bukan future.",
             "wrong": "When I will get home, I'll check my messages.",
             "correct": "When I get home, I'll check my messages."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang menggunakan First Conditional dengan benar untuk menyatakan kemungkinan di masa depan.",
+              "options": [
+                "If you will study hard, you will pass the exam.",
+                "If you study hard, you will pass the exam.",
+                "If you study hard, you pass the exam."
+              ],
+              "correctIndex": 1,
+              "explanation": "Dalam First Conditional, klausa 'if' harus menggunakan present simple (study), sedangkan klausa utama menggunakan 'will' + verb (will pass)."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan rencana di masa depan menggunakan 'when'?",
+              "options": [
+                "When I will get home, I will take a rest.",
+                "When I get home, I will take a rest.",
+                "When I get home, I take a rest."
+              ],
+              "correctIndex": 1,
+              "explanation": "Setelah 'when' untuk merujuk masa depan, kita harus menggunakan present simple (get), bukan 'will'. 'Will' hanya digunakan pada klausa utama."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Alice berkata: 'I really don't feel well. Maybe I won't go to school tomorrow.' Respon mana yang paling tepat secara tata bahasa dan konteks?",
+              "options": [
+                "If you don't go to school, you will feel better.",
+                "If you won't go to school, you will feel better.",
+                "If you don't go to school, you feel better."
+              ],
+              "correctIndex": 0,
+              "explanation": "Opsi pertama adalah First Conditional yang benar: 'if' + present simple (don't go) + 'will' + verb (will feel) untuk prediksi masa depan."
+            }
+          ]
         },
         "vocab": [
           {
@@ -2540,7 +2958,45 @@
             "explanation": "Pemula sering salah menggunakan Past Simple ketika seharusnya menggunakan Present Perfect, atau sebaliknya. Gunakan Present Perfect ketika TIDAK menyebutkan waktu spesifik dan fokus pada pengalaman/hasil. Gunakan Past Simple ketika menyebutkan KAPAN kejadian terjadi.",
             "wrong": "I have visited London last year. / Have you seen the movie yesterday?",
             "correct": "I visited London last year. / Did you see the movie yesterday? ATAU I have visited London. (tanpa waktu spesifik)"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang menggunakan Present Perfect Simple dengan benar untuk menceritakan pengalaman?",
+              "options": [
+                "She have travelled to many countries.",
+                "They has visited the museum twice.",
+                "We have been to Japan three times."
+              ],
+              "correctIndex": 2,
+              "explanation": "Present Perfect Simple menggunakan 'have' untuk subjek I/you/we/they dan 'has' untuk he/she/it, diikuti oleh past participle. Opsi ketiga adalah satu-satunya yang memiliki kesesuaian subjek dan kata kerja yang benar."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar secara tata bahasa untuk menceritakan pengalaman tanpa waktu spesifik?",
+              "options": [
+                "I have visited Paris in 2019.",
+                "I have visited Paris many times.",
+                "I have visited Paris yesterday."
+              ],
+              "correctIndex": 1,
+              "explanation": "Present Perfect digunakan untuk pengalaman tanpa waktu spesifik. Jika menyebutkan waktu spesifik seperti 'in 2019' atau 'yesterday', kita harus menggunakan Past Simple (I visited)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: \"Have you [...] to the new accommodation in the city center?\"",
+              "options": [
+                "ever been",
+                "ever go",
+                "ever went"
+              ],
+              "correctIndex": 0,
+              "explanation": "Struktur 'Have you ever + past participle' digunakan untuk menanyakan pengalaman. 'Been' adalah bentuk past participle dari 'be', yang tepat untuk melengkapi kalimat tersebut."
+            }
+          ]
         },
         "vocab": [
           {
@@ -2761,7 +3217,45 @@
             "explanation": "Siswa level A2 sering mengacaukan penggunaan present perfect dengan past simple. Present perfect digunakan untuk pengalaman tanpa waktu spesifik, sedangkan past simple memerlukan waktu yang jelas. Kesalahan lain adalah menempatkan 'enough' di posisi yang salah.",
             "wrong": "I have visited Paris last year. / This bag is enough big.",
             "correct": "I visited Paris last year. (waktu spesifik) / I have visited Paris. (pengalaman umum) / This bag is big enough."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Komprehensif Tindakan Dasar\"?",
+              "options": [
+                "Present Simple vs Present Continuous: Gunakan present simple untuk kebiasaan (I work ev...",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Ujian kelulusan A2."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Evaluasi Komprehensif Tindakan Dasar\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "This bag is enough big",
+                "I visited Paris last year. (waktu spesifik)",
+                "I have visited Paris last year"
+              ],
+              "correctIndex": 1,
+              "explanation": "Siswa level A2 sering mengacaukan penggunaan present perfect dengan past simple. Present perfect digunakan untuk pengalaman tanpa waktu spesifik, sedangkan past simple memerlukan waktu yang jelas. Kesalahan lain adalah menempatkan 'enough' di posisi yang salah."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Mr. Khoirul, I've just finished the A2.1 exam. It was quite challenging!\"\nMr. Khoirul: \"[...]\"",
+              "options": [
+                "Well done, Sarah! Which section did you find the most difficult?",
+                "Sorry, I forgot my keys at home.",
+                "I have visited Paris last year"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Well done, Sarah! Which section did you find the most difficult?\" (\"Bagus sekali, Sarah! Bagian mana yang menurutmu paling sulit?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Mr. Khoirul."
+            }
+          ]
         },
         "vocab": [
           {
@@ -3101,7 +3595,45 @@
             "explanation": "Banyak siswa lupa menambahkan 's/es' pada kata kerja saat subjeknya orang ketiga tunggal (he, she, a doctor, an engineer). Ingat, profesi adalah subjek tunggal, jadi kata kerjanya harus ditambahkan 's/es'.",
             "wrong": "A nurse care for patients. An electrician repair electrical systems.",
             "correct": "A nurse cares for patients. An electrician repairs electrical systems."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang tepat untuk menanyakan dan menjelaskan pekerjaan seorang jurnalis?",
+              "options": [
+                "What does a journalist do? He writes news articles.",
+                "What do a journalist do? He writes news articles.",
+                "What does a journalist do? He write news articles."
+              ],
+              "correctIndex": 0,
+              "explanation": "Gunakan 'What does' untuk subjek tunggal (a journalist) dan tambahkan akhiran '-s' pada kata kerja (writes) untuk subjek orang ketiga tunggal."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang benar untuk mendeskripsikan pekerjaan seorang perawat (nurse) sesuai aturan tata bahasa.",
+              "options": [
+                "A nurse care for patients in a hospital.",
+                "A nurse cares for patients in a hospital.",
+                "A nurse is care for patients in a hospital."
+              ],
+              "correctIndex": 1,
+              "explanation": "Subjek 'A nurse' adalah orang ketiga tunggal, sehingga kata kerja harus ditambah akhiran '-s' menjadi 'cares' untuk menunjukkan aktivitas rutin."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'What does an architect do?' - 'He [...] buildings.'",
+              "options": [
+                "He design buildings.",
+                "He is design buildings.",
+                "He designs buildings."
+              ],
+              "correctIndex": 2,
+              "explanation": "Karena subjeknya adalah 'He' (orang ketiga tunggal), kata kerja 'design' harus ditambah akhiran '-s' menjadi 'designs'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -3331,7 +3863,45 @@
             "explanation": "Banyak siswa menggunakan 'will' untuk semua situasi masa depan. Ingat: jika Anda sudah merencanakan sesuatu sebelum berbicara, gunakan 'be going to'. Jika keputusan dibuat saat berbicara, gunakan 'will'.",
             "wrong": "A: We don't have any milk. B: I know. I will buy some after work. (Salah, karena B sudah tahu dan sudah berencana)",
             "correct": "A: We don't have any milk. B: I know. I'm going to buy some after work. (Benar, karena ini rencana yang sudah dibuat sebelumnya)"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang paling tepat untuk menyatakan keputusan spontan saat itu juga.",
+              "options": [
+                "I'll open the window, it's getting hot in here.",
+                "I'm going to open the window, it's getting hot in here.",
+                "I will to open the window, it's getting hot in here."
+              ],
+              "correctIndex": 0,
+              "explanation": "'Will' digunakan untuk keputusan spontan yang dibuat saat itu juga. Pilihan kedua salah karena 'be going to' digunakan untuk rencana, dan pilihan ketiga salah secara tata bahasa."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang paling tepat untuk menyatakan rencana yang sudah dipikirkan sebelumnya?",
+              "options": [
+                "I will visit my grandmother this weekend because I already bought the ticket.",
+                "I'm going to visit my grandmother this weekend because I already bought the ticket.",
+                "I visit my grandmother this weekend because I already bought the ticket."
+              ],
+              "correctIndex": 1,
+              "explanation": "Karena subjek sudah membeli tiket, ini adalah rencana yang sudah dipikirkan sebelumnya, sehingga harus menggunakan 'be going to'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: A: 'We are out of coffee.' B: '[...]' (B baru saja memutuskan untuk pergi ke toko sekarang)",
+              "options": [
+                "I'm going to go to the shop.",
+                "I'll go to the shop and buy some.",
+                "I will to go to the shop."
+              ],
+              "correctIndex": 1,
+              "explanation": "Keputusan untuk pergi ke toko dibuat saat itu juga sebagai respons terhadap pernyataan A, sehingga 'will' adalah pilihan yang tepat."
+            }
+          ]
         },
         "vocab": [
           {
@@ -3561,7 +4131,45 @@
             "explanation": "Banyak siswa menempatkan 'yet' di tengah kalimat seperti 'just' dan 'already'. Padahal 'yet' hampir selalu diletakkan di akhir kalimat, baik dalam kalimat tanya maupun negatif.",
             "wrong": "I haven't yet finished my homework.",
             "correct": "I haven't finished my homework yet."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan bahwa seseorang baru saja menyelesaikan tugasnya?",
+              "options": [
+                "I have just finished my task.",
+                "I have finished just my task.",
+                "I just have finished my task."
+              ],
+              "correctIndex": 0,
+              "explanation": "Dalam Present Perfect, kata 'just' diletakkan di antara auxiliary verb (have/has) dan past participle (finished) untuk menunjukkan kejadian yang baru saja terjadi."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar dalam penggunaan kata 'yet' untuk menyatakan sesuatu yang belum selesai?",
+              "options": [
+                "I haven't yet bought the ticket.",
+                "I haven't bought the ticket yet.",
+                "I haven't bought yet the ticket."
+              ],
+              "correctIndex": 1,
+              "explanation": "Kata 'yet' dalam kalimat negatif atau tanya harus selalu diletakkan di akhir kalimat, bukan di tengah."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'A: Have you finished your report [...]? B: No, I'm still working on it.'",
+              "options": [
+                "already",
+                "just",
+                "yet"
+              ],
+              "correctIndex": 2,
+              "explanation": "Kata 'yet' digunakan di akhir kalimat tanya untuk menanyakan apakah suatu aktivitas sudah selesai atau belum."
+            }
+          ]
         },
         "vocab": [
           {
@@ -3791,7 +4399,45 @@
             "explanation": "Banyak siswa lupa menggunakan frasa pembuka opini dan langsung menyatakan pendapat tanpa penanda, sehingga terdengar terlalu blak-blakan atau kurang sopan dalam konteks formal. Selain itu, siswa sering salah menempatkan kata sifat atau menggunakan bentuk yang tidak tepat.",
             "wrong": "The movie boring and I no like it.",
             "correct": "In my opinion, the movie was boring and I didn't like it."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang menggunakan struktur 'I found it + adjective' dengan benar untuk memberikan opini tentang sebuah film.",
+              "options": [
+                "I found it boring because the story was too slow.",
+                "I found boring it the movie.",
+                "I found it the movie boring."
+              ],
+              "correctIndex": 0,
+              "explanation": "Struktur yang benar adalah 'I found it + adjective'. Pilihan pertama mengikuti aturan ini dengan tepat, sedangkan pilihan lainnya memiliki susunan kata yang salah."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang paling tepat dan sopan untuk menyatakan pendapat tentang sebuah film sesuai dengan aturan modul?",
+              "options": [
+                "The movie boring and I not like it.",
+                "In my opinion, the movie was boring and I didn't like it.",
+                "Movie boring, I no like."
+              ],
+              "correctIndex": 1,
+              "explanation": "Menggunakan frasa pembuka opini seperti 'In my opinion' membuat kalimat lebih sopan dan sesuai aturan, dibandingkan langsung menyatakan pendapat tanpa subjek atau kata kerja bantu."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: A: 'Have you seen the new documentary?' B: 'Yes, it was amazing! [...]'",
+              "options": [
+                "I recommend watch it if you like history.",
+                "I recommend to watch it if you like history.",
+                "I recommend it if you like history."
+              ],
+              "correctIndex": 2,
+              "explanation": "Struktur yang benar adalah 'I recommend + [objek]'. Kata 'recommend' diikuti oleh kata benda atau gerund, bukan bentuk dasar kata kerja (watch) atau to-infinitive (to watch) dalam konteks ini."
+            }
+          ]
         },
         "vocab": [
           {
@@ -4011,7 +4657,45 @@
             "explanation": "Banyak siswa level A2 lupa menggunakan bentuk imperative yang benar dalam resep. Mereka sering menambahkan subjek 'you' atau menggunakan bentuk infinitive 'to + verb' yang membuat instruksi tidak natural.",
             "wrong": "You chop the onions and you add the salt.",
             "correct": "Chop the onions and add the salt."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat instruksi resep yang paling tepat menggunakan kata penghubung urutan.",
+              "options": [
+                "First, you chop the onions. Next, you boil the water.",
+                "First, chop the onions. Next, boil the water.",
+                "To chop the onions first. To boil the water next."
+              ],
+              "correctIndex": 1,
+              "explanation": "Instruksi resep (imperative) tidak memerlukan subjek 'you' atau bentuk 'to'. Cukup gunakan kata kerja langsung di awal kalimat untuk memberikan perintah yang jelas."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat instruksi memasak yang benar sesuai aturan penulisan resep?",
+              "options": [
+                "You mix the flour and the sugar in a bowl.",
+                "Mix the flour and the sugar in a bowl.",
+                "To mix the flour and the sugar in a bowl."
+              ],
+              "correctIndex": 1,
+              "explanation": "Dalam resep, gunakan bentuk imperative (kata kerja langsung) tanpa subjek 'you' atau bentuk infinitive 'to' agar instruksi terdengar natural dan sesuai standar penulisan resep."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'I have the chicken ready. What should I do with it?'",
+              "options": [
+                "First, slice it into small pieces.",
+                "You slice it into small pieces.",
+                "To slice it into small pieces."
+              ],
+              "correctIndex": 0,
+              "explanation": "Untuk memberikan instruksi langkah demi langkah, gunakan kata penghubung urutan (seperti 'First') diikuti kata kerja bentuk imperative (tanpa subjek)."
+            }
+          ]
         },
         "vocab": [
           {
@@ -4251,7 +4935,45 @@
             "explanation": "Banyak siswa level A2 keliru menggunakan possessive adjective (my, your, his, her) ketika seharusnya menggunakan possessive pronoun (mine, yours, his, hers) setelah kata kerja 'be'. Possessive adjective selalu diikuti noun, sedangkan possessive pronoun berdiri sendiri menggantikan noun.",
             "wrong": "Whose book is this? It's my.",
             "correct": "Whose book is this? It's mine."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang tepat untuk mendeskripsikan bahan sebuah benda?",
+              "options": [
+                "The table is made of wood.",
+                "The table is make of wood.",
+                "The table is making of wood."
+              ],
+              "correctIndex": 0,
+              "explanation": "Pola yang benar untuk mendeskripsikan bahan adalah 'be + made of + material'. 'Made' adalah bentuk past participle yang tepat digunakan setelah 'is'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah jawaban yang benar untuk pertanyaan 'Whose phone is this?' agar tidak terjebak kesalahan umum?",
+              "options": [
+                "It's my.",
+                "It's mine.",
+                "It's me."
+              ],
+              "correctIndex": 1,
+              "explanation": "Setelah kata kerja 'be', kita harus menggunakan possessive pronoun ('mine') untuk menggantikan noun. 'My' adalah possessive adjective yang harus diikuti oleh kata benda, sedangkan 'me' adalah object pronoun."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'A: Are these keys yours? B: No, [...]'",
+              "options": [
+                "they are not mine.",
+                "they are not my.",
+                "they are not mine's."
+              ],
+              "correctIndex": 0,
+              "explanation": "'Mine' adalah possessive pronoun yang tepat untuk menggantikan 'my keys'. 'My' tidak bisa berdiri sendiri tanpa kata benda, dan 'mine's' bukanlah bentuk yang benar dalam bahasa Inggris."
+            }
+          ]
         },
         "vocab": [
           {
@@ -4488,7 +5210,45 @@
             "explanation": "Banyak siswa A2 salah menyusun urutan kata sifat saat mendeskripsikan barang. Dalam bahasa Inggris, urutan kata sifat mengikuti pola: opinion - size - age - shape - color - origin - material - purpose. Untuk barang hilang, fokus pada: size + color + material + noun.",
             "wrong": "I've lost my leather black big bag",
             "correct": "I've lost my big black leather bag"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang paling tepat digunakan untuk melaporkan kehilangan paspor Anda kepada petugas?",
+              "options": [
+                "I've lost my passport.",
+                "I lose my passport.",
+                "I am losing my passport."
+              ],
+              "correctIndex": 0,
+              "explanation": "Untuk melaporkan kehilangan barang yang baru saja terjadi atau dampaknya masih terasa, gunakan Present Perfect ('I've lost...')."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Anda perlu mendeskripsikan dompet yang hilang. Manakah urutan kata sifat (size + color + material) yang benar?",
+              "options": [
+                "I've lost my small brown leather wallet.",
+                "I've lost my leather brown small wallet.",
+                "I've lost my brown small leather wallet."
+              ],
+              "correctIndex": 0,
+              "explanation": "Urutan kata sifat yang benar dalam bahasa Inggris adalah ukuran (small), warna (brown), lalu material (leather)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Petugas bertanya: 'What is inside the bag?' Anda ingin menjawab bahwa ada beberapa kartu dan uang tunai. Kalimat mana yang benar?",
+              "options": [
+                "There are some cards and cash inside.",
+                "There is some cards and cash inside.",
+                "They are some cards and cash inside."
+              ],
+              "correctIndex": 0,
+              "explanation": "Gunakan 'There are' untuk benda jamak (cards) dan 'There is' untuk benda tunggal. Karena 'cards' jamak, maka gunakan 'There are'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -4720,7 +5480,45 @@
             "explanation": "Banyak siswa lupa menggunakan bentuk jamak 'tickets' ketika memesan lebih dari satu tiket, atau salah menggunakan 'is/are'. Perhatikan subject-verb agreement: 'ticket is' untuk satu tiket, 'tickets are' untuk banyak tiket.",
             "wrong": "How much is two tickets? I want to book one tickets for Friday.",
             "correct": "How much are two tickets? I want to book one ticket for Friday."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang paling tepat secara tata bahasa untuk menanyakan ketersediaan tiket konser?",
+              "options": [
+                "Are there any seats available for the concert on Friday?",
+                "Is there any seats available for the concert on Friday?",
+                "Are you have any seats available for the concert on Friday?"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kalimat 'Are there' digunakan karena 'seats' adalah kata benda jamak (plural). Pilihan kedua salah karena menggunakan 'is', dan pilihan ketiga salah karena struktur 'Are you have' tidak tepat."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar untuk memesan dua tiket pertunjukan?",
+              "options": [
+                "I want to book two ticket for the show.",
+                "I want to book two tickets for the show.",
+                "I want to book two tickets is for the show."
+              ],
+              "correctIndex": 1,
+              "explanation": "Karena jumlahnya dua, kata benda harus dalam bentuk jamak 'tickets'. Pilihan pertama salah karena kurang 's', dan pilihan ketiga salah karena penambahan kata kerja 'is' yang tidak perlu."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Box Office Staff: 'We have balcony seats for $30 and front row seats for $80. Which would you prefer?'\nCustomer: '[...]'",
+              "options": [
+                "I am prefer the balcony seats.",
+                "I like prefer the balcony seats.",
+                "I prefer the balcony seats, please."
+              ],
+              "correctIndex": 2,
+              "explanation": "Ungkapan 'I prefer' sudah cukup untuk menyatakan pilihan. Pilihan pertama dan kedua salah secara tata bahasa karena menambahkan kata kerja bantu 'am' atau 'like' yang tidak diperlukan."
+            }
+          ]
         },
         "vocab": [
           {
@@ -4955,7 +5753,45 @@
             "explanation": "Siswa sering lupa menggunakan artikel 'the' atau 'a/an' saat menyebut fasilitas bandara atau hotel, dan sering menggunakan 'I want' yang terdengar terlalu langsung dalam konteks formal.",
             "wrong": "Where is gate? I want check in now.",
             "correct": "Where is the gate? I'd like to check in now."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang paling tepat dan sopan untuk meminta layanan check-in di bandara.",
+              "options": [
+                "I want check in for my flight.",
+                "I'd like to check in for my flight.",
+                "I'm like to check in for my flight."
+              ],
+              "correctIndex": 1,
+              "explanation": "Frasa 'I'd like to' adalah bentuk yang sopan dan sesuai dengan aturan modul untuk meminta layanan, sedangkan pilihan lainnya mengandung kesalahan tata bahasa."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar secara tata bahasa untuk menanyakan lokasi pengambilan bagasi?",
+              "options": [
+                "Where is baggage claim?",
+                "Where is the baggage claim?",
+                "Where baggage claim is?"
+              ],
+              "correctIndex": 1,
+              "explanation": "Dalam bahasa Inggris, kita perlu menggunakan artikel 'the' sebelum menyebutkan fasilitas bandara seperti 'the baggage claim' untuk menunjukkan lokasi yang spesifik."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut saat Anda tiba di hotel:\nReceptionist: 'Welcome to the hotel. How can I help you?'\nYou: '[...]'",
+              "options": [
+                "I have a reservation for a double room under the name John Doe.",
+                "I want room now, please.",
+                "Where is reservation for double room?"
+              ],
+              "correctIndex": 0,
+              "explanation": "Saat check-in hotel, sangat penting untuk menyebutkan detail reservasi dengan jelas dan sopan menggunakan frasa 'I have a reservation for...'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -5186,7 +6022,45 @@
             "explanation": "Banyak siswa salah menambahkan 'to' setelah 'should' atau 'shouldn't' karena terpengaruh oleh 'ought to'. Ingat: 'should' dan 'shouldn't' langsung diikuti verb tanpa 'to', hanya 'ought' yang memerlukan 'to'.",
             "wrong": "You should to exercise every day. / She shouldn't to skip breakfast.",
             "correct": "You should exercise every day. / She shouldn't skip breakfast. / You ought to exercise every day."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang menggunakan struktur modal verb untuk saran dengan tepat?",
+              "options": [
+                "You should to drink more water every day.",
+                "You should drink more water every day.",
+                "You ought drink more water every day."
+              ],
+              "correctIndex": 1,
+              "explanation": "Setelah 'should', kita langsung menggunakan kata kerja dasar (infinitive tanpa 'to'). 'Ought' memerlukan 'to', sedangkan 'should' tidak."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang benar untuk menghindari kesalahan umum dalam penggunaan 'shouldn't'.",
+              "options": [
+                "He shouldn't eat too much sugar.",
+                "He shouldn't to eat too much sugar.",
+                "He shouldn't eating too much sugar."
+              ],
+              "correctIndex": 0,
+              "explanation": "'Shouldn't' (should not) harus diikuti oleh kata kerja dasar tanpa 'to'. Menambahkan 'to' setelah 'shouldn't' adalah kesalahan umum yang harus dihindari."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lisa: 'I don't have time to eat breakfast in the morning. What should I do?' David: '...'",
+              "options": [
+                "You should to prepare something simple the night before.",
+                "You ought prepare something simple the night before.",
+                "You ought to prepare something simple the night before."
+              ],
+              "correctIndex": 2,
+              "explanation": "'Ought to' adalah bentuk yang benar untuk memberikan saran. Pilihan lain salah karena menambahkan 'to' setelah 'should' atau menghilangkan 'to' setelah 'ought'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -5420,7 +6294,45 @@
             "explanation": "Banyak siswa menggunakan Past Simple untuk kedua kejadian, atau Past Continuous untuk keduanya. Ingat: aktivitas yang sedang berlangsung menggunakan Past Continuous, sedangkan kejadian yang menyela menggunakan Past Simple.",
             "wrong": "I walked in the park when it started to rain.",
             "correct": "I was walking in the park when it started to rain."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan aktivitas yang sedang berlangsung lalu disela oleh kejadian lain?",
+              "options": [
+                "I was sleeping when the phone rang.",
+                "I slept when the phone was ringing.",
+                "I was sleeping when the phone was ringing."
+              ],
+              "correctIndex": 0,
+              "explanation": "Past Continuous ('was sleeping') digunakan untuk aktivitas yang sedang berlangsung, dan Past Simple ('rang') digunakan untuk kejadian yang menyela."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang paling tepat untuk menghindari kesalahan penggunaan tense (Past Continuous vs Past Simple):",
+              "options": [
+                "She read a book when the lights went out.",
+                "She was reading a book when the lights went out.",
+                "She was reading a book when the lights were going out."
+              ],
+              "correctIndex": 1,
+              "explanation": "Aktivitas yang sedang berlangsung harus menggunakan Past Continuous ('was reading'), sedangkan kejadian yang menyela menggunakan Past Simple ('went out')."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi kalimat berikut agar sesuai dengan aturan Past Continuous yang disela oleh Past Simple: 'I [...] when I noticed a strange noise coming from the kitchen.'",
+              "options": [
+                "cooked dinner",
+                "was cook dinner",
+                "was cooking dinner"
+              ],
+              "correctIndex": 2,
+              "explanation": "'Was cooking' adalah bentuk Past Continuous yang tepat untuk aktivitas yang sedang berlangsung sebelum disela oleh kejadian lain."
+            }
+          ]
         },
         "vocab": [
           {
@@ -5650,7 +6562,45 @@
             "explanation": "Banyak siswa lupa menambahkan penjelasan setelah meminta maaf, sehingga terdengar tidak tulus. Hindari permintaan maaf yang terlalu singkat atau tanpa konteks.",
             "wrong": "Sorry.",
             "correct": "I'm really sorry for forgetting your birthday. I didn't mean to hurt your feelings."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang menggunakan frasa pertemanan dengan tata bahasa yang benar?",
+              "options": [
+                "I get on well with my classmates because we have similar interests.",
+                "I fall out well with my best friend.",
+                "I make up my friend after we argued."
+              ],
+              "correctIndex": 0,
+              "explanation": "Opsi pertama benar karena 'get on well with' adalah frasa yang tepat untuk menyatakan hubungan yang baik. Opsi kedua salah karena 'fall out well' bukan frasa yang benar (seharusnya 'fall out with'). Opsi ketiga salah karena 'make up' membutuhkan kata depan 'with' saat diikuti objek orang."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang menunjukkan permintaan maaf yang tulus dan lengkap sesuai aturan modul?",
+              "options": [
+                "Sorry.",
+                "I'm really sorry for breaking your favorite mug. I didn't mean to be careless.",
+                "I'm really sorry for break your mug. I didn't mean to."
+              ],
+              "correctIndex": 1,
+              "explanation": "Opsi kedua adalah yang paling tepat karena mengikuti struktur 'I'm really sorry for + verb-ing' dan memberikan penjelasan tambahan. Opsi pertama terlalu singkat (trap), dan opsi ketiga salah secara tata bahasa karena seharusnya menggunakan 'breaking' setelah 'for'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'I'm so sorry for being late to our meeting. [...]'",
+              "options": [
+                "I didn't mean to keep you waiting, the traffic was terrible.",
+                "That's okay, don't worry about it.",
+                "I get on well with you, so it's fine."
+              ],
+              "correctIndex": 0,
+              "explanation": "Opsi pertama adalah kelanjutan yang tepat karena memberikan alasan atas kesalahan tersebut, sesuai dengan aturan meminta maaf yang tulus. Opsi kedua adalah respon untuk menerima permintaan maaf, bukan bagian dari permintaan maaf itu sendiri. Opsi ketiga tidak relevan dengan konteks keterlambatan."
+            }
+          ]
         },
         "vocab": [
           {
@@ -5881,7 +6831,45 @@
             "explanation": "Banyak siswa A2 masih bingung antara Present Perfect dan Past Simple. Present Perfect digunakan untuk pengalaman tanpa waktu spesifik atau aksi yang masih relevan sekarang, sedangkan Past Simple untuk waktu yang spesifik dan selesai di masa lalu.",
             "wrong": "I have seen that movie yesterday.",
             "correct": "I saw that movie yesterday. / I have seen that movie before."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang menggunakan Present Perfect dengan adverb of time yang tepat.",
+              "options": [
+                "She has already arrived at the airport.",
+                "She has arrive already at the airport.",
+                "She has arrived at the airport yet."
+              ],
+              "correctIndex": 0,
+              "explanation": "Present Perfect menggunakan 'has/have' + past participle (arrived). 'Already' diletakkan di tengah kalimat, sedangkan 'yet' biasanya digunakan di akhir kalimat negatif atau tanya."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar secara tata bahasa untuk menyatakan pengalaman di masa lalu dengan keterangan waktu yang spesifik?",
+              "options": [
+                "I have visited Bali last year.",
+                "I visited Bali last year.",
+                "I have visited Bali before last year."
+              ],
+              "correctIndex": 1,
+              "explanation": "Gunakan Past Simple (visited) untuk waktu yang spesifik (last year). Present Perfect tidak boleh digunakan dengan keterangan waktu spesifik yang sudah selesai di masa lalu."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'I feel very tired lately.' 'You [...] more sleep.'",
+              "options": [
+                "should get",
+                "should to get",
+                "should getting"
+              ],
+              "correctIndex": 0,
+              "explanation": "Setelah modal verb 'should', kita harus menggunakan kata kerja bentuk dasar (base verb) tanpa tambahan 'to' atau akhiran '-ing'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -6237,7 +7225,45 @@
             "explanation": "Siswa sering lupa bahwa instruksi keselamatan menggunakan bentuk imperative (tanpa subjek), bukan bentuk biasa dengan subjek 'you'. Mereka juga sering salah menggunakan preposisi setelah kata kerja keselamatan.",
             "wrong": "You stay indoors during the storm. Go to outside after the hurricane.",
             "correct": "Stay indoors during the storm. Go outside after the hurricane."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang benar untuk mendeskripsikan fenomena cuaca menggunakan aturan Present Simple.",
+              "options": [
+                "A hurricane cause strong winds.",
+                "A hurricane causes strong winds.",
+                "A hurricane is cause strong winds."
+              ],
+              "correctIndex": 1,
+              "explanation": "Dalam Present Simple, subjek tunggal (A hurricane) memerlukan kata kerja yang diakhiri dengan -s (causes)."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih instruksi keselamatan yang paling tepat sesuai dengan aturan penggunaan kalimat perintah (imperative).",
+              "options": [
+                "You stay indoors during the storm.",
+                "Stay indoors during the storm.",
+                "Stay to indoors during the storm."
+              ],
+              "correctIndex": 1,
+              "explanation": "Kalimat perintah (imperative) tidak menggunakan subjek (seperti 'you') dan langsung dimulai dengan kata kerja dasar."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'The storm is getting worse. What should we do?' 'We [...] before the flood starts.'",
+              "options": [
+                "must evacuate the area",
+                "should to evacuate the area",
+                "must evacuating the area"
+              ],
+              "correctIndex": 0,
+              "explanation": "Modal verbs seperti 'must' harus diikuti oleh kata kerja bentuk dasar (bare infinitive), tanpa 'to' atau akhiran '-ing'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -6468,7 +7494,45 @@
             "explanation": "Banyak siswa menggunakan 'will' di kedua bagian kalimat, padahal setelah 'if' harus menggunakan Present Simple, bukan 'will'. Ingat: 'will' hanya ada di bagian result/consequence.",
             "wrong": "If you will study hard, you will pass the exam.",
             "correct": "If you study hard, you will pass the exam."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar secara tata bahasa untuk First Conditional?",
+              "options": [
+                "If you will arrive early, you will get a seat.",
+                "If you arrive early, you will get a seat.",
+                "If you arrive early, you will getting a seat."
+              ],
+              "correctIndex": 1,
+              "explanation": "Pola First Conditional adalah 'If + Present Simple, will + verb'. 'Will' tidak digunakan setelah 'if', dan setelah 'will' harus menggunakan bentuk dasar kata kerja (infinitive)."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang tepat untuk menghindari kesalahan umum penggunaan 'will' pada klausa 'if'.",
+              "options": [
+                "If you study hard, you will pass the test.",
+                "If you will study hard, you will pass the test.",
+                "If you study hard, you will passed the test."
+              ],
+              "correctIndex": 0,
+              "explanation": "Kesalahan umum adalah menggunakan 'will' di klausa 'if'. Seharusnya bagian 'if' menggunakan Present Simple, sedangkan 'will' hanya digunakan di bagian hasil (result clause)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: Tom: 'Unless we leave now, [...]' Sarah: 'You are right, let's go!'",
+              "options": [
+                "we will missed the train.",
+                "we will missing the train.",
+                "we will miss the train."
+              ],
+              "correctIndex": 2,
+              "explanation": "Setelah 'will', kita harus menggunakan bentuk dasar kata kerja (infinitive). 'Miss' adalah bentuk dasar yang benar, sedangkan 'missed' dan 'missing' tidak tepat digunakan setelah 'will'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -6700,7 +7764,45 @@
             "explanation": "Siswa level A2 sering salah menggunakan 'must' dan 'should'. 'Must' menunjukkan keharusan yang sangat kuat atau aturan yang wajib diikuti, sedangkan 'should' memberikan saran yang lebih lemah. Kesalahan lain adalah menggunakan 'to' setelah modal verbs.",
             "wrong": "You must to change your password. You should to be careful online.",
             "correct": "You must change your password. You should be careful online."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk memberikan saran keamanan internet?",
+              "options": [
+                "You should to enable notifications.",
+                "You should enable notifications.",
+                "You should enabling notifications."
+              ],
+              "correctIndex": 1,
+              "explanation": "Setelah modal verb seperti 'should', kita harus menggunakan kata kerja bentuk dasar (bare infinitive) tanpa 'to' atau akhiran '-ing'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang benar secara tata bahasa untuk menyatakan aturan keamanan yang wajib diikuti.",
+              "options": [
+                "You must verify links before clicking.",
+                "You must to verify links before clicking.",
+                "You must verifying links before clicking."
+              ],
+              "correctIndex": 0,
+              "explanation": "'Must' adalah modal verb yang diikuti langsung oleh kata kerja bentuk dasar. Penggunaan 'must to' adalah kesalahan umum yang harus dihindari."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'I'm worried about my personal data on social media. What should I do?'",
+              "options": [
+                "You must to avoid privacy settings.",
+                "You should sharing your password.",
+                "You should check your privacy settings."
+              ],
+              "correctIndex": 2,
+              "explanation": "Memberikan saran yang tepat untuk melindungi data pribadi adalah dengan memeriksa pengaturan privasi (privacy settings). Opsi lain salah secara tata bahasa dan konteks."
+            }
+          ]
         },
         "vocab": [
           {
@@ -6931,7 +8033,45 @@
             "explanation": "Banyak siswa menggunakan 'then' terlalu sering dalam satu cerita sehingga terdengar monoton dan membosankan. Selain itu, siswa sering salah menempatkan kata hubung di tengah kalimat padahal seharusnya di awal untuk penekanan yang lebih kuat.",
             "wrong": "I woke up then I brushed my teeth then I had breakfast then I went to school.",
             "correct": "At first, I felt tired. Then I brushed my teeth and had breakfast. Suddenly, I realized I was late! In the end, I ran to school."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang paling tepat untuk memulai sebuah cerita naratif sesuai dengan aturan penggunaan kata hubung kronologis.",
+              "options": [
+                "At first, the sky was clear and the birds were singing.",
+                "Suddenly, the sky was clear and the birds were singing.",
+                "Meanwhile, the sky was clear and the birds were singing."
+              ],
+              "correctIndex": 0,
+              "explanation": "'At first' digunakan untuk menggambarkan situasi awal cerita, sedangkan 'suddenly' digunakan untuk perubahan mendadak dan 'meanwhile' untuk kejadian bersamaan."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang paling baik dalam menghindari pengulangan kata 'then' yang membuat cerita terdengar monoton?",
+              "options": [
+                "I woke up, then I ate breakfast, then I went to work, then I felt tired.",
+                "At first, I felt energetic. Suddenly, I got a headache, so I went home.",
+                "I woke up, then I ate breakfast, then I went to work, then I felt tired, then I slept."
+              ],
+              "correctIndex": 1,
+              "explanation": "Penggunaan 'At first' dan 'Suddenly' membuat cerita lebih bervariasi dan menarik dibandingkan hanya menggunakan kata 'then' secara berulang-ulang."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'I was reading a book in my bedroom. [...] my sister was playing the piano downstairs.'",
+              "options": [
+                "Suddenly",
+                "At first",
+                "Meanwhile"
+              ],
+              "correctIndex": 2,
+              "explanation": "'Meanwhile' adalah kata hubung yang tepat untuk menunjukkan dua kejadian yang terjadi secara bersamaan di tempat yang berbeda."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7173,7 +8313,45 @@
             "explanation": "Banyak siswa salah menggunakan preposisi waktu dan tempat, atau menggunakan tenses yang tidak tepat saat mendeskripsikan bangunan bersejarah. Ingat: gunakan 'was/were built' untuk masa lalu, 'in' untuk tahun dan abad, 'is located in' untuk lokasi.",
             "wrong": "The palace is built in 1632 and locate at India.",
             "correct": "The palace was built in 1632 and is located in India."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang paling tepat untuk mendeskripsikan pembangunan dan lokasi sebuah bangunan bersejarah.",
+              "options": [
+                "The Taj Mahal was built in 1632 and is located in India.",
+                "The Taj Mahal were built in 1632 and is located in India.",
+                "The Taj Mahal was built in 1632 and locate in India."
+              ],
+              "correctIndex": 0,
+              "explanation": "Kalimat pertama benar karena menggunakan 'was built' untuk subjek tunggal (Taj Mahal) dan 'is located in' untuk menyatakan lokasi dengan tepat."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar dalam penggunaan tenses dan preposisi saat mendeskripsikan landmark?",
+              "options": [
+                "The Great Wall of China is built centuries ago and is famous for its massive stone walls.",
+                "The Great Wall of China was built centuries ago and is famous for its massive stone walls.",
+                "The Great Wall of China was built in centuries ago and is famous for its massive stone walls."
+              ],
+              "correctIndex": 1,
+              "explanation": "Opsi kedua benar karena menggunakan 'was built' untuk kejadian masa lalu dan tidak memerlukan preposisi 'in' sebelum frasa 'centuries ago'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'Look at that beautiful building with the golden dome. [...]'",
+              "options": [
+                "Yes, it was built in a skyscraper.",
+                "Yes, it is located for a fortress.",
+                "Yes, it is known as a famous landmark in this city."
+              ],
+              "correctIndex": 2,
+              "explanation": "Opsi ketiga adalah respon yang paling natural dan tepat secara tata bahasa untuk mendeskripsikan pentingnya sebuah bangunan menggunakan frasa 'is known as'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7403,7 +8581,45 @@
             "explanation": "Banyak siswa keliru menggunakan 'will' atau Present Simple di klausa 'if' atau lupa menggunakan Past Simple. Second Conditional HARUS menggunakan Past Simple setelah 'if' dan 'would + verb' di klausa utama.",
             "wrong": "If I will have money, I would buy a car. / If I have money, I would travel.",
             "correct": "If I had money, I would buy a car. / If I had money, I would travel."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang menggunakan struktur Second Conditional dengan tepat?",
+              "options": [
+                "If I had more time, I would learn Spanish.",
+                "If I have more time, I would learn Spanish.",
+                "If I had more time, I will learn Spanish."
+              ],
+              "correctIndex": 0,
+              "explanation": "Second Conditional menggunakan rumus 'If + Past Simple' (had) dan 'would + verb' (would learn) untuk situasi imajiner."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang benar untuk menyatakan situasi imajiner menggunakan 'were' sesuai aturan formal:",
+              "options": [
+                "If I was you, I would take the opportunity.",
+                "If I were you, I would take the opportunity.",
+                "If I am you, I would take the opportunity."
+              ],
+              "correctIndex": 1,
+              "explanation": "Dalam Second Conditional, aturan formal mengharuskan penggunaan 'were' untuk semua subjek (I/he/she/it/we/you/they)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: \"Tom: If you won the lottery, what would you do? Sarah: [...]\"",
+              "options": [
+                "If I were rich, I would buy a house for my parents.",
+                "If I am rich, I will buy a house for my parents.",
+                "If I had a million dollars, I will buy a house for my parents."
+              ],
+              "correctIndex": 0,
+              "explanation": "Jawaban ini mengikuti struktur Second Conditional yang benar (If + Past Simple, would + verb) untuk menjawab pertanyaan imajiner."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7633,7 +8849,45 @@
             "explanation": "Banyak siswa lupa menambahkan 'by' sebelum verb-ing ketika menjelaskan cara melakukan sesuatu, atau menggunakan infinitive 'to' yang salah.",
             "wrong": "We can protect nature use public transport.",
             "correct": "We can protect nature by using public transport."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang benar untuk menjelaskan cara menghemat energi.",
+              "options": [
+                "We save energy by turn off the lights.",
+                "We save energy by turning off the lights.",
+                "We save energy to turn off the lights."
+              ],
+              "correctIndex": 1,
+              "explanation": "Setelah kata 'by', kita harus menggunakan bentuk 'verb-ing' (gerund) untuk menjelaskan cara melakukan sesuatu."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar secara tata bahasa untuk menjelaskan cara melindungi satwa langka?",
+              "options": [
+                "We protect endangered species by preserving their habitats.",
+                "We protect endangered species preserve their habitats.",
+                "We protect endangered species to preserving their habitats."
+              ],
+              "correctIndex": 0,
+              "explanation": "Gunakan struktur 'by + verb-ing' untuk menjelaskan metode atau cara. Opsi lain salah karena tidak menyertakan 'by' atau menggunakan preposisi yang tidak tepat."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: Sarah: 'How can we reduce plastic waste at school?' Tom: 'We can [...] reusable water bottles.'",
+              "options": [
+                "by use",
+                "by using",
+                "to using"
+              ],
+              "correctIndex": 1,
+              "explanation": "Struktur 'by + verb-ing' adalah cara yang tepat untuk menjelaskan tindakan yang dilakukan untuk mencapai tujuan tertentu."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7864,7 +9118,45 @@
             "explanation": "Kesalahan paling umum adalah menulis 'didn't used to' atau 'Did you used to'. Ingat, setelah 'did/didn't', kata kerja selalu kembali ke bentuk dasar. Jadi 'used' harus berubah menjadi 'use' (tanpa d).",
             "wrong": "I didn't used to eat spicy food. Did she used to live in Jakarta?",
             "correct": "I didn't use to eat spicy food. Did she use to live in Jakarta?"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat bahasa Inggris yang benar untuk menyatakan kebiasaan di masa lalu?",
+              "options": [
+                "I used to playing soccer with my friends.",
+                "I used to play soccer with my friends.",
+                "I use to played soccer with my friends."
+              ],
+              "correctIndex": 1,
+              "explanation": "Struktur yang benar adalah 'used to' diikuti oleh kata kerja bentuk dasar (base form/infinitive). Jadi, 'used to play' adalah bentuk yang tepat."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang benar secara tata bahasa untuk bentuk negatif dari kebiasaan masa lalu:",
+              "options": [
+                "She didn't used to like vegetables when she was a child.",
+                "She didn't use to like vegetables when she was a child.",
+                "She not used to like vegetables when she was a child."
+              ],
+              "correctIndex": 1,
+              "explanation": "Dalam bentuk negatif (didn't), kata 'used' harus kembali ke bentuk dasar 'use'. Jadi, 'didn't use to' adalah bentuk yang benar."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut dengan pilihan yang paling tepat: \n\nA: Did you [...] in this neighborhood when you were little?\nB: Yes, I did. I lived here for ten years.",
+              "options": [
+                "use to live",
+                "used to live",
+                "used to living"
+              ],
+              "correctIndex": 0,
+              "explanation": "Dalam kalimat tanya yang menggunakan 'Did', kata kerja 'used' harus kembali ke bentuk dasar 'use'. Oleh karena itu, 'Did you use to live' adalah struktur yang benar."
+            }
+          ]
         },
         "vocab": [
           {
@@ -8097,7 +9389,45 @@
             "explanation": "Beberapa phrasal verbs tidak bisa dipisahkan (inseparable), seperti 'look after' dan 'run out of'. Siswa sering menempatkan object di tengah-tengah phrasal verb ini, padahal object harus diletakkan setelah phrasal verb lengkap.",
             "wrong": "I look my brother after. / We ran of milk out.",
             "correct": "I look after my brother. / We ran out of milk."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang menggunakan phrasal verb 'look after' dengan struktur yang benar?",
+              "options": [
+                "I look after my little brother.",
+                "I look my little brother after.",
+                "I look after him my little brother."
+              ],
+              "correctIndex": 0,
+              "explanation": "Look after adalah phrasal verb yang tidak bisa dipisahkan (inseparable), sehingga objek harus diletakkan setelah kata 'after'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Phrasal verb 'run out of' tidak bisa dipisahkan. Manakah kalimat yang benar?",
+              "options": [
+                "We ran out of milk this morning.",
+                "We ran milk out of this morning.",
+                "We ran out milk of this morning."
+              ],
+              "correctIndex": 0,
+              "explanation": "Run out of tidak bisa dipisahkan. Objek (milk) harus diletakkan setelah frasa lengkap 'run out of'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Sarah: 'I'm so tired of studying for this exam.' Mum: 'Don't [...], you have worked so hard!'",
+              "options": [
+                "give up",
+                "look after",
+                "turn off"
+              ],
+              "correctIndex": 0,
+              "explanation": "Give up berarti menyerah, yang paling sesuai dengan konteks percakapan untuk memberikan semangat agar tidak berhenti berusaha."
+            }
+          ]
         },
         "vocab": [
           {
@@ -8327,7 +9657,45 @@
             "explanation": "Kesalahan umum adalah mengulang subjek setelah relative pronoun. Setelah who/which/that/where, kamu tidak perlu menyebutkan subjek lagi karena relative pronoun sudah menggantikan subjek tersebut.",
             "wrong": "A teacher is someone who he/she helps students.",
             "correct": "A teacher is someone who helps students."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilihlah kalimat yang menggunakan kata ganti relatif (relative pronoun) dengan tepat untuk menjelaskan seseorang.",
+              "options": [
+                "The architect who designed this building is very famous.",
+                "The architect which designed this building is very famous.",
+                "The architect where designed this building is very famous."
+              ],
+              "correctIndex": 0,
+              "explanation": "Kata 'who' digunakan untuk orang (architect), sedangkan 'which' digunakan untuk benda dan 'where' digunakan untuk tempat."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar dan tidak mengandung kesalahan subjek ganda?",
+              "options": [
+                "An explorer is a person who he travels to unknown places.",
+                "An explorer is a person who travels to unknown places.",
+                "An explorer is a person who they travel to unknown places."
+              ],
+              "correctIndex": 1,
+              "explanation": "Setelah 'who', kita tidak perlu mengulang subjek (he/they) karena 'who' sudah berfungsi sebagai subjek klausa tersebut."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi kalimat berikut: 'I want to visit the ancient temple. Do you know a place [...]?'",
+              "options": [
+                "where we can see old artifacts.",
+                "which we can see old artifacts.",
+                "who we can see old artifacts."
+              ],
+              "correctIndex": 0,
+              "explanation": "'Where' digunakan untuk merujuk pada tempat (a place). Pilihan lain salah karena 'which' dan 'who' tidak tepat untuk konteks tempat."
+            }
+          ]
         },
         "vocab": [
           {
@@ -8559,7 +9927,45 @@
             "explanation": "Banyak siswa keliru menggunakan 'So do I' untuk merespon kalimat negatif. Ingat: 'So do I' hanya untuk kalimat positif, sedangkan 'Neither do I' untuk kalimat negatif.",
             "wrong": "A: I don't like horror movies. B: So do I.",
             "correct": "A: I don't like horror movies. B: Neither do I. / Me neither."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Temanmu berkata, 'I really enjoy playing tennis.' Manakah respon yang benar untuk menyatakan setuju dengan pernyataan positif tersebut?",
+              "options": [
+                "So do I.",
+                "Neither do I.",
+                "I disagree with you."
+              ],
+              "correctIndex": 0,
+              "explanation": "Untuk menyetujui pernyataan positif, kita menggunakan 'So do I' atau 'Me too'. 'Neither do I' digunakan untuk pernyataan negatif."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Temanmu berkata, 'I don't like waking up early.' Manakah respon yang tepat untuk menyetujui pendapat negatif tersebut?",
+              "options": [
+                "So do I.",
+                "Neither do I.",
+                "Me too."
+              ],
+              "correctIndex": 1,
+              "explanation": "Kesalahan umum adalah menggunakan 'So do I' untuk kalimat negatif. Untuk menyetujui pernyataan negatif, aturan yang benar adalah menggunakan 'Neither do I' atau 'Me neither'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Rekan kerja berkata, 'I think we should have the meeting in the office.' Kamu ingin menyanggah pendapat tersebut dengan sopan. Kalimat mana yang paling tepat?",
+              "options": [
+                "I see what you mean, but I think a virtual meeting is more efficient.",
+                "That is a bad idea, let's do it online.",
+                "I don't like your opinion."
+              ],
+              "correctIndex": 0,
+              "explanation": "Untuk menyanggah dengan sopan, kita harus mengawali dengan pengakuan seperti 'I see what you mean, but...' agar diskusi tetap konstruktif dan tidak terkesan kasar."
+            }
+          ]
         },
         "vocab": [
           {
@@ -8789,7 +10195,45 @@
             "explanation": "Banyak siswa A2 hanya menjawab dengan satu kalimat pendek tanpa memberikan alasan atau contoh. Ini membuat percakapan terasa tidak lengkap dan kurang natural.",
             "wrong": "Do you like reading? - Yes, I do.",
             "correct": "Do you like reading? - Yes, I really enjoy it. Actually, reading helps me relax after work. For example, I just finished a mystery novel last week and it was fascinating."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih jawaban yang paling tepat menggunakan struktur P.R.E (Point, Reason, Example) untuk pertanyaan 'Do you like cooking?'",
+              "options": [
+                "I love cooking. It's a great way to relax after work because I can focus on the ingredients. For example, I made a delicious pasta dish last night.",
+                "I love cooking because it is fun. I like to cook pasta. It is a good hobby.",
+                "I love cooking. I made pasta last night. It is very fun."
+              ],
+              "correctIndex": 0,
+              "explanation": "Opsi pertama mengikuti struktur P.R.E dengan jelas: Point (I love cooking), Reason (relaxing after work), dan Example (pasta dish last night)."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah jawaban yang paling baik dalam menerapkan 'Extended Response' untuk menghindari jawaban yang terlalu pendek saat ditanya: 'Do you enjoy living in this city?'",
+              "options": [
+                "Yes, I do. It is a nice city.",
+                "Yes, I really enjoy it. Actually, the city has many parks where I can exercise. For instance, I go jogging in the central park every Saturday morning.",
+                "Yes, I enjoy it. I like the city because it is big and I have lived here for a long time."
+              ],
+              "correctIndex": 1,
+              "explanation": "Jawaban yang benar memberikan detail tambahan, alasan, dan contoh konkret, sehingga percakapan menjadi lebih hidup dan tidak terhenti di jawaban singkat."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut dengan frasa yang tepat untuk memberikan waktu berpikir sebelum menjawab pertanyaan tak terduga: 'If you could travel anywhere in the world tomorrow, where would you go?' - '[...]. I think I would choose Japan because I love the culture and the food.'",
+              "options": [
+                "To be fair, I go there.",
+                "Actually, I am going there.",
+                "That's an interesting question."
+              ],
+              "correctIndex": 2,
+              "explanation": "'That's an interesting question' adalah filler yang tepat untuk memberikan waktu berpikir sebelum memberikan jawaban atas pertanyaan yang tidak terduga."
+            }
+          ]
         },
         "vocab": [
           {
@@ -9011,7 +10455,45 @@
             "explanation": "Siswa sering mencampuradukkan first dan second conditional, atau salah menggunakan 'used to' dengan 'be used to'. Perhatikan juga perbedaan waktu: first conditional untuk kemungkinan nyata (will), second conditional untuk imajinasi (would). Jangan lupa bahwa 'used to' diikuti infinitive tanpa 'to' tambahan.",
             "wrong": "If I would have time, I will visit you. I am used to play tennis.",
             "correct": "If I had time, I would visit you. I used to play tennis."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang menggunakan First Conditional dengan benar untuk menyatakan situasi nyata di masa depan?",
+              "options": [
+                "If it rains tomorrow, we will stay home.",
+                "If it will rain tomorrow, we stay home.",
+                "If it rains tomorrow, we would stay home."
+              ],
+              "correctIndex": 0,
+              "explanation": "First conditional menggunakan pola 'If + present simple' untuk syarat dan 'will + infinitive' untuk hasil yang mungkin terjadi di masa depan."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang benar untuk menyatakan kebiasaan di masa lalu (past habit) sesuai aturan 'used to'.",
+              "options": [
+                "I am used to play tennis every day.",
+                "I used to play tennis every day when I was young.",
+                "I used to playing tennis every day when I was young."
+              ],
+              "correctIndex": 1,
+              "explanation": "Struktur 'used to' untuk kebiasaan masa lalu harus diikuti oleh kata kerja bentuk dasar (infinitive), bukan 'am used to' atau bentuk -ing."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut berdasarkan konteks ujian: 'I used to struggle with second conditionals, but [...]'",
+              "options": [
+                "I practiced a lot.",
+                "I am practice a lot.",
+                "I will practicing a lot."
+              ],
+              "correctIndex": 0,
+              "explanation": "Karena kalimat pertama menggunakan bentuk lampau ('used to struggle'), maka bagian kedua harus menggunakan bentuk lampau ('practiced') agar konsisten secara tata bahasa."
+            }
+          ]
         },
         "vocab": [
           {

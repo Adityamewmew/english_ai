@@ -24,7 +24,45 @@
         "explanation": "Banyak siswa lupa menggunakan 'the' sebelum kata sifat komparatif di kedua bagian kalimat, atau salah meletakkan subjek dan verb. Pola yang benar harus selalu 'the + comparative + subject + verb' di kedua klausa.",
         "wrong": "More expensive the city, more difficult to save money.",
         "correct": "The more expensive the city is, the more difficult it is to save money."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Demographic Trends, Nuanced Adjectives & Lifestyle Choices\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Pola Perbandingan Ganda: 'The + comparative + subject + verb, the + comparative + subje..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Dalam modul ini, kita akan mempelajari cara membandingkan kehidupan perkotaan dan pedesaan menggunakan kata sifat bernuansa dan struktur perbandingan tingkat lanjut."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "more difficult to save money",
+            "More expensive the city",
+            "The more expensive the city is"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak siswa lupa menggunakan 'the' sebelum kata sifat komparatif di kedua bagian kalimat, atau salah meletakkan subjek dan verb. Pola yang benar harus selalu 'the + comparative + subject + verb' di kedua klausa."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"But don't you worry about being isolated? Rural areas lack the infrastructure and entertainment options.\"\nDavid: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "That's exactly what I want! The more peaceful the environment, the happier I'll be. Plus, the air quality is so much better.",
+            "More expensive the city"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"That's exactly what I want! The more peaceful the environment, the happier I'll be. Plus, the air quality is so much better.\" (\"Itu persis yang aku inginkan! Semakin damai lingkungannya, semakin bahagia aku. Lagipula, kualitas udaranya jauh lebih baik.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

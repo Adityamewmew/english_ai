@@ -23,7 +23,45 @@
         "explanation": "Siswa C1 sering membuat klaim absolut tanpa hedging yang memadai, atau menggunakan nominalisasi berlebihan hingga kalimat menjadi tidak natural. Dalam konteks akademis dan profesional, penting untuk menyeimbangkan assertiveness dengan intellectual humility, serta menjaga clarity sambil meningkatkan formality.",
         "wrong": "The research proves that all organizations must implement this strategy immediately because it's the best solution.",
         "correct": "The research would appear to suggest that many organizations might benefit from implementing this strategy, provided that contextual factors are carefully considered."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Perhatikan kalimat langsung: \"The company decided to expand\". Bagaimana bentuk kalimat tidak langsung (reported/transformed) yang benar?",
+          "options": [
+            "The company",
+            "Bentuk kalimat tidak baku",
+            "The company decided to expand"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah pada \"Evaluasi Komprehensif Strategic Oratory & Complex Syntax\": bentuk yang tepat adalah \"The company\". Perhatikan perubahan tenses dan kata kerja bantunya."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "The research proves that all organizations must implement this strategy immediately because it's the best solution",
+            "The research would appear to suggest that many organizations might benefit from implementing this strategy",
+            "The research proves that all organizations must implement this strategy immediately because it's the best solution always"
+          ],
+          "correctIndex": 1,
+          "explanation": "Siswa C1 sering membuat klaim absolut tanpa hedging yang memadai, atau menggunakan nominalisasi berlebihan hingga kalimat menjadi tidak natural. Dalam konteks akademis dan profesional, penting untuk menyeimbangkan assertiveness dengan intellectual humility, serta menjaga clarity sambil meningkatkan formality."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Rahman: \"I found the keynote speaker's assertion regarding digital transformation somewhat contentious, wouldn't you agree?\"\nProf. Winters: \"[...]\"",
+          "options": [
+            "Indeed. While her argument was compelling, she failed to substantiate several claims with empirical evidence from diverse educational contexts.",
+            "The research proves that all organizations must implement this strategy immediately because it's the best solution",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Indeed. While her argument was compelling, she failed to substantiate several claims with empirical evidence from diverse educational contexts.\" (\"Benar. Meskipun argumennya meyakinkan, dia gagal membuktikan beberapa klaim dengan bukti empiris dari konteks pendidikan yang beragam.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Winters."
+        }
+      ]
     },
     "vocab": [
       {

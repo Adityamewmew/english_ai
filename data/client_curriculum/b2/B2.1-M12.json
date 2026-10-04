@@ -19,7 +19,45 @@
         "explanation": "Banyak pemula mencoba memisahkan semua phrasal verbs, padahal ada beberapa yang harus tetap bersama. Cara mengeceknya adalah dengan menggunakan kamus: 'look sth up' berarti bisa dipisahkan, sedangkan 'look into sth' tidak bisa dipisahkan.",
         "wrong": "They're looking it into. / I'm looking to forward it.",
         "correct": "They're looking into it. / I'm looking forward to it."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Wish / If Only & Future in the Past\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "I wish / If only + past perfect: Untuk mengungkapkan penyesalan tentang masa lalu. Cont..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara mengungkapkan penyesalan tentang hal-hal yang sudah terjadi di masa lalu."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Wish / If Only & Future in the Past\"?",
+          "options": [
+            "They're looking it into",
+            "I'm looking to forward it",
+            "They're looking into it"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula mencoba memisahkan semua phrasal verbs, padahal ada beberapa yang harus tetap bersama. Cara mengeceknya adalah dengan menggunakan kamus: 'look sth up' berarti bisa dipisahkan, sedangkan 'look into sth' tidak bisa dipisahkan."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nOliver: \"What's the matter, Amelia?\"\nAmelia: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "They're looking it into",
+            "It was that third piece of cake. I wish I hadn't eaten it."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"It was that third piece of cake. I wish I hadn't eaten it.\" (\"Ini karena potongan kue yang ketiga. Andai saja aku tidak memakannya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Amelia."
+        }
+      ]
     },
     "vocab": [
       {

@@ -25,7 +25,45 @@
         "explanation": "Siswa B2 sering menggunakan bahasa terlalu formal dalam situasi informal atau sebaliknya, gagal menyesuaikan register. Mereka juga cenderung menghindari idiom karena takut salah, atau menggunakan idiom secara kaku tanpa memahami konteks sosialnya.",
         "wrong": "In my opinion, we should not put all our eggs in one basket in this casual Friday meeting with colleagues.",
         "correct": "I think we shouldn't put all our eggs in one basket. Let's diversify our approach."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Mastering Spontaneous Synthesis & Nuanced Idiomatic Mastery\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Discourse Markers untuk Sintesis: Gunakan 'That said', 'Having said that', 'By the same...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Modul ini mempersiapkan Anda untuk transisi ke level C1 dengan menguasai tiga kompetensi kunci: (1) Sintesis Spontan - kemampuan menggabungkan ide dari berbagai sumber secara natural tanpa persiapan panjang, (2) Nuansa Pragmatis - memahami makna tersirat, ironi, dan konteks sosial dalam komunikasi, dan (3) Penguasaan Idiom Tingkat Lanjut - menggunakan ekspresi idiomatik secara tepat dan natural."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Mastering Spontaneous Synthesis & Nuanced Idiomatic Mastery\"?",
+          "options": [
+            "I think we shouldn't put all our eggs in one basket. Let's diversify our approach",
+            "we should not put all our eggs in one basket in this casual Friday meeting with colleagues",
+            "In my opinion"
+          ],
+          "correctIndex": 0,
+          "explanation": "Siswa B2 sering menggunakan bahasa terlalu formal dalam situasi informal atau sebaliknya, gagal menyesuaikan register. Mereka juga cenderung menghindari idiom karena takut salah, atau menggunakan idiom secara kaku tanpa memahami konteks sosialnya."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Amelia: \"So, having digested all those presentations, what's your overall take on the conference? I found the diversity of perspectives quite striking.\"\nProf. Rahman: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Indeed. What struck me most was how the European and Asian approaches, while seemingly at odds, actually complement each other. That said, I think we're still missing the bigger picture.",
+            "In my opinion"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Indeed. What struck me most was how the European and Asian approaches, while seemingly at odds, actually complement each other. That said, I think we're still missing the bigger picture.\" (\"Benar. Yang paling mencolok bagi saya adalah bagaimana pendekatan Eropa dan Asia, meskipun tampak bertentangan, sebenarnya saling melengkapi. Meski begitu, saya rasa kita masih melewatkan gambaran yang lebih besar.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Rahman."
+        }
+      ]
     },
     "vocab": [
       {

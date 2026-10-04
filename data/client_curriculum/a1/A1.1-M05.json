@@ -20,7 +20,45 @@
         "explanation": "Pemula sering lupa bahwa untuk he/she/it, verb harus ditambah -s atau -es. Selain itu, dalam bentuk negatif dan pertanyaan, jangan tambahkan -s pada verb utama karena sudah ada pada does/doesn't.",
         "wrong": "She teach Maths. He don't likes music. Does she teaches piano?",
         "correct": "She teaches Maths. He doesn't like music. Does she teach piano?"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Present Simple & Adverbs of Frequency\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Present Simple Positif: Subjek + verb (tambah -s/-es untuk he/she/it). Contoh: I love G..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara membicarakan aktivitas waktu luang dan kebiasaan sehari-hari menggunakan Present Simple."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "She teach Maths. He don't likes music. Does she teaches piano? always",
+            "She teach Maths. He don't likes music. Does she teaches piano?",
+            "She teaches Maths. He doesn't like music. Does she teach piano?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pemula sering lupa bahwa untuk he/she/it, verb harus ditambah -s atau -es. Selain itu, dalam bentuk negatif dan pertanyaan, jangan tambahkan -s pada verb utama karena sudah ada pada does/doesn't."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nNewsletter: \"We often sing popular songs from films but we sometimes sing old songs from the 1960s and 1970s.\"\nNewsletter: \"[...]\"",
+          "options": [
+            "She teach Maths. He don't likes music. Does she teaches piano?",
+            "Sorry, I forgot my keys at home.",
+            "We meet in the school hall every Tuesday at lunchtime and every Friday after school."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"We meet in the school hall every Tuesday at lunchtime and every Friday after school.\" (\"Kami bertemu di aula sekolah setiap Selasa saat makan siang dan setiap Jumat setelah sekolah.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Newsletter."
+        }
+      ]
     },
     "vocab": [
       {

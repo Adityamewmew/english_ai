@@ -21,7 +21,45 @@
         "explanation": "Banyak pemula bingung kapan menggunakan 'for' dan 'since'. 'For' digunakan untuk durasi (berapa lama), sedangkan 'since' untuk titik waktu (sejak kapan).",
         "wrong": "I have lived here since five years.",
         "correct": "I have lived here for five years. / I have lived here since 2021."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"The Ways We Learn\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Present Perfect dengan 'for': Subject + have/has + past participle + for + periode wakt..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas present perfect tense dengan fokus pada penggunaan 'for' dan 'since' untuk menyatakan durasi waktu."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"The Ways We Learn\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I have lived here since five years",
+            "I have lived here for five years",
+            "I have lived here for five years"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula bingung kapan menggunakan 'for' dan 'since'. 'For' digunakan untuk durasi (berapa lama), sedangkan 'since' untuk titik waktu (sejak kapan)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nNick: \"Dad?\"\nDad: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I have lived here since five years",
+            "Yes?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Yes?\" (\"Ya?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dad."
+        }
+      ]
     },
     "vocab": [
       {

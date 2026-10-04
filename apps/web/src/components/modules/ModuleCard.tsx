@@ -51,14 +51,10 @@ export function ModuleCard({ module, onSelect }: ModuleCardProps) {
               Modul {module.orderIndex}
             </Badge>
 
-            {module.isExam ? (
+            {module.isExam && (
               <Badge variant="warning" className="gap-1 text-xs font-semibold">
                 <Award className="w-3 h-3" />
                 Ujian Kelulusan
-              </Badge>
-            ) : (
-              <Badge variant="outline" className="text-xs font-medium capitalize">
-                {module.complexity}
               </Badge>
             )}
           </div>

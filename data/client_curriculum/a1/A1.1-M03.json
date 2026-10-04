@@ -20,7 +20,45 @@
         "explanation": "Pemula sering lupa menambahkan 's ketika menunjukkan kepemilikan pada nama orang. Mereka juga kadang bingung membedakan 'his' dan 'her', atau salah menempatkan possessive adjective.",
         "wrong": "Tom house is big. / William father is Prince Charles. / She cousin is nice.",
         "correct": "Tom's house is big. / William's father is Prince Charles. / Her cousin is nice."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Family Members & Possessives\"?",
+          "options": [
+            "Possessive 's: Untuk menunjukkan kepemilikan, tambahkan 's setelah nama orang. Contoh: ...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara membicarakan keluarga dengan menggunakan kata benda yang menunjukkan kepemilikan (possessive 's) dan kata sifat kepemilikan (my, your, his, her, its, our, their)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Family Members & Possessives\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "William father is Prince Charles",
+            "Tom's house is big",
+            "Tom house is big"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering lupa menambahkan 's ketika menunjukkan kepemilikan pada nama orang. Mereka juga kadang bingung membedakan 'his' dan 'her', atau salah menempatkan possessive adjective."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSteve: \"Hello. My name's Steve. What's your name?\"\nJane: \"[...]\"",
+          "options": [
+            "Hi, I'm Jane and this is Renata. She's Brazilian. She's here on holiday with her mother and father.",
+            "Sorry, I forgot my keys at home.",
+            "Tom house is big"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Hi, I'm Jane and this is Renata. She's Brazilian. She's here on holiday with her mother and father.\" (\"Hai, aku Jane dan ini Renata. Dia orang Brazil. Dia di sini berlibur bersama ibu dan ayahnya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Jane."
+        }
+      ]
     },
     "vocab": [
       {

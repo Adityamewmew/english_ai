@@ -23,7 +23,45 @@
         "explanation": "Siswa C1 sering menggunakan penolakan langsung ('I disagree', 'That's not acceptable') yang terdengar konfrontatif dalam konteks profesional, atau terlalu banyak hedging hingga kehilangan assertiveness. Pilihan kata yang kurang tepat juga dapat merusak diplomatic tone.",
         "wrong": "I don't think that will work for us. We need better terms or we can't proceed.",
         "correct": "While I appreciate the proposal, I'm afraid we'd need to revisit certain terms, particularly regarding the payment schedule, before we could move forward with confidence."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Professional Negotiation, Tactful Concession & Strategic Compromise\"?",
+          "options": [
+            "Penolakan Terselubung (Diplomatic Refusal): Gunakan struktur 'I'm afraid...', 'I can se...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Negosiasi profesional tingkat tinggi memerlukan kemampuan menyampaikan penolakan tanpa menyinggung, menawarkan kompromi dengan syarat yang jelas, dan membangun konsensus strategis."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I don't think that will work for us. We need better terms or we can't proceed always",
+            "While I appreciate the proposal",
+            "I don't think that will work for us. We need better terms or we can't proceed"
+          ],
+          "correctIndex": 1,
+          "explanation": "Siswa C1 sering menggunakan penolakan langsung ('I disagree', 'That's not acceptable') yang terdengar konfrontatif dalam konteks profesional, atau terlalu banyak hedging hingga kehilangan assertiveness. Pilihan kata yang kurang tepat juga dapat merusak diplomatic tone."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"David, I appreciate you coming in today. I've reviewed the renewal proposal, and while the pricing structure is competitive, I'm afraid we'd need more flexibility on the payment terms before we could move forward.\"\nDavid: \"[...]\"",
+          "options": [
+            "I can certainly see your point, Sarah. Would it be fair to say that extending the payment window from 30 to 45 days might address your concerns, provided that we maintain the current volume commitments?",
+            "Sorry, I forgot my keys at home.",
+            "I don't think that will work for us. We need better terms or we can't proceed"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"I can certainly see your point, Sarah. Would it be fair to say that extending the payment window from 30 to 45 days might address your concerns, provided that we maintain the current volume commitments?\" (\"Saya tentu memahami maksud Anda, Sarah. Apakah wajar jika saya katakan bahwa memperpanjang jangka waktu pembayaran dari 30 menjadi 45 hari mungkin dapat mengatasi kekhawatiran Anda, dengan syarat kami mempertahankan komitmen volume saat ini?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

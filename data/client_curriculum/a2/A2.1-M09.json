@@ -22,7 +22,45 @@
         "explanation": "Banyak pemula salah menggunakan 'more' untuk semua kata sifat. Padahal kata sifat pendek (1 suku kata) hanya perlu tambahan -er, bukan 'more'.",
         "wrong": "Africa is more big than Europe.",
         "correct": "Africa is bigger than Europe."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"Nature, Geography & First Conditional\", bagaimana perubahan atau padanan yang benar untuk \"hot → hotter than, big\"?",
+          "options": [
+            "Tidak ada perubahan tenses pada hot → hotter than, big",
+            "hot → hotter than, big selalu dihilangkan",
+            "bigger than"
+          ],
+          "correctIndex": 2,
+          "explanation": "Dalam materi ini: hot → hotter than, big berubah atau berpadanan menjadi \"bigger than\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Nature, Geography & First Conditional\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "Africa is bigger than Europe",
+            "Africa are bigger than Europe",
+            "Africa is more big than Europe"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak pemula salah menggunakan 'more' untuk semua kata sifat. Padahal kata sifat pendek (1 suku kata) hanya perlu tambahan -er, bukan 'more'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nTourist 2: \"Where do these people live?\"\nGuide: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "They live in huts – little houses that they make from wood and grass.",
+            "Africa is more big than Europe"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"They live in huts – little houses that they make from wood and grass.\" (\"Mereka tinggal di gubuk – rumah kecil yang mereka buat dari kayu dan rumput.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Guide."
+        }
+      ]
     },
     "vocab": [
       {

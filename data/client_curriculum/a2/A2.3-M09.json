@@ -26,7 +26,45 @@
         "explanation": "Beberapa phrasal verbs tidak bisa dipisahkan (inseparable), seperti 'look after' dan 'run out of'. Siswa sering menempatkan object di tengah-tengah phrasal verb ini, padahal object harus diletakkan setelah phrasal verb lengkap.",
         "wrong": "I look my brother after. / We ran of milk out.",
         "correct": "I look after my brother. / We ran out of milk."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Essential Daily Phrasal Verbs in Context\"?",
+          "options": [
+            "Turn on/off: verb + particle untuk menyalakan atau mematikan peralatan. Pattern: turn o...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Phrasal verbs adalah kombinasi kata kerja dengan preposisi atau adverb yang membentuk makna baru."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Essential Daily Phrasal Verbs in Context\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "We ran of milk out",
+            "I look after my brother",
+            "I look my brother after"
+          ],
+          "correctIndex": 1,
+          "explanation": "Beberapa phrasal verbs tidak bisa dipisahkan (inseparable), seperti 'look after' dan 'run out of'. Siswa sering menempatkan object di tengah-tengah phrasal verb ini, padahal object harus diletakkan setelah phrasal verb lengkap."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Mum, I can't find my blue dress. Have you seen it?\"\nMum: \"[...]\"",
+          "options": [
+            "I think it's in the washing machine. You can put on your red one instead.",
+            "Sorry, I forgot my keys at home.",
+            "I look my brother after"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"I think it's in the washing machine. You can put on your red one instead.\" (\"Ibu pikir itu ada di mesin cuci. Kamu bisa pakai yang merah saja.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Mum."
+        }
+      ]
     },
     "vocab": [
       {

@@ -24,7 +24,45 @@
         "explanation": "Pemula sering langsung melompat antar waktu tanpa kata penghubung, sehingga cerita jadi membingungkan. Atau mereka lupa mengubah bentuk verb sesuai tense yang dipakai.",
         "wrong": "I go to museum yesterday. I tired now. I sleep tomorrow.",
         "correct": "I went to the museum yesterday. I'm tired now, so I'm going to sleep early tomorrow."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Comprehensive Conversational Fluency\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Simple Past untuk menceritakan pengalaman yang sudah selesai: Subject + Verb 2 / was-we..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Di modul ini, kamu akan belajar menggabungkan cerita masa lalu, kondisi sekarang, dan rencana masa depan dalam satu percakapan yang mengalir natural."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I go to museum yesterday. I tired now. I sleep tomorrow",
+            "I go to museum yesterday. I tired now. I sleep tomorrow always",
+            "I went to the museum yesterday. I'm tired now"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pemula sering langsung melompat antar waktu tanpa kata penghubung, sehingga cerita jadi membingungkan. Atau mereka lupa mengubah bentuk verb sesuai tense yang dipakai."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLisa: \"That sounds wonderful! How do you feel now? Are you tired?\"\nTom: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I go to museum yesterday. I tired now. I sleep tomorrow",
+            "Yes, I'm a bit exhausted because we walked a lot. But I'm happy and relaxed."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Yes, I'm a bit exhausted because we walked a lot. But I'm happy and relaxed.\" (\"Ya, aku sedikit kelelahan karena kami banyak berjalan. Tapi aku senang dan santai.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

@@ -30,10 +30,16 @@ export function ModuleStepFooter({
   const isFirst = currentStep === 1;
   const isLast = currentStep === totalSteps;
 
+  // Hitung sisa estimasi waktu belajar
+  const remainingMinutes = MODULE_STEPS.slice(currentStep - 1).reduce(
+    (acc, s) => acc + (s.estimatedMinutes || 3),
+    0
+  );
+
   return (
-    <footer className="mt-14 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <footer className="mt-14 pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 sticky bottom-0 sm:static z-30 bg-white/95 dark:bg-slate-900/95 sm:bg-transparent backdrop-blur-md -mx-4 px-4 py-3 sm:mx-0 sm:px-0 sm:py-0 shadow-lg sm:shadow-none transition-all">
       {/* Previous Step Button */}
-      <div>
+      <div className="w-full sm:w-auto">
         {!isFirst ? (
           <Button
             variant="outline"
@@ -45,24 +51,26 @@ export function ModuleStepFooter({
             className="w-full sm:w-auto gap-2 text-xs sm:text-sm font-bold shadow-xs min-h-[44px]"
           >
             <ChevronLeft className="w-4 h-4" />
-            <span>Sebelumnya: {prevStepDef?.title || "Langkah Sebelumnya"}</span>
+            <span>Sebelumnya: {prevStepDef?.title || "Sebelumnya"}</span>
           </Button>
         ) : (
-          <div className="text-xs text-slate-400 dark:text-slate-500 font-medium">
+          <div className="text-xs text-slate-400 dark:text-slate-500 font-medium hidden sm:block">
             Langkah pertama dari {totalSteps}
           </div>
         )}
       </div>
 
-      {/* Step Counter Indicator */}
-      <div className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">
-        Langkah {currentStep} dari {totalSteps}
+      {/* Step Counter Indicator with Remaining Time */}
+      <div className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 flex-wrap">
+        <span>Langkah {currentStep} dari {totalSteps}</span>
+        <span className="text-slate-300 dark:text-slate-600">•</span>
+        <span className="text-indigo-600 dark:text-indigo-400 normal-case font-semibold">~{remainingMinutes} menit tersisa</span>
       </div>
 
       {/* Next Step Button */}
-      <div>
+      <div className="w-full sm:w-auto">
         {!isLast ? (
-          <div className="flex flex-col items-end gap-1">
+          <div className="flex flex-col items-stretch sm:items-end gap-1 w-full sm:w-auto">
             <Button
               size="md"
               disabled={!canAdvance}
@@ -86,7 +94,7 @@ export function ModuleStepFooter({
                   ? "Lanjut ke Speaking Lab"
                   : currentStep === 7
                   ? "Lanjut ke Kuis Evaluasi"
-                  : `Lanjut: ${nextStepDef?.title || "Langkah Berikutnya"}`}
+                  : `Lanjut: ${nextStepDef?.title || "Berikutnya"}`}
               </span>
               {!canAdvance ? (
                 <Lock className="w-4 h-4 text-slate-400" />
@@ -95,7 +103,7 @@ export function ModuleStepFooter({
               )}
             </Button>
             {advanceTooltip && !canAdvance && (
-              <span className="text-[11px] text-amber-600 dark:text-amber-400 font-medium">
+              <span className="text-[11px] text-amber-600 dark:text-amber-400 font-medium text-center sm:text-right">
                 {advanceTooltip}
               </span>
             )}

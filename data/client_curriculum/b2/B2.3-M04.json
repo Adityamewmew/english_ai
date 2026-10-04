@@ -25,7 +25,45 @@
         "explanation": "Siswa sering keliru menggunakan present perfect (have + past participle) ketika seharusnya menggunakan modal of deduction. Present perfect menyatakan fakta yang sudah terjadi, sedangkan modal of deduction menyatakan spekulasi atau deduksi tentang masa lalu.",
         "wrong": "He has left his phone at home. (This states a fact, not a deduction)",
         "correct": "He must have left his phone at home. (This expresses a logical deduction based on evidence)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Must have, Could have, Couldn't have, May have been\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Must have + past participle: Digunakan untuk deduksi dengan tingkat kepastian sangat ti..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Modal deduction dalam bentuk past digunakan untuk membuat spekulasi atau deduksi logis tentang peristiwa yang sudah terjadi di masa lalu."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Must have, Could have, Couldn't have, May have been\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "not a deduction)",
+            "He has left his phone at home. (This states a fact",
+            "He must have left his phone at home. (This expresses a logical deduction based on evidence)"
+          ],
+          "correctIndex": 2,
+          "explanation": "Siswa sering keliru menggunakan present perfect (have + past participle) ketika seharusnya menggunakan modal of deduction. Present perfect menyatakan fakta yang sudah terjadi, sedangkan modal of deduction menyatakan spekulasi atau deduksi tentang masa lalu."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Look at this security footage. The alarm was disabled at exactly 2:47 AM. The thief must have had inside knowledge of the system.\"\nTom: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "He has left his phone at home. (This states a fact",
+            "I agree. And look, the display case wasn't forced open. They could have used a key, or maybe they knew the combination."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"I agree. And look, the display case wasn't forced open. They could have used a key, or maybe they knew the combination.\" (\"Saya setuju. Dan lihat, lemari pajangan tidak dibuka dengan paksa. Mereka mungkin menggunakan kunci, atau mungkin mereka tahu kombinasinya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

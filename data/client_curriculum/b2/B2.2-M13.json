@@ -24,7 +24,45 @@
         "explanation": "Siswa B2 sering salah dalam urutan inversi atau lupa menggunakan base form verb dalam subjunctive mood. Mereka juga sering mencampur causative 'have' dan 'get' tanpa memahami perbedaan nuansanya.",
         "wrong": "Never I have seen such a crisis. / The board demands that he goes immediately. / We had them installing the software.",
         "correct": "Never have I seen such a crisis. / The board demands that he go immediately. / We had them install the software."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Komprehensif Keberfasihan Profesional & Akademik\"?",
+          "options": [
+            "Inversion: Struktur inversi digunakan untuk penekanan formal. Formula: Negative adverb ...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Ujian kelulusan B2."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Evaluasi Komprehensif Keberfasihan Profesional & Akademik\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "Never I have seen such a crisis",
+            "Never have I seen such a crisis",
+            "The board demands that he goes immediately"
+          ],
+          "correctIndex": 1,
+          "explanation": "Siswa B2 sering salah dalam urutan inversi atau lupa menggunakan base form verb dalam subjunctive mood. Mereka juga sering mencampur causative 'have' dan 'get' tanpa memahami perbedaan nuansanya."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMargaret Chen: \"We've had our legal team draft a comprehensive statement, and we're offering affected customers two years of credit monitoring. However, the board insists that we take more proactive steps to restore trust.\"\nDavid Park: \"[...]\"",
+          "options": [
+            "That's a good start, but I'd recommend you get your communications team to deploy a multi-channel transparency campaign immediately. It's crucial that stakeholders see you're taking full accountability.",
+            "Never I have seen such a crisis",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"That's a good start, but I'd recommend you get your communications team to deploy a multi-channel transparency campaign immediately. It's crucial that stakeholders see you're taking full accountability.\" (\"Itu awal yang baik, tetapi saya sarankan Anda meminta tim komunikasi Anda menerapkan kampanye transparansi multi-saluran segera. Sangat penting bahwa para pemangku kepentingan melihat Anda mengambil akuntabilitas penuh.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David Park."
+        }
+      ]
     },
     "vocab": [
       {

@@ -22,7 +22,45 @@
         "explanation": "Pemula sering bingung kapan menggunakan adjective berakhiran -ed atau -ing. Ingat: -ed untuk perasaan orang (interested, bored, amazed), -ing untuk sifat benda/situasi yang menyebabkan perasaan itu (interesting, boring, amazing).",
         "wrong": "I'm boring when I wait for the bus.",
         "correct": "I'm bored when I wait for the bus. (karena yang merasa bosan adalah 'I', bukan 'bus' yang membosankan)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Homes, Furniture & Past Continuous\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Past Simple (Regular Verbs) - Positif: Subject + verb-ed. Contoh: They started building..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara berbicara tentang rumah, ruangan, dan perabotan dalam bahasa Inggris."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I'm boring when I wait for the bus",
+            "I'm boring when I wait for the bus always",
+            "I'm bored when I wait for the bus. (karena yang merasa bosan adalah 'I'"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pemula sering bingung kapan menggunakan adjective berakhiran -ed atau -ing. Ingat: -ed untuk perasaan orang (interested, bored, amazed), -ing untuk sifat benda/situasi yang menyebabkan perasaan itu (interesting, boring, amazing)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSophie: \"Home is where I feel safe and comfortable.\"\nJames: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I'm boring when I wait for the bus",
+            "For me, home is somewhere I can relax and be myself."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"For me, home is somewhere I can relax and be myself.\" (\"Bagi saya, rumah adalah suatu tempat di mana saya bisa santai dan menjadi diri sendiri.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh James."
+        }
+      ]
     },
     "vocab": [
       {

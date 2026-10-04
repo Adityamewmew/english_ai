@@ -23,7 +23,45 @@
         "explanation": "Kesalahan umum di level C1 adalah menggunakan terlalu banyak hedging devices dalam satu kalimat (overhedging) sehingga klaim menjadi tidak jelas, atau menggunakan hedging yang terlalu lemah untuk klaim yang didukung data kuat (underhedging). Overhedging merusak kredibilitas akademis karena terkesan tidak percaya diri, sementara underhedging dapat membuat klaim terdengar dogmatis.",
         "wrong": "It might possibly perhaps be conceivably argued that there could potentially be some evidence suggesting...",
         "correct": "The evidence would seem to suggest that... OR It could be argued that the data indicate..."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Advanced Academic Hedging & Nuanced Modality\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Gunakan modal verbs untuk mengekspresikan berbagai tingkat kemungkinan: 'may/might/coul..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Hedging akademis adalah strategi linguistik yang digunakan dalam penulisan dan presentasi ilmiah untuk menyampaikan klaim dengan tingkat kepastian yang terukur."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "It might possibly perhaps be conceivably argued that there could potentially be some evidence suggesting",
+            "It might possibly perhaps be conceivably argued that there could potentially be some evidence suggesting always",
+            "The evidence would seem to suggest that... OR It could be argued that the data indicate"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kesalahan umum di level C1 adalah menggunakan terlalu banyak hedging devices dalam satu kalimat (overhedging) sehingga klaim menjadi tidak jelas, atau menggunakan hedging yang terlalu lemah untuk klaim yang didukung data kuat (underhedging). Overhedging merusak kredibilitas akademis karena terkesan tidak percaya diri, sementara underhedging dapat membuat klaim terdengar dogmatis."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Rahman: \"The preliminary data would seem to suggest a correlation between rising temperatures and earlier migration patterns, though we should be cautious about drawing definitive conclusions at this stage.\"\nDr. Chen: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "It might possibly perhaps be conceivably argued that there could potentially be some evidence suggesting",
+            "Indeed, and arguably the most compelling evidence comes from the northern populations, where the shift appears to be more pronounced than in southern regions."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Indeed, and arguably the most compelling evidence comes from the northern populations, where the shift appears to be more pronounced than in southern regions.\" (\"Memang, dan bisa dikatakan bukti paling menarik berasal dari populasi utara, di mana pergeserannya tampak lebih jelas dibandingkan wilayah selatan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Chen."
+        }
+      ]
     },
     "vocab": [
       {

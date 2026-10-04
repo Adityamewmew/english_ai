@@ -20,7 +20,45 @@
         "explanation": "Kesalahan pemula yang paling sering adalah lupa menggunakan am/is/are sebelum verb-ing. Present Continuous membutuhkan dua bagian: to be dan verb-ing.",
         "wrong": "She playing the violin now.",
         "correct": "She is playing the violin now."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Dance to the Music\"?",
+          "options": [
+            "Present Continuous Positif: Subject + am/is/are + verb-ing. Contoh: I am listening to m...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan Present Continuous untuk mendeskripsikan aktivitas yang sedang terjadi sekarang."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Dance to the Music\"?",
+          "options": [
+            "She playing the violin now",
+            "She is playing the violin now",
+            "She are playing the violin now"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kesalahan pemula yang paling sering adalah lupa menggunakan am/is/are sebelum verb-ing. Present Continuous membutuhkan dua bagian: to be dan verb-ing."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nAlex: \"Now four people are singing! They're giving a concert but they aren't wearing special clothes. Why is this happening? I don't know!\"\nAlex: \"[...]\"",
+          "options": [
+            "OK, it's over. All the people here are smiling and talking about the music. The musicians and singers are leaving. What a great morning!",
+            "She playing the violin now",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"OK, it's over. All the people here are smiling and talking about the music. The musicians and singers are leaving. What a great morning!\" (\"OK, sudah selesai. Semua orang di sini tersenyum dan berbicara tentang musiknya. Para musisi dan penyanyi sedang pergi. Pagi yang luar biasa!\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Alex."
+        }
+      ]
     },
     "vocab": [
       {

@@ -23,7 +23,45 @@
         "explanation": "Pelajar C1 sering menggunakan konstruksi verbal sederhana daripada nominalisasi kompleks yang diharapkan dalam diskusi ekonomi perilaku tingkat mahir. Selain itu, mereka kadang gagal mempertahankan register formal-akademis secara konsisten ketika membahas konsep abstrak.",
         "wrong": "People don't want to lose money more than they want to get money, so companies use this when they advertise.",
         "correct": "The phenomenon of loss aversion, whereby individuals exhibit a stronger preference for avoiding losses than for acquiring equivalent gains, is strategically leveraged in contemporary marketing frameworks."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Behavioral Economics, Heuristics & Cognitive Biases in Decision Making\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Loss aversion: Gunakan struktur 'the tendency to prefer avoiding losses to acquiring eq..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Ekonomi perilaku (behavioral economics) mengkaji bagaimana faktor psikologis dan kognitif memengaruhi keputusan ekonomi manusia, sering kali menyimpang dari asumsi rasionalitas sempurna dalam teori ekonomi klasik."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "so companies use this when they advertise",
+            "People don't want to lose money more than they want to get money",
+            "The phenomenon of loss aversion"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pelajar C1 sering menggunakan konstruksi verbal sederhana daripada nominalisasi kompleks yang diharapkan dalam diskusi ekonomi perilaku tingkat mahir. Selain itu, mereka kadang gagal mempertahankan register formal-akademis secara konsisten ketika membahas konsep abstrak."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"James, I've been reviewing our experimental data, and the magnitude of loss aversion among retail investors is frankly staggering. Even when controlling for risk tolerance, participants exhibited a 2.5-to-1 preference for avoiding losses over acquiring equivalent gains.\"\nDr. Morrison: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "That's consistent with Kahneman and Tversky's seminal work on prospect theory. What's particularly intriguing is how we manipulated the framing effect. Did the positive framing condition yield significantly different portfolio allocations?",
+            "People don't want to lose money more than they want to get money"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"That's consistent with Kahneman and Tversky's seminal work on prospect theory. What's particularly intriguing is how we manipulated the framing effect. Did the positive framing condition yield significantly different portfolio allocations?\" (\"Itu konsisten dengan karya penting Kahneman dan Tversky tentang teori prospek. Yang sangat menarik adalah bagaimana kita memanipulasi efek pembingkaian. Apakah kondisi pembingkaian positif menghasilkan alokasi portofolio yang signifikan berbeda?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Morrison."
+        }
+      ]
     },
     "vocab": [
       {

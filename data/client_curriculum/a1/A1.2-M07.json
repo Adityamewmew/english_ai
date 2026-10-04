@@ -23,7 +23,45 @@
         "explanation": "Pemula sering lupa menggunakan artikel 'a' setelah 'have' untuk penyakit yang bisa dihitung, atau salah menggunakan bentuk jamak untuk bagian tubuh. Ingat, gunakan 'a' untuk penyakit tunggal dan bentuk tunggal untuk bagian tubuh yang sakit.",
         "wrong": "I have headache. My legs hurts.",
         "correct": "I have a headache. My leg hurts."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Describing Health, Body Parts & Ailments\"?",
+          "options": [
+            "Gunakan 'I have a + [nama penyakit]' untuk menjelaskan keluhan: I have a headache (Saya...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Dalam kehidupan sehari-hari, kita perlu bisa menjelaskan kondisi kesehatan kita, terutama saat merasa tidak enak badan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Describing Health, Body Parts & Ailments\"?",
+          "options": [
+            "I have headache. My legs hurts",
+            "I have a headache. My leg hurts",
+            "I have a headache. My leg hurts"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering lupa menggunakan artikel 'a' setelah 'have' untuk penyakit yang bisa dihitung, atau salah menggunakan bentuk jamak untuk bagian tubuh. Ingat, gunakan 'a' untuk penyakit tunggal dan bentuk tunggal untuk bagian tubuh yang sakit."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nTom: \"Hi Lisa. Are you okay? You don't look well.\"\nLisa: \"[...]\"",
+          "options": [
+            "Hi Tom. I'm not feeling good. I have a headache and a sore throat.",
+            "I have headache. My legs hurts",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Hi Tom. I'm not feeling good. I have a headache and a sore throat.\" (\"Hai Tom. Aku tidak enak badan. Aku sakit kepala dan sakit tenggorokan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Lisa."
+        }
+      ]
     },
     "vocab": [
       {

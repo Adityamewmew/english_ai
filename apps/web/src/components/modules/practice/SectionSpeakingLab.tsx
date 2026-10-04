@@ -6,6 +6,7 @@ import { useSpeechRecorder } from "@/hooks/use-speech-recorder";
 import { SpeakingLabDrill, DrillItem } from "./SpeakingLabDrill";
 import { SpeakingLabRoleplay, RoleplayData } from "./SpeakingLabRoleplay";
 import { SpeakingLabChallenge, ChallengeData } from "./SpeakingLabChallenge";
+import { SpeakingReadyScreen } from "./SpeakingReadyScreen";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { animeButtonPop, animeShake } from "@/lib/anime-effects";
@@ -130,6 +131,7 @@ export function SectionSpeakingLab({
   }, [challenge, roleplay, resolvedDrills, title]);
 
   const hasDrills = resolvedDrills.length > 0;
+  const [isReadyConfirmed, setIsReadyConfirmed] = useState(false);
   const [activeTab, setActiveTab] = useState<"drill" | "roleplay" | "challenge">(
     hasDrills ? "drill" : "roleplay"
   );
@@ -170,6 +172,16 @@ export function SectionSpeakingLab({
     );
     onSpeakingComplete?.(overallSpeaking, true);
   };
+
+  if (!isReadyConfirmed) {
+    return (
+      <SpeakingReadyScreen
+        moduleTitle={title}
+        hasDrills={hasDrills}
+        onStart={() => setIsReadyConfirmed(true)}
+      />
+    );
+  }
 
   return (
     <div className="space-y-8 sm:space-y-10">

@@ -23,7 +23,45 @@
         "explanation": "Kesalahan umum adalah mencampuradukkan timeline dengan menggunakan past perfect continuous tanpa titik referensi yang jelas di past simple, atau menggunakan modal perfects tanpa konteks kondisional yang tepat. Siswa C1 sering lupa bahwa modal perfects memerlukan pemahaman implisit atau eksplisit tentang kondisi yang tidak terpenuhi.",
         "wrong": "By the time the meeting started, I was working on the report for two hours, and we would present different findings.",
         "correct": "By the time the meeting started, I had been working on the report for two hours, and we could have presented different findings if we had received the updated data."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Retrospective Realism & Dual-Timeline Tenses\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Past Perfect Continuous untuk Aktivitas Berkelanjutan Sebelum Titik Naratif: [Subject +...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Narasi retrospektif tingkat mahir memerlukan kemampuan mengelola dua atau lebih kerangka temporal secara bersamaan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "By the time the meeting started",
+            "By the time the meeting started",
+            "I was working on the report for two hours"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kesalahan umum adalah mencampuradukkan timeline dengan menggunakan past perfect continuous tanpa titik referensi yang jelas di past simple, atau menggunakan modal perfects tanpa konteks kondisional yang tepat. Siswa C1 sering lupa bahwa modal perfects memerlukan pemahaman implisit atau eksplisit tentang kondisi yang tidak terpenuhi."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"Had we secured that additional grant we had been pursuing, the findings might have been significantly more robust. The university could have supported us more.\"\nProf. Richardson: \"[...]\"",
+          "options": [
+            "By the time the meeting started",
+            "True, but in retrospect, the methodological limitations we faced actually led us to develop that innovative statistical approach. We might not have discovered it otherwise.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"True, but in retrospect, the methodological limitations we faced actually led us to develop that innovative statistical approach. We might not have discovered it otherwise.\" (\"Benar, tapi jika menengok kembali, keterbatasan metodologis yang kita hadapi justru membawa kita mengembangkan pendekatan statistik inovatif itu. Kita mungkin tidak akan menemukannya sebaliknya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Richardson."
+        }
+      ]
     },
     "vocab": [
       {

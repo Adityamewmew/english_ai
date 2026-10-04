@@ -20,7 +20,45 @@
         "explanation": "Pemula sering lupa bahwa setelah modal verb (may, might, should, must) harus diikuti bentuk dasar verb tanpa 'to' atau tambahan -s/-ed. Kesalahan lain adalah salah menempatkan 'not' dalam kalimat negatif.",
         "wrong": "He might be arrives late. / She should to call him. / They can't to go there.",
         "correct": "He might arrive late. / She should call him. / They can't go there."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Inversion, Passive & Biographies\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Modal for speculation: 'may/might/could + verb' untuk kemungkinan (You might forget her...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas struktur grammar tingkat lanjut untuk membicarakan kehidupan selebriti dan tokoh terkenal."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Inversion, Passive & Biographies\"?",
+          "options": [
+            "He might arrive late",
+            "She should to call him",
+            "He might be arrives late"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering lupa bahwa setelah modal verb (may, might, should, must) harus diikuti bentuk dasar verb tanpa 'to' atau tambahan -s/-ed. Kesalahan lain adalah salah menempatkan 'not' dalam kalimat negatif."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMum: \"Well, if by 'her' you mean Naomi Osaka – yes, I am. What's the big deal, Mum?\"\nBecky: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Tennis, tennis, tennis. It's always tennis. And always following Osaka on social media. But seriously, Mum.",
+            "He might be arrives late"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Tennis, tennis, tennis. It's always tennis. And always following Osaka on social media. But seriously, Mum.\" (\"Tenis, tenis, tenis. Selalu tentang tenis. Dan selalu mengikuti Osaka di media sosial. Tapi serius, Mum.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Becky."
+        }
+      ]
     },
     "vocab": [
       {

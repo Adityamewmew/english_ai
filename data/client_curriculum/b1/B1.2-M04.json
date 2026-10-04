@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa menggunakan mustn't untuk menyatakan deduksi negatif, padahal mustn't berarti 'prohibition' (larangan), bukan deduksi. Untuk deduksi negatif yang berarti 'hampir pasti tidak', gunakan can't.",
         "wrong": "He mustn't be at home. (Salah - ini berarti 'dia tidak boleh di rumah')",
         "correct": "He can't be at home. (Benar - ini berarti 'dia pasti tidak di rumah')"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Must, Might, Can't in Everyday Reasoning\"?",
+          "options": [
+            "MUST + bare infinitive = deduksi positif dengan kepastian tinggi (99% yakin). Formula: ...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Modal verbs untuk deduksi membantu kita menyatakan seberapa yakin kita terhadap suatu situasi saat ini."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Must, Might, Can't in Everyday Reasoning\"?",
+          "options": [
+            "He mustn't be at home. (Salah - ini berarti 'dia tidak boleh di rumah')",
+            "He can't be at home. (Benar - ini berarti 'dia pasti tidak di rumah')",
+            "He mustn't be at home. (Salah - ini berarti 'dia tidak boleh di rumah') always"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak siswa menggunakan mustn't untuk menyatakan deduksi negatif, padahal mustn't berarti 'prohibition' (larangan), bukan deduksi. Untuk deduksi negatif yang berarti 'hampir pasti tidak', gunakan can't."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"That can't be right. I just saw him post a photo on social media an hour ago from the gym.\"\nTom: \"[...]\"",
+          "options": [
+            "Really? Then he might be working from home today. He mentioned something about a delivery.",
+            "He mustn't be at home. (Salah - ini berarti 'dia tidak boleh di rumah')",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Really? Then he might be working from home today. He mentioned something about a delivery.\" (\"Benarkah? Kalau begitu dia mungkin sedang bekerja dari rumah hari ini. Dia menyebut sesuatu tentang pengiriman barang.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

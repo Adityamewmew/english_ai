@@ -51,7 +51,7 @@ export function TheoryThreeTierExamples({
     return [
       {
         level: "simple",
-        levelLabel: "Level 1: Sederhana (Simple)",
+        levelLabel: "Tingkat Dasar (Core Pattern)",
         badgeVariant: "primary",
         sentence: targetExampleSentence,
         meaning: targetSentenceMeaning || "Pola dasar kalimat utama modul ini.",
@@ -59,7 +59,7 @@ export function TheoryThreeTierExamples({
       },
       {
         level: "contextual",
-        levelLabel: "Level 2: Kontekstual (Contextual)",
+        levelLabel: "Tingkat Menengah (In Context)",
         badgeVariant: "secondary",
         sentence: `In fact, ${targetExampleSentence.toLowerCase().replace(/\.$/, "")} every single day.`,
         meaning: `Sebenarnya, ${targetSentenceMeaning ? targetSentenceMeaning.toLowerCase().replace(/\.$/, "") : "dia/saya melakukannya"} setiap hari.`,
@@ -67,7 +67,7 @@ export function TheoryThreeTierExamples({
       },
       {
         level: "applied",
-        levelLabel: "Level 3: Terapan Nyata (Applied)",
+        levelLabel: "Tingkat Mahir (Real Application)",
         badgeVariant: "success",
         sentence: `Hello! ${targetExampleSentence} Nice to meet you!`,
         meaning: `Halo! ${targetSentenceMeaning || ""} Senang berkenalan denganmu!`,

@@ -21,7 +21,45 @@
         "explanation": "Banyak pemula masih menggunakan 'do/does' ketika membuat pertanyaan atau kalimat negatif dengan 'can'. Padahal 'can' adalah modal verb yang tidak memerlukan auxiliary verb 'do/does'.",
         "wrong": "Do you can swim? / He doesn't can play guitar.",
         "correct": "Can you swim? / He can't play guitar."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Sports & Adverbs of Frequency\"?",
+          "options": [
+            "Positive: Subject + can + verb (contoh: I can swim. / She can play tennis.)",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara mengungkapkan kemampuan (ability) menggunakan kata 'can' dan 'can't'."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "Do you can swim?",
+            "Can you swim?",
+            "He doesn't can play guitar"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula masih menggunakan 'do/does' ketika membuat pertanyaan atau kalimat negatif dengan 'can'. Padahal 'can' adalah modal verb yang tidak memerlukan auxiliary verb 'do/does'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nAlex: \"That's great! Can you do taekwondo too?\"\nJamie: \"[...]\"",
+          "options": [
+            "No, I can't. But I can swim very well.",
+            "Do you can swim?",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"No, I can't. But I can swim very well.\" (\"Tidak, aku tidak bisa. Tapi aku bisa berenang dengan sangat baik.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Jamie."
+        }
+      ]
     },
     "vocab": [
       {

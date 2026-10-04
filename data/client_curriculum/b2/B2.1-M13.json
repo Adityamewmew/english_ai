@@ -24,7 +24,45 @@
         "explanation": "Banyak siswa mencampuradukkan narrative tenses, terutama lupa menggunakan Past Perfect untuk menunjukkan urutan waktu yang jelas. Kesalahan lain adalah menggunakan modal deduction dengan tense yang salah (must do vs must have done) dan tertukar antara second dan third conditional.",
         "wrong": "When I arrived, she already left and was waiting for an hour. He must forget his keys yesterday.",
         "correct": "When I arrived, she had already left and had been waiting for an hour. He must have forgotten his keys yesterday."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Komprehensif Vantage Foundations\"?",
+          "options": [
+            "Narrative Tenses: Past Simple untuk aksi utama (I went), Past Continuous untuk latar be...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Ujian kelulusan B2."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "she already left and was waiting for an hour. He must forget his keys yesterday",
+            "When I arrived",
+            "When I arrived"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak siswa mencampuradukkan narrative tenses, terutama lupa menggunakan Past Perfect untuk menunjukkan urutan waktu yang jelas. Kesalahan lain adalah menggunakan modal deduction dengan tense yang salah (must do vs must have done) dan tertukar antara second dan third conditional."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"That makes sense! What about the listening section? I always struggle with understanding native speakers at natural speed.\"\nDavid: \"[...]\"",
+          "options": [
+            "Try to focus on key words and context clues rather than every single word. You don't need to understand everything to get the main idea.",
+            "Sorry, I forgot my keys at home.",
+            "When I arrived"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Try to focus on key words and context clues rather than every single word. You don't need to understand everything to get the main idea.\" (\"Coba fokus pada kata kunci dan petunjuk konteks daripada setiap kata. Kamu tidak perlu memahami semuanya untuk mendapatkan ide utama.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

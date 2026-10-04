@@ -21,7 +21,45 @@
         "explanation": "Kesalahan umum pemula adalah menggunakan 'more' untuk adjective pendek, atau menambahkan -er pada adjective panjang. Ingat: adjective pendek pakai -er, adjective panjang pakai 'more'.",
         "wrong": "Bikes are more cheap than cars. / Cars are expensiver than bikes.",
         "correct": "Bikes are cheaper than cars. / Cars are more expensive than bikes."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"Transport, Comparatives & Getting Around\", bagaimana perubahan atau padanan yang benar untuk \"quick → quicker, cheap\"?",
+          "options": [
+            "quick → quicker, cheap selalu dihilangkan",
+            "Tidak ada perubahan tenses pada quick → quicker, cheap",
+            "cheaper. 'Bikes are cheaper than cars.'"
+          ],
+          "correctIndex": 2,
+          "explanation": "Dalam materi ini: quick → quicker, cheap berubah atau berpadanan menjadi \"cheaper. 'Bikes are cheaper than cars.'\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Transport, Comparatives & Getting Around\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "Bikes are more cheap than cars",
+            "Cars are expensiver than bikes",
+            "Bikes are cheaper than cars"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kesalahan umum pemula adalah menggunakan 'more' untuk adjective pendek, atau menambahkan -er pada adjective panjang. Ingat: adjective pendek pakai -er, adjective panjang pakai 'more'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nAmy: \"How much is a ticket to Brighton?\"\nSales Assistant: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Bikes are more cheap than cars",
+            "Do you want a single or a return?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Do you want a single or a return?\" (\"Anda ingin tiket sekali jalan atau pulang-pergi?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sales Assistant."
+        }
+      ]
     },
     "vocab": [
       {

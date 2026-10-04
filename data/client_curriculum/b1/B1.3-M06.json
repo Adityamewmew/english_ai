@@ -23,7 +23,45 @@
         "explanation": "Kesalahan umum adalah menggunakan 'would have + past participle' di main clause, yang menghasilkan Third Conditional murni (masa lalu ke masa lalu), bukan Mixed Conditional (masa lalu ke masa sekarang).",
         "wrong": "If I had saved money, I would have been rich now.",
         "correct": "If I had saved money, I would be rich now."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Connecting Past Choices with Present Realities\"?",
+          "options": [
+            "Formula: If + past perfect, would/could/might + base verb. Contoh: If I had studied med...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Mixed conditionals menghubungkan keputusan atau kejadian di masa lalu dengan dampaknya terhadap kondisi saat ini."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Connecting Past Choices with Present Realities\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "If I had saved money",
+            "I would have been rich now",
+            "If I had saved money"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kesalahan umum adalah menggunakan 'would have + past participle' di main clause, yang menghasilkan Third Conditional murni (masa lalu ke masa lalu), bukan Mixed Conditional (masa lalu ke masa sekarang)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"That's wonderful! I sometimes wonder how different my life would be if I had taken that job offer in Singapore ten years ago.\"\nTom: \"[...]\"",
+          "options": [
+            "Really? Do you regret staying here?",
+            "Sorry, I forgot my keys at home.",
+            "If I had saved money"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Really? Do you regret staying here?\" (\"Benarkah? Apakah kamu menyesal tetap di sini?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

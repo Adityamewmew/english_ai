@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula bingung kapan menggunakan gerund (-ing) dan kapan menggunakan infinitive (to + verb). Kesalahan umum adalah menggunakan bentuk yang salah setelah kata kerja tertentu.",
         "wrong": "He avoided to walk along the seafront. / I hope seeing you soon.",
         "correct": "He avoided walking along the seafront. / I hope to see you soon."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Reported Questions & Requests\"?",
+          "options": [
+            "Verbs followed by gerund: enjoy, (don't) mind, (can't) stand, finish, imagine, feel lik...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas penggunaan kata kerja yang diikuti gerund atau infinitive, cara menyatakan tujuan dengan to/in order to/so as to, serta penggunaan so dan such untuk memberikan penekanan pada kalimat."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Reported Questions & Requests\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "He avoided to walk along the seafront",
+            "He avoided walking along the seafront",
+            "I hope seeing you soon"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula bingung kapan menggunakan gerund (-ing) dan kapan menggunakan infinitive (to + verb). Kesalahan umum adalah menggunakan bentuk yang salah setelah kata kerja tertentu."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJournalist: \"What did you see when you arrived?\"\nMr Reeder: \"[...]\"",
+          "options": [
+            "I saw a baby's buggy in the sea. The baby was strapped into the buggy and was in the water. I went over and pulled the buggy over to the sea wall.",
+            "He avoided to walk along the seafront",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"I saw a baby's buggy in the sea. The baby was strapped into the buggy and was in the water. I went over and pulled the buggy over to the sea wall.\" (\"Saya melihat kereta bayi di laut. Bayinya masih terikat di kereta dan ada di dalam air. Saya menghampiri dan menarik kereta itu ke dinding laut.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Mr Reeder."
+        }
+      ]
     },
     "vocab": [
       {

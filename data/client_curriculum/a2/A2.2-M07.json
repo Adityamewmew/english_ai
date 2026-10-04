@@ -25,7 +25,45 @@
         "explanation": "Banyak siswa A2 salah menyusun urutan kata sifat saat mendeskripsikan barang. Dalam bahasa Inggris, urutan kata sifat mengikuti pola: opinion - size - age - shape - color - origin - material - purpose. Untuk barang hilang, fokus pada: size + color + material + noun.",
         "wrong": "I've lost my leather black big bag",
         "correct": "I've lost my big black leather bag"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Everyday Emergencies, Lost Property & Reporting Incidents\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Gunakan Present Perfect untuk melaporkan kehilangan: 'I've lost my...' atau 'I can't fi...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Dalam kehidupan sehari-hari, kehilangan barang atau menghadapi situasi darurat ringan bisa terjadi kapan saja."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Everyday Emergencies, Lost Property & Reporting Incidents\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I've lost my leather black big bag always",
+            "I've lost my leather black big bag",
+            "I've lost my big black leather bag"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak siswa A2 salah menyusun urutan kata sifat saat mendeskripsikan barang. Dalam bahasa Inggris, urutan kata sifat mengikuti pola: opinion - size - age - shape - color - origin - material - purpose. Untuk barang hilang, fokus pada: size + color + material + noun."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"I think I left it on the train about an hour ago. I was on the 2 o'clock service to Brighton.\"\nStaff: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I've lost my leather black big bag",
+            "Could you describe the backpack for me? What color is it and what size?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Could you describe the backpack for me? What color is it and what size?\" (\"Bisakah Anda mendeskripsikan ransel itu? Warna dan ukurannya seperti apa?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Staff."
+        }
+      ]
     },
     "vocab": [
       {

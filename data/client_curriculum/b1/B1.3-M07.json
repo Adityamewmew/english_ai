@@ -23,7 +23,45 @@
         "explanation": "Siswa sering hanya menceritakan seluruh plot tanpa memberikan analisis mendalam atau evaluasi kritis. Ulasan yang baik menyeimbangkan ringkasan dengan interpretasi.",
         "wrong": "The movie is about a man who finds a ring and then he travels to destroy it and at the end he succeeds.",
         "correct": "The film explores themes of power and corruption through the protagonist's moral struggle. The journey serves as a metaphor for inner transformation."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Reviewing Books, Independent Cinema & Visual Arts\"?",
+          "options": [
+            "Gunakan present simple untuk fakta umum tentang karya: 'The film explores...', 'The nov...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Dalam modul ini, kita akan mempelajari cara menyusun kritik seni dan ulasan film yang mendalam menggunakan bahasa Inggris."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Reviewing Books, Independent Cinema & Visual Arts\"?",
+          "options": [
+            "The movie is about a man who finds a ring and then he travels to destroy it and at the end he succeeds",
+            "The film explores themes of power and corruption through the protagonist's moral struggle. The journey serves as a metaphor for inner transformation",
+            "The movie is about a man who finds a ring and then he travels to destroy it and at the end he succeeds always"
+          ],
+          "correctIndex": 1,
+          "explanation": "Siswa sering hanya menceritakan seluruh plot tanpa memberikan analisis mendalam atau evaluasi kritis. Ulasan yang baik menyeimbangkan ringkasan dengan interpretasi."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nRina: \"I agree! The character development was exceptional. But did you find the plot twist in the middle predictable?\"\nDavid: \"[...]\"",
+          "options": [
+            "The movie is about a man who finds a ring and then he travels to destroy it and at the end he succeeds",
+            "Not at all! It completely caught me off guard. The way they used visual metaphors throughout was stunning.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Not at all! It completely caught me off guard. The way they used visual metaphors throughout was stunning.\" (\"Sama sekali tidak! Itu benar-benar mengejutkan saya. Cara mereka menggunakan metafora visual sepanjang film sangat memukau.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

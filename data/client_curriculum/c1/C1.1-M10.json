@@ -21,7 +21,45 @@
         "explanation": "Kesalahan umum adalah lupa mengubah tenses atau ekspresi waktu saat melaporkan ucapan. Pemula sering menggunakan tenses yang sama seperti direct speech, atau lupa mengubah 'today' menjadi 'that day', 'tomorrow' menjadi 'the next day', dsb.",
         "wrong": "She said she is busy today and will come tomorrow.",
         "correct": "She said she was busy that day and would come the next day."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Perhatikan kalimat langsung: \"I am happy\". Bagaimana bentuk kalimat tidak langsung (reported/transformed) yang benar?",
+          "options": [
+            "I am happy",
+            "She said (that",
+            "She say (that"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah pada \"Passive Report Structures & Media\": bentuk yang tepat adalah \"She said (that\". Perhatikan perubahan tenses dan kata kerja bantunya."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Passive Report Structures & Media\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "She said she was busy that day and would come the next day",
+            "She said she were busy that day and would come the next day",
+            "She said she is busy today and will come tomorrow"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kesalahan umum adalah lupa mengubah tenses atau ekspresi waktu saat melaporkan ucapan. Pemula sering menggunakan tenses yang sama seperti direct speech, atau lupa mengubah 'today' menjadi 'that day', 'tomorrow' menjadi 'the next day', dsb."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJustin: \"So where's Nicole? We're going to miss the bus.\"\nEmma: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "We've still got a few minutes. She'll be here. She's not going to miss a trip to the skate park.",
+            "She said she is busy today and will come tomorrow"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"We've still got a few minutes. She'll be here. She's not going to miss a trip to the skate park.\" (\"Kita masih punya beberapa menit. Dia akan datang. Dia tidak akan melewatkan perjalanan ke taman skateboard.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Emma."
+        }
+      ]
     },
     "vocab": [
       {

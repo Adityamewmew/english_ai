@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula menggunakan 'Can you' untuk meminta bantuan, padahal ini terdengar kurang sopan atau seperti mempertanyakan kemampuan seseorang. Dalam situasi formal atau saat berbicara dengan orang yang baru dikenal, 'Could you' jauh lebih tepat dan sopan.",
         "wrong": "Can you help me?",
         "correct": "Could you help me, please?"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Polite Requests, Permission & Offers\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Could you + verb: Digunakan untuk meminta bantuan atau meminta seseorang melakukan sesu..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Dalam bahasa Inggris, cara kita meminta sesuatu, meminta izin, atau menawarkan bantuan sangat penting untuk menunjukkan kesopanan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Polite Requests, Permission & Offers\"?",
+          "options": [
+            "Can you help me? always",
+            "Can you help me?",
+            "Could you help me"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula menggunakan 'Can you' untuk meminta bantuan, padahal ini terdengar kurang sopan atau seperti mempertanyakan kemampuan seseorang. Dalam situasi formal atau saat berbicara dengan orang yang baru dikenal, 'Could you' jauh lebih tepat dan sopan."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"Thank you so much! Also, may I borrow your blue pen? Mine has run out of ink.\"\nDaniel: \"[...]\"",
+          "options": [
+            "Can you help me?",
+            "Sorry, I forgot my keys at home.",
+            "Yes, certainly. Here you are. You can keep it until tomorrow if you need to."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Yes, certainly. Here you are. You can keep it until tomorrow if you need to.\" (\"Ya, tentu. Ini dia. Kamu bisa memakainya sampai besok kalau perlu.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Daniel."
+        }
+      ]
     },
     "vocab": [
       {

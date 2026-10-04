@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula salah menggunakan 'to + verb' setelah kata kerja preferensi ini. Ingat, setelah like, love, enjoy, don't mind, dislike, dan hate harus menggunakan verb-ing, bukan 'to + verb'.",
         "wrong": "I enjoy to play tennis. She loves to dance.",
         "correct": "I enjoy playing tennis. She loves dancing."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Like, Love & Hate + -ing\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola dasar: Subject + like/love/enjoy/don't mind/dislike/hate + verb-ing. Contoh: I enj..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Dalam bahasa Inggris, kita menggunakan kata kerja seperti like, love, enjoy, don't mind, dislike, dan hate untuk mengungkapkan tingkat kesukaan terhadap aktivitas."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I enjoy to play tennis. She loves to dance",
+            "I enjoy to play tennis. She loves to dance always",
+            "I enjoy playing tennis. She loves dancing"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula salah menggunakan 'to + verb' setelah kata kerja preferensi ini. Ingat, setelah like, love, enjoy, don't mind, dislike, dan hate harus menggunakan verb-ing, bukan 'to + verb'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"Hi Ryan! What do you like doing in your free time?\"\nRyan: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I enjoy to play tennis. She loves to dance",
+            "I love playing football with my friends. What about you?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"I love playing football with my friends. What about you?\" (\"Aku sangat suka bermain sepak bola dengan teman-temanku. Kalau kamu?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ryan."
+        }
+      ]
     },
     "vocab": [
       {

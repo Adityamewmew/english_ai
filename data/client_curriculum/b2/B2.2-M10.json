@@ -25,7 +25,45 @@
         "explanation": "Banyak pelajar B2 salah memisahkan atau menggabungkan partikel phrasal verb dengan objeknya. Beberapa phrasal verbs dapat dipisahkan (separable), sementara yang lain tidak (inseparable). Phrasal verbs tiga kata seperti 'boil down to' dan 'factor in' memiliki aturan posisi khusus.",
         "wrong": "We need to iron the problems out before the merger completes.",
         "correct": "We need to iron out the problems before the merger completes."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Complex Phrasal Verbs & Prepositional Combinations in Executive Discourse\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Iron out = menyelesaikan masalah atau kesulitan secara detail | Formula: iron out + [pr..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Phrasal verbs kompleks dan kombinasi preposisi adalah elemen kunci dalam komunikasi bisnis tingkat eksekutif."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Complex Phrasal Verbs & Prepositional Combinations in Executive Discourse\"?",
+          "options": [
+            "We need to iron the problems out before the merger completes always",
+            "We need to iron the problems out before the merger completes",
+            "We need to iron out the problems before the merger completes"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pelajar B2 salah memisahkan atau menggabungkan partikel phrasal verb dengan objeknya. Beberapa phrasal verbs dapat dipisahkan (separable), sementara yang lain tidak (inseparable). Phrasal verbs tiga kata seperti 'boil down to' dan 'factor in' memiliki aturan posisi khusus."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJennifer: \"Marcus, I've reviewed the expansion proposal. The numbers look promising, but have we factored in the regulatory costs for entering the Southeast Asian markets?\"\nMarcus: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "We need to iron the problems out before the merger completes",
+            "Good question. We've included preliminary estimates, but there are still some compliance issues we need to iron out with local authorities before we can finalize the budget."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Good question. We've included preliminary estimates, but there are still some compliance issues we need to iron out with local authorities before we can finalize the budget.\" (\"Pertanyaan bagus. Kami sudah memasukkan estimasi awal, tapi masih ada beberapa masalah kepatuhan yang perlu kami selesaikan dengan otoritas lokal sebelum kami bisa menyelesaikan anggaran.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Marcus."
+        }
+      ]
     },
     "vocab": [
       {

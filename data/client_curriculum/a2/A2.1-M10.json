@@ -20,7 +20,45 @@
         "explanation": "Pemula sering bingung kapan menggunakan 'be going to' dan kapan menggunakan present continuous. Gunakan 'be going to' untuk rencana atau niat umum, tetapi gunakan present continuous untuk janji atau pengaturan spesifik yang sudah dibuat (biasanya dengan waktu yang jelas).",
         "wrong": "I go to the cinema tonight. / I'm going watch a movie.",
         "correct": "I'm going to the cinema tonight. (sudah ada rencana pasti) / I'm going to watch a movie. (niat umum)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Places in Town & Present Perfect with Ever/Never\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Be going to + verb (base form): Digunakan untuk menyatakan niat atau rencana masa depan...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara membicarakan tempat-tempat di kota (seperti shopping mall, bus station, concert hall) dan mengekspresikan rencana masa depan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Places in Town & Present Perfect with Ever/Never\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I'm going to the cinema tonight. (sudah ada rencana pasti)",
+            "I go to the cinema tonight",
+            "I'm going watch a movie"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering bingung kapan menggunakan 'be going to' dan kapan menggunakan present continuous. Gunakan 'be going to' untuk rencana atau niat umum, tetapi gunakan present continuous untuk janji atau pengaturan spesifik yang sudah dibuat (biasanya dengan waktu yang jelas)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nKenny: \"Paul and I are playing football. Do you want to come?\"\nOlivia: \"[...]\"",
+          "options": [
+            "I go to the cinema tonight",
+            "OK. Can I invite Tim? He's not doing anything either.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"OK. Can I invite Tim? He's not doing anything either.\" (\"OK. Boleh aku mengajak Tim? Dia juga tidak melakukan apa-apa.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Olivia."
+        }
+      ]
     },
     "vocab": [
       {

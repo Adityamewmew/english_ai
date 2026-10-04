@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa B1 keliru menggunakan frasa evaluatif atau tidak membedakan antara sumber primer dan sekunder. Kesalahan umum adalah menerima informasi tanpa memeriksa kredibilitas sumber.",
         "wrong": "This article says it's true, so it must be a fact.",
         "correct": "According to independent fact-checkers, this claim requires further verification before it can be considered factual."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Detecting Biases, Fact-Checking & Spotting Misinformation\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Fakta vs Opini: Fakta dapat diverifikasi dan objektif (contoh: 'The study was published..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Di era digital, kita dihadapkan dengan ribuan artikel berita setiap hari."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Detecting Biases, Fact-Checking & Spotting Misinformation\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "so it must be a fact",
+            "This article says it's true",
+            "According to independent fact-checkers"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak siswa B1 keliru menggunakan frasa evaluatif atau tidak membedakan antara sumber primer dan sekunder. Kesalahan umum adalah menerima informasi tanpa memeriksa kredibilitas sumber."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"You're right. I checked the source, and it's from an unknown website with no credible references. This claim is completely unsubstantiated.\"\nTom: \"[...]\"",
+          "options": [
+            "This article says it's true",
+            "Sorry, I forgot my keys at home.",
+            "Exactly. We need to practice fact-checking before believing everything we read online. Did you find any independent audits or scientific studies backing this up?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Exactly. We need to practice fact-checking before believing everything we read online. Did you find any independent audits or scientific studies backing this up?\" (\"Tepat sekali. Kita perlu mempraktikkan fact-checking sebelum percaya semua yang kita baca online. Apakah kamu menemukan audit independen atau studi ilmiah yang mendukung ini?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

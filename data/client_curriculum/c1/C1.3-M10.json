@@ -23,7 +23,45 @@
         "explanation": "Eksekutif sering terjebak memberikan denial langsung yang terdengar defensif atau evasive, yang justru meningkatkan kecurigaan media. Di level C1, Anda harus mampu membedakan antara transparent accountability dan self-incrimination. Kesalahan umum adalah menjawab 'No comment' atau 'I can't discuss that' tanpa memberikan konteks, yang membuat perusahaan terlihat menyembunyikan sesuatu.",
         "wrong": "We categorically deny any wrongdoing, and I can't comment on ongoing investigations.",
         "correct": "While I can't discuss specifics of the ongoing investigation to preserve its integrity, what I can share is that we've implemented immediate corrective measures, including a comprehensive third-party audit."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"High-Stakes Crisis Communication & Executive Press Briefings\"?",
+          "options": [
+            "Gunakan bridging phrases untuk beralih dari pertanyaan sulit ke pesan kunci: 'While I u...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Komunikasi krisis tingkat eksekutif memerlukan penguasaan teknik bridging (transisi strategis), defusing (meredakan ketegangan), dan framing (pembingkaian narasi) untuk mengelola persepsi publik saat menghadapi pertanyaan investigatif yang agresif."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"High-Stakes Crisis Communication & Executive Press Briefings\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "We categorically deny any wrongdoing",
+            "While I can't discuss specifics of the ongoing investigation to preserve its integrity",
+            "and I can't comment on ongoing investigations"
+          ],
+          "correctIndex": 1,
+          "explanation": "Eksekutif sering terjebak memberikan denial langsung yang terdengar defensif atau evasive, yang justru meningkatkan kecurigaan media. Di level C1, Anda harus mampu membedakan antara transparent accountability dan self-incrimination. Kesalahan umum adalah menjawab 'No comment' atau 'I can't discuss that' tanpa memberikan konteks, yang membuat perusahaan terlihat menyembunyikan sesuatu."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMarcus Williams: \"But isn't it true that budget constraints were cited as the reason for delays, suggesting profit was prioritized over security?\"\nSarah Chen: \"[...]\"",
+          "options": [
+            "We categorically deny any wrongdoing",
+            "Let me put this in perspective. Like any organization, we do operate within budget frameworks, but security spending actually increased 40% year-over-year. The issue wasn't funding—it was prioritization within a complex implementation schedule. That's the gap we're now addressing.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Let me put this in perspective. Like any organization, we do operate within budget frameworks, but security spending actually increased 40% year-over-year. The issue wasn't funding—it was prioritization within a complex implementation schedule. That's the gap we're now addressing.\" (\"Izinkan saya menempatkan ini dalam perspektif. Seperti organisasi mana pun, kami memang beroperasi dalam kerangka anggaran, tetapi pengeluaran keamanan sebenarnya meningkat 40% dari tahun ke tahun. Masalahnya bukan pendanaan—tetapi prioritas dalam jadwal implementasi yang kompleks. Itulah kesenjangan yang sekarang kami tangani.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah Chen."
+        }
+      ]
     },
     "vocab": [
       {

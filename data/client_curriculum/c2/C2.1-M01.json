@@ -20,7 +20,45 @@
         "explanation": "Pemula sering salah menggunakan 'would' untuk semua kebiasaan masa lalu. Padahal, 'would' hanya untuk kebiasaan berulang (repeated actions), TIDAK untuk keadaan/state di masa lalu. Untuk state, harus pakai 'used to'.",
         "wrong": "I would have long hair when I was young.",
         "correct": "I used to have long hair when I was young."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"Habitual Actions & Family Dynamics\", bagaimana perubahan atau padanan yang benar untuk \"admittedly, hopefully, obviously, undoubtedly, etc.\"?",
+          "options": [
+            "diletakkan di awal atau tengah kalimat untuk menunjukkan sikap pembicara. Contoh",
+            "Tidak ada perubahan tenses pada admittedly, hopefully, obviously, undoubtedly, etc.",
+            "admittedly, hopefully, obviously, undoubtedly, etc. selalu dihilangkan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Dalam materi ini: admittedly, hopefully, obviously, undoubtedly, etc. berubah atau berpadanan menjadi \"diletakkan di awal atau tengah kalimat untuk menunjukkan sikap pembicara. Contoh\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Habitual Actions & Family Dynamics\"?",
+          "options": [
+            "I would have long hair when I was young",
+            "I used to have long hair when I were young",
+            "I used to have long hair when I was young"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pemula sering salah menggunakan 'would' untuk semua kebiasaan masa lalu. Padahal, 'would' hanya untuk kebiasaan berulang (repeated actions), TIDAK untuk keadaan/state di masa lalu. Untuk state, harus pakai 'used to'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"I'm tired of this family. I'm tired of always walking on eggshells while you talk to your sister.\"\nMum: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I would have long hair when I was young",
+            "Do we have to talk about each other all the time?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Do we have to talk about each other all the time?\" (\"Apa kita harus membicarakan satu sama lain sepanjang waktu?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Mum."
+        }
+      ]
     },
     "vocab": [
       {

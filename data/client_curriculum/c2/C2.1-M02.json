@@ -21,7 +21,45 @@
         "explanation": "Pemula sering salah menggunakan tenses setelah 'wish' dan 'if only'. Untuk situasi present yang tidak sesuai harapan, gunakan past simple/continuous, bukan present tense.",
         "wrong": "I wish I can sleep better tonight",
         "correct": "I wish I could sleep better tonight"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Narrative Tenses & Psychology of Sleep\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Past tenses dengan hypothetical meaning: 'It's time + past simple' untuk menyatakan ses..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan penggunaan past tenses (past simple, past continuous, past perfect) dengan makna hipotetikal, terutama dalam ekspresi seperti 'it's time', 'I'd rather', dan 'if only'."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Narrative Tenses & Psychology of Sleep\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I wish I can sleep better tonight always",
+            "I wish I could sleep better tonight",
+            "I wish I can sleep better tonight"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering salah menggunakan tenses setelah 'wish' dan 'if only'. Untuk situasi present yang tidak sesuai harapan, gunakan past simple/continuous, bukan present tense."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDad: \"Did you hear me, Ellie? You've got fifteen minutes to get ready.\"\nEllie: \"[...]\"",
+          "options": [
+            "What? No! If only it were the weekend. If only I didn't have school today. If only...",
+            "Sorry, I forgot my keys at home.",
+            "I wish I can sleep better tonight"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"What? No! If only it were the weekend. If only I didn't have school today. If only...\" (\"Apa? Tidak! Andai saja ini akhir pekan. Andai saja aku tidak ada sekolah hari ini. Andai saja...\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ellie."
+        }
+      ]
     },
     "vocab": [
       {

@@ -23,7 +23,45 @@
         "explanation": "Pelajar C1 sering menggunakan bahasa terlalu informal atau tidak presisi saat mengkritik riset ilmiah. Hindari generalisasi tanpa bukti spesifik, dan selalu gunakan terminologi statistik yang tepat dengan hedging language yang sesuai untuk menjaga objektivitas akademis.",
         "wrong": "This research is bad because the sample is too small and they didn't think about other factors.",
         "correct": "The study's validity is compromised by an inadequately small sample size (n=45), which limits statistical power, and the failure to control for potential confounding variables such as socioeconomic status undermines the reliability of the reported associations."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Critique of Quantitative Research, Statistical Claims & Logical Fallacies\"?",
+          "options": [
+            "Causation vs Correlation: Gunakan struktur 'While X correlates with Y, this does not ne...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Modul ini membekali Anda dengan kemampuan untuk mengkritisi riset kuantitatif secara sistematis, mengevaluasi validitas klaim statistik, dan mengidentifikasi kekeliruan logika dalam argumen ilmiah."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Critique of Quantitative Research, Statistical Claims & Logical Fallacies\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "The study's validity is compromised by an inadequately small sample size (n=45)",
+            "This research is bad because the sample is too small and they didn't think about other factors",
+            "The study's validity are compromised by an inadequately small sample size (n=45)"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pelajar C1 sering menggunakan bahasa terlalu informal atau tidak presisi saat mengkritik riset ilmiah. Hindari generalisasi tanpa bukti spesifik, dan selalu gunakan terminologi statistik yang tepat dengan hedging language yang sesuai untuk menjaga objektivitas akademis."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Martinez: \"Precisely. And did you notice the statistical manipulation in Table 3? They've conducted seventeen different subgroup analyses but only reported the three that achieved statistical significance. This reeks of p-hacking.\"\nDr. Kowalski: \"[...]\"",
+          "options": [
+            "Good catch. The confidence intervals are also problematically wide—ranging from a 5% to 47% productivity increase. Such variance renders any definitive conclusions untenable. We're essentially looking at noise masquerading as signal.",
+            "This research is bad because the sample is too small and they didn't think about other factors",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Good catch. The confidence intervals are also problematically wide—ranging from a 5% to 47% productivity increase. Such variance renders any definitive conclusions untenable. We're essentially looking at noise masquerading as signal.\" (\"Tangkapan yang bagus. Interval kepercayaan juga lebar secara problematis—berkisar dari peningkatan produktivitas 5% hingga 47%. Variansi seperti itu membuat kesimpulan definitif apa pun tidak dapat dipertahankan. Kita pada dasarnya melihat noise yang menyamar sebagai sinyal.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Kowalski."
+        }
+      ]
     },
     "vocab": [
       {

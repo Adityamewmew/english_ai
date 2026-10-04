@@ -24,7 +24,45 @@
         "explanation": "Banyak siswa terburu-buru membaca soal tanpa memperhatikan detail kecil seperti bentuk kata kerja (was/were, is/are) atau penggunaan can/can't. Perhatikan juga subjek kalimat untuk menentukan to be yang tepat.",
         "wrong": "She were at the library yesterday.",
         "correct": "She was at the library yesterday."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Fondasi 4 Keterampilan\"?",
+          "options": [
+            "Listening Comprehension: Dengarkan audio dengan saksama dan pahami konteks percakapan u...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Ujian kelulusan ini mengevaluasi pemahaman menyeluruh Anda terhadap dasar-dasar bahasa Inggris level A1."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Evaluasi Fondasi 4 Keterampilan\"?",
+          "options": [
+            "She was at the library yesterday",
+            "She were at the library yesterday",
+            "She were at the library yesterday"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak siswa terburu-buru membaca soal tanpa memperhatikan detail kecil seperti bentuk kata kerja (was/were, is/are) atau penggunaan can/can't. Perhatikan juga subjek kalimat untuk menentukan to be yang tepat."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLisa: \"That's nice! Where is your cousin from?\"\nMarco: \"[...]\"",
+          "options": [
+            "He's from Italy, but he lives here now. He can speak three languages!",
+            "Sorry, I forgot my keys at home.",
+            "She were at the library yesterday"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"He's from Italy, but he lives here now. He can speak three languages!\" (\"Dia dari Italia, tapi sekarang tinggal di sini. Dia bisa berbicara tiga bahasa!\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Marco."
+        }
+      ]
     },
     "vocab": [
       {

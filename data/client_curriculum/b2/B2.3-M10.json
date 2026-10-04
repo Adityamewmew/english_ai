@@ -23,7 +23,45 @@
         "explanation": "Kesalahan umum siswa B2 adalah menggunakan terlalu banyak nominalization sehingga kalimat menjadi kaku dan sulit dipahami. Gunakan nominalization untuk menambah kepadatan informasi, bukan untuk setiap kata kerja. Dalam percakapan dan penulisan informal, hindari nominalization berlebihan.",
         "wrong": "The implementation of the utilization of the resources resulted in the achievement of efficiency.",
         "correct": "Using the resources more efficiently led to better results. (atau untuk akademik: Resource utilization improved operational efficiency.)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"Transforming Verbs and Adjectives into Dense Academic Nouns\", bagaimana perubahan atau padanan yang benar untuk \"Verb\"?",
+          "options": [
+            "Tidak ada perubahan tenses pada Verb",
+            "Noun",
+            "Verb selalu dihilangkan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Dalam materi ini: Verb berubah atau berpadanan menjadi \"Noun\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "Using the resources more efficiently led to better results. (atau untuk akademik: Resource utilization improved operational efficiency.)",
+            "The implementation of the utilization of the resources resulted in the achievement of efficiency",
+            "The implementation of the utilization of the resources resulted in the achievement of efficiency always"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kesalahan umum siswa B2 adalah menggunakan terlalu banyak nominalization sehingga kalimat menjadi kaku dan sulit dipahami. Gunakan nominalization untuk menambah kepadatan informasi, bukan untuk setiap kata kerja. Dalam percakapan dan penulisan informal, hindari nominalization berlebihan."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"I've revised the abstract, but the reviewers said it's too verbose. They want more concise academic language.\"\nProf. Martinez: \"[...]\"",
+          "options": [
+            "The implementation of the utilization of the resources resulted in the achievement of efficiency",
+            "Let me see. Ah, you wrote 'When we analyzed the data, we discovered...' That could be nominalized to 'Data analysis revealed...' Much more concise.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Let me see. Ah, you wrote 'When we analyzed the data, we discovered...' That could be nominalized to 'Data analysis revealed...' Much more concise.\" (\"Coba saya lihat. Ah, kamu menulis 'When we analyzed the data, we discovered...' Itu bisa dinominalisasi menjadi 'Data analysis revealed...' Jauh lebih ringkas.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Martinez."
+        }
+      ]
     },
     "vocab": [
       {

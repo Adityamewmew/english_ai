@@ -22,7 +22,45 @@
         "explanation": "Banyak pemula salah menambahkan 'to' setelah should dan had better karena terpengaruh oleh ought to. Padahal should dan had better langsung diikuti verb bentuk dasar (infinitive tanpa to).",
         "wrong": "You should to think before posting. / You'd better to change your password.",
         "correct": "You should think before posting. / You'd better change your password."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Social Networking\"?",
+          "options": [
+            "Should + verb (infinitive): digunakan untuk memberikan saran atau nasihat. Contoh: You ...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas cara memberikan nasihat dalam bahasa Inggris menggunakan modal verbs seperti should, had better, dan ought to."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "You should to think before posting",
+            "You should think before posting",
+            "You'd better to change your password"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula salah menambahkan 'to' setelah should dan had better karena terpengaruh oleh ought to. Padahal should dan had better langsung diikuti verb bentuk dasar (infinitive tanpa to)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDad: \"Hannah, you spend too much time playing computer games.\"\nHannah: \"[...]\"",
+          "options": [
+            "But I love gaming! It's so much fun.",
+            "You should to think before posting",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"But I love gaming! It's so much fun.\" (\"Tapi aku suka main game! Sangat menyenangkan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Hannah."
+        }
+      ]
     },
     "vocab": [
       {

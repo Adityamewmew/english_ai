@@ -25,7 +25,45 @@
         "explanation": "Banyak learner B2 salah menggunakan simple past untuk situasi yang masih berlangsung, atau lupa menggunakan conditional yang tepat saat membahas skenario hipotetis. Dalam konteks supply chain crisis, penting membedakan antara kejadian selesai vs dampak berkelanjutan.",
         "wrong": "The sanctions disrupted our supply chain (terlalu sederhana, tidak menunjukkan dampak berkelanjutan)",
         "correct": "The sanctions have disrupted our supply chain, and we are still facing significant delays (present perfect + present continuous menunjukkan dampak yang masih berlangsung)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Global Supply Chains, Geopolitics & Logistics Crisis Management\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Gunakan present perfect untuk mendeskripsikan disrupsi yang berdampak hingga sekarang: ...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Rantai pasok global (global supply chain) adalah jaringan kompleks yang menghubungkan pemasok, produsen, distributor, dan konsumen di seluruh dunia."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "The sanctions have disrupted our supply chain",
+            "The sanctions disrupted our supply chain (terlalu sederhana",
+            "tidak menunjukkan dampak berkelanjutan)"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak learner B2 salah menggunakan simple past untuk situasi yang masih berlangsung, atau lupa menggunakan conditional yang tepat saat membahas skenario hipotetis. Dalam konteks supply chain crisis, penting membedakan antara kejadian selesai vs dampak berkelanjutan."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"We have approximately three weeks of inventory left. I've already activated our contingency plan and reached out to alternative suppliers in Southeast Asia and Latin America.\"\nDavid: \"[...]\"",
+          "options": [
+            "The sanctions disrupted our supply chain (terlalu sederhana",
+            "Good thinking. What about freight costs? I imagine air freight would be prohibitively expensive given the current capacity constraints.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Good thinking. What about freight costs? I imagine air freight would be prohibitively expensive given the current capacity constraints.\" (\"Pemikiran yang bagus. Bagaimana dengan biaya angkutan? Saya bayangkan angkutan udara akan sangat mahal mengingat keterbatasan kapasitas saat ini.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

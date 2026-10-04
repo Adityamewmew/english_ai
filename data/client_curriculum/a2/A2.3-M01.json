@@ -23,7 +23,45 @@
         "explanation": "Siswa sering lupa bahwa instruksi keselamatan menggunakan bentuk imperative (tanpa subjek), bukan bentuk biasa dengan subjek 'you'. Mereka juga sering salah menggunakan preposisi setelah kata kerja keselamatan.",
         "wrong": "You stay indoors during the storm. Go to outside after the hurricane.",
         "correct": "Stay indoors during the storm. Go outside after the hurricane."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Extreme Weather Phenomena & Safety Procedures\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Gunakan Present Simple untuk mendeskripsikan fenomena cuaca: 'A hurricane causes strong..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan mempelajari cara membicarakan fenomena cuaca ekstrem seperti badai, banjir, dan gempa bumi dalam bahasa Inggris."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Extreme Weather Phenomena & Safety Procedures\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "You stay indoors during the storm. Go to outside after the hurricane always",
+            "You stay indoors during the storm. Go to outside after the hurricane",
+            "Stay indoors during the storm. Go outside after the hurricane"
+          ],
+          "correctIndex": 2,
+          "explanation": "Siswa sering lupa bahwa instruksi keselamatan menggunakan bentuk imperative (tanpa subjek), bukan bentuk biasa dengan subjek 'you'. Mereka juga sering salah menggunakan preposisi setelah kata kerja keselamatan."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Should we go to the emergency shelter on Main Street?\"\nTom: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "You stay indoors during the storm. Go to outside after the hurricane",
+            "That's a good idea. But first, we must turn off the electricity and gas."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"That's a good idea. But first, we must turn off the electricity and gas.\" (\"Itu ide bagus. Tapi pertama, kita harus mematikan listrik dan gas.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

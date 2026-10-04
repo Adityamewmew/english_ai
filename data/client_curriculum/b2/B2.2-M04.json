@@ -25,7 +25,45 @@
         "explanation": "Banyak pelajar B2 keliru menggunakan bentuk active verb setelah have/get dalam struktur kausatif, atau lupa menggunakan past participle. Ingat bahwa dalam causative, kita tidak melakukan aksi tersebut sendiri, maka objek diikuti past participle (bentuk pasif).",
         "wrong": "I had my assistant to prepare the documents. / She got her hair cutting yesterday.",
         "correct": "I had my assistant prepare the documents. / I had the documents prepared by my assistant. / She got her hair cut yesterday."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Have/Get Something Done & It is Alleged\"?",
+          "options": [
+            "HAVE something DONE: Subject + have + object + past participle. Digunakan untuk menyata...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Causative verbs dan passive reporting structures adalah dua struktur penting dalam bahasa Inggris formal, khususnya untuk konteks profesional, akademis, dan jurnalistik."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Have/Get Something Done & It is Alleged\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I had my assistant to prepare the documents",
+            "I had my assistant prepare the documents",
+            "She got her hair cutting yesterday"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pelajar B2 keliru menggunakan bentuk active verb setelah have/get dalam struktur kausatif, atau lupa menggunakan past participle. Ingat bahwa dalam causative, kita tidak melakukan aksi tersebut sendiri, maka objek diikuti past participle (bentuk pasif)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Mark, have you had all the financial records reviewed before the audit next week?\"\nMark: \"[...]\"",
+          "options": [
+            "Yes, I had them checked by our internal team yesterday. Everything seems to be in order, but I'm getting the final report prepared by Friday.",
+            "I had my assistant to prepare the documents",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Yes, I had them checked by our internal team yesterday. Everything seems to be in order, but I'm getting the final report prepared by Friday.\" (\"Ya, saya sudah menyuruh tim internal memeriksa kemarin. Semuanya tampaknya sudah beres, tapi saya akan menyelesaikan laporan akhir sebelum Jumat.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Mark."
+        }
+      ]
     },
     "vocab": [
       {

@@ -28,6 +28,7 @@ export interface StepDefinition {
   subtitle: string;
   phase: "theory" | "practice";
   icon: React.ElementType;
+  estimatedMinutes: number;
 }
 
 export const MODULE_STEPS: StepDefinition[] = [
@@ -37,6 +38,7 @@ export const MODULE_STEPS: StepDefinition[] = [
     subtitle: "Briefing cerita & misi belajar",
     phase: "theory",
     icon: Compass,
+    estimatedMinutes: 2,
   },
   {
     stepNumber: 2,
@@ -44,6 +46,7 @@ export const MODULE_STEPS: StepDefinition[] = [
     subtitle: "Susun pola & jebakan umum",
     phase: "theory",
     icon: Zap,
+    estimatedMinutes: 3,
   },
   {
     stepNumber: 3,
@@ -51,6 +54,7 @@ export const MODULE_STEPS: StepDefinition[] = [
     subtitle: "Pola 3 tingkat & variasi",
     phase: "theory",
     icon: Layers,
+    estimatedMinutes: 3,
   },
   {
     stepNumber: 4,
@@ -58,6 +62,7 @@ export const MODULE_STEPS: StepDefinition[] = [
     subtitle: "Pelafalan kata & kolokasi",
     phase: "theory",
     icon: BookOpen,
+    estimatedMinutes: 3,
   },
   {
     stepNumber: 5,
@@ -65,6 +70,7 @@ export const MODULE_STEPS: StepDefinition[] = [
     subtitle: "Dialog kontekstual penutur asli",
     phase: "theory",
     icon: MessageSquare,
+    estimatedMinutes: 3,
   },
   {
     stepNumber: 6,
@@ -72,6 +78,7 @@ export const MODULE_STEPS: StepDefinition[] = [
     subtitle: "Cek pemahaman sebelum praktikum",
     phase: "theory",
     icon: HelpCircle,
+    estimatedMinutes: 2,
   },
   {
     stepNumber: 7,
@@ -79,6 +86,7 @@ export const MODULE_STEPS: StepDefinition[] = [
     subtitle: "Drill, roleplay & tantangan spontan",
     phase: "practice",
     icon: Volume2,
+    estimatedMinutes: 6,
   },
   {
     stepNumber: 8,
@@ -86,6 +94,7 @@ export const MODULE_STEPS: StepDefinition[] = [
     subtitle: "Uji kelulusan & skor akhir",
     phase: "practice",
     icon: Award,
+    estimatedMinutes: 4,
   },
 ];
 
@@ -185,6 +194,9 @@ export function ModuleLessonSidebar({
             >
               {step.stepNumber}. {step.title}
             </span>
+            <span className="text-[10px] text-slate-400 font-medium shrink-0">
+              ~{step.estimatedMinutes}m
+            </span>
           </div>
           <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate mt-0.5 font-medium">
             {step.subtitle}
@@ -260,12 +272,12 @@ export function ModuleLessonSidebar({
         {/* Phase 1: Theory */}
         <div className="space-y-2">
           <div className="px-2 flex items-center justify-between">
-            <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-wider">
+            <span className="text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">
               Fase 1: Teori &amp; Pemahaman
             </span>
-            <Badge variant="secondary" className="text-[10px] px-1.5 py-0">
+            <span className="text-[10px] px-2 py-0.5 font-bold rounded-full bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 border border-indigo-200/60 dark:border-indigo-800/40">
               Langkah 1 - 6
-            </Badge>
+            </span>
           </div>
           <div className="space-y-1.5">{theorySteps.map(renderStepItem)}</div>
         </div>
@@ -273,12 +285,12 @@ export function ModuleLessonSidebar({
         {/* Phase 2: Practice & Quiz */}
         <div className="space-y-2">
           <div className="px-2 flex items-center justify-between">
-            <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-wider">
+            <span className="text-[10px] font-black text-violet-600 dark:text-violet-400 uppercase tracking-wider">
               Fase 2: Praktikum &amp; Evaluasi
             </span>
-            <Badge variant="secondary" className="text-[10px] px-1.5 py-0">
+            <span className="text-[10px] px-2 py-0.5 font-bold rounded-full bg-violet-50 dark:bg-violet-950/50 text-violet-600 dark:text-violet-400 border border-violet-200/60 dark:border-violet-800/40">
               Langkah 7 - 8
-            </Badge>
+            </span>
           </div>
           <div className="space-y-1.5">{practiceSteps.map(renderStepItem)}</div>
         </div>

@@ -25,7 +25,45 @@
         "explanation": "Banyak siswa lupa menggunakan bentuk jamak 'tickets' ketika memesan lebih dari satu tiket, atau salah menggunakan 'is/are'. Perhatikan subject-verb agreement: 'ticket is' untuk satu tiket, 'tickets are' untuk banyak tiket.",
         "wrong": "How much is two tickets? I want to book one tickets for Friday.",
         "correct": "How much are two tickets? I want to book one ticket for Friday."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Music Genres, Concerts & Booking Event Tickets\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Asking about availability: 'Are there any seats available for [day/time]?' atau 'Do you..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan belajar cara memesan tiket konser atau pertunjukan musik dalam bahasa Inggris."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "How much is two tickets? I want to book one tickets for Friday",
+            "How much is two tickets? I want to book one ticket for Friday",
+            "How much are two tickets? I want to book one ticket for Friday"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak siswa lupa menggunakan bentuk jamak 'tickets' ketika memesan lebih dari satu tiket, atau salah menggunakan 'is/are'. Perhatikan subject-verb agreement: 'ticket is' untuk satu tiket, 'tickets are' untuk banyak tiket."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nBox Office Staff: \"Yes, we still have seats available. We have balcony seats for $30 and front row seats for $80. Which would you prefer?\"\nSarah: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "How much is two tickets? I want to book one tickets for Friday",
+            "I'd like two balcony seats, please. How much is that in total?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"I'd like two balcony seats, please. How much is that in total?\" (\"Saya mau dua kursi balkon. Berapa totalnya?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah."
+        }
+      ]
     },
     "vocab": [
       {

@@ -26,7 +26,45 @@
         "explanation": "Pemula sering salah menggunakan 'much' untuk countable nouns atau 'many' untuk uncountable nouns. Ingat: much untuk yang tidak bisa dihitung (air, gula, waktu), many untuk yang bisa dihitung (apel, mobil, orang).",
         "wrong": "How many sugar do you want? / There are much people here.",
         "correct": "How much sugar do you want? / There are many people here."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"Quantifiers, Too & Not Enough\", bagaimana perubahan atau padanan yang benar untuk \"bisa dihitung, punya bentuk jamak\"?",
+          "options": [
+            "'an apple / two apples'. Gunakan a/an untuk singular.",
+            "bisa dihitung, punya bentuk jamak selalu dihilangkan",
+            "Tidak ada perubahan tenses pada bisa dihitung, punya bentuk jamak"
+          ],
+          "correctIndex": 0,
+          "explanation": "Dalam materi ini: bisa dihitung, punya bentuk jamak berubah atau berpadanan menjadi \"'an apple / two apples'. Gunakan a/an untuk singular.\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Quantifiers, Too & Not Enough\"?",
+          "options": [
+            "There are much people here",
+            "How much sugar do you want?",
+            "How many sugar do you want?"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering salah menggunakan 'much' untuk countable nouns atau 'many' untuk uncountable nouns. Ingat: much untuk yang tidak bisa dihitung (air, gula, waktu), many untuk yang bisa dihitung (apel, mobil, orang)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nRyan: \"Don't be so surprised. It's not my first one.\"\nLuke: \"[...]\"",
+          "options": [
+            "Umm. Actually, I think it probably is.",
+            "Sorry, I forgot my keys at home.",
+            "How many sugar do you want?"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Umm. Actually, I think it probably is.\" (\"Umm. Sebenarnya, sepertinya memang pertama kali.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Luke."
+        }
+      ]
     },
     "vocab": [
       {

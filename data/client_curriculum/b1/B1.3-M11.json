@@ -23,7 +23,45 @@
         "explanation": "Banyak pelajar langsung mengatakan 'You're wrong' atau 'I don't agree' tanpa frasa pelembut, yang terdengar kasar dalam konteks profesional. Ketidaksetujuan langsung tanpa acknowledgment membuat lawan bicara defensif dan menutup ruang dialog.",
         "wrong": "You're wrong. That strategy won't work at all.",
         "correct": "I see your point, however, I have some concerns about the practical implementation. Could we perhaps explore some alternatives?"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Tactful Disagreement & Reaching Consensus\"?",
+          "options": [
+            "Gunakan 'softening phrases' sebelum menyatakan ketidaksetujuan: 'I see your point, howe...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Dalam komunikasi profesional dan akademis, kemampuan untuk tidak setuju dengan sopan adalah keterampilan penting."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Tactful Disagreement & Reaching Consensus\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "You're wrong. That strategy won't work at all",
+            "I see your point",
+            "You're wrong. That strategy won't work at all always"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pelajar langsung mengatakan 'You're wrong' atau 'I don't agree' tanpa frasa pelembut, yang terdengar kasar dalam konteks profesional. Ketidaksetujuan langsung tanpa acknowledgment membuat lawan bicara defensif dan menutup ruang dialog."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"That's true, but LinkedIn ads are significantly more expensive per impression.\"\nDavid: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "You're wrong. That strategy won't work at all",
+            "You're absolutely right about the cost. With respect, though, the conversion rate on LinkedIn is three times higher for B2B services like ours."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"You're absolutely right about the cost. With respect, though, the conversion rate on LinkedIn is three times higher for B2B services like ours.\" (\"Anda benar sekali soal biaya. Namun dengan hormat, conversion rate di LinkedIn tiga kali lebih tinggi untuk layanan B2B seperti kita.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

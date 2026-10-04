@@ -29,6 +29,7 @@ export function TheoryGoalCard({
   summary,
   objective,
   cefr,
+  orderIndex = 1,
   unlockedStep = 1,
   isPracticeUnlocked = false,
   onScrollToStep,
@@ -50,6 +51,32 @@ export function TheoryGoalCard({
         "Mengenal kosakata kunci dan pelafalan yang tepat",
         "Mempersiapkan diri untuk berinteraksi langsung di Speaking Lab",
       ];
+
+  // 5 variasi opener dialog Maya & Mr. Khoirul agar tidak monoton
+  const dialogVariants = [
+    {
+      maya: `Mr. Khoirul, kapan sih kita sebenarnya wajib menggunakan pola materi ${title} ini dalam percakapan sehari-hari?`,
+      khoirul: `Pertanyaan mantap, Maya! Pola ini kita pakai untuk ${summary.toLowerCase()}. Bayangkan kamu sedang mengobrol dengan rekan internasional. Kunci utamanya ada pada contoh kalimat target ini:`,
+    },
+    {
+      maya: `Mr. Khoirul, banyak yang bilang pola ${title} terdengar mirip dengan kalimat biasa. Apa ciri khas utamanya?`,
+      khoirul: `Bagus sekali perhatianmu, Maya! Ciri khasnya ada pada ketepatan konteks: ${summary.toLowerCase()}. Coba dengarkan dan rasakan alur contoh kalimat target kita ini:`,
+    },
+    {
+      maya: `Kalau di lingkungan kerja atau saat traveling, apakah pola ${title} ini sering dipakai penutur asli?`,
+      khoirul: `Sangat sering! Penutur asli memakainya secara spontan saat ${summary.toLowerCase()}. Mulailah membiasakan diri dengan kalimat target berikut:`,
+    },
+    {
+      maya: `Supaya terdengar percaya diri dan natural saat berbicara, fokus utama apa yang harus saya latih di modul ${title} ini?`,
+      khoirul: `Fokus pada ritme dan intonasi intinya, Maya. Modul ini melatihmu untuk ${summary.toLowerCase()}. Dengarkan kalimat target ini sebagai patokan awalmu:`,
+    },
+    {
+      maya: `Mr. Khoirul, bagaimana cara tercepat agar tidak ragu-ragu saat mengucapkan pola ${title} saat berbicara langsung?`,
+      khoirul: `Kuncinya adalah muscle memory lewat repetisi alami! Modul ini dirancang agar kamu terbiasa ${summary.toLowerCase()}. Dengarkan contoh kalimat target ini:`,
+    },
+  ];
+
+  const currentDialog = dialogVariants[(Math.max(1, orderIndex) - 1) % dialogVariants.length];
 
   return (
     <div className="space-y-8">
@@ -102,9 +129,7 @@ export function TheoryGoalCard({
                   <span className="font-extrabold text-amber-700 dark:text-amber-400 text-xs block">
                     Maya (Siswa)
                   </span>
-                  <p>
-                    &ldquo;Mr. Khoirul, kapan sih kita sebenarnya wajib menggunakan pola materi <strong>{title}</strong> ini dalam percakapan sehari-hari?&rdquo;
-                  </p>
+                  <p>&ldquo;{currentDialog.maya}&rdquo;</p>
                 </div>
               </div>
 
@@ -134,7 +159,7 @@ export function TheoryGoalCard({
                     )}
                   </div>
                   <p>
-                    &ldquo;Pertanyaan mantap, Maya! Pola ini kita pakai untuk <strong>{summary.toLowerCase()}</strong>. Bayangkan kamu sedang berkenalan atau bercerita dengan teman internasional. Kunci utamanya ada pada contoh kalimat target ini: <em>&ldquo;{targetSentence}&rdquo;</em>.&rdquo;
+                    &ldquo;{currentDialog.khoirul} <em>&ldquo;{targetSentence}&rdquo;</em>.&rdquo;
                   </p>
                 </div>
               </div>
@@ -148,7 +173,7 @@ export function TheoryGoalCard({
                 <Sparkles className="w-3.5 h-3.5 text-amber-300" />
                 <span>Contoh Kalimat Target Modul:</span>
               </span>
-              <p className="text-xl sm:text-2xl font-black font-mono tracking-wide">
+              <p className="text-xl sm:text-2xl font-black font-sans tracking-wide">
                 &ldquo;{targetSentence}&rdquo;
               </p>
               {targetSentenceMeaning && (

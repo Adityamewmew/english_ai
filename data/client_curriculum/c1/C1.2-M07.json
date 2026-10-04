@@ -23,7 +23,45 @@
         "explanation": "Mahasiswa C1 sering mencampur elemen dari berbagai register dalam satu konteks, menghasilkan inkoherensi stilistik. Misalnya, menggunakan idiom colloquial dalam esai akademik atau struktur kaku formal dalam email informal kepada rekan. Kontaminasi register merusak kredibilitas penulis dan menunjukkan kurangnya kesadaran sosiolinguistik.",
         "wrong": "The research methodology was kinda iffy, but the results are pretty solid and really hit the nail on the head regarding our hypothesis.",
         "correct": "While certain methodological limitations warrant acknowledgment, the empirical findings substantiate the hypothesized correlations with considerable rigor."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Shifting from Colloquial Idiom to High-Formal Academic Registers\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Colloquial Register: Gunakan contractions (I'm, we've, shouldn't), phrasal verbs (put u..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Register adalah tingkat formalitas bahasa yang disesuaikan dengan konteks komunikasi."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Shifting from Colloquial Idiom to High-Formal Academic Registers\"?",
+          "options": [
+            "but the results are pretty solid and really hit the nail on the head regarding our hypothesis",
+            "The research methodology was kinda iffy",
+            "While certain methodological limitations warrant acknowledgment"
+          ],
+          "correctIndex": 2,
+          "explanation": "Mahasiswa C1 sering mencampur elemen dari berbagai register dalam satu konteks, menghasilkan inkoherensi stilistik. Misalnya, menggunakan idiom colloquial dalam esai akademik atau struktur kaku formal dalam email informal kepada rekan. Kontaminasi register merusak kredibilitas penulis dan menunjukkan kurangnya kesadaran sosiolinguistik."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nProf. Richardson: \"Emma, I've reviewed your latest chapter draft. While your argumentation is sound, I noticed certain stylistic inconsistencies that undermine the scholarly tone.\"\nEmma: \"[...]\"",
+          "options": [
+            "The research methodology was kinda iffy",
+            "Sorry, I forgot my keys at home.",
+            "Could you elucidate which specific passages require revision? I've attempted to maintain formal register throughout, but perhaps some colloquialisms slipped through."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Could you elucidate which specific passages require revision? I've attempted to maintain formal register throughout, but perhaps some colloquialisms slipped through.\" (\"Bisakah Anda menjelaskan bagian spesifik mana yang perlu revisi? Saya sudah berusaha menjaga register formal sepanjang tulisan, tapi mungkin beberapa ungkapan informal terselip.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Emma."
+        }
+      ]
     },
     "vocab": [
       {

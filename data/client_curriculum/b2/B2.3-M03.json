@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa B2 keliru menggunakan verb plural untuk kata benda kolektif seperti 'economics', 'bias', atau konsep abstrak yang tampak jamak tetapi diperlakukan singular dalam konteks akademik.",
         "wrong": "Behavioral economics are changing how we understand decision-making.",
         "correct": "Behavioral economics is changing how we understand decision-making."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Behavioral Economics, Cognitive Biases & Consumer Nudging\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Gunakan present perfect untuk menggambarkan pengaruh bias yang masih relevan: 'Loss ave...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Behavioral economics menggabungkan psikologi dan ekonomi untuk memahami mengapa manusia sering membuat keputusan yang tidak rasional."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "Behavioral economics is changing how we understand decision-making",
+            "Behavioral economics are changing how we understand decision-making",
+            "Behavioral economics are changing how we understand decision-making"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak siswa B2 keliru menggunakan verb plural untuk kata benda kolektif seperti 'economics', 'bias', atau konsep abstrak yang tampak jamak tetapi diperlakukan singular dalam konteks akademik."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Mitchell: \"I see your point, but consider the anchoring effect. People anchor to whatever default is presented. We're simply choosing a default that serves their long-term interests better.\"\nMarcus: \"[...]\"",
+          "options": [
+            "Behavioral economics are changing how we understand decision-making",
+            "True, and loss aversion works in our favor here. People are more afraid of losing future security than motivated by abstract gains. But shouldn't we educate them instead?",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"True, and loss aversion works in our favor here. People are more afraid of losing future security than motivated by abstract gains. But shouldn't we educate them instead?\" (\"Benar, dan penghindaran kerugian bekerja menguntungkan kita di sini. Orang lebih takut kehilangan keamanan masa depan daripada termotivasi oleh keuntungan abstrak. Tapi bukankah kita seharusnya mendidik mereka?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Marcus."
+        }
+      ]
     },
     "vocab": [
       {

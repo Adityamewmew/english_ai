@@ -23,7 +23,45 @@
         "explanation": "Penulis yang belum mencapai tingkat grandmaster sering kali menyerang teori lama dengan bahasa yang terlalu langsung atau emosional, yang dianggap tidak profesional dalam wacana akademik tingkat tinggi. C2 Mastery menuntut kritik yang dibungkus dalam objektivitas analitis yang dingin dan presisi.",
         "wrong": "Smith's theory is completely wrong because it ignores the new data.",
         "correct": "Smith's theoretical edifice, while foundational, is rendered increasingly untenable in light of emerging empirical anomalies."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Defending Original Conceptual Paradigms\"?",
+          "options": [
+            "Gunakan struktur 'cleft sentences' dan inversi untuk memberikan penekanan epistemologis...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Menulis pendahuluan monograf doktoral menuntut lebih dari sekadar penguasaan tata bahasa; ia membutuhkan orkestrasi retoris yang mampu membongkar ortodoksi lama (epistemic breakthrough) dan meletakkan fondasi bagi paradigma konseptual baru."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "Smith's theory is completely wrong because it ignores the new data always",
+            "Smith's theoretical edifice",
+            "Smith's theory is completely wrong because it ignores the new data"
+          ],
+          "correctIndex": 1,
+          "explanation": "Penulis yang belum mencapai tingkat grandmaster sering kali menyerang teori lama dengan bahasa yang terlalu langsung atau emosional, yang dianggap tidak profesional dalam wacana akademik tingkat tinggi. C2 Mastery menuntut kritik yang dibungkus dalam objektivitas analitis yang dingin dan presisi."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nProf. Aris: \"Helena, I've just reviewed the candidate's introductory chapter. The way he dismantles the prevailing orthodoxy is nothing short of audacious.\"\nProf. Helena: \"[...]\"",
+          "options": [
+            "Audacious, yes, but is it epistemologically sound? I found his critique of Smith's theoretical edifice a bit premature.",
+            "Sorry, I forgot my keys at home.",
+            "Smith's theory is completely wrong because it ignores the new data"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Audacious, yes, but is it epistemologically sound? I found his critique of Smith's theoretical edifice a bit premature.\" (\"Berani, ya, tetapi apakah secara epistemologis kuat? Saya merasa kritiknya terhadap bangunan teoretis Smith agak terlalu dini.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Helena."
+        }
+      ]
     },
     "vocab": [
       {

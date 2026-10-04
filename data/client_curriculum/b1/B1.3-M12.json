@@ -25,7 +25,45 @@
         "explanation": "Banyak siswa B1 menggunakan discourse markers secara berlebihan atau di posisi yang salah, membuat kalimat terdengar tidak natural. 'However' tidak bisa digunakan untuk menghubungkan dua independent clause dengan koma saja.",
         "wrong": "Online learning is convenient, however it lacks social interaction.",
         "correct": "Online learning is convenient. However, it lacks social interaction. / Online learning is convenient; however, it lacks social interaction."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Extended Spontaneous Discourse, Debate & Argument Structure\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Opening Statement Structure: Start with a clear thesis + Preview your main points. Patt...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Modul ini mempersiapkan kamu untuk level B2 dengan fokus pada kemampuan berbicara panjang tanpa jeda dan menyusun argumen yang terstruktur."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Extended Spontaneous Discourse, Debate & Argument Structure\"?",
+          "options": [
+            "Online learning is convenient. However",
+            "however it lacks social interaction",
+            "Online learning is convenient"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak siswa B1 menggunakan discourse markers secara berlebihan atau di posisi yang salah, membuat kalimat terdengar tidak natural. 'However' tidak bisa digunakan untuk menghubungkan dua independent clause dengan koma saja."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"James, I've been struggling with my opening statement. How do you make yours so compelling?\"\nJames: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I always start with a clear thesis, then preview my three main points. Furthermore, I use a rhetorical question or striking statistic to grab attention immediately.",
+            "Online learning is convenient"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"I always start with a clear thesis, then preview my three main points. Furthermore, I use a rhetorical question or striking statistic to grab attention immediately.\" (\"Aku selalu mulai dengan thesis yang jelas, lalu preview tiga poin utamaku. Lebih lanjut, aku menggunakan pertanyaan retoris atau statistik yang menarik untuk langsung menarik perhatian.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh James."
+        }
+      ]
     },
     "vocab": [
       {

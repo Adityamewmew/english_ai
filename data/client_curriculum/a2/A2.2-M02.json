@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa menggunakan 'will' untuk semua situasi masa depan. Ingat: jika Anda sudah merencanakan sesuatu sebelum berbicara, gunakan 'be going to'. Jika keputusan dibuat saat berbicara, gunakan 'will'.",
         "wrong": "A: We don't have any milk. B: I know. I will buy some after work. (Salah, karena B sudah tahu dan sudah berencana)",
         "correct": "A: We don't have any milk. B: I know. I'm going to buy some after work. (Benar, karena ini rencana yang sudah dibuat sebelumnya)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Will vs Be Going To\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "WILL untuk keputusan spontan: Subject + will + verb (base form). Contoh: 'The phone is ..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Dalam bahasa Inggris, kita menggunakan dua cara berbeda untuk berbicara tentang masa depan: 'will' dan 'be going to'."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "karena B sudah tahu dan sudah berencana)",
+            "A: We don't have any milk. B: I know. I will buy some after work. (Salah",
+            "A: We don't have any milk. B: I know. I'm going to buy some after work. (Benar"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak siswa menggunakan 'will' untuk semua situasi masa depan. Ingat: jika Anda sudah merencanakan sesuatu sebelum berbicara, gunakan 'be going to'. Jika keputusan dibuat saat berbicara, gunakan 'will'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Oh no! The printer isn't working and we need those documents for the meeting.\"\nTom: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "A: We don't have any milk. B: I know. I will buy some after work. (Salah",
+            "Don't worry. I'll call the technician right now."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Don't worry. I'll call the technician right now.\" (\"Jangan khawatir. Saya akan menelepon teknisinya sekarang juga.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

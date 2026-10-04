@@ -25,7 +25,45 @@
         "explanation": "Banyak siswa level B1 masih mencampuradukkan third conditional dengan second conditional, atau lupa menggunakan 'had' pada wish structures untuk penyesalan masa lalu. Kesalahan lain adalah tidak menggunakan koma pada non-defining relative clauses, atau salah menempatkan reporting verbs.",
         "wrong": "If I would have known, I would come earlier. / I wish I studied harder last year.",
         "correct": "If I had known, I would have come earlier. / I wish I had studied harder last year."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Comprehensive 4-Skills CEFR B1 Graduation Exam\"?",
+          "options": [
+            "Third Conditional: If + past perfect, would/could/might + have + past participle. Conto...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Ujian kelulusan akhir B1 ini menguji kemampuan komprehensif Anda dalam keempat keterampilan bahasa Inggris: Listening (memahami seminar dan debat formal), Reading (menganalisis artikel opini dan teks argumentatif), Writing & Grammar (menguasai third conditional, mixed conditionals, reporting verbs, wish structures, dan non-defining relative clauses), serta Speaking (presentasi ide dan debat interaktif)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Comprehensive 4-Skills CEFR B1 Graduation Exam\"?",
+          "options": [
+            "I would come earlier",
+            "If I had known",
+            "If I would have known"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak siswa level B1 masih mencampuradukkan third conditional dengan second conditional, atau lupa menggunakan 'had' pada wish structures untuk penyesalan masa lalu. Kesalahan lain adalah tidak menggunakan koma pada non-defining relative clauses, atau salah menempatkan reporting verbs."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"I'm feeling quite nervous about the graduation exam tomorrow. Have you finished reviewing all the grammar structures?\"\nMarcus: \"[...]\"",
+          "options": [
+            "Yeah, I've been focusing on mixed conditionals and reporting verbs today. I wish I had started preparing earlier, to be honest.",
+            "Sorry, I forgot my keys at home.",
+            "If I would have known"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Yeah, I've been focusing on mixed conditionals and reporting verbs today. I wish I had started preparing earlier, to be honest.\" (\"Ya, aku telah fokus pada mixed conditionals dan reporting verbs hari ini. Sejujurnya, aku berharap sudah mulai mempersiapkan lebih awal.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Marcus."
+        }
+      ]
     },
     "vocab": [
       {

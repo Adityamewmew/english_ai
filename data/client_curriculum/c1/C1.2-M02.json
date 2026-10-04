@@ -25,7 +25,45 @@
         "explanation": "Siswa C1 sering terjebak dalam nominalisasi berlebihan yang justru membuat tulisan menjadi kabur dan sulit dipahami. Nominalisasi efektif harus menyeimbangkan kepadatan informasi dengan clarity. Hindari menumpuk terlalu banyak abstract nouns secara berurutan atau menghilangkan agent penting dalam kalimat.",
         "wrong": "The implementation of the facilitation of the improvement of the optimization of resource allocation efficiency was undertaken.",
         "correct": "We implemented measures to facilitate more efficient resource allocation and optimisation."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Perhatikan kalimat langsung: \"X affects Y\". Bagaimana bentuk kalimat tidak langsung (reported/transformed) yang benar?",
+          "options": [
+            "the effect of X on Y",
+            "X affects Y",
+            "Bentuk kalimat tidak baku"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah pada \"Complex Nominalisation in Formal Academic & Technical Writing\": bentuk yang tepat adalah \"the effect of X on Y\". Perhatikan perubahan tenses dan kata kerja bantunya."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "We implemented measures to facilitate more efficient resource allocation and optimisation",
+            "The implementation of the facilitation of the improvement of the optimization of resource allocation efficiency was undertaken always",
+            "The implementation of the facilitation of the improvement of the optimization of resource allocation efficiency was undertaken"
+          ],
+          "correctIndex": 0,
+          "explanation": "Siswa C1 sering terjebak dalam nominalisasi berlebihan yang justru membuat tulisan menjadi kabur dan sulit dipahami. Nominalisasi efektif harus menyeimbangkan kepadatan informasi dengan clarity. Hindari menumpuk terlalu banyak abstract nouns secara berurutan atau menghilangkan agent penting dalam kalimat."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Williams: \"I've been reviewing your methodology section, and I'm concerned about the excessive nominalisation. This sentence, for instance: 'The implementation of the examination of the facilitation of cross-linguistic transfer' – it's virtually impenetrable.\"\nDr. Chen: \"[...]\"",
+          "options": [
+            "I take your point entirely. I was attempting to achieve higher lexical density, but I may have sacrificed clarity in the process. Would you recommend reverbalising some of these abstract process nouns?",
+            "Sorry, I forgot my keys at home.",
+            "The implementation of the facilitation of the improvement of the optimization of resource allocation efficiency was undertaken"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"I take your point entirely. I was attempting to achieve higher lexical density, but I may have sacrificed clarity in the process. Would you recommend reverbalising some of these abstract process nouns?\" (\"Saya sangat memahami maksud Anda. Saya mencoba mencapai kepadatan leksikal yang lebih tinggi, tetapi saya mungkin telah mengorbankan kejelasan dalam prosesnya. Apakah Anda menyarankan untuk mengubah kembali beberapa kata benda proses abstrak ini menjadi verbal?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Chen."
+        }
+      ]
     },
     "vocab": [
       {

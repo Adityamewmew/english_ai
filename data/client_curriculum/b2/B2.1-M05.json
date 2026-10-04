@@ -20,7 +20,45 @@
         "explanation": "Pemula sering lupa membedakan defining dan non-defining relative clause. Defining clause tidak pakai koma (informasi penting), sedangkan non-defining pakai koma (informasi tambahan). Juga sering salah menggunakan 'what' sebagai relative pronoun.",
         "wrong": "Stephen King, that is American, is famous. / She was late, what made her nervous.",
         "correct": "Stephen King, who is American, is famous. / She was late, which made her nervous."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Past Perfect & Narrative Tenses\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Relative Pronouns: who (untuk orang), which (untuk benda/hewan), whose (untuk kepemilik..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara menceritakan kisah dengan baik menggunakan relative clauses untuk memberikan informasi tambahan tentang orang, tempat, atau benda."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "that is American",
+            "Stephen King",
+            "Stephen King"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering lupa membedakan defining dan non-defining relative clause. Defining clause tidak pakai koma (informasi penting), sedangkan non-defining pakai koma (informasi tambahan). Juga sering salah menggunakan 'what' sebagai relative pronoun."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMac: \"What was it?\"\nAnnie: \"[...]\"",
+          "options": [
+            "Stephen King",
+            "Sorry, I forgot my keys at home.",
+            "It was a song I knew, but I couldn't remember what it was. I even sang it to a few of my friends, but they didn't know what it was either."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"It was a song I knew, but I couldn't remember what it was. I even sang it to a few of my friends, but they didn't know what it was either.\" (\"Itu lagu yang aku tahu, tapi aku tidak bisa mengingat apa judulnya. Aku bahkan menyanyikannya pada beberapa temanku, tapi mereka juga tidak tahu lagu apa itu.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Annie."
+        }
+      ]
     },
     "vocab": [
       {

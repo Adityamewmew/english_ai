@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula menggunakan 'this' untuk benda jamak atau 'these' untuk benda tunggal. Ingat: 'this' untuk satu benda (dekat dengan kita), 'these' untuk banyak benda (dekat dengan kita).",
         "wrong": "How much is these shoes?",
         "correct": "How much are these shoes?"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Shopping, Prices & Numbers\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Gunakan 'How much is this + kata benda tunggal?' untuk menanyakan harga satu barang. Co..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Ketika berbelanja, kamu perlu menanyakan harga dan memahami angka dalam bahasa Inggris."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Shopping, Prices & Numbers\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "How much is these shoes?",
+            "How much is these shoes?",
+            "How much are these shoes?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula menggunakan 'this' untuk benda jamak atau 'these' untuk benda tunggal. Ingat: 'this' untuk satu benda (dekat dengan kita), 'these' untuk banyak benda (dekat dengan kita)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"And how much are these keychains?\"\nShop Assistant: \"[...]\"",
+          "options": [
+            "How much is these shoes?",
+            "Sorry, I forgot my keys at home.",
+            "They're three pounds each, or two for five pounds."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"They're three pounds each, or two for five pounds.\" (\"Harganya tiga poundsterling per buah, atau dua untuk lima poundsterling.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Shop Assistant."
+        }
+      ]
     },
     "vocab": [
       {

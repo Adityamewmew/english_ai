@@ -406,7 +406,7 @@ export default function ModuleDetailPage() {
             {/* Step 1 to 6: Theory Components */}
             {currentStep <= 6 && (
               <SectionTheoryUnified
-                title={theorySection?.title || moduleData.title}
+                title={moduleData.title}
                 theoryContent={theorySection?.content}
                 vocabItems={vocabSection?.content?.items || []}
                 dialogueContext={dialogueSection?.content?.context}

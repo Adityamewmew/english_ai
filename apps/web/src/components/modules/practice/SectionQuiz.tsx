@@ -82,6 +82,17 @@ export function SectionQuiz({
   const answeredCount = Object.keys(userAnswers).length;
   const isAllAnswered = questions.length > 0 && answeredCount === questions.length;
 
+  const unansweredQuestions = questions
+    .map((q, idx) => ({ id: q.id ?? idx, index: idx, number: idx + 1 }))
+    .filter((item) => userAnswers[item.id.toString()] === undefined);
+
+  const scrollToQuestion = (idx: number) => {
+    const el = document.getElementById(`quiz-question-${idx}`);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
   // Anime.js Stagger question cards on mount
   useEffect(() => {
     if (!containerRef.current) return;
@@ -235,9 +246,10 @@ export function SectionQuiz({
           return (
             <Card
               key={qId.toString()}
+              id={`quiz-question-${qIndex}`}
               onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
               onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-              className={`quiz-question-card p-6 sm:p-8 rounded-2xl transition-all will-change-transform shadow-xs space-y-5 ${
+              className={`quiz-question-card scroll-mt-24 p-6 sm:p-8 rounded-2xl transition-all will-change-transform shadow-xs space-y-5 ${
                 isSubmitted
                   ? qResult?.isCorrect
                     ? "border-emerald-200 bg-white dark:border-emerald-800/40 dark:bg-slate-900"
@@ -377,19 +389,45 @@ export function SectionQuiz({
 
       {/* Submit Action Bar */}
       {!isSubmitted && (
-        <Card className="flex items-center justify-between p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-xs">
-          <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">
-            {isAllAnswered
-              ? "Semua pertanyaan telah dijawab. Klik kirim untuk melihat skor akhir."
-              : `Tersisa ${questions.length - answeredCount} pertanyaan yang belum dijawab.`}
+        <Card className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-xs">
+          <div className="space-y-2">
+            <div className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium">
+              {isAllAnswered ? (
+                <span className="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4" />
+                  Semua pertanyaan telah dijawab! Klik tombol untuk kirim.
+                </span>
+              ) : (
+                <span>
+                  Tersisa <strong className="text-amber-600 dark:text-amber-400">{unansweredQuestions.length}</strong> pertanyaan yang belum dijawab:
+                </span>
+              )}
+            </div>
+
+            {!isAllAnswered && unansweredQuestions.length > 0 && (
+              <div className="flex items-center gap-1.5 flex-wrap">
+                {unansweredQuestions.map((uq) => (
+                  <button
+                    key={uq.id.toString()}
+                    type="button"
+                    onClick={() => scrollToQuestion(uq.index)}
+                    className="px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400 border border-amber-300 dark:border-amber-800 hover:bg-amber-100 dark:hover:bg-amber-900 transition-colors cursor-pointer"
+                    title={`Lompat ke Soal #${uq.number}`}
+                  >
+                    Soal #{uq.number}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
+
           <Button
             disabled={!isAllAnswered || isSubmitting}
             onClick={(e) => {
               animeButtonPop(e.currentTarget);
               onSubmit();
             }}
-            className="gap-2 shadow-md"
+            className="w-full sm:w-auto gap-2 shadow-md shrink-0 min-h-[44px]"
           >
             <span>{isSubmitting ? "Memproses..." : "Kirim Jawaban"}</span>
             <ArrowRight className="w-4 h-4" />

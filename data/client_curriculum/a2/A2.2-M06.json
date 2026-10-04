@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa level A2 keliru menggunakan possessive adjective (my, your, his, her) ketika seharusnya menggunakan possessive pronoun (mine, yours, his, hers) setelah kata kerja 'be'. Possessive adjective selalu diikuti noun, sedangkan possessive pronoun berdiri sendiri menggantikan noun.",
         "wrong": "Whose book is this? It's my.",
         "correct": "Whose book is this? It's mine."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Whose is this?\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Untuk mendeskripsikan bahan benda, gunakan pola: 'be + made of + material'. Contoh: The..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan belajar cara mendeskripsikan material atau bahan pembuat suatu benda menggunakan pola 'made of + material'."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Whose is this?\"?",
+          "options": [
+            "Whose book are this? It's mine",
+            "Whose book is this? It's my",
+            "Whose book is this? It's mine"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak siswa level A2 keliru menggunakan possessive adjective (my, your, his, her) ketika seharusnya menggunakan possessive pronoun (mine, yours, his, hers) setelah kata kerja 'be'. Possessive adjective selalu diikuti noun, sedangkan possessive pronoun berdiri sendiri menggantikan noun."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"You're right. And what about these keys? Are they yours?\"\nDavid: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Whose book is this? It's my",
+            "No, they're not mine. Maybe they belong to Sarah. Let me check with her."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"No, they're not mine. Maybe they belong to Sarah. Let me check with her.\" (\"Tidak, itu bukan milikku. Mungkin itu milik Sarah. Biar aku tanyakan padanya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

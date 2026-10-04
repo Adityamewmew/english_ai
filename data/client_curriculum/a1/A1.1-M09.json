@@ -20,7 +20,45 @@
         "explanation": "Pemula sering bingung kapan menggunakan 'must' (keharusan) dan 'can' (kemampuan/izin). 'Must' digunakan untuk aturan atau hal yang wajib dilakukan, sedangkan 'can' untuk kemampuan atau meminta izin.",
         "wrong": "You can be quiet in the library. (salah konteks)",
         "correct": "You must be quiet in the library. (benar - ini adalah keharusan/aturan)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Countable / Uncountable & Some / Any\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Must/Mustn't: Gunakan 'must' untuk menyatakan keharusan dan 'mustn't' untuk larangan. C..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara membicarakan makanan dan kebiasaan makan, cara meminta dan menawarkan sesuatu dengan sopan menggunakan 'Would you like."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "You must to be quiet in the library. (benar - ini adalah keharusan",
+            "You can be quiet in the library. (salah konteks)",
+            "You must be quiet in the library. (benar - ini adalah keharusan"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pemula sering bingung kapan menggunakan 'must' (keharusan) dan 'can' (kemampuan/izin). 'Must' digunakan untuk aturan atau hal yang wajib dilakukan, sedangkan 'can' untuk kemampuan atau meminta izin."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nNarrator: \"Harry is ten years old and he's from New York.\"\nHarry: \"[...]\"",
+          "options": [
+            "He wants to be a star chef.",
+            "Sorry, I forgot my keys at home.",
+            "You can be quiet in the library. (salah konteks)"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"He wants to be a star chef.\" (\"Dia ingin menjadi koki terkenal.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Harry."
+        }
+      ]
     },
     "vocab": [
       {

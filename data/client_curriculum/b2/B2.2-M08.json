@@ -23,7 +23,45 @@
         "explanation": "Kesalahan paling umum adalah dangling participle, di mana subjek dari participle clause berbeda dengan subjek kalimat utama. Ini menciptakan kalimat yang rancu atau bahkan lucu. Subjek participle clause HARUS sama dengan subjek kalimat utama.",
         "wrong": "Walking through the park, the flowers looked beautiful.",
         "correct": "Walking through the park, I noticed the flowers looked beautiful."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Participle Clauses for Concise Writing & Narrative Flow\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Present Participle Clause: V-ing menunjukkan aksi yang terjadi bersamaan dengan aksi ut..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Participle clauses adalah cara efektif untuk membuat tulisan lebih ringkas dan mengalir natural."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "Walking through the park",
+            "the flowers looked beautiful",
+            "Walking through the park"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kesalahan paling umum adalah dangling participle, di mana subjek dari participle clause berbeda dengan subjek kalimat utama. Ini menciptakan kalimat yang rancu atau bahkan lucu. Subjek participle clause HARUS sama dengan subjek kalimat utama."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDavid: \"Looking at our draft proposal, I think we need to make it more concise. It's running to 15 pages.\"\nAmara: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Walking through the park",
+            "You're right. Having reviewed similar successful proposals, I noticed they rarely exceed 10 pages. We should use more participle clauses."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"You're right. Having reviewed similar successful proposals, I noticed they rarely exceed 10 pages. We should use more participle clauses.\" (\"Benar juga. Setelah mengulas proposal sukses yang serupa, aku perhatikan jarang yang melebihi 10 halaman. Kita sebaiknya pakai lebih banyak participle clauses.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Amara."
+        }
+      ]
     },
     "vocab": [
       {

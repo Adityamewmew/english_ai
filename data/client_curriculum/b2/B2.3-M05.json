@@ -25,7 +25,45 @@
         "explanation": "Siswa level B2 sering mencampur tipe conditional ketika berspekulasi tentang kebijakan antariksa, atau menggunakan active voice padahal passive lebih tepat untuk konteks hukum dan regulasi formal.",
         "wrong": "If the treaty will be revised, it would allow private mining. / International law regulates asteroid mining activities.",
         "correct": "If the treaty were revised, it would allow private mining. / Asteroid mining activities are regulated by international law."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Space Exploration, Extraterrestrial Resources & International Treaties\"?",
+          "options": [
+            "Conditional Type 2 untuk spekulasi kebijakan: 'If nations claimed celestial bodies, it ...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Modul ini membahas bahasa dan struktur argumentasi untuk debat tentang eksplorasi luar angkasa, eksploitasi sumber daya ekstraterestrial, dan interpretasi perjanjian internasional."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "it would allow private mining",
+            "If the treaty were revised",
+            "If the treaty will be revised"
+          ],
+          "correctIndex": 1,
+          "explanation": "Siswa level B2 sering mencampur tipe conditional ketika berspekulasi tentang kebijakan antariksa, atau menggunakan active voice padahal passive lebih tepat untuk konteks hukum dan regulasi formal."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Kovač: \"While I acknowledge the economic potential, we cannot ignore that Article II explicitly prohibits national appropriation of celestial bodies. How would your mining operations not violate this provision?\"\nMarcus: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "The treaty prohibits national appropriation, not private extraction of resources. There's a crucial distinction between claiming sovereignty over an asteroid and extracting minerals from it. If the treaty had intended to ban commercial activities, it would have stated so explicitly.",
+            "If the treaty will be revised"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"The treaty prohibits national appropriation, not private extraction of resources. There's a crucial distinction between claiming sovereignty over an asteroid and extracting minerals from it. If the treaty had intended to ban commercial activities, it would have stated so explicitly.\" (\"Perjanjian itu melarang pengambilalihan negara, bukan ekstraksi sumber daya oleh pihak swasta. Ada perbedaan krusial antara mengklaim kedaulatan atas asteroid dan mengekstraksi mineral darinya. Jika perjanjian bermaksud melarang aktivitas komersial, itu akan dinyatakan secara eksplisit.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Marcus."
+        }
+      ]
     },
     "vocab": [
       {

@@ -24,7 +24,45 @@
         "explanation": "Siswa sering menggunakan bahasa yang terlalu langsung atau tidak cukup jelas saat menyampaikan pembatasan diet, yang bisa terdengar kasar atau menyebabkan kesalahpahaman berbahaya.",
         "wrong": "I don't eat meat. Take it out.",
         "correct": "I'm vegetarian. Could I have this dish without meat, please? Or would you recommend a vegetarian option?"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Global Cuisine, Culinary Heritage & Expressing Dietary Preferences Politely\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Gunakan 'Could you tell me...?' atau 'Would it be possible...?' untuk pertanyaan sopan:...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Dalam konteks global, kemampuan mengekspresikan preferensi makanan dengan sopan sangat penting."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Global Cuisine, Culinary Heritage & Expressing Dietary Preferences Politely\"?",
+          "options": [
+            "I'm vegetarian. Could I have this dish without meat",
+            "I'm vegetarian. Could I have this dish without meat",
+            "I don't eat meat. Take it out"
+          ],
+          "correctIndex": 0,
+          "explanation": "Siswa sering menggunakan bahasa yang terlalu langsung atau tidak cukup jelas saat menyampaikan pembatasan diet, yang bisa terdengar kasar atau menyebabkan kesalahpahaman berbahaya."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nWaiter: \"The paella contains mussels, prawns, and squid. But we also have a chicken and vegetable paella that's very popular.\"\nSarah: \"[...]\"",
+          "options": [
+            "I don't eat meat. Take it out",
+            "Perfect! I'll have the chicken paella, please. Could I have it without the bell peppers?",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Perfect! I'll have the chicken paella, please. Could I have it without the bell peppers?\" (\"Sempurna! Saya akan pesan paella ayam. Bisakah saya minta tanpa paprika?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah."
+        }
+      ]
     },
     "vocab": [
       {

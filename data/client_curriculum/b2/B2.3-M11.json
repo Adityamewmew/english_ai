@@ -23,7 +23,45 @@
         "explanation": "Banyak debater pemula menggunakan bahasa yang terlalu agresif atau personal saat menyerang argumen lawan, padahal debat parlementer mengharuskan kesantunan dan fokus pada argumen, bukan pribadi. Selain itu, sering kali debater tidak merespons POI dengan baik atau bahkan mengabaikannya sama sekali.",
         "wrong": "Your argument is completely stupid and you clearly don't understand the issue at all.",
         "correct": "While I respect my opponent's perspective, their argument fails to consider the empirical evidence that demonstrates the contrary."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Parliamentary Rules, Rebuttals & Point of Information\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "POI Structure: 'On that point, sir/madam...' atau 'Will the speaker yield?' — POI harus..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Debat gaya parlementer Oxford Union adalah format debat formal yang mengikuti struktur dewan parlemen dengan dua sisi (Government dan Opposition)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Parliamentary Rules, Rebuttals & Point of Information\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "Your argument is completely stupid and you clearly don't understand the issue at all always",
+            "Your argument is completely stupid and you clearly don't understand the issue at all",
+            "While I respect my opponent's perspective"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak debater pemula menggunakan bahasa yang terlalu agresif atau personal saat menyerang argumen lawan, padahal debat parlementer mengharuskan kesantunan dan fokus pada argumen, bukan pribadi. Selain itu, sering kali debater tidak merespons POI dengan baik atau bahkan mengabaikannya sama sekali."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"I will yield briefly.\"\nJames: \"[...]\"",
+          "options": [
+            "Your argument is completely stupid and you clearly don't understand the issue at all",
+            "Sorry, I forgot my keys at home.",
+            "Can the speaker substantiate her claims with empirical evidence rather than theoretical projections?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Can the speaker substantiate her claims with empirical evidence rather than theoretical projections?\" (\"Bisakah pembicara membuktikan klaimnya dengan bukti empiris daripada proyeksi teoretis?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh James."
+        }
+      ]
     },
     "vocab": [
       {

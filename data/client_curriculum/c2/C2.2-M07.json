@@ -23,7 +23,45 @@
         "explanation": "Penutur C1 sering menggunakan terminologi finansial secara harfiah dan eksplisit, menghasilkan komunikasi yang terdengar naif atau bahkan berbahaya secara legal. Dalam high finance, implisit dan eufemisme adalah norma karena alasan regulasi, reputasi, dan negosiasi. Mengatakan 'We're insolvent' di earnings call bisa memicu bank run; profesional C2 akan berkata 'We're exploring strategic alternatives to optimize our capital structure.' Trap lainnya: menggunakan bahasa emosional ('panic', 'disaster') yang dihindari bankir—mereka lebih memilih 'volatility', 'market correction', 'liquidity event'. Grandmaster C2 memahami bahwa setiap kata memiliki implikasi hukum dan PR.",
         "wrong": "The company is broke and we need to fire everyone to survive this crisis.",
         "correct": "The firm is undertaking a comprehensive balance sheet restructuring, which will necessitate workforce rationalization to ensure long-term viability."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"High-Finance Mergers, Derivative Markets & Sovereign Debt Restructuring\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Gunakan nominalisasi kompleks untuk mengabstraksi proses finansial: 'debt monetization'..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Modul ini mendalami register linguistik keuangan tingkat elite yang digunakan dalam transaksi M&A bernilai miliaran dolar, negosiasi restrukturisasi utang sovereign, dan perdagangan instrumen derivatif kompleks."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "The company is broke and we need to fire everyone to survive this crisis",
+            "The firm are undertaking a comprehensive balance sheet restructuring",
+            "The firm is undertaking a comprehensive balance sheet restructuring"
+          ],
+          "correctIndex": 2,
+          "explanation": "Penutur C1 sering menggunakan terminologi finansial secara harfiah dan eksplisit, menghasilkan komunikasi yang terdengar naif atau bahkan berbahaya secara legal. Dalam high finance, implisit dan eufemisme adalah norma karena alasan regulasi, reputasi, dan negosiasi. Mengatakan 'We're insolvent' di earnings call bisa memicu bank run; profesional C2 akan berkata 'We're exploring strategic alternatives to optimize our capital structure.' Trap lainnya: menggunakan bahasa emosional ('panic', 'disaster') yang dihindari bankir—mereka lebih memilih 'volatility', 'market correction', 'liquidity event'. Grandmaster C2 memahami bahwa setiap kata memiliki implikasi hukum dan PR."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nManaging Director: \"Precisely. Which gives us leverage, but we must tread carefully. The geopolitical optics of being perceived as vulture funds could prove reputationally catastrophic, particularly given the current populist sentiment in their legislature.\"\nJunior Analyst: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "The company is broke and we need to fire everyone to survive this crisis",
+            "Should we explore subordinating our claims to multilateral creditors? It might facilitate a broader Paris Club restructuring and avoid litigation risk."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Should we explore subordinating our claims to multilateral creditors? It might facilitate a broader Paris Club restructuring and avoid litigation risk.\" (\"Apakah sebaiknya kita pertimbangkan mensubordinasi klaim kita kepada kreditor multilateral? Ini mungkin memfasilitasi restrukturisasi Paris Club yang lebih luas dan menghindari risiko litigasi.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Junior Analyst."
+        }
+      ]
     },
     "vocab": [
       {

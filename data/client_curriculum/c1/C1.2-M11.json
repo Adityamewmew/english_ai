@@ -24,7 +24,45 @@
         "explanation": "Pelajar C1 sering mengasumsikan bahwa editorial dengan bahasa formal secara otomatis bersifat objektif. Padahal, bias dapat tersembunyi dalam pilihan leksikal yang tampak netral. Kesalahan lain adalah gagal mengenali presuposisi dalam pertanyaan retoris atau klausa subordinat.",
         "wrong": "The article is objective because it uses statistics and formal vocabulary.",
         "correct": "Despite employing statistical data and formal register, the article exhibits ideological bias through selective nominalization and evaluative adjectives that frame the issue unilaterally."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Epistemic Stance & Critical Discourse Analysis of Editorial Journalism\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Epistemic Modal Verbs: Gunakan modal verbs (may, might, could, must, should) untuk mena..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Critical Discourse Analysis (CDA) adalah pendekatan analitis yang mengungkap hubungan antara bahasa, kekuasaan, dan ideologi dalam teks media."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "The article is objective because it uses statistics and formal vocabulary always",
+            "The article is objective because it uses statistics and formal vocabulary",
+            "Despite employing statistical data and formal register"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pelajar C1 sering mengasumsikan bahwa editorial dengan bahasa formal secara otomatis bersifat objektif. Padahal, bias dapat tersembunyi dalam pilihan leksikal yang tampak netral. Kesalahan lain adalah gagal mengenali presuposisi dalam pertanyaan retoris atau klausa subordinat."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"Marcus, I'd like you to examine the epistemic stance in this Guardian editorial on climate policy. What linguistic markers indicate the author's level of certainty?\"\nMarcus: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "The author predominantly employs boosters like 'unequivocally' and 'indisputably,' suggesting a high degree of commitment to the proposition that immediate action is imperative.",
+            "The article is objective because it uses statistics and formal vocabulary"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"The author predominantly employs boosters like 'unequivocally' and 'indisputably,' suggesting a high degree of commitment to the proposition that immediate action is imperative.\" (\"Penulis secara dominan menggunakan booster seperti 'unequivocally' dan 'indisputably,' yang menunjukkan tingkat komitmen tinggi terhadap proposisi bahwa tindakan segera sangat penting.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Marcus."
+        }
+      ]
     },
     "vocab": [
       {

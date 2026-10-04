@@ -25,7 +25,45 @@
         "explanation": "Banyak pemula lupa bahwa dalam passive voice, subject kalimat adalah objek yang dikenai aksi, bukan pelaku aksi. Selain itu, kesalahan umum lain adalah menggunakan 'work' sebagai countable noun.",
         "wrong": "The factory makes the sweets. → The factory is made the sweets. / I have four works to finish.",
         "correct": "The factory makes the sweets. → The sweets are made in the factory. / I have four jobs to finish. OR I have a lot of work to do."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Second Conditional & Work Vocabulary\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Passive Voice dibentuk dengan: to be + past participle. Contoh: The sweets are made in ..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas penggunaan passive voice dalam berbagai bentuk waktu (present simple, past simple, present continuous, present perfect)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I have four works to finish",
+            "The factory makes the sweets. → The factory is made the sweets",
+            "The factory makes the sweets. → The sweets are made in the factory"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula lupa bahwa dalam passive voice, subject kalimat adalah objek yang dikenai aksi, bukan pelaku aksi. Selain itu, kesalahan umum lain adalah menggunakan 'work' sebagai countable noun."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nRyan: \"Hi, Olivia. What happened to you yesterday?\"\nOlivia: \"[...]\"",
+          "options": [
+            "Oh, I just didn't feel very good. I'm all right now though. By the way, here's your book back, Ryan.",
+            "Sorry, I forgot my keys at home.",
+            "The factory makes the sweets. → The factory is made the sweets"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Oh, I just didn't feel very good. I'm all right now though. By the way, here's your book back, Ryan.\" (\"Oh, aku hanya tidak enak badan. Tapi sekarang sudah baikan. Ngomong-ngomong, ini bukumu, Ryan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Olivia."
+        }
+      ]
     },
     "vocab": [
       {

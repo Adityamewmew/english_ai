@@ -42,7 +42,45 @@
             "explanation": "Pemula sering bingung membedakan 'remember/forget + gerund' dan 'remember/forget + infinitive'. Yang perlu diingat: gerund untuk kejadian yang SUDAH terjadi (masa lalu), infinitive untuk yang BELUM/HARUS terjadi (masa depan atau kewajiban).",
             "wrong": "Don't forget buying food for my packed lunch tomorrow, Mum.",
             "correct": "Don't forget to buy food for my packed lunch tomorrow, Mum."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pada kaidah \"Verbs with Gerund & Infinitive\", bagaimana perubahan atau padanan yang benar untuk \"imagine, feel like, suggest, practice, miss, can't stand, enjoy, detest, don't mind\"?",
+              "options": [
+                "Tidak ada perubahan tenses pada imagine, feel like, suggest, practice, miss, can't stand, enjoy, detest, don't mind",
+                "Contoh",
+                "imagine, feel like, suggest, practice, miss, can't stand, enjoy, detest, don't mind selalu dihilangkan"
+              ],
+              "correctIndex": 1,
+              "explanation": "Dalam materi ini: imagine, feel like, suggest, practice, miss, can't stand, enjoy, detest, don't mind berubah atau berpadanan menjadi \"Contoh\"."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Verbs with Gerund & Infinitive\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "Don't forget to buy food for my packed lunch tomorrow",
+                "Don't forget buying food for my packed lunch tomorrow",
+                "Mum"
+              ],
+              "correctIndex": 0,
+              "explanation": "Pemula sering bingung membedakan 'remember/forget + gerund' dan 'remember/forget + infinitive'. Yang perlu diingat: gerund untuk kejadian yang SUDAH terjadi (masa lalu), infinitive untuk yang BELUM/HARUS terjadi (masa depan atau kewajiban)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"It's been such a busy week.\"\nLiam: \"[...]\"",
+              "options": [
+                "Don't forget buying food for my packed lunch tomorrow",
+                "Sorry, I forgot my keys at home.",
+                "Too right. So many things to do."
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"Too right. So many things to do.\" (\"Benar sekali. Banyak hal yang harus dilakukan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Liam."
+            }
+          ]
         },
         "vocab": [
           {
@@ -289,7 +327,45 @@
             "explanation": "Banyak pemula menghilangkan relative pronoun secara sembarangan tanpa mengecek apakah ada auxiliary verb 'be' setelahnya. Ingat: kamu hanya bisa menghilangkan relative pronoun + be, bukan relative pronoun saja.",
             "wrong": "I met the people come from Italy.",
             "correct": "I met the people who come from Italy. ATAU I met the people coming from Italy."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Relative Clauses & Travel\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Defining relative clause: Digunakan untuk mengidentifikasi which/that (benda), who/that..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Unit ini membahas penggunaan relative clauses (klausa relatif) untuk menambahkan informasi pada kalimat."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "I met the people come from Italy always",
+                "I met the people come from Italy",
+                "I met the people who come from Italy. ATAU I met the people coming from Italy"
+              ],
+              "correctIndex": 2,
+              "explanation": "Banyak pemula menghilangkan relative pronoun secara sembarangan tanpa mengecek apakah ada auxiliary verb 'be' setelahnya. Ingat: kamu hanya bisa menghilangkan relative pronoun + be, bukan relative pronoun saja."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nKaren: \"Hi James, how are you doing? Hope you're OK!\"\nKaren: \"[...]\"",
+              "options": [
+                "I met the people come from Italy",
+                "Sorry, I forgot my keys at home.",
+                "Well, here I am at last – living in northern Canada with the nomadic Inuit people."
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"Well, here I am at last – living in northern Canada with the nomadic Inuit people.\" (\"Nah, akhirnya aku di sini – tinggal di Kanada utara bersama suku Inuit yang nomaden.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Karen."
+            }
+          ]
         },
         "vocab": [
           {
@@ -500,7 +576,45 @@
             "explanation": "Pemula sering keliru menempatkan so dan such. So diikuti langsung oleh adjective/adverb, sedangkan such diikuti oleh noun phrase (a/an + adjective + noun). Jangan sampai tertukar!",
             "wrong": "It was so a difficult question. / He is such intelligent.",
             "correct": "It was such a difficult question. / He is so intelligent."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Future Continuous & Future Perfect\"?",
+              "options": [
+                "Quantifiers: Gunakan 'a few/a little/some' untuk jumlah kecil, 'a lot of/lots of/plenty...",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara menggunakan quantifiers (kata penentu jumlah) untuk berbicara tentang kuantitas dengan lebih presisi, serta menggunakan so/such dan do/did untuk memberikan penekanan dalam kalimat bahasa Inggris."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Future Continuous & Future Perfect\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "He is such intelligent",
+                "It was such a difficult question",
+                "It was so a difficult question"
+              ],
+              "correctIndex": 1,
+              "explanation": "Pemula sering keliru menempatkan so dan such. So diikuti langsung oleh adjective/adverb, sedangkan such diikuti oleh noun phrase (a/an + adjective + noun). Jangan sampai tertukar!"
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Did you see that blog about the dad who wore costumes to school?\"\nTom: \"[...]\"",
+              "options": [
+                "Yeah! Rain's dad wore a different fancy-dress costume every single day.",
+                "Sorry, I forgot my keys at home.",
+                "It was so a difficult question"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Yeah! Rain's dad wore a different fancy-dress costume every single day.\" (\"Ya! Ayah Rain mengenakan kostum yang berbeda setiap hari.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+            }
+          ]
         },
         "vocab": [
           {
@@ -717,7 +831,45 @@
             "explanation": "Banyak pemula bingung antara 'used to (do)' yang menunjukkan kebiasaan masa lalu yang sudah berhenti, dengan 'be/get used to (doing)' yang menunjukkan kebiasaan atau familiaritas saat ini. Perhatikan struktur setelah 'to': jika diikuti verb dasar, gunakan 'used to'. Jika diikuti gerund (verb-ing) atau noun, gunakan 'be/get used to'.",
             "wrong": "I used to wake up early, but now I'm used to wake up late.",
             "correct": "I used to wake up early, but now I'm used to waking up late."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Modals of Deduction & Speculation\"?",
+              "options": [
+                "'used to (do)' / 'be used to (doing)' - untuk membicarakan situasi di masa lalu yang se...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Unit ini membahas perbedaan penting antara 'be/get used to (doing)' yang menunjukkan kebiasaan atau familiaritas dengan situasi, versus 'used to (do)' yang menjelaskan kebiasaan di masa lalu yang tidak lagi terjadi."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Modals of Deduction & Speculation\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "I used to wake up early",
+                "I used to wake up early",
+                "but now I'm used to wake up late"
+              ],
+              "correctIndex": 0,
+              "explanation": "Banyak pemula bingung antara 'used to (do)' yang menunjukkan kebiasaan masa lalu yang sudah berhenti, dengan 'be/get used to (doing)' yang menunjukkan kebiasaan atau familiaritas saat ini. Perhatikan struktur setelah 'to': jika diikuti verb dasar, gunakan 'used to'. Jika diikuti gerund (verb-ing) atau noun, gunakan 'be/get used to'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nTeacher: \"OK, everyone, so this is what I want you to do by Friday, OK? A short story, of five hundred words.\"\nEmma: \"[...]\"",
+              "options": [
+                "Five hundred words? We can't be serious!",
+                "I used to wake up early",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Five hundred words? We can't be serious!\" (\"Lima ratus kata? Kita tidak bisa serius!\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Emma."
+            }
+          ]
         },
         "vocab": [
           {
@@ -947,7 +1099,45 @@
             "explanation": "Pemula sering salah menggunakan couldn't untuk menyatakan ketidakmampuan dalam situasi spesifik yang berhasil diatasi. Couldn't digunakan untuk kemampuan umum atau kegagalan, sedangkan was/were able to, managed to, atau succeeded in digunakan untuk pencapaian spesifik di masa lalu.",
             "wrong": "After the IT lessons, they couldn't use computers confidently.",
             "correct": "After the IT lessons, they were able to use computers confidently. / They managed to use computers confidently."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Conditionals with Conjunctions & Technology\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Obligation/Necessity: have to/must + infinitive (Most experts agree that screen time sh..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Unit ini membahas tiga area gramatikal penting: (1) Obligation, permission, dan prohibition menggunakan have to, must, should, need to, dan be allowed to untuk memberikan nasihat dan aturan; (2) Necessity dengan didn't need to (tidak perlu melakukan sesuatu dan memang tidak dilakukan) vs needn't have done (tidak perlu melakukan tapi tetap dilakukan); (3) Ability in the past menggunakan could, was/were able to, managed to, dan succeeded in untuk menyatakan kemampuan umum atau pencapaian spesifik di masa lalu."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "After the IT lessons",
+                "they couldn't use computers confidently",
+                "After the IT lessons"
+              ],
+              "correctIndex": 0,
+              "explanation": "Pemula sering salah menggunakan couldn't untuk menyatakan ketidakmampuan dalam situasi spesifik yang berhasil diatasi. Couldn't digunakan untuk kemampuan umum atau kegagalan, sedangkan was/were able to, managed to, atau succeeded in digunakan untuk pencapaian spesifik di masa lalu."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSheena: \"I understand. I've been staying up until midnight recently too, scrolling through social media.\"\nAaron: \"[...]\"",
+              "options": [
+                "After the IT lessons",
+                "Sorry, I forgot my keys at home.",
+                "I wanted to warn you about hidden advertising or product placement in films. It's everywhere now."
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"I wanted to warn you about hidden advertising or product placement in films. It's everywhere now.\" (\"Aku ingin memperingatkanmu tentang iklan tersembunyi atau penempatan produk dalam film. Sekarang itu ada di mana-mana.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Aaron."
+            }
+          ]
         },
         "vocab": [
           {
@@ -1161,7 +1351,45 @@
             "explanation": "Pemula sering bingung antara 'despite' dan 'although'. 'Despite' harus diikuti noun atau gerund, sedangkan 'although' diikuti subjek + verb (klausa lengkap).",
             "wrong": "Despite he was tired, he kept working.",
             "correct": "Despite being tired, he kept working. / Although he was tired, he kept working."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Gerunds, Infinitives & Community\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Intensifying Comparatives: Gunakan 'a lot/far/much + comparative' untuk memperkuat perb...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Unit ini fokus pada penggunaan comparatives yang lebih kuat dengan intensifier seperti 'a lot', 'far', 'much', serta linkers of contrast seperti 'although', 'despite', 'however', dan 'nevertheless'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Gerunds, Infinitives & Community\"?",
+              "options": [
+                "Despite being tired",
+                "he kept working",
+                "Despite he was tired"
+              ],
+              "correctIndex": 0,
+              "explanation": "Pemula sering bingung antara 'despite' dan 'although'. 'Despite' harus diikuti noun atau gerund, sedangkan 'although' diikuti subjek + verb (klausa lengkap)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"What other situations can you think of in which strangers might start talking to each other?\"\nJames: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "Maybe at a concert or sports event. People are far friendlier when they share the same interest.",
+                "Despite he was tired"
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"Maybe at a concert or sports event. People are far friendlier when they share the same interest.\" (\"Mungkin di konser atau acara olahraga. Orang-orang jauh lebih ramah ketika mereka punya minat yang sama.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh James."
+            }
+          ]
         },
         "vocab": [
           {
@@ -1361,7 +1589,45 @@
             "explanation": "Pemula sering menggunakan future simple (will + verb) padahal konteksnya membutuhkan future continuous untuk menunjukkan aksi yang sedang berlangsung di waktu tertentu di masa depan. Future continuous memberi nuansa bahwa aksi tersebut sedang dalam proses, bukan hanya akan terjadi.",
             "wrong": "At 3 PM tomorrow, I will finish my homework.",
             "correct": "At 3 PM tomorrow, I will be finishing my homework."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Ways of Referring to Future & Optimism\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Future Continuous: will + be + verb-ing. Digunakan untuk aksi yang sedang berlangsung d...",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Unit ini membahas cara-cara merujuk ke masa depan dalam bahasa Inggris, khususnya future continuous dan future perfect."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "At 3 PM tomorrow",
+                "At 3 PM tomorrow",
+                "I will finish my homework"
+              ],
+              "correctIndex": 0,
+              "explanation": "Pemula sering menggunakan future simple (will + verb) padahal konteksnya membutuhkan future continuous untuk menunjukkan aksi yang sedang berlangsung di waktu tertentu di masa depan. Future continuous memberi nuansa bahwa aksi tersebut sedang dalam proses, bukan hanya akan terjadi."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLiam: \"Anyway, there's a photo competition next month at school that I'm thinking of entering. First prize is a tablet. I think I've got a really good shot.\"\nEmma: \"[...]\"",
+              "options": [
+                "At 3 PM tomorrow",
+                "That's great. Go for it.",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"That's great. Go for it.\" (\"Itu bagus. Ayo lakukan saja.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Emma."
+            }
+          ]
         },
         "vocab": [
           {
@@ -1572,7 +1838,45 @@
             "explanation": "Pemula sering mencampur struktur conditional yang berbeda atau menggunakan 'will' di klausa 'if'. Ingat, setiap tipe conditional memiliki pola tenses yang tetap dan tidak boleh dicampur sembarangan kecuali dalam mixed conditionals yang memang dirancang untuk menghubungkan waktu berbeda.",
             "wrong": "If you will take this medicine, you won't get headaches.",
             "correct": "If you take this medicine, you won't get headaches."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Participle Clauses & Organization\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Zero Conditional: If + present simple, present simple. Contoh: If surgeons run through ...",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Unit ini berfokus pada penggunaan kalimat bersyarat (conditionals) dalam berbagai tipe, termasuk mixed conditionals yang menggabungkan waktu berbeda."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Participle Clauses & Organization\"?",
+              "options": [
+                "If you will take this medicine",
+                "you won't get headaches",
+                "If you take this medicine"
+              ],
+              "correctIndex": 2,
+              "explanation": "Pemula sering mencampur struktur conditional yang berbeda atau menggunakan 'will' di klausa 'if'. Ingat, setiap tipe conditional memiliki pola tenses yang tetap dan tidak boleh dicampur sembarangan kecuali dalam mixed conditionals yang memang dirancang untuk menghubungkan waktu berbeda."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Have you read that book about checklists? It's really interesting.\"\nTom: \"[...]\"",
+              "options": [
+                "If you will take this medicine",
+                "Sorry, I forgot my keys at home.",
+                "Not yet. Why do you recommend it?"
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"Not yet. Why do you recommend it?\" (\"Belum. Kenapa kamu merekomendasikannya?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+            }
+          ]
         },
         "vocab": [
           {
@@ -1784,7 +2088,45 @@
             "explanation": "Banyak pemula salah menggunakan tense setelah I wish dan If only. Untuk situasi sekarang, gunakan past simple (bukan present). Untuk situasi masa lalu, gunakan past perfect (bukan past simple).",
             "wrong": "I wish I can disappear. / If only my teacher understands me.",
             "correct": "I wish I could disappear. / If only my teacher understood me."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Mixed Conditionals & Personal Growth\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "I wish / If only + past simple: untuk penyesalan tentang situasi sekarang. Contoh: 'I w..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Unit ini mengajarkan penggunaan mixed conditionals untuk mengekspresikan penyesalan masa lalu dan keinginan tentang situasi saat ini atau masa depan."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "If only my teacher understands me",
+                "I wish I can disappear",
+                "I wish I could disappear"
+              ],
+              "correctIndex": 2,
+              "explanation": "Banyak pemula salah menggunakan tense setelah I wish dan If only. Untuk situasi sekarang, gunakan past simple (bukan present). Untuk situasi masa lalu, gunakan past perfect (bukan past simple)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMum: \"Josh, I'd rather you put your phone on the table.\"\nJosh: \"[...]\"",
+              "options": [
+                "Sorry, Mum. I won't be a minute.",
+                "Sorry, I forgot my keys at home.",
+                "I wish I can disappear"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Sorry, Mum. I won't be a minute.\" (\"Maaf, Bu. Sebentar saja.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Josh."
+            }
+          ]
         },
         "vocab": [
           {
@@ -2007,7 +2349,45 @@
             "explanation": "Kesalahan umum adalah lupa mengubah tenses atau ekspresi waktu saat melaporkan ucapan. Pemula sering menggunakan tenses yang sama seperti direct speech, atau lupa mengubah 'today' menjadi 'that day', 'tomorrow' menjadi 'the next day', dsb.",
             "wrong": "She said she is busy today and will come tomorrow.",
             "correct": "She said she was busy that day and would come the next day."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Perhatikan kalimat langsung: \"I am happy\". Bagaimana bentuk kalimat tidak langsung (reported/transformed) yang benar?",
+              "options": [
+                "I am happy",
+                "She said (that",
+                "She say (that"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah pada \"Passive Report Structures & Media\": bentuk yang tepat adalah \"She said (that\". Perhatikan perubahan tenses dan kata kerja bantunya."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Passive Report Structures & Media\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "She said she was busy that day and would come the next day",
+                "She said she were busy that day and would come the next day",
+                "She said she is busy today and will come tomorrow"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kesalahan umum adalah lupa mengubah tenses atau ekspresi waktu saat melaporkan ucapan. Pemula sering menggunakan tenses yang sama seperti direct speech, atau lupa mengubah 'today' menjadi 'that day', 'tomorrow' menjadi 'the next day', dsb."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJustin: \"So where's Nicole? We're going to miss the bus.\"\nEmma: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "We've still got a few minutes. She'll be here. She's not going to miss a trip to the skate park.",
+                "She said she is busy today and will come tomorrow"
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"We've still got a few minutes. She'll be here. She's not going to miss a trip to the skate park.\" (\"Kita masih punya beberapa menit. Dia akan datang. Dia tidak akan melewatkan perjalanan ke taman skateboard.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Emma."
+            }
+          ]
         },
         "vocab": [
           {
@@ -2222,7 +2602,45 @@
             "explanation": "Pemula sering lupa menggunakan 'have + past participle' setelah modal verbs ketika berspekulasi tentang masa lalu. Mereka hanya menggunakan modal + verb biasa, yang sebenarnya untuk masa sekarang/masa depan.",
             "wrong": "They might visit us yesterday. (Salah - 'visit' adalah bentuk dasar, bukan past speculation)",
             "correct": "They might have visited us yesterday. (Benar - menggunakan 'might have + past participle' untuk spekulasi masa lalu)"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Inversion with Negative Adverbials & Science\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Untuk spekulasi kemungkinan masa lalu: might have + past participle, may have + past pa...",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara berspekulasi (speculating) menggunakan modal verbs untuk kejadian masa lalu, sekarang, dan masa depan."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Inversion with Negative Adverbials & Science\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "They might visit us yesterday. (Salah - 'visit' adalah bentuk dasar",
+                "They might have visited us yesterday. (Benar - menggunakan 'might have + past participle' untuk spekulasi masa lalu)",
+                "bukan past speculation)"
+              ],
+              "correctIndex": 1,
+              "explanation": "Pemula sering lupa menggunakan 'have + past participle' setelah modal verbs ketika berspekulasi tentang masa lalu. Mereka hanya menggunakan modal + verb biasa, yang sebenarnya untuk masa sekarang/masa depan."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJulie: \"We sleep very well in space. Can you imagine? You have a sleeping bag each, and when you get into it you float in the sleeping bag.\"\nTracy: \"[...]\"",
+              "options": [
+                "They might visit us yesterday. (Salah - 'visit' adalah bentuk dasar",
+                "Sorry, I forgot my keys at home.",
+                "Free-floating in the space station can be quite enjoyable, but the trips to and from the station can be a bit rough. I've heard it described as a train wreck followed by a car crash followed by falling off your bike."
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"Free-floating in the space station can be quite enjoyable, but the trips to and from the station can be a bit rough. I've heard it described as a train wreck followed by a car crash followed by falling off your bike.\" (\"Melayang bebas di stasiun luar angkasa bisa sangat menyenangkan, tapi perjalanan ke dan dari stasiun bisa cukup kasar. Aku pernah mendengarnya digambarkan seperti kecelakaan kereta diikuti kecelakaan mobil lalu jatuh dari sepeda.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tracy."
+            }
+          ]
         },
         "vocab": [
           {
@@ -2430,7 +2848,45 @@
             "explanation": "Banyak pelajar salah memilih subject saat membuat passive dari kalimat dengan dua objek. Meskipun secara gramatikal kedua bentuk benar, dalam bahasa Inggris natural lebih umum menggunakan person (indirect object) sebagai subject, bukan thing (direct object).",
             "wrong": "A lot of money was paid to her.",
             "correct": "She was paid a lot of money."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Emphatic Structures, Cleft Sentences & Discovery\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Passive report structure: It + be + past participle + that clause. Contoh: It is though..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Unit ini mengajarkan passive report structures yang sering digunakan dalam bahasa formal dan akademik untuk melaporkan kepercayaan, pengetahuan, atau pendapat."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "She were paid a lot of money",
+                "A lot of money was paid to her",
+                "She was paid a lot of money"
+              ],
+              "correctIndex": 2,
+              "explanation": "Banyak pelajar salah memilih subject saat membuat passive dari kalimat dengan dua objek. Meskipun secara gramatikal kedua bentuk benar, dalam bahasa Inggris natural lebih umum menggunakan person (indirect object) sebagai subject, bukan thing (direct object)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nAnna: \"There's an earlier train you could catch, if you want.\"\nBen: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "Hmm, that sounds like she wants me to leave earlier. People don't always say what they really mean!",
+                "A lot of money was paid to her"
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"Hmm, that sounds like she wants me to leave earlier. People don't always say what they really mean!\" (\"Hmm, kedengarannya seperti dia ingin aku pergi lebih awal. Orang tidak selalu mengatakan apa yang mereka maksud sebenarnya!\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ben."
+            }
+          ]
         },
         "vocab": [
           {
@@ -2634,7 +3090,45 @@
             "explanation": "Pelajar tingkat C1 sering mencampuradukkan penggunaan gerund dan infinitive setelah verb tertentu, salah menempatkan koma dalam relative clauses sehingga mengubah makna, atau menggunakan modal deduction yang tidak sesuai dengan tingkat kepastian yang dimaksud. Kesalahan lain termasuk participle clauses yang dangling (tidak jelas subjeknya) dan emphatic structures yang terlalu berlebihan sehingga mengurangi profesionalitas.",
             "wrong": "I look forward to meet you. The scientists which discovered this were awarded. She must forget about the meeting yesterday.",
             "correct": "I look forward to meeting you. The scientists who discovered this were awarded. She must have forgotten about the meeting yesterday."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Komprehensif Advanced Foundations\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Gerunds and Infinitives: Gunakan gerund (-ing) setelah preposisi dan verb tertentu (avo...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Ujian kelulusan C1."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Evaluasi Komprehensif Advanced Foundations\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "I look forward to meeting you. The scientists who discovered this were awarded. She must have forgotten about the meeting yesterday",
+                "I look forward to meeting you. The scientists who discovered this was awarded. She must have forgotten about the meeting yesterday",
+                "I look forward to meet you. The scientists which discovered this were awarded. She must forget about the meeting yesterday"
+              ],
+              "correctIndex": 0,
+              "explanation": "Pelajar tingkat C1 sering mencampuradukkan penggunaan gerund dan infinitive setelah verb tertentu, salah menempatkan koma dalam relative clauses sehingga mengubah makna, atau menggunakan modal deduction yang tidak sesuai dengan tingkat kepastian yang dimaksud. Kesalahan lain termasuk participle clauses yang dangling (tidak jelas subjeknya) dan emphatic structures yang terlalu berlebihan sehingga mengurangi profesionalitas."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Rahman: \"Having reviewed the preliminary data, I must say the findings are rather more nuanced than we initially anticipated.\"\nDr. Chen: \"[...]\"",
+              "options": [
+                "Indeed. What strikes me most is the extent to which AI-driven methodologies can both enhance and potentially compromise research integrity.",
+                "Sorry, I forgot my keys at home.",
+                "I look forward to meet you. The scientists which discovered this were awarded. She must forget about the meeting yesterday"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Indeed. What strikes me most is the extent to which AI-driven methodologies can both enhance and potentially compromise research integrity.\" (\"Memang benar. Yang paling mencolok bagi saya adalah sejauh mana metodologi berbasis AI dapat meningkatkan sekaligus berpotensi mengkompromikan integritas riset.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Chen."
+            }
+          ]
         },
         "vocab": [
           {
@@ -2990,7 +3484,45 @@
             "explanation": "Kesalahan umum di level C1 adalah menggunakan terlalu banyak hedging devices dalam satu kalimat (overhedging) sehingga klaim menjadi tidak jelas, atau menggunakan hedging yang terlalu lemah untuk klaim yang didukung data kuat (underhedging). Overhedging merusak kredibilitas akademis karena terkesan tidak percaya diri, sementara underhedging dapat membuat klaim terdengar dogmatis.",
             "wrong": "It might possibly perhaps be conceivably argued that there could potentially be some evidence suggesting...",
             "correct": "The evidence would seem to suggest that... OR It could be argued that the data indicate..."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Advanced Academic Hedging & Nuanced Modality\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Gunakan modal verbs untuk mengekspresikan berbagai tingkat kemungkinan: 'may/might/coul..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Hedging akademis adalah strategi linguistik yang digunakan dalam penulisan dan presentasi ilmiah untuk menyampaikan klaim dengan tingkat kepastian yang terukur."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "It might possibly perhaps be conceivably argued that there could potentially be some evidence suggesting",
+                "It might possibly perhaps be conceivably argued that there could potentially be some evidence suggesting always",
+                "The evidence would seem to suggest that... OR It could be argued that the data indicate"
+              ],
+              "correctIndex": 2,
+              "explanation": "Kesalahan umum di level C1 adalah menggunakan terlalu banyak hedging devices dalam satu kalimat (overhedging) sehingga klaim menjadi tidak jelas, atau menggunakan hedging yang terlalu lemah untuk klaim yang didukung data kuat (underhedging). Overhedging merusak kredibilitas akademis karena terkesan tidak percaya diri, sementara underhedging dapat membuat klaim terdengar dogmatis."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Rahman: \"The preliminary data would seem to suggest a correlation between rising temperatures and earlier migration patterns, though we should be cautious about drawing definitive conclusions at this stage.\"\nDr. Chen: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "It might possibly perhaps be conceivably argued that there could potentially be some evidence suggesting",
+                "Indeed, and arguably the most compelling evidence comes from the northern populations, where the shift appears to be more pronounced than in southern regions."
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"Indeed, and arguably the most compelling evidence comes from the northern populations, where the shift appears to be more pronounced than in southern regions.\" (\"Memang, dan bisa dikatakan bukti paling menarik berasal dari populasi utara, di mana pergeserannya tampak lebih jelas dibandingkan wilayah selatan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Chen."
+            }
+          ]
         },
         "vocab": [
           {
@@ -3232,7 +3764,45 @@
             "explanation": "Siswa C1 sering terjebak dalam nominalisasi berlebihan yang justru membuat tulisan menjadi kabur dan sulit dipahami. Nominalisasi efektif harus menyeimbangkan kepadatan informasi dengan clarity. Hindari menumpuk terlalu banyak abstract nouns secara berurutan atau menghilangkan agent penting dalam kalimat.",
             "wrong": "The implementation of the facilitation of the improvement of the optimization of resource allocation efficiency was undertaken.",
             "correct": "We implemented measures to facilitate more efficient resource allocation and optimisation."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Perhatikan kalimat langsung: \"X affects Y\". Bagaimana bentuk kalimat tidak langsung (reported/transformed) yang benar?",
+              "options": [
+                "the effect of X on Y",
+                "X affects Y",
+                "Bentuk kalimat tidak baku"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah pada \"Complex Nominalisation in Formal Academic & Technical Writing\": bentuk yang tepat adalah \"the effect of X on Y\". Perhatikan perubahan tenses dan kata kerja bantunya."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "We implemented measures to facilitate more efficient resource allocation and optimisation",
+                "The implementation of the facilitation of the improvement of the optimization of resource allocation efficiency was undertaken always",
+                "The implementation of the facilitation of the improvement of the optimization of resource allocation efficiency was undertaken"
+              ],
+              "correctIndex": 0,
+              "explanation": "Siswa C1 sering terjebak dalam nominalisasi berlebihan yang justru membuat tulisan menjadi kabur dan sulit dipahami. Nominalisasi efektif harus menyeimbangkan kepadatan informasi dengan clarity. Hindari menumpuk terlalu banyak abstract nouns secara berurutan atau menghilangkan agent penting dalam kalimat."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Williams: \"I've been reviewing your methodology section, and I'm concerned about the excessive nominalisation. This sentence, for instance: 'The implementation of the examination of the facilitation of cross-linguistic transfer' – it's virtually impenetrable.\"\nDr. Chen: \"[...]\"",
+              "options": [
+                "I take your point entirely. I was attempting to achieve higher lexical density, but I may have sacrificed clarity in the process. Would you recommend reverbalising some of these abstract process nouns?",
+                "Sorry, I forgot my keys at home.",
+                "The implementation of the facilitation of the improvement of the optimization of resource allocation efficiency was undertaken"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"I take your point entirely. I was attempting to achieve higher lexical density, but I may have sacrificed clarity in the process. Would you recommend reverbalising some of these abstract process nouns?\" (\"Saya sangat memahami maksud Anda. Saya mencoba mencapai kepadatan leksikal yang lebih tinggi, tetapi saya mungkin telah mengorbankan kejelasan dalam prosesnya. Apakah Anda menyarankan untuk mengubah kembali beberapa kata benda proses abstrak ini menjadi verbal?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Chen."
+            }
+          ]
         },
         "vocab": [
           {
@@ -3478,7 +4048,45 @@
             "explanation": "Kesalahan umum di level C1 adalah memberikan konsesi tanpa segera merefutasinya dengan argumen yang lebih persuasif, sehingga melemahkan posisi Anda. Konsesi harus selalu diikuti dengan 'pivot' yang mengembalikan kekuatan argumen utama.",
             "wrong": "While online education provides accessibility, traditional classrooms offer better interaction. Both have merits.",
             "correct": "While online education provides accessibility, this advantage is substantially outweighed by the pedagogical deficit in spontaneous dialogue and mentor relationships, which longitudinal studies consistently link to deeper learning outcomes."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Discursive Essays & Counter-Argumentation Architectures\"?",
+              "options": [
+                "Concession Markers: Gunakan penanda konsesi tingkat lanjut seperti 'albeit', 'notwithst...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Esai diskursif tingkat mahir memerlukan arsitektur argumentasi yang canggih, di mana Anda tidak hanya menyajikan sudut pandang tetapi juga mengakui, mengevaluasi, dan merefutasi pandangan alternatif secara sistematis."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Discursive Essays & Counter-Argumentation Architectures\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "While online education provides accessibility",
+                "While online education provides accessibility",
+                "traditional classrooms offer better interaction. Both have merits"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kesalahan umum di level C1 adalah memberikan konsesi tanpa segera merefutasinya dengan argumen yang lebih persuasif, sehingga melemahkan posisi Anda. Konsesi harus selalu diikuti dengan 'pivot' yang mengembalikan kekuatan argumen utama."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"Precisely. I've been emphasizing dialectical synthesis—teaching them that acknowledging complexity doesn't mean abandoning their position, but rather strengthening it through nuanced analysis.\"\nProf. Williams: \"[...]\"",
+              "options": [
+                "That's pedagogically sound. Albeit time-consuming, training students to construct three-tier argumentation—thesis, antithesis, synthesis—yields substantially more sophisticated discourse.",
+                "While online education provides accessibility",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"That's pedagogically sound. Albeit time-consuming, training students to construct three-tier argumentation—thesis, antithesis, synthesis—yields substantially more sophisticated discourse.\" (\"Itu pedagogis yang baik. Meskipun memakan waktu, melatih mahasiswa membangun argumentasi tiga tingkat—tesis, antitesis, sintesis—menghasilkan wacana yang jauh lebih canggih.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Williams."
+            }
+          ]
         },
         "vocab": [
           {
@@ -3720,7 +4328,45 @@
             "explanation": "Pelajar C1 sering menggunakan subjunctive formulaik dalam konteks yang terlalu kasual, atau mencampur register formal-arkais dengan struktur modern sehingga terdengar tidak natural. Subjunctive formulaik harus dibatasi pada legal drafting, ceremonial speech, atau academic writing formal—penggunaan dalam email bisnis biasa atau presentasi informal justru terkesan bombastic dan tidak profesional.",
             "wrong": "Come what may, I think we should maybe reschedule the team meeting for next week if everyone's available.",
             "correct": "The Board resolves that the annual audit be completed by fiscal year-end, come what may, notwithstanding any operational impediments."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Advanced Subjunctive Mood & Formulaic Legal Registers\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Formulaic subjunctive dengan inversi: Be that as it may / Come what may / Suffice it to..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Subjunctive mood dalam bahasa Inggris tingkat mahir mencakup struktur formulaik yang sangat spesifik untuk register hukum, protokol diplomatik, dan wacana formal tingkat tinggi."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "I think we should maybe reschedule the team meeting for next week if everyone's available",
+                "Come what may",
+                "The Board resolves that the annual audit be completed by fiscal year-end"
+              ],
+              "correctIndex": 2,
+              "explanation": "Pelajar C1 sering menggunakan subjunctive formulaik dalam konteks yang terlalu kasual, atau mencampur register formal-arkais dengan struktur modern sehingga terdengar tidak natural. Subjunctive formulaik harus dibatasi pada legal drafting, ceremonial speech, atau academic writing formal—penggunaan dalam email bisnis biasa atau presentasi informal justru terkesan bombastic dan tidak profesional."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSenior Drafter: \"When drafting this provision, it's imperative that the verb form remain in the subjunctive throughout. We write 'that each Member State ensure compliance,' not 'ensures.'\"\nJunior Associate: \"[...]\"",
+              "options": [
+                "Come what may",
+                "Sorry, I forgot my keys at home.",
+                "I understand the mandative subjunctive for obligations, but what about the formulaic expressions? When should I use 'be that as it may' versus a simple concession clause?"
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"I understand the mandative subjunctive for obligations, but what about the formulaic expressions? When should I use 'be that as it may' versus a simple concession clause?\" (\"Saya memahami mandative subjunctive untuk kewajiban, tetapi bagaimana dengan ekspresi formulaik? Kapan saya harus menggunakan 'be that as it may' dibanding klausa konsesi sederhana?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Junior Associate."
+            }
+          ]
         },
         "vocab": [
           {
@@ -3981,7 +4627,45 @@
             "explanation": "Pelajar C1 sering melakukan inversi pada konteks yang tidak tepat atau menggunakan fronting secara berlebihan sehingga teks terdengar artifisial. Fronting dengan inversi hanya wajib pada adverbial negatif tertentu; untuk fronting adverbial positif biasa, inversi bersifat opsional dan dapat terdengar kaku dalam konteks informal. Kesalahan lain adalah tidak mencocokkan tingkat formalitas—fronting dramatis cocok untuk esai argumentatif, pidato, atau prosa sastra, namun terasa tidak natural dalam email bisnis rutin atau percakapan sehari-hari.",
             "wrong": "Carefully, John was examining the evidence. (Inversi tidak diperlukan untuk adverbial positif dalam konteks netral)",
             "correct": "Carefully, John examined the evidence. ATAU untuk penekanan retoris tinggi: 'So carefully did John examine the evidence that no detail escaped his notice.'"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Fronting & Topicalisation for Dramatic Emphasis in Written Rhetoric\"?",
+              "options": [
+                "Adverbial Fronting dengan Inversi: Ketika adverbial negatif atau restriktif (never, sel...",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Fronting adalah teknik retoris tingkat mahir di mana elemen kalimat yang biasanya muncul di akhir dipindahkan ke posisi awal untuk menciptakan penekanan dramatis dan mengatur fokus informasi."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "Carefully",
+                "John was examining the evidence. (Inversi tidak diperlukan untuk adverbial positif dalam konteks netral)",
+                "Carefully"
+              ],
+              "correctIndex": 0,
+              "explanation": "Pelajar C1 sering melakukan inversi pada konteks yang tidak tepat atau menggunakan fronting secara berlebihan sehingga teks terdengar artifisial. Fronting dengan inversi hanya wajib pada adverbial negatif tertentu; untuk fronting adverbial positif biasa, inversi bersifat opsional dan dapat terdengar kaku dalam konteks informal. Kesalahan lain adalah tidak mencocokkan tingkat formalitas—fronting dramatis cocok untuk esai argumentatif, pidato, atau prosa sastra, namun terasa tidak natural dalam email bisnis rutin atau percakapan sehari-hari."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Rahman: \"Precisely. Look at this section on climate policy—it's factually accurate but stylistically flat. With topicalisation, we could foreground the urgency: 'This crisis, we can no longer ignore.'\"\nMs. Sinclair: \"[...]\"",
+              "options": [
+                "Excellent suggestion. And in the concluding paragraph, consider: 'Never before has humanity faced such an existential threat.' The inversion would create the emphatic tone the conclusion demands.",
+                "Sorry, I forgot my keys at home.",
+                "Carefully"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Excellent suggestion. And in the concluding paragraph, consider: 'Never before has humanity faced such an existential threat.' The inversion would create the emphatic tone the conclusion demands.\" (\"Saran yang bagus. Dan di paragraf penutup, pertimbangkan: 'Tidak pernah sebelumnya umat manusia menghadapi ancaman eksistensial semacam ini.' Inversi itu akan menciptakan nada tegas yang dituntut oleh kesimpulan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ms. Sinclair."
+            }
+          ]
         },
         "vocab": [
           {
@@ -4227,7 +4911,45 @@
             "explanation": "Kesalahan umum pada level C1 adalah penggunaan pronomina atau demonstratif ketika terdapat lebih dari satu anteseden potensial dalam jarak dekat, menyebabkan referensi ambigu. Dalam prosa akademis yang padat informasi, multiple noun phrases dapat berkompetisi sebagai anteseden. Penulis mahir harus memastikan referensi anaphoric tidak ambigu, dengan cara: (1) menempatkan pronomina sedekat mungkin dengan anteseden yang dimaksud, (2) menggunakan full noun phrase atau substitusi leksikal yang eksplisit jika konteks tidak cukup jelas, atau (3) merestrukturisasi kalimat.",
             "wrong": "The government consulted with industry representatives and environmental advocates. They were opposed to the new regulations.",
             "correct": "The government consulted with industry representatives and environmental advocates. The latter were opposed to the new regulations, whereas the former expressed cautious support."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Anaphora, Cataphora & Ellipsis in Sophisticated Prose\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Anafora Pronominal & Demonstratif: Gunakan pronoun (it, they, this, that, these, those,...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Kohesi tekstual adalah jalinan referensi linguistik yang mengikat proposisi-proposisi dalam wacana menjadi satu kesatuan makna yang padu."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Anaphora, Cataphora & Ellipsis in Sophisticated Prose\"?",
+              "options": [
+                "The government consulted with industry representatives and environmental advocates. The latter were opposed to the new regulations",
+                "The government consulted with industry representatives and environmental advocates. They were opposed to the new regulations",
+                "The government consulted with industry representatives and environmental advocates. The latter was opposed to the new regulations"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kesalahan umum pada level C1 adalah penggunaan pronomina atau demonstratif ketika terdapat lebih dari satu anteseden potensial dalam jarak dekat, menyebabkan referensi ambigu. Dalam prosa akademis yang padat informasi, multiple noun phrases dapat berkompetisi sebagai anteseden. Penulis mahir harus memastikan referensi anaphoric tidak ambigu, dengan cara: (1) menempatkan pronomina sedekat mungkin dengan anteseden yang dimaksud, (2) menggunakan full noun phrase atau substitusi leksikal yang eksplisit jika konteks tidak cukup jelas, atau (3) merestrukturisasi kalimat."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Helena: \"I've reviewed the manuscript draft, and while the empirical analysis is robust, the discussion section suffers from referential ambiguity. Multiple antecedents compete in several passages.\"\nDr. Mahmoud: \"[...]\"",
+              "options": [
+                "The government consulted with industry representatives and environmental advocates. They were opposed to the new regulations",
+                "Indeed. Paragraph four exemplifies this precisely. When the author writes 'they demonstrated significant correlation,' it's unclear whether 'they' refers to the variables or the participants.",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"Indeed. Paragraph four exemplifies this precisely. When the author writes 'they demonstrated significant correlation,' it's unclear whether 'they' refers to the variables or the participants.\" (\"Benar. Paragraf keempat mencontohkan hal ini dengan tepat. Ketika penulis menulis 'they demonstrated significant correlation,' tidak jelas apakah 'they' merujuk pada variabel atau partisipan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Mahmoud."
+            }
+          ]
         },
         "vocab": [
           {
@@ -4467,7 +5189,45 @@
             "explanation": "Mahasiswa C1 sering mencampur elemen dari berbagai register dalam satu konteks, menghasilkan inkoherensi stilistik. Misalnya, menggunakan idiom colloquial dalam esai akademik atau struktur kaku formal dalam email informal kepada rekan. Kontaminasi register merusak kredibilitas penulis dan menunjukkan kurangnya kesadaran sosiolinguistik.",
             "wrong": "The research methodology was kinda iffy, but the results are pretty solid and really hit the nail on the head regarding our hypothesis.",
             "correct": "While certain methodological limitations warrant acknowledgment, the empirical findings substantiate the hypothesized correlations with considerable rigor."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Shifting from Colloquial Idiom to High-Formal Academic Registers\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Colloquial Register: Gunakan contractions (I'm, we've, shouldn't), phrasal verbs (put u..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Register adalah tingkat formalitas bahasa yang disesuaikan dengan konteks komunikasi."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Shifting from Colloquial Idiom to High-Formal Academic Registers\"?",
+              "options": [
+                "but the results are pretty solid and really hit the nail on the head regarding our hypothesis",
+                "The research methodology was kinda iffy",
+                "While certain methodological limitations warrant acknowledgment"
+              ],
+              "correctIndex": 2,
+              "explanation": "Mahasiswa C1 sering mencampur elemen dari berbagai register dalam satu konteks, menghasilkan inkoherensi stilistik. Misalnya, menggunakan idiom colloquial dalam esai akademik atau struktur kaku formal dalam email informal kepada rekan. Kontaminasi register merusak kredibilitas penulis dan menunjukkan kurangnya kesadaran sosiolinguistik."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nProf. Richardson: \"Emma, I've reviewed your latest chapter draft. While your argumentation is sound, I noticed certain stylistic inconsistencies that undermine the scholarly tone.\"\nEmma: \"[...]\"",
+              "options": [
+                "The research methodology was kinda iffy",
+                "Sorry, I forgot my keys at home.",
+                "Could you elucidate which specific passages require revision? I've attempted to maintain formal register throughout, but perhaps some colloquialisms slipped through."
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"Could you elucidate which specific passages require revision? I've attempted to maintain formal register throughout, but perhaps some colloquialisms slipped through.\" (\"Bisakah Anda menjelaskan bagian spesifik mana yang perlu revisi? Saya sudah berusaha menjaga register formal sepanjang tulisan, tapi mungkin beberapa ungkapan informal terselip.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Emma."
+            }
+          ]
         },
         "vocab": [
           {
@@ -4711,7 +5471,45 @@
             "explanation": "Siswa C1 sering menggunakan penolakan langsung ('I disagree', 'That's not acceptable') yang terdengar konfrontatif dalam konteks profesional, atau terlalu banyak hedging hingga kehilangan assertiveness. Pilihan kata yang kurang tepat juga dapat merusak diplomatic tone.",
             "wrong": "I don't think that will work for us. We need better terms or we can't proceed.",
             "correct": "While I appreciate the proposal, I'm afraid we'd need to revisit certain terms, particularly regarding the payment schedule, before we could move forward with confidence."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Professional Negotiation, Tactful Concession & Strategic Compromise\"?",
+              "options": [
+                "Penolakan Terselubung (Diplomatic Refusal): Gunakan struktur 'I'm afraid...', 'I can se...",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Negosiasi profesional tingkat tinggi memerlukan kemampuan menyampaikan penolakan tanpa menyinggung, menawarkan kompromi dengan syarat yang jelas, dan membangun konsensus strategis."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "I don't think that will work for us. We need better terms or we can't proceed always",
+                "While I appreciate the proposal",
+                "I don't think that will work for us. We need better terms or we can't proceed"
+              ],
+              "correctIndex": 1,
+              "explanation": "Siswa C1 sering menggunakan penolakan langsung ('I disagree', 'That's not acceptable') yang terdengar konfrontatif dalam konteks profesional, atau terlalu banyak hedging hingga kehilangan assertiveness. Pilihan kata yang kurang tepat juga dapat merusak diplomatic tone."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"David, I appreciate you coming in today. I've reviewed the renewal proposal, and while the pricing structure is competitive, I'm afraid we'd need more flexibility on the payment terms before we could move forward.\"\nDavid: \"[...]\"",
+              "options": [
+                "I can certainly see your point, Sarah. Would it be fair to say that extending the payment window from 30 to 45 days might address your concerns, provided that we maintain the current volume commitments?",
+                "Sorry, I forgot my keys at home.",
+                "I don't think that will work for us. We need better terms or we can't proceed"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"I can certainly see your point, Sarah. Would it be fair to say that extending the payment window from 30 to 45 days might address your concerns, provided that we maintain the current volume commitments?\" (\"Saya tentu memahami maksud Anda, Sarah. Apakah wajar jika saya katakan bahwa memperpanjang jangka waktu pembayaran dari 30 menjadi 45 hari mungkin dapat mengatasi kekhawatiran Anda, dengan syarat kami mempertahankan komitmen volume saat ini?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+            }
+          ]
         },
         "vocab": [
           {
@@ -4957,7 +5755,45 @@
             "explanation": "Pelajar C1 sering menggunakan bahasa terlalu informal atau tidak presisi saat mengkritik riset ilmiah. Hindari generalisasi tanpa bukti spesifik, dan selalu gunakan terminologi statistik yang tepat dengan hedging language yang sesuai untuk menjaga objektivitas akademis.",
             "wrong": "This research is bad because the sample is too small and they didn't think about other factors.",
             "correct": "The study's validity is compromised by an inadequately small sample size (n=45), which limits statistical power, and the failure to control for potential confounding variables such as socioeconomic status undermines the reliability of the reported associations."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Critique of Quantitative Research, Statistical Claims & Logical Fallacies\"?",
+              "options": [
+                "Causation vs Correlation: Gunakan struktur 'While X correlates with Y, this does not ne...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Modul ini membekali Anda dengan kemampuan untuk mengkritisi riset kuantitatif secara sistematis, mengevaluasi validitas klaim statistik, dan mengidentifikasi kekeliruan logika dalam argumen ilmiah."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Critique of Quantitative Research, Statistical Claims & Logical Fallacies\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "The study's validity is compromised by an inadequately small sample size (n=45)",
+                "This research is bad because the sample is too small and they didn't think about other factors",
+                "The study's validity are compromised by an inadequately small sample size (n=45)"
+              ],
+              "correctIndex": 0,
+              "explanation": "Pelajar C1 sering menggunakan bahasa terlalu informal atau tidak presisi saat mengkritik riset ilmiah. Hindari generalisasi tanpa bukti spesifik, dan selalu gunakan terminologi statistik yang tepat dengan hedging language yang sesuai untuk menjaga objektivitas akademis."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Martinez: \"Precisely. And did you notice the statistical manipulation in Table 3? They've conducted seventeen different subgroup analyses but only reported the three that achieved statistical significance. This reeks of p-hacking.\"\nDr. Kowalski: \"[...]\"",
+              "options": [
+                "Good catch. The confidence intervals are also problematically wide—ranging from a 5% to 47% productivity increase. Such variance renders any definitive conclusions untenable. We're essentially looking at noise masquerading as signal.",
+                "This research is bad because the sample is too small and they didn't think about other factors",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Good catch. The confidence intervals are also problematically wide—ranging from a 5% to 47% productivity increase. Such variance renders any definitive conclusions untenable. We're essentially looking at noise masquerading as signal.\" (\"Tangkapan yang bagus. Interval kepercayaan juga lebar secara problematis—berkisar dari peningkatan produktivitas 5% hingga 47%. Variansi seperti itu membuat kesimpulan definitif apa pun tidak dapat dipertahankan. Kita pada dasarnya melihat noise yang menyamar sebagai sinyal.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Kowalski."
+            }
+          ]
         },
         "vocab": [
           {
@@ -5197,7 +6033,45 @@
             "explanation": "Kesalahan umum adalah mencampuradukkan timeline dengan menggunakan past perfect continuous tanpa titik referensi yang jelas di past simple, atau menggunakan modal perfects tanpa konteks kondisional yang tepat. Siswa C1 sering lupa bahwa modal perfects memerlukan pemahaman implisit atau eksplisit tentang kondisi yang tidak terpenuhi.",
             "wrong": "By the time the meeting started, I was working on the report for two hours, and we would present different findings.",
             "correct": "By the time the meeting started, I had been working on the report for two hours, and we could have presented different findings if we had received the updated data."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Retrospective Realism & Dual-Timeline Tenses\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Past Perfect Continuous untuk Aktivitas Berkelanjutan Sebelum Titik Naratif: [Subject +...",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Narasi retrospektif tingkat mahir memerlukan kemampuan mengelola dua atau lebih kerangka temporal secara bersamaan."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "By the time the meeting started",
+                "By the time the meeting started",
+                "I was working on the report for two hours"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kesalahan umum adalah mencampuradukkan timeline dengan menggunakan past perfect continuous tanpa titik referensi yang jelas di past simple, atau menggunakan modal perfects tanpa konteks kondisional yang tepat. Siswa C1 sering lupa bahwa modal perfects memerlukan pemahaman implisit atau eksplisit tentang kondisi yang tidak terpenuhi."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"Had we secured that additional grant we had been pursuing, the findings might have been significantly more robust. The university could have supported us more.\"\nProf. Richardson: \"[...]\"",
+              "options": [
+                "By the time the meeting started",
+                "True, but in retrospect, the methodological limitations we faced actually led us to develop that innovative statistical approach. We might not have discovered it otherwise.",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"True, but in retrospect, the methodological limitations we faced actually led us to develop that innovative statistical approach. We might not have discovered it otherwise.\" (\"Benar, tapi jika menengok kembali, keterbatasan metodologis yang kita hadapi justru membawa kita mengembangkan pendekatan statistik inovatif itu. Kita mungkin tidak akan menemukannya sebaliknya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Richardson."
+            }
+          ]
         },
         "vocab": [
           {
@@ -5438,7 +6312,45 @@
             "explanation": "Pelajar C1 sering mengasumsikan bahwa editorial dengan bahasa formal secara otomatis bersifat objektif. Padahal, bias dapat tersembunyi dalam pilihan leksikal yang tampak netral. Kesalahan lain adalah gagal mengenali presuposisi dalam pertanyaan retoris atau klausa subordinat.",
             "wrong": "The article is objective because it uses statistics and formal vocabulary.",
             "correct": "Despite employing statistical data and formal register, the article exhibits ideological bias through selective nominalization and evaluative adjectives that frame the issue unilaterally."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Epistemic Stance & Critical Discourse Analysis of Editorial Journalism\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Epistemic Modal Verbs: Gunakan modal verbs (may, might, could, must, should) untuk mena..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Critical Discourse Analysis (CDA) adalah pendekatan analitis yang mengungkap hubungan antara bahasa, kekuasaan, dan ideologi dalam teks media."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "The article is objective because it uses statistics and formal vocabulary always",
+                "The article is objective because it uses statistics and formal vocabulary",
+                "Despite employing statistical data and formal register"
+              ],
+              "correctIndex": 2,
+              "explanation": "Pelajar C1 sering mengasumsikan bahwa editorial dengan bahasa formal secara otomatis bersifat objektif. Padahal, bias dapat tersembunyi dalam pilihan leksikal yang tampak netral. Kesalahan lain adalah gagal mengenali presuposisi dalam pertanyaan retoris atau klausa subordinat."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"Marcus, I'd like you to examine the epistemic stance in this Guardian editorial on climate policy. What linguistic markers indicate the author's level of certainty?\"\nMarcus: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "The author predominantly employs boosters like 'unequivocally' and 'indisputably,' suggesting a high degree of commitment to the proposition that immediate action is imperative.",
+                "The article is objective because it uses statistics and formal vocabulary"
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"The author predominantly employs boosters like 'unequivocally' and 'indisputably,' suggesting a high degree of commitment to the proposition that immediate action is imperative.\" (\"Penulis secara dominan menggunakan booster seperti 'unequivocally' dan 'indisputably,' yang menunjukkan tingkat komitmen tinggi terhadap proposisi bahwa tindakan segera sangat penting.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Marcus."
+            }
+          ]
         },
         "vocab": [
           {
@@ -5678,7 +6590,45 @@
             "explanation": "Kesalahan paling umum adalah memulai parallel structure yang konsisten namun merusak pola di elemen terakhir dengan mengubah bentuk kata atau struktur kalimat. Ini menghancurkan ritme retoris dan membuat presentasi terdengar amatir. Perhatikan konsistensi bentuk kata: jika menggunakan gerund, semua elemen harus gerund; jika infinitive, semua harus infinitive; jika noun phrase, semua harus noun phrase dengan struktur serupa.",
             "wrong": "Our strategy focuses on reducing costs, to improve efficiency, and we will enhance customer satisfaction.",
             "correct": "Our strategy focuses on reducing costs, improving efficiency, and enhancing customer satisfaction."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Triads & Parallelism\"?",
+              "options": [
+                "Tricolon (Rule of Three): Kelompokkan ide dalam tiga elemen paralel untuk menciptakan r...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Retorika publik tingkat mahir memanfaatkan perangkat klasik yang telah terbukti efektif selama berabad-abad."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Triads & Parallelism\"?",
+              "options": [
+                "Our strategy focuses on reducing costs",
+                "Our strategy focuses on reducing costs",
+                "to improve efficiency"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kesalahan paling umum adalah memulai parallel structure yang konsisten namun merusak pola di elemen terakhir dengan mengubah bentuk kata atau struktur kalimat. Ini menghancurkan ritme retoris dan membuat presentasi terdengar amatir. Perhatikan konsistensi bentuk kata: jika menggunakan gerund, semua elemen harus gerund; jika infinitive, semua harus infinitive; jika noun phrase, semua harus noun phrase dengan struktur serupa."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"Good instinct, but let's refine the parallelism. Remove the repeated 'requires' after the first use—it creates unnecessary redundancy. Try: 'Digital transformation requires bold vision, strategic execution, and unwavering commitment.' See how the cadence flows more naturally?\"\nJames: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "Our strategy focuses on reducing costs",
+                "That's significantly more elegant. What about incorporating antithesis to address stakeholder resistance? Many executives fear the cost of transformation."
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"That's significantly more elegant. What about incorporating antithesis to address stakeholder resistance? Many executives fear the cost of transformation.\" (\"Itu jauh lebih elegan. Bagaimana dengan memasukkan antitesis untuk menangani resistensi stakeholder? Banyak eksekutif takut dengan biaya transformasi.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh James."
+            }
+          ]
         },
         "vocab": [
           {
@@ -5942,7 +6892,45 @@
             "explanation": "Siswa C1 sering membuat klaim absolut tanpa hedging yang memadai, atau menggunakan nominalisasi berlebihan hingga kalimat menjadi tidak natural. Dalam konteks akademis dan profesional, penting untuk menyeimbangkan assertiveness dengan intellectual humility, serta menjaga clarity sambil meningkatkan formality.",
             "wrong": "The research proves that all organizations must implement this strategy immediately because it's the best solution.",
             "correct": "The research would appear to suggest that many organizations might benefit from implementing this strategy, provided that contextual factors are carefully considered."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Perhatikan kalimat langsung: \"The company decided to expand\". Bagaimana bentuk kalimat tidak langsung (reported/transformed) yang benar?",
+              "options": [
+                "The company",
+                "Bentuk kalimat tidak baku",
+                "The company decided to expand"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah pada \"Evaluasi Komprehensif Strategic Oratory & Complex Syntax\": bentuk yang tepat adalah \"The company\". Perhatikan perubahan tenses dan kata kerja bantunya."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "The research proves that all organizations must implement this strategy immediately because it's the best solution",
+                "The research would appear to suggest that many organizations might benefit from implementing this strategy",
+                "The research proves that all organizations must implement this strategy immediately because it's the best solution always"
+              ],
+              "correctIndex": 1,
+              "explanation": "Siswa C1 sering membuat klaim absolut tanpa hedging yang memadai, atau menggunakan nominalisasi berlebihan hingga kalimat menjadi tidak natural. Dalam konteks akademis dan profesional, penting untuk menyeimbangkan assertiveness dengan intellectual humility, serta menjaga clarity sambil meningkatkan formality."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Rahman: \"I found the keynote speaker's assertion regarding digital transformation somewhat contentious, wouldn't you agree?\"\nProf. Winters: \"[...]\"",
+              "options": [
+                "Indeed. While her argument was compelling, she failed to substantiate several claims with empirical evidence from diverse educational contexts.",
+                "The research proves that all organizations must implement this strategy immediately because it's the best solution",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Indeed. While her argument was compelling, she failed to substantiate several claims with empirical evidence from diverse educational contexts.\" (\"Benar. Meskipun argumennya meyakinkan, dia gagal membuktikan beberapa klaim dengan bukti empiris dari konteks pendidikan yang beragam.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Winters."
+            }
+          ]
         },
         "vocab": [
           {
@@ -6282,7 +7270,45 @@
             "explanation": "Siswa C1 sering mencampur register (menggunakan idiom informal dalam konteks sangat formal) atau menafsirkan idiom secara literal. Idiom 'cut corners' TIDAK berarti memotong sudut fisik, dan 'toe the line' bukan tentang kaki. Jebakan lain: menggunakan phrasal verb kolokial seperti 'sort out' dalam laporan eksekutif formal, padahal 'resolve' atau 'address' lebih tepat. Sebaliknya, 'thrash out' dapat diterima dalam rapat eksekutif karena menekankan proses diskusi intensif.",
             "wrong": "We must throw the gauntlet down to our competitors by cutting some corners in the production line to save costs.",
             "correct": "We must throw down the gauntlet to our competitors by innovating aggressively, though we cannot afford to cut corners on quality assurance."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"High-Level Idiomatic Collocations & Phrasal Verb Nuance in Executive Settings\"?",
+              "options": [
+                "Kolokasi Idiomatis Eksekutif: Gunakan idiom fixed seperti 'cut corners' (reduce quality...",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Modul ini membekali Anda dengan kolokasi idiomatis tingkat eksekutif dan phrasal verbs abstrak yang esensial dalam komunikasi bisnis strategis."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "We must throw down the gauntlet to our competitors by innovating aggressively",
+                "We must to throw down the gauntlet to our competitors by innovating aggressively",
+                "We must throw the gauntlet down to our competitors by cutting some corners in the production line to save costs"
+              ],
+              "correctIndex": 0,
+              "explanation": "Siswa C1 sering mencampur register (menggunakan idiom informal dalam konteks sangat formal) atau menafsirkan idiom secara literal. Idiom 'cut corners' TIDAK berarti memotong sudut fisik, dan 'toe the line' bukan tentang kaki. Jebakan lain: menggunakan phrasal verb kolokial seperti 'sort out' dalam laporan eksekutif formal, padahal 'resolve' atau 'address' lebih tepat. Sebaliknya, 'thrash out' dapat diterima dalam rapat eksekutif karena menekankan proses diskusi intensif."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Agreed, but let's zero in on what truly differentiates us. If we rush this, we'll just be papering over fundamental gaps in our value proposition.\"\nDavid: \"[...]\"",
+              "options": [
+                "Fair point. What if we pare down the initial rollout to three pilot markets instead of seven? That gives us time to flesh out the operational framework properly.",
+                "Sorry, I forgot my keys at home.",
+                "We must throw the gauntlet down to our competitors by cutting some corners in the production line to save costs"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Fair point. What if we pare down the initial rollout to three pilot markets instead of seven? That gives us time to flesh out the operational framework properly.\" (\"Poin yang adil. Bagaimana jika kita kurangi peluncuran awal menjadi tiga pasar percontohan alih-alih tujuh? Itu memberi kita waktu untuk mengembangkan kerangka operasional dengan benar.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+            }
+          ]
         },
         "vocab": [
           {
@@ -6523,7 +7549,45 @@
             "explanation": "Mahasiswa C1 sering keliru menempatkan subjek sebelum auxiliary dalam inversi atau menggunakan tense yang tidak konsisten dalam pola korelasi temporal. Kesalahan lain adalah menggunakan inversi dalam konteks informal yang justru terdengar tidak natural. Inversi adalah fitur register formal, bukan percakapan kasual.",
             "wrong": "Under no circumstances we should compromise our ethical standards. / Scarcely the meeting had begun when the fire alarm sounded. / Rarely I have seen such dedication (dalam konteks chat santai).",
             "correct": "Under no circumstances should we compromise our ethical standards. / Scarcely had the meeting begun when the fire alarm sounded. / I rarely see such dedication (untuk konteks informal), atau 'Rarely have I witnessed such exemplary dedication' (untuk konteks formal akademis)."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Stylistic Inversion After Limiting & Negative Adverbial Expressions\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Setelah ekspresi negatif absolut (Under no circumstances, On no account, In no way, By ...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Inversi stilistik setelah ekspresi adverbial negatif dan pembatas merupakan ciri khas bahasa Inggris formal tingkat mahir."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "Under no circumstances should we compromise our ethical standards",
+                "Under no circumstances we should compromise our ethical standards",
+                "Scarcely the meeting had begun when the fire alarm sounded"
+              ],
+              "correctIndex": 0,
+              "explanation": "Mahasiswa C1 sering keliru menempatkan subjek sebelum auxiliary dalam inversi atau menggunakan tense yang tidak konsisten dalam pola korelasi temporal. Kesalahan lain adalah menggunakan inversi dalam konteks informal yang justru terdengar tidak natural. Inversi adalah fitur register formal, bukan percakapan kasual."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Winters: \"Marcus, I need to emphasize the gravity of our security protocols. Under no circumstances should preliminary trial data be shared outside the core research team.\"\nDr. Chen: \"[...]\"",
+              "options": [
+                "Under no circumstances we should compromise our ethical standards",
+                "Absolutely, Helena. On no account will I compromise patient confidentiality or data integrity. I understand the regulatory implications.",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"Absolutely, Helena. On no account will I compromise patient confidentiality or data integrity. I understand the regulatory implications.\" (\"Tentu saja, Helena. Saya sama sekali tidak akan mengorbankan kerahasiaan pasien atau integritas data. Saya memahami implikasi regulasinya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Chen."
+            }
+          ]
         },
         "vocab": [
           {
@@ -6765,7 +7829,45 @@
             "explanation": "Mahasiswa C1 sering menggunakan cleft structures secara berlebihan sehingga terdengar melodramatis atau menggunakan register yang tidak sesuai konteks. Cleft structures paling efektif ketika digunakan strategis untuk menandai informasi penting, bukan di setiap kalimat. Kesalahan umum lain adalah agreement error antara wh-clause dan verb 'be', serta mixing tenses yang tidak konsisten.",
             "wrong": "What I'm needing right now is to understanding this concept. / The thing is what bothers me most about it. (register terlalu kasual untuk konteks akademis + grammatical error)",
             "correct": "What I require at this juncture is a comprehensive understanding of the underlying principles. / What concerns me most is the potential for misinterpretation."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Wh-clefts, Reverse Clefts & All-clefts\"?",
+              "options": [
+                "Wh-cleft (Pseudo-cleft): [What/Where/When/Why/How + S + V] + is/was + [Focus Element]. ...",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Cleft structures adalah konstruksi kalimat canggih yang membelah informasi menjadi dua klausa untuk menonjolkan elemen tertentu sebagai fokus informasi."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Wh-clefts, Reverse Clefts & All-clefts\"?",
+              "options": [
+                "The thing is what bothers me most about it. (register terlalu kasual untuk konteks akademis + grammatical error)",
+                "What I require at this juncture is a comprehensive understanding of the underlying principles",
+                "What I'm needing right now is to understanding this concept"
+              ],
+              "correctIndex": 1,
+              "explanation": "Mahasiswa C1 sering menggunakan cleft structures secara berlebihan sehingga terdengar melodramatis atau menggunakan register yang tidak sesuai konteks. Cleft structures paling efektif ketika digunakan strategis untuk menandai informasi penting, bukan di setiap kalimat. Kesalahan umum lain adalah agreement error antara wh-clause dan verb 'be', serta mixing tenses yang tidak konsisten."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"What concerns me most about the proposed changes is the lack of stakeholder consultation. We've heard from faculty, but where are the student voices?\"\nProf. Rodriguez: \"[...]\"",
+              "options": [
+                "That's a valid point. What we need at this juncture is a comprehensive survey of current students and recent alumni to gauge their perspectives on program effectiveness.",
+                "What I'm needing right now is to understanding this concept",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"That's a valid point. What we need at this juncture is a comprehensive survey of current students and recent alumni to gauge their perspectives on program effectiveness.\" (\"Itu poin yang valid. Yang kita butuhkan pada tahap krusial ini adalah survei komprehensif dari mahasiswa saat ini dan alumni baru untuk mengukur perspektif mereka tentang efektivitas program.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Rodriguez."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7005,7 +8107,45 @@
             "explanation": "Pelajar C1 sering menggunakan frasa informal atau konstruksi simpleks ketika konteks menuntut register diplomatik tinggi. Dalam analisis geopolitik, hindari contractions, phrasal verbs kasual, dan klaim absolut tanpa hedging. Gunakan passive voice strategis dan nominalisasi untuk objektivitas akademis.",
             "wrong": "The countries didn't agree because they thought the treaty wasn't fair and it would hurt their economy.",
             "correct": "The participating nations failed to reach consensus, citing concerns that the stipulated provisions would adversely impact their respective economic interests and national sovereignty."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Geopolitical Analysis, International Treaties & Diplomatic Protocol\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Gunakan nominalisasi kompleks untuk menyatakan konsep abstrak geopolitik: 'ratification..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Modul ini membekali Anda dengan kemampuan analitis tingkat mahir untuk memahami dan mendiskusikan isu-isu geopolitik kompleks dalam bahasa Inggris formal akademis."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Geopolitical Analysis, International Treaties & Diplomatic Protocol\"?",
+              "options": [
+                "The countries didn't agree because they thought the treaty wasn't fair and it would hurt their economy always",
+                "The countries didn't agree because they thought the treaty wasn't fair and it would hurt their economy",
+                "The participating nations failed to reach consensus"
+              ],
+              "correctIndex": 2,
+              "explanation": "Pelajar C1 sering menggunakan frasa informal atau konstruksi simpleks ketika konteks menuntut register diplomatik tinggi. Dalam analisis geopolitik, hindari contractions, phrasal verbs kasual, dan klaim absolut tanpa hedging. Gunakan passive voice strategis dan nominalisasi untuk objektivitas akademis."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"The newly proposed multilateral security pact raises considerable questions about sovereignty and territorial integrity in the region.\"\nAmbassador Hayes: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "The countries didn't agree because they thought the treaty wasn't fair and it would hurt their economy",
+                "Indeed. The stipulations regarding freedom of navigation in contested territorial waters are particularly contentious among the signatory nations."
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"Indeed. The stipulations regarding freedom of navigation in contested territorial waters are particularly contentious among the signatory nations.\" (\"Memang benar. Ketentuan mengenai kebebasan navigasi di perairan teritorial yang disengketakan sangat kontroversial di antara negara-negara penandatangan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ambassador Hayes."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7247,7 +8387,45 @@
             "correct": "Utilitarian theory arguably offers a more pragmatic framework insofar as it prioritizes aggregate welfare, though this approach is not without its philosophical detractors who contend that it may sanction morally counterintuitive outcomes.",
             "wrongSecond": "Kantian ethics says you must never lie, which is too extreme and doesn't work in real life situations.",
             "correctSecond": "The categorical imperative, while philosophically rigorous, has been critiqued for its perceived inflexibility when applied to morally complex scenarios where competing duties may conflict."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Utilitarianism, Deontology & Ethical Dilemmas\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Gunakan register formal-akademis dengan struktur argumen deduktif: 'If we subscribe to ..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Dalam filsafat moral tingkat lanjut, dua kerangka etika utama sering berkonflik: utilitarianisme (consequentialism) yang menilai tindakan berdasarkan hasil/konsekuensinya untuk mencapai kebahagiaan maksimal bagi mayoritas, dan deontologi yang berfokus pada kewajiban moral absolut tanpa memandang hasil."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Utilitarianism, Deontology & Ethical Dilemmas\"?",
+              "options": [
+                "Utilitarianism is better because it thinks about everyone's happiness and that's obviously the right way to do ethics",
+                "Utilitarianism is better because it thinks about everyone's happiness and that's obviously the right way to do ethics always",
+                "Utilitarian theory arguably offers a more pragmatic framework insofar as it prioritizes aggregate welfare"
+              ],
+              "correctIndex": 2,
+              "explanation": "Siswa C1 sering mencampurkan register informal dengan topik filosofis formal, atau menggunakan absolute statements tanpa hedging yang tepat. Dalam debat etika akademis, setiap klaim harus dikualifikasi dengan epistemic modality yang sesuai untuk menunjukkan critical sophistication."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"Perhaps statistically, yet it violates the categorical imperative—treating individuals as means to an end rather than ends in themselves. Each life possesses inviolable dignity.\"\nProf. Webb: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "Utilitarianism is better because it thinks about everyone's happiness and that's obviously the right way to do ethics",
+                "I appreciate your deontological stance, but doesn't that position create paralysis? If all lives are equally inviolable, how does the algorithm decide when collision is unavoidable?"
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"I appreciate your deontological stance, but doesn't that position create paralysis? If all lives are equally inviolable, how does the algorithm decide when collision is unavoidable?\" (\"Saya menghargai posisi deontologis Anda, tetapi bukankah posisi itu menciptakan kelumpuhan? Jika semua kehidupan sama-sama tidak dapat dilanggar, bagaimana algoritma memutuskan ketika tabrakan tidak dapat dihindari?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Webb."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7498,7 +8676,45 @@
             "wrong": "The blue curtains obviously symbolize the character's depression and the author is trying to say life is sad.",
             "correct": "The recurring motif of blue throughout the text, particularly in domestic settings, may suggest melancholy; however, this interpretation requires corroboration from the protagonist's explicit emotional state and narrative context.",
             "trapExplanation": "Kalimat salah menggunakan 'obviously' tanpa bukti, generalisasi berlebihan ('life is sad'), dan register kasual ('trying to say'). Kalimat benar menggunakan hedging akademis ('may suggest'), menunjukkan kebutuhan evidensi ('requires corroboration'), dan terminologi presisi ('recurring motif', 'narrative context')."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Perhatikan kalimat langsung: \"The mind is an ocean\". Bagaimana bentuk kalimat tidak langsung (reported/transformed) yang benar?",
+              "options": [
+                "kemudian eksplorasi",
+                "The mind is an ocean",
+                "Bentuk kalimat tidak baku"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah pada \"Sensory Imagery, Extended Metaphors & Allegory\": bentuk yang tepat adalah \"kemudian eksplorasi\". Perhatikan perubahan tenses dan kata kerja bantunya."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Sensory Imagery, Extended Metaphors & Allegory\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "The recurring motif of blue throughout the text",
+                "The blue curtains obviously symbolize the character's depression and the author is trying to say life is sad always",
+                "The blue curtains obviously symbolize the character's depression and the author is trying to say life is sad"
+              ],
+              "correctIndex": 0,
+              "explanation": "Pembelajar C1 sering melakukan over-interpretation, mencari makna simbolis di setiap detail tanpa justifikasi tekstual, atau menggunakan register informal dalam analisis akademis. Critical analysis memerlukan evidensi tekstual dan pemisahan jelas antara observasi objektif dengan interpretasi."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Rahman: \"That's compelling. The evocative imagery of the donations—clinical yet euphemistic—certainly reinforces that reading. But couldn't we also interpret it as commentary on social stratification?\"\nSarah: \"[...]\"",
+              "options": [
+                "Absolutely. The allegorical subtext is multilayered. The 'normals' versus clones dichotomy parallels class divisions, with the clones serving as an exploited underclass whose humanity is systematically denied.",
+                "Sorry, I forgot my keys at home.",
+                "The blue curtains obviously symbolize the character's depression and the author is trying to say life is sad"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Absolutely. The allegorical subtext is multilayered. The 'normals' versus clones dichotomy parallels class divisions, with the clones serving as an exploited underclass whose humanity is systematically denied.\" (\"Tentu saja. Subteks alegoris bersifat berlapis. Dikotomi 'normal' versus klon sejajar dengan pembagian kelas, dengan klon berfungsi sebagai underclass yang dieksploitasi dan kemanusiaannya secara sistematis disangkal.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7738,7 +8954,45 @@
             "explanation": "Pelajar C1 sering menginterpretasikan understatement British secara literal karena terbiasa dengan komunikasi eksplisit. Frasa seperti 'not entirely satisfactory' atau 'somewhat disappointing' terdengar netral, padahal dalam konteks profesional British, ini merupakan kritik tajam. Kesalahan lain adalah mengabaikan perubahan micro-prosodi (penekanan halus dan jeda) yang mengubah makna drastis.",
             "wrong": "Menerjemahkan 'The proposal is not without merit' sebagai pujian netral tanpa menangkap skeptisisme implisit.",
             "correct": "Memahami 'The proposal is not without merit' sebagai kritik halus: 'Ada beberapa poin bagus, tetapi secara keseluruhan proposal ini bermasalah.'"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Intonation Shifts, Irony Detection & Sarcasm Cues\"?",
+              "options": [
+                "Sarkasme halus: Ditandai dengan intonasi datar (flat/deadpan) atau nada naik yang berte...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Komunikasi tingkat mahir dalam bahasa Inggris memerlukan kepekaan terhadap nuansa prosodi dan pragmatik yang sering kali tidak tersurat secara eksplisit."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Intonation Shifts, Irony Detection & Sarcasm Cues\"?",
+              "options": [
+                "Menerjemahkan 'The proposal is not without merit' sebagai pujian netral tanpa menangkap skeptisisme implisit",
+                "Memahami 'The proposal is not without merit' sebagai kritik halus: 'Ada beberapa poin bagus",
+                "Memahami 'The proposal are not without merit' sebagai kritik halus: 'Ada beberapa poin bagus"
+              ],
+              "correctIndex": 1,
+              "explanation": "Pelajar C1 sering menginterpretasikan understatement British secara literal karena terbiasa dengan komunikasi eksplisit. Frasa seperti 'not entirely satisfactory' atau 'somewhat disappointing' terdengar netral, padahal dalam konteks profesional British, ini merupakan kritik tajam. Kesalahan lain adalah mengabaikan perubahan micro-prosodi (penekanan halus dan jeda) yang mengubah makna drastis."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Hughes: \"The methodology section was not entirely without merit, I suppose. Though the sample size of twelve does raise certain... questions.\"\nDr. Peterson: \"[...]\"",
+              "options": [
+                "Menerjemahkan 'The proposal is not without merit' sebagai pujian netral tanpa menangkap skeptisisme implisit",
+                "Twelve. Yes. For a population-level study. How wonderfully ambitious.",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"Twelve. Yes. For a population-level study. How wonderfully ambitious.\" (\"Dua belas. Ya. Untuk studi tingkat populasi. Betapa luar biasa ambisiusnya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Peterson."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7978,7 +9232,45 @@
             "explanation": "Mahasiswa C1 sering jatuh ke dalam dua ekstrem: terlalu defensif (terdengar emosional dan tidak profesional) atau terlalu pasif (kehilangan kredibilitas akademis). Penting untuk menggunakan language of concession tanpa melemahkan argumen inti.",
             "wrong": "The reviewer is completely wrong about our sample size. We know what we're doing.",
             "correct": "While we acknowledge the reviewer's concerns regarding sample size, our n=150 exceeds the threshold established by Chen et al. (2023) for this type of longitudinal analysis, and we have addressed potential confounding variables through stratified sampling."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Academic Peer Review & Defending Original Scientific Theses\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Gunakan hedging language untuk menyampaikan keterbatasan: 'While we acknowledge that......"
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Peer review adalah proses evaluasi kritis oleh para ahli sejawat dalam suatu disiplin ilmu."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Academic Peer Review & Defending Original Scientific Theses\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "The reviewer is completely wrong about our sample size. We know what we're doing always",
+                "The reviewer is completely wrong about our sample size. We know what we're doing",
+                "While we acknowledge the reviewer's concerns regarding sample size"
+              ],
+              "correctIndex": 2,
+              "explanation": "Mahasiswa C1 sering jatuh ke dalam dua ekstrem: terlalu defensif (terdengar emosional dan tidak profesional) atau terlalu pasif (kehilangan kredibilitas akademis). Penting untuk menggunakan language of concession tanpa melemahkan argumen inti."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nProf. Chen: \"Dr. Williams, your findings are compelling within the experimental setting, but I'm concerned about the ecological validity. How would these results translate to authentic classroom environments with inherent unpredictability?\"\nDr. Williams: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "Thank you for raising that critical point, Professor. While I acknowledge the controlled nature of our initial study, we conducted a follow-up naturalistic observation across twelve diverse classrooms to assess precisely this concern. The effect sizes, while somewhat attenuated, remained statistically significant.",
+                "The reviewer is completely wrong about our sample size. We know what we're doing"
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"Thank you for raising that critical point, Professor. While I acknowledge the controlled nature of our initial study, we conducted a follow-up naturalistic observation across twelve diverse classrooms to assess precisely this concern. The effect sizes, while somewhat attenuated, remained statistically significant.\" (\"Terima kasih telah mengangkat poin kritis itu, Profesor. Meskipun saya mengakui sifat terkontrol dari studi awal kami, kami melakukan observasi naturalistik lanjutan di dua belas kelas yang beragam untuk menilai kekhawatiran ini secara tepat. Ukuran efeknya, meskipun agak melemah, tetap signifikan secara statistik.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Williams."
+            }
+          ]
         },
         "vocab": [
           {
@@ -8234,7 +9526,45 @@
             "explanation": "Siswa C1 sering mencampur register informal dengan konteks akademis, atau menggunakan istilah lingkungan secara tidak presisi. Misalnya, 'carbon neutral' dan 'net-zero' memiliki perbedaan teknis penting: carbon neutral dapat dicapai melalui offset, sedangkan net-zero memerlukan pengurangan emisi aktual hingga mendekati nol. Kesalahan lain adalah penggunaan 'green energy' yang terlalu umum ketika 'renewable energy' atau 'low-carbon energy' lebih tepat dalam konteks teknis.",
             "wrong": "We need to use more green stuff to stop climate change and make things carbon neutral quickly.",
             "correct": "Achieving net-zero emissions by 2050 necessitates a comprehensive transition to renewable energy sources, coupled with verified carbon removal strategies rather than reliance on unregulated offset schemes."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Environmental Geopolitics & Climate Policy Discourse\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Gunakan struktur kondisional campuran untuk hipotesis kompleks tentang kebijakan iklim:...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Modul ini membekali Anda dengan kemampuan untuk terlibat dalam diskusi akademis dan profesional mengenai isu lingkungan global yang kompleks."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Environmental Geopolitics & Climate Policy Discourse\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "Achieving net-zero emissions by 2050 necessitates a comprehensive transition to renewable energy sources",
+                "We need to use more green stuff to stop climate change and make things carbon neutral quickly always",
+                "We need to use more green stuff to stop climate change and make things carbon neutral quickly"
+              ],
+              "correctIndex": 0,
+              "explanation": "Siswa C1 sering mencampur register informal dengan konteks akademis, atau menggunakan istilah lingkungan secara tidak presisi. Misalnya, 'carbon neutral' dan 'net-zero' memiliki perbedaan teknis penting: carbon neutral dapat dicapai melalui offset, sedangkan net-zero memerlukan pengurangan emisi aktual hingga mendekati nol. Kesalahan lain adalah penggunaan 'green energy' yang terlalu umum ketika 'renewable energy' atau 'low-carbon energy' lebih tepat dalam konteks teknis."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"Ambassador Hassan, I appreciate your delegation's concerns regarding the equity implications of carbon pricing mechanisms. However, wouldn't a universal carbon tax, with revenue recycling provisions, address precisely those distributional concerns?\"\nAmbassador Hassan: \"[...]\"",
+              "options": [
+                "In principle, yes. But what we're witnessing in practice is that developed nations, having built their prosperity on centuries of unfettered emissions, now expect emerging economies to bear the costs of decarbonisation. That hardly constitutes climate justice.",
+                "Sorry, I forgot my keys at home.",
+                "We need to use more green stuff to stop climate change and make things carbon neutral quickly"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"In principle, yes. But what we're witnessing in practice is that developed nations, having built their prosperity on centuries of unfettered emissions, now expect emerging economies to bear the costs of decarbonisation. That hardly constitutes climate justice.\" (\"Secara prinsip, ya. Tetapi yang kami saksikan dalam praktiknya adalah negara-negara maju, yang membangun kemakmuran mereka melalui emisi tanpa batas selama berabad-abad, kini mengharapkan ekonomi berkembang menanggung biaya dekarbonisasi. Itu bukan keadilan iklim.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ambassador Hassan."
+            }
+          ]
         },
         "vocab": [
           {
@@ -8492,7 +9822,45 @@
             "explanation": "Eksekutif sering terjebak memberikan denial langsung yang terdengar defensif atau evasive, yang justru meningkatkan kecurigaan media. Di level C1, Anda harus mampu membedakan antara transparent accountability dan self-incrimination. Kesalahan umum adalah menjawab 'No comment' atau 'I can't discuss that' tanpa memberikan konteks, yang membuat perusahaan terlihat menyembunyikan sesuatu.",
             "wrong": "We categorically deny any wrongdoing, and I can't comment on ongoing investigations.",
             "correct": "While I can't discuss specifics of the ongoing investigation to preserve its integrity, what I can share is that we've implemented immediate corrective measures, including a comprehensive third-party audit."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"High-Stakes Crisis Communication & Executive Press Briefings\"?",
+              "options": [
+                "Gunakan bridging phrases untuk beralih dari pertanyaan sulit ke pesan kunci: 'While I u...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Komunikasi krisis tingkat eksekutif memerlukan penguasaan teknik bridging (transisi strategis), defusing (meredakan ketegangan), dan framing (pembingkaian narasi) untuk mengelola persepsi publik saat menghadapi pertanyaan investigatif yang agresif."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"High-Stakes Crisis Communication & Executive Press Briefings\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "We categorically deny any wrongdoing",
+                "While I can't discuss specifics of the ongoing investigation to preserve its integrity",
+                "and I can't comment on ongoing investigations"
+              ],
+              "correctIndex": 1,
+              "explanation": "Eksekutif sering terjebak memberikan denial langsung yang terdengar defensif atau evasive, yang justru meningkatkan kecurigaan media. Di level C1, Anda harus mampu membedakan antara transparent accountability dan self-incrimination. Kesalahan umum adalah menjawab 'No comment' atau 'I can't discuss that' tanpa memberikan konteks, yang membuat perusahaan terlihat menyembunyikan sesuatu."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMarcus Williams: \"But isn't it true that budget constraints were cited as the reason for delays, suggesting profit was prioritized over security?\"\nSarah Chen: \"[...]\"",
+              "options": [
+                "We categorically deny any wrongdoing",
+                "Let me put this in perspective. Like any organization, we do operate within budget frameworks, but security spending actually increased 40% year-over-year. The issue wasn't funding—it was prioritization within a complex implementation schedule. That's the gap we're now addressing.",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"Let me put this in perspective. Like any organization, we do operate within budget frameworks, but security spending actually increased 40% year-over-year. The issue wasn't funding—it was prioritization within a complex implementation schedule. That's the gap we're now addressing.\" (\"Izinkan saya menempatkan ini dalam perspektif. Seperti organisasi mana pun, kami memang beroperasi dalam kerangka anggaran, tetapi pengeluaran keamanan sebenarnya meningkat 40% dari tahun ke tahun. Masalahnya bukan pendanaan—tetapi prioritas dalam jadwal implementasi yang kompleks. Itulah kesenjangan yang sekarang kami tangani.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah Chen."
+            }
+          ]
         },
         "vocab": [
           {
@@ -8742,7 +10110,45 @@
             "explanation": "Pelajar C1 sering menggunakan konstruksi verbal sederhana daripada nominalisasi kompleks yang diharapkan dalam diskusi ekonomi perilaku tingkat mahir. Selain itu, mereka kadang gagal mempertahankan register formal-akademis secara konsisten ketika membahas konsep abstrak.",
             "wrong": "People don't want to lose money more than they want to get money, so companies use this when they advertise.",
             "correct": "The phenomenon of loss aversion, whereby individuals exhibit a stronger preference for avoiding losses than for acquiring equivalent gains, is strategically leveraged in contemporary marketing frameworks."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Behavioral Economics, Heuristics & Cognitive Biases in Decision Making\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Loss aversion: Gunakan struktur 'the tendency to prefer avoiding losses to acquiring eq..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Ekonomi perilaku (behavioral economics) mengkaji bagaimana faktor psikologis dan kognitif memengaruhi keputusan ekonomi manusia, sering kali menyimpang dari asumsi rasionalitas sempurna dalam teori ekonomi klasik."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "so companies use this when they advertise",
+                "People don't want to lose money more than they want to get money",
+                "The phenomenon of loss aversion"
+              ],
+              "correctIndex": 2,
+              "explanation": "Pelajar C1 sering menggunakan konstruksi verbal sederhana daripada nominalisasi kompleks yang diharapkan dalam diskusi ekonomi perilaku tingkat mahir. Selain itu, mereka kadang gagal mempertahankan register formal-akademis secara konsisten ketika membahas konsep abstrak."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"James, I've been reviewing our experimental data, and the magnitude of loss aversion among retail investors is frankly staggering. Even when controlling for risk tolerance, participants exhibited a 2.5-to-1 preference for avoiding losses over acquiring equivalent gains.\"\nDr. Morrison: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "That's consistent with Kahneman and Tversky's seminal work on prospect theory. What's particularly intriguing is how we manipulated the framing effect. Did the positive framing condition yield significantly different portfolio allocations?",
+                "People don't want to lose money more than they want to get money"
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"That's consistent with Kahneman and Tversky's seminal work on prospect theory. What's particularly intriguing is how we manipulated the framing effect. Did the positive framing condition yield significantly different portfolio allocations?\" (\"Itu konsisten dengan karya penting Kahneman dan Tversky tentang teori prospek. Yang sangat menarik adalah bagaimana kita memanipulasi efek pembingkaian. Apakah kondisi pembingkaian positif menghasilkan alokasi portofolio yang signifikan berbeda?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Morrison."
+            }
+          ]
         },
         "vocab": [
           {
@@ -8982,7 +10388,45 @@
             "explanation": "Mahasiswa C1 sering menyandingkan kutipan dari berbagai sumber dengan transisi kontras (however, conversely, in contrast) namun gagal mengintegrasikan mereka menjadi argumen terpadu. Hasilnya adalah kolase deskriptif, bukan sintesis analitis. Sintesis sejati memerlukan 'third voice'—perspektif penulis yang muncul dari dialog antar-sumber, bukan sekadar moderator netral.",
             "wrong": "Smith argues for policy A, while Johnson advocates policy B. Meanwhile, Lee suggests policy C. Each perspective has merits. Further research is needed.",
             "correct": "While Smith's advocacy for policy A rests on efficiency metrics and Johnson's support for policy B emphasises equity considerations, Lee's proposal for policy C implicitly attempts to reconcile these values through a phased implementation framework. This synthesis, though not explicitly articulated by Lee, offers a productive path forward that honours both efficiency and equity as co-constitutive rather than competing objectives."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Synthesising Multiple Opposing Sources into Unified Arguments\"?",
+              "options": [
+                "Identifikasi kontradiksi substantif (bukan semantik): Pisahkan perbedaan metodologis, a...",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Sintesis multi-sumber merupakan keterampilan puncak akademis yang mengintegrasikan perspektif bertentangan dari beragam literatur menjadi argumen koheren yang orisinal."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Synthesising Multiple Opposing Sources into Unified Arguments\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "while Johnson advocates policy B. Meanwhile",
+                "While Smith's advocacy for policy A rests on efficiency metrics and Johnson's support for policy B emphasises equity considerations",
+                "Smith argues for policy A"
+              ],
+              "correctIndex": 1,
+              "explanation": "Mahasiswa C1 sering menyandingkan kutipan dari berbagai sumber dengan transisi kontras (however, conversely, in contrast) namun gagal mengintegrasikan mereka menjadi argumen terpadu. Hasilnya adalah kolase deskriptif, bukan sintesis analitis. Sintesis sejati memerlukan 'third voice'—perspektif penulis yang muncul dari dialog antar-sumber, bukan sekadar moderator netral."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Martinez: \"I must say, the candidate's attempt to synthesise these four conflicting studies is ambitious, but I'm concerned the synthesis remains somewhat superficial. What's your assessment, Raj?\"\nDr. Patel: \"[...]\"",
+              "options": [
+                "I share your reservation. While she adequately juxtaposes the divergent conclusions, she hasn't quite articulated a meta-theoretical framework that would genuinely reconcile them. It reads more like a sophisticated literature review than a true synthesis.",
+                "Sorry, I forgot my keys at home.",
+                "Smith argues for policy A"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"I share your reservation. While she adequately juxtaposes the divergent conclusions, she hasn't quite articulated a meta-theoretical framework that would genuinely reconcile them. It reads more like a sophisticated literature review than a true synthesis.\" (\"Saya memiliki kekhawatiran yang sama. Meskipun dia cukup baik dalam menyandingkan kesimpulan-kesimpulan yang berbeda, dia belum benar-benar mengartikulasikan kerangka meta-teoretis yang sungguh-sungguh menyelaraskan mereka. Ini lebih terasa seperti tinjauan pustaka yang canggih ketimbang sintesis sejati.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Patel."
+            }
+          ]
         },
         "vocab": [
           {
@@ -9223,7 +10667,45 @@
             "explanation": "Banyak siswa gagal membedakan antara pemahaman literal dan inferensial, atau menggunakan register yang tidak konsisten. Dalam konteks diplomatik dan akademis, ketidaktepatan register atau kegagalan membaca implikasi tersembunyi dapat menurunkan skor drastis.",
             "wrong": "The speaker said that the policy is bad and we shouldn't do it because it's wrong.",
             "correct": "The speaker articulated concerns regarding the policy's feasibility, suggesting that its implementation might be predicated on untenable assumptions."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Komprehensif Critical Dialectics & Bridge to C2\"?",
+              "options": [
+                "Listening Comprehension: Pahami pidato diplomatik, kuliah akademis, atau diskusi filoso...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Ujian kelulusan ini mengevaluasi kemampuan Anda dalam mengintegrasikan keempat keterampilan bahasa pada level C1 Advanced: mendengarkan pidato diplomatik kompleks, membaca teks filosofis dan akademis dengan pemahaman kritis, menulis sintesis argumentatif yang koheren, serta berbicara dalam konteks debat dan negosiasi kritis."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "The speaker said that the policy is bad and we shouldn't do it because it's wrong",
+                "The speaker articulated concerns regarding the policy's feasibility",
+                "The speaker said that the policy is bad and we shouldn't do it because it's wrong always"
+              ],
+              "correctIndex": 1,
+              "explanation": "Banyak siswa gagal membedakan antara pemahaman literal dan inferensial, atau menggunakan register yang tidak konsisten. Dalam konteks diplomatik dan akademis, ketidaktepatan register atau kegagalan membaca implikasi tersembunyi dapat menurunkan skor drastis."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nAmbassador Chen: \"I would respectfully contend that the current institutional framework, while imperfect, has demonstrated remarkable resilience in navigating unprecedented geopolitical turbulence.\"\nMinister Okafor: \"[...]\"",
+              "options": [
+                "With due respect, Ambassador, that assessment presupposes that resilience alone constitutes legitimacy, which I would argue is a fundamentally flawed premise.",
+                "The speaker said that the policy is bad and we shouldn't do it because it's wrong",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"With due respect, Ambassador, that assessment presupposes that resilience alone constitutes legitimacy, which I would argue is a fundamentally flawed premise.\" (\"Dengan hormat, Duta Besar, penilaian itu mengandaikan bahwa ketahanan saja merupakan legitimasi, yang menurut saya adalah premis yang pada dasarnya cacat.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Minister Okafor."
+            }
+          ]
         },
         "vocab": [
           {

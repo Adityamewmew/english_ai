@@ -24,7 +24,45 @@
         "explanation": "Banyak siswa A2 masih bingung antara Present Perfect dan Past Simple. Present Perfect digunakan untuk pengalaman tanpa waktu spesifik atau aksi yang masih relevan sekarang, sedangkan Past Simple untuk waktu yang spesifik dan selesai di masa lalu.",
         "wrong": "I have seen that movie yesterday.",
         "correct": "I saw that movie yesterday. / I have seen that movie before."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Komprehensif Dinamika Sosial\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Present Perfect with Adverbs: Have/Has + past participle + time adverb (ever, never, al...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Selamat datang di ujian kelulusan A2."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Evaluasi Komprehensif Dinamika Sosial\"?",
+          "options": [
+            "I saw that movie yesterday",
+            "I have seen that movie yesterday always",
+            "I have seen that movie yesterday"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak siswa A2 masih bingung antara Present Perfect dan Past Simple. Present Perfect digunakan untuk pengalaman tanpa waktu spesifik atau aksi yang masih relevan sekarang, sedangkan Past Simple untuk waktu yang spesifik dan selesai di masa lalu."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"I'm going to be a chef. I've just finished a cooking course and I loved it!\"\nTom: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "That's great! Have you ever worked in a restaurant before?",
+            "I have seen that movie yesterday"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"That's great! Have you ever worked in a restaurant before?\" (\"Itu bagus! Apakah kamu pernah bekerja di restoran sebelumnya?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

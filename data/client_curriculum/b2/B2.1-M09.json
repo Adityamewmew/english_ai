@@ -20,7 +20,45 @@
         "explanation": "Banyak pemula menggunakan 'must be', 'can't be', atau 'might be' ketika berbicara tentang peristiwa masa lalu. Padahal untuk deduksi masa lalu, kita HARUS menambahkan 'have + past participle' setelah modal verb.",
         "wrong": "She must be at home yesterday when it happened.",
         "correct": "She must have been at home yesterday when it happened."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Third Conditional & Regrets\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Modal of deduction (certainty - positive): must + have + past participle. Contoh: 'Amel..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara membuat deduksi atau kesimpulan tentang peristiwa yang sudah terjadi di masa lalu."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "She must to have been at home yesterday when it happened",
+            "She must be at home yesterday when it happened",
+            "She must have been at home yesterday when it happened"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula menggunakan 'must be', 'can't be', atau 'might be' ketika berbicara tentang peristiwa masa lalu. Padahal untuk deduksi masa lalu, kita HARUS menambahkan 'have + past participle' setelah modal verb."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nOliver: \"Yes, it was here an hour ago and now it isn't. Who's taken it?\"\nMatt: \"[...]\"",
+          "options": [
+            "She must be at home yesterday when it happened",
+            "Sorry, I forgot my keys at home.",
+            "What about Dad? I heard him saying how hungry he was. In fact, I'm sure it must have been Dad."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"What about Dad? I heard him saying how hungry he was. In fact, I'm sure it must have been Dad.\" (\"Bagaimana dengan Ayah? Aku mendengar dia bilang betapa laparnya dia. Bahkan, aku yakin pasti Ayah yang mengambilnya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Matt."
+        }
+      ]
     },
     "vocab": [
       {

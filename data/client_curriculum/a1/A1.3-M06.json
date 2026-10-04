@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula lupa menambahkan 'is/am/are' sebelum kata sifat kepribadian. Dalam bahasa Inggris, kata sifat harus didahului oleh 'to be' ketika mendeskripsikan seseorang.",
         "wrong": "She friendly and kind.",
         "correct": "She is friendly and kind."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Personalities, Character Traits & Feelings\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Kata sifat kepribadian diletakkan setelah 'to be' (is/am/are): He is friendly. She is c...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Dalam bahasa Inggris, kita menggunakan kata sifat (adjectives) untuk mendeskripsikan kepribadian dan perasaan seseorang."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "She is friendly and kind",
+            "She are friendly and kind",
+            "She friendly and kind"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak pemula lupa menambahkan 'is/am/are' sebelum kata sifat kepribadian. Dalam bahasa Inggris, kata sifat harus didahului oleh 'to be' ketika mendeskripsikan seseorang."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMaya: \"I agree. Why do you like him?\"\nRina: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Because he is always cheerful and helpful to everyone.",
+            "She friendly and kind"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Because he is always cheerful and helpful to everyone.\" (\"Karena dia selalu ceria dan suka menolong semua orang.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Rina."
+        }
+      ]
     },
     "vocab": [
       {

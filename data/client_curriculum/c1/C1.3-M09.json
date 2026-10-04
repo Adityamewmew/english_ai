@@ -25,7 +25,45 @@
         "explanation": "Siswa C1 sering mencampur register informal dengan konteks akademis, atau menggunakan istilah lingkungan secara tidak presisi. Misalnya, 'carbon neutral' dan 'net-zero' memiliki perbedaan teknis penting: carbon neutral dapat dicapai melalui offset, sedangkan net-zero memerlukan pengurangan emisi aktual hingga mendekati nol. Kesalahan lain adalah penggunaan 'green energy' yang terlalu umum ketika 'renewable energy' atau 'low-carbon energy' lebih tepat dalam konteks teknis.",
         "wrong": "We need to use more green stuff to stop climate change and make things carbon neutral quickly.",
         "correct": "Achieving net-zero emissions by 2050 necessitates a comprehensive transition to renewable energy sources, coupled with verified carbon removal strategies rather than reliance on unregulated offset schemes."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Environmental Geopolitics & Climate Policy Discourse\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Gunakan struktur kondisional campuran untuk hipotesis kompleks tentang kebijakan iklim:...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Modul ini membekali Anda dengan kemampuan untuk terlibat dalam diskusi akademis dan profesional mengenai isu lingkungan global yang kompleks."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Environmental Geopolitics & Climate Policy Discourse\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "Achieving net-zero emissions by 2050 necessitates a comprehensive transition to renewable energy sources",
+            "We need to use more green stuff to stop climate change and make things carbon neutral quickly always",
+            "We need to use more green stuff to stop climate change and make things carbon neutral quickly"
+          ],
+          "correctIndex": 0,
+          "explanation": "Siswa C1 sering mencampur register informal dengan konteks akademis, atau menggunakan istilah lingkungan secara tidak presisi. Misalnya, 'carbon neutral' dan 'net-zero' memiliki perbedaan teknis penting: carbon neutral dapat dicapai melalui offset, sedangkan net-zero memerlukan pengurangan emisi aktual hingga mendekati nol. Kesalahan lain adalah penggunaan 'green energy' yang terlalu umum ketika 'renewable energy' atau 'low-carbon energy' lebih tepat dalam konteks teknis."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"Ambassador Hassan, I appreciate your delegation's concerns regarding the equity implications of carbon pricing mechanisms. However, wouldn't a universal carbon tax, with revenue recycling provisions, address precisely those distributional concerns?\"\nAmbassador Hassan: \"[...]\"",
+          "options": [
+            "In principle, yes. But what we're witnessing in practice is that developed nations, having built their prosperity on centuries of unfettered emissions, now expect emerging economies to bear the costs of decarbonisation. That hardly constitutes climate justice.",
+            "Sorry, I forgot my keys at home.",
+            "We need to use more green stuff to stop climate change and make things carbon neutral quickly"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"In principle, yes. But what we're witnessing in practice is that developed nations, having built their prosperity on centuries of unfettered emissions, now expect emerging economies to bear the costs of decarbonisation. That hardly constitutes climate justice.\" (\"Secara prinsip, ya. Tetapi yang kami saksikan dalam praktiknya adalah negara-negara maju, yang membangun kemakmuran mereka melalui emisi tanpa batas selama berabad-abad, kini mengharapkan ekonomi berkembang menanggung biaya dekarbonisasi. Itu bukan keadilan iklim.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ambassador Hassan."
+        }
+      ]
     },
     "vocab": [
       {

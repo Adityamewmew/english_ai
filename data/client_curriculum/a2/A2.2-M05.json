@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa level A2 lupa menggunakan bentuk imperative yang benar dalam resep. Mereka sering menambahkan subjek 'you' atau menggunakan bentuk infinitive 'to + verb' yang membuat instruksi tidak natural.",
         "wrong": "You chop the onions and you add the salt.",
         "correct": "Chop the onions and add the salt."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Culinary Traditions, Recipes & Kitchen Verbs\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Gunakan kata kerja dapur dalam bentuk imperative (perintah) tanpa subjek untuk menulis ..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan belajar cara menjelaskan resep masakan dan tradisi kuliner dengan menggunakan kata kerja dapur yang tepat."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Culinary Traditions, Recipes & Kitchen Verbs\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "You chop the onions and you add the salt",
+            "You chop the onions and you add the salt always",
+            "Chop the onions and add the salt"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak siswa level A2 lupa menggunakan bentuk imperative yang benar dalam resep. Mereka sering menambahkan subjek 'you' atau menggunakan bentuk infinitive 'to + verb' yang membuat instruksi tidak natural."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Hi David! Today I'm going to teach you how to make Indonesian fried rice. Do you have all the ingredients?\"\nDavid: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "You chop the onions and you add the salt",
+            "Yes, I have rice, eggs, garlic, and vegetables. What should I do first?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Yes, I have rice, eggs, garlic, and vegetables. What should I do first?\" (\"Ya, aku punya nasi, telur, bawang putih, dan sayuran. Apa yang harus kulakukan dulu?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

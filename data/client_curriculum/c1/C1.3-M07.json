@@ -23,7 +23,45 @@
         "explanation": "Pelajar C1 sering menginterpretasikan understatement British secara literal karena terbiasa dengan komunikasi eksplisit. Frasa seperti 'not entirely satisfactory' atau 'somewhat disappointing' terdengar netral, padahal dalam konteks profesional British, ini merupakan kritik tajam. Kesalahan lain adalah mengabaikan perubahan micro-prosodi (penekanan halus dan jeda) yang mengubah makna drastis.",
         "wrong": "Menerjemahkan 'The proposal is not without merit' sebagai pujian netral tanpa menangkap skeptisisme implisit.",
         "correct": "Memahami 'The proposal is not without merit' sebagai kritik halus: 'Ada beberapa poin bagus, tetapi secara keseluruhan proposal ini bermasalah.'"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Intonation Shifts, Irony Detection & Sarcasm Cues\"?",
+          "options": [
+            "Sarkasme halus: Ditandai dengan intonasi datar (flat/deadpan) atau nada naik yang berte...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Komunikasi tingkat mahir dalam bahasa Inggris memerlukan kepekaan terhadap nuansa prosodi dan pragmatik yang sering kali tidak tersurat secara eksplisit."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Intonation Shifts, Irony Detection & Sarcasm Cues\"?",
+          "options": [
+            "Menerjemahkan 'The proposal is not without merit' sebagai pujian netral tanpa menangkap skeptisisme implisit",
+            "Memahami 'The proposal is not without merit' sebagai kritik halus: 'Ada beberapa poin bagus",
+            "Memahami 'The proposal are not without merit' sebagai kritik halus: 'Ada beberapa poin bagus"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pelajar C1 sering menginterpretasikan understatement British secara literal karena terbiasa dengan komunikasi eksplisit. Frasa seperti 'not entirely satisfactory' atau 'somewhat disappointing' terdengar netral, padahal dalam konteks profesional British, ini merupakan kritik tajam. Kesalahan lain adalah mengabaikan perubahan micro-prosodi (penekanan halus dan jeda) yang mengubah makna drastis."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Hughes: \"The methodology section was not entirely without merit, I suppose. Though the sample size of twelve does raise certain... questions.\"\nDr. Peterson: \"[...]\"",
+          "options": [
+            "Menerjemahkan 'The proposal is not without merit' sebagai pujian netral tanpa menangkap skeptisisme implisit",
+            "Twelve. Yes. For a population-level study. How wonderfully ambitious.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Twelve. Yes. For a population-level study. How wonderfully ambitious.\" (\"Dua belas. Ya. Untuk studi tingkat populasi. Betapa luar biasa ambisiusnya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Peterson."
+        }
+      ]
     },
     "vocab": [
       {

@@ -24,7 +24,45 @@
         "explanation": "Siswa B1 sering lupa bahwa non-defining clauses WAJIB menggunakan koma dan TIDAK BOLEH memakai 'that'. Mereka juga kadang bingung kapan informasi itu esensial (defining) atau hanya tambahan (non-defining). Jika noun-nya sudah jelas tanpa perlu clause untuk mengidentifikasinya, gunakan non-defining dengan koma.",
         "wrong": "My supervisor that has worked here for twenty years is retiring next month.",
         "correct": "My supervisor, who has worked here for twenty years, is retiring next month."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Adding Insightful Commentary & Context\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Gunakan koma sebelum dan sesudah clause: Subject, who/which/whose + verb..., main verb....",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Non-defining relative clauses adalah anak kalimat relatif yang memberikan informasi tambahan (bonus) tentang noun yang sudah jelas identitasnya."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "My supervisor",
+            "My supervisor that has worked here for twenty years is retiring next month always",
+            "My supervisor that has worked here for twenty years is retiring next month"
+          ],
+          "correctIndex": 0,
+          "explanation": "Siswa B1 sering lupa bahwa non-defining clauses WAJIB menggunakan koma dan TIDAK BOLEH memakai 'that'. Mereka juga kadang bingung kapan informasi itu esensial (defining) atau hanya tambahan (non-defining). Jika noun-nya sudah jelas tanpa perlu clause untuk mengidentifikasinya, gunakan non-defining dengan koma."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"Exactly. Her previous project, which involved AI technology, was really impressive.\"\nDaniel: \"[...]\"",
+          "options": [
+            "My supervisor that has worked here for twenty years is retiring next month",
+            "I heard she'll be leading the marketing campaign, which starts next quarter.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"I heard she'll be leading the marketing campaign, which starts next quarter.\" (\"Saya dengar dia akan memimpin kampanye pemasaran, yang dimulai kuartal depan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Daniel."
+        }
+      ]
     },
     "vocab": [
       {

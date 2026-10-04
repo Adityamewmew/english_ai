@@ -24,7 +24,45 @@
         "explanation": "Banyak siswa keliru menggunakan Past Continuous untuk aksi yang sudah selesai sebelum kejadian lain. Past Continuous hanya untuk aksi yang sedang berlangsung pada waktu tertentu, sedangkan Past Perfect Continuous menunjukkan durasi aksi yang sudah berlangsung sebelum momen lain di masa lalu.",
         "wrong": "I was studying for three hours when the exam started. (keliru - tidak menunjukkan bahwa belajar sudah berlangsung sebelum ujian)",
         "correct": "I had been studying for three hours before the exam started. (benar - menunjukkan durasi belajar sebelum ujian dimulai)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Interweaving Past Continuous, Past Simple & Past Perfect Continuous\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Past Perfect Continuous: had been + V-ing - untuk aksi yang sudah berlangsung lama sebe..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Dalam narasi kompleks, kita sering perlu menggambarkan beberapa lapisan waktu di masa lalu."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I was studying for three hours when the exam started. (keliru - tidak menunjukkan bahwa belajar sudah berlangsung sebelum ujian)",
+            "I was studying for three hours when the exam started. (keliru - tidak menunjukkan bahwa belajar sudah berlangsung sebelum ujian) always",
+            "I had been studying for three hours before the exam started. (benar - menunjukkan durasi belajar sebelum ujian dimulai)"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak siswa keliru menggunakan Past Continuous untuk aksi yang sudah selesai sebelum kejadian lain. Past Continuous hanya untuk aksi yang sedang berlangsung pada waktu tertentu, sedangkan Past Perfect Continuous menunjukkan durasi aksi yang sudah berlangsung sebelum momen lain di masa lalu."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDavid: \"Oh no! So what happened? Did you wait long?\"\nEmma: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I was studying for three hours when the exam started. (keliru - tidak menunjukkan bahwa belajar sudah berlangsung sebelum ujian)",
+            "I had been waiting in the lobby for two hours when they finally called me in. By that time, I was so nervous."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"I had been waiting in the lobby for two hours when they finally called me in. By that time, I was so nervous.\" (\"Aku sudah menunggu di lobi selama dua jam ketika mereka akhirnya memanggilku masuk. Saat itu, aku sangat gugup.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Emma."
+        }
+      ]
     },
     "vocab": [
       {

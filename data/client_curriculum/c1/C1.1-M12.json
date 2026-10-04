@@ -21,7 +21,45 @@
         "explanation": "Banyak pelajar salah memilih subject saat membuat passive dari kalimat dengan dua objek. Meskipun secara gramatikal kedua bentuk benar, dalam bahasa Inggris natural lebih umum menggunakan person (indirect object) sebagai subject, bukan thing (direct object).",
         "wrong": "A lot of money was paid to her.",
         "correct": "She was paid a lot of money."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Emphatic Structures, Cleft Sentences & Discovery\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Passive report structure: It + be + past participle + that clause. Contoh: It is though..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan passive report structures yang sering digunakan dalam bahasa formal dan akademik untuk melaporkan kepercayaan, pengetahuan, atau pendapat."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "She were paid a lot of money",
+            "A lot of money was paid to her",
+            "She was paid a lot of money"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pelajar salah memilih subject saat membuat passive dari kalimat dengan dua objek. Meskipun secara gramatikal kedua bentuk benar, dalam bahasa Inggris natural lebih umum menggunakan person (indirect object) sebagai subject, bukan thing (direct object)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nAnna: \"There's an earlier train you could catch, if you want.\"\nBen: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Hmm, that sounds like she wants me to leave earlier. People don't always say what they really mean!",
+            "A lot of money was paid to her"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Hmm, that sounds like she wants me to leave earlier. People don't always say what they really mean!\" (\"Hmm, kedengarannya seperti dia ingin aku pergi lebih awal. Orang tidak selalu mengatakan apa yang mereka maksud sebenarnya!\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ben."
+        }
+      ]
     },
     "vocab": [
       {

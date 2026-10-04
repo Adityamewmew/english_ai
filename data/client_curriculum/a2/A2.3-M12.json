@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa A2 hanya menjawab dengan satu kalimat pendek tanpa memberikan alasan atau contoh. Ini membuat percakapan terasa tidak lengkap dan kurang natural.",
         "wrong": "Do you like reading? - Yes, I do.",
         "correct": "Do you like reading? - Yes, I really enjoy it. Actually, reading helps me relax after work. For example, I just finished a mystery novel last week and it was fascinating."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Spontaneous Fluency & Extended Responses\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Extended Response Structure: Point + Reason + Example. Contoh: 'I prefer online shoppin..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Di level ini, kamu akan belajar memberikan jawaban yang lebih panjang dan terstruktur, bukan hanya jawaban singkat."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Spontaneous Fluency & Extended Responses\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "Do you like reading? - Yes",
+            "I do",
+            "Do you like reading? - Yes"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak siswa A2 hanya menjawab dengan satu kalimat pendek tanpa memberikan alasan atau contoh. Ini membuat percakapan terasa tidak lengkap dan kurang natural."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"That sounds fascinating! Do you prefer shooting landscapes or people?\"\nDavid: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Do you like reading? - Yes",
+            "Honestly, I prefer landscapes. To be fair, photographing people requires more confidence to approach them. I feel more comfortable capturing natural scenery where I can take my time."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Honestly, I prefer landscapes. To be fair, photographing people requires more confidence to approach them. I feel more comfortable capturing natural scenery where I can take my time.\" (\"Sejujurnya, aku lebih suka pemandangan. Sejujurnya, memotret orang membutuhkan lebih banyak kepercayaan diri untuk mendekati mereka. Aku merasa lebih nyaman mengabadikan pemandangan alam di mana aku bisa mengambil waktu.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

@@ -24,7 +24,45 @@
         "explanation": "Siswa level B1 sering salah menggunakan 'because of' diikuti klausa lengkap, atau 'because' diikuti noun phrase. Ingat: 'because of/due to' hanya diikuti kata benda atau frasa nomina, sedangkan 'because' harus diikuti subjek + kata kerja.",
         "wrong": "The meeting was postponed because of the manager was sick.",
         "correct": "The meeting was postponed because the manager was sick. ATAU The meeting was postponed because of the manager's illness."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"In order to, So that, Because of & Due to\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "IN ORDER TO + verb (infinitive): Digunakan untuk menyatakan tujuan dengan struktur form...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Dalam bahasa Inggris formal, kita menggunakan konjungsi khusus untuk menunjukkan tujuan dan penyebab dengan presisi."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "The meeting was postponed because the manager was sick. ATAU The meeting was postponed because of the manager's illness",
+            "The meeting was postponed because of the manager was sick",
+            "The meeting were postponed because the manager were sick. ATAU The meeting were postponed because of the manager's illness"
+          ],
+          "correctIndex": 0,
+          "explanation": "Siswa level B1 sering salah menggunakan 'because of' diikuti klausa lengkap, atau 'because' diikuti noun phrase. Ingat: 'because of/due to' hanya diikuti kata benda atau frasa nomina, sedangkan 'because' harus diikuti subjek + kata kerja."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Good thinking. Actually, we need to simplify slide 7 because of the feedback we received from the manager yesterday.\"\nTom: \"[...]\"",
+          "options": [
+            "I agree. The previous version was too technical. Should we include more examples so that the concepts are clearer?",
+            "The meeting was postponed because of the manager was sick",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"I agree. The previous version was too technical. Should we include more examples so that the concepts are clearer?\" (\"Saya setuju. Versi sebelumnya terlalu teknis. Haruskah kita memasukkan lebih banyak contoh agar konsepnya lebih jelas?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

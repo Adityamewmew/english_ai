@@ -23,7 +23,45 @@
         "explanation": "Pemula sering salah menggunakan preposisi 'to', 'from', dan 'at' dalam konteks transportasi. Ingat: 'go TO' (tujuan), 'depart FROM' (asal), 'arrive AT' (tiba di).",
         "wrong": "The bus goes from the airport. (maksudnya ingin ke airport)",
         "correct": "The bus goes to the airport."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Public Transportation & Commuting\"?",
+          "options": [
+            "Gunakan 'Which + noun + goes to...?' untuk menanyakan transportasi: 'Which bus goes to ...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Transportasi umum adalah bagian penting dari kehidupan sehari-hari."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "The bus goes from the airport. (maksudnya ingin ke airport) always",
+            "The bus goes to the airport",
+            "The bus goes from the airport. (maksudnya ingin ke airport)"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering salah menggunakan preposisi 'to', 'from', dan 'at' dalam konteks transportasi. Ingat: 'go TO' (tujuan), 'depart FROM' (asal), 'arrive AT' (tiba di)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Excuse me, which train goes to Cambridge?\"\nTicket Officer: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "The next train departs from platform 7 at 10:15.",
+            "The bus goes from the airport. (maksudnya ingin ke airport)"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"The next train departs from platform 7 at 10:15.\" (\"Kereta berikutnya berangkat dari peron 7 pukul 10:15.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ticket Officer."
+        }
+      ]
     },
     "vocab": [
       {

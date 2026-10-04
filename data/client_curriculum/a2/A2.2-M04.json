@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa lupa menggunakan frasa pembuka opini dan langsung menyatakan pendapat tanpa penanda, sehingga terdengar terlalu blak-blakan atau kurang sopan dalam konteks formal. Selain itu, siswa sering salah menempatkan kata sifat atau menggunakan bentuk yang tidak tepat.",
         "wrong": "The movie boring and I no like it.",
         "correct": "In my opinion, the movie was boring and I didn't like it."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Movies, Cinema & Expressing Critical Opinions\"?",
+          "options": [
+            "Gunakan frasa pembuka opini: 'In my opinion, ...', 'I think (that) ...', 'I found it + ...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan belajar cara membicarakan film dengan lebih ekspresif dan kritis."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Movies, Cinema & Expressing Critical Opinions\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "The movie boring and I no like it",
+            "The movie boring and I no like it always",
+            "In my opinion"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak siswa lupa menggunakan frasa pembuka opini dan langsung menyatakan pendapat tanpa penanda, sehingga terdengar terlalu blak-blakan atau kurang sopan dalam konteks formal. Selain itu, siswa sering salah menempatkan kata sifat atau menggunakan bentuk yang tidak tepat."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"So, what did you think of the movie?\"\nTom: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "The movie boring and I no like it",
+            "In my opinion, it was quite thrilling! The action scenes were amazing."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"In my opinion, it was quite thrilling! The action scenes were amazing.\" (\"Menurutku, filmnya cukup menegangkan! Adegan aksinya luar biasa.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

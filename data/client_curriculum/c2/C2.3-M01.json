@@ -23,7 +23,45 @@
         "explanation": "Jebakan terbesar dalam menggunakan archaism atau neologisme adalah misjudging register. Penutur C2 memahami bahwa archaism bukan sekadar 'bahasa formal', melainkan stylistic choice yang membawa muatan ironis, nostalgia, atau gravitas retoris. Demikian pula, neologisme digital seperti 'rizz' atau 'bussin' memiliki bounded social context—penggunaannya dalam academic discourse akan merusak kredibilitas. Grandmaster C2 mampu code-switch dengan presisi absolut antara historical pastiche, contemporary colloquialism, dan elevated prose.",
         "wrong": "The utilization of such aforementioned vocabulary doth bespeak thy great erudition, forsooth. (Penggunaan arkais yang berlebihan dan tidak organik, terdengar seperti parodi Shakespeare yang canggung)",
         "correct": "One might well ask whence this linguistic conservatism arose—surely not from any philological necessity, but rather from an aesthetic preference for the cadences of an earlier age. (Arkais 'whence' digunakan secara strategis dalam kalimat akademis modern dengan kesadaran penuh terhadap efek retorikalnya)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"Archaisms, Neologisms & The Evolution of English Lexicon Across Millennia\", bagaimana perubahan atau padanan yang benar untuk \"awe-inspiring, penuh kekaguman)\"?",
+          "options": [
+            "awe-inspiring, penuh kekaguman) selalu dihilangkan",
+            "modern",
+            "Tidak ada perubahan tenses pada awe-inspiring, penuh kekaguman)"
+          ],
+          "correctIndex": 1,
+          "explanation": "Dalam materi ini: awe-inspiring, penuh kekaguman) berubah atau berpadanan menjadi \"modern\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Archaisms, Neologisms & The Evolution of English Lexicon Across Millennia\"?",
+          "options": [
+            "One might well ask whence this linguistic conservatism arose—surely not from any philological necessity",
+            "forsooth. (Penggunaan arkais yang berlebihan dan tidak organik",
+            "The utilization of such aforementioned vocabulary doth bespeak thy great erudition"
+          ],
+          "correctIndex": 0,
+          "explanation": "Jebakan terbesar dalam menggunakan archaism atau neologisme adalah misjudging register. Penutur C2 memahami bahwa archaism bukan sekadar 'bahasa formal', melainkan stylistic choice yang membawa muatan ironis, nostalgia, atau gravitas retoris. Demikian pula, neologisme digital seperti 'rizz' atau 'bussin' memiliki bounded social context—penggunaannya dalam academic discourse akan merusak kredibilitas. Grandmaster C2 mampu code-switch dengan presisi absolut antara historical pastiche, contemporary colloquialism, dan elevated prose."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Ashford: \"Your point about gatekeeping resonates deeply. Prescriptivism has always been a rearguard action against descriptive reality. Yet I remain troubled by the semantic impoverishment I observe—when 'literally' undergoes such radical auto-antonymy, what lexical anchors remain?\"\nProfessor Chen: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I'd argue that auto-antonymy represents semantic sophistication rather than impoverishment—contextual disambiguation becomes the very marker of linguistic competence. Native speakers navigate 'literally' with effortless pragmatic calibration.",
+            "The utilization of such aforementioned vocabulary doth bespeak thy great erudition"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"I'd argue that auto-antonymy represents semantic sophistication rather than impoverishment—contextual disambiguation becomes the very marker of linguistic competence. Native speakers navigate 'literally' with effortless pragmatic calibration.\" (\"Saya berpendapat bahwa auto-antonimi mewakili kecanggihan semantik ketimbang pemiskinan—disambiguasi kontekstual menjadi penanda kompetensi linguistik itu sendiri. Penutur asli menavigasi 'literally' dengan kalibrasi pragmatis yang mudah.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Professor Chen."
+        }
+      ]
     },
     "vocab": [
       {

@@ -24,7 +24,45 @@
         "explanation": "Banyak siswa B2 salah menggunakan 'in spite of' dengan klausa lengkap (karena terpengaruh 'although'), atau menggunakan 'on the contrary' hanya untuk menunjukkan perbedaan biasa (padahal artinya adalah 'justru sebaliknya' untuk kontradiksi). 'Albeit' juga sering disalahgunakan dengan klausa penuh.",
         "wrong": "In spite of the weather was bad, we continued. / The results differ. On the contrary, they show improvement.",
         "correct": "In spite of the bad weather, we continued. / The results do not show decline. On the contrary, they demonstrate significant improvement."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Concession & Contrast Connectors in Academic Argumentation\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "ALBEIT (meskipun/walaupun): Digunakan untuk konsesi singkat, biasanya diikuti adjective...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Konjungsi konsesi dan kontras tingkat tinggi memungkinkan Anda menyusun argumen akademis yang kompleks dengan mengakui poin lawan sambil tetap mempertahankan posisi Anda."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Concession & Contrast Connectors in Academic Argumentation\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "In spite of the bad weather",
+            "In spite of the weather was bad",
+            "we continued"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak siswa B2 salah menggunakan 'in spite of' dengan klausa lengkap (karena terpengaruh 'although'), atau menggunakan 'on the contrary' hanya untuk menunjukkan perbedaan biasa (padahal artinya adalah 'justru sebaliknya' untuk kontradiksi). 'Albeit' juga sering disalahgunakan dengan klausa penuh."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Rahman: \"Exactly. Whereas online platforms offer flexibility and accessibility, traditional classrooms provide immediate feedback and social engagement.\"\nDr. Susan: \"[...]\"",
+          "options": [
+            "In spite of the weather was bad",
+            "Some critics argue that online education diminishes learning quality. On the contrary, our data shows comparable outcomes when properly implemented.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Some critics argue that online education diminishes learning quality. On the contrary, our data shows comparable outcomes when properly implemented.\" (\"Beberapa kritikus berargumen bahwa pendidikan online mengurangi kualitas pembelajaran. Sebaliknya, data kami menunjukkan hasil yang sebanding ketika diterapkan dengan benar.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Susan."
+        }
+      ]
     },
     "vocab": [
       {

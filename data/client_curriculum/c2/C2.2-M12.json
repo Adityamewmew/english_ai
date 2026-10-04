@@ -23,7 +23,45 @@
         "explanation": "Penutur menengah cenderung menggunakan hyperbole atau science fiction clichés saat membahas AI: 'Robots will take over the world!' Grandmaster C2 menghindari sensasionalisme, memilih precision dan epistemic caution. Perbedaan ini krusial dalam discourse akademis dan policy-making.",
         "wrong": "AI will definitely destroy humanity if we don't stop it now—it's like Terminator but real!",
         "correct": "The prospect of existential risk from misaligned superintelligence, while contested, warrants rigorous prophylactic governance frameworks commensurate with the stakes involved."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Ethical Implications of Artificial Superintelligence, Transhumanism & Consciousness\"?",
+          "options": [
+            "Gunakan nominalisasi abstrak untuk mengemas argumen kompleks secara ekonomis: 'the inst...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Modul ini mengeksplorasi dilema eksistensial terdalam abad ke-21: bagaimana umat manusia menyelaraskan nilai-nilai humanistik dengan kemajuan teknologi yang eksponensial."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Ethical Implications of Artificial Superintelligence, Transhumanism & Consciousness\"?",
+          "options": [
+            "AI will definitely destroy humanity if we don't stop it now—it's like Terminator but real!",
+            "The prospect of existential risk from misaligned superintelligence",
+            "AI will definitely destroy humanity if we don't stop it now—it's like Terminator but real! always"
+          ],
+          "correctIndex": 1,
+          "explanation": "Penutur menengah cenderung menggunakan hyperbole atau science fiction clichés saat membahas AI: 'Robots will take over the world!' Grandmaster C2 menghindari sensasionalisme, memilih precision dan epistemic caution. Perbedaan ini krusial dalam discourse akademis dan policy-making."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Voss: \"The alignment problem, as I see it, isn't fundamentally technical—it's a crisis of axiology. Which human values warrant encoding when our moral landscape is itself riven with incommensurable frameworks?\"\nProf. Mehta: \"[...]\"",
+          "options": [
+            "A compelling point, yet surely some minimal consensus exists—suffering reduction, preference satisfaction. The danger lies in assuming AGI will spontaneously inherit our intuitive ethics absent explicit instantiation.",
+            "AI will definitely destroy humanity if we don't stop it now—it's like Terminator but real!",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"A compelling point, yet surely some minimal consensus exists—suffering reduction, preference satisfaction. The danger lies in assuming AGI will spontaneously inherit our intuitive ethics absent explicit instantiation.\" (\"Poin yang menarik, namun pastilah ada konsensus minimal—pengurangan penderitaan, kepuasan preferensi. Bahayanya terletak pada asumsi bahwa AGI akan secara spontan mewarisi etika intuitif kita tanpa instansiasi eksplisit.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Mehta."
+        }
+      ]
     },
     "vocab": [
       {

@@ -20,7 +20,45 @@
         "explanation": "Banyak pemula menghilangkan relative pronoun secara sembarangan tanpa mengecek apakah ada auxiliary verb 'be' setelahnya. Ingat: kamu hanya bisa menghilangkan relative pronoun + be, bukan relative pronoun saja.",
         "wrong": "I met the people come from Italy.",
         "correct": "I met the people who come from Italy. ATAU I met the people coming from Italy."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Relative Clauses & Travel\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Defining relative clause: Digunakan untuk mengidentifikasi which/that (benda), who/that..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas penggunaan relative clauses (klausa relatif) untuk menambahkan informasi pada kalimat."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I met the people come from Italy always",
+            "I met the people come from Italy",
+            "I met the people who come from Italy. ATAU I met the people coming from Italy"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula menghilangkan relative pronoun secara sembarangan tanpa mengecek apakah ada auxiliary verb 'be' setelahnya. Ingat: kamu hanya bisa menghilangkan relative pronoun + be, bukan relative pronoun saja."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nKaren: \"Hi James, how are you doing? Hope you're OK!\"\nKaren: \"[...]\"",
+          "options": [
+            "I met the people come from Italy",
+            "Sorry, I forgot my keys at home.",
+            "Well, here I am at last – living in northern Canada with the nomadic Inuit people."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Well, here I am at last – living in northern Canada with the nomadic Inuit people.\" (\"Nah, akhirnya aku di sini – tinggal di Kanada utara bersama suku Inuit yang nomaden.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Karen."
+        }
+      ]
     },
     "vocab": [
       {

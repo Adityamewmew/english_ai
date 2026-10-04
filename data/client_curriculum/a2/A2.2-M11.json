@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa menggunakan Past Simple untuk kedua kejadian, atau Past Continuous untuk keduanya. Ingat: aktivitas yang sedang berlangsung menggunakan Past Continuous, sedangkan kejadian yang menyela menggunakan Past Simple.",
         "wrong": "I walked in the park when it started to rain.",
         "correct": "I was walking in the park when it started to rain."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Past Continuous Interrupted by Past Simple\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Past Continuous untuk aktivitas yang sedang berlangsung: Subject + was/were + verb-ing....",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Dalam bahasa Inggris, kita sering menceritakan kejadian masa lalu di mana satu aktivitas sedang berlangsung, lalu tiba-tiba ada kejadian lain yang menyela."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Past Continuous Interrupted by Past Simple\"?",
+          "options": [
+            "I was walking in the park when it started to rain",
+            "I walked in the park when it started to rain",
+            "I were walking in the park when it started to rain"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak siswa menggunakan Past Simple untuk kedua kejadian, atau Past Continuous untuk keduanya. Ingat: aktivitas yang sedang berlangsung menggunakan Past Continuous, sedangkan kejadian yang menyela menggunakan Past Simple."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"You won't believe what happened to me yesterday! I was walking to work when I saw a famous actor.\"\nTom: \"[...]\"",
+          "options": [
+            "I walked in the park when it started to rain",
+            "Sorry, I forgot my keys at home.",
+            "Really? That's amazing! Which actor was it?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Really? That's amazing! Which actor was it?\" (\"Benarkah? Itu luar biasa! Aktor siapa itu?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

@@ -23,7 +23,45 @@
         "explanation": "Penutur tingkat lanjut sering kali menggunakan bahasa diplomatik secara superfisial tanpa memahami implikasi strategisnya. Jebakan utama adalah mengira bahwa ketidakjelasan adalah kelemahan komunikasi, padahal dalam diplomasi, ambiguitas adalah alat yang disengaja. Perbedaan antara C1 dan C2 terletak pada kemampuan mengidentifikasi niat di balik pemilihan kata: apakah eufemisme digunakan untuk sopan santun, ataukah untuk menyembunyikan ketidaksepakatan fundamental? Seorang grandmaster C2 membaca komunike tidak hanya untuk apa yang dikatakan, tetapi terutama untuk apa yang tidak dikatakan—omisi strategis, passive voice untuk menghilangkan agensi, dan penggunaan 'noted' (paling lemah) versus 'welcomed' (endorsement moderat) versus 'strongly supported' (komitmen penuh).",
         "wrong": "The two countries agreed to solve the territorial dispute peacefully and will meet again soon to finalize the details.",
         "correct": "Both delegations acknowledged the complexity of the territorial question and reaffirmed their commitment to exploring pathways toward a mutually acceptable framework, with a view to reconvening at an appropriate juncture."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Diplomatic Brinkmanship, Summit Communiqués & Multilateral Negotiation\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Constructive Ambiguity: Gunakan frasa yang memungkinkan interpretasi ganda namun tetap ...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Diplomasi tingkat tinggi menuntut penguasaan bahasa yang melampaui ketepatan gramatikal—ia memerlukan kemampuan membaca subteks, mengonstruksi ambiguitas yang disengaja, dan menyeimbangkan ketegasan dengan fleksibilitas interpretatif."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Diplomatic Brinkmanship, Summit Communiqués & Multilateral Negotiation\"?",
+          "options": [
+            "The two countries agreed to solve the territorial dispute peacefully and will meet again soon to finalize the details always",
+            "The two countries agreed to solve the territorial dispute peacefully and will meet again soon to finalize the details",
+            "Both delegations acknowledged the complexity of the territorial question and reaffirmed their commitment to exploring pathways toward a mutually acceptable framework"
+          ],
+          "correctIndex": 2,
+          "explanation": "Penutur tingkat lanjut sering kali menggunakan bahasa diplomatik secara superfisial tanpa memahami implikasi strategisnya. Jebakan utama adalah mengira bahwa ketidakjelasan adalah kelemahan komunikasi, padahal dalam diplomasi, ambiguitas adalah alat yang disengaja. Perbedaan antara C1 dan C2 terletak pada kemampuan mengidentifikasi niat di balik pemilihan kata: apakah eufemisme digunakan untuk sopan santun, ataukah untuk menyembunyikan ketidaksepakatan fundamental? Seorang grandmaster C2 membaca komunike tidak hanya untuk apa yang dikatakan, tetapi terutama untuk apa yang tidak dikatakan—omisi strategis, passive voice untuk menghilangkan agensi, dan penggunaan 'noted' (paling lemah) versus 'welcomed' (endorsement moderat) versus 'strongly supported' (komitmen penuh)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nAmbassador Chen: \"That's a deft reframing. However, our domestic constituencies will parse every subordinate clause. What if we employed passive voice to elide agency altogether? 'It was noted that maritime cooperation frameworks warrant further examination'—clinical, non-committal, yet substantive enough to appear productive.\"\nMinister Kowalski: \"[...]\"",
+          "options": [
+            "The two countries agreed to solve the territorial dispute peacefully and will meet again soon to finalize the details",
+            "Sorry, I forgot my keys at home.",
+            "Elegant. Though I must flag that 'warrant' carries a normative weight—it implies necessity. 'Merit consideration' might offer more interpretive latitude. We're essentially calibrating degrees of obligation here, and every lexical choice reverberates in parliamentary debates back home."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Elegant. Though I must flag that 'warrant' carries a normative weight—it implies necessity. 'Merit consideration' might offer more interpretive latitude. We're essentially calibrating degrees of obligation here, and every lexical choice reverberates in parliamentary debates back home.\" (\"Elegan. Meski saya harus menandai bahwa 'memerlukan' membawa bobot normatif—ini menyiratkan keharusan. 'Layak dipertimbangkan' mungkin menawarkan lebih banyak keleluasaan interpretatif. Pada dasarnya kita mengkalibrasi derajat kewajiban di sini, dan setiap pilihan leksikal bergema dalam debat parlementer di tanah air.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Minister Kowalski."
+        }
+      ]
     },
     "vocab": [
       {

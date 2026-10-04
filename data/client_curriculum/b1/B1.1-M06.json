@@ -20,7 +20,45 @@
         "explanation": "Pemula sering bingung kapan memakai will dan kapan memakai might/may. Will digunakan saat kamu yakin sesuatu akan terjadi, sedangkan might/may untuk hal yang mungkin terjadi tapi belum pasti.",
         "wrong": "I will pick you up at 7, but I'm not sure yet.",
         "correct": "I might pick you up at 7, but I'm not sure yet."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Future Forms - Will, Going to, Present Continuous\"?",
+          "options": [
+            "Will / Won't untuk kepastian masa depan: 'In a few years' time, there won't be any tige...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas cara menyatakan prediksi masa depan dengan will, won't, may, may not, might, dan might not."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Future Forms - Will, Going to, Present Continuous\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "but I'm not sure yet",
+            "I might pick you up at",
+            "I will pick you up at"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering bingung kapan memakai will dan kapan memakai might/may. Will digunakan saat kamu yakin sesuatu akan terjadi, sedangkan might/may untuk hal yang mungkin terjadi tapi belum pasti."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nA: \"He has offered me a role in his next film.\"\nB: \"[...]\"",
+          "options": [
+            "He's only going to meet Stephen Spielberg.",
+            "Sorry, I forgot my keys at home.",
+            "I will pick you up at"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"He's only going to meet Stephen Spielberg.\" (\"Dia hanya akan bertemu Stephen Spielberg.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh B."
+        }
+      ]
     },
     "vocab": [
       {

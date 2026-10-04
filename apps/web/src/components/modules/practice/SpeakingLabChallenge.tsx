@@ -274,11 +274,20 @@ export function SpeakingLabChallenge({
             {isAnalyzing
               ? "Menganalisis Artikulasimu..."
               : isRecording
-              ? "Sedang Merekam Suaramu... (Klik untuk Selesai)"
+              ? "Merekam Suara... (Klik untuk Selesai)"
               : challengeTranscript
               ? "Klik untuk Merekam Ulang"
               : "Tekan untuk Mulai Berbicara Bebas"}
           </span>
+
+          {isRecording && (
+            <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 text-rose-600 dark:text-rose-400 text-xs font-bold animate-pulse">
+              <span className="w-1.5 h-3 bg-rose-500 rounded-full animate-pulse" />
+              <span className="w-1.5 h-5 bg-rose-500 rounded-full animate-pulse [animation-delay:150ms]" />
+              <span className="w-1.5 h-3 bg-rose-500 rounded-full animate-pulse [animation-delay:300ms]" />
+              <span className="ml-1 text-[11px]">Mikrofon Aktif...</span>
+            </div>
+          )}
 
           {challengeTranscript && (
             <div className="w-full text-center max-w-lg mt-2 space-y-2">
@@ -308,12 +317,12 @@ export function SpeakingLabChallenge({
                     {isPlayingThisAudio ? (
                       <>
                         <Square className="w-3.5 h-3.5 fill-current" />
-                        <span>Stop Suara Saya</span>
+                        <span>Stop Suara</span>
                       </>
                     ) : (
                       <>
                         <Volume2 className="w-3.5 h-3.5 text-blue-600" />
-                        <span>Putar Ulang Rekaman Saya</span>
+                        <span>Dengar Suara Saya</span>
                       </>
                     )}
                   </Button>

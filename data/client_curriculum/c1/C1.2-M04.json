@@ -25,7 +25,45 @@
         "explanation": "Pelajar C1 sering menggunakan subjunctive formulaik dalam konteks yang terlalu kasual, atau mencampur register formal-arkais dengan struktur modern sehingga terdengar tidak natural. Subjunctive formulaik harus dibatasi pada legal drafting, ceremonial speech, atau academic writing formal—penggunaan dalam email bisnis biasa atau presentasi informal justru terkesan bombastic dan tidak profesional.",
         "wrong": "Come what may, I think we should maybe reschedule the team meeting for next week if everyone's available.",
         "correct": "The Board resolves that the annual audit be completed by fiscal year-end, come what may, notwithstanding any operational impediments."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Advanced Subjunctive Mood & Formulaic Legal Registers\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Formulaic subjunctive dengan inversi: Be that as it may / Come what may / Suffice it to..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Subjunctive mood dalam bahasa Inggris tingkat mahir mencakup struktur formulaik yang sangat spesifik untuk register hukum, protokol diplomatik, dan wacana formal tingkat tinggi."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I think we should maybe reschedule the team meeting for next week if everyone's available",
+            "Come what may",
+            "The Board resolves that the annual audit be completed by fiscal year-end"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pelajar C1 sering menggunakan subjunctive formulaik dalam konteks yang terlalu kasual, atau mencampur register formal-arkais dengan struktur modern sehingga terdengar tidak natural. Subjunctive formulaik harus dibatasi pada legal drafting, ceremonial speech, atau academic writing formal—penggunaan dalam email bisnis biasa atau presentasi informal justru terkesan bombastic dan tidak profesional."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSenior Drafter: \"When drafting this provision, it's imperative that the verb form remain in the subjunctive throughout. We write 'that each Member State ensure compliance,' not 'ensures.'\"\nJunior Associate: \"[...]\"",
+          "options": [
+            "Come what may",
+            "Sorry, I forgot my keys at home.",
+            "I understand the mandative subjunctive for obligations, but what about the formulaic expressions? When should I use 'be that as it may' versus a simple concession clause?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"I understand the mandative subjunctive for obligations, but what about the formulaic expressions? When should I use 'be that as it may' versus a simple concession clause?\" (\"Saya memahami mandative subjunctive untuk kewajiban, tetapi bagaimana dengan ekspresi formulaik? Kapan saya harus menggunakan 'be that as it may' dibanding klausa konsesi sederhana?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Junior Associate."
+        }
+      ]
     },
     "vocab": [
       {

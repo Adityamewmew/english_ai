@@ -24,7 +24,45 @@
         "explanation": "Banyak pelajar B2 menggunakan bahasa yang terlalu langsung atau menuduh dalam konteks diplomatik, yang bisa merusak negosiasi. Hindari kata kerja imperatif atau pernyataan absolut yang terdengar ultimatum.",
         "wrong": "You must withdraw your troops immediately or we will take action.",
         "correct": "We would strongly encourage a mutual de-escalation, whereby both parties could consider a phased withdrawal under neutral observation."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Crisis Diplomacy, Conflict Resolution & International Arbitration\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Gunakan conditional structures untuk usulan diplomatik: 'We would be willing to conside...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Diplomasi krisis dan resolusi konflik internasional memerlukan bahasa yang sangat presisi, netral, dan diplomatik."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Crisis Diplomacy, Conflict Resolution & International Arbitration\"?",
+          "options": [
+            "You must withdraw your troops immediately or we will take action",
+            "We would strongly encourage a mutual de-escalation",
+            "You must withdraw your troops immediately or we will take action always"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pelajar B2 menggunakan bahasa yang terlalu langsung atau menuduh dalam konteks diplomatik, yang bisa merusak negosiasi. Hindari kata kerja imperatif atau pernyataan absolut yang terdengar ultimatum."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nNeighboring Country Diplomat: \"We acknowledge Indonesia's position, however, historical fishing rights and prior agreements dating back to 1975 must also be taken into consideration. We would be willing to explore a joint development area as a compromise.\"\nUN Mediator: \"[...]\"",
+          "options": [
+            "You must withdraw your troops immediately or we will take action",
+            "That's a constructive proposal. Indonesia, would your government consider a co-management framework for the disputed waters while the arbitration process continues?",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"That's a constructive proposal. Indonesia, would your government consider a co-management framework for the disputed waters while the arbitration process continues?\" (\"Itu usulan yang konstruktif. Indonesia, apakah pemerintah Anda akan mempertimbangkan kerangka pengelolaan bersama untuk perairan yang disengketakan sementara proses arbitrasi berlanjut?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh UN Mediator."
+        }
+      ]
     },
     "vocab": [
       {

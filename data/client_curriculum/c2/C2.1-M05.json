@@ -21,7 +21,45 @@
         "explanation": "Pemula sering menggunakan present participle untuk dua aksi yang tidak simultan atau mengabaikan perfect participle ketika satu aksi jelas terjadi sebelum aksi lainnya. Perhatikan urutan waktu kejadian untuk memilih bentuk participle yang tepat.",
         "wrong": "Making many preparations, Petit walked on the wire (jika persiapan sudah selesai sebelum berjalan)",
         "correct": "Having made many preparations, Petit walked on the wire (Setelah membuat banyak persiapan, Petit berjalan di atas kawat)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Risk, Fear & Participle Clauses\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Present participle clause: Digunakan untuk aksi simultan atau sebab-akibat. Contoh: 'Kn..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas participle clauses (klausa partisip) yang digunakan untuk membuat kalimat lebih ringkas dan natural."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "Petit walked on the wire (jika persiapan sudah selesai sebelum berjalan)",
+            "Making many preparations",
+            "Having made many preparations"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pemula sering menggunakan present participle untuk dua aksi yang tidak simultan atau mengabaikan perfect participle ketika satu aksi jelas terjadi sebelum aksi lainnya. Perhatikan urutan waktu kejadian untuk memilih bentuk participle yang tepat."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nAnna: \"Her interview is today and she's getting very cold feet about it. She just really needs to relax with her.\"\nBen: \"[...]\"",
+          "options": [
+            "Making many preparations",
+            "Sorry, I forgot my keys at home.",
+            "What did she do?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"What did she do?\" (\"Apa yang dia lakukan?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ben."
+        }
+      ]
     },
     "vocab": [
       {

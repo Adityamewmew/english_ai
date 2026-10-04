@@ -22,7 +22,45 @@
         "explanation": "Pemula sering keliru menempatkan so dan such. So diikuti langsung oleh adjective/adverb, sedangkan such diikuti oleh noun phrase (a/an + adjective + noun). Jangan sampai tertukar!",
         "wrong": "It was so a difficult question. / He is such intelligent.",
         "correct": "It was such a difficult question. / He is so intelligent."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Future Continuous & Future Perfect\"?",
+          "options": [
+            "Quantifiers: Gunakan 'a few/a little/some' untuk jumlah kecil, 'a lot of/lots of/plenty...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara menggunakan quantifiers (kata penentu jumlah) untuk berbicara tentang kuantitas dengan lebih presisi, serta menggunakan so/such dan do/did untuk memberikan penekanan dalam kalimat bahasa Inggris."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Future Continuous & Future Perfect\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "He is such intelligent",
+            "It was such a difficult question",
+            "It was so a difficult question"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering keliru menempatkan so dan such. So diikuti langsung oleh adjective/adverb, sedangkan such diikuti oleh noun phrase (a/an + adjective + noun). Jangan sampai tertukar!"
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Did you see that blog about the dad who wore costumes to school?\"\nTom: \"[...]\"",
+          "options": [
+            "Yeah! Rain's dad wore a different fancy-dress costume every single day.",
+            "Sorry, I forgot my keys at home.",
+            "It was so a difficult question"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Yeah! Rain's dad wore a different fancy-dress costume every single day.\" (\"Ya! Ayah Rain mengenakan kostum yang berbeda setiap hari.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

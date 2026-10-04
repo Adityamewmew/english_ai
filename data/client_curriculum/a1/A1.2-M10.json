@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula mencampuradukkan 'mustn't' dengan 'don't have to'. Ingat: mustn't = LARANGAN (tidak boleh), sedangkan don't have to = TIDAK WAJIB (boleh tidak melakukan, tapi juga boleh melakukan). Ini perbedaan yang sangat penting!",
         "wrong": "You don't have to smoke here. (Salah! Ini berarti 'kamu tidak harus merokok di sini' - seolah memberi izin)",
         "correct": "You mustn't smoke here. (Benar! Ini berarti 'kamu tidak boleh merokok di sini' - larangan keras)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Must, Mustn't & Have to\"?",
+          "options": [
+            "MUST + verb (base form) = kewajiban kuat atau aturan penting. Contoh: You must be quiet...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Dalam kehidupan sehari-hari, kita sering perlu menyampaikan aturan, kewajiban, atau larangan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "You don't have to smoke here. (Salah! Ini berarti 'kamu tidak harus merokok di sini' - seolah memberi izin) always",
+            "You mustn't smoke here. (Benar! Ini berarti 'kamu tidak boleh merokok di sini' - larangan keras)",
+            "You don't have to smoke here. (Salah! Ini berarti 'kamu tidak harus merokok di sini' - seolah memberi izin)"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula mencampuradukkan 'mustn't' dengan 'don't have to'. Ingat: mustn't = LARANGAN (tidak boleh), sedangkan don't have to = TIDAK WAJIB (boleh tidak melakukan, tapi juga boleh melakukan). Ini perbedaan yang sangat penting!"
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nTeacher: \"Good morning, everyone! Welcome to our school. Let me tell you about our school rules.\"\nStudent: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Do we have to wear uniforms every day?",
+            "You don't have to smoke here. (Salah! Ini berarti 'kamu tidak harus merokok di sini' - seolah memberi izin)"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Do we have to wear uniforms every day?\" (\"Apakah kami harus pakai seragam setiap hari?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Student."
+        }
+      ]
     },
     "vocab": [
       {

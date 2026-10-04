@@ -24,7 +24,45 @@
         "explanation": "Kesalahan paling umum adalah menggunakan infinitive setelah 'be used to' atau menggunakan gerund setelah 'used to'. Ingat: 'used to' (kebiasaan lama) diikuti INFINITIVE, sedangkan 'be/get used to' (terbiasa/adaptasi) diikuti GERUND atau NOUN. Bentuk 'to' di sini adalah preposisi, bukan bagian dari infinitive.",
         "wrong": "I am used to wake up early. / I used to waking up at 5 AM.",
         "correct": "I am used to waking up early. / I used to wake up at 5 AM."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Used To vs Would vs Be/Get Used To\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "USED TO + infinitive: Menyatakan kebiasaan atau keadaan di masa lalu yang sekarang suda..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Modul ini membahas tiga struktur yang sering membingungkan: 'used to', 'would', dan 'be/get used to'."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Used To vs Would vs Be/Get Used To\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I am used to wake up early",
+            "I used to waking up at 5 AM",
+            "I am used to waking up early"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kesalahan paling umum adalah menggunakan infinitive setelah 'be used to' atau menggunakan gerund setelah 'used to'. Ingat: 'used to' (kebiasaan lama) diikuti INFINITIVE, sedangkan 'be/get used to' (terbiasa/adaptasi) diikuti GERUND atau NOUN. Bentuk 'to' di sini adalah preposisi, bukan bagian dari infinitive."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"I'm still getting used to living in this city. Everything feels so different from my hometown.\"\nMike: \"[...]\"",
+          "options": [
+            "I know what you mean. When I first moved here, I would get lost every single day! But now I'm used to the complicated metro system.",
+            "Sorry, I forgot my keys at home.",
+            "I am used to wake up early"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"I know what you mean. When I first moved here, I would get lost every single day! But now I'm used to the complicated metro system.\" (\"Aku paham maksudmu. Ketika pertama kali pindah ke sini, aku akan tersesat setiap hari! Tapi sekarang aku sudah terbiasa dengan sistem metro yang rumit.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Mike."
+        }
+      ]
     },
     "vocab": [
       {

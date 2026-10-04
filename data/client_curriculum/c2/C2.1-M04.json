@@ -22,7 +22,45 @@
         "correct": "It's laughter that helps us deal with difficult emotions.",
         "wrongSecond": "What I love is comedy shows.",
         "correctSecond": "What I love is watching comedy shows."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Humor, Irony & Emphasis with Clefts\"?",
+          "options": [
+            "It-cleft: It + be + fokus + that/who + sisa kalimat. Contoh: 'It's laughter that helps ...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas cara menggunakan cleft sentences (kalimat terbelah) untuk memberikan penekanan pada bagian tertentu dalam kalimat."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "It's laughter that helps us deal with difficult emotions",
+            "Laughter helps us deal with difficult emotions it is",
+            "Laughter helps us deal with difficult emotions it is always"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering lupa bahwa dalam cleft sentences, bagian yang ingin ditekankan harus diletakkan di tengah struktur, bukan di awal atau akhir seperti kalimat biasa. Selain itu, pemilihan 'that' vs 'who' juga sering keliru."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"What really makes me laugh is watching stand-up comedy shows. Have you seen Trevor Noah's latest special?\"\nTom: \"[...]\"",
+          "options": [
+            "Yes! It's his storytelling that I find so entertaining. The way he shares personal experiences is hilarious.",
+            "Laughter helps us deal with difficult emotions it is",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Yes! It's his storytelling that I find so entertaining. The way he shares personal experiences is hilarious.\" (\"Sudah! Cara dia bercerita itulah yang kutemukan sangat menghibur. Cara dia berbagi pengalaman pribadinya sangat lucu.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

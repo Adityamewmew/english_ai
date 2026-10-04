@@ -23,7 +23,45 @@
         "explanation": "Siswa B2 sering salah menggunakan verb-noun collocations dalam konteks perencanaan kota. Kata 'implement', 'enforce', 'adopt', dan 'carry out' memiliki nuansa berbeda yang harus dipahami. 'Implement' digunakan untuk kebijakan dan rencana, 'enforce' untuk regulasi dan hukum, 'adopt' untuk strategi atau pendekatan baru, sementara 'carry out' untuk penelitian atau survei.",
         "wrong": "The government enforced a new urban development strategy last year.",
         "correct": "The government adopted a new urban development strategy last year and is now implementing it across all districts."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Architectural Philosophy, Urban Planning & Sustainable Megacities\"?",
+          "options": [
+            "Mixed Conditionals untuk Urban Planning: Gunakan kombinasi type 2 dan type 3 untuk mend...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Modul ini membahas konsep perencanaan kota modern dan arsitektur berkelanjutan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "The government adopted a new urban development strategy last year and are now implementing it across all districts",
+            "The government adopted a new urban development strategy last year and is now implementing it across all districts",
+            "The government enforced a new urban development strategy last year"
+          ],
+          "correctIndex": 1,
+          "explanation": "Siswa B2 sering salah menggunakan verb-noun collocations dalam konteks perencanaan kota. Kata 'implement', 'enforce', 'adopt', dan 'carry out' memiliki nuansa berbeda yang harus dipahami. 'Implement' digunakan untuk kebijakan dan rencana, 'enforce' untuk regulasi dan hukum, 'adopt' untuk strategi atau pendekatan baru, sementara 'carry out' untuk penelitian atau survei."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nProf. Chen: \"That's a sound approach. However, have you considered the implications for existing zoning regulations? The current codes may not permit the density levels you're proposing.\"\nSarah: \"[...]\"",
+          "options": [
+            "Yes, that's actually addressed in section three. I'm proposing an overlay zone that would allow for increased density in exchange for environmental amenities like green roofs, permeable surfaces, and public access to ground-level gardens.",
+            "Sorry, I forgot my keys at home.",
+            "The government enforced a new urban development strategy last year"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Yes, that's actually addressed in section three. I'm proposing an overlay zone that would allow for increased density in exchange for environmental amenities like green roofs, permeable surfaces, and public access to ground-level gardens.\" (\"Ya, itu sebenarnya dibahas di bagian tiga. Saya mengusulkan zona overlay yang memungkinkan peningkatan kepadatan sebagai imbalan untuk amenitas lingkungan seperti atap hijau, permukaan permeabel, dan akses publik ke taman permukaan tanah.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah."
+        }
+      ]
     },
     "vocab": [
       {

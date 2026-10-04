@@ -21,7 +21,45 @@
         "explanation": "Pemula sering lupa membedakan 'there is' untuk singular dan 'there are' untuk plural, atau menggunakan 'some' di kalimat negatif padahal seharusnya 'any'.",
         "wrong": "There is many parks in London. / There are some people? / There aren't some shops here.",
         "correct": "There are many parks in London. / Are there any people? / There aren't any shops here."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Places in Town & There is / There are\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "There is + kata benda tunggal (singular noun): There is a park called Window of the Wor...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara menyebutkan tempat-tempat di kota (bank, museum, toko, restoran), menjelaskan keberadaan sesuatu menggunakan 'there is / there are', memberikan petunjuk arah dengan kata kerja imperatif (turn, go, don't open), serta berbelanja dengan angka 100+."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Places in Town & There is / There are\"?",
+          "options": [
+            "There are many parks in London",
+            "There is many parks in London",
+            "There are some people?"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering lupa membedakan 'there is' untuk singular dan 'there are' untuk plural, atau menggunakan 'some' di kalimat negatif padahal seharusnya 'any'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMan: \"Morning. Can I help you?\"\nGirl: \"[...]\"",
+          "options": [
+            "There is many parks in London",
+            "Yes, please. A ticket to London, please. Return?",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Yes, please. A ticket to London, please. Return?\" (\"Ya, tolong. Satu tiket ke London. Pulang pergi?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Girl."
+        }
+      ]
     },
     "vocab": [
       {

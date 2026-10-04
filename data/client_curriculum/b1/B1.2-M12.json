@@ -24,7 +24,45 @@
         "explanation": "Banyak learner B1 menggunakan bahasa yang terlalu lemah ('maybe you could help me?') atau terlalu agresif ('You must give me money now!'). Gunakan assertive language yang tegas namun profesional dengan struktur formal dan referensi ke hak atau garansi.",
         "wrong": "Can you maybe give me my money back if it's not too much trouble?",
         "correct": "I am entitled to a full refund as the product is defective and still under warranty. I would like to process this refund today."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Consumer Rights, Product Warranties & Constructive Assertiveness\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Gunakan 'I am entitled to...' untuk merujuk hak konsumen: 'I am entitled to a full refu...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Sebagai konsumen, Anda memiliki hak untuk mendapatkan produk yang sesuai spesifikasi dan garansi yang dijanjikan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Consumer Rights, Product Warranties & Constructive Assertiveness\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I am entitled to a full refund as the product is defective and still under warranty. I would like to process this refund today",
+            "I is entitled to a full refund as the product are defective and still under warranty. I would like to process this refund today",
+            "Can you maybe give me my money back if it's not too much trouble?"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak learner B1 menggunakan bahasa yang terlalu lemah ('maybe you could help me?') atau terlalu agresif ('You must give me money now!'). Gunakan assertive language yang tegas namun profesional dengan struktur formal dan referensi ke hak atau garansi."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Yes, here they are. The product is clearly defective and does not match the specifications. It should last much longer than three weeks.\"\nCustomer Service: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "We can send it for repairs under warranty. It usually takes about two to three weeks.",
+            "Can you maybe give me my money back if it's not too much trouble?"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"We can send it for repairs under warranty. It usually takes about two to three weeks.\" (\"Kami bisa mengirimkannya untuk perbaikan dengan garansi. Biasanya memakan waktu dua hingga tiga minggu.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Customer Service."
+        }
+      ]
     },
     "vocab": [
       {

@@ -19,7 +19,45 @@
         "explanation": "Pemula sering keliru menggunakan Past Perfect ketika tidak ada hubungan 'sebelum-sesudah' yang jelas antara dua kejadian. Past Perfect hanya digunakan jika satu kejadian terjadi sebelum kejadian lain di masa lalu.",
         "wrong": "I had eaten breakfast this morning. (tidak ada kejadian kedua sebagai acuan)",
         "correct": "I had already eaten breakfast when she called me. (ada dua kejadian dengan urutan jelas: makan sarapan terjadi sebelum dia menelepon)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Past Perfect & Health Vocabulary\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Past Perfect Simple: had + past participle. Contoh: She had returned from Alaska when h...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan dua bentuk Past Perfect: Simple dan Continuous."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I had already eaten breakfast when she called me. (ada dua kejadian dengan urutan jelas: makan sarapan terjadi sebelum dia menelepon)",
+            "I had eaten breakfast this morning. (tidak ada kejadian kedua sebagai acuan) always",
+            "I had eaten breakfast this morning. (tidak ada kejadian kedua sebagai acuan)"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering keliru menggunakan Past Perfect ketika tidak ada hubungan 'sebelum-sesudah' yang jelas antara dua kejadian. Past Perfect hanya digunakan jika satu kejadian terjadi sebelum kejadian lain di masa lalu."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nAnna: \"Yes, I made an appointment immediately. The doctor gave me medication.\"\nBen: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Did the medication help? Are you feeling better now?",
+            "I had eaten breakfast this morning. (tidak ada kejadian kedua sebagai acuan)"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Did the medication help? Are you feeling better now?\" (\"Apakah obatnya membantu? Apakah kamu merasa lebih baik sekarang?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ben."
+        }
+      ]
     },
     "vocab": [
       {

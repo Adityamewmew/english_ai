@@ -23,7 +23,45 @@
         "explanation": "Kesalahan terbesar penutur tingkat lanjut (C1) adalah terlalu eksplisit dalam berargumen sehingga terkesan mendikte atau konfrontatif. Di level C2, persuasi yang efektif adalah persuasi yang tidak terlihat seperti persuasi. Kehilangan kehalusan ini akan merusak diplomasi dan membuat Anda terdengar kurang canggih secara pragmatik.",
         "wrong": "You must agree that our strategy is better because it clearly solves the financial problem.",
         "correct": "Given the fiscal imperatives, one can hardly overlook the inherent advantages of recalibrating our current strategy."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Covert Rhetoric & Soft Power Diplomacy\"?",
+          "options": [
+            "Pra-suposisi Leksikal (Lexical Presupposition): Gunakan kata kerja faktif (seperti 'rea...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Di tingkat C2 (Mastery), persuasi tidak lagi dilakukan melalui argumen yang agresif atau pemaksaan kehendak (hard sell)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "You must agree that our strategy is better because it clearly solves the financial problem",
+            "Given the fiscal imperatives",
+            "You must agree that our strategy is better because it clearly solves the financial problem always"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kesalahan terbesar penutur tingkat lanjut (C1) adalah terlalu eksplisit dalam berargumen sehingga terkesan mendikte atau konfrontatif. Di level C2, persuasi yang efektif adalah persuasi yang tidak terlihat seperti persuasi. Kehilangan kehalusan ini akan merusak diplomasi dan membuat Anda terdengar kurang canggih secara pragmatik."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLord Harrington: \"Quite. Yet, there are murmurs in Westminster regarding the somewhat insidious nature of the cultural hegemony accompanying your investments.\"\nAmbassador Wijaya: \"[...]\"",
+          "options": [
+            "You must agree that our strategy is better because it clearly solves the financial problem",
+            "I assure you, any cultural exchange is purely organic. To suggest subterfuge would be to obfuscate the very real, tangible benefits your citizens enjoy.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"I assure you, any cultural exchange is purely organic. To suggest subterfuge would be to obfuscate the very real, tangible benefits your citizens enjoy.\" (\"Saya yakinkan Anda, pertukaran budaya apa pun murni organik. Mengisyaratkan adanya tipu daya sama saja dengan mengaburkan manfaat yang sangat nyata dan berwujud yang dinikmati warga negara Anda.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ambassador Wijaya."
+        }
+      ]
     },
     "vocab": [
       {

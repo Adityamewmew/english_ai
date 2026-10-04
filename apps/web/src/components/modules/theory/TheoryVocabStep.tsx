@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Volume2, ArrowRight, HelpCircle, Bot, Check, X } from "lucide-react";
+import { Volume2, ArrowRight, HelpCircle, Bot, Check, X, BookOpen } from "lucide-react";
 import { VocabItem } from "../SectionVocab";
 import { animeCardStagger, animeCardHover, animeButtonPop, animeShake } from "@/lib/anime-effects";
 import { Card } from "@/components/ui/card";
@@ -53,6 +53,33 @@ export function TheoryVocabStep({
     }
     onCompleteStep?.();
   };
+
+  if (!vocabItems || vocabItems.length === 0) {
+    return (
+      <Card className="p-8 sm:p-10 text-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl space-y-4 shadow-xs">
+        <div className="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mx-auto">
+          <BookOpen className="w-6 h-6" />
+        </div>
+        <div className="space-y-1">
+          <h4 className="text-base font-bold text-slate-900 dark:text-white">
+            Kosakata Telah Terintegrasi dalam Pola Kalimat
+          </h4>
+          <p className="text-xs sm:text-sm text-slate-500 max-w-md mx-auto leading-relaxed">
+            Modul ini berfokus pada struktur dan pola kalimat utama. Kamu dapat langsung lanjut ke langkah percakapan kontekstual.
+          </p>
+        </div>
+        <div className="pt-2">
+          <Button
+            onClick={onNext}
+            className="bg-blue-600 hover:bg-blue-700 text-white gap-2 shadow-xs"
+          >
+            <span>Lanjut ke Percakapan</span>
+            <ArrowRight className="w-4 h-4" />
+          </Button>
+        </div>
+      </Card>
+    );
+  }
 
   return (
     <div className="space-y-8 sm:space-y-10">

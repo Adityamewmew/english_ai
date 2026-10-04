@@ -23,7 +23,45 @@
         "explanation": "Kesalahan umum adalah menggunakan bahasa yang terlalu konfrontatif atau terlalu pasif. Penutur mahir sering terjebak dalam 'Why' yang terdengar seperti tuduhan, yang justru memperkeras posisi lawan (recalcitrance).",
         "wrong": "Why are you doing this to us? You need to stop immediately.",
         "correct": "It seems like you feel backed into a corner and believe this is the only path to be heard. How can we explore alternatives that address your concerns without further escalation?"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"High-Stakes Hostage & Geopolitical De-escalation Scripts\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Mirroring: Ulangi 1-3 kata terakhir dari pernyataan lawan dengan nada bertanya untuk me..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Dalam negosiasi krisis, bahasa bukan sekadar alat komunikasi, melainkan instrumen presisi untuk membedah realitas lawan bicara."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"High-Stakes Hostage & Geopolitical De-escalation Scripts\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "Why are you doing this to us? You need to stop immediately",
+            "It seems like you feel backed into a corner and believe this are the only path to be heard. How can we explore alternatives that address your concerns without further escalation?",
+            "It seems like you feel backed into a corner and believe this is the only path to be heard. How can we explore alternatives that address your concerns without further escalation?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kesalahan umum adalah menggunakan bahasa yang terlalu konfrontatif atau terlalu pasif. Penutur mahir sering terjebak dalam 'Why' yang terdengar seperti tuduhan, yang justru memperkeras posisi lawan (recalcitrance)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nNegotiator: \"The only way to make them listen.\"\nHostage Taker: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Why are you doing this to us? You need to stop immediately",
+            "Exactly! I have nothing left to lose."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Exactly! I have nothing left to lose.\" (\"Tepat sekali! Saya tidak punya apa-apa lagi untuk dipertaruhkan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Hostage Taker."
+        }
+      ]
     },
     "vocab": [
       {

@@ -25,7 +25,45 @@
         "explanation": "Pelajar tingkat C1 sering mencampuradukkan penggunaan gerund dan infinitive setelah verb tertentu, salah menempatkan koma dalam relative clauses sehingga mengubah makna, atau menggunakan modal deduction yang tidak sesuai dengan tingkat kepastian yang dimaksud. Kesalahan lain termasuk participle clauses yang dangling (tidak jelas subjeknya) dan emphatic structures yang terlalu berlebihan sehingga mengurangi profesionalitas.",
         "wrong": "I look forward to meet you. The scientists which discovered this were awarded. She must forget about the meeting yesterday.",
         "correct": "I look forward to meeting you. The scientists who discovered this were awarded. She must have forgotten about the meeting yesterday."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Komprehensif Advanced Foundations\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Gerunds and Infinitives: Gunakan gerund (-ing) setelah preposisi dan verb tertentu (avo...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Ujian kelulusan C1."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Evaluasi Komprehensif Advanced Foundations\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I look forward to meeting you. The scientists who discovered this were awarded. She must have forgotten about the meeting yesterday",
+            "I look forward to meeting you. The scientists who discovered this was awarded. She must have forgotten about the meeting yesterday",
+            "I look forward to meet you. The scientists which discovered this were awarded. She must forget about the meeting yesterday"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pelajar tingkat C1 sering mencampuradukkan penggunaan gerund dan infinitive setelah verb tertentu, salah menempatkan koma dalam relative clauses sehingga mengubah makna, atau menggunakan modal deduction yang tidak sesuai dengan tingkat kepastian yang dimaksud. Kesalahan lain termasuk participle clauses yang dangling (tidak jelas subjeknya) dan emphatic structures yang terlalu berlebihan sehingga mengurangi profesionalitas."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Rahman: \"Having reviewed the preliminary data, I must say the findings are rather more nuanced than we initially anticipated.\"\nDr. Chen: \"[...]\"",
+          "options": [
+            "Indeed. What strikes me most is the extent to which AI-driven methodologies can both enhance and potentially compromise research integrity.",
+            "Sorry, I forgot my keys at home.",
+            "I look forward to meet you. The scientists which discovered this were awarded. She must forget about the meeting yesterday"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Indeed. What strikes me most is the extent to which AI-driven methodologies can both enhance and potentially compromise research integrity.\" (\"Memang benar. Yang paling mencolok bagi saya adalah sejauh mana metodologi berbasis AI dapat meningkatkan sekaligus berpotensi mengkompromikan integritas riset.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Chen."
+        }
+      ]
     },
     "vocab": [
       {

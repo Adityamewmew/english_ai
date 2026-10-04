@@ -23,7 +23,45 @@
         "explanation": "Kesalahan umum pada level C1 adalah penggunaan pronomina atau demonstratif ketika terdapat lebih dari satu anteseden potensial dalam jarak dekat, menyebabkan referensi ambigu. Dalam prosa akademis yang padat informasi, multiple noun phrases dapat berkompetisi sebagai anteseden. Penulis mahir harus memastikan referensi anaphoric tidak ambigu, dengan cara: (1) menempatkan pronomina sedekat mungkin dengan anteseden yang dimaksud, (2) menggunakan full noun phrase atau substitusi leksikal yang eksplisit jika konteks tidak cukup jelas, atau (3) merestrukturisasi kalimat.",
         "wrong": "The government consulted with industry representatives and environmental advocates. They were opposed to the new regulations.",
         "correct": "The government consulted with industry representatives and environmental advocates. The latter were opposed to the new regulations, whereas the former expressed cautious support."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Anaphora, Cataphora & Ellipsis in Sophisticated Prose\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Anafora Pronominal & Demonstratif: Gunakan pronoun (it, they, this, that, these, those,...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Kohesi tekstual adalah jalinan referensi linguistik yang mengikat proposisi-proposisi dalam wacana menjadi satu kesatuan makna yang padu."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Anaphora, Cataphora & Ellipsis in Sophisticated Prose\"?",
+          "options": [
+            "The government consulted with industry representatives and environmental advocates. The latter were opposed to the new regulations",
+            "The government consulted with industry representatives and environmental advocates. They were opposed to the new regulations",
+            "The government consulted with industry representatives and environmental advocates. The latter was opposed to the new regulations"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kesalahan umum pada level C1 adalah penggunaan pronomina atau demonstratif ketika terdapat lebih dari satu anteseden potensial dalam jarak dekat, menyebabkan referensi ambigu. Dalam prosa akademis yang padat informasi, multiple noun phrases dapat berkompetisi sebagai anteseden. Penulis mahir harus memastikan referensi anaphoric tidak ambigu, dengan cara: (1) menempatkan pronomina sedekat mungkin dengan anteseden yang dimaksud, (2) menggunakan full noun phrase atau substitusi leksikal yang eksplisit jika konteks tidak cukup jelas, atau (3) merestrukturisasi kalimat."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Helena: \"I've reviewed the manuscript draft, and while the empirical analysis is robust, the discussion section suffers from referential ambiguity. Multiple antecedents compete in several passages.\"\nDr. Mahmoud: \"[...]\"",
+          "options": [
+            "The government consulted with industry representatives and environmental advocates. They were opposed to the new regulations",
+            "Indeed. Paragraph four exemplifies this precisely. When the author writes 'they demonstrated significant correlation,' it's unclear whether 'they' refers to the variables or the participants.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Indeed. Paragraph four exemplifies this precisely. When the author writes 'they demonstrated significant correlation,' it's unclear whether 'they' refers to the variables or the participants.\" (\"Benar. Paragraf keempat mencontohkan hal ini dengan tepat. Ketika penulis menulis 'they demonstrated significant correlation,' tidak jelas apakah 'they' merujuk pada variabel atau partisipan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Mahmoud."
+        }
+      ]
     },
     "vocab": [
       {

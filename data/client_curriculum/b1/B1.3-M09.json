@@ -25,7 +25,45 @@
         "explanation": "Banyak pelajar salah menggunakan 'to + infinitive' setelah phrasal verbs yang berakhiran dengan preposisi 'to'. Yang benar adalah menggunakan gerund (-ing form) karena 'to' di sini adalah preposisi, bukan bagian dari infinitive.",
         "wrong": "I'm looking forward to see you next week.",
         "correct": "I'm looking forward to seeing you next week."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Multi-word Verbs & Idiomatic Fluency in Academic and Informal Dialogues\"?",
+          "options": [
+            "Three-part phrasal verbs selalu berbentuk: verb + adverb/particle + preposition (contoh...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Three-part phrasal verbs (phrasal verbs tiga kata) adalah kombinasi kata kerja + partikel pertama + preposisi yang membentuk makna baru."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Multi-word Verbs & Idiomatic Fluency in Academic and Informal Dialogues\"?",
+          "options": [
+            "I'm looking forward to see you next week",
+            "I'm looking forward to seeing you next week",
+            "I'm looking forward to see you next week always"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pelajar salah menggunakan 'to + infinitive' setelah phrasal verbs yang berakhiran dengan preposisi 'to'. Yang benar adalah menggunakan gerund (-ing form) karena 'to' di sini adalah preposisi, bukan bagian dari infinitive."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"You hit the nail on the head. I've been putting it off too long. Do you get along with everyone in our group?\"\nTom: \"[...]\"",
+          "options": [
+            "Mostly, yes. Though Jake and I don't always see eye to eye on the research approach.",
+            "I'm looking forward to see you next week",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Mostly, yes. Though Jake and I don't always see eye to eye on the research approach.\" (\"Sebagian besar, ya. Meskipun Jake dan aku tidak selalu sependapat tentang pendekatan riset.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

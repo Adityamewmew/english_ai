@@ -25,7 +25,45 @@
         "explanation": "Mahasiswa sering menggunakan bahasa terlalu absolut dalam penulisan akademik, yang tidak mencerminkan kehati-hatian ilmiah. Pernyataan definitif tanpa hedging terdengar tidak profesional dan mengabaikan kemungkinan interpretasi alternatif.",
         "wrong": "This research proves that social media causes depression in teenagers.",
         "correct": "This research suggests that social media use may be associated with depressive symptoms in adolescents."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Abstract Writing, Literature Review & Citation Registers\"?",
+          "options": [
+            "Hedging verbs: suggest, indicate, appear to, seem to, tend to | Contoh: 'The data sugge...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Penulisan akademik memerlukan register bahasa yang formal dan objektif."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Abstract Writing, Literature Review & Citation Registers\"?",
+          "options": [
+            "This research proves that social media causes depression in teenagers always",
+            "This research suggests that social media use may be associated with depressive symptoms in adolescents",
+            "This research proves that social media causes depression in teenagers"
+          ],
+          "correctIndex": 1,
+          "explanation": "Mahasiswa sering menggunakan bahasa terlalu absolut dalam penulisan akademik, yang tidak mencerminkan kehati-hatian ilmiah. Pernyataan definitif tanpa hedging terdengar tidak profesional dan mengabaikan kemungkinan interpretasi alternatif."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Martinez: \"Exactly. Also, your literature review needs more synthesis. Right now, you're just listing what each author said. Try connecting the studies thematically.\"\nSarah: \"[...]\"",
+          "options": [
+            "So instead of 'Johnson found X, then Smith found Y,' I should write something like 'Recent studies converge on the view that...' and cite multiple sources?",
+            "Sorry, I forgot my keys at home.",
+            "This research proves that social media causes depression in teenagers"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"So instead of 'Johnson found X, then Smith found Y,' I should write something like 'Recent studies converge on the view that...' and cite multiple sources?\" (\"Jadi daripada 'Johnson menemukan X, lalu Smith menemukan Y,' saya harus menulis seperti 'Studi-studi terkini konvergen pada pandangan bahwa...' dan mengutip beberapa sumber?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah."
+        }
+      ]
     },
     "vocab": [
       {

@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula salah menggunakan 'is' untuk fitur yang seharusnya menggunakan 'has got', atau sebaliknya. Ingat: 'be' untuk karakteristik umum (tall, short, slim), 'have got' untuk fitur spesifik yang dimiliki (hair, eyes, beard).",
         "wrong": "She is long black hair. He has tall.",
         "correct": "She has got long black hair. He is tall."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Describing Physical Appearance & Style\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Gunakan 'be' (am/is/are) + adjective untuk mendeskripsikan karakteristik umum: He is ta..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Dalam bahasa Inggris, kita menggunakan dua struktur utama untuk mendeskripsikan penampilan fisik seseorang: 'be' (am/is/are) untuk karakteristik permanen seperti tinggi badan dan warna mata, dan 'have got' atau 'has got' untuk fitur yang dimiliki seperti rambut dan aksesori."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Describing Physical Appearance & Style\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "She is long black hair. He has tall",
+            "She has got long black hair. He are tall",
+            "She has got long black hair. He is tall"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula salah menggunakan 'is' untuk fitur yang seharusnya menggunakan 'has got', atau sebaliknya. Ingat: 'be' untuk karakteristik umum (tall, short, slim), 'have got' untuk fitur spesifik yang dimiliki (hair, eyes, beard)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nTom: \"Sarah, I haven't met Lisa before. What does she look like?\"\nSarah: \"[...]\"",
+          "options": [
+            "She is long black hair. He has tall",
+            "Sorry, I forgot my keys at home.",
+            "Well, she's quite tall and slim. She has got long straight black hair."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Well, she's quite tall and slim. She has got long straight black hair.\" (\"Nah, dia cukup tinggi dan langsing. Dia punya rambut hitam lurus panjang.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah."
+        }
+      ]
     },
     "vocab": [
       {

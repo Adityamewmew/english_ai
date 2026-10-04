@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula menggunakan 'will' untuk semua hal di masa depan. Padahal, jika sudah ada rencana atau pengaturan konkret, gunakan 'be going to' atau present continuous, bukan 'will'.",
         "wrong": "I will meet my friend tomorrow at 3pm (salah jika sudah ada janji pasti)",
         "correct": "I'm meeting my friend tomorrow at 3pm (benar untuk arrangement yang sudah fix)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Present Tenses for Future & Ambitions\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Present Simple: Untuk fakta dan opini. Contoh: 'I'm not feeling any fitter' (fakta saat..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengulas penggunaan present tenses (simple, continuous, perfect, perfect continuous) dan future tenses untuk membicarakan fakta, kebiasaan, rencana, dan prediksi."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Present Tenses for Future & Ambitions\"?",
+          "options": [
+            "I will meet my friend tomorrow at 3pm (salah jika sudah ada janji pasti)",
+            "I will meet my friend tomorrow at 3pm (salah jika sudah ada janji pasti) always",
+            "I'm meeting my friend tomorrow at 3pm (benar untuk arrangement yang sudah fix)"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula menggunakan 'will' untuk semua hal di masa depan. Padahal, jika sudah ada rencana atau pengaturan konkret, gunakan 'be going to' atau present continuous, bukan 'will'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLeo: \"Don't you like playing the violin?\"\nMia: \"[...]\"",
+          "options": [
+            "I will meet my friend tomorrow at 3pm (salah jika sudah ada janji pasti)",
+            "Sorry, I forgot my keys at home.",
+            "Not really. I mean, I like playing an instrument. I just don't think I want to continue with the violin."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Not really. I mean, I like playing an instrument. I just don't think I want to continue with the violin.\" (\"Tidak terlalu. Maksudku, aku suka main alat musik. Tapi aku rasa aku tidak mau lanjut dengan violin.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Mia."
+        }
+      ]
     },
     "vocab": [
       {

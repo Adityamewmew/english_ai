@@ -23,7 +23,45 @@
         "explanation": "Siswa sering menggunakan Present Perfect Simple ketika seharusnya menggunakan Continuous untuk menekankan durasi atau proses. Atau sebaliknya, menggunakan Continuous untuk hasil yang sudah pasti selesai. Perhatikan konteks dan fokusnya: apakah Anda ingin menekankan 'sudah selesai' atau 'sudah berapa lama/masih berlangsung'?",
         "wrong": "I have worked on this report all day, so I'm exhausted.",
         "correct": "I have been working on this report all day, so I'm exhausted."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Ongoing Actions vs Finished Results\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Formula: Subject + have/has + been + verb-ing. Digunakan untuk aktivitas yang dimulai d..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Present Perfect Continuous digunakan untuk menekankan durasi atau proses suatu aktivitas yang dimulai di masa lalu dan masih berlanjut atau baru saja selesai, dengan efek yang terlihat sekarang."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Ongoing Actions vs Finished Results\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "so I'm exhausted",
+            "I have worked on this report all day",
+            "I have been working on this report all day"
+          ],
+          "correctIndex": 2,
+          "explanation": "Siswa sering menggunakan Present Perfect Simple ketika seharusnya menggunakan Continuous untuk menekankan durasi atau proses. Atau sebaliknya, menggunakan Continuous untuk hasil yang sudah pasti selesai. Perhatikan konteks dan fokusnya: apakah Anda ingin menekankan 'sudah selesai' atau 'sudah berapa lama/masih berlangsung'?"
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Hi Tom! You look exhausted. What have you been doing?\"\nTom: \"[...]\"",
+          "options": [
+            "I've been preparing the quarterly report since this morning. It's taking forever!",
+            "Sorry, I forgot my keys at home.",
+            "I have worked on this report all day"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"I've been preparing the quarterly report since this morning. It's taking forever!\" (\"Aku sudah menyiapkan laporan triwulan sejak pagi ini. Ini memakan waktu sangat lama!\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

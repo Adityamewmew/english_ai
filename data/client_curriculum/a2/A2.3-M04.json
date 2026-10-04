@@ -24,7 +24,45 @@
         "explanation": "Banyak siswa menggunakan 'then' terlalu sering dalam satu cerita sehingga terdengar monoton dan membosankan. Selain itu, siswa sering salah menempatkan kata hubung di tengah kalimat padahal seharusnya di awal untuk penekanan yang lebih kuat.",
         "wrong": "I woke up then I brushed my teeth then I had breakfast then I went to school.",
         "correct": "At first, I felt tired. Then I brushed my teeth and had breakfast. Suddenly, I realized I was late! In the end, I ran to school."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Chronological Connectors & Suspense\"?",
+          "options": [
+            "Gunakan 'At first' atau 'In the beginning' untuk memulai cerita dan menggambarkan situa...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan belajar cara menceritakan kisah yang menarik dan terstruktur menggunakan kata hubung kronologis (chronological connectors)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "At first",
+            "I woke up then I brushed my teeth then I had breakfast then I went to school",
+            "I woke up then I brushed my teeth then I had breakfast then I went to school always"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak siswa menggunakan 'then' terlalu sering dalam satu cerita sehingga terdengar monoton dan membosankan. Selain itu, siswa sering salah menempatkan kata hubung di tengah kalimat padahal seharusnya di awal untuk penekanan yang lebih kuat."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"You won't believe what happened during my camping trip last weekend!\"\nTom: \"[...]\"",
+          "options": [
+            "Really? Tell me! I love scary camping stories.",
+            "I woke up then I brushed my teeth then I had breakfast then I went to school",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Really? Tell me! I love scary camping stories.\" (\"Benaran? Ceritain dong! Aku suka cerita kemah yang seram.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

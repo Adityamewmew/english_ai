@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula lupa bahwa setelah 'good at' atau 'bad at' harus menggunakan bentuk verb-ing (gerund), bukan bentuk dasar verb. Ini karena 'at' adalah preposisi yang harus diikuti oleh gerund atau noun.",
         "wrong": "I am good at play guitar.",
         "correct": "I am good at playing guitar."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"'Good at' & 'Bad at'\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Pola dasar: Subject + am/is/are + good/bad at + verb-ing. Contoh: I am good at swimming...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan belajar cara mengekspresikan kemampuan dan bakat menggunakan 'good at' dan 'bad at'."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I am good at playing guitar",
+            "I is good at playing guitar",
+            "I am good at play guitar"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak pemula lupa bahwa setelah 'good at' atau 'bad at' harus menggunakan bentuk verb-ing (gerund), bukan bentuk dasar verb. Ini karena 'at' adalah preposisi yang harus diikuti oleh gerund atau noun."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Hi David! Are you joining the school talent show this year?\"\nDavid: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I'm not sure. I'm quite good at playing the guitar, but I'm terrible at performing in front of people.",
+            "I am good at play guitar"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"I'm not sure. I'm quite good at playing the guitar, but I'm terrible at performing in front of people.\" (\"Aku tidak yakin. Aku cukup pandai bermain gitar, tapi aku sangat buruk tampil di depan orang banyak.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

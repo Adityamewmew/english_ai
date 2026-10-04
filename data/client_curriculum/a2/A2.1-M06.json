@@ -21,7 +21,45 @@
         "explanation": "Pemula sering lupa mengubah kata kerja menjadi bentuk lampau (verb 2) pada kalimat positif past simple, atau sebaliknya menggunakan verb 2 setelah 'didn't' pada kalimat negatif.",
         "wrong": "They go to Rome last year. / He didn't went to school yesterday.",
         "correct": "They went to Rome last year. / He didn't go to school yesterday."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Friendship, Have to & Don't Have to\"?",
+          "options": [
+            "Past Simple (Irregular Verbs) - Positif: Subject + Verb 2 (contoh: She liked singing. T...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara menceritakan kejadian masa lalu menggunakan past simple dengan kata kerja tidak beraturan (irregular verbs)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Friendship, Have to & Don't Have to\"?",
+          "options": [
+            "He didn't went to school yesterday",
+            "They went to Rome last year",
+            "They go to Rome last year"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering lupa mengubah kata kerja menjadi bentuk lampau (verb 2) pada kalimat positif past simple, atau sebaliknya menggunakan verb 2 setelah 'didn't' pada kalimat negatif."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nReporter: \"So first of all, when and where did you meet?\"\nRichard: \"[...]\"",
+          "options": [
+            "We first met in 2012, one morning at about 10.30 am on Bondi Beach, in Sydney.",
+            "Sorry, I forgot my keys at home.",
+            "They go to Rome last year"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"We first met in 2012, one morning at about 10.30 am on Bondi Beach, in Sydney.\" (\"Kami pertama kali bertemu pada 2012, suatu pagi sekitar jam 10.30 di Pantai Bondi, Sydney.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Richard."
+        }
+      ]
     },
     "vocab": [
       {

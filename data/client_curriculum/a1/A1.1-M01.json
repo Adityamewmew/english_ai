@@ -21,7 +21,45 @@
         "explanation": "Banyak pemula lupa mengubah bentuk 'to be' sesuai subjeknya, atau salah menggunakan kata tanya",
         "wrong": "I are from Indonesia. Where you from?",
         "correct": "I am from Indonesia. Where are you from?"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Countries, Nationalities & To Be\"?",
+          "options": [
+            "Verb 'to be' berubah sesuai subjek: I am, You/We/They are, He/She/It is",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Di unit pertama ini, kamu akan belajar cara memperkenalkan diri dalam bahasa Inggris."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I are from Indonesia. Where you from?",
+            "I am from Indonesia. Where are you from?",
+            "I is from Indonesia. Where is you from?"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula lupa mengubah bentuk 'to be' sesuai subjeknya, atau salah menggunakan kata tanya"
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJamie: \"Nice shirt.\"\nMarta: \"[...]\"",
+          "options": [
+            "I are from Indonesia. Where you from?",
+            "Sorry, I forgot my keys at home.",
+            "Thank you. It's the new Barcelona shirt."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Thank you. It's the new Barcelona shirt.\" (\"Terima kasih. Ini kaos Barcelona yang baru.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Marta."
+        }
+      ]
     },
     "vocab": [
       {

@@ -24,7 +24,45 @@
         "explanation": "Kesalahan paling umum adalah menambahkan -ed pada irregular verbs karena terbiasa dengan pola regular verbs. Irregular verbs memiliki bentuk past tense khusus yang tidak boleh ditambahkan -ed. Hafalkan bentuk past tense yang benar untuk setiap irregular verb.",
         "wrong": "I goed to the cinema yesterday. She buyed a new bag. We eated at a restaurant.",
         "correct": "I went to the cinema yesterday. She bought a new bag. We ate at a restaurant."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"Common Irregular Past Verbs\", bagaimana perubahan atau padanan yang benar untuk \"go\"?",
+          "options": [
+            "Tidak ada perubahan tenses pada go",
+            "go selalu dihilangkan",
+            "went"
+          ],
+          "correctIndex": 2,
+          "explanation": "Dalam materi ini: go berubah atau berpadanan menjadi \"went\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I goed to the cinema yesterday. She buyed a new bag. We eated at a restaurant always",
+            "I goed to the cinema yesterday. She buyed a new bag. We eated at a restaurant",
+            "I went to the cinema yesterday. She bought a new bag. We ate at a restaurant"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kesalahan paling umum adalah menambahkan -ed pada irregular verbs karena terbiasa dengan pola regular verbs. Irregular verbs memiliki bentuk past tense khusus yang tidak boleh ditambahkan -ed. Hafalkan bentuk past tense yang benar untuk setiap irregular verb."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Hi Tom! How was your weekend?\"\nTom: \"[...]\"",
+          "options": [
+            "I goed to the cinema yesterday. She buyed a new bag. We eated at a restaurant",
+            "Sorry, I forgot my keys at home.",
+            "It was great! I went to the beach on Saturday. What did you do?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"It was great! I went to the beach on Saturday. What did you do?\" (\"Bagus sekali! Aku pergi ke pantai pada hari Sabtu. Apa yang kamu lakukan?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

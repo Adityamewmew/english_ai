@@ -24,7 +24,45 @@
         "explanation": "Banyak siswa gagal membedakan antara pemahaman literal dan inferensial, atau menggunakan register yang tidak konsisten. Dalam konteks diplomatik dan akademis, ketidaktepatan register atau kegagalan membaca implikasi tersembunyi dapat menurunkan skor drastis.",
         "wrong": "The speaker said that the policy is bad and we shouldn't do it because it's wrong.",
         "correct": "The speaker articulated concerns regarding the policy's feasibility, suggesting that its implementation might be predicated on untenable assumptions."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Komprehensif Critical Dialectics & Bridge to C2\"?",
+          "options": [
+            "Listening Comprehension: Pahami pidato diplomatik, kuliah akademis, atau diskusi filoso...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Ujian kelulusan ini mengevaluasi kemampuan Anda dalam mengintegrasikan keempat keterampilan bahasa pada level C1 Advanced: mendengarkan pidato diplomatik kompleks, membaca teks filosofis dan akademis dengan pemahaman kritis, menulis sintesis argumentatif yang koheren, serta berbicara dalam konteks debat dan negosiasi kritis."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "The speaker said that the policy is bad and we shouldn't do it because it's wrong",
+            "The speaker articulated concerns regarding the policy's feasibility",
+            "The speaker said that the policy is bad and we shouldn't do it because it's wrong always"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak siswa gagal membedakan antara pemahaman literal dan inferensial, atau menggunakan register yang tidak konsisten. Dalam konteks diplomatik dan akademis, ketidaktepatan register atau kegagalan membaca implikasi tersembunyi dapat menurunkan skor drastis."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nAmbassador Chen: \"I would respectfully contend that the current institutional framework, while imperfect, has demonstrated remarkable resilience in navigating unprecedented geopolitical turbulence.\"\nMinister Okafor: \"[...]\"",
+          "options": [
+            "With due respect, Ambassador, that assessment presupposes that resilience alone constitutes legitimacy, which I would argue is a fundamentally flawed premise.",
+            "The speaker said that the policy is bad and we shouldn't do it because it's wrong",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"With due respect, Ambassador, that assessment presupposes that resilience alone constitutes legitimacy, which I would argue is a fundamentally flawed premise.\" (\"Dengan hormat, Duta Besar, penilaian itu mengandaikan bahwa ketahanan saja merupakan legitimasi, yang menurut saya adalah premis yang pada dasarnya cacat.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Minister Okafor."
+        }
+      ]
     },
     "vocab": [
       {

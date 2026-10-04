@@ -22,7 +22,45 @@
         "explanation": "Pemula sering salah menggunakan possessive adjective dan pronoun. Ingat: possessive adjective harus diikuti kata benda, sedangkan possessive pronoun berdiri sendiri tanpa kata benda.",
         "wrong": "That sandwich is my. / The book is your.",
         "correct": "That sandwich is mine. / The book is yours."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Comparatives & Family Relationships\"?",
+          "options": [
+            "Possessive adjectives (my, your, his, her, our, their) diletakkan SEBELUM kata benda. C...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara menyatakan kepemilikan dalam bahasa Inggris, baik dengan kata sifat kepemilikan (my, your, his, her) maupun kata ganti kepemilikan (mine, yours, his, hers)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "That sandwich is mine",
+            "That sandwich is my",
+            "The book is your"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering salah menggunakan possessive adjective dan pronoun. Ingat: possessive adjective harus diikuti kata benda, sedangkan possessive pronoun berdiri sendiri tanpa kata benda."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nKathy: \"Can I borrow your yellow and black shirt?\"\nLucy: \"[...]\"",
+          "options": [
+            "Of course you can.",
+            "That sandwich is my",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Of course you can.\" (\"Tentu saja boleh.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Lucy."
+        }
+      ]
     },
     "vocab": [
       {

@@ -20,7 +20,45 @@
         "explanation": "Banyak pemula bingung membedakan antara 'have something done' (meminta orang lain melakukan sesuatu untuk kita) dengan 'have to do something' (harus melakukan sesuatu sendiri). Struktur causative have menunjukkan bahwa subjek tidak melakukan aksi tersebut sendiri, melainkan orang lain yang melakukan.",
         "wrong": "I had to repair my phone (berarti saya yang memperbaikinya sendiri)",
         "correct": "I had my phone repaired (berarti saya minta orang lain/teknisi memperbaikannya)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Society, Trends & Complex Syntax\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Passive Voice (Lanjutan): Agent lebih mungkin dibagikan dalam passive daripada happy to...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas penggunaan struktur pasif lanjutan dan causative have untuk mengekspresikan situasi yang dialami atau dilakukan oleh orang lain."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Society, Trends & Complex Syntax\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I had my phone repaired (berarti saya minta orang lain",
+            "I had to repair my phone (berarti saya yang memperbaikinya sendiri)",
+            "I had to repair my phone (berarti saya yang memperbaikinya sendiri) always"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak pemula bingung membedakan antara 'have something done' (meminta orang lain melakukan sesuatu untuk kita) dengan 'have to do something' (harus melakukan sesuatu sendiri). Struktur causative have menunjukkan bahwa subjek tidak melakukan aksi tersebut sendiri, melainkan orang lain yang melakukan."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"Did you hear that radio show about internet rage? It's crazy how much anger there is online.\"\nJake: \"[...]\"",
+          "options": [
+            "I had to repair my phone (berarti saya yang memperbaikinya sendiri)",
+            "Yeah, I know. I think people feel braver behind a screen. They say things they'd never say face to face.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Yeah, I know. I think people feel braver behind a screen. They say things they'd never say face to face.\" (\"Ya, aku tahu. Menurutku orang merasa lebih berani di balik layar. Mereka bilang hal-hal yang tidak akan pernah mereka katakan secara langsung.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Jake."
+        }
+      ]
     },
     "vocab": [
       {

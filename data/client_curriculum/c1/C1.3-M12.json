@@ -23,7 +23,45 @@
         "explanation": "Mahasiswa C1 sering menyandingkan kutipan dari berbagai sumber dengan transisi kontras (however, conversely, in contrast) namun gagal mengintegrasikan mereka menjadi argumen terpadu. Hasilnya adalah kolase deskriptif, bukan sintesis analitis. Sintesis sejati memerlukan 'third voice'—perspektif penulis yang muncul dari dialog antar-sumber, bukan sekadar moderator netral.",
         "wrong": "Smith argues for policy A, while Johnson advocates policy B. Meanwhile, Lee suggests policy C. Each perspective has merits. Further research is needed.",
         "correct": "While Smith's advocacy for policy A rests on efficiency metrics and Johnson's support for policy B emphasises equity considerations, Lee's proposal for policy C implicitly attempts to reconcile these values through a phased implementation framework. This synthesis, though not explicitly articulated by Lee, offers a productive path forward that honours both efficiency and equity as co-constitutive rather than competing objectives."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Synthesising Multiple Opposing Sources into Unified Arguments\"?",
+          "options": [
+            "Identifikasi kontradiksi substantif (bukan semantik): Pisahkan perbedaan metodologis, a...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Sintesis multi-sumber merupakan keterampilan puncak akademis yang mengintegrasikan perspektif bertentangan dari beragam literatur menjadi argumen koheren yang orisinal."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Synthesising Multiple Opposing Sources into Unified Arguments\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "while Johnson advocates policy B. Meanwhile",
+            "While Smith's advocacy for policy A rests on efficiency metrics and Johnson's support for policy B emphasises equity considerations",
+            "Smith argues for policy A"
+          ],
+          "correctIndex": 1,
+          "explanation": "Mahasiswa C1 sering menyandingkan kutipan dari berbagai sumber dengan transisi kontras (however, conversely, in contrast) namun gagal mengintegrasikan mereka menjadi argumen terpadu. Hasilnya adalah kolase deskriptif, bukan sintesis analitis. Sintesis sejati memerlukan 'third voice'—perspektif penulis yang muncul dari dialog antar-sumber, bukan sekadar moderator netral."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Martinez: \"I must say, the candidate's attempt to synthesise these four conflicting studies is ambitious, but I'm concerned the synthesis remains somewhat superficial. What's your assessment, Raj?\"\nDr. Patel: \"[...]\"",
+          "options": [
+            "I share your reservation. While she adequately juxtaposes the divergent conclusions, she hasn't quite articulated a meta-theoretical framework that would genuinely reconcile them. It reads more like a sophisticated literature review than a true synthesis.",
+            "Sorry, I forgot my keys at home.",
+            "Smith argues for policy A"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"I share your reservation. While she adequately juxtaposes the divergent conclusions, she hasn't quite articulated a meta-theoretical framework that would genuinely reconcile them. It reads more like a sophisticated literature review than a true synthesis.\" (\"Saya memiliki kekhawatiran yang sama. Meskipun dia cukup baik dalam menyandingkan kesimpulan-kesimpulan yang berbeda, dia belum benar-benar mengartikulasikan kerangka meta-teoretis yang sungguh-sungguh menyelaraskan mereka. Ini lebih terasa seperti tinjauan pustaka yang canggih ketimbang sintesis sejati.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Patel."
+        }
+      ]
     },
     "vocab": [
       {

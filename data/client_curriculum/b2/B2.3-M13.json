@@ -24,7 +24,45 @@
         "explanation": "Siswa B2 sering keliru menggunakan past modals dengan bentuk infinitive biasa alih-alih past participle, atau salah menempatkan elemen fokus dalam cleft sentences. Kesalahan lain adalah gagal melakukan inversi penuh setelah negative adverb atau menggunakan nominalization secara berlebihan hingga kalimat menjadi tidak natural.",
         "wrong": "The city should implement better policies years ago. It is economic inequality which are the main problem. Rarely we see such comprehensive reforms.",
         "correct": "The city should have implemented better policies years ago. It is economic inequality that is the main problem. Rarely do we see such comprehensive reforms."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Comprehensive 4-Skills CEFR B2 Graduation Exam\"?",
+          "options": [
+            "Cleft Sentences: Digunakan untuk memberikan penekanan pada informasi tertentu. Formula:...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Ujian kelulusan akhir B2 ini dirancang untuk mengevaluasi penguasaan komprehensif keempat keterampilan bahasa Inggris pada level CEFR B2."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Comprehensive 4-Skills CEFR B2 Graduation Exam\"?",
+          "options": [
+            "The city should have implemented better policies years ago. It are economic inequality that are the main problem. Rarely do we see such comprehensive reforms",
+            "The city should have implemented better policies years ago. It is economic inequality that is the main problem. Rarely do we see such comprehensive reforms",
+            "The city should implement better policies years ago. It is economic inequality which are the main problem. Rarely we see such comprehensive reforms"
+          ],
+          "correctIndex": 1,
+          "explanation": "Siswa B2 sering keliru menggunakan past modals dengan bentuk infinitive biasa alih-alih past participle, atau salah menempatkan elemen fokus dalam cleft sentences. Kesalahan lain adalah gagal melakukan inversi penuh setelah negative adverb atau menggunakan nominalization secara berlebihan hingga kalimat menjadi tidak natural."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Sarah: \"Never have I seen such a stark illustration of income disparity as in today's presentation on megapolitan growth.\"\nDr. Rahman: \"[...]\"",
+          "options": [
+            "Indeed. What concerns me most is the lack of sustainable infrastructure planning in these rapidly expanding urban areas.",
+            "Sorry, I forgot my keys at home.",
+            "The city should implement better policies years ago. It is economic inequality which are the main problem. Rarely we see such comprehensive reforms"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Indeed. What concerns me most is the lack of sustainable infrastructure planning in these rapidly expanding urban areas.\" (\"Memang. Yang paling membuat saya khawatir adalah kurangnya perencanaan infrastruktur berkelanjutan di wilayah perkotaan yang berkembang pesat ini.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Rahman."
+        }
+      ]
     },
     "vocab": [
       {

@@ -20,7 +20,45 @@
         "explanation": "Pemula sering menggunakan past simple padahal ingin menggambarkan aksi yang sedang berlangsung di masa lalu. Past continuous harus dipakai untuk menunjukkan durasi atau aksi yang sedang terjadi.",
         "wrong": "Derek ran when he fell down",
         "correct": "Derek was running when he fell down"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Sports, Rules & Modals of Advice\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Past Continuous: was/were + verb-ing — Digunakan untuk aksi yang sedang berlangsung di ...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara menggunakan past continuous tense untuk menggambarkan aksi yang sedang berlangsung di waktu tertentu di masa lalu."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Sports, Rules & Modals of Advice\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "Derek was running when he fell down",
+            "Derek ran when he fell down",
+            "Derek were running when he fell down"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering menggunakan past simple padahal ingin menggambarkan aksi yang sedang berlangsung di masa lalu. Past continuous harus dipakai untuk menunjukkan durasi atau aksi yang sedang terjadi."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nStudent A: \"I'm like Gemma because I don't really like sport.\"\nStudent B: \"[...]\"",
+          "options": [
+            "Derek ran when he fell down",
+            "Sorry, I forgot my keys at home.",
+            "I really like running, so I'm like Andy."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"I really like running, so I'm like Andy.\" (\"Aku sangat suka lari, jadi aku seperti Andy.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Student B."
+        }
+      ]
     },
     "vocab": [
       {

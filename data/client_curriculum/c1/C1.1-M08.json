@@ -22,7 +22,45 @@
         "explanation": "Pemula sering mencampur struktur conditional yang berbeda atau menggunakan 'will' di klausa 'if'. Ingat, setiap tipe conditional memiliki pola tenses yang tetap dan tidak boleh dicampur sembarangan kecuali dalam mixed conditionals yang memang dirancang untuk menghubungkan waktu berbeda.",
         "wrong": "If you will take this medicine, you won't get headaches.",
         "correct": "If you take this medicine, you won't get headaches."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Participle Clauses & Organization\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Zero Conditional: If + present simple, present simple. Contoh: If surgeons run through ...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Unit ini berfokus pada penggunaan kalimat bersyarat (conditionals) dalam berbagai tipe, termasuk mixed conditionals yang menggabungkan waktu berbeda."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Participle Clauses & Organization\"?",
+          "options": [
+            "If you will take this medicine",
+            "you won't get headaches",
+            "If you take this medicine"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pemula sering mencampur struktur conditional yang berbeda atau menggunakan 'will' di klausa 'if'. Ingat, setiap tipe conditional memiliki pola tenses yang tetap dan tidak boleh dicampur sembarangan kecuali dalam mixed conditionals yang memang dirancang untuk menghubungkan waktu berbeda."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Have you read that book about checklists? It's really interesting.\"\nTom: \"[...]\"",
+          "options": [
+            "If you will take this medicine",
+            "Sorry, I forgot my keys at home.",
+            "Not yet. Why do you recommend it?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Not yet. Why do you recommend it?\" (\"Belum. Kenapa kamu merekomendasikannya?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

@@ -344,7 +344,7 @@ export function SpeakingLabDrill({
             ) : isDrillRecording ? (
               <>
                 <MicOff className="w-4 h-4" />
-                <span>Mendengarkan... (Klik untuk Berhenti)</span>
+                <span>Mendengarkan... (Stop)</span>
               </>
             ) : (
               <>
@@ -353,6 +353,15 @@ export function SpeakingLabDrill({
               </>
             )}
           </Button>
+
+          {isDrillRecording && (
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 text-rose-600 dark:text-rose-400 text-xs font-bold animate-pulse">
+              <span className="w-1.5 h-3 bg-rose-500 rounded-full animate-pulse" />
+              <span className="w-1.5 h-4.5 bg-rose-500 rounded-full animate-pulse [animation-delay:150ms]" />
+              <span className="w-1.5 h-2.5 bg-rose-500 rounded-full animate-pulse [animation-delay:300ms]" />
+              <span className="ml-1 text-[11px]">Sedang Merekam...</span>
+            </div>
+          )}
         </div>
 
         {/* Real-Time Speech Score & Word Analysis Card with Side-by-Side Playback */}

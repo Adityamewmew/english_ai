@@ -20,7 +20,45 @@
         "explanation": "Pemula sering lupa menambahkan prepositions atau determiners sebelum relative pronouns ketika ingin merujuk pada keseluruhan atau sebagian kelompok. Mereka juga sering salah menempatkan 'however' di awal kalimat tanpa memahami strukturnya sebagai concessive conjunction.",
         "wrong": "They found ancient scripts, which they learned had been written by priests. / However, I tried hard, I couldn't understand.",
         "correct": "They found ancient scripts, all of which they learned had been written by priests. / However hard I tried, I couldn't understand. (atau: I tried hard; however, I couldn't understand.)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Language, Cryptography & Concession\"?",
+          "options": [
+            "Relative clauses dengan determiners dan prepositions: 'all of which', 'many of whom', '...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas tentang kode dan bahasa dari perspektif linguistik dan kriptografi."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Language, Cryptography & Concession\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "They found ancient scripts",
+            "which they learned had been written by priests",
+            "They found ancient scripts"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering lupa menambahkan prepositions atau determiners sebelum relative pronouns ketika ingin merujuk pada keseluruhan atau sebagian kelompok. Mereka juga sering salah menempatkan 'however' di awal kalimat tanpa memahami strukturnya sebagai concessive conjunction."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"I tried to be a bit afraid to say something I think like in the foreign language. I can be a lot more assertive and forceful in my own language.\"\nMarco: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "They found ancient scripts",
+            "I feel really self-conscious if I speak another language, because everyone is listening and thinking I'm making mistakes all the time."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"I feel really self-conscious if I speak another language, because everyone is listening and thinking I'm making mistakes all the time.\" (\"Saya merasa sangat malu jika berbicara bahasa lain, karena semua orang mendengarkan dan berpikir saya terus membuat kesalahan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Marco."
+        }
+      ]
     },
     "vocab": [
       {

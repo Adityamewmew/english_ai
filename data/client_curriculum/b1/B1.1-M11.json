@@ -19,7 +19,45 @@
         "explanation": "Pemula sering lupa mengubah tenses saat melaporkan pernyataan (misalnya tetap menggunakan present simple padahal harus past simple). Kesalahan lain adalah menggunakan 'say' dengan object atau 'tell' tanpa object.",
         "wrong": "He said me that he was tired. / She told that she liked it.",
         "correct": "He told me that he was tired. / She said that she liked it."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Perhatikan kalimat langsung: \"I work hard\". Bagaimana bentuk kalimat tidak langsung (reported/transformed) yang benar?",
+          "options": [
+            "He say that he worked hard",
+            "He said that he worked hard",
+            "I work hard"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah pada \"Passive Voice - Present & Past Simple\": bentuk yang tepat adalah \"He said that he worked hard\". Perhatikan perubahan tenses dan kata kerja bantunya."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "He told me that he was tired",
+            "He said me that he was tired",
+            "She told that she liked it"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering lupa mengubah tenses saat melaporkan pernyataan (misalnya tetap menggunakan present simple padahal harus past simple). Kesalahan lain adalah menggunakan 'say' dengan object atau 'tell' tanpa object."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nOlivia: \"What!? Let me see.\"\nMegan: \"[...]\"",
+          "options": [
+            "He said me that he was tired",
+            "Do you see that? 'Once again'! Like it happens every day!",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Do you see that? 'Once again'! Like it happens every day!\" (\"Kamu lihat itu? 'Lagi'! Seolah-olah terjadi setiap hari!\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Megan."
+        }
+      ]
     },
     "vocab": [
       {

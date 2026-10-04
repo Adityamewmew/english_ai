@@ -20,7 +20,45 @@
         "explanation": "Pemula sering salah menggunakan 'was' untuk subjek jamak atau 'were' untuk subjek tunggal. Ingat: I/he/she/it → was; you/we/they → were",
         "wrong": "They was famous athletes.",
         "correct": "They were famous athletes."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"High Flyers - Past Simple & Famous People\"?",
+          "options": [
+            "Past Simple 'was/were': I was, you were, he/she/it was, we/they were. Contoh: 'Valentin...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara berbicara tentang masa lalu menggunakan 'was/were' dan Past Simple untuk menceritakan pencapaian atau kejadian yang sudah terjadi."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "They was famous athletes",
+            "They were famous athletes",
+            "They was famous athletes"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering salah menggunakan 'was' untuk subjek jamak atau 'were' untuk subjek tunggal. Ingat: I/he/she/it → was; you/we/they → were"
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nTeacher: \"What are the names of the two people in the photos?\"\nStudent: \"[...]\"",
+          "options": [
+            "They are Mother Teresa and Nelson Mandela.",
+            "They was famous athletes",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"They are Mother Teresa and Nelson Mandela.\" (\"Mereka adalah Ibu Teresa dan Nelson Mandela.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Student."
+        }
+      ]
     },
     "vocab": [
       {

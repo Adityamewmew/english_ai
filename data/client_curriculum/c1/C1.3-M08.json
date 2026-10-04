@@ -23,7 +23,45 @@
         "explanation": "Mahasiswa C1 sering jatuh ke dalam dua ekstrem: terlalu defensif (terdengar emosional dan tidak profesional) atau terlalu pasif (kehilangan kredibilitas akademis). Penting untuk menggunakan language of concession tanpa melemahkan argumen inti.",
         "wrong": "The reviewer is completely wrong about our sample size. We know what we're doing.",
         "correct": "While we acknowledge the reviewer's concerns regarding sample size, our n=150 exceeds the threshold established by Chen et al. (2023) for this type of longitudinal analysis, and we have addressed potential confounding variables through stratified sampling."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Academic Peer Review & Defending Original Scientific Theses\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Gunakan hedging language untuk menyampaikan keterbatasan: 'While we acknowledge that......"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Peer review adalah proses evaluasi kritis oleh para ahli sejawat dalam suatu disiplin ilmu."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Academic Peer Review & Defending Original Scientific Theses\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "The reviewer is completely wrong about our sample size. We know what we're doing always",
+            "The reviewer is completely wrong about our sample size. We know what we're doing",
+            "While we acknowledge the reviewer's concerns regarding sample size"
+          ],
+          "correctIndex": 2,
+          "explanation": "Mahasiswa C1 sering jatuh ke dalam dua ekstrem: terlalu defensif (terdengar emosional dan tidak profesional) atau terlalu pasif (kehilangan kredibilitas akademis). Penting untuk menggunakan language of concession tanpa melemahkan argumen inti."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nProf. Chen: \"Dr. Williams, your findings are compelling within the experimental setting, but I'm concerned about the ecological validity. How would these results translate to authentic classroom environments with inherent unpredictability?\"\nDr. Williams: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Thank you for raising that critical point, Professor. While I acknowledge the controlled nature of our initial study, we conducted a follow-up naturalistic observation across twelve diverse classrooms to assess precisely this concern. The effect sizes, while somewhat attenuated, remained statistically significant.",
+            "The reviewer is completely wrong about our sample size. We know what we're doing"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Thank you for raising that critical point, Professor. While I acknowledge the controlled nature of our initial study, we conducted a follow-up naturalistic observation across twelve diverse classrooms to assess precisely this concern. The effect sizes, while somewhat attenuated, remained statistically significant.\" (\"Terima kasih telah mengangkat poin kritis itu, Profesor. Meskipun saya mengakui sifat terkontrol dari studi awal kami, kami melakukan observasi naturalistik lanjutan di dua belas kelas yang beragam untuk menilai kekhawatiran ini secara tepat. Ukuran efeknya, meskipun agak melemah, tetap signifikan secara statistik.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Williams."
+        }
+      ]
     },
     "vocab": [
       {

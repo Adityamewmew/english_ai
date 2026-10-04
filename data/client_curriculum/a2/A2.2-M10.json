@@ -24,7 +24,45 @@
         "explanation": "Banyak siswa salah menambahkan 'to' setelah 'should' atau 'shouldn't' karena terpengaruh oleh 'ought to'. Ingat: 'should' dan 'shouldn't' langsung diikuti verb tanpa 'to', hanya 'ought' yang memerlukan 'to'.",
         "wrong": "You should to exercise every day. / She shouldn't to skip breakfast.",
         "correct": "You should exercise every day. / She shouldn't skip breakfast. / You ought to exercise every day."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Should, Shouldn't & Ought To\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Should + verb (infinitive tanpa 'to'): Digunakan untuk memberikan saran positif. Contoh...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Modal verbs 'should', 'shouldn't', dan 'ought to' digunakan untuk memberikan saran atau nasihat."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Should, Shouldn't & Ought To\"?",
+          "options": [
+            "She shouldn't to skip breakfast",
+            "You should exercise every day",
+            "You should to exercise every day"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak siswa salah menambahkan 'to' setelah 'should' atau 'shouldn't' karena terpengaruh oleh 'ought to'. Ingat: 'should' dan 'shouldn't' langsung diikuti verb tanpa 'to', hanya 'ought' yang memerlukan 'to'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLisa: \"I know, but I don't have time. What should I do?\"\nDavid: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "You should prepare something simple the night before, like overnight oats. And you ought to sleep earlier too.",
+            "You should to exercise every day"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"You should prepare something simple the night before, like overnight oats. And you ought to sleep earlier too.\" (\"Kamu sebaiknya menyiapkan sesuatu yang sederhana di malam sebelumnya, seperti oat semalaman. Dan kamu juga sebaiknya tidur lebih awal.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

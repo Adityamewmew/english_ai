@@ -24,7 +24,45 @@
         "explanation": "Kesalahan paling umum adalah menulis 'didn't used to' atau 'Did you used to'. Ingat, setelah 'did/didn't', kata kerja selalu kembali ke bentuk dasar. Jadi 'used' harus berubah menjadi 'use' (tanpa d).",
         "wrong": "I didn't used to eat spicy food. Did she used to live in Jakarta?",
         "correct": "I didn't use to eat spicy food. Did she use to live in Jakarta?"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Comparing Eras with 'Used To'\"?",
+          "options": [
+            "Bentuk Positive: Subject + used to + verb (base form). Contoh: 'I used to play outside ...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Struktur 'used to' adalah cara khusus untuk membicarakan kebiasaan atau keadaan yang benar di masa lalu, tetapi sekarang sudah tidak berlaku lagi."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Comparing Eras with 'Used To'\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I didn't used to eat spicy food. Did she used to live in Jakarta?",
+            "I didn't use to eat spicy food. Did she use to live in Jakarta?",
+            "I didn't used to eat spicy food. Did she used to live in Jakarta? always"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kesalahan paling umum adalah menulis 'didn't used to' atau 'Did you used to'. Ingat, setelah 'did/didn't', kata kerja selalu kembali ke bentuk dasar. Jadi 'used' harus berubah menjadi 'use' (tanpa d)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Grandma, did you use to have smartphones when you were young?\"\nGrandma: \"[...]\"",
+          "options": [
+            "No, dear. We didn't use to have smartphones at all! We used to write letters to friends and wait for weeks to get a reply.",
+            "I didn't used to eat spicy food. Did she used to live in Jakarta?",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"No, dear. We didn't use to have smartphones at all! We used to write letters to friends and wait for weeks to get a reply.\" (\"Tidak, sayang. Dulu kami tidak punya smartphone sama sekali! Kami biasa menulis surat kepada teman dan menunggu berminggu-minggu untuk mendapat balasan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Grandma."
+        }
+      ]
     },
     "vocab": [
       {

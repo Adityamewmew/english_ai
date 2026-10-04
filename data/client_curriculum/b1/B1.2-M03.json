@@ -23,7 +23,45 @@
         "explanation": "Banyak pelajar menggunakan Simple Past padahal masalahnya masih berlangsung atau baru saja terjadi. Gunakan Present Perfect untuk masalah yang berdampak pada situasi saat ini, dan Past Simple hanya untuk kejadian yang sudah selesai sepenuhnya.",
         "wrong": "My flight delayed two hours ago and I still wait here.",
         "correct": "My flight has been delayed for two hours and I'm still waiting here."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Travel Dilemmas, Booking Flights & Problem Resolution at Transit Hubs\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Gunakan Present Perfect untuk menjelaskan masalah yang baru terjadi: 'My luggage has be...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Ketika bepergian melalui bandara internasional, Anda akan menghadapi berbagai situasi yang memerlukan komunikasi yang jelas dan asertif namun tetap sopan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "My flight have been delayed for two hours and I'm still waiting here",
+            "My flight delayed two hours ago and I still wait here",
+            "My flight has been delayed for two hours and I'm still waiting here"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pelajar menggunakan Simple Past padahal masalahnya masih berlangsung atau baru saja terjadi. Gunakan Present Perfect untuk masalah yang berdampak pada situasi saat ini, dan Past Simple hanya untuk kejadian yang sudah selesai sepenuhnya."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Here they are. I'm quite worried because I have a connecting flight to Sydney in two hours, and I need some items from my suitcase.\"\nAgent: \"[...]\"",
+          "options": [
+            "My flight delayed two hours ago and I still wait here",
+            "Sorry, I forgot my keys at home.",
+            "Let me check our system. It appears your luggage was left behind in Jakarta due to weight restrictions. It will arrive on the next flight in four hours."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Let me check our system. It appears your luggage was left behind in Jakarta due to weight restrictions. It will arrive on the next flight in four hours.\" (\"Biar saya cek sistem kami. Terlihat bagasi Anda tertinggal di Jakarta karena pembatasan berat. Bagasi akan tiba dengan penerbangan berikutnya dalam empat jam.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Agent."
+        }
+      ]
     },
     "vocab": [
       {

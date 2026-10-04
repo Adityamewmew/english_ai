@@ -23,7 +23,45 @@
         "explanation": "Penutur tingkat mahir sering menggunakan frasa generik seperti \"the court decided\" atau \"the judge said,\" yang terdengar simplitis dalam konteks yurisprudensi. Grandmaster C2 membedakan register dengan presisi: gunakan \"the Court held,\" \"Justice X, writing for the majority, opined,\" atau \"the dissent contended.\" Kesalahan lain adalah mencampurkan register argumentatif dengan bahasa jurnalistik — hindari sensasionalisme (\"shocking ruling\") demi objektivitas analitis (\"the ruling departs significantly from established precedent\"). Perbedaan ini memisahkan komentar awam dari analisis konstitusional profesional.",
         "wrong": "The Supreme Court said that the law was wrong and they changed their mind from before, which was a big surprise to everyone.",
         "correct": "The Court, in a 5-4 decision authored by Chief Justice Roberts, held the statute unconstitutional, thereby departing from precedent established in *Chevron* and signaling a doctrinal shift towards textualist statutory construction."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Supreme Court & Constitutional Jurisprudence Discourse\"?",
+          "options": [
+            "Gunakan pasif agentless untuk menekankan prinsip hukum di atas aktor: \"Precedent may be...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Wacana yurisprudensi konstitusional menuntut penguasaan terminologi hukum yang presisi dan kemampuan mengurai doktrin filosofis yang berlapis."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "The Supreme Court said that the law was wrong and they changed their mind from before",
+            "The Court",
+            "which was a big surprise to everyone"
+          ],
+          "correctIndex": 1,
+          "explanation": "Penutur tingkat mahir sering menggunakan frasa generik seperti \"the court decided\" atau \"the judge said,\" yang terdengar simplitis dalam konteks yurisprudensi. Grandmaster C2 membedakan register dengan presisi: gunakan \"the Court held,\" \"Justice X, writing for the majority, opined,\" atau \"the dissent contended.\" Kesalahan lain adalah mencampurkan register argumentatif dengan bahasa jurnalistik — hindari sensasionalisme (\"shocking ruling\") demi objektivitas analitis (\"the ruling departs significantly from established precedent\"). Perbedaan ini memisahkan komentar awam dari analisis konstitusional profesional."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nProfessor Martinez: \"David, your textualist framework presupposes that constitutional meaning crystallized in 1789, yet surely the Framers anticipated evolution. Doesn't rigid originalism ossify rights in an antiquated paradigm?\"\nProfessor Chen: \"[...]\"",
+          "options": [
+            "On the contrary, Elena. Originalism constrains judicial overreach. If contemporary mores dictate meaning, we've effectively granted nine unelected jurists legislative authority—a manifest subversion of democratic legitimacy.",
+            "The Supreme Court said that the law was wrong and they changed their mind from before",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"On the contrary, Elena. Originalism constrains judicial overreach. If contemporary mores dictate meaning, we've effectively granted nine unelected jurists legislative authority—a manifest subversion of democratic legitimacy.\" (\"Sebaliknya, Elena. Originalisme membatasi kelebihan kekuasaan yudisial. Jika nilai-nilai kontemporer mendikte makna, kita secara efektif telah memberikan sembilan yuris yang tidak terpilih kewenangan legislatif—suatu subversi nyata terhadap legitimasi demokratis.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Professor Chen."
+        }
+      ]
     },
     "vocab": [
       {

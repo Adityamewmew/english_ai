@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa lupa menambahkan penjelasan setelah meminta maaf, sehingga terdengar tidak tulus. Hindari permintaan maaf yang terlalu singkat atau tanpa konteks.",
         "wrong": "Sorry.",
         "correct": "I'm really sorry for forgetting your birthday. I didn't mean to hurt your feelings."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Friendship Qualities, Conflicts & Apologizing Sincerely\"?",
+          "options": [
+            "Friendship phrasal verbs: 'get on well with someone' (akur dengan seseorang), 'fall out...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Dalam pertemanan, kita perlu mengekspresikan kualitas hubungan, mengatasi konflik, dan meminta maaf dengan tulus."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Friendship Qualities, Conflicts & Apologizing Sincerely\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "Bentuk kalimat keliru",
+            "I'm really sorry for forgetting your birthday. I didn't mean to hurt your feelings",
+            "Sorry"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak siswa lupa menambahkan penjelasan setelah meminta maaf, sehingga terdengar tidak tulus. Hindari permintaan maaf yang terlalu singkat atau tanpa konteks."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Emma, I'm really sorry for not coming to the party yesterday. I know you were counting on me.\"\nEmma: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I was so upset, Sarah. You promised you'd be there, and I waited for you the whole evening.",
+            "Sorry"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"I was so upset, Sarah. You promised you'd be there, and I waited for you the whole evening.\" (\"Aku sangat kecewa, Sarah. Kamu berjanji akan datang, dan aku menunggumu sepanjang malam.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Emma."
+        }
+      ]
     },
     "vocab": [
       {

@@ -23,7 +23,45 @@
         "explanation": "Kesalahan umum di level C1 adalah memberikan konsesi tanpa segera merefutasinya dengan argumen yang lebih persuasif, sehingga melemahkan posisi Anda. Konsesi harus selalu diikuti dengan 'pivot' yang mengembalikan kekuatan argumen utama.",
         "wrong": "While online education provides accessibility, traditional classrooms offer better interaction. Both have merits.",
         "correct": "While online education provides accessibility, this advantage is substantially outweighed by the pedagogical deficit in spontaneous dialogue and mentor relationships, which longitudinal studies consistently link to deeper learning outcomes."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Discursive Essays & Counter-Argumentation Architectures\"?",
+          "options": [
+            "Concession Markers: Gunakan penanda konsesi tingkat lanjut seperti 'albeit', 'notwithst...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Esai diskursif tingkat mahir memerlukan arsitektur argumentasi yang canggih, di mana Anda tidak hanya menyajikan sudut pandang tetapi juga mengakui, mengevaluasi, dan merefutasi pandangan alternatif secara sistematis."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Discursive Essays & Counter-Argumentation Architectures\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "While online education provides accessibility",
+            "While online education provides accessibility",
+            "traditional classrooms offer better interaction. Both have merits"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kesalahan umum di level C1 adalah memberikan konsesi tanpa segera merefutasinya dengan argumen yang lebih persuasif, sehingga melemahkan posisi Anda. Konsesi harus selalu diikuti dengan 'pivot' yang mengembalikan kekuatan argumen utama."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"Precisely. I've been emphasizing dialectical synthesis—teaching them that acknowledging complexity doesn't mean abandoning their position, but rather strengthening it through nuanced analysis.\"\nProf. Williams: \"[...]\"",
+          "options": [
+            "That's pedagogically sound. Albeit time-consuming, training students to construct three-tier argumentation—thesis, antithesis, synthesis—yields substantially more sophisticated discourse.",
+            "While online education provides accessibility",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"That's pedagogically sound. Albeit time-consuming, training students to construct three-tier argumentation—thesis, antithesis, synthesis—yields substantially more sophisticated discourse.\" (\"Itu pedagogis yang baik. Meskipun memakan waktu, melatih mahasiswa membangun argumentasi tiga tingkat—tesis, antitesis, sintesis—menghasilkan wacana yang jauh lebih canggih.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Williams."
+        }
+      ]
     },
     "vocab": [
       {

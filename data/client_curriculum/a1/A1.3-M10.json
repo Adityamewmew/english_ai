@@ -23,7 +23,45 @@
         "explanation": "Pemula sering menambahkan subjek (you, we) atau to sebelum verb dalam kalimat imperatif pada tanda-tanda umum. Tanda-tanda publik selalu langsung dan singkat tanpa subjek.",
         "wrong": "You push the door, Please to keep off the grass",
         "correct": "Push the door, Keep off the grass"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Public Signs, Notices & Imperatives\"?",
+          "options": [
+            "Imperatif positif: Verb (kata kerja dasar) + object/complement. Contoh: Push the door, ...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Tanda-tanda umum dan rambu keselamatan menggunakan kalimat imperatif (perintah) untuk memberikan instruksi langsung."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "Please to keep off the grass",
+            "Push the door",
+            "You push the door"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering menambahkan subjek (you, we) atau to sebelum verb dalam kalimat imperatif pada tanda-tanda umum. Tanda-tanda publik selalu langsung dan singkat tanpa subjek."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Look at that sign, Tom. It says 'Caution: Wet floor'.\"\nTom: \"[...]\"",
+          "options": [
+            "Oh yes, we should walk carefully here. There's another sign over there.",
+            "Sorry, I forgot my keys at home.",
+            "You push the door"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Oh yes, we should walk carefully here. There's another sign over there.\" (\"Oh ya, kita harus berjalan hati-hati di sini. Ada tanda lain di sana.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

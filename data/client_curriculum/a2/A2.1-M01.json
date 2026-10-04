@@ -21,7 +21,45 @@
         "explanation": "Banyak pemula lupa bahwa untuk subjek orang ketiga tunggal (he, she, it), verb harus ditambahkan -s atau -es. Begitu juga dalam kalimat negatif dan tanya, gunakan 'doesn't' bukan 'don't', dan jangan tambahkan -s pada verb setelah doesn't/does.",
         "wrong": "He play football. She don't like music. Does he plays guitar?",
         "correct": "He plays football. She doesn't like music. Does he play guitar?"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Present Tenses & Hobbies\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Present Simple Positif: I/you/we/they + base verb (I like milk). He/she/it + verb + -s/...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas cara menggunakan Present Simple untuk menyatakan kebiasaan, rutinitas, dan fakta yang selalu benar."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Present Tenses & Hobbies\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "He plays football. She doesn't like music. Does he play guitar?",
+            "He play football. She don't like music. Does he plays guitar?",
+            "He play football. She don't like music. Does he plays guitar? always"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak pemula lupa bahwa untuk subjek orang ketiga tunggal (he, she, it), verb harus ditambahkan -s atau -es. Begitu juga dalam kalimat negatif dan tanya, gunakan 'doesn't' bukan 'don't', dan jangan tambahkan -s pada verb setelah doesn't/does."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLuke: \"Look. It's Olivia and Megan.\"\nRyan: \"[...]\"",
+          "options": [
+            "What are they up to?",
+            "He play football. She don't like music. Does he plays guitar?",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"What are they up to?\" (\"Apa yang sedang mereka lakukan?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ryan."
+        }
+      ]
     },
     "vocab": [
       {

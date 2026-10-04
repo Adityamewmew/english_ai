@@ -24,7 +24,45 @@
         "explanation": "Siswa sering salah memilih antara present perfect simple dan continuous. Present perfect simple fokus pada hasil atau fakta ('I have finished the report'), sedangkan present perfect continuous menekankan durasi atau proses yang sedang berlangsung ('I have been working on the report for two hours'). Dalam konteks wawancara kerja atau negosiasi, menggunakan continuous menunjukkan komitmen dan proses berkelanjutan.",
         "wrong": "I have worked on this project. (Jika ingin menekankan durasi hingga sekarang)",
         "correct": "I have been working on this project for six months. (Menekankan durasi dan kontinuitas)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"Evaluasi Komprehensif Komunikasi Global & Dunia Kerja\", bagaimana perubahan atau padanan yang benar untuk \"have/has + been + verb-ing\"?",
+          "options": [
+            "have/has + been + verb-ing selalu dihilangkan",
+            "Digunakan untuk menekankan durasi aktivitas yang dimulai di masa lalu dan masih berlanjut atau baru saja selesai. Contoh",
+            "Tidak ada perubahan tenses pada have/has + been + verb-ing"
+          ],
+          "correctIndex": 1,
+          "explanation": "Dalam materi ini: have/has + been + verb-ing berubah atau berpadanan menjadi \"Digunakan untuk menekankan durasi aktivitas yang dimulai di masa lalu dan masih berlanjut atau baru saja selesai. Contoh\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I have been working on this project for six months. (Menekankan durasi dan kontinuitas)",
+            "I have worked on this project. (Jika ingin menekankan durasi hingga sekarang)",
+            "I have been working on this project for six months. (Menekankan durasi dan kontinuitas)"
+          ],
+          "correctIndex": 0,
+          "explanation": "Siswa sering salah memilih antara present perfect simple dan continuous. Present perfect simple fokus pada hasil atau fakta ('I have finished the report'), sedangkan present perfect continuous menekankan durasi atau proses yang sedang berlangsung ('I have been working on the report for two hours'). Dalam konteks wawancara kerja atau negosiasi, menggunakan continuous menunjukkan komitmen dan proses berkelanjutan."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMr. Thompson: \"That's interesting. What made you decide to apply for this position?\"\nSarah: \"[...]\"",
+          "options": [
+            "I have worked on this project. (Jika ingin menekankan durasi hingga sekarang)",
+            "I'm looking for new challenges and your company's international projects really appeal to me. I'm used to working in multicultural teams.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"I'm looking for new challenges and your company's international projects really appeal to me. I'm used to working in multicultural teams.\" (\"Saya mencari tantangan baru dan proyek internasional perusahaan Anda benar-benar menarik bagi saya. Saya terbiasa bekerja di tim multikultural.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah."
+        }
+      ]
     },
     "vocab": [
       {

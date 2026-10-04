@@ -25,7 +25,45 @@
         "explanation": "Siswa level A2 sering salah menggunakan 'must' dan 'should'. 'Must' menunjukkan keharusan yang sangat kuat atau aturan yang wajib diikuti, sedangkan 'should' memberikan saran yang lebih lemah. Kesalahan lain adalah menggunakan 'to' setelah modal verbs.",
         "wrong": "You must to change your password. You should to be careful online.",
         "correct": "You must change your password. You should be careful online."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Modern Digital Habits & Online Cybersecurity Basics\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Modal verbs untuk saran keamanan: 'should/shouldn't' (sebaiknya/tidak sebaiknya) - You ...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Di era digital ini, kita menghabiskan banyak waktu online untuk media sosial, belajar, dan berkomunikasi."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "You must change your password. You should be careful online",
+            "You must to change your password. You should to be careful online",
+            "You must to change your password. You should to be careful online"
+          ],
+          "correctIndex": 0,
+          "explanation": "Siswa level A2 sering salah menggunakan 'must' dan 'should'. 'Must' menunjukkan keharusan yang sangat kuat atau aturan yang wajib diikuti, sedangkan 'should' memberikan saran yang lebih lemah. Kesalahan lain adalah menggunakan 'to' setelah modal verbs."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMira: \"Good job! You should never share your password with anyone. These scams are getting smarter.\"\nTom: \"[...]\"",
+          "options": [
+            "I know. I also need to change my passwords more often. I've been using the same one for two years.",
+            "You must to change your password. You should to be careful online",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"I know. I also need to change my passwords more often. I've been using the same one for two years.\" (\"Aku tahu. Aku juga perlu mengganti kata sandi ku lebih sering. Aku sudah menggunakan yang sama selama dua tahun.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

@@ -23,7 +23,45 @@
         "explanation": "Siswa sering menggunakan 'must' untuk semua situasi padahal should lebih tepat untuk saran yang tidak wajib. Must mengindikasikan kewajiban keras atau urgensi tinggi, sedangkan should untuk rekomendasi yang masuk akal namun tidak mutlak.",
         "wrong": "Individuals must recycle their plastics every day or they are bad people.",
         "correct": "Individuals should recycle their plastics to reduce waste, and governments must provide proper recycling infrastructure."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Renewable Energy, Eco-Innovations & Community Actions\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Modal verbs untuk tanggung jawab lingkungan: 'We should reduce our carbon footprint' (s...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Modul ini membekali Anda dengan kosakata dan struktur bahasa untuk membahas isu lingkungan kontemporer."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Renewable Energy, Eco-Innovations & Community Actions\"?",
+          "options": [
+            "Individuals should recycle their plastics to reduce waste",
+            "Individuals must recycle their plastics every day or they are bad people",
+            "Individuals should to recycle their plastics to reduce waste"
+          ],
+          "correctIndex": 0,
+          "explanation": "Siswa sering menggunakan 'must' untuk semua situasi padahal should lebih tepat untuk saran yang tidak wajib. Must mengindikasikan kewajiban keras atau urgensi tinggi, sedangkan should untuk rekomendasi yang masuk akal namun tidak mutlak."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"I partly agree, however, individual actions like adopting a zero-waste lifestyle can create collective impact.\"\nMarco: \"[...]\"",
+          "options": [
+            "Individuals must recycle their plastics every day or they are bad people",
+            "True, but without systemic change, it's just a drop in the ocean. Companies must invest in renewable energy sources.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"True, but without systemic change, it's just a drop in the ocean. Companies must invest in renewable energy sources.\" (\"Benar, tapi tanpa perubahan sistemik, itu hanya setetes di lautan. Perusahaan harus berinvestasi di sumber energi terbarukan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Marco."
+        }
+      ]
     },
     "vocab": [
       {

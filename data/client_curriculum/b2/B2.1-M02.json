@@ -22,7 +22,45 @@
         "explanation": "Banyak pemula menggunakan 'would' untuk semua jenis kebiasaan masa lampau, padahal 'would' hanya bisa dipakai untuk action verbs. Stative verbs (seperti 'be', 'have', 'know') harus menggunakan 'used to'.",
         "wrong": "I would be shy when I was young.",
         "correct": "I used to be shy when I was young."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Past Simple & Past Continuous\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Past Simple: untuk aksi yang selesai di masa lampau. Contoh: 'The fire started in a bak..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas cara menceritakan peristiwa di masa lampau menggunakan narrative tenses (Past Simple, Past Continuous, Past Perfect, dan Past Perfect Continuous)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Past Simple & Past Continuous\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I would be shy when I was young",
+            "I used to be shy when I were young",
+            "I used to be shy when I was young"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula menggunakan 'would' untuk semua jenis kebiasaan masa lampau, padahal 'would' hanya bisa dipakai untuk action verbs. Stative verbs (seperti 'be', 'have', 'know') harus menggunakan 'used to'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nIan: \"I had a real scare yesterday. As I was walking up to our house, I saw smoke coming from the window.\"\nOli: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I would be shy when I was young",
+            "Oh no! Was something burning?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Oh no! Was something burning?\" (\"Oh tidak! Apakah ada yang terbakar?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Oli."
+        }
+      ]
     },
     "vocab": [
       {

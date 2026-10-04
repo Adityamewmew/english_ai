@@ -24,7 +24,45 @@
         "explanation": "Siswa B2 sering mengira semua kebetulan dalam cerita adalah ironi. Ironi situasional harus memiliki kontras yang signifikan antara ekspektasi dan realitas, bukan sekadar kejadian tidak terduga. Juga, jangan mengasumsikan semua narator orang pertama adalah unreliable—hanya yang menunjukkan inkonsistensi atau bias jelas.",
         "wrong": "It's ironic that it rained during our picnic.",
         "correct": "It's ironic that the meteorologist's outdoor wedding was ruined by an unpredicted storm, despite his expertise in weather forecasting."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Literary Devices, Subtext & Analyzing Irony in Modern Fiction\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Dramatic Irony: Ketika pembaca mengetahui informasi yang tidak diketahui karakter. Pola..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Analisis sastra tingkat lanjut memerlukan kemampuan untuk menangkap makna yang tidak langsung disampaikan penulis."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Literary Devices, Subtext & Analyzing Irony in Modern Fiction\"?",
+          "options": [
+            "It's ironic that it rained during our picnic",
+            "It's ironic that the meteorologist's outdoor wedding were ruined by an unpredicted storm",
+            "It's ironic that the meteorologist's outdoor wedding was ruined by an unpredicted storm"
+          ],
+          "correctIndex": 2,
+          "explanation": "Siswa B2 sering mengira semua kebetulan dalam cerita adalah ironi. Ironi situasional harus memiliki kontras yang signifikan antara ekspektasi dan realitas, bukan sekadar kejadian tidak terduga. Juga, jangan mengasumsikan semua narator orang pertama adalah unreliable—hanya yang menunjukkan inkonsistensi atau bias jelas."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"You're right. And the dramatic irony in chapter five was brilliant—we knew about the affair, but he was completely oblivious.\"\nJames: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "It's ironic that it rained during our picnic",
+            "What did you make of the recurring water metaphor? I felt it symbolized emotional cleansing or rebirth throughout the story."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"What did you make of the recurring water metaphor? I felt it symbolized emotional cleansing or rebirth throughout the story.\" (\"Bagaimana menurutmu tentang metafora air yang berulang? Aku merasa itu melambangkan pembersihan emosional atau kelahiran kembali di sepanjang cerita.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh James."
+        }
+      ]
     },
     "vocab": [
       {

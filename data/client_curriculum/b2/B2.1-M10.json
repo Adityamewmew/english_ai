@@ -19,7 +19,45 @@
         "explanation": "Pemula sering menggunakan future simple (will + verb) ketika seharusnya menggunakan future continuous untuk menunjukkan aksi yang sedang berlangsung di waktu tertentu di masa depan. Mereka juga sering lupa menggunakan future perfect untuk aksi yang akan selesai sebelum waktu tertentu.",
         "wrong": "Tomorrow at 10 o'clock, I will sit on a train.",
         "correct": "Tomorrow at 10 o'clock, I will be sitting on a train."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Reported Speech Statements\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Future Continuous: will + be + verb-ing. Contoh: 'In a few decades' time, everyone will...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas dua bentuk waktu future yang lebih kompleks: Future Continuous untuk membicarakan aksi yang sedang berlangsung di waktu tertentu di masa depan, dan Future Perfect untuk membicarakan aksi yang akan selesai di antara sekarang dan waktu tertentu di masa depan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "Tomorrow at 10 o'clock",
+            "I will sit on a train",
+            "Tomorrow at 10 o'clock"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering menggunakan future simple (will + verb) ketika seharusnya menggunakan future continuous untuk menunjukkan aksi yang sedang berlangsung di waktu tertentu di masa depan. Mereka juga sering lupa menggunakan future perfect untuk aksi yang akan selesai sebelum waktu tertentu."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMia: \"Tell me about it. I'd really like one of those hot chocolate drinks with all the extras. But I just can't afford it.\"\nJeff: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Look what I found! Outside here, on the street, by the shoe shop. My lucky day, eh? And your lucky day, too! Let's go crazy - desserts are on me!",
+            "Tomorrow at 10 o'clock"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Look what I found! Outside here, on the street, by the shoe shop. My lucky day, eh? And your lucky day, too! Let's go crazy - desserts are on me!\" (\"Lihat apa yang kutemukan! Di luar sini, di jalan, dekat toko sepatu. Hari keberuntunganku, eh? Dan hari keberuntungan kalian juga! Ayo gila-gilaan - makanan penutup ditraktir aku!\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Jeff."
+        }
+      ]
     },
     "vocab": [
       {

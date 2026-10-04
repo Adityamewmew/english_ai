@@ -22,7 +22,45 @@
         "explanation": "Pemula sering bingung antara 'must' dan 'have to'. 'Must' lebih subjektif dan berasal dari pembicara, sedangkan 'have to' lebih objektif dan berasal dari aturan eksternal. Untuk bentuk negatif, 'mustn't' = larangan keras, sedangkan 'don't have to' = tidak wajib (boleh tidak).",
         "wrong": "You mustn't buy another phone. (Maksudnya: tidak wajib, tapi terdengar seperti larangan)",
         "correct": "You don't have to buy another phone. (Kamu tidak harus membeli ponsel lain - boleh tidak beli.)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Present Perfect with Already & Yet\"?",
+          "options": [
+            "Menggunakan 'have to' / 'don't have to' untuk kewajiban: You have to give the product a...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas penggunaan modal verbs untuk memberikan nasihat dan mengungkapkan kewajiban."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Present Perfect with Already & Yet\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "tapi terdengar seperti larangan)",
+            "You don't have to buy another phone. (Kamu tidak harus membeli ponsel lain - boleh tidak beli.)",
+            "You mustn't buy another phone. (Maksudnya: tidak wajib"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering bingung antara 'must' dan 'have to'. 'Must' lebih subjektif dan berasal dari pembicara, sedangkan 'have to' lebih objektif dan berasal dari aturan eksternal. Untuk bentuk negatif, 'mustn't' = larangan keras, sedangkan 'don't have to' = tidak wajib (boleh tidak)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMandy: \"Mum, there's a new mobile phone out. It's brilliant. I must get one!\"\nMum: \"[...]\"",
+          "options": [
+            "No way! Your mobile phone is fine. You don't have to buy another one.",
+            "Sorry, I forgot my keys at home.",
+            "You mustn't buy another phone. (Maksudnya: tidak wajib"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"No way! Your mobile phone is fine. You don't have to buy another one.\" (\"Tidak mungkin! Ponselmu masih bagus. Kamu tidak harus beli yang baru.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Mum."
+        }
+      ]
     },
     "vocab": [
       {

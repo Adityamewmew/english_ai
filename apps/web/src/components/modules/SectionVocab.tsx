@@ -12,6 +12,7 @@ export interface VocabItem {
   ipa?: string;
   meaning: string;
   collocation?: string;
+  example?: string;
 }
 
 interface SectionVocabProps {

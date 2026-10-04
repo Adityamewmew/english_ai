@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa salah menggunakan tense setelah 'wish', terutama menggunakan present tense untuk menyesali masa lalu atau menggunakan 'would' untuk diri sendiri. Ingat: masa lalu pakai 'had + past participle', masa kini pakai 'past simple', dan 'would' hanya untuk orang lain.",
         "wrong": "I wish I would study harder yesterday.",
         "correct": "I wish I had studied harder yesterday."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Mastery of Wish and If Only\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Wish + Past Perfect: Digunakan untuk menyesali sesuatu yang tidak terjadi di masa lalu....",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Struktur 'wish' dan 'if only' digunakan untuk mengekspresikan harapan yang tidak sesuai dengan kenyataan atau penyesalan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Mastery of Wish and If Only\"?",
+          "options": [
+            "I wish I had studied harder yesterday",
+            "I wish I would study harder yesterday",
+            "I wish I would study harder yesterday always"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak siswa salah menggunakan tense setelah 'wish', terutama menggunakan present tense untuk menyesali masa lalu atau menggunakan 'would' untuk diri sendiri. Ingat: masa lalu pakai 'had + past participle', masa kini pakai 'past simple', dan 'would' hanya untuk orang lain."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"I wish I had taken that job offer in Singapore last year. It was such a great opportunity.\"\nTom: \"[...]\"",
+          "options": [
+            "I wish I would study harder yesterday",
+            "I know how you feel. I wish I had studied computer science instead of history. The job market would be easier now.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"I know how you feel. I wish I had studied computer science instead of history. The job market would be easier now.\" (\"Saya tahu perasaanmu. Saya berharap saya kuliah ilmu komputer daripada sejarah. Pasar kerja akan lebih mudah sekarang.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

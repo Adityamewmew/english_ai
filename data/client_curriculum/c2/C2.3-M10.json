@@ -23,7 +23,45 @@
         "explanation": "Penutur yang kurang mahir sering gagal membedakan antara peringatan kondisional yang netral dan ancaman terselubung. Penulis tingkat master menggunakan struktur pasif, inversi kondisional, atau modalitas epistemik untuk menyembunyikan niat jahat (plausible deniability), sehingga ancaman tidak terlihat eksplisit di mata hukum.",
         "wrong": "If you don't pay the money, bad things will happen to your business and family.",
         "correct": "It would be highly regrettable should your enterprise encounter unforeseen operational friction due to an oversight in our mutual financial arrangement."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Authorship Identification & Semantic Disambiguation\"?",
+          "options": [
+            "Identifikasi Penanda Idiolek: Analisis deviasi leksikal, preferensi tanda baca yang tid...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Linguistik forensik pada tingkat C2 menuntut kemampuan membedah teks secara mikroskopis dan analitis."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Authorship Identification & Semantic Disambiguation\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "If you don't pay the money",
+            "It would be highly regrettable should your enterprise encounter unforeseen operational friction due to an oversight in our mutual financial arrangement",
+            "bad things will happen to your business and family"
+          ],
+          "correctIndex": 1,
+          "explanation": "Penutur yang kurang mahir sering gagal membedakan antara peringatan kondisional yang netral dan ancaman terselubung. Penulis tingkat master menggunakan struktur pasif, inversi kondisional, atau modalitas epistemik untuk menyembunyikan niat jahat (plausible deniability), sehingga ancaman tidak terlihat eksplisit di mata hukum."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Aris: \"Elena, if you examine the syntactic parsing of the third paragraph, the idiosyncratic deployment of the subjunctive mood strongly points to our primary suspect.\"\nDr. Elena: \"[...]\"",
+          "options": [
+            "I concede the structural similarities, Aris, but the type-token ratio in this document deviates significantly from his established baseline corpus.",
+            "If you don't pay the money",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"I concede the structural similarities, Aris, but the type-token ratio in this document deviates significantly from his established baseline corpus.\" (\"Saya mengakui kesamaan strukturalnya, Aris, tetapi rasio tipe-token dalam dokumen ini menyimpang secara signifikan dari korpus dasar yang telah ditetapkannya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Elena."
+        }
+      ]
     },
     "vocab": [
       {

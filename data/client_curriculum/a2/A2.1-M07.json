@@ -20,7 +20,45 @@
         "explanation": "Pemula sering tertukar antara 'mustn't' dan 'don't have to'. 'Mustn't' artinya DILARANG (prohibition), sedangkan 'don't have to' artinya TIDAK WAJIB tapi boleh dilakukan (no obligation).",
         "wrong": "You don't have to use mobile phones in class (maksudnya melarang)",
         "correct": "You mustn't use mobile phones in class (dilarang) ATAU You don't have to bring your laptop (tidak wajib, tapi boleh)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Technology, Gadgets & Future with Will\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "have to / don't have to: Gunakan 'have to' untuk menyatakan keharusan (I have to help)....",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas tentang teknologi dan kehidupan modern dengan fokus pada modal verbs untuk menyatakan keharusan (have to), ketiadaan keharusan (don't have to), saran (should/shouldn't), serta larangan (mustn't)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "You don't have to use mobile phones in class (maksudnya melarang)",
+            "You mustn't use mobile phones in class (dilarang) ATAU You don't have to bring your laptop (tidak wajib",
+            "You mustn't use mobile phones in class (dilarang) ATAU You don't have to bring your laptop (tidak wajib"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering tertukar antara 'mustn't' dan 'don't have to'. 'Mustn't' artinya DILARANG (prohibition), sedangkan 'don't have to' artinya TIDAK WAJIB tapi boleh dilakukan (no obligation)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLuke: \"Come to my house after school.\"\nRyan: \"[...]\"",
+          "options": [
+            "You don't have to use mobile phones in class (maksudnya melarang)",
+            "Sorry, no chance. I have things to do.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Sorry, no chance. I have things to do.\" (\"Maaf, tidak bisa. Aku ada urusan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ryan."
+        }
+      ]
     },
     "vocab": [
       {

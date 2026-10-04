@@ -25,7 +25,45 @@
         "explanation": "Mahasiswa C1 sering menggunakan cleft structures secara berlebihan sehingga terdengar melodramatis atau menggunakan register yang tidak sesuai konteks. Cleft structures paling efektif ketika digunakan strategis untuk menandai informasi penting, bukan di setiap kalimat. Kesalahan umum lain adalah agreement error antara wh-clause dan verb 'be', serta mixing tenses yang tidak konsisten.",
         "wrong": "What I'm needing right now is to understanding this concept. / The thing is what bothers me most about it. (register terlalu kasual untuk konteks akademis + grammatical error)",
         "correct": "What I require at this juncture is a comprehensive understanding of the underlying principles. / What concerns me most is the potential for misinterpretation."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Wh-clefts, Reverse Clefts & All-clefts\"?",
+          "options": [
+            "Wh-cleft (Pseudo-cleft): [What/Where/When/Why/How + S + V] + is/was + [Focus Element]. ...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Cleft structures adalah konstruksi kalimat canggih yang membelah informasi menjadi dua klausa untuk menonjolkan elemen tertentu sebagai fokus informasi."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Wh-clefts, Reverse Clefts & All-clefts\"?",
+          "options": [
+            "The thing is what bothers me most about it. (register terlalu kasual untuk konteks akademis + grammatical error)",
+            "What I require at this juncture is a comprehensive understanding of the underlying principles",
+            "What I'm needing right now is to understanding this concept"
+          ],
+          "correctIndex": 1,
+          "explanation": "Mahasiswa C1 sering menggunakan cleft structures secara berlebihan sehingga terdengar melodramatis atau menggunakan register yang tidak sesuai konteks. Cleft structures paling efektif ketika digunakan strategis untuk menandai informasi penting, bukan di setiap kalimat. Kesalahan umum lain adalah agreement error antara wh-clause dan verb 'be', serta mixing tenses yang tidak konsisten."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"What concerns me most about the proposed changes is the lack of stakeholder consultation. We've heard from faculty, but where are the student voices?\"\nProf. Rodriguez: \"[...]\"",
+          "options": [
+            "That's a valid point. What we need at this juncture is a comprehensive survey of current students and recent alumni to gauge their perspectives on program effectiveness.",
+            "What I'm needing right now is to understanding this concept",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"That's a valid point. What we need at this juncture is a comprehensive survey of current students and recent alumni to gauge their perspectives on program effectiveness.\" (\"Itu poin yang valid. Yang kita butuhkan pada tahap krusial ini adalah survei komprehensif dari mahasiswa saat ini dan alumni baru untuk mengukur perspektif mereka tentang efektivitas program.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Rodriguez."
+        }
+      ]
     },
     "vocab": [
       {

@@ -22,7 +22,45 @@
         "explanation": "Banyak pemula menggunakan 'will' untuk semua situasi masa depan. Padahal 'will' digunakan untuk prediksi atau keputusan spontan, sedangkan 'be going to' untuk rencana yang sudah dipikirkan sebelumnya.",
         "wrong": "I will go to the cinema tomorrow. (padahal sudah merencanakan sejak kemarin)",
         "correct": "I'm going to go to the cinema tomorrow. (untuk rencana yang sudah dibuat)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"First Conditional with If, When & Unless\"?",
+          "options": [
+            "Present Simple untuk kejadian masa depan yang sudah terjadwal atau pasti: 'The film ope...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan empat cara berbeda untuk membicarakan masa depan dalam bahasa Inggris."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"First Conditional with If, When & Unless\"?",
+          "options": [
+            "I will go to the cinema tomorrow. (padahal sudah merencanakan sejak kemarin)",
+            "I'm going to go to the cinema tomorrow. (untuk rencana yang sudah dibuat)",
+            "I will go to the cinema tomorrow. (padahal sudah merencanakan sejak kemarin) always"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula menggunakan 'will' untuk semua situasi masa depan. Padahal 'will' digunakan untuk prediksi atau keputusan spontan, sedangkan 'be going to' untuk rencana yang sudah dipikirkan sebelumnya."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLuke: \"Friday morning. I can't wait for the weekend.\"\nOlivia: \"[...]\"",
+          "options": [
+            "Nor can I.",
+            "I will go to the cinema tomorrow. (padahal sudah merencanakan sejak kemarin)",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Nor can I.\" (\"Aku juga tidak sabar.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Olivia."
+        }
+      ]
     },
     "vocab": [
       {

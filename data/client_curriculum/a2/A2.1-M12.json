@@ -21,7 +21,45 @@
         "explanation": "Pemula sering salah menggunakan Past Simple ketika seharusnya menggunakan Present Perfect, atau sebaliknya. Gunakan Present Perfect ketika TIDAK menyebutkan waktu spesifik dan fokus pada pengalaman/hasil. Gunakan Past Simple ketika menyebutkan KAPAN kejadian terjadi.",
         "wrong": "I have visited London last year. / Have you seen the movie yesterday?",
         "correct": "I visited London last year. / Did you see the movie yesterday? ATAU I have visited London. (tanpa waktu spesifik)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Travel, Transport & Relative Clauses\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Present Perfect Simple: I/you/we/they + have + past participle | Contoh: I have travell..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara menceritakan pengalaman hidup menggunakan Present Perfect Simple, terutama untuk kejadian yang sudah terjadi di masa lalu tetapi masih relevan dengan masa kini."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I have visited London last year",
+            "Have you seen the movie yesterday?",
+            "I visited London last year"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pemula sering salah menggunakan Past Simple ketika seharusnya menggunakan Present Perfect, atau sebaliknya. Gunakan Present Perfect ketika TIDAK menyebutkan waktu spesifik dan fokus pada pengalaman/hasil. Gunakan Past Simple ketika menyebutkan KAPAN kejadian terjadi."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nStudent 2: \"Where did you eat a cooked spider?\"\nSteve: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I have visited London last year",
+            "In Mexico. I ate it at a street market."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"In Mexico. I ate it at a street market.\" (\"Di Meksiko. Saya memakannya di pasar jalanan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Steve."
+        }
+      ]
     },
     "vocab": [
       {

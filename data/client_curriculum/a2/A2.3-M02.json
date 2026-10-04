@@ -24,7 +24,45 @@
         "explanation": "Banyak siswa menggunakan 'will' di kedua bagian kalimat, padahal setelah 'if' harus menggunakan Present Simple, bukan 'will'. Ingat: 'will' hanya ada di bagian result/consequence.",
         "wrong": "If you will study hard, you will pass the exam.",
         "correct": "If you study hard, you will pass the exam."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Realistic Causes and Real-life Consequences\"?",
+          "options": [
+            "Pola dasar: If + Present Simple, will + base verb. Contoh: If it rains, we will stay home.",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: First Conditional digunakan untuk membicarakan situasi yang mungkin terjadi di masa depan dan konsekuensinya."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "you will pass the exam",
+            "If you study hard",
+            "If you will study hard"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak siswa menggunakan 'will' di kedua bagian kalimat, padahal setelah 'if' harus menggunakan Present Simple, bukan 'will'. Ingat: 'will' hanya ada di bagian result/consequence."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Tom, if the weather is good on Saturday, we will go hiking in the mountains.\"\nTom: \"[...]\"",
+          "options": [
+            "That sounds great! But if it rains, what will we do?",
+            "Sorry, I forgot my keys at home.",
+            "If you will study hard"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"That sounds great! But if it rains, what will we do?\" (\"Kedengarannya bagus! Tapi jika hujan, apa yang akan kita lakukan?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

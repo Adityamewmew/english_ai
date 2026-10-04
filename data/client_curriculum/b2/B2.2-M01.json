@@ -23,7 +23,45 @@
         "explanation": "Banyak pelajar B2 mencampur register informal dalam konteks korporat formal. Dalam dokumen kebijakan atau presentasi bisnis, hindari phrasal verbs informal dan gunakan padanan formal.",
         "wrong": "The company needs to look into the complaint and figure out what went wrong.",
         "correct": "The organization must investigate the allegation and determine the root cause of the misconduct."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Corporate Governance, Ethics & Whistleblowing Policies\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Gunakan passive voice untuk menekankan tindakan dan kebijakan, bukan pelaku: 'Violation..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Corporate governance mengacu pada sistem aturan, praktik, dan proses yang mengatur bagaimana perusahaan diarahkan dan dikendalikan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Corporate Governance, Ethics & Whistleblowing Policies\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "The company needs to look into the complaint and figure out what went wrong",
+            "The organization must to investigate the allegation and determine the root cause of the misconduct",
+            "The organization must investigate the allegation and determine the root cause of the misconduct"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pelajar B2 mencampur register informal dalam konteks korporat formal. Dalam dokumen kebijakan atau presentasi bisnis, hindari phrasal verbs informal dan gunakan padanan formal."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"David, I'd like to walk you through our updated whistleblowing policy. The board has mandated enhanced protections for employees who report misconduct.\"\nDavid: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "The company needs to look into the complaint and figure out what went wrong",
+            "That's reassuring. What specific measures have been implemented to prevent retaliation against whistleblowers?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"That's reassuring. What specific measures have been implemented to prevent retaliation against whistleblowers?\" (\"Itu menenangkan. Langkah-langkah spesifik apa yang telah diterapkan untuk mencegah pembalasan terhadap pelapor pelanggaran?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

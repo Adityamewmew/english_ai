@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula lupa menambahkan 'the' di depan superlative, atau salah menggunakan '-est' untuk kata sifat panjang. Ingat: superlative SELALU pakai 'the', dan kata sifat panjang pakai 'the most', bukan '-est'.",
         "wrong": "She is most beautiful girl in class. / This is expensivest car.",
         "correct": "She is the most beautiful girl in class. / This is the most expensive car."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"The Best & The Most Exciting\", bagaimana perubahan atau padanan yang benar untuk \"tall → the tallest, big → the biggest, old\"?",
+          "options": [
+            "tall → the tallest, big → the biggest, old selalu dihilangkan",
+            "Tidak ada perubahan tenses pada tall → the tallest, big → the biggest, old",
+            "the oldest."
+          ],
+          "correctIndex": 2,
+          "explanation": "Dalam materi ini: tall → the tallest, big → the biggest, old berubah atau berpadanan menjadi \"the oldest.\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "She is most beautiful girl in class",
+            "This is expensivest car",
+            "She is the most beautiful girl in class"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula lupa menambahkan 'the' di depan superlative, atau salah menggunakan '-est' untuk kata sifat panjang. Ingat: superlative SELALU pakai 'the', dan kata sifat panjang pakai 'the most', bukan '-est'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Yes! It was the most exciting experience ever. The view was incredible.\"\nKevin: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "She is most beautiful girl in class",
+            "I want to go there too! By the way, do you know the longest river in the world?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"I want to go there too! By the way, do you know the longest river in the world?\" (\"Aku juga ingin ke sana! Ngomong-ngomong, apakah kamu tahu sungai terpanjang di dunia?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Kevin."
+        }
+      ]
     },
     "vocab": [
       {

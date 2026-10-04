@@ -23,7 +23,45 @@
         "explanation": "Siswa sering lupa melakukan inversi setelah fronting elemen negatif/restrictive, atau menggunakan substitusi yang tidak sesuai konteks gramatikal. Fronting dengan negative adverbs (never, seldom, rarely, hardly) WAJIB diikuti inversi auxiliary-subject. Substitution 'one' hanya untuk countable nouns, bukan untuk abstract concepts atau uncountable nouns.",
         "wrong": "Never I have experienced this. / I need some advice; do you have one?",
         "correct": "Never have I experienced this. / I need some advice; do you have any? (advice = uncountable, tidak bisa pakai 'one')"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Perhatikan kalimat langsung: \"Can you help?\". Bagaimana bentuk kalimat tidak langsung (reported/transformed) yang benar?",
+          "options": [
+            "Can you help?",
+            "Bentuk kalimat tidak baku",
+            "I"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah pada \"Ellipsis, Substitution & Fronting for Stylistic Elegance\": bentuk yang tepat adalah \"I\". Perhatikan perubahan tenses dan kata kerja bantunya."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Ellipsis, Substitution & Fronting for Stylistic Elegance\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "Never I have experienced this",
+            "I need some advice",
+            "Never have I experienced this"
+          ],
+          "correctIndex": 2,
+          "explanation": "Siswa sering lupa melakukan inversi setelah fronting elemen negatif/restrictive, atau menggunakan substitusi yang tidak sesuai konteks gramatikal. Fronting dengan negative adverbs (never, seldom, rarely, hardly) WAJIB diikuti inversi auxiliary-subject. Substitution 'one' hanya untuk countable nouns, bukan untuk abstract concepts atau uncountable nouns."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Rahman: \"Excellent. What about the opening? Never have I encountered such a bold introduction in an academic paper.\"\nDr. Lisa: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Never I have experienced this",
+            "That was intentional. The fronting and inversion create emphasis, which I felt the argument needed."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"That was intentional. The fronting and inversion create emphasis, which I felt the argument needed.\" (\"Itu disengaja. Fronting dan inversi menciptakan penekanan, yang saya rasa dibutuhkan oleh argumen tersebut.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Lisa."
+        }
+      ]
     },
     "vocab": [
       {

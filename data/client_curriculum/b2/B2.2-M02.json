@@ -23,7 +23,45 @@
         "explanation": "Siswa sering melakukan inversi langsung dengan kata kerja utama tanpa auxiliary verb, terutama dengan Simple Present dan Simple Past. Ingat: kamu HARUS menggunakan 'do/does/did' sebagai auxiliary jika tidak ada auxiliary verb lain (have, will, can, etc.).",
         "wrong": "Never saw I such a beautiful sunset. / Seldom goes he to the gym.",
         "correct": "Never have I seen such a beautiful sunset. / Seldom does he go to the gym."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Advanced Inversion for Dramatic Emphasis & Formal Oratory\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Formula Inversi Negatif: Negative Adverbial + Auxiliary Verb + Subject + Main Verb. Con...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Inversi adalah teknik membalik urutan subjek dan kata kerja bantu untuk memberikan penekanan dramatis, terutama dalam pidato formal, tulisan akademis, dan konteks retoris."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Advanced Inversion for Dramatic Emphasis & Formal Oratory\"?",
+          "options": [
+            "Never have I seen such a beautiful sunset",
+            "Seldom goes he to the gym",
+            "Never saw I such a beautiful sunset"
+          ],
+          "correctIndex": 0,
+          "explanation": "Siswa sering melakukan inversi langsung dengan kata kerja utama tanpa auxiliary verb, terutama dengan Simple Present dan Simple Past. Ingat: kamu HARUS menggunakan 'do/does/did' sebagai auxiliary jika tidak ada auxiliary verb lain (have, will, can, etc.)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"James, your content is solid, but it lacks punch. Try this: 'Never before have we faced such a critical moment in our company's history.'\"\nJames: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Oh, I see! So instead of saying 'We have never faced,' I put 'never' first and flip the order?",
+            "Never saw I such a beautiful sunset"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Oh, I see! So instead of saying 'We have never faced,' I put 'never' first and flip the order?\" (\"Oh, aku paham! Jadi daripada mengatakan 'Kita tidak pernah menghadapi,' aku taruh 'never' di depan dan balik urutannya?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh James."
+        }
+      ]
     },
     "vocab": [
       {

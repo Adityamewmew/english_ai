@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula salah menggunakan tense setelah I wish dan If only. Untuk situasi sekarang, gunakan past simple (bukan present). Untuk situasi masa lalu, gunakan past perfect (bukan past simple).",
         "wrong": "I wish I can disappear. / If only my teacher understands me.",
         "correct": "I wish I could disappear. / If only my teacher understood me."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Mixed Conditionals & Personal Growth\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "I wish / If only + past simple: untuk penyesalan tentang situasi sekarang. Contoh: 'I w..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan penggunaan mixed conditionals untuk mengekspresikan penyesalan masa lalu dan keinginan tentang situasi saat ini atau masa depan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "If only my teacher understands me",
+            "I wish I can disappear",
+            "I wish I could disappear"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula salah menggunakan tense setelah I wish dan If only. Untuk situasi sekarang, gunakan past simple (bukan present). Untuk situasi masa lalu, gunakan past perfect (bukan past simple)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMum: \"Josh, I'd rather you put your phone on the table.\"\nJosh: \"[...]\"",
+          "options": [
+            "Sorry, Mum. I won't be a minute.",
+            "Sorry, I forgot my keys at home.",
+            "I wish I can disappear"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Sorry, Mum. I won't be a minute.\" (\"Maaf, Bu. Sebentar saja.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Josh."
+        }
+      ]
     },
     "vocab": [
       {

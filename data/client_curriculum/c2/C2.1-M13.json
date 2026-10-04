@@ -23,7 +23,45 @@
         "explanation": "Penutur C2 sejati tidak sekadar menggunakan struktur rumit—mereka memilih struktur yang koheren dengan konteks retoris dan audiens. Jebakan umum adalah overuse inversi atau cleft tanpa alasan pragmatik, yang membuat teks terasa artifisial atau bombastis. Begitu pula, penggunaan kondisional kompleks yang tidak diperlukan dapat mengaburkan makna alih-alih memperjelas. Di C2, less is more bila simplicity lebih elegan.",
         "wrong": "Rarely do I find myself in disagreement with such propositions, yet seldom have I encountered arguments so profoundly lacking in substantive merit.",
         "correct": "I rarely disagree with such propositions, yet I've seldom encountered arguments so lacking in substance."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Komprehensif Mastery Foundations & Rhetoric\"?",
+          "options": [
+            "Inversion & Cleft untuk Penekanan Retoris: Gunakan inversi (Never have I witnessed..., ...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Ujian kelulusan C2."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Evaluasi Komprehensif Mastery Foundations & Rhetoric\"?",
+          "options": [
+            "yet seldom have I encountered arguments so profoundly lacking in substantive merit",
+            "I rarely disagree with such propositions",
+            "Rarely do I find myself in disagreement with such propositions"
+          ],
+          "correctIndex": 1,
+          "explanation": "Penutur C2 sejati tidak sekadar menggunakan struktur rumit—mereka memilih struktur yang koheren dengan konteks retoris dan audiens. Jebakan umum adalah overuse inversi atau cleft tanpa alasan pragmatik, yang membuat teks terasa artifisial atau bombastis. Begitu pula, penggunaan kondisional kompleks yang tidak diperlukan dapat mengaburkan makna alih-alih memperjelas. Di C2, less is more bila simplicity lebih elegan."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nProfessor Ashworth: \"Seldom have I encountered a proposition as philosophically tendentious as the claim that algorithmic adjudication can possess moral agency.\"\nDr. Karimova: \"[...]\"",
+          "options": [
+            "Yet what concerns me most is not the agency itself, but rather the insouciance with which we delegate life-altering decisions to systems whose epistemological foundations remain fundamentally recondite.",
+            "Rarely do I find myself in disagreement with such propositions",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Yet what concerns me most is not the agency itself, but rather the insouciance with which we delegate life-altering decisions to systems whose epistemological foundations remain fundamentally recondite.\" (\"Namun yang paling mengkhawatirkan saya bukanlah agensi itu sendiri, melainkan sikap acuh tak acuh di mana kita mendelegasikan keputusan yang mengubah hidup kepada sistem yang fondasi epistemologisnya tetap sangat sulit dipahami.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Karimova."
+        }
+      ]
     },
     "vocab": [
       {

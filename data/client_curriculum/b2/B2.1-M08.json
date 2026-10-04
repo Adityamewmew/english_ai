@@ -25,7 +25,45 @@
         "explanation": "Pemula sering lupa mengubah tenses saat melaporkan ucapan, atau lupa mengubah time expressions seperti 'today' menjadi 'that day', 'yesterday' menjadi 'the day before'",
         "wrong": "She said she is tired today",
         "correct": "She said she was tired that day"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Perhatikan kalimat langsung: \"I like it\". Bagaimana bentuk kalimat tidak langsung (reported/transformed) yang benar?",
+          "options": [
+            "She say (that",
+            "She said (that",
+            "I like it"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah pada \"Reported Speech\": bentuk yang tepat adalah \"She said (that\". Perhatikan perubahan tenses dan kata kerja bantunya."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Reported Speech\"?",
+          "options": [
+            "She said she was tired that day",
+            "She said she is tired today",
+            "She said she were tired that day"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering lupa mengubah tenses saat melaporkan ucapan, atau lupa mengubah time expressions seperti 'today' menjadi 'that day', 'yesterday' menjadi 'the day before'"
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nReporter: \"Mrs. Atkins, can you tell us what happened?\"\nMrs. Atkins: \"[...]\"",
+          "options": [
+            "She said she is tired today",
+            "When I went to ride my bike last Friday, I was shocked to discover it wasn't there.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"When I went to ride my bike last Friday, I was shocked to discover it wasn't there.\" (\"Ketika saya hendak naik sepeda Jumat lalu, saya kaget menemukan sepeda itu tidak ada.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Mrs. Atkins."
+        }
+      ]
     },
     "vocab": [
       {

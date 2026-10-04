@@ -23,7 +23,45 @@
         "explanation": "Banyak kandidat memberikan jawaban yang terlalu umum atau teoretis tanpa contoh konkret. Hindari jawaban seperti 'I'm a hard worker' tanpa bukti spesifik. Juga hindari memaparkan kelemahan yang terlalu serius atau relevan langsung dengan posisi yang dilamar.",
         "wrong": "My biggest weakness is that I'm a perfectionist and I work too hard.",
         "correct": "I sometimes focus too much on details, which can slow me down. I've been using time-blocking techniques to balance thoroughness with efficiency, and it's helped me meet deadlines more consistently."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Showcasing Strengths, Describing Challenges & Asking Strategic Questions\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "STAR Method: Situation (jelaskan konteks), Task (tugas yang dihadapi), Action (tindakan..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Wawancara kerja dalam bahasa Inggris memerlukan strategi khusus untuk menjawab pertanyaan secara efektif."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Showcasing Strengths, Describing Challenges & Asking Strategic Questions\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "My biggest weakness is that I'm a perfectionist and I work too hard",
+            "My biggest weakness is that I'm a perfectionist and I work too hard always",
+            "I sometimes focus too much on details"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak kandidat memberikan jawaban yang terlalu umum atau teoretis tanpa contoh konkret. Hindari jawaban seperti 'I'm a hard worker' tanpa bukti spesifik. Juga hindari memaparkan kelemahan yang terlalu serius atau relevan langsung dengan posisi yang dilamar."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMr. Thompson: \"Impressive. What would you say is your greatest strength?\"\nSarah: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "My biggest weakness is that I'm a perfectionist and I work too hard",
+            "My greatest strength is my ability to analyze data and turn insights into actionable strategies. For example, I identified a gap in our target audience and created a campaign that increased engagement by 45%."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"My greatest strength is my ability to analyze data and turn insights into actionable strategies. For example, I identified a gap in our target audience and created a campaign that increased engagement by 45%.\" (\"Kekuatan terbesar saya adalah kemampuan untuk menganalisis data dan mengubah wawasan menjadi strategi yang dapat ditindaklanjuti. Sebagai contoh, saya mengidentifikasi kesenjangan dalam audiens target kami dan membuat kampanye yang meningkatkan keterlibatan sebesar 45%.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah."
+        }
+      ]
     },
     "vocab": [
       {

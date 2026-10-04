@@ -22,7 +22,45 @@
         "explanation": "Pemula sering lupa menambahkan '-ing' setelah 'like', atau menggunakan 'have' tanpa 'got' dalam konteks British English yang diajarkan di buku ini.",
         "wrong": "I like play football. / I have a sister.",
         "correct": "I like playing football. / I've got a sister."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Hobbies, Like + -ing & Can / Can't\"?",
+          "options": [
+            "Like + -ing: Gunakan 'like' + kata kerja dengan akhiran '-ing' untuk menyatakan kesukaa...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara membicarakan hobi dan aktivitas waktu luang."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Hobbies, Like + -ing & Can / Can't\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I have a sister",
+            "I like playing football",
+            "I like play football"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering lupa menambahkan '-ing' setelah 'like', atau menggunakan 'have' tanpa 'got' dalam konteks British English yang diajarkan di buku ini."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nOlivia: \"I'm happy. You know my brother, Patrick, right? Well, he's got a new friend. He's really cool.\"\nChloe: \"[...]\"",
+          "options": [
+            "Really? Who is he? What does he look like?",
+            "Sorry, I forgot my keys at home.",
+            "I like play football"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Really? Who is he? What does he look like?\" (\"Benarkah? Siapa dia? Seperti apa dia?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Chloe."
+        }
+      ]
     },
     "vocab": [
       {

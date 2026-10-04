@@ -21,7 +21,45 @@
         "explanation": "Banyak pemula keliru saat membuat kalimat negatif dengan 'used to'. Mereka sering menulis 'I didn't used to' padahal seharusnya 'I didn't use to' (tanpa 'd' pada 'use' karena 'did' sudah menunjukkan past tense).",
         "wrong": "I didn't used to like science when I was younger.",
         "correct": "I didn't use to like science when I was younger."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Modals of Ability & Obligation\"?",
+          "options": [
+            "Used to + verb: untuk menyatakan kebiasaan atau keadaan di masa lalu yang tidak terjadi...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas cara menyatakan kebiasaan di masa lampau dengan 'used to', membayangkan situasi yang berbeda dengan second conditional, dan membedakan past simple dengan past continuous."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Modals of Ability & Obligation\"?",
+          "options": [
+            "I didn't used to like science when I was younger",
+            "I didn't use to like science when I was younger",
+            "I didn't use to like science when I were younger"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula keliru saat membuat kalimat negatif dengan 'used to'. Mereka sering menulis 'I didn't used to' padahal seharusnya 'I didn't use to' (tanpa 'd' pada 'use' karena 'did' sudah menunjukkan past tense)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"They used to read books and listen to the radio. Families used to get together and sing songs.\"\nTom: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I didn't used to like science when I was younger",
+            "I wish there was a time machine so I could see what life was like back then."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"I wish there was a time machine so I could see what life was like back then.\" (\"Saya berharap ada mesin waktu sehingga saya bisa melihat seperti apa kehidupan dulu.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

@@ -23,7 +23,45 @@
         "explanation": "Kesalahan terbesar di tingkat C2 adalah memilih kata atau struktur yang secara gramatikal benar, namun secara pragmatik atau stilistika tidak tepat untuk konteks akademis atau diplomasi tingkat tinggi. Penutur C2 sejati memahami bobot konotatif dari setiap kata.",
         "wrong": "I think the government's plan is very bad and will cause a lot of problems for everyone.",
         "correct": "The proposed governmental policy is fundamentally flawed, inevitably precipitating widespread systemic repercussions."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Grandmastery Proficiency Examination (C2 Complete)\"?",
+          "options": [
+            "Dalam Listening dan Reading C2, jawaban yang benar sering kali diparafrasekan secara ek...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Ujian Grandmastery ini adalah kulminasi dari penguasaan bahasa Inggris pada tingkat C2 (Cambridge Proficiency)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "The proposed governmental policy are fundamentally flawed",
+            "The proposed governmental policy is fundamentally flawed",
+            "I think the government's plan is very bad and will cause a lot of problems for everyone"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kesalahan terbesar di tingkat C2 adalah memilih kata atau struktur yang secara gramatikal benar, namun secara pragmatik atau stilistika tidak tepat untuk konteks akademis atau diplomasi tingkat tinggi. Penutur C2 sejati memahami bobot konotatif dari setiap kata."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Aris: \"It is my contention that integrating AI into the judicial system risks institutionalizing algorithmic bias under the guise of absolute objectivity.\"\nProf. Elena: \"[...]\"",
+          "options": [
+            "I think the government's plan is very bad and will cause a lot of problems for everyone",
+            "While I concede that the potential for bias is non-trivial, one must not overlook the inexorable flaws inherent in human jurisprudence, which is often swayed by ephemeral emotions.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"While I concede that the potential for bias is non-trivial, one must not overlook the inexorable flaws inherent in human jurisprudence, which is often swayed by ephemeral emotions.\" (\"Meskipun saya mengakui bahwa potensi bias itu bukan hal sepele, kita tidak boleh mengabaikan kelemahan yang tak terhindarkan dalam yurisprudensi manusia, yang sering kali dipengaruhi oleh emosi sesaat.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Elena."
+        }
+      ]
     },
     "vocab": [
       {

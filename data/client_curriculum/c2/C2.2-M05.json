@@ -23,7 +23,45 @@
         "explanation": "Kesalahan umum adalah penggunaan trope retoris secara mekanis tanpa mempertimbangkan register, konteks, dan audience. Chiasmus yang dipaksakan terdengar artifisial; zeugma yang gagal dapat membingungkan; polysyndeton berlebihan menjadi membosankan; asyndeton tanpa kontrol kehilangan koherensi. Penutur C2 tahu kapan menerapkan ornamen retoris dan kapan kesederhanaan lebih powerful.",
         "wrong": "He lost his keys and his mind and his way home, which was very unfortunate for him in that particular moment.",
         "correct": "He lost his keys, his mind, his way home—each disappearance marking a deeper descent into that November chaos."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Chiasmus, Zeugma, Polysyndeton & Asyndeton in Modern Prose\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Chiasmus: Balik struktur sintaksis dalam pola AB-BA untuk menciptakan simetri retoris (...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Retorika klasik Yunani-Romawi menawarkan perangkat stilistik yang menciptakan musikalitas dan kekuatan persuasif dalam prosa modern."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "He lost his keys",
+            "which was very unfortunate for him in that particular moment",
+            "He lost his keys and his mind and his way home"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kesalahan umum adalah penggunaan trope retoris secara mekanis tanpa mempertimbangkan register, konteks, dan audience. Chiasmus yang dipaksakan terdengar artifisial; zeugma yang gagal dapat membingungkan; polysyndeton berlebihan menjadi membosankan; asyndeton tanpa kontrol kehilangan koherensi. Penutur C2 tahu kapan menerapkan ornamen retoris dan kapan kesederhanaan lebih powerful."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nProfessor Ashworth: \"I find it rather curious that contemporary novelists deploy chiasmus with such abandon, yet so few demonstrate genuine understanding of its Ciceronian function—it's not mere ornament, but a dialectical hinge.\"\nDr. Chen: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Precisely. And the distinction between zeugma and syllepsis has become so blurred in popular usage that the semantic wit—the very essence of the device—is routinely squandered on pedestrian constructions.",
+            "He lost his keys and his mind and his way home"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Precisely. And the distinction between zeugma and syllepsis has become so blurred in popular usage that the semantic wit—the very essence of the device—is routinely squandered on pedestrian constructions.\" (\"Tepat sekali. Dan perbedaan antara zeugma dan syllepsis telah menjadi begitu kabur dalam penggunaan populer sehingga kecerdasan semantik—inti dari perangkat itu—secara rutin disia-siakan pada konstruksi yang biasa-biasa saja.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Chen."
+        }
+      ]
     },
     "vocab": [
       {

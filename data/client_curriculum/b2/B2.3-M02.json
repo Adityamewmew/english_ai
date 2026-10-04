@@ -23,7 +23,45 @@
         "explanation": "Banyak siswa level B2 lupa menyesuaikan bentuk 'be' dalam cleft sentence dengan waktu kalimat asli. It-cleft harus mencerminkan tense yang sesuai dengan konteks, dan wh-cleft memerlukan kecocokan subject-verb agreement yang tepat.",
         "wrong": "It is in 2019 that we launched the product. What he need is more time.",
         "correct": "It was in 2019 that we launched the product. What he needs is more time."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Cleft Sentences for Rhetorical Precision & Thematic Highlighting\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "It-cleft: It + be + fokus + that/who + sisa kalimat. Contoh: 'It was the CEO who approv...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Cleft sentences adalah struktur kalimat yang digunakan untuk memberikan penekanan retoris pada informasi tertentu."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "It was in 2019 that we launched the product. What he needs are more time",
+            "It was in 2019 that we launched the product. What he needs is more time",
+            "It is in 2019 that we launched the product. What he need is more time"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak siswa level B2 lupa menyesuaikan bentuk 'be' dalam cleft sentence dengan waktu kalimat asli. It-cleft harus mencerminkan tense yang sesuai dengan konteks, dan wh-cleft memerlukan kecocokan subject-verb agreement yang tepat."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nRachel: \"That's true. What investors appreciated most was the transparency in their quarterly reports.\"\nDavid: \"[...]\"",
+          "options": [
+            "It is in 2019 that we launched the product. What he need is more time",
+            "Precisely. It wasn't just the numbers that impressed them—it was the CEO's willingness to acknowledge challenges openly.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Precisely. It wasn't just the numbers that impressed them—it was the CEO's willingness to acknowledge challenges openly.\" (\"Tepat sekali. Bukan hanya angka-angkanya yang mengesankan mereka—tetapi kesediaan CEO untuk mengakui tantangan secara terbuka.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

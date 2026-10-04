@@ -21,7 +21,45 @@
         "explanation": "Pemula sering lupa menghilangkan -ed saat menggunakan didn't atau did, karena bentuk negatif dan tanya sudah menggunakan auxiliary verb 'did'.",
         "wrong": "I didn't helped my friend / Did you worked yesterday?",
         "correct": "I didn't help my friend / Did you work yesterday?"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Past Simple Regular Verbs\"?",
+          "options": [
+            "Positive: Subject + verb + -ed (I helped my friend yesterday / She worked in a factory)",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Past Simple adalah bentuk kata kerja yang digunakan untuk menceritakan kejadian yang sudah selesai di masa lampau."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I didn't helped my friend",
+            "I didn't help my friend",
+            "Did you worked yesterday?"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pemula sering lupa menghilangkan -ed saat menggunakan didn't atau did, karena bentuk negatif dan tanya sudah menggunakan auxiliary verb 'did'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJenny: \"My phone? Where is it? It was in my jacket!\"\nPedro: \"[...]\"",
+          "options": [
+            "OK, calm down. Where were you this morning?",
+            "I didn't helped my friend",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"OK, calm down. Where were you this morning?\" (\"OK, tenang. Kamu di mana tadi pagi?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Pedro."
+        }
+      ]
     },
     "vocab": [
       {

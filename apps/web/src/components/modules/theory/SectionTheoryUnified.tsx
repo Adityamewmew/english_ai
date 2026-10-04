@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { Zap, Flame, Volume2, VolumeX } from "lucide-react";
 import { VocabItem } from "../SectionVocab";
 import { DialogueTurn } from "../SectionDialogue";
 import { TheoryStepper } from "./TheoryStepper";
@@ -165,21 +166,33 @@ export function SectionTheoryUnified({
         {/* Gamification Floating HUD & Audio Toggle */}
         <div className="flex items-center justify-between pb-2">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-bold px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">
-              ⚡ {game.xp} XP
+            <span className="text-xs font-bold px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 flex items-center gap-1.5 shadow-xs">
+              <Zap className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
+              <span>{game.xp} XP</span>
             </span>
             {game.streak > 0 && (
-              <span className="text-xs font-bold px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300">
-                🔥 {game.streak} Hari
+              <span className="text-xs font-bold px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 flex items-center gap-1.5 shadow-xs">
+                <Flame className="w-3.5 h-3.5 text-orange-500 fill-orange-500" />
+                <span>{game.streak} Hari</span>
               </span>
             )}
           </div>
           <button
             type="button"
             onClick={game.toggleMute}
-            className="text-xs font-semibold text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+            className="text-xs font-semibold text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors flex items-center gap-1.5 cursor-pointer py-1 px-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
           >
-            {game.isMuted ? "🔇 Suara Mati" : "🔊 Efek Suara Aktif"}
+            {game.isMuted ? (
+              <>
+                <VolumeX className="w-3.5 h-3.5 text-rose-500" />
+                <span>Suara Mati</span>
+              </>
+            ) : (
+              <>
+                <Volume2 className="w-3.5 h-3.5 text-blue-600" />
+                <span>Efek Suara Aktif</span>
+              </>
+            )}
           </button>
         </div>
 
@@ -272,6 +285,11 @@ export function SectionTheoryUnified({
               rules={rules}
               commonTrap={commonTrap}
               vocabItems={vocabItems}
+              dialogueLines={dialogueLines}
+              moduleTitle={title}
+              orderIndex={orderIndex}
+              summaryText={summaryText}
+              bestExample={bestExample}
               onNext={() => {}}
               onCompleteStep={() => onStepComplete?.(6)}
               onAwardXp={game.awardXp}
@@ -411,6 +429,11 @@ export function SectionTheoryUnified({
               rules={rules}
               commonTrap={commonTrap}
               vocabItems={vocabItems}
+              dialogueLines={dialogueLines}
+              moduleTitle={title}
+              orderIndex={orderIndex}
+              summaryText={summaryText}
+              bestExample={bestExample}
               onNext={() => handleUnlockAndScroll(6)}
               onCompleteStep={() => setUnlockedStep((prev) => Math.max(prev, 6))}
               onAwardXp={game.awardXp}

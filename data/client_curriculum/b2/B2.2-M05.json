@@ -23,7 +23,45 @@
         "explanation": "Siswa B2 sering membuat pernyataan terlalu absolut dalam diskusi etis, yang tidak sesuai dengan register akademis. Dalam bioetika, hampir tidak ada jawaban hitam-putih, sehingga penggunaan bahasa yang terlalu pasti menunjukkan kurangnya sophisticated thinking.",
         "wrong": "Genetic engineering is completely wrong and should be banned immediately.",
         "correct": "Genetic engineering raises significant ethical concerns that warrant careful consideration, although it may offer certain medical benefits."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Bioethics, Genetic Engineering & Medical Innovations\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Gunakan passive voice untuk fokus pada tindakan ilmiah: 'Genes can be modified' (bukan ...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Modul ini membekali Anda dengan kemampuan untuk mendiskusikan isu-isu bioetika kompleks dalam bahasa Inggris tingkat lanjut."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "Genetic engineering raises significant ethical concerns that warrant careful consideration",
+            "Genetic engineering is completely wrong and should be banned immediately always",
+            "Genetic engineering is completely wrong and should be banned immediately"
+          ],
+          "correctIndex": 0,
+          "explanation": "Siswa B2 sering membuat pernyataan terlalu absolut dalam diskusi etis, yang tidak sesuai dengan register akademis. Dalam bioetika, hampir tidak ada jawaban hitam-putih, sehingga penggunaan bahasa yang terlalu pasti menunjukkan kurangnya sophisticated thinking."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJames: \"Dr. Chen, CRISPR technology has been hailed as revolutionary, but it's also deeply controversial. Where do you stand on its use in human embryos?\"\nDr. Chen: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "It's a nuanced issue. While CRISPR could potentially eliminate hereditary diseases like sickle cell anaemia, we must consider the unintended consequences. We're essentially making decisions for future generations without their consent.",
+            "Genetic engineering is completely wrong and should be banned immediately"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"It's a nuanced issue. While CRISPR could potentially eliminate hereditary diseases like sickle cell anaemia, we must consider the unintended consequences. We're essentially making decisions for future generations without their consent.\" (\"Ini adalah isu yang bernuansa. Meskipun CRISPR berpotensi menghilangkan penyakit turun-temurun seperti anemia sel sabit, kita harus mempertimbangkan konsekuensi yang tidak diinginkan. Kita pada dasarnya membuat keputusan untuk generasi mendatang tanpa persetujuan mereka.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Chen."
+        }
+      ]
     },
     "vocab": [
       {

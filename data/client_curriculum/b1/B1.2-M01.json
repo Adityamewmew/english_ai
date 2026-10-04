@@ -25,7 +25,45 @@
         "explanation": "Banyak pembelajar B1 menggunakan bahasa terlalu kasual dalam email bisnis atau sebaliknya, terlalu kaku saat berkomunikasi dengan rekan kerja. Kesalahan umum termasuk penggunaan kontraksi (I'm, don't, can't) dalam email formal, atau memulai email dengan 'Hi' kepada klien penting yang belum kenal.",
         "wrong": "Hi John, I'm writing cause I need the report ASAP. Can you send it? Thanks, bye!",
         "correct": "Dear Mr. Anderson, I am writing to request the quarterly report. Would it be possible to receive it by the end of this week? I would appreciate your assistance with this matter. Best regards, [Your name]"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"Business Emails, Formal Registers & Etiquette\", bagaimana perubahan atau padanan yang benar untuk \"Subject line yang jelas\"?",
+          "options": [
+            "Subject line yang jelas selalu dihilangkan",
+            "Tidak ada perubahan tenses pada Subject line yang jelas",
+            "Salam formal"
+          ],
+          "correctIndex": 2,
+          "explanation": "Dalam materi ini: Subject line yang jelas berubah atau berpadanan menjadi \"Salam formal\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Business Emails, Formal Registers & Etiquette\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I'm writing cause I need the report ASAP. Can you send it? Thanks",
+            "Hi John",
+            "Dear Mr. Anderson"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pembelajar B1 menggunakan bahasa terlalu kasual dalam email bisnis atau sebaliknya, terlalu kaku saat berkomunikasi dengan rekan kerja. Kesalahan umum termasuk penggunaan kontraksi (I'm, don't, can't) dalam email formal, atau memulai email dengan 'Hi' kepada klien penting yang belum kenal."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah (Email): \"Please find attached the revised proposal incorporating the changes we discussed. I would appreciate if you could review it at your earliest convenience.\"\nMr. Thompson (Reply): \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Hi John",
+            "Dear Sarah, Thank you for your prompt response and for sending the updated proposal."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Dear Sarah, Thank you for your prompt response and for sending the updated proposal.\" (\"Kepada Sarah, Terima kasih atas respons cepat Anda dan pengiriman proposal yang telah diperbarui.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Mr. Thompson (Reply)."
+        }
+      ]
     },
     "vocab": [
       {

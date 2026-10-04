@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula lupa menambahkan 'to' setelah 'going', atau salah memilih bentuk 'be' (am/is/are) yang tidak sesuai dengan subjek. Ingat, setelah 'going to' harus diikuti kata kerja bentuk dasar (infinitive), bukan bentuk -ing atau past.",
         "wrong": "I am going visit my friend tomorrow. / She is going to visiting the museum.",
         "correct": "I am going to visit my friend tomorrow. / She is going to visit the museum."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Future Plans & Intentions with 'Be Going To'\"?",
+          "options": [
+            "Rumus Positif: Subject + am/is/are + going to + verb (infinitive). Contoh: I am going t...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Struktur 'be going to' digunakan untuk menyatakan rencana atau niat yang sudah kamu putuskan di masa depan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I am going visit my friend tomorrow",
+            "I am going to visit my friend tomorrow",
+            "She is going to visiting the museum"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula lupa menambahkan 'to' setelah 'going', atau salah memilih bentuk 'be' (am/is/are) yang tidak sesuai dengan subjek. Ingat, setelah 'going to' harus diikuti kata kerja bentuk dasar (infinitive), bukan bentuk -ing atau past."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"I'm going to study for the English test on Monday.\"\nTom: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I am going visit my friend tomorrow",
+            "That's a good plan. Are you going to study with Lisa?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"That's a good plan. Are you going to study with Lisa?\" (\"Itu rencana yang bagus. Apakah kamu akan belajar dengan Lisa?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

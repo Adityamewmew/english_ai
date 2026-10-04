@@ -21,7 +21,45 @@
         "explanation": "Banyak pemula menggunakan present perfect bersama keterangan waktu spesifik seperti 'yesterday' atau 'in 1998'. Ini salah karena present perfect tidak menyebutkan waktu spesifik, hanya past simple yang boleh.",
         "wrong": "I have visited Greece in 1998.",
         "correct": "I visited Greece in 1998. (atau) I have visited Greece before."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Present Tenses & Personality\"?",
+          "options": [
+            "Present Perfect + just: I have just finished my homework. (Baru saja selesai, relevan d...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan perbedaan antara present perfect dan past simple."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Present Tenses & Personality\"?",
+          "options": [
+            "I have visited Greece in",
+            "I visited Greece in 1998. (atau) I have visited Greece before",
+            "I visited Greece in 1998. (atau) I have visited Greece before"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula menggunakan present perfect bersama keterangan waktu spesifik seperti 'yesterday' atau 'in 1998'. Ini salah karena present perfect tidak menyebutkan waktu spesifik, hanya past simple yang boleh."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLuke: \"Have you read this? They're opening a new café in the park. Saturday afternoon.\"\nOlivia: \"[...]\"",
+          "options": [
+            "That's fantastic. Who's going to do the big opening ceremony?",
+            "I have visited Greece in",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"That's fantastic. Who's going to do the big opening ceremony?\" (\"Itu fantastis. Siapa yang akan melakukan upacara pembukaan besar?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Olivia."
+        }
+      ]
     },
     "vocab": [
       {

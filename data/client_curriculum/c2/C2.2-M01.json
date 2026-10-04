@@ -23,7 +23,45 @@
         "explanation": "Satir gagal bukan karena kurang tajam, melainkan karena terlalu eksplisit atau kehilangan ambiguitas produktif. Penutur C1 cenderung menjelaskan leluconnya atau menggunakan penanda ironi yang terlalu jelas ('obviously', 'of course'). Penutur C2 memahami bahwa kekuatan satir terletak pada ketegangan interpretif—pembaca harus bekerja untuk menemukan makna, dan dalam proses itu, kritik menjadi lebih menancap. Register juga krusial: satir aristokratik berbeda dengan satir populis, dan memilih register yang salah menghancurkan efek retoris.",
         "wrong": "The politician's promises are obviously lies and everyone knows he's corrupt, which is clearly ridiculous.",
         "correct": "One admires the politician's unwavering commitment to principles—particularly the principle that today's convictions need not constrain tomorrow's opportunities."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Nuanced Satire, Irony & High-Level Rhetorical Sarcasm in Cultural Commentary\"?",
+          "options": [
+            "Gunakan dramatic irony dengan sengaja menciptakan kesenjangan antara apa yang dikatakan...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Satir tingkat C2 merupakan seni retorika tertinggi yang mengkritik absurditas sosial, politik, atau budaya melalui ironi berlapis, sarkasme terselubung, dan parodi intelektual."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Nuanced Satire, Irony & High-Level Rhetorical Sarcasm in Cultural Commentary\"?",
+          "options": [
+            "which is clearly ridiculous",
+            "One admires the politician's unwavering commitment to principles—particularly the principle that today's convictions need not constrain tomorrow's opportunities",
+            "The politician's promises are obviously lies and everyone knows he's corrupt"
+          ],
+          "correctIndex": 1,
+          "explanation": "Satir gagal bukan karena kurang tajam, melainkan karena terlalu eksplisit atau kehilangan ambiguitas produktif. Penutur C1 cenderung menjelaskan leluconnya atau menggunakan penanda ironi yang terlalu jelas ('obviously', 'of course'). Penutur C2 memahami bahwa kekuatan satir terletak pada ketegangan interpretif—pembaca harus bekerja untuk menemukan makna, dan dalam proses itu, kritik menjadi lebih menancap. Register juga krusial: satir aristokratik berbeda dengan satir populis, dan memilih register yang salah menghancurkan efek retoris."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Hartwick: \"I must confess, Vikram, I'm utterly enchanted by the novel's groundbreaking revelation that wealthy people sometimes feel sad.\"\nProf. Desai: \"[...]\"",
+          "options": [
+            "Indeed. One can only marvel at the author's courage in depicting the ennui of the leisure class with such unflinching... what's the word... banality.",
+            "Sorry, I forgot my keys at home.",
+            "The politician's promises are obviously lies and everyone knows he's corrupt"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Indeed. One can only marvel at the author's courage in depicting the ennui of the leisure class with such unflinching... what's the word... banality.\" (\"Memang. Orang hanya bisa kagum pada keberanian penulis dalam menggambarkan kebosanan kelas santai dengan... apa ya kata yang tepat... kebanalitasan yang tak berkedip.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Desai."
+        }
+      ]
     },
     "vocab": [
       {

@@ -34,7 +34,45 @@
             "explanation": "Banyak pemula lupa mengubah bentuk 'to be' sesuai subjeknya, atau salah menggunakan kata tanya",
             "wrong": "I are from Indonesia. Where you from?",
             "correct": "I am from Indonesia. Where are you from?"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilihlah kalimat yang menggunakan verb 'to be' dengan benar untuk menyatakan kewarganegaraan.",
+              "options": [
+                "She are Brazilian.",
+                "She is Brazilian.",
+                "She am Brazilian."
+              ],
+              "correctIndex": 1,
+              "explanation": "Subjek 'She' (orang ketiga tunggal) harus diikuti oleh 'is', bukan 'are' atau 'am'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar untuk menanyakan asal negara seseorang?",
+              "options": [
+                "Where you from?",
+                "Where are you from?",
+                "Where is you from?"
+              ],
+              "correctIndex": 1,
+              "explanation": "Dalam kalimat tanya, 'to be' (are) harus diletakkan sebelum subjek (you), dan 'are' adalah pasangan yang tepat untuk 'you'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'Nice to meet you. I'm from Japan. [...]?'",
+              "options": [
+                "Where are you from?",
+                "What are you from?",
+                "How are you from?"
+              ],
+              "correctIndex": 0,
+              "explanation": "Untuk menanyakan asal negara seseorang, ungkapan yang tepat adalah 'Where are you from?'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -263,7 +301,45 @@
             "explanation": "Pemula sering lupa menambahkan 'not' setelah 'be' dalam kalimat negatif, atau salah menyusun urutan kata dalam pertanyaan. Dalam pertanyaan, 'be' harus di depan subjek, bukan setelahnya.",
             "wrong": "She is not happy? / You is cold? / They not are tired.",
             "correct": "She isn't happy. / Are you cold? / They aren't tired."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat negatif yang benar untuk menyatakan bahwa 'Dia (perempuan) tidak bahagia'.",
+              "options": [
+                "She isn't happy.",
+                "She not is happy.",
+                "She is not happy not."
+              ],
+              "correctIndex": 0,
+              "explanation": "Struktur kalimat negatif dengan 'to be' adalah Subject + be + not + adjective. 'She isn't happy' adalah bentuk yang benar."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah bentuk pertanyaan yang benar untuk menanyakan kondisi seseorang?",
+              "options": [
+                "You are worried?",
+                "Are you worried?",
+                "Are you worried not?"
+              ],
+              "correctIndex": 1,
+              "explanation": "Dalam pertanyaan dengan 'to be', kata kerja bantu (be) harus diletakkan di depan subjek. 'Are you worried?' adalah urutan yang tepat."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'Do you like your new teacher, Mr. John?' 'Yes, I like [...] very much.'",
+              "options": [
+                "he",
+                "his",
+                "him"
+              ],
+              "correctIndex": 2,
+              "explanation": "Setelah kata kerja 'like', kita memerlukan object pronoun. Karena Mr. John adalah laki-laki, maka kata ganti objek yang tepat adalah 'him'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -500,7 +576,45 @@
             "explanation": "Pemula sering lupa menambahkan 's ketika menunjukkan kepemilikan pada nama orang. Mereka juga kadang bingung membedakan 'his' dan 'her', atau salah menempatkan possessive adjective.",
             "wrong": "Tom house is big. / William father is Prince Charles. / She cousin is nice.",
             "correct": "Tom's house is big. / William's father is Prince Charles. / Her cousin is nice."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang benar untuk menunjukkan kepemilikan menggunakan 's.",
+              "options": [
+                "This is my brother's house.",
+                "This is my brother house.",
+                "This is my brothers house."
+              ],
+              "correctIndex": 0,
+              "explanation": "Gunakan apostrof dan huruf s ('s) setelah kata benda untuk menunjukkan kepemilikan (brother's house)."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar untuk menunjukkan kepemilikan?",
+              "options": [
+                "Kate's mother is very kind.",
+                "Kate mother is very kind.",
+                "Kates mother is very kind."
+              ],
+              "correctIndex": 0,
+              "explanation": "Kesalahan umum adalah lupa menambahkan apostrof (') sebelum 's. Bentuk yang benar adalah Kate's mother."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi kalimat berikut: 'I have a brother. [...] name is John.'",
+              "options": [
+                "His",
+                "He",
+                "Her"
+              ],
+              "correctIndex": 0,
+              "explanation": "Gunakan possessive adjective 'His' untuk menunjukkan kepemilikan bagi laki-laki (brother)."
+            }
+          ]
         },
         "vocab": [
           {
@@ -738,7 +852,45 @@
             "explanation": "Pemula sering lupa membedakan 'there is' untuk singular dan 'there are' untuk plural, atau menggunakan 'some' di kalimat negatif padahal seharusnya 'any'.",
             "wrong": "There is many parks in London. / There are some people? / There aren't some shops here.",
             "correct": "There are many parks in London. / Are there any people? / There aren't any shops here."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan keberadaan suatu tempat?",
+              "options": [
+                "There is a big museum in this city.",
+                "There is many restaurants in the town.",
+                "There are a park near the station."
+              ],
+              "correctIndex": 0,
+              "explanation": "Gunakan 'There is' untuk kata benda tunggal (a museum) dan 'There are' untuk kata benda jamak. Pilihan 1 salah karena menggunakan 'is' untuk jamak, dan pilihan 2 salah karena menggunakan 'are' untuk tunggal."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang tepat untuk menyatakan ketidakadaan sesuatu (negatif) sesuai aturan penggunaan 'some' dan 'any'.",
+              "options": [
+                "There aren't some supermarkets in this area.",
+                "There aren't any supermarkets in this area.",
+                "There are any supermarkets in this area."
+              ],
+              "correctIndex": 1,
+              "explanation": "Dalam kalimat negatif, kita harus menggunakan 'any', bukan 'some'. 'Some' hanya digunakan untuk kalimat positif."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Seseorang bertanya arah ke stasiun. Kalimat mana yang paling tepat untuk memberikan petunjuk?",
+              "options": [
+                "To go straight and turning left at the bank.",
+                "You goes straight and turn left at the bank.",
+                "Go straight and turn left at the bank."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kalimat perintah (imperative) menggunakan kata kerja bentuk dasar (base form) tanpa tambahan 'to' atau akhiran subjek seperti '-es'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -947,7 +1099,45 @@
             "explanation": "Pemula sering lupa bahwa untuk he/she/it, verb harus ditambah -s atau -es. Selain itu, dalam bentuk negatif dan pertanyaan, jangan tambahkan -s pada verb utama karena sudah ada pada does/doesn't.",
             "wrong": "She teach Maths. He don't likes music. Does she teaches piano?",
             "correct": "She teaches Maths. He doesn't like music. Does she teach piano?"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan kebiasaan sehari-hari subjek 'He'?",
+              "options": [
+                "He plays computer games every day.",
+                "He play computer games every day.",
+                "He is play computer games every day."
+              ],
+              "correctIndex": 0,
+              "explanation": "Untuk subjek he/she/it dalam Present Simple positif, kata kerja utama harus ditambah akhiran -s atau -es."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar untuk bentuk negatif atau pertanyaan?",
+              "options": [
+                "Does she teach piano?",
+                "Does she teaches piano?",
+                "She doesn't likes music."
+              ],
+              "correctIndex": 0,
+              "explanation": "Dalam kalimat negatif (doesn't) dan pertanyaan (does), kata kerja utama harus kembali ke bentuk dasar tanpa tambahan -s/-es karena penanda subjek sudah ada pada kata bantu."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'How often do you hang out with friends?' - 'I [...] hang out with them on weekends.'",
+              "options": [
+                "always",
+                "hang out always",
+                "always do"
+              ],
+              "correctIndex": 0,
+              "explanation": "Adverb of frequency (seperti always, often, sometimes) diletakkan sebelum kata kerja utama (hang out) dalam kalimat."
+            }
+          ]
         },
         "vocab": [
           {
@@ -1161,7 +1351,45 @@
             "explanation": "Pemula sering lupa menambahkan '-ing' setelah 'like', atau menggunakan 'have' tanpa 'got' dalam konteks British English yang diajarkan di buku ini.",
             "wrong": "I like play football. / I have a sister.",
             "correct": "I like playing football. / I've got a sister."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan hobi menggunakan pola 'like + -ing'?",
+              "options": [
+                "I like playing football.",
+                "I like play football.",
+                "I like to playing football."
+              ],
+              "correctIndex": 0,
+              "explanation": "Setelah kata 'like', kata kerja harus ditambahkan akhiran '-ing' (gerund) untuk menyatakan aktivitas atau hobi."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan kepemilikan sesuai aturan 'have/has got'?",
+              "options": [
+                "She has got a new smartphone.",
+                "She have got a new smartphone.",
+                "She's get a new smartphone."
+              ],
+              "correctIndex": 0,
+              "explanation": "Subjek 'She' (orang ketiga tunggal) harus diikuti oleh 'has got'. 'Have' digunakan untuk I/You/We/They, dan 'get' tidak tepat dalam pola ini."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi kalimat tanya berikut: \"Have you [...] a games console?\"",
+              "options": [
+                "got",
+                "get",
+                "getting"
+              ],
+              "correctIndex": 0,
+              "explanation": "Pola kalimat tanya untuk kepemilikan adalah 'Have/Has + subjek + got...?'. Jadi, kata yang tepat untuk melengkapi kalimat tersebut adalah 'got'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -1394,7 +1622,45 @@
             "explanation": "Banyak pemula masih menggunakan 'do/does' ketika membuat pertanyaan atau kalimat negatif dengan 'can'. Padahal 'can' adalah modal verb yang tidak memerlukan auxiliary verb 'do/does'.",
             "wrong": "Do you can swim? / He doesn't can play guitar.",
             "correct": "Can you swim? / He can't play guitar."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan kemampuan?",
+              "options": [
+                "He can swims well.",
+                "He can swim well.",
+                "He can to swim well."
+              ],
+              "correctIndex": 1,
+              "explanation": "Setelah modal 'can', kata kerja harus dalam bentuk dasar (bare infinitive) tanpa tambahan -s/-es dan tanpa 'to'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat tanya yang benar sesuai aturan penggunaan 'can'?",
+              "options": [
+                "Can you play golf?",
+                "Do you can play golf?",
+                "Does you can play golf?"
+              ],
+              "correctIndex": 0,
+              "explanation": "'Can' adalah modal verb, sehingga tidak memerlukan auxiliary verb 'do' atau 'does' untuk membuat kalimat tanya."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan ini: 'Can you do taekwondo?' - 'No, I can't. But [...]'",
+              "options": [
+                "I can swimming very well.",
+                "I can to swim very well.",
+                "I can swim very well."
+              ],
+              "correctIndex": 2,
+              "explanation": "Setelah 'can', kata kerja harus dalam bentuk dasar (swim), bukan 'swimming' atau 'to swim'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -1593,7 +1859,45 @@
             "explanation": "Kesalahan pemula yang paling sering adalah lupa menggunakan am/is/are sebelum verb-ing. Present Continuous membutuhkan dua bagian: to be dan verb-ing.",
             "wrong": "She playing the violin now.",
             "correct": "She is playing the violin now."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang menggunakan Present Continuous dengan benar untuk mendeskripsikan aktivitas yang sedang terjadi?",
+              "options": [
+                "The musicians are playing the violin.",
+                "The musicians playing the violin.",
+                "The musicians are play the violin."
+              ],
+              "correctIndex": 0,
+              "explanation": "Present Continuous membutuhkan 'to be' (are) dan verb-ing (playing). Pilihan kedua kurang 'to be', dan pilihan ketiga menggunakan bentuk dasar 'play' bukan 'playing'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan kesalahan umum dalam Present Continuous. Manakah kalimat yang ditulis dengan benar?",
+              "options": [
+                "He is wearing special clothes today.",
+                "He wearing special clothes today.",
+                "He is wear special clothes today."
+              ],
+              "correctIndex": 0,
+              "explanation": "Kesalahan umum adalah lupa menggunakan 'to be'. Kalimat yang benar harus memiliki 'is' dan 'wearing' (verb-ing)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi kalimat berikut berdasarkan konteks musik: 'The singer is on stage. She [...] a song for the audience.'",
+              "options": [
+                "is singing",
+                "are singing",
+                "singing"
+              ],
+              "correctIndex": 0,
+              "explanation": "Subjek 'She' adalah tunggal, maka menggunakan 'is'. Present Continuous memerlukan 'is' + 'singing' untuk menunjukkan aksi yang sedang berlangsung."
+            }
+          ]
         },
         "vocab": [
           {
@@ -1800,7 +2104,45 @@
             "explanation": "Pemula sering bingung kapan menggunakan 'must' (keharusan) dan 'can' (kemampuan/izin). 'Must' digunakan untuk aturan atau hal yang wajib dilakukan, sedangkan 'can' untuk kemampuan atau meminta izin.",
             "wrong": "You can be quiet in the library. (salah konteks)",
             "correct": "You must be quiet in the library. (benar - ini adalah keharusan/aturan)"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang tepat untuk menawarkan makanan kepada tamu dengan sopan?",
+              "options": [
+                "Would you like some steak?",
+                "You like some steak?",
+                "Do you like some steak?"
+              ],
+              "correctIndex": 0,
+              "explanation": "\"Would you like...?\" adalah ungkapan standar dan sopan untuk menawarkan sesuatu dalam bahasa Inggris."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di perpustakaan, ada aturan bahwa pengunjung harus tenang. Kalimat mana yang paling tepat untuk menyatakan aturan tersebut?",
+              "options": [
+                "You can be quiet in the library.",
+                "You must be quiet in the library.",
+                "You mustn't be quiet in the library."
+              ],
+              "correctIndex": 1,
+              "explanation": "\"Must\" digunakan untuk menyatakan aturan atau keharusan, sedangkan \"can\" digunakan untuk kemampuan atau izin, sehingga \"must\" adalah pilihan yang tepat untuk aturan."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut untuk meminta izin meminjam sesuatu: \"A: I want to make an omelette. [...]?\" \"B: Sure, here is my cookbook.\"",
+              "options": [
+                "Can I borrow your cookbook",
+                "Must I borrow your cookbook",
+                "Would you like your cookbook"
+              ],
+              "correctIndex": 0,
+              "explanation": "\"Can I...?\" digunakan untuk meminta izin melakukan sesuatu, sedangkan \"must\" untuk keharusan dan \"would you like\" untuk menawarkan sesuatu."
+            }
+          ]
         },
         "vocab": [
           {
@@ -2027,7 +2369,45 @@
             "explanation": "Pemula sering salah menggunakan 'was' untuk subjek jamak atau 'were' untuk subjek tunggal. Ingat: I/he/she/it → was; you/we/they → were",
             "wrong": "They was famous athletes.",
             "correct": "They were famous athletes."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang benar untuk mendeskripsikan seseorang di masa lalu menggunakan 'was'.",
+              "options": [
+                "She was a famous astronaut.",
+                "She were a famous astronaut.",
+                "She is was a famous astronaut."
+              ],
+              "correctIndex": 0,
+              "explanation": "Subjek 'She' adalah tunggal, sehingga harus menggunakan 'was'. 'Were' digunakan untuk subjek jamak, dan 'is was' adalah struktur yang salah."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang benar untuk subjek jamak 'They' dalam bentuk lampau.",
+              "options": [
+                "They was at the factory yesterday.",
+                "They were at the factory yesterday.",
+                "They weren't was at the factory yesterday."
+              ],
+              "correctIndex": 1,
+              "explanation": "Subjek 'They' (mereka) selalu berpasangan dengan 'were' dalam bentuk lampau. 'Was' hanya digunakan untuk subjek tunggal (I/he/she/it)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'Was Valentina Tereshkova in space?' 'Yes, [...]'",
+              "options": [
+                "she was.",
+                "she were.",
+                "she is."
+              ],
+              "correctIndex": 0,
+              "explanation": "Karena pertanyaan dimulai dengan 'Was' dan subjeknya tunggal (Valentina), maka jawaban singkat yang benar adalah 'she was'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -2245,7 +2625,45 @@
             "explanation": "Pemula sering lupa menghilangkan -ed saat menggunakan didn't atau did, karena bentuk negatif dan tanya sudah menggunakan auxiliary verb 'did'.",
             "wrong": "I didn't helped my friend / Did you worked yesterday?",
             "correct": "I didn't help my friend / Did you work yesterday?"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan kejadian di masa lampau menggunakan kata kerja beraturan?",
+              "options": [
+                "She walked to the park yesterday.",
+                "She walk to the park yesterday.",
+                "She walks to the park yesterday."
+              ],
+              "correctIndex": 0,
+              "explanation": "Untuk kalimat positif Past Simple, kata kerja beraturan harus ditambah akhiran -ed (walk menjadi walked)."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat tanya yang benar sesuai aturan Past Simple?",
+              "options": [
+                "Did you watch the competition?",
+                "Did you watched the competition?",
+                "Did you watching the competition?"
+              ],
+              "correctIndex": 0,
+              "explanation": "Setelah auxiliary verb 'did', kata kerja harus kembali ke bentuk dasar (base verb), bukan bentuk lampau (-ed)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: Jenny: 'Where were you this morning?' Pedro: 'I [...] at the training programme.'",
+              "options": [
+                "was",
+                "were",
+                "am"
+              ],
+              "correctIndex": 0,
+              "explanation": "Subjek 'I' dalam Past Simple menggunakan 'was', sedangkan 'were' digunakan untuk subjek 'you', 'we', atau 'they'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -2488,7 +2906,45 @@
             "explanation": "Kesalahan umum pemula adalah menggunakan 'more' untuk adjective pendek, atau menambahkan -er pada adjective panjang. Ingat: adjective pendek pakai -er, adjective panjang pakai 'more'.",
             "wrong": "Bikes are more cheap than cars. / Cars are expensiver than bikes.",
             "correct": "Bikes are cheaper than cars. / Cars are more expensive than bikes."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk membandingkan kecepatan kereta dan bus menggunakan aturan comparative adjective?",
+              "options": [
+                "The train is faster than the bus.",
+                "The train is more fast than the bus.",
+                "The train is fast than the bus."
+              ],
+              "correctIndex": 0,
+              "explanation": "Untuk adjective pendek (1 suku kata) seperti 'fast', kita harus menambahkan akhiran '-er' dan kata 'than' untuk membandingkan dua hal."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar untuk membandingkan harga tiket pesawat dan kereta tanpa melanggar aturan comparative?",
+              "options": [
+                "A plane ticket is expensiver than a train ticket.",
+                "A plane ticket is more expensive than a train ticket.",
+                "A plane ticket is more cheap than a train ticket."
+              ],
+              "correctIndex": 1,
+              "explanation": "'Expensive' adalah adjective panjang, sehingga harus menggunakan 'more' di depan. Pilihan lain salah karena 'expensiver' tidak ada dalam bahasa Inggris, dan 'more cheap' salah karena 'cheap' adalah adjective pendek yang seharusnya menggunakan 'cheaper'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Amy berada di stasiun dan ingin menanyakan harga tiket. Lengkapi percakapan berikut: 'Excuse me, [...] to Brighton?'",
+              "options": [
+                "how much are a ticket",
+                "how much is the ticket price cost",
+                "how much is a ticket"
+              ],
+              "correctIndex": 2,
+              "explanation": "Struktur 'how much is a ticket' adalah cara yang tepat dan natural untuk menanyakan harga satu tiket (singular) di stasiun."
+            }
+          ]
         },
         "vocab": [
           {
@@ -2691,7 +3147,45 @@
             "explanation": "Banyak siswa terburu-buru membaca soal tanpa memperhatikan detail kecil seperti bentuk kata kerja (was/were, is/are) atau penggunaan can/can't. Perhatikan juga subjek kalimat untuk menentukan to be yang tepat.",
             "wrong": "She were at the library yesterday.",
             "correct": "She was at the library yesterday."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang menggunakan struktur past simple dengan kata kerja to be yang tepat untuk subjek jamak (plural).",
+              "options": [
+                "My friends was at the park yesterday.",
+                "My friends were at the park yesterday.",
+                "My friends were be at the park yesterday."
+              ],
+              "correctIndex": 1,
+              "explanation": "Subjek jamak 'My friends' memerlukan 'were' dalam bentuk past tense. Pilihan pertama salah karena menggunakan 'was', dan pilihan ketiga salah karena menambahkan 'be' yang tidak diperlukan setelah 'were'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar dalam penggunaan kata kerja bantu 'can' untuk menyatakan kemampuan?",
+              "options": [
+                "She can speaks Italian.",
+                "She can speak Italian.",
+                "She can to speak Italian."
+              ],
+              "correctIndex": 1,
+              "explanation": "Setelah kata kerja bantu 'can', kita harus menggunakan kata kerja bentuk dasar (base form) tanpa tambahan akhiran 's' atau kata depan 'to'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'Lisa: Where is your cousin from? Marco: [...]'",
+              "options": [
+                "He is from Italy.",
+                "He from Italy is.",
+                "He is Italy from."
+              ],
+              "correctIndex": 0,
+              "explanation": "Struktur kalimat yang benar untuk menyatakan asal negara adalah 'Subject + to be + from + Country'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -3031,7 +3525,45 @@
             "explanation": "Pemula sering lupa menggunakan kata 'the' sebelum nama tempat umum, atau salah menggunakan preposisi. Perhatikan juga bahwa 'turn left' dan 'turn right' tidak menggunakan 'to' di depannya.",
             "wrong": "Turn to left at the traffic light. The bank is in next to the hospital.",
             "correct": "Turn left at the traffic light. The bank is next to the hospital."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk memberikan instruksi arah?",
+              "options": [
+                "Turn left at the traffic light.",
+                "To turn left at the traffic light.",
+                "Turning left at the traffic light."
+              ],
+              "correctIndex": 0,
+              "explanation": "Kalimat perintah (imperative) untuk memberi arah harus dimulai langsung dengan kata kerja (verb) tanpa tambahan 'to' atau akhiran '-ing'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilihlah kalimat yang tepat sesuai aturan penggunaan preposisi dan kata kerja arah.",
+              "options": [
+                "The post office is next to the bank.",
+                "The post office is in next to the bank.",
+                "Turn to left at the bank."
+              ],
+              "correctIndex": 0,
+              "explanation": "Kalimat pertama benar karena 'next to' tidak memerlukan 'in', dan 'turn left' tidak menggunakan 'to'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: 'Excuse me, how do I get to the hospital?' 'Sure, [...]'",
+              "options": [
+                "Go straight and turn left at the corner.",
+                "The hospital is next to the bank.",
+                "Where is the hospital?"
+              ],
+              "correctIndex": 0,
+              "explanation": "Pertanyaan 'How do I get to...' menanyakan cara atau langkah-langkah menuju lokasi, sehingga jawaban yang tepat adalah instruksi arah."
+            }
+          ]
         },
         "vocab": [
           {
@@ -3261,7 +3793,45 @@
             "explanation": "Banyak pemula menggunakan 'this' untuk benda jamak atau 'these' untuk benda tunggal. Ingat: 'this' untuk satu benda (dekat dengan kita), 'these' untuk banyak benda (dekat dengan kita).",
             "wrong": "How much is these shoes?",
             "correct": "How much are these shoes?"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang benar untuk menanyakan harga satu buah kemeja (shirt).",
+              "options": [
+                "How much is this shirt?",
+                "How much are this shirt?",
+                "How much is these shirt?"
+              ],
+              "correctIndex": 0,
+              "explanation": "Gunakan 'How much is this' untuk benda tunggal (singular). 'Shirt' adalah benda tunggal, sehingga pasangan yang tepat adalah 'is' dan 'this'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar untuk menanyakan harga sepasang sepatu (shoes)?",
+              "options": [
+                "How much is these shoes?",
+                "How much are these shoes?",
+                "How much are this shoes?"
+              ],
+              "correctIndex": 1,
+              "explanation": "Sepatu (shoes) dianggap sebagai benda jamak (plural). Gunakan 'How much are these' untuk menanyakan harga benda jamak."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut: Pembeli: 'Excuse me, how much is this bag?' Penjual: '...'",
+              "options": [
+                "It's twenty-five pounds.",
+                "They're twenty-five pounds.",
+                "It's twenty-five pound."
+              ],
+              "correctIndex": 0,
+              "explanation": "Karena pembeli menanyakan harga satu tas (tunggal), penjual harus menjawab dengan 'It's' dan menggunakan bentuk jamak untuk mata uang (pounds) karena jumlahnya lebih dari satu."
+            }
+          ]
         },
         "vocab": [
           {
@@ -3491,7 +4061,45 @@
             "explanation": "Banyak pemula langsung menggunakan 'I want' yang terdengar kurang sopan atau terlalu langsung dalam konteks restoran formal. Dalam bahasa Inggris, terutama saat berbicara dengan pelayan atau di tempat umum, menggunakan 'I want' dianggap kasar.",
             "wrong": "I want a chicken sandwich.",
             "correct": "I would like a chicken sandwich, please."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Ordering Food & Drinks\"?",
+              "options": [
+                "Gunakan 'I would like' + noun/infinitive untuk memesan dengan sopan. Formula: I would l...",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Saat makan di restoran atau kafe, kita perlu menggunakan bahasa yang sopan untuk memesan makanan dan minuman."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Ordering Food & Drinks\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "I want a chicken sandwich always",
+                "I would like a chicken sandwich",
+                "I want a chicken sandwich"
+              ],
+              "correctIndex": 1,
+              "explanation": "Banyak pemula langsung menggunakan 'I want' yang terdengar kurang sopan atau terlalu langsung dalam konteks restoran formal. Dalam bahasa Inggris, terutama saat berbicara dengan pelayan atau di tempat umum, menggunakan 'I want' dianggap kasar."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nWaiter: \"Good afternoon! Are you ready to order?\"\nSarah: \"[...]\"",
+              "options": [
+                "Yes, I would like a chicken sandwich, please.",
+                "Sorry, I forgot my keys at home.",
+                "I want a chicken sandwich"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Yes, I would like a chicken sandwich, please.\" (\"Ya, saya ingin roti lapis ayam, tolong.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah."
+            }
+          ]
         },
         "vocab": [
           {
@@ -3721,7 +4329,45 @@
             "explanation": "Banyak pemula lupa menggunakan kata 'wearing' ketika mendeskripsikan pakaian. Ingat, untuk pakaian kita tidak bisa hanya menggunakan 'am/is/are' saja tanpa kata kerja.",
             "wrong": "She is a red dress.",
             "correct": "She is wearing a red dress."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Clothing, Colors & Weather Descriptions\"?",
+              "options": [
+                "Present Continuous untuk pakaian: Subject + am/is/are + wearing + pakaian. Contoh: I am...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Pada modul ini, kamu akan belajar cara mendeskripsikan pakaian yang sedang dikenakan seseorang dan kondisi cuaca saat ini."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Clothing, Colors & Weather Descriptions\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "She is a red dress",
+                "She is wearing a red dress",
+                "She are wearing a red dress"
+              ],
+              "correctIndex": 1,
+              "explanation": "Banyak pemula lupa menggunakan kata 'wearing' ketika mendeskripsikan pakaian. Ingat, untuk pakaian kita tidak bisa hanya menggunakan 'am/is/are' saja tanpa kata kerja."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Good morning, Tom! You're wearing a nice blue jacket today.\"\nTom: \"[...]\"",
+              "options": [
+                "Thank you! It's freezing outside, so I need a warm jacket.",
+                "She is a red dress",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Thank you! It's freezing outside, so I need a warm jacket.\" (\"Terima kasih! Di luar sangat dingin, jadi saya perlu jaket yang hangat.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+            }
+          ]
         },
         "vocab": [
           {
@@ -3951,7 +4597,45 @@
             "explanation": "Pemula sering keliru menggunakan 'There is' dengan kata benda jamak atau 'There are' dengan kata benda tunggal. Perhatikan dengan cermat apakah benda yang disebutkan satu atau lebih dari satu.",
             "wrong": "There is two bedrooms in my house.",
             "correct": "There are two bedrooms in my house."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pilih kalimat yang menggunakan struktur 'There is' atau 'There are' dengan benar untuk mendeskripsikan perabotan.",
+              "options": [
+                "There is two lamps in the bedroom.",
+                "There are a table in the kitchen.",
+                "There is a sofa in the living room."
+              ],
+              "correctIndex": 2,
+              "explanation": "'There is' digunakan untuk benda tunggal (a sofa). Pilihan lain salah karena 'two lamps' dan 'a table' tidak sesuai dengan pasangan 'is' atau 'are'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan keberadaan lebih dari satu benda (plural)?",
+              "options": [
+                "There are four windows in the living room.",
+                "There are a bed in the bedroom.",
+                "There is three chairs in the kitchen."
+              ],
+              "correctIndex": 0,
+              "explanation": "Gunakan 'There are' untuk benda jamak (four windows). Pilihan lain salah karena menggunakan 'are' dengan benda tunggal atau 'is' dengan benda jamak."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Rina bertanya, 'How many bedrooms are there in your house?' Manakah jawaban yang paling tepat secara tata bahasa?",
+              "options": [
+                "Yes, there are three bedrooms.",
+                "There are three bedrooms in my house.",
+                "There is three bedrooms in my house."
+              ],
+              "correctIndex": 1,
+              "explanation": "Pertanyaan 'How many' menanyakan jumlah, sehingga jawaban yang tepat adalah menyebutkan jumlahnya dengan struktur 'There are' untuk benda jamak (bedrooms)."
+            }
+          ]
         },
         "vocab": [
           {
@@ -4181,7 +4865,45 @@
             "explanation": "Pemula sering salah menggunakan preposisi 'to', 'from', dan 'at' dalam konteks transportasi. Ingat: 'go TO' (tujuan), 'depart FROM' (asal), 'arrive AT' (tiba di).",
             "wrong": "The bus goes from the airport. (maksudnya ingin ke airport)",
             "correct": "The bus goes to the airport."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk menanyakan bus mana yang menuju ke bandara?",
+              "options": [
+                "Which bus goes to the airport?",
+                "Which bus go to the airport?",
+                "Which bus to goes the airport?"
+              ],
+              "correctIndex": 0,
+              "explanation": "Struktur yang benar adalah 'Which + noun + goes to + destination'. Kata kerja 'goes' digunakan karena subjeknya tunggal (bus)."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan lokasi keberangkatan kereta?",
+              "options": [
+                "The train departs to platform 4.",
+                "The train departs from platform 4.",
+                "The train departs at platform 4."
+              ],
+              "correctIndex": 1,
+              "explanation": "Gunakan 'depart from' untuk menyatakan titik keberangkatan (asal). 'To' digunakan untuk tujuan, dan 'at' biasanya untuk waktu atau lokasi spesifik saat tiba."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi kalimat berikut untuk membeli tiket pulang-pergi: 'I need a [...] to Manchester, please.'",
+              "options": [
+                "return ticket",
+                "single ticket",
+                "platform ticket"
+              ],
+              "correctIndex": 0,
+              "explanation": "'Return ticket' adalah istilah yang tepat untuk tiket pulang-pergi. 'Single ticket' adalah untuk sekali jalan, dan 'platform ticket' tidak umum digunakan untuk perjalanan."
+            }
+          ]
         },
         "vocab": [
           {
@@ -4411,7 +5133,45 @@
             "explanation": "Pemula sering lupa menggunakan artikel 'a' setelah 'have' untuk penyakit yang bisa dihitung, atau salah menggunakan bentuk jamak untuk bagian tubuh. Ingat, gunakan 'a' untuk penyakit tunggal dan bentuk tunggal untuk bagian tubuh yang sakit.",
             "wrong": "I have headache. My legs hurts.",
             "correct": "I have a headache. My leg hurts."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan bahwa Anda sedang sakit kepala?",
+              "options": [
+                "I have headache.",
+                "I have a headache.",
+                "I am headache."
+              ],
+              "correctIndex": 1,
+              "explanation": "Gunakan pola 'I have a + [nama penyakit]'. Artikel 'a' wajib digunakan sebelum kata benda tunggal seperti 'headache'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang benar untuk menyatakan rasa sakit pada punggung?",
+              "options": [
+                "My back hurts.",
+                "My back hurt.",
+                "My backs hurts."
+              ],
+              "correctIndex": 0,
+              "explanation": "Untuk subjek tunggal ('back'), kata kerja harus dalam bentuk tunggal ('hurts'). Pilihan kedua salah karena kurang akhiran 's', dan pilihan ketiga salah karena subjek jamak tidak cocok dengan kata kerja tunggal."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Teman Anda terlihat pucat dan lemas. Kalimat saran apa yang paling tepat untuk diucapkan?",
+              "options": [
+                "You should see a doctor.",
+                "You should to see a doctor.",
+                "You should seeing a doctor."
+              ],
+              "correctIndex": 0,
+              "explanation": "Setelah modal 'should', gunakan kata kerja bentuk dasar (bare infinitive) tanpa 'to' atau akhiran '-ing'."
+            }
+          ]
         },
         "vocab": [
           {
@@ -4641,7 +5401,45 @@
             "explanation": "Banyak pemula lupa menggunakan verb bentuk dasar (base form) setelah 'Would you like to', 'Let's', atau 'Why don't we'. Mereka sering menambahkan '-ing' atau 'to' yang sebenarnya tidak diperlukan.",
             "wrong": "Would you like to coming to my party? / Let's to watch a movie.",
             "correct": "Would you like to come to my party? / Let's watch a movie."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Making Plans, Suggestions & Invitations\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Mengundang dengan 'Would you like to...?': Formula: 'Would you like to + verb (base for..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Dalam kehidupan sehari-hari, kita sering mengajak teman untuk bertemu, membuat rencana, atau memberikan saran kegiatan."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Making Plans, Suggestions & Invitations\"?",
+              "options": [
+                "Would you like to coming to my party?",
+                "Let's to watch a movie",
+                "Would you like to come to my party?"
+              ],
+              "correctIndex": 2,
+              "explanation": "Banyak pemula lupa menggunakan verb bentuk dasar (base form) setelah 'Would you like to', 'Let's', atau 'Why don't we'. Mereka sering menambahkan '-ing' atau 'to' yang sebenarnya tidak diperlukan."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Hi David! Would you like to watch a movie this Saturday?\"\nDavid: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "Would you like to coming to my party?",
+                "That sounds great! What time are you thinking?"
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"That sounds great! What time are you thinking?\" (\"Kedengarannya bagus! Jam berapa kamu pikirkan?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+            }
+          ]
         },
         "vocab": [
           {
@@ -4871,7 +5669,45 @@
             "explanation": "Banyak pemula salah menggunakan 'to + verb' setelah kata kerja preferensi ini. Ingat, setelah like, love, enjoy, don't mind, dislike, dan hate harus menggunakan verb-ing, bukan 'to + verb'.",
             "wrong": "I enjoy to play tennis. She loves to dance.",
             "correct": "I enjoy playing tennis. She loves dancing."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Like, Love & Hate + -ing\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola dasar: Subject + like/love/enjoy/don't mind/dislike/hate + verb-ing. Contoh: I enj..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Dalam bahasa Inggris, kita menggunakan kata kerja seperti like, love, enjoy, don't mind, dislike, dan hate untuk mengungkapkan tingkat kesukaan terhadap aktivitas."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "I enjoy to play tennis. She loves to dance",
+                "I enjoy to play tennis. She loves to dance always",
+                "I enjoy playing tennis. She loves dancing"
+              ],
+              "correctIndex": 2,
+              "explanation": "Banyak pemula salah menggunakan 'to + verb' setelah kata kerja preferensi ini. Ingat, setelah like, love, enjoy, don't mind, dislike, dan hate harus menggunakan verb-ing, bukan 'to + verb'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"Hi Ryan! What do you like doing in your free time?\"\nRyan: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "I enjoy to play tennis. She loves to dance",
+                "I love playing football with my friends. What about you?"
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"I love playing football with my friends. What about you?\" (\"Aku sangat suka bermain sepak bola dengan teman-temanku. Kalau kamu?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ryan."
+            }
+          ]
         },
         "vocab": [
           {
@@ -5101,7 +5937,45 @@
             "explanation": "Banyak pemula mencampuradukkan 'mustn't' dengan 'don't have to'. Ingat: mustn't = LARANGAN (tidak boleh), sedangkan don't have to = TIDAK WAJIB (boleh tidak melakukan, tapi juga boleh melakukan). Ini perbedaan yang sangat penting!",
             "wrong": "You don't have to smoke here. (Salah! Ini berarti 'kamu tidak harus merokok di sini' - seolah memberi izin)",
             "correct": "You mustn't smoke here. (Benar! Ini berarti 'kamu tidak boleh merokok di sini' - larangan keras)"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang menggunakan 'must' dengan struktur tata bahasa yang tepat?",
+              "options": [
+                "Students must wear uniforms.",
+                "Students must to wear uniforms.",
+                "Students must wearing uniforms."
+              ],
+              "correctIndex": 0,
+              "explanation": "Setelah kata 'must', kita harus menggunakan kata kerja bentuk dasar (base form) tanpa tambahan 'to' atau akhiran '-ing'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Kamu ingin melarang temanmu merokok di dalam ruangan. Kalimat mana yang paling tepat?",
+              "options": [
+                "You don't have to smoke inside.",
+                "You mustn't smoke inside.",
+                "You doesn't have to smoke inside."
+              ],
+              "correctIndex": 1,
+              "explanation": "'Mustn't' digunakan untuk larangan keras (tidak boleh), sedangkan 'don't have to' berarti tidak wajib (boleh dilakukan atau tidak)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Guru: 'Tomorrow is a holiday, so you don't have to come to school.' Murid: '...'",
+              "options": [
+                "Great, so I must go to school tomorrow.",
+                "Great, so I don't have to go to school tomorrow.",
+                "Great, so I mustn't go to school tomorrow."
+              ],
+              "correctIndex": 1,
+              "explanation": "Karena besok libur, murid tidak wajib datang. 'Don't have to' adalah ungkapan yang tepat untuk menyatakan sesuatu yang tidak wajib dilakukan."
+            }
+          ]
         },
         "vocab": [
           {
@@ -5334,7 +6208,45 @@
             "explanation": "Pemula sering salah membedakan INTO dan IN TO (dua kata terpisah), atau menggunakan ACROSS dan THROUGH secara bergantian padahal maknanya berbeda. INTO menunjukkan masuk ke dalam, sedangkan IN TO adalah 'in' + infinitive 'to'. ACROSS berarti melintasi permukaan, sedangkan THROUGH berarti melewati bagian dalam.",
             "wrong": "She came in to say hello. (Salah jika maksudnya 'masuk untuk menyapa')",
             "correct": "She came into the room to say hello. (Benar: dia masuk ke dalam ruangan untuk menyapa)"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Into, Out of & Across\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "INTO = masuk ke dalam sesuatu. Formula: [subject] + [verb] + INTO + [tempat]. Contoh: T...",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Preposisi pergerakan (prepositions of movement) digunakan untuk menjelaskan arah atau rute perpindahan dari satu tempat ke tempat lain."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Into, Out of & Across\"?",
+              "options": [
+                "She came into the room to say hello. (Benar: dia masuk ke dalam ruangan untuk menyapa)",
+                "She came in to say hello. (Salah jika maksudnya 'masuk untuk menyapa')",
+                "She came in to say hello. (Salah jika maksudnya 'masuk untuk menyapa') always"
+              ],
+              "correctIndex": 0,
+              "explanation": "Pemula sering salah membedakan INTO dan IN TO (dua kata terpisah), atau menggunakan ACROSS dan THROUGH secara bergantian padahal maknanya berbeda. INTO menunjukkan masuk ke dalam, sedangkan IN TO adalah 'in' + infinitive 'to'. ACROSS berarti melintasi permukaan, sedangkan THROUGH berarti melewati bagian dalam."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Okay, and then?\"\nLocal: \"[...]\"",
+              "options": [
+                "She came in to say hello. (Salah jika maksudnya 'masuk untuk menyapa')",
+                "Go past the coffee shop and turn right at the corner.",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"Go past the coffee shop and turn right at the corner.\" (\"Lewati kedai kopi dan belok kanan di pojok.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Local."
+            }
+          ]
         },
         "vocab": [
           {
@@ -5565,7 +6477,45 @@
             "explanation": "Kesalahan paling umum adalah menambahkan -ed pada irregular verbs karena terbiasa dengan pola regular verbs. Irregular verbs memiliki bentuk past tense khusus yang tidak boleh ditambahkan -ed. Hafalkan bentuk past tense yang benar untuk setiap irregular verb.",
             "wrong": "I goed to the cinema yesterday. She buyed a new bag. We eated at a restaurant.",
             "correct": "I went to the cinema yesterday. She bought a new bag. We ate at a restaurant."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pada kaidah \"Common Irregular Past Verbs\", bagaimana perubahan atau padanan yang benar untuk \"go\"?",
+              "options": [
+                "Tidak ada perubahan tenses pada go",
+                "go selalu dihilangkan",
+                "went"
+              ],
+              "correctIndex": 2,
+              "explanation": "Dalam materi ini: go berubah atau berpadanan menjadi \"went\"."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "I goed to the cinema yesterday. She buyed a new bag. We eated at a restaurant always",
+                "I goed to the cinema yesterday. She buyed a new bag. We eated at a restaurant",
+                "I went to the cinema yesterday. She bought a new bag. We ate at a restaurant"
+              ],
+              "correctIndex": 2,
+              "explanation": "Kesalahan paling umum adalah menambahkan -ed pada irregular verbs karena terbiasa dengan pola regular verbs. Irregular verbs memiliki bentuk past tense khusus yang tidak boleh ditambahkan -ed. Hafalkan bentuk past tense yang benar untuk setiap irregular verb."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Hi Tom! How was your weekend?\"\nTom: \"[...]\"",
+              "options": [
+                "I goed to the cinema yesterday. She buyed a new bag. We eated at a restaurant",
+                "Sorry, I forgot my keys at home.",
+                "It was great! I went to the beach on Saturday. What did you do?"
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"It was great! I went to the beach on Saturday. What did you do?\" (\"Bagus sekali! Aku pergi ke pantai pada hari Sabtu. Apa yang kamu lakukan?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+            }
+          ]
         },
         "vocab": [
           {
@@ -5796,7 +6746,45 @@
             "explanation": "Banyak siswa terburu-buru membaca soal dan tidak memperhatikan detail kecil. Dalam listening, mereka sering melewatkan kata kunci penting. Dalam grammar, kesalahan umum adalah menggunakan bentuk reguler untuk irregular verbs atau lupa menambahkan 's' pada kata kerja present tense untuk subjek he/she/it.",
             "wrong": "Yesterday, I goed to the market and buyed some apples.",
             "correct": "Yesterday, I went to the market and bought some apples."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Komprehensif 4 Keterampilan\"?",
+              "options": [
+                "Listening Comprehension: Dengarkan audio atau baca transkrip dengan seksama, fokus pada...",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Ujian kelulusan ini mengevaluasi kemampuan Anda dalam empat keterampilan bahasa Inggris: mendengarkan, membaca, menulis, dan berbicara."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Evaluasi Komprehensif 4 Keterampilan\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "I goed to the market and buyed some apples",
+                "Yesterday",
+                "Yesterday"
+              ],
+              "correctIndex": 1,
+              "explanation": "Banyak siswa terburu-buru membaca soal dan tidak memperhatikan detail kecil. Dalam listening, mereka sering melewatkan kata kunci penting. Dalam grammar, kesalahan umum adalah menggunakan bentuk reguler untuk irregular verbs atau lupa menambahkan 's' pada kata kerja present tense untuk subjek he/she/it."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Excuse me, I'm not feeling well. Is there a pharmacy near here?\"\nOfficer: \"[...]\"",
+              "options": [
+                "Yes, there's one just two blocks away. Go straight ahead, then turn right at the traffic light.",
+                "Sorry, I forgot my keys at home.",
+                "Yesterday"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Yes, there's one just two blocks away. Go straight ahead, then turn right at the traffic light.\" (\"Ya, ada satu yang hanya dua blok dari sini. Jalan lurus ke depan, lalu belok kanan di lampu lalu lintas.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Officer."
+            }
+          ]
         },
         "vocab": [
           {
@@ -6126,7 +7114,45 @@
             "explanation": "Banyak pemula mencampur aturan comparative dengan menambahkan more dan -er sekaligus, atau lupa menggunakan than setelah comparative adjective.",
             "wrong": "This bag is more cheaper than that one.",
             "correct": "This bag is cheaper than that one."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pada kaidah \"Comparing People & Things\", bagaimana perubahan atau padanan yang benar untuk \"tall → taller than, big → bigger than, fast\"?",
+              "options": [
+                "Tidak ada perubahan tenses pada tall → taller than, big → bigger than, fast",
+                "faster than",
+                "tall → taller than, big → bigger than, fast selalu dihilangkan"
+              ],
+              "correctIndex": 1,
+              "explanation": "Dalam materi ini: tall → taller than, big → bigger than, fast berubah atau berpadanan menjadi \"faster than\"."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Comparing People & Things\"?",
+              "options": [
+                "This bag is cheaper than that one",
+                "This bag is more cheaper than that one",
+                "This bag are cheaper than that one"
+              ],
+              "correctIndex": 0,
+              "explanation": "Banyak pemula mencampur aturan comparative dengan menambahkan more dan -er sekaligus, atau lupa menggunakan than setelah comparative adjective."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLisa: \"How much did it cost? Is it more expensive than mine?\"\nAndi: \"[...]\"",
+              "options": [
+                "This bag is more cheaper than that one",
+                "Actually, it's cheaper than yours. I got it on sale.",
+                "Sorry, I forgot my keys at home."
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"Actually, it's cheaper than yours. I got it on sale.\" (\"Sebenarnya, lebih murah dari punyamu. Aku membelinya saat diskon.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Andi."
+            }
+          ]
         },
         "vocab": [
           {
@@ -6356,7 +7382,45 @@
             "explanation": "Banyak pemula lupa menambahkan 'the' di depan superlative, atau salah menggunakan '-est' untuk kata sifat panjang. Ingat: superlative SELALU pakai 'the', dan kata sifat panjang pakai 'the most', bukan '-est'.",
             "wrong": "She is most beautiful girl in class. / This is expensivest car.",
             "correct": "She is the most beautiful girl in class. / This is the most expensive car."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Pada kaidah \"The Best & The Most Exciting\", bagaimana perubahan atau padanan yang benar untuk \"tall → the tallest, big → the biggest, old\"?",
+              "options": [
+                "tall → the tallest, big → the biggest, old selalu dihilangkan",
+                "Tidak ada perubahan tenses pada tall → the tallest, big → the biggest, old",
+                "the oldest."
+              ],
+              "correctIndex": 2,
+              "explanation": "Dalam materi ini: tall → the tallest, big → the biggest, old berubah atau berpadanan menjadi \"the oldest.\"."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "She is most beautiful girl in class",
+                "This is expensivest car",
+                "She is the most beautiful girl in class"
+              ],
+              "correctIndex": 2,
+              "explanation": "Banyak pemula lupa menambahkan 'the' di depan superlative, atau salah menggunakan '-est' untuk kata sifat panjang. Ingat: superlative SELALU pakai 'the', dan kata sifat panjang pakai 'the most', bukan '-est'."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Yes! It was the most exciting experience ever. The view was incredible.\"\nKevin: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "She is most beautiful girl in class",
+                "I want to go there too! By the way, do you know the longest river in the world?"
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"I want to go there too! By the way, do you know the longest river in the world?\" (\"Aku juga ingin ke sana! Ngomong-ngomong, apakah kamu tahu sungai terpanjang di dunia?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Kevin."
+            }
+          ]
         },
         "vocab": [
           {
@@ -6586,7 +7650,45 @@
             "explanation": "Pemula sering lupa mengubah kata kerja ke bentuk past tense atau mencampur present dan past tense dalam satu cerita. Pastikan semua kata kerja menggunakan bentuk lampau saat menceritakan liburan yang sudah terjadi.",
             "wrong": "Last week, I go to the beach and I buy some souvenirs.",
             "correct": "Last week, I went to the beach and I bought some souvenirs."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Holiday Experiences & Travel Memories\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Gunakan Past Simple untuk menceritakan aktivitas yang sudah selesai: Subject + Verb 2 (...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan belajar menceritakan pengalaman liburan masa lalu dengan detail."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Holiday Experiences & Travel Memories\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "Last week",
+                "I go to the beach and I buy some souvenirs",
+                "Last week"
+              ],
+              "correctIndex": 0,
+              "explanation": "Pemula sering lupa mengubah kata kerja ke bentuk past tense atau mencampur present dan past tense dalam satu cerita. Pastikan semua kata kerja menggunakan bentuk lampau saat menceritakan liburan yang sudah terjadi."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"That sounds great! What did you do there?\"\nTom: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "We visited Borobudur Temple and Prambanan. The views were amazing!",
+                "Last week"
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"We visited Borobudur Temple and Prambanan. The views were amazing!\" (\"Kami mengunjungi Candi Borobudur dan Prambanan. Pemandangannya menakjubkan!\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+            }
+          ]
         },
         "vocab": [
           {
@@ -6816,7 +7918,45 @@
             "explanation": "Banyak pemula lupa menambahkan 'to' setelah 'going', atau salah memilih bentuk 'be' (am/is/are) yang tidak sesuai dengan subjek. Ingat, setelah 'going to' harus diikuti kata kerja bentuk dasar (infinitive), bukan bentuk -ing atau past.",
             "wrong": "I am going visit my friend tomorrow. / She is going to visiting the museum.",
             "correct": "I am going to visit my friend tomorrow. / She is going to visit the museum."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Future Plans & Intentions with 'Be Going To'\"?",
+              "options": [
+                "Rumus Positif: Subject + am/is/are + going to + verb (infinitive). Contoh: I am going t...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Struktur 'be going to' digunakan untuk menyatakan rencana atau niat yang sudah kamu putuskan di masa depan."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "I am going visit my friend tomorrow",
+                "I am going to visit my friend tomorrow",
+                "She is going to visiting the museum"
+              ],
+              "correctIndex": 1,
+              "explanation": "Banyak pemula lupa menambahkan 'to' setelah 'going', atau salah memilih bentuk 'be' (am/is/are) yang tidak sesuai dengan subjek. Ingat, setelah 'going to' harus diikuti kata kerja bentuk dasar (infinitive), bukan bentuk -ing atau past."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"I'm going to study for the English test on Monday.\"\nTom: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "I am going visit my friend tomorrow",
+                "That's a good plan. Are you going to study with Lisa?"
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"That's a good plan. Are you going to study with Lisa?\" (\"Itu rencana yang bagus. Apakah kamu akan belajar dengan Lisa?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7036,7 +8176,45 @@
             "explanation": "Banyak pemula salah menggunakan 'is' untuk fitur yang seharusnya menggunakan 'has got', atau sebaliknya. Ingat: 'be' untuk karakteristik umum (tall, short, slim), 'have got' untuk fitur spesifik yang dimiliki (hair, eyes, beard).",
             "wrong": "She is long black hair. He has tall.",
             "correct": "She has got long black hair. He is tall."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Describing Physical Appearance & Style\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Gunakan 'be' (am/is/are) + adjective untuk mendeskripsikan karakteristik umum: He is ta..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Dalam bahasa Inggris, kita menggunakan dua struktur utama untuk mendeskripsikan penampilan fisik seseorang: 'be' (am/is/are) untuk karakteristik permanen seperti tinggi badan dan warna mata, dan 'have got' atau 'has got' untuk fitur yang dimiliki seperti rambut dan aksesori."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Describing Physical Appearance & Style\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "She is long black hair. He has tall",
+                "She has got long black hair. He are tall",
+                "She has got long black hair. He is tall"
+              ],
+              "correctIndex": 2,
+              "explanation": "Banyak pemula salah menggunakan 'is' untuk fitur yang seharusnya menggunakan 'has got', atau sebaliknya. Ingat: 'be' untuk karakteristik umum (tall, short, slim), 'have got' untuk fitur spesifik yang dimiliki (hair, eyes, beard)."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nTom: \"Sarah, I haven't met Lisa before. What does she look like?\"\nSarah: \"[...]\"",
+              "options": [
+                "She is long black hair. He has tall",
+                "Sorry, I forgot my keys at home.",
+                "Well, she's quite tall and slim. She has got long straight black hair."
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"Well, she's quite tall and slim. She has got long straight black hair.\" (\"Nah, dia cukup tinggi dan langsing. Dia punya rambut hitam lurus panjang.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7256,7 +8434,45 @@
             "explanation": "Banyak pemula lupa menambahkan 'is/am/are' sebelum kata sifat kepribadian. Dalam bahasa Inggris, kata sifat harus didahului oleh 'to be' ketika mendeskripsikan seseorang.",
             "wrong": "She friendly and kind.",
             "correct": "She is friendly and kind."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Personalities, Character Traits & Feelings\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Kata sifat kepribadian diletakkan setelah 'to be' (is/am/are): He is friendly. She is c...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Dalam bahasa Inggris, kita menggunakan kata sifat (adjectives) untuk mendeskripsikan kepribadian dan perasaan seseorang."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "She is friendly and kind",
+                "She are friendly and kind",
+                "She friendly and kind"
+              ],
+              "correctIndex": 0,
+              "explanation": "Banyak pemula lupa menambahkan 'is/am/are' sebelum kata sifat kepribadian. Dalam bahasa Inggris, kata sifat harus didahului oleh 'to be' ketika mendeskripsikan seseorang."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMaya: \"I agree. Why do you like him?\"\nRina: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "Because he is always cheerful and helpful to everyone.",
+                "She friendly and kind"
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"Because he is always cheerful and helpful to everyone.\" (\"Karena dia selalu ceria dan suka menolong semua orang.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Rina."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7486,7 +8702,45 @@
             "explanation": "Banyak pemula lupa bahwa setelah 'good at' atau 'bad at' harus menggunakan bentuk verb-ing (gerund), bukan bentuk dasar verb. Ini karena 'at' adalah preposisi yang harus diikuti oleh gerund atau noun.",
             "wrong": "I am good at play guitar.",
             "correct": "I am good at playing guitar."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"'Good at' & 'Bad at'\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Pola dasar: Subject + am/is/are + good/bad at + verb-ing. Contoh: I am good at swimming...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan belajar cara mengekspresikan kemampuan dan bakat menggunakan 'good at' dan 'bad at'."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "I am good at playing guitar",
+                "I is good at playing guitar",
+                "I am good at play guitar"
+              ],
+              "correctIndex": 0,
+              "explanation": "Banyak pemula lupa bahwa setelah 'good at' atau 'bad at' harus menggunakan bentuk verb-ing (gerund), bukan bentuk dasar verb. Ini karena 'at' adalah preposisi yang harus diikuti oleh gerund atau noun."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Hi David! Are you joining the school talent show this year?\"\nDavid: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "I'm not sure. I'm quite good at playing the guitar, but I'm terrible at performing in front of people.",
+                "I am good at play guitar"
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"I'm not sure. I'm quite good at playing the guitar, but I'm terrible at performing in front of people.\" (\"Aku tidak yakin. Aku cukup pandai bermain gitar, tapi aku sangat buruk tampil di depan orang banyak.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7716,7 +8970,45 @@
             "explanation": "Banyak pemula menggunakan 'Can you' untuk meminta bantuan, padahal ini terdengar kurang sopan atau seperti mempertanyakan kemampuan seseorang. Dalam situasi formal atau saat berbicara dengan orang yang baru dikenal, 'Could you' jauh lebih tepat dan sopan.",
             "wrong": "Can you help me?",
             "correct": "Could you help me, please?"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Polite Requests, Permission & Offers\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Could you + verb: Digunakan untuk meminta bantuan atau meminta seseorang melakukan sesu..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Dalam bahasa Inggris, cara kita meminta sesuatu, meminta izin, atau menawarkan bantuan sangat penting untuk menunjukkan kesopanan."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Polite Requests, Permission & Offers\"?",
+              "options": [
+                "Can you help me? always",
+                "Can you help me?",
+                "Could you help me"
+              ],
+              "correctIndex": 2,
+              "explanation": "Banyak pemula menggunakan 'Can you' untuk meminta bantuan, padahal ini terdengar kurang sopan atau seperti mempertanyakan kemampuan seseorang. Dalam situasi formal atau saat berbicara dengan orang yang baru dikenal, 'Could you' jauh lebih tepat dan sopan."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"Thank you so much! Also, may I borrow your blue pen? Mine has run out of ink.\"\nDaniel: \"[...]\"",
+              "options": [
+                "Can you help me?",
+                "Sorry, I forgot my keys at home.",
+                "Yes, certainly. Here you are. You can keep it until tomorrow if you need to."
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"Yes, certainly. Here you are. You can keep it until tomorrow if you need to.\" (\"Ya, tentu. Ini dia. Kamu bisa memakainya sampai besok kalau perlu.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Daniel."
+            }
+          ]
         },
         "vocab": [
           {
@@ -7946,7 +9238,45 @@
             "explanation": "Pemula sering menukar posisi 'because' dan 'so'. Ingat: 'because' = hasil dulu baru alasan, 'so' = alasan dulu baru hasil. Jangan gunakan keduanya sekaligus dalam satu kalimat.",
             "wrong": "I was tired, so because I went to bed early.",
             "correct": "I was tired, so I went to bed early. / I went to bed early because I was tired."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"'Because' & 'So'\"?",
+              "options": [
+                "Tenses dan susunan subjek tidak perlu diperhatikan",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "BECAUSE menghubungkan AKIBAT + SEBAB. Pola: [Result] + because + [Reason]. Contoh: I st..."
+              ],
+              "correctIndex": 2,
+              "explanation": "Kaidah inti topik ini: Dalam percakapan sehari-hari, kita sering perlu menjelaskan alasan mengapa sesuatu terjadi atau apa akibat dari suatu kejadian."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"'Because' & 'So'\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "so because I went to bed early",
+                "I was tired",
+                "I was tired"
+              ],
+              "correctIndex": 1,
+              "explanation": "Pemula sering menukar posisi 'because' dan 'so'. Ingat: 'because' = hasil dulu baru alasan, 'so' = alasan dulu baru hasil. Jangan gunakan keduanya sekaligus dalam satu kalimat."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"Hi Tom! Why didn't you come to the park yesterday?\"\nTom: \"[...]\"",
+              "options": [
+                "I was tired",
+                "Sorry, I forgot my keys at home.",
+                "I didn't come because the weather was terrible. It was raining all day!"
+              ],
+              "correctIndex": 2,
+              "explanation": "Respon \"I didn't come because the weather was terrible. It was raining all day!\" (\"Aku tidak datang karena cuacanya buruk sekali. Hujan seharian!\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+            }
+          ]
         },
         "vocab": [
           {
@@ -8176,7 +9506,45 @@
             "explanation": "Pemula sering menambahkan subjek (you, we) atau to sebelum verb dalam kalimat imperatif pada tanda-tanda umum. Tanda-tanda publik selalu langsung dan singkat tanpa subjek.",
             "wrong": "You push the door, Please to keep off the grass",
             "correct": "Push the door, Keep off the grass"
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Public Signs, Notices & Imperatives\"?",
+              "options": [
+                "Imperatif positif: Verb (kata kerja dasar) + object/complement. Contoh: Push the door, ...",
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 0,
+              "explanation": "Kaidah inti topik ini: Tanda-tanda umum dan rambu keselamatan menggunakan kalimat imperatif (perintah) untuk memberikan instruksi langsung."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+              "options": [
+                "Please to keep off the grass",
+                "Push the door",
+                "You push the door"
+              ],
+              "correctIndex": 1,
+              "explanation": "Pemula sering menambahkan subjek (you, we) atau to sebelum verb dalam kalimat imperatif pada tanda-tanda umum. Tanda-tanda publik selalu langsung dan singkat tanpa subjek."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Look at that sign, Tom. It says 'Caution: Wet floor'.\"\nTom: \"[...]\"",
+              "options": [
+                "Oh yes, we should walk carefully here. There's another sign over there.",
+                "Sorry, I forgot my keys at home.",
+                "You push the door"
+              ],
+              "correctIndex": 0,
+              "explanation": "Respon \"Oh yes, we should walk carefully here. There's another sign over there.\" (\"Oh ya, kita harus berjalan hati-hati di sini. Ada tanda lain di sana.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+            }
+          ]
         },
         "vocab": [
           {
@@ -8406,7 +9774,45 @@
             "explanation": "Banyak pemula lupa menambahkan 'than' setelah kata sifat komparatif ketika membandingkan dua hal. Tanpa 'than', kalimat menjadi tidak lengkap dan membingungkan.",
             "wrong": "The city is more crowded the village.",
             "correct": "The city is more crowded than the village."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Pros & Cons\"?",
+              "options": [
+                "Pola ini hanya boleh digunakan dalam situasi santai",
+                "Gunakan comparative adjectives untuk membandingkan: adjective + -er + than (untuk kata ...",
+                "Tenses dan susunan subjek tidak perlu diperhatikan"
+              ],
+              "correctIndex": 1,
+              "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan belajar membandingkan kehidupan di kota dan desa menggunakan kata sifat komparatif dan kosakata lingkungan."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Perhatikan jebakan umum pada materi \"Pros & Cons\". Manakah kalimat yang SUDAH TEPAT?",
+              "options": [
+                "The city is more crowded than the village",
+                "The city are more crowded than the village",
+                "The city is more crowded the village"
+              ],
+              "correctIndex": 0,
+              "explanation": "Banyak pemula lupa menambahkan 'than' setelah kata sifat komparatif ketika membandingkan dua hal. Tanpa 'than', kalimat menjadi tidak lengkap dan membingungkan."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMaya: \"Yes, but there is a lot of traffic in the city. Sometimes it's very stressful. How is the air in your village?\"\nTom: \"[...]\"",
+              "options": [
+                "Sorry, I forgot my keys at home.",
+                "The air is fresher and cleaner than in the city. We have less pollution here because there are many trees.",
+                "The city is more crowded the village"
+              ],
+              "correctIndex": 1,
+              "explanation": "Respon \"The air is fresher and cleaner than in the city. We have less pollution here because there are many trees.\" (\"Udaranya lebih segar dan bersih daripada di kota. Kami punya lebih sedikit polusi di sini karena ada banyak pohon.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+            }
+          ]
         },
         "vocab": [
           {
@@ -8637,7 +10043,45 @@
             "explanation": "Pemula sering langsung melompat antar waktu tanpa kata penghubung, sehingga cerita jadi membingungkan. Atau mereka lupa mengubah bentuk verb sesuai tense yang dipakai.",
             "wrong": "I go to museum yesterday. I tired now. I sleep tomorrow.",
             "correct": "I went to the museum yesterday. I'm tired now, so I'm going to sleep early tomorrow."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang menggabungkan masa lalu, sekarang, dan rencana masa depan dengan tata bahasa yang benar?",
+              "options": [
+                "I went to the park yesterday, so I am tired now, and I am going to sleep soon.",
+                "I go to the park yesterday, but I am tired now, and I go to sleep soon.",
+                "I went to the park yesterday, because I am tired now, and I will to sleep soon."
+              ],
+              "correctIndex": 0,
+              "explanation": "Kalimat pertama menggunakan Simple Past (went), Present (am tired), dan Future (am going to) dengan kata penghubung 'so' dan 'and' yang tepat untuk alur cerita."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Pilih kalimat yang menghindari kesalahan umum dalam mencampur tenses dan menggunakan kata penghubung dengan tepat.",
+              "options": [
+                "I visited my grandmother yesterday. I am happy now, so I am going to visit her again next month.",
+                "I visit my grandmother yesterday. I am happy now, but I going to visit her again next month.",
+                "I visited my grandmother yesterday. I am happy now, because I visit her again next month."
+              ],
+              "correctIndex": 0,
+              "explanation": "Opsi pertama menggunakan Verb 2 (visited) untuk masa lalu dan 'am going to' untuk rencana masa depan dengan benar, serta menggunakan 'so' sebagai penghubung yang logis."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan berikut agar alur ceritanya logis: \"I finished my project yesterday. It was difficult, [...] I feel relieved now.\"",
+              "options": [
+                "so",
+                "because",
+                "then"
+              ],
+              "correctIndex": 0,
+              "explanation": "'So' digunakan untuk menunjukkan hasil atau konsekuensi (proyeknya sulit, jadi sekarang merasa lega), yang paling tepat untuk menghubungkan dua kalimat tersebut."
+            }
+          ]
         },
         "vocab": [
           {
@@ -8868,7 +10312,45 @@
             "explanation": "Banyak siswa lupa menambahkan 'than' setelah comparative adjective, atau salah menempatkan 'to' dalam struktur 'be going to'. Selain itu, sering terjadi kesalahan dalam memilih 'has' vs 'have' berdasarkan subjek.",
             "wrong": "My brother is tall from me. I going to visit my grandma. She have brown eyes.",
             "correct": "My brother is taller than me. I am going to visit my grandma. She has brown eyes."
-          }
+          },
+          "readinessQuestions": [
+            {
+              "id": 1,
+              "category": "Pengenalan Bentuk",
+              "prompt": "Manakah kalimat yang benar untuk membandingkan dua hal dalam bahasa Inggris?",
+              "options": [
+                "My house is bigger than yours.",
+                "My house is more big than yours.",
+                "My house is bigger yours."
+              ],
+              "correctIndex": 0,
+              "explanation": "Comparative adjective untuk 'big' adalah 'bigger', dan harus diikuti oleh kata 'than' untuk membandingkan dua objek. 'More big' adalah kesalahan umum karena 'big' adalah kata sifat satu suku kata."
+            },
+            {
+              "id": 2,
+              "category": "Pemahaman Aturan",
+              "prompt": "Manakah kalimat yang menggunakan struktur 'be going to' dan kata kerja bantu 'has/have' dengan benar?",
+              "options": [
+                "She have brown eyes and she going to visit her friend.",
+                "She has brown eyes and she is going to visit her friend.",
+                "She has brown eyes and she going to visit her friend."
+              ],
+              "correctIndex": 1,
+              "explanation": "Subjek 'She' menggunakan 'has' untuk kepemilikan fisik, dan struktur 'be going to' memerlukan kata kerja bantu 'is' (she is going to) untuk menyatakan rencana masa depan."
+            },
+            {
+              "id": 3,
+              "category": "Penerapan Konteks",
+              "prompt": "Lengkapi percakapan ini dengan alasan yang tepat: \"Why are you studying so hard?\" \"I am studying hard [...]\"",
+              "options": [
+                "because I want to pass the exam.",
+                "because I am going to exam.",
+                "because the exam is easy."
+              ],
+              "correctIndex": 0,
+              "explanation": "'Because' digunakan untuk memberikan alasan. Pilihan pertama secara logis menjelaskan mengapa seseorang belajar keras, sedangkan pilihan lainnya tidak tepat secara tata bahasa atau konteks."
+            }
+          ]
         },
         "vocab": [
           {

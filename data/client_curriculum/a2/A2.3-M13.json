@@ -25,7 +25,45 @@
         "explanation": "Siswa sering mencampuradukkan first dan second conditional, atau salah menggunakan 'used to' dengan 'be used to'. Perhatikan juga perbedaan waktu: first conditional untuk kemungkinan nyata (will), second conditional untuk imajinasi (would). Jangan lupa bahwa 'used to' diikuti infinitive tanpa 'to' tambahan.",
         "wrong": "If I would have time, I will visit you. I am used to play tennis.",
         "correct": "If I had time, I would visit you. I used to play tennis."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"4-Skills CEFR A2 Graduation Exam\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "First Conditional: If + present simple, will + infinitive. Digunakan untuk situasi nyat...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Ujian kelulusan ini menguji seluruh kemampuan bahasa Inggris level A2 kamu secara komprehensif."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "If I had time",
+            "I will visit you. I am used to play tennis",
+            "If I would have time"
+          ],
+          "correctIndex": 0,
+          "explanation": "Siswa sering mencampuradukkan first dan second conditional, atau salah menggunakan 'used to' dengan 'be used to'. Perhatikan juga perbedaan waktu: first conditional untuk kemungkinan nyata (will), second conditional untuk imajinasi (would). Jangan lupa bahwa 'used to' diikuti infinitive tanpa 'to' tambahan."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMaya: \"How did you find the exam, Rudi?\"\nRudi: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "It was challenging! The listening part was quite difficult for me.",
+            "If I would have time"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"It was challenging! The listening part was quite difficult for me.\" (\"Cukup menantang! Bagian listening cukup sulit buat saya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Rudi."
+        }
+      ]
     },
     "vocab": [
       {

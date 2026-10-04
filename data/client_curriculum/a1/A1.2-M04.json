@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula lupa menggunakan kata 'wearing' ketika mendeskripsikan pakaian. Ingat, untuk pakaian kita tidak bisa hanya menggunakan 'am/is/are' saja tanpa kata kerja.",
         "wrong": "She is a red dress.",
         "correct": "She is wearing a red dress."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Clothing, Colors & Weather Descriptions\"?",
+          "options": [
+            "Present Continuous untuk pakaian: Subject + am/is/are + wearing + pakaian. Contoh: I am...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Pada modul ini, kamu akan belajar cara mendeskripsikan pakaian yang sedang dikenakan seseorang dan kondisi cuaca saat ini."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Clothing, Colors & Weather Descriptions\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "She is a red dress",
+            "She is wearing a red dress",
+            "She are wearing a red dress"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula lupa menggunakan kata 'wearing' ketika mendeskripsikan pakaian. Ingat, untuk pakaian kita tidak bisa hanya menggunakan 'am/is/are' saja tanpa kata kerja."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Good morning, Tom! You're wearing a nice blue jacket today.\"\nTom: \"[...]\"",
+          "options": [
+            "Thank you! It's freezing outside, so I need a warm jacket.",
+            "She is a red dress",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Thank you! It's freezing outside, so I need a warm jacket.\" (\"Terima kasih! Di luar sangat dingin, jadi saya perlu jaket yang hangat.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

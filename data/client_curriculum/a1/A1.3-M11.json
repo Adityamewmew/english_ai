@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula lupa menambahkan 'than' setelah kata sifat komparatif ketika membandingkan dua hal. Tanpa 'than', kalimat menjadi tidak lengkap dan membingungkan.",
         "wrong": "The city is more crowded the village.",
         "correct": "The city is more crowded than the village."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Pros & Cons\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Gunakan comparative adjectives untuk membandingkan: adjective + -er + than (untuk kata ...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan belajar membandingkan kehidupan di kota dan desa menggunakan kata sifat komparatif dan kosakata lingkungan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Pros & Cons\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "The city is more crowded than the village",
+            "The city are more crowded than the village",
+            "The city is more crowded the village"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak pemula lupa menambahkan 'than' setelah kata sifat komparatif ketika membandingkan dua hal. Tanpa 'than', kalimat menjadi tidak lengkap dan membingungkan."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMaya: \"Yes, but there is a lot of traffic in the city. Sometimes it's very stressful. How is the air in your village?\"\nTom: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "The air is fresher and cleaner than in the city. We have less pollution here because there are many trees.",
+            "The city is more crowded the village"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"The air is fresher and cleaner than in the city. We have less pollution here because there are many trees.\" (\"Udaranya lebih segar dan bersih daripada di kota. Kami punya lebih sedikit polusi di sini karena ada banyak pohon.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

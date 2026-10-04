@@ -25,7 +25,45 @@
         "explanation": "Banyak siswa salah menggunakan preposisi waktu dan tempat, atau menggunakan tenses yang tidak tepat saat mendeskripsikan bangunan bersejarah. Ingat: gunakan 'was/were built' untuk masa lalu, 'in' untuk tahun dan abad, 'is located in' untuk lokasi.",
         "wrong": "The palace is built in 1632 and locate at India.",
         "correct": "The palace was built in 1632 and is located in India."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Architectural Wonders & Historic Landmarks\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Gunakan 'was built' atau 'were built' untuk menyatakan tahun pembangunan: 'The temple w..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan belajar cara mendeskripsikan bangunan bersejarah dan monumen budaya dengan detail."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Architectural Wonders & Historic Landmarks\"?",
+          "options": [
+            "The palace was built in 1632 and are located in India",
+            "The palace is built in 1632 and locate at India",
+            "The palace was built in 1632 and is located in India"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak siswa salah menggunakan preposisi waktu dan tempat, atau menggunakan tenses yang tidak tepat saat mendeskripsikan bangunan bersejarah. Ingat: gunakan 'was/were built' untuk masa lalu, 'in' untuk tahun dan abad, 'is located in' untuk lokasi."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Wow! Look at that magnificent structure! That's the Colosseum, right?\"\nTom: \"[...]\"",
+          "options": [
+            "The palace is built in 1632 and locate at India",
+            "Sorry, I forgot my keys at home.",
+            "Yes, it is! It was built almost 2,000 years ago, during the Roman Empire."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Yes, it is! It was built almost 2,000 years ago, during the Roman Empire.\" (\"Ya, benar! Ini dibangun hampir 2.000 tahun yang lalu, pada masa Kekaisaran Romawi.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

@@ -21,7 +21,45 @@
         "explanation": "Pemula sering keliru mencampur waktu dalam mixed conditionals. Perlu dipahami bahwa mixed conditionals menghubungkan kondisi di satu waktu dengan hasil di waktu yang berbeda, bukan sekadar menggabungkan tenses secara acak.",
         "wrong": "If I would have studied harder, I would be successful now",
         "correct": "If I had studied harder, I would be successful now"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Advanced Conditionals & Probability\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Mixed Conditionals (Type 1): If + past perfect, would/wouldn't + infinitive. Contoh: If...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas penggunaan mixed conditionals (kalimat pengandaian campuran) yang menggabungkan waktu berbeda untuk mengekspresikan situasi hipotetis kompleks."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Advanced Conditionals & Probability\"?",
+          "options": [
+            "If I had studied harder",
+            "I would be successful now",
+            "If I would have studied harder"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering keliru mencampur waktu dalam mixed conditionals. Perlu dipahami bahwa mixed conditionals menghubungkan kondisi di satu waktu dengan hasil di waktu yang berbeda, bukan sekadar menggabungkan tenses secara acak."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJo: \"But Dad, I can't afford to fail. If I go off to university without a driving licence, then I won't have a much better chance next time.\"\nDad: \"[...]\"",
+          "options": [
+            "OK, we'll sort something out. And like I said, you'll be fine ... assuming the examiner isn't concentrating at the time.",
+            "Sorry, I forgot my keys at home.",
+            "If I would have studied harder"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"OK, we'll sort something out. And like I said, you'll be fine ... assuming the examiner isn't concentrating at the time.\" (\"Oke, kita akan cari solusinya. Dan seperti yang sudah ayah bilang, kamu akan baik-baik saja... asalkan pengujinya sedang konsentrasi waktu itu.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dad."
+        }
+      ]
     },
     "vocab": [
       {

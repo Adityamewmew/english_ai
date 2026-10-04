@@ -23,7 +23,45 @@
         "explanation": "Jebakan umum dalam menganalisis metafora kompleks adalah mereduksi pemetaan menjadi sekadar 'perbandingan' atau 'simile yang diperluas'. Penutur C2 memahami bahwa metafora konseptual beroperasi di tingkat struktur kognitif, bukan sekadar peranti stilistik. Kesalahan lain adalah mengabaikan dimensi embodied cognition—bagaimana pengalaman fisik tubuh manusia membentuk arsitektur metaforis. Analisis yang lemah juga sering gagal membedakan antara metafora mati (dead metaphors) yang telah terleksikalisasi dengan metafora hidup (novel metaphors) yang masih memiliki daya kejut kognitif. Terakhir, hindari pembacaan yang terlalu literal terhadap puisi eksperimental; pahami bahwa 'kesalahan' gramatikal atau semantik sering kali merupakan strategi deliberatif untuk menciptakan ruang ambiguitas produktif.",
         "wrong": "The poet uses a metaphor to compare time to a river, making the abstract concept more concrete and easier to understand for readers.",
         "correct": "The poet instantiates the TIME IS A RIVER conceptual mapping, exploiting the SOURCE-PATH-GOAL image schema to structure our temporal cognition, yet deliberately violates the unidirectionality entailment by introducing eddies and reversals that destabilise linearchronology and foreground the phenomenological complexity of durée."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"Complex Metaphorical Mapping in Literature, Poetry & Avant-Garde Prose\", bagaimana perubahan atau padanan yang benar untuk \"SOURCE DOMAIN\"?",
+          "options": [
+            "TARGET DOMAIN dengan entailments yang dapat diverifikasi secara linguistik.",
+            "Tidak ada perubahan tenses pada SOURCE DOMAIN",
+            "SOURCE DOMAIN selalu dihilangkan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Dalam materi ini: SOURCE DOMAIN berubah atau berpadanan menjadi \"TARGET DOMAIN dengan entailments yang dapat diverifikasi secara linguistik.\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Complex Metaphorical Mapping in Literature, Poetry & Avant-Garde Prose\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "The poet uses a metaphor to compare time to a river",
+            "The poet instantiates the TIME IS A RIVER conceptual mapping",
+            "making the abstract concept more concrete and easier to understand for readers"
+          ],
+          "correctIndex": 1,
+          "explanation": "Jebakan umum dalam menganalisis metafora kompleks adalah mereduksi pemetaan menjadi sekadar 'perbandingan' atau 'simile yang diperluas'. Penutur C2 memahami bahwa metafora konseptual beroperasi di tingkat struktur kognitif, bukan sekadar peranti stilistik. Kesalahan lain adalah mengabaikan dimensi embodied cognition—bagaimana pengalaman fisik tubuh manusia membentuk arsitektur metaforis. Analisis yang lemah juga sering gagal membedakan antara metafora mati (dead metaphors) yang telah terleksikalisasi dengan metafora hidup (novel metaphors) yang masih memiliki daya kejut kognitif. Terakhir, hindari pembacaan yang terlalu literal terhadap puisi eksperimental; pahami bahwa 'kesalahan' gramatikal atau semantik sering kali merupakan strategi deliberatif untuk menciptakan ruang ambiguitas produktif."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Ashworth: \"Precisely. And notice how Eliot compounds this through catachresis—attributing agency and moral judgment to a temporal unit. The semantic anomaly forces conceptual blending between seasonal cycles and ethical frameworks.\"\nElena: \"[...]\"",
+          "options": [
+            "The poet uses a metaphor to compare time to a river",
+            "But doesn't the fragmentation throughout the poem resist any coherent metaphorical system? The montage technique seems to preclude stable source-target mappings.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"But doesn't the fragmentation throughout the poem resist any coherent metaphorical system? The montage technique seems to preclude stable source-target mappings.\" (\"Namun bukankah fragmentasi di seluruh puisi itu menolak sistem metaforis yang koheren? Teknik montase tampaknya menghalangi pemetaan sumber-target yang stabil.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Elena."
+        }
+      ]
     },
     "vocab": [
       {

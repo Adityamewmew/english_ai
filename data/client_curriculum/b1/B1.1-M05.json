@@ -20,7 +20,45 @@
         "explanation": "Banyak pemula salah menggunakan Past Simple ketika seharusnya menggunakan Present Perfect Continuous untuk aktivitas yang masih relevan dengan sekarang, atau sebaliknya menggunakan Present Perfect untuk kejadian dengan waktu spesifik di masa lalu.",
         "wrong": "I play guitar since I was 10. / I have been to the concert yesterday.",
         "correct": "I've been playing guitar since I was 10. / I went to the concert yesterday."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Present Perfect vs Past Simple\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Present Perfect Continuous: have/has + been + verb-ing — untuk aktivitas yang dimulai d..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan perbedaan antara Present Perfect Simple (I have played) untuk menekankan hasil akhir, Present Perfect Continuous (I have been playing) untuk menekankan durasi atau proses yang masih berlangsung, dan Past Simple (I played) untuk kejadian yang sudah selesai di waktu tertentu di masa lalu."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Present Perfect vs Past Simple\"?",
+          "options": [
+            "I have been to the concert yesterday",
+            "I play guitar since I was",
+            "I've been playing guitar since I was"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula salah menggunakan Past Simple ketika seharusnya menggunakan Present Perfect Continuous untuk aktivitas yang masih relevan dengan sekarang, atau sebaliknya menggunakan Present Perfect untuk kejadian dengan waktu spesifik di masa lalu."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nOlivia: \"What's up, Luke? Aren't you excited?\"\nLuke: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I play guitar since I was",
+            "Not really. Well I am, but I'm just a bit upset. I mean, where am I going to get £20 from? I've run out of money."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Not really. Well I am, but I'm just a bit upset. I mean, where am I going to get £20 from? I've run out of money.\" (\"Tidak juga. Maksudku iya, tapi aku sedikit kesal. Dari mana aku bisa dapat £20? Uangku sudah habis.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Luke."
+        }
+      ]
     },
     "vocab": [
       {

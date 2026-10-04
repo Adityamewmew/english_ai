@@ -23,7 +23,45 @@
         "explanation": "Kesalahan umum adalah mengulang subjek setelah relative pronoun. Setelah who/which/that/where, kamu tidak perlu menyebutkan subjek lagi karena relative pronoun sudah menggantikan subjek tersebut.",
         "wrong": "A teacher is someone who he/she helps students.",
         "correct": "A teacher is someone who helps students."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Who, Which, That & Where\"?",
+          "options": [
+            "WHO: digunakan untuk orang. Formula: noun (person) + who + verb/clause. Contoh: 'A doct...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Defining relative clauses adalah klausa yang memberikan informasi penting untuk mendefinisikan atau mengidentifikasi orang, benda, atau tempat."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Who, Which, That & Where\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "she helps students",
+            "A teacher is someone who helps students",
+            "A teacher is someone who he"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kesalahan umum adalah mengulang subjek setelah relative pronoun. Setelah who/which/that/where, kamu tidak perlu menyebutkan subjek lagi karena relative pronoun sudah menggantikan subjek tersebut."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Great! Is there a guide who can explain the history?\"\nTom: \"[...]\"",
+          "options": [
+            "Yes, there's a historian who works there. She knows everything about ancient civilizations.",
+            "Sorry, I forgot my keys at home.",
+            "A teacher is someone who he"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Yes, there's a historian who works there. She knows everything about ancient civilizations.\" (\"Ya, ada sejarawan yang bekerja di sana. Dia tahu segalanya tentang peradaban kuno.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

@@ -19,7 +19,45 @@
         "explanation": "Banyak pemula mencampuradukkan 'used to + infinitive' (kebiasaan di masa lalu) dengan 'be/get used to + gerund/noun' (familiar dengan sesuatu). Keduanya berbeda! 'Used to' + infinitive untuk kebiasaan masa lalu, sedangkan 'be/get used to' + gerund/noun untuk kebiasaan yang sudah familiar.",
         "wrong": "I'm used to wake up early.",
         "correct": "I'm used to waking up early. (sudah terbiasa) ATAU I used to wake up early. (dulu sering, sekarang tidak)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Modals of Deduction - Must, Might, Can't\"?",
+          "options": [
+            "make/let dan be allowed to: We can use 'make' (someone do something) untuk memaksa sese...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas tiga struktur grammar penting: (1) make/let dan be allowed to untuk membicarakan izin dan paksaan, (2) be/get used to untuk membicarakan kebiasaan dan proses adaptasi, dan (3) phrasal verbs yang terbentuk dari kata kerja + partikel yang memiliki makna khusus berbeda dari kata kerja aslinya."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Modals of Deduction - Must, Might, Can't\"?",
+          "options": [
+            "I'm used to wake up early",
+            "I'm used to waking up early. (sudah terbiasa) ATAU I used to wake up early. (dulu sering",
+            "I'm used to wake up early always"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula mencampuradukkan 'used to + infinitive' (kebiasaan di masa lalu) dengan 'be/get used to + gerund/noun' (familiar dengan sesuatu). Keduanya berbeda! 'Used to' + infinitive untuk kebiasaan masa lalu, sedangkan 'be/get used to' + gerund/noun untuk kebiasaan yang sudah familiar."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJeff: \"Don't look now, but Richie Ford's sitting behind you.\"\nLeo: \"[...]\"",
+          "options": [
+            "Let me guess: he's doing something on his computer.",
+            "I'm used to wake up early",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Let me guess: he's doing something on his computer.\" (\"Biar kutebak: dia sedang melakukan sesuatu di komputernya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Leo."
+        }
+      ]
     },
     "vocab": [
       {

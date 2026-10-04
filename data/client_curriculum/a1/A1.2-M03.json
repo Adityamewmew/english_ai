@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula langsung menggunakan 'I want' yang terdengar kurang sopan atau terlalu langsung dalam konteks restoran formal. Dalam bahasa Inggris, terutama saat berbicara dengan pelayan atau di tempat umum, menggunakan 'I want' dianggap kasar.",
         "wrong": "I want a chicken sandwich.",
         "correct": "I would like a chicken sandwich, please."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Ordering Food & Drinks\"?",
+          "options": [
+            "Gunakan 'I would like' + noun/infinitive untuk memesan dengan sopan. Formula: I would l...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Saat makan di restoran atau kafe, kita perlu menggunakan bahasa yang sopan untuk memesan makanan dan minuman."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Ordering Food & Drinks\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I want a chicken sandwich always",
+            "I would like a chicken sandwich",
+            "I want a chicken sandwich"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula langsung menggunakan 'I want' yang terdengar kurang sopan atau terlalu langsung dalam konteks restoran formal. Dalam bahasa Inggris, terutama saat berbicara dengan pelayan atau di tempat umum, menggunakan 'I want' dianggap kasar."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nWaiter: \"Good afternoon! Are you ready to order?\"\nSarah: \"[...]\"",
+          "options": [
+            "Yes, I would like a chicken sandwich, please.",
+            "Sorry, I forgot my keys at home.",
+            "I want a chicken sandwich"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Yes, I would like a chicken sandwich, please.\" (\"Ya, saya ingin roti lapis ayam, tolong.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah."
+        }
+      ]
     },
     "vocab": [
       {

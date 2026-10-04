@@ -18,7 +18,45 @@
         "explanation": "Pemula sering keliru dalam membentuk kalimat pasif dengan 'be allowed to'. Jangan lupa subjek kalimat adalah orang yang menerima izin, bukan yang memberi izin.",
         "wrong": "My parents allowed me to stay up late. (ini benar tapi bukan passive form)",
         "correct": "I was allowed to stay up late. (Saya diizinkan untuk begadang) atau I'm allowed to stay up late. (Saya diizinkan untuk begadang)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Reported Speech & Sport Rules\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "be allowed to: Untuk membicarakan izin, gunakan 'be allowed to' + kata kerja dasar. Con..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas cara mengekspresikan izin dan larangan menggunakan 'be allowed to' dan 'let', serta third conditional untuk membicarakan situasi yang tidak terjadi di masa lalu."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Reported Speech & Sport Rules\"?",
+          "options": [
+            "My parents allowed me to stay up late. (ini benar tapi bukan passive form)",
+            "I were allowed to stay up late. (Saya diizinkan untuk begadang) atau I'm allowed to stay up late. (Saya diizinkan untuk begadang)",
+            "I was allowed to stay up late. (Saya diizinkan untuk begadang) atau I'm allowed to stay up late. (Saya diizinkan untuk begadang)"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pemula sering keliru dalam membentuk kalimat pasif dengan 'be allowed to'. Jangan lupa subjek kalimat adalah orang yang menerima izin, bukan yang memberi izin."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nAlex: \"My parents let me go out on school nights.\"\nJordan: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "My parents allowed me to stay up late. (ini benar tapi bukan passive form)",
+            "That isn't true. I wasn't allowed to go to the party last week."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"That isn't true. I wasn't allowed to go to the party last week.\" (\"Itu tidak benar. Saya tidak diizinkan pergi ke pesta minggu lalu.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Jordan."
+        }
+      ]
     },
     "vocab": [
       {

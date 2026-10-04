@@ -25,7 +25,45 @@
         "explanation": "Siswa sering mencampur present simple dan present perfect ketika menjelaskan data historis dengan dampak berkelanjutan. Dalam konteks finansial, present perfect digunakan untuk tren yang masih relevan, sedangkan past simple untuk kejadian yang sudah selesai di masa lampau.",
         "wrong": "The central bank increased interest rates three times this year and inflation decreases significantly.",
         "correct": "The central bank has increased interest rates three times this year, and inflation has decreased significantly."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Financial Markets, Risk Hedging & Macroeconomic Indicators\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Gunakan present perfect untuk menggambarkan tren ekonomi yang berdampak hingga sekarang...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Modul ini membahas bahasa Inggris profesional untuk analisis pasar keuangan dan indikator makroekonomi."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Financial Markets, Risk Hedging & Macroeconomic Indicators\"?",
+          "options": [
+            "The central bank have increased interest rates three times this year",
+            "The central bank increased interest rates three times this year and inflation decreases significantly",
+            "The central bank has increased interest rates three times this year"
+          ],
+          "correctIndex": 2,
+          "explanation": "Siswa sering mencampur present simple dan present perfect ketika menjelaskan data historis dengan dampak berkelanjutan. Dalam konteks finansial, present perfect digunakan untuk tren yang masih relevan, sedangkan past simple untuk kejadian yang sudah selesai di masa lampau."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"David, I've reviewed your portfolio, and given the current macroeconomic climate, I think we need to discuss some adjustments. Inflation has remained above the central bank's target for six consecutive months.\"\nDavid: \"[...]\"",
+          "options": [
+            "The central bank increased interest rates three times this year and inflation decreases significantly",
+            "Sorry, I forgot my keys at home.",
+            "I've been following the news. The Fed has already raised the benchmark rate three times this year. How is that affecting my investments?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"I've been following the news. The Fed has already raised the benchmark rate three times this year. How is that affecting my investments?\" (\"Saya sudah mengikuti beritanya. The Fed sudah menaikkan suku bunga acuan tiga kali tahun ini. Bagaimana itu mempengaruhi investasi saya?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

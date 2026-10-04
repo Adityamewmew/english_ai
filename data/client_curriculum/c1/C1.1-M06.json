@@ -21,7 +21,45 @@
         "explanation": "Pemula sering bingung antara 'despite' dan 'although'. 'Despite' harus diikuti noun atau gerund, sedangkan 'although' diikuti subjek + verb (klausa lengkap).",
         "wrong": "Despite he was tired, he kept working.",
         "correct": "Despite being tired, he kept working. / Although he was tired, he kept working."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Gerunds, Infinitives & Community\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Intensifying Comparatives: Gunakan 'a lot/far/much + comparative' untuk memperkuat perb...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Unit ini fokus pada penggunaan comparatives yang lebih kuat dengan intensifier seperti 'a lot', 'far', 'much', serta linkers of contrast seperti 'although', 'despite', 'however', dan 'nevertheless'."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Gerunds, Infinitives & Community\"?",
+          "options": [
+            "Despite being tired",
+            "he kept working",
+            "Despite he was tired"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering bingung antara 'despite' dan 'although'. 'Despite' harus diikuti noun atau gerund, sedangkan 'although' diikuti subjek + verb (klausa lengkap)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"What other situations can you think of in which strangers might start talking to each other?\"\nJames: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Maybe at a concert or sports event. People are far friendlier when they share the same interest.",
+            "Despite he was tired"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Maybe at a concert or sports event. People are far friendlier when they share the same interest.\" (\"Mungkin di konser atau acara olahraga. Orang-orang jauh lebih ramah ketika mereka punya minat yang sama.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh James."
+        }
+      ]
     },
     "vocab": [
       {

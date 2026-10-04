@@ -23,7 +23,45 @@
         "explanation": "Penutur C1 sering menggunakan terminologi neurolinguistik secara mekanis tanpa menunjukkan pemahaman implikasi teoretis atau kontroversi dalam field. Mereka mungkin berkata 'Broca's area controls speech' tanpa mengakui kompleksitas atau debat tentang lokalisasi fungsi. Grandmaster C2 mendemonstrasikan epistemic humility dan kesadaran akan batasan metodologis, menggunakan frasa seperti 'the prevailing consensus, albeit contested...' atau 'neuroimaging data, while suggestive, do not establish causality'. Mereka juga menghindari determinisme neurologis naif, mengakui bahwa neural correlates ≠ neural causes.",
         "wrong": "Brain scans show that Broca's area is responsible for grammar, proving that language is localized in specific brain regions.",
         "correct": "While lesion studies and fMRI data implicate Broca's area in syntactic processing, the extent to which linguistic functions are genuinely modular—as opposed to distributed across neural networks—remains an empirical question that neuroimaging alone cannot decisively adjudicate."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Psycholinguistics, Cognitive Neuroscience & The Mechanics of Fluent Thought\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Gunakan register akademik-ilmiah dengan presisi terminologis: 'lexical access', 'phonol...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Psycholinguistics mengeksplorasi arsitektur kognitif bahasa: bagaimana otak memproses, menyimpan, dan mengakses representasi linguistik."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "While lesion studies and fMRI data implicate Broca's area in syntactic processing",
+            "Brain scans show that Broca's area is responsible for grammar",
+            "proving that language is localized in specific brain regions"
+          ],
+          "correctIndex": 0,
+          "explanation": "Penutur C1 sering menggunakan terminologi neurolinguistik secara mekanis tanpa menunjukkan pemahaman implikasi teoretis atau kontroversi dalam field. Mereka mungkin berkata 'Broca's area controls speech' tanpa mengakui kompleksitas atau debat tentang lokalisasi fungsi. Grandmaster C2 mendemonstrasikan epistemic humility dan kesadaran akan batasan metodologis, menggunakan frasa seperti 'the prevailing consensus, albeit contested...' atau 'neuroimaging data, while suggestive, do not establish causality'. Mereka juga menghindari determinisme neurologis naif, mengakui bahwa neural correlates ≠ neural causes."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Sharma: \"A defensible position, though I remain skeptical. Consider the extensive overlap we observe between regions implicated in syntactic processing and those subserving domain-general working memory—such convergence problematizes any strong modularity thesis.\"\nDr. Chen: \"[...]\"",
+          "options": [
+            "Brain scans show that Broca's area is responsible for grammar",
+            "Fair enough, but neural substrate alone doesn't determine functional architecture. Even if syntax co-opts executive resources, that needn't entail that grammatical knowledge itself is reducible to general cognition.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Fair enough, but neural substrate alone doesn't determine functional architecture. Even if syntax co-opts executive resources, that needn't entail that grammatical knowledge itself is reducible to general cognition.\" (\"Cukup adil, tetapi substrat neural saja tidak menentukan arsitektur fungsional. Bahkan jika sintaksis mengambil alih sumber daya eksekutif, itu tidak berarti pengetahuan gramatikal itu sendiri dapat direduksi menjadi kognisi umum.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Chen."
+        }
+      ]
     },
     "vocab": [
       {

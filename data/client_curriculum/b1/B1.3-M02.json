@@ -25,7 +25,45 @@
         "explanation": "Kesalahan umum adalah menggunakan 'would' di klausa 'if' atau mencampur struktur dengan Second Conditional. Ingat: klausa 'if' HARUS menggunakan 'had + V3', bukan 'would have'.",
         "wrong": "If I would have known about the meeting, I would have attended it.",
         "correct": "If I had known about the meeting, I would have attended it."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Imagining Alternative Past Outcomes, Lessons & Regrets\"?",
+          "options": [
+            "Pola dasar: If + Subject + had + V3 (Past Participle), Subject + would have + V3. Conto...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Third Conditional digunakan untuk membayangkan hasil yang berbeda dari situasi masa lalu yang sudah tidak mungkin diubah."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Imagining Alternative Past Outcomes, Lessons & Regrets\"?",
+          "options": [
+            "I would have attended it",
+            "If I had known about the meeting",
+            "If I would have known about the meeting"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kesalahan umum adalah menggunakan 'would' di klausa 'if' atau mencampur struktur dengan Second Conditional. Ingat: klausa 'if' HARUS menggunakan 'had + V3', bukan 'would have'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"True, but I wouldn't have met my current boyfriend if I had moved abroad. That's something I don't regret.\"\nTom: \"[...]\"",
+          "options": [
+            "That's a good point. Plus, if you hadn't stayed here, you might not have gotten the promotion last month.",
+            "Sorry, I forgot my keys at home.",
+            "If I would have known about the meeting"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"That's a good point. Plus, if you hadn't stayed here, you might not have gotten the promotion last month.\" (\"Itu poin yang bagus. Lagipula, kalau kamu tidak tinggal di sini, kamu mungkin tidak akan mendapat promosi bulan lalu.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

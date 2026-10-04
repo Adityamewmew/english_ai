@@ -25,7 +25,45 @@
         "explanation": "Banyak siswa keliru menggunakan 'So do I' untuk merespon kalimat negatif. Ingat: 'So do I' hanya untuk kalimat positif, sedangkan 'Neither do I' untuk kalimat negatif.",
         "wrong": "A: I don't like horror movies. B: So do I.",
         "correct": "A: I don't like horror movies. B: Neither do I. / Me neither."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Polite Agreement & Constructive Disagreement\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Untuk menyetujui pernyataan positif, gunakan 'So do I' atau 'Me too'. Contoh: A: 'I lik...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Dalam percakapan sehari-hari, kita sering perlu menyatakan setuju atau tidak setuju dengan pendapat orang lain."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Polite Agreement & Constructive Disagreement\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "A: I don't like horror movies. B: So do I",
+            "A: I don't like horror movies. B: Neither do I",
+            "A: I don't like horror movies. B: So do I always"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak siswa keliru menggunakan 'So do I' untuk merespon kalimat negatif. Ingat: 'So do I' hanya untuk kalimat positif, sedangkan 'Neither do I' untuk kalimat negatif."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"I really enjoy reading books in my free time. It helps me relax.\"\nTom: \"[...]\"",
+          "options": [
+            "A: I don't like horror movies. B: So do I",
+            "Sorry, I forgot my keys at home.",
+            "So do I! I love reading, especially adventure novels. What kind of books do you like?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"So do I! I love reading, especially adventure novels. What kind of books do you like?\" (\"Aku juga! Aku suka membaca, terutama novel petualangan. Kamu suka buku jenis apa?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

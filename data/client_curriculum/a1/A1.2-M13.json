@@ -24,7 +24,45 @@
         "explanation": "Banyak siswa terburu-buru membaca soal dan tidak memperhatikan detail kecil. Dalam listening, mereka sering melewatkan kata kunci penting. Dalam grammar, kesalahan umum adalah menggunakan bentuk reguler untuk irregular verbs atau lupa menambahkan 's' pada kata kerja present tense untuk subjek he/she/it.",
         "wrong": "Yesterday, I goed to the market and buyed some apples.",
         "correct": "Yesterday, I went to the market and bought some apples."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Komprehensif 4 Keterampilan\"?",
+          "options": [
+            "Listening Comprehension: Dengarkan audio atau baca transkrip dengan seksama, fokus pada...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Ujian kelulusan ini mengevaluasi kemampuan Anda dalam empat keterampilan bahasa Inggris: mendengarkan, membaca, menulis, dan berbicara."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Evaluasi Komprehensif 4 Keterampilan\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "I goed to the market and buyed some apples",
+            "Yesterday",
+            "Yesterday"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak siswa terburu-buru membaca soal dan tidak memperhatikan detail kecil. Dalam listening, mereka sering melewatkan kata kunci penting. Dalam grammar, kesalahan umum adalah menggunakan bentuk reguler untuk irregular verbs atau lupa menambahkan 's' pada kata kerja present tense untuk subjek he/she/it."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Excuse me, I'm not feeling well. Is there a pharmacy near here?\"\nOfficer: \"[...]\"",
+          "options": [
+            "Yes, there's one just two blocks away. Go straight ahead, then turn right at the traffic light.",
+            "Sorry, I forgot my keys at home.",
+            "Yesterday"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Yes, there's one just two blocks away. Go straight ahead, then turn right at the traffic light.\" (\"Ya, ada satu yang hanya dua blok dari sini. Jalan lurus ke depan, lalu belok kanan di lampu lalu lintas.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Officer."
+        }
+      ]
     },
     "vocab": [
       {

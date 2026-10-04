@@ -23,7 +23,45 @@
         "explanation": "Siswa sering mencampuradukkan 'tend to' (kecenderungan kebiasaan sekarang) dengan 'used to' (kebiasaan di masa lalu). 'Tend to' digunakan untuk pola yang masih terjadi sekarang, sedangkan 'used to' untuk kebiasaan yang sudah berhenti.",
         "wrong": "I used to procrastinate when I have too many tasks now.",
         "correct": "I tend to procrastinate when I have too many tasks."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Goal-Setting Psychology & Overcoming Procrastination\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Present Simple untuk kebiasaan rutin: 'I tend to put off tasks whenever I feel overwhel...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Psikologi produktivitas menjelaskan bagaimana otak kita membentuk kebiasaan melalui dopamine reward loop—sebuah siklus yang dimulai dengan cue (pemicu), craving (keinginan), response (respons), dan reward (hadiah)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "I tend to procrastinate when I have too many tasks",
+            "I tend to procrastinate when I have too many tasks",
+            "I used to procrastinate when I have too many tasks now"
+          ],
+          "correctIndex": 0,
+          "explanation": "Siswa sering mencampuradukkan 'tend to' (kecenderungan kebiasaan sekarang) dengan 'used to' (kebiasaan di masa lalu). 'Tend to' digunakan untuk pola yang masih terjadi sekarang, sedangkan 'used to' untuk kebiasaan yang sudah berhenti."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Tom, I really need your advice. I tend to put off my assignments whenever they feel too complicated.\"\nTom: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "I used to have the same problem! What helped me was breaking milestones into manageable chunks. Instead of seeing one big project, I divide it into smaller tasks.",
+            "I used to procrastinate when I have too many tasks now"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"I used to have the same problem! What helped me was breaking milestones into manageable chunks. Instead of seeing one big project, I divide it into smaller tasks.\" (\"Dulu aku punya masalah yang sama! Yang membantuku adalah memecah pencapaian menjadi bagian-bagian yang bisa dikelola. Alih-alih melihat satu proyek besar, aku membaginya menjadi tugas-tugas kecil.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

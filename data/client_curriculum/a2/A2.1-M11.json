@@ -19,7 +19,45 @@
         "explanation": "Banyak pemula salah menggunakan 'will' setelah when/as soon as dalam kalimat tentang masa depan. Padahal setelah when/as soon as harus menggunakan present simple, bukan future.",
         "wrong": "When I will get home, I'll check my messages.",
         "correct": "When I get home, I'll check my messages."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Health, Illness & Present Perfect vs Past Simple\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Will/Won't untuk prediksi: Gunakan 'will' atau 'won't' + base form verb untuk membuat p..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas cara memprediksi masa depan dengan will/won't, penggunaan first conditional untuk kemungkinan di masa depan, dan time clauses dengan when/as soon as."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Health, Illness & Present Perfect vs Past Simple\"?",
+          "options": [
+            "I'll check my messages",
+            "When I will get home",
+            "When I get home"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula salah menggunakan 'will' setelah when/as soon as dalam kalimat tentang masa depan. Padahal setelah when/as soon as harus menggunakan present simple, bukan future."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nAlice: \"Oh, Mark, it's the French test tomorrow! I hate French. I'm sure I won't get the answers right!\"\nMark: \"[...]\"",
+          "options": [
+            "When I will get home",
+            "Sorry, I forgot my keys at home.",
+            "Don't worry, you'll be fine! You got a good result in your last test."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"Don't worry, you'll be fine! You got a good result in your last test.\" (\"Jangan khawatir, kamu akan baik-baik saja! Kamu mendapat hasil bagus di ujian terakhirmu.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Mark."
+        }
+      ]
     },
     "vocab": [
       {

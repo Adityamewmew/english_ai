@@ -21,7 +21,45 @@
         "explanation": "Banyak pemula keliru menggunakan 'more' bersama dengan '-er', atau lupa menggunakan 'than' setelah comparative. Ingat: gunakan salah satu bentuk saja, dan selalu tambahkan 'than' saat membandingkan dua hal.",
         "wrong": "This film is more cheaper than that one.",
         "correct": "This film is cheaper than that one."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Pada kaidah \"Comparatives & Superlatives\", bagaimana perubahan atau padanan yang benar untuk \"cheap\"?",
+          "options": [
+            "cheaper), atau gunakan 'more' untuk kata panjang",
+            "cheap selalu dihilangkan",
+            "Tidak ada perubahan tenses pada cheap"
+          ],
+          "correctIndex": 0,
+          "explanation": "Dalam materi ini: cheap berubah atau berpadanan menjadi \"cheaper), atau gunakan 'more' untuk kata panjang\"."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "options": [
+            "This film are cheaper than that one",
+            "This film is cheaper than that one",
+            "This film is more cheaper than that one"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula keliru menggunakan 'more' bersama dengan '-er', atau lupa menggunakan 'than' setelah comparative. Ingat: gunakan salah satu bentuk saja, dan selalu tambahkan 'than' saat membandingkan dua hal."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMegan: \"I really am. Gregory Harris is in the film. He's so cool. In fact, I think he's my favourite actor of all time!\"\nLuke: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Don't get too excited, Megan. You're not going to meet him. Or even see him, probably.",
+            "This film is more cheaper than that one"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Don't get too excited, Megan. You're not going to meet him. Or even see him, probably.\" (\"Jangan terlalu bersemangat, Megan. Kamu tidak akan bertemu dengannya. Atau bahkan melihatnya, mungkin.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Luke."
+        }
+      ]
     },
     "vocab": [
       {

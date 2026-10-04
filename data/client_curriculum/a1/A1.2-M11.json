@@ -26,7 +26,45 @@
         "explanation": "Pemula sering salah membedakan INTO dan IN TO (dua kata terpisah), atau menggunakan ACROSS dan THROUGH secara bergantian padahal maknanya berbeda. INTO menunjukkan masuk ke dalam, sedangkan IN TO adalah 'in' + infinitive 'to'. ACROSS berarti melintasi permukaan, sedangkan THROUGH berarti melewati bagian dalam.",
         "wrong": "She came in to say hello. (Salah jika maksudnya 'masuk untuk menyapa')",
         "correct": "She came into the room to say hello. (Benar: dia masuk ke dalam ruangan untuk menyapa)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Into, Out of & Across\"?",
+          "options": [
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "INTO = masuk ke dalam sesuatu. Formula: [subject] + [verb] + INTO + [tempat]. Contoh: T...",
+            "Pola ini hanya boleh digunakan dalam situasi santai"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Preposisi pergerakan (prepositions of movement) digunakan untuk menjelaskan arah atau rute perpindahan dari satu tempat ke tempat lain."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Into, Out of & Across\"?",
+          "options": [
+            "She came into the room to say hello. (Benar: dia masuk ke dalam ruangan untuk menyapa)",
+            "She came in to say hello. (Salah jika maksudnya 'masuk untuk menyapa')",
+            "She came in to say hello. (Salah jika maksudnya 'masuk untuk menyapa') always"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering salah membedakan INTO dan IN TO (dua kata terpisah), atau menggunakan ACROSS dan THROUGH secara bergantian padahal maknanya berbeda. INTO menunjukkan masuk ke dalam, sedangkan IN TO adalah 'in' + infinitive 'to'. ACROSS berarti melintasi permukaan, sedangkan THROUGH berarti melewati bagian dalam."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Okay, and then?\"\nLocal: \"[...]\"",
+          "options": [
+            "She came in to say hello. (Salah jika maksudnya 'masuk untuk menyapa')",
+            "Go past the coffee shop and turn right at the corner.",
+            "Sorry, I forgot my keys at home."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"Go past the coffee shop and turn right at the corner.\" (\"Lewati kedai kopi dan belok kanan di pojok.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Local."
+        }
+      ]
     },
     "vocab": [
       {

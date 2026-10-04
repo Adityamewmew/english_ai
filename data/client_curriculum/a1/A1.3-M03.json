@@ -23,7 +23,45 @@
         "explanation": "Pemula sering lupa mengubah kata kerja ke bentuk past tense atau mencampur present dan past tense dalam satu cerita. Pastikan semua kata kerja menggunakan bentuk lampau saat menceritakan liburan yang sudah terjadi.",
         "wrong": "Last week, I go to the beach and I buy some souvenirs.",
         "correct": "Last week, I went to the beach and I bought some souvenirs."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Holiday Experiences & Travel Memories\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Gunakan Past Simple untuk menceritakan aktivitas yang sudah selesai: Subject + Verb 2 (...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan belajar menceritakan pengalaman liburan masa lalu dengan detail."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Holiday Experiences & Travel Memories\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "Last week",
+            "I go to the beach and I buy some souvenirs",
+            "Last week"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pemula sering lupa mengubah kata kerja ke bentuk past tense atau mencampur present dan past tense dalam satu cerita. Pastikan semua kata kerja menggunakan bentuk lampau saat menceritakan liburan yang sudah terjadi."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"That sounds great! What did you do there?\"\nTom: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "We visited Borobudur Temple and Prambanan. The views were amazing!",
+            "Last week"
+          ],
+          "correctIndex": 1,
+          "explanation": "Respon \"We visited Borobudur Temple and Prambanan. The views were amazing!\" (\"Kami mengunjungi Candi Borobudur dan Prambanan. Pemandangannya menakjubkan!\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+        }
+      ]
     },
     "vocab": [
       {

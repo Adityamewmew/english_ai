@@ -23,7 +23,45 @@
         "explanation": "Banyak pemula lupa menggunakan verb bentuk dasar (base form) setelah 'Would you like to', 'Let's', atau 'Why don't we'. Mereka sering menambahkan '-ing' atau 'to' yang sebenarnya tidak diperlukan.",
         "wrong": "Would you like to coming to my party? / Let's to watch a movie.",
         "correct": "Would you like to come to my party? / Let's watch a movie."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Making Plans, Suggestions & Invitations\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Mengundang dengan 'Would you like to...?': Formula: 'Would you like to + verb (base for..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Dalam kehidupan sehari-hari, kita sering mengajak teman untuk bertemu, membuat rencana, atau memberikan saran kegiatan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Making Plans, Suggestions & Invitations\"?",
+          "options": [
+            "Would you like to coming to my party?",
+            "Let's to watch a movie",
+            "Would you like to come to my party?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banyak pemula lupa menggunakan verb bentuk dasar (base form) setelah 'Would you like to', 'Let's', atau 'Why don't we'. Mereka sering menambahkan '-ing' atau 'to' yang sebenarnya tidak diperlukan."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Hi David! Would you like to watch a movie this Saturday?\"\nDavid: \"[...]\"",
+          "options": [
+            "Sorry, I forgot my keys at home.",
+            "Would you like to coming to my party?",
+            "That sounds great! What time are you thinking?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Respon \"That sounds great! What time are you thinking?\" (\"Kedengarannya bagus! Jam berapa kamu pikirkan?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {

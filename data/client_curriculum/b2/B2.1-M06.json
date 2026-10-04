@@ -22,7 +22,45 @@
         "explanation": "Banyak pemula lupa menggunakan bentuk past participle (verb 3) setelah be dalam kalimat pasif, dan malah menggunakan verb 1 atau verb 2. Passive voice HARUS menggunakan bentuk past participle.",
         "wrong": "The box is cut in half by the magician. ✗ (menggunakan 'cut' yang kebetulan sama untuk semua bentuk, tapi konteksnya salah jika tidak past participle)",
         "correct": "The box is cut in half by the magician. ✓ (cut adalah past participle dari cut)"
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Passive Voice Present & Past\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan",
+            "Present Passive: Subject + am/is/are + past participle. Contoh: The trick is performed ..."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan penggunaan passive voice dalam bentuk present dan past untuk menjelaskan bagaimana sesuatu dilakukan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Passive Voice Present & Past\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "tapi konteksnya salah jika tidak past participle)",
+            "The box is cut in half by the magician. ✓ (cut adalah past participle dari cut)",
+            "The box is cut in half by the magician. ✗ (menggunakan 'cut' yang kebetulan sama untuk semua bentuk"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula lupa menggunakan bentuk past participle (verb 3) setelah be dalam kalimat pasif, dan malah menggunakan verb 1 atau verb 2. Passive voice HARUS menggunakan bentuk past participle."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nKim: \"She's so shocked at Dave's tattoo that she can't speak.\"\nDave: \"[...]\"",
+          "options": [
+            "Whatever. I like it.",
+            "Sorry, I forgot my keys at home.",
+            "The box is cut in half by the magician. ✗ (menggunakan 'cut' yang kebetulan sama untuk semua bentuk"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Whatever. I like it.\" (\"Terserahlah. Aku suka kok.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dave."
+        }
+      ]
     },
     "vocab": [
       {

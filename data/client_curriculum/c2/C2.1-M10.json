@@ -20,7 +20,45 @@
         "explanation": "Banyak pemula salah menggunakan infinitive (to + verb) setelah reporting verbs seperti 'suggest', 'recommend', atau 'decide'. Padahal, kata-kata ini membutuhkan that-clause atau gerund, bukan infinitive.",
         "wrong": "The teacher suggested to study Physics instead of Drama.",
         "correct": "The teacher suggested studying Physics instead of Drama."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Education, Memory & Nominalization\"?",
+          "options": [
+            "Reported verb patterns: Subject + reporting verb + that-clause (e.g., 'Experts think th...",
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kaidah inti topik ini: Unit ini membahas cara melaporkan perkataan orang lain menggunakan reported verbs dan passive report structures."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Education, Memory & Nominalization\"?",
+          "options": [
+            "The teacher suggested to study Physics instead of Drama always",
+            "The teacher suggested studying Physics instead of Drama",
+            "The teacher suggested to study Physics instead of Drama"
+          ],
+          "correctIndex": 1,
+          "explanation": "Banyak pemula salah menggunakan infinitive (to + verb) setelah reporting verbs seperti 'suggest', 'recommend', atau 'decide'. Padahal, kata-kata ini membutuhkan that-clause atau gerund, bukan infinitive."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nTanya: \"How do they feel now about the decision they made?\"\nJoanna: \"[...]\"",
+          "options": [
+            "I'd disagree. She sounds a bit selfish. I'll rather talk to Harry. He seems the most mature.",
+            "Sorry, I forgot my keys at home.",
+            "The teacher suggested to study Physics instead of Drama"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"I'd disagree. She sounds a bit selfish. I'll rather talk to Harry. He seems the most mature.\" (\"Aku tidak setuju. Dia terdengar agak egois. Aku lebih suka bicara dengan Harry. Dia tampak paling dewasa.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Joanna."
+        }
+      ]
     },
     "vocab": [
       {

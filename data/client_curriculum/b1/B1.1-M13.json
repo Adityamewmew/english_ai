@@ -24,7 +24,45 @@
         "explanation": "Banyak siswa B1.1 terjebak dengan mencampurkan tenses dalam conditional sentences, lupa melakukan backshifting dalam reported speech, atau salah menempatkan 'for' dan 'since' dalam present perfect. Kesalahan lain adalah tidak memperhatikan konteks dalam listening dan reading comprehension, sehingga menjawab terlalu cepat tanpa memahami detail penting.",
         "wrong": "If I will have time, I would visit you. She said that she is busy now. I have been working here since five years.",
         "correct": "If I had time, I would visit you. She said that she was busy. I have been working here for five years."
-      }
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Komprehensif Fondasi Intermediate\"?",
+          "options": [
+            "Pola ini hanya boleh digunakan dalam situasi santai",
+            "Present Perfect with For/Since: Subject + have/has + past participle + for/since + time...",
+            "Tenses dan susunan subjek tidak perlu diperhatikan"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kaidah inti topik ini: Ujian kelulusan B1."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan jebakan umum pada materi \"Evaluasi Komprehensif Fondasi Intermediate\". Manakah kalimat yang SUDAH TEPAT?",
+          "options": [
+            "If I had time",
+            "I would visit you. She said that she is busy now. I have been working here since five years",
+            "If I will have time"
+          ],
+          "correctIndex": 0,
+          "explanation": "Banyak siswa B1.1 terjebak dengan mencampurkan tenses dalam conditional sentences, lupa melakukan backshifting dalam reported speech, atau salah menempatkan 'for' dan 'since' dalam present perfect. Kesalahan lain adalah tidak memperhatikan konteks dalam listening dan reading comprehension, sehingga menjawab terlalu cepat tanpa memahami detail penting."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Hi David! Have you been studying for the B1.1 final exam? I'm a bit nervous about it.\"\nDavid: \"[...]\"",
+          "options": [
+            "Yes, I have been reviewing all the grammar points for two weeks now. The second conditional is still tricky for me.",
+            "Sorry, I forgot my keys at home.",
+            "If I will have time"
+          ],
+          "correctIndex": 0,
+          "explanation": "Respon \"Yes, I have been reviewing all the grammar points for two weeks now. The second conditional is still tricky for me.\" (\"Ya, aku sudah mengulas semua poin grammar selama dua minggu sekarang. Second conditional masih sulit bagiku.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh David."
+        }
+      ]
     },
     "vocab": [
       {
