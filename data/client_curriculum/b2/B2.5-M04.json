@@ -1,0 +1,209 @@
+{
+  "id": "B2.5-M04",
+  "levelId": "B2.5",
+  "title": "Unit 4: Advanced Subjunctive & Formulaic Legal Expressions",
+  "cefr": "B2",
+  "group": "Formal Registers",
+  "objective": "Mampu menggunakan present subjunctive (mandate that he be, demand that she submit) dalam konteks formal.",
+  "complexity": "deep",
+  "estimatedMinutes": 15,
+  "isExam": false,
+  "passingScore": 70,
+  "orderIndex": 44,
+  "sections": {
+    "theory": {
+      "summary": "Present subjunctive adalah bentuk kata kerja khusus yang digunakan dalam konteks sangat formal, terutama dalam bahasa hukum, politik, dan akademik. Berbeda dengan subjunctive untuk situasi hipotetis (If I were you), present subjunctive menyatakan perintah, permintaan, saran, atau kebutuhan yang dikemukakan melalui kata kerja seperti 'mandate', 'demand', 'require', 'recommend', atau 'insist'. Bentuk ini menggunakan base form verb (kata kerja bentuk dasar) tanpa akhiran -s pada subjek tunggal, sehingga 'he be' (bukan 'he is') dan 'she submit' (bukan 'she submits'). Struktur ini sering muncul dalam dokumen kontrak, keputusan pengadilan, dan surat resmi institusi.",
+      "rules": [
+        {
+          "pattern": "Subject + verb of demand/urgency + that + subject + base verb (without 'to')",
+          "meaning": "Menyatakan perintah, permintaan, atau keharusan formal bahwa seseorang harus melakukan sesuatu. Kata kerja utama setelah 'that' selalu dalam bentuk dasar.",
+          "example": "The contract mandates that all employees submit their reports by Friday."
+        },
+        {
+          "pattern": "It is + adjective of urgency/necessity + that + subject + base verb",
+          "meaning": "Menyatakan pentingnya atau perlunya suatu tindakan dilakukan. Adjective yang umum: essential, imperative, vital, crucial, necessary.",
+          "example": "It is imperative that the defendant be present at all court proceedings."
+        },
+        {
+          "pattern": "Noun phrase + of + demand/urgency + that + subject + base verb",
+          "meaning": "Digunakan dalam frasa benda yang menyatakan permintaan atau syarat formal, sering dalam dokumen legal.",
+          "example": "The committee's recommendation that the proposal be approved was unanimous."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Kesalahan Penggunaan 'Should' atau Indicative Mood",
+        "explanation": "Banyak pembelajar menambahkan 'should' atau menggunakan kata kerja biasa (indicative) setelah 'that' karena terasa lebih natural. Namun, dalam present subjunctive yang formal, 'should' tidak digunakan dan base verb wajib dipakai tanpa memandang jumlah subjek (singular/plural). Kata kerja juga tidak berubah walaupun subjeknya tunggal.",
+        "wrong": "The law requires that he should submits the documents within 30 days.",
+        "correct": "The law requires that he submit the documents within 30 days."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah kalimat di bawah ini yang menggunakan present subjunctive dengan benar?",
+          "options": [
+            "The board demands that the CEO resign immediately.",
+            "The board demands that the CEO resigns immediately.",
+            "The board demands that the CEO should resign immediately."
+          ],
+          "correctIndex": 0,
+          "explanation": "Present subjunctive menggunakan base verb 'resign' tanpa -s dan tanpa 'should', meskipun subjeknya singular (CEO)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Identifikasi kesalahan dalam kalimat berikut: 'The treaty stipulates that all parties complies with the regulations.'",
+          "options": [
+            "The treaty stipulates that all parties comply with the regulations.",
+            "The treaty stipulates that all parties should comply with the regulations.",
+            "The treaty stipulates that all parties are complying with the regulations."
+          ],
+          "correctIndex": 0,
+          "explanation": "'Complies' salah karena subjunctive memerlukan base verb 'comply', bukan bentuk ketiga tunggal dengan -s."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Hakim: 'The court insists that the witness [...] under oath.' Lengkapi dengan bentuk yang tepat.",
+          "options": [
+            "testifies",
+            "should testify",
+            "testify"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Insists that' memicu subjunctive, sehingga base verb 'testify' (bukan 'testifies' atau 'should testify') adalah pilihan benar."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "mandate",
+        "translation": "mewajibkan, mengamanatkan",
+        "example": "The legislation mandates that all schools provide free meals.",
+        "context": "Kata kerja formal dalam dokumen hukum untuk menyatakan kewajiban resmi"
+      },
+      {
+        "word": "stipulate",
+        "translation": "menetapkan syarat, mensyaratkan",
+        "example": "The agreement stipulates that payment be made within 14 days.",
+        "context": "Umum dalam kontrak dan perjanjian untuk menyatakan ketentuan spesifik"
+      },
+      {
+        "word": "imperative",
+        "translation": "sangat penting, mendesak, keharusan",
+        "example": "It is imperative that the evidence be preserved.",
+        "context": "Adjective untuk menekankan kebutuhan mendesak dalam situasi kritis"
+      },
+      {
+        "word": "decree",
+        "translation": "dekrit, keputusan resmi",
+        "example": "The presidential decree ordered that the borders be closed.",
+        "context": "Keputusan resmi dari otoritas tinggi yang memiliki kekuatan hukum"
+      },
+      {
+        "word": "petition",
+        "translation": "permohonan resmi, petisi",
+        "example": "The petition requests that the decision be reconsidered.",
+        "context": "Permintaan formal yang diajukan kepada otoritas atau lembaga"
+      },
+      {
+        "word": "verdict",
+        "translation": "putusan pengadilan",
+        "example": "The jury's verdict demands that the defendant be released immediately.",
+        "context": "Keputusan akhir dari juri atau hakim dalam proses pengadilan"
+      }
+    ],
+    "dialogue": {
+      "context": "Seorang pengacara senior dan junior mendiskusikan draf kontrak klien di kantor firma hukum. Mereka meninjau klausa-klausa penting sebelum kontrak diserahkan kepada klien.",
+      "lines": [
+        {
+          "speaker": "Sarah",
+          "text": "Have you reviewed the termination clause in Section 7?",
+          "translation": "Sudahkah kamu meninjau klausa pengakhiran di Bagian 7?"
+        },
+        {
+          "speaker": "Marcus",
+          "text": "Yes, it stipulates that either party may terminate with 30 days' notice. But should we add a provision?",
+          "translation": "Sudah, klausa itu menetapkan bahwa salah satu pihak dapat mengakhiri dengan pemberitahuan 30 hari. Tapi apakah kita perlu menambah ketentuan?"
+        },
+        {
+          "speaker": "Sarah",
+          "text": "Definitely. I recommend that the contract require written confirmation for any termination.",
+          "translation": "Tentu. Saya menyarankan agar kontrak mewajibkan konfirmasi tertulis untuk setiap pengakhiran."
+        },
+        {
+          "speaker": "Marcus",
+          "text": "Good point. Also, it's essential that the confidentiality clause be extended to five years post-termination.",
+          "translation": "Panduan bagus. Juga, sangat penting bahwa klausa kerahasiaan diperpanjang hingga lima tahun setelah pengakhiran."
+        },
+        {
+          "speaker": "Sarah",
+          "text": "Agreed. I'll draft that. The client insists that all amendments be reviewed by legal counsel.",
+          "translation": "Setuju. Saya akan menyusunnya. Klien bersikeras agar semua amendemen ditinjau oleh penasihat hukum."
+        },
+        {
+          "speaker": "Marcus",
+          "text": "I'll make sure the final version reflects that. The board mandates that we submit this by Friday.",
+          "translation": "Saya akan memastikan versi final mencerminkan hal itu. Dewan mewajibkan kita mengirimkan ini sebelum Jumat."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Menggunakan present subjunctive secara akurat dalam simulasi negosiasi kontrak atau diskusi kebijakan formal.",
+      "scenario": "Bayangkan Anda adalah penasihat hukum untuk sebuah perusahaan teknologi. Direktur Utama meminta Anda menjelaskan perubahan kebijakan privasi data yang baru. Anda harus menyampaikan minimal tiga klausa menggunakan present subjunctive (misalnya: 'The policy requires that users consent...', 'It is essential that data be stored...', 'We recommend that the company implement...'). Berlatihlah dengan nada formal dan profesional."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Pilih kalimat dengan present subjunctive yang GRAMATIKAL BENAR:",
+          "options": [
+            "The university requires that every student submits a thesis proposal.",
+            "The university requires that every student submit a thesis proposal.",
+            "The university requires that every student should submit a thesis proposal.",
+            "The university requires that every student submitting a thesis proposal."
+          ],
+          "correctIndex": 1,
+          "explanation": "Setelah 'requires that', present subjunctive menggunakan base verb 'submit' tanpa -s dan tanpa 'should', meskipun subjek 'every student' adalah singular."
+        },
+        {
+          "id": 2,
+          "prompt": "Manakah pasangan kata kerja yang TIDAK dapat memicu present subjunctive?",
+          "options": [
+            "suggest / recommend",
+            "insist / demand",
+            "believe / think",
+            "mandate / order"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Believe' dan 'think' adalah kata kerja kognitif yang tidak menyatakan urgensi, permintaan, atau keharusan, sehingga tidak memicu subjunctive."
+        },
+        {
+          "id": 3,
+          "prompt": "Lengkapi: 'The committee's decision was that the proposal ___ rejected.'",
+          "options": [
+            "is",
+            "be",
+            "was",
+            "been"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Decision was that' dalam konteks formal memicu subjunctive untuk menyatakan hasil putusan, sehingga 'be' adalah bentuk yang tepat."
+        },
+        {
+          "id": 4,
+          "prompt": "Identifikasi kesalahan: 'It is vital that the patient receives immediate medical attention.'",
+          "options": [
+            "Tidak ada kesalahan",
+            "Seharusnya 'receive' bukan 'receives'",
+            "Seharusnya 'received' bukan 'receives'",
+            "Seharusnya 'should receive' bukan 'receives'"
+          ],
+          "correctIndex": 1,
+          "explanation": "'It is vital that' memicu subjunctive, sehingga base verb 'receive' (tanpa -s) adalah bentuk yang benar, bukan 'receives'."
+        }
+      ]
+    }
+  }
+}

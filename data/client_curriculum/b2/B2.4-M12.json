@@ -1,0 +1,199 @@
+{
+  "id": "B2.4-M12",
+  "levelId": "B2.4",
+  "title": "Unit 12: Executive Summaries & Policy Brief Formulation",
+  "cefr": "B2",
+  "group": "Executive Writing",
+  "objective": "Mampu menyusun ringkasan eksekutif dan rekomendasi kebijakan publik dengan kepadatan leksikal yang ringkas dan padat.",
+  "complexity": "deep",
+  "estimatedMinutes": 15,
+  "isExam": false,
+  "passingScore": 70,
+  "orderIndex": 51,
+  "sections": {
+    "theory": {
+      "summary": "Executive summary dan policy brief adalah dokumen profesional yang menyajikan informasi penting secara ringkas dan padat untuk pengambil keputusan. Executive summary merangkum poin-poin kunci dari laporan yang lebih panjang, sedangkan policy brief memberikan analisis masalah kebijakan publik beserta rekomendasi yang dapat ditindaklanjuti. Keduanya membutuhkan kepadatan leksikal tinggi—setiap kata harus bernilai informasi. Struktur umumnya mencakup: latar belakang singkat, temuan utama, implikasi, dan rekomendasi. Bahasa yang digunakan formal, objektif, dan menghindari redundansi.",
+      "rules": [
+        {
+          "pattern": "Subject + passive/active verb + key finding + implication",
+          "meaning": "Menyatakan temuan utama dengan dampaknya dalam satu kalimat padat",
+          "example": "The analysis reveals a 23% increase in urban air pollution, necessitating immediate policy intervention."
+        },
+        {
+          "pattern": "It is recommended that + subject + action verb + specific measure",
+          "meaning": "Memberikan rekomendasi formal dan dapat ditindaklanjuti",
+          "example": "It is recommended that the municipality implement low-emission zones by Q3 2025."
+        },
+        {
+          "pattern": "Given + noun phrase, + main clause with modal (should/must/ought to)",
+          "meaning": "Menyampaikan justifikasi berbasis bukti sebelum rekomendasi",
+          "example": "Given the projected population growth of 15%, infrastructure investment must be prioritized."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Redundansi dan Ketidakpadatan Leksikal",
+        "explanation": "Pembelajar sering menulis kalimat bertele-tele dengan kata-kata yang tidak menambah informasi ('filler words'). Dalam executive writing, setiap kata harus berkontribusi pada makna. Hindari frasa seperti 'in order to' (gunakan 'to'), 'due to the fact that' (gunakan 'because'), dan 'it is important to note that' (langsung nyatakan poinnya).",
+        "wrong": "It is important to note that due to the fact that there has been an increase in the number of vehicles, what this means is that pollution levels have gone up.",
+        "correct": "Rising vehicle numbers have increased pollution levels."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah kalimat yang menunjukkan kepadatan leksikal paling tinggi untuk executive summary?",
+          "options": [
+            "Infrastructure investment must be prioritized given the projected 15% population growth.",
+            "Due to the fact that the population is projected to grow, it is important to prioritize infrastructure investment.",
+            "The population will grow by 15% and this means that we should think about investing in infrastructure."
+          ],
+          "correctIndex": 0,
+          "explanation": "Kalimat pertama paling padat: semua kata berkontribusi pada makna, struktur langsung, dan menggabungkan justifikasi ('given...') dengan rekomendasi dalam satu kalimat efisien."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Identifikasi kalimat yang menghindari jebakan redundansi dengan benar:",
+          "options": [
+            "In order to address the issue of traffic congestion, what needs to happen is the implementation of better public transport.",
+            "Implementing better public transport addresses traffic congestion.",
+            "For the purpose of addressing traffic congestion, it is recommended that better public transport should be implemented."
+          ],
+          "correctIndex": 1,
+          "explanation": "Kalimat kedua langsung menyatakan aksi dan dampaknya tanpa filler. Kalimat pertama dan ketiga mengandung frasa bertele-tele ('in order to', 'what needs to happen is', 'for the purpose of')."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Lengkapi policy brief dengan rekomendasi yang paling tepat: 'Analysis indicates that 68% of municipal waste goes to landfills. _______'",
+          "options": [
+            "Therefore, something should be done about this problem in the near future.",
+            "Recycling infrastructure investment is recommended to reduce landfill dependency by 40%.",
+            "It would be a good idea if the government could consider looking into recycling programs."
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi kedua memberikan rekomendasi spesifik, terukur (40%), dan dapat ditindaklanjuti. Opsi lain terlalu vagues ('something should be done', 'good idea', 'looking into')."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "stakeholder",
+        "translation": "pemangku kepentingan",
+        "example": "Key stakeholders must be consulted before policy implementation.",
+        "context": "Pihak yang terkena dampak atau berkepentingan dengan kebijakan"
+      },
+      {
+        "word": "implementation",
+        "translation": "pelaksanaan/penerapan",
+        "example": "Successful implementation requires adequate funding and monitoring.",
+        "context": "Proses menjalankan kebijakan atau program"
+      },
+      {
+        "word": "mitigate",
+        "translation": "mengurangi/menanggulangi",
+        "example": "Carbon taxes mitigate environmental degradation effectively.",
+        "context": "Mengurangi dampak negatif suatu masalah"
+      },
+      {
+        "word": "feasibility",
+        "translation": "kelayakan",
+        "example": "A feasibility study must precede any infrastructure project.",
+        "context": "Penilaian apakah suatu rencana dapat dilaksanakan"
+      },
+      {
+        "word": "implication",
+        "translation": "implikasi/dampak",
+        "example": "The policy has significant budgetary implications for local governments.",
+        "context": "Konsekuensi atau dampak dari suatu keputusan atau temuan"
+      },
+      {
+        "word": "recommendation",
+        "translation": "rekomendasi/saran",
+        "example": "The report offers three actionable recommendations for reform.",
+        "context": "Usulan tindakan berdasarkan analisis"
+      }
+    ],
+    "dialogue": {
+      "context": "Dua analis kebijakan, Sarah dan David, mendiskusikan draft policy brief tentang krisis perumahan kota besar sebelum presentasi ke dewan kota.",
+      "lines": [
+        {
+          "speaker": "Sarah",
+          "text": "The executive summary still feels too verbose. We need to cut it by half.",
+          "translation": "Ringkasan eksekutifnya masih terasa bertele-tele. Kita perlu memotongnya menjadi setengah."
+        },
+        {
+          "speaker": "David",
+          "text": "Agreed. Should I replace 'due to the fact that housing prices have increased' with 'rising housing prices'?",
+          "translation": "Setuju. Haruskah saya mengganti 'disebabkan oleh kenyataan bahwa harga rumah telah meningkat' dengan 'meningkatnya harga rumah'?"
+        },
+        {
+          "speaker": "Sarah",
+          "text": "Exactly. And merge the findings with the recommendation. Something like: 'Given the 40% price surge, rent control policies must be implemented.'",
+          "translation": "Tepat. Dan gabungkan temuan dengan rekomendasi. Seperti: 'Mengingat lonjakan harga 40%, kebijakan kontrol sewa harus diterapkan.'"
+        },
+        {
+          "speaker": "David",
+          "text": "That works. I'll also add specific metrics to the recommendation section for credibility.",
+          "translation": "Itu bagus. Saya juga akan menambahkan metrik spesifik ke bagian rekomendasi untuk kredibilitas."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Menyusun paragraf ringkasan eksekutif yang ringkas, padat, dan berisi rekomendasi berbasis bukti.",
+      "scenario": "Anda adalah analis di lembaga think tank. Buatlah ringkasan eksekutif (3-4 kalimat) untuk policy brief tentang kemacetan lalu lintas di Jakarta. Sertakan: (1) data masalah, (2) penyebab utama, (3) implikasi ekonomi, dan (4) rekomendasi spesifik terukur. Gunakan kepadatan leksikal tinggi tanpa filler words."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Manakah yang BUKAN karakteristik executive summary yang efektif?",
+          "options": [
+            "Kepadatan leksikal tinggi dengan setiap kata bernilai informasi",
+            "Bahasa formal dan objektif tanpa redundansi",
+            "Penjelasan mendetail tentang metodologi penelitian",
+            "Struktur jelas: latar belakang, temuan, implikasi, rekomendasi"
+          ],
+          "correctIndex": 2,
+          "explanation": "Executive summary tidak memuat metodologi mendetail—itu milik laporan lengkap. Ringkasan eksekutif fokus pada hasil dan rekomendasi, bukan proses teknis."
+        },
+        {
+          "id": 2,
+          "prompt": "Pilih transformasi paling efektif untuk kalimat: 'It is important to note that due to the fact that there is a shortage of water, what needs to happen is that conservation measures must be implemented.'",
+          "options": [
+            "Water shortages are happening and conservation is important to implement.",
+            "Water shortages necessitate immediate conservation measures.",
+            "Because there is a water shortage, it is recommended that conservation should happen.",
+            "The fact is that water is short so we must conserve it."
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi kedua menghilangkan semua filler ('it is important to note that', 'due to the fact that', 'what needs to happen is') sambil mempertahankan makna lengkap dalam 6 kata."
+        },
+        {
+          "id": 3,
+          "prompt": "Dalam policy brief, frasa 'It is recommended that' paling tepat diikuti oleh:",
+          "options": [
+            "the government should think about possible solutions",
+            "the municipality implement congestion pricing by Q2 2025",
+            "something be done about this pressing issue",
+            "stakeholders consider various options moving forward"
+          ],
+          "correctIndex": 1,
+          "explanation": "Rekomendasi harus spesifik, terukur, dan dapat ditindaklanjuti. Opsi kedua menyebutkan aksi konkret (implement congestion pricing), pelaku (municipality), dan tenggat waktu (Q2 2025)."
+        },
+        {
+          "id": 4,
+          "prompt": "Urutkan elemen berikut sesuai struktur standar executive summary: (A) Rekomendasi, (B) Latar belakang, (C) Implikasi, (D) Temuan utama",
+          "options": [
+            "B → D → C → A",
+            "A → B → D → C",
+            "B → A → D → C",
+            "D → B → C → A"
+          ],
+          "correctIndex": 0,
+          "explanation": "Struktur standar: Latar belakang (B) → Temuan utama (D) → Implikasi (C) → Rekomendasi (A). Urutan ini mengalir dari konteks ke tindakan."
+        }
+      ]
+    }
+  }
+}

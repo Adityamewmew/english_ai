@@ -1,0 +1,199 @@
+{
+  "id": "B2.5-M12",
+  "levelId": "B2.5",
+  "title": "Unit 12: Bridge to C1: Autonomous Academic Debate & Complex Dialectics",
+  "cefr": "B2",
+  "group": "Capstone Synthesis",
+  "objective": "Mampu menyintesis seluruh keterampilan B2 menjadi kefasihan mandiri yang siap menembus standar C1 Operational Proficiency.",
+  "complexity": "deep",
+  "estimatedMinutes": 15,
+  "isExam": false,
+  "passingScore": 70,
+  "orderIndex": 64,
+  "sections": {
+    "theory": {
+      "summary": "Pada tingkat B2.5 menuju C1, kamu menguasai kemampuan untuk berpartisipasi dalam debat akademik yang kompleks dengan menggunakan bahasa yang sofistikasi dan nuanced. Ini mencakup penggunaan advanced discourse markers untuk struktur argumentasi, hedging expressions untuk menyatakan posisi dengan akademis, serta rhetorical moves untuk membangun, menantang, dan mensintesis argumen. Kemampuan ini membutuhkan kontrol gramatikal yang presisi dalam penggunaan concessive clauses, inversion untuk emphasis, dan nominalisation untuk menciptakan gaya akademik yang formal.",
+      "rules": [
+        {
+          "pattern": "While/Although/Even though + [clause], [main clause with counter-assertion]",
+          "meaning": "Menyatakan pengakuan terhadap argumen lawan sambil mempertahankan posisi sendiri (concession)",
+          "example": "While the methodology appears sound, the sample size raises significant concerns about generalisability."
+        },
+        {
+          "pattern": "Not only [auxiliary] [subject] [past participle/base verb], but [subject] also [verb phrase]",
+          "meaning": "Inversion untuk memberikan emphasis dramatis pada dua poin sekaligus, umum digunakan dalam debat akademik",
+          "example": "Not only does this approach overlook cultural variables, but it also fails to account for temporal shifts in demographic patterns."
+        },
+        {
+          "pattern": "[Adjective/Noun] + though/that + [subject] + [verb], [main clause]",
+          "meaning": "Struktur inversion untuk concession dengan register lebih formal dan literer",
+          "example": "Compelling though the argument may be, it rests on assumptions that have been empirically refuted."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Kesalahan Struktur Inversion dengan 'Not only'",
+        "explanation": "Pebelajar sering lupa bahwa setelah 'Not only' di awal kalimat, auxiliary verb (do/does/did/have/will/can) harus mendahului subjek. Struktur ini membalik urutan normal subjek-verb. Tanpa inversion, kalimat terdengar tidak gramatikal dalam register akademik.",
+        "wrong": "Not only the study ignores confounding variables, but it also uses outdated methodology.",
+        "correct": "Not only does the study ignore confounding variables, but it also uses outdated methodology."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Kalimat mana yang menggunakan struktur concessive clause dengan benar untuk mengakui argumen lawan sebelum menyatakan counter-position?",
+          "options": [
+            "While the proposal has merit, the funding implications remain problematic.",
+            "The proposal has merit, while the funding implications remain problematic.",
+            "The funding implications remain problematic, while the proposal has merit."
+          ],
+          "correctIndex": 0,
+          "explanation": "Struktur 'While + clause' di awal kalimat berfungsi sebagai concessive opener yang secara retoris memposisikan argumen lawan di depan sebelum speaker menyatakan posisi kontranya. Urutan ini penting untuk flow argumentatif."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Identifikasi kalimat dengan struktur inversion yang GRAMATIKAL setelah 'Not only':",
+          "options": [
+            "Not only the theory is flawed, but the evidence is also circumstantial.",
+            "Not only is the theory flawed, but the evidence is also circumstantial.",
+            "Not only the theory flawed, but the evidence is also circumstantial."
+          ],
+          "correctIndex": 1,
+          "explanation": "Setelah 'Not only' di awal kalimat, auxiliary 'is' harus mendahului subjek 'the theory'. Ini adalah inversion wajib dalam bahasa Inggris formal. Tanpa inversion, kalimat tidak gramatikal."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Dalam debat akademik tentang AI ethics, seorang panelist ingin menyatakan: 'Meskipun argumennya persuasif, ia mengabaikan pertimbangan jangka panjang.' Mana respons yang paling akademik?",
+          "options": [
+            "Persuasive though the argument is, it disregards long-term considerations.",
+            "The argument is persuasive though it disregards long-term considerations.",
+            "Though persuasive the argument, it disregards long-term considerations."
+          ],
+          "correctIndex": 0,
+          "explanation": "'Adjective + though + subject + be' adalah struktur inversion formal yang sangat akademik untuk concession. Ini lebih sophisticated dibanding 'although' biasa dan menunjukkan control retoris tingkat tinggi."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "delineate",
+        "translation": "menguraikan secara terperinci; menetapkan batas",
+        "example": "The study delineates three distinct phases of cognitive development in adolescents.",
+        "context": "Digunakan dalam academic writing untuk menjelaskan framework atau boundaries konseptual"
+      },
+      {
+        "word": "corroborate",
+        "translation": "memperkuat; mengkonfirmasi dengan bukti",
+        "example": "Recent meta-analyses corroborate the initial findings regarding intervention efficacy.",
+        "context": "Umum dalam literature review untuk menyatakan dukungan empiris terhadap klaim"
+      },
+      {
+        "word": "juxtaposition",
+        "translation": "penempatan berdampingan untuk perbandingan",
+        "example": "The juxtaposition of qualitative and quantitative data reveals patterns neither method captures alone.",
+        "context": "Digunakan dalam analisis komparatif dan methodological discussions"
+      },
+      {
+        "word": "purport",
+        "translation": "mengklaim atau menyatakan (sering dengan keraguan)",
+        "example": "The article purports to demonstrate causality, yet the methodology only supports correlation.",
+        "context": "Berguna untuk hedging dalam kritik akademik; menyiratkan skepticism"
+      },
+      {
+        "word": "warrant",
+        "translation": "mewajarkan; memberi justifikasi",
+        "example": "The limited sample size does not warrant such sweeping generalisations.",
+        "context": "Digunakan untuk mengevaluasi klaim atau menyatakan batas validitas"
+      },
+      {
+        "word": "contentious",
+        "translation": "kontroversial; menimbulkan perdebatan",
+        "example": "The methodology section has proven particularly contentious among peer reviewers.",
+        "context": "Umum dalam academic discourse untuk menyatakan area dis agreement"
+      }
+    ],
+    "dialogue": {
+      "context": "Simposium akademik tentang 'The Ethics of Algorithmic Decision-Making' di sebuah universitas. Alex (teknolog) dan Morgan (etikawan) berdebat tentang proposal penggunaan AI dalam sistem peradilan pidana.",
+      "lines": [
+        {
+          "speaker": "Alex",
+          "text": "The data suggests that algorithmic risk assessment reduces recidivism by 23% compared to traditional methods. Not only does this represent a significant improvement, but it also addresses the systemic biases inherent in human judgment.",
+          "translation": "Data menunjukkan bahwa penilaian risiko algoritmik mengurangi residivisme sebesar 23% dibandingkan metode tradisional. Tidak hanya ini mewakili peningkatan signifikan, tetapi juga mengatasi bias sistemik yang melekat dalam penilaian manusia."
+        },
+        {
+          "speaker": "Morgan",
+          "text": "Compelling though those figures may be, they obscure a more fundamental concern. The algorithm purportedly eliminates bias, yet the training data itself encodes historical patterns of discrimination.",
+          "translation": "Meskipun angka-angka itu menarik, mereka mengaburkan kekhawatiran yang lebih mendasar. Algoritma diklaim menghilangkan bias, namun data training itu sendiri mengkodekan pola-pola diskriminasi historis."
+        },
+        {
+          "speaker": "Alex",
+          "text": "While I acknowledge that historical bias exists, the transparency protocols we've implemented allow for continuous auditing. No system is perfect, but the alternative—subjective human judgment—has demonstrably worse outcomes.",
+          "translation": "Meskipun saya mengakui bahwa bias historis ada, protokol transparansi yang kami terapkan memungkinkan audit berkelanjutan. Tidak ada sistem yang sempurna, tetapi alternatifnya—penilaian manusia yang subjektif—memiliki hasil yang jelas-jelas lebih buruk."
+        },
+        {
+          "speaker": "Morgan",
+          "text": "That juxtaposition presents a false dichotomy. We could instead delineate a hybrid approach that leverages algorithmic efficiency while preserving human oversight for edge cases. The stakes—individual liberty—warrant nothing less.",
+          "translation": "Juxtaposisi itu menghadirkan dikotomi palsu. Kita bisa sebagai gantinya menguraikan pendekatan hibrida yang memanfaatkan efisiensi algoritmik sambil mempertahankan pengawasan manusia untuk kasus-kasus edge. Taruhannya—kebebasan individu—mewajarkan tidak kurang dari itu."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Mampu menyampaikan posisi akademik yang nuanced menggunakan concessive structures dan inversion untuk emphasis, sambil membangun dan menantang argumen dengan register formal yang sesuai standar C1.",
+      "scenario": "Kamu adalah panelis dalam forum akademik tentang 'Should Universal Basic Income Replace Traditional Welfare Systems?' Berikan opening statement 2-3 kalimat yang: (1) mengakui satu argumen yang valid dari sisi lawan menggunakan concessive structure, (2) menyatakan posisi kontra-mu menggunakan hedging yang akademik, dan (3) menggunakan inversion untuk menekankan satu poin krusial. Rekaman akan dianalisis untuk sophistication retoris dan kontrol gramatikal."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Pilih kalimat dengan penggunaan 'not only... but also' inversion yang BENAR untuk konteks akademik:",
+          "options": [
+            "Not only the framework accounts for economic variables, but it incorporates social factors.",
+            "Not only does the framework account for economic variables, but it also incorporates social factors.",
+            "Not only does the framework account for economic variables, but incorporates social factors.",
+            "The framework not only does account for economic variables, but also incorporates social factors."
+          ],
+          "correctIndex": 1,
+          "explanation": "Inversion yang benar: 'Not only + auxiliary (does) + subject + base verb'. Selain itu, 'also' harus mengawali klausa kedua untuk parallel structure yang proper."
+        },
+        {
+          "id": 2,
+          "prompt": "Kalimat mana yang menggunakan 'though' sebagai concessive inversion dengan register paling formal dan akademik?",
+          "options": [
+            "The evidence is contradictory, though the hypothesis remains plausible.",
+            "Though the evidence is contradictory, the hypothesis remains plausible.",
+            "Contradictory though the evidence is, the hypothesis remains plausible.",
+            "The hypothesis remains plausible, contradictory though is the evidence."
+          ],
+          "correctIndex": 2,
+          "explanation": "'Adjective + though + subject + verb' adalah struktur inversion literer yang sangat formal. Posisi di awal kalimat memberikan emphasis retoris pada concession."
+        },
+        {
+          "id": 3,
+          "prompt": "Pilih hedging expression yang paling tepat untuk menyatakan klaim dengan caution akademik:",
+          "options": [
+            "This proves definitively that the intervention caused the outcome.",
+            "This suggests a potential causal relationship between intervention and outcome.",
+            "This absolutely demonstrates causality between the variables.",
+            "This clearly shows that the intervention definitely worked."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Suggests a potential causal relationship' adalah hedging yang akademik. Kata 'proves', 'absolutely', dan 'definitely' terlalu kuat untuk klaim akademik yang responsible."
+        },
+        {
+          "id": 4,
+          "prompt": "Dalam struktur argumentasi akademik, fungsi UTAMA concessive clause adalah:",
+          "options": [
+            "Menyatakan kesimpulan dari argumen sebelumnya",
+            "Mengakui validitas sebagian argumen lawan sebelum menyatakan counter-position",
+            "Mengulangi poin utama untuk emphasis",
+            "Mengalihkan topik ke aspek lain yang lebih mudah dibahas"
+          ],
+          "correctIndex": 1,
+          "explanation": "Concessive clause berfungsi retoris untuk menunjukkan fairness intelektual: mengakui kekuatan argumen lawan sebelum membangun counter-argument. Ini memperkuat kredibilitas speaker."
+        }
+      ]
+    }
+  }
+}

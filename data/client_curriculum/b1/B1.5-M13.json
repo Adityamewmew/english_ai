@@ -1,0 +1,199 @@
+{
+  "id": "B1.5-M13",
+  "levelId": "B1.5",
+  "title": "Ujian Kelulusan B1.5: Evaluasi Komprehensif Pre-B2 Fluency & Social Debates",
+  "cefr": "B1",
+  "group": "Graduation Assessment",
+  "objective": "Menguji kemampuan siswa dalam berdebat, sintesis opini sosial, dan penguasaan tata bahasa pra-B2 secara komprehensif.",
+  "complexity": "deep",
+  "estimatedMinutes": 15,
+  "isExam": true,
+  "passingScore": 70,
+  "orderIndex": 65,
+  "sections": {
+    "theory": {
+      "summary": "Selamat datang di Ujian Kelulusan B1.5! Modul ini menguji penguasaan komprehensifmu atas seluruh materi yang telah dipelajari sepanjang level B1.5 — mulai dari berdebat tentang isu sosial, menyintesis opini, hingga menguasai tata bahasa pra-B2. Kamu akan diuji pada lima area utama: (1) **Tenses & Future Forms** — cara membicarakan rencana dan prediksi; (2) **Modal Verbs** — menyatakan kewajiban, saran, dan larangan menggunakan *must, should, ought to, had better, have to*; (3) **Conditionals & Wishes** — conditional pertama, kedua, ketiga, serta ekspresi *wish/if only*; (4) **Reported Speech & Passive** — melaporkan ucapan orang lain dan menggunakan kalimat pasif; (5) **Debating & Opinion Synthesis** — menyatakan, mendukung, dan menentang argumen secara kohesif. Kemampuan menggabungkan semua elemen ini dalam konteks debat sosial autentik adalah tanda kesiapanmu memasuki level B2.",
+      "rules": [
+        {
+          "pattern": "Subject + modal (must / should / ought to / had better) + base verb",
+          "meaning": "Menyatakan kewajiban moral, saran kuat, atau peringatan — digunakan saat berdebat untuk merekomendasikan tindakan atau kebijakan sosial.",
+          "example": "Governments ought to invest more in renewable energy before it's too late."
+        },
+        {
+          "pattern": "If + Past Simple, Subject + would / could + base verb (2nd Conditional) → I wish / If only + Past Simple",
+          "meaning": "Membicarakan situasi hipotetis atau menyatakan penyesalan tentang situasi sekarang — kunci dalam debat untuk mengkritik kebijakan yang ada.",
+          "example": "If companies paid their workers fairly, inequality wouldn't be such a serious problem. / I wish the government would listen to young people more."
+        },
+        {
+          "pattern": "Subject + reported verb (said / told / claimed / argued / admitted) + that + clause (tense shift)",
+          "meaning": "Melaporkan argumen atau klaim orang lain dalam debat — penting untuk mensintesis berbagai sudut pandang secara akademis.",
+          "example": "The researcher argued that social media had significantly worsened mental health among teenagers."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Jebakan: Mencampur 'must not' dan 'don't have to' — Larangan vs. Ketidakharusan",
+        "explanation": "Banyak pelajar mengira 'must not' dan 'don't have to' memiliki arti yang sama karena keduanya mengandung negasi. Padahal artinya berlawanan! 'Must not' (mustn't) berarti DILARANG — kamu tidak boleh melakukannya. Sementara 'don't have to' berarti TIDAK WAJIB — kamu bebas memilih, tidak ada kewajiban. Kesalahan ini sangat fatal dalam konteks debat kebijakan sosial karena bisa membalikkan makna argumenmu sepenuhnya.",
+        "wrong": "You mustn't wear a uniform at this school — it's your choice.",
+        "correct": "You don't have to wear a uniform at this school — it's your choice. (OR: You mustn't break the school rules — it's strictly forbidden.)"
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Kalimat mana yang menggunakan Third Conditional dengan benar untuk mengekspresikan penyesalan tentang keputusan di masa lalu?",
+          "options": [
+            "If the government had introduced stricter pollution laws earlier, the environmental crisis wouldn't have become so severe.",
+            "If the government introduced stricter pollution laws, the environmental crisis wouldn't become so severe.",
+            "If the government will introduce stricter pollution laws, the environmental crisis won't become so severe."
+          ],
+          "correctIndex": 0,
+          "explanation": "Third Conditional menggunakan struktur 'If + Past Perfect, would/could/might + have + past participle' untuk membicarakan situasi di masa lalu yang tidak terjadi dan konsekuensinya. Opsi A benar karena menggunakan 'had introduced' dan 'wouldn't have become'. Opsi B adalah Second Conditional (situasi hipotetis sekarang), dan Opsi C adalah First Conditional (prediksi masa depan)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Seorang siswa menulis: 'Citizens mustn't vote in a democracy — it's optional.' Mengapa kalimat ini salah, dan mana perbaikan yang tepat?",
+          "options": [
+            "Citizens mustn't vote in a democracy — it's compulsory.",
+            "Citizens don't have to vote in a democracy — it's optional.",
+            "Citizens shouldn't vote in a democracy — it's optional."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Mustn't' menyatakan larangan keras (dilarang melakukan sesuatu), sedangkan konteks kalimat mengatakan 'it's optional' (pilihan bebas). Kata yang tepat adalah 'don't have to' yang berarti tidak ada kewajiban. Opsi B adalah satu-satunya yang konsisten secara logis antara modal verb dan konteksnya."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Dalam sebuah debat kelas tentang media sosial, Alex berkata: 'I think social media companies should be held responsible for harmful content.' Morgan ingin melaporkan pernyataan Alex kepada juri debat. Apa yang seharusnya Morgan katakan?",
+          "options": [
+            "Alex says that social media companies should be held responsible for harmful content right now.",
+            "Alex is saying that social media companies will hold responsible for harmful content.",
+            "Alex argued that social media companies should be held responsible for harmful content."
+          ],
+          "correctIndex": 2,
+          "explanation": "Dalam reported speech untuk konteks debat formal, kita menggunakan kata kerja pelaporan seperti 'argued', 'claimed', atau 'stated' (bukan 'says' yang terlalu informal). 'Should' tidak berubah dalam reported speech. Opsi C paling tepat karena menggunakan 'argued' yang akademis dan struktur reported speech yang benar. Opsi A menggunakan 'says' (present tense, kurang formal) dan tambahan 'right now' yang tidak perlu. Opsi B salah secara gramatikal ('will hold responsible' bukan bentuk yang benar)."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "inequality",
+        "translation": "ketidaksetaraan",
+        "example": "The debate focused on growing economic inequality between the rich and the poor.",
+        "context": "Digunakan dalam debat sosial untuk membahas kesenjangan ekonomi, pendidikan, atau hak-hak masyarakat."
+      },
+      {
+        "word": "ought to",
+        "translation": "seharusnya (saran moral)",
+        "example": "Corporations ought to take responsibility for their environmental impact.",
+        "context": "Modal verb yang lebih formal dari 'should', sering digunakan dalam argumen tertulis dan debat akademis untuk menyatakan kewajiban moral."
+      },
+      {
+        "word": "synthesise",
+        "translation": "mensintesis / menggabungkan",
+        "example": "A good debater can synthesise multiple viewpoints into a coherent argument.",
+        "context": "Kemampuan akademis kunci di level B2 — menggabungkan berbagai sumber atau opini menjadi satu argumen yang kohesif."
+      },
+      {
+        "word": "counterargument",
+        "translation": "argumen tandingan / sanggahan",
+        "example": "She presented a strong counterargument against the proposed ban on single-use plastics.",
+        "context": "Digunakan dalam debat formal untuk menunjukkan bahwa kamu memahami dan mampu menantang sudut pandang lawan."
+      },
+      {
+        "word": "endangered",
+        "translation": "terancam punah / dalam bahaya",
+        "example": "Several endangered species could disappear entirely if deforestation continues at this rate.",
+        "context": "Sering muncul dalam debat lingkungan hidup; bisa digunakan secara literal (spesies) atau metaforis (bahasa, budaya yang terancam)."
+      },
+      {
+        "word": "compulsory",
+        "translation": "wajib / diwajibkan",
+        "example": "Some people argue that voting should be compulsory in a functioning democracy.",
+        "context": "Sinonim formal dari 'mandatory' atau 'obligatory' — penting dalam debat tentang kebijakan publik dan hak-hak warga negara."
+      }
+    ],
+    "dialogue": {
+      "context": "Alex dan Morgan adalah dua siswa yang sedang berlatih untuk ujian debat akhir B1.5 mereka. Mereka mendiskusikan topik apakah media sosial harus diatur lebih ketat oleh pemerintah. Percakapan ini berlangsung di perpustakaan sekolah, dua hari sebelum ujian.",
+      "lines": [
+        {
+          "speaker": "Alex",
+          "text": "I genuinely believe that governments ought to introduce much stricter regulations on social media platforms. The amount of misinformation spreading online is alarming.",
+          "translation": "Saya benar-benar percaya bahwa pemerintah seharusnya memperkenalkan regulasi yang jauh lebih ketat terhadap platform media sosial. Jumlah misinformasi yang menyebar secara online sangat mengkhawatirkan."
+        },
+        {
+          "speaker": "Morgan",
+          "text": "I understand your concern, but if governments controlled social media too heavily, they might end up restricting freedom of speech. That's a serious counterargument you'd have to address.",
+          "translation": "Saya memahami kekhawatiranmu, tetapi jika pemerintah mengontrol media sosial terlalu ketat, mereka mungkin akhirnya membatasi kebebasan berbicara. Itu adalah argumen tandingan serius yang harus kamu hadapi."
+        },
+        {
+          "speaker": "Alex",
+          "text": "That's fair. I wish more people had considered that angle earlier in the debate. But I'd argue that harmful content mustn't be allowed to spread unchecked — there has to be a balance.",
+          "translation": "Itu adil. Saya berharap lebih banyak orang mempertimbangkan sudut pandang itu lebih awal dalam debat. Tapi saya berpendapat bahwa konten berbahaya tidak boleh dibiarkan menyebar tanpa pengawasan — harus ada keseimbangan."
+        },
+        {
+          "speaker": "Morgan",
+          "text": "Exactly. If stricter laws had been passed five years ago, we probably wouldn't be dealing with such a severe inequality in access to accurate information today. That's the synthesis we need to present.",
+          "translation": "Tepat sekali. Jika undang-undang yang lebih ketat telah disahkan lima tahun lalu, kita mungkin tidak akan menghadapi ketidaksetaraan akses terhadap informasi yang akurat yang begitu parah seperti sekarang. Itulah sintesis yang perlu kita sampaikan."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Siswa mampu menyampaikan, mendukung, dan mempertahankan argumen dalam debat sosial menggunakan modal verbs, conditionals, dan reported speech secara terintegrasi dan natural.",
+      "scenario": "You are participating in a formal class debate. The motion is: 'Social media does more harm than good to society.' You have been assigned to ARGUE IN FAVOUR of this motion. Your partner will challenge your arguments. Use at least ONE modal verb (must/should/ought to/had better), ONE conditional (2nd or 3rd), and ONE reported speech structure in your argument. Begin by stating your main argument, then respond to your partner's counterargument. You have 3 minutes."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Pilih kalimat yang paling tepat untuk melengkapi argumen debat ini: 'We cannot ignore the data. Scientists have proven that carbon emissions are rising. Therefore, industries _____ reduce their output immediately — this is not a suggestion, it is an urgent necessity.'",
+          "options": [
+            "don't have to",
+            "had better not",
+            "must",
+            "ought not to"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Must' adalah pilihan yang paling tepat karena konteks kalimat menekankan keharusan mendesak ('urgent necessity') dan bukan sekadar saran. 'Don't have to' berarti tidak wajib (berlawanan dengan konteks). 'Had better not' berarti sebaiknya tidak melakukan sesuatu (negasi). 'Ought not to' terlalu lemah untuk konteks darurat ini."
+        },
+        {
+          "id": 2,
+          "prompt": "Manakah kalimat Reported Speech yang BENAR dari ucapan langsung ini? Direct speech: 'We are destroying our planet and we need to act now,' said the environmental activist.",
+          "options": [
+            "The environmental activist said that they are destroying their planet and they need to act now.",
+            "The environmental activist said that they were destroying their planet and they needed to act then.",
+            "The environmental activist told that they had destroyed their planet and they will need to act now.",
+            "The environmental activist said that we are destroying our planet and we needed to act now."
+          ],
+          "correctIndex": 1,
+          "explanation": "Dalam Reported Speech, terjadi 'backshift' (pergeseran tenses ke belakang): 'are' → 'were', 'need' → 'needed', dan 'now' → 'then'. Opsi B menerapkan semua perubahan ini dengan benar. Opsi A tidak mengubah tenses. Opsi C salah karena 'told' membutuhkan objek orang ('told them') dan 'will need' tidak tepat. Opsi D mencampur sudut pandang 'we' dan 'they' secara tidak konsisten."
+        },
+        {
+          "id": 3,
+          "prompt": "Seorang siswa ingin mengekspresikan penyesalan tentang keputusan masa lalu dalam debat: 'Sayang sekali pemerintah tidak menginvestasikan dana lebih banyak untuk energi terbarukan 20 tahun lalu — sekarang kita tidak akan menghadapi krisis energi ini.' Kalimat mana yang paling tepat?",
+          "options": [
+            "If the government invests more in renewable energy 20 years ago, we won't face this energy crisis now.",
+            "If the government had invested more in renewable energy 20 years ago, we wouldn't be facing this energy crisis now.",
+            "If the government would invest more in renewable energy 20 years ago, we wouldn't face this energy crisis.",
+            "If the government invested more in renewable energy 20 years ago, we wouldn't face this energy crisis now."
+          ],
+          "correctIndex": 1,
+          "explanation": "Ini adalah Mixed Conditional — kondisi di masa lalu (If + Past Perfect: 'had invested') dengan hasil yang dirasakan di masa sekarang (would + be + -ing: 'wouldn't be facing'). Opsi B adalah satu-satunya yang menangkap nuansa ini dengan benar. Opsi A salah secara gramatikal (present tense untuk masa lalu). Opsi C menggunakan 'would' di klausa 'if' yang tidak diperbolehkan. Opsi D adalah Second Conditional murni yang tidak menunjukkan bahwa kondisinya sudah terjadi di masa lalu."
+        },
+        {
+          "id": 4,
+          "prompt": "Dalam debat tentang pendidikan, manakah cara yang PALING efektif dan akademis untuk mensintesis dua sudut pandang yang berbeda?",
+          "options": [
+            "'Person A says schools are bad and Person B says schools are good, so I don't know who is right.'",
+            "'While some critics argue that the current education system fails to prepare students for real-world challenges, proponents counter that it provides essential foundational knowledge — the truth, I believe, lies in reforming rather than abolishing the system.'",
+            "'I think both sides have a point but it is hard to say because education is complicated and everyone has different opinions about it.'",
+            "'The education system is definitely broken because my friend told me that he learned nothing useful at school last year.'"
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi B mendemonstrasikan sintesis opini yang autentik dan akademis: (1) menggunakan reported speech formal ('argue that', 'counter that'), (2) mengakui kedua sisi argumen menggunakan 'while', (3) menyajikan posisi yang bernuansa dan solusi ('reforming rather than abolishing'), dan (4) menggunakan kosakata akademis yang tepat. Opsi A terlalu pasif dan tidak mengambil posisi. Opsi C terlalu samar dan tidak substantif. Opsi D menggunakan anekdot personal yang tidak valid sebagai bukti dalam debat formal."
+        }
+      ]
+    }
+  }
+}
