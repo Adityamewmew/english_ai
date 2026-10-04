@@ -28,38 +28,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"'Because' & 'So'\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan pola 'because' dengan benar untuk menghubungkan akibat dan sebab?",
           "options": [
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "BECAUSE menghubungkan AKIBAT + SEBAB. Pola: [Result] + because + [Reason]. Contoh: I st..."
+            "She was hungry because she skipped breakfast.",
+            "Because she was hungry, so she skipped breakfast.",
+            "She skipped breakfast so because she was hungry."
           ],
-          "correctIndex": 2,
-          "explanation": "Kaidah inti topik ini: Dalam percakapan sehari-hari, kita sering perlu menjelaskan alasan mengapa sesuatu terjadi atau apa akibat dari suatu kejadian."
+          "correctIndex": 0,
+          "explanation": "Pola 'because' yang benar adalah: [Akibat] + because + [Sebab]. Kalimat 'She was hungry because she skipped breakfast' sudah tepat karena akibat (she was hungry) ditulis lebih dulu, lalu diikuti alasan (she skipped breakfast) setelah 'because'. Opsi lain salah karena mencampurkan 'because' dan 'so' dalam satu kalimat."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Perhatikan jebakan umum pada materi \"'Because' & 'So'\". Manakah kalimat yang SUDAH TEPAT?",
+          "prompt": "Pemula sering keliru mencampurkan 'because' dan 'so' dalam satu kalimat. Manakah kalimat berikut yang BENAR dan menghindari kesalahan tersebut?",
           "options": [
-            "so because I went to bed early",
-            "I was tired",
-            "I was tired"
+            "He overslept, so because he missed the bus.",
+            "He missed the bus because he overslept.",
+            "Because he overslept, so he missed the bus."
           ],
           "correctIndex": 1,
-          "explanation": "Pemula sering menukar posisi 'because' dan 'so'. Ingat: 'because' = hasil dulu baru alasan, 'so' = alasan dulu baru hasil. Jangan gunakan keduanya sekaligus dalam satu kalimat."
+          "explanation": "Kalimat yang benar adalah 'He missed the bus because he overslept.' Pola ini menggunakan 'because' saja untuk menghubungkan akibat (missed the bus) dengan sebab (overslept). Opsi lain salah karena menggunakan 'because' dan 'so' sekaligus dalam satu kalimat, yang merupakan kesalahan umum (common trap) pada modul ini."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"Hi Tom! Why didn't you come to the park yesterday?\"\nTom: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut:\n\nEmma: \"Hi Tom! Why didn't you come to the park yesterday?\"\nTom: \"[...]\"\n\nIsi bagian [...] dengan respons yang paling tepat dan natural dalam konteks percakapan ini.",
           "options": [
-            "I was tired",
-            "Sorry, I forgot my keys at home.",
-            "I didn't come because the weather was terrible. It was raining all day!"
+            "I didn't come so the weather was terrible.",
+            "I didn't come because the weather was terrible.",
+            "The weather was terrible because I didn't come."
           ],
-          "correctIndex": 2,
-          "explanation": "Respon \"I didn't come because the weather was terrible. It was raining all day!\" (\"Aku tidak datang karena cuacanya buruk sekali. Hujan seharian!\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+          "correctIndex": 1,
+          "explanation": "Jawaban yang benar adalah 'I didn't come because the weather was terrible.' Karena Emma bertanya 'Why?' (mengapa), Tom harus menjawab dengan 'because' untuk memberikan alasan. Pola yang tepat: [Akibat: tidak datang] + because + [Sebab: cuaca buruk]. Opsi pertama salah karena menggunakan 'so' padahal seharusnya 'because'. Opsi ketiga salah karena membalik hubungan sebab-akibat (seolah cuaca buruk disebabkan oleh Tom tidak datang)."
         }
       ]
     },

@@ -28,38 +28,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Perhatikan kalimat langsung: \"The company decided to expand\". Bagaimana bentuk kalimat tidak langsung (reported/transformed) yang benar?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang paling tepat menerapkan nominalisasi akademis (academic nominalisation) untuk meningkatkan formalitas dan densitas informasi?",
           "options": [
-            "The company",
-            "Bentuk kalimat tidak baku",
-            "The company decided to expand"
+            "The government decided to implement the new policy, and this caused a lot of debate among stakeholders.",
+            "The government's decision to implement the new policy generated considerable debate among stakeholders.",
+            "The government was deciding to implement the new policy, which has been debated by many stakeholders."
           ],
-          "correctIndex": 0,
-          "explanation": "Kaidah pada \"Evaluasi Komprehensif Strategic Oratory & Complex Syntax\": bentuk yang tepat adalah \"The company\". Perhatikan perubahan tenses dan kata kerja bantunya."
+          "correctIndex": 1,
+          "explanation": "Opsi kedua menggunakan nominalisasi akademis dengan mengubah klausa verbal 'The government decided' menjadi frasa nominal 'The government's decision', sehingga meningkatkan formalitas dan kepadatan informasi sesuai pola [Verb + Object] → [Nominalised Form + Prepositional Phrase]. Opsi pertama masih menggunakan bentuk verbal biasa dengan koordinasi 'and this caused', dan opsi ketiga menggunakan bentuk progresif 'was deciding' yang kurang formal dan tidak menerapkan nominalisasi."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "prompt": "Dalam penulisan akademis tingkat C1, siswa sering terjebak membuat klaim absolut tanpa hedging yang memadai (overgeneralisasi). Manakah kalimat berikut yang paling tepat menunjukkan keseimbangan antara ketegasan argumen dan kehati-hatian ilmiah (intellectual humility)?",
           "options": [
-            "The research proves that all organizations must implement this strategy immediately because it's the best solution",
-            "The research would appear to suggest that many organizations might benefit from implementing this strategy",
-            "The research proves that all organizations must implement this strategy immediately because it's the best solution always"
+            "The findings conclusively prove that remote learning is superior to traditional education in every measurable aspect.",
+            "The findings would appear to suggest that remote learning might offer certain advantages over traditional education in specific contexts.",
+            "The findings kind of show that remote learning is maybe better than traditional education, I guess, in some ways."
           ],
           "correctIndex": 1,
-          "explanation": "Siswa C1 sering membuat klaim absolut tanpa hedging yang memadai, atau menggunakan nominalisasi berlebihan hingga kalimat menjadi tidak natural. Dalam konteks akademis dan profesional, penting untuk menyeimbangkan assertiveness dengan intellectual humility, serta menjaga clarity sambil meningkatkan formality."
+          "explanation": "Opsi kedua menerapkan hedging akademis secara tepat dengan menggunakan 'would appear to suggest', 'might offer', dan frasa pembatas 'in specific contexts', sehingga menunjukkan kehati-hatian ilmiah tanpa kehilangan ketegasan. Opsi pertama adalah contoh overgeneralisasi dengan klaim absolut ('conclusively prove', 'every measurable aspect') tanpa hedging. Opsi ketiga menggunakan bahasa informal dan ragu-ragu ('kind of', 'maybe', 'I guess') yang tidak sesuai dengan register akademis formal."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Rahman: \"I found the keynote speaker's assertion regarding digital transformation somewhat contentious, wouldn't you agree?\"\nProf. Winters: \"[...]\"",
+          "prompt": "Perhatikan percakapan akademis berikut:\n\nDr. Rahman: \"I found the keynote speaker's assertion regarding digital transformation somewhat contentious, wouldn't you agree?\"\nProf. Winters: \"Indeed. While her argument was compelling, she failed to substantiate several claims with empirical evidence from diverse educational contexts.\"\nDr. Rahman: \"[...]\"\n\nManakah respons yang paling tepat dan natural untuk mengisi bagian [...] dalam konteks diskusi akademis formal ini?",
           "options": [
-            "Indeed. While her argument was compelling, she failed to substantiate several claims with empirical evidence from diverse educational contexts.",
-            "The research proves that all organizations must implement this strategy immediately because it's the best solution",
-            "Sorry, I forgot my keys at home."
+            "Yeah, that's true. She should have used better examples to make her point stronger.",
+            "Precisely. One could argue that extrapolating findings from elite institutions to underfunded universities is methodologically problematic.",
+            "I completely disagree. Her evidence unequivocally proves that all universities should adopt digital transformation without exception."
           ],
-          "correctIndex": 0,
-          "explanation": "Respon \"Indeed. While her argument was compelling, she failed to substantiate several claims with empirical evidence from diverse educational contexts.\" (\"Benar. Meskipun argumennya meyakinkan, dia gagal membuktikan beberapa klaim dengan bukti empiris dari konteks pendidikan yang beragam.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Winters."
+          "correctIndex": 1,
+          "explanation": "Opsi kedua paling tepat karena menggunakan register formal akademis yang konsisten dengan percakapan ('Precisely', 'One could argue'), menerapkan hedging ('One could argue'), serta menggunakan kosakata tingkat C1 ('extrapolating', 'methodologically problematic') yang relevan dengan konteks diskusi. Opsi pertama terlalu informal ('Yeah, that's true') untuk konteks diskusi akademis ini. Opsi ketiga membuat klaim absolut ('unequivocally proves', 'all universities', 'without exception') yang bertentangan dengan nada kritis dan berhati-hati dalam percakapan tersebut."
         }
       ]
     },

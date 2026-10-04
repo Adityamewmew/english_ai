@@ -34,38 +34,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Pada kaidah \"Verbs with Gerund & Infinitive\", bagaimana perubahan atau padanan yang benar untuk \"imagine, feel like, suggest, practice, miss, can't stand, enjoy, detest, don't mind\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan pola verb + gerund atau infinitive dengan BENAR sesuai aturan yang berlaku?",
           "options": [
-            "Tidak ada perubahan tenses pada imagine, feel like, suggest, practice, miss, can't stand, enjoy, detest, don't mind",
-            "Contoh",
-            "imagine, feel like, suggest, practice, miss, can't stand, enjoy, detest, don't mind selalu dihilangkan"
+            "She enjoys to hike in the mountains every weekend.",
+            "They decided to descend the mountain before the storm arrived.",
+            "He managed climbing to the summit despite the harsh weather."
           ],
           "correctIndex": 1,
-          "explanation": "Dalam materi ini: imagine, feel like, suggest, practice, miss, can't stand, enjoy, detest, don't mind berubah atau berpadanan menjadi \"Contoh\"."
+          "explanation": "Kata kerja 'decide' selalu diikuti oleh infinitive (to + verb). Jadi 'decided to descend' adalah bentuk yang benar. 'Enjoy' harus diikuti gerund (enjoys hiking, bukan enjoys to hike), dan 'manage' harus diikuti infinitive (managed to climb, bukan managed climbing)."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Perhatikan jebakan umum pada materi \"Verbs with Gerund & Infinitive\". Manakah kalimat yang SUDAH TEPAT?",
+          "prompt": "Seorang ibu berpesan kepada anaknya agar JANGAN LUPA membawa bekal makan siang besok. Manakah kalimat yang paling tepat?",
           "options": [
-            "Don't forget to buy food for my packed lunch tomorrow",
-            "Don't forget buying food for my packed lunch tomorrow",
-            "Mum"
+            "Don't forget bringing your packed lunch tomorrow.",
+            "Don't forget to bring your packed lunch tomorrow.",
+            "Don't forget having brought your packed lunch tomorrow."
           ],
-          "correctIndex": 0,
-          "explanation": "Pemula sering bingung membedakan 'remember/forget + gerund' dan 'remember/forget + infinitive'. Yang perlu diingat: gerund untuk kejadian yang SUDAH terjadi (masa lalu), infinitive untuk yang BELUM/HARUS terjadi (masa depan atau kewajiban)."
+          "correctIndex": 1,
+          "explanation": "Karena konteksnya adalah mengingatkan sesuatu yang BELUM dilakukan (membawa bekal besok), maka digunakan 'forget + infinitive' → 'Don't forget to bring'. 'Forget + gerund' digunakan untuk sesuatu yang SUDAH terjadi di masa lalu, sehingga 'forget bringing' dan 'forget having brought' tidak tepat dalam konteks ini."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"It's been such a busy week.\"\nLiam: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut:\n\nEmma: \"It's been such a busy week.\"\nLiam: \"Too right. So many things to do.\"\nNicole: \"Same here. And all of these projects for school. [...]\"\n\nNicole ingin mengatakan bahwa meskipun sibuk, minggu ini tetap menyenangkan. Manakah ungkapan yang paling tepat untuk mengisi [...]?",
           "options": [
-            "Don't forget buying food for my packed lunch tomorrow",
-            "Sorry, I forgot my keys at home.",
-            "Too right. So many things to do."
+            "It's been fun, though. Hasn't it, Justin?",
+            "I really regret to have so much fun this week, Justin.",
+            "I can't stand to enjoy this week, Justin."
           ],
-          "correctIndex": 2,
-          "explanation": "Respon \"Too right. So many things to do.\" (\"Benar sekali. Banyak hal yang harus dilakukan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Liam."
+          "correctIndex": 0,
+          "explanation": "Pilihan pertama adalah ungkapan yang natural dan sesuai konteks: Nicole mengakui bahwa meskipun sibuk, minggu itu tetap menyenangkan, lalu meminta persetujuan Justin. Pilihan kedua salah karena 'regret to have fun' tidak logis secara makna. Pilihan ketiga juga salah karena 'can't stand to enjoy' tidak masuk akal — 'can't stand' berarti tidak tahan, dan seharusnya diikuti gerund (can't stand enjoying), namun maknanya pun tidak sesuai konteks."
         }
       ]
     },

@@ -28,38 +28,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Shifting from Colloquial Idiom to High-Formal Academic Registers\"?",
+          "prompt": "Manakah kalimat berikut yang paling tepat menerapkan register akademik formal (academic/formal register) sesuai kaidah yang diajarkan dalam modul ini — yaitu menggunakan nominalisasi, hedging language, dan menghindari unsur informal?",
           "options": [
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Colloquial Register: Gunakan contractions (I'm, we've, shouldn't), phrasal verbs (put u..."
+            "The discovery of significant correlations between dietary patterns and cognitive performance arguably necessitates further longitudinal investigation.",
+            "Researchers have figured out that eating habits are really connected to how well people think, so they should probably look into it more.",
+            "It has been found that diet is linked to cognition, and this is, like, a pretty important finding that we've gotta explore further."
           ],
-          "correctIndex": 2,
-          "explanation": "Kaidah inti topik ini: Register adalah tingkat formalitas bahasa yang disesuaikan dengan konteks komunikasi."
+          "correctIndex": 0,
+          "explanation": "Opsi pertama menggunakan nominalisasi ('discovery', 'investigation'), hedging language ('arguably'), struktur pasif/abstrak, dan diksi Latinate — semua ciri khas register akademik formal. Opsi kedua mengandung phrasal verb informal ('figured out') dan adverbia colloquial ('really'). Opsi ketiga mencampur register dengan 'like' dan 'we've gotta' yang merupakan elemen colloquial, sehingga melanggar konsistensi register akademik."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Shifting from Colloquial Idiom to High-Formal Academic Registers\"?",
+          "prompt": "Salah satu kesalahan umum yang dibahas dalam modul ini adalah 'Register Contamination' — mencampur elemen register yang berbeda dalam satu konteks. Manakah kalimat berikut yang BEBAS dari kontaminasi register dan konsisten sebagai kalimat akademik formal?",
           "options": [
-            "but the results are pretty solid and really hit the nail on the head regarding our hypothesis",
-            "The research methodology was kinda iffy",
-            "While certain methodological limitations warrant acknowledgment"
+            "The methodology was kind of problematic, yet the empirical outcomes substantiate the theoretical framework with notable precision.",
+            "Notwithstanding certain methodological constraints, the empirical outcomes substantiate the theoretical framework with notable precision.",
+            "The methodology had some issues that were a bit dodgy, but to a certain extent the results demonstrate correlational validity."
           ],
-          "correctIndex": 2,
-          "explanation": "Mahasiswa C1 sering mencampur elemen dari berbagai register dalam satu konteks, menghasilkan inkoherensi stilistik. Misalnya, menggunakan idiom colloquial dalam esai akademik atau struktur kaku formal dalam email informal kepada rekan. Kontaminasi register merusak kredibilitas penulis dan menunjukkan kurangnya kesadaran sosiolinguistik."
+          "correctIndex": 1,
+          "explanation": "Opsi kedua sepenuhnya konsisten dalam register akademik formal: menggunakan 'notwithstanding' (konjungsi formal), nominalisasi ('constraints'), dan diksi Latinate ('substantiate', 'precision') tanpa elemen informal. Opsi pertama terkontaminasi oleh 'kind of' yang bersifat colloquial. Opsi ketiga mengandung 'a bit dodgy' yang merupakan ungkapan slang/informal Inggris, sehingga merusak konsistensi register akademik."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nProf. Richardson: \"Emma, I've reviewed your latest chapter draft. While your argumentation is sound, I noticed certain stylistic inconsistencies that undermine the scholarly tone.\"\nEmma: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut antara Prof. Richardson dan Emma. Isilah bagian \"[...]\" dengan respons yang paling tepat dan sesuai dengan konteks akademik formal.\n\nProf. Richardson: \"On page seventeen, you wrote 'the data really shows' rather than 'the data demonstrate.' The adverb 'really' and the singular verb constitute register violations in academic discourse.\"\n\nEmma: \"[...]\"",
           "options": [
-            "The research methodology was kinda iffy",
-            "Sorry, I forgot my keys at home.",
-            "Could you elucidate which specific passages require revision? I've attempted to maintain formal register throughout, but perhaps some colloquialisms slipped through."
+            "Oh right, my bad! I'll swap that out and make it sound fancier next time.",
+            "I appreciate the correction. Would 'the empirical findings substantiate' be more appropriate in that context?",
+            "Yeah, I guess 'really' is too casual. I'll just chuck in a bigger word and it should be fine."
           ],
-          "correctIndex": 2,
-          "explanation": "Respon \"Could you elucidate which specific passages require revision? I've attempted to maintain formal register throughout, but perhaps some colloquialisms slipped through.\" (\"Bisakah Anda menjelaskan bagian spesifik mana yang perlu revisi? Saya sudah berusaha menjaga register formal sepanjang tulisan, tapi mungkin beberapa ungkapan informal terselip.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Emma."
+          "correctIndex": 1,
+          "explanation": "Opsi kedua adalah respons yang tepat karena Emma menanggapi dengan register yang sesuai konteks akademik: sopan, formal, dan mengajukan alternatif kalimat akademik ('the empirical findings substantiate'). Opsi pertama menggunakan bahasa colloquial ('my bad', 'swap that out', 'sound fancier') yang tidak pantas dalam diskusi akademik dengan dosen. Opsi ketiga juga terlalu informal dengan 'Yeah', 'chuck in', dan 'should be fine' — menunjukkan kontaminasi register dalam konteks konsultasi akademik."
         }
       ]
     },

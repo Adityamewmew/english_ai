@@ -28,38 +28,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Critique of Quantitative Research, Statistical Claims & Logical Fallacies\"?",
+          "prompt": "Dalam konteks kritik riset kuantitatif, manakah kalimat bahasa Inggris yang paling tepat menggunakan struktur akademis untuk membedakan korelasi dari kausalitas?",
           "options": [
-            "Causation vs Correlation: Gunakan struktur 'While X correlates with Y, this does not ne...",
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Pola ini hanya boleh digunakan dalam situasi santai"
+            "Coffee makes people more productive at work because the data shows a strong correlation between consumption and output.",
+            "While coffee consumption correlates with increased workplace productivity, this does not necessarily imply causation, as several confounding variables remain uncontrolled.",
+            "Coffee consumption and workplace productivity are connected, so we can say that drinking coffee causes people to work better."
           ],
-          "correctIndex": 0,
-          "explanation": "Kaidah inti topik ini: Modul ini membekali Anda dengan kemampuan untuk mengkritisi riset kuantitatif secara sistematis, mengevaluasi validitas klaim statistik, dan mengidentifikasi kekeliruan logika dalam argumen ilmiah."
+          "correctIndex": 1,
+          "explanation": "Opsi kedua menggunakan struktur akademis yang tepat: 'While X correlates with Y, this does not necessarily imply causation' disertai penyebutan confounding variables. Opsi pertama dan ketiga keliru karena langsung menyimpulkan kausalitas dari data korelasional, yang merupakan kesalahan logika (post hoc ergo propter hoc)."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Perhatikan jebakan umum pada materi \"Critique of Quantitative Research, Statistical Claims & Logical Fallacies\". Manakah kalimat yang SUDAH TEPAT?",
+          "prompt": "Pelajar C1 sering menggunakan bahasa yang terlalu informal atau tidak presisi saat mengkritik metodologi riset. Manakah kalimat berikut yang menggunakan register akademis yang tepat dengan hedging language dan terminologi statistik yang presisi?",
           "options": [
-            "The study's validity is compromised by an inadequately small sample size (n=45)",
-            "This research is bad because the sample is too small and they didn't think about other factors",
-            "The study's validity are compromised by an inadequately small sample size (n=45)"
+            "The study's validity is undermined by an inadequately small sample size, which limits statistical power, and the absence of controls for confounding variables compromises the reliability of the findings.",
+            "This research is really bad because they used too few people and didn't even bother thinking about other things that could affect the results.",
+            "The research has some problems with the number of participants and maybe there are other factors, but overall the conclusions seem fine to accept."
           ],
           "correctIndex": 0,
-          "explanation": "Pelajar C1 sering menggunakan bahasa terlalu informal atau tidak presisi saat mengkritik riset ilmiah. Hindari generalisasi tanpa bukti spesifik, dan selalu gunakan terminologi statistik yang tepat dengan hedging language yang sesuai untuk menjaga objektivitas akademis."
+          "explanation": "Opsi pertama menggunakan register akademis yang tepat dengan terminologi presisi seperti 'statistical power', 'confounding variables', dan 'compromises the reliability', serta menjaga objektivitas. Opsi kedua terlalu informal ('really bad', 'didn't even bother'). Opsi ketiga terlalu lemah dan tidak kritis—menerima kesimpulan meskipun mengakui adanya masalah metodologis."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Martinez: \"Precisely. And did you notice the statistical manipulation in Table 3? They've conducted seventeen different subgroup analyses but only reported the three that achieved statistical significance. This reeks of p-hacking.\"\nDr. Kowalski: \"[...]\"",
+          "prompt": "Perhatikan percakapan akademis berikut. Dr. Martinez berkata: 'They've conducted seventeen different subgroup analyses but only reported the three that achieved statistical significance.' Dr. Kowalski merespons: 'Good catch. [...] Such variance renders any definitive conclusions untenable.' Manakah kalimat yang paling tepat mengisi bagian [...] dalam konteks diskusi kritik riset ini?",
           "options": [
-            "Good catch. The confidence intervals are also problematically wide—ranging from a 5% to 47% productivity increase. Such variance renders any definitive conclusions untenable. We're essentially looking at noise masquerading as signal.",
-            "This research is bad because the sample is too small and they didn't think about other factors",
-            "Sorry, I forgot my keys at home."
+            "The results look pretty good overall and the numbers seem to support their main argument quite convincingly.",
+            "The confidence intervals are also problematically wide—ranging from a 5% to 47% productivity increase.",
+            "The authors should have used more participants from different companies to make the study more interesting."
           ],
-          "correctIndex": 0,
-          "explanation": "Respon \"Good catch. The confidence intervals are also problematically wide—ranging from a 5% to 47% productivity increase. Such variance renders any definitive conclusions untenable. We're essentially looking at noise masquerading as signal.\" (\"Tangkapan yang bagus. Interval kepercayaan juga lebar secara problematis—berkisar dari peningkatan produktivitas 5% hingga 47%. Variansi seperti itu membuat kesimpulan definitif apa pun tidak dapat dipertahankan. Kita pada dasarnya melihat noise yang menyamar sebagai sinyal.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Kowalski."
+          "correctIndex": 1,
+          "explanation": "Opsi kedua paling tepat karena secara logis menghubungkan temuan p-hacking yang disebutkan Dr. Martinez dengan masalah interval kepercayaan yang terlalu lebar, dan secara koheren mengarah ke kalimat berikutnya tentang variansi yang membuat kesimpulan definitif tidak dapat dipertahankan. Opsi pertama bertentangan dengan konteks kritik. Opsi ketiga membahas desain riset secara umum dan tidak relevan dengan alur diskusi tentang manipulasi statistik."
         }
       ]
     },

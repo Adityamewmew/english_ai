@@ -26,38 +26,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Risk, Fear & Participle Clauses\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan participle clause dengan benar untuk menyatakan hubungan waktu atau sebab-akibat?",
           "options": [
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Present participle clause: Digunakan untuk aksi simultan atau sebab-akibat. Contoh: 'Kn..."
+            "Terrified by the height of the cliff, the climber decided to turn back.",
+            "Terrifying by the height of the cliff, the climber decided to turn back.",
+            "Being terrify by the height of the cliff, the climber decided to turn back."
           ],
-          "correctIndex": 2,
-          "explanation": "Kaidah inti topik ini: Unit ini membahas participle clauses (klausa partisip) yang digunakan untuk membuat kalimat lebih ringkas dan natural."
+          "correctIndex": 0,
+          "explanation": "Kalimat pertama benar karena menggunakan past participle clause 'Terrified by the height of the cliff' untuk menyatakan sebab (si pendaki merasa takut) secara pasif. Opsi kedua salah karena 'terrifying' bermakna aktif (menakutkan), bukan pasif (merasa takut). Opsi ketiga salah karena bentuk 'terrify' tidak tepat setelah 'being' — seharusnya 'being terrified'."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "prompt": "Perhatikan situasi berikut: Seorang penerjun payung SUDAH SELESAI memeriksa semua peralatannya, KEMUDIAN dia melompat dari pesawat. Manakah kalimat yang menggunakan bentuk participle clause yang paling tepat untuk menggambarkan urutan waktu ini?",
           "options": [
-            "Petit walked on the wire (jika persiapan sudah selesai sebelum berjalan)",
-            "Making many preparations",
-            "Having made many preparations"
+            "Checking all his equipment, the skydiver jumped out of the plane.",
+            "Having checked all his equipment, the skydiver jumped out of the plane.",
+            "Being checked all his equipment, the skydiver jumped out of the plane."
           ],
-          "correctIndex": 2,
-          "explanation": "Pemula sering menggunakan present participle untuk dua aksi yang tidak simultan atau mengabaikan perfect participle ketika satu aksi jelas terjadi sebelum aksi lainnya. Perhatikan urutan waktu kejadian untuk memilih bentuk participle yang tepat."
+          "correctIndex": 1,
+          "explanation": "Kalimat kedua benar karena menggunakan perfect participle 'Having checked' yang menunjukkan bahwa aksi memeriksa peralatan sudah selesai sebelum aksi utama (melompat). Opsi pertama salah karena present participle 'Checking' menyiratkan kedua aksi terjadi bersamaan, padahal pemeriksaan sudah selesai lebih dulu. Opsi ketiga salah secara gramatikal karena 'being checked' bermakna pasif dan tidak bisa diikuti objek langsung."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nAnna: \"Her interview is today and she's getting very cold feet about it. She just really needs to relax with her.\"\nBen: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut tentang aktivitas ekstrem. Isilah bagian [...] dengan respons yang paling tepat dan natural.\n\nAlex: \"Did you see that daredevil walk across the canyon on a tightrope yesterday?\"\nMia: \"Yes! [...] I could barely watch — it was absolutely death-defying!\"",
           "options": [
-            "Making many preparations",
-            "Sorry, I forgot my keys at home.",
-            "What did she do?"
+            "Having seen him step onto the rope, I immediately felt my heart beating fast.",
+            "Having see him step onto the rope, I immediately felt my heart beating fast.",
+            "Seeing him to step onto the rope, I immediately felt my heart beating fast."
           ],
-          "correctIndex": 2,
-          "explanation": "Respon \"What did she do?\" (\"Apa yang dia lakukan?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ben."
+          "correctIndex": 0,
+          "explanation": "Opsi pertama benar karena menggunakan perfect participle 'Having seen' dengan bentuk past participle yang tepat, dan 'felt my heart beating fast' menggunakan verb of perception + gerund dengan benar untuk menggambarkan aksi yang sedang berlangsung. Opsi kedua salah karena 'Having see' bukan bentuk perfect participle yang benar (seharusnya 'Having seen'). Opsi ketiga salah karena setelah 'seeing' tidak perlu 'to' sebelum 'step' — seharusnya 'Seeing him step onto the rope'."
         }
       ]
     },

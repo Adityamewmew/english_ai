@@ -26,38 +26,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Gerunds, Infinitives & Community\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan intensifier dengan comparative secara tepat untuk memperkuat perbandingan?",
           "options": [
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Intensifying Comparatives: Gunakan 'a lot/far/much + comparative' untuk memperkuat perb...",
-            "Tenses dan susunan subjek tidak perlu diperhatikan"
+            "The new community centre is far more spacious than the old one.",
+            "The new community centre is very more spacious than the old one.",
+            "The new community centre is too more spacious than the old one."
           ],
-          "correctIndex": 1,
-          "explanation": "Kaidah inti topik ini: Unit ini fokus pada penggunaan comparatives yang lebih kuat dengan intensifier seperti 'a lot', 'far', 'much', serta linkers of contrast seperti 'although', 'despite', 'however', dan 'nevertheless'."
+          "correctIndex": 0,
+          "explanation": "Intensifier yang tepat untuk memperkuat comparative adalah 'far', 'much', atau 'a lot'. 'Far more spacious' adalah bentuk yang benar. 'Very' dan 'too' tidak dapat digunakan langsung sebelum 'more + adjective' dalam struktur comparative."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Gerunds, Infinitives & Community\"?",
+          "prompt": "Salah satu kesalahan umum adalah mencampurkan penggunaan 'despite' dan 'although'. Manakah kalimat berikut yang menggunakan 'despite' atau 'although' dengan benar?",
           "options": [
-            "Despite being tired",
-            "he kept working",
-            "Despite he was tired"
+            "Despite the event was poorly organised, many volunteers showed up.",
+            "Although the charity had limited funding, it managed to help hundreds of families.",
+            "Despite although the rain, the community gathering continued as planned."
           ],
-          "correctIndex": 0,
-          "explanation": "Pemula sering bingung antara 'despite' dan 'although'. 'Despite' harus diikuti noun atau gerund, sedangkan 'although' diikuti subjek + verb (klausa lengkap)."
+          "correctIndex": 1,
+          "explanation": "'Although' harus diikuti oleh klausa lengkap (subjek + kata kerja), dan kalimat 'Although the charity had limited funding, it managed to help hundreds of families' sudah memenuhi aturan ini. Opsi pertama salah karena 'despite' tidak boleh diikuti klausa lengkap (seharusnya 'Despite the event being poorly organised...'). Opsi ketiga salah karena menggabungkan 'despite' dan 'although' secara bersamaan."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"What other situations can you think of in which strangers might start talking to each other?\"\nJames: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut tentang bagaimana orang asing bisa mulai berinteraksi. Isilah bagian [...] dengan respons yang paling tepat dan natural.\n\nEmma: \"What other situations can you think of in which strangers might start talking to each other?\"\nJames: \"[...]\"",
           "options": [
-            "Sorry, I forgot my keys at home.",
             "Maybe at a concert or sports event. People are far friendlier when they share the same interest.",
-            "Despite he was tired"
+            "Maybe at a concert or sports event. People are very much friendly when they share the same interest.",
+            "Maybe at a concert or sports event. People are more far friendly when they share the same interest."
           ],
-          "correctIndex": 1,
-          "explanation": "Respon \"Maybe at a concert or sports event. People are far friendlier when they share the same interest.\" (\"Mungkin di konser atau acara olahraga. Orang-orang jauh lebih ramah ketika mereka punya minat yang sama.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh James."
+          "correctIndex": 0,
+          "explanation": "Jawaban yang benar menggunakan intensifier 'far' + comparative 'friendlier' dengan tepat, sesuai pola 'far + comparative adjective'. Opsi kedua salah karena 'very much friendly' bukan bentuk comparative yang benar. Opsi ketiga salah karena urutan 'more far friendly' tidak gramatikal; yang benar adalah 'far friendlier' atau 'far more friendly'."
         }
       ]
     },

@@ -29,38 +29,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Stylistic Inversion After Limiting & Negative Adverbial Expressions\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menerapkan inversi stilistik setelah ekspresi adverbial negatif dengan benar?",
           "options": [
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Setelah ekspresi negatif absolut (Under no circumstances, On no account, In no way, By ...",
-            "Tenses dan susunan subjek tidak perlu diperhatikan"
+            "Under no circumstances should employees access classified files without authorization.",
+            "Under no circumstances employees should access classified files without authorization.",
+            "Under no circumstances employees access classified files without should authorization."
           ],
-          "correctIndex": 1,
-          "explanation": "Kaidah inti topik ini: Inversi stilistik setelah ekspresi adverbial negatif dan pembatas merupakan ciri khas bahasa Inggris formal tingkat mahir."
+          "correctIndex": 0,
+          "explanation": "Setelah ekspresi adverbial negatif 'Under no circumstances', inversi wajib dilakukan: auxiliary (should) harus ditempatkan sebelum subjek (employees). Opsi kedua salah karena subjek mendahului auxiliary, dan opsi ketiga memiliki susunan kata yang kacau."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "prompt": "Salah satu kesalahan umum dalam pola korelasi temporal adalah ketidakkonsistenan tense dan urutan auxiliary. Manakah kalimat berikut yang menggunakan pola 'Scarcely... when' dengan benar?",
           "options": [
-            "Under no circumstances should we compromise our ethical standards",
-            "Under no circumstances we should compromise our ethical standards",
-            "Scarcely the meeting had begun when the fire alarm sounded"
+            "Scarcely the committee had reviewed the proposal when new evidence emerged.",
+            "Scarcely had the committee reviewed the proposal when new evidence emerged.",
+            "Scarcely did the committee review the proposal when new evidence has emerged."
           ],
-          "correctIndex": 0,
-          "explanation": "Mahasiswa C1 sering keliru menempatkan subjek sebelum auxiliary dalam inversi atau menggunakan tense yang tidak konsisten dalam pola korelasi temporal. Kesalahan lain adalah menggunakan inversi dalam konteks informal yang justru terdengar tidak natural. Inversi adalah fitur register formal, bukan percakapan kasual."
+          "correctIndex": 1,
+          "explanation": "Pola 'Scarcely... when' mengharuskan penggunaan past perfect (had + past participle) dengan inversi auxiliary 'had' sebelum subjek. Opsi pertama salah karena tidak ada inversi (subjek mendahului 'had'). Opsi ketiga salah karena menggunakan 'did + base verb' alih-alih past perfect, dan klausa 'when' menggunakan present perfect yang tidak konsisten."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Winters: \"Marcus, I need to emphasize the gravity of our security protocols. Under no circumstances should preliminary trial data be shared outside the core research team.\"\nDr. Chen: \"[...]\"",
+          "prompt": "Perhatikan percakapan formal berikut antara dua peneliti senior. Isilah bagian [...] dengan respons yang paling tepat dan natural.\n\nDr. Winters: \"We must maintain the highest ethical standards in this project. [...] will I allow any breach of protocol.\"\nDr. Chen: \"Understood. I will ensure every team member follows the guidelines strictly.\"",
           "options": [
-            "Under no circumstances we should compromise our ethical standards",
-            "Absolutely, Helena. On no account will I compromise patient confidentiality or data integrity. I understand the regulatory implications.",
-            "Sorry, I forgot my keys at home."
+            "On no account",
+            "For no reason I",
+            "In any circumstances not"
           ],
-          "correctIndex": 1,
-          "explanation": "Respon \"Absolutely, Helena. On no account will I compromise patient confidentiality or data integrity. I understand the regulatory implications.\" (\"Tentu saja, Helena. Saya sama sekali tidak akan mengorbankan kerahasiaan pasien atau integritas data. Saya memahami implikasi regulasinya.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Chen."
+          "correctIndex": 0,
+          "explanation": "'On no account' adalah ekspresi adverbial negatif formal yang tepat dan memicu inversi (will + I), sesuai dengan konteks percakapan formal antar peneliti senior. 'For no reason I' tidak mengikuti pola inversi yang benar, dan 'In any circumstances not' bukan ekspresi adverbial negatif standar dalam bahasa Inggris formal."
         }
       ]
     },

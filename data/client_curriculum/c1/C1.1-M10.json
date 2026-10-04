@@ -26,38 +26,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Perhatikan kalimat langsung: \"I am happy\". Bagaimana bentuk kalimat tidak langsung (reported/transformed) yang benar?",
+          "prompt": "Manakah kalimat berikut yang menerapkan reported speech dengan benar, termasuk perubahan tenses dan ekspresi waktu yang tepat?",
           "options": [
-            "I am happy",
-            "She said (that",
-            "She say (that"
+            "He told me that he had finished the project the day before and would submit it the next day.",
+            "He told me that he finished the project yesterday and will submit it tomorrow.",
+            "He told me that he has finished the project today and would submit it the next day."
           ],
-          "correctIndex": 1,
-          "explanation": "Kaidah pada \"Passive Report Structures & Media\": bentuk yang tepat adalah \"She said (that\". Perhatikan perubahan tenses dan kata kerja bantunya."
+          "correctIndex": 0,
+          "explanation": "Opsi pertama benar karena tenses diubah mundur satu tingkat (past simple → past perfect, will → would) dan ekspresi waktu juga diubah dengan tepat ('yesterday' → 'the day before', 'tomorrow' → 'the next day'). Opsi kedua tidak mengubah tenses maupun ekspresi waktu. Opsi ketiga mencampur tenses yang belum diubah (has finished, today) dengan yang sudah diubah (would)."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Perhatikan jebakan umum pada materi \"Passive Report Structures & Media\". Manakah kalimat yang SUDAH TEPAT?",
+          "prompt": "Salah satu kesalahan umum dalam reported speech adalah lupa mengubah tenses dan ekspresi waktu. Manakah kalimat reported speech berikut yang BENAR dan bebas dari kesalahan tersebut?",
           "options": [
-            "She said she was busy that day and would come the next day",
-            "She said she were busy that day and would come the next day",
-            "She said she is busy today and will come tomorrow"
+            "The manager announced that the meeting is now postponed until tomorrow.",
+            "The manager announced that the meeting was then postponed until the next day.",
+            "The manager announced that the meeting was now postponed until the next day."
           ],
-          "correctIndex": 0,
-          "explanation": "Kesalahan umum adalah lupa mengubah tenses atau ekspresi waktu saat melaporkan ucapan. Pemula sering menggunakan tenses yang sama seperti direct speech, atau lupa mengubah 'today' menjadi 'that day', 'tomorrow' menjadi 'the next day', dsb."
+          "correctIndex": 1,
+          "explanation": "Opsi kedua benar karena semua elemen diubah dengan tepat: tenses mundur satu tingkat ('is' → 'was'), 'now' diubah menjadi 'then', dan 'tomorrow' diubah menjadi 'the next day'. Opsi pertama sama sekali tidak mengubah tenses maupun ekspresi waktu. Opsi ketiga masih menyisakan 'now' yang seharusnya diubah menjadi 'then'."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJustin: \"So where's Nicole? We're going to miss the bus.\"\nEmma: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut. Nicole datang terlambat dan menceritakan apa yang terjadi. Kemudian Justin menceritakan kembali kejadian itu kepada temannya. Lengkapi kalimat Justin:\n\nNicole: \"Sorry I'm late. You'll never believe what happened.\"\n\nJustin (menceritakan ke teman): \"Nicole apologised for being late and said that we [...]\"",
           "options": [
-            "Sorry, I forgot my keys at home.",
-            "We've still got a few minutes. She'll be here. She's not going to miss a trip to the skate park.",
-            "She said she is busy today and will come tomorrow"
+            "would never believe what had happened.",
+            "will never believe what happened.",
+            "would never believe what has happened."
           ],
-          "correctIndex": 1,
-          "explanation": "Respon \"We've still got a few minutes. She'll be here. She's not going to miss a trip to the skate park.\" (\"Kita masih punya beberapa menit. Dia akan datang. Dia tidak akan melewatkan perjalanan ke taman skateboard.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Emma."
+          "correctIndex": 0,
+          "explanation": "Opsi pertama benar karena dalam reported speech, 'will' berubah menjadi 'would' dan 'happened' (past simple) berubah menjadi 'had happened' (past perfect). Opsi kedua tidak mengubah tenses sama sekali. Opsi ketiga mengubah 'will' menjadi 'would' dengan benar, tetapi salah menggunakan 'has happened' (present perfect) alih-alih 'had happened' (past perfect)."
         }
       ]
     },

@@ -28,38 +28,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Pada kaidah \"The Best & The Most Exciting\", bagaimana perubahan atau padanan yang benar untuk \"tall → the tallest, big → the biggest, old\"?",
+          "prompt": "Modul ini membahas superlative adjectives (bentuk 'ter-' dalam bahasa Inggris). Manakah kalimat berikut yang paling tepat menggunakan pola superlative yang benar?",
           "options": [
-            "tall → the tallest, big → the biggest, old selalu dihilangkan",
-            "Tidak ada perubahan tenses pada tall → the tallest, big → the biggest, old",
-            "the oldest."
+            "This is most expensive restaurant in the city.",
+            "Mount Everest is the highest mountain in the world.",
+            "She is taller girl in her class."
           ],
-          "correctIndex": 2,
-          "explanation": "Dalam materi ini: tall → the tallest, big → the biggest, old berubah atau berpadanan menjadi \"the oldest.\"."
+          "correctIndex": 1,
+          "explanation": "Kalimat 'Mount Everest is the highest mountain in the world' benar karena menggunakan pola superlative yang tepat: 'the + -est' untuk kata sifat pendek 'high'. Opsi pertama salah karena tidak ada 'the' sebelum 'most expensive'. Opsi ketiga salah karena 'taller' adalah bentuk comparative, bukan superlative — seharusnya 'the tallest'."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "prompt": "Salah satu jebakan umum dalam superlative adalah lupa memakai 'the' atau salah memilih bentuk superlative untuk kata sifat panjang. Manakah kalimat yang BENAR di bawah ini?",
           "options": [
-            "She is most beautiful girl in class",
-            "This is expensivest car",
-            "She is the most beautiful girl in class"
+            "She is the most beautiful girl in class.",
+            "She is most beautiful girl in class.",
+            "She is the beautifulest girl in class."
           ],
-          "correctIndex": 2,
-          "explanation": "Banyak pemula lupa menambahkan 'the' di depan superlative, atau salah menggunakan '-est' untuk kata sifat panjang. Ingat: superlative SELALU pakai 'the', dan kata sifat panjang pakai 'the most', bukan '-est'."
+          "correctIndex": 0,
+          "explanation": "Kalimat 'She is the most beautiful girl in class' benar karena 'beautiful' adalah kata sifat panjang (3 suku kata) sehingga harus menggunakan 'the most + kata sifat', dan kata 'the' wajib ada. Opsi kedua salah karena tidak ada 'the'. Opsi ketiga salah karena 'beautifulest' bukan bentuk yang benar — kata sifat panjang tidak boleh ditambah '-est'."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Yes! It was the most exciting experience ever. The view was incredible.\"\nKevin: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut antara Sarah dan Kevin:\n\nSarah: \"Hi Kevin! I just visited the tallest building in the city yesterday.\"\nKevin: \"Really? That's amazing! Was it exciting?\"\nSarah: \"[...]\"\n\nApa respons Sarah yang paling tepat dan alami untuk melanjutkan percakapan ini?",
           "options": [
-            "Sorry, I forgot my keys at home.",
-            "She is most beautiful girl in class",
-            "I want to go there too! By the way, do you know the longest river in the world?"
+            "Yes! It was the most exciting experience ever. The view was incredible.",
+            "Yes! It was most exciting experience ever. The view was incredible.",
+            "Yes! It was the more exciting experience ever. The view was incredible."
           ],
-          "correctIndex": 2,
-          "explanation": "Respon \"I want to go there too! By the way, do you know the longest river in the world?\" (\"Aku juga ingin ke sana! Ngomong-ngomong, apakah kamu tahu sungai terpanjang di dunia?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Kevin."
+          "correctIndex": 0,
+          "explanation": "Jawaban 'Yes! It was the most exciting experience ever.' benar karena menggunakan superlative yang tepat: 'the most + exciting' (kata sifat panjang) dan disertai 'the' yang wajib ada. Opsi kedua salah karena tidak ada 'the' sebelum 'most exciting'. Opsi ketiga salah karena 'the more exciting' adalah bentuk comparative, bukan superlative — tidak cocok untuk menyatakan pengalaman 'paling' menggembirakan."
         }
       ]
     },

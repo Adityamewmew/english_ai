@@ -25,38 +25,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Inversion, Passive & Biographies\"?",
+          "prompt": "Dalam penulisan biografi formal, struktur inversion digunakan setelah negative adverbs untuk memberikan penekanan. Manakah kalimat bahasa Inggris berikut yang menerapkan struktur inversion dengan benar?",
           "options": [
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Modal for speculation: 'may/might/could + verb' untuk kemungkinan (You might forget her...",
-            "Tenses dan susunan subjek tidak perlu diperhatikan"
+            "Rarely does she take pride in her achievements despite her fame.",
+            "Rarely she does take pride in her achievements despite her fame.",
+            "Rarely she takes pride in her achievements despite her fame."
           ],
-          "correctIndex": 1,
-          "explanation": "Kaidah inti topik ini: Unit ini membahas struktur grammar tingkat lanjut untuk membicarakan kehidupan selebriti dan tokoh terkenal."
+          "correctIndex": 0,
+          "explanation": "Setelah negative adverb 'Rarely', struktur inversion mengharuskan auxiliary verb (does) ditempatkan sebelum subjek (she), sehingga menjadi 'Rarely does she take...'. Opsi kedua salah karena 'she' ditempatkan sebelum 'does', dan opsi ketiga tidak menggunakan inversion sama sekali."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Inversion, Passive & Biographies\"?",
+          "prompt": "Kesalahan umum dalam penggunaan modal verbs adalah menambahkan 'to' atau akhiran '-s/-ed' setelah modal. Manakah kalimat berikut yang menggunakan modal verb dengan benar?",
           "options": [
-            "He might arrive late",
-            "She should to call him",
-            "He might be arrives late"
+            "The paparazzi might to follow the celebrity everywhere she goes.",
+            "She must feels a lot of admiration from her fans around the world.",
+            "He could become the next big star if he stays in the limelight."
           ],
-          "correctIndex": 0,
-          "explanation": "Pemula sering lupa bahwa setelah modal verb (may, might, should, must) harus diikuti bentuk dasar verb tanpa 'to' atau tambahan -s/-ed. Kesalahan lain adalah salah menempatkan 'not' dalam kalimat negatif."
+          "correctIndex": 2,
+          "explanation": "Setelah modal verb (could, might, must, dll.), kata kerja harus dalam bentuk dasar (bare infinitive) tanpa 'to' dan tanpa akhiran '-s/-ed'. Opsi pertama salah karena menambahkan 'to' setelah 'might', dan opsi kedua salah karena menambahkan '-s' pada 'feel' setelah 'must'. Opsi ketiga benar: 'could become' menggunakan bentuk dasar verb."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMum: \"Well, if by 'her' you mean Naomi Osaka – yes, I am. What's the big deal, Mum?\"\nBecky: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut antara Mum dan Becky tentang ketertarikan Becky pada selebriti tenis:\n\nMum: \"I've never heard you so passionate about tennis, Becky. It's always tennis and always following Osaka on social media.\"\nBecky: \"What's the big deal, Mum? [...]\"\nMum: \"Well, I think you should focus more on playing tennis yourself rather than just following celebrities online.\"\n\nManakah respons yang paling tepat dan natural untuk mengisi bagian [...]?",
           "options": [
-            "Sorry, I forgot my keys at home.",
-            "Tennis, tennis, tennis. It's always tennis. And always following Osaka on social media. But seriously, Mum.",
-            "He might be arrives late"
+            "She might be one of the greatest athletes of our generation, so I take pride in supporting her.",
+            "She might being one of the greatest athletes, so I take pride to support her.",
+            "She may to be one of the greatest athletes, so I am taking pride for supporting her."
           ],
-          "correctIndex": 1,
-          "explanation": "Respon \"Tennis, tennis, tennis. It's always tennis. And always following Osaka on social media. But seriously, Mum.\" (\"Tenis, tenis, tenis. Selalu tentang tenis. Dan selalu mengikuti Osaka di media sosial. Tapi serius, Mum.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Becky."
+          "correctIndex": 0,
+          "explanation": "Opsi pertama benar karena menggunakan modal 'might' diikuti bentuk dasar 'be' (tanpa 'to' atau akhiran) dan ekspresi 'take pride in + gerund' dengan tepat. Opsi kedua salah karena 'might being' tidak gramatikal (seharusnya 'might be') dan 'take pride to' seharusnya 'take pride in'. Opsi ketiga salah karena 'may to be' tidak gramatikal (seharusnya 'may be') dan 'taking pride for' bukan kolokasi yang tepat."
         }
       ]
     },

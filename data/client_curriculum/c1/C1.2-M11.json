@@ -29,38 +29,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Epistemic Stance & Critical Discourse Analysis of Editorial Journalism\"?",
+          "prompt": "Dalam analisis wacana kritis (CDA), penulis editorial menggunakan epistemic stance untuk menunjukkan tingkat kepastian terhadap klaim yang disampaikan. Manakah kalimat bahasa Inggris berikut yang secara tepat menerapkan teknik hedging dan nominalisasi untuk melembutkan klaim sekaligus menyembunyikan agensi pelaku?",
           "options": [
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Epistemic Modal Verbs: Gunakan modal verbs (may, might, could, must, should) untuk mena..."
+            "The displacement of vulnerable communities may arguably reflect systemic failures in urban planning policy.",
+            "The government undoubtedly displaced vulnerable communities because of their systemic failures in urban planning.",
+            "Vulnerable communities were obviously displaced, and this clearly proves that urban planning has always been a failure."
           ],
-          "correctIndex": 2,
-          "explanation": "Kaidah inti topik ini: Critical Discourse Analysis (CDA) adalah pendekatan analitis yang mengungkap hubungan antara bahasa, kekuasaan, dan ideologi dalam teks media."
+          "correctIndex": 0,
+          "explanation": "Opsi pertama tepat karena menggunakan nominalisasi ('displacement' mengubah verb 'displace' menjadi noun sehingga pelaku tersembunyi) dan hedging ganda ('may arguably' menunjukkan tingkat kepastian rendah). Opsi kedua menyebutkan pelaku secara eksplisit dan menggunakan booster 'undoubtedly' (bukan hedging). Opsi ketiga menggunakan booster kuat ('obviously', 'clearly') yang justru memperkuat klaim, bukan melembutkannya."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "prompt": "Pelajar C1 sering keliru menganggap bahwa editorial yang menggunakan data statistik dan bahasa formal secara otomatis bersifat objektif. Padahal, bias ideologis bisa tersembunyi dalam pilihan kata yang tampak netral. Manakah kalimat analisis berikut yang paling tepat menunjukkan kemampuan mengenali bias tersembunyi dalam editorial?",
           "options": [
-            "The article is objective because it uses statistics and formal vocabulary always",
-            "The article is objective because it uses statistics and formal vocabulary",
-            "Despite employing statistical data and formal register"
+            "The editorial is entirely objective since it references peer-reviewed studies and maintains a formal academic tone throughout.",
+            "Despite employing statistical evidence and a formal register, the editorial reveals ideological bias through selective nominalization and evaluative adjectives that frame the issue unilaterally.",
+            "The editorial contains some bias because the author uses informal language and emotional exclamations that are easy to detect."
           ],
-          "correctIndex": 2,
-          "explanation": "Pelajar C1 sering mengasumsikan bahwa editorial dengan bahasa formal secara otomatis bersifat objektif. Padahal, bias dapat tersembunyi dalam pilihan leksikal yang tampak netral. Kesalahan lain adalah gagal mengenali presuposisi dalam pertanyaan retoris atau klausa subordinat."
+          "correctIndex": 1,
+          "explanation": "Opsi kedua benar karena menunjukkan pemahaman bahwa bahasa formal dan data statistik tidak menjamin objektivitas — bias dapat tersembunyi dalam nominalisasi selektif dan adjektiva evaluatif. Opsi pertama jatuh ke dalam jebakan umum (common trap) dengan menyamakan formalitas dan data sebagai bukti objektivitas. Opsi ketiga keliru karena mengasumsikan bias hanya muncul dalam bahasa informal dan emosional, padahal bias justru sering tersembunyi dalam register formal."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"Marcus, I'd like you to examine the epistemic stance in this Guardian editorial on climate policy. What linguistic markers indicate the author's level of certainty?\"\nMarcus: \"[...]\"",
+          "prompt": "Perhatikan percakapan akademis berikut antara Dr. Chen dan Marcus yang sedang menganalisis editorial surat kabar. Isilah bagian [...] dengan respons yang paling tepat secara kontekstual dan gramatikal.\n\nDr. Chen: \"Marcus, can you identify any presuppositions in the editorial's rhetorical question 'When will policymakers finally prioritize public health over corporate profits?'\"\n\nMarcus: \"[...]\"",
           "options": [
-            "Sorry, I forgot my keys at home.",
-            "The author predominantly employs boosters like 'unequivocally' and 'indisputably,' suggesting a high degree of commitment to the proposition that immediate action is imperative.",
-            "The article is objective because it uses statistics and formal vocabulary"
+            "Yes, the question presupposes that policymakers have consistently prioritized corporate profits over public health, framing them as complicit regardless of existing health legislation.",
+            "The rhetorical question is simply asking for a timeline, so it doesn't contain any hidden assumptions or ideological framing whatsoever.",
+            "The word 'finally' is a booster that makes the sentence more formal, and 'prioritize' is a nominalization that hides the agent of the action."
           ],
-          "correctIndex": 1,
-          "explanation": "Respon \"The author predominantly employs boosters like 'unequivocally' and 'indisputably,' suggesting a high degree of commitment to the proposition that immediate action is imperative.\" (\"Penulis secara dominan menggunakan booster seperti 'unequivocally' dan 'indisputably,' yang menunjukkan tingkat komitmen tinggi terhadap proposisi bahwa tindakan segera sangat penting.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Marcus."
+          "correctIndex": 0,
+          "explanation": "Opsi pertama benar karena secara tepat mengidentifikasi presuposisi dalam pertanyaan retoris tersebut: kata 'finally' dan struktur 'When will... prioritize X over Y' mengasumsikan bahwa pembuat kebijakan selama ini mengutamakan keuntungan korporasi di atas kesehatan publik. Opsi kedua salah karena gagal mengenali presuposisi — pertanyaan retoris bukan sekadar menanyakan jadwal. Opsi ketiga salah secara analitis: 'finally' adalah penanda presuposisi (bukan booster formalitas), dan 'prioritize' adalah kata kerja (bukan nominalisasi)."
         }
       ]
     },

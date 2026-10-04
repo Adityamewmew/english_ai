@@ -27,38 +27,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Humor, Irony & Emphasis with Clefts\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan struktur cleft sentence (it-cleft atau wh-cleft) dengan benar untuk memberikan penekanan?",
           "options": [
-            "It-cleft: It + be + fokus + that/who + sisa kalimat. Contoh: 'It's laughter that helps ...",
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Pola ini hanya boleh digunakan dalam situasi santai"
+            "It's his timing that makes his comedy so effective.",
+            "His timing makes it that his comedy is so effective.",
+            "That his timing is what makes his comedy so effective it is."
           ],
           "correctIndex": 0,
-          "explanation": "Kaidah inti topik ini: Unit ini membahas cara menggunakan cleft sentences (kalimat terbelah) untuk memberikan penekanan pada bagian tertentu dalam kalimat."
+          "explanation": "Opsi pertama menggunakan struktur it-cleft dengan benar: It + be + fokus (his timing) + that + sisa kalimat (makes his comedy so effective). Opsi kedua dan ketiga memiliki susunan kata yang salah dan tidak mengikuti pola cleft sentence yang tepat."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "prompt": "Salah satu kesalahan umum dalam cleft sentences adalah urutan kata yang salah dan pemilihan 'that' vs 'who' yang keliru. Manakah kalimat berikut yang menggunakan cleft sentence dengan benar?",
           "options": [
-            "It's laughter that helps us deal with difficult emotions",
-            "Laughter helps us deal with difficult emotions it is",
-            "Laughter helps us deal with difficult emotions it is always"
+            "It's the comedian that I admire the most for her brilliant timing.",
+            "It's the comedian who I admire the most for her brilliant timing.",
+            "The comedian it is who I admire the most for her brilliant timing."
           ],
-          "correctIndex": 0,
-          "explanation": "Pemula sering lupa bahwa dalam cleft sentences, bagian yang ingin ditekankan harus diletakkan di tengah struktur, bukan di awal atau akhir seperti kalimat biasa. Selain itu, pemilihan 'that' vs 'who' juga sering keliru."
+          "correctIndex": 1,
+          "explanation": "Ketika bagian yang ditekankan dalam it-cleft merujuk pada orang, kata penghubung yang tepat adalah 'who', bukan 'that'. Opsi pertama menggunakan 'that' untuk merujuk orang, yang kurang tepat di tingkat C2. Opsi ketiga memiliki urutan kata yang salah karena menempatkan 'it is' setelah subjek, bukan di awal kalimat."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"What really makes me laugh is watching stand-up comedy shows. Have you seen Trevor Noah's latest special?\"\nTom: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut. Isilah bagian [...] dengan respons yang paling tepat dan alami.\n\nSarah: \"I burst out laughing when he talked about his mum. What do you think makes a good comedian?\"\nTom: \"[...]\"",
           "options": [
-            "Yes! It's his storytelling that I find so entertaining. The way he shares personal experiences is hilarious.",
-            "Laughter helps us deal with difficult emotions it is",
-            "Sorry, I forgot my keys at home."
+            "What makes a good comedian is definitely knowing your audience and having great timing.",
+            "A good comedian is what makes definitely timing and knowing the audience.",
+            "Knowing your audience makes what is a good comedian definitely timing."
           ],
           "correctIndex": 0,
-          "explanation": "Respon \"Yes! It's his storytelling that I find so entertaining. The way he shares personal experiences is hilarious.\" (\"Sudah! Cara dia bercerita itulah yang kutemukan sangat menghibur. Cara dia berbagi pengalaman pribadinya sangat lucu.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+          "explanation": "Opsi pertama menggunakan wh-cleft (What makes a good comedian is...) dengan benar dan alami sebagai jawaban atas pertanyaan Sarah, serta menyertakan boosting adverb 'definitely' untuk penekanan. Opsi kedua dan ketiga memiliki susunan kata yang kacau dan tidak mengikuti struktur wh-cleft yang benar."
         }
       ]
     },

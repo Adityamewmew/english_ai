@@ -28,38 +28,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Pros & Cons\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan kata sifat komparatif (comparative adjective) dengan benar untuk membandingkan kehidupan kota dan desa?",
           "options": [
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Gunakan comparative adjectives untuk membandingkan: adjective + -er + than (untuk kata ...",
-            "Tenses dan susunan subjek tidak perlu diperhatikan"
+            "The countryside is more peaceful than the city.",
+            "The countryside is peacefuler than the city.",
+            "The countryside is more peaceful the city."
           ],
-          "correctIndex": 1,
-          "explanation": "Kaidah inti topik ini: Dalam modul ini, kamu akan belajar membandingkan kehidupan di kota dan desa menggunakan kata sifat komparatif dan kosakata lingkungan."
+          "correctIndex": 0,
+          "explanation": "Kata sifat 'peaceful' adalah kata panjang (lebih dari dua suku kata), sehingga bentuk komparatifnya menggunakan 'more + adjective + than'. Pilihan pertama benar karena menggunakan 'more peaceful than'. Pilihan kedua salah karena menambahkan '-er' pada kata panjang, dan pilihan ketiga salah karena tidak ada 'than'."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Perhatikan jebakan umum pada materi \"Pros & Cons\". Manakah kalimat yang SUDAH TEPAT?",
+          "prompt": "Kesalahan umum saat membandingkan dua hal adalah lupa menambahkan 'than' setelah kata sifat komparatif. Manakah kalimat berikut yang menggunakan struktur komparatif dengan benar dan lengkap?",
           "options": [
-            "The city is more crowded than the village",
-            "The city are more crowded than the village",
-            "The city is more crowded the village"
+            "Cities are busier the countryside.",
+            "Cities are more busy than the countryside.",
+            "Cities are busier than the countryside."
           ],
-          "correctIndex": 0,
-          "explanation": "Banyak pemula lupa menambahkan 'than' setelah kata sifat komparatif ketika membandingkan dua hal. Tanpa 'than', kalimat menjadi tidak lengkap dan membingungkan."
+          "correctIndex": 2,
+          "explanation": "Kalimat ketiga benar karena 'busy' adalah kata sifat pendek yang berubah menjadi 'busier' (y → ier) dan diikuti oleh 'than'. Pilihan pertama salah karena tidak ada 'than'. Pilihan kedua salah karena 'busy' adalah kata pendek sehingga tidak menggunakan 'more', melainkan langsung ditambahkan '-er'."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nMaya: \"Yes, but there is a lot of traffic in the city. Sometimes it's very stressful. How is the air in your village?\"\nTom: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut:\n\nMaya: \"How is the air in your village?\"\nTom: \"[...]\"\n\nIsi bagian [...] dengan respons yang paling tepat dan alami sesuai konteks percakapan tentang perbandingan kota dan desa.",
           "options": [
-            "Sorry, I forgot my keys at home.",
             "The air is fresher and cleaner than in the city. We have less pollution here because there are many trees.",
-            "The city is more crowded the village"
+            "The air is fresh and clean. I like shopping malls and restaurants in the city.",
+            "There is a lot of traffic and pollution in my village because it is very crowded."
           ],
-          "correctIndex": 1,
-          "explanation": "Respon \"The air is fresher and cleaner than in the city. We have less pollution here because there are many trees.\" (\"Udaranya lebih segar dan bersih daripada di kota. Kami punya lebih sedikit polusi di sini karena ada banyak pohon.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+          "correctIndex": 0,
+          "explanation": "Pilihan pertama paling tepat karena menjawab pertanyaan Maya tentang udara di desa Tom dengan menggunakan komparatif ('fresher and cleaner than') dan menjelaskan alasannya (sedikit polusi, banyak pohon). Pilihan kedua tidak konsisten karena tiba-tiba membahas pusat perbelanjaan. Pilihan ketiga tidak logis karena menggambarkan desa seperti kota yang ramai dan berpolusi."
         }
       ]
     },

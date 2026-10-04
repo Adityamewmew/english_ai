@@ -29,38 +29,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Fronting & Topicalisation for Dramatic Emphasis in Written Rhetoric\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menerapkan teknik adverbial fronting dengan inversi secara benar, sesuai aturan bahwa adverbial negatif di awal kalimat memicu inversi subjek-auxiliary verb?",
           "options": [
-            "Adverbial Fronting dengan Inversi: Ketika adverbial negatif atau restriktif (never, sel...",
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Tenses dan susunan subjek tidak perlu diperhatikan"
+            "Seldom does the committee convene without controversy.",
+            "Seldom the committee does convene without controversy.",
+            "Seldom the committee convenes without controversy."
           ],
           "correctIndex": 0,
-          "explanation": "Kaidah inti topik ini: Fronting adalah teknik retoris tingkat mahir di mana elemen kalimat yang biasanya muncul di akhir dipindahkan ke posisi awal untuk menciptakan penekanan dramatis dan mengatur fokus informasi."
+          "explanation": "Ketika adverbial negatif/restriktif seperti 'seldom' ditempatkan di awal kalimat (fronting), wajib terjadi inversi subjek-auxiliary verb. Pola yang benar: [Negative Adverbial] + [Auxiliary] + [Subject] + [Main Verb], sehingga 'Seldom does the committee convene...' adalah bentuk yang tepat. Opsi kedua salah karena urutan auxiliary-nya terbalik, dan opsi ketiga salah karena tidak ada inversi sama sekali."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "prompt": "Salah satu jebakan umum dalam teknik fronting adalah melakukan inversi secara berlebihan pada konteks yang tidak memerlukannya. Manakah kalimat berikut yang menggunakan adverbial fronting positif (bukan negatif) dengan BENAR tanpa inversi yang tidak perlu?",
           "options": [
-            "Carefully",
-            "John was examining the evidence. (Inversi tidak diperlukan untuk adverbial positif dalam konteks netral)",
-            "Carefully"
+            "Carefully was John examining the evidence before presenting his case.",
+            "Carefully did John examine the evidence before presenting his case.",
+            "Carefully, John examined the evidence before presenting his case."
           ],
-          "correctIndex": 0,
-          "explanation": "Pelajar C1 sering melakukan inversi pada konteks yang tidak tepat atau menggunakan fronting secara berlebihan sehingga teks terdengar artifisial. Fronting dengan inversi hanya wajib pada adverbial negatif tertentu; untuk fronting adverbial positif biasa, inversi bersifat opsional dan dapat terdengar kaku dalam konteks informal. Kesalahan lain adalah tidak mencocokkan tingkat formalitas—fronting dramatis cocok untuk esai argumentatif, pidato, atau prosa sastra, namun terasa tidak natural dalam email bisnis rutin atau percakapan sehari-hari."
+          "correctIndex": 2,
+          "explanation": "Adverbial positif biasa seperti 'carefully' tidak memerlukan inversi ketika difronting dalam konteks netral. Bentuk yang benar cukup menempatkan adverbial di awal diikuti koma dan kalimat dengan urutan normal: 'Carefully, John examined the evidence...' Inversi dengan 'did' atau 'was' pada adverbial positif dalam konteks netral terdengar kaku dan tidak natural—inversi hanya wajib untuk adverbial negatif/restriktif seperti 'never', 'seldom', 'rarely'."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Rahman: \"Precisely. Look at this section on climate policy—it's factually accurate but stylistically flat. With topicalisation, we could foreground the urgency: 'This crisis, we can no longer ignore.'\"\nMs. Sinclair: \"[...]\"",
+          "prompt": "Dalam diskusi editorial tentang naskah akademis, Dr. Rahman ingin memperbaiki paragraf penutup tentang krisis iklim agar lebih dramatis dan emfatik. Ia berkata:\n\n\"In the concluding paragraph, consider: '[...]' The inversion would create the emphatic tone the conclusion demands.\"\n\nManakah kalimat yang paling tepat mengisi [...] dengan teknik fronting adverbial negatif dan inversi yang benar untuk menciptakan nada retoris yang kuat?",
           "options": [
-            "Excellent suggestion. And in the concluding paragraph, consider: 'Never before has humanity faced such an existential threat.' The inversion would create the emphatic tone the conclusion demands.",
-            "Sorry, I forgot my keys at home.",
-            "Carefully"
+            "Never before humanity has faced such an existential threat.",
+            "Before never has humanity faced such an existential threat.",
+            "Never before has humanity faced such an existential threat."
           ],
-          "correctIndex": 0,
-          "explanation": "Respon \"Excellent suggestion. And in the concluding paragraph, consider: 'Never before has humanity faced such an existential threat.' The inversion would create the emphatic tone the conclusion demands.\" (\"Saran yang bagus. Dan di paragraf penutup, pertimbangkan: 'Tidak pernah sebelumnya umat manusia menghadapi ancaman eksistensial semacam ini.' Inversi itu akan menciptakan nada tegas yang dituntut oleh kesimpulan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Ms. Sinclair."
+          "correctIndex": 2,
+          "explanation": "Kalimat yang benar adalah 'Never before has humanity faced such an existential threat.' Adverbial negatif 'never before' di awal kalimat memicu inversi subjek-auxiliary: [Never before] + [has] + [humanity] + [faced]. Opsi pertama salah karena tidak melakukan inversi ('humanity has' seharusnya 'has humanity'). Opsi kedua salah karena urutan 'before never' tidak natural—frasa yang benar adalah 'never before' sebagai satu kesatuan adverbial."
         }
       ]
     },

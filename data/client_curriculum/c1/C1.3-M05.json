@@ -30,38 +30,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Utilitarianism, Deontology & Ethical Dilemmas\"?",
+          "prompt": "Dalam debat filosofis tingkat akademis, kita sering menggunakan struktur conditional perfect untuk counterfactual moral reasoning. Manakah kalimat bahasa Inggris berikut yang menerapkan pola ini dengan benar dalam konteks dilema etika?",
           "options": [
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Gunakan register formal-akademis dengan struktur argumen deduktif: 'If we subscribe to ..."
+            "Had the autonomous vehicle prioritized deontological principles, it would have refused to calculate the comparative value of human lives in the collision scenario.",
+            "If the autonomous vehicle will prioritize deontological principles, it would have refused to calculate the comparative value of human lives in the collision scenario.",
+            "If the autonomous vehicle prioritizes deontological principles, it will have been refusing to calculate the comparative value of human lives in the collision scenario."
           ],
-          "correctIndex": 2,
-          "explanation": "Kaidah inti topik ini: Dalam filsafat moral tingkat lanjut, dua kerangka etika utama sering berkonflik: utilitarianisme (consequentialism) yang menilai tindakan berdasarkan hasil/konsekuensinya untuk mencapai kebahagiaan maksimal bagi mayoritas, dan deontologi yang berfokus pada kewajiban moral absolut tanpa memandang hasil."
+          "correctIndex": 0,
+          "explanation": "Opsi pertama menggunakan struktur conditional perfect (Had + past participle ... would have + past participle) dengan benar untuk menyatakan counterfactual moral reasoning. Opsi kedua salah karena mencampurkan 'will prioritize' dengan 'would have refused' (ketidaksesuaian tenses). Opsi ketiga menggunakan 'will have been refusing' yang tidak tepat secara gramatikal maupun kontekstual untuk skenario hipotetis di masa lalu."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Utilitarianism, Deontology & Ethical Dilemmas\"?",
+          "prompt": "Dalam diskusi filosofis akademis level C1, penggunaan hedging language dan register formal sangat penting. Siswa sering membuat kesalahan dengan menggunakan pernyataan absolut tanpa kualifikasi epistemik. Manakah kalimat berikut yang menggunakan register formal-akademis dan hedging language dengan tepat?",
           "options": [
-            "Utilitarianism is better because it thinks about everyone's happiness and that's obviously the right way to do ethics",
-            "Utilitarianism is better because it thinks about everyone's happiness and that's obviously the right way to do ethics always",
-            "Utilitarian theory arguably offers a more pragmatic framework insofar as it prioritizes aggregate welfare"
+            "Kantian ethics says you must never lie, which is too extreme and doesn't work in real life situations.",
+            "The categorical imperative, while philosophically rigorous, has been critiqued for its perceived inflexibility when applied to morally complex scenarios where competing duties may conflict.",
+            "Utilitarianism is better because it thinks about everyone's happiness and that's obviously the right way to do ethics."
           ],
-          "correctIndex": 2,
-          "explanation": "Siswa C1 sering mencampurkan register informal dengan topik filosofis formal, atau menggunakan absolute statements tanpa hedging yang tepat. Dalam debat etika akademis, setiap klaim harus dikualifikasi dengan epistemic modality yang sesuai untuk menunjukkan critical sophistication."
+          "correctIndex": 1,
+          "explanation": "Opsi kedua menggunakan register formal-akademis yang tepat dengan hedging language seperti 'perceived inflexibility' dan 'may conflict', menunjukkan critical sophistication. Opsi pertama terlalu informal ('doesn't work in real life') dan menggunakan pernyataan absolut tanpa kualifikasi. Opsi ketiga juga terlalu kasual ('that's obviously the right way') dan tidak memiliki nuansa epistemologis yang diharapkan dalam debat filosofis akademis."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nDr. Chen: \"Perhaps statistically, yet it violates the categorical imperative—treating individuals as means to an end rather than ends in themselves. Each life possesses inviolable dignity.\"\nProf. Webb: \"[...]\"",
+          "prompt": "Perhatikan percakapan debat filosofis berikut. Dr. Chen berkata: 'I'd argue that programming autonomous vehicles with utilitarian algorithms is fundamentally flawed, as it reduces human life to mere mathematical calculations.' Prof. Webb merespons: '[...]' Manakah respons yang paling tepat dan natural untuk konteks debat akademis ini?",
           "options": [
-            "Sorry, I forgot my keys at home.",
-            "Utilitarianism is better because it thinks about everyone's happiness and that's obviously the right way to do ethics",
-            "I appreciate your deontological stance, but doesn't that position create paralysis? If all lives are equally inviolable, how does the algorithm decide when collision is unavoidable?"
+            "Yeah, I totally agree, utilitarianism is just wrong and we should stop using it for self-driving cars because it's unfair to people.",
+            "That's a compelling critique, but consider this: in aggregate, wouldn't a consequentialist approach minimize overall fatalities across millions of driving scenarios?",
+            "I don't really understand what you mean by utilitarian algorithms, can you explain it more simply for everyone here?"
           ],
-          "correctIndex": 2,
-          "explanation": "Respon \"I appreciate your deontological stance, but doesn't that position create paralysis? If all lives are equally inviolable, how does the algorithm decide when collision is unavoidable?\" (\"Saya menghargai posisi deontologis Anda, tetapi bukankah posisi itu menciptakan kelumpuhan? Jika semua kehidupan sama-sama tidak dapat dilanggar, bagaimana algoritma memutuskan ketika tabrakan tidak dapat dihindari?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Prof. Webb."
+          "correctIndex": 1,
+          "explanation": "Opsi kedua adalah respons yang paling tepat karena menggunakan register formal-akademis ('compelling critique', 'in aggregate', 'consequentialist approach'), mengakui argumen lawan sebelum menyajikan counter-argument, dan menerapkan hedging dengan pertanyaan retoris ('wouldn't... ?'). Opsi pertama terlalu informal dan tidak menunjukkan critical engagement. Opsi ketiga tidak sesuai konteks debat akademis C1 karena menunjukkan ketidakpahaman dasar yang tidak wajar di level ini."
         }
       ]
     },

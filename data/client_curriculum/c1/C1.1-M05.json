@@ -26,38 +26,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Conditionals with Conjunctions & Technology\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan struktur 'necessity in the past' (needn't have + past participle) dengan benar untuk menyatakan bahwa seseorang melakukan sesuatu yang sebenarnya tidak perlu dilakukan?",
           "options": [
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Obligation/Necessity: have to/must + infinitive (Most experts agree that screen time sh..."
+            "You needn't have downloaded the update because the system already synced automatically.",
+            "You didn't need to download the update because the system already synced automatically.",
+            "You mustn't have downloaded the update because the system already synced automatically."
           ],
-          "correctIndex": 2,
-          "explanation": "Kaidah inti topik ini: Unit ini membahas tiga area gramatikal penting: (1) Obligation, permission, dan prohibition menggunakan have to, must, should, need to, dan be allowed to untuk memberikan nasihat dan aturan; (2) Necessity dengan didn't need to (tidak perlu melakukan sesuatu dan memang tidak dilakukan) vs needn't have done (tidak perlu melakukan tapi tetap dilakukan); (3) Ability in the past menggunakan could, was/were able to, managed to, dan succeeded in untuk menyatakan kemampuan umum atau pencapaian spesifik di masa lalu."
+          "correctIndex": 0,
+          "explanation": "Kalimat pertama benar karena 'needn't have downloaded' menunjukkan bahwa orang tersebut sudah terlanjur mengunduh pembaruan, padahal sebenarnya tidak perlu karena sistem sudah sinkron otomatis. 'Didn't need to' (opsi kedua) berarti tidak perlu dan memang tidak dilakukan. 'Mustn't have' (opsi ketiga) bukan struktur yang lazim untuk menyatakan ketidakperluan di masa lalu."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "prompt": "Perhatikan konteks berikut: Setelah mengikuti kursus IT selama sebulan, para peserta akhirnya berhasil menguasai penggunaan komputer. Manakah kalimat yang paling tepat untuk menyatakan pencapaian spesifik tersebut di masa lalu?",
           "options": [
-            "After the IT lessons",
-            "they couldn't use computers confidently",
-            "After the IT lessons"
+            "After the IT course, they could use computers confidently.",
+            "After the IT course, they managed to use computers confidently.",
+            "After the IT course, they would use computers confidently."
           ],
-          "correctIndex": 0,
-          "explanation": "Pemula sering salah menggunakan couldn't untuk menyatakan ketidakmampuan dalam situasi spesifik yang berhasil diatasi. Couldn't digunakan untuk kemampuan umum atau kegagalan, sedangkan was/were able to, managed to, atau succeeded in digunakan untuk pencapaian spesifik di masa lalu."
+          "correctIndex": 1,
+          "explanation": "Untuk menyatakan pencapaian spesifik di masa lalu, kita menggunakan 'managed to', 'was/were able to', atau 'succeeded in', bukan 'could'. 'Could' digunakan untuk kemampuan umum di masa lalu, bukan pencapaian spesifik. 'Would' menyatakan kebiasaan di masa lalu, bukan pencapaian. Jadi 'managed to use' adalah pilihan yang paling tepat."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSheena: \"I understand. I've been staying up until midnight recently too, scrolling through social media.\"\nAaron: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut antara Sheena dan Aaron tentang kebiasaan screen time mereka. Isilah bagian [...] dengan respons yang paling tepat dan natural.\n\nSheena: \"I've been staying up until midnight recently, scrolling through social media. What do you think I should do?\"\nAaron: \"[...]\"",
           "options": [
-            "After the IT lessons",
-            "Sorry, I forgot my keys at home.",
-            "I wanted to warn you about hidden advertising or product placement in films. It's everywhere now."
+            "You had better set a screen time limit if you don't want to ruin your sleep schedule.",
+            "You are supposed to set a screen time limit if you don't want to ruin your sleep schedule.",
+            "You could set a screen time limit if you don't want to ruin your sleep schedule."
           ],
-          "correctIndex": 2,
-          "explanation": "Respon \"I wanted to warn you about hidden advertising or product placement in films. It's everywhere now.\" (\"Aku ingin memperingatkanmu tentang iklan tersembunyi atau penempatan produk dalam film. Sekarang itu ada di mana-mana.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Aaron."
+          "correctIndex": 0,
+          "explanation": "Sheena meminta saran langsung, dan 'had better' digunakan untuk memberikan saran kuat atau peringatan, yang cocok dalam konteks ini karena ada konsekuensi negatif (jadwal tidur terganggu). 'Be supposed to' menyiratkan ada aturan atau ekspektasi dari pihak lain, bukan saran pribadi. 'Could' terlalu lemah sebagai saran dalam konteks di mana ada dampak kesehatan yang jelas."
         }
       ]
     },

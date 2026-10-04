@@ -27,38 +27,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Participle Clauses & Organization\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan mixed conditional dengan benar, yaitu menggabungkan kondisi masa lalu dengan hasil di masa sekarang?",
           "options": [
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Zero Conditional: If + present simple, present simple. Contoh: If surgeons run through ...",
-            "Pola ini hanya boleh digunakan dalam situasi santai"
+            "If I hadn't studied yesterday, I wouldn't be ready now.",
+            "If I didn't study yesterday, I wouldn't have been ready now.",
+            "If I hadn't studied yesterday, I won't be ready now."
           ],
-          "correctIndex": 1,
-          "explanation": "Kaidah inti topik ini: Unit ini berfokus pada penggunaan kalimat bersyarat (conditionals) dalam berbagai tipe, termasuk mixed conditionals yang menggabungkan waktu berbeda."
+          "correctIndex": 0,
+          "explanation": "Mixed conditional yang menghubungkan kondisi masa lalu dengan hasil masa sekarang menggunakan pola: If + past perfect, would(n't) + infinitive. Opsi pertama benar karena menggunakan 'hadn't studied' (past perfect) di klausa if dan 'wouldn't be' (would + infinitive) untuk hasil masa sekarang. Opsi kedua salah karena menggunakan past simple ('didn't study') alih-alih past perfect. Opsi ketiga salah karena menggunakan 'won't' alih-alih 'would' di klausa hasil."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Participle Clauses & Organization\"?",
+          "prompt": "Salah satu kesalahan umum dalam conditional sentences adalah menggunakan 'will' di dalam klausa 'if'. Manakah kalimat first conditional berikut yang menggunakan tenses dengan benar?",
           "options": [
-            "If you will take this medicine",
-            "you won't get headaches",
-            "If you take this medicine"
+            "If you will follow the checklist, you won't make mistakes.",
+            "If you followed the checklist, you won't make mistakes.",
+            "If you follow the checklist, you won't make mistakes."
           ],
           "correctIndex": 2,
-          "explanation": "Pemula sering mencampur struktur conditional yang berbeda atau menggunakan 'will' di klausa 'if'. Ingat, setiap tipe conditional memiliki pola tenses yang tetap dan tidak boleh dicampur sembarangan kecuali dalam mixed conditionals yang memang dirancang untuk menghubungkan waktu berbeda."
+          "explanation": "Dalam first conditional, klausa 'if' harus menggunakan present simple, bukan 'will' atau past simple. Pola yang benar adalah: If + present simple, will + infinitive. Opsi ketiga benar karena menggunakan 'follow' (present simple) di klausa if dan 'won't make' di klausa hasil. Opsi pertama salah karena menggunakan 'will' di klausa if, dan opsi kedua salah karena mencampur past simple ('followed') dengan 'won't' yang merupakan pencampuran tipe conditional yang tidak tepat."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Have you read that book about checklists? It's really interesting.\"\nTom: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut. Sarah dan Tom sedang membahas manfaat checklist bagi para profesional. Isilah bagian [...] dengan respons yang paling tepat dan alami.\n\nSarah: \"It points out how professionals like doctors and pilots use checklists to avoid mistakes. [...]\"\nTom: \"That makes sense. I suppose we could all benefit from making our own checklists.\"",
           "options": [
-            "If you will take this medicine",
-            "Sorry, I forgot my keys at home.",
-            "Not yet. Why do you recommend it?"
+            "If they won't use them, more accidents will happen.",
+            "If they didn't use them, more accidents would happen.",
+            "If they don't use them, more accidents would happen."
           ],
-          "correctIndex": 2,
-          "explanation": "Respon \"Not yet. Why do you recommend it?\" (\"Belum. Kenapa kamu merekomendasikannya?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tom."
+          "correctIndex": 1,
+          "explanation": "Konteks percakapan ini membahas situasi hipotetis (bukan kenyataan) tentang apa yang akan terjadi jika para profesional tidak menggunakan checklist. Ini memerlukan second conditional: If + past simple, would + infinitive. Opsi kedua benar karena menggunakan 'didn't use' (past simple) dan 'would happen'. Opsi pertama salah karena menggunakan 'won't' di klausa if. Opsi ketiga salah karena mencampur present simple ('don't use') dengan 'would' yang merupakan pencampuran tipe conditional yang tidak konsisten."
         }
       ]
     },

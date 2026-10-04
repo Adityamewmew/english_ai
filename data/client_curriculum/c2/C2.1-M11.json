@@ -25,38 +25,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Society, Trends & Complex Syntax\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan struktur causative have (meminta orang lain melakukan sesuatu untuk kita) dengan benar?",
           "options": [
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Passive Voice (Lanjutan): Agent lebih mungkin dibagikan dalam passive daripada happy to...",
-            "Pola ini hanya boleh digunakan dalam situasi santai"
+            "I had my laptop fixed by a technician last week.",
+            "I had to fix my laptop by myself last week.",
+            "I was having my laptop and fixed it last week."
           ],
-          "correctIndex": 1,
-          "explanation": "Kaidah inti topik ini: Unit ini membahas penggunaan struktur pasif lanjutan dan causative have untuk mengekspresikan situasi yang dialami atau dilakukan oleh orang lain."
+          "correctIndex": 0,
+          "explanation": "Kalimat 'I had my laptop fixed by a technician' menggunakan pola causative have yang benar: Subject + had + object (my laptop) + past participle (fixed). Artinya, subjek meminta orang lain (teknisi) untuk memperbaiki laptopnya. Opsi kedua menggunakan 'had to fix' yang berarti 'harus memperbaiki sendiri', bukan causative. Opsi ketiga memiliki struktur yang salah secara gramatikal."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Perhatikan jebakan umum pada materi \"Society, Trends & Complex Syntax\". Manakah kalimat yang SUDAH TEPAT?",
+          "prompt": "Perhatikan jebakan umum dalam penggunaan causative have. Jika seseorang ingin mengatakan bahwa ia meminta salon untuk memotong rambutnya, kalimat mana yang paling tepat?",
           "options": [
-            "I had my phone repaired (berarti saya minta orang lain",
-            "I had to repair my phone (berarti saya yang memperbaikinya sendiri)",
-            "I had to repair my phone (berarti saya yang memperbaikinya sendiri) always"
+            "I had to cut my hair at the salon yesterday.",
+            "I had my hair cut at the salon yesterday.",
+            "I have been cutting my hair at the salon yesterday."
           ],
-          "correctIndex": 0,
-          "explanation": "Banyak pemula bingung membedakan antara 'have something done' (meminta orang lain melakukan sesuatu untuk kita) dengan 'have to do something' (harus melakukan sesuatu sendiri). Struktur causative have menunjukkan bahwa subjek tidak melakukan aksi tersebut sendiri, melainkan orang lain yang melakukan."
+          "correctIndex": 1,
+          "explanation": "Kalimat 'I had my hair cut at the salon' menggunakan causative have dengan benar (had + object + past participle), yang menunjukkan bahwa orang lain (penata rambut) yang memotong rambutnya. Opsi pertama 'had to cut' berarti 'harus memotong sendiri', yang merupakan jebakan umum. Opsi ketiga salah karena menggunakan present perfect continuous dengan 'yesterday', yang tidak sesuai secara tenses."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nEmma: \"Did you hear that radio show about internet rage? It's crazy how much anger there is online.\"\nJake: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut tentang kemarahan di internet dan keamanan digital. Lengkapi bagian yang kosong dengan respons yang paling natural dan sesuai konteks.\n\nEmma: \"Did you hear that radio show about internet rage? It's crazy how much anger there is online.\"\nJake: \"Yeah, I know. I think people feel braver behind a screen.\"\nEmma: \"The host mentioned that most people only have one password. That's really risky, isn't it?\"\nJake: \"Definitely. [...] So I'm extra careful about security now.\"",
           "options": [
-            "I had to repair my phone (berarti saya yang memperbaikinya sendiri)",
-            "Yeah, I know. I think people feel braver behind a screen. They say things they'd never say face to face.",
-            "Sorry, I forgot my keys at home."
+            "My car got broken into the other day.",
+            "I have to break into my car the other day.",
+            "My car had been breaking the other day."
           ],
-          "correctIndex": 1,
-          "explanation": "Respon \"Yeah, I know. I think people feel braver behind a screen. They say things they'd never say face to face.\" (\"Ya, aku tahu. Menurutku orang merasa lebih berani di balik layar. Mereka bilang hal-hal yang tidak akan pernah mereka katakan secara langsung.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Jake."
+          "correctIndex": 0,
+          "explanation": "Kalimat 'My car got broken into the other day' adalah respons yang benar dan natural, menggunakan struktur pasif dengan 'get' (got + past participle) untuk menggambarkan pengalaman negatif yang terjadi pada mobilnya. Ini sesuai dengan konteks pembicaraan tentang keamanan. Opsi kedua salah karena 'have to break into my car' berarti 'harus membobol mobilku sendiri' dan penggunaan 'have to' dengan 'the other day' tidak cocok secara tenses. Opsi ketiga salah secara gramatikal karena 'had been breaking' tidak menyampaikan makna pasif yang tepat."
         }
       ]
     },

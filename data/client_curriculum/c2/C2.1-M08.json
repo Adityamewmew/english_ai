@@ -25,38 +25,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Language, Cryptography & Concession\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan relative clause dengan determiner secara tepat untuk merujuk pada keseluruhan atau sebagian kelompok?",
           "options": [
-            "Relative clauses dengan determiners dan prepositions: 'all of which', 'many of whom', '...",
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Pola ini hanya boleh digunakan dalam situasi santai"
+            "The archaeologists discovered several inscriptions, all of which had been carved by ancient scribes.",
+            "The archaeologists discovered several inscriptions, which all had been carved by ancient scribes.",
+            "The archaeologists discovered several inscriptions, that all of which had been carved by ancient scribes."
           ],
           "correctIndex": 0,
-          "explanation": "Kaidah inti topik ini: Unit ini membahas tentang kode dan bahasa dari perspektif linguistik dan kriptografi."
+          "explanation": "Opsi pertama benar karena menggunakan pola 'all of which' sebagai relative clause dengan determiner yang tepat untuk merujuk pada keseluruhan kelompok ('several inscriptions'). Opsi kedua salah karena menempatkan 'all' setelah 'which' tanpa preposisi 'of', sehingga strukturnya tidak sesuai pola determiner + of + relative pronoun. Opsi ketiga salah karena menambahkan 'that' secara tidak perlu sebelum 'all of which', yang membuat kalimat tidak gramatikal."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Perhatikan jebakan umum pada materi \"Language, Cryptography & Concession\". Manakah kalimat yang SUDAH TEPAT?",
+          "prompt": "Salah satu kesalahan umum adalah penggunaan 'however' yang tidak tepat. Manakah kalimat berikut yang menggunakan 'however' sebagai concessive conjunction (kata hubung konsesi) dengan struktur yang benar?",
           "options": [
-            "They found ancient scripts",
-            "which they learned had been written by priests",
-            "They found ancient scripts"
+            "However, hard she studied the ancient text, she managed to decipher it eventually.",
+            "However hard she studied the ancient text, she couldn't fully decipher it.",
+            "However she studied hard the ancient text, she couldn't fully decipher it."
           ],
-          "correctIndex": 0,
-          "explanation": "Pemula sering lupa menambahkan prepositions atau determiners sebelum relative pronouns ketika ingin merujuk pada keseluruhan atau sebagian kelompok. Mereka juga sering salah menempatkan 'however' di awal kalimat tanpa memahami strukturnya sebagai concessive conjunction."
+          "correctIndex": 1,
+          "explanation": "Opsi kedua benar karena mengikuti pola concessive conjunction: 'however' + adjective/adverb ('hard') + subject + verb, yang berarti 'sekeras apapun dia mempelajari teks kuno itu, dia tidak bisa sepenuhnya menguraikannya.' Opsi pertama salah karena tanda koma setelah 'however' membuatnya berfungsi sebagai conjunctive adverb (penghubung antarkalimat), bukan concessive conjunction, dan maknanya menjadi tidak konsisten. Opsi ketiga salah karena 'hard' tidak langsung mengikuti 'however', melainkan ditempatkan setelah 'studied', sehingga strukturnya tidak gramatikal sebagai concessive clause."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"I tried to be a bit afraid to say something I think like in the foreign language. I can be a lot more assertive and forceful in my own language.\"\nMarco: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut tentang hambatan bahasa saat bepergian. Isilah bagian [...] dengan respons yang paling tepat dan natural.\n\nMarco: \"When you travel, there's sometimes a language barrier but people can communicate through gestures and facial expressions.\"\nSarah: \"That's true. Last time I was in Japan, [...].\"\n\nManakah pilihan yang paling sesuai untuk mengisi bagian tersebut?",
           "options": [
-            "Sorry, I forgot my keys at home.",
-            "They found ancient scripts",
-            "I feel really self-conscious if I speak another language, because everyone is listening and thinking I'm making mistakes all the time."
+            "I didn't quite get what people were saying, but their body language helped me understand their intentions",
+            "I wasn't understanding nothing they said and I couldn't make communication with anyone at all",
+            "I have not been familiar to understand what they explain so I was giving up immediately"
           ],
-          "correctIndex": 2,
-          "explanation": "Respon \"I feel really self-conscious if I speak another language, because everyone is listening and thinking I'm making mistakes all the time.\" (\"Saya merasa sangat malu jika berbicara bahasa lain, karena semua orang mendengarkan dan berpikir saya terus membuat kesalahan.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Marco."
+          "correctIndex": 0,
+          "explanation": "Opsi pertama benar karena menggunakan ungkapan 'I didn't quite get what people were saying' (cara sopan mengungkapkan ketidakpahaman sesuai modul) dan menyambungkannya secara natural dengan konsep 'body language' yang membantu komunikasi, sesuai konteks percakapan Marco tentang gestures dan ekspresi wajah. Opsi kedua salah karena menggunakan double negative ('wasn't understanding nothing') yang tidak gramatikal dan 'make communication' bukan kolokasi yang tepat. Opsi ketiga salah karena 'familiar to understand' bukan struktur yang benar (seharusnya 'familiar with') dan 'giving up immediately' tidak sesuai konteks percakapan yang membahas cara mengatasi hambatan bahasa."
         }
       ]
     },

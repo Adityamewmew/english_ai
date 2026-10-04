@@ -26,38 +26,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Inversion with Negative Adverbials & Science\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan modal verb dengan benar untuk berspekulasi tentang kejadian di masa lalu?",
           "options": [
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Untuk spekulasi kemungkinan masa lalu: might have + past participle, may have + past pa...",
-            "Pola ini hanya boleh digunakan dalam situasi santai"
+            "The astronaut must have forgotten to secure the hatch before the launch.",
+            "The astronaut must forget to secure the hatch before the launch yesterday.",
+            "The astronaut must had forgotten to secure the hatch before the launch."
           ],
-          "correctIndex": 1,
-          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara berspekulasi (speculating) menggunakan modal verbs untuk kejadian masa lalu, sekarang, dan masa depan."
+          "correctIndex": 0,
+          "explanation": "Untuk berspekulasi tentang masa lalu dengan tingkat kepastian tinggi, kita menggunakan pola 'must have + past participle'. Opsi pertama ('must have forgotten') mengikuti pola ini dengan benar. Opsi kedua salah karena menggunakan 'must forget' (bentuk dasar, bukan spekulasi masa lalu). Opsi ketiga salah karena menggunakan 'must had' — setelah modal verb, kita selalu menggunakan 'have', bukan 'had'."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Perhatikan jebakan umum pada materi \"Inversion with Negative Adverbials & Science\". Manakah kalimat yang SUDAH TEPAT?",
+          "prompt": "Salah satu kesalahan umum adalah lupa menggunakan 'have + past participle' setelah modal verb saat berspekulasi tentang masa lalu. Manakah kalimat berikut yang BENAR untuk menyatakan spekulasi bahwa Sunita Williams mungkin membawa wasabi ke stasiun luar angkasa pada tahun 2007?",
           "options": [
-            "They might visit us yesterday. (Salah - 'visit' adalah bentuk dasar",
-            "They might have visited us yesterday. (Benar - menggunakan 'might have + past participle' untuk spekulasi masa lalu)",
-            "bukan past speculation)"
+            "Sunita Williams might bring wasabi to the space station in 2007.",
+            "Sunita Williams might have brought wasabi to the space station in 2007.",
+            "Sunita Williams might has brought wasabi to the space station in 2007."
           ],
           "correctIndex": 1,
-          "explanation": "Pemula sering lupa menggunakan 'have + past participle' setelah modal verbs ketika berspekulasi tentang masa lalu. Mereka hanya menggunakan modal + verb biasa, yang sebenarnya untuk masa sekarang/masa depan."
+          "explanation": "Karena kejadian tersebut terjadi di masa lalu (tahun 2007), kita harus menggunakan pola 'might have + past participle' (might have brought). Opsi pertama salah karena 'might bring' adalah spekulasi untuk masa sekarang/depan, bukan masa lalu. Opsi ketiga salah karena setelah modal verb harus diikuti 'have' (bare infinitive), bukan 'has'."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nJulie: \"We sleep very well in space. Can you imagine? You have a sleeping bag each, and when you get into it you float in the sleeping bag.\"\nTracy: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut tentang kehidupan di luar angkasa. Isilah bagian yang kosong [...] dengan respons yang paling tepat dan alami.\n\nTracy: \"The trips to and from the station can be a bit rough. I've heard it described as a train wreck followed by a car crash.\"\nJulie: \"That's true! After she flew home on one herself, she reported it was incredibly intense. [...]\"",
           "options": [
-            "They might visit us yesterday. (Salah - 'visit' adalah bentuk dasar",
-            "Sorry, I forgot my keys at home.",
-            "Free-floating in the space station can be quite enjoyable, but the trips to and from the station can be a bit rough. I've heard it described as a train wreck followed by a car crash followed by falling off your bike."
+            "She can't have been disappointed — it was every bit as rough as they said!",
+            "She can be disappointed — it was every bit as rough as they said!",
+            "She can't disappoint — it was every bit as rough as they said!"
           ],
-          "correctIndex": 2,
-          "explanation": "Respon \"Free-floating in the space station can be quite enjoyable, but the trips to and from the station can be a bit rough. I've heard it described as a train wreck followed by a car crash followed by falling off your bike.\" (\"Melayang bebas di stasiun luar angkasa bisa sangat menyenangkan, tapi perjalanan ke dan dari stasiun bisa cukup kasar. Aku pernah mendengarnya digambarkan seperti kecelakaan kereta diikuti kecelakaan mobil lalu jatuh dari sepeda.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Tracy."
+          "correctIndex": 0,
+          "explanation": "Konteks percakapan menunjukkan bahwa pengalaman tersebut memang benar-benar kasar seperti yang digambarkan, sehingga Julie ingin menyatakan spekulasi masa lalu bahwa astronot tersebut 'pasti tidak kecewa' (karena memang sesuai ekspektasi). Pola 'can't have been disappointed' menggunakan 'can't have + past participle' untuk menyatakan kepastian negatif tentang masa lalu. Opsi kedua salah karena 'can be disappointed' adalah bentuk masa sekarang dan maknanya terbalik. Opsi ketiga salah karena 'can't disappoint' bukan spekulasi masa lalu dan subjeknya tidak sesuai konteks."
         }
       ]
     },

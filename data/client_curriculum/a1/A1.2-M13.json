@@ -29,38 +29,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Evaluasi Komprehensif 4 Keterampilan\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan bentuk lampau (simple past) kata kerja tak beraturan (irregular verbs) dengan benar?",
           "options": [
-            "Listening Comprehension: Dengarkan audio atau baca transkrip dengan seksama, fokus pada...",
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Tenses dan susunan subjek tidak perlu diperhatikan"
+            "Yesterday, I went to the market and bought some apples.",
+            "Yesterday, I goed to the market and buyed some apples.",
+            "Yesterday, I go to the market and buy some apples."
           ],
           "correctIndex": 0,
-          "explanation": "Kaidah inti topik ini: Ujian kelulusan ini mengevaluasi kemampuan Anda dalam empat keterampilan bahasa Inggris: mendengarkan, membaca, menulis, dan berbicara."
+          "explanation": "Pilihan pertama benar karena 'went' adalah bentuk lampau dari 'go' dan 'bought' adalah bentuk lampau dari 'buy'. Keduanya adalah irregular verbs yang tidak mengikuti aturan penambahan -ed. Pilihan kedua salah karena 'goed' dan 'buyed' bukan bentuk yang benar. Pilihan ketiga salah karena menggunakan bentuk present, bukan past tense."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Perhatikan jebakan umum pada materi \"Evaluasi Komprehensif 4 Keterampilan\". Manakah kalimat yang SUDAH TEPAT?",
+          "prompt": "Banyak siswa melakukan kesalahan dengan menggunakan bentuk reguler (-ed) untuk kata kerja tak beraturan (irregular verbs) dalam kalimat lampau. Manakah kalimat berikut yang BENAR dan bebas dari kesalahan tersebut?",
           "options": [
-            "I goed to the market and buyed some apples",
-            "Yesterday",
-            "Yesterday"
+            "She drinked her medicine and then sleeped for two hours.",
+            "She drank her medicine and then sleeped for two hours.",
+            "She drank her medicine and then slept for two hours."
           ],
-          "correctIndex": 1,
-          "explanation": "Banyak siswa terburu-buru membaca soal dan tidak memperhatikan detail kecil. Dalam listening, mereka sering melewatkan kata kunci penting. Dalam grammar, kesalahan umum adalah menggunakan bentuk reguler untuk irregular verbs atau lupa menambahkan 's' pada kata kerja present tense untuk subjek he/she/it."
+          "correctIndex": 2,
+          "explanation": "Pilihan ketiga benar karena 'drank' adalah bentuk lampau yang tepat dari 'drink' dan 'slept' adalah bentuk lampau yang tepat dari 'sleep'. Keduanya adalah irregular verbs. Pilihan pertama salah karena 'drinked' dan 'sleeped' bukan bentuk yang benar. Pilihan kedua masih salah karena meskipun 'drank' sudah benar, 'sleeped' seharusnya 'slept'."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSarah: \"Excuse me, I'm not feeling well. Is there a pharmacy near here?\"\nOfficer: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut. Sarah sedang bertanya arah ke apotek kepada seorang petugas. Isilah bagian yang kosong [...] dengan respons yang paling tepat dan natural.\n\nSarah: \"Excuse me, I'm not feeling well. Is there a pharmacy near here?\"\nOfficer: \"Yes, there's one just two blocks away. [...]\"\nSarah: \"Turn right at the traffic light. Got it. How long does it take to walk there?\"",
           "options": [
-            "Yes, there's one just two blocks away. Go straight ahead, then turn right at the traffic light.",
-            "Sorry, I forgot my keys at home.",
-            "Yesterday"
+            "Go straight ahead, then turn right at the traffic light.",
+            "You should taking the bus to go to the pharmacy.",
+            "The pharmacy is open every day from morning."
           ],
           "correctIndex": 0,
-          "explanation": "Respon \"Yes, there's one just two blocks away. Go straight ahead, then turn right at the traffic light.\" (\"Ya, ada satu yang hanya dua blok dari sini. Jalan lurus ke depan, lalu belok kanan di lampu lalu lintas.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Officer."
+          "explanation": "Pilihan pertama benar karena sesuai dengan konteks percakapan: Sarah bertanya arah, dan petugas memberikan petunjuk jalan yang jelas ('Go straight ahead, then turn right at the traffic light'). Ini juga cocok dengan respons Sarah selanjutnya yang mengulang instruksi 'Turn right at the traffic light'. Pilihan kedua salah secara tata bahasa ('should taking' seharusnya 'should take') dan tidak sesuai konteks. Pilihan ketiga tidak menjawab pertanyaan tentang arah."
         }
       ]
     },

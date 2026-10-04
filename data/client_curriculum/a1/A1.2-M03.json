@@ -28,38 +28,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Ordering Food & Drinks\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan pola sopan 'I would like' atau 'Could I have' dengan benar untuk memesan makanan atau minuman di restoran?",
           "options": [
-            "Gunakan 'I would like' + noun/infinitive untuk memesan dengan sopan. Formula: I would l...",
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Tenses dan susunan subjek tidak perlu diperhatikan"
+            "Could I have a chicken sandwich, please?",
+            "Could I like a chicken sandwich, please?",
+            "I would have a chicken sandwich, please?"
           ],
           "correctIndex": 0,
-          "explanation": "Kaidah inti topik ini: Saat makan di restoran atau kafe, kita perlu menggunakan bahasa yang sopan untuk memesan makanan dan minuman."
+          "explanation": "Pilihan pertama benar karena menggunakan pola 'Could I have + a/an/some + item' yang merupakan cara sopan untuk memesan di restoran. Pilihan kedua salah karena mencampurkan 'Could I' dengan 'like' (seharusnya 'Could I have' atau 'I would like'). Pilihan ketiga salah karena mencampurkan 'I would' dengan 'have' dalam bentuk pertanyaan, yang bukan pola yang tepat untuk memesan."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Perhatikan jebakan umum pada materi \"Ordering Food & Drinks\". Manakah kalimat yang SUDAH TEPAT?",
+          "prompt": "Saat memesan makanan di restoran berbahasa Inggris, banyak pemula menggunakan ungkapan yang terdengar kurang sopan. Manakah kalimat berikut yang paling sopan dan tepat digunakan kepada pelayan?",
           "options": [
-            "I want a chicken sandwich always",
-            "I would like a chicken sandwich",
-            "I want a chicken sandwich"
+            "I want some orange juice.",
+            "Give me some orange juice.",
+            "I would like some orange juice, please."
           ],
-          "correctIndex": 1,
-          "explanation": "Banyak pemula langsung menggunakan 'I want' yang terdengar kurang sopan atau terlalu langsung dalam konteks restoran formal. Dalam bahasa Inggris, terutama saat berbicara dengan pelayan atau di tempat umum, menggunakan 'I want' dianggap kasar."
+          "correctIndex": 2,
+          "explanation": "Pilihan ketiga benar karena menggunakan 'I would like' yang sopan dan ditambah 'please' di akhir kalimat. Pilihan pertama ('I want') terdengar terlalu langsung dan kurang sopan dalam konteks restoran. Pilihan kedua ('Give me') terdengar seperti perintah dan sangat tidak sopan saat berbicara dengan pelayan."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nWaiter: \"Good afternoon! Are you ready to order?\"\nSarah: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut di sebuah restoran:\n\nWaiter: \"Good afternoon! Are you ready to order?\"\nSarah: \"Yes, I would like a chicken sandwich, please.\"\nWaiter: \"Great choice! And what would you like to drink?\"\nSarah: \"[...]\"\n\nPelayan bertanya apa yang ingin Sarah minum. Manakah respons yang paling tepat dan sopan untuk mengisi bagian [...] tersebut?",
           "options": [
-            "Yes, I would like a chicken sandwich, please.",
-            "Sorry, I forgot my keys at home.",
-            "I want a chicken sandwich"
+            "I want orange juice now.",
+            "Could I have some orange juice, please?",
+            "I would like ordering some orange juice."
           ],
-          "correctIndex": 0,
-          "explanation": "Respon \"Yes, I would like a chicken sandwich, please.\" (\"Ya, saya ingin roti lapis ayam, tolong.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Sarah."
+          "correctIndex": 1,
+          "explanation": "Pilihan kedua benar karena menggunakan pola 'Could I have + some + item + please?' yang sopan dan sesuai konteks percakapan di restoran. Pilihan pertama salah karena menggunakan 'I want' yang kurang sopan dan kata 'now' yang terkesan tidak sabar. Pilihan ketiga salah karena setelah 'I would like' seharusnya langsung diikuti kata benda (noun), bukan 'ordering' (verb-ing)."
         }
       ]
     },

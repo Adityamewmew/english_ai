@@ -26,38 +26,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Aesthetics, Perception & Modals\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan substitusi modal (modal substitution) dengan benar untuk menghindari pengulangan kata benda?",
           "options": [
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "**Substitusi dengan 'one/ones'**: Ganti kata benda tunggal dengan 'one' dan jamak denga...",
-            "Tenses dan susunan subjek tidak perlu diperhatikan"
+            "The paintings in the Louvre are far more captivating than the paintings in the local gallery.",
+            "The paintings in the Louvre are far more captivating than those in the local gallery.",
+            "The paintings in the Louvre are far more captivating than it in the local gallery."
           ],
           "correctIndex": 1,
-          "explanation": "Kaidah inti topik ini: Unit ini membahas konsep keindahan dari berbagai perspektif—fisik, alam, seni, dan emosi."
+          "explanation": "Pilihan kedua benar karena 'those' digunakan sebagai substitusi untuk kata benda jamak 'the paintings', sehingga menghindari pengulangan. Pilihan pertama mengulang 'the paintings' secara tidak efisien, dan pilihan ketiga salah karena 'it' adalah kata ganti tunggal yang tidak cocok menggantikan kata benda jamak 'paintings'."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Aesthetics, Perception & Modals\"?",
+          "prompt": "Salah satu kesalahan umum dalam substitusi modal adalah tidak mencocokkan bentuk substitusi dengan jenis kata yang diganti. Manakah kalimat berikut yang menggunakan substitusi dengan tepat setelah kata kerja 'believe'?",
           "options": [
-            "I like the red dress better than the blue one",
-            "I like the red dress better than the blue dress. (pengulangan tidak efisien)",
-            "Will it rain tomorrow? I believe it. (harusnya 'so'"
+            "Will the exhibition be worth visiting? I believe so.",
+            "Will the exhibition be worth visiting? I believe one.",
+            "Will the exhibition be worth visiting? I believe it."
           ],
           "correctIndex": 0,
-          "explanation": "Pemula sering lupa mencocokkan bentuk substitusi dengan jenis kata yang diganti. 'One/ones' hanya untuk kata benda, 'so' untuk klausa, 'do' untuk kata kerja."
+          "explanation": "Pilihan pertama benar karena 'so' digunakan untuk menggantikan seluruh klausa ('the exhibition will be worth visiting') setelah kata kerja seperti believe, think, dan hope. 'One' hanya digunakan untuk menggantikan kata benda tunggal, dan 'it' tidak lazim digunakan sebagai substitusi klausa setelah 'believe' dalam konteks ini."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nPeter: \"What about you, James?\"\nJames: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut. Peter mengajak Matt bermain lagi. Isilah bagian yang kosong dengan respons yang paling tepat dan alami.\n\nPeter: \"Do you fancy another game, Matt?\"\nMatt: \"[...]\"",
           "options": [
-            "I like the red dress better than the blue dress. (pengulangan tidak efisien)",
-            "Sorry, there is not enough time. I have got to finish my homework.",
-            "Sorry, I forgot my keys at home."
+            "I would love one.",
+            "I would love game.",
+            "I would love to one."
           ],
-          "correctIndex": 1,
-          "explanation": "Respon \"Sorry, there is not enough time. I have got to finish my homework.\" (\"Maaf, waktu tidak cukup. Aku harus menyelesaikan PR.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh James."
+          "correctIndex": 0,
+          "explanation": "Pilihan pertama benar karena 'one' digunakan sebagai substitusi untuk kata benda tunggal 'game', dan ellipsis diterapkan secara alami ('I would love one' = 'I would love another game'). Pilihan kedua salah karena 'game' tanpa artikel atau determiner tidak gramatikal. Pilihan ketiga salah karena 'to one' menggabungkan ellipsis infinitif ('to') dengan substitusi kata benda ('one') secara tidak tepat."
         }
       ]
     },

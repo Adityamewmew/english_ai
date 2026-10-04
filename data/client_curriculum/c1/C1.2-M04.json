@@ -30,38 +30,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Advanced Subjunctive Mood & Formulaic Legal Registers\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menerapkan struktur subjunctive formulaik dengan benar dalam register hukum formal?",
           "options": [
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Formulaic subjunctive dengan inversi: Be that as it may / Come what may / Suffice it to..."
+            "The tribunal recommends that the defendant attends all scheduled hearings notwithstanding prior commitments.",
+            "It is imperative that the defendant attend all scheduled hearings, notwithstanding any prior commitments.",
+            "The tribunal is recommending that the defendant will attend all scheduled hearings notwithstanding prior commitments."
           ],
-          "correctIndex": 2,
-          "explanation": "Kaidah inti topik ini: Subjunctive mood dalam bahasa Inggris tingkat mahir mencakup struktur formulaik yang sangat spesifik untuk register hukum, protokol diplomatik, dan wacana formal tingkat tinggi."
+          "correctIndex": 1,
+          "explanation": "Pilihan kedua benar karena menggunakan mandative subjunctive dengan pola 'It is imperative that + subject + bare infinitive (attend, bukan attends atau will attend)' sesuai dengan register hukum formal. Pilihan pertama salah karena menggunakan 'attends' (indicative), dan pilihan ketiga salah karena menggunakan 'will attend' yang tidak sesuai dengan struktur subjunctive."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "prompt": "Kesalahan umum pelajar C1 adalah menggunakan subjunctive formulaik dalam konteks yang terlalu kasual sehingga terdengar tidak natural. Manakah kalimat berikut yang menggunakan ekspresi subjunctive formulaik dalam konteks yang tepat dan natural?",
           "options": [
-            "I think we should maybe reschedule the team meeting for next week if everyone's available",
-            "Come what may",
-            "The Board resolves that the annual audit be completed by fiscal year-end"
+            "Come what may, I'll probably grab some coffee after this casual team catch-up.",
+            "Be that as it may, could you maybe forward me that email about the office party?",
+            "The Court hereby orders that all evidence be preserved, come what may, pending the conclusion of the investigation."
           ],
           "correctIndex": 2,
-          "explanation": "Pelajar C1 sering menggunakan subjunctive formulaik dalam konteks yang terlalu kasual, atau mencampur register formal-arkais dengan struktur modern sehingga terdengar tidak natural. Subjunctive formulaik harus dibatasi pada legal drafting, ceremonial speech, atau academic writing formal—penggunaan dalam email bisnis biasa atau presentasi informal justru terkesan bombastic dan tidak profesional."
+          "explanation": "Pilihan ketiga benar karena ekspresi formulaik 'come what may' digunakan dalam konteks legal drafting (perintah pengadilan) yang sesuai dengan register formal tinggi. Pilihan pertama dan kedua salah karena menggunakan subjunctive formulaik dalam konteks kasual sehari-hari (ngobrol santai, email informal), yang justru terkesan bombastic dan tidak profesional."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSenior Drafter: \"When drafting this provision, it's imperative that the verb form remain in the subjunctive throughout. We write 'that each Member State ensure compliance,' not 'ensures.'\"\nJunior Associate: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut antara Senior Drafter dan Junior Associate saat menyusun dokumen hukum:\n\nJunior Associate: \"In this emergency powers clause, how should I phrase the obligation for Member States?\"\nSenior Drafter: \"[...]\"\n\nManakah respons yang paling tepat dan natural untuk mengisi bagian [...] dalam konteks penyusunan dokumen hukum formal?",
           "options": [
-            "Come what may",
-            "Sorry, I forgot my keys at home.",
-            "I understand the mandative subjunctive for obligations, but what about the formulaic expressions? When should I use 'be that as it may' versus a simple concession clause?"
+            "Just write 'each Member State should try to ensure compliance' — it sounds formal enough for legal documents.",
+            "Write 'that each Member State ensure compliance,' using the mandative subjunctive. Lest there be any ambiguity, avoid the indicative 'ensures' in statutory language.",
+            "You can write 'each Member State is ensuring compliance' since the progressive tense makes it sound more authoritative in legal texts."
           ],
-          "correctIndex": 2,
-          "explanation": "Respon \"I understand the mandative subjunctive for obligations, but what about the formulaic expressions? When should I use 'be that as it may' versus a simple concession clause?\" (\"Saya memahami mandative subjunctive untuk kewajiban, tetapi bagaimana dengan ekspresi formulaik? Kapan saya harus menggunakan 'be that as it may' dibanding klausa konsesi sederhana?\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Junior Associate."
+          "correctIndex": 1,
+          "explanation": "Pilihan kedua benar karena menggunakan mandative subjunctive ('ensure,' bukan 'ensures') sesuai dengan konteks legal drafting, dan juga menerapkan 'lest there be' (purposive subjunctive) secara tepat. Pilihan pertama salah karena 'should try to ensure' terlalu lemah dan kasual untuk bahasa hukum. Pilihan ketiga salah karena progressive tense ('is ensuring') tidak lazim dalam statutory language dan tidak mencerminkan kewajiban hukum yang tegas."
         }
       ]
     },

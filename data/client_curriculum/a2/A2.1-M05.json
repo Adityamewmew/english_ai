@@ -27,38 +27,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Homes, Furniture & Past Continuous\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan Past Simple (negatif) dengan benar sesuai aturan: Subject + didn't + base verb?",
           "options": [
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Past Simple (Regular Verbs) - Positif: Subject + verb-ed. Contoh: They started building..."
+            "We didn't visited all of the houses last weekend.",
+            "We didn't visit all of the houses last weekend.",
+            "We don't visit all of the houses last weekend."
           ],
-          "correctIndex": 2,
-          "explanation": "Kaidah inti topik ini: Unit ini mengajarkan cara berbicara tentang rumah, ruangan, dan perabotan dalam bahasa Inggris."
+          "correctIndex": 1,
+          "explanation": "Bentuk Past Simple negatif yang benar adalah 'didn't + base verb' (kata kerja bentuk dasar tanpa -ed). Opsi pertama salah karena menggunakan 'visited' setelah 'didn't'. Opsi ketiga salah karena menggunakan 'don't' (present) padahal konteksnya masa lalu ('last weekend')."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "prompt": "Perhatikan jebakan umum tentang adjective berakhiran -ed dan -ing. Manakah kalimat yang BENAR untuk menggambarkan perasaan seseorang yang merasa tertarik dengan sejarah kota Pompeii?",
           "options": [
-            "I'm boring when I wait for the bus",
-            "I'm boring when I wait for the bus always",
-            "I'm bored when I wait for the bus. (karena yang merasa bosan adalah 'I'"
+            "I was interesting in the history of Pompeii.",
+            "I was interested in the history of Pompeii.",
+            "The history of Pompeii made me feel interesting."
           ],
-          "correctIndex": 2,
-          "explanation": "Pemula sering bingung kapan menggunakan adjective berakhiran -ed atau -ing. Ingat: -ed untuk perasaan orang (interested, bored, amazed), -ing untuk sifat benda/situasi yang menyebabkan perasaan itu (interesting, boring, amazing)."
+          "correctIndex": 1,
+          "explanation": "Untuk menggambarkan perasaan seseorang, gunakan adjective berakhiran -ed. 'I was interested' berarti 'saya merasa tertarik'. Opsi pertama salah karena 'interesting' menggambarkan sifat benda, bukan perasaan orang. Opsi ketiga juga salah karena 'interesting' berarti 'menarik (sifat)', bukan 'merasa tertarik'."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSophie: \"Home is where I feel safe and comfortable.\"\nJames: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut tentang rumah dan perabotan. Lengkapi bagian yang kosong dengan jawaban yang paling tepat dan alami.\n\nSophie: \"What do you think about our new living room?\"\nJames: \"[...] The armchair is quite comfortable and I love the new curtains.\"",
           "options": [
-            "Sorry, I forgot my keys at home.",
-            "I'm boring when I wait for the bus",
-            "For me, home is somewhere I can relax and be myself."
+            "I really like it! It feels very cosy now.",
+            "I didn't liked it. The room is quite boring.",
+            "I look after the living room yesterday."
           ],
-          "correctIndex": 2,
-          "explanation": "Respon \"For me, home is somewhere I can relax and be myself.\" (\"Bagi saya, rumah adalah suatu tempat di mana saya bisa santai dan menjadi diri sendiri.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh James."
+          "correctIndex": 0,
+          "explanation": "Opsi pertama paling tepat karena James memberikan respons positif yang sesuai dengan kalimat selanjutnya yang memuji kursi dan tirai baru, serta menggunakan modifier 'really' dan 'very' dengan benar. Opsi kedua salah secara tata bahasa ('didn't liked' seharusnya 'didn't like') dan tidak konsisten dengan komentar positif setelahnya. Opsi ketiga tidak relevan dengan konteks percakapan tentang pendapat mengenai ruang tamu."
         }
       ]
     },

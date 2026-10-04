@@ -25,38 +25,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Justice, Ethics & Relative Structures\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menerapkan negative inversion (pembalikan subjek-auxiliary setelah ekspresi negatif) dengan benar?",
           "options": [
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Negative Inversion: Ketika kalimat diawali ekspresi negatif (never, not only, no sooner..."
+            "Not only were they convicted, but they also spent years in prison.",
+            "Not only they were convicted, but they also spent years in prison.",
+            "Not only they had been convicted, but also they spent years in prison."
           ],
-          "correctIndex": 2,
-          "explanation": "Kaidah inti topik ini: Unit ini membahas topik keadilan sosial dan kesalahan sistem hukum melalui kasus nyata seperti Sally Clark, Rubin Carter, dan Guildford Four."
+          "correctIndex": 0,
+          "explanation": "Dalam negative inversion, setelah ekspresi negatif seperti 'Not only' di awal kalimat, urutan kata harus dibalik menjadi pola pertanyaan: auxiliary verb + subject. Jadi 'Not only were they convicted...' adalah bentuk yang benar, bukan 'Not only they were...' yang menggunakan urutan pernyataan biasa."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Perhatikan jebakan umum pada materi \"Justice, Ethics & Relative Structures\". Manakah kalimat yang SUDAH TEPAT?",
+          "prompt": "Kesalahan umum dalam negative inversion adalah lupa membalik urutan subjek dan auxiliary verb. Manakah kalimat berikut yang menggunakan negative inversion dengan urutan kata yang BENAR?",
           "options": [
-            "Never have I seen such injustice",
-            "Not only they were innocent but they also were tortured",
-            "Never I have seen such injustice"
+            "Rarely can we see such miscarriages of justice in a democratic society.",
+            "Under no circumstances they could have committed the crime without being noticed.",
+            "Never I have read about such a disturbing case of wrongful imprisonment."
           ],
           "correctIndex": 0,
-          "explanation": "Pemula sering lupa membalik urutan subjek dan auxiliary verb setelah ekspresi negatif, atau malah menggunakan bentuk normal. Ingat: setelah kata negatif di awal kalimat, gunakan pola pertanyaan (auxiliary + subject), bukan pola pernyataan biasa"
+          "explanation": "Kalimat pertama benar karena setelah 'Rarely' urutan kata dibalik menjadi 'can we' (auxiliary + subject). Opsi kedua salah karena seharusnya 'Under no circumstances could they have committed...'. Opsi ketiga salah karena seharusnya 'Never have I read...' — auxiliary 'have' harus mendahului subjek 'I'."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nSteve: \"Look it! Stole! And he's been found guilty. But he only got a five-year sentence. Apparently, he took loads of money over a long time and left over 100 people with no jobs for the future.\"\nMichelle: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut tentang ketidakadilan dalam sistem hukum. Isilah bagian [...] dengan respons yang paling tepat dan natural.\n\nSteve: \"He stole millions and left over 100 people jobless, but he only got a five-year sentence!\"\nMichelle: \"[...]\"",
           "options": [
-            "Sorry, I forgot my keys at home.",
-            "Yes. And you know, I think maybe he didn't get a more severe sentence because he's rich and could afford the best lawyers. That happens quite a lot of the time.",
-            "Never I have seen such injustice"
+            "Only when you look at it that way does it seem truly outrageous — he could afford the best lawyers, and that made all the difference.",
+            "Only when you look at it that way it seems truly outrageous — he could afford the best lawyers, and that made all the difference.",
+            "When only you look at it that way does it seem truly outrageous — he could afford the best lawyers, and that made all the difference."
           ],
-          "correctIndex": 1,
-          "explanation": "Respon \"Yes. And you know, I think maybe he didn't get a more severe sentence because he's rich and could afford the best lawyers. That happens quite a lot of the time.\" (\"Benar. Dan kamu tahu, saya pikir mungkin dia tidak mendapat hukuman lebih berat karena dia kaya dan mampu membayar pengacara terbaik. Itu sering terjadi.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Michelle."
+          "correctIndex": 0,
+          "explanation": "Opsi pertama benar karena menggunakan pola 'Only when + clause + auxiliary + subject + verb' dengan tepat: 'Only when you look at it that way does it seem...'. Opsi kedua salah karena tidak membalik urutan subjek-auxiliary setelah 'Only when' di awal kalimat. Opsi ketiga salah karena posisi 'only' harus di awal sebelum 'when', bukan setelahnya."
         }
       ]
     },

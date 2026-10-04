@@ -26,38 +26,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Ways of Referring to Future & Optimism\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan future perfect dengan benar untuk menyatakan bahwa suatu aksi akan selesai sebelum waktu tertentu di masa depan?",
           "options": [
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Future Continuous: will + be + verb-ing. Digunakan untuk aksi yang sedang berlangsung d...",
-            "Pola ini hanya boleh digunakan dalam situasi santai"
+            "By the time we arrive at the resort, the snow will have covered the entire mountain.",
+            "By the time we arrive at the resort, the snow will be covering the entire mountain.",
+            "By the time we arrive at the resort, the snow will cover the entire mountain."
           ],
-          "correctIndex": 1,
-          "explanation": "Kaidah inti topik ini: Unit ini membahas cara-cara merujuk ke masa depan dalam bahasa Inggris, khususnya future continuous dan future perfect."
+          "correctIndex": 0,
+          "explanation": "Kalimat pertama menggunakan future perfect (will + have + past participle) dengan benar untuk menunjukkan bahwa aksi 'menutupi gunung dengan salju' akan sudah selesai sebelum waktu kedatangan. Opsi kedua menggunakan future continuous yang menekankan proses sedang berlangsung, bukan penyelesaian. Opsi ketiga menggunakan future simple yang tidak menekankan bahwa aksi sudah selesai sebelum titik waktu tertentu."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Di antara pilihan berikut, manakah kalimat yang menggunakan tata bahasa baku yang tepat?",
+          "prompt": "Perhatikan konteks berikut: seseorang menggambarkan apa yang sedang ia lakukan pada waktu tertentu besok. Manakah kalimat yang paling tepat dan menghindari kesalahan umum penggunaan future simple vs future continuous?",
           "options": [
-            "At 3 PM tomorrow",
-            "At 3 PM tomorrow",
-            "I will finish my homework"
+            "This time tomorrow, I will sit in the exam hall writing my final paper.",
+            "This time tomorrow, I will have sat in the exam hall writing my final paper.",
+            "This time tomorrow, I will be sitting in the exam hall writing my final paper."
           ],
-          "correctIndex": 0,
-          "explanation": "Pemula sering menggunakan future simple (will + verb) padahal konteksnya membutuhkan future continuous untuk menunjukkan aksi yang sedang berlangsung di waktu tertentu di masa depan. Future continuous memberi nuansa bahwa aksi tersebut sedang dalam proses, bukan hanya akan terjadi."
+          "correctIndex": 2,
+          "explanation": "Ketika menggambarkan aksi yang sedang berlangsung pada waktu tertentu di masa depan ('this time tomorrow'), kita harus menggunakan future continuous (will + be + verb-ing). Opsi pertama salah karena menggunakan future simple yang tidak menunjukkan aksi sedang dalam proses. Opsi kedua salah karena future perfect menunjukkan aksi yang sudah selesai, bukan sedang berlangsung."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLiam: \"Anyway, there's a photo competition next month at school that I'm thinking of entering. First prize is a tablet. I think I've got a really good shot.\"\nEmma: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut. Liam bercerita tentang rencana masa depannya. Isilah bagian [...] dengan respons yang paling natural dan sesuai konteks.\n\nLiam: \"I'm thinking of entering the photo competition next month. First prize is a tablet. I think I've got a really good shot.\"\nEmma: \"That's great. Go for it.\"\nNicole: \"[...]\"",
           "options": [
-            "At 3 PM tomorrow",
-            "That's great. Go for it.",
-            "Sorry, I forgot my keys at home."
+            "By the time the competition starts, you will have practiced enough to win!",
+            "By the time the competition starts, you will be practiced enough to win!",
+            "By the time the competition starts, you will have been practice enough to win!"
           ],
-          "correctIndex": 1,
-          "explanation": "Respon \"That's great. Go for it.\" (\"Itu bagus. Ayo lakukan saja.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Emma."
+          "correctIndex": 0,
+          "explanation": "Opsi pertama menggunakan future perfect (will + have + past participle) dengan benar untuk menyatakan bahwa latihan Liam akan sudah cukup sebelum kompetisi dimulai, sekaligus mengekspresikan optimisme. Opsi kedua salah karena 'will be practiced' bukan struktur yang tepat dalam konteks ini. Opsi ketiga salah secara gramatikal karena 'have been practice' tidak mengikuti pola future perfect yang benar (seharusnya 'have been practicing' atau 'have practiced')."
         }
       ]
     },

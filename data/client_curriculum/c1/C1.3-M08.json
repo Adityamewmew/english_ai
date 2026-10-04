@@ -28,38 +28,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Manakah pernyataan yang BENAR mengenai kaidah pada topik \"Academic Peer Review & Defending Original Scientific Theses\"?",
+          "prompt": "Dalam konteks peer review akademis, struktur rebuttal (sanggahan) yang benar mengikuti pola: Acknowledge → Clarify/Counter → Support with evidence. Manakah kalimat bahasa Inggris berikut yang paling tepat menerapkan pola rebuttal akademis ini secara lengkap?",
           "options": [
-            "Tenses dan susunan subjek tidak perlu diperhatikan",
-            "Pola ini hanya boleh digunakan dalam situasi santai",
-            "Gunakan hedging language untuk menyampaikan keterbatasan: 'While we acknowledge that......"
+            "We appreciate the reviewer's concern regarding sample size. However, our methodology employs stratified random sampling, as evidenced by the validation results reported in Table 3.",
+            "The reviewer's concern regarding sample size is noted, and we will consider revising our approach in future iterations of this study.",
+            "We strongly disagree with the reviewer's assessment of our sample size because our research design is clearly superior to previous studies in this field."
           ],
-          "correctIndex": 2,
-          "explanation": "Kaidah inti topik ini: Peer review adalah proses evaluasi kritis oleh para ahli sejawat dalam suatu disiplin ilmu."
+          "correctIndex": 0,
+          "explanation": "Opsi pertama menerapkan pola rebuttal lengkap: (1) Acknowledge ('We appreciate the reviewer's concern...'), (2) Clarify/Counter ('However, our methodology employs...'), dan (3) Support with evidence ('as evidenced by the validation results reported in Table 3'). Opsi kedua hanya mengakui dan menyerah tanpa counter atau bukti (terlalu pasif). Opsi ketiga bersifat terlalu defensif dan emosional tanpa memberikan bukti konkret."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Perhatikan jebakan umum pada materi \"Academic Peer Review & Defending Original Scientific Theses\". Manakah kalimat yang SUDAH TEPAT?",
+          "prompt": "Kesalahan umum mahasiswa C1 dalam mempertahankan tesis adalah menggunakan nada yang terlalu defensif (emosional) atau terlalu pasif (kehilangan kredibilitas). Manakah respons berikut yang menggunakan 'language of concession' secara tepat tanpa melemahkan argumen inti maupun terdengar agresif?",
           "options": [
-            "The reviewer is completely wrong about our sample size. We know what we're doing always",
-            "The reviewer is completely wrong about our sample size. We know what we're doing",
-            "While we acknowledge the reviewer's concerns regarding sample size"
+            "The reviewer clearly misunderstands our research design. We refuse to accept this criticism as it has no basis whatsoever.",
+            "While we acknowledge the controlled nature of our initial study, we conducted a follow-up naturalistic observation across twelve diverse classrooms, and the effect sizes remained statistically significant.",
+            "We fully accept the reviewer's criticism and recognize that our study may not be valid. We hope to improve in future research."
           ],
-          "correctIndex": 2,
-          "explanation": "Mahasiswa C1 sering jatuh ke dalam dua ekstrem: terlalu defensif (terdengar emosional dan tidak profesional) atau terlalu pasif (kehilangan kredibilitas akademis). Penting untuk menggunakan language of concession tanpa melemahkan argumen inti."
+          "correctIndex": 1,
+          "explanation": "Opsi kedua menunjukkan keseimbangan tone akademis yang ideal: mengakui keterbatasan ('While we acknowledge the controlled nature...') tanpa melemahkan argumen inti, lalu memberikan bukti pendukung ('we conducted a follow-up naturalistic observation... effect sizes remained statistically significant'). Opsi pertama terlalu defensif dan emosional ('clearly misunderstands', 'refuse to accept'). Opsi ketiga terlalu pasif dan melemahkan kredibilitas penelitian sendiri ('may not be valid')."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nProf. Chen: \"Dr. Williams, your findings are compelling within the experimental setting, but I'm concerned about the ecological validity. How would these results translate to authentic classroom environments with inherent unpredictability?\"\nDr. Williams: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut dalam sidang tesis:\n\nProf. Chen: \"Your sample was predominantly drawn from middle-class suburban schools. Doesn't that introduce sampling bias that limits generalizability to urban or rural contexts?\"\n\nDr. Williams: \"[...]\"\n\nManakah respons yang paling tepat dan natural untuk mengisi bagian [...] dalam konteks mempertahankan tesis secara profesional?",
           "options": [
-            "Sorry, I forgot my keys at home.",
-            "Thank you for raising that critical point, Professor. While I acknowledge the controlled nature of our initial study, we conducted a follow-up naturalistic observation across twelve diverse classrooms to assess precisely this concern. The effect sizes, while somewhat attenuated, remained statistically significant.",
-            "The reviewer is completely wrong about our sample size. We know what we're doing"
+            "I don't think sampling bias is relevant here. Our study is about suburban schools, so urban and rural contexts are outside the scope and not our problem.",
+            "You're absolutely right, Professor. Our study is fundamentally flawed because of this bias, and we cannot draw any meaningful conclusions from the data.",
+            "That's a fair critique. I explicitly address this limitation in Chapter 7, and I would argue that it opens avenues for future research rather than invalidating the core findings."
           ],
-          "correctIndex": 1,
-          "explanation": "Respon \"Thank you for raising that critical point, Professor. While I acknowledge the controlled nature of our initial study, we conducted a follow-up naturalistic observation across twelve diverse classrooms to assess precisely this concern. The effect sizes, while somewhat attenuated, remained statistically significant.\" (\"Terima kasih telah mengangkat poin kritis itu, Profesor. Meskipun saya mengakui sifat terkontrol dari studi awal kami, kami melakukan observasi naturalistik lanjutan di dua belas kelas yang beragam untuk menilai kekhawatiran ini secara tepat. Ukuran efeknya, meskipun agak melemah, tetap signifikan secara statistik.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Dr. Williams."
+          "correctIndex": 2,
+          "explanation": "Opsi ketiga adalah respons yang paling tepat karena mengakui kritik secara profesional ('That's a fair critique'), menunjukkan bahwa keterbatasan telah dibahas ('I explicitly address this limitation in Chapter 7'), dan mempertahankan argumen inti tanpa bersikap defensif ('opens avenues for future research rather than invalidating the core findings'). Opsi pertama terlalu dismissive dan defensif. Opsi kedua terlalu pasif dan menyerah sepenuhnya, melemahkan kredibilitas akademis."
         }
       ]
     },

@@ -28,38 +28,38 @@
         {
           "id": 1,
           "category": "Pengenalan Bentuk",
-          "prompt": "Pada kaidah \"Comparing People & Things\", bagaimana perubahan atau padanan yang benar untuk \"tall → taller than, big → bigger than, fast\"?",
+          "prompt": "Manakah kalimat bahasa Inggris berikut yang menggunakan bentuk comparative adjective dengan benar untuk membandingkan dua benda?",
           "options": [
-            "Tidak ada perubahan tenses pada tall → taller than, big → bigger than, fast",
-            "faster than",
-            "tall → taller than, big → bigger than, fast selalu dihilangkan"
+            "This road is more longer than that road.",
+            "This road is longer than that road.",
+            "This road is long than that road."
           ],
           "correctIndex": 1,
-          "explanation": "Dalam materi ini: tall → taller than, big → bigger than, fast berubah atau berpadanan menjadi \"faster than\"."
+          "explanation": "Kata sifat 'long' adalah kata sifat pendek (1 suku kata), sehingga bentuk comparative-nya cukup ditambahkan -er menjadi 'longer than'. Opsi pertama salah karena mencampurkan 'more' dan '-er' sekaligus. Opsi ketiga salah karena tidak mengubah kata sifat ke bentuk comparative (-er)."
         },
         {
           "id": 2,
           "category": "Pemahaman Aturan",
-          "prompt": "Manakah kalimat yang BENAR dan terhindar dari jebakan kesalahan umum pada topik \"Comparing People & Things\"?",
+          "prompt": "Salah satu kesalahan umum dalam comparative adjectives adalah mencampurkan aturan 'more' dan '-er' secara bersamaan. Manakah kalimat berikut yang BENAR dan menghindari kesalahan tersebut?",
           "options": [
-            "This bag is cheaper than that one",
-            "This bag is more cheaper than that one",
-            "This bag are cheaper than that one"
+            "My house is more bigger than your house.",
+            "My house is more spacious than your house.",
+            "My house is spaciouser than your house."
           ],
-          "correctIndex": 0,
-          "explanation": "Banyak pemula mencampur aturan comparative dengan menambahkan more dan -er sekaligus, atau lupa menggunakan than setelah comparative adjective."
+          "correctIndex": 1,
+          "explanation": "Kata sifat 'spacious' adalah kata sifat panjang (lebih dari 1 suku kata), sehingga bentuk comparative-nya menggunakan 'more spacious than'. Opsi pertama salah karena 'bigger' sudah bentuk -er, tidak boleh ditambah 'more'. Opsi ketiga salah karena kata sifat panjang seperti 'spacious' tidak menggunakan akhiran -er."
         },
         {
           "id": 3,
           "category": "Penerapan Konteks",
-          "prompt": "Lengkapi dialog percakapan berikut sesuai konteks:\nLisa: \"How much did it cost? Is it more expensive than mine?\"\nAndi: \"[...]\"",
+          "prompt": "Perhatikan percakapan berikut, lalu pilih jawaban yang paling tepat untuk mengisi bagian [...] :\n\nLisa: \"Hey Andi, is that your new phone? It looks nice!\"\nAndi: \"Yes! I just bought it yesterday. It's bigger than my old phone.\"\nLisa: \"How much did it cost? Is it more expensive than mine?\"\nAndi: \"[...]\"",
           "options": [
-            "This bag is more cheaper than that one",
             "Actually, it's cheaper than yours. I got it on sale.",
-            "Sorry, I forgot my keys at home."
+            "Actually, it's more cheap than yours. I got it on sale.",
+            "Actually, it's most cheaper than yours. I got it on sale."
           ],
-          "correctIndex": 1,
-          "explanation": "Respon \"Actually, it's cheaper than yours. I got it on sale.\" (\"Sebenarnya, lebih murah dari punyamu. Aku membelinya saat diskon.\") adalah jawaban yang tepat dan alami sesuai alur percakapan tokoh Andi."
+          "correctIndex": 0,
+          "explanation": "Kata sifat 'cheap' adalah kata sifat pendek (1 suku kata), sehingga bentuk comparative-nya adalah 'cheaper than'. Opsi kedua salah karena menggunakan 'more cheap' (seharusnya cukup 'cheaper'). Opsi ketiga salah karena 'most cheaper' mencampurkan bentuk superlative dan comparative secara keliru."
         }
       ]
     },
