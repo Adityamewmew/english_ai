@@ -1,0 +1,199 @@
+{
+  "id": "C1.5-M13",
+  "levelId": "C1.5",
+  "title": "Ujian Kelulusan C1.5: Evaluasi Komprehensif Academic Peer Review & Research Synthesis",
+  "cefr": "C1",
+  "group": "Graduation Assessment",
+  "objective": "Menguji kemampuan sintesis telaah sejawat, ketepatan hedging, metodologi riset, dan argumentasi ilmiah C1.5.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": true,
+  "passingScore": 75,
+  "orderIndex": 65,
+  "sections": {
+    "theory": {
+      "summary": "Dalam evaluasi komprehensif C1.5 ini, fokus utama adalah penguasaan Academic Peer Review dan Research Synthesis. Di tingkat C1/C2, penulis akademis tidak hanya menyajikan data secara objektif, tetapi juga mengekspresikan sikap (stance) melalui 'attitude adverbials' yang ditempatkan secara strategis (di awal atau disisipkan di tengah kalimat dengan koma pengapit) untuk memberikan nuansa evaluatif yang elegan. Selain itu, presisi sintaksis diuji melalui penggunaan 'dependent prepositions' tingkat lanjut (seperti attribute to, stem from, subject to, account for) yang mutlak diperlukan untuk merangkai argumen kausalitas, mengkritisi metodologi, dan menyintesis literatur secara kohesif dan berbobot.",
+      "rules": [
+        {
+          "pattern": "Fronted Attitude Adverbial + Comma + Main Clause",
+          "meaning": "Memberikan kerangka evaluatif atau sikap penulis terhadap keseluruhan klaim akademis yang menyusul.",
+          "example": "Fundamentally, the methodological discrepancies stem from a failure to control for confounding variables."
+        },
+        {
+          "pattern": "Subject + Auxiliary/Verb + Comma + Attitude Adverbial + Comma + Complement/Object",
+          "meaning": "Menyisipkan evaluasi secara halus di tengah kalimat (mid-position) untuk mempertahankan alur akademis yang elegan tanpa merusak struktur utama.",
+          "example": "The control group was, surprisingly, more susceptible to the placebo effect than initially hypothesized."
+        },
+        {
+          "pattern": "Advanced Academic Verb/Adjective + Specific Dependent Preposition",
+          "meaning": "Menunjukkan relasi logis, kausalitas, atau batasan dalam sintesis riset dengan presisi leksikal tingkat tinggi.",
+          "example": "The anomalous data points can be largely attributed to calibration errors rather than underlying genetic mutations."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Kesalahan Penempatan Adverbia dan Ketidakcocokan Preposisi (Misplaced Modifiers & Preposition Mismatch)",
+        "explanation": "Pembelajar tingkat lanjut sering kali lupa menggunakan koma pengapit saat meletakkan attitude adverbials di tengah kalimat, atau menggunakan preposisi yang salah secara kolokasi (misal: 'attribute for' alih-alih 'attribute to'), yang secara instan menurunkan register tulisan dari C2 menjadi B2.",
+        "wrong": "The researchers attributed the sudden drop in efficacy for the temperature changes and were surprisingly unaware of the flaw.",
+        "correct": "The researchers attributed the sudden drop in efficacy to the temperature changes and were, surprisingly, unaware of the flaw."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Manakah struktur sintaksis yang paling tepat untuk menyisipkan 'attitude adverbial' di tengah kalimat akademis?",
+          "options": [
+            "The findings are surprisingly indicative of a broader trend.",
+            "The findings are, surprisingly, indicative of a broader trend.",
+            "The findings, are surprisingly indicative, of a broader trend."
+          ],
+          "correctIndex": 1,
+          "explanation": "Di tingkat C1/C2, saat attitude adverbial diletakkan di tengah kalimat (antara auxiliary dan complement), ia harus diapit oleh dua koma untuk memisahkan komentar evaluatif dari struktur inti kalimat."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Dalam konteks peer review, kombinasi preposisi manakah yang secara akurat melengkapi verba 'subject' dan 'attribute'?",
+          "options": [
+            "The manuscript was subjected for rigorous review, attributing the errors on poor sampling.",
+            "The manuscript was subjected to rigorous review, attributing the errors to poor sampling.",
+            "The manuscript was subjected with rigorous review, attributing the errors at poor sampling."
+          ],
+          "correctIndex": 1,
+          "explanation": "Kolokasi preposisi yang tepat dan baku dalam bahasa Inggris akademis adalah 'subject to' (dihadapkan pada/dikenakan) dan 'attribute to' (dinisbahkan/dikaitkan dengan)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Lengkapi kritik telaah sejawat berikut: '[...], the authors fail to [...] the anomalies, which ultimately interferes with the validity of their conclusion.'",
+          "options": [
+            "As a matter of fact / account for",
+            "Surprisingly / attribute to",
+            "Frankly / stem from"
+          ],
+          "correctIndex": 0,
+          "explanation": "'As a matter of fact' memberikan penekanan faktual yang kuat, dan 'account for' berarti menjelaskan atau mempertanggungjawabkan anomali tersebut, sangat cocok untuk kritik metodologi."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Attribute to",
+        "translation": "Menisbahkan pada / Mengaitkan dengan (sebagai penyebab)",
+        "example": "The unprecedented economic downturn can be directly attributed to the collapse of the housing market.",
+        "context": "Digunakan saat menjelaskan penyebab utama dari sebuah fenomena dalam riset."
+      },
+      {
+        "word": "Stem from",
+        "translation": "Berasal dari / Berakar dari",
+        "example": "The ongoing debate stems from a fundamental disagreement over the interpretation of the quantum data.",
+        "context": "Digunakan untuk melacak asal-usul sebuah masalah, teori, atau konflik akademis."
+      },
+      {
+        "word": "Account for",
+        "translation": "Menjelaskan / Mempertanggungjawabkan",
+        "example": "The proposed theoretical model fails to account for the behavioral anomalies observed in the control group.",
+        "context": "Sangat umum dalam peer review untuk mengkritik variabel yang terlewat atau tidak dijelaskan."
+      },
+      {
+        "word": "Subject to",
+        "translation": "Tunduk pada / Dihadapkan pada (kondisi tertentu)",
+        "example": "All submitted manuscripts are subject to a rigorous double-blind peer review process.",
+        "context": "Digunakan untuk menyatakan bahwa sesuatu harus melewati proses, aturan, atau kondisi tertentu."
+      },
+      {
+        "word": "Methodological flaw",
+        "translation": "Kecacatan metodologi",
+        "example": "Frankly, the study is riddled with methodological flaws that render its conclusions highly questionable.",
+        "context": "Frasa leksikal tingkat tinggi untuk mengkritik desain eksperimen atau cara pengumpulan data."
+      },
+      {
+        "word": "Corroborate",
+        "translation": "Memperkuat / Membenarkan (dengan bukti)",
+        "example": "Recent empirical studies corroborate the hypothesis that cognitive decline is linked to sleep deprivation.",
+        "context": "Digunakan dalam sintesis riset untuk menunjukkan bahwa berbagai sumber data saling mendukung."
+      }
+    ],
+    "dialogue": {
+      "context": "Sidang tertutup komite peer review di jurnal ilmiah bereputasi tinggi (Q1), mengevaluasi sebuah manuskrip kontroversial di bidang neurosains.",
+      "lines": [
+        {
+          "speaker": "Dr. Aris",
+          "text": "Frankly, the authors' failure to account for the confounding variables severely undermines their primary hypothesis.",
+          "translation": "Sejujurnya, kegagalan para penulis untuk memperhitungkan variabel perancu sangat melemahkan hipotesis utama mereka."
+        },
+        {
+          "speaker": "Prof. Elena",
+          "text": "I completely agree. The anomalous results can be directly attributed to their flawed sampling method, rather than a novel neurological phenomenon.",
+          "translation": "Saya sangat setuju. Hasil yang ganjil tersebut dapat secara langsung dikaitkan dengan metode pengambilan sampel mereka yang cacat, alih-alih sebuah fenomena neurologis baru."
+        },
+        {
+          "speaker": "Dr. Aris",
+          "text": "Furthermore, the data is, surprisingly, inconsistent with previous literature, which they completely failed to comment on.",
+          "translation": "Lebih jauh lagi, datanya, secara mengejutkan, tidak konsisten dengan literatur sebelumnya, yang sama sekali gagal mereka komentari."
+        },
+        {
+          "speaker": "Prof. Elena",
+          "text": "As a matter of fact, unless the manuscript is subjected to a major revision, we must recommend outright rejection.",
+          "translation": "Faktanya, kecuali manuskrip tersebut dihadapkan pada revisi besar-besaran, kita harus merekomendasikan penolakan langsung."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Mempertahankan atau mengkritik sebuah manuskrip akademis menggunakan attitude adverbials yang tepat dan dependent prepositions yang akurat secara sintaksis.",
+      "scenario": "Anda adalah penguji utama dalam sidang disertasi doktoral. Anda harus mengkritik metodologi kandidat, menyoroti bahwa kesimpulan mereka tidak didukung oleh data (gunakan 'attribute to', 'account for') dan memberikan pandangan evaluatif Anda secara tegas namun akademis (gunakan 'Frankly', 'As a matter of fact', 'surprisingly' di posisi tengah kalimat)."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Identify the grammatically impeccable sentence employing an attitude adverbial and a dependent preposition.",
+          "options": [
+            "Sadly the committee decided to exclude him in the trial, based on his previous record.",
+            "Sadly, the committee decided to exclude him from the trial, based on his previous record.",
+            "The committee sadly decided to exclude him from the trial, based in his previous record.",
+            "The committee decided, sadly to exclude him from the trial, based on his previous record."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Sadly' di awal kalimat harus diikuti koma. Preposisi yang tepat untuk 'exclude' adalah 'from', dan untuk 'based' adalah 'on'."
+        },
+        {
+          "id": 2,
+          "prompt": "Fill in the blanks with the correct dependent prepositions: 'The researchers persisted ___ using the outdated model, which resulted ___ a failure to rely ___ the new empirical data.'",
+          "options": [
+            "in / in / on",
+            "on / to / with",
+            "in / to / for",
+            "with / in / on"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kolokasi preposisi yang baku adalah: persist IN, result IN, dan rely ON."
+        },
+        {
+          "id": 3,
+          "prompt": "Which of the following sentences best synthesizes a critique using a mid-sentence attitude adverbial with correct punctuation?",
+          "options": [
+            "The control group, as a matter of fact was subjected to different conditions.",
+            "The control group was as a matter of fact, subjected to different conditions.",
+            "The control group was, as a matter of fact, subjected to different conditions.",
+            "The control group was subjected to, as a matter of fact different conditions."
+          ],
+          "correctIndex": 2,
+          "explanation": "Attitude adverbial yang disisipkan di tengah kalimat (antara auxiliary 'was' dan main verb 'subjected') harus diapit oleh dua koma."
+        },
+        {
+          "id": 4,
+          "prompt": "Choose the most appropriate completion for this high-stakes peer review excerpt: '________, the principal investigator could not ________ the sudden drop in temperature, which we must ________ equipment failure.'",
+          "options": [
+            "Surprisingly, / account for / attribute to",
+            "Generally speaking, / relate to / blame for",
+            "Frankly, / comment on / base on",
+            "As far as I'm concerned, / deal with / stem from"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Surprisingly,' memberikan sikap evaluatif yang tepat. 'Account for' berarti menjelaskan (penurunan suhu), dan 'attribute to' berarti mengaitkan penyebabnya pada (kegagalan peralatan)."
+        }
+      ]
+    }
+  }
+}

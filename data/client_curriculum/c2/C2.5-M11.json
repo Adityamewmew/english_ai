@@ -1,0 +1,199 @@
+{
+  "id": "C2.5-M11",
+  "levelId": "C2.5",
+  "title": "Unit 11: The Epigrammatic Duel: Spontaneous Intellectual Banter",
+  "cefr": "C2",
+  "group": "Spontaneous Wit",
+  "objective": "Mampu terlibat dalam adu kelakar dan wit intelektual tanpa naskah menghadapi penutur asli paling fasih di dunia.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": false,
+  "passingScore": 75,
+  "orderIndex": 63,
+  "sections": {
+    "theory": {
+      "summary": "Dalam wacana bahasa Inggris tingkat C2+, 'Epigrammatic Duel' atau adu kelakar intelektual menuntut lebih dari sekadar penguasaan kosakata; ia membutuhkan ketangkasan sintaksis, keringkasan (brevity), dan manipulasi implikatur pragmatis. Penutur asli yang sangat fasih tidak memenangkan perdebatan dengan penjelasan yang bertele-tele, melainkan dengan serangan balik yang tajam, ironi yang halus (litotes), dan struktur paralel yang mematikan argumen lawan secara elegan. Modul ini membedah anatomi 'spontaneous wit' melalui inversi retoris, elipsis, dan sarkasme tingkat tinggi yang sering dijumpai di forum debat Oxford atau negosiasi diplomatik tingkat tinggi.",
+      "rules": [
+        {
+          "pattern": "Adjective / Noun + as/though + Subject + Verb (Concessive Fronting)",
+          "meaning": "Digunakan untuk mengakui poin lawan secara elegan sebelum mematahkannya secara telak (Konsesi Retoris).",
+          "example": "Brilliant as your premise may be, it remains entirely unburdened by empirical evidence."
+        },
+        {
+          "pattern": "Not so much a [Noun/Adjective] as a [Noun/Adjective] (Redefinitional Parallelism)",
+          "meaning": "Mendefinisikan ulang klaim lawan dengan ironi atau sarkasme yang menohok.",
+          "example": "His latest policy is not so much a strategic pivot as a spectacular capitulation to populist whims."
+        },
+        {
+          "pattern": "Litotes (Double Negative / Understatement for Emphasis)",
+          "meaning": "Menegaskan suatu poin dengan menyangkal kebalikannya, menciptakan nuansa ironi intelektual yang sangat halus.",
+          "example": "One could hardly call her handling of the diplomatic crisis an unmitigated disaster, though it certainly flirted with the abyss."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Jebakan Verbositas (Over-explaining the Wit)",
+        "explanation": "Pembelajar tingkat lanjut sering kali merasa perlu menjelaskan argumen mereka dengan kalimat majemuk yang panjang (verbositas) untuk terdengar akademis. Dalam 'epigrammatic duel', kekuatan justru terletak pada keringkasan (brevity) dan implikatur. Menjelaskan lelucon atau ironi akan membunuh ketajamannya.",
+        "wrong": "Your argument is fundamentally flawed because it completely ignores the basic principles of economics, which makes it very illogical.",
+        "correct": "A fascinating economic theory, unencumbered by the constraints of reality."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Pilih struktur 'Concessive Fronting' yang paling tepat dan elegan untuk merespons argumen yang terdengar cerdas namun tidak praktis:",
+          "options": [
+            "Ingenious though your proposal is, it lacks the pragmatic scaffolding required for execution.",
+            "Even though your proposal is very ingenious, it does not have the pragmatic scaffolding to be executed.",
+            "Despite the ingenuity of your proposal, it is lacking in the pragmatic scaffolding for execution."
+          ],
+          "correctIndex": 0,
+          "explanation": "Opsi pertama menggunakan 'Adjective + though + Subject + Verb' (Ingenious though your proposal is), yang merupakan ciri khas retorika C2 untuk memberikan konsesi yang tajam dan ringkas sebelum memberikan sanggahan."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Lawan debat Anda mengklaim bahwa keputusannya adalah sebuah 'langkah berani' (a bold move). Anda ingin menggunakan 'Redefinitional Parallelism' untuk mengejeknya. Mana yang paling bernuansa C2?",
+          "options": [
+            "It was not a bold move, but rather a very reckless decision that will cost us dearly.",
+            "It was not so much a bold move as a masterclass in unadulterated recklessness.",
+            "I disagree that it was a bold move because it was actually just a reckless action."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Not so much a [X] as a [Y]' adalah formula epigrammatis yang sempurna. Penggunaan 'masterclass in unadulterated recklessness' menambahkan sarkasme intelektual (sardonic wit) yang sangat natural bagi penutur C2."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Dalam sebuah sidang komite, seorang kolega memberikan laporan yang sangat minim data. Anda merespons dengan Litotes (Understatement): 'Well, one must admit, the report is [...]'",
+          "options": [
+            "completely devoid of any meaningful statistical analysis.",
+            "very lacking in the necessary empirical data we requested.",
+            "hardly suffocating under the weight of empirical evidence."
+          ],
+          "correctIndex": 2,
+          "explanation": "Opsi ketiga menggunakan ironi tingkat tinggi (Litotes). Alih-alih mengatakan laporan itu tidak ada datanya secara langsung, pembicara mengatakan laporan itu 'tidak sesak napas karena tertindih beban bukti empiris', sebuah kelakar intelektual yang sangat mematikan."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Repartee",
+        "translation": "Balasan atau percakapan yang cepat, cerdas, dan jenaka.",
+        "example": "The debate was less about substantive policy and more a showcase of brilliant, spontaneous repartee.",
+        "context": "Digunakan untuk menggambarkan adu argumen yang tangkas dan elegan, sering kali di lingkungan akademis atau sosial kelas atas."
+      },
+      {
+        "word": "Persiflage",
+        "translation": "Kelakar ringan yang sedikit mengejek; olok-olok intelektual.",
+        "example": "Beneath the academic persiflage lay a deeply entrenched ideological rivalry.",
+        "context": "Merujuk pada gaya bicara yang meremehkan subjek yang serius dengan cara yang cerdas dan tidak menyinggung secara kasar."
+      },
+      {
+        "word": "Sardonic",
+        "translation": "Sinikal, mengejek dengan tajam dan pahit.",
+        "example": "He greeted the committee's grandiose proposal with a sardonic smile and a devastating one-liner.",
+        "context": "Digunakan untuk mendeskripsikan nada bicara atau ekspresi yang menunjukkan superioritas intelektual melalui ejekan sinis."
+      },
+      {
+        "word": "Epigrammatic",
+        "translation": "Singkat, padat, tajam, dan penuh makna (seperti pepatah/pepatah jenaka).",
+        "example": "Oscar Wilde is universally revered for his epigrammatic wit, capable of dismantling an opponent in a single sentence.",
+        "context": "Menggambarkan gaya bahasa yang sangat efisien, di mana satu kalimat pendek mengandung kritik atau observasi yang mendalam."
+      },
+      {
+        "word": "Trenchant",
+        "translation": "Tajam, menohok, dan sangat efektif (tentang kritik atau argumen).",
+        "example": "Her trenchant critique of the prevailing economic dogma left the panel in stunned silence.",
+        "context": "Digunakan dalam konteks analitis atau debat untuk memuji argumen yang memotong langsung ke inti permasalahan."
+      },
+      {
+        "word": "Facetious",
+        "translation": "Bersenda gurau pada saat yang tidak tepat; tidak serius mengenai isu penting.",
+        "example": "I assure you, my suggestion to dismantle the entire department was not entirely facetious.",
+        "context": "Sering digunakan sebagai bentuk pertahanan diri atau ironi ketika seseorang menyampaikan kritik tajam berbalut lelucon."
+      }
+    ],
+    "dialogue": {
+      "context": "Di dalam ruang debat Oxford Union, dua akademisi terkemuka, Dr. Aristhorne (Speaker A) dan Prof. Vance (Speaker B), sedang berdebat sengit mengenai dampak Kecerdasan Buatan terhadap otonomi manusia. Suasana sangat tegang namun dipenuhi dengan adu kelakar intelektual tingkat tinggi.",
+      "lines": [
+        {
+          "speaker": "Dr. Aristhorne",
+          "text": "One must concede that this new algorithmic governance is a triumph of modern efficiency, eliminating human error from the equation.",
+          "translation": "Kita harus mengakui bahwa tata kelola algoritmik baru ini adalah sebuah kemenangan efisiensi modern, yang mengeliminasi kesalahan manusia dari persamaan."
+        },
+        {
+          "speaker": "Prof. Vance",
+          "text": "A triumph indeed, provided one's definition of efficiency involves distributing misery with absolute, mathematical parity.",
+          "translation": "Sebuah kemenangan yang nyata, asalkan definisi efisiensi Anda melibatkan distribusi penderitaan dengan kesetaraan matematis yang absolut."
+        },
+        {
+          "speaker": "Dr. Aristhorne",
+          "text": "Facetious as you are, Professor, the empirical data suggests a remarkable stabilization of the global markets.",
+          "translation": "Meskipun Anda suka bersenda gurau, Profesor, data empiris menunjukkan stabilisasi pasar global yang luar biasa."
+        },
+        {
+          "speaker": "Prof. Vance",
+          "text": "Stabilization? Please. It is not so much a stabilization as a rigor mortis of the financial sector. The patient isn't cured; it's merely stopped breathing.",
+          "translation": "Stabilisasi? Tolonglah. Itu bukan sebuah stabilisasi melainkan kaku mayat (rigor mortis) dari sektor keuangan. Pasiennya tidak sembuh; ia hanya berhenti bernapas."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Mampu merespons argumen yang provokatif dengan ketangkasan epigrammatis, menggunakan ironi, litotes, dan inversi sintaksis tanpa jeda berpikir.",
+      "scenario": "Anda sedang berada di sesi tanya jawab (Q&A) setelah mempertahankan disertasi doktoral Anda di Cambridge. Seorang penguji tamu yang terkenal arogan mencoba meremehkan metodologi Anda dengan mengatakan: 'Your entire thesis seems to rest on the rather naive assumption that human beings act rationally.' Gunakan teknik 'Concessive Fronting' atau 'Redefinitional Parallelism' untuk membalasnya secara elegan, tajam, dan tanpa terlihat defensif."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Which of the following responses best exemplifies the use of 'Litotes' to deliver a devastating intellectual critique?",
+          "options": [
+            "Your analysis is completely wrong and lacks any fundamental understanding of the topic.",
+            "I find your conclusions to be highly problematic and entirely devoid of logic.",
+            "One could hardly accuse your hypothesis of being overly burdened by factual accuracy.",
+            "It is obvious that your argument fails to meet even the most basic academic standards."
+          ],
+          "correctIndex": 2,
+          "explanation": "Opsi C menggunakan Litotes ('hardly accuse... of being overly burdened') untuk menyatakan bahwa hipotesis tersebut tidak akurat secara faktual, namun disampaikan dengan ironi yang sangat halus dan elegan khas C2."
+        },
+        {
+          "id": 2,
+          "prompt": "Complete the sentence to create a perfect 'Redefinitional Parallelism' (epigrammatic retort): 'The committee's new environmental policy is not so much a step forward as...' ",
+          "options": [
+            "a policy that will cause a lot of environmental damage in the long run.",
+            "a spectacular leap into the dark ages of industrial deregulation.",
+            "it is a bad decision that we will all regret very soon.",
+            "a failure to understand the basic principles of ecology."
+          ],
+          "correctIndex": 1,
+          "explanation": "Formula 'not so much a [X] as a [Y]' membutuhkan kontras yang puitis dan tajam. 'A spectacular leap into the dark ages' memberikan keseimbangan retoris yang sempurna terhadap 'a step forward'."
+        },
+        {
+          "id": 3,
+          "prompt": "Identify the correct syntactic structure for 'Concessive Fronting' in a formal debate context.",
+          "options": [
+            "Flawed as your methodology might be, the underlying premise warrants further investigation.",
+            "As your methodology might be flawed, the underlying premise warrants further investigation.",
+            "Although flawed your methodology might be, the underlying premise warrants further investigation.",
+            "Flawed though might be your methodology, the underlying premise warrants further investigation."
+          ],
+          "correctIndex": 0,
+          "explanation": "Struktur yang benar untuk Concessive Fronting adalah [Adjective] + as/though + [Subject] + [Verb]. 'Flawed as your methodology might be' adalah bentuk yang paling tepat secara gramatikal dan stilistika."
+        },
+        {
+          "id": 4,
+          "prompt": "In the context of high-stakes diplomatic banter, if an ambassador's remarks are described as 'trenchant persiflage', what does this imply?",
+          "options": [
+            "The remarks were completely irrelevant and highly offensive to the host nation.",
+            "The remarks were overly academic, verbose, and difficult for the audience to comprehend.",
+            "The remarks were polite, diplomatic, and entirely devoid of any real substance or critique.",
+            "The remarks were seemingly lighthearted and witty, yet contained a sharp, cutting critique."
+          ],
+          "correctIndex": 3,
+          "explanation": "'Persiflage' berarti kelakar ringan, sedangkan 'trenchant' berarti tajam/menohok. Kombinasi ini mengimplikasikan bahwa sang duta besar menggunakan humor atau olok-olok ringan untuk menyampaikan kritik yang sangat tajam dan efektif."
+        }
+      ]
+    }
+  }
+}

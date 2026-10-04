@@ -1,0 +1,199 @@
+{
+  "id": "C2.6-M06",
+  "levelId": "C2.6",
+  "title": "Unit 6: Hermeneutics of Historic Supreme Court Majority Opinions",
+  "cefr": "C2",
+  "group": "Jurisprudence",
+  "objective": "Mampu menganalisis teks putusan Mahkamah Agung AS bersejarah (Brown v Board, Marbury v Madison) dengan diksi hukum konstitusi.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": false,
+  "passingScore": 75,
+  "orderIndex": 71,
+  "sections": {
+    "theory": {
+      "summary": "Dalam yurisprudensi tingkat tinggi (C2), khususnya saat menganalisis opini mayoritas Mahkamah Agung AS yang bersejarah seperti Brown v. Board of Education atau Marbury v. Madison, penguasaan hermeneutika hukum dan presisi sintaksis adalah mutlak. Modul ini membedah bagaimana Hakim Agung menggunakan ambiguitas sintaksis yang disengaja, implikatur pragmatis, dan modulasi register stilistika untuk menetapkan preseden (stare decisis). Anda akan mempelajari penggunaan inversi empatik untuk absolutisme hukum, frasa partisipial untuk penalaran kausal, dan modus subjungtif (subjunctive mood) dalam mandat konstitusional yang tidak dapat diganggu gugat.",
+      "rules": [
+        {
+          "pattern": "Emphatic Inversion with Negative/Restrictive Adverbials (e.g., Under no circumstances shall... / Seldom has the Court...)",
+          "meaning": "Digunakan untuk menegaskan kemutlakan suatu larangan atau preseden hukum tanpa ruang untuk interpretasi ganda.",
+          "example": "Under no circumstances shall the doctrine of 'separate but equal' find refuge in the jurisprudence of public education."
+        },
+        {
+          "pattern": "Absolute Participial Phrases for Causal/Temporal Reasoning (e.g., Having established X, the Court hereby...)",
+          "meaning": "Berfungsi untuk merangkai logika kausalitas secara elegan sebelum menjatuhkan putusan atau doktrin baru.",
+          "example": "Having established that the segregation of children deprives them of equal educational opportunities, we hold that such practices violate the Fourteenth Amendment."
+        },
+        {
+          "pattern": "Mandative Subjunctive in Judicial Decrees (e.g., It is imperative/ordered that the state [base verb]...)",
+          "meaning": "Digunakan dalam perintah pengadilan (injunction) atau mandat untuk menunjukkan keharusan hukum yang mengikat, menghilangkan unsur subjektivitas.",
+          "example": "The Constitution demands that the lower court issue a writ of mandamus, and that the executive branch comply forthwith."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Ambiguitas Sintaksis pada Klausa Modifikasi (Dangling Modifiers in Legal Dicta)",
+        "explanation": "Pembelajar tingkat lanjut sering kali menggunakan klausa partisipial yang subjeknya tidak selaras dengan klausa utama. Dalam teks hukum C2, kesalahan penempatan pengubah (modifier) dapat berakibat fatal pada interpretasi konstitusional (hermeneutics), mengubah siapa yang sebenarnya dikenai beban hukum.",
+        "wrong": "Being inherently unequal, the Supreme Court decided that segregated schools violate the Constitution.",
+        "correct": "The Supreme Court held that segregated educational facilities are inherently unequal, thereby violating the Equal Protection Clause."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Pilih struktur inversi yang paling tepat dan berwibawa untuk membuka sebuah opini mayoritas yang membatalkan preseden lama:",
+          "options": [
+            "Rarely the Court has encountered a doctrine so fundamentally flawed as 'separate but equal'.",
+            "Seldom has this Court encountered a doctrine so fundamentally at odds with the egalitarian principles of our Constitution.",
+            "Not often this Court encounters a doctrine that is so fundamentally flawed as 'separate but equal'."
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi B menggunakan inversi yang benar ('Seldom has this Court encountered') yang wajib digunakan setelah adverbia negatif/restriktif di awal kalimat, menciptakan register hukum yang sangat formal dan empatik."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Manakah dari kalimat berikut yang menghindari jebakan 'dangling modifier' dan mempertahankan presisi forensik hukum?",
+          "options": [
+            "Reviewing the historical context of the Fourteenth Amendment, it is clear that segregation is unconstitutional.",
+            "Reviewing the historical context of the Fourteenth Amendment, the justices found segregation to be unconstitutional.",
+            "Reviewing the historical context of the Fourteenth Amendment, segregation was deemed unconstitutional by the Court."
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi B benar karena subjek dari klausa utama ('the justices') adalah pihak yang secara logis melakukan tindakan pada klausa partisipial ('Reviewing'). Opsi A dan C mengandung dangling modifiers."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Lengkapi mandat yudisial berikut dengan menggunakan 'mandative subjunctive' yang tepat: 'Given the egregious violation of civil liberties, it is imperative that the state legislature ________ the discriminatory statute immediately.'",
+          "options": [
+            "repeals",
+            "must repeal",
+            "repeal"
+          ],
+          "correctIndex": 2,
+          "explanation": "Dalam struktur 'mandative subjunctive' (It is imperative that...), kata kerja yang mengikuti subjek harus berada dalam bentuk dasar (base form), yaitu 'repeal', tanpa memandang subjek tunggal atau jamak."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Jurisprudence",
+        "translation": "Yurisprudensi / Filsafat dan teori hukum",
+        "example": "Chief Justice Marshall's ruling in Marbury v. Madison remains the cornerstone of American constitutional jurisprudence.",
+        "context": "Digunakan saat membahas sistem, filosofi, atau kumpulan putusan hukum secara makro."
+      },
+      {
+        "word": "Stare decisis",
+        "translation": "Asas preseden yang mengikat (Let the decision stand)",
+        "example": "While stare decisis provides stability to the legal system, it must not shield egregiously flawed precedents from judicial scrutiny.",
+        "context": "Digunakan dalam debat apakah Mahkamah Agung harus mempertahankan atau membatalkan putusan masa lalu."
+      },
+      {
+        "word": "Hermeneutics",
+        "translation": "Hermeneutika / Ilmu tafsir teks",
+        "example": "The conservative wing of the Court often relies on the hermeneutics of originalism to interpret the framers' intent.",
+        "context": "Digunakan dalam analisis akademis mengenai metodologi interpretasi teks hukum atau konstitusi."
+      },
+      {
+        "word": "Writ of mandamus",
+        "translation": "Mandamus / Perintah pengadilan kepada pejabat publik",
+        "example": "The plaintiffs petitioned the Supreme Court to issue a writ of mandamus compelling the Secretary of State to deliver their commissions.",
+        "context": "Istilah teknis hukum yang sangat spesifik, krusial dalam memahami kasus Marbury v. Madison."
+      },
+      {
+        "word": "Injunction",
+        "translation": "Perintah pengadilan (untuk melakukan atau menghentikan sesuatu)",
+        "example": "The federal judge granted a preliminary injunction, halting the implementation of the controversial executive order.",
+        "context": "Digunakan dalam konteks litigasi di mana pengadilan mengeluarkan perintah yang mengikat secara hukum."
+      },
+      {
+        "word": "Originalism",
+        "translation": "Originalisme (Paham tafsir konstitusi berdasarkan makna aslinya)",
+        "example": "Proponents of originalism argue that the Constitution is not a living document, but rather one bound by its eighteenth-century lexicon.",
+        "context": "Digunakan saat membedah filosofi interpretasi konstitusional yang saling bertentangan di Mahkamah Agung."
+      }
+    ],
+    "dialogue": {
+      "context": "Konferensi tertutup para Hakim Agung AS (Supreme Court Justices) di Washington D.C. Mereka sedang berdebat sengit mengenai draf opini mayoritas yang akan membatalkan doktrin 'Separate but Equal' (Brown v. Board of Education).",
+      "lines": [
+        {
+          "speaker": "Chief Justice Warren",
+          "text": "Brethren, if we are to overturn Plessy, our hermeneutic approach must be unassailable. We cannot merely argue sociological shifts; we must unequivocally state that segregation inherently violates the Equal Protection Clause.",
+          "translation": "Saudara-saudara, jika kita ingin membatalkan Plessy, pendekatan hermeneutika kita tidak boleh terbantahkan. Kita tidak bisa hanya mendalilkan pergeseran sosiologis; kita harus menyatakan secara tegas bahwa segregasi pada dasarnya melanggar Klausul Perlindungan Setara."
+        },
+        {
+          "speaker": "Justice Frankfurter",
+          "text": "I concur in principle, Chief. However, casting aside stare decisis so brazenly risks fracturing the Court's legitimacy. The phrasing must be surgically precise to avoid a jurisprudential earthquake.",
+          "translation": "Saya setuju pada prinsipnya, Ketua. Namun, mengesampingkan stare decisis secara terang-terangan berisiko menghancurkan legitimasi Mahkamah. Pemilihan katanya harus sangat presisi untuk menghindari gempa yurisprudensi."
+        },
+        {
+          "speaker": "Chief Justice Warren",
+          "text": "Legitimacy is forged in the crucible of justice, not in the preservation of an egregious wrong. It is imperative that the final decree mandate desegregation 'with all deliberate speed.'",
+          "translation": "Legitimasi ditempa dalam kawah keadilan, bukan dalam pelestarian kesalahan yang fatal. Sangatlah mendesak agar putusan akhir mengamanatkan desegregasi 'dengan segala kecepatan yang terukur.'"
+        },
+        {
+          "speaker": "Justice Frankfurter",
+          "text": "Then let us draft a writ that leaves no room for syntactic ambiguity. The lower courts will exploit any pragmatic implicature to delay implementation.",
+          "translation": "Kalau begitu mari kita susun surat perintah yang tidak menyisakan ruang bagi ambiguitas sintaksis. Pengadilan tingkat bawah akan mengeksploitasi setiap implikatur pragmatis untuk menunda pelaksanaannya."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Mampu menyusun dan menyampaikan argumen lisan (oral argument) atau opini mayoritas (majority opinion) yang mengikat secara hukum dengan menggunakan diksi konstitusional dan presisi sintaksis tingkat C2.",
+      "scenario": "Anda adalah seorang Hakim Agung yang sedang membacakan Opini Mayoritas (Majority Opinion) dalam sebuah kasus fiktif yang monumental mengenai hak privasi digital. Anda harus menggunakan prinsip 'stare decisis', menganalisis teks Amandemen Keempat menggunakan 'hermeneutics', dan mengeluarkan 'injunction' dengan menggunakan struktur mandative subjunctive dan inversi empatik untuk menegaskan putusan Anda."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Dalam konteks yurisprudensi Mahkamah Agung, manakah pernyataan yang paling akurat mendeskripsikan ketegangan antara 'stare decisis' dan 'judicial review'?",
+          "options": [
+            "Stare decisis compels the Court to strike down unconstitutional laws, whereas judicial review forces adherence to past precedents.",
+            "Judicial review allows the Court to invalidate unconstitutional legislation, while stare decisis dictates that courts should generally adhere to historical precedents.",
+            "Both concepts mandate that the Supreme Court must defer to the hermeneutics of the executive branch.",
+            "Stare decisis is a writ of mandamus issued during judicial review to enforce originalism."
+          ],
+          "correctIndex": 1,
+          "explanation": "Judicial review adalah kewenangan untuk membatalkan hukum yang inkonstitusional (ditetapkan dalam Marbury v. Madison), sedangkan stare decisis adalah prinsip untuk menghormati preseden masa lalu. Keduanya sering berbenturan ketika Mahkamah harus memutuskan apakah akan membatalkan preseden yang dianggap inkonstitusional."
+        },
+        {
+          "id": 2,
+          "prompt": "Pilih kalimat yang menunjukkan penggunaan 'mandative subjunctive' yang paling tepat dan formal untuk sebuah dekret pengadilan:",
+          "options": [
+            "The Court orders that the defendant must cease all operations immediately.",
+            "The Court orders that the defendant ceases all operations immediately.",
+            "The Court orders that the defendant cease all operations immediately.",
+            "The Court orders for the defendant to be ceasing all operations immediately."
+          ],
+          "correctIndex": 2,
+          "explanation": "Mandative subjunctive mengharuskan penggunaan 'base verb' (cease) setelah klausa yang menyatakan perintah atau keharusan (The Court orders that...), terlepas dari subjeknya (the defendant) yang merupakan orang ketiga tunggal."
+        },
+        {
+          "id": 3,
+          "prompt": "Chief Justice John Marshall famously wrote: 'It is emphatically the province and duty of the judicial department to say what the law is.' Apa implikatur pragmatis utama dari pernyataan ini dalam kasus Marbury v. Madison?",
+          "options": [
+            "The judiciary is subordinate to the legislature in matters of constitutional interpretation.",
+            "The executive branch holds the ultimate authority to issue a writ of mandamus.",
+            "The Supreme Court claims the exclusive and final authority to interpret the Constitution and invalidate unconstitutional acts.",
+            "The judicial department must rely on originalism to dictate legislative drafting."
+          ],
+          "correctIndex": 2,
+          "explanation": "Kutipan ini adalah fondasi dari 'judicial review', yang secara pragmatis menegaskan bahwa Mahkamah Agung memiliki otoritas tertinggi dan final untuk menafsirkan konstitusi dan membatalkan undang-undang yang bertentangan dengannya."
+        },
+        {
+          "id": 4,
+          "prompt": "Manakah dari struktur inversi berikut yang paling tepat digunakan untuk menekankan bahwa Mahkamah Agung tidak akan pernah menoleransi pelanggaran hak asasi manusia?",
+          "options": [
+            "Under no circumstances the Court will tolerate the infringement of inalienable human rights.",
+            "Never the Court shall tolerate the infringement of inalienable human rights.",
+            "Not only the Court will not tolerate, but it will also punish the infringement of inalienable human rights.",
+            "On no account shall this Court tolerate the infringement of inalienable human rights."
+          ],
+          "correctIndex": 3,
+          "explanation": "Opsi D ('On no account shall this Court tolerate...') menggunakan struktur inversi yang sempurna secara gramatikal (Negative Adverbial + Auxiliary + Subject + Verb) dan memiliki register hukum tingkat tinggi (C2) yang sangat otentik."
+        }
+      ]
+    }
+  }
+}

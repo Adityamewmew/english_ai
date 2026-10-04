@@ -1,0 +1,199 @@
+{
+  "id": "C1.6-M13",
+  "levelId": "C1.6",
+  "title": "Ujian Kelulusan C1.6: Evaluasi Komprehensif Diplomatic Negotiation & Executive Discourse",
+  "cefr": "C1",
+  "group": "Graduation Assessment",
+  "objective": "Menguji penguasaan bahasa diplomasi, negosiasi krisis eksekutif, arbitrase, dan perumusan komunike C1.6.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": true,
+  "passingScore": 75,
+  "orderIndex": 78,
+  "sections": {
+    "theory": {
+      "summary": "Ujian kelulusan ini mengevaluasi penguasaan wacana eksekutif dan negosiasi diplomatik tingkat C1/C2. Fokus utama adalah penggunaan 'Attitude Adverbials' untuk membingkai argumen secara strategis tanpa terkesan agresif, serta penguasaan 'Dependent Prepositions' tingkat lanjut yang esensial dalam merumuskan komunike, arbitrase, dan resolusi krisis secara presisi dan otoritatif.",
+      "rules": [
+        {
+          "pattern": "[Attitude Adverbial] + [,] + [Main Clause]",
+          "meaning": "Membingkai sikap, emosi, atau posisi diplomatik secara eksplisit di awal kalimat untuk menetapkan nada wacana.",
+          "example": "Frankly speaking, the proposed sanctions amount to an act of economic warfare."
+        },
+        {
+          "pattern": "[Subject] + [Verb] + [Object] + [Dependent Preposition] + [Noun/Gerund]",
+          "meaning": "Menyatakan hubungan sebab-akibat, atribusi, atau ketergantungan dalam wacana hukum dan diplomatik secara presisi.",
+          "example": "The committee attributes the recent economic volatility to unregulated cross-border transactions."
+        },
+        {
+          "pattern": "[Subject] + [Auxiliary] + [,] + [Attitude Adverbial] + [,] + [Main Verb]",
+          "meaning": "Menyisipkan nuansa sikap di tengah kalimat (mid-position) untuk memberikan penekanan retoris yang elegan dan formal.",
+          "example": "The opposing counsel has, surprisingly, conceded to the arbitration terms."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Kesalahan Preposisi Dependen & Interupsi Koma (Prepositional & Comma Splice Pitfalls)",
+        "explanation": "Pembelajar tingkat lanjut sering salah memasangkan kata kerja dengan preposisi (misal: 'attribute for' alih-alih 'attribute to') atau lupa menggunakan koma ganda saat menyisipkan attitude adverbial di tengah kalimat, yang secara fatal merusak formalitas dokumen legal atau diplomatik.",
+        "wrong": "The ambassador was frankly appalled by the decision and attributed the failure of the talks for a lack of transparency.",
+        "correct": "The ambassador was, frankly, appalled by the decision and attributed the failure of the talks to a lack of transparency."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Pilih kalimat yang menggunakan 'attitude adverbial' di posisi tengah (mid-position) dengan tanda baca yang paling tepat untuk dokumen eksekutif.",
+          "options": [
+            "The delegation has, understandably, refused to sign the treaty.",
+            "The delegation has understandably, refused to sign the treaty.",
+            "The delegation, has understandably refused to sign the treaty."
+          ],
+          "correctIndex": 0,
+          "explanation": "Dalam bahasa Inggris C1/C2, saat attitude adverbial disisipkan di antara auxiliary verb ('has') dan main verb ('refused'), ia harus diapit oleh dua koma."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Preposisi dependen mana yang paling tepat untuk melengkapi pernyataan diplomatik berikut: 'The current geopolitical impasse stems ___ a historical failure to compromise'?",
+          "options": [
+            "from",
+            "of",
+            "by"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kata kerja 'stem' (berasal dari/berakar dari) selalu berpasangan dengan preposisi 'from'. Ini adalah kolokasi tingkat lanjut yang sangat umum dalam analisis politik dan sejarah."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Lengkapi pernyataan arbitrase tingkat tinggi berikut: '___, we cannot subject our citizens ___ such draconian economic measures.'",
+          "options": [
+            "As a matter of fact / with",
+            "Fundamentally / to",
+            "Surprisingly / for"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Fundamentally' berfungsi sebagai attitude adverbial yang menetapkan prinsip dasar, dan kata kerja 'subject' (menundukkan/memaparkan) selalu diikuti oleh preposisi 'to' (subject someone to something)."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Communique",
+        "translation": "Pernyataan resmi / Komunike",
+        "example": "The summit concluded with a joint communique outlining the new trade protocols.",
+        "context": "Digunakan untuk merujuk pada pengumuman resmi setelah pertemuan tingkat tinggi atau negosiasi diplomatik."
+      },
+      {
+        "word": "Arbitration",
+        "translation": "Penyelesaian sengketa / Arbitrase",
+        "example": "Both parties have agreed to submit their territorial dispute to international arbitration.",
+        "context": "Konteks hukum internasional atau bisnis di mana pihak ketiga yang netral membuat keputusan yang mengikat."
+      },
+      {
+        "word": "Impasse",
+        "translation": "Jalan buntu",
+        "example": "The negotiations reached an impasse when neither side would compromise on the tariff issue.",
+        "context": "Digunakan saat negosiasi atau diskusi tidak dapat dilanjutkan karena ketidaksepakatan yang tajam."
+      },
+      {
+        "word": "Resort to",
+        "translation": "Mengambil jalan terakhir / Terpaksa menggunakan",
+        "example": "We hope to resolve this diplomatically without having to resort to military intervention.",
+        "context": "Diikuti oleh kata benda atau gerund, menunjukkan tindakan ekstrem yang diambil ketika opsi lain gagal."
+      },
+      {
+        "word": "Attribute to",
+        "translation": "Mengaitkan dengan / Menisbahkan pada",
+        "example": "The sudden collapse of the currency can be directly attributed to the central bank's mismanagement.",
+        "context": "Digunakan untuk menunjukkan penyebab dari suatu peristiwa, sangat umum dalam laporan analitis dan forensik."
+      },
+      {
+        "word": "Unequivocally",
+        "translation": "Secara tegas / Tanpa keraguan",
+        "example": "The Secretary-General unequivocally condemned the unprovoked attack on the sovereign nation.",
+        "context": "Adverbia tingkat tinggi untuk mengekspresikan kepastian absolut, sering digunakan dalam kecaman atau dukungan resmi."
+      }
+    ],
+    "dialogue": {
+      "context": "Sidang darurat tertutup Dewan Keamanan PBB. Dua utusan negara sedang berdebat sengit mengenai krisis perbatasan dan ancaman sanksi ekonomi.",
+      "lines": [
+        {
+          "speaker": "Ambassador Sterling",
+          "text": "As a matter of fact, the recent border incursions stem directly from your government's failure to uphold the previous treaty.",
+          "translation": "Faktanya, pelanggaran perbatasan baru-baru ini berakar langsung dari kegagalan pemerintah Anda dalam menjunjung tinggi perjanjian sebelumnya."
+        },
+        {
+          "speaker": "Ambassador Vance",
+          "text": "Frankly, we unequivocally reject that accusation. You cannot attribute the actions of rogue factions to our central administration.",
+          "translation": "Terus terang, kami secara tegas menolak tuduhan tersebut. Anda tidak dapat mengaitkan tindakan faksi-faksi pemberontak dengan pemerintahan pusat kami."
+        },
+        {
+          "speaker": "Ambassador Sterling",
+          "text": "The international community is, understandably, losing patience. We may have to resort to economic sanctions if this impasse continues.",
+          "translation": "Komunitas internasional, dapat dipahami, mulai kehilangan kesabaran. Kami mungkin terpaksa mengambil jalan sanksi ekonomi jika jalan buntu ini terus berlanjut."
+        },
+        {
+          "speaker": "Ambassador Vance",
+          "text": "If you subject our economy to such draconian measures, we will withdraw from the arbitration process entirely.",
+          "translation": "Jika Anda menundukkan ekonomi kami pada tindakan kejam seperti itu, kami akan menarik diri dari proses arbitrase sepenuhnya."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Menegosiasikan resolusi krisis tanpa memicu eskalasi konflik menggunakan bahasa diplomasi tingkat tinggi dan presisi sintaksis.",
+      "scenario": "Anda adalah Utusan Khusus PBB dalam negosiasi krisis bilateral. Pihak lawan mengancam akan menarik diri dari perjanjian damai karena merasa disudutkan. Gunakan 'attitude adverbials' (seperti: understandably, frankly, generally speaking) untuk meredakan ketegangan, dan 'dependent prepositions' (seperti: resort to, attribute to, subject to) untuk merumuskan draf komunike kompromi secara lisan."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Which sentence correctly employs an attitude adverbial to express a contextual limitation in a formal diplomatic setting?",
+          "options": [
+            "Generally speaking, bilateral agreements require mutual concessions to be sustainable.",
+            "The agreement is generally speaking requiring concessions to be sustainable.",
+            "Speaking generally, the concessions are required by the agreement to be sustainable.",
+            "Bilateral agreements require, generally speaking mutual concessions to be sustainable."
+          ],
+          "correctIndex": 0,
+          "explanation": "'Generally speaking' adalah attitude adverbial yang tepat diletakkan di awal kalimat (diikuti koma) untuk memberikan konteks umum sebelum menyatakan klaim spesifik."
+        },
+        {
+          "id": 2,
+          "prompt": "The chief negotiator refused to ___ the demands, warning that the crisis would inevitably result ___ further economic destabilization.",
+          "options": [
+            "comply with / to",
+            "yield to / in",
+            "submit for / into",
+            "agree on / from"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kata kerja 'yield' berpasangan dengan 'to' (menyerah pada), dan 'result' berpasangan dengan 'in' (berakibat pada). Ini adalah kombinasi preposisi dependen C1/C2 yang krusial."
+        },
+        {
+          "id": 3,
+          "prompt": "Faced with a diplomatic ___, the committee had no choice but to ___ international arbitration to resolve the territorial dispute.",
+          "options": [
+            "communique / rely on",
+            "resolution / subject to",
+            "impasse / resort to",
+            "sanction / attribute to"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Impasse' berarti jalan buntu, dan 'resort to' berarti mengambil jalan terakhir. Kombinasi ini sangat lazim dalam konteks kegagalan negosiasi awal."
+        },
+        {
+          "id": 4,
+          "prompt": "Choose the grammatically impeccable sentence suitable for a formal executive summary.",
+          "options": [
+            "The board of directors has surprisingly, voted to dissolve the partnership.",
+            "The board of directors has surprisingly voted, to dissolve the partnership.",
+            "The board of directors, has surprisingly, voted to dissolve the partnership.",
+            "The board of directors has, surprisingly, voted to dissolve the partnership."
+          ],
+          "correctIndex": 3,
+          "explanation": "Saat attitude adverbial ('surprisingly') disisipkan di antara auxiliary verb ('has') dan main verb ('voted'), ia harus diapit oleh dua koma untuk memisahkan interupsi tersebut dari klausa utama."
+        }
+      ]
+    }
+  }
+}

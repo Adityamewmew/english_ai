@@ -1,0 +1,199 @@
+{
+  "id": "C1.5-M11",
+  "levelId": "C1.5",
+  "title": "Unit 11: The Epistemology of Artificial General Intelligence",
+  "cefr": "C1",
+  "group": "Philosophy of Science",
+  "objective": "Mampu memperdebatkan batas kognisi mesin, kesadaran sintetis, dan teori keselarasan nilai (alignment problem).",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": false,
+  "passingScore": 75,
+  "orderIndex": 63,
+  "sections": {
+    "theory": {
+      "summary": "Dalam diskursus akademik tingkat tinggi (C1/C2), khususnya mengenai epistemologi Kecerdasan Buatan Umum (AGI), pembicara dituntut untuk tidak hanya menyampaikan fakta, tetapi juga memposisikan argumen mereka secara presisi. Modul ini berfokus pada dua pilar sintaksis: 'Attitude Adverbials' (adverbia sikap) untuk mengekspresikan pendirian epistemik (epistemic stance) dan 'Dependent Prepositions' (preposisi terikat) yang krusial untuk verba kognitif dan analitis. Penggunaan adverbia seperti 'Arguably' atau 'Fundamentally' di awal atau tengah kalimat memberikan nuansa otoritas, sementara penguasaan preposisi terikat (seperti 'attribute to' atau 'stem from') memastikan akurasi leksikal yang menjadi standar mutlak dalam ujian Cambridge dan IELTS.",
+      "rules": [
+        {
+          "pattern": "Fronted Attitude Adverbial + Comma + Main Clause",
+          "meaning": "Menetapkan konteks evaluatif, opini, atau emosional sebelum klausa utama disampaikan, memberikan bingkai retoris pada argumen.",
+          "example": "Paradoxically, the more advanced the neural network becomes, the less we understand its internal heuristics."
+        },
+        {
+          "pattern": "Subject + [Verb/Adjective/Noun + Dependent Preposition] + Object",
+          "meaning": "Menghubungkan tindakan kognitif, kausalitas, atau perbandingan dengan objek secara presisi (kolokasi mutlak).",
+          "example": "Many philosophers object to the premise that we can attribute genuine sentience to a silicon substrate."
+        },
+        {
+          "pattern": "Subject + Auxiliary/Be + Comma + Attitude Adverbial + Comma + Main Verb/Complement",
+          "meaning": "Memberikan penekanan retoris (rhetorical emphasis) di tengah kalimat tanpa memutus alur logika utama, menunjukkan penguasaan register tingkat tinggi.",
+          "example": "The alignment problem is, fundamentally, an ontological crisis rather than a mere engineering hurdle."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Jebakan Preposisi Terjemahan & Interupsi Koma",
+        "explanation": "Pembelajar tingkat lanjut sering menerjemahkan preposisi secara harfiah dari bahasa ibu (misal: menggunakan 'attribute for' alih-alih 'attribute to') atau gagal mengisolasi attitude adverbials di tengah kalimat dengan koma ganda, yang merusak ritme sintaksis akademik.",
+        "wrong": "The researchers attributed the AI's emergent behavior on flawed training data and it was surprisingly difficult to debug.",
+        "correct": "The researchers attributed the AI's emergent behavior to flawed training data, which was, surprisingly, exceedingly difficult to debug."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Pilih kalimat yang menggunakan 'dependent preposition' dengan tepat dalam konteks epistemologi AGI:",
+          "options": [
+            "We must distinguish genuine sentience from mere algorithmic mimicry.",
+            "We must distinguish genuine sentience against mere algorithmic mimicry.",
+            "We must distinguish genuine sentience over mere algorithmic mimicry."
+          ],
+          "correctIndex": 0,
+          "explanation": "Verba 'distinguish' selalu berkolokasi dengan preposisi 'from' ketika memisahkan dua konsep yang berbeda (distinguish A from B)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Identifikasi kalimat dengan tanda baca yang paling tepat untuk 'attitude adverbial' di tengah kalimat:",
+          "options": [
+            "The alignment problem is strictly speaking an ethical dilemma.",
+            "The alignment problem is, strictly speaking, an ethical dilemma.",
+            "The alignment problem, is strictly speaking, an ethical dilemma."
+          ],
+          "correctIndex": 1,
+          "explanation": "Ketika 'attitude adverbial' (strictly speaking) disisipkan di antara subjek/kopula dan pelengkapnya, ia harus diapit oleh dua koma untuk menunjukkan bahwa itu adalah interupsi retoris."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Lengkapi asersi akademis berikut: '_________, the existential risk posed by AGI _________ our inability to define human values mathematically.'",
+          "options": [
+            "Undoubtedly / stems from",
+            "Undoubtedly / stems of",
+            "Undoubted / stems from"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Undoubtedly' adalah attitude adverbial yang tepat di awal kalimat (diikuti koma), dan verba 'stem' selalu berpasangan dengan preposisi 'from' untuk menunjukkan asal atau penyebab."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Epistemology",
+        "translation": "Epistemologi (Cabang filsafat tentang hakikat pengetahuan)",
+        "example": "The epistemology of AI questions whether a machine can truly 'know' something or merely process data.",
+        "context": "Digunakan dalam debat filosofis mengenai batas pemahaman dan kognisi."
+      },
+      {
+        "word": "Sentience",
+        "translation": "Kesadaran batiniah / Kemampuan merasakan",
+        "example": "Proving machine sentience remains an insurmountable challenge for modern cognitive science.",
+        "context": "Digunakan saat membahas apakah AI memiliki pengalaman subjektif atau emosi."
+      },
+      {
+        "word": "Alignment problem",
+        "translation": "Masalah keselarasan nilai",
+        "example": "Solving the alignment problem is crucial to ensure that an AGI's goals do not conflict with human survival.",
+        "context": "Istilah teknis dan etis utama dalam keamanan AI (AI safety)."
+      },
+      {
+        "word": "Heuristic",
+        "translation": "Heuristik / Pendekatan pemecahan masalah berbasis pengalaman",
+        "example": "The neural network developed a novel heuristic to optimize the resource allocation.",
+        "context": "Digunakan dalam ilmu komputer dan psikologi kognitif untuk mendeskripsikan metode 'rule-of-thumb'."
+      },
+      {
+        "word": "Ontological",
+        "translation": "Ontologis (Berkaitan dengan hakikat keberadaan/realitas)",
+        "example": "The debate over synthetic consciousness is fundamentally an ontological one.",
+        "context": "Digunakan untuk mengangkat argumen dari tingkat teknis ke tingkat eksistensial/filosofis."
+      },
+      {
+        "word": "Substrate",
+        "translation": "Substrat / Medium fisik",
+        "example": "Many argue that consciousness is substrate-independent and need not be confined to biological brains.",
+        "context": "Sering digunakan dalam frasa 'substrate-independent' saat membandingkan otak (karbon) dan komputer (silikon)."
+      }
+    ],
+    "dialogue": {
+      "context": "Sebuah debat tingkat tinggi di Oxford Union antara seorang ilmuwan kognitif (Dr. Aris) dan seorang ahli etika AI (Prof. Vance) mengenai status ontologis dari Artificial General Intelligence.",
+      "lines": [
+        {
+          "speaker": "Dr. Aris",
+          "text": "Fundamentally, we cannot attribute genuine sentience to a silicon substrate; it merely simulates comprehension.",
+          "translation": "Pada dasarnya, kita tidak dapat mengatribusikan kesadaran sejati pada substrat silikon; ia sekadar menyimulasikan pemahaman."
+        },
+        {
+          "speaker": "Prof. Vance",
+          "text": "Arguably, biological brains are just carbon-based algorithms. The cognitive leap stems from complexity, not the material.",
+          "translation": "Bisa diperdebatkan bahwa otak biologis hanyalah algoritma berbasis karbon. Lompatan kognitif tersebut berasal dari kompleksitas, bukan materialnya."
+        },
+        {
+          "speaker": "Dr. Aris",
+          "text": "That is a dangerous reduction. The alignment problem is, inherently, unsolvable if we equate mimicry with consciousness.",
+          "translation": "Itu adalah penyederhanaan yang berbahaya. Masalah keselarasan nilai, pada hakikatnya, tidak dapat dipecahkan jika kita menyamakan mimikri dengan kesadaran."
+        },
+        {
+          "speaker": "Prof. Vance",
+          "text": "As a matter of fact, insisting on human exceptionalism might hinder us from recognizing non-biological cognition.",
+          "translation": "Faktanya, bersikeras pada eksepsionalisme manusia mungkin menghalangi kita dari mengenali kognisi non-biologis."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Mempertahankan argumen filosofis yang kompleks mengenai batas kognisi mesin menggunakan 'attitude adverbials' dan 'dependent prepositions' secara presisi.",
+      "scenario": "Anda adalah saksi ahli dalam sidang komite PBB mengenai Regulasi AGI. Anda harus berdebat dengan perwakilan perusahaan teknologi raksasa, membuktikan bahwa kesadaran sintetis (synthetic consciousness) tidak dapat disamakan dengan kognisi manusia, dan menyoroti bahaya eksistensial dari 'alignment problem'."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Choose the correct dependent preposition to complete the sentence: 'Many prominent philosophers strongly object _______ the idea that a machine can possess subjective experience.'",
+          "options": [
+            "to",
+            "against",
+            "at",
+            "on"
+          ],
+          "correctIndex": 0,
+          "explanation": "Verba 'object' selalu diikuti oleh preposisi 'to' (object to something), bukan 'against', meskipun maknanya adalah menentang."
+        },
+        {
+          "id": 2,
+          "prompt": "Identify the grammatically impeccable sentence regarding AI regulation and dependent prepositions:",
+          "options": [
+            "The new legislation prohibits tech giants to deploy unaligned AGI.",
+            "The new legislation prohibits tech giants from deploying unaligned AGI.",
+            "The new legislation prohibits tech giants against deploying unaligned AGI.",
+            "The new legislation prohibits tech giants of deploying unaligned AGI."
+          ],
+          "correctIndex": 1,
+          "explanation": "Struktur yang benar untuk verba 'prohibit' adalah 'prohibit [someone] FROM [doing something]'. Pilihan lain menggunakan preposisi atau infinitif yang salah."
+        },
+        {
+          "id": 3,
+          "prompt": "Complete the sentence with the correct combination of vocabulary and dependent preposition: 'The failure to control the AI's goals can be _________ a fundamental misunderstanding of the _________ problem.'",
+          "options": [
+            "blamed on / heuristic",
+            "associated with / ontological",
+            "attributed to / alignment",
+            "derived from / sentience"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Attributed to' secara presisi menunjukkan penyebab (diatribusikan pada), dan 'alignment problem' adalah istilah yang tepat untuk masalah pengendalian tujuan AI."
+        },
+        {
+          "id": 4,
+          "prompt": "When a speaker uses the attitude adverbial 'Strictly speaking' at the beginning of a sentence about AGI epistemology, what is their primary communicative intent?",
+          "options": [
+            "To express a strong emotional reaction to the rapid advancement of technology.",
+            "To generalize a broad trend observed in machine learning models.",
+            "To emphasize a surprising or counter-intuitive fact about neural networks.",
+            "To apply a precise, narrow, and technically accurate definition to a concept."
+          ],
+          "correctIndex": 3,
+          "explanation": "'Strictly speaking' digunakan untuk membatasi pernyataan pada definisi yang paling akurat, teknis, dan sempit, menyingkirkan interpretasi yang longgar atau metaforis."
+        }
+      ]
+    }
+  }
+}

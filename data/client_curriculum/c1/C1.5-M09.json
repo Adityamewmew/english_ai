@@ -1,0 +1,199 @@
+{
+  "id": "C1.5-M09",
+  "levelId": "C1.5",
+  "title": "Unit 9: Interdisciplinary Jargon: Translating Hard Science for Policymakers",
+  "cefr": "C1",
+  "group": "Science Communication",
+  "objective": "Mampu mentransformasikan data sains kompleks menjadi rekomendasi kebijakan publik tanpa menyederhanakan substansi.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": false,
+  "passingScore": 75,
+  "orderIndex": 61,
+  "sections": {
+    "theory": {
+      "summary": "Dalam komunikasi sains tingkat lanjut (C1/C2), menjembatani kesenjangan antara data empiris yang kompleks dan kebijakan publik membutuhkan penguasaan 'attitude adverbials' dan 'dependent prepositions'. 'Attitude adverbials' (seperti *as a matter of fact*, *surprisingly*) berfungsi secara retoris untuk membingkai data, memberikan penekanan, atau menunjukkan sikap penulis terhadap temuan tanpa mengorbankan objektivitas akademis. Sementara itu, 'dependent prepositions' (seperti *attribute to*, *stem from*, *subject to*) sangat krusial untuk mengartikulasikan hubungan sebab-akibat dan korelasi secara presisi, guna menghindari ambiguitas yang berpotensi membahayakan regulasi atau legislasi publik.",
+      "rules": [
+        {
+          "pattern": "Front-position Attitude Adverbial + , + Main Clause",
+          "meaning": "Digunakan di awal kalimat untuk menetapkan konteks, opini, atau penekanan secara tegas sebelum menyajikan fakta ilmiah kepada pembuat kebijakan.",
+          "example": "As a matter of fact, the latest empirical data contradicts the committee's initial hypothesis regarding carbon sequestration."
+        },
+        {
+          "pattern": "Subject + verb + , + Attitude Adverbial + , + complement/object",
+          "meaning": "Penempatan adverbial di tengah kalimat (mid-position) yang diapit oleh koma untuk memberikan nuansa sisipan (parenthetical nuance) yang elegan dan formal.",
+          "example": "The sudden drop in mortality rates was, surprisingly, confined to demographics with high baseline immunity."
+        },
+        {
+          "pattern": "Advanced Verb/Adjective + Dependent Preposition (e.g., attribute to, stem from, subject to)",
+          "meaning": "Kombinasi leksikal tetap untuk menyatakan kausalitas, asal-usul, atau kondisi tanpa ruang untuk misinterpretasi hukum atau saintifik.",
+          "example": "We must attribute this paradigm shift to the new regulations, as the current anomalies stem directly from previous policy failures."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Abaikan Koma Ganda & Miskolokasi Preposisi Kausalitas",
+        "explanation": "Pembelajar tingkat lanjut sering kali mengabaikan penggunaan koma ganda saat meletakkan attitude adverbials di tengah kalimat, atau menggunakan preposisi yang salah secara intuitif (misalnya *attribute for* alih-alih *attribute to*). Kesalahan sintaksis ini menurunkan tingkat profesionalisme dan presisi dalam dokumen kebijakan tingkat tinggi.",
+        "wrong": "The discrepancy in the clinical trials was understandably attributed for the flawed methodology.",
+        "correct": "The discrepancy in the clinical trials was, understandably, attributed to the flawed methodology."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Pilih opsi dengan tanda baca yang paling tepat untuk menyisipkan 'attitude adverbial' di tengah kalimat formal:",
+          "options": [
+            "The committee has, understandably, decided to allocate further funding to the epidemiological research.",
+            "The committee has understandably, decided to allocate further funding to the epidemiological research.",
+            "The committee has, understandably decided to allocate further funding to the epidemiological research."
+          ],
+          "correctIndex": 0,
+          "explanation": "Dalam laras bahasa C1/C2, saat 'attitude adverbial' diletakkan di tengah kalimat (antara auxiliary dan main verb), ia harus diapit oleh dua koma untuk menunjukkan sifatnya yang parenthetical (sebagai sisipan)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Manakah 'attitude adverbial' yang paling tepat untuk mengoreksi miskonsepsi seorang menteri secara objektif namun tegas?",
+          "options": [
+            "Sadly, the statistical models do not support your legislative proposal.",
+            "As a matter of fact, the statistical models do not support your legislative proposal.",
+            "Generally speaking, the statistical models do not support your legislative proposal."
+          ],
+          "correctIndex": 1,
+          "explanation": "'As a matter of fact' digunakan untuk memberikan penekanan pada fakta yang sering kali bertentangan dengan apa yang diyakini sebelumnya, sangat cocok untuk mengoreksi asumsi pembuat kebijakan secara profesional."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Lengkapi pernyataan ilmiah ini: 'The long-term economic stagnation largely stems [...] the administration's reluctance to invest in renewable infrastructure.'",
+          "options": [
+            "of",
+            "in",
+            "from"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kata kerja 'stem' (berasal/berakar) selalu berpasangan dengan dependent preposition 'from'. Ini adalah kolokasi tingkat lanjut yang esensial untuk menjelaskan akar penyebab suatu masalah."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Corroborate",
+        "translation": "Memperkuat / Membenarkan (dengan bukti)",
+        "example": "Recent satellite imagery corroborates the scientists' claims regarding the accelerated melting of the ice caps.",
+        "context": "Digunakan saat menyajikan bukti tambahan yang mendukung hipotesis atau temuan awal di depan panel."
+      },
+      {
+        "word": "Extrapolate",
+        "translation": "Mengekstrapolasi / Memperkirakan",
+        "example": "It is dangerous to extrapolate long-term policy based solely on a single quarter's economic data.",
+        "context": "Digunakan untuk memperingatkan pembuat kebijakan agar tidak menarik kesimpulan luas dari data yang terbatas."
+      },
+      {
+        "word": "Caveat",
+        "translation": "Peringatan / Syarat / Pengecualian",
+        "example": "The model predicts a steady decline in inflation, with the caveat that global energy prices remain stable.",
+        "context": "Sangat penting dalam komunikasi sains untuk menunjukkan batasan atau kondisi dari sebuah prediksi saintifik."
+      },
+      {
+        "word": "Discrepancy",
+        "translation": "Ketidaksesuaian / Perbedaan",
+        "example": "The board must address the glaring discrepancy between the projected emissions and the actual atmospheric readings.",
+        "context": "Digunakan untuk menyoroti perbedaan antara teori/target kebijakan dan realitas data empiris."
+      },
+      {
+        "word": "Mitigate",
+        "translation": "Memitigasi / Mengurangi keparahan",
+        "example": "Immediate legislative intervention is required to mitigate the adverse effects of urban runoff on local ecosystems.",
+        "context": "Istilah standar dalam rekomendasi kebijakan publik untuk tindakan pencegahan atau pengurangan dampak buruk."
+      },
+      {
+        "word": "Paradigm shift",
+        "translation": "Pergeseran paradigma / Perubahan mendasar",
+        "example": "Transitioning to a circular economy requires a fundamental paradigm shift in both consumer behavior and industrial manufacturing.",
+        "context": "Digunakan untuk mendeskripsikan perubahan radikal dalam cara berpikir atau pendekatan sistemik."
+      }
+    ],
+    "dialogue": {
+      "context": "Sidang Komite Lingkungan Parlemen. Seorang Kepala Ilmuwan (Speaker A) sedang mempresentasikan anomali data iklim yang kompleks kepada Menteri Energi (Speaker B) yang skeptis, mencoba mengubah data tersebut menjadi urgensi kebijakan.",
+      "lines": [
+        {
+          "speaker": "Chief Scientist",
+          "text": "As a matter of fact, Minister, we can attribute this unprecedented temperature spike directly to unregulated industrial runoff.",
+          "translation": "Faktanya, Menteri, kita dapat mengatribusikan lonjakan suhu yang belum pernah terjadi sebelumnya ini secara langsung pada limbah industri yang tidak diregulasi."
+        },
+        {
+          "speaker": "Minister of Energy",
+          "text": "Are you suggesting that our current regulatory framework is, fundamentally, flawed and failing to mitigate the risks?",
+          "translation": "Apakah Anda menyiratkan bahwa kerangka regulasi kita saat ini, pada dasarnya, cacat dan gagal memitigasi risiko tersebut?"
+        },
+        {
+          "speaker": "Chief Scientist",
+          "text": "Frankly, yes. The discrepancies in the data stem from outdated monitoring protocols that completely fail to capture micro-pollutants.",
+          "translation": "Sejujurnya, ya. Ketidaksesuaian dalam data tersebut berakar dari protokol pemantauan usang yang sama sekali gagal menangkap polutan mikro."
+        },
+        {
+          "speaker": "Minister of Energy",
+          "text": "Then we must subject these protocols to an immediate, rigorous independent review before drafting any new legislation.",
+          "translation": "Kalau begitu kita harus menundukkan protokol-protokol ini pada tinjauan independen yang ketat dan segera sebelum merancang undang-undang baru."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Mampu mentransformasikan data sains yang rumit menjadi rekomendasi kebijakan yang tegas menggunakan 'attitude adverbials' untuk pembingkaian dan 'dependent prepositions' untuk akurasi kausalitas.",
+      "scenario": "Anda adalah Penasihat Ilmiah Utama untuk Organisasi Kesehatan Dunia (WHO). Anda harus memberikan pengarahan kepada dewan menteri yang skeptis mengenai data epidemiologis terbaru. Gunakan kata-kata seperti 'corroborate', 'caveat', serta struktur 'stem from' dan 'attribute to' yang dipadukan dengan 'attitude adverbials' (misal: surprisingly, frankly) untuk meyakinkan mereka agar segera mengubah kebijakan karantina."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Which sentence demonstrates the correct C1/C2 punctuation and usage of a mid-position attitude adverbial?",
+          "options": [
+            "The findings were surprisingly, consistent with the initial hypothesis.",
+            "The findings were, surprisingly, consistent with the initial hypothesis.",
+            "The findings, were surprisingly consistent with the initial hypothesis.",
+            "The findings were surprisingly consistent, with the initial hypothesis."
+          ],
+          "correctIndex": 1,
+          "explanation": "Mid-position attitude adverbials (seperti 'surprisingly') yang memisahkan auxiliary verb (were) dan adjective/complement (consistent) harus diapit oleh dua koma."
+        },
+        {
+          "id": 2,
+          "prompt": "Complete the sentence with the correct dependent preposition: 'All new pharmaceutical products must be subject [...] rigorous clinical trials before receiving governmental approval.'",
+          "options": [
+            "for",
+            "with",
+            "to",
+            "under"
+          ],
+          "correctIndex": 2,
+          "explanation": "Frasa adjektiva 'subject to' (tunduk pada / harus melalui) adalah kolokasi tetap dalam bahasa Inggris formal dan hukum."
+        },
+        {
+          "id": 3,
+          "prompt": "Complete the sentence with the correct dependent preposition: 'The sudden collapse of the bridge was ultimately attributed [...] structural fatigue and poor maintenance.'",
+          "options": [
+            "to",
+            "by",
+            "from",
+            "for"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kata kerja 'attribute' selalu diikuti oleh preposisi 'to' (attribute something to something) untuk menunjukkan penyebab dari suatu kejadian."
+        },
+        {
+          "id": 4,
+          "prompt": "Which attitude adverbial best fits the context of a scientist reluctantly admitting a flaw in their own research during a doctoral defense?",
+          "options": [
+            "Generally speaking",
+            "As a matter of fact",
+            "Surprisingly",
+            "Frankly"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Frankly' (sejujurnya) digunakan untuk mengekspresikan opini atau fakta yang mungkin tidak menyenangkan atau sulit diakui, sangat cocok untuk momen pengakuan kelemahan secara profesional."
+        }
+      ]
+    }
+  }
+}

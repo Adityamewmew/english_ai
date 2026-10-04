@@ -1,0 +1,199 @@
+{
+  "id": "C1.5-M08",
+  "levelId": "C1.5",
+  "title": "Unit 8: Grant Proposal Formulation & Justifying High-Risk Budgets",
+  "cefr": "C1",
+  "group": "Grant Writing",
+  "objective": "Mampu merumuskan proposal hibah riset berdaya pikat tinggi dengan argumen signifikansi dan ROI keilmuan.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": false,
+  "passingScore": 75,
+  "orderIndex": 60,
+  "sections": {
+    "theory": {
+      "summary": "Dalam penulisan proposal hibah riset (grant proposal) tingkat lanjut, meyakinkan komite pendanaan membutuhkan lebih dari sekadar penyajian data; Anda harus memandu interpretasi dan ekspektasi mereka. Di sinilah 'Attitude Adverbials' (seperti *Undeniably*, *As a matter of fact*, *Paradoxically*) berperan esensial untuk membingkai argumen dan menjustifikasi anggaran berisiko tinggi tanpa terdengar arogan atau defensif. Selain itu, penguasaan 'Dependent Prepositions' (seperti *attribute to*, *stem from*, *subject to*) secara presisi sangat krusial untuk menunjukkan kompetensi akademis, merangkai hubungan sebab-akibat yang logis, dan menghindari ambiguitas dalam alokasi dana serta metodologi.",
+      "rules": [
+        {
+          "pattern": "[Attitude Adverbial] + [,] + [Subject] + [Verb] + [Complement]",
+          "meaning": "Membingkai klaim utama atau menjustifikasi risiko anggaran sejak awal kalimat untuk mengarahkan persepsi evaluator secara proaktif.",
+          "example": "Paradoxically, the unprecedented initial expenditure will ultimately result in a significantly higher return on scientific investment."
+        },
+        {
+          "pattern": "[Subject] + [Auxiliary/Be] + [,] + [Attitude Adverbial] + [,] + [Main Verb/Complement]",
+          "meaning": "Memberikan penekanan halus (nuanced emphasis) atau konsesi pada elemen spesifik dari proposal tanpa mendominasi seluruh struktur kalimat.",
+          "example": "The proposed methodology is, admittedly, highly unorthodox, yet it stems from a rigorous analysis of previous systemic failures."
+        },
+        {
+          "pattern": "[Noun Phrase] + [Preposition] + [Which] + [Subject] + [Verb] OR [Passive Verb] + [Preposition]",
+          "meaning": "Menghubungkan variabel riset, penyebab anomali, atau alokasi dana dengan presisi akademis tingkat tinggi (C1/C2) menggunakan preposisi dependen.",
+          "example": "The anomalies to which these preliminary findings are attributed cannot be accounted for by existing paradigms."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Kesalahan Preposisi Dependen dan Penempatan Koma pada Adverbia",
+        "explanation": "Penulis proposal sering menggunakan preposisi yang salah akibat terjemahan harfiah dari bahasa ibu (misal: 'attribute with' alih-alih 'attribute to', atau 'stem out of' alih-alih 'stem from'). Selain itu, saat meletakkan attitude adverbial di tengah kalimat (mid-position), mereka sering melupakan koma pengapit, yang merusak ritme pembacaan akademis dan menurunkan register tulisan.",
+        "wrong": "The high contingency budget is surprisingly allocated to mitigate risks that stem up from equipment failure, which we attribute with the extreme conditions.",
+        "correct": "The high contingency budget is, surprisingly, allocated to mitigate risks that stem from equipment failure, which we attribute to the extreme conditions."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Manakah dari kalimat berikut yang menggunakan 'mid-position attitude adverbial' dengan tanda baca dan struktur sintaksis yang paling tepat untuk proposal hibah?",
+          "options": [
+            "The research team has, understandably, allocated a substantial portion of the budget to longitudinal data validation.",
+            "The research team has understandably allocated, a substantial portion of the budget to longitudinal data validation.",
+            "The research team, has understandably, allocated a substantial portion of the budget to longitudinal data validation."
+          ],
+          "correctIndex": 0,
+          "explanation": "Opsi pertama benar karena 'attitude adverbial' (understandably) diapit oleh koma dan diletakkan secara tepat di antara auxiliary verb (has) dan main verb (allocated)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Evaluator hibah sering mencari presisi dalam hubungan sebab-akibat. Frasa mana yang paling tepat menghindari 'common trap' penggunaan preposisi dependen?",
+          "options": [
+            "The unexpected variance in the control group was largely attributed with the uncalibrated sensors.",
+            "The unexpected variance in the control group was largely attributed to the uncalibrated sensors.",
+            "The unexpected variance in the control group was largely attributed for the uncalibrated sensors."
+          ],
+          "correctIndex": 1,
+          "explanation": "Kata kerja 'attribute' selalu berpasangan dengan preposisi dependen 'to' (attribute something to something), bukan 'with' atau 'for'."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Lengkapi argumen justifikasi anggaran berisiko tinggi ini: '[...], the committee must recognize that the potential breakthroughs [...] this high-risk methodology far outweigh the initial financial outlay.'",
+          "options": [
+            "Frankly speaking / resulting to",
+            "As a matter of fact / deriving of",
+            "Fundamentally / stemming from"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Fundamentally' berfungsi sebagai attitude adverbial yang kuat untuk argumen inti, dan 'stemming from' adalah bentuk participle yang tepat dari dependent preposition 'stem from' (berakar/berasal dari)."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Substantiate",
+        "translation": "Membuktikan / Memperkuat dengan bukti",
+        "example": "We must substantiate our request for a €2M grant with empirical pilot data.",
+        "context": "Digunakan saat memberikan bukti konkret untuk mendukung klaim atau permintaan anggaran dalam proposal."
+      },
+      {
+        "word": "Stem from",
+        "translation": "Berasal dari / Berakar dari",
+        "example": "The necessity for this high-risk budget stems from the unprecedented nature of the quantum variables.",
+        "context": "Preposisi dependen esensial untuk menjelaskan akar penyebab suatu kebutuhan atau fenomena."
+      },
+      {
+        "word": "Attribute to",
+        "translation": "Menghubungkan dengan / Menganggap sebagai akibat dari",
+        "example": "The initial anomalies can be directly attributed to environmental interference.",
+        "context": "Digunakan untuk menunjukkan hubungan sebab-akibat secara formal dan akademis."
+      },
+      {
+        "word": "Contingency",
+        "translation": "Anggaran tak terduga / Kontingensi",
+        "example": "A 15% contingency fund is, admittedly, higher than standard, but crucial for this expedition.",
+        "context": "Istilah finansial krusial dalam grant writing untuk dana cadangan yang dialokasikan untuk risiko tak terduga."
+      },
+      {
+        "word": "Paradigm shift",
+        "translation": "Pergeseran paradigma",
+        "example": "If successful, this methodology will result in a paradigm shift within neurobiology.",
+        "context": "Frasa berdaya pikat tinggi untuk meyakinkan komite tentang Return on Investment (ROI) keilmuan yang masif."
+      },
+      {
+        "word": "Account for",
+        "translation": "Menjelaskan / Mempertanggungjawabkan",
+        "example": "The principal investigator must account for every dollar spent on specialized sequencing equipment.",
+        "context": "Digunakan untuk menjustifikasi pengeluaran atau menjelaskan porsi data/anggaran tertentu."
+      }
+    ],
+    "dialogue": {
+      "context": "Sidang pertahanan proposal hibah (Grant Defense) di hadapan komite pendanaan sains internasional. Dr. Aris sedang menjustifikasi anggaran peralatan yang sangat tinggi kepada Ketua Komite, Prof. Vance.",
+      "lines": [
+        {
+          "speaker": "Prof. Vance",
+          "text": "Dr. Aris, your proposed budget for the sequencing apparatus is, frankly, exorbitant. How do you account for such a massive initial outlay?",
+          "translation": "Dr. Aris, anggaran yang Anda usulkan untuk alat pengurutan, sejujurnya, sangat mahal. Bagaimana Anda mempertanggungjawabkan pengeluaran awal yang begitu besar?"
+        },
+        {
+          "speaker": "Dr. Aris",
+          "text": "Understandably, the figures appear daunting, Professor. However, the high costs stem directly from the need for sub-atomic precision, which standard equipment simply cannot provide.",
+          "translation": "Bisa dipahami jika angka-angkanya tampak menakutkan, Profesor. Namun, tingginya biaya tersebut berakar langsung dari kebutuhan akan presisi sub-atomik, yang tidak dapat disediakan oleh peralatan standar."
+        },
+        {
+          "speaker": "Prof. Vance",
+          "text": "Be that as it may, we cannot subject our endowment to such high-risk ventures without guaranteed returns. What if the anomalies you attribute to the current tech persist?",
+          "translation": "Meskipun begitu, kami tidak dapat memaparkan dana abadi kami pada usaha berisiko tinggi tanpa jaminan hasil. Bagaimana jika anomali yang Anda kaitkan dengan teknologi saat ini terus berlanjut?"
+        },
+        {
+          "speaker": "Dr. Aris",
+          "text": "As a matter of fact, our pilot study demonstrates that once we eliminate the calibration errors, the scientific ROI will be unprecedented, fundamentally altering our approach to genetic mapping.",
+          "translation": "Faktanya, studi percontohan kami menunjukkan bahwa begitu kita menghilangkan kesalahan kalibrasi, ROI ilmiahnya akan belum pernah terjadi sebelumnya, secara fundamental mengubah pendekatan kita terhadap pemetaan genetik."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Mempertahankan dan menjustifikasi alokasi anggaran berisiko tinggi (high-risk budget) menggunakan attitude adverbials dan dependent prepositions yang presisi.",
+      "scenario": "Anda adalah Peneliti Utama (Principal Investigator) yang sedang berhadapan dengan Dewan Peninjau Hibah (Grant Review Board) dari European Research Council. Anda meminta dana sebesar €5 juta untuk proyek geo-engineering eksperimental. Dewan skeptis terhadap tingginya dana 'contingency' (darurat) dan risiko kegagalan. Gunakan attitude adverbials (mis. admittedly, crucially, surprisingly) untuk membingkai argumen Anda, dan dependent prepositions (mis. attribute to, rely on, subject to) untuk menjelaskan metodologi dan mitigasi risiko secara meyakinkan."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Which sentence correctly utilizes an attitude adverbial and a dependent preposition to justify a budget?",
+          "options": [
+            "Surprisingly, the failure of the previous model can be attributed to a lack of contingency funding.",
+            "Surprisingly the failure of the previous model can be attributed for a lack of contingency funding.",
+            "The failure of the previous model, surprisingly can be attributed with a lack of contingency funding.",
+            "The failure of the previous model can be attributed to a lack of contingency funding surprisingly."
+          ],
+          "correctIndex": 0,
+          "explanation": "Opsi A menggunakan koma yang tepat setelah attitude adverbial di awal kalimat ('Surprisingly,') dan menggunakan preposisi dependen yang benar ('attributed to')."
+        },
+        {
+          "id": 2,
+          "prompt": "Fill in the blanks with the correct prepositions: 'The committee must concentrate ___ the long-term benefits, rather than being distracted ___ the initial costs, which merely amount ___ a fraction of the potential economic return.'",
+          "options": [
+            "in / by / for",
+            "on / from / to",
+            "on / by / with",
+            "at / from / to"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pasangan preposisi dependen yang tepat secara berurutan adalah: concentrate on, distract from, dan amount to."
+        },
+        {
+          "id": 3,
+          "prompt": "Identify the sentence that contains a stylistic or grammatical error typical of non-native grant writers.",
+          "options": [
+            "Frankly, we cannot rely on outdated paradigms to solve modern ecological crises.",
+            "The principal investigator is, admittedly, experimenting on highly volatile compounds.",
+            "As far as I am concerned, the delays stem up from bureaucratic interference rather than scientific error.",
+            "Generally speaking, institutions are reluctant to invest in unproven methodologies."
+          ],
+          "correctIndex": 2,
+          "explanation": "Opsi C salah karena menggunakan tambahan preposisi yang tidak tepat 'stem up from'. Bentuk baku yang benar adalah 'stem from'."
+        },
+        {
+          "id": 4,
+          "prompt": "Choose the most sophisticated phrasing to complete the grant proposal excerpt: 'The proposed framework will ________ the anomalies observed in the pilot phase, which we ________ environmental degradation.'",
+          "options": [
+            "deal with / blame on",
+            "look into / connect with",
+            "figure out / relate to",
+            "account for / attribute to"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Account for' (mempertanggungjawabkan/menjelaskan) dan 'attribute to' (menghubungkan dengan/menganggap sebagai akibat dari) adalah kosakata register C1/C2 yang paling tepat dan formal untuk penulisan proposal hibah."
+        }
+      ]
+    }
+  }
+}

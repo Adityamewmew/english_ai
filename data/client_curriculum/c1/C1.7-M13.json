@@ -1,0 +1,199 @@
+{
+  "id": "C1.7-M13",
+  "levelId": "C1.7",
+  "title": "Ujian Kelulusan C1.7: Evaluasi Komprehensif High-Stakes Crisis & Ultimate C1 Capstone",
+  "cefr": "C1",
+  "group": "Graduation Assessment",
+  "objective": "Ujian kelulusan akhir C1: evaluasi komprehensif retorika krisis, perundingan internasional, dan orasi dialektis.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": true,
+  "passingScore": 75,
+  "orderIndex": 91,
+  "sections": {
+    "theory": {
+      "summary": "Sebagai ujian kelulusan tingkat C1 (Capstone), modul ini menguji penguasaan komprehensif Anda terhadap dua pilar utama wacana akademis dan diplomasi tingkat tinggi: *Attitude Adverbials* (adverbia sikap) untuk membingkai argumen secara retoris, dan *Dependent Prepositions* (preposisi terikat) untuk artikulasi presisi dalam analisis kausalitas dan resolusi krisis. Penguasaan integratif dari kedua elemen ini membedakan penutur yang sekadar fasih dari negosiator, advokat, atau akademisi yang berwibawa, persuasif, dan tak terbantahkan di panggung internasional.",
+      "rules": [
+        {
+          "pattern": "[Attitude Adverbial] + , + [Main Clause] ATAU [Subject] + , + [Attitude Adverbial] + , + [Verb/Complement]",
+          "meaning": "Menegaskan posisi retoris, emosi, atau konteks pembicara secara elegan sebelum atau tepat di tengah penyampaian fakta krusial (Medial Position).",
+          "example": "The delegation was, surprisingly, willing to compromise on the treaty, though, frankly, I doubt their long-term commitment."
+        },
+        {
+          "pattern": "[Verb/Noun/Adjective] + [Object] + to / from / on (e.g., attribute to, stem from, rely on)",
+          "meaning": "Menunjukkan hubungan kausalitas, asal-usul, atau fondasi argumen secara presisi mutlak dalam analisis forensik atau resolusi krisis.",
+          "example": "The systemic economic collapse can be directly attributed to rampant corruption, which ultimately stems from a lack of regulatory oversight."
+        },
+        {
+          "pattern": "[Verb] + [Object] + from + [Gerund/Noun] (e.g., prohibit from, hinder from, discourage from)",
+          "meaning": "Menyatakan pencegahan, pelarangan, atau hambatan yurisdiksional dalam konteks hukum internasional dan resolusi konflik.",
+          "example": "Under international law, member states are strictly prohibited from interfering with the sovereign electoral processes of neighboring nations."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Ilusi Preposisi Logis & Interupsi Koma (Logical Preposition Fallacy & Comma Splicing)",
+        "explanation": "Kandidat C1 sering jatuh pada terjemahan harfiah preposisi dari bahasa ibu (misalnya menggunakan 'attribute *for*' alih-alih 'attribute *to*'). Selain itu, saat meletakkan *attitude adverbial* di tengah kalimat (medial position), pembelajar sering melupakan penggunaan koma ganda yang mengapit adverbia tersebut, merusak ritme sintaksis formal.",
+        "wrong": "The committee attributed the failure of the negotiations on the rebel leaders, who were surprisingly unwilling to cooperate.",
+        "correct": "The committee attributed the failure of the negotiations to the rebel leaders, who were, surprisingly, unwilling to cooperate."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Manakah penempatan dan tanda baca *attitude adverbial* yang paling tepat dan elegan untuk konteks diplomasi formal?",
+          "options": [
+            "The ambassador was, frankly, appalled by the sudden escalation of violence.",
+            "The ambassador was frankly, appalled by the sudden escalation of violence.",
+            "Frankly the ambassador was appalled, by the sudden escalation of violence."
+          ],
+          "correctIndex": 0,
+          "explanation": "Dalam posisi medial (di tengah kalimat), *attitude adverbial* ('frankly') harus diapit oleh dua koma untuk memisahkan subjek/kata kerja bantu dari kata kerja utama atau komplemen."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Pilih preposisi yang tepat untuk melengkapi analisis krisis berikut: 'The humanitarian disaster largely stems ___ the government's refusal to provide ___ its displaced citizens.'",
+          "options": [
+            "of / to",
+            "from / for",
+            "by / with"
+          ],
+          "correctIndex": 1,
+          "explanation": "Frasa kerja yang tepat adalah 'stem from' (berasal/berakar dari) dan 'provide for' (menyediakan kebutuhan bagi). Ini adalah pasangan *dependent prepositions* mutlak di level C1/C2."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Lengkapi pernyataan Dewan Keamanan ini dengan kombinasi adverbia dan preposisi yang paling berwibawa: '[...], we cannot rely ___ temporary ceasefires; we must address the root causes.'",
+          "options": [
+            "Actually / in",
+            "Surprisingly / to",
+            "As a matter of fact / on"
+          ],
+          "correctIndex": 2,
+          "explanation": "'As a matter of fact' memberikan penekanan otoritatif yang kuat, dan kata kerja 'rely' selalu diikuti oleh preposisi 'on' (rely on)."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Attribute to",
+        "translation": "Mengaitkan dengan / Menisbahkan pada",
+        "example": "The sudden market recovery was attributed to the central bank's aggressive intervention.",
+        "context": "Digunakan dalam analisis forensik atau akademis untuk menunjukkan penyebab pasti dari suatu fenomena."
+      },
+      {
+        "word": "Stem from",
+        "translation": "Bermula dari / Berakar dari",
+        "example": "The geopolitical tensions stem directly from historical border disputes.",
+        "context": "Digunakan untuk melacak asal-usul suatu konflik, masalah, atau krisis."
+      },
+      {
+        "word": "Resort to",
+        "translation": "Terpaksa menggunakan / Mengambil jalan",
+        "example": "We must exhaust all diplomatic channels before we resort to military action.",
+        "context": "Digunakan saat merujuk pada tindakan ekstrem yang diambil karena tidak ada pilihan lain yang tersisa."
+      },
+      {
+        "word": "Interfere with",
+        "translation": "Mencampuri / Mengganggu",
+        "example": "The proposed sanctions must not interfere with the delivery of humanitarian aid.",
+        "context": "Digunakan dalam konteks hukum atau diplomasi untuk menyatakan gangguan terhadap proses yang sah."
+      },
+      {
+        "word": "Subject to",
+        "translation": "Tunduk pada / Rentan terhadap",
+        "example": "All international treaties are subject to ratification by the respective national parliaments.",
+        "context": "Digunakan untuk menyatakan kondisi bersyarat atau otoritas yang mengikat."
+      },
+      {
+        "word": "As a matter of fact",
+        "translation": "Faktanya / Sebenarnya (Penekanan)",
+        "example": "As a matter of fact, the intelligence reports contradict the regime's official statement.",
+        "context": "Attitude adverbial yang digunakan untuk mengoreksi miskonsepsi atau menambahkan fakta yang memperkuat argumen."
+      }
+    ],
+    "dialogue": {
+      "context": "Sidang Darurat Dewan Keamanan PBB. Duta Besar Vance dan Sekretaris Jenderal berdebat sengit mengenai penerapan sanksi ekonomi terhadap negara yang melanggar perjanjian perbatasan internasional.",
+      "lines": [
+        {
+          "speaker": "Ambassador Vance",
+          "text": "Frankly, the recent border incursions stem directly from a blatant disregard for international law. We cannot simply rely on diplomatic warnings anymore.",
+          "translation": "Terus terang, pelanggaran perbatasan baru-baru ini berakar langsung dari pengabaian terang-terangan terhadap hukum internasional. Kita tidak bisa lagi sekadar mengandalkan peringatan diplomatis."
+        },
+        {
+          "speaker": "Secretary General",
+          "text": "While I agree with your assessment, we must not resort to military intervention prematurely. The civilian population is already subjected to severe economic hardship.",
+          "translation": "Meskipun saya setuju dengan penilaian Anda, kita tidak boleh mengambil jalan intervensi militer terlalu dini. Penduduk sipil sudah tunduk pada penderitaan ekonomi yang parah."
+        },
+        {
+          "speaker": "Ambassador Vance",
+          "text": "As a matter of fact, our proposed sanctions are specifically designed to prohibit the regime from acquiring military assets, without interfering with humanitarian aid.",
+          "translation": "Faktanya, sanksi yang kami usulkan dirancang secara khusus untuk melarang rezim tersebut memperoleh aset militer, tanpa mengganggu bantuan kemanusiaan."
+        },
+        {
+          "speaker": "Secretary General",
+          "text": "If that is the case, we can attribute the potential success of this resolution to our unified stance. However, we must insure against any unintended collateral damage.",
+          "translation": "Jika demikian halnya, kita dapat mengaitkan potensi keberhasilan resolusi ini pada sikap bersatu kita. Namun, kita harus melindungi diri dari kerusakan tambahan yang tidak disengaja."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Mampu memimpin negosiasi krisis tingkat tinggi dengan menggunakan *attitude adverbials* untuk membingkai argumen secara otoritatif dan *dependent prepositions* untuk mengartikulasikan kausalitas serta batasan hukum secara presisi mutlak.",
+      "scenario": "Anda adalah Kepala Utusan Khusus PBB dalam krisis geopolitik yang memanas. Anda harus meyakinkan faksi-faksi yang bertikai bahwa krisis ini 'stems from' (berakar dari) miskomunikasi historis, dan memperingatkan mereka agar tidak 'resort to' (mengambil jalan) kekerasan. Gunakan *attitude adverbials* (seperti 'Frankly', 'As a matter of fact', 'Generally speaking') untuk menegaskan posisi Anda secara diplomatis namun tegas, sambil menggunakan preposisi terikat yang tepat."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Identify the sentence that demonstrates the impeccable use of both an attitude adverbial and a dependent preposition in a high-register academic context.",
+          "options": [
+            "Surprisingly, the researchers attributed the anomaly to a flaw in the initial algorithm.",
+            "Surprisingly the researchers attributed the anomaly on a flaw in the initial algorithm.",
+            "The researchers were surprisingly, attributing the anomaly for a flaw in the initial algorithm.",
+            "Surprisingly, the researchers attributed the anomaly with a flaw in the initial algorithm."
+          ],
+          "correctIndex": 0,
+          "explanation": "Opsi pertama menggunakan koma yang tepat setelah 'Surprisingly' (attitude adverbial di awal kalimat) dan menggunakan pasangan preposisi yang benar 'attributed [something] to [something]'."
+        },
+        {
+          "id": 2,
+          "prompt": "Fill in the blanks: '________ speaking, the board strongly disapproves ________ any strategy that distracts the team ________ their primary objectives.'",
+          "options": [
+            "Frankly / to / from",
+            "Generally / of / from",
+            "Actually / with / of",
+            "Sadly / on / to"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kombinasi yang tepat adalah 'Generally speaking' (attitude adverbial), 'disapproves of' (dependent preposition), dan 'distracts from' (dependent preposition)."
+        },
+        {
+          "id": 3,
+          "prompt": "Which of the following correctly employs a medial attitude adverbial and a dependent preposition?",
+          "options": [
+            "The defendant was as a matter of fact, prohibited to leave the country.",
+            "The defendant was, as a matter of fact prohibited of leaving the country.",
+            "The defendant was, as a matter of fact, prohibited from leaving the country.",
+            "The defendant, was as a matter of fact prohibited from leaving, the country."
+          ],
+          "correctIndex": 2,
+          "explanation": "Dalam posisi medial, 'as a matter of fact' harus diapit oleh dua koma. Selain itu, kata kerja 'prohibit' selalu diikuti oleh preposisi 'from' + gerund (prohibited from leaving)."
+        },
+        {
+          "id": 4,
+          "prompt": "In a high-stakes diplomatic negotiation, which phrasing best conveys a firm but sophisticated stance without grammatical errors?",
+          "options": [
+            "Frankly, we blame you for the crisis, which results to our refusal to sign.",
+            "Sadly, we cannot agree with your terms, because they interfere on our sovereignty.",
+            "Actually, we object against the treaty, as it subjects our economy under foreign control.",
+            "As far as I am concerned, we must not resort to sanctions that hinder the nation from recovering."
+          ],
+          "correctIndex": 3,
+          "explanation": "Opsi terakhir sempurna: menggunakan 'As far as I am concerned' dengan koma, 'resort to', dan 'hinder from'. Opsi lain mengandung kesalahan preposisi (results *in*, interfere *with*, object *to*, subjects *to*)."
+        }
+      ]
+    }
+  }
+}
