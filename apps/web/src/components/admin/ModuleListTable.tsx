@@ -3,15 +3,16 @@
 import React from "react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, Award, Clock, Layers, ArrowUpRight, Eye } from "lucide-react";
+import { BookOpen, Award, Clock, Layers, ArrowUpRight, Eye, Edit2, Trash2 } from "lucide-react";
 import { AdminModuleListItem } from "@/services/admin-curriculum.service";
 
 interface ModuleListTableProps {
   modules: AdminModuleListItem[];
   onSelectModule?: (moduleId: string) => void;
+  onDeleteModule?: (moduleId: string, title: string) => void;
 }
 
-export function ModuleListTable({ modules, onSelectModule }: ModuleListTableProps) {
+export function ModuleListTable({ modules, onSelectModule, onDeleteModule }: ModuleListTableProps) {
   if (modules.length === 0) {
     return (
       <div className="p-12 text-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl">
@@ -89,7 +90,7 @@ export function ModuleListTable({ modules, onSelectModule }: ModuleListTableProp
                       <button
                         type="button"
                         onClick={() => onSelectModule(m.id)}
-                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold transition-all"
+                        className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold transition-all"
                         title="Lihat Pratinjau Materi"
                       >
                         <Eye className="w-3.5 h-3.5" />
@@ -98,12 +99,32 @@ export function ModuleListTable({ modules, onSelectModule }: ModuleListTableProp
                     )}
 
                     <Link
+                      href={`/admin/modules/${m.id}/edit`}
+                      className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 text-xs font-semibold transition-all"
+                      title="Edit Modul Ini"
+                    >
+                      <Edit2 className="w-3.5 h-3.5" />
+                      <span>Edit</span>
+                    </Link>
+
+                    {onDeleteModule && (
+                      <button
+                        type="button"
+                        onClick={() => onDeleteModule(m.id, m.title)}
+                        className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/40 text-rose-700 dark:text-rose-300 text-xs font-semibold transition-all"
+                        title="Hapus Modul (Soft Delete)"
+                      >
+                        <Trash2 className="w-3.5 h-3.5" />
+                        <span>Hapus</span>
+                      </button>
+                    )}
+
+                    <Link
                       href={`/modules/${m.id}`}
                       target="_blank"
-                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 text-xs font-semibold transition-all"
+                      className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 text-xs font-semibold transition-all"
                       title="Buka Sebagai Siswa"
                     >
-                      <span>Buka Modul</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>

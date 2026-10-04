@@ -1,6 +1,7 @@
 import { Elysia, t } from "elysia";
 import { curriculumService } from "../services/curriculum.service";
 import { moduleTutorService } from "../services/module-tutor.service";
+import { curriculumAdminService } from "../services/curriculum-admin.service";
 
 export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
   .get("/", async () => {
@@ -184,6 +185,78 @@ export const curriculumRoutes = new Elysia({ prefix: "/api/curriculum" })
         audioBase64: t.String(),
         mimeType: t.Optional(t.String()),
         targetText: t.Optional(t.String()),
+      }),
+    }
+  )
+  // Admin Module CRUD Endpoints
+  .post(
+    "/admin/modules",
+    async ({ body }) => {
+      return await curriculumAdminService.createModule(body as any);
+    },
+    {
+      body: t.Object({
+        id: t.Optional(t.String()),
+        levelId: t.String(),
+        title: t.String(),
+        cefr: t.String(),
+        group: t.String(),
+        objective: t.String(),
+        complexity: t.Optional(t.String()),
+        estimatedMinutes: t.Optional(t.Number()),
+        isExam: t.Optional(t.Boolean()),
+        passingScore: t.Optional(t.Number()),
+        orderIndex: t.Optional(t.Number()),
+        sections: t.Optional(t.Array(t.Any())),
+      }),
+    }
+  )
+  .put(
+    "/admin/modules/:id",
+    async ({ params, body }) => {
+      return await curriculumAdminService.updateModule(params.id, body as any);
+    },
+    {
+      params: t.Object({
+        id: t.String(),
+      }),
+      body: t.Object({
+        levelId: t.Optional(t.String()),
+        title: t.Optional(t.String()),
+        cefr: t.Optional(t.String()),
+        group: t.Optional(t.String()),
+        objective: t.Optional(t.String()),
+        complexity: t.Optional(t.String()),
+        estimatedMinutes: t.Optional(t.Number()),
+        isExam: t.Optional(t.Boolean()),
+        passingScore: t.Optional(t.Number()),
+        orderIndex: t.Optional(t.Number()),
+        sections: t.Optional(t.Array(t.Any())),
+      }),
+    }
+  )
+  .delete(
+    "/admin/modules/:id",
+    async ({ params }) => {
+      return await curriculumAdminService.deleteModule(params.id);
+    },
+    {
+      params: t.Object({
+        id: t.String(),
+      }),
+    }
+  )
+  .post(
+    "/admin/modules/ai-draft",
+    async ({ body }) => {
+      return await curriculumAdminService.generateAiDraft(body as any);
+    },
+    {
+      body: t.Object({
+        title: t.String(),
+        cefr: t.String(),
+        levelId: t.Optional(t.String()),
+        objective: t.Optional(t.String()),
       }),
     }
   );
