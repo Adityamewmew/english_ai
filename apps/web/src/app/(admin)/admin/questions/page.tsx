@@ -1,5 +1,5 @@
 import React from "react";
-import { adminQuestionsService } from "@/services/admin-questions.service";
+import { adminApi } from "@/features/admin";
 import { AdminQuestionsClient } from "@/components/admin/AdminQuestionsClient";
 
 export const metadata = {
@@ -17,21 +17,26 @@ export default async function AdminQuestionsPage({
   const keywords = params.keywords ?? "";
   const page = params.page ? parseInt(params.page, 10) : 1;
 
-  const result = await adminQuestionsService.getAllQuestions({
-    cefr,
-    skill,
-    keywords,
-    page,
-    perPage: 20,
-  });
-
-  const data = result.success && result.data ? result.data : {
+  let data = {
     list: [],
     total: 0,
     page: 1,
     perPage: 20,
     totalPages: 1,
   };
+
+  try {
+    const res = await adminApi.getAllQuestions({
+      cefr,
+      skill,
+      keywords,
+      page,
+      perPage: 20,
+    });
+    if (res) data = res;
+  } catch (e) {
+    console.error("Gagal mengambil bank soal via API:", e);
+  }
 
   return (
     <div className="space-y-6">

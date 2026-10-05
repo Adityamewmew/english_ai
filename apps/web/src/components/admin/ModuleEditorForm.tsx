@@ -12,13 +12,32 @@ import {
   Volume2,
   MessageSquare,
   HelpCircle,
-  Plus,
-  Trash2,
   CheckCircle2,
   AlertCircle,
   Loader2,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import {
+  ModuleEditorMetadataTab,
+  CEFR_LEVELS,
+} from "./module-editor/ModuleEditorMetadataTab";
+import {
+  ModuleEditorTheoryTab,
+  RuleItem,
+  CommonTrapState,
+} from "./module-editor/ModuleEditorTheoryTab";
+import {
+  ModuleEditorVocabTab,
+  VocabItem,
+} from "./module-editor/ModuleEditorVocabTab";
+import {
+  ModuleEditorDialogueTab,
+  DialogueLine,
+} from "./module-editor/ModuleEditorDialogueTab";
+import {
+  ModuleEditorQuizTab,
+  QuizQuestionItem,
+} from "./module-editor/ModuleEditorQuizTab";
 
 export interface ModuleEditorFormProps {
   initialData?: {
@@ -27,8 +46,6 @@ export interface ModuleEditorFormProps {
   };
   isEdit?: boolean;
 }
-
-const CEFR_LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
 
 export function ModuleEditorForm({ initialData, isEdit = false }: ModuleEditorFormProps) {
   const router = useRouter();
@@ -58,14 +75,14 @@ export function ModuleEditorForm({ initialData, isEdit = false }: ModuleEditorFo
 
   // Section 1: Theory
   const [summary, setSummary] = useState(theorySec.summary || "");
-  const [rules, setRules] = useState<Array<{ pattern: string; meaning: string; example: string }>>(
+  const [rules, setRules] = useState<RuleItem[]>(
     Array.isArray(theorySec.rules)
       ? theorySec.rules.map((r: any) =>
           typeof r === "object" ? r : { pattern: r, meaning: "", example: "" }
         )
       : []
   );
-  const [commonTrap, setCommonTrap] = useState({
+  const [commonTrap, setCommonTrap] = useState<CommonTrapState>({
     trapTitle: theorySec.commonTrap?.trapTitle || "",
     explanation: theorySec.commonTrap?.explanation || "",
     wrong: theorySec.commonTrap?.wrong || "",
@@ -73,37 +90,20 @@ export function ModuleEditorForm({ initialData, isEdit = false }: ModuleEditorFo
   });
 
   // Section 2: Vocab
-  const [vocabItems, setVocabItems] = useState<Array<{ word: string; translation: string; example: string; context?: string }>>(
+  const [vocabItems, setVocabItems] = useState<VocabItem[]>(
     Array.isArray(vocabSec.items) ? vocabSec.items : Array.isArray(vocabSec) ? vocabSec : []
   );
 
   // Section 3: Dialogue
   const [dialogueContext, setDialogueContext] = useState(dialogueSec.context || "");
-  const [dialogueLines, setDialogueLines] = useState<Array<{ speaker: string; text: string; translation: string }>>(
+  const [dialogueLines, setDialogueLines] = useState<DialogueLine[]>(
     Array.isArray(dialogueSec.lines) ? dialogueSec.lines : Array.isArray(dialogueSec.dialogue) ? dialogueSec.dialogue : []
   );
 
   // Section 4: Quiz
-  const [quizQuestions, setQuizQuestions] = useState<Array<{ prompt: string; options: string[]; correctIndex: number; explanation: string }>>(
+  const [quizQuestions, setQuizQuestions] = useState<QuizQuestionItem[]>(
     Array.isArray(quizSec.questions) ? quizSec.questions : []
   );
-
-  // Handlers for dynamic arrays
-  const addRule = () => setRules((prev) => [...prev, { pattern: "", meaning: "", example: "" }]);
-  const removeRule = (idx: number) => setRules((prev) => prev.filter((_, i) => i !== idx));
-
-  const addVocab = () => setVocabItems((prev) => [...prev, { word: "", translation: "", example: "", context: "" }]);
-  const removeVocab = (idx: number) => setVocabItems((prev) => prev.filter((_, i) => i !== idx));
-
-  const addDialogueLine = () => setDialogueLines((prev) => [...prev, { speaker: "Speaker A", text: "", translation: "" }]);
-  const removeDialogueLine = (idx: number) => setDialogueLines((prev) => prev.filter((_, i) => i !== idx));
-
-  const addQuizQuestion = () =>
-    setQuizQuestions((prev) => [
-      ...prev,
-      { prompt: "", options: ["", "", "", ""], correctIndex: 0, explanation: "" },
-    ]);
-  const removeQuizQuestion = (idx: number) => setQuizQuestions((prev) => prev.filter((_, i) => i !== idx));
 
   // AI Auto-Draft Handler
   const handleAiDraft = async () => {
@@ -267,6 +267,14 @@ export function ModuleEditorForm({ initialData, isEdit = false }: ModuleEditorFo
     }
   };
 
+  const tabs = [
+    { key: "info", label: "Informasi Dasar", icon: Layers },
+    { key: "theory", label: "Teori & Tata Bahasa", icon: BookOpen },
+    { key: "vocab", label: "Kosakata Inti", icon: Volume2 },
+    { key: "dialogue", label: "Percakapan", icon: MessageSquare },
+    { key: "quiz", label: "Kuis Evaluasi", icon: HelpCircle },
+  ] as const;
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Top Action Bar */}
@@ -280,73 +288,87 @@ export function ModuleEditorForm({ initialData, isEdit = false }: ModuleEditorFo
           </Link>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">
-                {isEdit ? `Edit Modul: ${title || moduleId}` : "Buat Modul Kurikulum Baru"}
-              </h1>
-              <Badge variant="outline" className="font-mono text-xs">
-                {cefr}
+              <h2 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+                {isEdit ? "Edit Kurikulum Modul" : "Buat Modul Baru"}
+              </h2>
+              <Badge variant="outline" className="text-xs bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+                Level {cefr}
               </Badge>
             </div>
-            <p className="text-xs text-slate-500">
-              {isEdit ? "Perbarui informasi dan materi pembelajaran modul ini." : "Lengkapi metadata dan 5 bagian materi pembelajaran modul baru."}
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+              Atur metadata pembelajaran, materi grammar, kosakata, percakapan, dan evaluasi.
             </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-2 self-end sm:self-auto">
           <button
             type="button"
             onClick={handleAiDraft}
             disabled={draftingAi || saving}
-            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-purple-900/50 border border-purple-200/80 dark:border-purple-800/60 text-xs font-bold transition-all disabled:opacity-50"
-            title="Isi draf materi lengkap otomatis dengan AI"
+            className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold rounded-xl border border-violet-200 dark:border-violet-800 bg-violet-50 hover:bg-violet-100 dark:bg-violet-950/40 dark:hover:bg-violet-900/50 text-violet-700 dark:text-violet-300 transition-all disabled:opacity-50 shadow-sm"
           >
-            {draftingAi ? <Loader2 className="w-4 h-4 animate-spin text-purple-600" /> : <Sparkles className="w-4 h-4 text-purple-600 dark:text-purple-400" />}
-            <span>Auto-Draft AI</span>
+            {draftingAi ? (
+              <>
+                <Loader2 className="w-4 h-4 animate-spin text-violet-600" />
+                <span>AI Menulis Draf...</span>
+              </>
+            ) : (
+              <>
+                <Sparkles className="w-4 h-4 text-violet-600 dark:text-violet-400" />
+                <span>Auto-Draft AI</span>
+              </>
+            )}
           </button>
 
           <button
             type="submit"
             disabled={saving || draftingAi}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-md shadow-blue-500/20 transition-all disabled:opacity-50"
+            className="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-xl bg-blue-600 hover:bg-blue-700 text-white transition-all disabled:opacity-50 shadow-sm shadow-blue-500/20"
           >
-            {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
-            <span>{isEdit ? "Simpan Perubahan" : "Publikasikan Modul"}</span>
+            {saving ? (
+              <>
+                <Loader2 className="w-4 h-4 animate-spin" />
+                <span>Menyimpan...</span>
+              </>
+            ) : (
+              <>
+                <Save className="w-4 h-4" />
+                <span>{isEdit ? "Simpan Perubahan" : "Publikasikan Modul"}</span>
+              </>
+            )}
           </button>
         </div>
       </div>
 
-      {/* Feedback Banner */}
       {feedback && (
         <div
-          className={`p-4 rounded-xl text-xs font-semibold flex items-center gap-2.5 ${
+          className={`p-4 rounded-2xl border text-xs font-medium flex items-center gap-3 ${
             feedback.type === "success"
-              ? "bg-emerald-50 text-emerald-800 border border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800"
-              : "bg-rose-50 text-rose-800 border border-rose-200 dark:bg-rose-950/40 dark:text-rose-300 dark:border-rose-800"
+              ? "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300"
+              : "bg-rose-50 dark:bg-rose-950/40 border-rose-200 dark:border-rose-800 text-rose-800 dark:text-rose-300"
           }`}
         >
-          {feedback.type === "success" ? <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" /> : <AlertCircle className="w-4 h-4 shrink-0 text-rose-600" />}
+          {feedback.type === "success" ? (
+            <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+          ) : (
+            <AlertCircle className="w-5 h-5 text-rose-600 shrink-0" />
+          )}
           <span>{feedback.message}</span>
         </div>
       )}
 
-      {/* Section Tabs */}
-      <div className="flex items-center gap-1.5 overflow-x-auto pb-1 border-b border-slate-200 dark:border-slate-800 text-xs font-bold">
-        {[
-          { id: "info", label: "Informasi Dasar", icon: Layers },
-          { id: "theory", label: "Teori & Tata Bahasa", icon: BookOpen },
-          { id: "vocab", label: "Kosakata Inti", icon: Volume2 },
-          { id: "dialogue", label: "Percakapan Kontekstual", icon: MessageSquare },
-          { id: "quiz", label: "Kuis Evaluasi", icon: HelpCircle },
-        ].map((t) => {
+      {/* Tabs Selector */}
+      <div className="flex items-center gap-1 overflow-x-auto pb-1 border-b border-slate-200 dark:border-slate-800">
+        {tabs.map((t) => {
           const Icon = t.icon;
-          const isActive = activeTab === t.id;
+          const isActive = activeTab === t.key;
           return (
             <button
-              key={t.id}
+              key={t.key}
               type="button"
-              onClick={() => setActiveTab(t.id as any)}
-              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-t-xl transition-all border-b-2 ${
+              onClick={() => setActiveTab(t.key)}
+              className={`flex items-center gap-2 px-4 py-2.5 text-xs font-bold rounded-xl border transition-all whitespace-nowrap ${
                 isActive
                   ? "border-blue-600 text-blue-600 dark:text-blue-400 bg-blue-50/60 dark:bg-blue-950/30"
                   : "border-transparent text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60"
@@ -359,498 +381,66 @@ export function ModuleEditorForm({ initialData, isEdit = false }: ModuleEditorFo
         })}
       </div>
 
-      {/* Tab 1: Informasi Dasar */}
       {activeTab === "info" && (
-        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-5">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                ID Modul {!isEdit && <span className="text-slate-400 font-normal">(Opsional)</span>}
-              </label>
-              <input
-                type="text"
-                disabled={isEdit}
-                value={moduleId}
-                onChange={(e) => setModuleId(e.target.value)}
-                placeholder="Contoh: B1.1-M14"
-                className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white disabled:opacity-60"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Level CEFR</label>
-              <select
-                value={cefr}
-                onChange={(e) => {
-                  setCefr(e.target.value);
-                  setLevelId(`${e.target.value}.1`);
-                }}
-                className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
-              >
-                {CEFR_LEVELS.map((lvl) => (
-                  <option key={lvl} value={lvl}>Level {lvl}</option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Sub-Level ID</label>
-              <input
-                type="text"
-                value={levelId}
-                onChange={(e) => setLevelId(e.target.value)}
-                placeholder="Contoh: B1.1"
-                className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Judul Modul</label>
-            <input
-              type="text"
-              required
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              placeholder="Contoh: Unit 14: Career Choices: Modal Verbs of Obligation & Career Plans"
-              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-medium"
-            />
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Kategori / Topik (Group)</label>
-              <input
-                type="text"
-                value={group}
-                onChange={(e) => setGroup(e.target.value)}
-                placeholder="Contoh: Work & Professional Communication"
-                className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Tingkat Kompleksitas</label>
-              <select
-                value={complexity}
-                onChange={(e) => setComplexity(e.target.value)}
-                className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
-              >
-                <option value="basic">Basic (Dasar)</option>
-                <option value="medium">Medium (Menengah)</option>
-                <option value="deep">Deep (Mendalam)</option>
-              </select>
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Tujuan Pembelajaran (Objective)</label>
-            <textarea
-              rows={2}
-              value={objective}
-              onChange={(e) => setObjective(e.target.value)}
-              placeholder="Jelaskan kompetensi komunikatif yang akan dikuasai siswa setelah menyelesaikan modul ini."
-              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
-            />
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
-            <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Estimasi (Menit)</label>
-              <input
-                type="number"
-                min={5}
-                max={120}
-                value={estimatedMinutes}
-                onChange={(e) => setEstimatedMinutes(Number(e.target.value))}
-                className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Passing Score (%)</label>
-              <input
-                type="number"
-                min={50}
-                max={100}
-                value={passingScore}
-                onChange={(e) => setPassingScore(Number(e.target.value))}
-                className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Urutan Indeks</label>
-              <input
-                type="number"
-                min={1}
-                value={orderIndex}
-                onChange={(e) => setOrderIndex(Number(e.target.value))}
-                className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
-              />
-            </div>
-
-            <div className="flex items-center gap-2 pt-6">
-              <input
-                type="checkbox"
-                id="isExamCheck"
-                checked={isExam}
-                onChange={(e) => setIsExam(e.target.checked)}
-                className="w-4 h-4 rounded text-blue-600"
-              />
-              <label htmlFor="isExamCheck" className="text-xs font-bold text-slate-700 dark:text-slate-300 cursor-pointer">
-                Ujian Kelulusan
-              </label>
-            </div>
-          </div>
-        </div>
+        <ModuleEditorMetadataTab
+          isEdit={isEdit}
+          moduleId={moduleId}
+          setModuleId={setModuleId}
+          cefr={cefr}
+          setCefr={setCefr}
+          levelId={levelId}
+          setLevelId={setLevelId}
+          title={title}
+          setTitle={setTitle}
+          group={group}
+          setGroup={setGroup}
+          complexity={complexity}
+          setComplexity={setComplexity}
+          objective={objective}
+          setObjective={setObjective}
+          estimatedMinutes={estimatedMinutes}
+          setEstimatedMinutes={setEstimatedMinutes}
+          passingScore={passingScore}
+          setPassingScore={setPassingScore}
+          orderIndex={orderIndex}
+          setOrderIndex={setOrderIndex}
+          isExam={isExam}
+          setIsExam={setIsExam}
+        />
       )}
 
-      {/* Tab 2: Teori & Tata Bahasa */}
       {activeTab === "theory" && (
-        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-6">
-          <div>
-            <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-              Ringkasan Konsep Teori (Summary)
-            </label>
-            <textarea
-              rows={3}
-              value={summary}
-              onChange={(e) => setSummary(e.target.value)}
-              placeholder="Penjelasan ringkas mengenai konsep tata bahasa atau formula utama materi ini."
-              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
-            />
-          </div>
-
-          {/* Rules List */}
-          <div className="space-y-3">
-            <div className="flex items-center justify-between">
-              <label className="text-xs font-bold text-slate-800 dark:text-slate-200">
-                Kaidah / Pola Pembentukan Kalimat (Rules)
-              </label>
-              <button
-                type="button"
-                onClick={addRule}
-                className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-700"
-              >
-                <Plus className="w-3.5 h-3.5" /> Tambah Aturan
-              </button>
-            </div>
-
-            {rules.map((rule, idx) => (
-              <div key={idx} className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-800/40 space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-bold text-slate-500">Kaidah #{idx + 1}</span>
-                  <button type="button" onClick={() => removeRule(idx)} className="text-rose-500 hover:text-rose-700 p-1">
-                    <Trash2 className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                  <input
-                    type="text"
-                    placeholder="Pola/Formula (e.g. Subject + must + V1)"
-                    value={rule.pattern}
-                    onChange={(e) => {
-                      const updated = [...rules];
-                      updated[idx].pattern = e.target.value;
-                      setRules(updated);
-                    }}
-                    className="px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Arti/Konteks (e.g. Menyatakan keharusan mutlak)"
-                    value={rule.meaning}
-                    onChange={(e) => {
-                      const updated = [...rules];
-                      updated[idx].meaning = e.target.value;
-                      setRules(updated);
-                    }}
-                    className="px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Contoh Kalimat (e.g. You must wear a helmet.)"
-                    value={rule.example}
-                    onChange={(e) => {
-                      const updated = [...rules];
-                      updated[idx].example = e.target.value;
-                      setRules(updated);
-                    }}
-                    className="px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Common Trap */}
-          <div className="p-4 rounded-xl border border-amber-200/80 dark:border-amber-900/60 bg-amber-50/50 dark:bg-amber-950/20 space-y-3">
-            <h4 className="text-xs font-bold text-amber-800 dark:text-amber-300">Peringatan Kesalahan Umum (Common Trap)</h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <input
-                type="text"
-                placeholder="Judul Kesalahan (e.g. Salah meletakkan kata kerja)"
-                value={commonTrap.trapTitle}
-                onChange={(e) => setCommonTrap({ ...commonTrap, trapTitle: e.target.value })}
-                className="px-3 py-1.5 text-xs rounded-lg border border-amber-200 dark:border-amber-800 bg-white dark:bg-slate-900"
-              />
-              <input
-                type="text"
-                placeholder="Penjelasan Jebakan"
-                value={commonTrap.explanation}
-                onChange={(e) => setCommonTrap({ ...commonTrap, explanation: e.target.value })}
-                className="px-3 py-1.5 text-xs rounded-lg border border-amber-200 dark:border-amber-800 bg-white dark:bg-slate-900"
-              />
-              <input
-                type="text"
-                placeholder="Contoh SALAH (Wrong)"
-                value={commonTrap.wrong}
-                onChange={(e) => setCommonTrap({ ...commonTrap, wrong: e.target.value })}
-                className="px-3 py-1.5 text-xs rounded-lg border border-amber-200 dark:border-amber-800 bg-white dark:bg-slate-900 text-rose-600 font-medium"
-              />
-              <input
-                type="text"
-                placeholder="Contoh BENAR (Correct)"
-                value={commonTrap.correct}
-                onChange={(e) => setCommonTrap({ ...commonTrap, correct: e.target.value })}
-                className="px-3 py-1.5 text-xs rounded-lg border border-amber-200 dark:border-amber-800 bg-white dark:bg-slate-900 text-emerald-600 font-medium"
-              />
-            </div>
-          </div>
-        </div>
+        <ModuleEditorTheoryTab
+          summary={summary}
+          setSummary={setSummary}
+          rules={rules}
+          setRules={setRules}
+          commonTrap={commonTrap}
+          setCommonTrap={setCommonTrap}
+        />
       )}
 
-      {/* Tab 3: Kosakata Inti */}
       {activeTab === "vocab" && (
-        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="text-xs font-bold text-slate-800 dark:text-slate-200">Daftar Kosakata Inti ({vocabItems.length})</h3>
-              <p className="text-[11px] text-slate-500">Kosakata target yang akan dipelajari dan dilatih siswa.</p>
-            </div>
-            <button type="button" onClick={addVocab} className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-700">
-              <Plus className="w-3.5 h-3.5" /> Tambah Kosakata
-            </button>
-          </div>
-
-          <div className="space-y-2.5">
-            {vocabItems.map((item, idx) => (
-              <div key={idx} className="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-800/40 grid grid-cols-1 sm:grid-cols-4 gap-2 items-center">
-                <input
-                  type="text"
-                  placeholder="Kata (English)"
-                  value={item.word}
-                  onChange={(e) => {
-                    const u = [...vocabItems];
-                    u[idx].word = e.target.value;
-                    setVocabItems(u);
-                  }}
-                  className="px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 font-bold"
-                />
-                <input
-                  type="text"
-                  placeholder="Terjemahan (Indonesia)"
-                  value={item.translation}
-                  onChange={(e) => {
-                    const u = [...vocabItems];
-                    u[idx].translation = e.target.value;
-                    setVocabItems(u);
-                  }}
-                  className="px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
-                />
-                <input
-                  type="text"
-                  placeholder="Contoh Kalimat"
-                  value={item.example}
-                  onChange={(e) => {
-                    const u = [...vocabItems];
-                    u[idx].example = e.target.value;
-                    setVocabItems(u);
-                  }}
-                  className="px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
-                />
-                <div className="flex items-center gap-2">
-                  <input
-                    type="text"
-                    placeholder="Konteks (Opsional)"
-                    value={item.context || ""}
-                    onChange={(e) => {
-                      const u = [...vocabItems];
-                      u[idx].context = e.target.value;
-                      setVocabItems(u);
-                    }}
-                    className="flex-1 px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
-                  />
-                  <button type="button" onClick={() => removeVocab(idx)} className="text-rose-500 hover:text-rose-700 p-1">
-                    <Trash2 className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ModuleEditorVocabTab
+          vocabItems={vocabItems}
+          setVocabItems={setVocabItems}
+        />
       )}
 
-      {/* Tab 4: Percakapan Kontekstual */}
       {activeTab === "dialogue" && (
-        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-4">
-          <div>
-            <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Konteks Skenario Percakapan</label>
-            <input
-              type="text"
-              value={dialogueContext}
-              onChange={(e) => setDialogueContext(e.target.value)}
-              placeholder="Contoh: Alex and Jordan are discussing company policy during lunchtime."
-              className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
-            />
-          </div>
-
-          <div className="flex items-center justify-between pt-2">
-            <h3 className="text-xs font-bold text-slate-800 dark:text-slate-200">Alur Giliran Dialog ({dialogueLines.length})</h3>
-            <button type="button" onClick={addDialogueLine} className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-700">
-              <Plus className="w-3.5 h-3.5" /> Tambah Baris Dialog
-            </button>
-          </div>
-
-          <div className="space-y-3">
-            {dialogueLines.map((line, idx) => (
-              <div key={idx} className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-800/40 space-y-2">
-                <div className="flex items-center justify-between">
-                  <input
-                    type="text"
-                    value={line.speaker}
-                    onChange={(e) => {
-                      const u = [...dialogueLines];
-                      u[idx].speaker = e.target.value;
-                      setDialogueLines(u);
-                    }}
-                    placeholder="Nama Tokoh"
-                    className="w-40 px-2.5 py-1 text-xs font-bold rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
-                  />
-                  <button type="button" onClick={() => removeDialogueLine(idx)} className="text-rose-500 hover:text-rose-700 p-1">
-                    <Trash2 className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  <input
-                    type="text"
-                    placeholder="Kalimat Bahasa Inggris"
-                    value={line.text}
-                    onChange={(e) => {
-                      const u = [...dialogueLines];
-                      u[idx].text = e.target.value;
-                      setDialogueLines(u);
-                    }}
-                    className="px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Terjemahan Bahasa Indonesia"
-                    value={line.translation}
-                    onChange={(e) => {
-                      const u = [...dialogueLines];
-                      u[idx].translation = e.target.value;
-                      setDialogueLines(u);
-                    }}
-                    className="px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ModuleEditorDialogueTab
+          dialogueContext={dialogueContext}
+          setDialogueContext={setDialogueContext}
+          dialogueLines={dialogueLines}
+          setDialogueLines={setDialogueLines}
+        />
       )}
 
-      {/* Tab 5: Kuis Evaluasi */}
       {activeTab === "quiz" && (
-        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-5">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="text-xs font-bold text-slate-800 dark:text-slate-200">Soal Kuis Evaluasi ({quizQuestions.length})</h3>
-              <p className="text-[11px] text-slate-500">Soal pilihan ganda yang menguji pemahaman akhir modul siswa.</p>
-            </div>
-            <button type="button" onClick={addQuizQuestion} className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-700">
-              <Plus className="w-3.5 h-3.5" /> Tambah Soal Kuis
-            </button>
-          </div>
-
-          <div className="space-y-4">
-            {quizQuestions.map((q, qIdx) => (
-              <div key={qIdx} className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-800/40 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-slate-800 dark:text-white">Soal #{qIdx + 1}</span>
-                  <button type="button" onClick={() => removeQuizQuestion(qIdx)} className="text-rose-500 hover:text-rose-700 p-1">
-                    <Trash2 className="w-4 h-4" />
-                  </button>
-                </div>
-
-                <div>
-                  <label className="block text-[11px] font-bold text-slate-600 dark:text-slate-400 mb-1">Pertanyaan</label>
-                  <input
-                    type="text"
-                    value={q.prompt}
-                    onChange={(e) => {
-                      const u = [...quizQuestions];
-                      u[qIdx].prompt = e.target.value;
-                      setQuizQuestions(u);
-                    }}
-                    placeholder="Tuliskan pertanyaan kuis..."
-                    className="w-full px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {q.options.map((opt, optIdx) => (
-                    <div key={optIdx} className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name={`correct_q_${qIdx}`}
-                        checked={q.correctIndex === optIdx}
-                        onChange={() => {
-                          const u = [...quizQuestions];
-                          u[qIdx].correctIndex = optIdx;
-                          setQuizQuestions(u);
-                        }}
-                        className="w-4 h-4 text-emerald-600"
-                        title="Tandai sebagai kunci jawaban"
-                      />
-                      <input
-                        type="text"
-                        value={opt}
-                        onChange={(e) => {
-                          const u = [...quizQuestions];
-                          u[qIdx].options[optIdx] = e.target.value;
-                          setQuizQuestions(u);
-                        }}
-                        placeholder={`Pilihan ${String.fromCharCode(65 + optIdx)}`}
-                        className={`flex-1 px-3 py-1.5 text-xs rounded-lg border ${
-                          q.correctIndex === optIdx
-                            ? "border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/20 text-emerald-900 dark:text-emerald-200 font-semibold"
-                            : "border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
-                        }`}
-                      />
-                    </div>
-                  ))}
-                </div>
-
-                <div>
-                  <input
-                    type="text"
-                    value={q.explanation || ""}
-                    onChange={(e) => {
-                      const u = [...quizQuestions];
-                      u[qIdx].explanation = e.target.value;
-                      setQuizQuestions(u);
-                    }}
-                    placeholder="Penjelasan jawaban benar..."
-                    className="w-full px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ModuleEditorQuizTab
+          quizQuestions={quizQuestions}
+          setQuizQuestions={setQuizQuestions}
+        />
       )}
     </form>
   );

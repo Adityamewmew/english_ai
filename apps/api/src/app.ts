@@ -2,10 +2,11 @@ import { Elysia } from "elysia";
 import { swagger } from "@elysiajs/swagger";
 import { corsPlugin } from "./core/plugins/cors";
 import { errorHandler } from "./core/plugins/error-handler";
-import { voiceRoutes } from "./routes/voice";
-import { placementRoutes } from "./routes/placement";
-import { curriculumRoutes } from "./routes/curriculum";
-import { userRoutes } from "./routes/user";
+import { curriculumController } from "./features/curriculum";
+import { usersController } from "./features/users";
+import { placementController } from "./features/placement";
+import { voiceController } from "./features/voice";
+import { adminController } from "./features/admin";
 
 export const app = new Elysia()
   .use(corsPlugin)
@@ -16,7 +17,7 @@ export const app = new Elysia()
         info: {
           title: "EDDY'S AI API",
           version: "2.0.0",
-          description: "Clean Layered ElysiaJS Backend for EDDY'S AI Platform",
+          description: "Clean Feature-Based Layered ElysiaJS Backend",
         },
       },
     })
@@ -28,9 +29,10 @@ export const app = new Elysia()
     architecture: "Feature-Based Clean Layered",
     database: "PostgreSQL (english_ai)",
   }))
-  .use(voiceRoutes)
-  .use(placementRoutes)
-  .use(curriculumRoutes)
-  .use(userRoutes);
+  .use(curriculumController)
+  .use(usersController)
+  .use(placementController)
+  .use(voiceController)
+  .use(adminController);
 
 export type App = typeof app;

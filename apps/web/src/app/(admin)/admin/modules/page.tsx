@@ -1,5 +1,5 @@
 import React from "react";
-import { adminCurriculumService } from "@/services/admin-curriculum.service";
+import { adminApi } from "@/features/admin";
 import { AdminModulesClient } from "@/components/admin/AdminModulesClient";
 
 export const metadata = {
@@ -7,8 +7,12 @@ export const metadata = {
 };
 
 export default async function AdminModulesPage() {
-  const result = await adminCurriculumService.getAllModules();
-  const modules = result.success && result.data ? result.data : [];
+  let modules: any[] = [];
+  try {
+    modules = await adminApi.getAllModules();
+  } catch (e) {
+    console.error("Gagal mengambil modul kurikulum admin via API:", e);
+  }
 
   return (
     <div className="space-y-6">

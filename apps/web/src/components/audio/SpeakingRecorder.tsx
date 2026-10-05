@@ -11,7 +11,7 @@ import {
   Loader2,
   Info,
 } from "lucide-react";
-import { transcribeSpeakingAudio } from "@/app/(student)/placement/placement.actions";
+import { placementApi } from "@/features/placement/api/placement.api";
 
 interface SpeakingRecorderProps {
   onTranscriptChange: (transcript: string) => void;
@@ -72,11 +72,9 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
               setIsTranscribing(true);
               setTranscriptionError(null);
               try {
-                const fd = new FormData();
-                fd.append("audio", audioBlob, "intro.webm");
-                const res = await transcribeSpeakingAudio(fd);
-                if (res.success && res.transcript && res.transcript.trim().length > 0) {
-                  setTranscript(res.transcript.trim());
+                const transcriptText = await placementApi.transcribeSpeaking(audioBlob, "audio/webm");
+                if (transcriptText && transcriptText.trim().length > 0) {
+                  setTranscript(transcriptText.trim());
                   setIsAligned(true);
                   setTranscriptionError(null);
                 } else {

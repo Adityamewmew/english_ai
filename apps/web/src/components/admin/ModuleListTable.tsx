@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, Award, Clock, Layers, ArrowUpRight, Eye, Edit2, Trash2 } from "lucide-react";
-import { AdminModuleListItem } from "@/services/admin-curriculum.service";
+import { AdminModuleListItem } from "@/features/admin";
 
 interface ModuleListTableProps {
   modules: AdminModuleListItem[];

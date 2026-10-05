@@ -1,6 +1,6 @@
 "use server";
 
-import { userService } from "@/services/user.service";
+import { authApi } from "@/features/auth/api/auth.api";
 import { setSession, clearSession } from "@/lib/session";
 import { loginSchema, registerSchema } from "@/lib/validations/auth";
 import { redirect } from "next/navigation";
@@ -13,26 +13,29 @@ export async function doLogin(formData: FormData) {
     return { success: false, message: parsed.error.issues[0]?.message || "Validasi gagal" };
   }
 
-  const result = await userService.authenticate(parsed.data);
-  if (!result.success || !result.data) {
-    return { success: false, message: result.message || "Email atau password salah." };
-  }
+  try {
+    const user = await authApi.login(parsed.data);
+    if (!user) {
+      return { success: false, message: "Email atau password salah." };
+    }
 
-  const user = result.data;
-  const accessType = user.accessType ?? (user.role === "admin" ? 1 : 2);
-  await setSession({
-    userId: user.id,
-    name: user.name,
-    email: user.email,
-    role: user.role,
-    accessType,
-    currentCefr: user.currentCefr,
-  });
+    const accessType = user.accessType ?? (user.role === "admin" ? 1 : 2);
+    await setSession({
+      userId: user.id,
+      name: user.name,
+      email: user.email,
+      role: user.role,
+      accessType,
+      currentCefr: user.currentCefr,
+    });
 
-  if (accessType === 1 || user.role === "admin") {
-    redirect("/users");
-  } else {
-    redirect("/dashboard");
+    if (accessType === 1 || user.role === "admin") {
+      redirect("/users");
+    } else {
+      redirect("/dashboard");
+    }
+  } catch (err: any) {
+    return { success: false, message: err.message || "Email atau password salah." };
   }
 }
 
@@ -44,22 +47,25 @@ export async function doRegister(formData: FormData) {
     return { success: false, message: parsed.error.issues[0]?.message || "Validasi gagal" };
   }
 
-  const result = await userService.create(parsed.data);
-  if (!result.success || !result.data) {
-    return { success: false, message: result.message || "Gagal mendaftar." };
+  try {
+    const user = await authApi.register(parsed.data);
+    if (!user) {
+      return { success: false, message: "Gagal mendaftar." };
+    }
+
+    await setSession({
+      userId: user.id,
+      name: user.name,
+      email: user.email,
+      role: "student",
+      accessType: 2,
+      currentCefr: "A1",
+    });
+
+    redirect("/dashboard");
+  } catch (err: any) {
+    return { success: false, message: err.message || "Gagal mendaftar." };
   }
-
-  const user = result.data;
-  await setSession({
-    userId: user.id,
-    name: user.name,
-    email: user.email,
-    role: "student",
-    accessType: 2,
-    currentCefr: "A1",
-  });
-
-  redirect("/dashboard");
 }
 
 export async function doLogout() {

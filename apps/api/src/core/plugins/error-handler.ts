@@ -41,14 +41,12 @@ export const errorHandler = new Elysia({ name: "core-error-handler" })
 
     console.error("[Unhandled Server Error]:", error);
     set.status = 500;
+    const msg = error && typeof error === "object" && "message" in error ? String((error as any).message) : "Internal server error";
     return {
       success: false,
       error: {
         code: "INTERNAL_SERVER_ERROR",
-        message:
-          process.env.NODE_ENV === "production"
-            ? "Terjadi kesalahan pada server"
-            : error.message || "Internal server error",
+        message: process.env.NODE_ENV === "production" ? "Terjadi kesalahan pada server" : msg,
       },
     };
   });

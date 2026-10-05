@@ -11,15 +11,14 @@ import {
 } from "lucide-react";
 import { AdminStatCard } from "@/components/admin/AdminStatCard";
 import { Badge } from "@/components/ui/badge";
-import { adminDashboardService } from "@/services/admin-dashboard.service";
+import { adminApi } from "@/features/admin";
 
 export const metadata = {
   title: "Dashboard Admin | EDDY'S AI",
 };
 
 export default async function AdminDashboardPage() {
-  const result = await adminDashboardService.getStats();
-  const stats = result.success && result.data ? result.data : {
+  let stats = {
     totalUsers: 0,
     totalStudents: 0,
     totalAdmins: 0,
@@ -28,9 +27,16 @@ export default async function AdminDashboardPage() {
     totalQuestions: 0,
     totalCompletedModules: 0,
     totalInProgressModules: 0,
-    recentStudents: [],
-    cefrDistribution: { A1: 0, A2: 0, B1: 0, B2: 0, C1: 0, C2: 0 },
+    recentStudents: [] as any[],
+    cefrDistribution: { A1: 0, A2: 0, B1: 0, B2: 0, C1: 0, C2: 0 } as Record<string, number>,
   };
+
+  try {
+    const data = await adminApi.getStats();
+    if (data) stats = data;
+  } catch (e) {
+    console.error("Gagal memuat statistik admin via API:", e);
+  }
 
   return (
     <div className="space-y-8">

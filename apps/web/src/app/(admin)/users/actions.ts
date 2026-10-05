@@ -1,6 +1,6 @@
 "use server";
 
-import { userService } from "@/services/user.service";
+import { usersApi } from "@/features/users/api/users.api";
 import { requireRole } from "@/lib/permissions";
 import { revalidatePath } from "next/cache";
 import { createUserSchema, updateUserSchema } from "@/lib/validations/user";
@@ -18,13 +18,13 @@ export async function createUser(formData: FormData) {
     return { success: false, message: parsed.error.issues[0]?.message || "Validasi gagal" };
   }
 
-  const result = await userService.create(parsed.data, guard.session.userId);
-
-  if (result.success) {
+  try {
+    const user = await usersApi.register(parsed.data);
     revalidatePath("/users");
+    return { success: true, message: "Pengguna berhasil ditambahkan", data: user };
+  } catch (err: any) {
+    return { success: false, message: err?.message || "Gagal membuat pengguna" };
   }
-
-  return result;
 }
 
 export async function updateUser(id: string, formData: FormData) {
@@ -40,13 +40,17 @@ export async function updateUser(id: string, formData: FormData) {
     return { success: false, message: parsed.error.issues[0]?.message || "Validasi gagal" };
   }
 
-  const result = await userService.update(id, parsed.data, guard.session.userId);
-
-  if (result.success) {
+  try {
+    const payload: any = { ...parsed.data };
+    if (!payload.password || payload.password.trim() === "") {
+      delete payload.password;
+    }
+    const user = await usersApi.updateProfile(id, payload, guard.session.userId);
     revalidatePath("/users");
+    return { success: true, message: "Data pengguna berhasil diperbarui", data: user };
+  } catch (err: any) {
+    return { success: false, message: err?.message || "Gagal memperbarui pengguna" };
   }
-
-  return result;
 }
 
 export async function deleteUser(id: string) {
@@ -59,11 +63,11 @@ export async function deleteUser(id: string) {
     return { success: false, message: "Tidak dapat menghapus akun admin yang sedang aktif" };
   }
 
-  const result = await userService.delete(id, guard.session.userId);
-
-  if (result.success) {
+  try {
+    await usersApi.deleteUser(id, guard.session.userId);
     revalidatePath("/users");
+    return { success: true, message: "Pengguna berhasil dihapus" };
+  } catch (err: any) {
+    return { success: false, message: err?.message || "Gagal menghapus pengguna" };
   }
-
-  return result;
 }

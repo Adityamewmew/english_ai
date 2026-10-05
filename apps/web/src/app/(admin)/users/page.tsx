@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { userService } from "@/services/user.service";
+import { usersApi } from "@/features/users";
 import { SearchBar } from "@/components/admin/search-bar";
 import { UserDeleteButton } from "@/components/admin/user-delete-button";
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
@@ -21,14 +21,24 @@ export default async function UsersPage({
   const role = params.role ?? "all";
   const page = params.page ? parseInt(params.page, 10) : 1;
 
-  const result = await userService.getAll({
-    keywords,
-    role,
-    page,
-    perPage: 15,
-  });
+  let list: any[] = [];
+  let total = 0;
+  const perPage = 15;
 
-  const { list = [], total = 0, perPage = 15 } = result.success && result.data ? result.data : {};
+  try {
+    const data = await usersApi.list({
+      keywords,
+      role: role === "all" ? undefined : role,
+      page,
+      perPage,
+    });
+    if (data) {
+      list = data.items || [];
+      total = data.total || 0;
+    }
+  } catch (e) {
+    console.error("Gagal mengambil data pengguna via API:", e);
+  }
 
   return (
     <div className="space-y-6">

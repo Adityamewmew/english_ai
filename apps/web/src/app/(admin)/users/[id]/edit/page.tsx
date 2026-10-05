@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { userService } from "@/services/user.service";
+import { usersApi } from "@/features/users";
 import { UserForm } from "@/components/admin/user-form";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
@@ -15,13 +15,17 @@ export default async function EditUserPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const result = await userService.getById(id);
+  let user: any = null;
 
-  if (!result.success || !result.data) {
+  try {
+    user = await usersApi.getProfile(id);
+  } catch {
     notFound();
   }
 
-  const user = result.data;
+  if (!user) {
+    notFound();
+  }
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">

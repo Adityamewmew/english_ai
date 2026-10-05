@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ModuleListTable } from "./ModuleListTable";
 import { ModuleDetailModal } from "./ModuleDetailModal";
-import { AdminModuleListItem } from "@/services/admin-curriculum.service";
+import { AdminModuleListItem } from "@/features/admin";
 import { Filter, Plus, Search, CheckCircle2, AlertCircle } from "lucide-react";
 
 interface AdminModulesClientProps {
