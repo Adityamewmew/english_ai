@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: "Belajar Bahasa Inggris interaktif dengan Mr. Khoirul. Real-time voice call, tes penempatan CEFR, dan kurikulum standar IELTS/TOEIC.",
 };
 
+import { QueryProvider } from "@/providers/query-provider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,7 +24,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased bg-surface dark:bg-slate-950 dark:text-slate-100 selection:bg-accent/20">
-        {children}
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );

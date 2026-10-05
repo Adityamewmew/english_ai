@@ -2,7 +2,8 @@
   "name": "english-ai",
   "private": true,
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
     "clean": "bun -e \"import fs from 'fs'; fs.rmSync('apps/web/.next', { recursive: true, force: true })\"",
@@ -10,6 +11,7 @@
     "dev:web": "bun --filter web dev",
     "dev": "bun run clean && bun --filter \"*\" --parallel dev",
     "build": "bun --filter web build",
+    "typecheck": "bun run --filter \"*\" typecheck",
     "db:push": "bun --filter api db:push",
     "db:seed": "bun --filter api db:seed"
   }

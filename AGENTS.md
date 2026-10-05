@@ -7,19 +7,25 @@
 Monorepo arsitektur:
 - **Frontend (`apps/web`)**: Next.js App Router (Port 3000)
 - **Backend (`apps/api`)**: ElysiaJS on Bun runtime (Port 3001)
+- **Shared (`packages/shared`)**: Runtime constants & pure utils
 - **Database**: PostgreSQL (`english_ai`)
 - **ORM**: Drizzle ORM (`drizzle-orm/pg-core`)
-- **Package Manager & Runtime**: Bun (`bun run`, `bun add`)
+- **Auth**: Better Auth (Session cookie + Elysia macro)
+- **Data Fetching**: Eden Treaty (`@elysiajs/eden`) + TanStack Query (`@tanstack/react-query`)
+- **Package Manager & Workspaces**: Bun (`bun run`, `bun add`, `workspaces: ["apps/*", "packages/*"]`)
 
-Pola arsitektur: **Route (Elysia) → Service (BE Logic) → Dumb Component (FE Tailwind UI)**.
+Pola arsitektur: **Feature-Based + Clean Layered (Controller → Usecase → Repository → Schema)**.
 
 | Layer | Lokasi | Tanggung Jawab |
 |---|---|---|
-| **Elysia Route** | `apps/api/src/routes/*.ts` | Endpoint, schema validation (TypeBox `t`), panggil service |
-| **Service** | `apps/api/src/services/*.service.ts` | Business logic, query Drizzle ORM, AI calls |
-| **Database** | `apps/api/src/db/` | Schema Drizzle (`schema.ts`), connection (`index.ts`), seed |
-| **FE Component** | `apps/web/src/components/` | Presentational UI murni (HTML + Tailwind). **NO logic** |
-| **FE Page** | `apps/web/src/app/` | Layout, page wiring, hook consumption |
+| **Shared** | `packages/shared/src/` | Konstanta runtime & utilitas murni (bebas dependensi framework) |
+| **Controller** | `apps/api/src/features/<f>/<f>.controller.ts` | Validasi model (TypeBox `t`), ambil `user` dari auth macro, panggil usecase |
+| **Model** | `apps/api/src/features/<f>/<f>.model.ts` | Skema validasi TypeBox & tipe turunan |
+| **Usecase** | `apps/api/src/features/<f>/usecases/*.usecase.ts` | Business logic murni, orkestrasi repository, lempar `AppError` |
+| **Repository** | `apps/api/src/features/<f>/<f>.repository.ts` | Drizzle Query Builder mutasi/akses database |
+| **Schema** | `apps/api/src/features/<f>/<f>.schema.ts` | Definisi tabel Drizzle ORM |
+| **FE Feature** | `apps/web/src/features/<f>/` | Komponen fitur, custom hooks (TanStack Query), Eden API wrapper, query keys |
+| **FE Page** | `apps/web/src/app/` | Routing tipis (thin page), render feature component |
 
 ---
 
@@ -28,11 +34,7 @@ Pola arsitektur: **Route (Elysia) → Service (BE Logic) → Dumb Component (FE 
 Setiap file kode dalam repository **TIDAK BOLEH lebih dari 600 baris**.
 
 - Jika sebuah file mendekati batas (misal > 400-500 baris), **wajib dipecah/dimodularisasi** menjadi sub-modul terpisah.
-- Contoh yang sudah diterapkan: `gemini.ts` (awalnya ~800 baris) dipecah menjadi:
-  - `gemini-tts.ts` (TTS & voice logic)
-  - `gemini-chat.ts` (Chat & conversation logic)
-  - `gemini-eval.ts` (Evaluation & scoring logic)
-  - `gemini.ts` (Facade re-export sederhana)
+- Contoh: satu file usecase untuk satu aksi (`create-post.usecase.ts`, `list-posts.usecase.ts`), pecah utilitas AI/facade ke file spesifik.
 - Jangan menggabungkan semua fungsi ke dalam satu file raksasa.
 
 ---
@@ -42,186 +44,179 @@ Setiap file kode dalam repository **TIDAK BOLEH lebih dari 600 baris**.
 ```
 english-ai/
 ├── apps/
-│   ├── api/                      # ElysiaJS Backend (Bun)
+│   ├── api/                           # ElysiaJS Backend (Bun)
 │   │   ├── src/
+│   │   │   ├── core/                  # Utilitas lintas fitur (agnostik fitur)
+│   │   │   │   ├── config/env.ts      # Validasi environment variable
+│   │   │   │   ├── errors/app-error.ts# AppError, NotFoundError, dll.
+│   │   │   │   └── plugins/           # cors.ts, error-handler.ts
 │   │   │   ├── db/
-│   │   │   │   ├── schema.ts     # Drizzle pgTable definitions
-│   │   │   │   ├── index.ts      # Postgres connection instance
-│   │   │   │   └── seed.ts       # Database seeder
-│   │   │   ├── routes/           # Controller/Endpoint Elysia
-│   │   │   ├── services/         # Usecase/Business logic
-│   │   │   ├── lib/              # Utility & AI facades (Gemini, dll)
-│   │   │   └── index.ts          # Server entrypoint (Port 3001)
+│   │   │   │   ├── index.ts           # Koneksi Drizzle instance
+│   │   │   │   ├── schema.ts          # Re-export semua *.schema.ts dari features
+│   │   │   │   └── seed.ts            # Seeder database
+│   │   │   ├── features/              # Fitur modular (1 fitur = 1 folder)
+│   │   │   │   ├── auth/              # Better Auth config, plugin, schema
+│   │   │   │   ├── users/             # Controller, model, repo, usecases
+│   │   │   │   ├── curriculum/        # Controller, model, schema, repo, usecases
+│   │   │   │   ├── voice/             # Speech, audio, AI conversation
+│   │   │   │   └── placement/         # Placement test & CEFR assessment
+│   │   │   ├── app.ts                 # Rakit plugin & controller, export type App
+│   │   │   └── index.ts               # app.listen(3001) saja
 │   │   ├── package.json
 │   │   └── tsconfig.json
 │   │
-│   └── web/                      # Next.js Frontend
+│   └── web/                           # Next.js Frontend
 │       ├── src/
-│       │   ├── app/              # Next.js App Router (Pages)
-│       │   ├── components/       # Presentational UI (Tailwind only)
-│       │   ├── hooks/            # Client hooks (speech, audio, etc.)
-│       │   └── lib/              # Client helpers
-│       ├── next.config.ts        # Proxy rewrites /api/* -> :3001
+│       │   ├── app/                   # Next.js App Router (thin routes saja)
+│       │   ├── features/              # Feature modules
+│       │   │   └── <feature>/
+│       │   │       ├── api/           # Eden Treaty callers (*.api.ts)
+│       │   │       ├── components/    # Feature UI components
+│       │   │       ├── hooks/         # TanStack Query & state hooks
+│       │   │       ├── query-keys.ts  # Konsistensi invalidasi query cache
+│       │   │       └── index.ts       # Public API feature
+│       │   ├── components/            # Generic dumb UI (ui/, layout/)
+│       │   ├── lib/
+│       │   │   ├── api-client.ts      # treaty<App>(...) instance Eden
+│       │   │   └── query-client.ts    # TanStack QueryClient
+│       │   ├── providers/             # QueryProvider, dll.
+│       │   └── middleware.ts          # Cookie session auth guard
 │       ├── package.json
 │       └── tailwind.config.ts
-├── data/                         # Master curriculum & questions data
-├── prompts/                      # AI system prompts
-├── AGENTS.md                     # Architecture & coding guidelines
-└── package.json                  # Root package config
+│
+├── packages/
+│   └── shared/                        # Runtime constants & pure utils (@english-ai/shared)
+│       ├── src/
+│       │   ├── constants/             # Roles, CEFR levels, statuses
+│       │   ├── utils/                 # Pure helper functions
+│       │   └── index.ts
+│       ├── package.json
+│       └── tsconfig.json
+│
+├── data/                              # Master curriculum data
+├── prompts/                           # AI system prompts
+├── ARCHITECTURE.md                    # Detailed architectural standard
+├── AGENTS.md                          # Architecture & coding guidelines for agents
+├── tsconfig.base.json                 # Base TypeScript compiler options
+└── package.json                       # Root workspace config
 ```
 
 ---
 
-## Layer: Backend Route (`apps/api/src/routes/*.ts`)
+## Aturan Dependensi Antar-Layer
 
-### Tanggung Jawab
-- Menerima HTTP request (GET, POST, PUT, DELETE)
-- Validasi schema input/body/query menggunakan TypeBox (`t`) bawaan Elysia
-- Meneruskan data ke Service terkait
-- Return response JSON terstandarisasi
-- **DILARANG**: Melakukan query Drizzle atau logika bisnis langsung di file route
+```
+web ──► shared ◄── api
+web ──(import type saja)──► api
+```
 
-### Contoh Struktur Route
+| Dari | Boleh import | Dilarang |
+|---|---|---|
+| `apps/web` | `packages/shared`, `import type { App } from 'api'` | Import runtime apa pun dari `api` |
+| `apps/api` | `packages/shared` | Apa pun dari `web` |
+| `packages/shared` | Hanya dependensi stdlib/murni | `elysia`, `drizzle`, `react`, `next` |
+| `features/A` | `core/`, `db/`, `shared`, `features/B/index.ts` | File internal `features/B/*` langsung |
+| `core/` | `shared` | `features/*` |
+
+---
+
+## Layer: Backend Rules
+
+### 1. Controller (`<feature>.controller.ts`)
+- Tanggung jawab: definisi endpoint, validasi input dengan TypeBox (`t`), ambil `user` dari macro `{ auth: true }`, panggil usecase, return hasil.
+- **DILARANG**: Memiliki logika bisnis, kalkulasi kompleks, atau query Drizzle langsung.
+
+### 2. Model (`<feature>.model.ts`)
+- Tanggung jawab: skema TypeBox untuk body, query params, path params, dan type turunan (`type X = typeof X.static`).
+- **DILARANG**: Akses database atau import dependensi runtime selain TypeBox.
+
+### 3. Usecase (`usecases/<verb-noun>.usecase.ts`)
+- Aturan: **1 file = 1 aksi bisnis** (misal `getModuleDetailUsecase`, `submitPlacementUsecase`).
+- Parameter: Menerima data polos (primitives / plain objects, bukan objek Elysia `Context` atau `request`).
+- Error Handling: Lempar turunan `AppError` (`NotFoundError`, `ConflictError`, dll.). Ditangkap otomatis oleh `error-handler.ts`.
+- **DILARANG**: Import Elysia, membaca `set`/`request`, atau query DB tanpa repository.
+
+### 4. Repository (`<feature>.repository.ts`)
+- Tanggung jawab: isolasi query & mutasi Drizzle ORM ke database.
+- **DILARANG**: Aturan bisnis, kalkulasi nilai domain, atau melempar error bisnis.
+
+### 5. Schema (`<feature>.schema.ts`)
+- Definisi tabel Drizzle (`pgTable`). Semua tabel fitur di-reexport di `apps/api/src/db/schema.ts`.
+- Konvensi nama tabel: `snake_case` (e.g. `curriculum_modules`, `call_sessions`).
+
+### 6. App Contract (`apps/api/src/app.ts`)
+- Backend mengekspor `export type App = typeof app`.
+- `apps/api/src/index.ts` hanya memanggil `app.listen(3001)` agar aman saat di-import type oleh frontend.
+
+---
+
+## Layer: Frontend Rules
+
+### 1. Data Fetching via Eden Treaty + TanStack Query
+- FE tidak menduplikasi type response/payload BE. Semua type otomatis mengalir dari Eden Treaty:
 ```typescript
-import { Elysia, t } from 'elysia'
-import { curriculumService } from '../services/curriculum.service'
+// apps/web/src/lib/api-client.ts
+import { treaty } from '@elysiajs/eden'
+import type { App } from 'api'
 
-export const curriculumRoutes = new Elysia({ prefix: '/api/curriculum' })
-  .get('/modules', async () => {
-    return await curriculumService.getAllModules()
-  })
-  .post('/progress', async ({ body }) => {
-    return await curriculumService.saveProgress(body)
-  }, {
-    body: t.Object({
-      moduleId: t.String(),
-      score: t.Number(),
-      status: t.String()
-    })
-  })
+export const apiClient = treaty<App>(process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001', {
+  fetch: { credentials: 'include' }
+})
 ```
+- Setiap pemanggilan API dibungkus di `features/<feature>/api/<feature>.api.ts`.
+- State server diatur oleh **TanStack Query** melalui custom hook di `features/<feature>/hooks/`.
+- Query key dikelola terpusat di `features/<feature>/query-keys.ts` untuk konsistensi invalidasi cache.
 
----
+### 2. Thin App Router (`apps/web/src/app/`)
+- File `page.tsx` di `app/` harus **tipis**: hanya membaca route params/searchParams dan me-render feature component.
+- Tidak ada query/fetch data langsung di file page tanpa melalui feature layer.
 
-## Layer: Backend Service (`apps/api/src/services/*.service.ts`)
-
-### Tanggung Jawab
-- Seluruh logika bisnis aplikasi
-- Query & mutasi database menggunakan **Drizzle Query Builder**
-- Integrasi third-party (Google Gemini, ElevenLabs, dll)
-- Handle error dan return standard result
-
-### Format Response Standar
-```typescript
-export interface ServiceResult<T = unknown> {
-  success: boolean
-  data?: T
-  message?: string
-  error?: string
-}
-```
-
-### Pola Query Drizzle (PostgreSQL)
-```typescript
-import { db } from '../db'
-import { curriculumModules } from '../db/schema'
-import { eq, asc } from 'drizzle-orm'
-
-export class CurriculumService {
-  async getAllModules() {
-    try {
-      const data = await db
-        .select()
-        .from(curriculumModules)
-        .orderBy(asc(curriculumModules.orderIndex))
-
-      return { success: true, data }
-    } catch (e) {
-      console.error(e)
-      return { success: false, error: (e as Error).message }
-    }
-  }
-}
-
-export const curriculumService = new CurriculumService()
-```
-
----
-
-## Layer: Database (`apps/api/src/db/`)
-
-- Database: PostgreSQL (koneksi default `postgresql://postgres@127.0.0.1:5432/english_ai`)
-- Schema: Didefinisikan di `apps/api/src/db/schema.ts` menggunakan helper `drizzle-orm/pg-core`:
-  - `pgTable`, `varchar`, `text`, `integer`, `boolean`, `jsonb`, `timestamp`
-- Konvensi nama tabel: `snake_case` (e.g. `curriculum_modules`, `user_progress`)
-- Relasi & migration via Drizzle Kit:
-  - Push schema langsung: `bun run db:push` (di dalam `apps/api`)
-  - Seed database: `bun run db:seed`
-
----
-
-## Layer: Frontend (`apps/web/`)
-
-### Aturan Komponen FE: "Mental HTML Tailwind"
-Komponen UI di `apps/web/src/components/` harus **murni presentational / dumb components**:
-- Hanya bertugas menampilkan data dan styling via **Tailwind CSS**.
-- **JANGAN** menaruh business logic, kalkulasi scoring, atau manipulasi data rumit di dalam komponen.
-- Interaksi diteruskan via props / callback functions (`onClick`, `onSubmit`, `onSelect`).
-- State kompleks dipisah ke custom hooks di `apps/web/src/hooks/` (misal: `useAudioRecorder`, `useSpeechQueue`).
-
-### Next.js Proxy Rewrite
-Semua request FE ke `/api/*` diteruskan secara transparan oleh Next.js dev server ke Elysia backend di port 3001:
-```typescript
-// apps/web/next.config.ts
-const nextConfig: NextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'http://localhost:3001/api/:path*',
-      },
-    ]
-  },
-}
-```
-Client component cukup panggil `fetch('/api/voice/process', ...)` tanpa perlu tahu port Elysia.
-
----
-
-## Workflow & Perintah Bun
-
-Semua lifecycle project menggunakan **Bun**:
-
-```bash
-# Backend (apps/api)
-cd apps/api
-bun install              # Install dependencies
-bun dev                  # Jalankan Elysia dev server (watch mode, port 3001)
-bun run db:push          # Push schema Drizzle ke PostgreSQL
-bun run db:seed          # Seed data kurikulum & user default
-
-# Frontend (apps/web)
-cd apps/web
-bun install              # Install dependencies
-bun dev                  # Jalankan Next.js dev server (port 3000)
-bun run build            # Production build check
-```
+### 3. Generic Components (`apps/web/src/components/`)
+- Hanya untuk komponen generik yang tidak mengenal fitur bisnis (misal `ui/button.tsx`, `layout/navbar.tsx`).
+- **DILARANG** mengimpor dari `features/`.
 
 ---
 
 ## Konvensi Penamaan
 
-- File Service: `kebab-case.service.ts` (`curriculum.service.ts`)
-- File Route: `kebab-case.ts` di `apps/api/src/routes/` (`voice.ts`, `placement.ts`)
-- File Komponen React: `PascalCase.tsx` (`SpeechMeter.tsx`, `ModuleCard.tsx`)
-- Tabel DB: `snake_case` di database, `camelCase` export di `schema.ts`
-- Kolom DB: `snake_case` mapping ke `camelCase` di schema TypeScript
+| Hal | Format | Contoh |
+|---|---|---|
+| File | `kebab-case` | `get-module-detail.usecase.ts` |
+| Suffix File BE | `.controller` `.usecase` `.repository` `.model` `.schema` | `curriculum.repository.ts` |
+| Fungsi Usecase | `camelCase` (`verbNounUsecase`) | `getModuleDetailUsecase` |
+| Komponen React | `PascalCase` (nama file `kebab-case.tsx`) | `ModuleCard` di `module-card.tsx` |
+| Hook | `camelCase` (`useXxx`) | `useModuleDetail` |
+| Query Keys | `camelCase` object | `curriculumKeys.detail(id)` |
+| Tabel DB | `snake_case` jamak | `curriculum_modules`, `users` |
+| Folder Fitur | `kebab-case` jamak | `curriculum`, `users`, `voice` |
+
+---
+
+## Workflow & Perintah Bun
+
+```bash
+# Root
+bun install                  # Install seluruh workspace (api, web, shared)
+bun run dev                  # Jalankan api & web secara paralel
+bun run typecheck            # Validasi typecheck seluruh workspace
+
+# Backend (apps/api)
+cd apps/api
+bun dev                      # Jalankan Elysia dev server (watch mode, port 3001)
+bun run db:push              # Push schema Drizzle ke PostgreSQL
+bun run db:seed              # Seed data kurikulum & user default
+
+# Frontend (apps/web)
+cd apps/web
+bun dev                      # Jalankan Next.js dev server (port 3000)
+bun run build                # Production build check
+```
 
 ---
 
 ## Testing & Validasi
 
-- Backend check: jalankan `bun run build` atau `bun test` di `apps/api`
-- Frontend check: jalankan `bun run build` di `apps/web`
-- Verifikasi batas baris: pastikan tidak ada file yang melebihi 600 baris.
+1. **Batas Baris File**: Pastikan tidak ada file yang melebihi **600 baris**.
+2. **Typecheck Kontrak**: Jalankan `bun run typecheck`. Jika ada perubahan pada endpoint BE, pastikan typecheck di FE otomatis mendeteksi dan lulus uji.
+3. **Build Check**: Jalankan `bun run build` pada `apps/web` dan `apps/api`.
 </project-architecture-guidelines>
