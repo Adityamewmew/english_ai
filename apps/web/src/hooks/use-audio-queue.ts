@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect } from "react";
+import { getApiUrl } from "@/lib/api-client";
 
 export interface QueuedSentence {
   index: number;
@@ -156,7 +157,7 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     (sentence: string, index: number) => {
       if (isHaltedRef.current) return;
 
-      const audioUrl = `/api/voice/tts?text=${encodeURIComponent(sentence)}`;
+      const audioUrl = getApiUrl(`/api/voice/tts?text=${encodeURIComponent(sentence)}`);
       const audio = new Audio();
       audio.preload = "auto";
       audio.src = audioUrl;

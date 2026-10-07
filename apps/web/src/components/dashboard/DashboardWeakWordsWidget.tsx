@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { animeButtonPop, animeCardHover } from "@/lib/anime-effects";
+import { getApiUrl } from "@/lib/api-client";
 
 export interface DashboardWeakWordsWidgetProps {
   words: string[];
@@ -35,7 +36,7 @@ export function DashboardWeakWordsWidget({ words }: DashboardWeakWordsWidgetProp
     setPlayingWord(word);
 
     const clean = word.toLowerCase().trim();
-    const audio = new Audio(`/api/voice/tts?text=${encodeURIComponent(clean)}`);
+    const audio = new Audio(getApiUrl(`/api/voice/tts?text=${encodeURIComponent(clean)}`));
     audioRef.current = audio;
 
     audio.onended = () => {

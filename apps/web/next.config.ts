@@ -2,11 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   async rewrites() {
-    const apiPort = process.env.PORT_API || "3003";
+    const rawApiUrl = process.env.NEXT_PUBLIC_API_URL || process.env.API_URL;
+    const apiUrl = rawApiUrl
+      ? rawApiUrl.replace(/\/$/, "")
+      : `http://localhost:${process.env.PORT_API || "3003"}`;
     return [
       {
         source: "/api/:path*",
-        destination: `http://localhost:${apiPort}/api/:path*`,
+        destination: `${apiUrl}/api/:path*`,
       },
     ];
   },

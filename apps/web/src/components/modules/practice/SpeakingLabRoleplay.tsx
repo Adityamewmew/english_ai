@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { evaluateSpeechDiff } from "@/lib/speech-diff";
 import { SpeechRecorderCallbackOptions, blobToBase64 } from "@/hooks/use-speech-recorder";
+import { getApiUrl } from "@/lib/api-client";
 import { RoleplayBriefing } from "./RoleplayBriefing";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -248,7 +249,7 @@ export function SpeakingLabRoleplay({
             try {
               setAnalyzingTurnIdx(turnIdx);
               const base64Audio = await blobToBase64(audioBlob);
-              const res = await fetch("/api/curriculum/transcribe-speech", {
+              const res = await fetch(getApiUrl("/api/curriculum/transcribe-speech"), {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

@@ -8,6 +8,7 @@ import { CallFooter } from "@/components/call/CallFooter";
 import { CallTranscriptDrawer, ChatMessage } from "@/components/call/CallTranscriptDrawer";
 import { useSpeechRecognition } from "@/hooks/use-speech-recognition";
 import { useAudioQueue } from "@/hooks/use-audio-queue";
+import { getApiUrl } from "@/lib/api-client";
 import { voiceApi } from "../api/voice.api";
 
 export interface VoiceCallViewProps {
@@ -33,6 +34,7 @@ export function VoiceCallView({
 
   const [conversationHistory, setConversationHistory] = useState<ChatMessage[]>([]);
   const [showSubtitles, setShowSubtitles] = useState<boolean>(true);
+  const [callLang, setCallLang] = useState<"en-US" | "id-ID">("en-US");
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const [studentName, setStudentName] = useState<string>(propStudentName);
 
@@ -120,7 +122,7 @@ export function VoiceCallView({
       streamAbortRef.current = abortController;
 
       try {
-        const res = await fetch("/api/voice/turn-stream", {
+        const res = await fetch(getApiUrl("/api/voice/turn-stream"), {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -219,6 +221,7 @@ export function VoiceCallView({
   const { liveTranscript, setLiveTranscript, abort: abortSpeech } = useSpeechRecognition({
     canListen,
     studentName,
+    lang: callLang,
     onUtteranceReady: (spoken) => {
       setLiveTranscript("");
       handleSendStudentMessage(spoken);
@@ -342,8 +345,10 @@ export function VoiceCallView({
         callStatus={callStatus}
         duration={duration}
         showSubtitles={showSubtitles}
+        lang={callLang}
         onOpenDrawer={() => setIsDrawerOpen(true)}
         onToggleSubtitles={() => setShowSubtitles((prev) => !prev)}
+        onToggleLang={() => setCallLang((prev) => (prev === "en-US" ? "id-ID" : "en-US"))}
       />
 
       <main className="flex-1 flex flex-col items-center justify-center relative px-6 z-10">

@@ -6,6 +6,7 @@ import { ModuleListTable } from "./ModuleListTable";
 import { ModuleDetailModal } from "./ModuleDetailModal";
 import { AdminModuleListItem } from "@/features/admin";
 import { Filter, Plus, Search, CheckCircle2, AlertCircle } from "lucide-react";
+import { getApiUrl } from "@/lib/api-client";
 
 interface AdminModulesClientProps {
   initialModules: AdminModuleListItem[];
@@ -39,7 +40,7 @@ export function AdminModulesClient({ initialModules }: AdminModulesClientProps) 
   const handleOpenDetail = async (moduleId: string) => {
     try {
       setLoadingModal(true);
-      const res = await fetch(`/api/curriculum/modules/${moduleId}`);
+      const res = await fetch(getApiUrl(`/api/curriculum/modules/${moduleId}`));
       const json = await res.json();
       if (json.success && json.data) {
         setSelectedModuleData({
@@ -62,7 +63,7 @@ export function AdminModulesClient({ initialModules }: AdminModulesClientProps) 
     if (!confirmed) return;
 
     try {
-      const res = await fetch(`/api/curriculum/admin/modules/${moduleId}`, {
+      const res = await fetch(getApiUrl(`/api/curriculum/admin/modules/${moduleId}`), {
         method: "DELETE",
       });
       const json = await res.json();

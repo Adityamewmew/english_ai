@@ -22,6 +22,7 @@ import {
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { getApiUrl } from "@/lib/api-client";
 
 export interface DrillItem {
   id: string;
@@ -105,7 +106,7 @@ export function SpeakingLabDrill({
     if (moduleId && spokenText.trim().length > 0) {
       try {
         setLoadingTips((prev) => ({ ...prev, [activeDrillIdx]: true }));
-        const res = await fetch(`/api/curriculum/modules/${moduleId}/evaluate-speech`, {
+        const res = await fetch(getApiUrl(`/api/curriculum/modules/${moduleId}/evaluate-speech`), {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -158,7 +159,7 @@ export function SpeakingLabDrill({
             try {
               setIsAnalyzing(true);
               const base64Audio = await blobToBase64(audioBlob);
-              const res = await fetch("/api/curriculum/transcribe-speech", {
+              const res = await fetch(getApiUrl("/api/curriculum/transcribe-speech"), {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

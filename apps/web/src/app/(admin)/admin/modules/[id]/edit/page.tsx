@@ -12,10 +12,10 @@ export const metadata = {
 
 export default async function EditModulePage({ params }: EditModulePageProps) {
   const { id } = await params;
-  const apiPort = process.env.PORT_API || "3003";
+  const apiUrl = (process.env.API_URL || process.env.NEXT_PUBLIC_API_URL || `http://localhost:${process.env.PORT_API || "3003"}`).replace(/\/+$/, "");
 
   try {
-    const res = await fetch(`http://localhost:${apiPort}/api/curriculum/modules/${id}`, {
+    const res = await fetch(`${apiUrl}/api/curriculum/modules/${id}`, {
       cache: "no-store",
     });
     const json = await res.json();

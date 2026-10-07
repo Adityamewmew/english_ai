@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { getApiUrl } from "@/lib/api-client";
 import { ChatMessage } from "@/components/modules/ModuleAIAssistant";
 
 interface UseModuleTutorProps {
@@ -27,9 +28,11 @@ export function useModuleTutor({ moduleId, studentName = "", userId = "" }: UseM
       if (!moduleId) return;
       try {
         const greetRes = await fetch(
-          `/api/curriculum/modules/${moduleId}/tutor/greeting?studentName=${encodeURIComponent(
-            studentName
-          )}&userId=${encodeURIComponent(userId)}`
+          getApiUrl(
+            `/api/curriculum/modules/${moduleId}/tutor/greeting?studentName=${encodeURIComponent(
+              studentName
+            )}&userId=${encodeURIComponent(userId)}`
+          )
         ).catch(() => null);
 
         if (greetRes && greetRes.ok) {
@@ -66,7 +69,7 @@ export function useModuleTutor({ moduleId, studentName = "", userId = "" }: UseM
 
     const clean = text.replace(/[*_#]/g, "").trim();
     const encoded = encodeURIComponent(clean.slice(0, 800));
-    const audio = new Audio(`/api/voice/tts?text=${encoded}`);
+    const audio = new Audio(getApiUrl(`/api/voice/tts?text=${encoded}`));
     audioRef.current = audio;
 
     audio.onended = () => {
@@ -170,7 +173,7 @@ export function useModuleTutor({ moduleId, studentName = "", userId = "" }: UseM
         content: m.text,
       }));
 
-      const res = await fetch(`/api/curriculum/modules/${moduleId}/tutor/chat`, {
+      const res = await fetch(getApiUrl(`/api/curriculum/modules/${moduleId}/tutor/chat`), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

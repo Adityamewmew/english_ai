@@ -3,7 +3,7 @@
 import { getSession } from "@/lib/session";
 import { revalidatePath } from "next/cache";
 
-const API_URL = process.env.API_URL || "http://localhost:3003";
+const API_URL = (process.env.API_URL || process.env.NEXT_PUBLIC_API_URL || "http://localhost:3003").replace(/\/+$/, "");
 
 export interface SubmitQuizResponse {
   success: boolean;

@@ -17,6 +17,7 @@ import {
   Loader2,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { getApiUrl } from "@/lib/api-client";
 import {
   ModuleEditorMetadataTab,
   CEFR_LEVELS,
@@ -116,7 +117,7 @@ export function ModuleEditorForm({ initialData, isEdit = false }: ModuleEditorFo
       setDraftingAi(true);
       setFeedback(null);
 
-      const res = await fetch("/api/curriculum/admin/modules/ai-draft", {
+      const res = await fetch(getApiUrl("/api/curriculum/admin/modules/ai-draft"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -235,12 +236,12 @@ export function ModuleEditorForm({ initialData, isEdit = false }: ModuleEditorFo
         ],
       };
 
-      const url = isEdit
+      const targetPath = isEdit
         ? `/api/curriculum/admin/modules/${initialData?.module?.id}`
         : "/api/curriculum/admin/modules";
       const method = isEdit ? "PUT" : "POST";
 
-      const res = await fetch(url, {
+      const res = await fetch(getApiUrl(targetPath), {
         method,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
