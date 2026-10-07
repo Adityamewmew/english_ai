@@ -43,3 +43,16 @@ pdf_raw/
 # Python
 __pycache__/
 *.pyc
+
+# Vercel & Deploy
+.vercel/
+
+# Scratch & Offline Generators
+scratch/
+scripts/
+apps/api/src/scripts/
+
+# Media & Database Dumps
+*.mp3
+*.wav
+*.sqlite*
