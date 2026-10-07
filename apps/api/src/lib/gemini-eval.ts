@@ -80,8 +80,12 @@ YOUR TASK:
 4. Recognize spoken English words naturally.
 5. Return ONLY the final clean transcribed English sentences. No preamble, no quotes, no markdown.`;
 
-    if (baseUrl) {
-      const transcribeModels = Array.from(new Set([modelName, "gemini/gemini-3-flash-preview"]));
+    // Guard: Only send Base64 audio if a dedicated audio-capable model is explicitly configured
+    const isAudioCapableModel = (model: string) =>
+      /gemini|whisper|gpt-4o-audio|claude-3-5-sonnet/i.test(model);
+
+    if (baseUrl && modelName && isAudioCapableModel(modelName)) {
+      const transcribeModels = [modelName];
       for (const m of transcribeModels) {
         try {
           const endpoint = `${baseUrl.replace(/\/+$/, "")}/chat/completions`;
@@ -192,8 +196,12 @@ CRITICAL TRANSCRIPTION RULES:
 4. Do NOT hallucinate words that were not spoken.
 5. Return ONLY the clean transcribed English sentence/words. No preamble, no quotation marks, no markdown explanations.`;
 
-    if (baseUrl) {
-      const transcribeModels = Array.from(new Set([modelName, "gemini/gemini-3-flash-preview"]));
+    // Guard: Only send Base64 audio if a dedicated audio-capable model is explicitly configured
+    const isAudioCapableModel = (model: string) =>
+      /gemini|whisper|gpt-4o-audio|claude-3-5-sonnet/i.test(model);
+
+    if (baseUrl && modelName && isAudioCapableModel(modelName)) {
+      const transcribeModels = [modelName];
       for (const m of transcribeModels) {
         try {
           const endpoint = `${baseUrl.replace(/\/+$/, "")}/chat/completions`;

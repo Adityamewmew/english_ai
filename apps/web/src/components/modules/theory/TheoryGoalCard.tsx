@@ -53,26 +53,27 @@ export function TheoryGoalCard({
       ];
 
   // 5 variasi opener dialog Maya & Mr. Khoirul agar tidak monoton
+  const safeSummary = (summary || "berkomunikasi").toLowerCase();
   const dialogVariants = [
     {
       maya: `Mr. Khoirul, kapan sih kita sebenarnya wajib menggunakan pola materi ${title} ini dalam percakapan sehari-hari?`,
-      khoirul: `Pertanyaan mantap, Maya! Pola ini kita pakai untuk ${summary.toLowerCase()}. Bayangkan kamu sedang mengobrol dengan rekan internasional. Kunci utamanya ada pada contoh kalimat target ini:`,
+      khoirul: `Pertanyaan mantap, Maya! Pola ini kita pakai untuk ${safeSummary}. Bayangkan kamu sedang mengobrol dengan rekan internasional. Kunci utamanya ada pada contoh kalimat target ini:`,
     },
     {
       maya: `Mr. Khoirul, banyak yang bilang pola ${title} terdengar mirip dengan kalimat biasa. Apa ciri khas utamanya?`,
-      khoirul: `Bagus sekali perhatianmu, Maya! Ciri khasnya ada pada ketepatan konteks: ${summary.toLowerCase()}. Coba dengarkan dan rasakan alur contoh kalimat target kita ini:`,
+      khoirul: `Bagus sekali perhatianmu, Maya! Ciri khasnya ada pada ketepatan konteks: ${safeSummary}. Coba dengarkan dan rasakan alur contoh kalimat target kita ini:`,
     },
     {
       maya: `Kalau di lingkungan kerja atau saat traveling, apakah pola ${title} ini sering dipakai penutur asli?`,
-      khoirul: `Sangat sering! Penutur asli memakainya secara spontan saat ${summary.toLowerCase()}. Mulailah membiasakan diri dengan kalimat target berikut:`,
+      khoirul: `Sangat sering! Penutur asli memakainya secara spontan saat ${safeSummary}. Mulailah membiasakan diri dengan kalimat target berikut:`,
     },
     {
       maya: `Supaya terdengar percaya diri dan natural saat berbicara, fokus utama apa yang harus saya latih di modul ${title} ini?`,
-      khoirul: `Fokus pada ritme dan intonasi intinya, Maya. Modul ini melatihmu untuk ${summary.toLowerCase()}. Dengarkan kalimat target ini sebagai patokan awalmu:`,
+      khoirul: `Fokus pada ritme dan intonasi intinya, Maya. Modul ini melatihmu untuk ${safeSummary}. Dengarkan kalimat target ini sebagai patokan awalmu:`,
     },
     {
       maya: `Mr. Khoirul, bagaimana cara tercepat agar tidak ragu-ragu saat mengucapkan pola ${title} saat berbicara langsung?`,
-      khoirul: `Kuncinya adalah muscle memory lewat repetisi alami! Modul ini dirancang agar kamu terbiasa ${summary.toLowerCase()}. Dengarkan contoh kalimat target ini:`,
+      khoirul: `Kuncinya adalah muscle memory lewat repetisi alami! Modul ini dirancang agar kamu terbiasa ${safeSummary}. Dengarkan contoh kalimat target ini:`,
     },
   ];
 

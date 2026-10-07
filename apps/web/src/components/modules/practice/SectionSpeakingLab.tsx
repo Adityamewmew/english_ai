@@ -78,9 +78,10 @@ export function SectionSpeakingLab({
       const selectedTurns = userTurns.length > 0 ? userTurns : turns;
 
       return selectedTurns.slice(0, 3).map((t, idx) => {
-        const cleanText = t.text.includes(" / ")
-          ? t.text.split(" / ")[0].trim()
-          : t.text.trim();
+        const rawText = t?.text || "";
+        const cleanText = rawText.includes(" / ")
+          ? rawText.split(" / ")[0].trim()
+          : rawText.trim();
         return {
           id: `drill-turn-${idx + 1}`,
           targetText: cleanText,

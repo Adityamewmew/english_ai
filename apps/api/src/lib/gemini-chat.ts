@@ -35,14 +35,14 @@ export class GeminiChatService {
     const apiKey = process.env.AI_API_KEY || process.env.GEMINI_API_KEY || "";
     const primaryModel =
       process.env.AI_CHAT_MODEL ||
-      "gemini/gemini-3.1-flash-lite";
+      "deepseek-v4-flash:free";
 
     const proxyModels = Array.from(
       new Set([
-        "antigravity/gemini-3.7-flash-low",
-        "gemini/gemini-2.5-flash-lite",
-        "antigravity/gemini-3.7-flash-high",
-      ])
+        primaryModel,
+        process.env.AI_CHAT_MODEL,
+        "deepseek-v4-flash:free",
+      ].filter(Boolean) as string[])
     );
 
     if (baseUrl) {
@@ -127,16 +127,14 @@ export class GeminiChatService {
     const apiKey = process.env.AI_API_KEY || process.env.GEMINI_API_KEY || "";
     const primaryModel =
       process.env.AI_CHAT_MODEL ||
-      "gemini/gemini-3.1-flash-lite";
+      "deepseek-v4-flash:free";
 
     const proxyModels = Array.from(
       new Set([
         primaryModel,
-        "gemini/gemini-3.1-flash-lite",
-        "antigravity/gemini-3.7-flash-low",
-        "gemini/gemini-2.5-flash-lite",
-        "antigravity/gemini-3.7-flash-high",
-      ])
+        process.env.AI_CHAT_MODEL,
+        "deepseek-v4-flash:free",
+      ].filter(Boolean) as string[])
     );
 
     if (baseUrl) {

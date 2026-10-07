@@ -5,7 +5,6 @@ import { Info } from "lucide-react";
 import { VoiceOrb } from "@/components/call/VoiceOrb";
 import { CallHeader } from "@/components/call/CallHeader";
 import { CallFooter } from "@/components/call/CallFooter";
-import { CallEvaluationModal } from "@/components/call/CallEvaluationModal";
 import { CallTranscriptDrawer, ChatMessage } from "@/components/call/CallTranscriptDrawer";
 import { useSpeechRecognition } from "@/hooks/use-speech-recognition";
 import { useAudioQueue } from "@/hooks/use-audio-queue";
@@ -126,8 +125,9 @@ export function VoiceCallView({
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             topic: defaultTopic,
-            history: updatedHistory,
+            history: updatedHistory.slice(-4),
             studentMessage: cleanText,
+            userId,
           }),
           signal: abortController.signal,
         });
@@ -306,7 +306,11 @@ export function VoiceCallView({
       .map((m) => `${m.role === "assistant" ? "Mr. Khoirul" : "Student"}: ${m.content}`)
       .join("\n");
 
-    setCallStatus("ended");
+    setCallStatus("idle");
+    setDuration(0);
+    setConversationHistory([]);
+    setLiveTranscript("");
+    setAiSpeechState("idle");
 
     try {
       await voiceApi.evaluateSession({
@@ -350,21 +354,7 @@ export function VoiceCallView({
           </div>
         )}
 
-        {callStatus === "ended" && (
-          <CallEvaluationModal
-            duration={duration}
-            conversationHistory={conversationHistory}
-            onNewCall={() => {
-              setCallStatus("idle");
-              setDuration(0);
-              setConversationHistory([]);
-              handleStartCall();
-            }}
-          />
-        )}
-
-        {callStatus !== "ended" && callStatus !== "evaluating" && (
-          <div className="flex flex-col items-center justify-center space-y-6">
+        <div className="flex flex-col items-center justify-center space-y-6">
             <VoiceOrb
               state={
                 callStatus === "idle"
@@ -417,7 +407,6 @@ export function VoiceCallView({
               </div>
             )}
           </div>
-        )}
       </main>
 
       <CallFooter

@@ -5,7 +5,7 @@ export const env = {
     process.env.DATABASE_URL ||
     "postgresql://postgres:postgres@localhost:5432/english_ai",
   CORS_ORIGIN: process.env.CORS_ORIGIN || "http://localhost:3000",
-  AI_BASE_URL: process.env.AI_BASE_URL || "http://localhost:20128/v1",
+  AI_BASE_URL: process.env.AI_BASE_URL || "https://ai.tiarina.cloud/v1",
   AI_API_KEY: process.env.AI_API_KEY || "",
-  AI_CHAT_MODEL: process.env.AI_CHAT_MODEL || "gemini",
+  AI_CHAT_MODEL: process.env.AI_CHAT_MODEL || "deepseek-v4-flash:free",
 } as const;

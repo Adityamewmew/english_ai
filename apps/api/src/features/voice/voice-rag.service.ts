@@ -19,6 +19,13 @@ export interface StudentMemoryContext {
   totalCalls: number;
 }
 
+// ponytail: single-instance in-memory cache (TTL 20m); upgrade to Redis only when deploying multi-replica
+interface CachedSessionContext {
+  context: string;
+  expiresAt: number;
+}
+const sessionContextCache = new Map<string, CachedSessionContext>();
+
 export const voiceRagService = {
   async getCurriculumContext(topic: string, studentCefr = "A1"): Promise<CurriculumContext | null> {
     try {
@@ -92,6 +99,12 @@ export const voiceRagService = {
     userId?: string;
     studentCefr?: string;
   }): Promise<string> {
+    const cacheKey = `${params.userId ?? "anon"}:${params.topic}`;
+    const cached = sessionContextCache.get(cacheKey);
+    if (cached && Date.now() < cached.expiresAt) {
+      return cached.context;
+    }
+
     const parts: string[] = [];
 
     const curr = await this.getCurriculumContext(params.topic, params.studentCefr || "A1");
@@ -123,7 +136,13 @@ export const voiceRagService = {
       }
     }
 
-    return parts.length > 0 ? parts.join("\n") : "";
+    const context = parts.length > 0 ? parts.join("\n") : "";
+    sessionContextCache.set(cacheKey, {
+      context,
+      expiresAt: Date.now() + 20 * 60 * 1000, // 20 minutes TTL
+    });
+
+    return context;
   },
 
   async buildEvaluationContext(params: { topic: string }): Promise<string> {
@@ -166,6 +185,13 @@ export const voiceRagService = {
       };
 
       await voiceRepository.updateUserMemory(userId, updatedMemory);
+
+      // Invalidate in-memory session cache for this user
+      for (const key of sessionContextCache.keys()) {
+        if (key.startsWith(`${userId}:`)) {
+          sessionContextCache.delete(key);
+        }
+      }
     } catch (err) {
       console.warn("voiceRagService.updateStudentMemory error:", err);
     }

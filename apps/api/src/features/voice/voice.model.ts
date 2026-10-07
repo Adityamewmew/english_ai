@@ -13,6 +13,8 @@ export const VoiceTurnStreamBody = t.Object({
     })
   ),
   studentMessage: t.String(),
+  userId: t.Optional(t.String()),
+  studentCefr: t.Optional(t.String()),
 });
 
 export const VoiceGreetingQuery = t.Optional(

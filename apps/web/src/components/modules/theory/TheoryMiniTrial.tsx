@@ -43,7 +43,7 @@ export function TheoryMiniTrial({
   const micButtonRef = useRef<HTMLButtonElement>(null);
 
   // Extract first word safely as fill-in-the-blank target
-  const rawWords = exampleSentence.split(/\s+/).filter(Boolean);
+  const rawWords = (exampleSentence || "I study English every day.").split(/\s+/).filter(Boolean);
   const cleanWords = rawWords.map((w) => w.replace(/[^a-zA-Z]/g, "")).filter(Boolean);
   const targetWord = cleanWords[0] || "I";
 

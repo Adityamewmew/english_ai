@@ -408,54 +408,84 @@ export function ModuleDetailView({ moduleId }: ModuleDetailViewProps) {
               />
             )}
 
-            {currentStep === 7 && practiceSection && (
-              <div className="animate-in fade-in duration-300">
-                <SectionSpeakingLab
-                  title={practiceSection.title}
-                  drills={practiceSection.content?.drills || []}
-                  roleplay={practiceSection.content?.roleplay || { context: "", roles: [], turns: [] }}
-                  challenge={practiceSection.content?.challenge || { scenario: "" }}
-                  vocabItems={vocabSection?.content?.items || []}
-                  moduleId={moduleId}
-                  userId={userId}
-                  onPlayAudio={tutor.playTutorAudio}
-                  onSpeakingComplete={(score, isComplete) => {
-                    setSpeakingScore(score);
-                    setIsSpeakingComplete(isComplete);
-                    setCompletedSteps((prev) => Array.from(new Set([...prev, 7])));
-                    setUnlockedStep((prev) => Math.max(prev, 8));
-                  }}
-                  onAdvanceToQuiz={() => {
-                    setCompletedSteps((prev) => Array.from(new Set([...prev, 7])));
-                    setUnlockedStep((prev) => Math.max(prev, 8));
-                    setCurrentStep(8);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                />
-              </div>
+            {currentStep === 7 && (
+              practiceSection ? (
+                <div className="animate-in fade-in duration-300">
+                  <SectionSpeakingLab
+                    title={practiceSection.title}
+                    drills={practiceSection.content?.drills || []}
+                    roleplay={practiceSection.content?.roleplay || { context: "", roles: [], turns: [] }}
+                    challenge={practiceSection.content?.challenge || { scenario: "" }}
+                    vocabItems={vocabSection?.content?.items || []}
+                    moduleId={moduleId}
+                    userId={userId}
+                    onPlayAudio={tutor.playTutorAudio}
+                    onSpeakingComplete={(score, isComplete) => {
+                      setSpeakingScore(score);
+                      setIsSpeakingComplete(isComplete);
+                      setCompletedSteps((prev) => Array.from(new Set([...prev, 7])));
+                      setUnlockedStep((prev) => Math.max(prev, 8));
+                    }}
+                    onAdvanceToQuiz={() => {
+                      setCompletedSteps((prev) => Array.from(new Set([...prev, 7])));
+                      setUnlockedStep((prev) => Math.max(prev, 8));
+                      setCurrentStep(8);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  />
+                </div>
+              ) : (
+                <div className="p-8 text-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-3">
+                  <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">Sesi Speaking Lab belum dikonfigurasi untuk modul ini.</p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsSpeakingComplete(true);
+                      setCompletedSteps((prev) => Array.from(new Set([...prev, 7])));
+                      setUnlockedStep((prev) => Math.max(prev, 8));
+                      setCurrentStep(8);
+                    }}
+                    className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-xl transition-all"
+                  >
+                    Lanjut ke Kuis Evaluasi
+                  </button>
+                </div>
+              )
             )}
 
-            {currentStep === 8 && quizSection && (
-              <div className="animate-in fade-in duration-300">
-                <SectionQuiz
-                  title={quizSection.title}
-                  questions={quizSection.content?.questions || []}
-                  passingScore={moduleData.passingScore || 70}
-                  userAnswers={userAnswers}
-                  isSubmitted={quizResult.submitted}
-                  isSubmitting={isSubmitting}
-                  score={quizResult.score}
-                  quizScore={quizResult.quizScore}
-                  speakingScore={quizResult.speakingScore ?? (isSpeakingComplete ? speakingScore : null)}
-                  passed={quizResult.passed}
-                  results={quizResult.results}
-                  isExam={moduleData.isExam}
-                  onSelectAnswer={handleSelectAnswer}
-                  onSubmit={handleSubmitQuiz}
-                  onRetry={handleRetryQuiz}
-                  onContinue={() => router.push(moduleData.levelId ? `/modules?level=${moduleData.levelId}` : "/modules")}
-                />
-              </div>
+            {currentStep === 8 && (
+              quizSection ? (
+                <div className="animate-in fade-in duration-300">
+                  <SectionQuiz
+                    title={quizSection.title}
+                    questions={quizSection.content?.questions || []}
+                    passingScore={moduleData.passingScore || 70}
+                    userAnswers={userAnswers}
+                    isSubmitted={quizResult.submitted}
+                    isSubmitting={isSubmitting}
+                    score={quizResult.score}
+                    quizScore={quizResult.quizScore}
+                    speakingScore={quizResult.speakingScore ?? (isSpeakingComplete ? speakingScore : null)}
+                    passed={quizResult.passed}
+                    results={quizResult.results}
+                    isExam={moduleData.isExam}
+                    onSelectAnswer={handleSelectAnswer}
+                    onSubmit={handleSubmitQuiz}
+                    onRetry={handleRetryQuiz}
+                    onContinue={() => router.push(moduleData.levelId ? `/modules?level=${moduleData.levelId}` : "/modules")}
+                  />
+                </div>
+              ) : (
+                <div className="p-8 text-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-3">
+                  <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">Kuis Evaluasi belum dikonfigurasi untuk modul ini.</p>
+                  <Link
+                    href={moduleData.levelId ? `/modules?level=${moduleData.levelId}` : "/modules"}
+                    className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-xl transition-all"
+                  >
+                    Kembali ke Katalog Modul
+                  </Link>
+                </div>
+              )
             )}
           </div>
 

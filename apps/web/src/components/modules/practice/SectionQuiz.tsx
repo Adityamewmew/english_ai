@@ -259,9 +259,10 @@ export function SectionQuiz({
             >
               {/* Question header */}
               {(() => {
-                const skillMatch = q.question.match(/^\[(.*?)\]\s*([\s\S]*)$/);
+                const rawQuestion = q?.question || "";
+                const skillMatch = rawQuestion.match(/^\[(.*?)\]\s*([\s\S]*)$/);
                 const skillTag = skillMatch ? skillMatch[1] : null;
-                const cleanQuestionText = skillMatch ? skillMatch[2] : q.question;
+                const cleanQuestionText = skillMatch ? skillMatch[2] : rawQuestion;
 
                 return (
                   <div>

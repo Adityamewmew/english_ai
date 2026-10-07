@@ -52,16 +52,18 @@ export function TheoryActionSandbox({
   const dynamicComplements: SandboxComplement[] = React.useMemo(() => {
     if (vocabItems && vocabItems.length >= 2) {
       return vocabItems.slice(0, 3).map((v, i) => {
-        const isFromOrigin = v.word.toLowerCase().includes("from") || v.meaning.toLowerCase().includes("dari");
-        const cleanWord = v.word.replace(/^[a-z]+\s+/i, "");
+        const word = (v?.word || "").trim();
+        const meaning = (v?.meaning || "").trim();
+        const isFromOrigin = word.toLowerCase().includes("from") || meaning.toLowerCase().includes("dari");
+        const cleanWord = word.replace(/^[a-z]+\s+/i, "") || word || "there";
 
         return {
           id: `vocab-${i}`,
-          label: v.word,
+          label: word || `Item ${i + 1}`,
           badge: i === 0 ? "🇯🇵" : i === 1 ? "🇮🇩" : "🇪🇸",
-          complementText: isFromOrigin ? v.word : `from ${cleanWord}`,
+          complementText: isFromOrigin ? word : `from ${cleanWord}`,
           cityName: cleanWord,
-          meaning: v.meaning,
+          meaning: meaning,
         };
       });
     }
@@ -79,7 +81,12 @@ export function TheoryActionSandbox({
   const [characterState, setCharacterState] = useState<CharacterState>("idle");
 
   const currentSubject = DEFAULT_SUBJECTS.find((s) => s.id === selectedSubjectId) || DEFAULT_SUBJECTS[0];
-  const currentComplement = dynamicComplements.find((c) => c.id === selectedCompId) || dynamicComplements[0];
+  const currentComplement = dynamicComplements.find((c) => c.id === selectedCompId) || dynamicComplements[0] || {
+    id: "default",
+    label: "default",
+    badge: "📍",
+    complementText: "here",
+  };
 
   const constructedSentence = `${currentSubject.subjectWord} ${currentSubject.correctToBe} ${currentComplement.complementText}.`;
 

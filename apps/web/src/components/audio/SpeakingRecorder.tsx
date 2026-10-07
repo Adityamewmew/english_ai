@@ -29,6 +29,8 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
 
   const timerRef = useRef<any>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const speechRecognitionRef = useRef<any>(null);
+  const liveTranscriptRef = useRef<string>("");
   const audioChunksRef = useRef<Blob[]>([]);
   const onTranscriptChangeRef = useRef(onTranscriptChange);
 
@@ -47,12 +49,44 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
     setTranscriptionError(null);
     setIsAligned(false);
     audioChunksRef.current = [];
+    liveTranscriptRef.current = "";
     setSeconds(0);
     setIsRecording(true);
     setHasRecorded(true);
     setIsTranscribing(false);
 
-    // Mulai perekaman audio murni (MediaRecorder)
+    // 1. Jalankan Web Speech API secara paralel di client jika didukung browser
+    if (typeof window !== "undefined") {
+      const SpeechRecognition =
+        (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      if (SpeechRecognition) {
+        try {
+          const sr = new SpeechRecognition();
+          sr.continuous = true;
+          sr.interimResults = true;
+          sr.lang = "en-US";
+          sr.onresult = (event: any) => {
+            let fullText = "";
+            for (let i = 0; i < event.results.length; i++) {
+              fullText += event.results[i][0].transcript + " ";
+            }
+            if (fullText.trim()) {
+              liveTranscriptRef.current = fullText.trim();
+              setTranscript(fullText.trim());
+            }
+          };
+          sr.onerror = (e: any) => {
+            console.warn("Client SpeechRecognition error:", e);
+          };
+          sr.start();
+          speechRecognitionRef.current = sr;
+        } catch (e) {
+          console.warn("Client SpeechRecognition init error:", e);
+        }
+      }
+    }
+
+    // 2. Mulai perekaman audio murni (MediaRecorder) sebagai audio player & fallback
     if (typeof navigator !== "undefined" && navigator.mediaDevices?.getUserMedia) {
       navigator.mediaDevices
         .getUserMedia({ audio: true })
@@ -68,7 +102,15 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
               const url = URL.createObjectURL(audioBlob);
               setAudioUrl(url);
 
-              // Kirim audio ke AI Gemini untuk menyelaraskan kalimat dan memunculkan teks
+              // Prioritas Tier 1: Jika browser berhasil mentranskrip lokal via Web Speech API (0 AI tokens)
+              if (liveTranscriptRef.current.trim().length > 0) {
+                setTranscript(liveTranscriptRef.current.trim());
+                setIsAligned(true);
+                setTranscriptionError(null);
+                return;
+              }
+
+              // Prioritas Tier 2 (Fallback): Jika Web Speech API tidak aktif/kosong di browser ini
               setIsTranscribing(true);
               setTranscriptionError(null);
               try {
@@ -80,14 +122,14 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
                 } else {
                   setIsAligned(false);
                   setTranscriptionError(
-                    "AI belum berhasil mentranskrip otomatis. Suaramu tetap tersimpan di atas! Kamu bisa klik 'Rekam Ulang Suara' atau ketikkan perkenalanmu langsung di bawah."
+                    "Suaramu tersimpan! Karena browser ini tidak mengaktifkan transkripsi otomatis, kamu bisa mengetikkan kalimat perkenalanmu langsung di bawah."
                   );
                 }
               } catch (err) {
                 console.warn("AI transcription error:", err);
                 setIsAligned(false);
                 setTranscriptionError(
-                  "Koneksi ke AI terganggu saat mentranskrip. Rekaman suaramu tetap tersimpan di atas dan kamu bisa mengetikkan kalimatmu langsung."
+                  "Rekaman suaramu tetap tersimpan di atas dan kamu bisa mengetikkan kalimatmu langsung."
                 );
               } finally {
                 setIsTranscribing(false);
@@ -120,6 +162,13 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
     setIsRecording(false);
     if (timerRef.current) clearInterval(timerRef.current);
 
+    if (speechRecognitionRef.current) {
+      try {
+        speechRecognitionRef.current.stop();
+      } catch {}
+      speechRecognitionRef.current = null;
+    }
+
     if (mediaRecorderRef.current && mediaRecorderRef.current.state === "recording") {
       try {
         mediaRecorderRef.current.stop();
@@ -134,12 +183,20 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
     setIsTranscribing(false);
     if (timerRef.current) clearInterval(timerRef.current);
 
+    if (speechRecognitionRef.current) {
+      try {
+        speechRecognitionRef.current.abort();
+      } catch {}
+      speechRecognitionRef.current = null;
+    }
+
     if (mediaRecorderRef.current && mediaRecorderRef.current.state === "recording") {
       try {
         mediaRecorderRef.current.stop();
       } catch {}
     }
 
+    liveTranscriptRef.current = "";
     setAudioUrl(null);
     setTranscript("");
     setSeconds(0);

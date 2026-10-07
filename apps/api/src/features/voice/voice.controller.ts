@@ -43,8 +43,9 @@ export const voiceController = new Elysia({ prefix: "/api/voice" })
   })
   .post(
     "/turn-stream",
-    async ({ body }) => {
-      const { topic, history, studentMessage } = body;
+    async ({ body, headers }) => {
+      const { topic, history, studentMessage, userId, studentCefr } = body;
+      const resolvedUserId = userId || headers["x-user-id"];
       const encoder = new TextEncoder();
       let sentenceIndex = 0;
       const accumulatedSentences: string[] = [];
@@ -56,6 +57,8 @@ export const voiceController = new Elysia({ prefix: "/api/voice" })
               topic,
               history: history as any,
               studentMessage,
+              userId: resolvedUserId,
+              studentCefr,
             })) {
               accumulatedSentences.push(sentence);
               const data = JSON.stringify({

@@ -112,7 +112,7 @@ export function SpeakingLabRoleplay({
 
   const aiRole =
     turnSpeakers.find((s) => s.toLowerCase() !== autoUserRole.toLowerCase()) ||
-    roleplay.roles.find((r) => r.toLowerCase() !== autoUserRole.toLowerCase()) ||
+    (roleplay.roles || []).find((r) => r.toLowerCase() !== autoUserRole.toLowerCase()) ||
     "Mr. Khoirul";
 
   const isUserTurn = (turn: RoleplayTurn) => {
@@ -148,10 +148,10 @@ export function SpeakingLabRoleplay({
       const isFirstAi = !isUserTurn(firstTurn);
       if (isFirstAi) {
         setIsAiSpeaking(true);
-        if (onPlayAudio) {
+        if (onPlayAudio && firstTurn.text) {
           onPlayAudio(firstTurn.text);
         }
-        const delay = Math.max(2500, firstTurn.text.split(" ").length * 420);
+        const delay = Math.max(2500, (firstTurn.text || "").split(" ").length * 420);
         setTimeout(() => {
           setIsAiSpeaking(false);
           if (turns.length > 1) {
@@ -186,7 +186,7 @@ export function SpeakingLabRoleplay({
 
     if (isAllUserTurnsCompleted) {
       // Evaluasi skor kelulusan praktikum tanpa menampilkan kartu penilaian penalti
-      const diff = evaluateSpeechDiff(turn.text, spokenText);
+      const diff = evaluateSpeechDiff(turn.text || "", spokenText);
       const earnedScore = Math.max(80, diff.score);
       onStageComplete?.(earnedScore);
     }
@@ -201,10 +201,10 @@ export function SpeakingLabRoleplay({
 
         if (isNextAi) {
           setIsAiSpeaking(true);
-          if (onPlayAudio) {
+          if (onPlayAudio && nextTurn.text) {
             onPlayAudio(nextTurn.text);
           }
-          const delay = Math.max(2500, nextTurn.text.split(" ").length * 420);
+          const delay = Math.max(2500, (nextTurn.text || "").split(" ").length * 420);
           setTimeout(() => {
             setIsAiSpeaking(false);
             const followingTurnIdx = nextTurnIdx + 1;

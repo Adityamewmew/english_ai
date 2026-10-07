@@ -8,15 +8,28 @@ export class GeminiTtsService {
    * Text-To-Speech generator with Mr. Khoirul voice
    */
   static async generateSpeech(text: string): Promise<Buffer | null> {
-    const baseUrl = process.env.AI_BASE_URL;
-    const apiKey = process.env.AI_API_KEY || "";
+    const baseUrl =
+      process.env.AI_TTS_BASE_URL ||
+      (process.env.AI_BASE_URL?.includes("tiarina")
+        ? "http://localhost:20128/v1"
+        : process.env.AI_BASE_URL) ||
+      "http://localhost:20128/v1";
+
+    const apiKey =
+      process.env.AI_TTS_API_KEY ||
+      (process.env.AI_BASE_URL?.includes("tiarina")
+        ? "sk-96f2316f84884524-2cee23-3c70805b"
+        : process.env.AI_API_KEY) ||
+      "sk-96f2316f84884524-2cee23-3c70805b";
+
     const cleanText = sanitizeRepeatedChars(text);
     if (!baseUrl || !cleanText || cleanText.trim() === "") return null;
 
-    // Strictly lock to ElevenLabs Roger (Mr. Khoirul) - NEVER use combo 'audio' models which default to female voices
-    const mrKhoirulVoice = process.env.AI_AUDIO_VOICE || "CwhRBWXzGAHq8TQ4Fs17";
+    // Use OmniRoute combo audio (Deepgram) or ElevenLabs candidate
+    const mrKhoirulVoice = process.env.AI_AUDIO_VOICE || "aura-orion-en";
     const candidates = [
-      { model: "elevenlabs/eleven_turbo_v2_5", voice: mrKhoirulVoice },
+      { model: "audio", voice: mrKhoirulVoice },
+      { model: "audio", voice: "alloy" },
       { model: "elevenlabs/eleven_multilingual_v2", voice: mrKhoirulVoice },
     ];
 
@@ -35,7 +48,7 @@ export class GeminiTtsService {
             input: cleanText,
             voice: candidate.voice,
           }),
-          signal: AbortSignal.timeout(12000),
+          signal: AbortSignal.timeout(6000),
         });
 
         if (res.ok) {
@@ -59,15 +72,27 @@ export class GeminiTtsService {
    * Text-To-Speech stream with Mr. Khoirul voice
    */
   static async getSpeechStream(text: string): Promise<globalThis.Response | null> {
-    const baseUrl = process.env.AI_BASE_URL;
-    const apiKey = process.env.AI_API_KEY || "";
+    const baseUrl =
+      process.env.AI_TTS_BASE_URL ||
+      (process.env.AI_BASE_URL?.includes("tiarina")
+        ? "http://localhost:20128/v1"
+        : process.env.AI_BASE_URL) ||
+      "http://localhost:20128/v1";
+
+    const apiKey =
+      process.env.AI_TTS_API_KEY ||
+      (process.env.AI_BASE_URL?.includes("tiarina")
+        ? "sk-96f2316f84884524-2cee23-3c70805b"
+        : process.env.AI_API_KEY) ||
+      "sk-96f2316f84884524-2cee23-3c70805b";
+
     const cleanText = sanitizeRepeatedChars(text);
     if (!baseUrl || !cleanText || cleanText.trim() === "") return null;
 
-    // Strictly lock to ElevenLabs Roger (Mr. Khoirul) - NEVER use combo 'audio' models which default to female voices
-    const mrKhoirulVoice = process.env.AI_AUDIO_VOICE || "CwhRBWXzGAHq8TQ4Fs17";
+    const mrKhoirulVoice = process.env.AI_AUDIO_VOICE || "aura-orion-en";
     const candidates = [
-      { model: "elevenlabs/eleven_turbo_v2_5", voice: mrKhoirulVoice },
+      { model: "audio", voice: mrKhoirulVoice },
+      { model: "audio", voice: "alloy" },
       { model: "elevenlabs/eleven_multilingual_v2", voice: mrKhoirulVoice },
     ];
 
@@ -86,7 +111,7 @@ export class GeminiTtsService {
             input: cleanText,
             voice: candidate.voice,
           }),
-          signal: AbortSignal.timeout(12000),
+          signal: AbortSignal.timeout(6000),
         });
 
         if (res.ok) {

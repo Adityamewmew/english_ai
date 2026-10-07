@@ -95,7 +95,8 @@ export function TheoryReadinessCheck({
     const baseSeed = (orderIndex || 1) * 313 + cleanTitle.length * 17;
 
     // Helper: extract clean first clause or short sentence
-    const cleanSentence = (str: string) => {
+    const cleanSentence = (str: any) => {
+      if (!str || typeof str !== "string") return "";
       const first = str.split(/[\/,;\n]/)[0]?.trim() || str.trim();
       return first.replace(/[0-9.:]+$/, "").trim();
     };
@@ -201,7 +202,8 @@ export function TheoryReadinessCheck({
       const q2Prompt = promptStems[q2Seed % promptStems.length];
 
       const correctSentence = cleanSentence(commonTrap.correct);
-      const wrongParts = commonTrap.wrong.split(/[\/,;\n]/).map((s) => cleanSentence(s)).filter(Boolean);
+      const wrongStr = typeof commonTrap.wrong === "string" ? commonTrap.wrong : String(commonTrap.wrong || "");
+      const wrongParts = wrongStr.split(/[\/,;\n]/).map((s) => cleanSentence(s)).filter(Boolean);
       const wrongSentence1 = wrongParts[0] || cleanSentence(commonTrap.wrong);
 
       let wrongSentence2 = wrongParts[1] || "";
@@ -269,38 +271,42 @@ export function TheoryReadinessCheck({
       const useLaterTurn = dialogueLines.length >= 4 && q3Seed % 2 === 1;
       const lineA = useLaterTurn ? dialogueLines[2] : dialogueLines[0];
       const lineB = useLaterTurn ? dialogueLines[3] : dialogueLines[1];
+      const speakerA = lineA?.speaker || "Speaker A";
+      const textA = lineA?.text || "";
+      const speakerB = lineB?.speaker || "Speaker B";
+      const textB = lineB?.text || "";
 
       const promptStems = [
-        `Lengkapi dialog berikut sesuai alur percakapan:\n${lineA.speaker}: "${lineA.text}"\n${lineB.speaker}: "[...]"`,
-        `Dalam situasi percakapan berikut:\n${lineA.speaker}: "${lineA.text}"\nBagaimana respon ${lineB.speaker} yang paling alami?`,
-        `Pilihlah kelanjutan percakapan yang tepat:\n${lineA.speaker}: "${lineA.text}"\n${lineB.speaker}: "[...]"`,
+        `Lengkapi dialog berikut sesuai alur percakapan:\n${speakerA}: "${textA}"\n${speakerB}: "[...]"`,
+        `Dalam situasi percakapan berikut:\n${speakerA}: "${textA}"\nBagaimana respon ${speakerB} yang paling alami?`,
+        `Pilihlah kelanjutan percakapan yang tepat:\n${speakerA}: "${textA}"\n${speakerB}: "[...]"`,
       ];
       q3Prompt = promptStems[q3Seed % promptStems.length];
 
-      correctQ3 = lineB.text;
+      correctQ3 = textB;
       const distractorA = commonTrap?.wrong ? cleanSentence(commonTrap.wrong) : "I don't think so.";
       const distractorB = "Sorry, I am not ready.";
 
       rawQ3Options = [correctQ3, distractorA, distractorB];
-      q3Explanation = `Respon "${correctQ3}" ${lineB.translation ? `("${lineB.translation}")` : ""} adalah jawaban yang tepat dan alami sesuai alur percakapan.`;
+      q3Explanation = `Respon "${correctQ3}" ${lineB?.translation ? `("${lineB.translation}")` : ""} adalah jawaban yang tepat dan alami sesuai alur percakapan.`;
     } else if (vocabItems && vocabItems.length > 0) {
       const vocabIndex = q3Seed % vocabItems.length;
       const targetVocab = vocabItems.find((_, idx) => idx === vocabIndex && _.example) ||
         vocabItems.find((v) => v.example && v.example.length > 10) ||
         vocabItems[0];
-      const word = targetVocab.word;
-      const ex = targetVocab.example || `I practice with ${word} every day.`;
-      const regex = new RegExp(`\\b${word}\\b`, "i");
-      const blanked = ex.replace(regex, "[...]");
+      const word = (targetVocab?.word || "practice").trim();
+      const ex = targetVocab?.example || `I practice with ${word} every day.`;
+      const escapedWord = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const blanked = ex.replace(new RegExp(`\\b${escapedWord}\\b`, "i"), "[...]");
 
-      q3Prompt = `Lengkapi kalimat dengan kosakata yang tepat:\n"${blanked}" (Petunjuk arti: ${targetVocab.meaning || word})`;
+      q3Prompt = `Lengkapi kalimat dengan kosakata yang tepat:\n"${blanked}" (Petunjuk arti: ${targetVocab?.meaning || word})`;
       correctQ3 = word;
       const distractorA = word.endsWith("ing") ? word.replace(/ing$/, "") : word + "s";
       const otherVocab = vocabItems.find((v) => v.word !== word);
       const distractorB = otherVocab?.word || "other";
 
       rawQ3Options = [correctQ3, distractorA, distractorB];
-      q3Explanation = `Kata yang tepat adalah "${correctQ3}" yang bermakna "${targetVocab.meaning || ""}".`;
+      q3Explanation = `Kata yang tepat adalah "${correctQ3}" yang bermakna "${targetVocab?.meaning || ""}".`;
     } else if (bestExample) {
       const match = bestExample.match(/\b(am|is|are|was|were|will|should|must|have|has)\b/i);
       if (match) {

@@ -127,8 +127,21 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     };
 
     nextItem.audio.onerror = (e) => {
-      console.warn("Audio queue chunk playback error:", e);
+      console.warn("Audio queue chunk playback error (falling back to native voice):", e);
       if (isHaltedRef.current) return;
+
+      // Fallback ke browser-native SpeechSynthesis jika TTS server kehabisan kredit
+      if (typeof window !== "undefined" && window.speechSynthesis) {
+        try {
+          const utter = new SpeechSynthesisUtterance(nextItem.text);
+          utter.lang = "en-US";
+          utter.rate = 1.0;
+          utter.onend = () => playNextInQueue();
+          utter.onerror = () => playNextInQueue();
+          window.speechSynthesis.speak(utter);
+          return;
+        } catch {}
+      }
       playNextInQueue();
     };
 
