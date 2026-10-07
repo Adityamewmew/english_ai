@@ -13,6 +13,7 @@ export async function doLogin(formData: FormData) {
     return { success: false, message: parsed.error.issues[0]?.message || "Validasi gagal" };
   }
 
+  let redirectPath: string | null = null;
   try {
     const user = await authApi.login(parsed.data);
     if (!user) {
@@ -29,13 +30,13 @@ export async function doLogin(formData: FormData) {
       currentCefr: user.currentCefr,
     });
 
-    if (accessType === 1 || user.role === "admin") {
-      redirect("/users");
-    } else {
-      redirect("/dashboard");
-    }
+    redirectPath = (accessType === 1 || user.role === "admin") ? "/users" : "/dashboard";
   } catch (err: any) {
     return { success: false, message: err.message || "Email atau password salah." };
+  }
+
+  if (redirectPath) {
+    redirect(redirectPath);
   }
 }
 
@@ -47,6 +48,7 @@ export async function doRegister(formData: FormData) {
     return { success: false, message: parsed.error.issues[0]?.message || "Validasi gagal" };
   }
 
+  let redirectPath: string | null = null;
   try {
     const user = await authApi.register(parsed.data);
     if (!user) {
@@ -62,9 +64,13 @@ export async function doRegister(formData: FormData) {
       currentCefr: "A1",
     });
 
-    redirect("/dashboard");
+    redirectPath = "/dashboard";
   } catch (err: any) {
     return { success: false, message: err.message || "Gagal mendaftar." };
+  }
+
+  if (redirectPath) {
+    redirect(redirectPath);
   }
 }
 
