@@ -37,6 +37,7 @@ export function VoiceCallView({
   const [callLang, setCallLang] = useState<"en-US" | "id-ID">("en-US");
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const [studentName, setStudentName] = useState<string>(propStudentName);
+  const [textInput, setTextInput] = useState<string>("");
 
   const defaultTopic = initialTopic;
 
@@ -218,7 +219,7 @@ export function VoiceCallView({
   );
 
   // Speech recognition hook
-  const { liveTranscript, setLiveTranscript, abort: abortSpeech } = useSpeechRecognition({
+  const { liveTranscript, setLiveTranscript, errorMsg: micError, abort: abortSpeech } = useSpeechRecognition({
     canListen,
     studentName,
     lang: callLang,
@@ -227,6 +228,12 @@ export function VoiceCallView({
       handleSendStudentMessage(spoken);
     },
   });
+
+  useEffect(() => {
+    if (micError) {
+      setErrorMsg(micError);
+    }
+  }, [micError]);
 
   useEffect(() => {
     abortSpeechRef.current = abortSpeech;
@@ -275,6 +282,7 @@ export function VoiceCallView({
       }
 
       setCallStatus("active");
+      setAiSpeechState("speaking");
       setConversationHistory([{ role: "assistant", content: initialGreeting }]);
       audioQueue.speakText(initialGreeting);
     } catch {
@@ -288,6 +296,7 @@ export function VoiceCallView({
       }
 
       setCallStatus("active");
+      setAiSpeechState("speaking");
       setConversationHistory([{ role: "assistant", content: fallbackGreeting }]);
       audioQueue.speakText(fallbackGreeting);
     }
@@ -335,8 +344,20 @@ export function VoiceCallView({
         handleInterruptToSpeak();
       } else if (isMuted) {
         setIsMuted(false);
+      } else if (aiSpeechState !== "listening") {
+        audioQueue.halt();
+        isSendingRef.current = false;
+        setAiSpeechState("listening");
       }
     }
+  };
+
+  const handleSendText = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!textInput.trim() || isSendingRef.current || callStatus !== "active") return;
+    const msg = textInput.trim();
+    setTextInput("");
+    handleSendStudentMessage(msg);
   };
 
   return (
@@ -399,7 +420,7 @@ export function VoiceCallView({
                     </p>
                   ) : (
                     <p className="text-xs text-zinc-500 font-normal animate-pulse">
-                      Mendengarkan suaramu...
+                      Mendengarkan suaramu... (Ketuk bundaran jika ingin memotong)
                     </p>
                   )
                 )}
@@ -410,6 +431,28 @@ export function VoiceCallView({
                   </p>
                 )}
               </div>
+            )}
+
+            {callStatus === "active" && (
+              <form
+                onSubmit={handleSendText}
+                className="w-full max-w-xs flex items-center gap-2 pt-2 animate-fadeIn"
+              >
+                <input
+                  type="text"
+                  value={textInput}
+                  onChange={(e) => setTextInput(e.target.value)}
+                  placeholder="Ketik jika mic tidak aktif..."
+                  className="flex-1 bg-zinc-900/90 border border-zinc-800 focus:border-zinc-700 rounded-full px-4 py-2 text-xs text-zinc-200 placeholder:text-zinc-600 outline-none transition-all shadow-inner"
+                />
+                <button
+                  type="submit"
+                  disabled={!textInput.trim() || isSendingRef.current}
+                  className="px-3 py-2 bg-zinc-800 hover:bg-zinc-700 disabled:opacity-40 text-zinc-200 rounded-full text-xs font-semibold transition-all active:scale-95 border border-zinc-700/60"
+                >
+                  Kirim
+                </button>
+              </form>
             )}
           </div>
       </main>

@@ -104,10 +104,10 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     setCurrentSubtitle(nextItem.text);
     onSentenceStartRef.current?.(nextItem.text);
 
-    // Watchdog per sentence chunk (max 25s)
+    // Watchdog per sentence chunk (max 12s, min 4s)
     if (ttsWatchdogRef.current) clearTimeout(ttsWatchdogRef.current);
     const wordCount = nextItem.text.split(/\s+/).filter(Boolean).length;
-    const maxWaitMs = Math.min(25000, Math.max(6000, Math.round((wordCount / 1.5) * 1000) + 5000));
+    const maxWaitMs = Math.min(12000, Math.max(4000, Math.round((wordCount / 2) * 1000) + 3000));
 
     ttsWatchdogRef.current = setTimeout(() => {
       if (isHaltedRef.current) return;
@@ -128,21 +128,8 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     };
 
     nextItem.audio.onerror = (e) => {
-      console.warn("Audio queue chunk playback error (falling back to native voice):", e);
+      console.warn("Audio queue chunk playback error:", e);
       if (isHaltedRef.current) return;
-
-      // Fallback ke browser-native SpeechSynthesis jika TTS server kehabisan kredit
-      if (typeof window !== "undefined" && window.speechSynthesis) {
-        try {
-          const utter = new SpeechSynthesisUtterance(nextItem.text);
-          utter.lang = "en-US";
-          utter.rate = 1.0;
-          utter.onend = () => playNextInQueue();
-          utter.onerror = () => playNextInQueue();
-          window.speechSynthesis.speak(utter);
-          return;
-        } catch {}
-      }
       playNextInQueue();
     };
 
@@ -192,17 +179,21 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     (text: string) => {
       halt();
       isHaltedRef.current = false;
-      isStreamActiveRef.current = true;
 
       const sentenceMatches = text.match(/[^.!?]+[.!?]+(?:\s+|$)|[^.!?]+$/g);
       const sentences = sentenceMatches
         ? sentenceMatches.map((s) => s.trim()).filter(Boolean)
         : [text];
 
+      if (sentences.length === 0 || !text.trim()) {
+        onAllEndedRef.current?.();
+        return;
+      }
+
+      isStreamActiveRef.current = false;
       for (let i = 0; i < sentences.length; i++) {
         enqueueSentence(sentences[i], i);
       }
-      isStreamActiveRef.current = false;
     },
     [halt, enqueueSentence]
   );
