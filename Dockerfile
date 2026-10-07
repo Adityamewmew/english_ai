@@ -1,5 +1,8 @@
 FROM oven/bun:1.2-alpine
 
+# Hugging Face Spaces user requirement (UID 1000)
+RUN adduser -D -u 1000 user
+
 WORKDIR /app
 
 # Copy root manifests
@@ -16,8 +19,12 @@ COPY apps/api/src ./apps/api/src
 # Install workspace dependencies
 RUN bun install --production
 
+RUN chown -R user:user /app
+
+USER user
+ENV HOME=/home/user
 ENV NODE_ENV=production
-ENV PORT=3001
-EXPOSE 3001
+ENV PORT=7860
+EXPOSE 7860
 
 CMD ["bun", "apps/api/src/index.ts"]
