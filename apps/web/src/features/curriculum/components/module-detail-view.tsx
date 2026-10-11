@@ -21,6 +21,7 @@ import {
   submitModuleQuizAction,
   saveModuleStepProgressAction,
 } from "@/app/(student)/modules/modules.actions";
+import { ModuleStudyView } from "./module-study-view";
 
 interface ModuleDetailViewProps {
   moduleId: string;
@@ -32,6 +33,7 @@ export function ModuleDetailView({ moduleId }: ModuleDetailViewProps) {
   const [loading, setLoading] = useState(true);
   const [moduleData, setModuleData] = useState<any>(null);
   const [sections, setSections] = useState<any[]>([]);
+  const [subModules, setSubModules] = useState<any[]>([]);
   const [studentName, setStudentName] = useState("");
   const [userId, setUserId] = useState("");
 
@@ -77,6 +79,7 @@ export function ModuleDetailView({ moduleId }: ModuleDetailViewProps) {
         if (res.success && res.data) {
           setModuleData(res.data.module);
           setSections(res.data.sections || []);
+          setSubModules(res.data.subModules || []);
           if (res.user) {
             setUserId(res.user.id);
             setStudentName(res.user.name);
@@ -292,6 +295,50 @@ export function ModuleDetailView({ moduleId }: ModuleDetailViewProps) {
     advanceTooltip = "Selesaikan praktikum berbicara untuk membuka Kuis Evaluasi";
   } else if (currentStep === 8) {
     canAdvance = false;
+  }
+
+  if (subModules && subModules.length > 0) {
+    return (
+      <>
+        <ModuleStudyView
+          moduleId={moduleId}
+          moduleData={moduleData}
+          subModules={subModules}
+          userId={userId}
+          studentName={studentName}
+          tutor={tutor}
+          onRefresh={() => {
+            getModuleDetailAction(moduleId).then((res) => {
+              if (res.success && res.data) {
+                setModuleData(res.data.module);
+                setSections(res.data.sections || []);
+                setSubModules(res.data.subModules || []);
+              }
+            });
+          }}
+        />
+        {(tutor.isCalling || tutor.isChatOpen) && (
+          <ModuleVoiceDock
+            moduleTitle={moduleData.title}
+            isCalling={tutor.isCalling}
+            isSpeaking={tutor.isSpeaking}
+            isListening={tutor.isListening}
+            isThinking={tutor.isThinking}
+            isChatOpen={tutor.isChatOpen}
+            messages={tutor.tutorMessages}
+            inputText={tutor.inputText}
+            onInputChange={tutor.setInputText}
+            onSendMessage={() => tutor.handleSendTutorMessage()}
+            onToggleCall={tutor.handleToggleCall}
+            onToggleMic={tutor.handleToggleMic}
+            onToggleChat={tutor.handleToggleChat}
+            onPlayAudio={tutor.playTutorAudio}
+            onBack={handlePrevStep}
+            onForward={handleNextStep}
+          />
+        )}
+      </>
+    );
   }
 
   return (

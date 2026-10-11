@@ -40,3 +40,24 @@ export function useSaveStepProgress(moduleId: string) {
     },
   });
 }
+
+export function useSubmitSubModule(moduleId: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({
+      subModuleId,
+      ...payload
+    }: {
+      subModuleId: string;
+      userId: string;
+      answers?: Record<string, number>;
+      score?: number;
+      speakingScore?: number;
+    }) => curriculumApi.submitSubModule(subModuleId, payload),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: curriculumKeys.all });
+      qc.invalidateQueries({ queryKey: curriculumKeys.detail(moduleId) });
+    },
+  });
+}
+

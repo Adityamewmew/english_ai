@@ -1,9 +1,9 @@
 import React from "react";
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/session";
-import { CurriculumRoadmapView } from "@/features/curriculum";
+import { ModulesCatalogView } from "@/features/curriculum";
 
-export default async function ModulesRoadmapPage({
+export default async function ModulesCatalogPage({
   searchParams,
 }: {
   searchParams: Promise<{ level?: string }>;
@@ -14,5 +14,5 @@ export default async function ModulesRoadmapPage({
   }
 
   const { level } = await searchParams;
-  return <CurriculumRoadmapView session={session} requestedLevel={level} />;
+  return <ModulesCatalogView session={session} initialLevel={level || "all"} />;
 }

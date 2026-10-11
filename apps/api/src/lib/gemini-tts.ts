@@ -3,11 +3,21 @@ import { sanitizeRepeatedChars } from "./gemini-chat";
 /**
  * Multi-Tier Text-To-Speech Service (Mr. Khoirul - ElevenLabs Voice: CwhRBWXzGAHq8TQ4Fs17)
  */
+// In-memory audio cache for repeated common phrases (max 50 entries, native Map)
+const ttsMemoryCache = new Map<string, Buffer>();
+
 export class GeminiTtsService {
   /**
    * Text-To-Speech generator with Mr. Khoirul voice
    */
   static async generateSpeech(text: string): Promise<Buffer | null> {
+    const cleanText = sanitizeRepeatedChars(text);
+    if (!cleanText || cleanText.trim() === "") return null;
+
+    // 0ms Cache Hit for frequent phrases
+    const cached = ttsMemoryCache.get(cleanText);
+    if (cached) return cached;
+
     const baseUrl =
       process.env.AI_TTS_BASE_URL ||
       (process.env.AI_BASE_URL?.includes("tiarina")
@@ -22,15 +32,13 @@ export class GeminiTtsService {
         : process.env.AI_API_KEY) ||
       "sk-96f2316f84884524-2cee23-3c70805b";
 
-    const cleanText = sanitizeRepeatedChars(text);
-    if (!baseUrl || !cleanText || cleanText.trim() === "") return null;
+    if (!baseUrl) return null;
 
-    // Use OmniRoute combo audio (Deepgram) or ElevenLabs candidate
     const mrKhoirulVoice = process.env.AI_AUDIO_VOICE || "aura-orion-en";
     const candidates = [
       { model: "audio", voice: mrKhoirulVoice },
       { model: "audio", voice: "alloy" },
-      { model: "elevenlabs/eleven_multilingual_v2", voice: mrKhoirulVoice },
+      { model: "audio", voice: "nova" },
     ];
 
     const endpoint = `${baseUrl.replace(/\/+$/, "")}/audio/speech`;
@@ -48,12 +56,23 @@ export class GeminiTtsService {
             input: cleanText,
             voice: candidate.voice,
           }),
-          signal: AbortSignal.timeout(6000),
+          signal: AbortSignal.timeout(3500),
         });
 
         if (res.ok) {
           const arrayBuffer = await res.arrayBuffer();
-          return Buffer.from(arrayBuffer);
+          const buffer = Buffer.from(arrayBuffer);
+
+          // Cache up to 50 frequent phrases in memory
+          if (cleanText.length < 120) {
+            if (ttsMemoryCache.size >= 50) {
+              const oldestKey = ttsMemoryCache.keys().next().value;
+              if (oldestKey) ttsMemoryCache.delete(oldestKey);
+            }
+            ttsMemoryCache.set(cleanText, buffer);
+          }
+
+          return buffer;
         }
 
         const errText = await res.text();
@@ -93,7 +112,7 @@ export class GeminiTtsService {
     const candidates = [
       { model: "audio", voice: mrKhoirulVoice },
       { model: "audio", voice: "alloy" },
-      { model: "elevenlabs/eleven_multilingual_v2", voice: mrKhoirulVoice },
+      { model: "audio", voice: "nova" },
     ];
 
     const endpoint = `${baseUrl.replace(/\/+$/, "")}/audio/speech`;
@@ -111,7 +130,7 @@ export class GeminiTtsService {
             input: cleanText,
             voice: candidate.voice,
           }),
-          signal: AbortSignal.timeout(6000),
+          signal: AbortSignal.timeout(3500),
         });
 
         if (res.ok) {

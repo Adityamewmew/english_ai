@@ -202,6 +202,7 @@ export function VoiceCallView({
       } catch (err: any) {
         if (currentTurnId !== speechTurnIdRef.current) return;
         audioQueue.markStreamDone();
+        isSendingRef.current = false;
 
         if (!fullReplyAccumulatorRef.current) {
           const fallback = "That sounds wonderful! Could you tell me a little bit more about that?";
@@ -254,6 +255,7 @@ export function VoiceCallView({
 
   // Start call handler
   const handleStartCall = async () => {
+    audioQueue.unlockAudio();
     setErrorMsg(null);
     setDuration(0);
     setLiveTranscript("");
@@ -338,12 +340,19 @@ export function VoiceCallView({
 
   const handleOrbClick = () => {
     if (callStatus === "idle") {
+      audioQueue.unlockAudio();
       handleStartCall();
     } else if (callStatus === "active") {
       if (aiSpeechState === "speaking") {
         handleInterruptToSpeak();
       } else if (isMuted) {
         setIsMuted(false);
+      } else if (liveTranscript && liveTranscript.trim().length > 1) {
+        // Force send spoken transcript immediately without waiting for silence
+        abortSpeechRef.current();
+        const spoken = liveTranscript.trim();
+        setLiveTranscript("");
+        handleSendStudentMessage(spoken);
       } else if (aiSpeechState !== "listening") {
         audioQueue.halt();
         isSendingRef.current = false;
@@ -354,9 +363,10 @@ export function VoiceCallView({
 
   const handleSendText = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!textInput.trim() || isSendingRef.current || callStatus !== "active") return;
+    if (!textInput.trim() || callStatus !== "active") return;
     const msg = textInput.trim();
     setTextInput("");
+    isSendingRef.current = false;
     handleSendStudentMessage(msg);
   };
 

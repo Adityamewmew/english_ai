@@ -134,13 +134,24 @@ export class GeminiChatService {
         primaryModel,
         process.env.AI_CHAT_MODEL,
         "deepseek-v4-flash:free",
+        "glm-5.3-flash:free",
       ].filter(Boolean) as string[])
     );
 
     if (baseUrl) {
       for (const m of proxyModels) {
         let hasYielded = false;
+        let timer: any = null;
         try {
+          const connectAbort = new AbortController();
+          timer = setTimeout(() => {
+            connectAbort.abort(new Error("TTFT connection timeout"));
+          }, 8000);
+
+          const activeSignal = signal
+            ? AbortSignal.any([signal, connectAbort.signal])
+            : connectAbort.signal;
+
           const endpoint = `${baseUrl.replace(/\/+$/, "")}/chat/completions`;
           const res = await fetch(endpoint, {
             method: "POST",
@@ -151,7 +162,7 @@ export class GeminiChatService {
             body: JSON.stringify({
               model: m,
               stream: true,
-              max_tokens: 800,
+              max_tokens: 220,
               temperature: 0.6,
               frequency_penalty: 0.3,
               presence_penalty: 0.2,
@@ -160,7 +171,7 @@ export class GeminiChatService {
                 { role: "user", content: userPrompt },
               ],
             }),
-            signal,
+            signal: activeSignal,
           });
 
           if (res.ok && res.body) {
@@ -171,6 +182,10 @@ export class GeminiChatService {
             while (true) {
               const { done, value } = await reader.read();
               if (done) break;
+              if (timer) {
+                clearTimeout(timer);
+                timer = null;
+              }
               lineBuffer += decoder.decode(value, { stream: true });
               const lines = lineBuffer.split("\n");
               lineBuffer = lines.pop() ?? "";
@@ -196,6 +211,11 @@ export class GeminiChatService {
           if (signal?.aborted) return;
           if (hasYielded) return;
           console.warn(`AI Stream Proxy [${m}] error:`, proxyErr?.message || proxyErr);
+        } finally {
+          if (timer) {
+            clearTimeout(timer);
+            timer = null;
+          }
         }
       }
     }
@@ -226,7 +246,7 @@ export class GeminiChatService {
   }
 
   /**
-   * Sentence boundary generator
+   * Sentence boundary generator with prompt-cache optimized prefix
    */
   static async *streamTutorSentences(
     topic: string,
@@ -235,31 +255,36 @@ export class GeminiChatService {
     ragContext?: string,
     signal?: AbortSignal
   ): AsyncGenerator<string, void, unknown> {
-    const systemPrompt = `You are Mr. Khoirul: a friendly, relaxed, and humble English conversational partner and tutor talking live on the phone with an Indonesian student.
-Topic: "${topic}".${ragContext ? `\n${ragContext}` : ""}
+    // Static persona prefix (invariant across turns to hit KV / prompt cache)
+    const STATIC_PREFIX = `You are Mr. Khoirul: a friendly, humble, and relaxed English conversational tutor talking live on the phone with an Indonesian learner.
+RULES:
+1. Tone: Humble, natural, spoken English. Never start with fake laughs ("Haha", "Hehe") or filler-only replies ("I see.", "Okay.").
+2. Length: First sentence punchy (5-10 words) for fast speech delivery. Casual replies: 1-2 sentences. Explanations: 3-5 sentences. Always end with an engaging open-ended question.
+3. Indonesian Support: If student speaks Indonesian or gets stuck, guide briefly in Indonesian and give one simple English sentence to practice.
+4. Output: Spoken words directly. Never stretch letters (no 'soooo', 'ummm'). Proper dictionary spelling only.`;
 
-GUIDELINES:
-1. Warm, relaxed, natural, and encouraging tone (santai & humble).
-2. NEVER start your sentence with "Haha", "Hehe", or artificial laugh sounds.
-3. ADAPTIVE LENGTH & DETAILED EXPLANATIONS:
-   - When the student asks to explain something, tell a story, asks about a character, topic, or movie, provide a RICH, COMPLETE, and ENGAGING explanation (3 to 6 spoken sentences).
-   - When the student gives a brief check-in or simple answer, keep it natural and balanced (1 to 2 sentences).
-   - Conclude naturally with an engaging open-ended question to keep the conversation flowing.
-4. If student speaks Indonesian or is confused, guide briefly in Indonesian, then give ONE simple English sentence they can repeat.
-5. If student asks about past memory, warmly and accurately acknowledge it from context.
-6. Speak directly as Mr. Khoirul in plain conversational spoken English.
-7. Dive straight into your genuine substantive response immediately without fake filler openings.
-8. Keep your very first sentence concise and punchy (around 5-10 words).
-9. Output only the spoken words directly.
-10. CRITICAL: NEVER stretch words, repeat characters, or stutter (NEVER write 'seeeee', 'sooooo', 'heyyy', 'ummmm', 'hmmmm'). Write proper standard dictionary spelling only.
-11. CRITICAL: NEVER output only a 1-2 word filler acknowledgement (like "I see.", "Okay.", "Got it."). You MUST ALWAYS follow up with a genuine thought and an engaging question.`;
+    // Dynamic context placed after static prefix to preserve prompt cache hits
+    const dynamicContext = `TOPIC: "${topic}"${ragContext ? `\n${ragContext}` : ""}`;
+    const systemPrompt = `${STATIC_PREFIX}\n\n${dynamicContext}`;
+
+    let historyPrefix = "";
+    if (history.length > 4) {
+      const olderTurns = history.slice(0, -4);
+      const studentRecap = olderTurns
+        .filter((m) => m.role === "user")
+        .map((m) => m.content.slice(0, 40))
+        .join(" | ");
+      if (studentRecap) {
+        historyPrefix = `[Prior topics discussed: ${studentRecap}]\n`;
+      }
+    }
 
     const recentHistory = history
       .slice(-4)
       .map((m) => `${m.role === "assistant" ? "Mr. Khoirul" : "Student"}: ${m.content}`)
       .join("\n");
 
-    const prompt = `${recentHistory ? recentHistory + "\n" : ""}Student: ${studentMessage}\nMr. Khoirul:`;
+    const prompt = `${historyPrefix}${recentHistory ? recentHistory + "\n" : ""}Student: ${studentMessage}\nMr. Khoirul:`;
 
     let buffer = "";
     let isFirstChunk = true;

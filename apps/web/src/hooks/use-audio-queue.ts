@@ -14,6 +14,25 @@ interface UseAudioQueueProps {
   onAllEnded?: () => void;
 }
 
+function playBrowserSpeechSynthesis(text: string, onEnd: () => void) {
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+    onEnd();
+    return;
+  }
+  try {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "en-US";
+    utterance.rate = 1.0;
+    utterance.pitch = 1.0;
+    utterance.onend = () => onEnd();
+    utterance.onerror = () => onEnd();
+    window.speechSynthesis.speak(utterance);
+  } catch {
+    onEnd();
+  }
+}
+
 export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProps = {}) {
   const [currentSubtitle, setCurrentSubtitle] = useState<string>("");
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -47,6 +66,12 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
       ttsWatchdogRef.current = null;
     }
 
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      try {
+        window.speechSynthesis.cancel();
+      } catch {}
+    }
+
     for (const item of audioQueueRef.current) {
       try {
         item.audio.pause();
@@ -63,6 +88,17 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
         currentAudioRef.current = null;
       } catch {}
     }
+  }, []);
+
+  const unlockAudio = useCallback(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const silentAudio = new Audio();
+      silentAudio.src =
+        "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA";
+      silentAudio.volume = 0.01;
+      silentAudio.play().catch(() => {});
+    } catch {}
   }, []);
 
   const playNextInQueue = useCallback(() => {
@@ -128,15 +164,19 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     };
 
     nextItem.audio.onerror = (e) => {
-      console.warn("Audio queue chunk playback error:", e);
+      console.warn("Audio queue chunk playback error, falling back to browser SpeechSynthesis:", e);
       if (isHaltedRef.current) return;
-      playNextInQueue();
+      playBrowserSpeechSynthesis(nextItem.text, () => {
+        if (!isHaltedRef.current) playNextInQueue();
+      });
     };
 
     nextItem.audio.play().catch((err) => {
       if (err.name === "AbortError" || isHaltedRef.current) return;
-      console.warn("Audio play() interrupted or rejected:", err);
-      playNextInQueue();
+      console.warn("Audio play() interrupted or rejected, falling back to browser SpeechSynthesis:", err);
+      playBrowserSpeechSynthesis(nextItem.text, () => {
+        if (!isHaltedRef.current) playNextInQueue();
+      });
     });
   }, []);
 
@@ -211,6 +251,7 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     enqueueSentence,
     speakText,
     halt,
+    unlockAudio,
     resetForNewTurn,
     markStreamDone,
   };

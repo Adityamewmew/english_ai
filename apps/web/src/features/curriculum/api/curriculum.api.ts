@@ -57,4 +57,21 @@ export const curriculumApi = {
     if (error) throw new Error(String(error.value));
     return data?.data;
   },
+
+  submitSubModule: async (
+    id: string,
+    payload: {
+      userId: string;
+      answers?: Record<string, number>;
+      score?: number;
+      speakingScore?: number;
+    }
+  ) => {
+    const { data, error } = await (apiClient.api.curriculum as any)[
+      "sub-modules"
+    ]({ id }).submit.post(payload);
+    if (error) throw new Error(String(error.value));
+    return data?.data;
+  },
 };
+

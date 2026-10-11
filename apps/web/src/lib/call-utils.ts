@@ -56,27 +56,16 @@ export function isThoughtIncomplete(text: string): boolean {
 
   // Trailing thinking sounds, hesitation, pauses
   if (
-    /(?:\b(?:uh|um|umm|uhh|eh|em|ahh|ah|wait|sebentar|tunggu|apa ya|kayak|anu|hmm|mikir|gimana ya|bentar|terus)\b|\.{2,}|…|-)$/i.test(
+    /(?:\b(?:uh|um|umm|uhh|eh|em|ahh|wait|sebentar|tunggu|apa ya|kayak|anu|hmm|mikir|gimana ya|bentar)\b|\.{2,}|…|-)$/i.test(
       trimmed
     )
   ) {
     return true;
   }
 
-  // Trailing connectives, prepositions, conjunctions, auxiliary verbs, or modal particles
+  // Trailing connectives, prepositions, conjunctions, auxiliary verbs (clearly unfinished sentence)
   if (
-    /\b(?:because|and|or|so|that|to|my|the|a|an|is|are|am|was|were|like|with|for|about|in|on|at|by|from|as|if|when|while|since|though|although|then|karena|dan|atau|jadi|yang|di|ke|pada|untuk|bahwa|mau|ingin|lagi|coba|terus|tapi|namun|sedang|akan|bisa|dapat|belum)$/i.test(
-      trimmed
-    )
-  ) {
-    return true;
-  }
-
-  // Brief utterance (<= 2 words) that isn't a stand-alone greeting/confirmation
-  const words = trimmed.split(/\s+/).filter(Boolean);
-  if (
-    words.length <= 2 &&
-    !/^(?:yes|no|fine|good|halo|hai|hi|hello|ok|okay|bye|sure|yep|nope|great|thanks|thank you|terima kasih|siap)$/i.test(
+    /\b(?:because|and|or|so|that|to|my|the|a|an|is|are|am|was|were|like|with|for|about|in|on|at|by|from|as|if|when|while|since|though|although|karena|dan|atau|jadi|yang|di|ke|pada|untuk|bahwa|lagi|tapi|namun)$/i.test(
       trimmed
     )
   ) {
@@ -92,19 +81,18 @@ export function isValidStudentUtterance(text: string): boolean {
   const words = cleaned.split(/\s+/).filter(Boolean);
   if (words.length === 0) return false;
 
-  const validSingleWords = new Set([
-    "yes", "no", "yeah", "yep", "nope", "sure", "fine", "good",
-    "okay", "ok", "hello", "hi", "hey", "halo", "bye", "goodbye",
-    "thanks", "siap", "iya", "tidak", "ya"
-  ]);
+  const fillers = new Set(["um", "uh", "eh", "ah", "er", "mm", "hmm", "anu"]);
 
   if (words.length === 1) {
-    return validSingleWords.has(words[0].toLowerCase());
+    const single = words[0].toLowerCase();
+    // Reject pure filler sounds or single-letter noises (except 'i')
+    if (fillers.has(single)) return false;
+    if (single.length === 1 && single !== "i") return false;
+    return true;
   }
 
-  // If 2 words, reject if both are just fillers or single-letter noises like "um uh" or "a the"
+  // If 2 words, reject if both are just fillers
   if (words.length === 2) {
-    const fillers = new Set(["um", "uh", "eh", "ah", "a", "the", "an", "oh", "er"]);
     if (fillers.has(words[0].toLowerCase()) && fillers.has(words[1].toLowerCase())) {
       return false;
     }

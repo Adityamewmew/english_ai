@@ -198,3 +198,25 @@ export function animeCountUp(
     },
   });
 }
+
+/**
+ * 11. Sidebar Slide & Width Transition with Anime.js
+ */
+export function animeSidebarSlide(
+  target: HTMLElement | null,
+  isOpen: boolean,
+  targetWidth = 256,
+  onComplete?: () => void
+) {
+  if (!target) return;
+  const params: Record<string, any> = {
+    width: isOpen ? [0, targetWidth] : [targetWidth, 0],
+    opacity: isOpen ? [0, 1] : [1, 0],
+    duration: 320,
+    ease: isOpen ? "outBack" : "inOutQuad",
+  };
+  if (onComplete) {
+    params.onComplete = () => onComplete();
+  }
+  return animate(target, params);
+}

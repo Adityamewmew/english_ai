@@ -4,3 +4,6 @@ export * from "./hooks/use-curriculum";
 export * from "./hooks/use-module-detail";
 export * from "./components/module-detail-view";
 export * from "./components/curriculum-roadmap-view";
+export * from "./components/modules-catalog-view";
+export * from "./components/module-study-view";
+export * from "./components/module-missions-hub";

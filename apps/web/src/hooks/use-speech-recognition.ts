@@ -157,14 +157,20 @@ export function useSpeechRecognition({
       recognition.onerror = (event: any) => {
         if (event.error === "not-allowed" || event.error === "audio-capture") {
           setErrorMsg("Izin mikrofon diperlukan untuk melakukan panggilan suara.");
+        } else if (event.error === "no-speech") {
+          // Normal silence, will auto-restart in onend
         }
       };
 
       recognition.onend = () => {
         if (canListenRef.current && recognitionRef.current === recognition) {
-          try {
-            recognition.start();
-          } catch {}
+          setTimeout(() => {
+            if (canListenRef.current && recognitionRef.current === recognition) {
+              try {
+                recognition.start();
+              } catch {}
+            }
+          }, 150);
         }
       };
 

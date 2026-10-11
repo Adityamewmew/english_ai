@@ -117,3 +117,40 @@ export async function saveModuleStepProgressAction(
   }
 }
 
+export async function submitSubModuleAction(
+  subModuleId: string,
+  payload: {
+    answers?: Record<string, any>;
+    score?: number;
+    speakingScore?: number;
+  }
+) {
+  try {
+    const session = await getSession();
+    if (!session?.userId) {
+      return { success: false, error: "Sesi telah berakhir, silakan login kembali" };
+    }
+
+    const res = await fetch(`${API_URL}/api/curriculum/sub-modules/${subModuleId}/submit`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId: session.userId,
+        ...payload,
+      }),
+      cache: "no-store",
+    });
+
+    const json = await res.json();
+    if (json.success) {
+      revalidatePath("/modules");
+      revalidatePath("/dashboard");
+      return { success: true, data: json.data };
+    }
+    return { success: false, error: json.error || "Gagal menyimpan progres sub-modul" };
+  } catch (err: any) {
+    console.error("submitSubModuleAction error:", err);
+    return { success: false, error: err.message || "Terjadi kesalahan server" };
+  }
+}
+
