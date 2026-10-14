@@ -18,33 +18,33 @@ export function StudentHeroBanner({
 }: StudentHeroBannerProps) {
   return (
     <div
-      style={{ backgroundColor: "#d9dbfc" }}
-      className="relative overflow-hidden rounded-[28px] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs border border-indigo-200/70"
+      style={{ backgroundColor: "#0D3B66" }}
+      className="relative overflow-hidden rounded-[28px] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md border border-[#082542]"
     >
-      {/* Decorative blurred circles */}
-      <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-white/40 blur-2xl pointer-events-none" />
-      <div className="absolute bottom-0 right-10 w-48 h-48 rounded-full bg-pink-300/30 blur-3xl pointer-events-none" />
+      {/* Organic Brand Wave Accents matching design.md */}
+      <div className="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-[#F4B41A]/25 blur-2xl pointer-events-none" />
+      <div className="absolute -bottom-10 -right-10 w-52 h-52 rounded-full bg-[#9E1B1B]/35 blur-3xl pointer-events-none" />
 
       {/* Left Content */}
       <div className="relative z-10 max-w-md space-y-3.5 text-center md:text-left">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 text-indigo-800 text-xs font-black uppercase tracking-wider shadow-2xs backdrop-blur-xs">
-          <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
-          <span>Active Module · CEFR {currentCefr}</span>
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-[#F4B41A] text-xs font-black uppercase tracking-wider shadow-2xs backdrop-blur-xs border border-white/10">
+          <Sparkles className="w-3.5 h-3.5 text-[#F4B41A]" />
+          <span>Active Course · CEFR {currentCefr}</span>
         </div>
 
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">
+        <h2 className="text-xl sm:text-2xl font-black text-white leading-tight">
           {activeModuleTitle}
         </h2>
 
-        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
-          Master target vocabulary, reading passages, contraction morphing, and interactive sentence building.
+        <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
+          Master target vocabulary, reading passages, contraction morphing, and interactive sentence building with AI Coach.
         </p>
 
         <div className="pt-1.5">
           <Link
             href={`/modules/${activeModuleCode}`}
             onClick={(e) => animeButtonPop(e.currentTarget)}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-950 hover:bg-slate-800 text-white font-extrabold text-xs sm:text-sm shadow-md transition-all active:scale-95 cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full btn-skeuo-yellow text-xs sm:text-sm shadow-md transition-all active:scale-95 cursor-pointer"
           >
             <span>Resume Module</span>
             <ArrowRight className="w-4 h-4 ml-0.5" />

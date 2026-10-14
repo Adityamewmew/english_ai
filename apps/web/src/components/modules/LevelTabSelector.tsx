@@ -76,7 +76,7 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
                 className="flex items-center gap-2 px-3.5 py-2.5 min-h-[44px] rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/70 dark:bg-slate-900/40 text-slate-400 dark:text-slate-500 cursor-not-allowed text-xs font-semibold select-none shrink-0 will-change-transform"
                 title="Selesaikan level sebelumnya untuk membuka"
               >
-                <Lock className="w-3.5 h-3.5 text-amber-500" />
+                <Lock className="w-3.5 h-3.5 text-[#F4B41A]" />
                 <span>Level {grp.cefr}</span>
               </div>
             );
@@ -89,14 +89,14 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
               onClick={(e) => animeButtonPop(e.currentTarget)}
               className={`flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-xl border text-xs font-bold transition-all shrink-0 will-change-transform ${
                 isCefrActive
-                  ? "bg-slate-900 dark:bg-white text-white dark:text-slate-900 border-slate-900 dark:border-white shadow-sm"
-                  : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800"
+                  ? "bg-[#0D3B66] text-white border-[#082542] border-b-2 shadow-xs"
+                  : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 border-b-2 border-b-slate-300 dark:border-b-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800"
               }`}
             >
               {grp.isCompleted ? (
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#F4B41A]" />
               ) : (
-                <span className={`w-2 h-2 rounded-full ${isCefrActive ? "bg-blue-400" : "bg-slate-300 dark:bg-slate-700"}`} />
+                <span className={`w-2 h-2 rounded-full ${isCefrActive ? "bg-[#F4B41A]" : "bg-slate-300 dark:bg-slate-700"}`} />
               )}
               <span>Level {grp.cefr}</span>
               <span
@@ -128,7 +128,7 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
                   className="flex items-center gap-2 px-3 py-2 min-h-[40px] rounded-xl text-slate-400 dark:text-slate-500 cursor-not-allowed text-xs font-medium select-none shrink-0 will-change-transform"
                   title="Selesaikan sub-level sebelumnya untuk membuka"
                 >
-                  <Lock className="w-3 h-3 text-amber-500/70" />
+                  <Lock className="w-3 h-3 text-[#F4B41A]/70" />
                   <span>{subLvl.title}</span>
                 </div>
               );
@@ -141,20 +141,20 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
                 onClick={(e) => animeButtonPop(e.currentTarget)}
                 className={`flex items-center gap-2 px-3.5 py-2 min-h-[40px] rounded-xl text-xs font-semibold transition-all shrink-0 will-change-transform ${
                   isSubActive
-                    ? "bg-blue-600 text-white shadow-sm shadow-blue-600/25"
-                    : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/60 border border-slate-200/60 dark:border-slate-700/60"
+                    ? "btn-skeuo-navy"
+                    : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/60 border border-slate-200/60 dark:border-slate-700/60 border-b-2 border-b-slate-300 dark:border-b-slate-700"
                 }`}
               >
                 {isCompleted ? (
                   <CheckCircle2
                     className={`w-3.5 h-3.5 ${
-                      isSubActive ? "text-emerald-300" : "text-emerald-500"
+                      isSubActive ? "text-[#F4B41A]" : "text-[#0D3B66] dark:text-[#F4B41A]"
                     }`}
                   />
                 ) : (
                   <Sparkles
                     className={`w-3.5 h-3.5 ${
-                      isSubActive ? "text-blue-200" : "text-blue-500"
+                      isSubActive ? "text-[#F4B41A]" : "text-[#0D3B66] dark:text-[#F4B41A]"
                     }`}
                   />
                 )}

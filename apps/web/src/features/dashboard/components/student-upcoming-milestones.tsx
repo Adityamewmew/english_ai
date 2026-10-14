@@ -40,7 +40,7 @@ export function StudentUpcomingMilestones({ modules = [] }: StudentUpcomingMiles
   return (
     <div className="space-y-3.5">
       <div className="flex items-center justify-between px-1">
-        <h3 className="text-lg sm:text-xl font-black text-slate-900 dark:text-white">
+        <h3 className="text-lg sm:text-xl font-black text-[#0D3B66] dark:text-white uppercase tracking-tight">
           Upcoming milestones
         </h3>
       </div>
@@ -50,14 +50,14 @@ export function StudentUpcomingMilestones({ modules = [] }: StudentUpcomingMiles
         {displayModules.map((m) => (
           <div
             key={m.id}
-            className="p-5 rounded-[26px] bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-2xs hover:shadow-xs transition-shadow space-y-3.5"
+            className="p-5 rounded-[22px] bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 border-b-2 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-xs transition-shadow space-y-3.5"
           >
             {/* Badges */}
             <div className="flex items-center gap-1.5 flex-wrap">
-              <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-700 font-mono">
+              <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#0D3B66]/10 text-[#0D3B66] font-mono border border-[#0D3B66]/20">
                 CEFR {m.cefr}
               </span>
-              <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-cyan-100 text-cyan-700">
+              <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#9E1B1B]/10 text-[#9E1B1B] border border-[#9E1B1B]/20">
                 Next Module
               </span>
             </div>
@@ -81,7 +81,7 @@ export function StudentUpcomingMilestones({ modules = [] }: StudentUpcomingMiles
               <Link
                 href={`/modules/${m.id}`}
                 onClick={(e) => animeButtonPop(e.currentTarget)}
-                className="px-4 py-2 rounded-full bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs shadow-xs transition-all active:scale-95 cursor-pointer flex items-center gap-1.5"
+                className="px-4 py-2 rounded-full btn-skeuo-navy font-bold text-xs shadow-xs transition-all active:scale-95 cursor-pointer flex items-center gap-1.5"
               >
                 <span>Open module</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -91,12 +91,12 @@ export function StudentUpcomingMilestones({ modules = [] }: StudentUpcomingMiles
         ))}
 
         {/* Live Speaking AI Call Card */}
-        <div className="p-5 rounded-[26px] bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-2xs hover:shadow-xs transition-shadow space-y-3.5">
+        <div className="p-5 rounded-[22px] bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 border-b-2 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-xs transition-shadow space-y-3.5">
           <div className="flex items-center gap-1.5">
-            <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-700">
+            <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#F4B41A]/20 text-[#0F172A] border border-[#F4B41A]/40">
               Voice AI Call
             </span>
-            <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-pink-100 text-pink-700">
+            <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#1B4965]/10 text-[#1B4965] border border-[#1B4965]/20">
               Speaking Lab
             </span>
           </div>
@@ -111,7 +111,7 @@ export function StudentUpcomingMilestones({ modules = [] }: StudentUpcomingMiles
           </div>
 
           <div className="flex items-center justify-between gap-3 pt-2 border-t border-slate-100 dark:border-slate-800">
-            <div className="flex items-center gap-1.5 text-xs font-bold text-amber-700 dark:text-amber-400">
+            <div className="flex items-center gap-1.5 text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A]">
               <PhoneCall className="w-3.5 h-3.5" />
               <span>Free AI Session</span>
             </div>
@@ -119,7 +119,7 @@ export function StudentUpcomingMilestones({ modules = [] }: StudentUpcomingMiles
             <Link
               href="/call"
               onClick={(e) => animeButtonPop(e.currentTarget)}
-              className="px-4 py-2 rounded-full bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs shadow-xs transition-all active:scale-95 cursor-pointer flex items-center gap-1.5"
+              className="px-4 py-2 rounded-full btn-skeuo-yellow font-bold text-xs shadow-xs transition-all active:scale-95 cursor-pointer flex items-center gap-1.5"
             >
               <span>Call now</span>
               <ArrowRight className="w-3.5 h-3.5" />

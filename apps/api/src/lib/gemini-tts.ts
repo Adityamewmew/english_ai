@@ -20,17 +20,13 @@ export class GeminiTtsService {
 
     const baseUrl =
       process.env.AI_TTS_BASE_URL ||
-      (process.env.AI_BASE_URL?.includes("tiarina")
-        ? "http://localhost:20128/v1"
-        : process.env.AI_BASE_URL) ||
+      process.env.AI_BASE_URL ||
       "http://localhost:20128/v1";
 
     const apiKey =
       process.env.AI_TTS_API_KEY ||
-      (process.env.AI_BASE_URL?.includes("tiarina")
-        ? "sk-96f2316f84884524-2cee23-3c70805b"
-        : process.env.AI_API_KEY) ||
-      "sk-96f2316f84884524-2cee23-3c70805b";
+      process.env.AI_API_KEY ||
+      "sk-96f2316f84884524-286a68-e9103247";
 
     if (!baseUrl) return null;
 
@@ -56,7 +52,7 @@ export class GeminiTtsService {
             input: cleanText,
             voice: candidate.voice,
           }),
-          signal: AbortSignal.timeout(3500),
+          signal: AbortSignal.timeout(15000),
         });
 
         if (res.ok) {
@@ -93,17 +89,13 @@ export class GeminiTtsService {
   static async getSpeechStream(text: string): Promise<globalThis.Response | null> {
     const baseUrl =
       process.env.AI_TTS_BASE_URL ||
-      (process.env.AI_BASE_URL?.includes("tiarina")
-        ? "http://localhost:20128/v1"
-        : process.env.AI_BASE_URL) ||
+      process.env.AI_BASE_URL ||
       "http://localhost:20128/v1";
 
     const apiKey =
       process.env.AI_TTS_API_KEY ||
-      (process.env.AI_BASE_URL?.includes("tiarina")
-        ? "sk-96f2316f84884524-2cee23-3c70805b"
-        : process.env.AI_API_KEY) ||
-      "sk-96f2316f84884524-2cee23-3c70805b";
+      process.env.AI_API_KEY ||
+      "sk-96f2316f84884524-286a68-e9103247";
 
     const cleanText = sanitizeRepeatedChars(text);
     if (!baseUrl || !cleanText || cleanText.trim() === "") return null;
@@ -130,7 +122,7 @@ export class GeminiTtsService {
             input: cleanText,
             voice: candidate.voice,
           }),
-          signal: AbortSignal.timeout(3500),
+          signal: AbortSignal.timeout(15000),
         });
 
         if (res.ok) {

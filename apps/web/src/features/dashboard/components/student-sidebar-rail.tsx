@@ -58,14 +58,12 @@ export function StudentSidebarRail({ isOpen, onToggle }: StudentSidebarRailProps
           {/* Brand Header */}
           <div className="flex items-center justify-between px-1">
             <Link href="/dashboard" className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-pink-500 via-rose-500 to-indigo-600 p-0.5 shadow-md flex items-center justify-center shrink-0">
-                <div className="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
-                  <span className="text-white font-black text-sm">E</span>
-                </div>
+              <div className="w-10 h-10 rounded-2xl bg-[#0D3B66] border-b-2 border-[#082542] shadow-[0_1px_2px_rgba(13,59,102,0.3),inset_0_1px_0_rgba(255,255,255,0.2)] flex items-center justify-center shrink-0">
+                <span className="text-[#F4B41A] font-black text-base tracking-tighter">E</span>
               </div>
               <div className="leading-none">
-                <span className="font-black text-slate-900 dark:text-white text-sm tracking-tight block">
-                  EDDY&apos;S <span className="text-indigo-600">AI</span>
+                <span className="font-black text-[#0D3B66] dark:text-white text-sm tracking-tight block">
+                  EDDY&apos;S <span className="text-[#F4B41A]">ENGLISH</span>
                 </span>
                 <span className="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider block mt-1">
                   Student Portal
@@ -81,7 +79,7 @@ export function StudentSidebarRail({ isOpen, onToggle }: StudentSidebarRailProps
                 onToggle();
               }}
               title="Collapse sidebar"
-              className="p-1.5 rounded-xl text-slate-400 hover:text-slate-800 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+              className="p-1.5 rounded-xl text-slate-400 hover:text-[#0D3B66] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
             >
               <PanelLeftClose className="w-4 h-4" />
             </button>
@@ -100,11 +98,11 @@ export function StudentSidebarRail({ isOpen, onToggle }: StudentSidebarRailProps
                   onClick={(e) => animeButtonPop(e.currentTarget)}
                   className={`flex items-center gap-3 px-3.5 py-2.5 rounded-2xl font-bold text-xs sm:text-sm transition-all ${
                     isActive
-                      ? "bg-slate-950 dark:bg-white text-white dark:text-slate-950 shadow-xs"
-                      : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
+                      ? "bg-[#0D3B66] text-white border-b-2 border-[#082542] shadow-[0_1px_2px_rgba(13,59,102,0.25),inset_0_1px_0_rgba(255,255,255,0.2)]"
+                      : "text-slate-600 dark:text-slate-400 hover:text-[#0D3B66] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
                   }`}
                 >
-                  <Icon className="w-4 h-4 shrink-0 stroke-[2.2]" />
+                  <Icon className={`w-4 h-4 shrink-0 stroke-[2.2] ${isActive ? "text-[#F4B41A]" : ""}`} />
                   <span className="truncate">{item.label}</span>
                 </Link>
               );

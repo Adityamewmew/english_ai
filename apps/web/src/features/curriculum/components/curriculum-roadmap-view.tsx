@@ -71,19 +71,19 @@ export async function CurriculumRoadmapView({
               <ArrowLeft className="w-5 h-5" />
             </Link>
             <div className="flex items-center gap-2">
-              <span className="w-8 h-8 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold text-sm">
+              <span className="w-8 h-8 rounded-xl bg-[#0D3B66] border-b-2 border-[#082542] flex items-center justify-center text-[#F4B41A] font-black text-sm shadow-xs">
                 E
               </span>
               <span className="font-extrabold text-slate-900 dark:text-white text-base">
-                EDDY&apos;S <span className="text-blue-600">AI</span>
+                EDDY&apos;S <span className="text-[#F4B41A]">AI</span>
               </span>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
             <Link href="/call">
-              <Button variant="outline" size="sm" className="text-xs">
-                <PhoneCall className="w-3.5 h-3.5 mr-1 text-blue-600" />
+              <Button variant="outline" size="sm" className="btn-skeuo-yellow text-xs border-b-2">
+                <PhoneCall className="w-3.5 h-3.5 mr-1 text-[#0D3B66]" />
                 Call Speaking
               </Button>
             </Link>
@@ -148,7 +148,7 @@ export async function CurriculumRoadmapView({
                     <div className="pt-4 flex items-center justify-between">
                       <Button asChild variant="outline" size="sm" className="rounded-xl gap-2 shadow-sm">
                         <Link href={`/modules?level=${levels[0]?.id || "A1"}`}>
-                          <ArrowLeft className="w-4 h-4 text-blue-600" />
+                          <ArrowLeft className="w-4 h-4 text-[#0D3B66]" />
                           <span>Kembali ke Level A1</span>
                         </Link>
                       </Button>
@@ -216,9 +216,9 @@ export async function CurriculumRoadmapView({
                       return (
                         <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
                           {prevLvl ? (
-                            <Button asChild variant="outline" size="sm" className="rounded-xl gap-2 shadow-sm">
+                            <Button asChild variant="outline" size="sm" className="rounded-xl gap-2 shadow-sm border-b-2">
                               <Link href={`/modules?level=${prevLvl.id}`}>
-                                <ArrowLeft className="w-4 h-4 text-blue-600" />
+                                <ArrowLeft className="w-4 h-4 text-[#0D3B66]" />
                                 <span>Kembali ke {prevLvl.title.split(" - ")[0]}</span>
                               </Link>
                             </Button>
@@ -227,14 +227,14 @@ export async function CurriculumRoadmapView({
                           )}
 
                           {nextLvl && nextLvl.isUnlocked ? (
-                            <Button asChild variant="default" size="sm" className="rounded-xl gap-2 bg-blue-600 hover:bg-blue-700 text-white shadow-sm">
+                            <Button asChild size="sm" className="btn-skeuo-navy rounded-xl gap-2 shadow-sm">
                               <Link href={`/modules?level=${nextLvl.id}`}>
                                 <span>Lanjut ke {nextLvl.title.split(" - ")[0]}</span>
-                                <ArrowRight className="w-4 h-4" />
+                                <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
                               </Link>
                             </Button>
                           ) : (
-                            <Button asChild variant="secondary" size="sm" className="rounded-xl gap-2 bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-100 text-blue-600 dark:text-blue-400">
+                            <Button asChild variant="secondary" size="sm" className="rounded-xl gap-2 bg-[#0D3B66]/10 text-[#0D3B66] dark:text-[#F4B41A] border-b-2 border-slate-200 dark:border-slate-700">
                               <Link href="/call">
                                 <PhoneCall className="w-3.5 h-3.5" />
                                 <span>Praktik Bicara Bebas AI</span>

@@ -8,6 +8,7 @@ import { ModuleStagePlaylist, PlaylistStepItem } from "./module-stage-playlist";
 import { ModuleStageViewport } from "./module-stage-viewport";
 import { ModuleTutorCallBar } from "./module-tutor-about-card";
 import { ModuleMissionsHub } from "./module-missions-hub";
+import { SubmoduleTutorWelcomeStage } from "./submodule-tutor-welcome-stage";
 import {
   BookOpen,
   Headphones,
@@ -16,10 +17,12 @@ import {
   ChevronRight,
   ArrowLeft,
   CheckCircle2,
+  Sparkles,
 } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 import { submitSubModuleAction } from "@/app/(student)/modules/modules.actions";
 import { playFanfareSound } from "@/lib/sound-fx";
+import { SidebarArcadeCompanion } from "./companion";
 
 interface ModuleStudyViewProps {
   moduleId: string;
@@ -55,13 +58,17 @@ export function ModuleStudyView({
   onRefresh,
 }: ModuleStudyViewProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  // Default to first subModule to immediately open the clean Demia player
+  // Default to null so module opens the onboarding missions hub first
   const [activeMissionId, setActiveMissionId] = useState<string | null>(() => {
-    const firstActive = subModules.find((s) => s.userProgress?.status !== "completed");
-    return firstActive?.id || subModules[0]?.id || null;
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("mission") || params.get("subModule") || null;
+    }
+    return null;
   });
   const [activeStepId, setActiveStepId] = useState(1);
   const [completedSteps, setCompletedSteps] = useState<number[]>([1]);
+  const [isOnboardingBriefing, setIsOnboardingBriefing] = useState(false);
   const [xpPoints, setXpPoints] = useState(35);
   const [combo, setCombo] = useState(1);
   const [isFinishing, setIsFinishing] = useState(false);
@@ -158,7 +165,7 @@ export function ModuleStudyView({
   };
 
   return (
-    <div className="min-h-screen w-full bg-slate-50/50 dark:bg-slate-950 flex flex-row overflow-x-hidden">
+    <div className="min-h-screen w-full bg-slate-50/50 dark:bg-slate-950 flex flex-row">
       {/* 1. Collapsible Sidebar Rail (Shared with Dashboard) */}
       <StudentSidebarRail
         isOpen={isSidebarOpen}
@@ -176,7 +183,7 @@ export function ModuleStudyView({
         />
 
         {/* Learning Workspace */}
-        <main className="flex-1 p-4 sm:p-6 lg:p-7 w-full max-w-[1520px] mx-auto space-y-6">
+        <main className="flex-1 px-3 py-2.5 sm:px-6 sm:py-3.5 w-full max-w-[1520px] mx-auto space-y-3.5">
           {/* VIEW A: Floating Skill Cards Hub (Before Entering Sub-Module) */}
           {!activeMissionId ? (
             <ModuleMissionsHub
@@ -185,56 +192,64 @@ export function ModuleStudyView({
               tutor={tutor}
               onSelectMission={(missionId) => {
                 setActiveMissionId(missionId);
+                setIsOnboardingBriefing(true);
                 setActiveStepId(1);
                 setCompletedSteps([1]);
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             />
+          ) : isOnboardingBriefing ? (
+            /* VIEW B: Sub-Module Onboarding Briefing with 3D Animated Mr. Khoirul */
+            <SubmoduleTutorWelcomeStage
+              moduleData={moduleData}
+              subModule={currentSub}
+              studentName={studentName}
+              onStartMission={() => {
+                setIsOnboardingBriefing(false);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              onBackToMissions={() => {
+                setActiveMissionId(null);
+                setIsOnboardingBriefing(false);
+              }}
+            />
           ) : (
-            /* VIEW B: Active Mission Stage Player (2-Column LMS Layout) */
-            <div className="space-y-6 animate-in fade-in duration-300">
+            /* VIEW C: Active Mission Stage Player (2-Column LMS Layout) */
+            <div className="space-y-3.5 animate-in fade-in duration-300">
               {/* Demia Header (Breadcrumb, Title, Metadata & Mission Switcher) */}
-              <div className="space-y-4 border-b border-slate-200/80 dark:border-slate-800 pb-5">
-                {/* 1. Breadcrumb & Actions Row */}
+              <div className="space-y-2 border-b border-slate-200/80 dark:border-slate-800 pb-2.5">
+                {/* 1. Breadcrumb & Actions Row with Left Back Button */}
                 <div className="flex items-center justify-between gap-4 flex-wrap">
-                  <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
-                    <Link href="/modules" className="hover:text-slate-800 dark:hover:text-white transition-colors">
-                      Courses
-                    </Link>
-                    <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-                    <span className="text-slate-600 dark:text-slate-400">
-                      {moduleData?.title || `Module ${moduleData?.orderIndex || 1}`}
-                    </span>
-                    <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-                    <span className="text-blue-600 dark:text-blue-400 font-semibold">
-                      {SKILL_LABELS[currentSub?.skillType] || currentSub?.title}
-                    </span>
-                  </div>
+                  <div className="flex items-center gap-3 flex-wrap">
+                    {/* Tombol Kembali di sebelah kiri */}
+                    <button
+                      type="button"
+                      onClick={() => setActiveMissionId(null)}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all active:scale-95 cursor-pointer shadow-2xs border border-slate-200/60 dark:border-slate-700/60"
+                      title="Kembali ke Sub Modules"
+                    >
+                      <ArrowLeft className="w-3.5 h-3.5 text-slate-600 dark:text-slate-400" />
+                      <span>Kembali</span>
+                    </button>
 
-                  {/* Mission Selector Tabs */}
-                  <div className="flex items-center gap-1.5 p-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                    {subModules.map((sub, i) => {
-                      const isSubActive = sub.id === currentSub?.id;
-                      return (
-                        <button
-                          key={sub.id}
-                          type="button"
-                          onClick={() => {
-                            setActiveMissionId(sub.id);
-                            setActiveStepId(1);
-                            setCompletedSteps([1]);
-                          }}
-                          className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
-                            isSubActive
-                              ? "bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs"
-                              : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
-                          }`}
-                        >
-                          {SKILL_ICONS[sub.skillType]}
-                          <span>{sub.skillType.toUpperCase()}</span>
-                        </button>
-                      );
-                    })}
+                    <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
+                      <Link href="/modules" className="hover:text-slate-800 dark:hover:text-white transition-colors">
+                        Courses
+                      </Link>
+                      <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+                      <button
+                        type="button"
+                        onClick={() => setActiveMissionId(null)}
+                        className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
+                        title="Kembali ke Sub Modules"
+                      >
+                        {moduleData?.title || `Module ${moduleData?.orderIndex || 1}`}
+                      </button>
+                      <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+                      <span className="text-blue-600 dark:text-blue-400 font-semibold capitalize">
+                        {currentSub?.skillType || currentSub?.title}
+                      </span>
+                    </div>
                   </div>
                 </div>
 
@@ -244,24 +259,33 @@ export function ModuleStudyView({
                     <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
                       {currentSub?.title}
                     </h1>
-                    <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 font-normal">
-                      <span className="flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                    <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 font-normal flex-wrap">
+                      <span className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">
                         CEFR {moduleData?.cefr || "A1.1"}
                       </span>
-                      <span>•</span>
-                      <span>{playlistSteps.length} Steps</span>
-                      <span>•</span>
-                      <span>~25 min practice</span>
+                      <span>{playlistSteps.length} Langkah Belajar</span>
+                      <span>Estimasi 25 Menit</span>
                     </div>
                   </div>
 
-                  {currentSub?.userProgress?.status === "completed" && (
-                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold border border-emerald-200 shrink-0">
-                      <CheckCircle2 className="w-3.5 h-3.5" />
-                      <span>Mission Completed</span>
-                    </div>
-                  )}
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <button
+                      type="button"
+                      onClick={() => setIsOnboardingBriefing(true)}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold border border-slate-200/60 dark:border-slate-700/60 transition-all cursor-pointer shadow-2xs"
+                      title="Buka kembali pengantar Mr. Khoirul"
+                    >
+                      <Sparkles className="w-3.5 h-3.5 text-[#F4B41A]" />
+                      <span>Pengantar Mr. Khoirul</span>
+                    </button>
+
+                    {currentSub?.userProgress?.status === "completed" && (
+                      <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 text-xs font-medium border border-emerald-200/70 dark:border-emerald-800/60 shrink-0">
+                        <CheckCircle2 className="w-3.5 h-3.5" />
+                        <span>Misi Selesai</span>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
 
@@ -290,8 +314,8 @@ export function ModuleStudyView({
                   />
                 </div>
 
-                {/* Right Column (Balanced ~320-340px): Sticky Study Progress & Step Playlist */}
-                <div className="w-full lg:w-[320px] xl:w-[340px] space-y-6 shrink-0 lg:sticky lg:top-24">
+                {/* Right Column: Sticky Sidebar (~265-285px) with scrollable steps & pinned docked character */}
+                <aside className="w-full lg:w-[265px] xl:w-[285px] shrink-0 lg:sticky lg:top-3 lg:self-start">
                   <ModuleStagePlaylist
                     steps={playlistSteps}
                     activeStepId={activeStepId}
@@ -299,8 +323,11 @@ export function ModuleStudyView({
                     xpPoints={xpPoints}
                     completedCount={completedSteps.length}
                     totalCount={playlistSteps.length}
-                  />
-                </div>
+                  >
+                    {/* Character Walking Runway docked directly inside sidebar */}
+                    <SidebarArcadeCompanion />
+                  </ModuleStagePlaylist>
+                </aside>
               </div>
             </div>
           )}

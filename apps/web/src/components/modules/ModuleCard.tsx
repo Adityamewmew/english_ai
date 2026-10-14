@@ -35,25 +35,25 @@ export function ModuleCard({ module, onSelect }: ModuleCardProps) {
     <Card
       onMouseEnter={(e) => !isLocked && animeCardHover(e.currentTarget, true)}
       onMouseLeave={(e) => !isLocked && animeCardHover(e.currentTarget, false)}
-      className={`module-item-card group relative flex flex-col justify-between p-5 transition-all will-change-transform ${
+      className={`module-item-card card-skeuo group relative flex flex-col justify-between p-5 transition-all will-change-transform ${
         isLocked
           ? "border-slate-200 bg-slate-50/75 opacity-70 dark:border-slate-800 dark:bg-slate-900/30"
           : isCompleted
-          ? "border-emerald-200 bg-emerald-50/20 hover:border-emerald-300 hover:shadow-sm dark:border-emerald-800/40 dark:bg-emerald-950/10 cursor-pointer"
-          : "border-slate-200 bg-white hover:border-blue-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 cursor-pointer"
+          ? "border-slate-200/90 dark:border-slate-800 bg-[#0D3B66]/5 dark:bg-slate-900/60 hover:border-[#0D3B66]/40 cursor-pointer"
+          : "border-slate-200/90 bg-white hover:border-[#0D3B66]/40 dark:border-slate-800 dark:bg-slate-900 cursor-pointer"
       }`}
     >
       <div>
         {/* Header row: CEFR / Exam badge & Status */}
         <div className="flex items-center justify-between gap-2 mb-3">
           <div className="flex items-center gap-2 flex-wrap">
-            <Badge variant="secondary" className="font-semibold text-xs">
+            <Badge variant="secondary" className="font-semibold text-xs border-b">
               Modul {module.orderIndex}
             </Badge>
 
             {module.isExam && (
-              <Badge variant="warning" className="gap-1 text-xs font-semibold">
-                <Award className="w-3 h-3" />
+              <Badge className="gap-1 text-xs font-semibold bg-[#F4B41A] text-[#0D3B66] border-b border-[#DDA012]">
+                <Award className="w-3 h-3 text-[#0D3B66]" />
                 Ujian Kelulusan
               </Badge>
             )}
@@ -61,17 +61,17 @@ export function ModuleCard({ module, onSelect }: ModuleCardProps) {
 
           <div>
             {isCompleted ? (
-              <Badge variant="success" className="gap-1 text-xs font-medium">
-                <CheckCircle2 className="w-3.5 h-3.5" />
+              <Badge className="gap-1 text-xs font-bold bg-[#0D3B66] text-white border-b border-[#082542]">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#F4B41A]" />
                 <span>Lulus {module.score ? `(${module.score}%)` : ""}</span>
               </Badge>
             ) : isLocked ? (
-              <Badge variant="secondary" className="gap-1 text-xs font-medium opacity-80">
+              <Badge variant="secondary" className="gap-1 text-xs font-medium opacity-80 border-b">
                 <Lock className="w-3 h-3" />
                 <span>Terkunci</span>
               </Badge>
             ) : (
-              <Badge variant="primary" className="text-xs font-medium">
+              <Badge className="text-xs font-bold bg-[#F4B41A] text-[#0D3B66] border-b border-[#DDA012]">
                 <span>Terbuka</span>
               </Badge>
             )}
@@ -83,7 +83,7 @@ export function ModuleCard({ module, onSelect }: ModuleCardProps) {
           className={`font-semibold text-base mb-1.5 ${
             isLocked
               ? "text-slate-600 dark:text-slate-400"
-              : "text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400"
+              : "text-slate-900 dark:text-white group-hover:text-[#0D3B66] dark:group-hover:text-[#F4B41A] transition-colors"
           }`}
         >
           {module.title}
@@ -117,8 +117,12 @@ export function ModuleCard({ module, onSelect }: ModuleCardProps) {
               onSelect?.(module.id);
             }
           }}
-          className={`gap-1 font-medium text-xs shadow-xs will-change-transform ${
-            isCompleted ? "bg-emerald-600 hover:bg-emerald-700 text-white" : ""
+          className={`gap-1 font-bold text-xs will-change-transform cursor-pointer ${
+            isCompleted
+              ? "btn-skeuo-navy"
+              : isLocked
+              ? ""
+              : "btn-skeuo-yellow"
           }`}
         >
           <span>{isCompleted ? "Ulangi" : "Mulai"}</span>

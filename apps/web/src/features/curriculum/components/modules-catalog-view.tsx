@@ -136,9 +136,9 @@ export function ModulesCatalogView({ session, initialLevel = "all" }: ModulesCat
                 Dashboard
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
-              <span className="text-indigo-600 dark:text-indigo-400">Curriculum Modules</span>
+              <span className="text-[#0D3B66] dark:text-[#F4B41A]">Curriculum Modules</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+            <h1 className="text-2xl sm:text-3xl font-black text-[#0D3B66] dark:text-white tracking-tight uppercase">
               Curriculum Courses &amp; Modules
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
@@ -170,7 +170,7 @@ export function ModulesCatalogView({ session, initialLevel = "all" }: ModulesCat
               <span>
                 Showing {filteredModules.length} of {allModules.length} Modules
               </span>
-              <span className="font-mono text-[11px] text-indigo-600 dark:text-indigo-400">
+              <span className="font-mono text-[11px] text-[#0D3B66] dark:text-[#F4B41A]">
                 Active CEFR: {currentCefr}
               </span>
             </div>

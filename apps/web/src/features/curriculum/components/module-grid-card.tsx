@@ -22,10 +22,10 @@ interface ModuleGridCardProps {
 }
 
 const THUMBNAIL_STYLES = [
-  { bg: "#d9dbfc", border: "#c5cafc", img: "/illustrations/hero-learning.svg", badge: "bg-indigo-100 text-indigo-700" },
-  { bg: "#fce7f3", border: "#fbcfe8", img: "/illustrations/article-vocab.svg", badge: "bg-pink-100 text-pink-700" },
-  { bg: "#fef3c7", border: "#fde68a", img: "/illustrations/student-books.svg", badge: "bg-amber-100 text-amber-700" },
-  { bg: "#e0e7ff", border: "#c7d2fe", img: "/illustrations/article-guide.svg", badge: "bg-cyan-100 text-cyan-700" },
+  { bg: "#F8FAFC", border: "#E2E8F0", img: "/illustrations/hero-learning.svg", badge: "bg-[#0D3B66] text-white border-b border-[#082542]" },
+  { bg: "#FFFBEB", border: "#FDE68A", img: "/illustrations/student-books.svg", badge: "bg-[#F4B41A] text-[#0F172A] border-b border-[#DDA012]" },
+  { bg: "#FEF2F2", border: "#FECACA", img: "/illustrations/article-vocab.svg", badge: "bg-[#9E1B1B] text-white border-b border-[#751414]" },
+  { bg: "#F0F9FF", border: "#BAE6FD", img: "/illustrations/article-guide.svg", badge: "bg-[#1B4965] text-white border-b border-[#113144]" },
 ];
 
 export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
@@ -35,10 +35,10 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
 
   return (
     <div
-      className={`group bg-white dark:bg-slate-900 border rounded-[26px] overflow-hidden p-3.5 shadow-2xs transition-all duration-200 flex flex-col justify-between gap-3.5 ${
+      className={`group bg-white dark:bg-slate-900 border border-b-2 rounded-[22px] overflow-hidden p-3.5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-200 flex flex-col justify-between gap-3.5 ${
         isLocked
           ? "border-slate-200/60 dark:border-slate-800/60 opacity-75"
-          : "border-slate-200/90 dark:border-slate-800 hover:shadow-md hover:border-indigo-300 dark:hover:border-indigo-700"
+          : "border-slate-200/90 dark:border-slate-800 hover:shadow-md hover:border-[#0D3B66] dark:hover:border-[#F4B41A]"
       }`}
     >
       {/* Top Illustration Thumbnail Frame */}
@@ -57,12 +57,12 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
 
         {/* Status Indicator */}
         {isCompleted && (
-          <div className="absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-xs">
+          <div className="absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-[#0D3B66] text-[#F4B41A] flex items-center justify-center shadow-xs border border-white/20">
             <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
           </div>
         )}
         {isLocked && (
-          <div className="absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-slate-900/60 backdrop-blur-xs text-white flex items-center justify-center">
+          <div className="absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-[#0D3B66]/80 backdrop-blur-xs text-white flex items-center justify-center">
             <Lock className="w-3.5 h-3.5" />
           </div>
         )}
@@ -80,17 +80,17 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
       <div className="px-1 space-y-1.5 flex-1 flex flex-col justify-between">
         <div>
           <div className="flex items-center justify-between text-[11px] font-extrabold text-slate-500 dark:text-slate-400 mb-1">
-            <span className="uppercase tracking-wider font-mono text-indigo-600 dark:text-indigo-400">
+            <span className="uppercase tracking-wider font-mono text-[#0D3B66] dark:text-[#F4B41A]">
               {module.id}
             </span>
             <span className="flex items-center gap-1 font-semibold">
-              <BookOpen className="w-3 h-3" />
+              <BookOpen className="w-3 h-3 text-[#0D3B66]" />
               <span>10 Exercises</span>
             </span>
           </div>
 
           {/* Module Title */}
-          <h4 className="font-extrabold text-sm text-slate-900 dark:text-white leading-snug line-clamp-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+          <h4 className="font-extrabold text-sm text-slate-900 dark:text-white leading-snug line-clamp-2 group-hover:text-[#0D3B66] dark:group-hover:text-[#F4B41A] transition-colors">
             {module.title}
           </h4>
 
@@ -104,22 +104,22 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
 
         {/* Footer Action */}
         <div className="pt-2.5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
-          {/* Avatar Stack representation of students */}
+          {/* Avatar Stack representation of students in brand colors */}
           <div className="flex items-center -space-x-1.5">
-            <div className="w-6 h-6 rounded-full bg-indigo-500 border border-white dark:border-slate-900 text-white font-black text-[8px] flex items-center justify-center">
+            <div className="w-6 h-6 rounded-full bg-[#0D3B66] border border-white dark:border-slate-900 text-white font-black text-[8px] flex items-center justify-center">
               M
             </div>
-            <div className="w-6 h-6 rounded-full bg-pink-500 border border-white dark:border-slate-900 text-white font-black text-[8px] flex items-center justify-center">
+            <div className="w-6 h-6 rounded-full bg-[#F4B41A] border border-white dark:border-slate-900 text-[#0F172A] font-black text-[8px] flex items-center justify-center">
               L
             </div>
-            <div className="w-6 h-6 rounded-full bg-amber-500 border border-white dark:border-slate-900 text-white font-black text-[8px] flex items-center justify-center">
+            <div className="w-6 h-6 rounded-full bg-[#9E1B1B] border border-white dark:border-slate-900 text-white font-black text-[8px] flex items-center justify-center">
               K
             </div>
           </div>
 
           {/* CTA Action Pill */}
           {isLocked ? (
-            <span className="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400 font-bold text-xs flex items-center gap-1 cursor-not-allowed">
+            <span className="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400 font-bold text-xs flex items-center gap-1 cursor-not-allowed border border-slate-200">
               <Lock className="w-3 h-3" />
               <span>Locked</span>
             </span>
@@ -127,10 +127,10 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
             <Link
               href={`/modules/${module.id}`}
               onClick={(e) => animeButtonPop(e.currentTarget)}
-              className={`px-4 py-1.5 rounded-full font-bold text-xs shadow-xs transition-all active:scale-95 cursor-pointer flex items-center gap-1 ${
+              className={`px-4 py-1.5 rounded-full font-bold text-xs transition-all active:scale-95 cursor-pointer flex items-center gap-1 ${
                 isCompleted
-                  ? "bg-emerald-600 hover:bg-emerald-700 text-white"
-                  : "bg-slate-950 hover:bg-slate-800 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-100 text-white"
+                  ? "btn-skeuo-yellow text-[#0F172A]"
+                  : "btn-skeuo-navy"
               }`}
             >
               <span>{isCompleted ? "Review" : "Start"}</span>

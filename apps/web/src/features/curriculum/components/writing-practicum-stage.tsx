@@ -1,0 +1,354 @@
+"use client";
+
+import React, { useState } from "react";
+import {
+  CheckCircle2,
+  AlertCircle,
+  RotateCcw,
+  ArrowRight,
+  Send,
+  Trophy,
+  Volume2,
+  PenTool,
+} from "lucide-react";
+import { animeButtonPop } from "@/lib/anime-effects";
+import {
+  playPopSound,
+  playSnapSound,
+  playMatchSuccessSound,
+  playFanfareSound,
+} from "@/lib/sound-fx";
+
+export interface WritingPracticumQuestion {
+  id: number;
+  typeLabel: string;
+  instruction: string;
+  promptText: string;
+  hint?: string;
+  targetAnswers: string[];
+  explanation: string;
+}
+
+interface WritingPracticumStageProps {
+  quizSec?: any;
+  onRewardXp: (amount: number) => void;
+  tutor: any;
+  onFinish?: () => void;
+}
+
+export function WritingPracticumStage({
+  quizSec,
+  onRewardXp,
+  tutor,
+  onFinish,
+}: WritingPracticumStageProps) {
+  const questions: WritingPracticumQuestion[] =
+    quizSec?.content?.practicumQuestions || [];
+
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [typedInputs, setTypedInputs] = useState<Record<number, string>>({});
+  const [evaluations, setEvaluations] = useState<
+    Record<number, { isCorrect: boolean; feedback: string }>
+  >({});
+  const [correctCount, setCorrectCount] = useState(0);
+  const [isCompletedAll, setIsCompletedAll] = useState(false);
+
+  const question = questions[currentIdx] || {
+    id: 1,
+    typeLabel: "Menulis",
+    instruction: "Ketik kalimat lengkap...",
+    promptText: "",
+    targetAnswers: [],
+    explanation: "",
+  };
+  const userText = typedInputs[question.id] || "";
+  const currentEval = evaluations[question.id];
+
+  const normalize = (str: string) => {
+    return str
+      .trim()
+      .replace(/\s+/g, " ")
+      .replace(/\s*([,.;?!])\s*/g, "$1 ")
+      .trim();
+  };
+
+  const handleCheckAnswer = () => {
+    const normalizedUser = normalize(userText);
+    const isMatch = question.targetAnswers.some(
+      (ans) => normalize(ans) === normalizedUser
+    );
+
+    if (isMatch) {
+      playMatchSuccessSound();
+      if (!evaluations[question.id]?.isCorrect) {
+        setCorrectCount((prev) => prev + 1);
+        onRewardXp(15);
+      }
+      setEvaluations((prev) => ({
+        ...prev,
+        [question.id]: {
+          isCorrect: true,
+          feedback: "Sempurna! Konstruksi kalimat dan mekanika penulisanmu sangat tepat.",
+        },
+      }));
+    } else {
+      playPopSound();
+      setEvaluations((prev) => ({
+        ...prev,
+        [question.id]: {
+          isCorrect: false,
+          feedback:
+            "Jawaban belum persis sesuai. Periksa huruf kapital, spasi, kata kerja 'to be', dan tanda titik/tanya.",
+        },
+      }));
+    }
+  };
+
+  const handleNext = () => {
+    playSnapSound();
+    if (currentIdx + 1 < questions.length) {
+      setCurrentIdx((prev) => prev + 1);
+    } else {
+      playFanfareSound();
+      setIsCompletedAll(true);
+    }
+  };
+
+  const handleListenPrompt = (e: React.MouseEvent) => {
+    animeButtonPop(e.currentTarget as HTMLElement);
+    playPopSound();
+    tutor?.playTutorAudio?.(question.promptText);
+  };
+
+  if (isCompletedAll) {
+    const totalScore = Math.round((correctCount / (questions.length || 1)) * 100);
+    return (
+      <div className="p-8 rounded-[24px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 border-b-2 shadow-[0_1px_3px_rgba(0,0,0,0.04)] text-center space-y-6 animate-in zoom-in-95 duration-300">
+        <div className="w-16 h-16 rounded-2xl bg-[#0D3B66]/10 dark:bg-[#0D3B66]/30 flex items-center justify-center mx-auto text-[#0D3B66] dark:text-[#F4B41A]">
+          <Trophy className="w-8 h-8" />
+        </div>
+
+        <div className="space-y-2">
+          <span className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] uppercase tracking-wider font-mono">
+            Praktikum Selesai
+          </span>
+          <h3 className="text-2xl font-black text-slate-900 dark:text-white">
+            Writing Mastery Achieved!
+          </h3>
+          <p className="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto">
+            Kamu telah menyelesaikan seluruh {questions.length} tantangan menulis aktif dengan skor akhir {totalScore}% ({correctCount}/{questions.length} Soal Benar).
+          </p>
+        </div>
+
+        <div className="inline-flex items-center gap-6 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+          <div className="text-center">
+            <span className="text-xs text-slate-400 block font-mono">Akurasi Menulis</span>
+            <span className="text-xl font-black text-slate-900 dark:text-white">{totalScore}%</span>
+          </div>
+          <div className="h-8 w-[1px] bg-slate-200 dark:bg-slate-700" />
+          <div className="text-center">
+            <span className="text-xs text-slate-400 block font-mono">Total XP Didapat</span>
+            <span className="text-xl font-black text-emerald-600 dark:text-emerald-400">+{correctCount * 15} XP</span>
+          </div>
+        </div>
+
+        <div className="pt-2">
+          <button
+            type="button"
+            onClick={onFinish}
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-sm transition-all active:scale-95 cursor-pointer shadow-md"
+          >
+            <CheckCircle2 className="w-4 h-4 text-[#F4B41A]" />
+            <span>Selesaikan &amp; Simpan Misi Menulis</span>
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6 animate-in fade-in duration-300">
+      {/* Header */}
+      <div className="space-y-1.5">
+        <div className="flex items-center justify-between">
+          <span className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] uppercase tracking-wider block font-mono">
+            Step 5 · Writing Mastery Practicum ({currentIdx + 1}/{questions.length})
+          </span>
+          <span className="text-xs font-bold text-slate-500 font-mono">
+            {question.typeLabel}
+          </span>
+        </div>
+        <h3 className="text-lg sm:text-xl font-black text-slate-900 dark:text-white">
+          Praktikum Menulis Kalimat Mandiri
+        </h3>
+        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+          Ketik kalimat utuh dengan ejaan, huruf kapital, dan tanda baca yang benar untuk setiap soal.
+        </p>
+      </div>
+
+      {/* Question Progress Dots */}
+      <div className="flex items-center gap-1.5 overflow-x-auto pb-1">
+        {questions.map((q, idx) => {
+          const isDone = evaluations[q.id]?.isCorrect;
+          const isCurrent = idx === currentIdx;
+          return (
+            <button
+              key={q.id}
+              type="button"
+              onClick={() => {
+                playPopSound();
+                setCurrentIdx(idx);
+              }}
+              className={`h-2.5 rounded-full transition-all cursor-pointer ${
+                isCurrent
+                  ? "w-8 bg-[#0D3B66] dark:bg-[#F4B41A]"
+                  : isDone
+                  ? "w-4 bg-emerald-500"
+                  : "w-2.5 bg-slate-200 dark:bg-slate-700"
+              }`}
+              title={`Soal ${idx + 1}`}
+            />
+          );
+        })}
+      </div>
+
+      {/* Main Workspace */}
+      <div className="p-6 rounded-[22px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 border-b-2 shadow-[0_1px_3px_rgba(0,0,0,0.04)] space-y-5">
+        {/* Instruction & Prompt */}
+        <div className="space-y-2">
+          <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider font-mono block">
+            Soal {currentIdx + 1}:
+          </span>
+          <p className="text-sm font-semibold text-slate-900 dark:text-white">
+            {question.instruction}
+          </p>
+
+          <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/60 flex items-center justify-between gap-3">
+            <span className="text-sm sm:text-base font-mono font-bold text-[#0D3B66] dark:text-[#F4B41A]">
+              {question.promptText}
+            </span>
+            <button
+              type="button"
+              onClick={handleListenPrompt}
+              className="p-2 rounded-lg bg-white dark:bg-slate-700 text-[#0D3B66] dark:text-[#F4B41A] hover:bg-slate-100 transition-colors cursor-pointer shrink-0 shadow-2xs"
+              title="Dengarkan teks soal"
+            >
+              <Volume2 className="w-4 h-4" />
+            </button>
+          </div>
+
+          {question.hint && (
+            <p className="text-xs text-slate-500 dark:text-slate-400 italic">
+              Petunjuk: {question.hint}
+            </p>
+          )}
+        </div>
+
+        {/* Typing Input */}
+        <div className="space-y-1.5">
+          <label className="text-xs font-bold text-slate-700 dark:text-slate-200 block">
+            Jawaban Tulisanmu:
+          </label>
+          <input
+            type="text"
+            value={userText}
+            onChange={(e) => {
+              const val = e.target.value;
+              setTypedInputs((prev) => ({ ...prev, [question.id]: val }));
+              if (currentEval) {
+                setEvaluations((prev) => ({
+                  ...prev,
+                  [question.id]: { isCorrect: false, feedback: "" },
+                }));
+              }
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && userText.trim()) {
+                handleCheckAnswer();
+              }
+            }}
+            placeholder="Ketik kalimat lengkap di sini..."
+            className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66] dark:focus:ring-[#F4B41A]"
+          />
+        </div>
+
+        {/* Evaluation Output */}
+        {currentEval?.feedback && (
+          <div
+            className={`p-4 rounded-xl text-xs space-y-1.5 ${
+              currentEval.isCorrect
+                ? "bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200"
+                : "bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200"
+            }`}
+          >
+            <div className="font-bold flex items-center gap-1.5">
+              {currentEval.isCorrect ? (
+                <>
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                  <span>Jawaban Tepat (+15 XP)</span>
+                </>
+              ) : (
+                <>
+                  <AlertCircle className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                  <span>Coba Periksa Lagi</span>
+                </>
+              )}
+            </div>
+            <p className="leading-relaxed">{currentEval.feedback}</p>
+            {currentEval.isCorrect && (
+              <p className="text-[11px] text-emerald-700 dark:text-emerald-400 font-mono">
+                Penjelasan: {question.explanation}
+              </p>
+            )}
+          </div>
+        )}
+
+        {/* Footer Controls */}
+        <div className="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-800">
+          <button
+            type="button"
+            onClick={() => {
+              playPopSound();
+              setTypedInputs((prev) => ({ ...prev, [question.id]: "" }));
+              setEvaluations((prev) => ({
+                ...prev,
+                [question.id]: { isCorrect: false, feedback: "" },
+              }));
+            }}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-colors cursor-pointer"
+          >
+            <RotateCcw className="w-3.5 h-3.5" />
+            <span>Ketik Ulang</span>
+          </button>
+
+          <div className="flex items-center gap-2">
+            {currentEval?.isCorrect ? (
+              <button
+                type="button"
+                onClick={handleNext}
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs transition-all active:scale-95 cursor-pointer shadow-xs"
+              >
+                <span>
+                  {currentIdx + 1 < questions.length
+                    ? "Soal Selanjutnya"
+                    : "Lihat Ringkasan Hasil"}
+                </span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={handleCheckAnswer}
+                disabled={!userText.trim()}
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs transition-all active:scale-95 cursor-pointer disabled:opacity-40 shadow-xs"
+              >
+                <Send className="w-3.5 h-3.5" />
+                <span>Periksa Jawaban</span>
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

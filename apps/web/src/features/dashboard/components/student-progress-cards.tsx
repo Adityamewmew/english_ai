@@ -28,11 +28,11 @@ export function StudentProgressCards({
   const cards = [
     {
       id: "curriculum",
-      bgColor: "#d5d8fb",
-      borderColor: "#c1c7f8",
-      textColor: "#0f172a",
-      progressBg: "rgba(15, 23, 42, 0.15)",
-      progressBar: "#0f172a",
+      accentColor: "#0D3B66",
+      accentBg: "bg-[#0D3B66]/10",
+      accentText: "text-[#0D3B66]",
+      iconBg: "bg-[#0D3B66] text-white",
+      progressBar: "#0D3B66",
       icon: BookOpen,
       title: `CEFR ${currentCefr} Progression`,
       subtitle: `${totalCompletedModules} of ${totalModules} Modules Completed`,
@@ -41,11 +41,11 @@ export function StudentProgressCards({
     },
     {
       id: "speaking",
-      bgColor: "#f8b874",
-      borderColor: "#f4a652",
-      textColor: "#1c1917",
-      progressBg: "rgba(28, 25, 23, 0.15)",
-      progressBar: "#1c1917",
+      accentColor: "#F4B41A",
+      accentBg: "bg-[#F4B41A]/15",
+      accentText: "text-[#0F172A]",
+      iconBg: "bg-[#F4B41A] text-[#0F172A]",
+      progressBar: "#F4B41A",
       icon: PhoneCall,
       title: "AI Speaking Reflexes",
       subtitle: "Live Voice Call with Mr. Khoirul",
@@ -54,11 +54,11 @@ export function StudentProgressCards({
     },
     {
       id: "placement",
-      bgColor: "#f98abf",
-      borderColor: "#f76fae",
-      textColor: "#1c1917",
-      progressBg: "rgba(28, 25, 23, 0.15)",
-      progressBar: "#1c1917",
+      accentColor: "#9E1B1B",
+      accentBg: "bg-[#9E1B1B]/10",
+      accentText: "text-[#9E1B1B]",
+      iconBg: "bg-[#9E1B1B] text-white",
+      progressBar: "#9E1B1B",
       icon: Award,
       title: "Placement Assessment",
       subtitle: placementCefr ? `Assessed Level: ${placementCefr}` : "CEFR Diagnostic Test",
@@ -70,7 +70,7 @@ export function StudentProgressCards({
   return (
     <div className="space-y-3.5">
       <div className="flex items-center justify-between px-1">
-        <h3 className="text-lg sm:text-xl font-black text-slate-900 dark:text-white">
+        <h3 className="text-lg sm:text-xl font-black text-[#0D3B66] dark:text-white uppercase tracking-tight">
           Your progress
         </h3>
       </div>
@@ -84,22 +84,17 @@ export function StudentProgressCards({
               key={card.id}
               href={card.href}
               onClick={(e) => animeButtonPop(e.currentTarget)}
-              style={{
-                backgroundColor: card.bgColor,
-                borderColor: card.borderColor,
-                color: card.textColor,
-              }}
-              className="p-5 rounded-[26px] border shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between gap-5 group cursor-pointer"
+              className="p-5 rounded-[22px] bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 border-b-2 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-md transition-all duration-200 flex flex-col justify-between gap-5 group cursor-pointer"
             >
               {/* Top Row: Icon Badge + More */}
               <div className="flex items-center justify-between">
-                <div className="w-10 h-10 rounded-2xl bg-white shadow-2xs flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-slate-900" />
+                <div className={`w-10 h-10 rounded-2xl ${card.iconBg} shadow-2xs flex items-center justify-center border-b-2 border-black/10`}>
+                  <Icon className="w-5 h-5" />
                 </div>
                 <button
                   type="button"
                   aria-label="Options"
-                  className="text-slate-900/60 hover:text-slate-900 transition-colors"
+                  className="text-slate-400 hover:text-[#0D3B66] transition-colors"
                 >
                   <MoreHorizontal className="w-4 h-4" />
                 </button>
@@ -107,18 +102,15 @@ export function StudentProgressCards({
 
               {/* Title & Subtitle */}
               <div className="space-y-0.5">
-                <h4 className="font-black text-sm sm:text-base leading-snug group-hover:translate-x-0.5 transition-transform">
+                <h4 className="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white leading-snug group-hover:text-[#0D3B66] transition-colors">
                   {card.title}
                 </h4>
-                <p className="text-[11px] font-bold opacity-80">{card.subtitle}</p>
+                <p className="text-xs text-slate-500 font-medium">{card.subtitle}</p>
               </div>
 
               {/* Progress Bar & Percentage */}
               <div className="space-y-1.5 pt-1">
-                <div
-                  className="w-full h-1.5 rounded-full overflow-hidden"
-                  style={{ backgroundColor: card.progressBg }}
-                >
+                <div className="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden shadow-inner">
                   <div
                     className="h-full rounded-full transition-all duration-500"
                     style={{
@@ -127,9 +119,9 @@ export function StudentProgressCards({
                     }}
                   />
                 </div>
-                <div className="flex items-center justify-between text-[11px] font-black font-mono">
+                <div className="flex items-center justify-between text-[11px] font-bold text-slate-500 font-mono">
                   <span>Progress</span>
-                  <span>{card.progress}%</span>
+                  <span className="text-slate-800 dark:text-slate-200">{card.progress}%</span>
                 </div>
               </div>
             </Link>

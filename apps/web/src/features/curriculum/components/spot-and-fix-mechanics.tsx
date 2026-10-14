@@ -142,12 +142,12 @@ export function SpotAndFixMechanics({ onRewardXp, rules }: SpotAndFixMechanicsPr
                 }}
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                   isActive
-                    ? "bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs"
+                    ? "bg-[#0D3B66] text-white border-b-2 border-[#082542] shadow-xs"
                     : "text-slate-500 hover:text-slate-900 dark:hover:text-slate-200"
                 }`}
               >
                 <span>Tantangan {idx + 1}</span>
-                {isDone && <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 fill-emerald-500/10" />}
+                {isDone && <CheckCircle2 className="w-3.5 h-3.5 text-[#F4B41A] fill-[#F4B41A]/20" />}
               </button>
             );
           })}
@@ -156,7 +156,7 @@ export function SpotAndFixMechanics({ onRewardXp, rules }: SpotAndFixMechanicsPr
         <button
           type="button"
           onClick={() => setShowRulesModal(!showRulesModal)}
-          className="flex items-center gap-1.5 text-xs font-medium text-amber-700 dark:text-amber-400 hover:underline cursor-pointer self-start sm:self-auto"
+          className="flex items-center gap-1.5 text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] hover:underline cursor-pointer self-start sm:self-auto"
         >
           <HelpCircle className="w-3.5 h-3.5" />
           <span>{showRulesModal ? "Sembunyikan Aturan" : "Lihat Aturan Penulisan"}</span>
@@ -165,21 +165,21 @@ export function SpotAndFixMechanics({ onRewardXp, rules }: SpotAndFixMechanicsPr
 
       {/* Rules cheat-sheet if toggled */}
       {showRulesModal && (
-        <div className="p-4 rounded-2xl bg-amber-50/60 dark:bg-amber-950/20 border border-amber-200/80 dark:border-amber-900/50 space-y-3 animate-in fade-in duration-200">
-          <h4 className="text-xs font-bold text-amber-900 dark:text-amber-200 uppercase tracking-wider font-mono">
+        <div className="p-4 rounded-2xl bg-[#0D3B66]/5 dark:bg-slate-800/40 border border-[#0D3B66]/20 border-b-2 border-b-[#0D3B66]/20 space-y-3 animate-in fade-in duration-200">
+          <h4 className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] uppercase tracking-wider font-mono">
             Aturan Baku Huruf Kapital (Capitalization Guidelines)
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-            <div className="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-amber-200/50 dark:border-amber-900/40">
-              <span className="font-bold block text-amber-700 dark:text-amber-400 mb-0.5">1. Awal Kalimat & Kata 'I'</span>
+            <div className="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 border-b-2 border-b-slate-300 dark:border-b-slate-700">
+              <span className="font-bold block text-[#0D3B66] dark:text-[#F4B41A] mb-0.5">1. Awal Kalimat & Kata 'I'</span>
               <p className="text-[11px] text-slate-500 leading-snug">Kata pertama dalam kalimat dan kata ganti tunggal &apos;I&apos; selalu ditulis huruf besar.</p>
             </div>
-            <div className="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-amber-200/50 dark:border-amber-900/40">
-              <span className="font-bold block text-amber-700 dark:text-amber-400 mb-0.5">2. Negara & Warga Negara</span>
+            <div className="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 border-b-2 border-b-slate-300 dark:border-b-slate-700">
+              <span className="font-bold block text-[#0D3B66] dark:text-[#F4B41A] mb-0.5">2. Negara & Warga Negara</span>
               <p className="text-[11px] text-slate-500 leading-snug">Nama negara (Japan) dan kata sifat kebangsaan (Japanese) wajib berawalan kapital.</p>
             </div>
-            <div className="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-amber-200/50 dark:border-amber-900/40">
-              <span className="font-bold block text-amber-700 dark:text-amber-400 mb-0.5">3. Nama Orang & Tempat</span>
+            <div className="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 border-b-2 border-b-slate-300 dark:border-b-slate-700">
+              <span className="font-bold block text-[#0D3B66] dark:text-[#F4B41A] mb-0.5">3. Nama Orang & Tempat</span>
               <p className="text-[11px] text-slate-500 leading-snug">Nama orang (Marco, Sarah) dan kota (Tokyo, London) selalu berhuruf besar.</p>
             </div>
           </div>
@@ -187,11 +187,11 @@ export function SpotAndFixMechanics({ onRewardXp, rules }: SpotAndFixMechanicsPr
       )}
 
       {/* Interactive Spot & Fix Card */}
-      <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 space-y-5 shadow-xs">
+      <div className="p-6 rounded-3xl card-skeuo bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 space-y-5 shadow-xs">
         {/* Instruction header */}
         <div className="flex items-center justify-between">
           <div className="space-y-0.5">
-            <span className="text-[11px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider font-mono block">
+            <span className="text-[11px] font-bold text-[#0D3B66] dark:text-[#F4B41A] uppercase tracking-wider font-mono block">
               Spot & Fix Interaktif
             </span>
             <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -200,7 +200,7 @@ export function SpotAndFixMechanics({ onRewardXp, rules }: SpotAndFixMechanicsPr
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono font-semibold px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+            <span className="text-xs font-mono font-semibold px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 border-b-2 border-b-slate-300 dark:border-b-slate-700">
               {currentFixesDone}/{totalFixesNeeded} Diperbaiki
             </span>
             <button
@@ -215,10 +215,9 @@ export function SpotAndFixMechanics({ onRewardXp, rules }: SpotAndFixMechanicsPr
         </div>
 
         {/* The Clickable Sentence Words */}
-        <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/60 flex flex-wrap items-center gap-2.5 min-h-[90px]">
+        <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/60 border-b-2 border-b-slate-300 dark:border-b-slate-700 flex flex-wrap items-center gap-2.5 min-h-[90px]">
           {sentence.originalTokens.map((token, idx) => {
             const isFixed = currentFixedMap[idx];
-            const isCorrect = !token.needsFix || isFixed;
 
             return (
               <div key={idx} className="inline-flex items-center">
@@ -227,23 +226,23 @@ export function SpotAndFixMechanics({ onRewardXp, rules }: SpotAndFixMechanicsPr
                   onClick={() => handleTokenClick(idx)}
                   className={`group relative px-3 py-1.5 rounded-xl font-medium text-sm transition-all duration-200 cursor-pointer select-none ${
                     isFixed
-                      ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/40 shadow-xs"
+                      ? "bg-[#0D3B66]/10 text-[#0D3B66] dark:text-[#F4B41A] border border-[#0D3B66]/30 border-b-2 border-b-[#0D3B66]/30 shadow-xs"
                       : token.needsFix
-                      ? "bg-amber-100/70 dark:bg-amber-950/60 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-700/70 hover:scale-105 active:scale-95 animate-pulse"
-                      : "bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 border border-slate-200/80 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800/80"
+                      ? "bg-[#9E1B1B]/10 text-[#9E1B1B] border border-[#9E1B1B] border-b-2 border-b-[#841515] hover:scale-105 active:scale-95 animate-pulse"
+                      : "bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 border border-slate-200/80 dark:border-slate-800 border-b-2 border-b-slate-300 dark:border-b-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800/80 active:translate-y-[1px]"
                   }`}
                 >
                   <span>{isFixed ? token.fixedText : token.text}</span>
 
                   {/* Micro badge indicator */}
                   {token.needsFix && !isFixed && (
-                    <span className="ml-1.5 text-[9px] font-bold text-amber-600 dark:text-amber-400 uppercase font-mono">
+                    <span className="ml-1.5 text-[9px] font-bold text-[#9E1B1B] uppercase font-mono">
                       Fix?
                     </span>
                   )}
 
                   {isFixed && token.ruleLabel && (
-                    <span className="ml-1.5 text-[9px] font-bold text-emerald-600 dark:text-emerald-400 font-mono">
+                    <span className="ml-1.5 text-[9px] font-bold text-[#0D3B66] dark:text-[#F4B41A] font-mono">
                       ✓ {token.ruleLabel}
                     </span>
                   )}
@@ -268,7 +267,7 @@ export function SpotAndFixMechanics({ onRewardXp, rules }: SpotAndFixMechanicsPr
             <button
               type="button"
               onClick={handleSpeakSentence}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold transition-all cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold transition-all border border-slate-200 dark:border-slate-700 border-b-2 border-b-slate-300 dark:border-b-slate-700 cursor-pointer active:translate-y-[1px]"
             >
               <Volume2 className="w-3.5 h-3.5" />
               <span>Dengarkan Kalimat</span>
@@ -281,10 +280,10 @@ export function SpotAndFixMechanics({ onRewardXp, rules }: SpotAndFixMechanicsPr
                   playPopSound();
                   setActiveSentenceIdx((prev) => prev + 1);
                 }}
-                className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold transition-all hover:opacity-90 cursor-pointer shadow-xs"
+                className="btn-skeuo-navy flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer"
               >
                 <span>Tantangan Berikutnya</span>
-                <Sparkles className="w-3.5 h-3.5" />
+                <Sparkles className="w-3.5 h-3.5 text-[#F4B41A]" />
               </button>
             )}
           </div>

@@ -35,13 +35,15 @@ export class GeminiChatService {
     const apiKey = process.env.AI_API_KEY || process.env.GEMINI_API_KEY || "";
     const primaryModel =
       process.env.AI_CHAT_MODEL ||
-      "deepseek-v4-flash:free";
+      "claude";
 
     const proxyModels = Array.from(
       new Set([
         primaryModel,
         process.env.AI_CHAT_MODEL,
-        "deepseek-v4-flash:free",
+        "claude",
+        "auto/chat",
+        "auto/best-chat",
       ].filter(Boolean) as string[])
     );
 
@@ -127,20 +129,22 @@ export class GeminiChatService {
     const apiKey = process.env.AI_API_KEY || process.env.GEMINI_API_KEY || "";
     const primaryModel =
       process.env.AI_CHAT_MODEL ||
-      "deepseek-v4-flash:free";
+      "claude";
 
     const proxyModels = Array.from(
       new Set([
         primaryModel,
         process.env.AI_CHAT_MODEL,
-        "deepseek-v4-flash:free",
-        "glm-5.3-flash:free",
+        "claude",
+        "auto/chat",
+        "auto/best-chat",
       ].filter(Boolean) as string[])
     );
 
+    let hasYielded = false;
+
     if (baseUrl) {
       for (const m of proxyModels) {
-        let hasYielded = false;
         let timer: any = null;
         try {
           const connectAbort = new AbortController();
@@ -162,10 +166,11 @@ export class GeminiChatService {
             body: JSON.stringify({
               model: m,
               stream: true,
-              max_tokens: 220,
-              temperature: 0.6,
+              max_tokens: 100,
+              temperature: 0.5,
               frequency_penalty: 0.3,
               presence_penalty: 0.2,
+              stop: ["Student:", "Student :", "\nStudent", "\nUser:", "\nHuman:", "Mr. Khoirul:"],
               messages: [
                 { role: "system", content: systemPrompt },
                 { role: "user", content: userPrompt },
@@ -220,6 +225,16 @@ export class GeminiChatService {
       }
     }
 
+    if (!hasYielded && !signal?.aborted) {
+      try {
+        const fullReply = await GeminiChatService.callAI(systemPrompt, userPrompt);
+        if (fullReply && fullReply.trim()) {
+          yield fullReply.trim();
+          return;
+        }
+      } catch {}
+    }
+
     const directKey = process.env.GEMINI_API_KEY;
     if (directKey && directKey.trim().length > 10) {
       const sdkFallbackModels = ["gemini-3.7-flash", "gemini-3.6-flash"];
@@ -257,14 +272,24 @@ export class GeminiChatService {
   ): AsyncGenerator<string, void, unknown> {
     // Static persona prefix (invariant across turns to hit KV / prompt cache)
     const STATIC_PREFIX = `You are Mr. Khoirul: a friendly, humble, and relaxed English conversational tutor talking live on the phone with an Indonesian learner.
-RULES:
-1. Tone: Humble, natural, spoken English. Never start with fake laughs ("Haha", "Hehe") or filler-only replies ("I see.", "Okay.").
-2. Length: First sentence punchy (5-10 words) for fast speech delivery. Casual replies: 1-2 sentences. Explanations: 3-5 sentences. Always end with an engaging open-ended question.
-3. Indonesian Support: If student speaks Indonesian or gets stuck, guide briefly in Indonesian and give one simple English sentence to practice.
-4. Output: Spoken words directly. Never stretch letters (no 'soooo', 'ummm'). Proper dictionary spelling only.`;
+CRITICAL RULES:
+1. ONLY Speak as Mr. Khoirul for this single turn. NEVER write 'Student:' or simulate student dialogue.
+2. Short & Simple for CEFR A1: Maximum 1-2 short sentences (8-12 words total). Do NOT give long lectures, complex campus stories, or unrelated topics.
+3. Relevant to Topic: Stick strictly to the topic (e.g. Unit 1: Self Introduction and Country of Origin).
+4. Speech Recognition Typos: Student's message is from automatic speech-to-text. Indonesian names or slight mispronunciations might be transcribed phonetically. Be forgiving and understand the intended meaning.
+5. Output: Spoken words directly. Never stretch letters (no 'soooo', 'ummm'). Proper dictionary spelling only.`;
 
     // Dynamic context placed after static prefix to preserve prompt cache hits
-    const dynamicContext = `TOPIC: "${topic}"${ragContext ? `\n${ragContext}` : ""}`;
+    const userMessageCount = history.filter((m) => m.role === "user").length;
+    const isClosing = userMessageCount >= 2;
+
+    const roleplayInstruction = isClosing
+      ? "FINAL CLOSING TURN: The conversation is finished. Say a short, warm goodbye (e.g., 'Nice meeting you! You did great today, have a wonderful day!'). DO NOT ask any question."
+      : userMessageCount === 1
+      ? "TURN 2: Acknowledge the student's name warmly, then ask where they are from (e.g., 'Nice to meet you! Where are you from?'). Do not ask about sports, universities, or other topics."
+      : "TURN 1: Greet the student warmly and ask their name (e.g., 'Hello! Welcome to our English class. What is your name?').";
+
+    const dynamicContext = `TOPIC: "${topic}"\nINSTRUCTION: ${roleplayInstruction}${ragContext ? `\n${ragContext}` : ""}`;
     const systemPrompt = `${STATIC_PREFIX}\n\n${dynamicContext}`;
 
     let historyPrefix = "";
@@ -330,6 +355,20 @@ RULES:
     for await (const token of GeminiChatService.callAIStream(systemPrompt, prompt, signal)) {
       if (signal?.aborted) return;
       buffer += token;
+
+      // HARD STOP if model output starts hallucinating student dialogue
+      if (/(?:\n|^)(?:student|user|human)\s*:/i.test(buffer)) {
+        buffer = buffer.split(/(?:\n|^)(?:student|user|human)\s*:/i)[0];
+        let sentence = extractCompleteSentence();
+        while (sentence) {
+          sentence = sanitizeRepeatedChars(sentence.replace(/[*_#`]/g, "")).trim();
+          if (sentence.length > 1) {
+            yield sentence.charAt(0).toUpperCase() + sentence.slice(1);
+          }
+          sentence = extractCompleteSentence();
+        }
+        return;
+      }
 
       if (isFirstChunk) {
         buffer = cleanLeadingJunk(buffer);

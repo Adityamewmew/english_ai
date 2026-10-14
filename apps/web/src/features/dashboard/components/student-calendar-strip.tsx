@@ -31,23 +31,23 @@ export function StudentCalendarStrip() {
   });
 
   return (
-    <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-[28px] p-5 shadow-xs space-y-4">
+    <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 border-b-2 rounded-[22px] p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] space-y-4">
       {/* Month Navigator with Real Current Month */}
       <div className="flex items-center justify-between px-1">
         <button
           onClick={(e) => animeButtonPop(e.currentTarget)}
-          className="w-8 h-8 rounded-full border border-slate-200/80 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
+          className="w-8 h-8 rounded-full border border-slate-200/80 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-[#0D3B66] dark:hover:text-white transition-colors cursor-pointer"
         >
           <ChevronLeft className="w-4 h-4" />
         </button>
 
-        <h4 className="font-black text-sm text-slate-900 dark:text-white">
+        <h4 className="font-black text-sm text-[#0D3B66] dark:text-white uppercase tracking-tight">
           {monthName} {year}
         </h4>
 
         <button
           onClick={(e) => animeButtonPop(e.currentTarget)}
-          className="w-8 h-8 rounded-full border border-slate-200/80 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
+          className="w-8 h-8 rounded-full border border-slate-200/80 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-[#0D3B66] dark:hover:text-white transition-colors cursor-pointer"
         >
           <ChevronRight className="w-4 h-4" />
         </button>
@@ -66,12 +66,12 @@ export function StudentCalendarStrip() {
                 animeButtonPop(e.currentTarget as HTMLElement);
                 setSelectedDate(d.date);
               }}
-              style={isSelected ? { backgroundColor: "#c5cafc", color: "#0f172a" } : undefined}
+              style={isSelected ? { backgroundColor: "#0D3B66", color: "#FFFFFF" } : undefined}
               className={`flex-1 py-2 px-1 rounded-2xl flex flex-col items-center justify-center gap-1 transition-all cursor-pointer ${
                 isSelected
-                  ? "font-black shadow-xs scale-105"
+                  ? "font-black shadow-xs scale-105 border-b-2 border-[#082542]"
                   : d.isToday
-                  ? "border border-indigo-300 dark:border-indigo-600 font-bold text-slate-800 dark:text-slate-200"
+                  ? "border-2 border-[#0D3B66] font-bold text-slate-800 dark:text-slate-200"
                   : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800"
               }`}
             >

@@ -50,18 +50,18 @@ export function InteractiveVocabCard({ item, onPlayAudio }: InteractiveVocabCard
             backfaceVisibility: "hidden",
             WebkitBackfaceVisibility: "hidden",
           }}
-          className="absolute inset-0 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 p-5 flex flex-col justify-between hover:border-indigo-400 dark:hover:border-indigo-600 transition-colors"
+          className="absolute inset-0 rounded-[22px] bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 border-b-2 p-5 flex flex-col justify-between hover:border-[#0D3B66]/50 transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
         >
           <div className="flex items-start justify-between gap-2">
             <div>
-              <span className="text-[10px] font-extrabold uppercase text-indigo-600 dark:text-indigo-400 tracking-wider">
+              <span className="text-[10px] font-black uppercase text-[#0D3B66] dark:text-[#F4B41A] tracking-wider font-mono">
                 Target Word
               </span>
               <h4 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mt-0.5">
                 {item.word}
               </h4>
               {item.ipa && (
-                <span className="inline-block mt-1 font-mono text-xs text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 rounded-lg border border-slate-200 dark:border-slate-700">
+                <span className="inline-block mt-1 font-mono text-xs text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 rounded-lg border border-slate-200 dark:border-slate-700">
                   {item.ipa}
                 </span>
               )}
@@ -70,16 +70,16 @@ export function InteractiveVocabCard({ item, onPlayAudio }: InteractiveVocabCard
             <button
               type="button"
               onClick={(e) => handleAudio(e, item.word)}
-              className="p-2.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 transition-colors shrink-0 cursor-pointer shadow-xs"
+              className="p-2.5 rounded-xl btn-skeuo-navy text-white transition-colors shrink-0 cursor-pointer shadow-xs"
               title={`Listen to pronunciation of "${item.word}"`}
             >
-              <Volume2 className="w-4 h-4" />
+              <Volume2 className="w-4 h-4 text-[#F4B41A]" />
             </button>
           </div>
 
           <div className="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-100 dark:border-slate-800/80">
             <span className="text-[11px] font-semibold text-slate-500">Tap to see meaning</span>
-            <div className="flex items-center gap-1 text-indigo-600 dark:text-indigo-400 font-bold text-[11px]">
+            <div className="flex items-center gap-1 text-[#0D3B66] dark:text-[#F4B41A] font-bold text-[11px]">
               <RotateCw className="w-3.5 h-3.5 group-hover:rotate-180 transition-transform duration-500" />
               <span>Flip</span>
             </div>
@@ -93,17 +93,17 @@ export function InteractiveVocabCard({ item, onPlayAudio }: InteractiveVocabCard
             WebkitBackfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
           }}
-          className="absolute inset-0 rounded-2xl bg-indigo-50/80 dark:bg-slate-900 border border-indigo-200/90 dark:border-indigo-900/60 p-5 flex flex-col justify-between"
+          className="absolute inset-0 rounded-[22px] bg-slate-50/90 dark:bg-slate-900 border border-[#0D3B66]/30 dark:border-slate-700 border-b-2 p-5 flex flex-col justify-between shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
         >
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-[10px] font-extrabold uppercase text-indigo-700 dark:text-indigo-300 tracking-wider">
-                Definition & Meaning
+              <span className="text-[10px] font-black uppercase text-[#0D3B66] dark:text-[#F4B41A] tracking-wider font-mono">
+                Definition &amp; Meaning
               </span>
               <button
                 type="button"
                 onClick={(e) => handleAudio(e, item.collocation || item.meaning)}
-                className="p-1.5 rounded-xl bg-indigo-100 hover:bg-indigo-200 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 transition-colors shrink-0 cursor-pointer"
+                className="p-1.5 rounded-xl bg-slate-200 dark:bg-slate-800 text-[#0D3B66] dark:text-[#F4B41A] transition-colors shrink-0 cursor-pointer"
                 title="Listen to example sentence"
               >
                 <Volume2 className="w-3.5 h-3.5" />
@@ -113,8 +113,8 @@ export function InteractiveVocabCard({ item, onPlayAudio }: InteractiveVocabCard
               {item.meaning}
             </p>
             {item.collocation && (
-              <div className="p-2.5 rounded-xl bg-white/90 dark:bg-slate-800/90 border border-indigo-100 dark:border-slate-700 text-[11px] text-indigo-950 dark:text-indigo-200 leading-relaxed font-medium">
-                <span className="font-bold block text-indigo-600 dark:text-indigo-400 text-[10px] uppercase">
+              <div className="p-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[11px] text-slate-800 dark:text-slate-200 leading-relaxed font-medium">
+                <span className="font-bold block text-[#0D3B66] dark:text-[#F4B41A] text-[10px] uppercase">
                   Example:
                 </span>
                 &ldquo;{item.collocation}&rdquo;
@@ -122,8 +122,8 @@ export function InteractiveVocabCard({ item, onPlayAudio }: InteractiveVocabCard
             )}
           </div>
 
-          <div className="flex items-center justify-between text-xs text-slate-400 pt-1 border-t border-indigo-100 dark:border-slate-800">
-            <span className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400">
+          <div className="flex items-center justify-between text-xs text-slate-400 pt-1 border-t border-slate-200 dark:border-slate-800">
+            <span className="text-[10px] font-bold text-[#0D3B66] dark:text-[#F4B41A]">
               {item.word}
             </span>
             <span className="text-[11px] font-semibold text-slate-500">Tap to flip back</span>

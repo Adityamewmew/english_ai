@@ -228,97 +228,286 @@ export async function seedSubModulesForModule(moduleId: string, force: boolean =
           title: "Struktur Penulisan Kalimat (Writing Mechanics)",
           orderIndex: 1,
           content: {
-            rules: [
+            summary: "Dalam modul ini, kamu akan mempelajari cara membangun kalimat bahasa Inggris yang utuh dan akurat: mulai dari formula dasar Subject + Verb + Complement, penerapan huruf kapital, hingga menulis profil perkenalan diri secara mandiri.",
+            blueprintItems: [
               {
-                rule: "Formula Anatomi Kalimat",
-                explanation: "Kalimat afirmatif dasar bahasa Inggris selalu tersusun dari: Subjek (Subject) + Kata Kerja (Verb 'to be') + Pelengkap (Complement).",
-                example: "Subject (She) + Verb (is) + Complement (from Canada)."
+                part: "Subject",
+                role: "Pelaku / Subjek",
+                examples: ["Liam", "I", "She", "They"],
+                color: "border-sky-300 bg-sky-50 dark:bg-sky-950/40 text-sky-900 dark:text-sky-200",
+                tagColor: "bg-sky-200/70 text-sky-800 dark:bg-sky-800/60 dark:text-sky-200"
               },
               {
-                rule: "Aturan Huruf Kapital (Capitalization)",
-                explanation: "Huruf kapital wajib digunakan untuk huruf pertama kalimat, kata ganti 'I', nama orang, nama negara, dan kewarganegaraan.",
-                example: "I am Indonesian and my friend is French."
+                part: "Verb ('to be')",
+                role: "Kata Kerja Penghubung",
+                examples: ["is", "am", "is", "are"],
+                color: "border-amber-300 bg-amber-50 dark:bg-amber-950/40 text-amber-900 dark:text-amber-200",
+                tagColor: "bg-amber-200/70 text-amber-800 dark:bg-amber-800/60 dark:text-amber-200"
               },
               {
-                rule: "Kata Hubung 'and' vs 'but'",
-                explanation: "Gunakan 'and' untuk menambahkan informasi setara, dan 'but' untuk mengontraskan dua klausa.",
-                example: "She is from Spain, but she lives in London."
-              },
-              {
-                rule: "Tanda Baca (Punctuation)",
-                explanation: "Gunakan tanda titik (.) di akhir kalimat pernyataan dan tanda tanya (?) di akhir kalimat pertanyaan.",
-                example: "Where are you from? I am from Brazil."
+                part: "Complement",
+                role: "Pelengkap (Asal, Status, Sifat)",
+                examples: ["from Melbourne.", "a student.", "Italian.", "close friends."],
+                color: "border-emerald-300 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200",
+                tagColor: "bg-emerald-200/70 text-emerald-800 dark:bg-emerald-800/60 dark:text-emerald-200"
               }
             ],
-            summary: "Kuasai mekanika penulisan kalimat bahasa Inggris mulai dari penyusunan balok kata, penggunaan huruf kapital, hingga pembentukan paragraf deskriptif.",
-            writingPrompt: "Tuliskan 3-5 kalimat perkenalan diri dalam bahasa Inggris: sebutkan namamu, asal kota & negaramu, kewarganegaraan, dan pekerjaan/statusmu saat ini."
+            mechanicsRules: [
+              {
+                title: "Huruf Kapital Wajib",
+                rule: "Gunakan huruf kapital untuk awal kalimat, kata ganti 'I', nama orang (Liam), negara (Indonesia), dan kebangsaan (Spanish).",
+                example: "I am from Jakarta and he is Japanese."
+              },
+              {
+                title: "Tanda Baca Akhir (.)",
+                rule: "Setiap kalimat pernyataan wajib ditutup dengan tanda titik (.) tepat di belakang kata terakhir tanpa spasi.",
+                example: "She is 16 years old."
+              },
+              {
+                title: "Subjek-Verb Agreement",
+                rule: "Pastikan bentuk 'to be' selaras dengan subjek: I am, He/She/It is, We/They are.",
+                example: "They are students at London University."
+              }
+            ],
+            sampleSentences: [
+              { text: "Liam is from Melbourne, Australia.", audio: "Liam is from Melbourne, Australia." },
+              { text: "I am a high school student.", audio: "I am a high school student." },
+              { text: "Marco isn't French. He is Spanish.", audio: "Marco isn't French. He is Spanish." }
+            ]
           },
         },
         {
           sectionType: "practice",
-          title: "Praktikum Konstruksi Kalimat (Writing Practice - 5 Latihan)",
+          title: "Praktikum Konstruksi Kalimat (Writing Practice)",
           orderIndex: 2,
           content: {
-            sentenceBuilderTargets: [
-              "I am from Indonesia.",
-              "They are students at London University.",
-              "She is not from Spain but Italy."
-            ],
-            questions: [
+            mechanicsChallenges: [
               {
-                id: "A1.1-WRITE-Q1",
-                question: "Pilih kalimat tertulis dengan penggunaan huruf kapital dan tata bahasa yang benar:",
-                options: [
-                  "i am from japan and speak japanese.",
-                  "I am from Japan and speak Japanese.",
-                  "I am from japan and speak Japanese.",
-                  "I am from Japan and Speak japanese."
-                ],
-                answer: "I am from Japan and speak Japanese.",
-                explanation: "Huruf 'I', nama negara 'Japan', dan bahasa 'Japanese' wajib menggunakan huruf kapital."
+                id: "sent-1",
+                faultySentence: "she is italian. she is from italy.",
+                targetSentence: "She is Italian. She is from Italy.",
+                translation: "Dia orang Italia. Dia berasal dari Italia.",
+                keyRule: "Kapital untuk awal kalimat ('She'), kewarganegaraan ('Italian'), dan negara ('Italy').",
+                requiredCapitals: ["She", "Italian", "Italy"]
               },
               {
-                id: "A1.1-WRITE-Q2",
-                question: "Susun kata-kata acak berikut menjadi kalimat tanya yang benar: [ from / where / you / are / ? ]",
-                options: [
-                  "Where you are from?",
-                  "Where are from you?",
-                  "Where are you from?",
-                  "You are where from?"
-                ],
-                answer: "Where are you from?",
-                explanation: "Rumus Wh-question dengan 'to be': Wh-word (Where) + Verb (are) + Subject (you) + from?"
+                id: "sent-2",
+                faultySentence: "i am from tokyo, japan.",
+                targetSentence: "I am from Tokyo, Japan.",
+                translation: "Saya berasal dari Tokyo, Jepang.",
+                keyRule: "Kata ganti 'I' selalu kapital. Kota 'Tokyo' dan negara 'Japan' wajib diawali huruf kapital.",
+                requiredCapitals: ["I", "Tokyo", "Japan"]
               },
               {
-                id: "A1.1-WRITE-Q3",
-                question: "Lengkapi kalimat gabungan berikut dengan kata hubung yang tepat: 'He is from Australia, ___ he lives in Indonesia.'",
-                options: ["and", "but", "so", "because"],
-                answer: "but",
-                explanation: "Kata 'but' digunakan untuk menghubungkan dua pernyataan yang kontras (asal Australia, tetapi tinggal di Indonesia)."
+                id: "sent-3",
+                faultySentence: "marco isn't french. he is spanish.",
+                targetSentence: "Marco isn't French. He is Spanish.",
+                translation: "Marco bukan orang Prancis. Dia orang Spanyol.",
+                keyRule: "Nama orang ('Marco'), kebangsaan ('French', 'Spanish'), dan awal kalimat kedua ('He').",
+                requiredCapitals: ["Marco", "French", "He", "Spanish"]
               },
               {
-                id: "A1.1-WRITE-Q4",
-                question: "Identifikasi kalimat negatif yang memiliki struktur tata bahasa yang sempurna:",
-                options: [
-                  "We not are from Canada.",
-                  "We are not from Canada.",
-                  "We doesn't from Canada.",
-                  "We isn't from Canada."
-                ],
-                answer: "We are not from Canada.",
-                explanation: "Bentuk negatif untuk subjek 'We' adalah 'are not' atau 'aren't'."
+                id: "sent-4",
+                faultySentence: "my teacher is mr. khoirul and he is indonesian.",
+                targetSentence: "My teacher is Mr. Khoirul and he is Indonesian.",
+                translation: "Guru saya adalah Pak Khoirul dan beliau berkebangsaan Indonesia.",
+                keyRule: "Gelar sapaan ('Mr.'), nama orang ('Khoirul'), dan kebangsaan ('Indonesian') wajib kapital.",
+                requiredCapitals: ["My", "Mr.", "Khoirul", "Indonesian"]
               },
               {
-                id: "A1.1-WRITE-Q5",
-                question: "Lengkapi subjek dan to be yang tepat: '___ a talented graphic designer from Tokyo.'",
-                options: ["He are", "They is", "He is", "We is"],
-                answer: "He is",
-                explanation: "Subjek tunggal 'He' selalu berpasangan dengan 'is'."
+                id: "sent-5",
+                faultySentence: "we are students from london, the uk.",
+                targetSentence: "We are students from London, the UK.",
+                translation: "Kami adalah pelajar dari London, Inggris Raya.",
+                keyRule: "Awal kalimat ('We'), kota ('London'), dan singkatan resmi negara ('UK') wajib kapital.",
+                requiredCapitals: ["We", "London", "UK"]
               }
             ],
-            challenge: {
-              scenario: "Tuliskan 3-5 kalimat perkenalan diri dalam bahasa Inggris: sebutkan namamu, asal kota & negara, serta statusmu saat ini."
-            }
+            sentenceBuilderTargets: [
+              {
+                id: "b-1",
+                category: "Afirmatif & Asal",
+                meaning: "Saya berasal dari Indonesia dan saya adalah seorang pelajar.",
+                tokens: ["I", "am", "from", "Indonesia", "and", "I", "am", "a", "student."],
+                fullSentence: "I am from Indonesia and I am a student."
+              },
+              {
+                id: "b-2",
+                category: "Bentuk Negatif & Kontras",
+                meaning: "Dia bukan berasal dari Spanyol tetapi dari Italia.",
+                tokens: ["She", "is", "not", "from", "Spain", "but", "from", "Italy."],
+                fullSentence: "She is not from Spain but from Italy."
+              },
+              {
+                id: "b-3",
+                category: "Usia & Tempat Tinggal",
+                meaning: "Dia berasal dari Melbourne dan dia berusia 16 tahun.",
+                tokens: ["He", "is", "from", "Melbourne", "and", "he", "is", "16", "years", "old."],
+                fullSentence: "He is from Melbourne and he is 16 years old."
+              },
+              {
+                id: "b-4",
+                category: "Kalimat Tanya & Kewarganegaraan",
+                meaning: "Dari mana kamu berasal dan apa kewarganegaraanmu?",
+                tokens: ["Where", "are", "you", "from", "and", "what", "is", "your", "nationality?"],
+                fullSentence: "Where are you from and what is your nationality?"
+              },
+              {
+                id: "b-5",
+                category: "Idola & Minat Favorit",
+                meaning: "Atlet favorit saya adalah Lionel Messi dan dia berasal dari Argentina.",
+                tokens: [
+                  "My",
+                  "favourite",
+                  "athlete",
+                  "is",
+                  "Lionel",
+                  "Messi",
+                  "and",
+                  "he",
+                  "is",
+                  "from",
+                  "Argentina."
+                ],
+                fullSentence: "My favourite athlete is Lionel Messi and he is from Argentina."
+              }
+            ],
+            guidedLabChallenges: [
+              {
+                id: "ch-1",
+                title: "Tantangan 1: Perkenalan Diri Sendiri",
+                badge: "Personal Bio",
+                instruction: "Tuliskan 3-5 kalimat perkenalan diri dalam bahasa Inggris: sebutkan namamu, usia, asal kota & negara, serta status/profesimu saat ini.",
+                example: "Hello! My name is Aditya. I am 16 years old. I am from Jakarta, Indonesia. I am a student.",
+                placeholder: "Start writing here... (Hello! My name is...)",
+                minWords: 10,
+                xpReward: 30
+              },
+              {
+                id: "ch-2",
+                title: "Tantangan 2: Profil Teman Sekelas",
+                badge: "Third-Person Bio",
+                instruction: "Tuliskan 3-5 kalimat mendeskripsikan teman sekelasmu menggunakan subjek ketiga (He is... / She is...): sebutkan namanya, kewarganegaraan, asal negara, dan usianya.",
+                example: "This is my classmate. Her name is Marta. She is from Madrid, Spain. She is Spanish and she is 16 years old.",
+                placeholder: "Start writing here... (This is my classmate. His/Her name is...)",
+                minWords: 12,
+                xpReward: 35
+              },
+              {
+                id: "ch-3",
+                title: "Tantangan 3: Tokoh / Atlet Favorit",
+                badge: "Favourite Idol",
+                instruction: "Tuliskan 3-5 kalimat tentang atlet, seniman, atau tokoh favoritmu: gunakan frasa 'My favourite...', sebutkan asal negaranya, dan profesinya.",
+                example: "My favourite athlete is Lionel Messi. He is a legendary football player. He is from Argentina. He is very inspiring.",
+                placeholder: "Start writing here... (My favourite athlete/singer is...)",
+                minWords: 12,
+                xpReward: 40
+              }
+            ],
+            practicumQuestions: [
+              {
+                id: 1,
+                typeLabel: "Transformasi Kalimat",
+                instruction: "Ubah kalimat afirmatif berikut menjadi kalimat negatif lengkap:",
+                promptText: "Liam is from Melbourne.",
+                hint: "Gunakan 'is not' atau singkatan 'isn't'",
+                targetAnswers: ["Liam is not from Melbourne.", "Liam isn't from Melbourne."],
+                explanation: "Bentuk negatif dari 'Liam is' adalah 'Liam is not' atau singkatan 'Liam isn't'."
+              },
+              {
+                id: 2,
+                typeLabel: "Penggabungan Kalimat ('and')",
+                instruction: "Gabungkan dua kalimat berikut menjadi satu kalimat utuh menggunakan kata hubung 'and':",
+                promptText: "\"I am 16 years old.\" + \"I am a student.\"",
+                hint: "I am 16 years old and I am a student.",
+                targetAnswers: [
+                  "I am 16 years old and I am a student.",
+                  "I am 16 years old and a student.",
+                  "I'm 16 years old and I'm a student."
+                ],
+                explanation: "Gunakan kata hubung 'and' untuk menyambungkan dua klausa afirmatif yang setara."
+              },
+              {
+                id: 3,
+                typeLabel: "Penggabungan Kalimat Kontras ('but')",
+                instruction: "Gabungkan dua kalimat kontras berikut menggunakan kata hubung 'but':",
+                promptText: "\"She is from Spain.\" + \"She lives in London.\"",
+                hint: "Gunakan koma sebelum 'but' untuk menghubungkan dua klausa utuh.",
+                targetAnswers: [
+                  "She is from Spain, but she lives in London.",
+                  "She is from Spain but she lives in London."
+                ],
+                explanation: "Kata hubung 'but' digunakan untuk menghubungkan dua pernyataan yang kontras."
+              },
+              {
+                id: 4,
+                typeLabel: "Tanya Jawab Utuh (Origin)",
+                instruction: "Jawab pertanyaan berikut dengan menuliskan satu kalimat afirmatif lengkap yang menyatakan kamu berasal dari Indonesia:",
+                promptText: "Where are you from?",
+                hint: "I am from Indonesia. (Perhatikan huruf kapital 'I' dan 'Indonesia')",
+                targetAnswers: ["I am from Indonesia.", "I'm from Indonesia."],
+                explanation: "Jawaban kalimat utuh yang tepat: 'I am from Indonesia.' atau 'I'm from Indonesia.'"
+              },
+              {
+                id: 5,
+                typeLabel: "Melengkapi Kalimat Utuh",
+                instruction: "Ketik kalimat lengkap di bawah ini dengan melengkapi kata kerja 'to be' yang tepat:",
+                promptText: "Marta _____ from Madrid, Spain.",
+                hint: "Gunakan bentuk to be tunggal untuk Marta ('is')",
+                targetAnswers: ["Marta is from Madrid, Spain."],
+                explanation: "Subjek tunggal 'Marta' berpasangan dengan kata kerja to be 'is'."
+              },
+              {
+                id: 6,
+                typeLabel: "Koreksi Mekanika & Kapitalisasi",
+                instruction: "Ketik ulang kalimat di bawah ini dengan memperbaiki seluruh huruf kapital dan tanda titik:",
+                promptText: "they are japanese and they live in tokyo",
+                hint: "Kapital untuk 'They', 'Japanese', dan 'Tokyo'",
+                targetAnswers: ["They are Japanese and they live in Tokyo."],
+                explanation: "Awal kalimat ('They'), kebangsaan ('Japanese'), dan nama kota ('Tokyo') wajib diawali huruf kapital."
+              },
+              {
+                id: 7,
+                typeLabel: "Konstruksi Kalimat Tanya",
+                instruction: "Susun dan ketik kalimat tanya lengkap untuk menanyakan asal seseorang menggunakan kata 'Where' dan 'are':",
+                promptText: "Where / you / from / ?",
+                hint: "Where are you from?",
+                targetAnswers: ["Where are you from?"],
+                explanation: "Formula Wh-question: Where + to be (are) + Subject (you) + from?"
+              },
+              {
+                id: 8,
+                typeLabel: "Subjek-Verb Agreement Jamak",
+                instruction: "Tuliskan kalimat afirmatif lengkap yang menyatakan bahwa kami adalah pelajar di sekolah:",
+                promptText: "We / students / at school",
+                hint: "We are students at school.",
+                targetAnswers: ["We are students at school.", "We're students at school."],
+                explanation: "Subjek jamak 'We' menggunakan kata kerja to be 'are'."
+              },
+              {
+                id: 9,
+                typeLabel: "Penulisan Singkatan (Contraction)",
+                instruction: "Tulis ulang kalimat ini dengan mengubah 'I am' menjadi bentuk singkatan resmi (contraction):",
+                promptText: "I am not French, I am Italian.",
+                hint: "Gunakan tanda apostrof (') untuk menyingkat: I'm",
+                targetAnswers: ["I'm not French, I'm Italian."],
+                explanation: "Bentuk singkatan dari 'I am' adalah 'I'm'."
+              },
+              {
+                id: 10,
+                typeLabel: "Deskripsi Kalimat Utuh",
+                instruction: "Tulis satu kalimat lengkap memperkenalkan temanmu bernama Alex yang berkebangsaan Australia:",
+                promptText: "Alex / friend / Australian",
+                hint: "This is Alex and he is Australian. ATAU Alex is my friend and he is Australian.",
+                targetAnswers: [
+                  "This is Alex and he is Australian.",
+                  "My friend is Alex and he is Australian.",
+                  "Alex is my friend and he is Australian.",
+                  "His name is Alex and he is Australian."
+                ],
+                explanation: "Semua nama orang (Alex) dan kebangsaan (Australian) harus berhuruf kapital dengan struktur to be 'is'."
+              }
+            ]
           },
         },
       ],

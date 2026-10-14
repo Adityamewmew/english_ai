@@ -7,3 +7,4 @@ export * from "./components/curriculum-roadmap-view";
 export * from "./components/modules-catalog-view";
 export * from "./components/module-study-view";
 export * from "./components/module-missions-hub";
+export * from "./components/companion";

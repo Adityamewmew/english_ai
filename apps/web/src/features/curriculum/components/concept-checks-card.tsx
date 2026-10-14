@@ -29,29 +29,29 @@ export function ConceptChecksCard({
 
   const colorStyles = {
     blue: {
-      badgeBg: "bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400",
-      border: "border-blue-200 dark:border-blue-900/50",
-      ring: "focus:ring-blue-500",
+      badgeBg: "bg-[#0D3B66]/10 text-[#0D3B66] dark:bg-slate-800 dark:text-[#F4B41A]",
+      border: "border-[#0D3B66]/30",
+      ring: "focus:ring-[#0D3B66]",
     },
     purple: {
-      badgeBg: "bg-purple-100 dark:bg-purple-950 text-purple-600 dark:text-purple-400",
-      border: "border-purple-200 dark:border-purple-900/50",
-      ring: "focus:ring-purple-500",
+      badgeBg: "bg-[#0D3B66]/10 text-[#0D3B66] dark:bg-slate-800 dark:text-[#F4B41A]",
+      border: "border-[#0D3B66]/30",
+      ring: "focus:ring-[#0D3B66]",
     },
     amber: {
-      badgeBg: "bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400",
-      border: "border-amber-200 dark:border-amber-900/50",
-      ring: "focus:ring-amber-500",
+      badgeBg: "bg-[#F4B41A]/20 text-[#855e05] dark:text-[#F4B41A]",
+      border: "border-[#F4B41A]/40",
+      ring: "focus:ring-[#F4B41A]",
     },
     rose: {
-      badgeBg: "bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400",
-      border: "border-rose-200 dark:border-rose-900/50",
-      ring: "focus:ring-rose-500",
+      badgeBg: "bg-[#9E1B1B]/10 text-[#9E1B1B]",
+      border: "border-[#9E1B1B]/30",
+      ring: "focus:ring-[#9E1B1B]",
     },
     emerald: {
-      badgeBg: "bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400",
-      border: "border-emerald-200 dark:border-emerald-900/50",
-      ring: "focus:ring-emerald-500",
+      badgeBg: "bg-[#0D3B66]/10 text-[#0D3B66] dark:bg-slate-800 dark:text-[#F4B41A]",
+      border: "border-[#0D3B66]/30",
+      ring: "focus:ring-[#0D3B66]",
     },
   }[accentColor];
 
@@ -74,12 +74,12 @@ export function ConceptChecksCard({
       className={
         embedded
           ? "space-y-5"
-          : "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xs space-y-5"
+          : "card-skeuo bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl p-6 sm:p-7 shadow-xs space-y-5"
       }
     >
       <div className="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
-        <div className={`w-9 h-9 rounded-2xl flex items-center justify-center ${colorStyles.badgeBg}`}>
-          <Sparkles className="w-4 h-4" />
+        <div className={`w-9 h-9 rounded-2xl flex items-center justify-center border-b-2 border-slate-200 dark:border-slate-700 ${colorStyles.badgeBg}`}>
+          <Sparkles className="w-4 h-4 text-[#F4B41A]" />
         </div>
         <div>
           <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400">
@@ -100,10 +100,10 @@ export function ConceptChecksCard({
           return (
             <div
               key={qIdx}
-              className="p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-3"
+              className="p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 border-b-2 border-b-slate-300 dark:border-b-slate-700 space-y-3"
             >
               <div className="flex items-start gap-2.5">
-                <span className="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+                <span className="w-5 h-5 rounded-full bg-[#0D3B66] text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
                   {qIdx + 1}
                 </span>
                 <p className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-snug">
@@ -114,15 +114,15 @@ export function ConceptChecksCard({
               <div className="grid gap-2 sm:grid-cols-2 pt-1">
                 {check.options?.map((opt, optIdx) => {
                   const isThisSelected = selected === opt;
-                  let btnStyle = "bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-600";
+                  let btnStyle = "bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 border-b-2 border-b-slate-300 dark:border-b-slate-700 hover:border-[#0D3B66]/40 active:translate-y-[1px]";
 
                   if (hasAnswered) {
                     if (opt.trim().toLowerCase() === check.answer.trim().toLowerCase()) {
-                      btnStyle = "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-400 dark:border-emerald-700 text-emerald-800 dark:text-emerald-300 font-bold";
+                      btnStyle = "bg-[#0D3B66]/10 dark:bg-slate-800 border-[#0D3B66] text-[#0D3B66] dark:text-[#F4B41A] font-bold border-b-2 border-b-[#082542]";
                     } else if (isThisSelected && !isCorrect) {
-                      btnStyle = "bg-red-50 dark:bg-red-950/40 border-red-300 dark:border-red-800 text-red-700 dark:text-red-300";
+                      btnStyle = "bg-[#9E1B1B]/10 dark:bg-[#9E1B1B]/20 border-[#9E1B1B] text-[#9E1B1B] border-b-2 border-b-[#841515] font-bold";
                     } else {
-                      btnStyle = "opacity-50 border-slate-200 dark:border-slate-700 text-slate-500";
+                      btnStyle = "opacity-50 border-slate-200 dark:border-slate-700 text-slate-500 border-b-2 border-b-slate-300 dark:border-b-slate-700";
                     }
                   }
 
@@ -132,14 +132,14 @@ export function ConceptChecksCard({
                       type="button"
                       disabled={hasAnswered}
                       onClick={(e) => handleSelect(qIdx, opt, e.currentTarget)}
-                      className={`text-left px-3.5 py-2.5 rounded-xl border text-xs transition-all flex items-center justify-between gap-2 ${btnStyle}`}
+                      className={`text-left px-3.5 py-2.5 rounded-xl border text-xs transition-all flex items-center justify-between gap-2 cursor-pointer ${btnStyle}`}
                     >
                       <span>{opt}</span>
                       {hasAnswered && opt.trim().toLowerCase() === check.answer.trim().toLowerCase() && (
-                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                         <CheckCircle2 className="w-3.5 h-3.5 text-[#0D3B66] dark:text-[#F4B41A] shrink-0" />
                       )}
                       {hasAnswered && isThisSelected && !isCorrect && (
-                        <XCircle className="w-3.5 h-3.5 text-red-500 shrink-0" />
+                        <XCircle className="w-3.5 h-3.5 text-[#9E1B1B] shrink-0" />
                       )}
                     </button>
                   );
@@ -150,11 +150,11 @@ export function ConceptChecksCard({
                 <div
                   className={`p-3 rounded-xl text-[11px] leading-relaxed flex items-start gap-2 ${
                     isCorrect
-                      ? "bg-emerald-50/60 dark:bg-emerald-950/30 text-emerald-800 dark:text-emerald-300 border border-emerald-200/50 dark:border-emerald-900/40"
-                      : "bg-amber-50/60 dark:bg-amber-950/30 text-amber-800 dark:text-amber-300 border border-amber-200/50 dark:border-amber-900/40"
+                      ? "bg-[#0D3B66]/10 text-[#0D3B66] dark:bg-slate-800 dark:text-slate-200 border border-[#0D3B66]/20 border-b-2 border-b-[#0D3B66]/20"
+                      : "bg-[#F4B41A]/15 text-[#855e05] dark:bg-slate-800 dark:text-[#F4B41A] border border-[#F4B41A]/30 border-b-2 border-b-[#DDA012]/30"
                   }`}
                 >
-                  <HelpCircle className="w-3.5 h-3.5 shrink-0 mt-0.5" />
+                  <HelpCircle className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[#F4B41A]" />
                   <div>
                     <span className="font-bold">{isCorrect ? "Correct! " : "Note: "}</span>
                     {check.explanation}

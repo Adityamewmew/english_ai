@@ -136,7 +136,7 @@ export function ModuleVoiceDock({
               <div className="flex items-center gap-1 mt-0.5">
                 <span
                   className={`w-1.5 h-1.5 rounded-full ${
-                    isCalling ? "bg-emerald-500 animate-ping" : "bg-blue-500"
+                    isCalling ? "bg-[#F4B41A] animate-ping" : "bg-[#0D3B66]"
                   }`}
                 />
                 <span className="text-[10px] font-semibold text-slate-600 dark:text-slate-300 whitespace-nowrap">
@@ -162,7 +162,7 @@ export function ModuleVoiceDock({
                   animeButtonPop(e.currentTarget);
                   onToggleCall();
                 }}
-                className="min-h-[44px] min-w-[44px] sm:h-9 sm:w-9 rounded-full shadow-md will-change-transform"
+                className="btn-skeuo-red min-h-[44px] min-w-[44px] sm:h-9 sm:w-9 rounded-full shadow-md will-change-transform"
                 title="Akhiri Panggilan"
               >
                 <PhoneOff className="w-3.5 h-3.5" />
@@ -193,7 +193,7 @@ export function ModuleVoiceDock({
                   animeButtonPop(e.currentTarget);
                   onForward();
                 }}
-                className="gap-1 text-xs font-semibold whitespace-nowrap will-change-transform"
+                className="btn-skeuo-navy gap-1 text-xs font-semibold whitespace-nowrap will-change-transform"
               >
                 <span>{forwardLabel}</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -205,17 +205,17 @@ export function ModuleVoiceDock({
 
       {/* Manual Chatbot Drawer / Modal */}
       {isChatOpen && (
-        <div className="fixed bottom-20 right-4 sm:right-8 z-50 w-[340px] sm:w-[380px] h-[460px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
+        <div className="fixed bottom-20 right-4 sm:right-8 z-50 w-[340px] sm:w-[380px] h-[460px] card-skeuo bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
           {/* Header */}
-          <div className="p-3.5 bg-slate-900 text-white flex items-center justify-between flex-shrink-0">
+          <div className="p-3.5 bg-[#0D3B66] text-white flex items-center justify-between flex-shrink-0 border-b-2 border-[#082542]">
             <div>
               <div className="flex items-center gap-1.5">
                 <h4 className="text-xs font-bold text-white">Chat Tutor • Mr. Khoirul</h4>
-                <Badge variant="primary" className="text-[10px] px-1.5 py-0.2">
+                <span className="text-[10px] px-1.5 py-0.2 rounded bg-[#F4B41A] text-[#0D3B66] font-bold">
                   Modul
-                </Badge>
+                </span>
               </div>
-              <p className="text-[10px] text-slate-400 truncate max-w-[240px] mt-0.5">
+              <p className="text-[10px] text-slate-200/80 truncate max-w-[240px] mt-0.5">
                 {moduleTitle}
               </p>
             </div>
@@ -227,7 +227,7 @@ export function ModuleVoiceDock({
                 animeButtonPop(e.currentTarget);
                 onToggleChat();
               }}
-              className="min-h-[44px] min-w-[44px] sm:h-8 sm:w-8 text-slate-400 hover:text-white hover:bg-slate-800"
+              className="min-h-[44px] min-w-[44px] sm:h-8 sm:w-8 text-slate-200 hover:text-white hover:bg-[#0A2E50]"
               title="Tutup Chat"
             >
               <X className="w-4 h-4" />
@@ -248,7 +248,7 @@ export function ModuleVoiceDock({
                     className={`max-w-[85%] rounded-2xl p-3 leading-relaxed ${
                       isAssistant
                         ? "bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-tl-none border border-slate-200/80 dark:border-slate-700/60"
-                        : "bg-blue-600 text-white rounded-tr-none shadow-sm"
+                        : "bg-[#0D3B66] text-white rounded-tr-none shadow-sm"
                     }`}
                   >
                     <p className="whitespace-pre-wrap">{msg.text}</p>
@@ -261,7 +261,7 @@ export function ModuleVoiceDock({
                       <button
                         type="button"
                         onClick={() => onPlayAudio(msg.text)}
-                        className="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 ml-1 p-0.5 cursor-pointer"
+                        className="text-slate-400 hover:text-[#0D3B66] dark:hover:text-[#F4B41A] ml-1 p-0.5 cursor-pointer"
                         title="Dengarkan suara"
                       >
                         <Volume2 className="w-3 h-3" />
@@ -274,7 +274,7 @@ export function ModuleVoiceDock({
 
             {isThinking && (
               <div className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500 text-xs w-fit">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-ping" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#F4B41A] animate-ping" />
                 <span>Mr. Khoirul sedang merespons...</span>
               </div>
             )}

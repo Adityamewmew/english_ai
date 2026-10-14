@@ -436,7 +436,7 @@ export function VoiceCallView({
                 )}
 
                 {aiSpeechState === "thinking" && (
-                  <p className="text-xs text-indigo-300 font-normal animate-pulse">
+                  <p className="text-xs text-[#F4B41A] font-normal animate-pulse">
                     Mr. Khoirul sedang merespons...
                   </p>
                 )}

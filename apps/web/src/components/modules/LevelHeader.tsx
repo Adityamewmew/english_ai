@@ -39,44 +39,47 @@ export function LevelHeader({
     <div
       onMouseEnter={(e) => animeCardHover(e.currentTarget, true)}
       onMouseLeave={(e) => animeCardHover(e.currentTarget, false)}
-      className={`rounded-2xl p-6 md:p-8 text-white shadow-lg mb-8 relative overflow-hidden transition-all will-change-transform ${
+      className={`card-skeuo rounded-2xl p-6 md:p-8 text-white shadow-lg mb-8 relative overflow-hidden transition-all will-change-transform border-b-2 ${
         isUnlocked
-          ? "bg-gradient-to-r from-blue-900 to-indigo-950"
-          : "bg-gradient-to-r from-slate-800 to-slate-900 opacity-90 border border-slate-700/60"
+          ? "bg-[#0D3B66] border-[#082542]"
+          : "bg-slate-900 border-slate-950 opacity-90 border"
       }`}
     >
       <div className="relative z-10 max-w-3xl">
         <div className="flex items-center gap-2 mb-3">
           <Badge
-            variant={isUnlocked ? "primary" : "secondary"}
-            className="gap-1.5 px-3 py-1 text-xs font-semibold"
+            className={`gap-1.5 px-3 py-1 text-xs font-bold border-b ${
+              isUnlocked
+                ? "bg-[#F4B41A] text-[#0D3B66] border-[#DDA012]"
+                : "bg-slate-800 text-slate-300 border-slate-700"
+            }`}
           >
             {isUnlocked ? (
-              <GraduationCap className="w-3.5 h-3.5" />
+              <GraduationCap className="w-3.5 h-3.5 text-[#0D3B66]" />
             ) : (
-              <Lock className="w-3.5 h-3.5 text-amber-400" />
+              <Lock className="w-3.5 h-3.5 text-[#F4B41A]" />
             )}
             Level {cefr}
           </Badge>
-          <span className="text-xs text-blue-200/80 font-medium">
+          <span className="text-xs text-white/80 font-medium">
             {isUnlocked ? "Kurikulum Bertingkat" : "Terkunci"}
           </span>
         </div>
 
         <h1 className="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-white flex items-center gap-2.5">
           {levelTitle}
-          {!isUnlocked && <Lock className="w-5 h-5 text-amber-400 shrink-0" />}
+          {!isUnlocked && <Lock className="w-5 h-5 text-[#F4B41A] shrink-0" />}
         </h1>
 
-        <p className="text-sm md:text-base text-blue-100/90 leading-relaxed mb-6 max-w-2xl">
+        <p className="text-sm md:text-base text-white/90 leading-relaxed mb-6 max-w-2xl">
           {description}
         </p>
 
         {/* Lock Notice if locked */}
         {!isUnlocked && lockReason && (
-          <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-3.5 mb-5 flex items-start gap-2.5 max-w-xl">
-            <Lock className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-            <p className="text-xs text-amber-200 font-medium leading-relaxed">
+          <div className="bg-[#9E1B1B]/15 border border-[#9E1B1B]/40 rounded-xl p-3.5 mb-5 flex items-start gap-2.5 max-w-xl">
+            <Lock className="w-4 h-4 text-[#F4B41A] shrink-0 mt-0.5" />
+            <p className="text-xs text-white/90 font-medium leading-relaxed">
               {lockReason}
             </p>
           </div>
@@ -85,21 +88,21 @@ export function LevelHeader({
         {/* Progress bar and counter */}
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10 max-w-xl space-y-2.5">
           <div className="flex items-center justify-between text-xs">
-            <div className="flex items-center gap-1.5 font-medium text-blue-100">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+            <div className="flex items-center gap-1.5 font-medium text-white">
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#F4B41A]" />
               <span>
                 {completedCount} dari {totalCount} modul selesai
               </span>
             </div>
-            <span ref={percentRef} className="font-bold text-white">
+            <span ref={percentRef} className="font-bold text-[#F4B41A]">
               {progressPercent}%
             </span>
           </div>
 
-          <Progress value={progressPercent} className="h-2.5 bg-black/30" />
+          <Progress value={progressPercent} className="h-2.5 bg-black/30 [&>div]:bg-[#F4B41A]" />
 
-          <div className="flex items-center gap-1.5 pt-0.5 text-[11px] text-blue-200/80">
-            <Target className="w-3 h-3 text-amber-300" />
+          <div className="flex items-center gap-1.5 pt-0.5 text-[11px] text-white/80">
+            <Target className="w-3 h-3 text-[#F4B41A]" />
             <span>
               {isUnlocked
                 ? "Selesaikan modul secara berurutan untuk membuka modul berikutnya."

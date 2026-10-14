@@ -81,7 +81,7 @@ export function StudentDashboardView({ session }: StudentDashboardViewProps) {
         />
 
         {/* Full-Bleed Bento Dashboard Grid */}
-        <main className="flex-1 p-4 sm:p-6 lg:p-8 w-full max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-8 items-start">
+        <main className="flex-1 p-4 sm:p-6 lg:p-8 pb-32 sm:pb-36 w-full max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-8 items-start">
           {/* Left Column (Wide, takes remaining space): Hero Banner + Your Progress + Articles */}
           <div className="w-full lg:flex-1 space-y-8 min-w-0">
             <StudentHeroBanner

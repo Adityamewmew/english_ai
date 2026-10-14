@@ -5,6 +5,18 @@
 :root {
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-plus-jakarta: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* EDDY'S English Brand Tokens (design.md) */
+  --brand-navy: #0D3B66;
+  --brand-navy-dark: #082542;
+  --brand-navy-hover: #092C4D;
+  --brand-yellow: #F4B41A;
+  --brand-yellow-hover: #DDA012;
+  --brand-red: #9E1B1B;
+  --brand-red-hover: #841515;
+  --brand-secondary: #1B4965;
+  --brand-bg: #F8FAFC;
+  --brand-card: #FFFFFF;
 }
 
 body {
@@ -19,6 +31,64 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-plus-jakarta);
   letter-spacing: -0.025em;
+}
+
+/* Subtle Skeuomorphic Affordances (skeumorphism.md) */
+.btn-skeuo-navy {
+  background-color: #0D3B66;
+  color: #FFFFFF;
+  border-bottom: 2px solid #082542;
+  box-shadow: 0 1px 2px rgba(13, 59, 102, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.15s ease;
+}
+.btn-skeuo-navy:hover {
+  background-color: #092C4D;
+}
+.btn-skeuo-navy:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-skeuo-yellow {
+  background-color: #F4B41A;
+  color: #0F172A;
+  border-bottom: 2px solid #DDA012;
+  box-shadow: 0 1px 2px rgba(244, 180, 26, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+.btn-skeuo-yellow:hover {
+  background-color: #DDA012;
+}
+.btn-skeuo-yellow:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-skeuo-red {
+  background-color: #9E1B1B;
+  color: #FFFFFF;
+  border-bottom: 2px solid #751414;
+  box-shadow: 0 1px 2px rgba(158, 27, 27, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+.btn-skeuo-red:hover {
+  background-color: #841515;
+}
+.btn-skeuo-red:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-skeuo {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05), 0 2px 4px -1px rgba(15, 23, 42, 0.03);
+  transition: all 0.2s ease;
+}
+.card-skeuo:hover {
+  box-shadow: 0 4px 12px -2px rgba(13, 59, 102, 0.08), 0 2px 4px -2px rgba(13, 59, 102, 0.04);
 }
 
 @keyframes orb-speak {
@@ -120,4 +190,76 @@ h1, h2, h3, h4, h5, h6 {
 .animate-spring-reveal {
   animation: card-spring-reveal 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+@keyframes arcade-walk {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1, 1);
+  }
+  25% {
+    /* Step 1 stride: passing leg, subtle lift, forward tilt */
+    transform: translateY(-1.2px) rotate(2.2deg) scale(0.99, 1.01);
+  }
+  50% {
+    /* Step 1 plant: foot grounded, subtle squash */
+    transform: translateY(0px) rotate(0.4deg) scale(1.015, 0.985);
+  }
+  75% {
+    /* Step 2 stride: opposite leg passing, subtle lift, back tilt */
+    transform: translateY(-1.2px) rotate(-1.6deg) scale(0.99, 1.01);
+  }
+  100% {
+    /* Step 2 plant: grounded back to center */
+    transform: translateY(0px) rotate(0deg) scale(1, 1);
+  }
+}
+
+.animate-arcade-walk {
+  transform-origin: bottom center;
+  animation: arcade-walk 0.52s ease-in-out infinite;
+}
+
+@keyframes arcade-shadow-walk {
+  0%, 50%, 100% {
+    transform: scaleX(1);
+    opacity: 0.35;
+  }
+  25%, 75% {
+    transform: scaleX(0.88);
+    opacity: 0.25;
+  }
+}
+
+.animate-arcade-shadow-walk {
+  animation: arcade-shadow-walk 0.52s ease-in-out infinite;
+}
+
+@keyframes pixel-idle {
+  0%, 100% {
+    transform: translateY(0px) scaleY(1);
+  }
+  50% {
+    transform: translateY(-0.8px) scaleY(1.015);
+  }
+}
+
+.animate-pixel-idle {
+  transform-origin: bottom center;
+  animation: pixel-idle 2.5s ease-in-out infinite;
+}
+
+/* Slim scrollbar for sidebar steps */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.7);
+}
+
 

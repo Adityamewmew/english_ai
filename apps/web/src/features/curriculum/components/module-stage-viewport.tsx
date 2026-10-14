@@ -57,10 +57,12 @@ export function ModuleStageViewport({
         {skillType === "listening" ? (
           <StageListeningView
             activeStepId={activeStepId}
+            theorySec={theorySec}
             dialogueSec={dialogueSec}
             quizSec={quizSec}
             tutor={tutor}
             onRewardXp={onRewardXp}
+            onNextStep={onNextStep}
             cefr={cefr}
           />
         ) : skillType === "writing" ? (
@@ -68,8 +70,10 @@ export function ModuleStageViewport({
             activeStepId={activeStepId}
             theorySec={theorySec}
             practiceSec={practiceSec}
+            quizSec={quizSec}
             tutor={tutor}
             onRewardXp={onRewardXp}
+            onNextStep={onNextStep}
             cefr={cefr}
           />
         ) : skillType === "speaking" ? (
@@ -77,8 +81,10 @@ export function ModuleStageViewport({
             activeStepId={activeStepId}
             theorySec={theorySec}
             practiceSec={practiceSec}
+            quizSec={quizSec}
             tutor={tutor}
             onRewardXp={onRewardXp}
+            onNextStep={onNextStep}
             cefr={cefr}
           />
         ) : (
@@ -86,47 +92,47 @@ export function ModuleStageViewport({
             activeStepId={activeStepId}
             theorySec={theorySec}
             vocabSec={vocabSec}
+            dialogueSec={dialogueSec}
+            practiceSec={practiceSec}
             quizSec={quizSec}
             tutor={tutor}
             onRewardXp={onRewardXp}
             onIncrementCombo={onIncrementCombo}
             onResetCombo={onResetCombo}
             cefr={cefr}
+            onNextStep={onNextStep}
           />
         )}
       </div>
 
-      {/* 2. Interactive Step Navigation Bar (Clean Demia Player Style) */}
+      {/* 2. Interactive Step Navigation Bar (EDDY'S English Skeuomorphic Style) */}
       <div className="p-3.5 sm:p-4 border-t border-slate-200/80 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3 select-none">
         {/* Left: Step indicator */}
         <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-xs shrink-0 border border-blue-200/60 dark:border-blue-900 font-mono">
+          <div className="w-7 h-7 rounded-lg bg-[#0D3B66] text-white flex items-center justify-center font-bold text-xs shrink-0 border-b-2 border-[#082542] shadow-2xs">
             {activeStepId}
           </div>
           <div className="leading-tight">
             <span className="text-xs font-semibold text-slate-800 dark:text-white block">
-              Step {activeStepId} of {totalSteps}
+              Langkah {activeStepId} dari {totalSteps}
             </span>
             <span className="text-[11px] text-slate-400 font-normal">
-              Interactive Activity
+              Aktivitas Interaktif
             </span>
           </div>
         </div>
 
-        {/* Center: Stage Progress Segments */}
-        <div className="flex-1 max-w-xs mx-auto hidden md:flex items-center gap-1.5">
-          {Array.from({ length: totalSteps }, (_, i) => i + 1).map((s) => (
+        {/* Center: Continuous Progress Bar */}
+        <div className="flex-1 max-w-xs mx-auto hidden md:flex items-center gap-2.5">
+          <div className="w-full h-1.5 rounded-full bg-slate-200/80 dark:bg-slate-700 overflow-hidden">
             <div
-              key={s}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                s === activeStepId
-                  ? "flex-1 bg-blue-600 dark:bg-blue-500"
-                  : s < activeStepId
-                  ? "w-4 bg-emerald-500"
-                  : "w-4 bg-slate-200 dark:bg-slate-700"
-              }`}
+              className="h-full bg-[#0D3B66] transition-all duration-300 rounded-full"
+              style={{ width: `${Math.round((activeStepId / Math.max(1, totalSteps)) * 100)}%` }}
             />
-          ))}
+          </div>
+          <span className="text-[11px] font-bold text-[#0D3B66] dark:text-[#F4B41A] shrink-0 font-mono">
+            {Math.round((activeStepId / Math.max(1, totalSteps)) * 100)}%
+          </span>
         </div>
 
         {/* Right: Step Navigation Controls */}
@@ -155,12 +161,12 @@ export function ModuleStageViewport({
               animeButtonPop(e.currentTarget);
               onNextStep();
             }}
-            className={`flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-white font-semibold text-xs shadow-sm transition-all active:scale-95 cursor-pointer ${
+            className={`flex items-center gap-1.5 px-5 py-2.5 rounded-xl font-bold text-xs shadow-sm transition-all active:scale-95 cursor-pointer ${
               isFinishing
-                ? "bg-slate-400 cursor-wait"
+                ? "bg-slate-400 text-white cursor-wait"
                 : activeStepId === totalSteps
-                ? "bg-emerald-600 hover:bg-emerald-500"
-                : "bg-blue-600 hover:bg-blue-500"
+                ? "btn-skeuo-yellow text-[#0F172A]"
+                : "btn-skeuo-navy text-white"
             }`}
           >
             {isFinishing ? (
