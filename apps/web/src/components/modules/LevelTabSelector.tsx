@@ -2,8 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { CheckCircle2, Lock, Sparkles } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { CheckCircle2, Lock, BookOpen } from "lucide-react";
 import { animeButtonPop, animeShake } from "@/lib/anime-effects";
 
 export interface LevelTabItem {
@@ -74,7 +73,7 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
                 key={grp.cefr}
                 onClick={(e) => animeShake(e.currentTarget)}
                 className="flex items-center gap-2 px-3.5 py-2.5 min-h-[44px] rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/70 dark:bg-slate-900/40 text-slate-400 dark:text-slate-500 cursor-not-allowed text-xs font-semibold select-none shrink-0 will-change-transform"
-                title="Selesaikan level sebelumnya untuk membuka"
+                title="Complete the previous level to unlock"
               >
                 <Lock className="w-3.5 h-3.5 text-[#F4B41A]" />
                 <span>Level {grp.cefr}</span>
@@ -87,7 +86,7 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
               key={grp.cefr}
               href={`/modules?level=${grp.firstTargetId}`}
               onClick={(e) => animeButtonPop(e.currentTarget)}
-              className={`flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-xl border text-xs font-bold transition-all shrink-0 will-change-transform ${
+              className={`flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-xl border text-xs font-bold transition-all shrink-0 will-change-transform touch-manipulation ${
                 isCefrActive
                   ? "bg-[#0D3B66] text-white border-[#082542] border-b-2 shadow-xs"
                   : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 border-b-2 border-b-slate-300 dark:border-b-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800"
@@ -125,8 +124,8 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
                 <div
                   key={subLvl.id}
                   onClick={(e) => animeShake(e.currentTarget)}
-                  className="flex items-center gap-2 px-3 py-2 min-h-[40px] rounded-xl text-slate-400 dark:text-slate-500 cursor-not-allowed text-xs font-medium select-none shrink-0 will-change-transform"
-                  title="Selesaikan sub-level sebelumnya untuk membuka"
+                  className="flex items-center gap-2 px-3 py-2 min-h-[40px] rounded-xl text-slate-400 dark:text-slate-500 cursor-not-allowed text-xs font-medium select-none shrink-0 will-change-transform touch-manipulation"
+                  title="Complete the previous sub-level to unlock"
                 >
                   <Lock className="w-3 h-3 text-[#F4B41A]/70" />
                   <span>{subLvl.title}</span>
@@ -139,7 +138,7 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
                 key={subLvl.id}
                 href={`/modules?level=${subLvl.id}`}
                 onClick={(e) => animeButtonPop(e.currentTarget)}
-                className={`flex items-center gap-2 px-3.5 py-2 min-h-[40px] rounded-xl text-xs font-semibold transition-all shrink-0 will-change-transform ${
+                className={`flex items-center gap-2 px-3.5 py-2 min-h-[40px] rounded-xl text-xs font-semibold transition-all shrink-0 will-change-transform touch-manipulation ${
                   isSubActive
                     ? "btn-skeuo-navy"
                     : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/60 border border-slate-200/60 dark:border-slate-700/60 border-b-2 border-b-slate-300 dark:border-b-slate-700"
@@ -152,7 +151,7 @@ export function LevelTabSelector({ levels, activeLevelId }: LevelTabSelectorProp
                     }`}
                   />
                 ) : (
-                  <Sparkles
+                  <BookOpen
                     className={`w-3.5 h-3.5 ${
                       isSubActive ? "text-[#F4B41A]" : "text-[#0D3B66] dark:text-[#F4B41A]"
                     }`}

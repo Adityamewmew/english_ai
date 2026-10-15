@@ -37,7 +37,7 @@ export function SpeakingSyllableStage({
     return (
       <div className="p-8 rounded-[24px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-3">
         <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">
-          Belum ada latihan ritme suku kata yang tersedia untuk sesi ini.
+          No syllable rhythm exercises available for this session yet.
         </p>
       </div>
     );
@@ -46,12 +46,10 @@ export function SpeakingSyllableStage({
   const [activeBeatId, setActiveBeatId] = useState<string | null>(null);
   const [completedPairs, setCompletedPairs] = useState<Record<string, boolean>>({});
 
-  // 1. Play full natural word via Backend TTS
   const playWordTts = (word: string) => {
     tutor.playTutorAudio(word);
   };
 
-  // 2. Click specific syllable pad: plays tactile sound FX & word audio without spelling letters
   const handleSyllableTap = (
     pairId: string,
     target: "country" | "nationality",
@@ -75,7 +73,6 @@ export function SpeakingSyllableStage({
     playWordTts(wordText);
   };
 
-  // 3. Metronome flow across syllables
   const playMetronomeFlow = async (
     pairId: string,
     target: "country" | "nationality",
@@ -110,13 +107,13 @@ export function SpeakingSyllableStage({
     <div className="space-y-6 animate-in fade-in duration-300">
       <div className="space-y-1.5">
         <span className="text-xs font-bold text-[#1B4965] dark:text-[#F4B41A] uppercase tracking-wider block font-mono">
-          Step 2 · Syllable Stress Drills (Country vs Nationality)
+          Step 2 · Syllable Stress Drills
         </span>
         <h3 className="text-xl font-black text-slate-900 dark:text-white">
-          Pergeseran Tekanan Suku Kata (*Syllable Shift*)
+          Syllable Stress Shift
         </h3>
         <p className="text-sm text-slate-600 dark:text-slate-300">
-          Ketuk tombol <strong>Putar Ritme</strong> untuk mendengarkan ketukan metronom suku kata, atau ketuk kotak suku kata untuk melatih intonasi bertekanan:
+          Tap the <strong>Play Rhythm</strong> button to hear the metronome syllable beat, or tap any syllable box to practice stressed pronunciation:
         </p>
       </div>
 
@@ -141,7 +138,7 @@ export function SpeakingSyllableStage({
                   {isDone && (
                     <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
                       <CheckCircle2 className="w-3.5 h-3.5" />
-                      <span>Tuntas</span>
+                      <span>Completed</span>
                     </span>
                   )}
                 </div>
@@ -156,7 +153,7 @@ export function SpeakingSyllableStage({
               <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-slate-400">
-                    Negara ({pair.countryAudio})
+                    Word 1 ({pair.countryAudio || pair.country})
                   </span>
                   <button
                     type="button"
@@ -166,7 +163,7 @@ export function SpeakingSyllableStage({
                     className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] transition-all cursor-pointer shadow-xs active:scale-95"
                   >
                     <Play className="w-3 h-3 fill-current" />
-                    <span>Putar Ritme</span>
+                    <span>Play Rhythm</span>
                   </button>
                 </div>
 
@@ -208,7 +205,7 @@ export function SpeakingSyllableStage({
               <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-slate-400">
-                    Kewarganegaraan ({pair.natAudio})
+                    Word 2 ({pair.natAudio || pair.nationality})
                   </span>
                   <button
                     type="button"
@@ -218,7 +215,7 @@ export function SpeakingSyllableStage({
                     className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] transition-all cursor-pointer shadow-xs active:scale-95"
                   >
                     <Play className="w-3 h-3 fill-current" />
-                    <span>Putar Ritme</span>
+                    <span>Play Rhythm</span>
                   </button>
                 </div>
 

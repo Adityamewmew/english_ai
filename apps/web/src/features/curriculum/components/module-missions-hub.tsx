@@ -8,7 +8,7 @@ import {
   PenTool,
   Mic,
   ChevronRight,
-  Sparkles,
+  GraduationCap,
   ArrowRight,
   MoreHorizontal,
   CheckCircle2,
@@ -125,18 +125,18 @@ export function ModuleMissionsHub({
       {/* 2. Top Hero Banner (Signature EDDY'S English Deep Navy + Golden Yellow / Red organic waves) */}
       <div
         style={{ backgroundColor: "#0D3B66" }}
-        className="relative overflow-hidden rounded-[28px] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md border border-[#082542]"
+        className="relative overflow-hidden rounded-[28px] p-5 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-6 shadow-md border border-[#082542]"
       >
         <div className="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-[#F4B41A]/20 blur-2xl pointer-events-none" />
         <div className="absolute -bottom-10 -right-10 w-52 h-52 rounded-full bg-[#9E1B1B]/30 blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 max-w-xl space-y-3.5 text-center md:text-left">
+        <div className="relative z-10 max-w-xl space-y-3.5 text-center md:text-left w-full">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-[#F4B41A] text-xs font-black uppercase tracking-wider shadow-2xs backdrop-blur-xs border border-white/10">
-            <Sparkles className="w-3.5 h-3.5 text-[#F4B41A]" />
+            <GraduationCap className="w-3.5 h-3.5 text-[#F4B41A]" />
             <span>CEFR {moduleData?.cefr || "A1.1"} · Active Course</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-black text-white leading-tight">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-white leading-tight">
             {moduleData?.title || "Unit 1: One World: Countries, Nationalities & To Be"}
           </h2>
 
@@ -144,12 +144,12 @@ export function ModuleMissionsHub({
             Think English, Think EDDY&apos;s. Master 4 distinct skills: Reading comprehension, Audio listening drills, Sentence writing, and Voice speaking practice.
           </p>
 
-          <div className="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-3">
+          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center md:justify-start gap-2.5 sm:gap-3">
             {firstActiveSub && (
               <button
                 type="button"
                 onClick={() => onSelectMission(firstActiveSub.id)}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full btn-skeuo-yellow text-xs sm:text-sm shadow-md transition-all active:scale-95 cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full btn-skeuo-yellow text-xs sm:text-sm shadow-md transition-all active:scale-95 cursor-pointer min-h-[44px] touch-manipulation w-full sm:w-auto font-bold"
               >
                 <span>{completedCount > 0 ? "Continue Course" : "Start Course"}</span>
                 <ArrowRight className="w-4 h-4" />
@@ -159,7 +159,7 @@ export function ModuleMissionsHub({
             <button
               type="button"
               onClick={tutor.handleToggleCall}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm border border-white/20 shadow-xs transition-all active:scale-95 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm border border-white/20 shadow-xs transition-all active:scale-95 cursor-pointer min-h-[44px] touch-manipulation w-full sm:w-auto"
             >
               <PhoneCall className="w-4 h-4 text-[#F4B41A]" />
               <span>Voice Practice Call</span>
@@ -168,7 +168,7 @@ export function ModuleMissionsHub({
         </div>
 
         {/* Hero Vector Illustration matching design.md */}
-        <div className="relative z-10 shrink-0 w-48 sm:w-64 h-40 sm:h-52 flex items-center justify-center">
+        <div className="relative z-10 shrink-0 w-36 sm:w-48 md:w-64 h-32 sm:h-40 md:h-52 flex items-center justify-center">
           <img
             src="/illustrations/hero-learning.svg"
             alt="Learning Illustration"
@@ -191,7 +191,7 @@ export function ModuleMissionsHub({
         </div>
 
         {/* 2-column grid layout with clean white cards + subtle tactile depth */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
           {subModules.map((sub, index) => {
             const skill = sub.skillType.toLowerCase();
             const theme = SKILL_THEMES[skill] || SKILL_THEMES.reading;
@@ -205,14 +205,14 @@ export function ModuleMissionsHub({
               <div
                 key={sub.id}
                 onClick={(e) => handleCardClick(sub, isLocked, e)}
-                className={`p-6 rounded-[22px] bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 border-b-2 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-md transition-all duration-200 flex flex-col justify-between gap-6 group cursor-pointer ${
-                  isLocked ? "opacity-60 cursor-not-allowed" : "hover:-translate-y-0.5"
+                className={`p-5 sm:p-6 rounded-[22px] bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 border-b-2 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-md transition-all duration-200 flex flex-col justify-between gap-5 sm:gap-6 group cursor-pointer touch-manipulation min-h-[160px] ${
+                  isLocked ? "opacity-60 cursor-not-allowed" : "hover:-translate-y-0.5 active:scale-[0.99]"
                 }`}
               >
                 {/* Top Row: Icon Badge + Status Pill / Menu */}
                 <div className="flex items-center justify-between">
-                  <div className={`w-12 h-12 rounded-2xl ${theme.iconBg} shadow-2xs flex items-center justify-center border-b-2 border-black/15`}>
-                    <Icon className="w-6 h-6" />
+                  <div className={`w-11 h-11 sm:w-12 sm:h-12 rounded-2xl ${theme.iconBg} shadow-2xs flex items-center justify-center border-b-2 border-black/15 shrink-0`}>
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
 
                   <div className="flex items-center gap-1.5">
@@ -230,7 +230,7 @@ export function ModuleMissionsHub({
                       <button
                         type="button"
                         aria-label="Options"
-                        className="p-1.5 rounded-full text-slate-400 hover:text-[#0D3B66] transition-colors"
+                        className="w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-slate-400 hover:text-[#0D3B66] transition-colors touch-manipulation"
                       >
                         <MoreHorizontal className="w-4 h-4" />
                       </button>
@@ -239,11 +239,11 @@ export function ModuleMissionsHub({
                 </div>
 
                 {/* Sub-Module Short Title: Reading, Listening, Writing, Speaking */}
-                <div className="py-2">
-                  <h4 className="font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white tracking-tight capitalize group-hover:text-[#0D3B66] transition-colors">
+                <div className="py-1 sm:py-2 min-w-0">
+                  <h4 className="font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white tracking-tight capitalize group-hover:text-[#0D3B66] transition-colors truncate">
                     {theme.shortTitle}
                   </h4>
-                  <p className="text-xs text-slate-500 font-medium mt-1">
+                  <p className="text-xs text-slate-500 font-medium mt-1 line-clamp-2">
                     {sub.title}
                   </p>
                 </div>

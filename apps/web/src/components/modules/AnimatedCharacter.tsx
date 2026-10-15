@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import { Volume2, Sparkles, HelpCircle } from "lucide-react";
+import { Volume2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { animeCharacterState, animeButtonPop } from "@/lib/anime-effects";

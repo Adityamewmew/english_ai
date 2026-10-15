@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Lock, Target, ShieldAlert } from "lucide-react";
+import { Lock, ShieldAlert } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { animeCardHover, animeShake } from "@/lib/anime-effects";
@@ -32,7 +32,7 @@ export function LevelLockedCard({
         <div className="space-y-2.5 max-w-xl">
           <Badge variant="secondary" className="gap-1.5 px-3 py-1 text-xs font-semibold bg-slate-800 text-slate-400 border border-slate-700/60 border-b-2 border-b-slate-950">
             <Lock className="w-3.5 h-3.5 text-[#F4B41A]" />
-            <span>Level {cefr} Terkunci</span>
+            <span>Level {cefr} Locked</span>
           </Badge>
 
           <h3 className="text-lg sm:text-xl font-bold tracking-tight text-white flex items-center gap-2">
@@ -48,8 +48,8 @@ export function LevelLockedCard({
             <span>
               {lockReason ||
                 (remainingModules !== undefined && remainingModules > 0
-                  ? `Selesaikan ${remainingModules} modul lagi dan Ujian Akhir (skor min 75%) untuk membuka level ini.`
-                  : "Selesaikan seluruh modul sebelumnya dan Ujian Akhir (skor min 75%) untuk membuka level ini.")}
+                  ? `Complete ${remainingModules} more module(s) and the Final Exam (min score 75%) to unlock this level.`
+                  : "Complete all previous modules and the Final Exam (min score 75%) to unlock this level.")}
             </span>
           </div>
         </div>
@@ -57,7 +57,7 @@ export function LevelLockedCard({
         <div className="shrink-0 w-full sm:w-auto">
           <div className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 text-slate-400 text-xs font-semibold border border-slate-700/50 border-b-2 border-b-slate-900 cursor-not-allowed w-full sm:w-auto">
             <Lock className="w-3.5 h-3.5 text-[#F4B41A]" />
-            <span>Modul {cefr} Masih Terkunci</span>
+            <span>Level {cefr} Modules Locked</span>
           </div>
         </div>
       </div>

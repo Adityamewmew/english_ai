@@ -53,7 +53,7 @@ export function ModuleStageViewport({
   return (
     <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-[28px] overflow-hidden shadow-sm flex flex-col justify-between">
       {/* 1. Specialized Stage Activity Canvas based on skillType */}
-      <div className="p-6 sm:p-8 space-y-6">
+      <div className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6">
         {skillType === "listening" ? (
           <StageListeningView
             activeStepId={activeStepId}
@@ -109,7 +109,7 @@ export function ModuleStageViewport({
       <div className="p-3.5 sm:p-4 border-t border-slate-200/80 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3 select-none">
         {/* Left: Step indicator */}
         <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-lg bg-[#0D3B66] text-white flex items-center justify-center font-bold text-xs shrink-0 border-b-2 border-[#082542] shadow-2xs">
+          <div className="w-8 h-8 rounded-xl bg-[#0D3B66] text-white flex items-center justify-center font-bold text-xs shrink-0 border-b-2 border-[#082542] shadow-2xs">
             {activeStepId}
           </div>
           <div className="leading-tight">
@@ -136,7 +136,7 @@ export function ModuleStageViewport({
         </div>
 
         {/* Right: Step Navigation Controls */}
-        <div className="flex items-center justify-between sm:justify-end gap-2 shrink-0">
+        <div className="flex items-center justify-between sm:justify-end gap-2.5 shrink-0">
           <button
             type="button"
             onClick={(e) => {
@@ -144,13 +144,13 @@ export function ModuleStageViewport({
               onPrevStep();
             }}
             disabled={activeStepId === 1}
-            className={`flex items-center gap-1 px-3.5 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+            className={`flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all cursor-pointer min-h-[44px] min-w-[44px] touch-manipulation ${
               activeStepId === 1
                 ? "opacity-30 cursor-not-allowed text-slate-400"
                 : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/60 dark:text-slate-300"
             }`}
           >
-            <ChevronLeft className="w-3.5 h-3.5" />
+            <ChevronLeft className="w-4 h-4" />
             <span>Previous</span>
           </button>
 
@@ -161,7 +161,7 @@ export function ModuleStageViewport({
               animeButtonPop(e.currentTarget);
               onNextStep();
             }}
-            className={`flex items-center gap-1.5 px-5 py-2.5 rounded-xl font-bold text-xs shadow-sm transition-all active:scale-95 cursor-pointer ${
+            className={`flex items-center justify-center gap-1.5 px-6 py-2.5 rounded-xl font-bold text-xs shadow-sm transition-all active:scale-95 cursor-pointer min-h-[44px] touch-manipulation ${
               isFinishing
                 ? "bg-slate-400 text-white cursor-wait"
                 : activeStepId === totalSteps
@@ -171,18 +171,18 @@ export function ModuleStageViewport({
           >
             {isFinishing ? (
               <>
-                <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                <Loader2 className="w-4 h-4 animate-spin" />
                 <span>Completing...</span>
               </>
             ) : activeStepId === totalSteps ? (
               <>
-                <CheckCircle2 className="w-3.5 h-3.5 stroke-[2.5]" />
+                <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
                 <span>Finish Mission</span>
               </>
             ) : (
               <>
                 <span>Next Step</span>
-                <ChevronRight className="w-3.5 h-3.5" />
+                <ChevronRight className="w-4 h-4" />
               </>
             )}
           </button>

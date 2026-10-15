@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useRef } from "react";
 
 /**
  * Native Web Audio API Sound Synthesizer
@@ -29,7 +29,7 @@ export function useGameSound() {
     setIsMuted((prev) => !prev);
   }, []);
 
-  // 1. Play joyful ascending chime (Correct answer)
+  // Ascending chime (Correct answer)
   const playCorrect = useCallback(() => {
     if (isMuted) return;
     const ctx = getAudioContext();
@@ -57,7 +57,7 @@ export function useGameSound() {
     });
   }, [isMuted, getAudioContext]);
 
-  // 2. Play gentle friendly thud/boop (Incorrect answer)
+  // Gentle friendly thud (Incorrect answer)
   const playWrong = useCallback(() => {
     if (isMuted) return;
     const ctx = getAudioContext();
@@ -81,7 +81,7 @@ export function useGameSound() {
     osc.stop(now + 0.3);
   }, [isMuted, getAudioContext]);
 
-  // 3. Play crisp wooden pop/click (Placing / dropping word chip)
+  // Crisp pop/click (Placing / dropping word chip)
   const playSnap = useCallback(() => {
     if (isMuted) return;
     const ctx = getAudioContext();
@@ -105,7 +105,7 @@ export function useGameSound() {
     osc.stop(now + 0.07);
   }, [isMuted, getAudioContext]);
 
-  // 4. Play celebratory triumphant fanfare
+  // Triumphant fanfare
   const playCelebrate = useCallback(() => {
     if (isMuted) return;
     const ctx = getAudioContext();

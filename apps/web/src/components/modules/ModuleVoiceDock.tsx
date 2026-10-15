@@ -57,9 +57,9 @@ export function ModuleVoiceDock({
   onToggleChat,
   onPlayAudio,
   onBack,
-  backLabel = "Kembali ke Atas (Teori)",
+  backLabel = "Back to Top (Theory)",
   onForward,
-  forwardLabel = "Lanjut ke Praktikum",
+  forwardLabel = "Continue to Practicum",
 }: ModuleVoiceDockProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -98,7 +98,7 @@ export function ModuleVoiceDock({
               >
                 <ChevronLeft className="w-4 h-4" />
                 <span className="hidden sm:inline">{backLabel}</span>
-                <span className="sm:hidden">Kembali</span>
+                <span className="sm:hidden">Back</span>
               </Button>
             )}
           </div>
@@ -119,7 +119,7 @@ export function ModuleVoiceDock({
                     ? "bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-emerald-400/50"
                     : "text-slate-400"
                 }`}
-                title={isListening ? "Matikan Mic" : "Nyalakan Mic"}
+                title={isListening ? "Mute Mic" : "Unmute Mic"}
               >
                 {isListening ? <Mic className="w-3.5 h-3.5" /> : <MicOff className="w-3.5 h-3.5" />}
               </Button>
@@ -141,14 +141,14 @@ export function ModuleVoiceDock({
                 />
                 <span className="text-[10px] font-semibold text-slate-600 dark:text-slate-300 whitespace-nowrap">
                   {isSpeaking
-                    ? "Mr. Khoirul bicara..."
+                    ? "Mr. Khoirul speaking..."
                     : isListening
-                    ? "Mendengarkan..."
+                    ? "Listening..."
                     : isThinking
-                    ? "Berpikir..."
+                    ? "Thinking..."
                     : isCalling
-                    ? "Panggilan aktif"
-                    : "Tanya Tutor"}
+                    ? "Call Active"
+                    : "Ask Tutor"}
                 </span>
               </div>
             </div>
@@ -163,7 +163,7 @@ export function ModuleVoiceDock({
                   onToggleCall();
                 }}
                 className="btn-skeuo-red min-h-[44px] min-w-[44px] sm:h-9 sm:w-9 rounded-full shadow-md will-change-transform"
-                title="Akhiri Panggilan"
+                title="End Call"
               >
                 <PhoneOff className="w-3.5 h-3.5" />
               </Button>
@@ -180,10 +180,10 @@ export function ModuleVoiceDock({
                 onToggleChat();
               }}
               className="gap-1.5 text-xs font-semibold will-change-transform"
-              title="Buka Chatbot Teks"
+              title="Open Text Chat"
             >
               <MessageSquare className="w-3.5 h-3.5" />
-              <span className="hidden md:inline">Chat Teks</span>
+              <span className="hidden md:inline">Text Chat</span>
             </Button>
 
             {onForward && (
@@ -205,14 +205,14 @@ export function ModuleVoiceDock({
 
       {/* Manual Chatbot Drawer / Modal */}
       {isChatOpen && (
-        <div className="fixed bottom-20 right-4 sm:right-8 z-50 w-[340px] sm:w-[380px] h-[460px] card-skeuo bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
+        <div className="fixed bottom-20 right-2 sm:right-8 z-50 w-[calc(100vw-1rem)] sm:w-[380px] max-w-[380px] h-[460px] max-h-[calc(100dvh-110px)] card-skeuo bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
           {/* Header */}
           <div className="p-3.5 bg-[#0D3B66] text-white flex items-center justify-between flex-shrink-0 border-b-2 border-[#082542]">
             <div>
               <div className="flex items-center gap-1.5">
                 <h4 className="text-xs font-bold text-white">Chat Tutor • Mr. Khoirul</h4>
                 <span className="text-[10px] px-1.5 py-0.2 rounded bg-[#F4B41A] text-[#0D3B66] font-bold">
-                  Modul
+                  Module
                 </span>
               </div>
               <p className="text-[10px] text-slate-200/80 truncate max-w-[240px] mt-0.5">
@@ -228,7 +228,7 @@ export function ModuleVoiceDock({
                 onToggleChat();
               }}
               className="min-h-[44px] min-w-[44px] sm:h-8 sm:w-8 text-slate-200 hover:text-white hover:bg-[#0A2E50]"
-              title="Tutup Chat"
+              title="Close Chat"
             >
               <X className="w-4 h-4" />
             </Button>
@@ -255,14 +255,14 @@ export function ModuleVoiceDock({
                   </div>
 
                   <div className="flex items-center gap-1.5 mt-1 px-1 text-[10px] text-slate-400">
-                    <span>{isAssistant ? "Mr. Khoirul" : "Anda"}</span>
+                    <span>{isAssistant ? "Mr. Khoirul" : "You"}</span>
                     {msg.timestamp && <span>• {msg.timestamp}</span>}
                     {isAssistant && (
                       <button
                         type="button"
                         onClick={() => onPlayAudio(msg.text)}
                         className="text-slate-400 hover:text-[#0D3B66] dark:hover:text-[#F4B41A] ml-1 p-0.5 cursor-pointer"
-                        title="Dengarkan suara"
+                        title="Listen to voice"
                       >
                         <Volume2 className="w-3 h-3" />
                       </button>
@@ -275,7 +275,7 @@ export function ModuleVoiceDock({
             {isThinking && (
               <div className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500 text-xs w-fit">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#F4B41A] animate-ping" />
-                <span>Mr. Khoirul sedang merespons...</span>
+                <span>Mr. Khoirul is responding...</span>
               </div>
             )}
           </div>
@@ -292,7 +292,7 @@ export function ModuleVoiceDock({
                   onSendMessage();
                 }
               }}
-              placeholder="Ketik pertanyaan untuk Mr. Khoirul..."
+              placeholder="Type a question for Mr. Khoirul..."
               className="flex-1 text-xs"
             />
 
@@ -304,7 +304,7 @@ export function ModuleVoiceDock({
                 onSendMessage();
               }}
               className="h-9 w-9 shrink-0 will-change-transform"
-              title="Kirim pesan"
+              title="Send message"
             >
               <Send className="w-4 h-4" />
             </Button>

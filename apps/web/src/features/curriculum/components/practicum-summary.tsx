@@ -3,9 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import {
-  Award,
-  CheckCircle2,
-  XCircle,
   RotateCcw,
   ArrowRight,
   BookOpen,
@@ -83,27 +80,27 @@ export function PracticumSummary({
                   : "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300"
               }`}
             >
-              {isPassed ? "LULUS AMBANG BATAS" : "BELUM MENCAPAI 75%"}
+              {isPassed ? "PASSED THRESHOLD" : "BELOW 75% TARGET"}
             </span>
             <span className="text-xs font-mono text-slate-400">Target: 75%</span>
           </div>
 
           <h4 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
             {isPassed
-              ? "Luar Biasa! Praktikum Speaking Tuntas"
-              : "Bagus! Kamu Sudah Menyelesaikan Semua Soal"}
+              ? "Outstanding! Speaking Practicum Completed"
+              : "Good Effort! You Have Completed All Tasks"}
           </h4>
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
             {isPassed
-              ? "Mr. Khoirul bangga atas keberanianmu berbicara! Seluruh 10 soal (cerita bebas, roleplay panggilan nyata, dan drill fonetik) telah dievaluasi."
-              : "Skor akhirmu belum mencapai ambang batas 75%. Jangan berkecil hati, kamu bisa mengulang latihan ini untuk memperlancar pelafalan dan durasi bicaramu!"}
+              ? "Mr. Khoirul is proud of your speaking courage! All 10 challenges (free storytelling, real voice calls, and phonetic drills) have been evaluated."
+              : "Your final score is below the 75% threshold. Don't be discouraged, you can retake this session to sharpen your pronunciation and flow!"}
           </p>
         </div>
 
         {/* Big Score Badge */}
         <div className="sm:ml-auto shrink-0 text-center px-4 py-3 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
           <span className="text-[10px] font-mono font-bold uppercase text-slate-400 block">
-            Skor Akhir
+            Final Score
           </span>
           <span
             className={`text-3xl font-black font-mono ${
@@ -130,9 +127,9 @@ export function PracticumSummary({
             </span>
           </div>
           <span className="text-xs font-bold text-slate-800 dark:text-slate-200 block">
-            2 Soal Cerita Bebas
+            2 Storytelling Tasks
           </span>
-          <span className="text-[11px] text-slate-500">Durasi & kelancaran narasi</span>
+          <span className="text-[11px] text-slate-500">Duration &amp; narrative fluency</span>
         </div>
 
         <div className="p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-1">
@@ -145,9 +142,9 @@ export function PracticumSummary({
             </span>
           </div>
           <span className="text-xs font-bold text-slate-800 dark:text-slate-200 block">
-            4 Roleplay Call Nyata
+            4 Real Roleplay Calls
           </span>
-          <span className="text-[11px] text-slate-500">Dialog dua arah Mr. Khoirul</span>
+          <span className="text-[11px] text-slate-500">Two-way dialogue with Mr. Khoirul</span>
         </div>
 
         <div className="p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-1">
@@ -160,9 +157,9 @@ export function PracticumSummary({
             </span>
           </div>
           <span className="text-xs font-bold text-slate-800 dark:text-slate-200 block">
-            4 Drill Fonetik & Tata Bahasa
+            4 Phonetic &amp; Grammar Drills
           </span>
-          <span className="text-[11px] text-slate-500">Ketepatan pelafalan lisan</span>
+          <span className="text-[11px] text-slate-500">Oral pronunciation accuracy</span>
         </div>
       </div>
 
@@ -177,7 +174,7 @@ export function PracticumSummary({
           className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all cursor-pointer"
         >
           <RotateCcw className="w-4 h-4" />
-          <span>Ulangi Praktikum</span>
+          <span>Retake Practicum</span>
         </button>
 
         {isPassed && onNextStep && (
@@ -186,7 +183,7 @@ export function PracticumSummary({
             onClick={onNextStep}
             className="flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer"
           >
-            <span>Lanjut ke Tahap Berikutnya</span>
+            <span>Continue to Next Stage</span>
             <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
           </button>
         )}

@@ -36,7 +36,7 @@ export function StudentCalendarStrip() {
       <div className="flex items-center justify-between px-1">
         <button
           onClick={(e) => animeButtonPop(e.currentTarget)}
-          className="w-8 h-8 rounded-full border border-slate-200/80 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-[#0D3B66] dark:hover:text-white transition-colors cursor-pointer"
+          className="w-10 h-10 min-w-[40px] min-h-[40px] rounded-full border border-slate-200/80 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-[#0D3B66] dark:hover:text-white transition-colors cursor-pointer touch-manipulation"
         >
           <ChevronLeft className="w-4 h-4" />
         </button>
@@ -47,7 +47,7 @@ export function StudentCalendarStrip() {
 
         <button
           onClick={(e) => animeButtonPop(e.currentTarget)}
-          className="w-8 h-8 rounded-full border border-slate-200/80 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-[#0D3B66] dark:hover:text-white transition-colors cursor-pointer"
+          className="w-10 h-10 min-w-[40px] min-h-[40px] rounded-full border border-slate-200/80 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-[#0D3B66] dark:hover:text-white transition-colors cursor-pointer touch-manipulation"
         >
           <ChevronRight className="w-4 h-4" />
         </button>
@@ -67,7 +67,7 @@ export function StudentCalendarStrip() {
                 setSelectedDate(d.date);
               }}
               style={isSelected ? { backgroundColor: "#0D3B66", color: "#FFFFFF" } : undefined}
-              className={`flex-1 py-2 px-1 rounded-2xl flex flex-col items-center justify-center gap-1 transition-all cursor-pointer ${
+              className={`flex-1 py-2.5 px-1 rounded-2xl flex flex-col items-center justify-center gap-1 transition-all cursor-pointer min-h-[44px] touch-manipulation ${
                 isSelected
                   ? "font-black shadow-xs scale-105 border-b-2 border-[#082542]"
                   : d.isToday

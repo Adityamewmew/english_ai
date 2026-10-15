@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { X, BookOpen, Layers, Award, Sparkles, CheckCircle2 } from "lucide-react";
+import { X, Layers, CheckCircle2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 interface ModuleDetailModalProps {
@@ -118,7 +118,7 @@ export function ModuleDetailModal({ isOpen, onClose, data }: ModuleDetailModalPr
               {sec.sectionType === "practice" && sec.content && (
                 <div className="text-xs text-slate-600 dark:text-slate-300 pl-7 space-y-1.5">
                   <div className="flex items-center gap-1.5 text-blue-600 font-semibold text-[11px]">
-                    <Sparkles className="w-3.5 h-3.5" />
+                    <Layers className="w-3.5 h-3.5" />
                     <span>3 Tahap: Shadowing Drill, Simulasi Peran, & Tantangan Spontan</span>
                   </div>
                   {sec.content.challenge?.scenario && (

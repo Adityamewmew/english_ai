@@ -1,42 +1,60 @@
 "use client";
 
 import React from "react";
-import { BookOpen, Volume2, ArrowRight, PenLine, Check } from "lucide-react";
+import { BookOpen, Volume2 } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 import { playPopSound } from "@/lib/sound-fx";
 
 interface WritingOverviewStageProps {
   theorySec?: any;
   tutor: any;
-  onGoToNext: () => void;
+  onGoToNext?: () => void;
 }
 
 export function WritingOverviewStage({
   theorySec,
   tutor,
-  onGoToNext,
 }: WritingOverviewStageProps) {
   const content = theorySec?.content || {};
-  const blueprintItems: Array<{
-    part: string;
-    role: string;
-    examples: string[];
-    color: string;
-    tagColor: string;
-  }> = content.blueprintItems || [];
 
-  const mechanicsRules: Array<{
-    title: string;
-    rule: string;
-    example: string;
-  }> = content.mechanicsRules || [];
+  // Normalize blueprint items with robust fallbacks
+  const blueprintItems = (content.blueprintItems || []).map((item: any, idx: number) => {
+    const part = item.part || item.title || `Step ${item.step || idx + 1}`;
+    const role = item.role || item.formula || "";
+    const examples: string[] = Array.isArray(item.examples)
+      ? item.examples
+      : item.example
+      ? [item.example]
+      : [];
+    const color =
+      item.color ||
+      "border-indigo-200 dark:border-indigo-800 bg-indigo-50/50 dark:bg-indigo-950/30 text-indigo-900 dark:text-indigo-200";
+    const tagColor =
+      item.tagColor || "bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300";
 
-  const sampleSentences: Array<{
-    text: string;
-    audio: string;
-  }> = content.sampleSentences || [];
+    return { part, role, examples, color, tagColor };
+  });
 
-  const summary = content.summary || "Dalam modul ini, kamu akan mempelajari cara membangun kalimat bahasa Inggris yang utuh dan akurat.";
+  // Normalize mechanics rules
+  const mechanicsRules = (content.mechanicsRules || []).map((r: any, idx: number) => ({
+    title: r.title || `Rule #${idx + 1}`,
+    rule: r.rule || "",
+    example: r.goodExample || r.example || "",
+    badExample: r.badExample || "",
+    why: r.why || "",
+  }));
+
+  // Normalize sample sentences
+  const sampleSentences = (content.sampleSentences || []).map((s: any) => ({
+    text: s.text || s.en || "",
+    audio: s.audio || s.text || s.en || "",
+    translation: s.id || s.translation || "",
+    focus: s.focus || "",
+  }));
+
+  const summary =
+    content.summary ||
+    "In this module, you will learn how to construct complete, accurate English sentences.";
 
   const handlePlayAudio = (text: string, e: React.MouseEvent) => {
     animeButtonPop(e.currentTarget as HTMLElement);
@@ -48,10 +66,10 @@ export function WritingOverviewStage({
     <div className="space-y-6 animate-in fade-in duration-300">
       {/* 1. Mission Briefing Banner */}
       <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/90 dark:border-slate-800 space-y-3">
-        <div className="flex items-center gap-2 text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A]">
+        <div className="flex items-center gap-2 text-xs font-bold text-indigo-600 dark:text-indigo-400">
           <BookOpen className="w-4 h-4" />
           <span className="uppercase tracking-wider font-mono">
-            Tujuan Belajar Menulis
+            Writing Mission Objective
           </span>
         </div>
         <p className="text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
@@ -60,122 +78,126 @@ export function WritingOverviewStage({
       </div>
 
       {/* 2. Visual Blueprint Formula */}
-      <div className="space-y-3">
-        <div>
-          <h4 className="text-sm font-bold text-slate-900 dark:text-white">
-            Formula Baku Konstruksi Kalimat
-          </h4>
-          <p className="text-xs text-slate-500 dark:text-slate-400">
-            Setiap kalimat afirmatif bahasa Inggris dibangun dengan tiga komponen utama berikut:
-          </p>
-        </div>
+      {blueprintItems.length > 0 && (
+        <div className="space-y-3">
+          <div>
+            <h4 className="text-sm font-bold text-slate-900 dark:text-white">
+              Sentence Construction Blueprint
+            </h4>
+            <p className="text-xs text-slate-500 dark:text-slate-400">
+              Key building blocks for constructing clear and accurate sentences:
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          {blueprintItems.map((item, idx) => (
-            <div
-              key={idx}
-              className={`p-4 rounded-xl border ${item.color} space-y-2.5 transition-all`}
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold font-mono uppercase tracking-wider">
-                  {item.part}
-                </span>
-                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white/70 dark:bg-slate-900/60">
-                  Langkah {idx + 1}
-                </span>
-              </div>
-              <p className="text-xs font-semibold">{item.role}</p>
-              <div className="flex flex-wrap gap-1.5 pt-1">
-                {item.examples.map((ex, exIdx) => (
-                  <span
-                    key={exIdx}
-                    className={`text-[11px] font-mono font-medium px-2 py-0.5 rounded-md ${item.tagColor}`}
-                  >
-                    {ex}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {blueprintItems.map((item: any, idx: number) => (
+              <div
+                key={idx}
+                className={`p-4 rounded-xl border ${item.color} space-y-2.5 transition-all`}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold font-mono uppercase tracking-wider">
+                    {item.part}
                   </span>
-                ))}
+                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white/70 dark:bg-slate-900/60">
+                    Step {idx + 1}
+                  </span>
+                </div>
+                {item.role && <p className="text-xs font-semibold">{item.role}</p>}
+                {item.examples.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {item.examples.map((ex: string, exIdx: number) => (
+                      <span
+                        key={exIdx}
+                        className={`text-[11px] font-mono font-medium px-2 py-0.5 rounded-md ${item.tagColor}`}
+                      >
+                        {ex}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* 3. Mechanics Core Rules */}
-      <div className="space-y-3">
-        <div>
-          <h4 className="text-sm font-bold text-slate-900 dark:text-white">
-            Aturan Mekanika &amp; Tata Tulis
-          </h4>
-          <p className="text-xs text-slate-500 dark:text-slate-400">
-            Perhatikan mekanika ini karena akan diuji langsung pada latihan mengetik di langkah berikutnya:
-          </p>
-        </div>
+      {mechanicsRules.length > 0 && (
+        <div className="space-y-3">
+          <div>
+            <h4 className="text-sm font-bold text-slate-900 dark:text-white">
+              Core Writing Mechanics &amp; Punctuation Rules
+            </h4>
+            <p className="text-xs text-slate-500 dark:text-slate-400">
+              Keep these mechanics in mind as they are directly evaluated in the upcoming typing exercises:
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          {mechanicsRules.map((r, idx) => (
-            <div
-              key={idx}
-              className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2 shadow-2xs"
-            >
-              <span className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] block">
-                {r.title}
-              </span>
-              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                {r.rule}
-              </p>
-              <div className="pt-1 border-t border-slate-100 dark:border-slate-800 text-[11px] font-mono text-slate-500 dark:text-slate-400">
-                Contoh: <span className="font-semibold text-slate-800 dark:text-slate-200">{r.example}</span>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {mechanicsRules.map((r: any, idx: number) => (
+              <div
+                key={idx}
+                className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2 shadow-2xs"
+              >
+                <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 block">
+                  {r.title}
+                </span>
+                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  {r.rule}
+                </p>
+                {r.example && (
+                  <div className="pt-1 border-t border-slate-100 dark:border-slate-800 text-[11px] font-mono text-slate-500 dark:text-slate-400">
+                    Example: <span className="font-semibold text-slate-800 dark:text-slate-200">{r.example}</span>
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* 4. Audio Sentence Examples */}
-      <div className="space-y-3">
-        <div>
-          <h4 className="text-sm font-bold text-slate-900 dark:text-white">
-            Contoh Kalimat Siap Pakai
-          </h4>
-          <p className="text-xs text-slate-500 dark:text-slate-400">
-            Dengarkan pelafalan kalimat model sebelum mulai latihan menulis:
-          </p>
-        </div>
+      {sampleSentences.length > 0 && (
+        <div className="space-y-3">
+          <div>
+            <h4 className="text-sm font-bold text-slate-900 dark:text-white">
+              Sample Sentence Models
+            </h4>
+            <p className="text-xs text-slate-500 dark:text-slate-400">
+              Listen to the pronunciation of these model sentences before starting your writing drills:
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          {sampleSentences.map((s, idx) => (
-            <div
-              key={idx}
-              className="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 shadow-2xs"
-            >
-              <span className="text-xs font-semibold text-slate-800 dark:text-slate-200 leading-snug">
-                &ldquo;{s.text}&rdquo;
-              </span>
-              <button
-                type="button"
-                onClick={(e) => handlePlayAudio(s.audio, e)}
-                className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-[#0D3B66] dark:text-[#F4B41A] transition-colors cursor-pointer shrink-0"
-                title="Dengarkan pengucapan"
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {sampleSentences.map((s: any, idx: number) => (
+              <div
+                key={idx}
+                className="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 shadow-2xs"
               >
-                <Volume2 className="w-4 h-4" />
-              </button>
-            </div>
-          ))}
+                <div className="min-w-0 pr-2">
+                  <span className="text-xs font-semibold text-slate-800 dark:text-slate-200 leading-snug block">
+                    &ldquo;{s.text}&rdquo;
+                  </span>
+                  {s.translation && (
+                    <span className="text-[11px] text-slate-400 dark:text-slate-500 truncate block mt-0.5">
+                      {s.translation}
+                    </span>
+                  )}
+                </div>
+                <button
+                  type="button"
+                  onClick={(e) => handlePlayAudio(s.audio, e)}
+                  className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-indigo-600 dark:text-indigo-400 transition-colors cursor-pointer shrink-0"
+                  title="Listen to pronunciation"
+                >
+                  <Volume2 className="w-4 h-4" />
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-
-      {/* 5. Direct Action CTA */}
-      <div className="pt-3 flex justify-end">
-        <button
-          type="button"
-          onClick={onGoToNext}
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs sm:text-sm transition-all active:scale-95 cursor-pointer shadow-xs"
-        >
-          <PenLine className="w-4 h-4" />
-          <span>Mulai Latihan Menulis (Langkah 2)</span>
-          <ArrowRight className="w-4 h-4" />
-        </button>
-      </div>
+      )}
     </div>
   );
 }

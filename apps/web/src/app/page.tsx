@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { Mic, BookOpen, Award, Sparkles, ArrowRight, MessageSquare, CheckCircle2 } from "lucide-react";
+import { Mic, BookOpen, Award, ArrowRight, MessageSquare, CheckCircle2 } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -38,8 +38,8 @@ export default function HomePage() {
           variant="secondary"
           className="gap-2 bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800 mb-6 py-1 px-3.5"
         >
-          <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-          <span>Tutor AI Bahasa Inggris Pribadimu: Mr. Khoirul</span>
+          <Award className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+          <span>Platform Praktik Refleks Bahasa Inggris Terstruktur</span>
         </Badge>
 
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight tracking-tight max-w-4xl mx-auto">

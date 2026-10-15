@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { CheckCircle2, Play } from "lucide-react";
+import { CheckCircle2, Circle } from "lucide-react";
 
 export interface PlaylistStepItem {
   id: number;
@@ -25,7 +25,6 @@ export function ModuleStagePlaylist({
   steps,
   activeStepId,
   onSelectStep,
-  xpPoints,
   completedCount,
   totalCount,
   children,
@@ -33,13 +32,13 @@ export function ModuleStagePlaylist({
   const progressPercent = Math.min(100, Math.round((completedCount / Math.max(1, totalCount)) * 100));
 
   return (
-    <div className="flex flex-col gap-2.5 select-none">
-      {/* 1. Study Progress Card with Circular Ring (Gambar 1 style) */}
-      <div className="shrink-0 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-2.5 shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
-        <div className="flex items-center gap-2.5">
+    <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl p-4 shadow-sm space-y-4 select-none">
+      {/* 1. Header with Circular Progress Ring */}
+      <div className="flex items-center justify-between gap-3 pb-3 border-b border-slate-100 dark:border-slate-800">
+        <div className="flex items-center gap-3">
           {/* Circular SVG Progress Ring */}
-          <div className="relative w-9 h-9 shrink-0 flex items-center justify-center">
-            <svg className="w-9 h-9 transform -rotate-90" viewBox="0 0 36 36">
+          <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
+            <svg className="w-10 h-10 transform -rotate-90" viewBox="0 0 36 36">
               <path
                 className="text-slate-100 dark:text-slate-800"
                 strokeWidth="3.5"
@@ -48,8 +47,8 @@ export function ModuleStagePlaylist({
                 d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
               />
               <path
-                className="transition-all duration-700 ease-out"
-                stroke="#0D3B66"
+                className="transition-all duration-500 ease-out text-[#0D3B66] dark:text-[#F4B41A]"
+                stroke="currentColor"
                 strokeDasharray={`${progressPercent}, 100`}
                 strokeWidth="3.5"
                 strokeLinecap="round"
@@ -57,109 +56,103 @@ export function ModuleStagePlaylist({
                 d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
               />
             </svg>
-            <span className="absolute text-[10px] font-black text-[#0D3B66] dark:text-[#F4B41A]">
+            <span className="absolute text-[10px] font-black text-[#0D3B66] dark:text-[#F4B41A] font-mono">
               {progressPercent}%
             </span>
           </div>
 
-          <div className="space-y-0.5 min-w-0">
-            <h4 className="text-xs font-bold text-slate-900 dark:text-white">
-              Study Progress
+          <div className="space-y-0.5">
+            <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+              Learning Flow
             </h4>
-            <p className="text-[11px] text-slate-500 dark:text-slate-400 font-normal leading-tight">
-              Track milestones & progress.
+            <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-tight">
+              {completedCount} of {totalCount} completed
             </p>
           </div>
         </div>
+
+        <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+          {steps.length} Steps
+        </span>
       </div>
 
-      {/* 2. Course Content Playlist with Internal Scroll (Max 3-4 steps visible) */}
-      <div className="shrink-0 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-2.5 shadow-[0_1px_3px_rgba(0,0,0,0.02)] overflow-hidden">
-        <div className="flex items-center justify-between pb-1.5 shrink-0 border-b border-slate-100 dark:border-slate-800/80 mb-1.5">
-          <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
-            Course Content
-          </h4>
-          <span className="text-[11px] font-semibold text-slate-400 font-mono">
-            {steps.length} Steps
-          </span>
-        </div>
+      {/* 2. Step Items List (Scrolls smoothly with generous room, pb-16 for floating companion) */}
+      <div className="space-y-1.5 max-h-[340px] lg:max-h-[calc(100vh-210px)] overflow-y-auto pr-0.5 pb-8 lg:pb-16">
+        {steps.map((s, idx) => {
+          const isActive = s.id === activeStepId;
+          const isDone = s.isCompleted;
 
-        {/* Scrollable Step List (Max 3-4 steps displayed, rest scroll smoothly) */}
-        <div className="max-h-[175px] overflow-y-auto space-y-1 pr-1 custom-scrollbar">
-          {steps.map((s, idx) => {
-            const isActive = s.id === activeStepId;
-            const isDone = s.isCompleted;
+          return (
+            <button
+              key={s.id}
+              type="button"
+              onClick={() => onSelectStep(s.id)}
+              className={`w-full text-left p-2.5 sm:p-3 rounded-xl transition-all duration-150 flex items-center justify-between gap-2.5 cursor-pointer border min-h-[44px] touch-manipulation ${
+                isActive
+                  ? "bg-[#0D3B66] text-white border-[#0D3B66] shadow-sm"
+                  : isDone
+                  ? "bg-slate-50/80 dark:bg-slate-800/50 border-slate-200/80 dark:border-slate-800 text-slate-800 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-700"
+                  : "bg-white dark:bg-slate-900 border-slate-200/60 dark:border-slate-800/80 hover:border-slate-300 text-slate-700 dark:text-slate-300"
+              }`}
+            >
+              <div className="flex items-center gap-2.5 min-w-0">
+                {/* Step Number Circle */}
+                <div
+                  className={`w-6 h-6 rounded-lg flex items-center justify-center shrink-0 text-[11px] font-bold font-mono ${
+                    isActive
+                      ? "bg-white/20 text-white"
+                      : isDone
+                      ? "bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800"
+                      : "bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700"
+                  }`}
+                >
+                  {idx + 1}
+                </div>
 
-            return (
-              <button
-                key={s.id}
-                type="button"
-                onClick={() => onSelectStep(s.id)}
-                className={`w-full text-left p-1.5 rounded-xl transition-all duration-150 flex items-center justify-between gap-2 cursor-pointer border ${
-                  isActive
-                    ? "bg-[#0D3B66]/10 dark:bg-[#0D3B66]/30 border-[#0D3B66] dark:border-[#F4B41A] ring-1 ring-[#0D3B66]/20 shadow-[inset_0_1px_1px_rgba(0,0,0,0.03)]"
-                    : "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200/60 dark:border-slate-800 hover:border-slate-300 text-slate-800 dark:text-slate-200"
-                }`}
-              >
-                <div className="flex items-center gap-2 min-w-0">
-                  {/* Step Number Circle */}
-                  <div
-                    className={`w-5.5 h-5.5 rounded-full flex items-center justify-center shrink-0 text-[10px] font-bold ${
+                {/* Title & Duration */}
+                <div className="min-w-0 leading-snug">
+                  <h5
+                    className={`text-xs truncate ${
                       isActive
-                        ? "bg-[#0D3B66] text-white shadow-2xs"
-                        : isDone
-                        ? "bg-[#F4B41A]/20 text-[#0F172A] border border-[#F4B41A]/40"
-                        : "bg-slate-200/80 text-slate-600 dark:bg-slate-700 dark:text-slate-400"
+                        ? "text-white font-bold"
+                        : "text-slate-800 dark:text-slate-200 font-semibold"
                     }`}
                   >
-                    {idx + 1}
-                  </div>
-
-                  {/* Title & Duration */}
-                  <div className="min-w-0 leading-tight">
-                    <h5
-                      className={`text-xs font-semibold truncate ${
-                        isActive
-                          ? "text-[#0D3B66] dark:text-[#F4B41A] font-bold"
-                          : "text-slate-800 dark:text-slate-200"
-                      }`}
-                    >
-                      {s.title.replace(/^\d+\.\s*/, "")}
-                    </h5>
-                    <span className="text-[10px] text-slate-400 font-normal block mt-0.5">
-                      {s.duration}
-                    </span>
-                  </div>
+                    {s.title.replace(/^\d+\.\s*/, "")}
+                  </h5>
+                  <span
+                    className={`text-[10px] block font-mono mt-0.5 ${
+                      isActive ? "text-blue-100/80" : "text-slate-400 dark:text-slate-500"
+                    }`}
+                  >
+                    {s.duration}
+                  </span>
                 </div>
+              </div>
 
-                {/* Status Percentage / Check Pill */}
-                <div className="shrink-0">
-                  {isDone ? (
-                    <span className="inline-flex items-center justify-center w-5.5 h-5.5 rounded-full bg-[#0D3B66] text-white text-[9px] font-bold shadow-2xs">
-                      100%
-                    </span>
-                  ) : isActive ? (
-                    <span className="inline-flex items-center justify-center w-5.5 h-5.5 rounded-full bg-[#F4B41A] text-[#0F172A] text-[9px] font-bold shadow-2xs">
-                      75%
-                    </span>
-                  ) : (
-                    <span className="inline-flex items-center justify-center w-5.5 h-5.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400 text-[9px] font-medium border border-slate-200/60 dark:border-slate-700">
-                      0%
-                    </span>
-                  )}
-                </div>
-              </button>
-            );
-          })}
-        </div>
+              {/* Status Indicator */}
+              <div className="shrink-0 flex items-center">
+                {isDone ? (
+                  <CheckCircle2
+                    className={`w-4 h-4 ${
+                      isActive ? "text-emerald-300" : "text-emerald-600 dark:text-emerald-400"
+                    }`}
+                  />
+                ) : isActive ? (
+                  <span className="px-2 py-0.5 rounded-full text-[9px] font-bold font-mono bg-white/25 text-white">
+                    Aktif
+                  </span>
+                ) : (
+                  <Circle className="w-3.5 h-3.5 text-slate-300 dark:text-slate-600" />
+                )}
+              </div>
+            </button>
+          );
+        })}
       </div>
 
-      {/* 3. Docked Arcade Companion inside Sidebar (Always 100% visible) */}
-      {children && (
-        <div className="shrink-0">
-          {children}
-        </div>
-      )}
+      {/* 3. Optional children */}
+      {children && <div className="pt-2">{children}</div>}
     </div>
   );
 }

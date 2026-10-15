@@ -10,18 +10,14 @@ async function runSeedLevelModules() {
   const dataFiles = [
     // Official Client Curriculum extracted from client PDFs & AI generated sub-levels
     "data/client_curriculum/level_a1_all_sublevels.json",
-    "data/client_curriculum/level_a2_all_sublevels.json",
-    "data/client_curriculum/level_b1_all_sublevels.json",
-    "data/client_curriculum/level_b2_all_sublevels.json",
-    "data/client_curriculum/level_c1_all_sublevels.json",
-    "data/client_curriculum/level_c2_all_sublevels.json",
+    // Note: A2 s/d C2 are cleared and pending new pilot generation
   ];
 
   const SUB_LEVELS = [
-    // A1 (3 sub-levels - 13 units each: 12 modules + 1 graduation exam)
-    { id: "A1.1", cefr: "A1", title: "A1.1 - Starter Foundations", description: "Fondasi identitas diri, kata ganti, dan percakapan dasar.", orderIndex: 1, unitRange: [1, 13] as [number, number] },
-    { id: "A1.2", cefr: "A1", title: "A1.2 - Daily Logistics & Practical Actions", description: "Aktivitas harian, arah, transaksi belanja, kafe, transportasi, dan kesehatan.", orderIndex: 2, unitRange: [1, 13] as [number, number] },
-    { id: "A1.3", cefr: "A1", title: "A1.3 - Experiences, Comparisons & Intentions", description: "Komparasi, memori liburan, rencana masa depan, dan jembatan ke A2.", orderIndex: 3, unitRange: [1, 13] as [number, number] },
+    // A1 (3 sub-levels - 12 modules each)
+    { id: "A1.1", cefr: "A1", title: "A1.1 - Starter Foundations", description: "Fondasi identitas diri, kata ganti, dan percakapan dasar.", orderIndex: 1, unitRange: [1, 12] as [number, number] },
+    { id: "A1.2", cefr: "A1", title: "A1.2 - Daily Logistics & Practical Actions", description: "Aktivitas harian, arah, transaksi belanja, kafe, transportasi, dan kesehatan.", orderIndex: 2, unitRange: [1, 12] as [number, number] },
+    { id: "A1.3", cefr: "A1", title: "A1.3 - Experiences, Comparisons & Intentions", description: "Komparasi, memori liburan, rencana masa depan, dan jembatan ke A2.", orderIndex: 3, unitRange: [1, 12] as [number, number] },
     // A2 (3 sub-levels - 13 units each: 12 modules + 1 graduation exam)
     { id: "A2.1", cefr: "A2", title: "A2.1 - Elementary Actions", description: "Waktu luang, transaksi belanja, kebutuhan pangan, dan relasi keluarga.", orderIndex: 4, unitRange: [1, 13] as [number, number] },
     { id: "A2.2", cefr: "A2", title: "A2.2 - Social Dynamics, Work & Everyday Life", description: "Profesi, belanja, transportasi, resep makanan, opini film, dan gaya hidup.", orderIndex: 5, unitRange: [1, 13] as [number, number] },
@@ -107,6 +103,11 @@ async function runSeedLevelModules() {
     await db.delete(curriculumModules).where(eq(curriculumModules.id, `C1-M${pad}`));
     await db.delete(moduleSections).where(eq(moduleSections.moduleId, `C2-M${pad}`));
     await db.delete(curriculumModules).where(eq(curriculumModules.id, `C2-M${pad}`));
+  }
+  // Hapus M13 A1 (A1 hanya 12 unit per sub-level)
+  for (const m13Id of ["A1.1-M13", "A1.2-M13", "A1.3-M13"]) {
+    await db.delete(moduleSections).where(eq(moduleSections.moduleId, m13Id));
+    await db.delete(curriculumModules).where(eq(curriculumModules.id, m13Id));
   }
 
   for (const relPath of dataFiles) {

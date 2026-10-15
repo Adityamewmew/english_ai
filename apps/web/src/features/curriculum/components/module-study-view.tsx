@@ -5,8 +5,8 @@ import Link from "next/link";
 import { StudentSidebarRail } from "@/features/dashboard/components/student-sidebar-rail";
 import { StudentTopbar } from "@/features/dashboard/components/student-topbar";
 import { ModuleStagePlaylist, PlaylistStepItem } from "./module-stage-playlist";
+import { SidebarArcadeCompanion } from "./companion/sidebar-arcade-companion";
 import { ModuleStageViewport } from "./module-stage-viewport";
-import { ModuleTutorCallBar } from "./module-tutor-about-card";
 import { ModuleMissionsHub } from "./module-missions-hub";
 import { SubmoduleTutorWelcomeStage } from "./submodule-tutor-welcome-stage";
 import {
@@ -17,12 +17,9 @@ import {
   ChevronRight,
   ArrowLeft,
   CheckCircle2,
-  Sparkles,
 } from "lucide-react";
-import { animeButtonPop } from "@/lib/anime-effects";
 import { submitSubModuleAction } from "@/app/(student)/modules/modules.actions";
 import { playFanfareSound } from "@/lib/sound-fx";
-import { SidebarArcadeCompanion } from "./companion";
 
 interface ModuleStudyViewProps {
   moduleId: string;
@@ -57,7 +54,13 @@ export function ModuleStudyView({
   tutor,
   onRefresh,
 }: ModuleStudyViewProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined" && window.innerWidth >= 1024) {
+      setIsSidebarOpen(true);
+    }
+  }, []);
   // Default to null so module opens the onboarding missions hub first
   const [activeMissionId, setActiveMissionId] = useState<string | null>(() => {
     if (typeof window !== "undefined") {
@@ -221,15 +224,15 @@ export function ModuleStudyView({
                 {/* 1. Breadcrumb & Actions Row with Left Back Button */}
                 <div className="flex items-center justify-between gap-4 flex-wrap">
                   <div className="flex items-center gap-3 flex-wrap">
-                    {/* Tombol Kembali di sebelah kiri */}
+                    {/* Left Back Button */}
                     <button
                       type="button"
                       onClick={() => setActiveMissionId(null)}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all active:scale-95 cursor-pointer shadow-2xs border border-slate-200/60 dark:border-slate-700/60"
-                      title="Kembali ke Sub Modules"
+                      title="Back to Sub-Modules"
                     >
                       <ArrowLeft className="w-3.5 h-3.5 text-slate-600 dark:text-slate-400" />
-                      <span>Kembali</span>
+                      <span>Back</span>
                     </button>
 
                     <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
@@ -241,7 +244,7 @@ export function ModuleStudyView({
                         type="button"
                         onClick={() => setActiveMissionId(null)}
                         className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
-                        title="Kembali ke Sub Modules"
+                        title="Back to Sub-Modules"
                       >
                         {moduleData?.title || `Module ${moduleData?.orderIndex || 1}`}
                       </button>
@@ -263,8 +266,8 @@ export function ModuleStudyView({
                       <span className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">
                         CEFR {moduleData?.cefr || "A1.1"}
                       </span>
-                      <span>{playlistSteps.length} Langkah Belajar</span>
-                      <span>Estimasi 25 Menit</span>
+                      <span>{playlistSteps.length} Learning Steps</span>
+                      <span>Est. 25 Minutes</span>
                     </div>
                   </div>
 
@@ -273,23 +276,23 @@ export function ModuleStudyView({
                       type="button"
                       onClick={() => setIsOnboardingBriefing(true)}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold border border-slate-200/60 dark:border-slate-700/60 transition-all cursor-pointer shadow-2xs"
-                      title="Buka kembali pengantar Mr. Khoirul"
+                      title="Re-open topic briefing"
                     >
-                      <Sparkles className="w-3.5 h-3.5 text-[#F4B41A]" />
-                      <span>Pengantar Mr. Khoirul</span>
+                      <BookOpen className="w-3.5 h-3.5 text-slate-500 dark:text-slate-400" />
+                      <span>Topic Briefing</span>
                     </button>
 
                     {currentSub?.userProgress?.status === "completed" && (
                       <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 text-xs font-medium border border-emerald-200/70 dark:border-emerald-800/60 shrink-0">
                         <CheckCircle2 className="w-3.5 h-3.5" />
-                        <span>Misi Selesai</span>
+                        <span>Mission Completed</span>
                       </div>
                     )}
                   </div>
                 </div>
               </div>
 
-              {/* 2-Column Side-by-Side Learning Layout matching reference mockup */}
+              {/* 2-Column Side-by-Side Learning Layout */}
               <div className="flex flex-col lg:flex-row gap-6 xl:gap-8 items-start">
                 {/* Left Column (Wide): Primary Interactive Learning Stage */}
                 <div className="w-full lg:flex-1 space-y-6 min-w-0">
@@ -314,8 +317,8 @@ export function ModuleStudyView({
                   />
                 </div>
 
-                {/* Right Column: Sticky Sidebar (~265-285px) with scrollable steps & pinned docked character */}
-                <aside className="w-full lg:w-[265px] xl:w-[285px] shrink-0 lg:sticky lg:top-3 lg:self-start">
+                {/* Right Column: Clean Sticky Playlist Sidebar */}
+                <aside className="w-full lg:w-[280px] xl:w-[300px] shrink-0 lg:sticky lg:top-3 lg:self-start space-y-2">
                   <ModuleStagePlaylist
                     steps={playlistSteps}
                     activeStepId={activeStepId}
@@ -323,10 +326,10 @@ export function ModuleStudyView({
                     xpPoints={xpPoints}
                     completedCount={completedSteps.length}
                     totalCount={playlistSteps.length}
-                  >
-                    {/* Character Walking Runway docked directly inside sidebar */}
-                    <SidebarArcadeCompanion />
-                  </ModuleStagePlaylist>
+                  />
+
+                  {/* Free-roaming mini Mr. Khoirul (Bebas jalan di area sidebar, tidak dikurung dalam box) */}
+                  <SidebarArcadeCompanion />
                 </aside>
               </div>
             </div>

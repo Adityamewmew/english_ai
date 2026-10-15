@@ -37,7 +37,7 @@ export function StudentTopbar({
             onToggleSidebar();
           }}
           title={isSidebarOpen ? "Collapse Sidebar" : "Open Sidebar"}
-          className="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer shrink-0"
+          className="w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer shrink-0 touch-manipulation"
         >
           {isSidebarOpen ? <Menu className="w-5 h-5" /> : <PanelLeftOpen className="w-5 h-5 text-[#0D3B66]" />}
         </button>
@@ -60,7 +60,7 @@ export function StudentTopbar({
       </div>
 
       {/* Right Controls */}
-      <div className="flex items-center gap-3 shrink-0">
+      <div className="flex items-center gap-2 sm:gap-3 shrink-0">
         {/* XP / Streak Pill (Only shown if showStreak is true) */}
         {showStreak && (
           <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#F4B41A]/15 border border-[#F4B41A]/40 text-[#0D3B66] dark:text-[#F4B41A] text-xs font-bold shadow-2xs">
@@ -72,11 +72,11 @@ export function StudentTopbar({
         {/* Notifications */}
         <button
           onClick={(e) => animeButtonPop(e.currentTarget)}
-          className="relative w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200/70 dark:border-slate-700/60 flex items-center justify-center text-slate-500 hover:text-[#0D3B66] dark:hover:text-white transition-colors cursor-pointer shadow-2xs"
+          className="relative w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200/70 dark:border-slate-700/60 flex items-center justify-center text-slate-500 hover:text-[#0D3B66] dark:hover:text-white transition-colors cursor-pointer shadow-2xs touch-manipulation"
           title="Notifications"
         >
           <Bell className="w-4 h-4" />
-          <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-[#9E1B1B]" />
+          <span className="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#9E1B1B]" />
         </button>
 
         {/* Profile Avatar Pill (Only shown if showProfile is true) */}

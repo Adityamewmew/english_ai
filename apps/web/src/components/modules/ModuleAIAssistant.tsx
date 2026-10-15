@@ -91,7 +91,7 @@ export function ModuleAIAssistant({
               </Badge>
             </div>
             <span className="text-[11px] text-blue-100/90 font-medium">
-              Tanya seputar materi modul
+              Ask about module material
             </span>
           </div>
 
@@ -116,7 +116,7 @@ export function ModuleAIAssistant({
                 <div className="flex items-center gap-1.5">
                   <h4 className="text-xs font-bold text-white leading-tight">Mr. Khoirul</h4>
                   <Badge variant="primary" className="text-[10px] text-blue-300 font-medium bg-blue-900/60 px-1">
-                    Tutor Modul
+                    Module Tutor
                   </Badge>
                 </div>
                 <p className="text-[10px] text-slate-400 truncate mt-0.5">{moduleTitle}</p>
@@ -133,12 +133,12 @@ export function ModuleAIAssistant({
                   onToggleCall();
                 }}
                 className="gap-1.5 text-xs will-change-transform"
-                title={isCalling ? "Akhiri Percakapan Suara" : "Mulai Percakapan Suara"}
+                title={isCalling ? "End Voice Call" : "Start Voice Call"}
               >
                 {isCalling ? (
                   <>
                     <PhoneOff className="w-3.5 h-3.5" />
-                    <span>Tutup</span>
+                    <span>End</span>
                   </>
                 ) : (
                   <>
@@ -157,7 +157,7 @@ export function ModuleAIAssistant({
                   onToggleOpen();
                 }}
                 className="min-h-[44px] min-w-[44px] sm:h-8 sm:w-8 text-slate-400 hover:text-white hover:bg-slate-800"
-                title="Sembunyikan"
+                title="Hide"
               >
                 <X className="w-4 h-4" />
               </Button>
@@ -171,12 +171,12 @@ export function ModuleAIAssistant({
                 <Radio className="w-4 h-4 text-emerald-400 animate-pulse" />
                 <span className="font-semibold text-[11px]">
                   {isSpeaking
-                    ? "Mr. Khoirul sedang berbicara..."
+                    ? "Mr. Khoirul is speaking..."
                     : isListening
-                    ? "Mendengarkan Anda..."
+                    ? "Listening to you..."
                     : isThinking
-                    ? "Sedang berpikir..."
-                    : "Panggilan Suara Aktif"}
+                    ? "Thinking..."
+                    : "Active Voice Call"}
                 </span>
               </div>
               <Badge variant="success" className="text-[10px]">
@@ -206,14 +206,14 @@ export function ModuleAIAssistant({
                   </div>
 
                   <div className="flex items-center gap-1.5 mt-1 px-1 text-[10px] text-slate-400">
-                    <span>{isAssistant ? "Mr. Khoirul" : "Anda"}</span>
+                    <span>{isAssistant ? "Mr. Khoirul" : "You"}</span>
                     {msg.timestamp && <span>• {msg.timestamp}</span>}
                     {isAssistant && (
                       <button
                         type="button"
                         onClick={() => onPlayAudio(msg.text)}
                         className="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 ml-1 p-0.5 cursor-pointer"
-                        title="Dengarkan suara"
+                        title="Listen to voice"
                       >
                         <Volume2 className="w-3 h-3" />
                       </button>
@@ -226,7 +226,7 @@ export function ModuleAIAssistant({
             {isThinking && (
               <div className="flex items-center gap-2 p-3 rounded-xl bg-slate-100 dark:bg-slate-800/80 text-slate-500 text-xs w-fit">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-ping" />
-                <span>Mr. Khoirul sedang merespons...</span>
+                <span>Mr. Khoirul is responding...</span>
               </div>
             )}
           </div>
@@ -241,7 +241,7 @@ export function ModuleAIAssistant({
                 onToggleMic();
               }}
               className="h-9 w-9 rounded-xl will-change-transform shrink-0"
-              title={isListening ? "Berhenti mendengarkan" : "Bicara lewat mikrofon"}
+              title={isListening ? "Stop listening" : "Speak via microphone"}
             >
               {isListening ? <Mic className="w-4 h-4 animate-pulse" /> : <MicOff className="w-4 h-4" />}
             </Button>
@@ -256,7 +256,7 @@ export function ModuleAIAssistant({
                   onSendMessage();
                 }
               }}
-              placeholder="Ketik pertanyaan seputar materi..."
+              placeholder="Type a question about the topic..."
               className="flex-1 text-xs"
             />
 
@@ -268,7 +268,7 @@ export function ModuleAIAssistant({
                 onSendMessage();
               }}
               className="h-9 w-9 rounded-xl will-change-transform shrink-0"
-              title="Kirim pesan"
+              title="Send message"
             >
               <Send className="w-4 h-4" />
             </Button>

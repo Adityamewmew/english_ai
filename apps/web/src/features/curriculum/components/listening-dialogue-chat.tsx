@@ -47,10 +47,10 @@ export function ListeningDialogueChat({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100 dark:border-slate-800">
         <div>
           <span className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] uppercase tracking-wider block font-mono">
-            Langkah 2 · Percakapan Multi-Speaker ({dialogueLines.length} Baris)
+            Step 2 · Multi-Speaker Dialogue ({dialogueLines.length} Lines)
           </span>
           <h3 className="text-xl font-black text-slate-900 dark:text-white mt-0.5">
-            Percakapan Jamie &amp; Marta
+            Interactive Dialogue Feed
           </h3>
         </div>
 
@@ -60,34 +60,35 @@ export function ListeningDialogueChat({
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs transition-all active:scale-95 cursor-pointer shadow-xs shrink-0"
         >
           <Play className="w-3.5 h-3.5 fill-current text-[#F4B41A]" />
-          <span>Putar Seluruh Percakapan</span>
+          <span>Play Full Dialogue</span>
         </button>
       </div>
 
-      {/* Chat Bubbles Feed (Jamie Left, Marta Right) */}
+      {/* Chat Bubbles Feed (Speaker 1 Left, Speaker 2 Right) */}
       <div className="space-y-4 max-w-2xl mx-auto py-2">
         {dialogueLines.map((line, idx) => {
           const speakerName = (line.speaker || "").trim();
-          const isJamie = speakerName.toLowerCase() === "jamie";
+          const firstSpeaker = (dialogueLines[0]?.speaker || "").trim();
+          const isFirstSpeaker = speakerName === firstSpeaker || !speakerName;
           const isPlaying = activeLineIdx === idx;
           const lineText = line.text || line.en || "";
 
           return (
             <div
               key={idx}
-              className={`flex flex-col ${isJamie ? "items-start" : "items-end"}`}
+              className={`flex flex-col ${isFirstSpeaker ? "items-start" : "items-end"}`}
             >
               {/* Speaker Label */}
               <div
                 className={`flex items-center gap-1.5 mb-1 px-1 text-xs font-bold ${
-                  isJamie
+                  isFirstSpeaker
                     ? "text-[#0D3B66] dark:text-sky-300"
                     : "text-amber-700 dark:text-amber-400"
                 }`}
               >
                 <span
                   className={`w-2 h-2 rounded-full ${
-                    isJamie ? "bg-[#0D3B66]" : "bg-amber-500"
+                    isFirstSpeaker ? "bg-[#0D3B66]" : "bg-amber-500"
                   }`}
                 />
                 <span>{speakerName}</span>
@@ -96,7 +97,7 @@ export function ListeningDialogueChat({
               {/* Chat Bubble with Audio Action */}
               <div
                 className={`max-w-[85%] sm:max-w-[78%] p-4 rounded-2xl shadow-xs transition-all border ${
-                  isJamie
+                  isFirstSpeaker
                     ? "bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-tl-xs"
                     : "bg-[#0D3B66]/10 dark:bg-[#0D3B66]/30 border-[#0D3B66]/20 dark:border-[#0D3B66]/40 rounded-tr-xs"
                 } ${
@@ -125,7 +126,7 @@ export function ListeningDialogueChat({
                         ? "bg-[#0D3B66] text-[#F4B41A]"
                         : "bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200"
                     }`}
-                    title="Dengarkan baris ini"
+                    title="Listen to this line"
                   >
                     <Volume2 className="w-3.5 h-3.5" />
                   </button>

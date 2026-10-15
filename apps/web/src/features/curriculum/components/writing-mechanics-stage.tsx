@@ -7,7 +7,6 @@ import {
   RotateCcw,
   Send,
   AlertCircle,
-  HelpCircle,
   ArrowRight,
 } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
@@ -53,7 +52,7 @@ export function WritingMechanicsStage({
   // Live mechanics checks
   const hasCapitalStart = /^[A-Z]/.test(userText.trim());
   const hasTerminalPeriod = /[.!?]$/.test(userText.trim());
-  const allRequiredCapsPresent = currentChallenge.requiredCapitals.every((cap) =>
+  const allRequiredCapsPresent = (currentChallenge?.requiredCapitals || []).every((cap) =>
     userText.includes(cap)
   );
 
@@ -75,7 +74,7 @@ export function WritingMechanicsStage({
         ...prev,
         [currentChallenge.id]: {
           isCorrect: true,
-          feedback: "Sempurna! Seluruh aturan huruf kapital dan tanda baca ditulis dengan tepat.",
+          feedback: "Perfect! All capitalization and punctuation mechanics are written accurately.",
         },
       }));
       if (!completedMap[currentChallenge.id]) {
@@ -84,16 +83,16 @@ export function WritingMechanicsStage({
       }
     } else {
       playPopSound();
-      let hint = "Periksa kembali ejaan kata, spasi, huruf kapital, dan tanda titik.";
+      let hint = "Check spelling, spacing, capitalization, and punctuation again.";
       if (!hasCapitalStart) {
-        hint = "Awal kalimat harus menggunakan huruf kapital.";
+        hint = "The first letter of the sentence must be capitalized.";
       } else if (!hasTerminalPeriod) {
-        hint = "Jangan lupa sertakan tanda titik (.) di akhir kalimat tanpa spasi sebelum titik.";
+        hint = "Don't forget to include a period (.) at the end of the sentence without a space before it.";
       } else if (!allRequiredCapsPresent) {
         const missing = currentChallenge.requiredCapitals.filter(
           (c) => !userText.includes(c)
         );
-        hint = `Pastikan kata ini berhuruf kapital: ${missing.join(", ")}.`;
+        hint = `Make sure these words are capitalized: ${missing.join(", ")}.`;
       }
       setValidationStates((prev) => ({
         ...prev,
@@ -131,14 +130,14 @@ export function WritingMechanicsStage({
             Step 2 · Real Writing &amp; Mechanics Correction
           </span>
           <span className="text-xs font-bold text-slate-500 font-mono">
-            {completedCount}/{challenges.length} Selesai
+            {completedCount}/{challenges.length} Completed
           </span>
         </div>
         <h3 className="text-lg sm:text-xl font-black text-slate-900 dark:text-white">
-          Ketik &amp; Perbaiki Kalimat (Sentence Rewrite)
+          Sentence Rewrite &amp; Mechanics Drill
         </h3>
         <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-          Ketik ulang kalimat di bawah ini menjadi kalimat yang benar dengan menerapkan aturan huruf kapital dan tanda baca.
+          Rewrite the sentence below accurately by applying capitalization and punctuation rules.
         </p>
       </div>
 
@@ -161,7 +160,7 @@ export function WritingMechanicsStage({
                   : "text-slate-500 hover:text-slate-900 dark:hover:text-slate-200"
               }`}
             >
-              <span>Tantangan {idx + 1}</span>
+              <span>Challenge {idx + 1}</span>
               {isChallengeDone && (
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#F4B41A]" />
               )}
@@ -175,7 +174,7 @@ export function WritingMechanicsStage({
         {/* Sentence With Errors to Fix */}
         <div className="space-y-2">
           <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider font-mono block">
-            Kalimat Belum Tepat:
+            Uncorrected Sentence:
           </span>
           <div className="p-4 rounded-xl bg-rose-50/70 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/50 flex items-center justify-between gap-3">
             <span className="text-sm sm:text-base font-mono font-bold text-rose-900 dark:text-rose-200">
@@ -185,20 +184,20 @@ export function WritingMechanicsStage({
               type="button"
               onClick={handleListenTarget}
               className="p-2 rounded-lg bg-white/80 dark:bg-slate-800 text-[#0D3B66] dark:text-[#F4B41A] hover:bg-white transition-colors cursor-pointer shrink-0 shadow-2xs"
-              title="Dengarkan pengucapan kalimat"
+              title="Listen to sentence audio"
             >
               <Volume2 className="w-4 h-4" />
             </button>
           </div>
           <div className="text-xs text-slate-500 dark:text-slate-400 italic">
-            Artinya: &ldquo;{currentChallenge.translation}&rdquo;
+            Translation: &ldquo;{currentChallenge.translation}&rdquo;
           </div>
         </div>
 
         {/* Input Text Area for Student Writing */}
         <div className="space-y-2">
           <label className="text-xs font-bold text-slate-700 dark:text-slate-200 block">
-            Ketik Kalimat Yang Telah Diperbaiki:
+            Type the Corrected Sentence:
           </label>
           <input
             type="text"
@@ -218,7 +217,7 @@ export function WritingMechanicsStage({
                 handleValidate();
               }
             }}
-            placeholder="Ketik kalimat dengan huruf kapital & tanda titik yang benar..."
+            placeholder="Type the sentence with proper capitalization and period..."
             className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66] dark:focus:ring-[#F4B41A]"
           />
         </div>
@@ -233,7 +232,7 @@ export function WritingMechanicsStage({
             }`}
           >
             <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-            <span>Kapital Awal Kalimat</span>
+            <span>Capitalized Initial Letter</span>
           </div>
 
           <div
@@ -244,7 +243,7 @@ export function WritingMechanicsStage({
             }`}
           >
             <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-            <span>Nama / Negara Kapital</span>
+            <span>Proper Noun / Country Caps</span>
           </div>
 
           <div
@@ -255,7 +254,7 @@ export function WritingMechanicsStage({
             }`}
           >
             <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-            <span>Tanda Titik (.) Akhir</span>
+            <span>Terminal Period (.)</span>
           </div>
         </div>
 
@@ -272,19 +271,19 @@ export function WritingMechanicsStage({
               {validation.isCorrect ? (
                 <>
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <span>Hebat! Jawaban Benar (+15 XP)</span>
+                  <span>Great! Correct Answer (+15 XP)</span>
                 </>
               ) : (
                 <>
                   <AlertCircle className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  <span>Perlu Perbaikan</span>
+                  <span>Needs Improvement</span>
                 </>
               )}
             </div>
             <p className="leading-relaxed">{validation.feedback}</p>
             {validation.isCorrect && (
               <p className="text-[11px] text-emerald-700 dark:text-emerald-400 font-mono">
-                Aturan: {currentChallenge.keyRule}
+                Rule: {currentChallenge.keyRule}
               </p>
             )}
           </div>
@@ -305,17 +304,17 @@ export function WritingMechanicsStage({
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-colors cursor-pointer"
           >
             <RotateCcw className="w-3.5 h-3.5" />
-            <span>Ketik Ulang</span>
+            <span>Clear Input</span>
           </button>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             {validation?.isCorrect && activeIdx + 1 < challenges.length ? (
               <button
                 type="button"
                 onClick={handleNextChallenge}
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs transition-all active:scale-95 cursor-pointer shadow-xs"
               >
-                <span>Tantangan Berikutnya</span>
+                <span>Next Challenge</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             ) : (
@@ -326,7 +325,7 @@ export function WritingMechanicsStage({
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs transition-all active:scale-95 cursor-pointer disabled:opacity-40 shadow-xs"
               >
                 <Send className="w-3.5 h-3.5" />
-                <span>Periksa Kalimat</span>
+                <span>Check Sentence</span>
               </button>
             )}
           </div>

@@ -66,7 +66,8 @@ export async function CurriculumRoadmapView({
           <div className="flex items-center gap-3">
             <Link
               href="/dashboard"
-              className="p-2 text-slate-500 hover:text-slate-900 dark:hover:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              className="p-2.5 text-slate-500 hover:text-slate-900 dark:hover:text-white rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation"
+              aria-label="Back to Dashboard"
             >
               <ArrowLeft className="w-5 h-5" />
             </Link>
@@ -82,8 +83,8 @@ export async function CurriculumRoadmapView({
 
           <div className="flex items-center gap-3">
             <Link href="/call">
-              <Button variant="outline" size="sm" className="btn-skeuo-yellow text-xs border-b-2">
-                <PhoneCall className="w-3.5 h-3.5 mr-1 text-[#0D3B66]" />
+              <Button variant="outline" size="sm" className="btn-skeuo-yellow text-xs border-b-2 min-h-[44px] px-4 touch-manipulation">
+                <PhoneCall className="w-4 h-4 mr-1 text-[#0D3B66]" />
                 Call Speaking
               </Button>
             </Link>
@@ -97,10 +98,10 @@ export async function CurriculumRoadmapView({
           <div className="p-8 text-center bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
             <BookOpen className="w-10 h-10 text-slate-400 mx-auto mb-3" />
             <h3 className="font-bold text-slate-800 dark:text-white mb-1">
-              Kurikulum Sedang Disiapkan
+              Curriculum In Preparation
             </h3>
             <p className="text-xs text-slate-500">
-              Silakan periksa kembali beberapa saat lagi atau hubungi administrator.
+              Please check back shortly or contact the administrator.
             </p>
           </div>
         ) : (
@@ -200,9 +201,9 @@ export async function CurriculumRoadmapView({
                           nextLevelTitle={nextLvl.title}
                           nextLevelId={nextLvl.id}
                           firstNextModuleId={nextLvl.modules?.[0]?.id || `${nextLvl.id}-M01`}
-                          description={`Selamat! Seluruh materi di ${activeLevel.title} telah kamu selesaikan. Buka dan lanjutkan pembelajaran ke ${nextLvl.title} untuk meningkatkan kemampuan bahasa Inggrismu.`}
-                          nextLevelButtonText={`Buka Level ${nextLvl.cefr}`}
-                          firstModuleButtonText={`Mulai Modul 1`}
+                          description={`Congratulations! You have completed all materials in ${activeLevel.title}. Unlock and continue your learning to ${nextLvl.title} to level up your English skills.`}
+                          nextLevelButtonText={`Unlock Level ${nextLvl.cefr}`}
+                          firstModuleButtonText={`Start Module 1`}
                         />
                       );
                     })()}
@@ -219,7 +220,7 @@ export async function CurriculumRoadmapView({
                             <Button asChild variant="outline" size="sm" className="rounded-xl gap-2 shadow-sm border-b-2">
                               <Link href={`/modules?level=${prevLvl.id}`}>
                                 <ArrowLeft className="w-4 h-4 text-[#0D3B66]" />
-                                <span>Kembali ke {prevLvl.title.split(" - ")[0]}</span>
+                                <span>Back to {prevLvl.title.split(" - ")[0]}</span>
                               </Link>
                             </Button>
                           ) : (
@@ -229,7 +230,7 @@ export async function CurriculumRoadmapView({
                           {nextLvl && nextLvl.isUnlocked ? (
                             <Button asChild size="sm" className="btn-skeuo-navy rounded-xl gap-2 shadow-sm">
                               <Link href={`/modules?level=${nextLvl.id}`}>
-                                <span>Lanjut ke {nextLvl.title.split(" - ")[0]}</span>
+                                <span>Continue to {nextLvl.title.split(" - ")[0]}</span>
                                 <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
                               </Link>
                             </Button>
@@ -237,7 +238,7 @@ export async function CurriculumRoadmapView({
                             <Button asChild variant="secondary" size="sm" className="rounded-xl gap-2 bg-[#0D3B66]/10 text-[#0D3B66] dark:text-[#F4B41A] border-b-2 border-slate-200 dark:border-slate-700">
                               <Link href="/call">
                                 <PhoneCall className="w-3.5 h-3.5" />
-                                <span>Praktik Bicara Bebas AI</span>
+                                <span>Free AI Voice Practice</span>
                               </Link>
                             </Button>
                           )}

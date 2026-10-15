@@ -8,7 +8,6 @@ import {
   Mic,
   Square,
   Volume2,
-  CheckCircle2,
   MapPin,
   RotateCcw,
   Send,
@@ -176,7 +175,6 @@ export function PracticumRoleplayCall({
     }
   };
 
-  // 1. Student stops speaking and reviews transcript
   const handleStopRecording = () => {
     playSnapSound();
     setIsRecordingStudent(false);
@@ -189,7 +187,6 @@ export function PracticumRoleplayCall({
     setIsPendingSend(true);
   };
 
-  // 2. Student confirms / sends the transcript to AI
   const handleSendStudentTurn = async () => {
     setIsPendingSend(false);
     const studentText = currentTranscript.trim() || "Yes, thank you Mr. Khoirul.";
@@ -259,7 +256,6 @@ export function PracticumRoleplayCall({
     }
   };
 
-  // 3. Student cancels current speech and re-records
   const handleCancelAndRerecord = () => {
     setIsPendingSend(false);
     setCurrentTranscript("");
@@ -282,12 +278,12 @@ export function PracticumRoleplayCall({
               <MapPin className="w-3.5 h-3.5" />
             </span>
             <span className="text-xs font-bold text-slate-900 dark:text-white">
-              {question.scenarioContext || "Situasi Percakapan Nyata"}
+              {question.scenarioContext || "Real Conversation Scenario"}
             </span>
           </div>
           {question.characterRole && (
             <span className="text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-slate-200/70 dark:bg-slate-700 text-slate-800 dark:text-slate-200">
-              Peran Mr. Khoirul: {question.characterRole}
+              Mr. Khoirul&apos;s Role: {question.characterRole}
             </span>
           )}
         </div>
@@ -311,20 +307,20 @@ export function PracticumRoleplayCall({
 
           <div className="space-y-1">
             <h4 className="text-base font-black text-slate-900 dark:text-white">
-              Panggilan Suara Bersama Mr. Khoirul
+              Voice Call with Mr. Khoirul
             </h4>
             <p className="text-xs text-slate-500 dark:text-slate-400 max-w-sm mx-auto leading-relaxed">
-              Percakapan interaktif 3 putaran ramah pemula. Dengarkan sapaan Mr. Khoirul lalu jawab dengan percaya diri.
+              Beginner-friendly 3-turn interactive call. Listen to Mr. Khoirul&apos;s greeting and respond with confidence.
             </p>
           </div>
 
           <button
             type="button"
             onClick={handleStartCall}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl btn-skeuo-navy text-white text-xs sm:text-sm font-black shadow-md transition-all active:scale-95 cursor-pointer min-h-[44px] touch-manipulation w-full sm:w-auto"
           >
             <PhoneCall className="w-4 h-4 fill-current text-[#F4B41A]" />
-            <span>Mulai Telepon Mr. Khoirul</span>
+            <span>Call Mr. Khoirul</span>
           </button>
         </div>
       ) : (
@@ -366,7 +362,7 @@ export function PracticumRoleplayCall({
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <span>{formatTimer(callSeconds)}</span>
                   <span>·</span>
-                  <span>Putaran {Math.min(turnsCount + 1, 3)}/3</span>
+                  <span>Turn {Math.min(turnsCount + 1, 3)}/3</span>
                 </div>
               </div>
             </div>
@@ -393,18 +389,18 @@ export function PracticumRoleplayCall({
                 )}
                 <span>
                   {isSpeakingTutor
-                    ? "Mr. Khoirul Berbicara"
+                    ? "Mr. Khoirul Speaking"
                     : isRecordingStudent
-                    ? "Mendengarkanmu..."
-                    : "Giliranmu Menjawab"}
+                    ? "Listening..."
+                    : "Your Turn to Speak"}
                 </span>
               </span>
 
               <button
                 type="button"
                 onClick={handleEndCall}
-                title="Akhiri Panggilan"
-                className="p-2 rounded-xl text-slate-400 hover:text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-950/40 transition-all cursor-pointer"
+                title="End Call"
+                className="p-2.5 rounded-xl text-slate-400 hover:text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-950/40 transition-all cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation"
               >
                 <PhoneOff className="w-4 h-4" />
               </button>
@@ -440,7 +436,7 @@ export function PracticumRoleplayCall({
                   }`}
                 >
                   <span className="text-[10px] font-mono block opacity-60 mb-0.5">
-                    {turn.role === "user" ? "Kamu" : "Mr. Khoirul"}
+                    {turn.role === "user" ? "You" : "Mr. Khoirul"}
                   </span>
                   &ldquo;{turn.text}&rdquo;
                 </div>
@@ -452,10 +448,10 @@ export function PracticumRoleplayCall({
               <div className="flex justify-end">
                 <div className="max-w-[80%] p-3.5 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-xs text-amber-900 dark:text-amber-200 rounded-br-xs animate-pulse space-y-1">
                   <span className="text-[10px] font-mono font-bold uppercase block text-amber-700 dark:text-amber-400">
-                    Sedang Merekam Suara...
+                    Recording Voice...
                   </span>
                   <p className="font-medium italic">
-                    {currentTranscript ? `"${currentTranscript}"` : "Bicaralah sekarang..."}
+                    {currentTranscript ? `"${currentTranscript}"` : "Speak now..."}
                   </p>
                 </div>
               </div>
@@ -465,24 +461,24 @@ export function PracticumRoleplayCall({
           {/* Call Controls & Review Bar */}
           <div className="p-4 bg-slate-50/90 dark:bg-slate-850 border-t border-slate-200 dark:border-slate-800">
             {isRecordingStudent ? (
-              <div className="flex items-center justify-between gap-3">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                 <div className="flex items-center gap-2 text-xs font-mono text-rose-600 dark:text-rose-400 font-bold">
                   <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping" />
-                  <span>Merekam ucapanmu...</span>
+                  <span>Recording your speech...</span>
                 </div>
                 <button
                   type="button"
                   onClick={handleStopRecording}
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-black shadow-md active:scale-95 cursor-pointer"
+                  className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-black shadow-md active:scale-95 cursor-pointer min-h-[44px] touch-manipulation w-full sm:w-auto"
                 >
                   <Square className="w-3.5 h-3.5 fill-current" />
-                  <span>Selesai Bicara</span>
+                  <span>Stop Speaking</span>
                 </button>
               </div>
             ) : isPendingSend ? (
               <div className="space-y-2">
                 <div className="flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400">
-                  <span>Tinjau ucapanmu sebelum dikirim (bisa kamu edit jika ada kata yang salah):</span>
+                  <span>Review your response before sending (you can edit if any word was misheard):</span>
                 </div>
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                   <input
@@ -490,25 +486,25 @@ export function PracticumRoleplayCall({
                     value={currentTranscript}
                     onChange={(e) => setCurrentTranscript(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && handleSendStudentTurn()}
-                    placeholder="Ketik kalimat responmu jika mikrofon salah dengar..."
-                    className="flex-1 px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-xs text-slate-900 dark:text-slate-100 font-medium focus:outline-none focus:ring-2 focus:ring-[#0D3B66]"
+                    placeholder="Type your response if speech recognition was off..."
+                    className="flex-1 px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-xs text-slate-900 dark:text-slate-100 font-medium focus:outline-none focus:ring-2 focus:ring-[#0D3B66] min-h-[44px]"
                   />
-                  <div className="flex items-center gap-2 self-end sm:self-center">
+                  <div className="flex items-center gap-2 w-full sm:w-auto">
                     <button
                       type="button"
                       onClick={handleSendStudentTurn}
-                      className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-xs active:scale-95 cursor-pointer"
+                      className="flex-1 sm:flex-none justify-center flex items-center gap-1.5 px-5 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-xs active:scale-95 cursor-pointer min-h-[44px] touch-manipulation"
                     >
                       <Send className="w-3.5 h-3.5" />
-                      <span>Kirim Respon</span>
+                      <span>Send Response</span>
                     </button>
                     <button
                       type="button"
                       onClick={handleCancelAndRerecord}
-                      className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white dark:bg-slate-700 hover:bg-slate-100 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-xs font-bold active:scale-95 cursor-pointer"
+                      className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-white dark:bg-slate-700 hover:bg-slate-100 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-xs font-bold active:scale-95 cursor-pointer min-h-[44px] touch-manipulation"
                     >
                       <RotateCcw className="w-3.5 h-3.5" />
-                      <span>Ulangi</span>
+                      <span>Redo</span>
                     </button>
                   </div>
                 </div>
@@ -519,18 +515,18 @@ export function PracticumRoleplayCall({
                   type="button"
                   onClick={handleStartTalking}
                   disabled={isSpeakingTutor}
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-xs active:scale-95 cursor-pointer disabled:opacity-50"
+                  className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-xs active:scale-95 cursor-pointer disabled:opacity-50 min-h-[48px] touch-manipulation"
                 >
                   <Mic className="w-4 h-4 text-[#0D3B66]" />
-                  <span>Tekan untuk Balas Bicara</span>
+                  <span>Tap to Speak Response</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={handleEndCall}
-                  className="text-xs font-semibold text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 cursor-pointer"
+                  className="text-xs font-semibold text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center px-3 py-2 touch-manipulation"
                 >
-                  Akhiri Panggilan
+                  End Call
                 </button>
               </div>
             )}
@@ -552,10 +548,10 @@ export function PracticumRoleplayCall({
             </div>
             <div>
               <span className="text-xs font-bold text-emerald-900 dark:text-emerald-200 block">
-                Sesi Roleplay Selesai Tuntas!
+                Roleplay Session Completed!
               </span>
               <span className="text-[11px] text-emerald-700 dark:text-emerald-300">
-                Mr. Khoirul mengapresiasi partisipasi aktifmu dalam percakapan ini.
+                Mr. Khoirul commends your active participation in this conversation.
               </span>
             </div>
           </div>

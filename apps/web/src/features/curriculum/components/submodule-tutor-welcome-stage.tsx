@@ -55,9 +55,9 @@ export function SubmoduleTutorWelcomeStage({
   const welcomeSpeech = useMemo(() => {
     const theorySec = subModule?.sections?.find((s: any) => s.sectionType === "theory");
     const target = theorySec?.content?.linguisticTarget;
-    const grammarTopic = subModule?.grammarFocus || target?.grammarTopic || "Pola Kalimat Dasar";
-    const vocabTopic = subModule?.vocabularyFocus || target?.vocabularyTopic || "Kosakata Terkait";
-    const functionText = target?.languageFunction || "berkomunikasi dengan percaya diri";
+    const grammarTopic = subModule?.grammarFocus || target?.grammarTopic || "Core Sentence Patterns";
+    const vocabTopic = subModule?.vocabularyFocus || target?.vocabularyTopic || "Key Vocabulary";
+    const functionText = target?.languageFunction || "communicate with confidence";
 
     return (
       subModule?.onboardingSpeech ||
@@ -79,7 +79,7 @@ export function SubmoduleTutorWelcomeStage({
       speechTimerRef.current = null;
     }
     setTimeout(() => {
-      setTutorPose((prev) => (prev === "thumbsup" ? "idle" : prev));
+      setTutorPose((prev: TutorPose) => (prev === "thumbsup" ? "idle" : prev));
     }, 2500);
   }, []);
 
@@ -229,10 +229,10 @@ export function SubmoduleTutorWelcomeStage({
   const target = theorySec?.content?.linguisticTarget;
 
   const poseLabel: Record<TutorPose, string> = {
-    idle: "Menunggu",
-    waving: "Menyapa",
-    talking: "Menjelaskan",
-    thumbsup: "Semangat!",
+    idle: "Waiting",
+    waving: "Greeting",
+    talking: "Explaining",
+    thumbsup: "Awesome!",
   };
 
   return (
@@ -244,12 +244,12 @@ export function SubmoduleTutorWelcomeStage({
           className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all border border-slate-200 dark:border-slate-700 shadow-xs cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4 text-slate-500" />
-          <span>Kembali ke Daftar Misi</span>
+          <span>Back to Missions</span>
         </button>
 
         <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
           <span className="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold">
-            Modul {moduleData?.id || "A1.1-M01"}
+            Module {moduleData?.id || "A1.1-M01"}
           </span>
           <span>·</span>
           <span className="text-[#0D3B66] dark:text-[#F4B41A] font-bold">
@@ -279,7 +279,7 @@ export function SubmoduleTutorWelcomeStage({
             <ThreejsPixelTutorStage
               pose={tutorPose}
               isSpeaking={isSpeaking}
-              className="w-full h-80 sm:h-96"
+              className="w-full h-52 sm:h-72 lg:h-96"
             />
           </div>
 
@@ -287,10 +287,10 @@ export function SubmoduleTutorWelcomeStage({
             <button
               type="button"
               onClick={handleReplay}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 text-slate-700 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-700 shadow-2xs transition-all cursor-pointer"
+              className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 text-slate-700 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-700 shadow-2xs transition-all cursor-pointer min-h-[44px] touch-manipulation"
             >
-              <RotateCcw className="w-3.5 h-3.5 text-slate-500" />
-              <span>Dengarkan Ulang</span>
+              <RotateCcw className="w-4 h-4 text-slate-500" />
+              <span>Replay Audio</span>
             </button>
 
             <button
@@ -304,9 +304,9 @@ export function SubmoduleTutorWelcomeStage({
                   speakGreeting(welcomeSpeech);
                 }
               }}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 text-slate-700 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-700 shadow-2xs transition-all cursor-pointer"
+              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 text-slate-700 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-700 shadow-2xs transition-all cursor-pointer min-h-[44px] min-w-[44px] touch-manipulation"
             >
-              {isMuted ? <VolumeX className="w-3.5 h-3.5 text-red-400" /> : <Volume2 className="w-3.5 h-3.5 text-slate-500" />}
+              {isMuted ? <VolumeX className="w-4 h-4 text-red-400" /> : <Volume2 className="w-4 h-4 text-slate-500" />}
             </button>
           </div>
         </div>
@@ -339,14 +339,14 @@ export function SubmoduleTutorWelcomeStage({
                       <span className="w-1 h-4 bg-emerald-500 rounded-full animate-pulse" style={{ animationDelay: "0.15s" }} />
                       <span className="w-1 h-2.5 bg-emerald-500 rounded-full animate-pulse" style={{ animationDelay: "0.3s" }} />
                     </span>
-                    Berbicara
+                    Speaking
                   </span>
                 )}
               </div>
 
               <p className="text-sm text-slate-800 dark:text-slate-100 leading-relaxed min-h-[90px]">
                 {greetingPhase === "entering" || greetingPhase === "waving" ? (
-                  <span className="text-slate-400 italic">Mr. Khoirul sedang menyapa...</span>
+                  <span className="text-slate-400 italic">Mr. Khoirul is greeting you...</span>
                 ) : (
                   <>
                     {displayedText}
@@ -359,7 +359,7 @@ export function SubmoduleTutorWelcomeStage({
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
               <div className="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-1">
                 <span className="text-[11px] font-semibold text-slate-500 dark:text-slate-400">
-                  Target Tata Bahasa
+                  Grammar Target
                 </span>
                 <p className="text-xs font-bold text-slate-900 dark:text-white">
                   {subModule?.grammarFocus || target?.grammarTopic || "Verb 'To Be'"}
@@ -368,7 +368,7 @@ export function SubmoduleTutorWelcomeStage({
 
               <div className="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-1">
                 <span className="text-[11px] font-semibold text-slate-500 dark:text-slate-400">
-                  Fokus Kosakata
+                  Vocabulary Focus
                 </span>
                 <p className="text-xs font-bold text-slate-900 dark:text-white">
                   {subModule?.vocabularyFocus || target?.vocabularyTopic || "Countries & Origin"}
@@ -377,10 +377,10 @@ export function SubmoduleTutorWelcomeStage({
 
               <div className="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-1">
                 <span className="text-[11px] font-semibold text-slate-500 dark:text-slate-400">
-                  Hasil Belajar
+                  Learning Outcome
                 </span>
                 <p className="text-xs font-bold text-slate-900 dark:text-white">
-                  {target?.languageFunction || "Refleks Berbicara & Membaca"}
+                  {target?.languageFunction || "Active Conversational Skills"}
                 </p>
               </div>
             </div>
@@ -390,17 +390,17 @@ export function SubmoduleTutorWelcomeStage({
             <button
               type="button"
               onClick={handleStart}
-              className="text-xs text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 font-medium underline cursor-pointer order-2 sm:order-1"
+              className="text-xs text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 font-medium underline cursor-pointer order-2 sm:order-1 min-h-[44px] flex items-center justify-center px-4 touch-manipulation"
             >
-              Lewati pengantar
+              Skip intro
             </button>
 
             <button
               type="button"
               onClick={handleStart}
-              className="w-full sm:w-auto px-7 py-3 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95 cursor-pointer order-1 sm:order-2"
+              className="w-full sm:w-auto px-7 py-3 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95 cursor-pointer order-1 sm:order-2 min-h-[48px] touch-manipulation"
             >
-              <span>Mulai Belajar</span>
+              <span>Start Mission</span>
               <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
             </button>
           </div>

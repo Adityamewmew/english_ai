@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { BookOpen, Volume2, CheckCircle2, ArrowRight } from "lucide-react";
+import { Volume2, CheckCircle2 } from "lucide-react";
 import { animeButtonPop, animeShake } from "@/lib/anime-effects";
 import { playPopSound, playMatchSuccessSound, playErrorSound } from "@/lib/sound-fx";
 
@@ -60,15 +60,15 @@ export function StageReadingOnboarding({
   const [warmupAnswered, setWarmupAnswered] = useState(false);
 
   const defaultWarmup = {
-    prompt: "Saat membaca teks perkenalan dalam bahasa Inggris, informasi kunci apa yang harus kamu cari terlebih dahulu?",
+    prompt: "When reading an introductory text in English, what key information should you scan for first?",
     options: [
-      "Nama orang, usia, dan kata penunjuk asal negara (from ...)",
-      "Kamus lengkap untuk menerjemahkan setiap kata tanpa kecuali",
-      "Struktur tata bahasa tingkat lanjut yang belum dipelajari",
+      "Names, ages, and country indicator words (from ...)",
+      "A complete dictionary to translate every single word without exception",
+      "Advanced complex grammar structures",
     ],
     correctIndex: 0,
     explanation:
-      "Tepat sekali. Membaca perkenalan difokuskan pada pemindaian detail penting seperti nama, angka usia, dan asal negara, bukan menerjemahkan seluruh kata.",
+      "Exactly right! Reading introductions focuses on scanning essential details like names, ages, and countries of origin, rather than translating every single word.",
   };
 
   const warmup = warmupData || defaultWarmup;
@@ -108,15 +108,15 @@ export function StageReadingOnboarding({
     grammarTopic: "Verb 'To Be' (am, is, are)",
     grammarFormula: "Subject + am / is / are + Origin / Age / Identity",
     vocabularyTopic: "Countries & Nationalities",
-    languageFunction: "Memperkenalkan diri, menyebutkan usia, dan asal negara",
+    languageFunction: "Introduce yourself, state age, and country of origin",
     keyPatterns: [
-      { subject: "I", be: "am", example: "I'm sixteen years old", desc: "Saya" },
-      { subject: "He / She", be: "is", example: "He is from Spain", desc: "Dia (tunggal)" },
-      { subject: "We / They", be: "are", example: "We are students in Madrid", desc: "Jamak" },
+      { subject: "I", be: "am", example: "I'm sixteen years old", desc: "First person" },
+      { subject: "He / She", be: "is", example: "He is from Spain", desc: "Singular" },
+      { subject: "We / They", be: "are", example: "We are students in Madrid", desc: "Plural" },
     ],
     vocabTargets: [
-      { word: "Spain", transformed: "Spanish", type: "Negara ke Kewarganegaraan" },
-      { word: "Brazil", transformed: "Brazilian", type: "Negara ke Kewarganegaraan" },
+      { word: "Spain", transformed: "Spanish", type: "Country to Nationality" },
+      { word: "Brazil", transformed: "Brazilian", type: "Country to Nationality" },
     ],
   };
 
@@ -129,28 +129,28 @@ export function StageReadingOnboarding({
           <span>·</span>
           <span>CEFR A1</span>
           <span>·</span>
-          <span className="text-[#F4B41A]">Topik: {target.grammarTopic}</span>
+          <span className="text-[#F4B41A]">Topic: {target.grammarTopic}</span>
           <span>·</span>
-          <span>Tema: {target.themeTitle}</span>
+          <span>Theme: {target.themeTitle}</span>
         </div>
 
         <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
-          {passageTitle || "Meet Jamie and Marta: International Profiles"}
+          {passageTitle || "Meet Liam from Australia: A Global Friendship"}
         </h2>
 
         <p className="text-sm text-white/90 leading-relaxed max-w-3xl">
           {summaryText ||
-            "Di sesi ini, kamu akan membaca teks perkenalan dua remaja internasional dan mempelajari cara menggunakan verb 'to be' untuk menyatakan nama, usia, serta asal negara."}
+            "In this session, you will read a self-introduction passage and learn how to use the verb 'to be' to state names, nationalities, and countries of origin."}
         </p>
       </div>
 
       {/* 2. Structured Learning Targets: Grammar & Reading Context */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Kolom 1: Pola Tata Bahasa */}
+        {/* Column 1: Grammar Pattern */}
         <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4">
           <div className="space-y-1">
             <span className="text-xs font-bold text-slate-500 dark:text-slate-400">
-              Target Tata Bahasa
+              Grammar Target
             </span>
             <h3 className="text-base font-bold text-slate-900 dark:text-white">
               {target.grammarTopic}
@@ -162,7 +162,7 @@ export function StageReadingOnboarding({
 
           <div className="space-y-2 pt-1">
             <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">
-              Contoh pola kalimat dalam teks:
+              Sentence pattern examples in the passage:
             </span>
             <div className="space-y-1.5">
               {target.keyPatterns?.map((pat, idx) => (
@@ -182,7 +182,7 @@ export function StageReadingOnboarding({
                     type="button"
                     onClick={(e) => handleSpeak(pat.example, e)}
                     className="p-1 rounded text-slate-500 hover:text-[#0D3B66] hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-                    title="Dengarkan pengucapan"
+                    title="Listen to pronunciation"
                   >
                     <Volume2 className="w-3.5 h-3.5" />
                   </button>
@@ -192,23 +192,23 @@ export function StageReadingOnboarding({
           </div>
         </div>
 
-        {/* Kolom 2: Konteks & Kosakata Tokoh */}
+        {/* Column 2: Context & Vocabulary */}
         <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4">
           <div className="space-y-1">
             <span className="text-xs font-bold text-slate-500 dark:text-slate-400">
-              Konteks Bacaan & Kosakata
+              Reading Context & Vocabulary
             </span>
             <h3 className="text-base font-bold text-slate-900 dark:text-white">
-              Tokoh & Asal Negara
+              Characters & Origin
             </h3>
             <p className="text-xs text-slate-600 dark:text-slate-400">
-              Fokus: {target.languageFunction}
+              Focus: {target.languageFunction}
             </p>
           </div>
 
           <div className="space-y-2 pt-1">
             <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">
-              Perubahan bentuk negara ke kewarganegaraan:
+              Country to nationality transformation:
             </span>
             <div className="space-y-1.5">
               {target.vocabTargets?.map((v, idx) => (
@@ -232,7 +232,7 @@ export function StageReadingOnboarding({
           </div>
 
           <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300">
-            <strong>Tokoh dalam teks:</strong> Jamie (16 tahun, dari Teruel, Spanyol) dan Marta (16 tahun, atlet renang dari Brazil).
+            <strong>Characters in the passage:</strong> Liam (22 years old, from Melbourne, Australia) and Kenji (graphic designer from Tokyo, Japan).
           </div>
         </div>
       </div>
@@ -241,11 +241,11 @@ export function StageReadingOnboarding({
       <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
         <div className="flex items-center justify-between">
           <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide">
-            Pemanasan Membaca
+            Reading Warm-Up
           </span>
           {warmupAnswered && selectedWarmupIndex === warmup.correctIndex && (
             <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
-              <CheckCircle2 className="w-3.5 h-3.5" /> Jawaban tepat
+              <CheckCircle2 className="w-3.5 h-3.5" /> Correct answer
             </span>
           )}
         </div>
@@ -286,34 +286,12 @@ export function StageReadingOnboarding({
                 : "bg-amber-50/60 dark:bg-amber-950/30 border-amber-200 text-amber-900 dark:text-amber-200"
             }`}
           >
-            <span className="font-semibold">Catatan: </span>
+            <span className="font-semibold">Note: </span>
             {warmup.explanation}
           </div>
         )}
       </div>
 
-      {/* 4. Natural Direct Action */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-        <div>
-          <h4 className="text-sm font-bold text-slate-900 dark:text-white">
-            Langkah 1 Selesai
-          </h4>
-          <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-            Lanjutkan ke langkah berikutnya untuk melatih pelafalan kosakata kunci sebelum membaca teks.
-          </p>
-        </div>
-
-        {onNextStep && (
-          <button
-            type="button"
-            onClick={onNextStep}
-            className="px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white text-xs font-bold flex items-center gap-2 cursor-pointer transition-colors shadow-xs shrink-0 w-full sm:w-auto justify-center"
-          >
-            <span>Lanjut ke Kosakata Kunci</span>
-            <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
-          </button>
-        )}
-      </div>
     </div>
   );
 }

@@ -42,7 +42,6 @@ export function ThreejsPixelTutorStage({
     const width = container.clientWidth || 340;
     const height = container.clientHeight || 340;
 
-    // 1. Scene, Camera, Renderer
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(34, width / height, 0.1, 100);
     // Camera positioned with generous padding so head & hands are never clipped
@@ -58,7 +57,6 @@ export function ThreejsPixelTutorStage({
     renderer.shadowMap.enabled = true;
     container.appendChild(renderer.domElement);
 
-    // 2. Lighting
     const ambientLight = new THREE.AmbientLight(0xffffff, 1.4);
     scene.add(ambientLight);
 
@@ -71,7 +69,6 @@ export function ThreejsPixelTutorStage({
     fillLight.position.set(-3, 3, 2);
     scene.add(fillLight);
 
-    // 3. Podium Platform (Navy with Gold Rim)
     const podiumGroup = new THREE.Group();
     const cylinderGeo = new THREE.CylinderGeometry(1.65, 1.85, 0.35, 32);
     const podiumMat = new THREE.MeshStandardMaterial({
@@ -95,7 +92,6 @@ export function ThreejsPixelTutorStage({
     podiumGroup.add(rimMesh);
     scene.add(podiumGroup);
 
-    // 4. Ambient Sparkle Dust Particles
     const particleCount = 24;
     const particleGeo = new THREE.BufferGeometry();
     const particlePos = new Float32Array(particleCount * 3);
@@ -115,7 +111,6 @@ export function ThreejsPixelTutorStage({
     const particleSystem = new THREE.Points(particleGeo, particleMat);
     scene.add(particleSystem);
 
-    // 5. Preload All 4 Transparent PNG Textures
     const textureLoader = new THREE.TextureLoader();
     const loadedTextures: Partial<Record<TutorPose, THREE.Texture>> = {};
     const poses: TutorPose[] = ["idle", "waving", "talking", "thumbsup"];
@@ -133,7 +128,6 @@ export function ThreejsPixelTutorStage({
       });
     });
 
-    // 6. Character Plane (Comfortably sized: 2.45 height x 2.08 width)
     const planeHeight = 2.45;
     const planeWidth = planeHeight * 0.85;
 
@@ -154,7 +148,6 @@ export function ThreejsPixelTutorStage({
     characterRoot.add(charMesh);
     scene.add(characterRoot);
 
-    // 7. Smooth, Calm Mouse Tracking
     let targetRotY = 0;
     let targetRotX = 0;
     const handleMouseMove = (e: MouseEvent) => {
@@ -167,7 +160,6 @@ export function ThreejsPixelTutorStage({
     };
     container.addEventListener("mousemove", handleMouseMove);
 
-    // 8. Animation Loop (Stationary, calm, stay on podium with zero floating)
     let animationFrameId: number;
     const clock = new THREE.Clock();
     let currentActivePose: TutorPose = poseRef.current;
@@ -229,7 +221,6 @@ export function ThreejsPixelTutorStage({
 
     animate();
 
-    // 9. Resize Handling
     const handleResize = () => {
       if (!container) return;
       const w = container.clientWidth;
@@ -240,7 +231,6 @@ export function ThreejsPixelTutorStage({
     };
     window.addEventListener("resize", handleResize);
 
-    // 10. Cleanup
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener("resize", handleResize);

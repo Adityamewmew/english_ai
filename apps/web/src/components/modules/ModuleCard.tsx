@@ -48,13 +48,13 @@ export function ModuleCard({ module, onSelect }: ModuleCardProps) {
         <div className="flex items-center justify-between gap-2 mb-3">
           <div className="flex items-center gap-2 flex-wrap">
             <Badge variant="secondary" className="font-semibold text-xs border-b">
-              Modul {module.orderIndex}
+              Module {module.orderIndex}
             </Badge>
 
             {module.isExam && (
               <Badge className="gap-1 text-xs font-semibold bg-[#F4B41A] text-[#0D3B66] border-b border-[#DDA012]">
                 <Award className="w-3 h-3 text-[#0D3B66]" />
-                Ujian Kelulusan
+                Graduation Exam
               </Badge>
             )}
           </div>
@@ -63,16 +63,16 @@ export function ModuleCard({ module, onSelect }: ModuleCardProps) {
             {isCompleted ? (
               <Badge className="gap-1 text-xs font-bold bg-[#0D3B66] text-white border-b border-[#082542]">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#F4B41A]" />
-                <span>Lulus {module.score ? `(${module.score}%)` : ""}</span>
+                <span>Passed {module.score ? `(${module.score}%)` : ""}</span>
               </Badge>
             ) : isLocked ? (
               <Badge variant="secondary" className="gap-1 text-xs font-medium opacity-80 border-b">
                 <Lock className="w-3 h-3" />
-                <span>Terkunci</span>
+                <span>Locked</span>
               </Badge>
             ) : (
               <Badge className="text-xs font-bold bg-[#F4B41A] text-[#0D3B66] border-b border-[#DDA012]">
-                <span>Terbuka</span>
+                <span>Open</span>
               </Badge>
             )}
           </div>
@@ -100,7 +100,7 @@ export function ModuleCard({ module, onSelect }: ModuleCardProps) {
         <div className="flex items-center gap-3">
           <span className="flex items-center gap-1">
             <Clock className="w-3.5 h-3.5" />
-            {module.estimatedMinutes} menit
+            {module.estimatedMinutes} mins
           </span>
           <span className="flex items-center gap-1">
             <BookOpen className="w-3.5 h-3.5" />
@@ -125,7 +125,7 @@ export function ModuleCard({ module, onSelect }: ModuleCardProps) {
               : "btn-skeuo-yellow"
           }`}
         >
-          <span>{isCompleted ? "Ulangi" : "Mulai"}</span>
+          <span>{isCompleted ? "Review" : "Start"}</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </Button>
       </div>

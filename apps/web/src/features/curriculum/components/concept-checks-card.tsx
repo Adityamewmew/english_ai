@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { CheckCircle2, XCircle, HelpCircle, Sparkles } from "lucide-react";
+import { CheckCircle2, XCircle, HelpCircle } from "lucide-react";
 import { animeButtonPop, animeShake } from "@/lib/anime-effects";
 
 interface ConceptCheckQuestion {
@@ -79,7 +79,7 @@ export function ConceptChecksCard({
     >
       <div className="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div className={`w-9 h-9 rounded-2xl flex items-center justify-center border-b-2 border-slate-200 dark:border-slate-700 ${colorStyles.badgeBg}`}>
-          <Sparkles className="w-4 h-4 text-[#F4B41A]" />
+          <CheckCircle2 className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A]" />
         </div>
         <div>
           <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400">
@@ -132,14 +132,14 @@ export function ConceptChecksCard({
                       type="button"
                       disabled={hasAnswered}
                       onClick={(e) => handleSelect(qIdx, opt, e.currentTarget)}
-                      className={`text-left px-3.5 py-2.5 rounded-xl border text-xs transition-all flex items-center justify-between gap-2 cursor-pointer ${btnStyle}`}
+                      className={`text-left px-3.5 py-2.5 rounded-xl border text-xs transition-all flex items-center justify-between gap-2 cursor-pointer min-h-[44px] touch-manipulation ${btnStyle}`}
                     >
                       <span>{opt}</span>
                       {hasAnswered && opt.trim().toLowerCase() === check.answer.trim().toLowerCase() && (
-                         <CheckCircle2 className="w-3.5 h-3.5 text-[#0D3B66] dark:text-[#F4B41A] shrink-0" />
+                         <CheckCircle2 className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A] shrink-0" />
                       )}
                       {hasAnswered && isThisSelected && !isCorrect && (
-                        <XCircle className="w-3.5 h-3.5 text-[#9E1B1B] shrink-0" />
+                        <XCircle className="w-4 h-4 text-[#9E1B1B] shrink-0" />
                       )}
                     </button>
                   );

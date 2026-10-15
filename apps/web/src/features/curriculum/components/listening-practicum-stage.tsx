@@ -7,7 +7,6 @@ import {
   HelpCircle,
   ArrowRight,
   RotateCcw,
-  Sparkles,
   Trophy,
 } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
@@ -31,127 +30,51 @@ export interface PracticumQuestion {
   explanation: string;
 }
 
-const DEFAULT_PRACTICUM_QUESTIONS: PracticumQuestion[] = [
-  // Soal 1-4: Susun Kata (Tap & Arrange)
-  {
-    id: 1,
-    type: "arrange",
-    audioText: "Nice shirt.",
-    instruction: "Dengarkan audio, lalu susun kata-kata berikut sesuai urutan yang diucapkan Jamie:",
-    targetSentence: "Nice shirt.",
-    words: ["shirt.", "Nice", "jacket.", "Good"],
-    explanation: "Jamie memulai percakapan dengan pujian singkat: 'Nice shirt.' (Bagus kausmu).",
-  },
-  {
-    id: 2,
-    type: "arrange",
-    audioText: "What's your name?",
-    instruction: "Dengarkan audio, lalu susun kalimat tanya yang diucapkan penutur:",
-    targetSentence: "What's your name?",
-    words: ["name?", "your", "What's", "Where's"],
-    explanation: "Bentuk singkatan dari 'What is your name?' diucapkan alami menjadi 'What's your name?'.",
-  },
-  {
-    id: 3,
-    type: "arrange",
-    audioText: "I'm a Barcelona fan too.",
-    instruction: "Dengarkan audio, lalu susun pernyataan Jamie tentang klub sepak bola favoritnya:",
-    targetSentence: "I'm a Barcelona fan too.",
-    words: ["too.", "Barcelona", "a", "fan", "I'm", "Madrid"],
-    explanation: "Jamie menyatakan bahwa ia juga fans Barcelona: 'I'm a Barcelona fan too.'",
-  },
-  {
-    id: 4,
-    type: "arrange",
-    audioText: "Spain is a beautiful country!",
-    instruction: "Dengarkan audio, lalu susun kalimat penutup dari Marta tentang Spanyol:",
-    targetSentence: "Spain is a beautiful country!",
-    words: ["country!", "beautiful", "Spain", "is", "a", "big"],
-    explanation: "Marta merespons asal Jamie dengan: 'Spain is a beautiful country!'.",
-  },
-
-  // Soal 5-7: Dengar & Ketik (Audio Dictation)
-  {
-    id: 5,
-    type: "dictation",
-    audioText: "Where are you from, Jamie?",
-    instruction: "Dengarkan klip audio, lalu ketik kata yang hilang untuk melengkapi kalimat tanya:",
-    promptSentence: "Marta: \"Where are you _____, Jamie?\"",
-    targetWord: "from",
-    hint: "Kata depan (preposition) penunjuk asal negara",
-    explanation: "Kata yang tepat adalah 'from' untuk menanyakan negara asal: 'Where are you from?'.",
-  },
-  {
-    id: 6,
-    type: "dictation",
-    audioText: "It's the new Barcelona shirt.",
-    instruction: "Dengarkan audio, lalu ketik kata benda terakhir yang diucapkan Marta:",
-    promptSentence: "Marta: \"It's the new Barcelona _____.\"",
-    targetWord: "shirt",
-    hint: "Pakaian atasan / kaus",
-    explanation: "Marta menyebutkan kaus Barcelona miliknya: 'shirt'.",
-  },
-  {
-    id: 7,
-    type: "dictation",
-    audioText: "I live in a town called Teruel.",
-    instruction: "Dengarkan audio, lalu ketik nama kota tempat tinggal Jamie:",
-    promptSentence: "Jamie: \"I live in a town called _____.\"",
-    targetWord: "teruel",
-    hint: "Nama kota di Spanyol yang disebutkan Jamie",
-    explanation: "Jamie tinggal di kota bernama Teruel: 'a town called Teruel'.",
-  },
-
-  // Soal 8-10: Benar atau Salah (Audio True/False)
-  {
-    id: 8,
-    type: "true_false",
-    audioText: "I know. I'm a Barcelona fan too. What's your name?",
-    instruction: "Dengarkan potongan audio, lalu tentukan apakah pernyataan berikut Benar atau Salah:",
-    statement: "Pernyataan: Baik Jamie maupun Marta sama-sama penggemar klub sepak bola Barcelona.",
-    isTrue: true,
-    explanation: "Benar. Marta memakai kaus baru Barcelona, dan Jamie merespons: 'I'm a Barcelona fan too.'",
-  },
-  {
-    id: 9,
-    type: "true_false",
-    audioText: "I'm from Spain. I live in a town called Teruel.",
-    instruction: "Dengarkan potongan audio, lalu tentukan apakah pernyataan berikut Benar atau Salah:",
-    statement: "Pernyataan: Jamie menyatakan bahwa ia berasal dari Italia.",
-    isTrue: false,
-    explanation: "Salah. Jamie dengan jelas mengatakan 'I'm from Spain', bukan dari Italia.",
-  },
-  {
-    id: 10,
-    type: "true_false",
-    audioText: "Nice shirt. Thank you! It's the new Barcelona shirt.",
-    instruction: "Dengarkan potongan audio, lalu tentukan apakah pernyataan berikut Benar atau Salah:",
-    statement: "Pernyataan: Jamie mengawali percakapan dengan memuji sepatu baru Marta.",
-    isTrue: false,
-    explanation: "Salah. Jamie memuji kaus Marta ('Nice shirt'), bukan sepatunya.",
-  },
-];
-
 interface ListeningPracticumStageProps {
+  quizSec?: any;
+  practiceSec?: any;
+  questions?: PracticumQuestion[];
   tutor: any;
   onRewardXp: (amount: number) => void;
+  onFinish?: () => void;
 }
 
 export function ListeningPracticumStage({
+  quizSec,
+  practiceSec,
+  questions: passedQuestions,
   tutor,
   onRewardXp,
+  onFinish,
 }: ListeningPracticumStageProps) {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [assembledWords, setAssembledWords] = useState<string[]>([]);
   const [dictationInput, setDictationInput] = useState("");
   const [selectedTrueFalse, setSelectedTrueFalse] = useState<boolean | null>(null);
-
   const [checkedStatus, setCheckedStatus] = useState<Record<number, boolean>>({});
   const [isCorrectStatus, setIsCorrectStatus] = useState<Record<number, boolean>>({});
   const [isCompletedAll, setIsCompletedAll] = useState(false);
 
-  const questions = DEFAULT_PRACTICUM_QUESTIONS;
-  const currentQ = questions[currentIdx];
+  const dynamicQuestions: PracticumQuestion[] =
+    passedQuestions ||
+    quizSec?.content?.practicumQuestions ||
+    practiceSec?.content?.practicumQuestions ||
+    practiceSec?.content?.questions ||
+    [];
+
+  const questions = dynamicQuestions;
+
+  if (!questions || questions.length === 0) {
+    return (
+      <div className="p-8 rounded-[24px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-3">
+        <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">
+          No listening practicum questions available for this session yet.
+        </p>
+      </div>
+    );
+  }
+
+  const currentQ = questions[currentIdx] || questions[0];
   const isChecked = Boolean(checkedStatus[currentQ.id]);
   const isCorrect = Boolean(isCorrectStatus[currentQ.id]);
 
@@ -220,9 +143,9 @@ export function ListeningPracticumStage({
   };
 
   const typeLabels = {
-    arrange: "Susun Kata (Tap & Arrange)",
-    dictation: "Dikte Kata (Fill-in-the-Blank)",
-    true_false: "Benar atau Salah (True / False)",
+    arrange: "Tap & Arrange",
+    dictation: "Audio Dictation (Fill-in-the-Blank)",
+    true_false: "True or False",
   };
 
   const correctCount = Object.values(isCorrectStatus).filter(Boolean).length;
@@ -235,13 +158,13 @@ export function ListeningPracticumStage({
         </div>
         <div className="space-y-1">
           <h3 className="text-2xl font-black text-slate-900 dark:text-white">
-            Praktikum Menyimak Selesai!
+            Listening Practicum Complete!
           </h3>
           <p className="text-sm text-slate-600 dark:text-slate-300">
-            Kamu berhasil menyelesaikan seluruh 10 tantangan menyimak dengan skor:
+            You completed all 10 listening challenges with a score of:
           </p>
           <div className="text-3xl font-black text-[#0D3B66] dark:text-[#F4B41A] pt-2">
-            {correctCount} / 10 Benar
+            {correctCount} / 10 Correct
           </div>
         </div>
 
@@ -252,7 +175,7 @@ export function ListeningPracticumStage({
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs sm:text-sm cursor-pointer shadow-xs"
           >
             <RotateCcw className="w-4 h-4" />
-            <span>Ulangi Praktikum</span>
+            <span>Retake Practicum</span>
           </button>
         </div>
       </div>
@@ -260,9 +183,9 @@ export function ListeningPracticumStage({
   }
 
   // Available words for arrange
-  const availableWords = (currentQ.words || []).filter((w, idx) => {
-    const timesUsed = assembledWords.filter((used) => used === w).length;
-    const occurrencesBefore = (currentQ.words || []).slice(0, idx + 1).filter((orig) => orig === w).length;
+  const availableWords = (currentQ.words || []).filter((w: string, idx: number) => {
+    const timesUsed = assembledWords.filter((used: string) => used === w).length;
+    const occurrencesBefore = (currentQ.words || []).slice(0, idx + 1).filter((orig: string) => orig === w).length;
     return timesUsed < occurrencesBefore;
   });
 
@@ -271,17 +194,17 @@ export function ListeningPracticumStage({
       {/* 1. Header & Progress Bar */}
       <div className="space-y-3 pb-3 border-b border-slate-100 dark:border-slate-800">
         <div className="flex items-center justify-between text-xs font-bold">
-          <span className="text-[#0D3B66] dark:text-[#F4B41A] font-mono uppercase tracking-wider">
-            Soal {currentIdx + 1} dari {questions.length}
+          <span className="text-indigo-600 dark:text-indigo-400 font-mono uppercase tracking-wider">
+            Question {currentIdx + 1} of {questions.length}
           </span>
           <span className="text-slate-500 dark:text-slate-400 font-semibold">
-            {typeLabels[currentQ.type]}
+            {typeLabels[currentQ.type as keyof typeof typeLabels] || "Practice"}
           </span>
         </div>
 
         {/* 10-Step Progress Track */}
         <div className="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden flex gap-0.5">
-          {questions.map((_, i) => (
+          {questions.map((_: any, i: number) => (
             <div
               key={i}
               className={`flex-1 h-full transition-all ${
@@ -311,7 +234,7 @@ export function ListeningPracticumStage({
             className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs shadow-xs transition-all active:scale-95 cursor-pointer shrink-0"
           >
             <Volume2 className="w-4 h-4 text-[#F4B41A]" />
-            <span>Putar Audio Soal</span>
+            <span>Play Question Audio</span>
           </button>
         </div>
 
@@ -324,7 +247,7 @@ export function ListeningPracticumStage({
               <div className="p-4 rounded-xl min-h-[56px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex flex-wrap items-center gap-2">
                 {assembledWords.length === 0 ? (
                   <span className="text-xs text-slate-400 italic">
-                    Ketuk kata di bawah untuk menyusun kalimat...
+                    Tap the words below to assemble the sentence...
                   </span>
                 ) : (
                   assembledWords.map((w, wIdx) => (
@@ -343,13 +266,13 @@ export function ListeningPracticumStage({
 
               {/* Available Word Bank */}
               <div className="flex flex-wrap items-center gap-2">
-                {availableWords.map((w, wIdx) => (
+                {availableWords.map((w: string, wIdx: number) => (
                   <button
                     key={wIdx}
                     type="button"
                     disabled={isChecked}
                     onClick={() => handleTapWord(w)}
-                    className="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-800 dark:text-slate-100 hover:border-[#0D3B66] transition-all cursor-pointer shadow-2xs"
+                    className="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-800 dark:text-slate-100 hover:border-indigo-500 transition-all cursor-pointer shadow-2xs"
                   >
                     {w}
                   </button>
@@ -367,7 +290,7 @@ export function ListeningPracticumStage({
                 </span>
                 {currentQ.hint && (
                   <span className="block text-xs text-slate-400 mt-1">
-                    Petunjuk: {currentQ.hint}
+                    Hint: {currentQ.hint}
                   </span>
                 )}
               </div>
@@ -377,7 +300,7 @@ export function ListeningPracticumStage({
                 disabled={isChecked}
                 value={dictationInput}
                 onChange={(e) => setDictationInput(e.target.value)}
-                placeholder="Ketik kata yang kamu dengar..."
+                placeholder="Type the word you hear..."
                 className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66]"
               />
             </div>
@@ -401,7 +324,7 @@ export function ListeningPracticumStage({
                       : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:border-slate-300"
                   }`}
                 >
-                  Benar (True)
+                  True
                 </button>
                 <button
                   type="button"
@@ -413,7 +336,7 @@ export function ListeningPracticumStage({
                       : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:border-slate-300"
                   }`}
                 >
-                  Salah (False)
+                  False
                 </button>
               </div>
             </div>
@@ -433,12 +356,12 @@ export function ListeningPracticumStage({
               {isCorrect ? (
                 <>
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <span>Jawaban Tepat! (+15 XP)</span>
+                  <span>Correct Answer! (+15 XP)</span>
                 </>
               ) : (
                 <>
                   <HelpCircle className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  <span>Kurang tepat</span>
+                  <span>Incorrect</span>
                 </>
               )}
             </div>
@@ -459,7 +382,7 @@ export function ListeningPracticumStage({
               }
               className="px-6 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold text-xs sm:text-sm transition-all cursor-pointer shadow-xs"
             >
-              Periksa Jawaban
+              Check Answer
             </button>
           ) : (
             <button
@@ -467,7 +390,7 @@ export function ListeningPracticumStage({
               onClick={handleNextQuestion}
               className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs sm:text-sm transition-all cursor-pointer shadow-xs ml-auto"
             >
-              <span>{currentIdx < questions.length - 1 ? "Soal Selanjutnya" : "Lihat Hasil Praktikum"}</span>
+              <span>{currentIdx < questions.length - 1 ? "Next Question" : "View Practicum Results"}</span>
               <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
             </button>
           )}

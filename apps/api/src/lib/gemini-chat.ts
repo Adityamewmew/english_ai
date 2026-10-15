@@ -41,9 +41,9 @@ export class GeminiChatService {
       new Set([
         primaryModel,
         process.env.AI_CHAT_MODEL,
+        "antigravity/gemini-3.1-flash-lite",
+        "deepseek-v4-flash:free",
         "claude",
-        "auto/chat",
-        "auto/best-chat",
       ].filter(Boolean) as string[])
     );
 
@@ -135,9 +135,9 @@ export class GeminiChatService {
       new Set([
         primaryModel,
         process.env.AI_CHAT_MODEL,
+        "antigravity/gemini-3.1-flash-lite",
+        "deepseek-v4-flash:free",
         "claude",
-        "auto/chat",
-        "auto/best-chat",
       ].filter(Boolean) as string[])
     );
 

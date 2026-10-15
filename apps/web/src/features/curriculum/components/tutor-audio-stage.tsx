@@ -55,10 +55,10 @@ export function TutorAudioStage({
           </div>
           <div>
             <h4 className="text-sm font-black text-[#0D3B66] dark:text-white uppercase tracking-tight">
-              Panduan Sesi
+              Session Guide
             </h4>
             <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
-              Dengarkan pengantar materi sebelum mulai latihan
+              Listen to the topic introduction before practicing
             </p>
           </div>
         </div>
@@ -75,12 +75,12 @@ export function TutorAudioStage({
           {isSpeaking ? (
             <>
               <Pause className="w-3.5 h-3.5 fill-current" />
-              <span>Jeda Audio</span>
+              <span>Pause Audio</span>
             </>
           ) : (
             <>
               <Play className="w-3.5 h-3.5 fill-current text-[#0D3B66]" />
-              <span>Putar Penjelasan</span>
+              <span>Play Audio Guide</span>
             </>
           )}
         </button>

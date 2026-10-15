@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { Badge } from "@/components/ui/badge";
-import { HelpCircle, CheckCircle, Volume2, FileText } from "lucide-react";
+import { HelpCircle, CheckCircle, Volume2 } from "lucide-react";
 
 interface QuestionItem {
   id: string;

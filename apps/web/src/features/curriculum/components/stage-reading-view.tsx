@@ -1,13 +1,11 @@
 "use client";
 
-import { BookOpen, Target, CheckCircle2 } from "lucide-react";
 import { GamifiedMatchPairs } from "./gamified-match-pairs";
 import { InteractiveContractionMorpher } from "./interactive-contraction-morpher";
 import { InteractiveVocabCard } from "./interactive-vocab-card";
 import { InteractiveReadingPassage } from "./interactive-reading-passage";
 import { InteractiveGrammarCard } from "./interactive-grammar-card";
 import { ConceptChecksCard } from "./concept-checks-card";
-import { TutorAudioStage } from "./tutor-audio-stage";
 import { StageReadingOnboarding } from "./stage-reading-onboarding";
 
 interface StageReadingViewProps {
@@ -52,7 +50,7 @@ export function StageReadingView({
 
   const summaryText =
     theorySec?.content?.summary ||
-    "Di sesi ini, kamu akan membaca teks perkenalan sederhana. Kamu akan belajar mengidentifikasi nama, asal negara, dan menggunakan verb 'to be' secara tepat dalam konteks teks.";
+    "In this session, you will read a simple self-introduction passage. You will learn to identify names, countries of origin, and use the verb 'to be' accurately in context.";
   const passageTitle =
     readingPassage?.passageTitle || readingPassage?.title || "Guided Reading Passage";
 
@@ -77,13 +75,13 @@ export function StageReadingView({
         <div className="space-y-4 animate-in fade-in duration-300">
           <div className="space-y-1">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-              Langkah 2 · Kosakata Kunci ({vocabItems.length} Kata)
+              Step 2 · Key Vocabulary ({vocabItems.length} Words)
             </span>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-              Pelajari Kosakata Kunci Sebelum Membaca Teks
+              Master Key Vocabulary Before Reading
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-300">
-              Ketuk setiap kartu untuk membalik arti dan mendengarkan pelafalan asli dari penutur bahasa Inggris:
+              Tap each card to flip for Indonesian meaning and listen to native English pronunciation:
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -99,13 +97,13 @@ export function StageReadingView({
         <div className="space-y-4 animate-in fade-in duration-300">
           <div className="space-y-1">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-              Langkah 3 · Teks Bacaan Terpandu
+              Step 3 · Guided Reading Passage
             </span>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
               {passageTitle}
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-300">
-              Ikuti teks bacaan sambil mendengarkan audio per kata dengan panduan sorotan suara:
+              Follow along with the passage while listening to word-by-word synchronized audio:
             </p>
           </div>
           {readingPassage && (
@@ -119,18 +117,18 @@ export function StageReadingView({
         </div>
       )}
 
-      {/* Step 4: Cable Connection Mini-Game (Sambung Tali Kosakata) */}
+      {/* Step 4: Cable Connection Mini-Game */}
       {activeStepId === 4 && (
         <div className="space-y-6 animate-in fade-in duration-300">
           <div className="space-y-1.5 pb-3 border-b border-slate-100 dark:border-slate-800">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-              Langkah 4 · Uji Ingatan Kosakata
+              Step 4 · Vocabulary Match Game
             </span>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-              Hubungkan Kata dengan Makna yang Tepat
+              Match Words with Their Correct Meanings
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-300">
-              Tarik atau klik pin kata di sebelah kiri, lalu hubungkan talinya ke arti yang tepat di sebelah kanan:
+              Connect the English word pin on the left with its matching Indonesian meaning on the right:
             </p>
           </div>
           <GamifiedMatchPairs
@@ -148,13 +146,13 @@ export function StageReadingView({
         <div className="space-y-6 animate-in fade-in duration-300">
           <div className="space-y-1.5 pb-3 border-b border-slate-100 dark:border-slate-800">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-              Langkah 5 · Peleburan Kata Singkatan
+              Step 5 · {theorySec?.content?.contractionsLabel || "Contraction Morpher"}
             </span>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-              Peleburan Singkatan Alami Verb 'To Be'
+              {theorySec?.content?.contractionsTitle || `Natural Spoken Contractions (${theorySec?.content?.linguisticTarget?.grammar || "Grammar Focus"})`}
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-300">
-              Lihat bagaimana kata subjek dan verb &apos;to be&apos; melebur menjadi satu hembusan nafas:
+              {theorySec?.content?.contractionsSubtitle || "Observe how subjects and verbs smoothly merge in natural spoken English:"}
             </p>
           </div>
           <InteractiveContractionMorpher contractions={contractions} embedded={true} />
@@ -166,13 +164,13 @@ export function StageReadingView({
         <div className="space-y-6 animate-in fade-in duration-300">
           <div className="space-y-1.5 pb-3 border-b border-slate-100 dark:border-slate-800">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-              Langkah 6 · Pola Kalimat
+              Step 6 · {grammarFormulas?.label || "Sentence Patterns"}
             </span>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-              Struktur Kalimat Verb 'To Be'
+              {grammarFormulas?.title || `Sentence Structure (${theorySec?.content?.linguisticTarget?.grammar || "Grammar Formula"})`}
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-300">
-              Rakit dan tukar balok kalimat untuk bereksperimen dengan pola kalimat positif, negatif, dan tanya:
+              {grammarFormulas?.description || "Assemble sentence blocks to explore affirmative, negative, and question patterns:"}
             </p>
           </div>
           <InteractiveGrammarCard rules={rules} formulas={grammarFormulas} onPlayAudio={tutor.playTutorAudio} embedded={true} />
@@ -184,13 +182,13 @@ export function StageReadingView({
         <div className="space-y-4 animate-in fade-in duration-300">
           <div className="space-y-1">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-              Langkah 7 · Evaluasi ({postTestQuestions.length} Soal)
+              Step 7 · Comprehension Quiz ({postTestQuestions.length} Questions)
             </span>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-              {quizSec?.title || "Uji Pemahaman Membaca"}
+              {quizSec?.title || "Reading Comprehension Quiz"}
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-300">
-              Jawab pertanyaan pemahaman berikut untuk menyelesaikan misi membaca:
+              Answer the following comprehension questions to complete your reading mission:
             </p>
           </div>
           <ConceptChecksCard conceptChecks={postTestQuestions} accentColor="blue" embedded={true} />

@@ -6,6 +6,7 @@ import { playPopSound } from "@/lib/sound-fx";
 import { ListeningOverviewStage } from "./listening-overview-stage";
 import { ListeningDialogueChat } from "./listening-dialogue-chat";
 import { ListeningPracticumStage } from "./listening-practicum-stage";
+import { ConceptChecksCard } from "./concept-checks-card";
 
 interface StageListeningViewProps {
   activeStepId: number;
@@ -22,11 +23,13 @@ export function StageListeningView({
   activeStepId,
   theorySec,
   dialogueSec,
+  quizSec,
   tutor,
   onRewardXp,
   onNextStep,
 }: StageListeningViewProps) {
   const dialogueLines = dialogueSec?.content?.lines || [];
+  const quizQuestions = quizSec?.content?.questions || [];
 
   // Local state for Step 4 Dictation
   const [dictationAnswers, setDictationAnswers] = useState<Record<number, string>>({});
@@ -40,6 +43,18 @@ export function StageListeningView({
     4: true,
   });
 
+  const connectedSpeechItems =
+    theorySec?.content?.connectedSpeech && theorySec.content.connectedSpeech.length > 0
+      ? theorySec.content.connectedSpeech
+      : (theorySec?.content?.keyPhrases || []).slice(0, 4).map((kp: any, idx: number) => ({
+          id: idx + 1,
+          slow: kp.slow || kp.phrase || "Standard form",
+          fast: kp.fast || kp.phrase || "Connected form",
+          slowIpa: kp.slowIpa || "",
+          fastIpa: kp.fastIpa || "",
+          note: kp.meaning ? `${kp.meaning} (${kp.note || "Konteks lisan"})` : kp.note || "",
+        }));
+
   const dictationDrills =
     dialogueLines.length > 0
       ? dialogueLines.slice(0, 4).map((line: any, idx: number) => {
@@ -48,35 +63,13 @@ export function StageListeningView({
           const targetWord = words[words.length - 1].replace(/[.,?!]/g, "");
           return {
             id: idx + 1,
-            prompt: `${line.speaker}: "${lineText.replace(targetWord, "_____")}"`,
+            prompt: `${line.speaker || "Speaker"}: "${lineText.replace(targetWord, "_____")}"`,
             audio: lineText,
             target: targetWord.toLowerCase(),
-            hint: `Dengarkan kata terakhir yang diucapkan oleh ${line.speaker}`,
+            hint: `Dengarkan kata terakhir yang diucapkan oleh ${line.speaker || "pembicara"}`,
           };
         })
-      : [
-          {
-            id: 1,
-            prompt: "Jamie: 'Where are you _____, Marta?'",
-            audio: "Where are you from, Marta?",
-            target: "from",
-            hint: "Kata depan penunjuk asal",
-          },
-          {
-            id: 2,
-            prompt: "Jamie: 'I am from _____, from Teruel.'",
-            audio: "I am from Spain, from Teruel.",
-            target: "spain",
-            hint: "Nama negara asal Jamie",
-          },
-          {
-            id: 3,
-            prompt: "Marta: 'It is the new Barcelona _____.'",
-            audio: "It is the new Barcelona shirt.",
-            target: "shirt",
-            hint: "Pakaian yang dipakai Marta",
-          },
-        ];
+      : [];
 
   return (
     <div className="space-y-6">
@@ -90,7 +83,7 @@ export function StageListeningView({
         />
       )}
 
-      {/* LANGKAH 2: Percakapan Multi-Speaker (Jamie Kiri, Marta Kanan) */}
+      {/* LANGKAH 2: Percakapan Multi-Speaker (Speaker 1 Kiri, Speaker 2 Kanan) */}
       {activeStepId === 2 && (
         <ListeningDialogueChat dialogueLines={dialogueLines} tutor={tutor} />
       )}
@@ -100,51 +93,18 @@ export function StageListeningView({
         <div className="space-y-6 animate-in fade-in duration-300">
           <div className="space-y-1.5 pb-3 border-b border-slate-100 dark:border-slate-800">
             <span className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] uppercase tracking-wider block font-mono">
-              Langkah 3 · Latihan Kepekaan Pendengaran (Ear Training)
+              Step 3 · Ear Training Drill
             </span>
             <h3 className="text-xl font-black text-slate-900 dark:text-white">
-              Peleburan Singkatan dalam Bahasa Inggris Lisan Cepat
+              Connected Speech &amp; Spoken Contractions
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-300">
-              Dalam percakapan lisan sehari-hari, penutur asli selalu meleburkan kata (contractions) agar bicara lebih mengalir. Latih telingamu membedakan bentuk lambat formal vs bentuk cepat alami:
+              In everyday spoken conversation, native speakers contract words to speak smoothly. Train your ear to distinguish formal slow forms vs natural connected speech:
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[
-              {
-                id: 1,
-                slow: "I am Jamie",
-                fast: "I'm Jamie",
-                slowIpa: "/aɪ æm/",
-                fastIpa: "/aɪm/",
-                note: "Vokal panjang 'æm' melebur menjadi bunyi pendek /aɪm/ dalam satu hembusan nafas.",
-              },
-              {
-                id: 2,
-                slow: "It is the new shirt",
-                fast: "It's the new shirt",
-                slowIpa: "/ɪt ɪz/",
-                fastIpa: "/ɪts/",
-                note: "Konsonan 't' dan 's' melebur menjadi satu desis tajam /ɪts/.",
-              },
-              {
-                id: 3,
-                slow: "What is your name?",
-                fast: "What's your name?",
-                slowIpa: "/wɒt ɪz/",
-                fastIpa: "/wɒts/",
-                note: "Kata tanya 'What is' langsung diringkas menjadi 'What's'.",
-              },
-              {
-                id: 4,
-                slow: "Where is Teruel?",
-                fast: "Where's Teruel?",
-                slowIpa: "/weər ɪz/",
-                fastIpa: "/weəz/",
-                note: "Akhiran bunyi menyatu dengan desis lembut /z/ di akhir kata 'Where'.",
-              },
-            ].map((item) => {
+            {connectedSpeechItems.map((item: any) => {
               const isContracted = contractionMode[item.id] ?? true;
 
               return (
@@ -154,7 +114,7 @@ export function StageListeningView({
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-semibold text-slate-500 font-mono">
-                      Pola #{item.id}
+                      Pattern #{item.id}
                     </span>
                     <button
                       type="button"
@@ -165,13 +125,13 @@ export function StageListeningView({
                           [item.id]: !isContracted,
                         }));
                       }}
-                      className={`px-3 py-1 rounded-xl text-xs font-semibold transition-all border cursor-pointer ${
+                      className={`px-3.5 py-2 rounded-xl text-xs font-semibold transition-all border cursor-pointer min-h-[40px] touch-manipulation ${
                         isContracted
-                          ? "bg-blue-50 text-[#0D3B66] border-blue-200 dark:bg-slate-800 dark:text-sky-300 dark:border-slate-700"
+                          ? "bg-blue-50 text-[#0D3B66] border-blue-200 dark:bg-slate-800 dark:text-sky-300 dark:border-slate-700 font-bold"
                           : "bg-slate-100 text-slate-600 border-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700"
                       }`}
                     >
-                      {isContracted ? "Bentuk Alami (Singkatan)" : "Bentuk Lambat (Formal)"}
+                      {isContracted ? "Natural Connected (Fast)" : "Full Form (Slow)"}
                     </button>
                   </div>
 
@@ -183,12 +143,12 @@ export function StageListeningView({
                         [item.id]: !isContracted,
                       }));
                     }}
-                    className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 cursor-pointer select-none space-y-1 transition-all hover:bg-slate-100/80"
+                    className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 cursor-pointer select-none space-y-1 transition-all hover:bg-slate-100/80 touch-manipulation"
                   >
                     <span className="text-[10px] font-mono text-slate-400 uppercase block">
                       {isContracted
-                        ? "Bentuk Lisan Cepat (Ketuk untuk ubah)"
-                        : "Bentuk Lisan Lambat (Ketuk untuk ubah)"}
+                        ? "Fast Spoken Form (Tap to toggle)"
+                        : "Slow Spoken Form (Tap to toggle)"}
                     </span>
                     <p
                       className={`text-base font-bold transition-all ${
@@ -200,7 +160,7 @@ export function StageListeningView({
                       {isContracted ? item.fast : item.slow}
                     </p>
                     <span className="text-[11px] font-mono text-slate-500 block">
-                      Transkripsi Bunyi: {isContracted ? item.fastIpa : item.slowIpa}
+                      Sound Transcription: {isContracted ? item.fastIpa : item.slowIpa}
                     </span>
                   </div>
 
@@ -209,18 +169,18 @@ export function StageListeningView({
                     <button
                       type="button"
                       onClick={() => tutor.playTutorAudio(item.slow)}
-                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+                      className="flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800 transition-colors cursor-pointer min-h-[44px] touch-manipulation"
                     >
-                      <Volume2 className="w-3.5 h-3.5 text-slate-400" />
-                      <span>Dengar Lambat</span>
+                      <Volume2 className="w-4 h-4 text-slate-400" />
+                      <span>Play Slow</span>
                     </button>
                     <button
                       type="button"
                       onClick={() => tutor.playTutorAudio(item.fast)}
-                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-[#0D3B66] dark:text-[#F4B41A] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+                      className="flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold text-[#0D3B66] dark:text-[#F4B41A] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer min-h-[44px] touch-manipulation"
                     >
-                      <Volume2 className="w-3.5 h-3.5" />
-                      <span>Dengar Cepat Alami</span>
+                      <Volume2 className="w-4 h-4" />
+                      <span>Play Fast</span>
                     </button>
                   </div>
 
@@ -239,13 +199,13 @@ export function StageListeningView({
         <div className="space-y-6 animate-in fade-in duration-300">
           <div className="space-y-1.5 pb-3 border-b border-slate-100 dark:border-slate-800">
             <span className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] uppercase tracking-wider block font-mono">
-              Langkah 4 · Dikte Audio &amp; Tangkap Kata
+              Step 4 · Audio Dictation Mini-Drill
             </span>
             <h3 className="text-xl font-black text-slate-900 dark:text-white">
-              Dengarkan Klip Audio &amp; Ketik Kata yang Hilang
+              Listen to the Audio Clip &amp; Type the Missing Word
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-300">
-              Putar tombol audio, dengarkan kata kuncinya, lalu ketikkan jawabannya pada kotak input di bawah:
+              Play the audio clip, catch the target word, and type your answer in the box below:
             </p>
           </div>
 
@@ -262,15 +222,15 @@ export function StageListeningView({
                 >
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-xs font-bold text-slate-500 font-mono">
-                      Klip Audio #{drill.id}
+                      Audio Clip #{drill.id}
                     </span>
                     <button
                       type="button"
                       onClick={() => tutor.playTutorAudio(drill.audio)}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white text-xs font-bold transition-colors cursor-pointer"
+                      className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white text-xs font-bold transition-colors cursor-pointer min-h-[44px] touch-manipulation"
                     >
-                      <Volume2 className="w-3.5 h-3.5 text-[#F4B41A]" />
-                      <span>Putar Klip</span>
+                      <Volume2 className="w-4 h-4 text-[#F4B41A]" />
+                      <span>Play Audio</span>
                     </button>
                   </div>
 
@@ -278,17 +238,17 @@ export function StageListeningView({
                     {drill.prompt}
                   </p>
 
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
                     <input
                       type="text"
-                      placeholder="Ketik kata yang kamu dengar..."
+                      placeholder="Type the word you hear..."
                       value={currentVal}
                       onChange={(e) => {
                         const val = e.target.value;
                         setDictationAnswers((prev) => ({ ...prev, [drill.id]: val }));
                         setDictationChecked((prev) => ({ ...prev, [drill.id]: false }));
                       }}
-                      className="flex-1 px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66]"
+                      className="flex-1 px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66] min-h-[44px]"
                     />
                     <button
                       type="button"
@@ -296,9 +256,9 @@ export function StageListeningView({
                         setDictationChecked((prev) => ({ ...prev, [drill.id]: true }));
                         if (isCorrect) onRewardXp(15);
                       }}
-                      className="px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white text-xs font-bold cursor-pointer"
+                      className="px-6 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white text-xs font-bold cursor-pointer min-h-[44px] touch-manipulation flex items-center justify-center w-full sm:w-auto"
                     >
-                      Periksa
+                      Check
                     </button>
                   </div>
 
@@ -317,8 +277,8 @@ export function StageListeningView({
                       )}
                       <span>
                         {isCorrect
-                          ? "Benar sekali! Pelafalan kata cocok."
-                          : `Kurang tepat. Kunci jawaban: ${drill.target}`}
+                          ? "Spot on! Correct word captured."
+                          : `Not quite. Correct answer: ${drill.target}`}
                       </span>
                     </div>
                   )}
@@ -331,7 +291,24 @@ export function StageListeningView({
 
       {/* LANGKAH 5: 10 Soal Praktikum Menyimak (Susun Kata, Dikte, Benar/Salah) */}
       {activeStepId === 5 && (
-        <ListeningPracticumStage tutor={tutor} onRewardXp={onRewardXp} />
+        quizQuestions.length > 0 ? (
+          <div className="space-y-4 animate-in fade-in duration-300">
+            <div className="space-y-1">
+              <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                Step 5 · Listening Comprehension ({quizQuestions.length} Questions)
+              </span>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                {quizSec?.title || "Audio Listening Assessment"}
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300">
+                Dengarkan rekaman audio dan jawab pertanyaan pemahaman berikut:
+              </p>
+            </div>
+            <ConceptChecksCard conceptChecks={quizQuestions} accentColor="blue" embedded={true} />
+          </div>
+        ) : (
+          <ListeningPracticumStage quizSec={quizSec} tutor={tutor} onRewardXp={onRewardXp} />
+        )
       )}
     </div>
   );

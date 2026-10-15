@@ -8,7 +8,6 @@ import {
   BookOpen,
   HelpCircle,
   Users,
-  PhoneCall,
   ExternalLink,
   LogOut,
   GraduationCap,

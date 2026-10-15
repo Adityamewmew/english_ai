@@ -59,7 +59,7 @@ export function SpeakingPracticumStage({
     return (
       <div className="p-8 rounded-[24px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-3">
         <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">
-          Belum ada soal praktikum yang tersedia untuk sesi ini.
+          No practicum questions available for this session yet.
         </p>
       </div>
     );
@@ -106,7 +106,6 @@ export function SpeakingPracticumStage({
     };
   }, []);
 
-  // 1. Play Audio Model for Storytelling
   const handlePlayModel = () => {
     playPopSound();
     setIsPlayingModel(true);
@@ -117,7 +116,6 @@ export function SpeakingPracticumStage({
     }, 3200);
   };
 
-  // 2. Start Recording (Storytelling)
   const handleStartRecord = async () => {
     playPopSound();
     setLiveTranscript("");
@@ -173,7 +171,6 @@ export function SpeakingPracticumStage({
     }
   };
 
-  // 3. Stop Recording (Storytelling)
   const handleStopRecord = () => {
     playSnapSound();
     if (timerRef.current) {
@@ -197,7 +194,6 @@ export function SpeakingPracticumStage({
     setItemScores((prev) => ({ ...prev, [currentIdx]: score }));
   };
 
-  // 4. Play Student Audio
   const handlePlayStudentAudio = () => {
     const audioUrl = recordings[currentIdx];
     if (!audioUrl) return;
@@ -215,7 +211,6 @@ export function SpeakingPracticumStage({
     audio.play().catch(() => setIsPlayingSelf(false));
   };
 
-  // 5. Confirm & Advance Storytelling
   const handleConfirmAndNext = () => {
     playMatchSuccessSound();
     setCompletedItems((prev) => ({ ...prev, [currentIdx]: true }));
@@ -228,14 +223,12 @@ export function SpeakingPracticumStage({
     }
   };
 
-  // 6. Roleplay Completed Handler
   const handleRoleplayComplete = (score: number) => {
     setItemScores((prev) => ({ ...prev, [currentIdx]: score }));
     setCompletedItems((prev) => ({ ...prev, [currentIdx]: true }));
     onRewardXp(20);
   };
 
-  // 7. Drill Completed Handler
   const handleDrillSave = (audioUrl: string, transcript: string, score: number) => {
     setRecordings((prev) => ({ ...prev, [currentIdx]: audioUrl }));
     setSpeechTranscripts((prev) => ({ ...prev, [currentIdx]: transcript }));
@@ -252,7 +245,6 @@ export function SpeakingPracticumStage({
     }
   };
 
-  // 8. Reset Practicum
   const handleResetPracticum = () => {
     playPopSound();
     setCurrentIdx(0);
@@ -298,10 +290,10 @@ export function SpeakingPracticumStage({
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs font-mono font-bold">
               <span className="text-[#0D3B66] dark:text-[#F4B41A]">
-                Soal {currentIdx + 1} dari {totalQuestions}
+                Question {currentIdx + 1} of {totalQuestions}
               </span>
               <span className="text-slate-400">
-                Tuntas: {answeredCount}/{totalQuestions}
+                Completed: {answeredCount}/{totalQuestions}
               </span>
             </div>
             <div className="w-full h-1.5 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
@@ -325,12 +317,12 @@ export function SpeakingPracticumStage({
                 {currentQ.focus && (
                   <span className="text-[10px] font-bold font-mono px-2 py-0.5 rounded-md bg-slate-200/50 dark:bg-slate-700 text-slate-700 dark:text-slate-300">
                     {currentQ.focus === "vocab"
-                      ? "Fokus: Kosakata"
+                      ? "Focus: Vocabulary"
                       : currentQ.focus === "grammar"
-                      ? "Fokus: Tata Bahasa"
+                      ? "Focus: Grammar"
                       : currentQ.focus === "pronunciation_stress"
-                      ? "Fokus: Stress Suku Kata"
-                      : "Fokus: Intonasi"}
+                      ? "Focus: Syllable Stress"
+                      : "Focus: Intonation"}
                   </span>
                 )}
               </div>
@@ -342,7 +334,7 @@ export function SpeakingPracticumStage({
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-700 hover:bg-slate-100 border border-slate-200 dark:border-slate-600 text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] cursor-pointer shadow-xs active:scale-95"
                 >
                   <Volume2 className={`w-3.5 h-3.5 ${isPlayingModel ? "animate-pulse text-[#F4B41A]" : ""}`} />
-                  <span>{isPlayingModel ? "Memutar..." : "Dengar Audio Soal"}</span>
+                  <span>{isPlayingModel ? "Playing..." : "Play Question Audio"}</span>
                 </button>
               )}
             </div>
@@ -356,14 +348,14 @@ export function SpeakingPracticumStage({
               <div className="space-y-3 pt-1">
                 {currentQ.themeTitle && (
                   <div className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] uppercase font-mono">
-                    Tema: {currentQ.themeTitle}
+                    Theme: {currentQ.themeTitle}
                   </div>
                 )}
 
                 {currentQ.inspirationPoints && currentQ.inspirationPoints.length > 0 && (
                   <div className="space-y-2">
                     <span className="text-[11px] font-bold text-slate-600 dark:text-slate-400 block">
-                      Pilihan Poin Inspirasi Cerita (Klik salah satu ide):
+                      Story Inspiration Ideas (Click any idea to select):
                     </span>
                     <div className="grid grid-cols-1 gap-2">
                       {currentQ.inspirationPoints.map((point, pIdx) => {
@@ -395,7 +387,7 @@ export function SpeakingPracticumStage({
                 <div className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300">
                   <Clock className="w-3.5 h-3.5 text-[#0D3B66] dark:text-[#F4B41A]" />
                   <span>
-                    Durasi cerita disarankan: <strong>minimal 15 detik</strong> (bebas dengan bahasamu sendiri tanpa terikat naskah kaku).
+                    Recommended speech duration: <strong>at least 15 seconds</strong> (speak freely in your own words).
                   </span>
                 </div>
 
@@ -403,7 +395,7 @@ export function SpeakingPracticumStage({
                 {(liveTranscript || speechTranscripts[currentIdx]) && (
                   <div className="p-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-800 dark:text-slate-200">
                     <span className="font-bold block mb-0.5 text-slate-500 dark:text-slate-400 font-mono text-[10px] uppercase">
-                      Ucapan Terdeteksi:
+                      Detected Speech:
                     </span>
                     &ldquo;{liveTranscript || speechTranscripts[currentIdx]}&rdquo;
                   </div>
@@ -447,7 +439,7 @@ export function SpeakingPracticumStage({
                 >
                   <Square className="w-3.5 h-3.5 fill-current" />
                   <span>
-                    Hentikan Cerita (00:{recordSeconds < 10 ? `0${recordSeconds}` : recordSeconds})
+                    Stop Story (00:{recordSeconds < 10 ? `0${recordSeconds}` : recordSeconds})
                   </span>
                 </button>
               ) : (
@@ -458,7 +450,7 @@ export function SpeakingPracticumStage({
                 >
                   <Mic className="w-4 h-4 text-[#0D3B66]" />
                   <span>
-                    {recordings[currentIdx] ? "Rekam Ulang Cerita" : "Tekan & Mulai Bercerita Bebas"}
+                    {recordings[currentIdx] ? "Re-record Story" : "Tap & Start Speaking Freely"}
                   </span>
                 </button>
               )}
@@ -470,7 +462,7 @@ export function SpeakingPracticumStage({
                   className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold shadow-xs transition-all hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer active:scale-95"
                 >
                   <Headphones className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A]" />
-                  <span>{isPlayingSelf ? "Memutar Rekamanmu..." : "Dengar Suaramu"}</span>
+                  <span>{isPlayingSelf ? "Playing Your Recording..." : "Play Your Recording"}</span>
                 </button>
               )}
 
@@ -480,7 +472,7 @@ export function SpeakingPracticumStage({
                   onClick={handleConfirmAndNext}
                   className="ml-auto flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer"
                 >
-                  <span>Konfirmasi & Lanjut Soal Berikutnya</span>
+                  <span>Confirm & Continue to Next Question</span>
                   <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
                 </button>
               )}
@@ -504,8 +496,8 @@ export function SpeakingPracticumStage({
               >
                 <span>
                   {currentIdx < totalQuestions - 1
-                    ? "Lanjut ke Soal Berikutnya"
-                    : "Selesaikan Praktikum"}
+                    ? "Continue to Next Question"
+                    : "Complete Practicum"}
                 </span>
                 <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
               </button>

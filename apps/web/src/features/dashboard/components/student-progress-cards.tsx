@@ -91,13 +91,12 @@ export function StudentProgressCards({
                 <div className={`w-10 h-10 rounded-2xl ${card.iconBg} shadow-2xs flex items-center justify-center border-b-2 border-black/10`}>
                   <Icon className="w-5 h-5" />
                 </div>
-                <button
-                  type="button"
-                  aria-label="Options"
-                  className="text-slate-400 hover:text-[#0D3B66] transition-colors"
+                <span
+                  aria-hidden="true"
+                  className="p-1 text-slate-400 group-hover:text-[#0D3B66] transition-colors"
                 >
                   <MoreHorizontal className="w-4 h-4" />
-                </button>
+                </span>
               </div>
 
               {/* Title & Subtitle */}

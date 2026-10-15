@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StudentSidebarRail } from "./student-sidebar-rail";
 import { StudentTopbar } from "./student-topbar";
 import { StudentHeroBanner } from "./student-hero-banner";
@@ -25,7 +25,13 @@ interface StudentDashboardViewProps {
 }
 
 export function StudentDashboardView({ session }: StudentDashboardViewProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.innerWidth >= 1024) {
+      setIsSidebarOpen(true);
+    }
+  }, []);
 
   const { data: levelsData } = useCurriculumLevels(session.userId);
   const { data: userProfile } = useUserProfile(session.userId);

@@ -11,7 +11,6 @@ import {
   Award,
   Headphones,
   PenTool,
-  Sparkles,
   Mic,
   CheckCircle,
   MessageSquare,
@@ -170,7 +169,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
               {result.speakingEvaluation.grammar_analysis?.corrections?.length > 0 && (
                 <div className="space-y-2">
                   <h4 className="text-xs font-bold text-amber-700 flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-amber-600" />
                     Analisis Koreksi Grammar &amp; Kosakata:
                   </h4>
                   <div className="space-y-2">
@@ -239,7 +238,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
       {/* Header */}
       <div className="mb-8">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold mb-2">
-          <Sparkles className="w-3.5 h-3.5" />
+          <Award className="w-3.5 h-3.5" />
           <span>Tes Penempatan Adaptif CEFR A1 - C2</span>
         </div>
         <h1 className="text-2xl md:text-3xl font-extrabold text-primary">
@@ -275,13 +274,13 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
                       type="button"
                       key={opt}
                       onClick={() => handleSelectOption(q.id, opt)}
-                      className={`text-left px-3.5 py-2.5 rounded-xl text-xs font-medium border transition-all ${
+                      className={`text-left px-4 py-3 rounded-xl text-xs sm:text-sm font-medium border transition-all min-h-[44px] touch-manipulation flex items-center justify-between ${
                         isSelected
-                          ? "bg-primary text-white border-primary shadow-sm"
+                          ? "bg-primary text-white border-primary shadow-sm font-bold"
                           : "bg-surface hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700"
                       }`}
                     >
-                      {opt}
+                      <span>{opt}</span>
                     </button>
                   );
                 })}
@@ -317,13 +316,13 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
                       type="button"
                       key={opt}
                       onClick={() => handleSelectOption(listening.id, opt)}
-                      className={`text-left px-3.5 py-2.5 rounded-xl text-xs font-medium border transition-all ${
+                      className={`text-left px-4 py-3 rounded-xl text-xs sm:text-sm font-medium border transition-all min-h-[44px] touch-manipulation flex items-center justify-between ${
                         isSelected
-                          ? "bg-primary text-white border-primary shadow-sm"
+                          ? "bg-primary text-white border-primary shadow-sm font-bold"
                           : "bg-surface hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700"
                       }`}
                     >
-                      {opt}
+                      <span>{opt}</span>
                     </button>
                   );
                 })}
@@ -385,7 +384,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
             variant="secondary"
             size="lg"
             disabled={submitMutation.isPending}
-            className="w-full md:w-auto min-w-[240px]"
+            className="w-full md:w-auto min-w-[240px] min-h-[48px] touch-manipulation text-sm font-bold"
           >
             {submitMutation.isPending ? "Menganalisis Jawaban & Grammar..." : "Kirim & Hitung Level CEFR"}
           </Button>

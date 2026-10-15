@@ -30,11 +30,18 @@ export class GeminiTtsService {
 
     if (!baseUrl) return null;
 
-    const mrKhoirulVoice = process.env.AI_AUDIO_VOICE || "aura-orion-en";
+    const ROGER_VOICE_ID = "CwhRBWXzGAHq8TQ4Fs17";
+    const voiceInput = (process.env.AI_AUDIO_VOICE || "").toLowerCase().trim();
+    const mrKhoirulVoice =
+      !voiceInput || voiceInput === "roger" || voiceInput === "aura-orion-en"
+        ? ROGER_VOICE_ID
+        : process.env.AI_AUDIO_VOICE || ROGER_VOICE_ID;
+
+    const audioModel = process.env.AI_AUDIO_MODEL || "audio";
     const candidates = [
-      { model: "audio", voice: mrKhoirulVoice },
+      { model: audioModel, voice: mrKhoirulVoice },
+      { model: "audio", voice: ROGER_VOICE_ID },
       { model: "audio", voice: "alloy" },
-      { model: "audio", voice: "nova" },
     ];
 
     const endpoint = `${baseUrl.replace(/\/+$/, "")}/audio/speech`;
@@ -100,11 +107,18 @@ export class GeminiTtsService {
     const cleanText = sanitizeRepeatedChars(text);
     if (!baseUrl || !cleanText || cleanText.trim() === "") return null;
 
-    const mrKhoirulVoice = process.env.AI_AUDIO_VOICE || "aura-orion-en";
+    const ROGER_VOICE_ID = "CwhRBWXzGAHq8TQ4Fs17";
+    const voiceInput = (process.env.AI_AUDIO_VOICE || "").toLowerCase().trim();
+    const mrKhoirulVoice =
+      !voiceInput || voiceInput === "roger" || voiceInput === "aura-orion-en"
+        ? ROGER_VOICE_ID
+        : process.env.AI_AUDIO_VOICE || ROGER_VOICE_ID;
+
+    const audioModel = process.env.AI_AUDIO_MODEL || "audio";
     const candidates = [
-      { model: "audio", voice: mrKhoirulVoice },
+      { model: audioModel, voice: mrKhoirulVoice },
+      { model: "audio", voice: ROGER_VOICE_ID },
       { model: "audio", voice: "alloy" },
-      { model: "audio", voice: "nova" },
     ];
 
     const endpoint = `${baseUrl.replace(/\/+$/, "")}/audio/speech`;

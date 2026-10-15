@@ -62,7 +62,7 @@ export function LevelHeader({
             Level {cefr}
           </Badge>
           <span className="text-xs text-white/80 font-medium">
-            {isUnlocked ? "Kurikulum Bertingkat" : "Terkunci"}
+            {isUnlocked ? "Graded Curriculum" : "Locked"}
           </span>
         </div>
 
@@ -91,7 +91,7 @@ export function LevelHeader({
             <div className="flex items-center gap-1.5 font-medium text-white">
               <CheckCircle2 className="w-3.5 h-3.5 text-[#F4B41A]" />
               <span>
-                {completedCount} dari {totalCount} modul selesai
+                {completedCount} of {totalCount} modules completed
               </span>
             </div>
             <span ref={percentRef} className="font-bold text-[#F4B41A]">

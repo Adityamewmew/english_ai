@@ -6,7 +6,7 @@ import Link from "next/link";
 import {
   ArrowLeft,
   Save,
-  Sparkles,
+  Wand2,
   Layers,
   BookOpen,
   Volume2,
@@ -20,7 +20,6 @@ import { Badge } from "@/components/ui/badge";
 import { getApiUrl } from "@/lib/api-client";
 import {
   ModuleEditorMetadataTab,
-  CEFR_LEVELS,
 } from "./module-editor/ModuleEditorMetadataTab";
 import {
   ModuleEditorTheoryTab,
@@ -316,7 +315,7 @@ export function ModuleEditorForm({ initialData, isEdit = false }: ModuleEditorFo
               </>
             ) : (
               <>
-                <Sparkles className="w-4 h-4 text-violet-600 dark:text-violet-400" />
+                <Wand2 className="w-4 h-4 text-violet-600 dark:text-violet-400" />
                 <span>Auto-Draft AI</span>
               </>
             )}

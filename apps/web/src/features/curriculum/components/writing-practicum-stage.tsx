@@ -9,7 +9,6 @@ import {
   Send,
   Trophy,
   Volume2,
-  PenTool,
 } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 import {
@@ -55,8 +54,8 @@ export function WritingPracticumStage({
 
   const question = questions[currentIdx] || {
     id: 1,
-    typeLabel: "Menulis",
-    instruction: "Ketik kalimat lengkap...",
+    typeLabel: "Writing",
+    instruction: "Type the complete sentence...",
     promptText: "",
     targetAnswers: [],
     explanation: "",
@@ -88,7 +87,7 @@ export function WritingPracticumStage({
         ...prev,
         [question.id]: {
           isCorrect: true,
-          feedback: "Sempurna! Konstruksi kalimat dan mekanika penulisanmu sangat tepat.",
+          feedback: "Spot on! Your sentence construction and mechanics are accurate.",
         },
       }));
     } else {
@@ -98,7 +97,7 @@ export function WritingPracticumStage({
         [question.id]: {
           isCorrect: false,
           feedback:
-            "Jawaban belum persis sesuai. Periksa huruf kapital, spasi, kata kerja 'to be', dan tanda titik/tanya.",
+            "Answer doesn't match yet. Check your capitalization, spacing, 'to be' verb, and punctuation mark.",
         },
       }));
     }
@@ -130,24 +129,24 @@ export function WritingPracticumStage({
 
         <div className="space-y-2">
           <span className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] uppercase tracking-wider font-mono">
-            Praktikum Selesai
+            Practicum Completed
           </span>
           <h3 className="text-2xl font-black text-slate-900 dark:text-white">
             Writing Mastery Achieved!
           </h3>
           <p className="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto">
-            Kamu telah menyelesaikan seluruh {questions.length} tantangan menulis aktif dengan skor akhir {totalScore}% ({correctCount}/{questions.length} Soal Benar).
+            You have completed all {questions.length} active writing challenges with a final score of {totalScore}% ({correctCount}/{questions.length} Correct).
           </p>
         </div>
 
         <div className="inline-flex items-center gap-6 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
           <div className="text-center">
-            <span className="text-xs text-slate-400 block font-mono">Akurasi Menulis</span>
+            <span className="text-xs text-slate-400 block font-mono">Writing Accuracy</span>
             <span className="text-xl font-black text-slate-900 dark:text-white">{totalScore}%</span>
           </div>
           <div className="h-8 w-[1px] bg-slate-200 dark:bg-slate-700" />
           <div className="text-center">
-            <span className="text-xs text-slate-400 block font-mono">Total XP Didapat</span>
+            <span className="text-xs text-slate-400 block font-mono">Total XP Earned</span>
             <span className="text-xl font-black text-emerald-600 dark:text-emerald-400">+{correctCount * 15} XP</span>
           </div>
         </div>
@@ -159,7 +158,7 @@ export function WritingPracticumStage({
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-sm transition-all active:scale-95 cursor-pointer shadow-md"
           >
             <CheckCircle2 className="w-4 h-4 text-[#F4B41A]" />
-            <span>Selesaikan &amp; Simpan Misi Menulis</span>
+            <span>Finish &amp; Save Writing Mission</span>
           </button>
         </div>
       </div>
@@ -179,10 +178,10 @@ export function WritingPracticumStage({
           </span>
         </div>
         <h3 className="text-lg sm:text-xl font-black text-slate-900 dark:text-white">
-          Praktikum Menulis Kalimat Mandiri
+          Independent Sentence Writing Practicum
         </h3>
         <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-          Ketik kalimat utuh dengan ejaan, huruf kapital, dan tanda baca yang benar untuk setiap soal.
+          Type complete sentences with accurate spelling, capitalization, and punctuation for each item.
         </p>
       </div>
 
@@ -206,7 +205,7 @@ export function WritingPracticumStage({
                   ? "w-4 bg-emerald-500"
                   : "w-2.5 bg-slate-200 dark:bg-slate-700"
               }`}
-              title={`Soal ${idx + 1}`}
+              title={`Question ${idx + 1}`}
             />
           );
         })}
@@ -217,7 +216,7 @@ export function WritingPracticumStage({
         {/* Instruction & Prompt */}
         <div className="space-y-2">
           <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider font-mono block">
-            Soal {currentIdx + 1}:
+            Question {currentIdx + 1}:
           </span>
           <p className="text-sm font-semibold text-slate-900 dark:text-white">
             {question.instruction}
@@ -231,7 +230,7 @@ export function WritingPracticumStage({
               type="button"
               onClick={handleListenPrompt}
               className="p-2 rounded-lg bg-white dark:bg-slate-700 text-[#0D3B66] dark:text-[#F4B41A] hover:bg-slate-100 transition-colors cursor-pointer shrink-0 shadow-2xs"
-              title="Dengarkan teks soal"
+              title="Listen to prompt text"
             >
               <Volume2 className="w-4 h-4" />
             </button>
@@ -239,7 +238,7 @@ export function WritingPracticumStage({
 
           {question.hint && (
             <p className="text-xs text-slate-500 dark:text-slate-400 italic">
-              Petunjuk: {question.hint}
+              Hint: {question.hint}
             </p>
           )}
         </div>
@@ -247,7 +246,7 @@ export function WritingPracticumStage({
         {/* Typing Input */}
         <div className="space-y-1.5">
           <label className="text-xs font-bold text-slate-700 dark:text-slate-200 block">
-            Jawaban Tulisanmu:
+            Your Written Answer:
           </label>
           <input
             type="text"
@@ -267,7 +266,7 @@ export function WritingPracticumStage({
                 handleCheckAnswer();
               }
             }}
-            placeholder="Ketik kalimat lengkap di sini..."
+            placeholder="Type complete sentence here..."
             className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66] dark:focus:ring-[#F4B41A]"
           />
         </div>
@@ -285,19 +284,19 @@ export function WritingPracticumStage({
               {currentEval.isCorrect ? (
                 <>
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <span>Jawaban Tepat (+15 XP)</span>
+                  <span>Correct Answer (+15 XP)</span>
                 </>
               ) : (
                 <>
                   <AlertCircle className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  <span>Coba Periksa Lagi</span>
+                  <span>Review Again</span>
                 </>
               )}
             </div>
             <p className="leading-relaxed">{currentEval.feedback}</p>
             {currentEval.isCorrect && (
               <p className="text-[11px] text-emerald-700 dark:text-emerald-400 font-mono">
-                Penjelasan: {question.explanation}
+                Explanation: {question.explanation}
               </p>
             )}
           </div>
@@ -318,7 +317,7 @@ export function WritingPracticumStage({
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-colors cursor-pointer"
           >
             <RotateCcw className="w-3.5 h-3.5" />
-            <span>Ketik Ulang</span>
+            <span>Clear &amp; Retype</span>
           </button>
 
           <div className="flex items-center gap-2">
@@ -330,8 +329,8 @@ export function WritingPracticumStage({
               >
                 <span>
                   {currentIdx + 1 < questions.length
-                    ? "Soal Selanjutnya"
-                    : "Lihat Ringkasan Hasil"}
+                    ? "Next Question"
+                    : "View Summary Results"}
                 </span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
@@ -343,7 +342,7 @@ export function WritingPracticumStage({
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs transition-all active:scale-95 cursor-pointer disabled:opacity-40 shadow-xs"
               >
                 <Send className="w-3.5 h-3.5" />
-                <span>Periksa Jawaban</span>
+                <span>Check Answer</span>
               </button>
             )}
           </div>

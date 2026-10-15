@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { Play, Pause, RotateCcw, Volume2, Eye, EyeOff } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { getApiUrl } from "@/lib/api-client";
 
 interface AudioPlayerProps {

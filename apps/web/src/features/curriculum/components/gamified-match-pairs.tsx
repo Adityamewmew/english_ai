@@ -242,7 +242,7 @@ export function GamifiedMatchPairs({
         id={`${isLeft ? "word" : "meaning"}-card-${item.id}`}
         {...(isLeft ? { "data-word-id": item.id } : { "data-meaning-id": item.id })}
         onClick={() => (isLeft ? handleWordClick(item.id) : handleMeaningClick(item.id))}
-        className={`relative w-full text-left px-4 py-3 sm:py-3.5 rounded-2xl font-bold text-xs sm:text-sm transition-all duration-200 flex items-center justify-between cursor-pointer border select-none ${
+        className={`relative w-full text-left px-3.5 sm:px-4 py-3 sm:py-3.5 rounded-2xl font-bold text-xs sm:text-sm transition-all duration-200 flex items-center justify-between cursor-pointer border select-none min-h-[44px] min-w-0 touch-manipulation ${
           isMatched
             ? "bg-[#0D3B66]/5 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 cursor-default"
             : isError
@@ -297,22 +297,22 @@ export function GamifiedMatchPairs({
         <div className="flex items-center gap-2.5">
           <div className="px-3 py-1.5 rounded-full bg-[#0D3B66]/10 dark:bg-[#0D3B66]/30 text-[#0D3B66] dark:text-[#F4B41A] border border-[#0D3B66]/20 font-bold text-xs flex items-center gap-2 font-mono">
             <Cable className="w-3.5 h-3.5 text-[#F4B41A]" />
-            <span>Mekanisme Sambung Tali</span>
+            <span>Cable Match Wiring</span>
           </div>
           <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">
-            Tarik atau klik pin untuk menghubungkan kata dengan artinya
+            Drag or click pins to connect English words with their Indonesian meanings
           </span>
         </div>
 
         <div className="flex items-center gap-2.5">
           <span className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 border-b-2 border-b-slate-300 dark:border-b-slate-700 shadow-2xs font-mono">
-            {matchedIds.size} / {shuffledWords.length} Terhubung
+            {matchedIds.size} / {shuffledWords.length} Connected
           </span>
           <button
             type="button"
             onClick={initializeGame}
             title="Reset Game"
-            className="p-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 border-b-2 border-b-slate-300 dark:border-b-slate-700 text-slate-600 hover:text-slate-900 dark:hover:text-white transition-all active:translate-y-[1px] cursor-pointer shadow-2xs"
+            className="p-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 border-b-2 border-b-slate-300 dark:border-b-slate-700 text-slate-600 hover:text-slate-900 dark:hover:text-white transition-all active:translate-y-[1px] cursor-pointer shadow-2xs min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation"
           >
             <RefreshCw className="w-4 h-4" />
           </button>
@@ -387,10 +387,10 @@ export function GamifiedMatchPairs({
         </svg>
 
         {/* Two-Column Grid with generous center channel */}
-        <div className="grid grid-cols-2 gap-8 sm:gap-16 md:gap-24 relative">
+        <div className="grid grid-cols-2 gap-5 sm:gap-14 md:gap-20 relative">
           <div className="space-y-3">
             <div className="text-[11px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider px-1">
-              Kata (English)
+              English Words
             </div>
             <div className="space-y-2.5">
               {shuffledWords.map((w) => renderCard(w, "left"))}
@@ -399,7 +399,7 @@ export function GamifiedMatchPairs({
 
           <div className="space-y-3">
             <div className="text-[11px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider px-1">
-              Arti / Terjemahan
+              Indonesian Meaning
             </div>
             <div className="space-y-2.5">
               {shuffledMeanings.map((m) => renderCard(m, "right"))}
@@ -416,9 +416,9 @@ export function GamifiedMatchPairs({
               <Trophy className="w-7 h-7 text-[#F4B41A] fill-[#F4B41A]" />
             </div>
             <div>
-              <h4 className="font-black text-lg">Semua Tali Berhasil Terhubung!</h4>
+              <h4 className="font-black text-lg">All Wires Connected!</h4>
               <p className="text-xs text-white/90">
-                Kamu sukses mencocokkan seluruh pasangan kata dengan benar! (+30 Bonus XP)
+                You have matched all vocabulary pairs correctly! (+30 Bonus XP)
               </p>
             </div>
           </div>
@@ -428,7 +428,7 @@ export function GamifiedMatchPairs({
             className="btn-skeuo-yellow px-4 py-2 rounded-xl font-extrabold text-xs flex items-center gap-2 cursor-pointer"
           >
             <RefreshCw className="w-3.5 h-3.5" />
-            <span>Main Lagi</span>
+            <span>Play Again</span>
           </button>
         </div>
       )}

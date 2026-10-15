@@ -36,7 +36,7 @@ export function SpeakingReflexDrills({
     return (
       <div className="p-8 rounded-[24px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-3">
         <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">
-          Belum ada latihan kalimat lisan yang tersedia untuk sesi ini.
+          No spoken sentence drills available for this session yet.
         </p>
       </div>
     );
@@ -67,7 +67,6 @@ export function SpeakingReflexDrills({
     };
   }, []);
 
-  // 1. Play Model Audio
   const handlePlayModel = (idx: number, text: string) => {
     playPopSound();
     setActiveDrillPlaying(idx);
@@ -77,7 +76,6 @@ export function SpeakingReflexDrills({
     }, 2800);
   };
 
-  // 2. Start Recording Student Voice (MediaRecorder)
   const handleStartRecord = async (idx: number) => {
     playPopSound();
     try {
@@ -107,12 +105,11 @@ export function SpeakingReflexDrills({
         setRecordSeconds((s) => s + 1);
       }, 1000);
     } catch (err) {
-      console.warn("Mikrofon tidak dapat diakses:", err);
-      alert("Izin mikrofon diperlukan untuk merekam suara latihan.");
+      console.warn("Microphone access failed:", err);
+      alert("Microphone permission is required to record your practice voice.");
     }
   };
 
-  // 3. Stop Recording
   const handleStopRecord = (idx: number) => {
     playSnapSound();
     if (timerRef.current) {
@@ -125,7 +122,6 @@ export function SpeakingReflexDrills({
     setRecordingDrillIdx(null);
   };
 
-  // 4. Play Student Recording
   const handlePlayStudentAudio = (idx: number) => {
     const audioUrl = recordings[idx];
     if (!audioUrl) return;
@@ -148,7 +144,6 @@ export function SpeakingReflexDrills({
     audio.play().catch(() => setPlayingRecordingIdx(null));
   };
 
-  // 5. Complete Drill & Reward XP
   const handleConfirmDone = (idx: number) => {
     if (drillCompleted[idx]) return;
     setDrillCompleted((prev) => ({ ...prev, [idx]: true }));
@@ -163,10 +158,10 @@ export function SpeakingReflexDrills({
           Step 3 · Oral Reflex Drills (Listen &amp; Repeat)
         </span>
         <h3 className="text-xl font-black text-slate-900 dark:text-white">
-          Latihan Ucapkan Mandiri (Listen, Repeat &amp; Compare)
+          Independent Speaking Practice (Listen, Repeat &amp; Compare)
         </h3>
         <p className="text-sm text-slate-600 dark:text-slate-300">
-          Dengarkan intonasi model Mr. Khoirul, lalu rekam suaramu sendiri untuk membandingkan ritme dan artikulasi perkenalan:
+          Listen to Mr. Khoirul's model intonation, then record your voice to compare your rhythm and intro articulation:
         </p>
       </div>
 
@@ -221,7 +216,7 @@ export function SpeakingReflexDrills({
                 {isDone && (
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 text-xs font-bold shrink-0 self-start">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                    <span>Tuntas</span>
+                    <span>Completed</span>
                   </span>
                 )}
               </div>
@@ -235,7 +230,7 @@ export function SpeakingReflexDrills({
                   className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold transition-all shadow-xs cursor-pointer active:scale-95"
                 >
                   <Volume2 className={`w-4 h-4 ${isModelPlaying ? "text-[#F4B41A] animate-pulse" : "text-[#0D3B66] dark:text-[#F4B41A]"}`} />
-                  <span>{isModelPlaying ? "Memutar Model..." : "Dengar Model"}</span>
+                  <span>{isModelPlaying ? "Playing Model..." : "Listen to Model"}</span>
                 </button>
 
                 {/* 2. Record Student Voice */}
@@ -246,7 +241,7 @@ export function SpeakingReflexDrills({
                     className="flex items-center gap-2 px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold shadow-md transition-all active:scale-95 cursor-pointer animate-pulse"
                   >
                     <Square className="w-3.5 h-3.5 fill-current" />
-                    <span>Selesai Rekam (00:0{recordSeconds})</span>
+                    <span>Stop Recording (00:0{recordSeconds})</span>
                   </button>
                 ) : (
                   <button
@@ -255,7 +250,7 @@ export function SpeakingReflexDrills({
                     className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-xs transition-all active:scale-95 cursor-pointer"
                   >
                     <Mic className="w-4 h-4 text-[#0D3B66]" />
-                    <span>{studentRecording ? "Rekam Ulang Suara" : "Rekam Suaramu"}</span>
+                    <span>{studentRecording ? "Re-record Voice" : "Record Your Voice"}</span>
                   </button>
                 )}
 
@@ -267,7 +262,7 @@ export function SpeakingReflexDrills({
                     className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold shadow-xs transition-all hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer active:scale-95"
                   >
                     <Headphones className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A]" />
-                    <span>{isPlayingSelf ? "Memutar..." : "Dengar Suaramu"}</span>
+                    <span>{isPlayingSelf ? "Playing..." : "Play Your Recording"}</span>
                   </button>
                 )}
 
@@ -279,7 +274,7 @@ export function SpeakingReflexDrills({
                     className="ml-auto flex items-center gap-1.5 px-4 py-2 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer"
                   >
                     <CheckCircle2 className="w-4 h-4 text-[#F4B41A]" />
-                    <span>Selesai Latih (+15 XP)</span>
+                    <span>Complete Drill (+15 XP)</span>
                   </button>
                 )}
               </div>

@@ -65,7 +65,6 @@ export function PracticumDrillCard({
     };
   }, [question.id, savedAudioUrl, savedScore]);
 
-  // 1. Play Audio Model
   const handlePlayModel = () => {
     playPopSound();
     setIsPlayingModel(true);
@@ -76,7 +75,6 @@ export function PracticumDrillCard({
     }, 3200);
   };
 
-  // 2. Start Recording Student Drill
   const handleStartRecord = async () => {
     playPopSound();
     setLiveTranscript("");
@@ -127,11 +125,10 @@ export function PracticumDrillCard({
         } catch {}
       }
     } catch {
-      alert("Izin mikrofon diperlukan untuk merekam pelafalanmu.");
+      alert("Microphone permission is required to record your speech.");
     }
   };
 
-  // 3. Stop Recording & Compute Accuracy
   const handleStopRecord = () => {
     playSnapSound();
     if (timerRef.current) {
@@ -177,7 +174,6 @@ export function PracticumDrillCard({
     setAccuracyScore(score);
   };
 
-  // 4. Play Student Audio
   const handlePlaySelfAudio = () => {
     if (!recordedAudioUrl) return;
     if (selfAudioRef.current) selfAudioRef.current.pause();
@@ -190,7 +186,6 @@ export function PracticumDrillCard({
     audio.play().catch(() => setIsPlayingSelf(false));
   };
 
-  // 5. Submit & Advance
   const handleConfirm = () => {
     playMatchSuccessSound();
     const finalScore = accuracyScore ?? 80;
@@ -208,7 +203,7 @@ export function PracticumDrillCard({
               <TrendingUp className="w-3.5 h-3.5" />
             </span>
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
-              Target Kalimat Lisan (Listen & Repeat)
+              Target Spoken Sentence (Listen &amp; Repeat)
             </span>
           </div>
 
@@ -218,7 +213,7 @@ export function PracticumDrillCard({
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-800 dark:text-slate-200 shadow-xs cursor-pointer active:scale-95 transition-all"
           >
             <Volume2 className={`w-3.5 h-3.5 ${isPlayingModel ? "animate-pulse text-[#F4B41A]" : "text-[#0D3B66] dark:text-[#F4B41A]"}`} />
-            <span>{isPlayingModel ? "Memutar Audio..." : "Dengarkan Contoh"}</span>
+            <span>{isPlayingModel ? "Playing Audio..." : "Listen to Sample"}</span>
           </button>
         </div>
 
@@ -245,7 +240,7 @@ export function PracticumDrillCard({
         <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 space-y-2">
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-mono font-bold uppercase text-slate-500">
-              Hasil Rekaman Suaramu:
+              Your Voice Recording:
             </span>
             {accuracyScore !== null && (
               <span
@@ -255,12 +250,12 @@ export function PracticumDrillCard({
                     : "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300"
                 }`}
               >
-                Kejelasan: {accuracyScore}%
+                Clarity: {accuracyScore}%
               </span>
             )}
           </div>
           <p className="text-xs text-slate-800 dark:text-slate-200 font-medium italic">
-            &ldquo;{liveTranscript || "Audio berhasil direkam."}&rdquo;
+            &ldquo;{liveTranscript || "Audio recorded successfully."}&rdquo;
           </p>
         </div>
       )}
@@ -274,7 +269,7 @@ export function PracticumDrillCard({
             className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold shadow-md transition-all active:scale-95 cursor-pointer animate-pulse"
           >
             <Square className="w-3.5 h-3.5 fill-current" />
-            <span>Selesai Bicara (00:0{recordSeconds})</span>
+            <span>Stop Speaking (00:0{recordSeconds})</span>
           </button>
         ) : (
           <button
@@ -283,7 +278,7 @@ export function PracticumDrillCard({
             className="flex items-center gap-2 px-4 py-2.5 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-xs transition-all active:scale-95 cursor-pointer"
           >
             <Mic className="w-4 h-4 text-[#0D3B66]" />
-            <span>{recordedAudioUrl ? "Ulangi Rekaman Lisan" : "Tekan & Ucapkan Kalimat"}</span>
+            <span>{recordedAudioUrl ? "Re-record Speech" : "Tap & Speak Sentence"}</span>
           </button>
         )}
 
@@ -294,7 +289,7 @@ export function PracticumDrillCard({
             className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold shadow-xs transition-all hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer active:scale-95"
           >
             <Headphones className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A]" />
-            <span>{isPlayingSelf ? "Memutar..." : "Dengar Suaramu"}</span>
+            <span>{isPlayingSelf ? "Playing..." : "Play Your Recording"}</span>
           </button>
         )}
 
@@ -304,7 +299,7 @@ export function PracticumDrillCard({
             onClick={handleConfirm}
             className="ml-auto flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer"
           >
-            <span>{isLastQuestion ? "Selesaikan Praktikum" : "Konfirmasi & Lanjut Soal"}</span>
+            <span>{isLastQuestion ? "Complete Practicum" : "Confirm & Continue"}</span>
             <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
           </button>
         )}

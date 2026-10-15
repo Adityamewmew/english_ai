@@ -6,7 +6,6 @@ import {
   Volume2,
   RotateCcw,
   ArrowRight,
-  Puzzle,
 } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 import {
@@ -43,18 +42,18 @@ export function WritingSentenceBuilder({
   const currentTarget = targets[currentTargetIdx] || {
     id: "empty",
     category: "Writing",
-    meaning: "Pilih kata untuk menyusun kalimat.",
+    meaning: "Choose words to build the sentence.",
     tokens: [],
     fullSentence: "",
   };
 
   // Helper to shuffle
-  const shuffleWords = (arr: string[]) => {
-    return [...arr].sort(() => Math.random() - 0.5);
+  const shuffleWords = (arr: string[] = []) => {
+    return [...(arr || [])].sort(() => Math.random() - 0.5);
   };
 
   const [availableWords, setAvailableWords] = useState<string[]>(() =>
-    shuffleWords(currentTarget.tokens)
+    shuffleWords(currentTarget?.tokens || [])
   );
   const [selectedWords, setSelectedWords] = useState<string[]>([]);
   const [builderStatus, setBuilderStatus] = useState<"idle" | "correct" | "wrong">("idle");
@@ -125,14 +124,14 @@ export function WritingSentenceBuilder({
             Step 3 · Word Chip Sentence Builder ({currentTargetIdx + 1}/{targets.length})
           </span>
           <span className="text-xs font-bold text-slate-500 font-mono">
-            Kategori: {currentTarget.category}
+            Category: {currentTarget.category}
           </span>
         </div>
         <h3 className="text-lg sm:text-xl font-black text-slate-900 dark:text-white">
-          Susun Balok Kata Menjadi Kalimat Utuh
+          Assemble Word Chips into Complete Sentences
         </h3>
         <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-          Ketuk balok kata di bawah untuk memindahkannya ke kanvas kalimat sesuai urutan sintaksis yang tepat.
+          Tap the word chips below to place them onto the sentence canvas in the correct syntactic order.
         </p>
       </div>
 
@@ -158,7 +157,7 @@ export function WritingSentenceBuilder({
                   : "text-slate-500 hover:text-slate-900 dark:hover:text-slate-200"
               }`}
             >
-              <span>Kalimat {idx + 1}</span>
+              <span>Sentence {idx + 1}</span>
               {isDone && <CheckCircle2 className="w-3.5 h-3.5 text-[#F4B41A]" />}
             </button>
           );
@@ -171,7 +170,7 @@ export function WritingSentenceBuilder({
         <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/60 flex items-center justify-between gap-3">
           <div className="space-y-0.5">
             <span className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider font-mono block">
-              Arti Kalimat Sasaran:
+              Target Sentence Meaning:
             </span>
             <p className="text-sm font-semibold text-slate-900 dark:text-white">
               &ldquo;{currentTarget.meaning}&rdquo;
@@ -181,7 +180,7 @@ export function WritingSentenceBuilder({
             type="button"
             onClick={handleListenTarget}
             className="p-2.5 rounded-lg bg-white dark:bg-slate-700 hover:bg-slate-100 text-[#0D3B66] dark:text-[#F4B41A] transition-colors cursor-pointer shrink-0 shadow-2xs"
-            title="Dengarkan pengucapan kalimat sasaran"
+            title="Listen to target sentence pronunciation"
           >
             <Volume2 className="w-4 h-4" />
           </button>
@@ -191,16 +190,16 @@ export function WritingSentenceBuilder({
         <div className="space-y-1.5">
           <div className="flex items-center justify-between text-xs">
             <span className="font-bold text-slate-600 dark:text-slate-300">
-              Kanvas Kalimat:
+              Sentence Canvas:
             </span>
             <span className="text-slate-400 dark:text-slate-500 text-[11px]">
-              Klik balok untuk mengembalikan ke bank kata
+              Click a chip to return it to the word bank
             </span>
           </div>
           <div className="min-h-[80px] p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border-2 border-dashed border-[#0D3B66]/30 dark:border-[#F4B41A]/30 flex flex-wrap items-center gap-2">
             {selectedWords.length === 0 ? (
               <span className="text-xs text-slate-400 dark:text-slate-500 italic">
-                Ketuk kata dari bank kata di bawah untuk mulai menyusun kalimat...
+                Tap words from the bank below to begin assembling the sentence...
               </span>
             ) : (
               selectedWords.map((word, idx) => (
@@ -220,7 +219,7 @@ export function WritingSentenceBuilder({
         {/* Available Word Bank */}
         <div className="space-y-2 pt-1">
           <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider font-mono block">
-            Bank Kata:
+            Word Bank:
           </span>
           <div className="flex flex-wrap gap-2">
             {availableWords.map((word, idx) => (
@@ -235,7 +234,7 @@ export function WritingSentenceBuilder({
             ))}
             {availableWords.length === 0 && (
               <span className="text-xs text-slate-400 dark:text-slate-500 italic py-2">
-                Semua kata telah dimasukkan ke kanvas kalimat.
+                All words have been placed onto the canvas.
               </span>
             )}
           </div>
@@ -249,19 +248,19 @@ export function WritingSentenceBuilder({
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-colors cursor-pointer"
           >
             <RotateCcw className="w-3.5 h-3.5" />
-            <span>Reset Susunan</span>
+            <span>Reset Words</span>
           </button>
 
           <div className="flex items-center gap-3">
             {builderStatus === "correct" && (
               <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
                 <CheckCircle2 className="w-4 h-4" />
-                <span>Susunan Tepat (+20 XP)!</span>
+                <span>Correct Order (+20 XP)!</span>
               </span>
             )}
             {builderStatus === "wrong" && (
               <span className="text-xs font-bold text-rose-600 dark:text-rose-400">
-                Susunan belum sesuai, coba atur kembali.
+                Not quite right, try rearranging the words.
               </span>
             )}
 
@@ -272,7 +271,7 @@ export function WritingSentenceBuilder({
                 onClick={handleNextTarget}
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs transition-all active:scale-95 cursor-pointer shadow-xs"
               >
-                <span>Kalimat Selanjutnya</span>
+                <span>Next Sentence</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             ) : (
@@ -282,7 +281,7 @@ export function WritingSentenceBuilder({
                 disabled={selectedWords.length === 0}
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs transition-all active:scale-95 cursor-pointer disabled:opacity-40 shadow-xs"
               >
-                <span>Periksa Susunan</span>
+                <span>Check Sentence</span>
               </button>
             )}
           </div>

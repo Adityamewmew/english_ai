@@ -28,11 +28,11 @@ export function LevelCompletionCard({
   firstModuleButtonText,
 }: LevelCompletionCardProps) {
   const moduleNumber = firstNextModuleId.replace(/^A1-M0?/, "");
-  const defaultNextBtnText = nextLevelButtonText || `Buka ${nextLevelTitle}`;
-  const defaultFirstModBtnText = firstModuleButtonText || `Mulai Modul ${moduleNumber}`;
+  const defaultNextBtnText = nextLevelButtonText || `Unlock ${nextLevelTitle}`;
+  const defaultFirstModBtnText = firstModuleButtonText || `Start Module ${moduleNumber}`;
   const defaultDescription =
     description ||
-    `Fondasi pembelajaran telah kamu kuasai dengan baik. Lanjutkan perjalanan belajarmu ke ${nextLevelTitle} untuk materi dan tantangan speaking baru.`;
+    `You have mastered the foundational materials well. Continue your learning journey to ${nextLevelTitle} for new topics and speaking challenges.`;
 
   return (
     <Card
@@ -44,11 +44,11 @@ export function LevelCompletionCard({
         <div className="space-y-2 max-w-xl">
           <Badge className="gap-2 px-3 py-1 text-xs font-bold bg-[#F4B41A] text-[#0D3B66] border-b border-[#DDA012]">
             <Award className="w-3.5 h-3.5 text-[#0D3B66]" />
-            <span>Pencapaian Level Selesai</span>
+            <span>Level Completed</span>
           </Badge>
 
           <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white">
-            Selamat! Kamu telah menyelesaikan {completedLevelTitle}
+            Congratulations! You have completed {completedLevelTitle}
           </h3>
 
           <p className="text-xs sm:text-sm text-slate-200/90 leading-relaxed">

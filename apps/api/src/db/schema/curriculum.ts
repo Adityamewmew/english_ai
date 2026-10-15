@@ -14,7 +14,7 @@ export const curriculumModules = pgTable("curriculum_modules", {
   levelId: varchar("level_id", { length: 20 }).notNull().default("A1.1"),
   title: varchar("title", { length: 150 }).notNull(),
   cefr: varchar("cefr", { length: 10 }).notNull(),
-  group: varchar("group", { length: 50 }).notNull(),
+  group: varchar("group", { length: 100 }).notNull(),
   objective: text("objective").notNull(),
   complexity: varchar("complexity", { length: 20 }).notNull().default("medium"),
   estimatedMinutes: integer("estimated_minutes").notNull().default(15),

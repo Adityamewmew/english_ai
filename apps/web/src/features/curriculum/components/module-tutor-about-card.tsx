@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { PhoneCall, CheckCircle2, Sparkles } from "lucide-react";
+import { PhoneCall, CheckCircle2, Target } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 
 interface ModuleTutorCallBarProps {
@@ -93,7 +93,7 @@ export function ModuleAboutCard({
       {/* Objective Box */}
       {objective && (
         <div className="card-skeuo p-4 rounded-2xl bg-[#0D3B66]/5 dark:bg-slate-800/40 border border-[#0D3B66]/20 text-xs sm:text-sm text-[#0D3B66] dark:text-slate-200 flex items-start gap-3">
-          <Sparkles className="w-4 h-4 text-[#F4B41A] shrink-0 mt-0.5" />
+          <Target className="w-4 h-4 text-[#F4B41A] shrink-0 mt-0.5" />
           <div>
             <span className="font-extrabold uppercase text-[10px] tracking-wider block text-[#0D3B66] dark:text-[#F4B41A] mb-0.5">
               Target Communicative Outcome

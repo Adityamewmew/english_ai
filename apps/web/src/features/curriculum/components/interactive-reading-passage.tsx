@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { BookOpen, Volume2, Play, Pause, Eye, Info } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 
@@ -17,7 +17,7 @@ interface InteractiveReadingPassageProps {
   linguisticTarget?: any;
 }
 
-const SPOTLIGHT_DICT: Record<string, { type: "grammar" | "vocab"; label: string; desc: string }> = {
+const CORE_GRAMMAR_SPOTLIGHT: Record<string, { type: "grammar" | "vocab"; label: string; desc: string }> = {
   "am": { type: "grammar", label: "To Be (1st Person)", desc: "Pasangan subjek 'I' (Saya)" },
   "i'm": { type: "grammar", label: "Kontraksi To Be", desc: "Singkatan dari 'I am' (Saya)" },
   "is": { type: "grammar", label: "To Be (Tunggal)", desc: "Pasangan subjek tunggal 'He / She / It'" },
@@ -26,12 +26,8 @@ const SPOTLIGHT_DICT: Record<string, { type: "grammar" | "vocab"; label: string;
   "are": { type: "grammar", label: "To Be (Jamak)", desc: "Pasangan subjek jamak 'We / They' atau 'You'" },
   "we're": { type: "grammar", label: "Kontraksi To Be", desc: "Singkatan dari 'We are' (Kami / Kita)" },
   "they're": { type: "grammar", label: "Kontraksi To Be", desc: "Singkatan dari 'They are' (Mereka)" },
-  "spain": { type: "vocab", label: "Nama Negara", desc: "Spanyol (asal Jamie)" },
-  "spanish": { type: "vocab", label: "Kewarganegaraan", desc: "Warga negara Spanyol" },
-  "brazil": { type: "vocab", label: "Nama Negara", desc: "Brazil (asal Marta)" },
-  "brazilian": { type: "vocab", label: "Kewarganegaraan", desc: "Warga negara Brazil" },
-  "athlete": { type: "vocab", label: "Kosakata Kunci", desc: "Atlet / olahragawan" },
-  "swimmer": { type: "vocab", label: "Kosakata Minat", desc: "Perenang" },
+  "isn't": { type: "grammar", label: "Kontraksi Negatif", desc: "Singkatan dari 'is not'" },
+  "aren't": { type: "grammar", label: "Kontraksi Negatif", desc: "Singkatan dari 'are not'" },
 };
 
 export function InteractiveReadingPassage({
@@ -44,6 +40,39 @@ export function InteractiveReadingPassage({
   const [isPlayingFull, setIsPlayingFull] = useState(false);
   const [spotlightEnabled, setSpotlightEnabled] = useState(true);
   const [activeTokenHint, setActiveTokenHint] = useState<{ word: string; label: string; desc: string } | null>(null);
+
+  const spotlightDict = useMemo(() => {
+    const dict: Record<string, { type: "grammar" | "vocab"; label: string; desc: string }> = {
+      ...CORE_GRAMMAR_SPOTLIGHT,
+    };
+
+    const vocabList: any[] =
+      (Array.isArray((passage as any)?.vocabTargets) ? (passage as any).vocabTargets : null) ||
+      (Array.isArray(linguisticTarget?.vocabTargets) ? linguisticTarget.vocabTargets : null) ||
+      (Array.isArray((passage as any)?.vocabulary) ? (passage as any).vocabulary : null) ||
+      [];
+
+    vocabList.forEach((v: any) => {
+      const word = (v.word || v.en || v.term || "").trim().toLowerCase();
+      if (word) {
+        dict[word] = {
+          type: "vocab",
+          label: v.type || "Kosakata Kunci",
+          desc: v.meaning || v.transformed || v.desc || "Kosakata target",
+        };
+      }
+      const transformed = (v.transformed || "").trim().toLowerCase();
+      if (transformed && !transformed.includes("/") && !transformed.includes(" ")) {
+        dict[transformed] = {
+          type: "vocab",
+          label: v.type || "Kosakata Kunci",
+          desc: v.meaning || v.desc || `Bentuk kata kunci: ${word}`,
+        };
+      }
+    });
+
+    return dict;
+  }, [passage, linguisticTarget]);
 
   const safeParagraphs = Array.isArray(passage?.paragraphs)
     ? passage.paragraphs
@@ -173,7 +202,7 @@ export function InteractiveReadingPassage({
 
       <div className="flex flex-wrap items-center justify-between text-xs text-slate-600 dark:text-slate-400 px-1 gap-2">
         <div className="flex items-center gap-2">
-          <span>Ketuk kalimat untuk audio. Ketuk kata bersorot untuk penjelasan grammar.</span>
+          <span>Tap a sentence to play audio. Tap highlighted words for grammar &amp; vocabulary insights.</span>
         </div>
         <div className="flex items-center gap-2">
           <button
@@ -186,11 +215,11 @@ export function InteractiveReadingPassage({
             }`}
           >
             <Eye className="w-3.5 h-3.5" />
-            <span>{spotlightEnabled ? "Sorotan Kata: Aktif" : "Sorotan Kata: Nonaktif"}</span>
+            <span>{spotlightEnabled ? "Word Spotlight: On" : "Word Spotlight: Off"}</span>
           </button>
           {activeSentenceIndex !== null && (
             <span className="font-semibold text-slate-700 dark:text-slate-300">
-              Kalimat {activeSentenceIndex + 1} dari {sentences.length}
+              Sentence {activeSentenceIndex + 1} of {sentences.length}
             </span>
           )}
         </div>
@@ -214,7 +243,7 @@ export function InteractiveReadingPassage({
             onClick={() => setActiveTokenHint(null)}
             className="text-xs px-2.5 py-1 rounded bg-white/15 hover:bg-white/25 text-white cursor-pointer font-medium shrink-0 transition-colors"
           >
-            Tutup
+            Close
           </button>
         </div>
       )}
@@ -259,7 +288,7 @@ export function InteractiveReadingPassage({
                   ? sentence
                   : words.map((token: string, wIdx: number) => {
                       const cleanWord = token.trim().toLowerCase().replace(/[.,!?;:()]/g, "");
-                      const match = SPOTLIGHT_DICT[cleanWord];
+                      const match = spotlightDict[cleanWord];
 
                       if (!match) {
                         return <React.Fragment key={wIdx}>{token}</React.Fragment>;

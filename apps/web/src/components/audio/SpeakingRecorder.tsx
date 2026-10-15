@@ -6,7 +6,7 @@ import {
   Square,
   RotateCcw,
   Volume2,
-  Sparkles,
+  FileText,
   CheckCircle,
   Loader2,
   Info,
@@ -55,7 +55,7 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
     setHasRecorded(true);
     setIsTranscribing(false);
 
-    // 1. Jalankan Web Speech API secara paralel di client jika didukung browser
+    // Web Speech API real-time transcript
     if (typeof window !== "undefined") {
       const SpeechRecognition =
         (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
@@ -86,7 +86,7 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
       }
     }
 
-    // 2. Mulai perekaman audio murni (MediaRecorder) sebagai audio player & fallback
+    // MediaRecorder capture for audio playback & server fallback
     if (typeof navigator !== "undefined" && navigator.mediaDevices?.getUserMedia) {
       navigator.mediaDevices
         .getUserMedia({ audio: true })
@@ -302,7 +302,7 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
       <div className="space-y-1.5">
         <div className="flex items-center justify-between text-xs">
           <label className="font-semibold text-slate-700 flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-secondary" />
+            <FileText className="w-3.5 h-3.5 text-secondary" />
             Teks yang Terekam dari Suaramu:
           </label>
           <div className="flex items-center gap-2">
@@ -324,7 +324,7 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
         {isTranscribing && (
           <div className="flex items-center gap-2 p-2.5 bg-secondary/10 border border-secondary/20 rounded-xl text-xs text-secondary font-medium">
             <Loader2 className="w-4 h-4 animate-spin text-secondary" />
-            <span>AI Gemini sedang menganalisis audio (menyesuaikan nama, daerah &amp; pengucapan)...</span>
+            <span>Sistem sedang mentranskrip dan menganalisis audio...</span>
           </div>
         )}
 

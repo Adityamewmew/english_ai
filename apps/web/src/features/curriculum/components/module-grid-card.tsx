@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Lock, ArrowRight, CheckCircle2, Clock, BookOpen, Sparkles } from "lucide-react";
+import { Lock, ArrowRight, CheckCircle2, BookOpen } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 
 export interface CurriculumModuleItem {
@@ -127,14 +127,14 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
             <Link
               href={`/modules/${module.id}`}
               onClick={(e) => animeButtonPop(e.currentTarget)}
-              className={`px-4 py-1.5 rounded-full font-bold text-xs transition-all active:scale-95 cursor-pointer flex items-center gap-1 ${
+              className={`px-4 py-2 sm:py-1.5 rounded-full font-bold text-xs transition-all active:scale-95 cursor-pointer flex items-center gap-1 min-h-[40px] sm:min-h-[36px] touch-manipulation ${
                 isCompleted
                   ? "btn-skeuo-yellow text-[#0F172A]"
                   : "btn-skeuo-navy"
               }`}
             >
               <span>{isCompleted ? "Review" : "Start"}</span>
-              <ArrowRight className="w-3 h-3" />
+              <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           )}
         </div>

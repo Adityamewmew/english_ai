@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Volume2, ArrowRight, BookOpen } from "lucide-react";
+import { Volume2, BookOpen } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 import { playPopSound } from "@/lib/sound-fx";
 
@@ -20,13 +20,8 @@ export function ListeningOverviewStage({
 }: ListeningOverviewStageProps) {
   const context =
     dialogueSec?.content?.context ||
-    "Dua siswa, Jamie dan Marta, bertemu di depan gerbang sekolah dan saling menyapa.";
-  const keyPhrases = theorySec?.content?.keyPhrases || [
-    { phrase: "Nice to meet you", meaning: "Senang berkenalan denganmu" },
-    { phrase: "Where are you from?", meaning: "Dari mana kamu berasal?" },
-    { phrase: "I'm from...", meaning: "Saya berasal dari..." },
-    { phrase: "What's your name?", meaning: "Siapa namamu?" },
-  ];
+    "Listen to the conversation carefully to understand the dialogue and key expressions.";
+  const keyPhrases = theorySec?.content?.keyPhrases || [];
 
   const handlePlayPhrase = (phrase: string, e: React.MouseEvent) => {
     animeButtonPop(e.currentTarget as HTMLElement);
@@ -41,14 +36,14 @@ export function ListeningOverviewStage({
         <div className="flex items-center gap-2 text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A]">
           <BookOpen className="w-4 h-4" />
           <span className="uppercase tracking-wider font-mono">
-            Konteks Percakapan
+            Conversation Context
           </span>
         </div>
         <p className="text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
           {context}
         </p>
         <p className="text-xs text-slate-500 dark:text-slate-400">
-          Dengarkan bagaimana Jamie dan Marta berkenalan, menanyakan asal negara, dan bercakap-cakap dengan tempo santai.
+          Listen to how the speakers interact, express ideas, and chat at a relaxed natural pace.
         </p>
       </div>
 
@@ -56,10 +51,10 @@ export function ListeningOverviewStage({
       <div className="space-y-3">
         <div>
           <h4 className="text-sm font-bold text-slate-900 dark:text-white">
-            Frasa Kunci yang Perlu Didengar
+            Key Phrases to Listen For
           </h4>
           <p className="text-xs text-slate-500 dark:text-slate-400">
-            Dengarkan pelafalan frasa-frasa penting ini sebelum menyimak percakapan utuh:
+            Listen to the pronunciation of these essential phrases before playing the full conversation:
           </p>
         </div>
 
@@ -81,7 +76,7 @@ export function ListeningOverviewStage({
                 type="button"
                 onClick={(e) => handlePlayPhrase(item.phrase, e)}
                 className="p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-[#0D3B66] dark:text-[#F4B41A] transition-colors cursor-pointer shrink-0"
-                title="Dengarkan pengucapan"
+                title="Listen to pronunciation"
               >
                 <Volume2 className="w-4 h-4" />
               </button>
@@ -90,17 +85,6 @@ export function ListeningOverviewStage({
         </div>
       </div>
 
-      {/* 3. Direct Clear Action Button */}
-      <div className="pt-2 flex justify-end">
-        <button
-          type="button"
-          onClick={onGoToDialogue}
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs sm:text-sm transition-all active:scale-95 cursor-pointer shadow-xs"
-        >
-          <span>Mulai Dengarkan Percakapan (Langkah 2)</span>
-          <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
-        </button>
-      </div>
     </div>
   );
 }
