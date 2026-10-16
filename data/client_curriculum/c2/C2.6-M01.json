@@ -1,0 +1,199 @@
+{
+  "id": "C2.6-M01",
+  "levelId": "C2.6",
+  "title": "Unit 1: Hermeneutic Close-Reading of Enlightenment Philosophers (Locke, Kant, Hume)",
+  "cefr": "C2",
+  "group": "Philosophical Hermeneutics",
+  "objective": "Mampu menelaah teks filsafat pencerahan asli dengan pemahaman mendalam atas nuansa leksikal abad ke-18.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": false,
+  "passingScore": 75,
+  "orderIndex": 66,
+  "sections": {
+    "theory": {
+      "summary": "Membaca teks filsafat Pencerahan (seperti karya Locke, Kant, dan Hume) menuntut penguasaan hermeneutika tingkat tinggi. Pembaca pada level C2 harus mampu mengurai klausa subordinatif yang sangat panjang (syntactic embedding), modalitas epistemik yang bernuansa, dan kosakata abad ke-18 yang maknanya telah mengalami pergeseran (semantic shift). Teks-teks ini sering menggunakan inversi retoris dan pengandaian subjungtif (archaic subjunctive) untuk membangun argumen deduktif dan induktif yang ketat, serta membedah ambiguitas sintaksis dalam wacana dialektis.",
+      "rules": [
+        {
+          "pattern": "Negative / Restrictive Adverbial Inversion (e.g., Seldom does / Under no circumstances can)",
+          "meaning": "Penekanan retoris pada batasan, negasi mutlak, atau kondisi eksklusif dalam argumen filosofis.",
+          "example": "Seldom does the human understanding, clouded by innate prejudices, perceive the absolute truth without rigorous empirical verification."
+        },
+        {
+          "pattern": "Inverted Counterfactual Conditionals (e.g., Were it not for / Had the mind been)",
+          "meaning": "Pengandaian hipotetis tingkat tinggi (tanpa kata 'if') untuk menguji premis logika atau merumuskan eksperimen pemikiran (thought experiment).",
+          "example": "Had the mind been a mere tabula rasa, it could not possibly synthesize the manifold of sensory intuition into coherent thought."
+        },
+        {
+          "pattern": "Complex Nominalization & Embedded Relative Clauses",
+          "meaning": "Pemadatan konsep abstrak menjadi frasa nomina tunggal untuk menjaga kepadatan dan presisi argumen dialektis.",
+          "example": "The assertion that all human knowledge arises strictly from sensory experience, which forms the bedrock of empiricism, fundamentally challenges rationalist a priori dogma."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Jebakan Pergeseran Semantik (Semantic Shift) & Ambiguitas Sintaksis",
+        "explanation": "Pembaca modern sering salah mengartikan kosakata abad ke-18. Misalnya, kata 'want' pada masa itu sering berarti 'lack' (kekurangan/ketiadaan), bukan 'ingin'. Selain itu, klausa modifikasi yang terlalu panjang sering membuat pembaca kehilangan subjek utama, menghasilkan interpretasi yang keliru terhadap premis sang filsuf.",
+        "wrong": "Because the philosopher wanted empirical evidence, he desired to find it in nature to prove his theory.",
+        "correct": "Being entirely in want of empirical evidence, the philosopher deduced that the rationalist premise was fundamentally flawed."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Manakah dari kalimat berikut yang menggunakan struktur 'inverted conditional' yang tepat untuk merumuskan premis filosofis Kantian?",
+          "options": [
+            "Were human reason capable of grasping the noumenal world, the limits of empirical science would be instantly transcended.",
+            "If human reason was capable to grasp the noumenal world, the limits of empirical science will be transcended.",
+            "Had human reason capable of grasping the noumenal world, the limits of empirical science would have transcended."
+          ],
+          "correctIndex": 0,
+          "explanation": "Opsi A menggunakan inversi subjungtif yang tepat ('Were human reason capable...') untuk menyatakan kondisi hipotetis (counterfactual) di masa kini/umum. Opsi B salah secara grammar ('was' alih-alih 'were', 'capable to grasp' alih-alih 'capable of grasping'). Opsi C salah karena 'Had' membutuhkan kata kerja bentuk ketiga (past participle), bukan kata sifat 'capable'."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Dalam pembacaan hermeneutik teks David Hume, kalimat 'The argument is entirely in want of logical coherence' bermakna...",
+          "options": [
+            "Argumen tersebut sangat menginginkan adanya koherensi logis agar dapat diterima oleh para empiris.",
+            "Argumen tersebut sama sekali tidak memiliki (kekurangan) koherensi logis yang mendasar.",
+            "Argumen tersebut membutuhkan koherensi logis untuk menantang dogma rasionalis secara efektif."
+          ],
+          "correctIndex": 1,
+          "explanation": "Dalam bahasa Inggris abad ke-18 dan register akademis tingkat tinggi, frasa 'in want of' berarti 'lacking' atau 'tidak memiliki/kekurangan'. Oleh karena itu, kalimat tersebut mengkritik argumen yang tidak logis."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Lengkapi sanggahan akademis berikut dengan presisi sintaksis C2: 'Kant posits that space and time are not objective realities but subjective forms of human intuition; [...], we could not perceive objects as existing outside ourselves.'",
+          "options": [
+            "therefore, if they are not existing",
+            "nevertheless, assuming they exist",
+            "for were it not so"
+          ],
+          "correctIndex": 2,
+          "explanation": "Frasa 'for were it not so' (karena jika tidak demikian) adalah bentuk elipsis dan inversi kondisional tingkat tinggi yang sangat elegan dan otentik dalam wacana filosofis. Opsi ini secara logis menghubungkan premis Kant dengan konsekuensi hipotetisnya."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Axiomatic",
+        "translation": "Terbukti dengan sendirinya / Aksiomatis",
+        "example": "It is axiomatic in Hume's philosophy that all complex ideas are ultimately derived from simple impressions.",
+        "context": "Digunakan saat menyatakan kebenaran dasar yang tidak memerlukan pembuktian lebih lanjut dalam debat logika."
+      },
+      {
+        "word": "Epistemological",
+        "translation": "Berkaitan dengan teori pengetahuan (Epistemologis)",
+        "example": "The epistemological shift initiated by Kant sought to reconcile the dogmatism of rationalists with the skepticism of empiricists.",
+        "context": "Digunakan dalam analisis kritis mengenai asal-usul, batasan, dan validitas pengetahuan manusia."
+      },
+      {
+        "word": "Tabula rasa",
+        "translation": "Kertas kosong (Keadaan pikiran tanpa ide bawaan)",
+        "example": "Locke famously argued that the human mind at birth is a tabula rasa, upon which experience subsequently writes.",
+        "context": "Istilah teknis dalam empirisme untuk menolak konsep 'innate ideas' (ide bawaan)."
+      },
+      {
+        "word": "Apperception",
+        "translation": "Apersepsi (Proses asimilasi ide ke dalam kesadaran)",
+        "example": "Kant's transcendental unity of apperception is the foundational requirement for any coherent conscious experience.",
+        "context": "Digunakan dalam psikologi filosofis untuk menjelaskan bagaimana pikiran menyatukan persepsi yang terpisah-pisah."
+      },
+      {
+        "word": "Syllogism",
+        "translation": "Silogisme (Penalaran deduktif)",
+        "example": "The philosopher deconstructed his opponent's argument by exposing a fatal flaw in the underlying syllogism.",
+        "context": "Digunakan dalam retorika forensik dan dialektika untuk merujuk pada struktur argumen logis (premis mayor, premis minor, kesimpulan)."
+      },
+      {
+        "word": "A priori",
+        "translation": "Pengetahuan yang didapat tanpa pengalaman indrawi",
+        "example": "Mathematics and pure logic are traditionally considered domains of a priori knowledge, independent of empirical observation.",
+        "context": "Sangat krusial dalam membedakan jenis pengetahuan dalam filsafat Pencerahan (lawan dari 'a posteriori')."
+      }
+    ],
+    "dialogue": {
+      "context": "Sidang disertasi doktoral (viva voce) di Oxford University. Seorang kandidat PhD sedang mempertahankan tesisnya tentang sintesis epistemologi Kantian dan empirisme Humean di hadapan penguji utama yang sangat kritis.",
+      "lines": [
+        {
+          "speaker": "Professor Sterling (Examiner)",
+          "text": "You assert that Kant successfully bridged the chasm between rationalism and empiricism. Yet, does his concept of transcendental apperception not merely smuggle Cartesian dualism through the back door?",
+          "translation": "Anda menegaskan bahwa Kant berhasil menjembatani jurang antara rasionalisme dan empirisme. Namun, bukankah konsep apersepsi transendentalnya hanya menyelundupkan dualisme Cartesian secara diam-diam?"
+        },
+        {
+          "speaker": "Dr. Aris (Candidate)",
+          "text": "I would argue to the contrary, Professor. Kant’s framework does not posit a substantive soul; rather, it establishes the 'I think' as a purely formal, axiomatic condition for any experience whatsoever.",
+          "translation": "Saya berpendapat sebaliknya, Profesor. Kerangka kerja Kant tidak mengajukan adanya jiwa yang substantif; melainkan, ia menetapkan 'Aku berpikir' sebagai kondisi formal dan aksiomatis murni untuk pengalaman apa pun."
+        },
+        {
+          "speaker": "Professor Sterling (Examiner)",
+          "text": "A clever evasion. But if we strip away the a priori categories, are we not left with Hume’s bundle of perceptions, rendering the self a mere epistemological illusion?",
+          "translation": "Penghindaran yang cerdas. Tetapi jika kita menanggalkan kategori-kategori a priori tersebut, bukankah kita hanya tersisa dengan kumpulan persepsi Hume, yang menjadikan 'diri' sekadar ilusi epistemologis?"
+        },
+        {
+          "speaker": "Dr. Aris (Candidate)",
+          "text": "Had Kant conceded to Hume’s radical skepticism, perhaps. However, by demonstrating that experience itself presupposes synthetic a priori judgments, Kant renders the 'bundle theory' logically untenable.",
+          "translation": "Seandainya Kant mengalah pada skeptisisme radikal Hume, mungkin saja. Namun, dengan mendemonstrasikan bahwa pengalaman itu sendiri mensyaratkan penilaian sintetik a priori, Kant membuat 'teori kumpulan' menjadi tidak dapat dipertahankan secara logis."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Mampu mempertahankan argumen filosofis yang kompleks menggunakan sintaksis tingkat tinggi (inversi, pengandaian hipotetis) dan merespons kritik dialektis secara spontan dan presisi.",
+      "scenario": "Anda adalah seorang profesor filsafat di sebuah simposium internasional. Anda harus mempresentasikan sanggahan (rebuttal) lisan selama 3 menit terhadap klaim bahwa 'moralitas murni didasarkan pada pengalaman empiris (Hume)', dengan menggunakan kerangka 'Categorical Imperative' dari Kant. Gunakan struktur kalimat inversi (misal: 'Under no circumstances...'), kosakata epistemologis tingkat C2, dan tunjukkan kelemahan silogisme lawan Anda."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Analyze the following excerpt: 'Seldom has a philosophical doctrine so profoundly shaken the dogmatic slumber of rationalism as did Hume's critique of causality.' What rhetorical device is primarily employed here?",
+          "options": [
+            "Negative inversion to emphasize the unprecedented impact of Hume's critique.",
+            "Passive voice to obscure the agent of the philosophical critique.",
+            "Epistemic modality to question the validity of rationalist dogma.",
+            "Subjunctive mood to propose a hypothetical historical scenario."
+          ],
+          "correctIndex": 0,
+          "explanation": "Kalimat tersebut menggunakan 'Negative inversion' (Seldom has a philosophical doctrine...) untuk memberikan penekanan retoris yang kuat pada seberapa besar dampak kritik Hume. Tidak ada penggunaan passive voice, epistemic modality yang dominan, atau subjunctive mood di sini."
+        },
+        {
+          "id": 2,
+          "prompt": "In 18th-century philosophical prose, particularly in the works of Hume and Locke, the term 'affections' most closely translates to which modern concept?",
+          "options": [
+            "Platonic love and familial attachment.",
+            "Emotional states, passions, or psychological dispositions.",
+            "Physical ailments or biological diseases.",
+            "Intentional cognitive biases in logical reasoning."
+          ],
+          "correctIndex": 1,
+          "explanation": "Dalam konteks filsafat abad ke-18, 'affections' merujuk pada emosi, hasrat (passions), atau keadaan psikologis yang memengaruhi tindakan manusia, bukan sekadar 'kasih sayang' dalam pengertian modern."
+        },
+        {
+          "id": 3,
+          "prompt": "Complete the sentence with the most appropriate C2-level syntactic structure: '________ the inherent flaws in human perception, Locke maintained that our understanding of the external world remains fundamentally probabilistic.'",
+          "options": [
+            "Due to the fact of",
+            "Notwithstanding",
+            "Albeit",
+            "In spite that"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Notwithstanding' adalah preposisi tingkat tinggi (C2) yang berarti 'meskipun ada' (in spite of), sangat cocok untuk register akademis formal. 'Due to the fact of' bertele-tele, 'Albeit' biasanya diikuti oleh kata sifat atau klausa (bukan frasa nomina langsung dalam konteks ini), dan 'In spite that' salah secara gramatikal (seharusnya 'In spite of the fact that')."
+        },
+        {
+          "id": 4,
+          "prompt": "Which of the following sentences correctly employs an inverted conditional to express a counterfactual philosophical premise?",
+          "options": [
+            "Should the mind be a blank slate, it will absorb all sensory data equally.",
+            "If the mind had been a blank slate, it would have absorbed all sensory data equally.",
+            "Were the mind to possess innate ideas, the necessity of empirical observation would be rendered moot.",
+            "Had the mind possess innate ideas, empirical observation is unnecessary."
+          ],
+          "correctIndex": 2,
+          "explanation": "Opsi C ('Were the mind to possess...') adalah bentuk inversi kondisional tipe 2 yang sempurna untuk menyatakan hipotesis filosofis. Opsi A adalah tipe 1 (bukan counterfactual). Opsi B menggunakan 'If' (bukan inversi). Opsi D salah secara grammar ('Had' harus diikuti V3 'possessed', dan klausa utamanya harus menggunakan 'would have been')."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1511 @@
+{
+  "module": {
+    "id": "A1.3-M12",
+    "levelId": "A1.3",
+    "title": "Bridge to A2: Comprehensive Conversational Fluency",
+    "cefr": "A1",
+    "group": "A1.3 - Experiences, Comparisons & Future Intentions",
+    "objective": "Integrate past events, present habits, and future plans seamlessly into cohesive everyday conversations as a bridge to A2.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 12
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-3-m12-reading",
+      "moduleId": "A1.3-M12",
+      "skillType": "reading",
+      "title": "Reading Mission: A Complete Story Across Time",
+      "theme": "Past Experiences, Present Feelings, and Future Plans",
+      "grammarFocus": "Simple Past, Present Simple and Continuous, and be going to with connectors",
+      "vocabularyFocus": "Travel experiences, feelings, plans, and time connectors",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-3-m12-r-theory",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this reading mission, you will follow a short personal story from the past to the present and the future. You will read about a finished trip, how a person feels now, and plans for tomorrow. Notice how connectors such as because, so, but, then, and after that make the story clear and natural. This is an important step toward A2 because you can understand a complete conversation, not only separate sentences.",
+            "linguisticTarget": {
+              "grammar": "Use the Simple Past for finished actions, the present for now, and be going to for future plans. Connect ideas with because, so, but, then, and after that.",
+              "vocabulary": "Travel, activities, feelings, preparation, recommendations, schedules, and experiences.",
+              "readingStrategy": "First, skim the passage to find the main story. Next, scan for time words such as yesterday, now, tomorrow, then, and after that to find key details."
+            },
+            "learningObjectives": [
+              "Understand the main idea of a short passage about a past trip, present feelings, and future plans.",
+              "Identify key details such as places, activities, reasons, and plans.",
+              "Recognize Simple Past, present forms, and be going to in one connected story.",
+              "Use time connectors to follow the order of events."
+            ],
+            "contextWarmup": {
+              "prompt": "Which sentence tells a complete story from the past to the future?",
+              "options": [
+                "I visited my aunt yesterday, and now I am tired, so I am going to rest tomorrow.",
+                "I visit my aunt yesterday and tired tomorrow.",
+                "I am going to visited my aunt yesterday."
+              ],
+              "correctIndex": 0,
+              "explanation": "This sentence is clear because it uses visited for the past, am tired for now, and am going to rest for a future plan."
+            },
+            "rules": [
+              "Use the Simple Past for a finished action: I visited the museum yesterday.",
+              "Use am, is, or are for feelings and actions now: I am tired now. She is relaxing at home.",
+              "Use am, is, or are going to plus a base verb for a future plan: We are going to travel tomorrow.",
+              "Use connectors to show reasons, results, contrast, and order: I was tired, so I went home. Then I made dinner."
+            ],
+            "commonTrap": {
+              "trapTitle": "Jumping Between Times Without Clear Words",
+              "explanation": "A story can be confusing when it changes from yesterday to now or tomorrow without a connector or the correct verb form. Look for time words and check the verb after each subject.",
+              "wrong": "I go to the beach yesterday. I tired now. I sleep tomorrow.",
+              "correct": "I went to the beach yesterday. I am tired now, so I am going to sleep early tomorrow."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Talking About Time",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in natural spoken English:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "am",
+                "vowelDropped": "a",
+                "remainder": "m",
+                "contracted": "I'm",
+                "exampleFull": "I am tired now.",
+                "exampleContracted": "I'm tired now."
+              },
+              {
+                "subject": "You",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "You're",
+                "exampleFull": "You are going to enjoy the trip.",
+                "exampleContracted": "You're going to enjoy the trip."
+              },
+              {
+                "subject": "She",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "She's",
+                "exampleFull": "She is preparing dinner.",
+                "exampleContracted": "She's preparing dinner."
+              },
+              {
+                "subject": "We",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "We're",
+                "exampleFull": "We are going to explore the town.",
+                "exampleContracted": "We're going to explore the town."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Structure with Past, Present, and Future Time",
+              "description": "Assemble and swap sentence blocks to explore affirmative, negative, and question patterns:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person (Singular)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "First Person Plural"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Third Person Plural"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Second Person"
+                }
+              ],
+              "complements": [
+                "visited the old town yesterday",
+                "am feeling relaxed now",
+                "are preparing for a busy week",
+                "am going to call my friend tomorrow",
+                "are going to explore the market after lunch",
+                "are tired, but happy"
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-3-m12-r-vocab",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "exhausted",
+                "ipa": "/ɪɡˈzɔːstɪd/",
+                "meaning": "sangat lelah, capek sekali",
+                "collocation": "I am exhausted after the long trip."
+              },
+              {
+                "word": "amazing",
+                "ipa": "/əˈmeɪzɪŋ/",
+                "meaning": "menakjubkan, luar biasa",
+                "collocation": "The view from the hill was amazing."
+              },
+              {
+                "word": "relax",
+                "ipa": "/rɪˈlæks/",
+                "meaning": "bersantai, beristirahat",
+                "collocation": "We are going to relax at home tonight."
+              },
+              {
+                "word": "explore",
+                "ipa": "/ɪkˈsplɔːr/",
+                "meaning": "menjelajahi, mengeksplor",
+                "collocation": "They explored the old town yesterday."
+              },
+              {
+                "word": "prepare",
+                "ipa": "/prɪˈpeər/",
+                "meaning": "mempersiapkan, menyiapkan",
+                "collocation": "I am preparing for my trip tomorrow."
+              },
+              {
+                "word": "experience",
+                "ipa": "/ɪkˈspɪəriəns/",
+                "meaning": "pengalaman",
+                "collocation": "The festival was a wonderful experience."
+              },
+              {
+                "word": "decide",
+                "ipa": "/dɪˈsaɪd/",
+                "meaning": "memutuskan",
+                "collocation": "We decided to stay until Sunday."
+              },
+              {
+                "word": "recommend",
+                "ipa": "/ˌrekəˈmend/",
+                "meaning": "merekomendasikan, menyarankan",
+                "collocation": "My friend recommended this small café."
+              },
+              {
+                "word": "schedule",
+                "ipa": "/ˈʃedjuːl/",
+                "meaning": "jadwal",
+                "collocation": "My schedule is busy this week."
+              },
+              {
+                "word": "after that",
+                "ipa": "/ˈɑːftər ðæt/",
+                "meaning": "setelah itu",
+                "collocation": "After that, we walked to the station."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m12-r-guided",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-reading",
+          "sectionType": "dialogue",
+          "title": "Reading Passage: Maya's Busy Weekend",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Maya's Busy Weekend",
+            "context": "Maya tells her friend about her weekend, how she feels today, and her plan for tomorrow.",
+            "text": "Last Saturday, Maya visited her cousin Lina in a small town near the sea. They explored the old market and bought fresh fruit. Then they walked to the beach because the weather was sunny. The view was amazing, so Maya took many photos. After that, they ate fish at a little restaurant that Lina recommended. Maya returned home late, and she was exhausted. Now it is Monday morning. Maya is at home and she is preparing for her English class. She feels tired, but she is happy because the weekend was a wonderful experience. Her schedule is busy today, so she is drinking tea and doing her homework slowly. Tomorrow, Maya is going to meet Lina again. They are going to plan a short trip for next month.",
+            "wordCount": 136,
+            "highlights": [
+              {
+                "text": "visited",
+                "note": "Visited is the Simple Past form of visit. It tells us about a finished action last Saturday.",
+                "type": "grammar"
+              },
+              {
+                "text": "because",
+                "note": "Because gives a reason: they walked to the beach because the weather was sunny.",
+                "type": "grammar"
+              },
+              {
+                "text": "exhausted",
+                "note": "Exhausted means very tired.",
+                "type": "vocab"
+              },
+              {
+                "text": "is preparing",
+                "note": "Is preparing describes an action happening now.",
+                "type": "grammar"
+              },
+              {
+                "text": "are going to plan",
+                "note": "Are going to plus a base verb describes a future plan.",
+                "type": "grammar"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m12-r-practice",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-reading",
+          "sectionType": "practice",
+          "title": "Guided Comprehension Check",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "prompt": "What is the passage mainly about?",
+              "options": [
+                "Maya talks about her past weekend, her feelings now, and a future plan.",
+                "Maya learns to cook fish at a restaurant.",
+                "Maya has an English class at the beach."
+              ],
+              "correctIndex": 0,
+              "explanation": "The passage moves from Maya's Saturday trip to her Monday morning and then to her plan for tomorrow."
+            },
+            "detailQuestions": [
+              {
+                "id": 1,
+                "prompt": "Where did Maya and Lina go after the old market?",
+                "options": [
+                  "They went to the beach.",
+                  "They went to English class.",
+                  "They went to Lina's school."
+                ],
+                "correctIndex": 0,
+                "explanation": "They walked to the beach because the weather was sunny."
+              },
+              {
+                "id": 2,
+                "prompt": "Why did Maya take many photos?",
+                "options": [
+                  "The view was amazing.",
+                  "She needed photos for homework.",
+                  "Lina asked her to take photos."
+                ],
+                "correctIndex": 0,
+                "explanation": "The text says that the view was amazing, so Maya took many photos."
+              },
+              {
+                "id": 3,
+                "prompt": "How does Maya feel on Monday morning?",
+                "options": [
+                  "She feels tired but happy.",
+                  "She feels angry and bored.",
+                  "She feels hungry but worried."
+                ],
+                "correctIndex": 0,
+                "explanation": "Maya feels tired because she returned home late, but she is happy about her weekend."
+              },
+              {
+                "id": 4,
+                "prompt": "What are Maya and Lina going to do tomorrow?",
+                "options": [
+                  "Plan a short trip for next month.",
+                  "Visit the old market again.",
+                  "Go to Maya's English class."
+                ],
+                "correctIndex": 0,
+                "explanation": "Tomorrow, they are going to meet and plan a short trip for next month."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m12-r-quiz",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-reading",
+          "sectionType": "quiz",
+          "title": "Reading Mastery Quiz",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "When did Maya visit Lina?",
+                "options": [
+                  "Last Saturday",
+                  "Monday morning",
+                  "Tomorrow"
+                ],
+                "answer": "A",
+                "explanation": "The first sentence says that Maya visited her cousin Lina last Saturday."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which word in the passage shows the reason for walking to the beach?",
+                "options": [
+                  "because",
+                  "then",
+                  "but"
+                ],
+                "answer": "A",
+                "explanation": "Because introduces a reason. They walked to the beach because the weather was sunny."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What did Maya and Lina eat at the restaurant?",
+                "options": [
+                  "Fish",
+                  "Fresh fruit",
+                  "Cake"
+                ],
+                "answer": "A",
+                "explanation": "They bought fresh fruit at the market, but they ate fish at the restaurant."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Which sentence is about Maya's present action?",
+                "options": [
+                  "She is preparing for her English class.",
+                  "She visited her cousin.",
+                  "She is going to meet Lina."
+                ],
+                "answer": "A",
+                "explanation": "Is preparing shows an action happening now. Visited is past, and is going to meet is a future plan."
+              },
+              {
+                "id": "q-r-5",
+                "question": "Which sentence correctly describes Maya's future plan?",
+                "options": [
+                  "Maya and Lina are going to plan a trip.",
+                  "Maya and Lina planned a trip yesterday.",
+                  "Maya and Lina are planning a trip last Saturday."
+                ],
+                "answer": "A",
+                "explanation": "Are going to plan is the correct form for a future plan. The passage says they will plan a short trip for next month."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-3-m12-listening",
+      "moduleId": "A1.3-M12",
+      "skillType": "listening",
+      "title": "Listening Mission: Past, Present, and Future Plans",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-3-m12-l-theory",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening mission, two friends meet after a holiday. Listen for time words to understand the order of events. They talk about the past, their feelings now, and plans for the future. Listen for past verbs such as \"went\" and \"visited\", present phrases such as \"I am tired\", and future plans with \"going to\".",
+            "learningObjectives": [
+              "Identify past activities in a short conversation.",
+              "Understand how speakers feel in the present.",
+              "Recognise future plans with \"be going to\".",
+              "Follow a conversation that moves from the past to the present and the future."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "How was your holiday?",
+                "meaning": "Bagaimana liburanmu?",
+                "note": "Use this question to ask about a holiday that has finished."
+              },
+              {
+                "phrase": "I went to Yogyakarta.",
+                "meaning": "Saya pergi ke Yogyakarta.",
+                "note": "Use \"went\" to talk about a finished trip in the past."
+              },
+              {
+                "phrase": "I am a bit exhausted.",
+                "meaning": "Saya sedikit kelelahan.",
+                "note": "Use this phrase to describe how you feel now."
+              },
+              {
+                "phrase": "What are you going to do this weekend?",
+                "meaning": "Apa yang akan kamu lakukan akhir pekan ini?",
+                "note": "Use this question to ask about a future plan."
+              },
+              {
+                "phrase": "I am going to stay at home.",
+                "meaning": "Saya akan tinggal di rumah.",
+                "note": "Use \"am going to\" before a planned future action."
+              },
+              {
+                "phrase": "We can meet next week.",
+                "meaning": "Kita bisa bertemu minggu depan.",
+                "note": "Use \"can\" to suggest a possible plan."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "How was your holiday?",
+                "fast": "How-wuz-your holiday?",
+                "slowIpa": "/haʊ wɒz jɔːr ˈhɒlədeɪ/",
+                "fastIpa": "/haʊ wəz jər ˈhɒlədeɪ/",
+                "note": "In natural speech, \"was\" is often weak and sounds like \"wuz\". The words join together smoothly."
+              },
+              {
+                "id": 2,
+                "slow": "I am going to stay at home.",
+                "fast": "I'm gonna stay at home.",
+                "slowIpa": "/aɪ æm ˈɡəʊɪŋ tuː steɪ æt həʊm/",
+                "fastIpa": "/aɪm ˈɡənə steɪ ət həʊm/",
+                "note": "In quick informal speech, \"I am\" becomes \"I'm\" and \"going to\" can sound like \"gonna\"."
+              },
+              {
+                "id": 3,
+                "slow": "How about you?",
+                "fast": "Howabou' you?",
+                "slowIpa": "/haʊ əˈbaʊt juː/",
+                "fastIpa": "/haʊ əˈbaʊtʃuː/",
+                "note": "The final sound in \"about\" can join the \"y\" sound in \"you\", making a soft \"ch\" sound."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m12-l-dialogue",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Meeting After the Holiday",
+          "orderIndex": 2,
+          "content": {
+            "context": "Lisa and Tom meet after a long holiday. They talk about Tom's trip last week, how he feels now, and their plans for next week.",
+            "audioPrompt": "Listen carefully to the following dialogue between Lisa and Tom. Notice the past, present, and future time expressions.",
+            "lines": [
+              {
+                "speaker": "Lisa",
+                "text": "Hi Tom! How was your holiday? I didn't see you last week.",
+                "audioUrl": "/audio/modules/a1-3-m12/dialogue-1.mp3",
+                "translation": "Hai Tom! Bagaimana liburanmu? Aku tidak melihatmu minggu lalu.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Tom",
+                "text": "It was amazing! I went to Yogyakarta with my family. We visited Borobudur and also explored the old city.",
+                "audioUrl": "/audio/modules/a1-3-m12/dialogue-2.mp3",
+                "translation": "Luar biasa! Aku pergi ke Yogyakarta dengan keluargaku. Kami mengunjungi Borobudur dan juga menjelajahi kota tua.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Lisa",
+                "text": "That sounds wonderful! How do you feel now? Are you tired?",
+                "audioUrl": "/audio/modules/a1-3-m12/dialogue-3.mp3",
+                "translation": "Kedengarannya menyenangkan! Bagaimana perasaanmu sekarang? Apakah kamu lelah?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Yes, I'm a bit exhausted because we walked a lot. But I'm happy and relaxed.",
+                "audioUrl": "/audio/modules/a1-3-m12/dialogue-4.mp3",
+                "translation": "Ya, aku sedikit kelelahan karena kami banyak berjalan. Tapi aku senang dan santai.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Lisa",
+                "text": "I understand. So, what are you going to do this weekend? Any plans?",
+                "audioUrl": "/audio/modules/a1-3-m12/dialogue-5.mp3",
+                "translation": "Aku mengerti. Jadi, apa yang akan kamu lakukan akhir pekan ini? Ada rencana?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Tom",
+                "text": "I'm going to stay at home and rest. After that, I'm going to prepare for my presentation next Monday. How about you?",
+                "audioUrl": "/audio/modules/a1-3-m12/dialogue-6.mp3",
+                "translation": "Aku akan tinggal di rumah dan beristirahat. Setelah itu, aku akan mempersiapkan presentasiku Senin depan. Bagaimana denganmu?",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Lisa",
+                "text": "I stayed in Jakarta last week, but I'm going to visit my grandparents this Sunday. I miss them.",
+                "audioUrl": "/audio/modules/a1-3-m12/dialogue-7.mp3",
+                "translation": "Aku tinggal di Jakarta minggu lalu, tapi aku akan mengunjungi kakek nenekku Minggu ini. Aku rindu mereka.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Tom",
+                "text": "That's nice! Enjoy your time with them. Then we can meet next week and have coffee together.",
+                "audioUrl": "/audio/modules/a1-3-m12/dialogue-8.mp3",
+                "translation": "Bagus sekali! Nikmati waktumu dengan mereka. Lalu kita bisa bertemu minggu depan dan minum kopi bersama.",
+                "emotion": "friendly"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m12-l-quiz",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "How was your holiday?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"How was your _____?\"",
+                "targetWord": "holiday",
+                "explanation": "Full audio: \"How was your holiday?\". The missing word is \"holiday\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I didn't see you last week.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"I didn't see you last _____.\"",
+                "targetWord": "week",
+                "explanation": "Full audio: \"I didn't see you last week.\". The missing word is \"week\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "It was amazing!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"It was _____!\"",
+                "targetWord": "amazing",
+                "explanation": "Full audio: \"It was amazing!\". The missing word is \"amazing\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I went to Yogyakarta with my family.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"I went to Yogyakarta with my _____.\"",
+                "targetWord": "family",
+                "explanation": "Full audio: \"I went to Yogyakarta with my family.\". The missing word is \"family\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "That sounds wonderful!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"That sounds _____!\"",
+                "targetWord": "wonderful",
+                "explanation": "Full audio: \"That sounds wonderful!\". The missing word is \"wonderful\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "How do you feel now?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "How do you feel now",
+                "words": [
+                  "feel",
+                  "you",
+                  "now",
+                  "do",
+                  "How"
+                ],
+                "explanation": "Correct sentence order: \"How do you feel now?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Are you tired?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Are you tired",
+                "words": [
+                  "tired",
+                  "you",
+                  "Are"
+                ],
+                "explanation": "Correct sentence order: \"Are you tired?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "But I'm happy and relaxed.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "But I'm happy and relaxed",
+                "words": [
+                  "I'm",
+                  "relaxed",
+                  "But",
+                  "happy",
+                  "and"
+                ],
+                "explanation": "Correct sentence order: \"But I'm happy and relaxed.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "How about you?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "How about you",
+                "words": [
+                  "you",
+                  "How",
+                  "about"
+                ],
+                "explanation": "Correct sentence order: \"How about you?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "I stayed in Jakarta last week",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I stayed in Jakarta last week",
+                "words": [
+                  "last",
+                  "I",
+                  "in",
+                  "week",
+                  "Jakarta",
+                  "stayed"
+                ],
+                "explanation": "Correct sentence order: \"I stayed in Jakarta last week\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "How was your holiday?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"How was your _____?\"",
+                "targetWord": "holiday",
+                "explanation": "Full audio: \"How was your holiday?\". The missing word is \"holiday\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I didn't see you last week.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"I didn't see you last _____.\"",
+                "targetWord": "week",
+                "explanation": "Full audio: \"I didn't see you last week.\". The missing word is \"week\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "It was amazing!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"It was _____!\"",
+                "targetWord": "amazing",
+                "explanation": "Full audio: \"It was amazing!\". The missing word is \"amazing\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I went to Yogyakarta with my family.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"I went to Yogyakarta with my _____.\"",
+                "targetWord": "family",
+                "explanation": "Full audio: \"I went to Yogyakarta with my family.\". The missing word is \"family\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "That sounds wonderful!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"That sounds _____!\"",
+                "targetWord": "wonderful",
+                "explanation": "Full audio: \"That sounds wonderful!\". The missing word is \"wonderful\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "How do you feel now?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "How do you feel now",
+                "words": [
+                  "feel",
+                  "you",
+                  "now",
+                  "do",
+                  "How"
+                ],
+                "explanation": "Correct sentence order: \"How do you feel now?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Are you tired?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Are you tired",
+                "words": [
+                  "tired",
+                  "you",
+                  "Are"
+                ],
+                "explanation": "Correct sentence order: \"Are you tired?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "But I'm happy and relaxed.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "But I'm happy and relaxed",
+                "words": [
+                  "I'm",
+                  "relaxed",
+                  "But",
+                  "happy",
+                  "and"
+                ],
+                "explanation": "Correct sentence order: \"But I'm happy and relaxed.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "How about you?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "How about you",
+                "words": [
+                  "you",
+                  "How",
+                  "about"
+                ],
+                "explanation": "Correct sentence order: \"How about you?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "I stayed in Jakarta last week",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I stayed in Jakarta last week",
+                "words": [
+                  "last",
+                  "I",
+                  "in",
+                  "week",
+                  "Jakarta",
+                  "stayed"
+                ],
+                "explanation": "Correct sentence order: \"I stayed in Jakarta last week\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-3-m12-writing",
+      "moduleId": "A1.3-M12",
+      "skillType": "writing",
+      "title": "Writing Mission: Tell Your Story Across Time",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-3-m12-w-theory",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Write a short conversation or paragraph about the past, the present, and the future. Start with a finished past activity, say how you feel or what you are doing now, and finish with a future plan. Use connectors to make your ideas clear.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Start with a Past Experience",
+                "formula": "Subject + Verb 2 + time expression.",
+                "example": "I visited my grandmother last Sunday."
+              },
+              {
+                "step": 2,
+                "title": "Add a Past Detail",
+                "formula": "Subject + was/were + adjective, or Subject + Verb 2 + detail.",
+                "example": "The weather was sunny, so we walked in the park."
+              },
+              {
+                "step": 3,
+                "title": "Talk About Now",
+                "formula": "Subject + present verb, or Subject + am/is/are + verb-ing.",
+                "example": "Now I feel happy and I am resting at home."
+              },
+              {
+                "step": 4,
+                "title": "Finish with a Future Plan",
+                "formula": "Subject + am/is/are + going to + Verb 1.",
+                "example": "Next weekend, I am going to visit her again."
+              },
+              {
+                "step": 5,
+                "title": "Connect Your Ideas",
+                "formula": "Sentence + connector + sentence.",
+                "example": "I was tired, but I am going to study tonight."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Start every sentence with a capital letter.",
+                "badExample": "yesterday i watched a film.",
+                "goodExample": "Yesterday I watched a film.",
+                "why": "The first word in a sentence and the word I need capital letters."
+              },
+              {
+                "rule": "Use a full stop at the end of a statement.",
+                "badExample": "I am going to call my friend",
+                "goodExample": "I am going to call my friend.",
+                "why": "A full stop shows that your sentence is finished."
+              },
+              {
+                "rule": "Use the correct time verb form.",
+                "badExample": "Yesterday I visit my aunt.",
+                "goodExample": "Yesterday I visited my aunt.",
+                "why": "Use Verb 2 for a finished activity in the past."
+              },
+              {
+                "rule": "Write am, is, or are before going to.",
+                "badExample": "I going to cook dinner.",
+                "goodExample": "I am going to cook dinner.",
+                "why": "Use am, is, or are with going to for a future plan."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "Last Saturday, I played football with my friends.",
+                "id": "A past activity with Verb 2.",
+                "focus": "Simple Past"
+              },
+              {
+                "en": "It was exciting, but I was very tired after the game.",
+                "id": "A past feeling with was and a contrast connector.",
+                "focus": "Was and but"
+              },
+              {
+                "en": "Now I am relaxing at home because my legs hurt.",
+                "id": "A present activity and a reason.",
+                "focus": "Present Continuous and because"
+              },
+              {
+                "en": "Tomorrow, I am going to watch a football match on TV.",
+                "id": "A future plan with going to.",
+                "focus": "Be going to"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m12-w-practice",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "last week i visit my cousin",
+                "targetSentence": "Last week I visited my cousin.",
+                "translation": "Minggu lalu saya mengunjungi sepupu saya.",
+                "keyRule": "Use a capital letter at the start, write I with a capital letter, use Verb 2 for the past, and add a full stop.",
+                "requiredCapitals": [
+                  "Last",
+                  "I"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "now she cooking dinner",
+                "targetSentence": "Now she is cooking dinner.",
+                "translation": "Sekarang dia sedang memasak makan malam.",
+                "keyRule": "Use is before a verb ending in -ing for an activity happening now.",
+                "requiredCapitals": [
+                  "Now"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "tomorrow we going to go to the beach",
+                "targetSentence": "Tomorrow we are going to go to the beach.",
+                "translation": "Besok kami akan pergi ke pantai.",
+                "keyRule": "Use are before going to when the subject is we.",
+                "requiredCapitals": [
+                  "Tomorrow"
+                ]
+              },
+              {
+                "id": "sent-4",
+                "faultySentence": "i was tired so i go home",
+                "targetSentence": "I was tired, so I went home.",
+                "translation": "Saya lelah, jadi saya pulang.",
+                "keyRule": "Use a comma before so when it joins two ideas. Use went for a finished past action.",
+                "requiredCapitals": [
+                  "I"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Past Experience",
+                "meaning": "Kemarin saya mengunjungi teman saya.",
+                "tokens": [
+                  "Yesterday",
+                  "I",
+                  "visited",
+                  "my",
+                  "friend."
+                ],
+                "fullSentence": "Yesterday I visited my friend."
+              },
+              {
+                "id": "b-2",
+                "category": "Present Activity",
+                "meaning": "Sekarang saya sedang minum teh di rumah.",
+                "tokens": [
+                  "Now",
+                  "I",
+                  "am",
+                  "drinking",
+                  "tea",
+                  "at",
+                  "home."
+                ],
+                "fullSentence": "Now I am drinking tea at home."
+              },
+              {
+                "id": "b-3",
+                "category": "Future Plan",
+                "meaning": "Akhir pekan ini kami akan menonton film.",
+                "tokens": [
+                  "This",
+                  "weekend",
+                  "we",
+                  "are",
+                  "going",
+                  "to",
+                  "watch",
+                  "a",
+                  "film."
+                ],
+                "fullSentence": "This weekend we are going to watch a film."
+              },
+              {
+                "id": "b-4",
+                "category": "Connected Story",
+                "meaning": "Saya lelah, tetapi saya akan belajar malam ini.",
+                "tokens": [
+                  "I",
+                  "am",
+                  "tired,",
+                  "but",
+                  "I",
+                  "am",
+                  "going",
+                  "to",
+                  "study",
+                  "tonight."
+                ],
+                "fullSentence": "I am tired, but I am going to study tonight."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: My Day Then and Now",
+                "badge": "Time Traveller",
+                "instruction": "Write 3 or 4 sentences. Write about one thing you did yesterday. Then write how you feel or what you are doing now. Use yesterday, now, and one connector such as but or so.",
+                "example": "Yesterday I cleaned my room. It was very messy, so I worked for one hour. Now I feel tired, but my room is clean.",
+                "placeholder": "Yesterday I ... Now I ...",
+                "minWords": 20,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Past, Present, and Future",
+                "badge": "Story Builder",
+                "instruction": "Write a short paragraph with 4 or 5 sentences. Include a finished past activity, a present feeling or activity, and a future plan. Use at least two connectors from also, but, because, so, then, or after that.",
+                "example": "Last weekend I visited the beach with my family. It was sunny, so we swam in the sea. After that, we ate lunch near the beach. Now I am at home and I feel relaxed. Next month, I am going to go there again.",
+                "placeholder": "Last weekend ... Now ... Next ...",
+                "minWords": 35,
+                "xpReward": 50
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m12-w-quiz",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-writing",
+          "sectionType": "quiz",
+          "title": "Writing Practicum & Assessment",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": "w-p-1",
+                "prompt": "Write 3 sentences about a meal you had in the past, what you are doing now, and what you are going to eat tomorrow.",
+                "criteria": "Write one correct past sentence, one correct present sentence, and one future sentence with going to. Use capital letters and full stops.",
+                "sampleGoodAnswer": "Yesterday I ate noodles with my sister. Now I am drinking water at home. Tomorrow I am going to cook rice and chicken."
+              },
+              {
+                "id": "w-p-2",
+                "prompt": "Write a short message to a friend about your weekend. Say what you did, how you feel now, and one plan for next weekend. Use but, because, or so.",
+                "criteria": "Write at least 30 words. Include Simple Past, a present form, and be going to. Use one connector correctly.",
+                "sampleGoodAnswer": "Hi Mia. Last weekend I watched a new film with my brother. It was funny, so we laughed a lot. Now I feel happy because the film was great. Next weekend, I am going to visit you."
+              },
+              {
+                "id": "w-p-3",
+                "prompt": "Write a 4-sentence mini story about a busy day. Put your ideas in time order with then or after that. Finish with a future plan.",
+                "criteria": "Write four complete sentences. Use a past action, a past detail, a present sentence, and a future plan. Use then or after that correctly.",
+                "sampleGoodAnswer": "Yesterday I went to the market. Then I bought fruit for my family. Now I am making a fruit salad in the kitchen. After dinner, I am going to call my grandmother."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-3-m12-speaking",
+      "moduleId": "A1.3-M12",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Connected Conversations",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-3-m12-s-theory",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In a full conversation, you can talk about the past, the present, and the future. Use clear time words such as last weekend, today, tonight, tomorrow, and next weekend. Connect your ideas with and, but, because, after that, and so.",
+            "audioGuidance": "Speak slowly and clearly. Use a falling voice at the end of complete answers. Use a rising voice for yes or no questions. Stress important words, especially time words, action words, and feeling words.",
+            "pillars": [
+              {
+                "name": "Clear Time",
+                "target": "Past, present, and future language",
+                "explanation": "Use past verbs for finished activities: I went to the park. Use present language for now: I feel tired today. Use going to for plans: I am going to watch a movie tonight."
+              },
+              {
+                "name": "Connected Ideas",
+                "target": "Simple connectors",
+                "explanation": "Use and to add information, but to show a different idea, because to give a reason, and after that to show the next action."
+              },
+              {
+                "name": "Natural Rhythm",
+                "target": "Word stress and sentence stress",
+                "explanation": "Make key words stronger: LAST weekend, I WENT to the PARK. Today I FEEL GOOD, but I am a bit TIRED."
+              },
+              {
+                "name": "Friendly Intonation",
+                "target": "Rising and falling voice",
+                "explanation": "Raise your voice for a yes or no question: Are you going to rest? Lower your voice at the end of an answer: Yes, I am going to rest tonight."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m12-s-practice",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "PREsent",
+                "countryAudio": "present",
+                "countrySyllables": [
+                  {
+                    "text": "PRE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "sent",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "preSENT",
+                "natAudio": "present",
+                "natSyllables": [
+                  {
+                    "text": "pre",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "SENT",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "PREsent is a thing you give to someone. PreSENT means to give or show something."
+              },
+              {
+                "id": "pair-2",
+                "country": "REcord",
+                "countryAudio": "record",
+                "countrySyllables": [
+                  {
+                    "text": "RE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "cord",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "reCORD",
+                "natAudio": "record",
+                "natSyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CORD",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "A REcord is saved information, music, or a result. To reCORD means to save sound or video."
+              },
+              {
+                "id": "pair-3",
+                "country": "CONtract",
+                "countryAudio": "contract",
+                "countrySyllables": [
+                  {
+                    "text": "CON",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tract",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "conTRACT",
+                "natAudio": "contract",
+                "natSyllables": [
+                  {
+                    "text": "con",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TRACT",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "A CONtract is a written agreement. To conTRACT means to become smaller."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "Last weekend, I went to the park with my friends.",
+                "phonetic": "/lɑːst ˈwiːk.end aɪ went tə ðə pɑːrk wɪð maɪ frendz/",
+                "focus": "Past-time words and clear past verb",
+                "hint": "Stress LAST, WENT, PARK, and FRIENDS."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "Today I feel good, but I am a bit tired.",
+                "phonetic": "/təˈdeɪ aɪ fiːl ɡʊd bət aɪ æm ə bɪt ˈtaɪərd/",
+                "focus": "Present feelings and contrast",
+                "hint": "Make but short and clear. Stress GOOD and TIRED."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Tonight, I am going to watch a movie at home.",
+                "phonetic": "/təˈnaɪt aɪ æm ˈɡoʊ.ɪŋ tə wɑːtʃ ə ˈmuː.vi æt hoʊm/",
+                "focus": "Future plan with going to",
+                "hint": "Say going to smoothly. In fast speech, it can sound like gonna."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "I am tired because I did not sleep much.",
+                "phonetic": "/aɪ æm ˈtaɪərd bɪˈkɔːz aɪ dɪd nɒt sliːp mʌtʃ/",
+                "focus": "Giving a reason with because",
+                "hint": "Stress TIRED, BECAUSE, SLEEP, and MUCH."
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "Are you going to visit your cousin this weekend?",
+                "phonetic": "/ɑːr ju ˈɡoʊ.ɪŋ tə ˈvɪz.ɪt jʊr ˈkʌz.ɪn ðɪs ˈwiːk.end/",
+                "focus": "Rising intonation in a yes or no question",
+                "hint": "Let your voice rise gently on weekend."
+              }
+            ],
+            "roleplay": {
+              "context": "You are having a friendly conversation with Mr. Khoirul. Talk about your activities last weekend, your feelings today, and your plans for tonight and next weekend.",
+              "roles": [
+                "Mr. Khoirul",
+                "You"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Hello! I am happy to see you today. What did you do last weekend? Did you go anywhere?",
+                  "translation": "Halo! Saya senang bertemu denganmu hari ini. Apa yang kamu lakukan akhir pekan lalu? Apakah kamu pergi ke suatu tempat?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Hi, Mr. Khoirul! Last weekend, I went to the park with my friends. We played badminton and had a picnic.",
+                  "translation": "Hai, Pak Khoirul! Akhir pekan lalu, saya pergi ke taman bersama teman-teman saya. Kami bermain bulu tangkis dan piknik."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "That sounds fun! How was the weather? How do you feel today?",
+                  "translation": "Wah, kedengarannya menyenangkan! Bagaimana cuacanya? Bagaimana perasaanmu hari ini?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "The weather was sunny and nice. Today I feel good, but I am a bit tired because I did not sleep much.",
+                  "translation": "Cuacanya cerah dan bagus. Hari ini saya merasa baik, tetapi saya sedikit lelah karena saya tidak banyak tidur."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "I see. What are you going to do tonight?",
+                  "translation": "Saya mengerti. Apa yang akan kamu lakukan malam ini?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Tonight, I am going to watch a movie at home. After that, I am going to sleep early.",
+                  "translation": "Malam ini, saya akan menonton film di rumah. Setelah itu, saya akan tidur lebih awal."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Good plan! What are you going to do next weekend?",
+                  "translation": "Rencana yang bagus! Apa yang akan kamu lakukan akhir pekan depan?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Next weekend, I am going to visit my cousin. We are going to explore the city and try local food.",
+                  "translation": "Akhir pekan depan, saya akan mengunjungi sepupu saya. Kami akan menjelajahi kota dan mencoba makanan lokal."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-3-m12-s-quiz",
+          "moduleId": "A1.3-M12",
+          "subModuleId": "sub-a1-3-m12-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Weekend Story",
+                "instruction": "Speak for 20 to 30 seconds about your last weekend. Connect your ideas with and, but, or after that.",
+                "audioPrompt": "Tell me about your last weekend. Where did you go, what did you do, and how was it?",
+                "storyPoints": [
+                  "Say where you went or stayed.",
+                  "Say one or two activities you did.",
+                  "Say how you felt about the weekend."
+                ],
+                "targetSentence": "Last weekend, I went to the park with my friends, and we played badminton. After that, we had a picnic, and I felt very happy.",
+                "phonetic": "/lɑːst ˈwiːk.end aɪ went tə ðə pɑːrk wɪð maɪ frendz ænd wi pleɪd ˈbæd.mɪn.tən/",
+                "expectedKeywords": [
+                  "last weekend",
+                  "went",
+                  "did",
+                  "felt"
+                ],
+                "hint": "Use a clear past verb, such as went, played, watched, visited, or stayed.",
+                "explanation": "This task checks if you can tell a short story about a finished activity in the past."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Time Journey Story",
+                "instruction": "Speak for 30 seconds about yesterday, today, and tomorrow. Use because to give one reason.",
+                "audioPrompt": "Tell me what you did yesterday, how you feel today, and what you are going to do tomorrow.",
+                "storyPoints": [
+                  "Say one activity from yesterday.",
+                  "Say how you feel today and give a reason.",
+                  "Say one plan for tomorrow."
+                ],
+                "targetSentence": "Yesterday, I studied at home. Today I feel tired because I slept late, but tomorrow I am going to meet my friend.",
+                "phonetic": "/ˈjes.tər.deɪ aɪ ˈstʌd.id æt hoʊm təˈdeɪ aɪ fiːl ˈtaɪərd bɪˈkɔːz aɪ slept leɪt/",
+                "expectedKeywords": [
+                  "yesterday",
+                  "today",
+                  "tomorrow",
+                  "because",
+                  "going to"
+                ],
+                "hint": "Pause very briefly after yesterday and today. Stress the time words.",
+                "explanation": "This task checks if you can move smoothly from past time to present time and future time."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Weekend Chat",
+                "instruction": "Answer Mr. Khoirul in a friendly way. Give at least two details about your last weekend.",
+                "audioPrompt": "Hello! What did you do last weekend? Did you go anywhere?",
+                "scenarioContext": "Mr. Khoirul meets you after the weekend and asks about your activities.",
+                "characterRole": "You are a student talking to Mr. Khoirul about a finished weekend activity.",
+                "targetSentence": "Last weekend, I went to the park with my friends, and we played badminton.",
+                "phonetic": "/lɑːst ˈwiːk.end aɪ went tə ðə pɑːrk wɪð maɪ frendz ænd wi pleɪd ˈbæd.mɪn.tən/",
+                "expectedKeywords": [
+                  "last weekend",
+                  "went",
+                  "with",
+                  "and"
+                ],
+                "hint": "Start with Last weekend and use one past verb.",
+                "explanation": "This roleplay checks clear answers about past activities and the connector and."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Feelings Today",
+                "instruction": "Answer the question about your feelings today. Add a reason with because or a contrast with but.",
+                "audioPrompt": "How do you feel today after your weekend?",
+                "scenarioContext": "Mr. Khoirul asks how you feel now after a busy or relaxing weekend.",
+                "characterRole": "You are a student sharing your present feeling and a simple reason.",
+                "targetSentence": "Today I feel good, but I am a little tired because I did not sleep much.",
+                "phonetic": "/təˈdeɪ aɪ fiːl ɡʊd bət aɪ æm ə ˈlɪt.əl ˈtaɪərd bɪˈkɔːz aɪ dɪd nɒt sliːp mʌtʃ/",
+                "expectedKeywords": [
+                  "today",
+                  "feel",
+                  "but",
+                  "because"
+                ],
+                "hint": "Stress your feeling word, such as happy, good, tired, excited, or busy.",
+                "explanation": "This roleplay checks present-time language and your ability to explain a feeling."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Plan for Tonight",
+                "instruction": "Tell Mr. Khoirul about your plan for tonight. Say what you are going to do and what you will do after that.",
+                "audioPrompt": "What are you going to do tonight?",
+                "scenarioContext": "Mr. Khoirul wants to know how you will relax or prepare for the next day.",
+                "characterRole": "You are a student describing a simple plan for tonight.",
+                "targetSentence": "Tonight, I am going to watch a movie at home. After that, I am going to sleep early.",
+                "phonetic": "/təˈnaɪt aɪ æm ˈɡoʊ.ɪŋ tə wɑːtʃ ə ˈmuː.vi æt hoʊm ˈæf.tər ðæt/",
+                "expectedKeywords": [
+                  "tonight",
+                  "going to",
+                  "after that",
+                  "sleep"
+                ],
+                "hint": "Say going to smoothly and clearly. Stress TONIGHT and AFTER THAT.",
+                "explanation": "This roleplay checks future plans with going to and sequence language."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Next Weekend Plan",
+                "instruction": "Answer with a plan for next weekend. Include who you are going with or what you want to do.",
+                "audioPrompt": "What are you going to do next weekend? Are you going to do something special?",
+                "scenarioContext": "Mr. Khoirul asks about your upcoming weekend and possible special plans.",
+                "characterRole": "You are a student sharing an exciting future plan.",
+                "targetSentence": "Next weekend, I am going to visit my cousin, and we are going to try local food.",
+                "phonetic": "/nekst ˈwiːk.end aɪ æm ˈɡoʊ.ɪŋ tə ˈvɪz.ɪt maɪ ˈkʌz.ɪn ænd wi ɑːr ˈɡoʊ.ɪŋ tə traɪ ˈloʊ.kəl fuːd/",
+                "expectedKeywords": [
+                  "next weekend",
+                  "going to",
+                  "visit",
+                  "and"
+                ],
+                "hint": "Use a happy voice when you talk about an exciting plan.",
+                "explanation": "This roleplay checks if you can make a longer future answer with a connected idea."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "focus": "vocab",
+                "instruction": "Say the time words in a complete sentence: last weekend, today, tonight, and tomorrow.",
+                "audioPrompt": "Make one short connected sentence with the time words.",
+                "targetSentence": "Last weekend I was busy, today I am tired, and tomorrow I am going to rest.",
+                "phonetic": "/lɑːst ˈwiːk.end aɪ wəz ˈbɪz.i təˈdeɪ aɪ æm ˈtaɪərd ænd təˈmɒr.oʊ aɪ æm ˈɡoʊ.ɪŋ tə rest/",
+                "expectedKeywords": [
+                  "last weekend",
+                  "today",
+                  "tomorrow",
+                  "rest"
+                ],
+                "hint": "Say each time word clearly. These words tell your listener when something happens.",
+                "explanation": "This drill checks useful vocabulary for talking about different times."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "focus": "grammar",
+                "instruction": "Say the three sentences. Use went for the past, feel for the present, and going to for the future.",
+                "audioPrompt": "Repeat: Yesterday I went to school. Today I feel good. Tomorrow I am going to study.",
+                "targetSentence": "Yesterday I went to school. Today I feel good. Tomorrow I am going to study.",
+                "phonetic": "/ˈjes.tər.deɪ aɪ went tə skuːl təˈdeɪ aɪ fiːl ɡʊd təˈmɒr.oʊ aɪ æm ˈɡoʊ.ɪŋ tə ˈstʌd.i/",
+                "expectedKeywords": [
+                  "went",
+                  "feel",
+                  "going to"
+                ],
+                "hint": "Do not say I went tomorrow. Use I am going to for a future plan.",
+                "explanation": "This drill checks the basic grammar forms for past, present, and future meaning."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Stress Shift Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Say both words and make the strong syllable clear: PREsent, then preSENT.",
+                "audioPrompt": "Listen and repeat: This is a PREsent. I preSENT my work today.",
+                "targetSentence": "This is a PREsent. I preSENT my work today.",
+                "phonetic": "/ðɪs ɪz ə ˈprez.ənt aɪ prɪˈzent maɪ wɜːrk təˈdeɪ/",
+                "expectedKeywords": [
+                  "present",
+                  "today"
+                ],
+                "hint": "For the thing, stress PRE. For the action, stress SENT.",
+                "explanation": "This drill checks if you can hear and produce a change in syllable stress."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Ask the question with a rising voice. Then answer it with a falling voice.",
+                "audioPrompt": "Repeat: Are you going to visit your cousin this weekend? Yes, I am going to visit my cousin this weekend.",
+                "targetSentence": "Are you going to visit your cousin this weekend? Yes, I am going to visit my cousin this weekend.",
+                "phonetic": "/ɑːr ju ˈɡoʊ.ɪŋ tə ˈvɪz.ɪt jʊr ˈkʌz.ɪn ðɪs ˈwiːk.end jes aɪ æm ˈɡoʊ.ɪŋ tə ˈvɪz.ɪt maɪ ˈkʌz.ɪn ðɪs ˈwiːk.end/",
+                "expectedKeywords": [
+                  "are you",
+                  "going to",
+                  "yes",
+                  "cousin"
+                ],
+                "hint": "Let your voice rise at the end of the question. Let it fall at the end of the answer.",
+                "explanation": "This drill checks rising intonation for a yes or no question and falling intonation for a complete answer."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

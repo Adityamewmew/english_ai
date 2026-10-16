@@ -1,0 +1,1702 @@
+{
+  "module": {
+    "id": "A1.1-M01",
+    "levelId": "A1.1",
+    "title": "Unit 1: One World: Countries, Nationalities & To Be",
+    "cefr": "A1",
+    "group": "A1.1 - Starter Foundations",
+    "objective": "Introduce yourself by stating your name, country of origin, nationality, and age using the verb 'to be' accurately.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 1
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-1-m01-reading",
+      "moduleId": "A1.1-M01",
+      "skillType": "reading",
+      "title": "Reading Mission: International Profiles",
+      "theme": "International Profiles (Global Friendships)",
+      "grammarFocus": "Verb 'To Be' (am, is, are)",
+      "vocabularyFocus": "Countries & Nationalities",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-1-m01-r-theory",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Learn how to read simple introduction profiles in English. Focus on reading names, home countries, and favourite things — you don't need to understand every difficult word!",
+            "linguisticTarget": {
+              "themeTitle": "International Profiles (Global Friendships)",
+              "grammarTopic": "Verb 'To Be' (am, is, are)",
+              "grammarFormula": "Subject + am / is / are + Origin / Age / Identity",
+              "vocabularyTopic": "Countries, Nationalities & Identity",
+              "languageFunction": "Introducing yourself, saying your age, and where you are from",
+              "keyPatterns": [
+                {
+                  "subject": "I",
+                  "be": "am",
+                  "example": "I'm sixteen / I am from Teruel",
+                  "desc": "First person singular (I)"
+                },
+                {
+                  "subject": "He / She",
+                  "be": "is",
+                  "example": "He is from Spain / She's Brazilian",
+                  "desc": "Third person singular (He / She)"
+                },
+                {
+                  "subject": "We / They",
+                  "be": "are",
+                  "example": "We are students / They're friends",
+                  "desc": "Plural (We / They)"
+                }
+              ],
+              "vocabTargets": [
+                {
+                  "word": "Spain",
+                  "transformed": "Spanish",
+                  "type": "Country ➔ Nationality"
+                },
+                {
+                  "word": "Brazil",
+                  "transformed": "Brazilian",
+                  "type": "Country ➔ Nationality"
+                },
+                {
+                  "word": "athlete",
+                  "transformed": "swimmer / runner",
+                  "type": "Profession / Interest"
+                }
+              ]
+            },
+            "learningObjectives": [
+              "Find names, ages, and home countries in a short text",
+              "Identify the main idea of an introduction text",
+              "Understand key words in simple sentences"
+            ],
+            "contextWarmup": {
+              "prompt": "What information do people usually share when they meet for the first time?",
+              "options": [
+                "Name, home country, and age",
+                "A monthly shopping list",
+                "A road repair schedule"
+              ],
+              "correctIndex": 0,
+              "explanation": "When people first meet, they usually share their name, where they are from, and simple interests."
+            },
+            "rules": [
+              "Look for capital letters for People's Names (Jamie), Countries (Spain, Brazil), and Nationalities (Spanish, Brazilian)",
+              "Use 'am / is / are' to connect the subject with a country or profession",
+              "Don't panic when you see a new word — look for key information like numbers and place names first!"
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Beginner Reading Mistake",
+              "explanation": "Many beginners read word by word and get stuck on unknown words. But the answer you need is often right there in the next sentence!",
+              "wrong": "Looking up every word like 'athlete' and 'amazing' in a dictionary before answering",
+              "correct": "Find the key words from the question directly in the matching line of the text"
+            },
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "am",
+                "vowelDropped": "a",
+                "remainder": "m",
+                "contracted": "I'm",
+                "exampleFull": "I am sixteen years old.",
+                "exampleContracted": "I'm sixteen years old."
+              },
+              {
+                "subject": "He",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "He's",
+                "exampleFull": "He is from Spain.",
+                "exampleContracted": "He's from Spain."
+              },
+              {
+                "subject": "She",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "She's",
+                "exampleFull": "She is from Brazil.",
+                "exampleContracted": "She's from Brazil."
+              },
+              {
+                "subject": "We",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "We're",
+                "exampleFull": "We are students in Spain.",
+                "exampleContracted": "We're students in Spain."
+              },
+              {
+                "subject": "They",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "They're",
+                "exampleFull": "They are fans of FC Barcelona.",
+                "exampleContracted": "They're fans of FC Barcelona."
+              }
+            ],
+            "grammarFormulas": {
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person (I)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "is",
+                  "role": "Third Person (He — male)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "is",
+                  "role": "Third Person (She — female)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "Plural (We)"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Plural (They)"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Second Person (You)"
+                }
+              ],
+              "complements": [
+                "from Spain",
+                "sixteen years old",
+                "a Brazilian swimmer",
+                "a fan of FC Barcelona"
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-1-m01-r-vocab",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-reading",
+          "sectionType": "vocab",
+          "title": "Vocabulary in Context",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "country",
+                "ipa": "/ˈkʌntri/",
+                "meaning": "negara",
+                "collocation": "Spain is a beautiful country."
+              },
+              {
+                "word": "nationality",
+                "ipa": "/ˌnæʃəˈnæləti/",
+                "meaning": "kewarganegaraan",
+                "collocation": "What's your nationality? I'm Brazilian."
+              },
+              {
+                "word": "athlete",
+                "ipa": "/ˈæθliːt/",
+                "meaning": "atlet / olahragawan",
+                "collocation": "Who is your favourite athlete?"
+              },
+              {
+                "word": "favourite",
+                "ipa": "/ˈfeɪvərɪt/",
+                "meaning": "favorit / kesukaan",
+                "collocation": "Usain Bolt is my favourite runner."
+              },
+              {
+                "word": "amazing",
+                "ipa": "/əˈmeɪzɪŋ/",
+                "meaning": "luar biasa / mengagumkan",
+                "collocation": "He is an amazing swimmer."
+              },
+              {
+                "word": "swimmer",
+                "ipa": "/ˈswɪmə(r)/",
+                "meaning": "perenang",
+                "collocation": "She is a fast swimmer."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m01-r-guided",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Meet Jamie and Marta",
+            "context": "Read the short text below about two students who meet at an international school.",
+            "text": "Jamie is sixteen years old. He is from Spain, from a small town called Teruel. He is a big fan of FC Barcelona. Marta is also sixteen. She is from Brazil, but she is now in Spain for school. Her favourite athlete is a Brazilian swimmer. Jamie and Marta agree that sports in Spain and Brazil are amazing.",
+            "wordCount": 62,
+            "highlights": [
+              {
+                "phrase": "sixteen years old",
+                "note": "Tells us someone's age"
+              },
+              {
+                "phrase": "from Spain",
+                "note": "Tells us Jamie's home country"
+              },
+              {
+                "phrase": "from Brazil",
+                "note": "Tells us Marta's home country"
+              },
+              {
+                "phrase": "fan of FC Barcelona",
+                "note": "Interest / favourite club"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m01-r-practice",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-reading",
+          "sectionType": "practice",
+          "title": "Reading Comprehension Practice",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "question": "What is the main topic of the text?",
+              "options": [
+                "Two teenagers introducing their age, origins, and interests",
+                "A football match in the town of Teruel",
+                "How to become a professional swimmer in Brazil"
+              ],
+              "answer": "Two teenagers introducing their age, origins, and interests",
+              "explanation": "The text focuses on introducing Jamie and Marta — their home countries and their interest in sports."
+            },
+            "detailQuestions": [
+              {
+                "question": "Where is Jamie from?",
+                "options": [
+                  "Spain",
+                  "Brazil",
+                  "England"
+                ],
+                "answer": "Spain",
+                "explanation": "The text says: 'He is from Spain, from a small town called Teruel.'"
+              },
+              {
+                "question": "How old is Marta?",
+                "options": [
+                  "Sixteen",
+                  "Fifteen",
+                  "Seventeen"
+                ],
+                "answer": "Sixteen",
+                "explanation": "The text says: 'Marta is also sixteen.'"
+              },
+              {
+                "question": "What team does Jamie support?",
+                "options": [
+                  "FC Barcelona",
+                  "Real Madrid",
+                  "Santos FC"
+                ],
+                "answer": "FC Barcelona",
+                "explanation": "The text says: 'He is a big fan of FC Barcelona.'"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m01-r-quiz",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-reading",
+          "sectionType": "quiz",
+          "title": "Reading Challenge (Post-test)",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "Jamie comes from a small town named...",
+                "options": [
+                  "Teruel",
+                  "Barcelona",
+                  "Madrid"
+                ],
+                "answer": "Teruel",
+                "explanation": "It is clearly written in the second sentence: 'from a small town called Teruel.'"
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which country is Marta originally from?",
+                "options": [
+                  "Brazil",
+                  "Spain",
+                  "Portugal"
+                ],
+                "answer": "Brazil",
+                "explanation": "The text says: 'She is from Brazil...'"
+              },
+              {
+                "id": "q-r-3",
+                "question": "Are Jamie and Marta the same age?",
+                "options": [
+                  "Yes, both are 16",
+                  "No, Jamie is older",
+                  "No, Marta is older"
+                ],
+                "answer": "Yes, both are 16",
+                "explanation": "'Jamie is sixteen years old' and 'Marta is also sixteen.'"
+              },
+              {
+                "id": "q-r-4",
+                "question": "Marta's favourite athlete is a...",
+                "options": [
+                  "Swimmer",
+                  "Runner",
+                  "Football player"
+                ],
+                "answer": "Swimmer",
+                "explanation": "The text says: 'Her favourite athlete is a Brazilian swimmer.'"
+              },
+              {
+                "id": "q-r-5",
+                "question": "Which sentence is TRUE based on the reading passage?",
+                "options": [
+                  "Marta is currently in Spain for school.",
+                  "Jamie is a runner from Madrid.",
+                  "Marta does not like sports."
+                ],
+                "answer": "Marta is currently in Spain for school.",
+                "explanation": "The text says: '...she is now in Spain for school.'"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m01-listening",
+      "moduleId": "A1.1-M01",
+      "skillType": "listening",
+      "title": "Listening Mission: Meeting at the School Gate",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-1-m01-l-theory",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-listening",
+          "sectionType": "theory",
+          "title": "Listening Objective & Ear Prep",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Train your ears to catch important words in everyday introduction conversations with natural intonation. Let's get started!",
+            "learningObjectives": [
+              "Listen and recognise the speaker's name and country",
+              "Catch contracted forms like 'I'm', 'What's', and 'He's'",
+              "Answer listening comprehension questions without a transcript"
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "Nice to meet you",
+                "meaning": "Senang berkenalan denganmu"
+              },
+              {
+                "phrase": "Where are you from?",
+                "meaning": "Dari mana kamu berasal?"
+              },
+              {
+                "phrase": "I'm from...",
+                "meaning": "Saya berasal dari..."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m01-l-dialogue",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-listening",
+          "sectionType": "dialogue",
+          "title": "Spoken Dialogue (Corrected)",
+          "orderIndex": 2,
+          "content": {
+            "context": "Two students, Jamie and Marta, meet in front of the school gate and greet each other.",
+            "audioPrompt": "Listen to this friendly conversation between Jamie and Marta.",
+            "lines": [
+              {
+                "speaker": "Jamie",
+                "text": "Nice shirt.",
+                "translation": "Bagus kaosmu."
+              },
+              {
+                "speaker": "Marta",
+                "text": "Thank you! It's the new Barcelona shirt.",
+                "translation": "Terima kasih! Ini kaos Barcelona yang baru."
+              },
+              {
+                "speaker": "Jamie",
+                "text": "I know. I'm a Barcelona fan too. What's your name?",
+                "translation": "Aku tahu. Aku juga fans Barcelona. Siapa namamu?"
+              },
+              {
+                "speaker": "Marta",
+                "text": "My name is Marta. And what's your name?",
+                "translation": "Nama saya Marta. Dan siapa namamu?"
+              },
+              {
+                "speaker": "Jamie",
+                "text": "I'm Jamie. Nice to meet you, Marta.",
+                "translation": "Saya Jamie. Senang berkenalan denganmu, Marta."
+              },
+              {
+                "speaker": "Marta",
+                "text": "Nice to meet you too! Where are you from, Jamie?",
+                "translation": "Senang berkenalan denganmu juga! Dari mana kamu berasal, Jamie?"
+              },
+              {
+                "speaker": "Jamie",
+                "text": "I'm from Spain. I live in a town called Teruel.",
+                "translation": "Saya dari Spanyol. Saya tinggal di kota bernama Teruel."
+              },
+              {
+                "speaker": "Marta",
+                "text": "Spain is a beautiful country!",
+                "translation": "Spanyol adalah negara yang sangat indah!"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m01-l-quiz",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "It's the new Barcelona shirt.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Marta: \"It's the new Barcelona _____.\"",
+                "targetWord": "shirt",
+                "explanation": "Full audio: \"It's the new Barcelona shirt.\". The missing word is \"shirt\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I'm a Barcelona fan too.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Jamie: \"I'm a Barcelona fan _____.\"",
+                "targetWord": "too",
+                "explanation": "Full audio: \"I'm a Barcelona fan too.\". The missing word is \"too\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "What's your name?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Jamie: \"What's your _____?\"",
+                "targetWord": "name",
+                "explanation": "Full audio: \"What's your name?\". The missing word is \"name\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "And what's your name?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Marta: \"And _____ your name?\"",
+                "targetWord": "what's",
+                "explanation": "Full audio: \"And what's your name?\". The missing word is \"what's\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Nice to meet you, Marta.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Jamie: \"Nice to _____ you, Marta.\"",
+                "targetWord": "meet",
+                "explanation": "Full audio: \"Nice to meet you, Marta.\". The missing word is \"meet\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "My name is Marta.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "My name is Marta",
+                "words": [
+                  "name",
+                  "Marta",
+                  "My",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"My name is Marta.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Nice to meet you too!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Nice to meet you too",
+                "words": [
+                  "to",
+                  "too",
+                  "Nice",
+                  "meet",
+                  "you"
+                ],
+                "explanation": "Correct sentence order: \"Nice to meet you too!\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Where are you from, Jamie?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Where are you from Jamie",
+                "words": [
+                  "are",
+                  "from",
+                  "Jamie",
+                  "Where",
+                  "you"
+                ],
+                "explanation": "Correct sentence order: \"Where are you from, Jamie?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "I'm from Spain.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I'm from Spain",
+                "words": [
+                  "from",
+                  "I'm",
+                  "Spain"
+                ],
+                "explanation": "Correct sentence order: \"I'm from Spain.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "I live in a town called Teruel.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I live in a town called Teruel",
+                "words": [
+                  "Teruel",
+                  "a",
+                  "I",
+                  "in",
+                  "live",
+                  "town",
+                  "called"
+                ],
+                "explanation": "Correct sentence order: \"I live in a town called Teruel.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "It's the new Barcelona shirt.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Marta: \"It's the new Barcelona _____.\"",
+                "targetWord": "shirt",
+                "explanation": "Full audio: \"It's the new Barcelona shirt.\". The missing word is \"shirt\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I'm a Barcelona fan too.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Jamie: \"I'm a Barcelona fan _____.\"",
+                "targetWord": "too",
+                "explanation": "Full audio: \"I'm a Barcelona fan too.\". The missing word is \"too\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "What's your name?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Jamie: \"What's your _____?\"",
+                "targetWord": "name",
+                "explanation": "Full audio: \"What's your name?\". The missing word is \"name\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "And what's your name?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Marta: \"And _____ your name?\"",
+                "targetWord": "what's",
+                "explanation": "Full audio: \"And what's your name?\". The missing word is \"what's\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Nice to meet you, Marta.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Jamie: \"Nice to _____ you, Marta.\"",
+                "targetWord": "meet",
+                "explanation": "Full audio: \"Nice to meet you, Marta.\". The missing word is \"meet\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "My name is Marta.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "My name is Marta",
+                "words": [
+                  "name",
+                  "Marta",
+                  "My",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"My name is Marta.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Nice to meet you too!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Nice to meet you too",
+                "words": [
+                  "to",
+                  "too",
+                  "Nice",
+                  "meet",
+                  "you"
+                ],
+                "explanation": "Correct sentence order: \"Nice to meet you too!\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Where are you from, Jamie?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Where are you from Jamie",
+                "words": [
+                  "are",
+                  "from",
+                  "Jamie",
+                  "Where",
+                  "you"
+                ],
+                "explanation": "Correct sentence order: \"Where are you from, Jamie?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "I'm from Spain.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I'm from Spain",
+                "words": [
+                  "from",
+                  "I'm",
+                  "Spain"
+                ],
+                "explanation": "Correct sentence order: \"I'm from Spain.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "I live in a town called Teruel.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I live in a town called Teruel",
+                "words": [
+                  "Teruel",
+                  "a",
+                  "I",
+                  "in",
+                  "live",
+                  "town",
+                  "called"
+                ],
+                "explanation": "Correct sentence order: \"I live in a town called Teruel.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m01-writing",
+      "moduleId": "A1.1-M01",
+      "skillType": "writing",
+      "title": "Writing Mission: Introducing Yourself",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-1-m01-w-theory",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-writing",
+          "sectionType": "theory",
+          "title": "Sentence Formulas & Word Order",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this module, you will learn how to build complete and accurate English sentences: from the basic Subject + Verb + Complement formula, to using capital letters correctly, and finally writing your own self-introduction profile independently.",
+            "blueprintItems": [
+              {
+                "part": "Subject",
+                "role": "The Doer / Subject",
+                "examples": [
+                  "Liam",
+                  "I",
+                  "She",
+                  "They"
+                ],
+                "color": "border-sky-300 bg-sky-50 dark:bg-sky-950/40 text-sky-900 dark:text-sky-200",
+                "tagColor": "bg-sky-200/70 text-sky-800 dark:bg-sky-800/60 dark:text-sky-200"
+              },
+              {
+                "part": "Verb ('to be')",
+                "role": "Linking Verb",
+                "examples": [
+                  "is",
+                  "am",
+                  "is",
+                  "are"
+                ],
+                "color": "border-amber-300 bg-amber-50 dark:bg-amber-950/40 text-amber-900 dark:text-amber-200",
+                "tagColor": "bg-amber-200/70 text-amber-800 dark:bg-amber-800/60 dark:text-amber-200"
+              },
+              {
+                "part": "Complement",
+                "role": "Complement (Origin, Status, Description)",
+                "examples": [
+                  "from Melbourne.",
+                  "a student.",
+                  "Italian.",
+                  "close friends."
+                ],
+                "color": "border-emerald-300 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200",
+                "tagColor": "bg-emerald-200/70 text-emerald-800 dark:bg-emerald-800/60 dark:text-emerald-200"
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "title": "Capital Letters Are Required",
+                "rule": "Use a capital letter at the beginning of a sentence, for the pronoun 'I', for people's names (Liam), countries (Indonesia), and nationalities (Spanish).",
+                "example": "I am from Jakarta and he is Japanese."
+              },
+              {
+                "title": "Full Stop at the End (.)",
+                "rule": "Every statement must end with a full stop (.) right after the last word, with no space before it.",
+                "example": "She is 16 years old."
+              },
+              {
+                "title": "Subject-Verb Agreement",
+                "rule": "Make sure the form of 'to be' matches the subject: I am, He/She/It is, We/They are.",
+                "example": "They are students at London University."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "text": "Liam is from Melbourne, Australia.",
+                "audio": "Liam is from Melbourne, Australia."
+              },
+              {
+                "text": "I am a high school student.",
+                "audio": "I am a high school student."
+              },
+              {
+                "text": "Marco isn't French. He is Spanish.",
+                "audio": "Marco isn't French. He is Spanish."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m01-w-practice",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-writing",
+          "sectionType": "practice",
+          "title": "Sentence Building & Guided Writing Practice",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "she is italian. she is from italy.",
+                "targetSentence": "She is Italian. She is from Italy.",
+                "translation": "Dia orang Italia. Dia berasal dari Italia.",
+                "keyRule": "Capitalise the beginning of each sentence ('She'), the nationality ('Italian'), and the country ('Italy').",
+                "requiredCapitals": [
+                  "She",
+                  "Italian",
+                  "Italy"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "i am from tokyo, japan.",
+                "targetSentence": "I am from Tokyo, Japan.",
+                "translation": "Saya berasal dari Tokyo, Jepang.",
+                "keyRule": "The pronoun 'I' is always capitalised. The city 'Tokyo' and the country 'Japan' must start with a capital letter.",
+                "requiredCapitals": [
+                  "I",
+                  "Tokyo",
+                  "Japan"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "marco isn't french. he is spanish.",
+                "targetSentence": "Marco isn't French. He is Spanish.",
+                "translation": "Marco bukan orang Prancis. Dia orang Spanyol.",
+                "keyRule": "Capitalise the person's name ('Marco'), nationalities ('French', 'Spanish'), and the start of the second sentence ('He').",
+                "requiredCapitals": [
+                  "Marco",
+                  "French",
+                  "He",
+                  "Spanish"
+                ]
+              },
+              {
+                "id": "sent-4",
+                "faultySentence": "my teacher is mr. khoirul and he is indonesian.",
+                "targetSentence": "My teacher is Mr. Khoirul and he is Indonesian.",
+                "translation": "Guru saya adalah Pak Khoirul dan beliau berkebangsaan Indonesia.",
+                "keyRule": "Capitalise the title ('Mr.'), the person's name ('Khoirul'), and the nationality ('Indonesian').",
+                "requiredCapitals": [
+                  "My",
+                  "Mr.",
+                  "Khoirul",
+                  "Indonesian"
+                ]
+              },
+              {
+                "id": "sent-5",
+                "faultySentence": "we are students from london, the uk.",
+                "targetSentence": "We are students from London, the UK.",
+                "translation": "Kami adalah pelajar dari London, Inggris Raya.",
+                "keyRule": "Capitalise the beginning of the sentence ('We'), the city ('London'), and the official country abbreviation ('UK').",
+                "requiredCapitals": [
+                  "We",
+                  "London",
+                  "UK"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Affirmative & Origin",
+                "meaning": "Saya berasal dari Indonesia dan saya adalah seorang pelajar.",
+                "tokens": [
+                  "I",
+                  "am",
+                  "from",
+                  "Indonesia",
+                  "and",
+                  "I",
+                  "am",
+                  "a",
+                  "student."
+                ],
+                "fullSentence": "I am from Indonesia and I am a student."
+              },
+              {
+                "id": "b-2",
+                "category": "Negative Form & Contrast",
+                "meaning": "Dia bukan berasal dari Spanyol tetapi dari Italia.",
+                "tokens": [
+                  "She",
+                  "is",
+                  "not",
+                  "from",
+                  "Spain",
+                  "but",
+                  "from",
+                  "Italy."
+                ],
+                "fullSentence": "She is not from Spain but from Italy."
+              },
+              {
+                "id": "b-3",
+                "category": "Age & Place of Residence",
+                "meaning": "Dia berasal dari Melbourne dan dia berusia 16 tahun.",
+                "tokens": [
+                  "He",
+                  "is",
+                  "from",
+                  "Melbourne",
+                  "and",
+                  "he",
+                  "is",
+                  "16",
+                  "years",
+                  "old."
+                ],
+                "fullSentence": "He is from Melbourne and he is 16 years old."
+              },
+              {
+                "id": "b-4",
+                "category": "Question Sentence & Nationality",
+                "meaning": "Dari mana kamu berasal dan apa kewarganegaraanmu?",
+                "tokens": [
+                  "Where",
+                  "are",
+                  "you",
+                  "from",
+                  "and",
+                  "what",
+                  "is",
+                  "your",
+                  "nationality?"
+                ],
+                "fullSentence": "Where are you from and what is your nationality?"
+              },
+              {
+                "id": "b-5",
+                "category": "Favourite Idol & Interests",
+                "meaning": "Atlet favorit saya adalah Lionel Messi dan dia berasal dari Argentina.",
+                "tokens": [
+                  "My",
+                  "favourite",
+                  "athlete",
+                  "is",
+                  "Lionel",
+                  "Messi",
+                  "and",
+                  "he",
+                  "is",
+                  "from",
+                  "Argentina."
+                ],
+                "fullSentence": "My favourite athlete is Lionel Messi and he is from Argentina."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Introduce Yourself",
+                "badge": "Personal Bio",
+                "instruction": "Write 3–5 sentences to introduce yourself in English: include your name, age, city and country of origin, and your current status or occupation.",
+                "example": "Hello! My name is Aditya. I am 16 years old. I am from Jakarta, Indonesia. I am a student.",
+                "placeholder": "Start writing here... (Hello! My name is...)",
+                "minWords": 10,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: A Classmate's Profile",
+                "badge": "Third-Person Bio",
+                "instruction": "Write 3–5 sentences describing a classmate using the third person (He is... / She is...): include their name, nationality, country of origin, and age.",
+                "example": "This is my classmate. Her name is Marta. She is from Madrid, Spain. She is Spanish and she is 16 years old.",
+                "placeholder": "Start writing here... (This is my classmate. His/Her name is...)",
+                "minWords": 12,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-3",
+                "title": "Challenge 3: Your Favourite Public Figure / Athlete",
+                "badge": "Favourite Idol",
+                "instruction": "Write 3–5 sentences about your favourite athlete, artist, or public figure: use the phrase 'My favourite...', mention their country of origin, and their profession.",
+                "example": "My favourite athlete is Lionel Messi. He is a legendary football player. He is from Argentina. He is very inspiring.",
+                "placeholder": "Start writing here... (My favourite athlete/singer is...)",
+                "minWords": 12,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m01-w-quiz",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following affirmative sentence into a complete negative sentence:",
+                "promptText": "Liam is from Melbourne.",
+                "hint": "Use 'is not' or the contraction 'isn't'.",
+                "targetAnswers": [
+                  "Liam is not from Melbourne.",
+                  "Liam isn't from Melbourne."
+                ],
+                "explanation": "The negative form of 'Liam is' is 'Liam is not' or the contraction 'Liam isn't'."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Joining Sentences (with 'and')",
+                "instruction": "Join the two sentences below into one complete sentence using the conjunction 'and':",
+                "promptText": "\"I am 16 years old.\" + \"I am a student.\"",
+                "hint": "I am 16 years old and I am a student.",
+                "targetAnswers": [
+                  "I am 16 years old and I am a student.",
+                  "I am 16 years old and a student.",
+                  "I'm 16 years old and I'm a student."
+                ],
+                "explanation": "Use the conjunction 'and' to connect two equal affirmative clauses."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Joining Contrasting Sentences (with 'but')",
+                "instruction": "Join the two contrasting sentences below using the conjunction 'but':",
+                "promptText": "\"She is from Spain.\" + \"She lives in London.\"",
+                "hint": "Use a comma before 'but' to connect two complete clauses.",
+                "targetAnswers": [
+                  "She is from Spain, but she lives in London.",
+                  "She is from Spain but she lives in London."
+                ],
+                "explanation": "The conjunction 'but' is used to connect two contrasting statements."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Full Question & Answer (Origin)",
+                "instruction": "Answer the following question by writing one complete affirmative sentence saying you are from Indonesia:",
+                "promptText": "Where are you from?",
+                "hint": "I am from Indonesia. (Remember to capitalise 'I' and 'Indonesia'.)",
+                "targetAnswers": [
+                  "I am from Indonesia.",
+                  "I'm from Indonesia."
+                ],
+                "explanation": "A correct full-sentence answer: 'I am from Indonesia.' or 'I'm from Indonesia.'"
+              },
+              {
+                "id": 5,
+                "typeLabel": "Complete the Full Sentence",
+                "instruction": "Type the complete sentence below by filling in the correct form of the verb 'to be':",
+                "promptText": "Marta _____ from Madrid, Spain.",
+                "hint": "Use the singular form of 'to be' for Marta ('is').",
+                "targetAnswers": [
+                  "Marta is from Madrid, Spain."
+                ],
+                "explanation": "The singular subject 'Marta' pairs with the verb 'to be' form 'is'."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Mechanics & Capitalisation Correction",
+                "instruction": "Retype the sentence below, correcting all capital letters and adding the full stop:",
+                "promptText": "they are japanese and they live in tokyo",
+                "hint": "Capitalise 'They', 'Japanese', and 'Tokyo'.",
+                "targetAnswers": [
+                  "They are Japanese and they live in Tokyo."
+                ],
+                "explanation": "The beginning of a sentence ('They'), a nationality ('Japanese'), and a city name ('Tokyo') must all start with a capital letter."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Building a Question Sentence",
+                "instruction": "Arrange and type a complete question to ask someone where they are from, using 'Where' and 'are':",
+                "promptText": "Where / you / from / ?",
+                "hint": "Where are you from?",
+                "targetAnswers": [
+                  "Where are you from?"
+                ],
+                "explanation": "Wh-question formula: Where + to be (are) + Subject (you) + from?"
+              },
+              {
+                "id": 8,
+                "typeLabel": "Plural Subject-Verb Agreement",
+                "instruction": "Write a complete affirmative sentence stating that we are students at school:",
+                "promptText": "We / students / at school",
+                "hint": "We are students at school.",
+                "targetAnswers": [
+                  "We are students at school.",
+                  "We're students at school."
+                ],
+                "explanation": "The plural subject 'We' uses the verb 'to be' form 'are'."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Writing Contractions",
+                "instruction": "Rewrite this sentence by changing 'I am' into its official contraction form:",
+                "promptText": "I am not French, I am Italian.",
+                "hint": "Use an apostrophe (') to shorten it: I'm",
+                "targetAnswers": [
+                  "I'm not French, I'm Italian."
+                ],
+                "explanation": "The contraction of 'I am' is 'I'm'."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Full Sentence Description",
+                "instruction": "Write one complete sentence introducing your friend named Alex, who is Australian:",
+                "promptText": "Alex / friend / Australian",
+                "hint": "This is Alex and he is Australian. OR Alex is my friend and he is Australian.",
+                "targetAnswers": [
+                  "This is Alex and he is Australian.",
+                  "My friend is Alex and he is Australian.",
+                  "Alex is my friend and he is Australian.",
+                  "His name is Alex and he is Australian."
+                ],
+                "explanation": "All names (Alex) and nationalities (Australian) must be capitalised, and the verb 'to be' form 'is' is used."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m01-speaking",
+      "moduleId": "A1.1-M01",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Introducing Yourself",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-1-m01-s-theory",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Intonation Blueprint",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practice voice articulation, pitch intonation (rising vs falling), and syllable rhythm before interacting live with AI Tutor Mr. Khoirul.",
+            "audioGuidance": "Hello voice champion! Pronunciation is not just about words, it is about music and rhythm. Wh-questions glide downward, while confirmation questions lift upward. Let's build your vocal confidence step by step!",
+            "pillars": [
+              {
+                "id": "pillar-pitch",
+                "title": "Pitch Trajectories",
+                "desc": "Yes/No confirmation questions rise at the end (Rising ↗), while Wh-questions and statements fall steadily at the end (Falling ↘).",
+                "example": "Are you Japanese? ↗ vs Where are you from? ↘"
+              },
+              {
+                "id": "pillar-stress",
+                "title": "Syllable Stress Shift",
+                "desc": "Stress shifts when a word changes from a country to a nationality, such as 'JA-pan' becoming 'ja-pa-NESE'.",
+                "example": "CA-na-da (beginning) ➔ ca-NA-di-an (middle)"
+              },
+              {
+                "id": "pillar-phonation",
+                "title": "Open & Relaxed Vowel Articulation",
+                "desc": "Pronounce each vowel with a relaxed, open mouth position without holding your breath at the back of your throat.",
+                "example": "Open-vowel flow: In-do-ne-sia"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m01-s-practice",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-speaking",
+          "sectionType": "practice",
+          "title": "Oral Drills, Syllable Shift & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "JA-pan",
+                "countryAudio": "Japan",
+                "countrySyllables": [
+                  {
+                    "text": "JA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "pan",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ja-pa-NESE",
+                "natAudio": "Japanese",
+                "natSyllables": [
+                  {
+                    "text": "ja",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "pa",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "NESE",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "The stress shifts from the 1st syllable (JA-) to the 3rd syllable (-NESE)."
+              },
+              {
+                "id": "pair-2",
+                "country": "AU-stra-lia",
+                "countryAudio": "Australia",
+                "countrySyllables": [
+                  {
+                    "text": "AU",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "stra",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "lia",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "au-STRA-lian",
+                "natAudio": "Australian",
+                "natSyllables": [
+                  {
+                    "text": "au",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "STRA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "lian",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress shifts from the first syllable (AU-) to the middle syllable (-STRA-)."
+              },
+              {
+                "id": "pair-3",
+                "country": "CA-na-da",
+                "countryAudio": "Canada",
+                "countrySyllables": [
+                  {
+                    "text": "CA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "na",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "da",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ca-NA-di-an",
+                "natAudio": "Canadian",
+                "natSyllables": [
+                  {
+                    "text": "ca",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "NA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "di",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "an",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The vowel changes and the stress moves from (CA-) to the second syllable (-NA-)."
+              },
+              {
+                "id": "pair-4",
+                "country": "I-ta-ly",
+                "countryAudio": "Italy",
+                "countrySyllables": [
+                  {
+                    "text": "I",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ta",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ly",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "i-TA-lian",
+                "natAudio": "Italian",
+                "natSyllables": [
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "lian",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The initial syllable stress (I-) moves to the second syllable (-TA-)."
+              },
+              {
+                "id": "pair-5",
+                "country": "Bra-ZIL",
+                "countryAudio": "Brazil",
+                "countrySyllables": [
+                  {
+                    "text": "Bra",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ZIL",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "bra-ZIL-ian",
+                "natAudio": "Brazilian",
+                "natSyllables": [
+                  {
+                    "text": "bra",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ZIL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ian",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress stays on the syllable (-ZIL-), but the rhythm gets longer with the -ian ending."
+              },
+              {
+                "id": "pair-6",
+                "country": "Spain",
+                "countryAudio": "Spain",
+                "countrySyllables": [
+                  {
+                    "text": "Spain",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "SPAN-ish",
+                "natAudio": "Spanish",
+                "natSyllables": [
+                  {
+                    "text": "SPAN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ish",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The single-syllable word 'Spain' becomes 2 syllables with strong stress at the beginning: 'SPAN-ish'."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "Hello! My name is Alex.",
+                "phonetic": "/həˈloʊ maɪ neɪm ɪz ˈæl.ɪks/",
+                "focus": "Greeting & Saying Your Name",
+                "hint": "Stress your name clearly with a friendly intonation."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "I am from Indonesia.",
+                "phonetic": "/aɪ æm frɒm ˌɪn.dəˈniː.ʒə/",
+                "focus": "Stating Your Country of Origin",
+                "hint": "Pronounce 'In-do-ne-si-a' smoothly without stiff pauses."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Are you from Japan?",
+                "phonetic": "/ɑːr juː frɒm dʒəˈpæn/",
+                "focus": "Yes/No Question (Rising Pitch ↗)",
+                "hint": "Raise your pitch at the end of the word 'Japan' ↗"
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "No, I am from Melbourne, Australia.",
+                "phonetic": "/noʊ aɪ æm frɒm ˈmɛl.bərn ɔːˈstreɪ.li.ə/",
+                "focus": "Stating Your City & Country of Origin",
+                "hint": "Use a steady falling intonation at the end of the sentence ↘"
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "Where are you from?",
+                "phonetic": "/weər ɑːr juː frɒm/",
+                "focus": "Wh-Question (Falling Pitch ↘)",
+                "hint": "Wh-questions naturally glide down at the end of the word 'from' ↘"
+              },
+              {
+                "id": "spk-d-6",
+                "targetText": "Nice to meet you too!",
+                "phonetic": "/naɪs tuː miːt juː tuː/",
+                "focus": "Friendly Introduction Response",
+                "hint": "Say it with a smile and positive introduction energy!"
+              }
+            ],
+            "roleplay": {
+              "context": "You meet Mr. Khoirul, a friendly English tutor. Have a 3-step spoken introduction conversation.",
+              "roles": [
+                "Mr. Khoirul",
+                "You"
+              ],
+              "turns": [
+                {
+                  "turnId": 1,
+                  "speaker": "Mr. Khoirul",
+                  "text": "Hello! Welcome to our English class. What's your name?",
+                  "audioPrompt": "Hello! Welcome to our English class. What's your name?",
+                  "suggestedResponse": "Hello! My name is Alex. Nice to meet you too."
+                },
+                {
+                  "turnId": 2,
+                  "speaker": "Mr. Khoirul",
+                  "text": "Nice to meet you too! Where are you from?",
+                  "audioPrompt": "Nice to meet you too! Where are you from?",
+                  "suggestedResponse": "I am from Indonesia. Are you from London?"
+                },
+                {
+                  "turnId": 3,
+                  "speaker": "Mr. Khoirul",
+                  "text": "Yes, I am from London! Who is your favourite athlete?",
+                  "audioPrompt": "Yes, I am from London! Who is your favourite athlete?",
+                  "suggestedResponse": "My favourite athlete is Cristiano Ronaldo. He is amazing!"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-1-m01-s-quiz",
+          "moduleId": "A1.1-M01",
+          "subModuleId": "sub-a1-1-m01-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum (10 Oral Assessments)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 75,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Free Storytelling: All About You",
+                "themeTitle": "Introduce Yourself & Your World",
+                "instruction": "Talk about yourself freely for 20–40 seconds. Choose one of the inspiration points below as a starting idea, then speak in your own words without following a rigid script.",
+                "audioPrompt": "Hello! Please tell me a little story about yourself. Who are you, where are you from, and what do you like?",
+                "inspirationPoints": [
+                  "Idea 1: Your full name, your city/country, and something interesting about where you live.",
+                  "Idea 2: Your name, your current student status, and your favourite hobby or free-time activity.",
+                  "Idea 3: Your name and a traditional food or drink from your area that you really like."
+                ],
+                "sampleStarter": "Hello, my name is... I am from... and I...",
+                "expectedKeywords": [
+                  "name",
+                  "from",
+                  "I am",
+                  "like"
+                ],
+                "minSeconds": 15,
+                "hint": "Use your own words! Tell your story casually, as if you are chatting with a new friend.",
+                "explanation": "This trains your ability to speak in a narrative monologue independently without memorising a rigid script."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Free Storytelling: A Person You Admire",
+                "themeTitle": "A Story About Someone You Admire",
+                "instruction": "Talk about a best friend, family member, or international celebrity/athlete you admire freely for 20–40 seconds. Choose one of the inspiration points below.",
+                "audioPrompt": "Now tell me a story about a person you admire: a good friend, a family member, or a famous athlete from another country.",
+                "inspirationPoints": [
+                  "Idea 1: An international friend — their name, their country, and their good qualities.",
+                  "Idea 2: Your favourite world athlete — their name, sport, country, and achievements.",
+                  "Idea 3: Your favourite celebrity/musician — their name, nationality, and work you enjoy."
+                ],
+                "sampleStarter": "This is my friend / favourite athlete... He/She is from... and...",
+                "expectedKeywords": [
+                  "He is",
+                  "She is",
+                  "from",
+                  "athlete",
+                  "friend"
+                ],
+                "minSeconds": 15,
+                "hint": "Use the pronouns he/she and the verb 'is'. Share your story with enthusiasm!",
+                "explanation": "This strengthens your command of third-person structures (he/she is) in free narrative storytelling."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Live Roleplay Call: Student Registration Desk",
+                "scenarioContext": "Student Registration Desk at an International Campus",
+                "characterRole": "Front Desk Officer",
+                "callTopic": "Roleplay: International Student Registration Desk",
+                "initialGreeting": "Good morning! Welcome to the international student office. I am Mr. Khoirul. What is your full name and where are you from?",
+                "instruction": "You are registering at a campus registration desk. Make a live voice call with Mr. Khoirul. Answer his questions and chat freely until your registration is complete!",
+                "audioPrompt": "Good morning! Welcome to the international student office. I am Mr. Khoirul. What is your full name and where are you from?",
+                "expectedKeywords": [
+                  "name",
+                  "from",
+                  "Indonesia",
+                  "student"
+                ],
+                "hint": "Answer naturally: say your name and your country when Mr. Khoirul asks.",
+                "explanation": "This simulates a real phone conversation in an international campus administration setting."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Live Roleplay Call: Youth Hostel Lounge",
+                "scenarioContext": "Relaxed Lounge at a Backpacker Hostel in Tokyo",
+                "characterRole": "Friendly Backpacker Traveler",
+                "callTopic": "Roleplay: Chatting with a Traveler at Youth Hostel",
+                "initialGreeting": "Hey there! Mind if I sit here? I am Mr. Khoirul, traveling from London. Where are you from and is it your first time here?",
+                "instruction": "You are relaxing at a backpacker hostel. Call Mr. Khoirul by voice and have a casual chat about where you are from and your travel plans!",
+                "audioPrompt": "Hey there! Mind if I sit here? I am Mr. Khoirul, traveling from London. Where are you from and is it your first time here?",
+                "expectedKeywords": [
+                  "from",
+                  "travel",
+                  "Japan",
+                  "nice to meet you"
+                ],
+                "hint": "Greet him back warmly: say where you are from and whether this is your first visit.",
+                "explanation": "This practises casual, informal conversation between travellers from different countries."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Live Roleplay Call: Airport Arrival & Immigration",
+                "scenarioContext": "Immigration & Border Control at an International Airport",
+                "characterRole": "Border Immigration Officer",
+                "callTopic": "Roleplay: Airport Passport Control and Border Inspection",
+                "initialGreeting": "Good afternoon. Welcome to the UK. I am Officer Khoirul. What is your nationality and what is the purpose of your visit?",
+                "instruction": "You have just arrived at an international airport. Make a call with immigration officer Mr. Khoirul and answer his passport questions clearly and confidently!",
+                "audioPrompt": "Good afternoon. Welcome to the UK. I am Officer Khoirul. What is your nationality and what is the purpose of your visit?",
+                "expectedKeywords": [
+                  "nationality",
+                  "Indonesian",
+                  "student",
+                  "holiday",
+                  "visit"
+                ],
+                "hint": "State your nationality (e.g. I am Indonesian) and your purpose (e.g. I am here for study/tourism).",
+                "explanation": "The airport setting is one of the most important real-life speaking situations for English language learners."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Live Roleplay Call: Classroom Partner Meetup",
+                "scenarioContext": "International English Language Classroom",
+                "characterRole": "International Study Partner",
+                "callTopic": "Roleplay: Finding a Class Project Partner",
+                "initialGreeting": "Hi! Are you looking for a study partner for the English project too? I am Mr. Khoirul from Cairo, Egypt. What about you?",
+                "instruction": "You are looking for a group partner in English class. Call Mr. Khoirul, introduce yourself, and agree to become study partners!",
+                "audioPrompt": "Hi! Are you looking for a study partner for the English project too? I am Mr. Khoirul from Cairo, Egypt. What about you?",
+                "expectedKeywords": [
+                  "name",
+                  "from",
+                  "partner",
+                  "yes",
+                  "project"
+                ],
+                "hint": "Say yes and express your enthusiasm about working together on the class project.",
+                "explanation": "This practises social initiative and academic collaboration in English."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Linguistic Drill: Vocabulary (Country vs Nationality)",
+                "instruction": "Distinguish between a country name and a nationality in one spoken sentence. Listen to the audio example, then repeat it clearly!",
+                "audioPrompt": "Listen and repeat: Spain is the country, and Spanish is the nationality.",
+                "targetSentence": "Spain is the country, and Spanish is the nationality.",
+                "phonetic": "/speɪn ɪz ðə ˈkʌn.tri ænd ˈspæn.ɪʃ ɪz ðə ˌnæʃ.ənˈæl.ə.ti/",
+                "expectedKeywords": [
+                  "Spain",
+                  "country",
+                  "Spanish",
+                  "nationality"
+                ],
+                "hint": "Notice the -ish ending on the Spanish nationality word.",
+                "explanation": "This strengthens the lexical difference between a geographical entity (country) and a citizen identity (nationality)."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Linguistic Drill: Grammar (Verb To Be & Pronouns)",
+                "instruction": "Practise your spoken reflex for using to be (am, is, are) with the correct subject pronoun. Say the following sentences one after another without hesitation!",
+                "audioPrompt": "Listen and repeat: I am a student, she is from Italy, and we are friends.",
+                "targetSentence": "I am a student, she is from Italy, and we are friends.",
+                "phonetic": "/aɪ æm ə ˈstjuː.dənt ʃiː ɪz frɒm ˈɪt.əl.i ænd wiː ɑːr frendz/",
+                "expectedKeywords": [
+                  "I am",
+                  "student",
+                  "she is",
+                  "Italy",
+                  "we are",
+                  "friends"
+                ],
+                "hint": "Use 'am' for I, 'is' for she, and 'are' for we.",
+                "explanation": "This locks in your automatic reflex for conjugating 'to be' so you don't mix them up when speaking spontaneously."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Linguistic Drill: Pronunciation (Syllable Stress Shift)",
+                "instruction": "Listen and repeat the stress shift from CA-na-da (stress at the beginning) to ca-NA-di-an (stress in the middle)!",
+                "audioPrompt": "Listen and repeat: CA-na-da is my country and I am ca-NA-di-an.",
+                "targetSentence": "CA-na-da is my country and I am ca-NA-di-an.",
+                "phonetic": "/ˈkæn.ə.də/ ➔ /kəˈneɪ.di.ən/",
+                "expectedKeywords": [
+                  "Canada",
+                  "country",
+                  "Canadian"
+                ],
+                "hint": "Put a strong beat on the capitalised syllable: CA-na-da then ca-NA-di-an.",
+                "explanation": "Stress shift is a key phonetic feature of English when a base word receives a nationality suffix."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Linguistic Drill: Intonation (Rising ↑ & Falling ↓ Pitch)",
+                "instruction": "Practise your pitch: use RISING intonation (↗) at the end of Yes/No questions and FALLING intonation (↘) at the end of statements!",
+                "audioPrompt": "Listen and repeat: Are you Australian? Yes, I am Australian.",
+                "targetSentence": "Are you Australian? ↗ Yes, I am Australian. ↘",
+                "phonetic": "/ɑːr juː ɒˈstreɪ.li.ən ↗/ /jes aɪ æm ɒˈstreɪ.li.ən ↘/",
+                "expectedKeywords": [
+                  "Are you",
+                  "Australian",
+                  "Yes",
+                  "I am"
+                ],
+                "hint": "Raise your pitch high at the end of the question, then lower it when you answer yes.",
+                "explanation": "Pitch intonation distinguishes the pragmatic meaning of a question versus a statement in spoken communication."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

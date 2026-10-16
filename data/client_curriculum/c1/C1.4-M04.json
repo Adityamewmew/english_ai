@@ -1,0 +1,198 @@
+{
+  "id": "C1.4-M04",
+  "levelId": "C1.4",
+  "title": "Unit 4: Nominalisation and Lexical Density in Scholarly Treatises",
+  "cefr": "C1",
+  "group": "Academic Prose",
+  "objective": "Mampu mengubah konstruksi verbal menjadi frasa nomina padat untuk meningkatkan bobot akademis tulisan riset.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": false,
+  "passingScore": 75,
+  "orderIndex": 43,
+  "sections": {
+    "theory": {
+      "summary": "Nominalisasi merupakan proses retoris krusial dalam register akademik C1/C2 yang mentransformasi konstruksi verbal—klausa, verba, atau adjektiva—menjadi frasa nomina yang lebih padat secara leksikal. Transformasi ini bukan sekadar pergeseran kategori gramatikal, melainkan strategi stilistik untuk menghasilkan bobot ilmiah, objektivitas semu, dan ekonomi bahasa yang karakteristik pada tulisan riset peer-reviewed. Dengan nominalisasi, penulis dapat mengemas proses dinamis menjadi entitas statis yang dapat didefinisikan, dikuantifikasi, dan dijadikan subjek atau objek argumen tanpa perlu melibatkan aktor manusia. Contohnya, alih-alih menulis 'The government decided to reduce funding, which caused universities to struggle financially', seorang akademisi C1/C2 akan menulis 'The governmental decision to reduce funding precipitated financial struggles across the university sector'. Pergeseran ini menciptakan jarak antara penulis dan klaim, sehingga memproyeksikan autoritas dan impersonalitas yang diharapkan dalam diskursus ilmiah. Namun, nominalisasi berlebihan dapat menghasilkan prosa rapuh dan berbelit—jebakan yang sering menimpa penulis akademik pemula yang terlalu antusias meniru gaya jurnal terkemuka.",
+      "rules": [
+        {
+          "pattern": "Verba + suffix (-tion/-sion/-ment/-ance/-ence/-al/-ure/-ing) → Noun",
+          "meaning": "Mengubah aksi dinamis menjadi entitas abstrak yang dapat menjadi subjek, objek, atau komplemen dalam klausa. Efek retorisnya adalah penekanan pada konsep, bukan pelaku, sehingga menciptakan objektivitas akademik.",
+          "example": "The implementation of stringent environmental regulations has accelerated the transition toward sustainable energy sources across the industrial sector."
+        },
+        {
+          "pattern": "Adjective + suffix (-ity/-ness/-cy/-dom/-th) → Abstract Noun",
+          "meaning": "Mengkonversi kualitas atau kondisi menjadi entitas yang dapat dikuantifikasi, dianalisis, atau dijadikan premis argumen. Sering dipadukan dengan verba kausal atau atributif.",
+          "example": "The unpredictability of climate patterns necessitates a fundamental reconceptualization of agricultural policy frameworks."
+        },
+        {
+          "pattern": "Noun + noun compound / Pre-modifying noun cluster",
+          "meaning": "Mengkompaksi hubungan antar konsep ke dalam satu frasa nomina tanpa preposisi, meningkatkan kepadatan informasi per unit sintaksis. Umum dalam literatur teknik, kedokteran, dan ilmu sosial.",
+          "example": "Climate change mitigation strategies require unprecedented levels of international policy coordination mechanisms."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Over-nominalisasi dan Kalimat Tak Terjangkau",
+        "explanation": "Penulis C1 sering tergoda untuk menominalisasi setiap verba dalam kalimat, menghasilkan rantai frasa nomina yang panjang dan saling menumpuk. Akibatnya, hubungan logis antar konsep menjadi kabur, dan beban kognitif pembaca melonjak. Penutur native C1/C2 memilih secara strategis mana proses yang perlu di-nominalisasi dan mana yang tetap dalam bentuk klausa untuk menjaga koherensi dan keterbacaan.",
+        "wrong": "The realisation of the significance of the undertaking of the investigation into the causes of the failure of the implementation necessitated a reconsideration.",
+        "correct": "Once researchers realised how significant the investigation's failure was, they recognised the need to reconsider their approach."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Pilih kalimat yang mendemonstrasikan nominalisasi efektif dengan transformasi verba 'analyse' menjadi nomina abstrak tanpa kehilangan kejelasan logis.",
+          "options": [
+            "A rigorous analysis of the data revealed statistically significant correlations between sleep deprivation and cognitive decline.",
+            "The analysing of the data rigorously revealed correlations that are statistically significant between sleep deprivation and cognitive decline.",
+            "When researchers analyse the data rigorously, it reveals that sleep deprivation correlates significantly with cognitive decline."
+          ],
+          "correctIndex": 0,
+          "explanation": "Opsi pertama menggunakan nominalisasi 'analysis' yang tepat sebagai subjek klausa, menghasilkan kalimat padat dan elegan. Opsi kedua menggunakan gerund 'analysing' yang canggung dalam konteks ini, sementara opsi ketiga mempertahankan klausa verbal yang kurang formal untuk register akademik."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Identifikasi kalimat yang mengandung over-nominalisasi sehingga menghambat keterbacaan.",
+          "options": [
+            "The committee's decision to postpone the announcement of the results prompted speculation regarding potential methodological concerns.",
+            "The postponement of the announcement of the committee's decision concerning the results' release led to speculation regarding the existence of methodological concerns.",
+            "The committee decided to postpone announcing the results, which led observers to speculate that methodological concerns might exist."
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi kedua menumpuk tiga nominalisasi berturut-turut ('postponement', 'announcement', 'decision'), menciptakan rantai frasa preposisional yang melelahkan. Opsi pertama seimbang dengan satu nominalisasi kunci, sedangkan opsi ketiga sepenuhnya verbal—cocok untuk narasi tapi kurang padat untuk abstrak riset."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Dalam sebuah makalah tentang kebijakan publik, lengkapi kutipan berikut untuk mencapai kepadatan leksikal C1/C2 optimal: 'The government's [...] has sparked intense debate among policy analysts.'",
+          "options": [
+            "reluctance to commit to binding emissions targets",
+            "reluctance, demonstrated through avoiding commitment to emissions targets that are binding",
+            "reluctant posture regarding the commitment toward emissions targets which are binding"
+          ],
+          "correctIndex": 0,
+          "explanation": "Opsi pertama menyeimbangkan nominalisasi ('reluctance') dengan klausa infinitive yang jelas, menciptakan frasa nomina padat dan terukur. Opsi kedua dan ketiga menggelembungkan struktur dengan preposisi dan klausa relatif yang tidak perlu, menurunkan efisiensi dan elegansi."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "proliferation",
+        "translation": "penyebaran pesat; proliferasi",
+        "example": "The proliferation of misinformation on social media platforms has prompted calls for stricter regulatory oversight.",
+        "context": "Digunakan dalam konteks pertumbuhan atau penyebaran sesuatu (sering negatif) secara eksponensial atau tak terkendali."
+      },
+      {
+        "word": "substantiation",
+        "translation": "pembuktian; validasi; penguatan",
+        "example": "Empirical substantiation of theoretical claims remains the cornerstone of credible scientific discourse.",
+        "context": "Nominalisasi dari 'substantiate'; umum dalam metodologi penelitian dan argumen akademik yang memerlukan evidensi."
+      },
+      {
+        "word": "deterioration",
+        "translation": "kemunduran; deteriorasi; kerusakan progresif",
+        "example": "The rapid deterioration of diplomatic relations between the two nations has alarmed the international community.",
+        "context": "Menyatakan proses penurunan kualitas atau kondisi secara bertahap; register formal."
+      },
+      {
+        "word": "implementation",
+        "translation": "pelaksanaan; implementasi",
+        "example": "Successful implementation of the curriculum reform hinges on adequate teacher training and resource allocation.",
+        "context": "Salah satu nominalisasi paling produktif dalam diskursus kebijakan dan manajemen proyek."
+      },
+      {
+        "word": "reconceptualisation",
+        "translation": "konseptualisasi ulang; pemikiran ulang fundamental",
+        "example": "The paradigm shift requires a radical reconceptualisation of traditional pedagogical frameworks.",
+        "context": "Nominalisasi tingkat tinggi yang menandakan perubahan mendasar dalam cara memahami sesuatu; karakteristik tulisan teoretis."
+      },
+      {
+        "word": "consolidation",
+        "translation": "penguatan; konsolidasi; penggabungan",
+        "example": "Market consolidation has led to diminished competition and higher consumer prices in the telecommunications sector.",
+        "context": "Merujuk pada proses memperkuat atau menggabungkan entitas; umum dalam analisis ekonomi dan kebijakan industri."
+      }
+    ],
+    "dialogue": {
+      "context": "Sidang komite editorial jurnal internasional di mana dua senior editor mendiskusikan revisi naskah yang diajukan oleh penulis muda. Konteks ini membutuhkan register formal-akademik dengan penggunaan nominalisasi yang terkontrol untuk presisi dan ekonomi bahasa.",
+      "lines": [
+        {
+          "speaker": "Dr. Harrison",
+          "text": "The manuscript shows promise, but I'm concerned about the authors' tendency to rely on verbal constructions where nominalised forms would enhance academic weight.",
+          "translation": "Naskahnya menunjukkan potensi, tapi saya khawatir dengan kecenderungan penulis mengandalkan konstruksi verbal padahal bentuk nominalisasi bisa meningkatkan bobot akademisnya."
+        },
+        {
+          "speaker": "Prof. Okonkwo",
+          "text": "I concur. The discussion section, in particular, would benefit from consolidation. Consider this passage: 'When the researchers compared the outcomes, they found that the differences were significant.'",
+          "translation": "Saya sependapat. Bagian diskusi, khususnya, akan mendapat manfaat dari konsolidasi. Perhatikan bagian ini: 'Ketika peneliti membandingkan hasilnya, mereka menemukan bahwa perbedaannya signifikan.'"
+        },
+        {
+          "speaker": "Dr. Harrison",
+          "text": "Precisely. A comparison of the outcomes revealed statistically significant differences—that's more economical. However, we must caution against over-nominalisation, which can render prose impenetrable.",
+          "translation": "Tepat sekali. Perbandingan hasil menunjukkan perbedaan yang signifikan secara statistik—itu lebih ekonomis. Namun, kita harus memperingatkan terhadap nominalisasi berlebihan yang dapat membuat prosa tidak tembus."
+        },
+        {
+          "speaker": "Prof. Okonkwo",
+          "text": "Agreed. The recommendation should emphasise strategic nominalisation—transforming key processes while maintaining clarity. Shall we request a revision along those lines?",
+          "translation": "Setuju. Rekomendasi harus menekankan nominalisasi strategis—mentransformasi proses kunci sambil menjaga kejelasan. Apakah kita meminta revisi ke arah itu?"
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Merevisi sebuah paragraf laporan penelitian dengan menerapkan nominalisasi strategis untuk meningkatkan kepadatan leksikal dan bobot akademis tanpa mengorbankan koherensi.",
+      "scenario": "Anda adalah asisten editor untuk Journal of Applied Linguistics. Seorang penulis telah mengirimkan abstrak yang terlalu berat pada konstruksi verbal. Revisilah abstrak berikut dengan mentransformasi minimal 4 klausa verbal menjadi frasa nomina yang tepat, sambil menjaga agar kalimat tetap terbaca: 'The study investigates how teachers adapt their methods when they teach online. The researchers collected data from 50 participants and they analysed it using quantitative methods. The results show that teachers who received training adapted more effectively. This suggests that institutions should invest more in training programs.'"
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Manakah transformasi nominalisasi yang PALING tepat untuk kalimat: 'The committee decided to postpone the vote'?",
+          "options": [
+            "The committee's decision was to postpone the vote.",
+            "The committee's decision to postpone the vote drew criticism.",
+            "The postponement decision of the committee regarding the vote was made.",
+            "The decision of postponement of the vote by the committee occurred."
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi B menghasilkan frasa nomina padat ('The committee's decision to postpone the vote') sebagai subjek yang koheren dengan verba baru ('drew criticism'). Opsi A lemah karena copula 'was' tidak menambah informasi. Opsi C dan D menderita over-nominalisasi dengan tumpukan frasa preposisional."
+        },
+        {
+          "id": 2,
+          "prompt": "Pilih kalimat dengan keseimbangan optimal antara nominalisasi dan kejelasan.",
+          "options": [
+            "The implementation of the policy by the government caused the dissatisfaction of the citizens.",
+            "When the government implemented the policy, citizens became dissatisfied.",
+            "The government's implementation of the policy provoked widespread citizen dissatisfaction."
+          ],
+          "correctIndex": 2,
+          "explanation": "Opsi C mencapai padat optimal: dua nominalisasi kunci ('implementation', 'dissatisfaction') yang dihubungkan dengan verba kausal kuat ('provoked'). Opsi A kaku dengan tumpukan preposisi. Opsi B terlalu verbal untuk register akademik-formal."
+        },
+        {
+          "id": 3,
+          "prompt": "Identifikasi jebakan stilistik dalam kalimat: 'The realisation of the necessity of the undertaking of the investigation resulted in the allocation of resources.'",
+          "options": [
+            "Penggunaan 'realisation' tidak tepat karena verba 'realise' jarang dinominalisasi.",
+            "Rantai nominalisasi bertingkat ('realisation', 'necessity', 'undertaking', 'investigation', 'allocation') menciptakan beban kognitif berlebih.",
+            "Kata 'resulted in' seharusnya diganti dengan 'caused' untuk tone lebih akademis.",
+            "Tidak ada masalah; kalimat tersebut mendemonstrasikan kepadatan leksikal ideal."
+          ],
+          "correctIndex": 1,
+          "explanation": "Kalimat tersebut menderita 'noun stack' atau tumpukan nomina yang membuat hubungan logis sulit diurai. Pembaca native C1/C2 harus membaca ulang untuk memahami siapa/apa yang melakukan apa. Solusinya adalah memilih 1-2 proses kunci untuk dinominalisasi dan mempertahankan klausa untuk yang lain."
+        },
+        {
+          "id": 4,
+          "prompt": "Dalam konteks abstrak jurnal ilmiah, transformasi mana yang meningkatkan bobot akademis TANPA mengurangi presisi?",
+          "options": [
+            "'The experiment failed' → 'The failure of the experiment was documented.'",
+            "'Researchers found that the drug was effective' → 'The drug's effectiveness was established.'",
+            "'The data suggests a correlation' → 'A correlation is suggested by the data.'",
+            "'We conclude that the theory is valid' → 'The conclusion regarding the validity of the theory was reached.'"
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi B menominalisasi adjektiva ('effective' → 'effectiveness') dan menggunakan verba pasif kuat ('was established'), menciptakan fokus pada temuan, bukan pelaku. Ini strategi yang tepat untuk abstrak ilmiah. Opsi A dan D menambah kata tanpa menambah makna. Opsi C adalah pasivisasi sederhana, bukan nominalisasi strategis."
+        }
+      ]
+    }
+  }
+}

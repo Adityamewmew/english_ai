@@ -1,0 +1,219 @@
+{
+  "id": "B1.4-M08",
+  "levelId": "B1.4",
+  "title": "Unit 8: Office Health, Safety & Ergonomic Regulations",
+  "cefr": "B1",
+  "group": "Health & Workplace Norms",
+  "objective": "Mampu memahami dan menyusun panduan keselamatan kerja menggunakan modal obligation (must, have to, should).",
+  "complexity": "medium",
+  "estimatedMinutes": 15,
+  "isExam": false,
+  "passingScore": 70,
+  "orderIndex": 47,
+  "sections": {
+    "theory": {
+      "summary": "Dalam unit ini, kamu akan belajar cara memahami dan menyusun panduan keselamatan kerja (office health, safety & ergonomic regulations) menggunakan modal obligation. Di lingkungan kerja, kita perlu membedakan antara kewajiban mutlak (must/must not), kewajiban eksternal atau aturan resmi (have to/don't have to), dan saran atau rekomendasi (should/shouldn't/ought to/had better). Perbedaan nuansa ini sangat penting karena dalam konteks keselamatan kerja, salah memilih modal bisa berarti perbedaan antara aturan wajib yang tidak boleh dilanggar dan sekadar saran yang bersifat opsional. Misalnya, 'You must wear a hard hat in the construction zone' adalah kewajiban mutlak, sedangkan 'You should adjust your chair height for comfort' adalah rekomendasi ergonomis. Memahami perbedaan ini akan membantumu membaca dan menulis dokumen keselamatan kerja dengan tepat.",
+      "rules": [
+        {
+          "pattern": "Subject + must / must not + base verb",
+          "meaning": "Menyatakan kewajiban mutlak atau larangan keras (biasanya dari pihak pembicara/pembuat aturan internal). 'Must not' berarti dilarang keras, bukan sekadar tidak perlu.",
+          "example": "All employees must report any workplace injury to their supervisor immediately."
+        },
+        {
+          "pattern": "Subject + have to / don't have to + base verb",
+          "meaning": "Menyatakan kewajiban yang berasal dari aturan eksternal (regulasi, hukum, kebijakan perusahaan). 'Don't have to' berarti tidak wajib / tidak perlu, bukan dilarang.",
+          "example": "Employees have to complete a safety training course before operating heavy machinery."
+        },
+        {
+          "pattern": "Subject + should(n't) / ought to / had better (not) + base verb",
+          "meaning": "Menyatakan saran, rekomendasi, atau peringatan. 'Should/ought to' untuk saran umum; 'had better' untuk peringatan yang lebih kuat — ada konsekuensi jika tidak diikuti.",
+          "example": "You should take regular breaks from your screen to avoid eye strain, and you'd better not ignore the ergonomic guidelines if you want to prevent back problems."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Jangan Samakan 'must not' dengan 'don't have to'!",
+        "explanation": "Banyak pelajar Indonesia menganggap 'must not' dan 'don't have to' sama-sama berarti 'tidak harus'. Padahal, 'must not' berarti DILARANG (prohibition), sedangkan 'don't have to' berarti TIDAK PERLU / tidak wajib (no obligation). Dalam konteks keselamatan kerja, perbedaan ini sangat krusial. Misalnya, 'You must not block the fire exit' berarti kamu DILARANG menghalangi pintu darurat, sedangkan 'You don't have to wear a helmet in the office' berarti kamu TIDAK PERLU memakai helm di kantor (tapi bukan berarti dilarang).",
+        "wrong": "You don't have to block the emergency exit. (salah — ini berarti 'kamu tidak perlu menghalangi', bukan 'kamu dilarang menghalangi')",
+        "correct": "You must not block the emergency exit. (benar — ini berarti 'kamu dilarang menghalangi pintu darurat')"
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Kalimat manakah yang menggunakan modal obligation untuk menyatakan KEWAJIBAN MUTLAK di tempat kerja?",
+          "options": [
+            "All staff must wear safety goggles in the laboratory.",
+            "You should probably bring a jacket to the office.",
+            "Employees don't have to attend the Friday meeting."
+          ],
+          "correctIndex": 0,
+          "explanation": "'Must' menyatakan kewajiban mutlak. 'Should probably' hanya saran ringan, dan 'don't have to' berarti tidak wajib — keduanya bukan kewajiban mutlak."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manajer menulis: 'Employees ______ use their phones near heavy machinery.' Mana yang tepat jika maksudnya adalah MELARANG penggunaan ponsel?",
+          "options": [
+            "don't have to",
+            "must not",
+            "should"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Must not' menyatakan larangan keras, yang tepat untuk konteks keselamatan di dekat mesin berat. 'Don't have to' berarti tidak perlu (bukan larangan), dan 'should' hanya saran."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "A: 'Do I need to bring my own safety helmet to the warehouse?'\nB: 'No, [...]. The company provides one for every worker.'",
+          "options": [
+            "you must not bring your own helmet",
+            "you had better bring your own helmet",
+            "you don't have to bring your own helmet"
+          ],
+          "correctIndex": 2,
+          "explanation": "Karena perusahaan menyediakan helm, karyawan TIDAK PERLU membawa sendiri. 'Don't have to' tepat untuk menyatakan ketiadaan kewajiban. 'Must not' berarti dilarang (terlalu kuat), dan 'had better' berarti sebaiknya membawa (bertentangan dengan konteks)."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "ergonomic",
+        "translation": "ergonomis (berkaitan dengan desain tempat kerja yang nyaman dan aman)",
+        "example": "The company invested in ergonomic chairs to reduce back pain among employees.",
+        "context": "Digunakan untuk mendeskripsikan peralatan atau desain tempat kerja yang dirancang sesuai kebutuhan tubuh manusia."
+      },
+      {
+        "word": "hazard",
+        "translation": "bahaya / risiko",
+        "example": "Wet floors are a common hazard in the workplace that can lead to slips and falls.",
+        "context": "Sering muncul dalam dokumen keselamatan kerja (safety regulations) untuk mengidentifikasi potensi bahaya."
+      },
+      {
+        "word": "compliance",
+        "translation": "kepatuhan (terhadap aturan/regulasi)",
+        "example": "All departments must ensure full compliance with the new fire safety regulations.",
+        "context": "Digunakan dalam konteks formal/resmi ketika membahas kepatuhan terhadap kebijakan atau hukum."
+      },
+      {
+        "word": "fire drill",
+        "translation": "latihan evakuasi kebakaran",
+        "example": "Employees have to participate in a fire drill at least twice a year.",
+        "context": "Merujuk pada simulasi evakuasi yang wajib dilakukan secara berkala di tempat kerja."
+      },
+      {
+        "word": "first-aid kit",
+        "translation": "kotak P3K (pertolongan pertama)",
+        "example": "You should always know where the nearest first-aid kit is located on your floor.",
+        "context": "Peralatan medis dasar yang harus tersedia di setiap area kerja sesuai regulasi keselamatan."
+      },
+      {
+        "word": "workstation",
+        "translation": "stasiun kerja / meja kerja",
+        "example": "You ought to adjust your workstation so that your monitor is at eye level.",
+        "context": "Merujuk pada area tempat karyawan bekerja, termasuk meja, kursi, monitor, dan peralatan lainnya."
+      }
+    ],
+    "dialogue": {
+      "context": "Alex adalah karyawan baru di sebuah perusahaan teknologi. Morgan, petugas Health & Safety, sedang memberikan orientasi keselamatan kerja dan panduan ergonomis di kantor pada hari pertama Alex bekerja.",
+      "lines": [
+        {
+          "speaker": "Morgan",
+          "text": "Welcome to your first day, Alex! Before you start, I have to go through some essential health and safety regulations with you. It's mandatory for all new employees.",
+          "translation": "Selamat datang di hari pertamamu, Alex! Sebelum kamu mulai, aku harus membahas beberapa peraturan kesehatan dan keselamatan penting denganmu. Ini wajib untuk semua karyawan baru."
+        },
+        {
+          "speaker": "Alex",
+          "text": "Sure, I understand. Do I have to memorise everything today?",
+          "translation": "Tentu, aku mengerti. Apakah aku harus menghafal semuanya hari ini?"
+        },
+        {
+          "speaker": "Morgan",
+          "text": "No, you don't have to memorise it all — we'll give you a handbook. But you must remember the emergency exits on this floor, and you must not block them with boxes or furniture under any circumstances.",
+          "translation": "Tidak, kamu tidak perlu menghafal semuanya — kami akan memberikanmu buku panduan. Tapi kamu harus mengingat pintu darurat di lantai ini, dan kamu tidak boleh menghalanginya dengan kotak atau furnitur dalam keadaan apapun."
+        },
+        {
+          "speaker": "Alex",
+          "text": "Got it. What about the desk setup? I've heard there are ergonomic guidelines.",
+          "translation": "Mengerti. Bagaimana dengan pengaturan meja? Aku dengar ada panduan ergonomis."
+        },
+        {
+          "speaker": "Morgan",
+          "text": "Yes, you should adjust your chair so your feet are flat on the floor, and you ought to position your monitor at eye level. These aren't strict rules, but you'd better follow them — otherwise, you might end up with serious back or neck problems.",
+          "translation": "Ya, kamu sebaiknya menyesuaikan kursimu agar kakimu rata di lantai, dan kamu sebaiknya menempatkan monitormu sejajar dengan mata. Ini bukan aturan ketat, tapi sebaiknya kamu mengikutinya — kalau tidak, kamu bisa berakhir dengan masalah punggung atau leher yang serius."
+        },
+        {
+          "speaker": "Alex",
+          "text": "That makes sense. And what about fire drills? Do we have to do those regularly?",
+          "translation": "Itu masuk akal. Dan bagaimana dengan latihan evakuasi kebakaran? Apakah kita harus melakukannya secara rutin?"
+        },
+        {
+          "speaker": "Morgan",
+          "text": "Absolutely. We have to carry out fire drills every quarter — it's a legal requirement. When the alarm goes off, you must leave the building immediately through the nearest exit. You must not use the lifts during an evacuation.",
+          "translation": "Tentu saja. Kita harus melaksanakan latihan evakuasi kebakaran setiap kuartal — itu persyaratan hukum. Ketika alarm berbunyi, kamu harus segera meninggalkan gedung melalui pintu keluar terdekat. Kamu tidak boleh menggunakan lift saat evakuasi."
+        },
+        {
+          "speaker": "Alex",
+          "text": "Understood. I'd better pay close attention to all of this. Thanks for the thorough orientation, Morgan!",
+          "translation": "Mengerti. Sebaiknya aku memperhatikan semua ini dengan seksama. Terima kasih untuk orientasi yang menyeluruh, Morgan!"
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Berlatih menyusun dan menyampaikan panduan keselamatan kerja secara lisan menggunakan modal obligation (must, must not, have to, don't have to, should, ought to, had better) dengan tepat sesuai tingkat kewajiban.",
+      "scenario": "You are the new Health & Safety officer at a small company. A group of new employees has just arrived for their first day. Give them a short safety briefing covering: (1) two things they MUST do (absolute obligations), (2) one thing they MUST NOT do (a strict prohibition), (3) one thing they DON'T HAVE TO do (no obligation), and (4) two ergonomic recommendations using should/ought to/had better. Try to make your briefing sound natural and professional, as if you were really speaking to new colleagues."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Pilih kalimat yang tepat untuk aturan keselamatan kerja yang bersifat WAJIB MUTLAK:",
+          "options": [
+            "All employees must wear protective gloves when handling chemicals.",
+            "All employees should wear protective gloves when handling chemicals.",
+            "All employees could wear protective gloves when handling chemicals.",
+            "All employees might wear protective gloves when handling chemicals."
+          ],
+          "correctIndex": 0,
+          "explanation": "'Must' digunakan untuk kewajiban mutlak, terutama dalam konteks keselamatan yang melibatkan bahan berbahaya. 'Should' hanya saran, sedangkan 'could' dan 'might' menyatakan kemungkinan, bukan kewajiban."
+        },
+        {
+          "id": 2,
+          "prompt": "Your manager says: 'You ______ eat at your workstation, but please clean up afterwards.' Mana yang paling tepat?",
+          "options": [
+            "must not",
+            "don't have to",
+            "are allowed to",
+            "had better not"
+          ],
+          "correctIndex": 2,
+          "explanation": "Konteks kalimat menunjukkan bahwa makan di meja kerja DIPERBOLEHKAN (asalkan dibersihkan). 'Are allowed to' berarti diizinkan. 'Must not' berarti dilarang (bertentangan dengan konteks). 'Don't have to' berarti tidak perlu. 'Had better not' berarti sebaiknya jangan."
+        },
+        {
+          "id": 3,
+          "prompt": "Kalimat mana yang menggunakan 'had better' dengan tepat sebagai PERINGATAN tentang ergonomi?",
+          "options": [
+            "You had better to adjust your screen brightness regularly.",
+            "You had better not sit in the same position for eight hours straight.",
+            "You had better not sit in the same position for eight hours straight, don't you?",
+            "You have better not ignore the posture guidelines."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Had better not + base verb' adalah bentuk yang benar untuk peringatan. Opsi A salah karena 'had better' tidak diikuti 'to'. Opsi C salah karena question tag-nya tidak tepat. Opsi D salah karena bentuknya 'have better' yang tidak ada dalam bahasa Inggris."
+        },
+        {
+          "id": 4,
+          "prompt": "Di sebuah pabrik, ada tanda bertuliskan: 'Helmets ______ be worn at all times in this area.' Kata modal mana yang paling tepat untuk tanda keselamatan resmi ini?",
+          "options": [
+            "should",
+            "ought to",
+            "could",
+            "must"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Must' adalah modal yang paling tepat untuk tanda keselamatan resmi karena menyatakan kewajiban mutlak yang tidak bisa ditawar. 'Should' dan 'ought to' hanya saran/rekomendasi, sedangkan 'could' menyatakan kemungkinan — keduanya terlalu lemah untuk konteks keselamatan wajib."
+        }
+      ]
+    }
+  }
+}

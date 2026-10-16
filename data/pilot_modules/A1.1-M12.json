@@ -1,0 +1,1722 @@
+{
+  "module": {
+    "id": "A1.1-M12",
+    "levelId": "A1.1",
+    "title": "Unit 12: Getting About: Transport, Comparatives & Getting Around",
+    "cefr": "A1",
+    "group": "A1.1 - Starter Foundations",
+    "objective": "Discuss modes of transportation, compare things using comparative adjectives, and ask for travel information at a train station.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 12
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-1-m12-reading",
+      "moduleId": "A1.1-M12",
+      "title": "Reading Mission: Getting Around Town and Comparing Transport",
+      "theme": "Transport, Comparatives & Getting Around",
+      "grammarFocus": "Comparative Adjectives (short adjectives + -er than, long adjectives + more... than, irregular: good → better, bad → worse)",
+      "vocabularyFocus": "Types of transport, travel vocabulary, asking for information at a train station",
+      "skillType": "reading",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-1-m12-r-theory",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to your Reading Mission! In this unit, you will read about different types of transport — trains, bikes, buses, ferries, and more. You will also learn how to compare things using comparative adjectives, for example: 'The train is faster than the bus' or 'A taxi is more expensive than a bike.' By the end of this mission, you will be able to understand short texts about travel, find key details like prices and times, and use comparatives to talk about transport. Let's get moving!",
+            "linguisticTarget": {
+              "grammar": "Comparative adjectives: short adjectives add -er + than (fast → faster than), adjectives ending in consonant + y change to -ier + than (easy → easier than), long adjectives use more + adjective + than (expensive → more expensive than), and irregular forms (good → better, bad → worse).",
+              "vocabulary": "Types of transport (train, bus, bike, taxi, ferry, motorbike, helicopter, tram), travel words (ticket, platform, journey, single, return, passenger, station, departure), and useful phrases for asking about travel information.",
+              "readingStrategy": "Skim the passage first to understand the main topic. Then scan for specific details like transport types, prices, and times. Look for comparative adjectives (words ending in -er or phrases with 'more') to understand comparisons between different transport options."
+            },
+            "learningObjectives": [
+              "Understand the main idea of short A1 passages about transport and travel.",
+              "Identify key details including types of transport, prices, journey times, and platform numbers.",
+              "Recognize and understand comparative adjective patterns such as 'faster than,' 'cheaper than,' and 'more comfortable than.'",
+              "Use context clues to guess the meaning of new transport vocabulary.",
+              "Answer comprehension questions about a reading passage on getting around town."
+            ],
+            "contextWarmup": {
+              "prompt": "You want to go from your home to the city centre. It is 5 kilometres away. Which transport is usually the cheapest?",
+              "options": [
+                "A bike",
+                "A taxi",
+                "A helicopter"
+              ],
+              "correctIndex": 0,
+              "explanation": "Great thinking! A bike is usually the cheapest way to travel short distances because you don't need to pay for fuel or a ticket. A taxi costs money, and a helicopter is very expensive!"
+            },
+            "rules": [
+              "When you read a passage, first look at the title and any pictures. They help you guess the topic before you start reading.",
+              "For short adjectives (one syllable like 'fast', 'cheap', 'slow'), add -er + than to compare: 'Trains are faster than buses.'",
+              "For adjectives ending in consonant + y (like 'easy', 'healthy'), change y to i and add -er + than: 'Bikes are healthier than cars.'",
+              "For long adjectives (two or more syllables like 'expensive', 'comfortable', 'dangerous'), use 'more' + adjective + 'than': 'Taxis are more expensive than buses.'",
+              "Remember the irregular comparatives: good → better, bad → worse. For example: 'The train service is better than the bus service.'",
+              "When scanning for details, look for numbers (prices, times), names of transport, and comparison words (-er, more, than, better, worse)."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Beginner Pitfall: Mixing Comparative Patterns",
+              "explanation": "Many beginners mix the two comparative patterns. They say 'more cheap' (wrong!) instead of 'cheaper' for short adjectives, or they say 'expensiver' (wrong!) instead of 'more expensive' for long adjectives. When reading, notice which pattern the writer uses — this helps you learn the correct form naturally.",
+              "wrong": "The bus is more slow than the train. / The taxi is comfortabler than the bus.",
+              "correct": "The bus is slower than the train. / The taxi is more comfortable than the bus."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Transport & Comparisons",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in natural spoken English:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "am",
+                "vowelDropped": "a",
+                "remainder": "m",
+                "contracted": "I'm",
+                "exampleFull": "I am taking the train today.",
+                "exampleContracted": "I'm taking the train today."
+              },
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It is faster than the bus.",
+                "exampleContracted": "It's faster than the bus."
+              },
+              {
+                "subject": "The train",
+                "verb": "is not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "isn't",
+                "exampleFull": "The train is not more expensive than a taxi.",
+                "exampleContracted": "The train isn't more expensive than a taxi."
+              },
+              {
+                "subject": "They",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "They're",
+                "exampleFull": "They are cheaper than taxis.",
+                "exampleContracted": "They're cheaper than taxis."
+              },
+              {
+                "subject": "We",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "We're",
+                "exampleFull": "We are going by ferry.",
+                "exampleContracted": "We're going by ferry."
+              },
+              {
+                "subject": "That",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "That's",
+                "exampleFull": "That is better than walking.",
+                "exampleContracted": "That's better than walking."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Structure with Comparative Adjectives",
+              "description": "Assemble and swap sentence blocks to explore affirmative, negative, and question patterns with comparatives:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person (Singular)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "First Person Plural"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Third Person Plural"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Second Person"
+                }
+              ],
+              "complements": [
+                "faster than the bus",
+                "cheaper than a taxi",
+                "more comfortable than the train",
+                "better than walking in the rain",
+                "slower than the express service",
+                "more expensive than a single ticket"
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-1-m12-r-vocab",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "train",
+                "ipa": "/treɪn/",
+                "meaning": "kereta api",
+                "collocation": "The train to London leaves from platform 3."
+              },
+              {
+                "word": "bus",
+                "ipa": "/bʌs/",
+                "meaning": "bus",
+                "collocation": "The bus is slower than the train, but it is cheaper."
+              },
+              {
+                "word": "bike",
+                "ipa": "/baɪk/",
+                "meaning": "sepeda",
+                "collocation": "Riding a bike is healthier than driving a car."
+              },
+              {
+                "word": "taxi",
+                "ipa": "/ˈtæksi/",
+                "meaning": "taksi",
+                "collocation": "A taxi is more expensive than a bus."
+              },
+              {
+                "word": "ferry",
+                "ipa": "/ˈferi/",
+                "meaning": "kapal feri",
+                "collocation": "We take the ferry across the river every morning."
+              },
+              {
+                "word": "platform",
+                "ipa": "/ˈplætfɔːm/",
+                "meaning": "peron (stasiun)",
+                "collocation": "What platform does the 9 o'clock train leave from?"
+              },
+              {
+                "word": "ticket",
+                "ipa": "/ˈtɪkɪt/",
+                "meaning": "tiket; karcis",
+                "collocation": "Can I buy a ticket to Manchester, please?"
+              },
+              {
+                "word": "single",
+                "ipa": "/ˈsɪŋɡl/",
+                "meaning": "sekali jalan (tiket)",
+                "collocation": "A single ticket to Brighton costs eight pounds."
+              },
+              {
+                "word": "return",
+                "ipa": "/rɪˈtɜːn/",
+                "meaning": "pulang-pergi (tiket)",
+                "collocation": "A return ticket is cheaper than two singles."
+              },
+              {
+                "word": "journey",
+                "ipa": "/ˈdʒɜːni/",
+                "meaning": "perjalanan",
+                "collocation": "The journey from here to the airport takes about forty minutes."
+              },
+              {
+                "word": "passenger",
+                "ipa": "/ˈpæsɪndʒə(r)/",
+                "meaning": "penumpang",
+                "collocation": "There are many passengers on the morning train."
+              },
+              {
+                "word": "departure",
+                "ipa": "/dɪˈpɑːtʃə(r)/",
+                "meaning": "keberangkatan",
+                "collocation": "Check the departure board for your train time."
+              },
+              {
+                "word": "tram",
+                "ipa": "/træm/",
+                "meaning": "trem",
+                "collocation": "The tram is quieter than the bus in the city centre."
+              },
+              {
+                "word": "comfortable",
+                "ipa": "/ˈkʌmftəbl/",
+                "meaning": "nyaman",
+                "collocation": "The new train seats are more comfortable than the old ones."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m12-r-guided",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-reading",
+          "sectionType": "dialogue",
+          "title": "Reading Passage: Tom's Trip to Brighton",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Tom's Trip to Brighton",
+            "context": "Tom lives in London. He wants to visit his friend Sara in Brighton this Saturday. He is looking at different ways to travel and comparing them. Read about his choices and what he decides.",
+            "text": "Tom wants to go to Brighton on Saturday. He looks at three ways to travel: by train, by bus, and by car.\n\nThe train is the fastest option. It takes about one hour, and a return ticket costs £25. The train leaves from platform 5 at Victoria Station. Tom thinks the train is more comfortable than the bus.\n\nThe bus is the cheapest option. A return ticket is only £12, but the journey is longer. It takes about two hours. The bus is slower than the train, but Tom can save money.\n\nDriving by car takes about one hour and thirty minutes. Petrol costs about £20, and parking in Brighton is expensive — about £15. So the car is more expensive than the train!\n\nTom decides to take the train. It is faster than the bus and cheaper than the car. He buys his ticket online. \"The train is better for me,\" Tom says. \"It's quick, comfortable, and not too expensive.\"\n\nHe arrives at the station early and finds platform 5. The departure board says the train is on time. Tom is happy — his journey to Brighton begins!",
+            "wordCount": 175,
+            "highlights": [
+              {
+                "text": "fastest",
+                "note": "Superlative form of 'fast.' Here it means the train is number one for speed. We focus on comparatives in this unit, but notice the -est ending for superlatives!",
+                "type": "grammar"
+              },
+              {
+                "text": "more comfortable than",
+                "note": "Comparative for a long adjective: 'comfortable' has four syllables, so we use 'more... than' instead of adding -er.",
+                "type": "grammar"
+              },
+              {
+                "text": "cheapest",
+                "note": "Superlative form of 'cheap.' The bus has the lowest price of all three options.",
+                "type": "grammar"
+              },
+              {
+                "text": "slower than",
+                "note": "Comparative for a short adjective: 'slow' + -er + than. The bus takes more time than the train.",
+                "type": "grammar"
+              },
+              {
+                "text": "more expensive than",
+                "note": "Comparative for a long adjective: 'expensive' uses 'more... than.' The car costs more money than the train.",
+                "type": "grammar"
+              },
+              {
+                "text": "faster than",
+                "note": "Comparative for a short adjective: 'fast' + -er + than. The train takes less time than the bus.",
+                "type": "grammar"
+              },
+              {
+                "text": "cheaper than",
+                "note": "Comparative for a short adjective: 'cheap' + -er + than. The train costs less money than the car.",
+                "type": "grammar"
+              },
+              {
+                "text": "better",
+                "note": "Irregular comparative of 'good.' We say 'better,' NOT 'gooder' or 'more good.'",
+                "type": "grammar"
+              },
+              {
+                "text": "return ticket",
+                "note": "A ticket for going to a place AND coming back. A 'single' ticket is only one way.",
+                "type": "vocab"
+              },
+              {
+                "text": "platform 5",
+                "note": "The area at a train station where you stand to get on the train. Each platform has a number.",
+                "type": "vocab"
+              },
+              {
+                "text": "departure board",
+                "note": "The big screen at a station that shows train times, platforms, and if trains are on time or delayed.",
+                "type": "vocab"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m12-r-practice",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-reading",
+          "sectionType": "practice",
+          "title": "Guided Comprehension Check",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "prompt": "What is the main idea of the passage?",
+              "options": [
+                "Tom compares different types of transport and chooses the best one for his trip to Brighton.",
+                "Tom buys a new car to drive to Brighton.",
+                "Tom cannot go to Brighton because all the tickets are expensive."
+              ],
+              "correctIndex": 0,
+              "explanation": "The passage is about Tom looking at three transport options — train, bus, and car — and comparing them to decide which one is best for his trip. He compares speed, price, and comfort. This is the main idea."
+            },
+            "detailQuestions": [
+              {
+                "id": 1,
+                "prompt": "How much does a return train ticket to Brighton cost?",
+                "options": [
+                  "£12",
+                  "£25",
+                  "£35"
+                ],
+                "correctIndex": 1,
+                "explanation": "The passage says: 'a return ticket costs £25.' The £12 price is for the bus, not the train."
+              },
+              {
+                "id": 2,
+                "prompt": "Why is the car more expensive than the train?",
+                "options": [
+                  "Because petrol costs £20 and parking costs £15, so the total is about £35.",
+                  "Because the car is faster than the train.",
+                  "Because Tom does not have a car."
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage tells us that petrol costs about £20 and parking in Brighton is about £15. Together, that is £35, which is more than the £25 train ticket. So the car is more expensive than the train."
+              },
+              {
+                "id": 3,
+                "prompt": "Which platform does Tom's train leave from?",
+                "options": [
+                  "Platform 3",
+                  "Platform 5",
+                  "Platform 12"
+                ],
+                "correctIndex": 1,
+                "explanation": "The passage clearly states: 'The train leaves from platform 5 at Victoria Station.' Tom also finds platform 5 when he arrives at the station."
+              },
+              {
+                "id": 4,
+                "prompt": "What does Tom say about the bus compared to the train?",
+                "options": [
+                  "The bus is slower than the train but cheaper.",
+                  "The bus is faster than the train but more expensive.",
+                  "The bus is more comfortable than the train."
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage says the bus takes about two hours (the train takes one hour), so the bus is slower. But the bus ticket is £12 compared to £25 for the train, so the bus is cheaper. Tom can 'save money' with the bus."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m12-r-quiz",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-reading",
+          "sectionType": "quiz",
+          "title": "Reading Mastery Quiz",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "According to the passage, which transport option does Tom choose for his trip to Brighton?",
+                "options": [
+                  "The bus",
+                  "The train",
+                  "The car"
+                ],
+                "answer": "The train",
+                "explanation": "Tom decides to take the train because it is faster than the bus and cheaper than the car. He says: 'The train is better for me.'"
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which sentence uses the correct comparative form?",
+                "options": [
+                  "The bus is more slow than the train.",
+                  "The bus is slower than the train.",
+                  "The bus is slowwer than the train."
+                ],
+                "answer": "The bus is slower than the train.",
+                "explanation": "'Slow' is a short adjective (one syllable), so we add -er + than: 'slower than.' We do NOT say 'more slow' for short adjectives, and we do not double the 'w.'"
+              },
+              {
+                "id": "q-r-3",
+                "question": "In the passage, how long does the bus journey to Brighton take?",
+                "options": [
+                  "About one hour",
+                  "About two hours",
+                  "About thirty minutes"
+                ],
+                "answer": "About two hours",
+                "explanation": "The passage states: 'It takes about two hours' for the bus journey. The train takes about one hour, which is faster."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What is the correct comparative form of 'expensive'?",
+                "options": [
+                  "expensiver",
+                  "more expensive",
+                  "expensier"
+                ],
+                "answer": "more expensive",
+                "explanation": "'Expensive' is a long adjective (four syllables), so we use 'more' before it: 'more expensive than.' We never add -er to long adjectives."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What does 'a return ticket' mean?",
+                "options": [
+                  "A ticket to go to a place and come back.",
+                  "A ticket that you can return to the shop.",
+                  "A ticket for one way only."
+                ],
+                "answer": "A ticket to go to a place and come back.",
+                "explanation": "A 'return ticket' means you travel to your destination AND travel back. A ticket for one way only is called a 'single ticket.'"
+              },
+              {
+                "id": "q-r-6",
+                "question": "Which sentence is correct?",
+                "options": [
+                  "The train is gooder than the bus.",
+                  "The train is more good than the bus.",
+                  "The train is better than the bus."
+                ],
+                "answer": "The train is better than the bus.",
+                "explanation": "'Good' has an irregular comparative form: 'better.' We never say 'gooder' or 'more good.' Similarly, 'bad' becomes 'worse,' not 'badder.'"
+              },
+              {
+                "id": "q-r-7",
+                "question": "Read this sentence from the passage: 'He arrives at the station early and finds platform 5.' What is a 'platform' at a train station?",
+                "options": [
+                  "The place where you buy food and drinks.",
+                  "The area where you wait for and get on the train.",
+                  "The office where you buy tickets."
+                ],
+                "answer": "The area where you wait for and get on the train.",
+                "explanation": "A platform is the raised area at a train station where passengers stand to wait for the train and then board it. Each platform usually has a number."
+              },
+              {
+                "id": "q-r-8",
+                "question": "Tom says the train is 'cheaper than the car.' Why is this true according to the passage?",
+                "options": [
+                  "The train ticket is £25, but the car costs about £35 (petrol + parking).",
+                  "The train ticket is free, but the car costs £20.",
+                  "The train is slower, so it uses less petrol."
+                ],
+                "answer": "The train ticket is £25, but the car costs about £35 (petrol + parking).",
+                "explanation": "The passage says the return train ticket is £25. For the car, petrol costs about £20 and parking costs about £15, making a total of about £35. So the train (£25) is cheaper than the car (£35)."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m12-listening",
+      "moduleId": "A1.1-M12",
+      "skillType": "listening",
+      "title": "Listening Mission: Getting Your Train at Victoria Station",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-1-m12-l-theory",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening mission, you will hear a conversation at a train station. A traveller named Amy wants to buy a ticket to Brighton. She asks the sales assistant about train times, ticket prices, and which platform to go to. You will also hear comparatives like 'faster' and 'cheaper' when comparing different types of transport. Listen carefully for key words like 'single', 'return', 'platform', and prices in British pounds. At A1 level, focus on catching numbers, times, and short question-and-answer pairs.",
+            "learningObjectives": [
+              "Understand basic questions about train times, prices, and platforms at a station.",
+              "Recognise comparative adjectives such as 'faster', 'cheaper', and 'easier' in spoken English.",
+              "Identify key transport vocabulary including 'single', 'return', 'platform', and 'train'.",
+              "Understand prices and times spoken in natural British English."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "What time is the next train to...?",
+                "meaning": "Jam berapa kereta berikutnya ke...?",
+                "note": "A very common question used at train stations to ask about departure times."
+              },
+              {
+                "phrase": "How much is a ticket to...?",
+                "meaning": "Berapa harga tiket ke...?",
+                "note": "Used to ask the price of a train ticket to a specific destination."
+              },
+              {
+                "phrase": "A return, please.",
+                "meaning": "Tiket pulang-pergi, tolong.",
+                "note": "A 'return' ticket means you go and come back. A 'single' ticket is one way only."
+              },
+              {
+                "phrase": "What platform does the train leave from?",
+                "meaning": "Keretanya berangkat dari peron berapa?",
+                "note": "A platform is the place at the station where you get on the train."
+              },
+              {
+                "phrase": "The bus is cheaper than the train.",
+                "meaning": "Bus lebih murah daripada kereta.",
+                "note": "This is a comparative sentence. We add '-er' to short adjectives like 'cheap' to make 'cheaper'."
+              },
+              {
+                "phrase": "The train is faster than the bus.",
+                "meaning": "Kereta lebih cepat daripada bus.",
+                "note": "Another comparative. 'Fast' becomes 'faster' when comparing two things."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "What time is the next train?",
+                "fast": "Wha' time's the nex' train?",
+                "slowIpa": "/wɒt taɪm ɪz ðə nɛkst treɪn/",
+                "fastIpa": "/wɒʔ taɪmz ðə nɛks treɪn/",
+                "note": "In fast speech, the 't' at the end of 'what' becomes a glottal stop. 'Is the' contracts to 'z the'. The 't' in 'next' is often dropped before 'train'."
+              },
+              {
+                "id": 2,
+                "slow": "How much is a ticket?",
+                "fast": "How much is a ticket?",
+                "slowIpa": "/haʊ mʌtʃ ɪz ə tɪkɪt/",
+                "fastIpa": "/haʊ mʌtʃ ɪz ə tɪkɪʔ/",
+                "note": "The final 't' in 'ticket' often becomes a glottal stop in natural British English. The rest stays mostly the same at normal speed."
+              },
+              {
+                "id": 3,
+                "slow": "Do you want a single or a return?",
+                "fast": "D'you want a single or a return?",
+                "slowIpa": "/duː juː wɒnt ə sɪŋɡəl ɔːr ə rɪtɜːn/",
+                "fastIpa": "/djə wɒnt ə sɪŋɡl ɔːr ə rɪtɜːn/",
+                "note": "'Do you' blends into 'D'you' or 'dja' in fast speech. The second vowel in 'single' is reduced."
+              },
+              {
+                "id": 4,
+                "slow": "That is sixteen pounds forty, please.",
+                "fast": "That's sixteen forty, please.",
+                "slowIpa": "/ðæt ɪz sɪkstiːn paʊndz fɔːti pliːz/",
+                "fastIpa": "/ðæts sɪkstiːn fɔːti pliːz/",
+                "note": "'That is' contracts to 'That's'. In everyday speech, 'pounds' is often dropped when the context is clear."
+              },
+              {
+                "id": 5,
+                "slow": "Have a good journey.",
+                "fast": "Have a good journey.",
+                "slowIpa": "/hæv ə ɡʊd dʒɜːni/",
+                "fastIpa": "/hæv ə ɡʊd dʒɜːni/",
+                "note": "This phrase stays mostly the same in fast speech. The 'd' in 'good' may link slightly to the 'j' in 'journey'."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m12-l-dialogue",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Buying a Train Ticket at Victoria Station",
+          "orderIndex": 2,
+          "content": {
+            "context": "Amy is at London Victoria station. She wants to buy a train ticket to Brighton. She speaks to the sales assistant at the ticket counter about departure times, prices, and which platform to use. She also compares different ways to travel.",
+            "audioPrompt": "Listen carefully to the following dialogue between Amy and the sales assistant at the train station ticket counter.",
+            "lines": [
+              {
+                "speaker": "Amy",
+                "text": "Excuse me, what time is the next train to Brighton?",
+                "audioUrl": "/audio/modules/a1-1-m12/dialogue-1.mp3",
+                "translation": "Permisi, jam berapa kereta berikutnya ke Brighton?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Sales Assistant",
+                "text": "The next train leaves at 10.45.",
+                "audioUrl": "/audio/modules/a1-1-m12/dialogue-2.mp3",
+                "translation": "Kereta berikutnya berangkat jam 10.45.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Amy",
+                "text": "OK, great. And how much is a ticket to Brighton?",
+                "audioUrl": "/audio/modules/a1-1-m12/dialogue-3.mp3",
+                "translation": "Oke, bagus. Dan berapa harga tiket ke Brighton?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Sales Assistant",
+                "text": "Do you want a single or a return?",
+                "audioUrl": "/audio/modules/a1-1-m12/dialogue-4.mp3",
+                "translation": "Anda ingin tiket sekali jalan atau pulang-pergi?",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Amy",
+                "text": "A return, please. Is the train faster than the bus?",
+                "audioUrl": "/audio/modules/a1-1-m12/dialogue-5.mp3",
+                "translation": "Pulang-pergi, tolong. Apakah kereta lebih cepat daripada bus?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Sales Assistant",
+                "text": "Yes, the train is much faster. The bus takes about two hours, but the train is only one hour.",
+                "audioUrl": "/audio/modules/a1-1-m12/dialogue-6.mp3",
+                "translation": "Ya, kereta jauh lebih cepat. Bus memakan waktu sekitar dua jam, tapi kereta hanya satu jam.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Amy",
+                "text": "And is the bus cheaper than the train?",
+                "audioUrl": "/audio/modules/a1-1-m12/dialogue-7.mp3",
+                "translation": "Dan apakah bus lebih murah daripada kereta?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Sales Assistant",
+                "text": "Yes, the bus is cheaper, but the train is more comfortable. A return ticket by train is sixteen pounds forty.",
+                "audioUrl": "/audio/modules/a1-1-m12/dialogue-8.mp3",
+                "translation": "Ya, bus lebih murah, tapi kereta lebih nyaman. Tiket pulang-pergi dengan kereta enam belas pound empat puluh pence.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Amy",
+                "text": "OK, I will take the train. Here you are. What platform does the train leave from?",
+                "audioUrl": "/audio/modules/a1-1-m12/dialogue-9.mp3",
+                "translation": "Oke, saya akan naik kereta. Ini uangnya. Keretanya berangkat dari peron berapa?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Sales Assistant",
+                "text": "Platform 9. Have a good journey!",
+                "audioUrl": "/audio/modules/a1-1-m12/dialogue-10.mp3",
+                "translation": "Peron 9. Selamat jalan!",
+                "emotion": "friendly"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m12-l-quiz",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "what time is the next train to Brighton?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Amy: \"what time is the next train to _____?\"",
+                "targetWord": "Brighton",
+                "explanation": "Full audio: \"what time is the next train to Brighton?\". The missing word is \"Brighton\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "The next train leaves at 10.45.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sales Assistant: \"The next train leaves at _____.\"",
+                "targetWord": "10.45",
+                "explanation": "Full audio: \"The next train leaves at 10.45.\". The missing word is \"10.45\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "And how much is a ticket to Brighton?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Amy: \"And how much is a _____ to Brighton?\"",
+                "targetWord": "ticket",
+                "explanation": "Full audio: \"And how much is a ticket to Brighton?\". The missing word is \"ticket\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Do you want a single or a return?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sales Assistant: \"Do you want a single or a _____?\"",
+                "targetWord": "return",
+                "explanation": "Full audio: \"Do you want a single or a return?\". The missing word is \"return\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "A return, please.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Amy: \"A return, _____.\"",
+                "targetWord": "please",
+                "explanation": "Full audio: \"A return, please.\". The missing word is \"please\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Yes, the train is much faster.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes the train is much faster",
+                "words": [
+                  "the",
+                  "much",
+                  "faster",
+                  "is",
+                  "train",
+                  "Yes"
+                ],
+                "explanation": "Correct sentence order: \"Yes, the train is much faster.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "The bus takes about two hours",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "The bus takes about two hours",
+                "words": [
+                  "about",
+                  "The",
+                  "hours",
+                  "two",
+                  "takes",
+                  "bus"
+                ],
+                "explanation": "Correct sentence order: \"The bus takes about two hours\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "but the train is only one hour.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "but the train is only one hour",
+                "words": [
+                  "is",
+                  "hour",
+                  "train",
+                  "only",
+                  "but",
+                  "one",
+                  "the"
+                ],
+                "explanation": "Correct sentence order: \"but the train is only one hour.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "the bus is cheaper",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "the bus is cheaper",
+                "words": [
+                  "cheaper",
+                  "is",
+                  "the",
+                  "bus"
+                ],
+                "explanation": "Correct sentence order: \"the bus is cheaper\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "but the train is more comfortable.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "but the train is more comfortable",
+                "words": [
+                  "the",
+                  "is",
+                  "more",
+                  "but",
+                  "comfortable",
+                  "train"
+                ],
+                "explanation": "Correct sentence order: \"but the train is more comfortable.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "what time is the next train to Brighton?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Amy: \"what time is the next train to _____?\"",
+                "targetWord": "Brighton",
+                "explanation": "Full audio: \"what time is the next train to Brighton?\". The missing word is \"Brighton\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "The next train leaves at 10.45.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sales Assistant: \"The next train leaves at _____.\"",
+                "targetWord": "10.45",
+                "explanation": "Full audio: \"The next train leaves at 10.45.\". The missing word is \"10.45\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "And how much is a ticket to Brighton?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Amy: \"And how much is a _____ to Brighton?\"",
+                "targetWord": "ticket",
+                "explanation": "Full audio: \"And how much is a ticket to Brighton?\". The missing word is \"ticket\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Do you want a single or a return?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sales Assistant: \"Do you want a single or a _____?\"",
+                "targetWord": "return",
+                "explanation": "Full audio: \"Do you want a single or a return?\". The missing word is \"return\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "A return, please.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Amy: \"A return, _____.\"",
+                "targetWord": "please",
+                "explanation": "Full audio: \"A return, please.\". The missing word is \"please\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Yes, the train is much faster.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes the train is much faster",
+                "words": [
+                  "the",
+                  "much",
+                  "faster",
+                  "is",
+                  "train",
+                  "Yes"
+                ],
+                "explanation": "Correct sentence order: \"Yes, the train is much faster.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "The bus takes about two hours",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "The bus takes about two hours",
+                "words": [
+                  "about",
+                  "The",
+                  "hours",
+                  "two",
+                  "takes",
+                  "bus"
+                ],
+                "explanation": "Correct sentence order: \"The bus takes about two hours\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "but the train is only one hour.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "but the train is only one hour",
+                "words": [
+                  "is",
+                  "hour",
+                  "train",
+                  "only",
+                  "but",
+                  "one",
+                  "the"
+                ],
+                "explanation": "Correct sentence order: \"but the train is only one hour.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "the bus is cheaper",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "the bus is cheaper",
+                "words": [
+                  "cheaper",
+                  "is",
+                  "the",
+                  "bus"
+                ],
+                "explanation": "Correct sentence order: \"the bus is cheaper\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "but the train is more comfortable.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "but the train is more comfortable",
+                "words": [
+                  "the",
+                  "is",
+                  "more",
+                  "but",
+                  "comfortable",
+                  "train"
+                ],
+                "explanation": "Correct sentence order: \"but the train is more comfortable.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m12-writing",
+      "moduleId": "A1.1-M12",
+      "skillType": "writing",
+      "title": "Writing Mission: Comparing Transport & Getting Around",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-1-m12-w-theory",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this unit, you will learn how to write sentences and short paragraphs about transport. You will compare different types of transport using comparative adjectives (cheaper, faster, more expensive). You will also learn to write questions to ask for travel information at a train station. Remember to use 'than' when you compare two things, and follow the spelling rules for short and long adjectives.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Write a Simple Comparative Sentence (Short Adjective)",
+                "formula": "Subject + is/are + adjective-er + than + noun/pronoun.",
+                "example": "Trains are faster than buses."
+              },
+              {
+                "step": 2,
+                "title": "Write a Comparative Sentence (Long Adjective)",
+                "formula": "Subject + is/are + more + adjective + than + noun/pronoun.",
+                "example": "Taxis are more expensive than buses."
+              },
+              {
+                "step": 3,
+                "title": "Write a Travel Information Question",
+                "formula": "Question word + auxiliary verb + subject + verb + ...?",
+                "example": "What time does the train to London leave?"
+              },
+              {
+                "step": 4,
+                "title": "Write a Short Paragraph Comparing Two Types of Transport",
+                "formula": "Sentence 1 (introduce two things) + Sentence 2 (compare with short adjective) + Sentence 3 (compare with long adjective or irregular) + Sentence 4 (say which one you prefer).",
+                "example": "I can take the bus or the train to work. The train is faster than the bus. But the bus is cheaper than the train. I prefer the bus because it is cheaper."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always use 'than' after a comparative adjective when you compare two things.",
+                "badExample": "Buses are cheaper cars.",
+                "goodExample": "Buses are cheaper than cars.",
+                "why": "You need 'than' to show what you are comparing. Without 'than', the sentence is incomplete and unclear."
+              },
+              {
+                "rule": "For short adjectives (one syllable), add '-er'. Do NOT use 'more' with short adjectives.",
+                "badExample": "Trains are more fast than buses.",
+                "goodExample": "Trains are faster than buses.",
+                "why": "Short adjectives like 'fast', 'cheap', and 'slow' take '-er' at the end. Using 'more' with short adjectives is incorrect in English."
+              },
+              {
+                "rule": "For long adjectives (two or more syllables), use 'more' before the adjective. Do NOT add '-er'.",
+                "badExample": "Planes are comfortabler than buses.",
+                "goodExample": "Planes are more comfortable than buses.",
+                "why": "Long adjectives like 'comfortable', 'expensive', and 'dangerous' use 'more' before them. Adding '-er' to long adjectives is incorrect."
+              },
+              {
+                "rule": "When an adjective ends in consonant + 'y', change 'y' to 'i' and add '-er'.",
+                "badExample": "Cycling is healthyer than driving.",
+                "goodExample": "Cycling is healthier than driving.",
+                "why": "For adjectives like 'healthy', 'easy', and 'busy', you must change the 'y' to 'i' before adding '-er'. This is a spelling rule in English."
+              },
+              {
+                "rule": "Use 'better' (not 'gooder') and 'worse' (not 'badder') for irregular comparatives.",
+                "badExample": "This bus service is gooder than that one.",
+                "goodExample": "This bus service is better than that one.",
+                "why": "'Good' and 'bad' are irregular adjectives. Their comparative forms are 'better' and 'worse'. They do not follow the normal '-er' rule."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "The bus is slower than the train.",
+                "id": "Bus lebih lambat daripada kereta.",
+                "focus": "Short adjective comparative: slow → slower + than"
+              },
+              {
+                "en": "Flying is more expensive than taking the bus.",
+                "id": "Terbang lebih mahal daripada naik bus.",
+                "focus": "Long adjective comparative: more expensive + than"
+              },
+              {
+                "en": "Riding a bike is healthier than driving a car.",
+                "id": "Bersepeda lebih sehat daripada mengendarai mobil.",
+                "focus": "Consonant + y adjective: healthy → healthier + than"
+              },
+              {
+                "en": "What platform does the train to Manchester leave from?",
+                "id": "Kereta ke Manchester berangkat dari peron berapa?",
+                "focus": "Travel question using 'What platform' + does"
+              },
+              {
+                "en": "The subway is better than the taxi when there is traffic.",
+                "id": "Kereta bawah tanah lebih baik daripada taksi ketika ada kemacetan.",
+                "focus": "Irregular comparative: good → better + than"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m12-w-practice",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "trains are more fast than buses",
+                "targetSentence": "Trains are faster than buses.",
+                "translation": "Kereta lebih cepat daripada bus.",
+                "keyRule": "For short adjectives like 'fast', add '-er' instead of using 'more'. Also capitalize the first word and add a period at the end.",
+                "requiredCapitals": [
+                  "Trains"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "taxis are expensiver than the subway",
+                "targetSentence": "Taxis are more expensive than the subway.",
+                "translation": "Taksi lebih mahal daripada kereta bawah tanah.",
+                "keyRule": "For long adjectives like 'expensive', use 'more' before the adjective instead of adding '-er'. Capitalize the first word and end with a period.",
+                "requiredCapitals": [
+                  "Taxis"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "what time does the train to london leave",
+                "targetSentence": "What time does the train to London leave?",
+                "translation": "Jam berapa kereta ke London berangkat?",
+                "keyRule": "Capitalize the first word of a question and proper nouns like city names (London). End a question with a question mark.",
+                "requiredCapitals": [
+                  "What",
+                  "London"
+                ]
+              },
+              {
+                "id": "sent-4",
+                "faultySentence": "cycling is healthyer than driving a car",
+                "targetSentence": "Cycling is healthier than driving a car.",
+                "translation": "Bersepeda lebih sehat daripada mengendarai mobil.",
+                "keyRule": "When an adjective ends in consonant + 'y', change 'y' to 'i' and add '-er'. 'Healthy' becomes 'healthier', not 'healthyer'. Capitalize the first word and add a period.",
+                "requiredCapitals": [
+                  "Cycling"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Comparing Transport (Short Adjective)",
+                "meaning": "Bus lebih murah daripada taksi.",
+                "tokens": [
+                  "Buses",
+                  "are",
+                  "cheaper",
+                  "than",
+                  "taxis."
+                ],
+                "fullSentence": "Buses are cheaper than taxis."
+              },
+              {
+                "id": "b-2",
+                "category": "Comparing Transport (Long Adjective)",
+                "meaning": "Pesawat lebih nyaman daripada bus.",
+                "tokens": [
+                  "Planes",
+                  "are",
+                  "more",
+                  "comfortable",
+                  "than",
+                  "buses."
+                ],
+                "fullSentence": "Planes are more comfortable than buses."
+              },
+              {
+                "id": "b-3",
+                "category": "Asking for Travel Information",
+                "meaning": "Jam berapa kereta berikutnya ke Paris?",
+                "tokens": [
+                  "What",
+                  "time",
+                  "is",
+                  "the",
+                  "next",
+                  "train",
+                  "to",
+                  "Paris?"
+                ],
+                "fullSentence": "What time is the next train to Paris?"
+              },
+              {
+                "id": "b-4",
+                "category": "Irregular Comparative",
+                "meaning": "Kereta bawah tanah lebih baik daripada taksi saat jam sibuk.",
+                "tokens": [
+                  "The",
+                  "subway",
+                  "is",
+                  "better",
+                  "than",
+                  "a",
+                  "taxi",
+                  "during",
+                  "rush",
+                  "hour."
+                ],
+                "fullSentence": "The subway is better than a taxi during rush hour."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Compare Two Types of Transport",
+                "badge": "Transport Comparer",
+                "instruction": "Write a short paragraph (at least 4 sentences) comparing two types of transport you know. For example, compare the bus and the train, or a bicycle and a car. Use at least two comparative adjectives (one short adjective with '-er' and one long adjective with 'more'). Say which transport you prefer and why.",
+                "example": "I often take the bus and the train. The train is faster than the bus. But the bus is cheaper than the train. The train is more comfortable than the bus. I prefer the train because it is faster and more comfortable.",
+                "placeholder": "Start writing your comparison here. For example: I can travel by... The... is... than the...",
+                "minWords": 20,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: At the Train Station",
+                "badge": "Station Navigator",
+                "instruction": "Imagine you are at a train station. Write a short dialogue (at least 6 lines) between you and a ticket officer. Ask about train times, platforms, and ticket prices. Use at least one comparative sentence to compare options (for example, comparing two trains or two ticket types). Use question marks for questions and periods for statements.",
+                "example": "Me: Hello! What time is the next train to Oxford?\nOfficer: The next train is at 10:15.\nMe: What platform does it leave from?\nOfficer: Platform 3.\nMe: How much is a return ticket?\nOfficer: A return ticket is £25. A single ticket is £15.\nMe: The single ticket is cheaper than the return ticket. I want a single ticket, please.\nOfficer: Here you are. Have a good trip!",
+                "placeholder": "Start writing your dialogue here. Me: Hello! What time is...",
+                "minWords": 30,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m12-w-quiz",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-writing",
+          "sectionType": "quiz",
+          "title": "Writing Practicum & Assessment",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": "w-p-1",
+                "prompt": "Write three sentences comparing different types of transport. Use one short adjective comparative (-er + than), one long adjective comparative (more + adjective + than), and one irregular comparative (better or worse + than).",
+                "criteria": "The answer must contain exactly three sentences. Each sentence must use a different comparative form correctly: one with '-er than', one with 'more... than', and one with 'better' or 'worse... than'. All sentences must have correct capitalization and punctuation.",
+                "sampleGoodAnswer": "Bikes are slower than cars. Cars are more dangerous than bikes. The train service here is better than the bus service."
+              },
+              {
+                "id": "w-p-2",
+                "prompt": "You are at a train station. Write two questions you can ask the ticket officer about your journey. Then write one sentence comparing two travel options.",
+                "criteria": "The answer must include two well-formed questions with question marks and correct word order. It must also include one comparative sentence with correct use of a comparative adjective and 'than'. Proper capitalization and punctuation are required.",
+                "sampleGoodAnswer": "What time does the next train to Birmingham leave? How much is a return ticket? The express train is faster than the local train."
+              },
+              {
+                "id": "w-p-3",
+                "prompt": "Write a short paragraph (4-5 sentences) about how you get to school or work. Mention the type of transport you use. Compare it with another type of transport. Say why you prefer your choice.",
+                "criteria": "The paragraph must be 4-5 sentences long. It must mention at least two types of transport and include at least two comparative sentences. The student should express a preference with a reason. Correct spelling of comparative forms, proper capitalization, and correct punctuation are required.",
+                "sampleGoodAnswer": "I take the bus to work every day. Sometimes I take the train. The bus is cheaper than the train. But the train is faster than the bus. I prefer the bus because it stops near my house and it is cheaper."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m12-speaking",
+      "moduleId": "A1.1-M12",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Getting About – Comparing Transport & Asking for Travel Information",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-1-m12-s-theory",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this speaking lab you will practise talking about different types of transport such as buses, trains, bikes, and cars. You will also learn how to compare things using comparative adjectives like 'faster', 'cheaper', and 'better'. Finally, you will practise asking for travel information at a train station. Good pronunciation and clear stress on comparative words will help people understand you.",
+            "audioGuidance": "When you say comparative adjectives, stress the first syllable clearly: FAST-er, CHEAP-er, SLOW-er. For two-syllable comparatives ending in '-er', keep a strong beat on the first part. For longer adjectives, say 'more' clearly before the adjective: 'more exPENsive'. Use rising intonation when you ask questions at a ticket office, for example: 'Is the bus cheaper than the train?' Your voice should go UP at the end of yes/no questions and DOWN at the end of information questions starting with 'What', 'Which', or 'How'.",
+            "pillars": [
+              {
+                "name": "Comparative Stress Patterns",
+                "target": "Clear stress on comparative adjective forms",
+                "explanation": "When you add '-er' to a short adjective, the stress stays on the root word. Say 'FAST-er', not 'fast-ER'. For 'more + adjective', stress the adjective: 'more exPENsive'. This helps your listener understand which word carries the comparison."
+              },
+              {
+                "name": "Question Intonation for Travel",
+                "target": "Correct rising and falling intonation in travel questions",
+                "explanation": "At a train station or bus stop, you need to ask clear questions. Yes/no questions like 'Is this the train to London?' use rising intonation — your voice goes up at the end. Information questions like 'What time does the bus leave?' use falling intonation — your voice goes down at the end."
+              },
+              {
+                "name": "Transport Vocabulary Pronunciation",
+                "target": "Accurate pronunciation of transport words",
+                "explanation": "Some transport words can be tricky. 'Underground' has stress on the first syllable: UN-der-ground. 'Bicycle' is BI-cy-cle. 'Platform' is PLAT-form. Practise saying each word slowly, then faster, making sure the stressed syllable is louder and longer."
+              },
+              {
+                "name": "Fluency in Short Comparisons",
+                "target": "Speaking comparison sentences smoothly without long pauses",
+                "explanation": "When you compare two things, try to connect your words smoothly. Say 'The train is faster than the bus' as one flowing sentence. Do not pause too long between 'faster' and 'than'. The word 'than' is usually unstressed and short, almost like 'thun'."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m12-s-practice",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "CHEAP",
+                "countryAudio": "cheap",
+                "countrySyllables": [
+                  {
+                    "text": "CHEAP",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "CHEAP-er",
+                "natAudio": "cheaper",
+                "natSyllables": [
+                  {
+                    "text": "CHEAP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "er",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress stays on the first syllable 'CHEAP' when we add '-er'. The ending '-er' is soft and quick. Say 'CHEAP-er', not 'cheap-ER'."
+              },
+              {
+                "id": "pair-2",
+                "country": "FAST",
+                "countryAudio": "fast",
+                "countrySyllables": [
+                  {
+                    "text": "FAST",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "FAST-er",
+                "natAudio": "faster",
+                "natSyllables": [
+                  {
+                    "text": "FAST",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "er",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress remains on 'FAST'. The '-er' ending is unstressed and short. Keep the strong beat on the root word."
+              },
+              {
+                "id": "pair-3",
+                "country": "exPENsive",
+                "countryAudio": "expensive",
+                "countrySyllables": [
+                  {
+                    "text": "ex",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PEN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "sive",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "more exPENsive",
+                "natAudio": "more expensive",
+                "natSyllables": [
+                  {
+                    "text": "more",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ex",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PEN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "sive",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "For longer adjectives we add 'more' before the word. The stress stays on 'PEN' in 'expensive'. The word 'more' is said quickly and lightly."
+              },
+              {
+                "id": "pair-4",
+                "country": "COMfort",
+                "countryAudio": "comfort",
+                "countrySyllables": [
+                  {
+                    "text": "COM",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "fort",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "COM-fort-a-ble",
+                "natAudio": "comfortable",
+                "natSyllables": [
+                  {
+                    "text": "COM",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "fort",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "a",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ble",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress stays on the first syllable 'COM'. Note that 'comfortable' is often pronounced with only three syllables in natural speech: 'COMF-ter-ble'."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "The train is faster than the bus.",
+                "phonetic": "/ðə treɪn ɪz ˈfɑːstər ðən ðə bʌs/",
+                "focus": "Stress on 'FAST-er' and reducing 'than' to a quick /ðən/",
+                "hint": "Say 'FAST-er' with a strong first beat. The word 'than' should be very short and soft, almost like 'thun'."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "Bikes are cheaper than taxis.",
+                "phonetic": "/baɪks ɑːr ˈtʃiːpər ðən ˈtæksiːz/",
+                "focus": "Clear /tʃ/ sound in 'cheaper' and plural /z/ in 'taxis'",
+                "hint": "Start 'cheaper' with a strong 'ch' sound like in 'cheese'. End 'taxis' with a buzzing /z/ sound."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "What time does the next train leave?",
+                "phonetic": "/wɒt taɪm dʌz ðə nekst treɪn liːv/",
+                "focus": "Falling intonation on information question",
+                "hint": "This is a 'wh-' question, so your voice should go DOWN at the end on the word 'leave'."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Is the underground quicker than the car?",
+                "phonetic": "/ɪz ðə ˈʌndəɡraʊnd ˈkwɪkər ðən ðə kɑːr/",
+                "focus": "Rising intonation on yes/no question and stress on 'UN-der-ground'",
+                "hint": "Your voice should go UP at the end because this is a yes/no question. Stress the first syllable of 'UNderground'."
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "A single ticket to Manchester, please.",
+                "phonetic": "/ə ˈsɪŋɡl ˈtɪkɪt tə ˈmæntʃɪstər pliːz/",
+                "focus": "Polite request intonation and clear pronunciation of 'single' and 'ticket'",
+                "hint": "Say 'SIN-gle' and 'TI-cket' with stress on the first syllable. End with a gentle falling tone on 'please' to sound polite."
+              },
+              {
+                "id": "spk-d-6",
+                "targetText": "The bus is more comfortable than the bicycle.",
+                "phonetic": "/ðə bʌs ɪz mɔːr ˈkʌmftəbl ðən ðə ˈbaɪsɪkl/",
+                "focus": "Using 'more + adjective' pattern with natural rhythm",
+                "hint": "Say 'more' quickly and stress 'COM-fort-able'. Remember 'comfortable' often sounds like three syllables: 'COMF-ter-ble'."
+              }
+            ],
+            "roleplay": {
+              "context": "You are learning to compare different types of transport with Mr. Khoirul. He will ask your opinion about different transport options. Use comparative adjectives like 'faster', 'cheaper', 'better', and 'more comfortable' in your answers.",
+              "roles": [
+                "Mr. Khoirul",
+                "You"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Hello! Let's talk about transport. Which do you think is better for the environment, bikes or cars?",
+                  "translation": "Halo! Ayo kita bicara tentang transportasi. Menurutmu mana yang lebih baik untuk lingkungan, sepeda atau mobil?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "I think bikes are better than cars for the environment.",
+                  "translation": "Saya pikir sepeda lebih baik daripada mobil untuk lingkungan."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Good! Now, can you compare bikes and public transport? Which is healthier?",
+                  "translation": "Bagus! Sekarang, bisakah kamu membandingkan sepeda dan transportasi umum? Mana yang lebih sehat?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Bikes are healthier than public transport because you exercise when you ride.",
+                  "translation": "Sepeda lebih sehat daripada transportasi umum karena kamu berolahraga saat mengendarainya."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Excellent! One more question. What's quicker in a big city — a car or the underground?",
+                  "translation": "Bagus sekali! Satu pertanyaan lagi. Mana yang lebih cepat di kota besar — mobil atau kereta bawah tanah?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "The underground is quicker than a car in a big city.",
+                  "translation": "Kereta bawah tanah lebih cepat daripada mobil di kota besar."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-1-m12-s-quiz",
+          "moduleId": "A1.1-M12",
+          "subModuleId": "sub-a1-1-m12-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about a journey you took last weekend. Describe the transport you used and compare it with another option. Use at least two comparative adjectives. Speak for about 30 seconds.",
+                "audioPrompt": "Tell me about a journey you took recently. What transport did you use? Was it good? Compare it with another type of transport.",
+                "storyPoints": [
+                  "Say where you went and what transport you used (for example: bus, train, or taxi).",
+                  "Compare your transport with another option using a comparative adjective (for example: 'The bus was cheaper than the taxi').",
+                  "Say how you felt about the journey and whether you would choose the same transport again."
+                ],
+                "targetSentence": "Last weekend I took the bus to the city centre. The bus was cheaper than a taxi, but it was slower. Next time, I want to take the train because it is faster.",
+                "phonetic": "/lɑːst ˈwiːkend aɪ tʊk ðə bʌs tə ðə ˈsɪti ˈsentər. ðə bʌs wɒz ˈtʃiːpər ðən ə ˈtæksi bʌt ɪt wɒz ˈsləʊər. nekst taɪm aɪ wɒnt tə teɪk ðə treɪn bɪˈkɒz ɪt ɪz ˈfɑːstər/",
+                "expectedKeywords": [
+                  "bus",
+                  "cheaper",
+                  "taxi",
+                  "slower",
+                  "train",
+                  "faster"
+                ],
+                "hint": "Remember to stress the first syllable of comparative adjectives: CHEAP-er, SLOW-er, FAST-er. Use 'than' to connect your comparisons.",
+                "explanation": "This storytelling task practises using comparative adjectives in a real-life travel context. You need to name transport types and compare them clearly so your listener understands your preference."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Imagine you are at a train station. Tell a short story about buying a ticket and finding your platform. Describe what happened step by step. Speak for about 30 seconds.",
+                "audioPrompt": "Imagine you are at a train station. Tell me the story of buying your ticket and getting on the train. What did you say? What happened?",
+                "storyPoints": [
+                  "Describe arriving at the train station and going to the ticket office.",
+                  "Say what you asked for (for example: 'A return ticket to Oxford, please') and how much it cost.",
+                  "Explain how you found your platform and got on the train."
+                ],
+                "targetSentence": "I arrived at the train station and went to the ticket office. I said, 'A return ticket to Oxford, please.' It cost twelve pounds. Then I looked at the board and found platform three. The train was on time and I got on.",
+                "phonetic": "/aɪ əˈraɪvd ət ðə treɪn ˈsteɪʃən ænd went tə ðə ˈtɪkɪt ˈɒfɪs. aɪ sed ə rɪˈtɜːn ˈtɪkɪt tə ˈɒksfəd pliːz. ɪt kɒst twelv paʊndz. ðen aɪ lʊkt ət ðə bɔːd ænd faʊnd ˈplætfɔːm θriː. ðə treɪn wɒz ɒn taɪm ænd aɪ ɡɒt ɒn/",
+                "expectedKeywords": [
+                  "station",
+                  "ticket",
+                  "return",
+                  "platform",
+                  "train",
+                  "please"
+                ],
+                "hint": "Use polite language when asking for a ticket: 'A return ticket to..., please.' Say 'PLAT-form' with stress on the first syllable.",
+                "explanation": "This task helps you practise the vocabulary and phrases you need at a real train station. Telling the story step by step builds your confidence for real travel situations."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are at a train station ticket office. Mr. Khoirul is the ticket seller. Ask for a ticket, ask about the price, and find out which platform to go to. Use polite language.",
+                "audioPrompt": "Good morning! Welcome to the ticket office. Where would you like to go today?",
+                "scenarioContext": "You are a traveller at a busy train station in London. You need to buy a ticket to Cambridge. You want to know the price and which platform the train leaves from. The ticket seller is friendly and helpful.",
+                "characterRole": "You are the traveller. Mr. Khoirul is the ticket seller at the station. Ask questions politely and listen to his answers.",
+                "targetSentence": "Hello, can I have a single ticket to Cambridge, please? How much is it? Which platform is it?",
+                "phonetic": "/həˈləʊ kæn aɪ hæv ə ˈsɪŋɡl ˈtɪkɪt tə ˈkeɪmbrɪdʒ pliːz. haʊ mʌtʃ ɪz ɪt. wɪtʃ ˈplætfɔːm ɪz ɪt/",
+                "expectedKeywords": [
+                  "single",
+                  "ticket",
+                  "Cambridge",
+                  "please",
+                  "how much",
+                  "platform"
+                ],
+                "hint": "Start with a greeting like 'Hello' or 'Good morning'. Always say 'please' when you ask for something. Use rising intonation for yes/no questions.",
+                "explanation": "This roleplay practises real transactional language at a ticket office. Being polite and clear is very important when buying tickets in English-speaking countries."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are asking a stranger for directions to the nearest bus stop. Mr. Khoirul is the stranger. Ask where the bus stop is and which bus goes to the city centre.",
+                "audioPrompt": "Oh hello! You look a bit lost. Can I help you with something?",
+                "scenarioContext": "You are walking in a town you do not know well. You need to find the nearest bus stop and take a bus to the city centre. A friendly local person offers to help you.",
+                "characterRole": "You are a visitor to the town. Mr. Khoirul is a friendly local person on the street. Ask him for help finding the bus stop and the right bus.",
+                "targetSentence": "Excuse me, where is the nearest bus stop? Which bus goes to the city centre?",
+                "phonetic": "/ɪkˈskjuːz miː weər ɪz ðə ˈnɪərɪst bʌs stɒp. wɪtʃ bʌs ɡəʊz tə ðə ˈsɪti ˈsentər/",
+                "expectedKeywords": [
+                  "excuse me",
+                  "bus stop",
+                  "nearest",
+                  "which",
+                  "city centre"
+                ],
+                "hint": "Start with 'Excuse me' to be polite. Use falling intonation on 'wh-' questions like 'Where is...?' and 'Which bus...?'",
+                "explanation": "Asking for directions is one of the most important skills for getting around. Using 'Excuse me' before your question is polite and natural in English."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You and Mr. Khoirul are planning a trip together. Compare different transport options — train, bus, and car — and decide which one to take. Use comparative adjectives.",
+                "audioPrompt": "So, we need to go to Brighton this Saturday. How should we get there? We can take the train, the bus, or drive. What do you think?",
+                "scenarioContext": "You and your friend Mr. Khoirul want to visit Brighton for a day trip. You need to decide together which transport to use. Think about price, speed, and comfort. Use comparatives to explain your opinion.",
+                "characterRole": "You are a friend planning a trip with Mr. Khoirul. Share your opinion about different transport options and give reasons using comparative adjectives like 'faster', 'cheaper', and 'more comfortable'.",
+                "targetSentence": "I think the train is faster than the bus. But the bus is cheaper than the train. Let's take the bus because it is cheaper.",
+                "phonetic": "/aɪ θɪŋk ðə treɪn ɪz ˈfɑːstər ðən ðə bʌs. bʌt ðə bʌs ɪz ˈtʃiːpər ðən ðə treɪn. lets teɪk ðə bʌs bɪˈkɒz ɪt ɪz ˈtʃiːpər/",
+                "expectedKeywords": [
+                  "faster",
+                  "cheaper",
+                  "train",
+                  "bus",
+                  "than",
+                  "more comfortable"
+                ],
+                "hint": "Use 'I think...' to give your opinion. Compare two things with 'X is [comparative] than Y'. Give a reason with 'because'.",
+                "explanation": "This roleplay practises making decisions by comparing options. Using comparative adjectives with 'than' is essential for expressing preferences in everyday English conversations."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are on a bus and you are not sure where to get off. Ask the bus driver (Mr. Khoirul) for help. Find out how many stops are left and when to get off.",
+                "audioPrompt": "Hello there! Take a seat. We'll be leaving in a minute. Do you need any help?",
+                "scenarioContext": "You are on a city bus going to the museum. You are not sure which stop to get off at. The bus driver is friendly and can help you. You need to ask how many stops there are and ask him to tell you when to get off.",
+                "characterRole": "You are a passenger on the bus. Mr. Khoirul is the bus driver. Ask politely about your stop and request help knowing when to get off.",
+                "targetSentence": "Excuse me, does this bus go to the museum? How many stops is it? Can you tell me when to get off, please?",
+                "phonetic": "/ɪkˈskjuːz miː dʌz ðɪs bʌs ɡəʊ tə ðə mjuːˈziːəm. haʊ ˈmeni stɒps ɪz ɪt. kæn juː tel miː wen tə ɡet ɒf pliːz/",
+                "expectedKeywords": [
+                  "excuse me",
+                  "bus",
+                  "museum",
+                  "stops",
+                  "get off",
+                  "please"
+                ],
+                "hint": "Use 'Does this bus go to...?' with rising intonation. 'Can you tell me...?' is a polite way to ask for help.",
+                "explanation": "When you are on public transport in a new place, asking the driver for help is very common. Practise polite question forms and travel vocabulary to feel confident."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Say the following transport vocabulary words clearly. Focus on correct pronunciation of each word.",
+                "audioPrompt": "Please say these transport words one by one: 'platform', 'underground', 'return ticket', 'departure', 'passenger'.",
+                "targetSentence": "Platform. Underground. Return ticket. Departure. Passenger.",
+                "phonetic": "/ˈplætfɔːm. ˈʌndəɡraʊnd. rɪˈtɜːn ˈtɪkɪt. dɪˈpɑːtʃər. ˈpæsɪndʒər/",
+                "expectedKeywords": [
+                  "platform",
+                  "underground",
+                  "return ticket",
+                  "departure",
+                  "passenger"
+                ],
+                "hint": "Stress the first syllable in 'PLAT-form', 'UN-der-ground', and 'PAS-sen-ger'. Stress the second syllable in 'de-PAR-ture' and 're-TURN'.",
+                "explanation": "Knowing transport vocabulary is essential for getting around. Each word has a specific stress pattern. Practise saying them with the correct stress so people can understand you at stations and bus stops."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Complete and say these comparative sentences out loud. Make sure you use the correct comparative form of the adjective.",
+                "audioPrompt": "Now let's practise comparative grammar. Please say these sentences: 'The train is faster than the bus.' 'A taxi is more expensive than the underground.' 'Walking is slower than cycling.'",
+                "targetSentence": "The train is faster than the bus. A taxi is more expensive than the underground. Walking is slower than cycling.",
+                "phonetic": "/ðə treɪn ɪz ˈfɑːstər ðən ðə bʌs. ə ˈtæksi ɪz mɔːr ɪkˈspensɪv ðən ðə ˈʌndəɡraʊnd. ˈwɔːkɪŋ ɪz ˈsləʊər ðən ˈsaɪklɪŋ/",
+                "expectedKeywords": [
+                  "faster",
+                  "than",
+                  "more expensive",
+                  "slower",
+                  "cycling"
+                ],
+                "hint": "Short adjectives add '-er': fast → faster, slow → slower. Long adjectives use 'more': expensive → more expensive. Always use 'than' after the comparative.",
+                "explanation": "Comparative adjectives follow two patterns: short adjectives add '-er' (cheaper, faster, slower) and long adjectives use 'more' before them (more expensive, more comfortable). The word 'than' connects the two things you are comparing."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Syllable Stress Shift Drill",
+                "instruction": "Practise the stress shift between base adjectives and their comparative forms. Pay attention to which syllable is stressed in each word.",
+                "audioPrompt": "Listen and repeat. Notice where the stress falls: 'COMfortable' becomes 'more COMfortable'. 'exPENsive' becomes 'more exPENsive'. 'CONvenient' becomes 'more CONvenient'.",
+                "targetSentence": "Comfortable. More comfortable. Expensive. More expensive. Convenient. More convenient.",
+                "phonetic": "/ˈkʌmftəbl. mɔːr ˈkʌmftəbl. ɪkˈspensɪv. mɔːr ɪkˈspensɪv. kənˈviːniənt. mɔːr kənˈviːniənt/",
+                "expectedKeywords": [
+                  "comfortable",
+                  "more comfortable",
+                  "expensive",
+                  "more expensive",
+                  "convenient",
+                  "more convenient"
+                ],
+                "hint": "The word 'more' is unstressed and quick. The main stress stays on the same syllable as the base adjective: COM-fort-able, ex-PEN-sive, con-VE-nient. Do not shift the stress when you add 'more'.",
+                "explanation": "When we form comparatives with 'more', the stress pattern of the adjective does not change. The word 'more' is said quickly and lightly. This is different from short adjectives where we add '-er' directly. Practising this helps you sound natural and clear."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Rising / Falling Intonation Drill",
+                "instruction": "Practise the correct intonation patterns for travel questions. Yes/no questions use rising intonation. Information questions with 'what', 'which', 'where', and 'how' use falling intonation.",
+                "audioPrompt": "Practise these questions with the correct intonation. Rising: 'Is this the right platform?' 'Does this bus go to the centre?' Falling: 'What time does the train leave?' 'Where is the bus stop?'",
+                "targetSentence": "Is this the right platform? Does this bus go to the centre? What time does the train leave? Where is the bus stop?",
+                "phonetic": "/ɪz ðɪs ðə raɪt ˈplætfɔːm↗. dʌz ðɪs bʌs ɡəʊ tə ðə ˈsentər↗. wɒt taɪm dʌz ðə treɪn liːv↘. weər ɪz ðə bʌs stɒp↘/",
+                "expectedKeywords": [
+                  "platform",
+                  "bus",
+                  "centre",
+                  "what time",
+                  "train",
+                  "bus stop"
+                ],
+                "hint": "For 'Is this...?' and 'Does this...?' your voice goes UP at the end ↗. For 'What time...?' and 'Where is...?' your voice goes DOWN at the end ↘. Practise exaggerating the rise and fall at first, then make it more natural.",
+                "explanation": "Intonation helps your listener understand whether you are asking a yes/no question or an information question. Rising intonation on yes/no questions signals that you expect a 'yes' or 'no' answer. Falling intonation on 'wh-' questions signals that you want specific information. Getting this right makes your English sound much more natural."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

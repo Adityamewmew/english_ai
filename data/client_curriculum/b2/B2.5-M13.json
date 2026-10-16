@@ -1,0 +1,199 @@
+{
+  "id": "B2.5-M13",
+  "levelId": "B2.5",
+  "title": "Ujian Kelulusan B2.5: Evaluasi Komprehensif Nuanced Persuasion & Bridge to C1",
+  "cefr": "B2",
+  "group": "Graduation Assessment",
+  "objective": "Evaluasi akhir level B2: menguji penguasaan mixed conditionals, cleft sentences, retorika persuasif, dan register formal.",
+  "complexity": "deep",
+  "estimatedMinutes": 15,
+  "isExam": true,
+  "passingScore": 70,
+  "orderIndex": 65,
+  "sections": {
+    "theory": {
+      "summary": "Modul ini merupakan ujian kelulusan B2.5 yang mengintegrasikan seluruh kompetensi tingkat tinggi yang telah Anda pelajari. Fokus utama mencakup mixed conditionals untuk mengekspresikan situasi hipotetis dengan waktu yang berbeda, cleft sentences untuk penekanan retoris yang dramatis, serta strategi persuasi halus yang menjadi jembatan menuju kompetensi C1. Penguasaan register formal dan kemampuan berbahasa dengan nuansa akurat menjadi penanda kesiapan Anda untuk melangkah ke level lanjut.",
+      "rules": [
+        {
+          "pattern": "If + past perfect, would + be + -ing (Third-to-Second Mixed Conditional)",
+          "meaning": "Menyatakan situasi di mana kondisi di masa lalu (yang tidak terjadi) memiliki konsekuensi imajiner di masa kini",
+          "example": "If she had accepted the promotion, she would be running the department now."
+        },
+        {
+          "pattern": "If + past simple, would have + past participle (Second-to-Third Mixed Conditional)",
+          "meaning": "Menyatakan situasi di mana kondisi hipotetis di masa kini memiliki konsekuensi yang berbeda di masa lalu",
+          "example": "If I were more patient, I would have finished the project by the deadline."
+        },
+        {
+          "pattern": "It + be + focused element + that/who + rest of sentence (It-Cleft for Emphasis)",
+          "meaning": "Struktur untuk memberikan penekanan dramatis pada elemen tertentu dalam kalimat, sering digunakan dalam retorika persuasif",
+          "example": "It was the CEO herself who approved the unprecedented policy change."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Kebingungan Tense dalam Mixed Conditionals",
+        "explanation": "Pembelajar sering mencocokkan tense di kedua klausa (past-past atau perfect-perfect), namun mixed conditionals justru membutuhkan ketidakcocokan tense yang disengaja untuk menunjukkan pergeseran waktu antara kondisi dan konsekuensi.",
+        "wrong": "If he had studied harder, he would have passed the exam now.",
+        "correct": "If he had studied harder, he would be passing the exam now."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah kalimat yang menggunakan struktur mixed conditional third-to-second dengan benar?",
+          "options": [
+            "If they had invested earlier, they would be enjoying substantial returns today.",
+            "If they had invested earlier, they would have enjoyed substantial returns today.",
+            "If they invested earlier, they would be enjoying substantial returns today."
+          ],
+          "correctIndex": 0,
+          "explanation": "Klausa if menggunakan past perfect (had invested) untuk kondisi di masa lalu, sedangkan klausa utama menggunakan would + be + -ing untuk konsekuensi imajiner di masa kini. Ini adalah pola third-to-second yang tepat."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Identifikasi kesalahan dalam kalimat berikut: 'If I was more experienced, I would have handled the negotiations differently last month.'",
+          "options": [
+            "Was seharusnya diganti dengan had been untuk konsistensi tense",
+            "Was seharusnya diganti dengan were untuk subjunctive mood yang benar",
+            "Would have handled seharusnya diganti dengan would handle untuk mixed conditional"
+          ],
+          "correctIndex": 1,
+          "explanation": "Dalam conditional clause yang menyatakan situasi hipotetis di masa kini, was harus diganti dengan were (subjunctive). Kalimat ini sebenarnya sudah merupakan mixed conditional second-to-third yang valid jika diperbaiki menjadi 'If I were more experienced...'"
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Dalam presentasi persuasif kepada dewan direksi, Anda ingin menekankan bahwa kegagalan proyek semata-mata disebabkan oleh keputusan CFO, bukan faktor eksternal. Pilih kalimat cleft yang paling efektif:",
+          "options": [
+            "It was the CFO's decision that caused the project to fail, not external factors.",
+            "It was the CFO who made the decision that ultimately doomed the project.",
+            "What caused the project failure was the CFO's unilateral decision."
+          ],
+          "correctIndex": 2,
+          "explanation": "Wh-cleft (What-caused...) memberikan penekanan yang lebih kuat dan formal pada penyebab spesifik, sangat cocok untuk konteks persuasif tingkat eksekutif. Struktur ini mengisolasi elemen yang ditekan di posisi akhir kalimat untuk dampak maksimal."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "unprecedented",
+        "translation": "tanpa preseden; belum pernah terjadi sebelumnya",
+        "example": "The company faced unprecedented challenges during the global supply chain crisis.",
+        "context": "Digunakan dalam konteks bisnis dan akademik untuk menggambarkan situasi yang sangat jarang atau unik"
+      },
+      {
+        "word": "contention",
+        "translation": "perdebatan; perselisihan pendapat",
+        "example": "The main point of contention among the board members was the proposed merger.",
+        "context": "Sering digunakan dalam diskusi formal dan negosiasi untuk menggambarkan area ketidaksepakatan"
+      },
+      {
+        "word": "inadvertently",
+        "translation": "tanpa sengaja; tidak disengaja",
+        "example": "The spokesperson inadvertently revealed confidential information during the press conference.",
+        "context": "Berguna untuk menjelaskan kesalahan atau tindakan yang tidak disengaja dalam konteks profesional"
+      },
+      {
+        "word": "mitigate",
+        "translation": "mengurangi; meredakan (dampak negatif)",
+        "example": "We must implement strategies to mitigate the risks associated with market volatility.",
+        "context": "Kata kunci dalam manajemen risiko dan komunikasi bisnis formal"
+      },
+      {
+        "word": "warrant",
+        "translation": "membenarkan; memberi alasan untuk",
+        "example": "The severity of the situation warrants immediate intervention from senior management.",
+        "context": "Digunakan dalam argumentasi persuasif untuk menjustifikasi tindakan yang diusulkan"
+      },
+      {
+        "word": "substantiate",
+        "translation": "membuktikan; memberikan bukti untuk",
+        "example": "The research team failed to substantiate their claims with empirical evidence.",
+        "context": "Esensial dalam diskursus akademik dan profesional yang menuntut bukti solid"
+      }
+    ],
+    "dialogue": {
+      "context": "Pertemuan krisis di kantor consulat sebuah perusahaan multinasional. Alex, Regional Director, berdiskusi dengan Morgan, Legal Counsel, tentang potensi pelanggaran compliance yang terungkap dalam audit internal. Keduanya menggunakan register formal dengan nuansa persuasif untuk membahas opsi dan konsekuensi.",
+      "lines": [
+        {
+          "speaker": "Alex",
+          "text": "Had we implemented the revised compliance protocols last quarter, we wouldn't be facing this level of regulatory scrutiny now.",
+          "translation": "Kalau kita menerapkan protokol compliance yang direvisi kuartal lalu, kita tidak akan menghadapi pengawasan regulatori setingkat ini sekarang."
+        },
+        {
+          "speaker": "Morgan",
+          "text": "It's worth noting, however, that the board's reluctance stemmed from legitimate concerns about operational disruption.",
+          "translation": "Namun perlu dicatat bahwa keengganan dewan berasal dari kekhawatiran yang sah tentang gangguan operasional."
+        },
+        {
+          "speaker": "Alex",
+          "text": "What concerns me most is not the past indecision, but rather the potential reputational damage if these findings become public.",
+          "translation": "Yang paling mengkhawatirkan saya bukanlah keraguan di masa lalu, melainkan potensi kerusakan reputasi jika temuan ini menjadi publik."
+        },
+        {
+          "speaker": "Morgan",
+          "text": "If we were to proactively disclose the irregularities, we might mitigate the fallout significantly. It was the transparency approach that saved our competitor in a similar situation.",
+          "translation": "Jika kita secara proaktif mengungkapkan ketidakberesan ini, kita mungkin bisa mengurangi dampaknya secara signifikan. Pendekatan transparansi itulah yang menyelamatkan kompetitor kita dalam situasi serupa."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Meyakinkan audiens eksekutif dengan argumen persuasif yang menggunakan mixed conditionals dan cleft sentences untuk menjustifikasi rekomendasi strategis.",
+      "scenario": "Anda adalah Senior Consultant yang harus mempresentasikan rekomendasi restrukturisasi kepada Board of Directors. Gunakan minimal dua mixed conditionals dan satu cleft sentence dalam argumentasi Anda. Sertakan vocabulary dari modul ini (unprecedented, contention, inadvertently, mitigate, warrant, substantiate) secara alami dalam presentasi 2-3 menit."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Complete the mixed conditional: 'If the research team _____ more thorough in their analysis, the flawed conclusions would not have influenced the strategic decision.'",
+          "options": [
+            "had been",
+            "were",
+            "was",
+            "has been"
+          ],
+          "correctIndex": 1,
+          "explanation": "Ini adalah mixed conditional second-to-third. Kondisi hipotetis di masa kini (were more thorough) berhubungan dengan konsekuensi di masa lalu (would not have influenced). Subjunctive 'were' adalah bentuk yang benar untuk subjek plural/singular dalam conditional."
+        },
+        {
+          "id": 2,
+          "prompt": "Pilih kalimat cleft yang paling tepat untuk menekankan bahwa bukan harga, melainkan kualitas layanan yang menjadi faktor utama keputusan pembelian klien korporat:",
+          "options": [
+            "It was the quality of service that was the main factor in the client's decision.",
+            "It was not the price but the quality of service that determined the client's decision.",
+            "What made the client decide was the quality of service, not the price.",
+            "It was the quality of service, not the price, that was the determining factor."
+          ],
+          "correctIndex": 1,
+          "explanation": "Struktur 'It was not X but Y that...' memberikan kontras eksplisit yang sangat efektif dalam konteks persuasif formal. Ini menempatkan penekanan ganda sekaligus mengklarifikasi kesalahpahaman potensial tentang motivasi klien."
+        },
+        {
+          "id": 3,
+          "prompt": "Dalam konteks negosiasi kontrak, manakah penggunaan kata 'warrant' yang paling tepat secara gramatikal dan pragmatik?",
+          "options": [
+            "The situation warrants that we should reconsider our position.",
+            "The situation warrants us to reconsider our position.",
+            "The situation warrants reconsideration of our position.",
+            "The situation is warranting a reconsideration of our position."
+          ],
+          "correctIndex": 2,
+          "explanation": "'Warrant' sebagai verb transitif langsung mengambil objek noun phrase (reconsideration of our position). Opsi pertama menggunakan that-clause yang tidak idiomatic, opsi kedua salah karena warrant tidak mengambil objek + infinitive, dan opsi keempat menggunakan continuous tense yang tidak natural untuk verb stative dalam konteks formal."
+        },
+        {
+          "id": 4,
+          "prompt": "Identifikasi manakah yang BUKAN merupakan karakteristik bahasa pada level C1 yang menjadi target transisi dari B2.5:",
+          "options": [
+            "Penggunaan secara sadar dan tepat dari berbagai register sesuai konteks sosial",
+            "Penguasaan idiom dan ekspresi figuratif yang digunakan secara spontan",
+            "Kemampuan mengoreksi kesalahan sendiri secara real-time selama produksi bahasa",
+            "Penggunaan struktur kalimat kompleks dengan akurasi konsisten dalam semua situasi"
+          ],
+          "correctIndex": 3,
+          "explanation": "Pada level C1, pengguna bahasa masih dapat membuat kesalahan minor dalam situasi yang sangat kompleks atau sangat formal, meskipun mereka mampu mengoreksi diri. Akurasi konsisten dalam semua situasi adalah karakteristik level C2, bukan C1. Tiga opsi lain adalah ciri khas C1."
+        }
+      ]
+    }
+  }
+}

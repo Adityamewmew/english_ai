@@ -1,0 +1,199 @@
+{
+  "id": "B2.4-M03",
+  "levelId": "B2.4",
+  "title": "Unit 3: Interpreting Academic Research Data & Charts",
+  "cefr": "B2",
+  "group": "Research & Statistics",
+  "objective": "Mampu menganalisis data survei, grafik batang, dan tren demografis dengan bahasa deskriptif akademis presisi.",
+  "complexity": "deep",
+  "estimatedMinutes": 15,
+  "isExam": false,
+  "passingScore": 70,
+  "orderIndex": 42,
+  "sections": {
+    "theory": {
+      "summary": "Dalam modul ini, kamu akan belajar bagaimana mendeskripsikan dan menganalisis data penelitian akademis — termasuk survei, grafik batang (bar charts), dan tren demografis — menggunakan bahasa Inggris akademis yang presisi. Kemampuan ini sangat penting di level B2 karena kamu diharapkan mampu membaca grafik, mengidentifikasi tren (naik, turun, stabil), membandingkan data antar kategori, dan menyampaikan temuan secara objektif. Kamu akan menguasai struktur kalimat pasif akademis, frasa perbandingan data, serta kosakata statistik yang umum digunakan dalam laporan penelitian dan presentasi akademis. Fokus utama adalah pada akurasi deskripsi (bukan opini), penggunaan hedging language (bahasa kehati-hatian), dan transisi logis antar data.",
+      "rules": [
+        {
+          "pattern": "Subject + showed / revealed / indicated + that + clause",
+          "meaning": "Digunakan untuk melaporkan temuan data secara objektif dan akademis, seperti 'Data menunjukkan bahwa...'",
+          "example": "The survey results revealed that 68% of respondents preferred online learning over traditional classroom settings."
+        },
+        {
+          "pattern": "There was a + adjective (significant/slight/steady/sharp) + noun (increase/decrease/rise/fall/decline) + in + noun + from X to Y",
+          "meaning": "Digunakan untuk mendeskripsikan perubahan tren dalam grafik atau data statistik, misalnya 'Terjadi kenaikan tajam dalam...'",
+          "example": "There was a significant increase in unemployment rates from 2019 to 2021, rising from 4.2% to 9.8%."
+        },
+        {
+          "pattern": "The data suggests / The findings suggest + that + clause (hedging language)",
+          "meaning": "Digunakan untuk menyampaikan interpretasi data secara hati-hati tanpa klaim absolut — ini adalah ciri khas penulisan akademis yang menghindari generalisasi berlebihan",
+          "example": "The data suggests that younger demographics are more likely to adopt renewable energy solutions, although further research is needed."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Mencampurkan Fakta Data dengan Opini Pribadi",
+        "explanation": "Banyak pelajar B2 menulis kalimat seperti 'I think the graph shows...' atau 'In my opinion, the data proves...' saat mendeskripsikan grafik. Dalam penulisan akademis, deskripsi data harus objektif. Gunakan subjek seperti 'The chart', 'The data', 'The findings' — bukan 'I'. Selain itu, hindari kata 'proves' (terlalu absolut) dan gunakan 'suggests' atau 'indicates' sebagai hedging.",
+        "wrong": "I think the graph proves that students don't like homework.",
+        "correct": "The graph indicates that a majority of students reported a negative attitude towards homework assignments."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah kalimat yang menggunakan struktur deskripsi data akademis yang benar?",
+          "options": [
+            "The bar chart reveals that expenditure on healthcare doubled between 2010 and 2020.",
+            "I saw the bar chart and I think healthcare spending went up a lot.",
+            "The bar chart is very interesting because healthcare costs are expensive."
+          ],
+          "correctIndex": 0,
+          "explanation": "Kalimat pertama menggunakan struktur akademis yang tepat: subjek data ('The bar chart') + kata kerja pelaporan ('reveals') + klausa objektif dengan angka spesifik. Kalimat kedua terlalu subjektif ('I think'), dan kalimat ketiga memberikan opini, bukan deskripsi data."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Kalimat mana yang menghindari jebakan umum (common trap) dalam penulisan akademis tentang data?",
+          "options": [
+            "The results prove beyond doubt that social media causes depression in teenagers.",
+            "The findings suggest that there may be a correlation between social media usage and reported levels of anxiety among teenagers.",
+            "In my opinion, the survey shows that social media is definitely bad for teenagers."
+          ],
+          "correctIndex": 1,
+          "explanation": "Kalimat kedua menggunakan hedging language ('suggest', 'may be', 'correlation') yang tepat untuk penulisan akademis. Kalimat pertama terlalu absolut ('prove beyond doubt', 'causes'), dan kalimat ketiga menggunakan opini pribadi ('In my opinion', 'definitely bad') yang tidak sesuai dengan deskripsi data akademis."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Dalam presentasi akademis, temanmu berkata: 'The pie chart shows the distribution of energy sources in 2023. Solar energy accounts for 15%, while coal [...].' Lengkapi kalimat tersebut dengan respons yang paling tepat.",
+          "options": [
+            "is really bad and should be banned immediately",
+            "represents approximately 32%, making it the largest single source",
+            "was used by some countries but I'm not sure how much"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pilihan kedua melanjutkan deskripsi data secara objektif dengan menyebutkan persentase spesifik dan perbandingan ('the largest single source'). Pilihan pertama adalah opini, bukan deskripsi data. Pilihan ketiga terlalu tidak pasti dan tidak memberikan data konkret."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "demographic",
+        "translation": "demografis; kelompok populasi berdasarkan karakteristik tertentu",
+        "example": "The study focused on the 18–25 demographic to understand youth spending habits.",
+        "context": "Digunakan dalam laporan penelitian untuk merujuk pada segmen populasi tertentu berdasarkan usia, jenis kelamin, pendapatan, dll."
+      },
+      {
+        "word": "correlation",
+        "translation": "korelasi; hubungan antara dua variabel",
+        "example": "The researchers found a strong correlation between exercise frequency and reported well-being.",
+        "context": "Istilah statistik yang menunjukkan hubungan antar variabel — penting: korelasi tidak berarti sebab-akibat (causation)."
+      },
+      {
+        "word": "fluctuate",
+        "translation": "berfluktuasi; naik turun secara tidak teratur",
+        "example": "Oil prices fluctuated dramatically throughout the first quarter of 2024.",
+        "context": "Digunakan untuk mendeskripsikan data pada grafik garis yang menunjukkan pergerakan naik-turun yang tidak stabil."
+      },
+      {
+        "word": "proportion",
+        "translation": "proporsi; bagian dari keseluruhan",
+        "example": "A significant proportion of the participants — nearly 40% — reported experiencing burnout at work.",
+        "context": "Sering digunakan saat mendeskripsikan pie chart atau distribusi persentase dalam survei."
+      },
+      {
+        "word": "account for",
+        "translation": "menyumbang; merupakan bagian dari (persentase)",
+        "example": "Renewable energy sources accounted for 29% of global electricity generation in 2023.",
+        "context": "Phrasal verb akademis yang sangat umum digunakan saat menjelaskan kontribusi suatu kategori terhadap total data."
+      },
+      {
+        "word": "plateau",
+        "translation": "mendatar; mencapai titik stabil setelah naik/turun",
+        "example": "After a rapid increase in the early 2000s, internet adoption rates plateaued around 2015.",
+        "context": "Digunakan untuk mendeskripsikan bagian grafik di mana garis menjadi datar, menunjukkan tidak ada perubahan signifikan."
+      }
+    ],
+    "dialogue": {
+      "context": "Alex dan Morgan adalah mahasiswa yang sedang mempersiapkan presentasi kelompok tentang hasil survei penggunaan transportasi publik di kota mereka. Mereka sedang mendiskusikan data dari grafik batang dan tabel survei di perpustakaan kampus.",
+      "lines": [
+        {
+          "speaker": "Alex",
+          "text": "Okay, so I've been looking at the bar chart on public transport usage. The data shows that bus ridership declined by approximately 18% between 2019 and 2022.",
+          "translation": "Oke, jadi aku sudah melihat grafik batang tentang penggunaan transportasi publik. Data menunjukkan bahwa jumlah penumpang bus menurun sekitar 18% antara 2019 dan 2022."
+        },
+        {
+          "speaker": "Morgan",
+          "text": "That's consistent with the survey findings. The results indicate that the main reasons cited by respondents were safety concerns and the shift to remote work. Interestingly, cycling accounted for the largest increase — up by 25%.",
+          "translation": "Itu konsisten dengan temuan survei. Hasilnya menunjukkan bahwa alasan utama yang disebutkan responden adalah kekhawatiran keamanan dan peralihan ke kerja jarak jauh. Menariknya, bersepeda menyumbang kenaikan terbesar — naik 25%."
+        },
+        {
+          "speaker": "Alex",
+          "text": "Right. And if we look at the demographic breakdown, the 18-to-30 age group showed the most significant shift towards cycling, while the over-50 demographic remained relatively stable in their use of private cars.",
+          "translation": "Benar. Dan kalau kita lihat rincian demografisnya, kelompok usia 18 hingga 30 tahun menunjukkan pergeseran paling signifikan ke bersepeda, sementara kelompok demografis di atas 50 tahun relatif stabil dalam penggunaan mobil pribadi."
+        },
+        {
+          "speaker": "Morgan",
+          "text": "So for our conclusion, I think we should say something like: 'The data suggests that urban transport preferences are shifting, particularly among younger demographics, although it would be premature to conclude that this trend will continue post-pandemic without further longitudinal data.'",
+          "translation": "Jadi untuk kesimpulan kita, menurutku kita harus mengatakan sesuatu seperti: 'Data menunjukkan bahwa preferensi transportasi perkotaan sedang bergeser, terutama di kalangan demografis yang lebih muda, meskipun terlalu dini untuk menyimpulkan bahwa tren ini akan berlanjut pasca-pandemi tanpa data longitudinal lebih lanjut.'"
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Mampu mendeskripsikan grafik batang dan data survei secara lisan menggunakan bahasa akademis yang objektif, termasuk hedging language dan perbandingan antar kategori data.",
+      "scenario": "You are presenting the results of a student satisfaction survey at your university to a panel of faculty members. The survey covered 500 students across four faculties. You have a bar chart showing satisfaction levels (Very Satisfied, Satisfied, Neutral, Dissatisfied) and a table showing the top three complaints by faculty. Describe the key trends, compare the data across faculties, and present a cautious conclusion using appropriate hedging language. Remember: do not give personal opinions — only describe and interpret what the data shows."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Pilih kalimat yang paling tepat untuk mendeskripsikan tren penurunan dalam grafik akademis:",
+          "options": [
+            "There was a steady decline in enrollment figures from 2018 to 2023, dropping from 12,000 to 8,500.",
+            "Enrollment went down a lot and it was really bad for the university.",
+            "I believe enrollment decreased because the university is not good enough.",
+            "Enrollment numbers are falling and something must be done about it immediately."
+          ],
+          "correctIndex": 0,
+          "explanation": "Pilihan A menggunakan bahasa akademis yang tepat: 'steady decline', angka spesifik, dan deskripsi objektif. Pilihan B terlalu informal ('a lot', 'really bad'). Pilihan C menggunakan opini pribadi ('I believe', 'not good enough'). Pilihan D bersifat persuasif/opini, bukan deskriptif."
+        },
+        {
+          "id": 2,
+          "prompt": "Which sentence correctly uses hedging language when interpreting research data?",
+          "options": [
+            "The experiment proves that caffeine definitely improves concentration.",
+            "The findings suggest that caffeine consumption may be associated with improved concentration levels in controlled settings.",
+            "Caffeine obviously makes people concentrate better, as everyone knows.",
+            "Based on my experience, caffeine always helps with concentration."
+          ],
+          "correctIndex": 1,
+          "explanation": "Pilihan B menggunakan hedging language yang tepat: 'suggest', 'may be associated with', dan 'in controlled settings' menunjukkan kehati-hatian akademis. Pilihan A terlalu absolut ('proves', 'definitely'). Pilihan C menggunakan generalisasi ('obviously', 'everyone knows'). Pilihan D berdasarkan pengalaman pribadi, bukan data."
+        },
+        {
+          "id": 3,
+          "prompt": "Apa arti frasa 'account for' dalam konteks berikut: 'Fossil fuels account for 61% of total energy production'?",
+          "options": [
+            "Menjelaskan alasan mengapa bahan bakar fosil digunakan",
+            "Menghitung jumlah bahan bakar fosil yang tersedia",
+            "Menyumbang atau merupakan 61% dari total produksi energi",
+            "Bertanggung jawab atas masalah 61% produksi energi"
+          ],
+          "correctIndex": 2,
+          "explanation": "Dalam konteks data dan statistik, 'account for' berarti 'menyumbang' atau 'merupakan bagian dari' suatu total. Jadi kalimat tersebut berarti bahan bakar fosil merupakan 61% dari total produksi energi. Ini berbeda dari makna 'account for' sebagai 'menjelaskan alasan' dalam konteks lain."
+        },
+        {
+          "id": 4,
+          "prompt": "Perhatikan kalimat berikut: 'After rising sharply in Q1, sales _______ throughout Q2 and Q3 before declining again in Q4.' Kata mana yang paling tepat mengisi bagian kosong?",
+          "options": [
+            "increased",
+            "fluctuated",
+            "correlated",
+            "plateaued"
+          ],
+          "correctIndex": 3,
+          "explanation": "Kata 'plateaued' (mendatar/stabil) paling tepat karena konteks kalimat menunjukkan penjualan naik tajam di Q1, lalu stabil di Q2 dan Q3, sebelum turun lagi di Q4. 'Increased' tidak cocok karena setelah naik tajam, data tidak terus naik. 'Fluctuated' berarti naik-turun tidak teratur. 'Correlated' berarti berhubungan dengan variabel lain, bukan mendeskripsikan bentuk grafik."
+        }
+      ]
+    }
+  }
+}

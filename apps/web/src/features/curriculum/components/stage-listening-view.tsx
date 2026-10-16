@@ -6,12 +6,12 @@ import { playPopSound } from "@/lib/sound-fx";
 import { ListeningOverviewStage } from "./listening-overview-stage";
 import { ListeningDialogueChat } from "./listening-dialogue-chat";
 import { ListeningPracticumStage } from "./listening-practicum-stage";
-import { ConceptChecksCard } from "./concept-checks-card";
 
 interface StageListeningViewProps {
   activeStepId: number;
   theorySec?: any;
   dialogueSec: any;
+  practiceSec?: any;
   quizSec?: any;
   tutor: any;
   onRewardXp: (amount: number) => void;
@@ -23,13 +23,13 @@ export function StageListeningView({
   activeStepId,
   theorySec,
   dialogueSec,
+  practiceSec,
   quizSec,
   tutor,
   onRewardXp,
   onNextStep,
 }: StageListeningViewProps) {
   const dialogueLines = dialogueSec?.content?.lines || [];
-  const quizQuestions = quizSec?.content?.questions || [];
 
   // Local state for Step 4 Dictation
   const [dictationAnswers, setDictationAnswers] = useState<Record<number, string>>({});
@@ -52,12 +52,13 @@ export function StageListeningView({
           fast: kp.fast || kp.phrase || "Connected form",
           slowIpa: kp.slowIpa || "",
           fastIpa: kp.fastIpa || "",
-          note: kp.meaning ? `${kp.meaning} (${kp.note || "Konteks lisan"})` : kp.note || "",
+          note: kp.note || kp.meaning || "",
         }));
 
   const dictationDrills =
-    dialogueLines.length > 0
-      ? dialogueLines.slice(0, 4).map((line: any, idx: number) => {
+    practiceSec?.content?.drills && practiceSec.content.drills.length > 0
+      ? practiceSec.content.drills
+      : dialogueLines.slice(0, 4).map((line: any, idx: number) => {
           const lineText = line.text || line.en || "";
           const words = lineText.trim().split(" ");
           const targetWord = words[words.length - 1].replace(/[.,?!]/g, "");
@@ -66,10 +67,9 @@ export function StageListeningView({
             prompt: `${line.speaker || "Speaker"}: "${lineText.replace(targetWord, "_____")}"`,
             audio: lineText,
             target: targetWord.toLowerCase(),
-            hint: `Dengarkan kata terakhir yang diucapkan oleh ${line.speaker || "pembicara"}`,
+            hint: "Listen to the sentence and type the target word.",
           };
-        })
-      : [];
+        });
 
   return (
     <div className="space-y-6">
@@ -289,26 +289,15 @@ export function StageListeningView({
         </div>
       )}
 
-      {/* LANGKAH 5: 10 Soal Praktikum Menyimak (Susun Kata, Dikte, Benar/Salah) */}
+      {/* LANGKAH 5: 10 Soal Praktikum Menyimak (Dikte Audio & Susun Kalimat - No MCQ) */}
       {activeStepId === 5 && (
-        quizQuestions.length > 0 ? (
-          <div className="space-y-4 animate-in fade-in duration-300">
-            <div className="space-y-1">
-              <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-                Step 5 · Listening Comprehension ({quizQuestions.length} Questions)
-              </span>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-                {quizSec?.title || "Audio Listening Assessment"}
-              </h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300">
-                Dengarkan rekaman audio dan jawab pertanyaan pemahaman berikut:
-              </p>
-            </div>
-            <ConceptChecksCard conceptChecks={quizQuestions} accentColor="blue" embedded={true} />
-          </div>
-        ) : (
-          <ListeningPracticumStage quizSec={quizSec} tutor={tutor} onRewardXp={onRewardXp} />
-        )
+        <ListeningPracticumStage
+          quizSec={quizSec}
+          practiceSec={practiceSec}
+          tutor={tutor}
+          onRewardXp={onRewardXp}
+          onFinish={() => onNextStep?.()}
+        />
       )}
     </div>
   );

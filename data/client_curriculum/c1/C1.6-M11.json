@@ -1,0 +1,199 @@
+{
+  "id": "C1.6-M11",
+  "levelId": "C1.6",
+  "title": "Unit 11: Drafting Non-Disclosure Agreements & Strategic Escapes",
+  "cefr": "C1",
+  "group": "Contractual Strategy",
+  "objective": "Mampu menganalisis celah klausul pengecualian dalam perjanjian kerahasiaan dan klausul force majeure.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": false,
+  "passingScore": 75,
+  "orderIndex": 76,
+  "sections": {
+    "theory": {
+      "summary": "Dalam penyusunan kontrak tingkat lanjut seperti Non-Disclosure Agreements (NDA) dan klausul Force Majeure, penguasaan 'Attitude Adverbials' dan 'Dependent Prepositions' sangat krusial. Adverbia sikap (seperti 'strictly speaking', 'fundamentally') berfungsi untuk menetapkan batasan interpretasi hukum dan memproyeksikan posisi retoris drafter. Sementara itu, preposisi terikat (seperti 'subject to', 'exempt from', 'resort to') membentuk fondasi kewajiban dan pengecualian yang tidak dapat diganggu gugat. Kesalahan kecil dalam pemilihan preposisi atau penempatan koma pada adverbia dapat menciptakan celah hukum (loophole) yang fatal dalam litigasi komersial.",
+      "rules": [
+        {
+          "pattern": "Attitude Adverbial + Comma + Main Legal Clause",
+          "meaning": "Menetapkan konteks, batasan, atau penekanan interpretasi hukum secara absolut di awal kalimat.",
+          "example": "Strictly speaking, any information derived from the proprietary software falls under the purview of this non-disclosure agreement."
+        },
+        {
+          "pattern": "Verb / Adjective / Noun + Specific Dependent Preposition",
+          "meaning": "Mengikat subjek hukum pada kondisi, pengecualian, atau tindakan spesifik tanpa ambiguitas (misal: attribute to, subject to, exempt from).",
+          "example": "The Receiving Party shall not resort to reverse engineering, nor shall they be exempt from liability should a breach occur."
+        },
+        {
+          "pattern": "Subject + Auxiliary + Comma + Attitude Adverbial + Comma + Main Verb",
+          "meaning": "Memberikan penekanan spesifik (nuansa register tinggi) pada frasa kerja dalam klausul tanpa mengubah struktur utama kalimat.",
+          "example": "The occurrence of a global pandemic shall, fundamentally, be classified as a force majeure event, thereby nullifying the immediate delivery obligations."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Ilusi Preposisi Logis & Penghilangan Koma Adverbial",
+        "explanation": "Pembelajar tingkat lanjut sering menggunakan preposisi yang terdengar logis secara umum tetapi keliru secara leksikon hukum (misal: menggunakan 'subjected to' yang bermakna dipaksa, alih-alih 'subject to' yang bermakna tunduk pada aturan). Selain itu, mereka sering menghilangkan koma saat menyisipkan attitude adverbial di tengah kalimat, yang secara sintaksis dapat mengaburkan subjek hukum dan memicu ambiguitas dalam pengadilan.",
+        "wrong": "The contractor is subjected to strict confidentiality and shall fundamentally be held liable for any leaks.",
+        "correct": "The contractor is subject to strict confidentiality and shall, fundamentally, be held liable for any leaks."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Lengkapi klausul Force Majeure berikut dengan preposisi terikat yang tepat: 'The delay in the supply chain was directly attributed [...] the unforeseen natural disaster.'",
+          "options": [
+            "to",
+            "with",
+            "for"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kata kerja 'attribute' (mengaitkan/menyandarkan sebab) selalu berpasangan dengan preposisi 'to' dalam konteks formal dan hukum."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Pilih kalimat dengan penempatan tanda baca pada 'attitude adverbial' yang paling tepat untuk dokumen hukum formal:",
+          "options": [
+            "The disclosing party will theoretically, retain all intellectual property rights.",
+            "The disclosing party will, theoretically, retain all intellectual property rights.",
+            "The disclosing party, will theoretically retain all intellectual property rights."
+          ],
+          "correctIndex": 1,
+          "explanation": "Saat 'attitude adverbial' (theoretically) disisipkan di antara auxiliary verb (will) dan main verb (retain), ia harus diapit oleh dua koma untuk memisahkan komentar retoris dari klausa utama."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Lengkapi klausul NDA berikut: 'Should the receiving party [...] unauthorized disclosure, the injured party may [...] legal action without prior notice.'",
+          "options": [
+            "commit to / rely on",
+            "participate on / apply to",
+            "engage in / resort to"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Engage in' (terlibat dalam) dan 'resort to' (mengambil jalan/tindakan) adalah kolokasi preposisi terikat tingkat C2 yang sangat lazim dalam penyusunan kontrak hukum."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Subject to",
+        "translation": "Tunduk pada / Bergantung pada",
+        "example": "The terms of this non-disclosure agreement are subject to the governing laws of the State of Delaware.",
+        "context": "Digunakan untuk menyatakan kondisi hukum yang mengikat atau hierarki aturan."
+      },
+      {
+        "word": "Resort to",
+        "translation": "Mengambil jalan / Menggunakan (sebagai upaya terakhir)",
+        "example": "The company may resort to litigation if the confidentiality breach is not immediately rectified.",
+        "context": "Digunakan dalam klausul penyelesaian sengketa (dispute resolution)."
+      },
+      {
+        "word": "Exempt from",
+        "translation": "Dikecualikan dari / Dibebaskan dari",
+        "example": "No party shall be exempt from liability in cases of gross negligence or willful misconduct.",
+        "context": "Sangat krusial dalam merumuskan klausul pengecualian (exclusion clauses)."
+      },
+      {
+        "word": "Attribute to",
+        "translation": "Dikaitkan dengan / Disebabkan oleh",
+        "example": "The failure to deliver the assets can be directly attributed to the recent international trade embargo.",
+        "context": "Digunakan untuk menjustifikasi klaim Force Majeure."
+      },
+      {
+        "word": "Strictly speaking",
+        "translation": "Secara tegas / Tepatnya",
+        "example": "Strictly speaking, the definition of 'Confidential Information' does not encompass knowledge already in the public domain.",
+        "context": "Attitude adverbial untuk mempersempit atau menegaskan definisi hukum."
+      },
+      {
+        "word": "Stem from",
+        "translation": "Berasal dari / Timbul akibat",
+        "example": "Any financial damages that stem from this unauthorized disclosure will be calculated comprehensively.",
+        "context": "Digunakan untuk menunjukkan kausalitas dalam tuntutan ganti rugi (liability)."
+      }
+    ],
+    "dialogue": {
+      "context": "Dua pengacara korporat senior, Arthur dan Beatrice, sedang berdebat sengit di ruang rapat firma hukum mengenai draf akhir Non-Disclosure Agreement dan klausul Force Majeure dalam sebuah kesepakatan merger akuisisi bernilai miliaran dolar.",
+      "lines": [
+        {
+          "speaker": "Arthur",
+          "text": "Frankly, Beatrice, your proposed force majeure clause is far too broad. We cannot attribute every minor supply chain disruption to an 'Act of God'.",
+          "translation": "Sejujurnya, Beatrice, usulan klausul force majeure Anda terlalu luas. Kita tidak bisa mengaitkan setiap gangguan kecil pada rantai pasokan sebagai 'Kehendak Tuhan'."
+        },
+        {
+          "speaker": "Beatrice",
+          "text": "As a matter of fact, Arthur, the recent geopolitical shifts necessitate such breadth. Our client will not be subject to penalties for events that stem from international sanctions.",
+          "translation": "Faktanya, Arthur, pergeseran geopolitik baru-baru ini mengharuskan cakupan seluas itu. Klien kami tidak akan tunduk pada penalti untuk peristiwa yang timbul akibat sanksi internasional."
+        },
+        {
+          "speaker": "Arthur",
+          "text": "I understand your position, but strictly speaking, if we agree to this wording, your client could resort to halting production without any real accountability.",
+          "translation": "Saya mengerti posisi Anda, tetapi secara tegas, jika kami menyetujui redaksi ini, klien Anda bisa mengambil jalan menghentikan produksi tanpa akuntabilitas yang nyata."
+        },
+        {
+          "speaker": "Beatrice",
+          "text": "The clause is, fundamentally, designed to protect against catastrophic losses, not to provide a loophole. We can, however, narrow the definition of 'unforeseen events' if you insist.",
+          "translation": "Klausul tersebut, pada dasarnya, dirancang untuk melindungi dari kerugian besar, bukan untuk memberikan celah hukum. Namun, kami bisa mempersempit definisi 'peristiwa tak terduga' jika Anda bersikeras."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Mampu bernegosiasi dan merumuskan ulang klausul pengecualian (exclusion clauses) menggunakan dependent prepositions dan attitude adverbials yang presisi untuk menutup celah hukum.",
+      "scenario": "Anda adalah Penasihat Hukum Utama (Chief Legal Counsel) untuk sebuah perusahaan teknologi multinasional. Anda harus menolak draf NDA dari pihak vendor yang mencoba membebaskan diri mereka dari tanggung jawab kebocoran data (data breach) dengan menggunakan alasan force majeure. Lakukan simulasi negosiasi lisan: gunakan 'attitude adverbials' (misal: frankly, strictly speaking) untuk menegaskan posisi Anda, dan 'dependent prepositions' (misal: exempt from, subject to, resort to) untuk mendefinisikan ulang batasan tanggung jawab mereka di depan dewan arbitrase."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Which sentence correctly utilizes a dependent preposition in a strict legal context?",
+          "options": [
+            "The vendor must comply to the new data protection regulations stipulated in section 4.",
+            "The vendor must comply with the new data protection regulations stipulated in section 4.",
+            "The vendor must comply on the new data protection regulations stipulated in section 4.",
+            "The vendor must comply for the new data protection regulations stipulated in section 4."
+          ],
+          "correctIndex": 1,
+          "explanation": "Kata kerja 'comply' (mematuhi) secara absolut berpasangan dengan preposisi 'with'. Penggunaan 'comply to' adalah kesalahan umum yang sering terjadi pada pembelajar bahasa Inggris."
+        },
+        {
+          "id": 2,
+          "prompt": "Identify the correctly punctuated sentence featuring a mid-sentence attitude adverbial.",
+          "options": [
+            "The defendant was surprisingly, exempt from all charges due to a technicality.",
+            "The defendant was, surprisingly exempt, from all charges due to a technicality.",
+            "The defendant was, surprisingly, exempt from all charges due to a technicality.",
+            "The defendant, was surprisingly exempt from all charges due to a technicality."
+          ],
+          "correctIndex": 2,
+          "explanation": "Attitude adverbial yang disisipkan di tengah kalimat (antara to be/auxiliary dan kata sifat/kata kerja utama) harus diapit oleh dua koma untuk menunjukkan jeda retoris."
+        },
+        {
+          "id": 3,
+          "prompt": "Fill in the blanks to complete the legal argument: 'The financial losses [...] the sudden market crash cannot be entirely [...] the CEO's strategic decisions.'",
+          "options": [
+            "stemming from / attributed to",
+            "resulting to / blamed on",
+            "derived of / accounted for",
+            "arising with / connected to"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Stemming from' (berasal dari) dan 'attributed to' (dikaitkan dengan/disebabkan oleh) adalah pasangan preposisi terikat tingkat C2 yang paling tepat dan presisi untuk konteks hukum kausalitas."
+        },
+        {
+          "id": 4,
+          "prompt": "In the context of an NDA negotiation, what is the rhetorical function of the attitude adverbial in this sentence: 'Theoretically, the algorithm could be reverse-engineered, but practically, it is impossible without the source code.'",
+          "options": [
+            "To express an emotional reaction to the algorithm's complexity.",
+            "To emphasize the absolute certainty of a future data breach.",
+            "To apologize for the lack of security measures in the source code.",
+            "To contrast a hypothetical legal vulnerability with a factual technical impossibility."
+          ],
+          "correctIndex": 3,
+          "explanation": "Penggunaan 'Theoretically' dan 'practically' di sini berfungsi untuk mengontraskan dua sudut pandang: kemungkinan hukum di atas kertas versus kenyataan teknis di lapangan, sebuah teknik retorika tingkat lanjut dalam negosiasi."
+        }
+      ]
+    }
+  }
+}

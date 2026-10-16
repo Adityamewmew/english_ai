@@ -1,0 +1,1616 @@
+{
+  "module": {
+    "id": "A2.3-M03",
+    "levelId": "A2.3",
+    "title": "Modern Digital Habits & Online Cybersecurity Basics",
+    "cefr": "A2",
+    "group": "A2.3 - World Explorations, Stories & Bridge to B1",
+    "objective": "Discuss digital habits, online safety, privacy, and smartphone routines using technology vocabulary.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 3
+  },
+  "subModules": [
+    {
+      "id": "sub-a2-3-m03-reading",
+      "moduleId": "A2.3-M03",
+      "skillType": "reading",
+      "title": "Reading Mission: Smart Digital Habits and Online Safety",
+      "theme": "Modern Digital Habits & Online Cybersecurity Basics",
+      "grammarFocus": "Modal verbs for advice and necessity (should, must, need to) and Present Simple for digital habits",
+      "vocabularyFocus": "Digital habits, passwords, screen time, privacy settings, and cybersecurity terms",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a2-3-m03-r-theory",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to your reading mission. In this lesson, you will read short texts about everyday digital habits and simple online safety rules. You will learn how to protect your personal information, manage your screen time, and understand important security advice using modal verbs and present simple sentences.",
+            "linguisticTarget": {
+              "grammar": "Modal verbs (should, shouldn't, must, need to) for advice and necessity, and Present Simple for daily routines.",
+              "vocabulary": "Digital habits, passwords, screen time, privacy settings, and cybersecurity terms.",
+              "readingStrategy": "Skimming the text for general meaning and scanning for specific security tips or details."
+            },
+            "learningObjectives": [
+              "Understand the main idea of short A2 texts about digital habits.",
+              "Locate specific details such as password rules and screen time limits.",
+              "Recognize and practice grammar patterns with modal verbs and imperatives."
+            ],
+            "contextWarmup": {
+              "prompt": "What is the best way to keep your social media account safe from strangers?",
+              "options": [
+                "Use your birthday as your password",
+                "Keep your privacy settings private and use a strong password",
+                "Share your login details with your best friend"
+              ],
+              "correctIndex": 1,
+              "explanation": "Keeping your privacy settings private and using a strong password protects your personal data from unknown users."
+            },
+            "rules": [
+              "Use should and shouldn't to give friendly advice about online safety, such as you should change your password regularly.",
+              "Use must, mustn't, and need to to express strong rules and necessity, such as you must verify links before clicking.",
+              "Use imperative sentences for direct instructions and warnings, such as never share your password with anyone."
+            ],
+            "commonTrap": {
+              "trapTitle": "Confusing Should and Must",
+              "explanation": "Learners often mix up should and must. Should is for general advice, while must is for strict rules and strong necessity.",
+              "wrong": "You must wear a blue shirt when you log in online.",
+              "correct": "You should use a strong password to protect your accounts."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Modal Verbs",
+            "contractionsSubtitle": "Observe how words merge in everyday English:",
+            "contractions": [
+              {
+                "subject": "You",
+                "verb": "should not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "shouldn't",
+                "exampleFull": "You should not share your password.",
+                "exampleContracted": "You shouldn't share your password."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Modal Verbs",
+              "description": "Assemble sentence blocks to practice rules and advice:",
+              "subjects": [
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "should",
+                  "role": "Second Person"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "protect",
+                  "thirdPerson": "protects",
+                  "continuous": "protecting"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "your personal data online",
+                  "type": "Security Object"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-3-m03-r-vocab",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "password",
+                "ipa": "/ˈpɑːs.wɜːd/",
+                "meaning": "kata sandi",
+                "partOfSpeech": "noun",
+                "exampleSentence": "You should create a strong password with letters and numbers.",
+                "collocation": "create a strong password"
+              },
+              {
+                "word": "screen time",
+                "ipa": "/skriːn taɪm/",
+                "meaning": "waktu menatap layar",
+                "partOfSpeech": "noun",
+                "exampleSentence": "I try to limit my screen time to two hours a day.",
+                "collocation": "limit screen time"
+              },
+              {
+                "word": "privacy settings",
+                "ipa": "/ˈprɪv.ə.si ˈset.ɪŋz/",
+                "meaning": "pengaturan privasi",
+                "partOfSpeech": "noun",
+                "exampleSentence": "You need to check your privacy settings on social media regularly.",
+                "collocation": "check privacy settings"
+              },
+              {
+                "word": "verify",
+                "ipa": "/ˈver.ɪ.faɪ/",
+                "meaning": "memverifikasi, memeriksa kebenaran",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Always verify links before clicking on them.",
+                "collocation": "verify links"
+              },
+              {
+                "word": "scam",
+                "ipa": "/skæm/",
+                "meaning": "penipuan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Be careful of online scams that ask for your personal information.",
+                "collocation": "online scam"
+              },
+              {
+                "word": "attach",
+                "ipa": "/əˈtætʃ/",
+                "meaning": "melampirkan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Don't open attachments from unknown senders.",
+                "collocation": "attach files"
+              },
+              {
+                "word": "suspicious",
+                "ipa": "/səˈspɪʃ.əs/",
+                "meaning": "mencurigakan",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "If an email looks suspicious, delete it immediately.",
+                "collocation": "suspicious email"
+              },
+              {
+                "word": "enable",
+                "ipa": "/ɪˈneɪ.bəl/",
+                "meaning": "mengaktifkan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "You should enable two-factor authentication for better security.",
+                "collocation": "enable security"
+              },
+              {
+                "word": "update",
+                "ipa": "/ʌpˈdeɪt/",
+                "meaning": "memperbarui",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Remember to update your apps and software regularly.",
+                "collocation": "update software"
+              },
+              {
+                "word": "download",
+                "ipa": "/ˌdaʊnˈloʊd/",
+                "meaning": "mengunduh",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Only download files from trusted websites.",
+                "collocation": "download files"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m03-r-guided",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Smart Digital Habits for Everyday Life",
+            "audioUrl": "/audio/modules/a2-3-m03/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Today, teenagers spend a lot of screen time on phones, tablets, and computers. We check social media every morning, chat with friends, and download fun apps. However, being online every day means we need to follow basic cybersecurity rules. Protecting your personal information is very important.",
+              "First, you should create a strong password with letters, numbers, and symbols. Never share your password with anyone, even your friends. Second, check your privacy settings on social media regularly so strangers cannot see your photos. If you receive an email with a strange link or an unknown file to attach, be careful because it might be a scam.",
+              "Finally, always verify links before clicking on them. If an email looks suspicious, delete it immediately. You should also enable two-factor authentication for extra security and remember to update your apps and software regularly to keep your devices safe from online threats."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "Today, teenagers spend a lot of screen time on phones, tablets, and computers.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 4.6,
+                "end": 9,
+                "text": "We check social media every morning, chat with friends, and download fun apps.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 9.1,
+                "end": 14,
+                "text": "First, you should create a strong password with letters, numbers, and symbols.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 14.1,
+                "end": 19,
+                "text": "If you receive an email with a strange link or an unknown file to attach, be careful.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 19.1,
+                "end": 24,
+                "text": "Always verify links before clicking on them and update your apps regularly.",
+                "paragraphIndex": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m03-r-practice",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-r-1",
+                "prompt": "Match the cybersecurity term with its correct definition or example.",
+                "pairs": [
+                  {
+                    "left": "Strong password",
+                    "right": "A mix of letters, numbers, and symbols"
+                  },
+                  {
+                    "left": "Privacy settings",
+                    "right": "Controls who can see your profile and photos"
+                  },
+                  {
+                    "left": "Suspicious email",
+                    "right": "An unexpected message from an unknown sender"
+                  },
+                  {
+                    "left": "Screen time",
+                    "right": "The amount of time spent looking at a device"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m03-r-quiz",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "According to the passage, what do teenagers spend a lot of time doing on phones and computers?",
+                "options": [
+                  "Reading printed books",
+                  "Screen time",
+                  "Playing outdoor sports"
+                ],
+                "answer": "Screen time",
+                "explanation": "The passage states that teenagers spend a lot of screen time on phones, tablets, and computers."
+              },
+              {
+                "id": "q-r-2",
+                "question": "What should your password include to make it strong?",
+                "options": [
+                  "Only your name and birthdate",
+                  "Letters, numbers, and symbols",
+                  "Simple words that are easy to guess"
+                ],
+                "answer": "Letters, numbers, and symbols",
+                "explanation": "Paragraph two advises creating a strong password with letters, numbers, and symbols."
+              },
+              {
+                "id": "q-r-3",
+                "question": "Who can you share your password with?",
+                "options": [
+                  "Your best friend",
+                  "Your parents",
+                  "No one"
+                ],
+                "answer": "No one",
+                "explanation": "The text explicitly states to never share your password with anyone, even your friends."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Why should you check your privacy settings on social media?",
+                "options": [
+                  "So strangers cannot see your photos",
+                  "To download apps faster",
+                  "To make your screen brighter"
+                ],
+                "answer": "So strangers cannot see your photos",
+                "explanation": "Paragraph two mentions checking privacy settings regularly so strangers cannot see your photos."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What should you do if you receive an email with a strange link or file to attach?",
+                "options": [
+                  "Open it immediately",
+                  "Be careful because it might be a scam",
+                  "Send it to all your friends"
+                ],
+                "answer": "Be careful because it might be a scam",
+                "explanation": "The passage warns that an unknown file or strange link might be a scam."
+              },
+              {
+                "id": "q-r-6",
+                "question": "What must you always do before clicking on a link in an email?",
+                "options": [
+                  "Verify the link",
+                  "Delete your account",
+                  "Turn off your computer"
+                ],
+                "answer": "Verify the link",
+                "explanation": "Paragraph three states to always verify links before clicking on them."
+              },
+              {
+                "id": "q-r-7",
+                "question": "What should you do if an email looks suspicious?",
+                "options": [
+                  "Reply to ask questions",
+                  "Delete it immediately",
+                  "Save it in a special folder"
+                ],
+                "answer": "Delete it immediately",
+                "explanation": "The text instructs that if an email looks suspicious, you should delete it immediately."
+              },
+              {
+                "id": "q-r-8",
+                "question": "What security feature should you enable for extra safety?",
+                "options": [
+                  "Two-factor authentication",
+                  "Automatic music player",
+                  "Screen brightness booster"
+                ],
+                "answer": "Two-factor authentication",
+                "explanation": "Paragraph three advises enabling two-factor authentication for extra security."
+              },
+              {
+                "id": "q-r-9",
+                "question": "Why is it important to update your apps and software regularly?",
+                "options": [
+                  "To change the background color",
+                  "To keep your devices safe from online threats",
+                  "To use more battery power"
+                ],
+                "answer": "To keep your devices safe from online threats",
+                "explanation": "The final sentence explains that updating apps and software keeps devices safe from online threats."
+              },
+              {
+                "id": "q-r-10",
+                "question": "What is the main theme of the reading passage?",
+                "options": [
+                  "Online safety and digital habits",
+                  "How to write computer code",
+                  "History of mobile phones"
+                ],
+                "answer": "Online safety and digital habits",
+                "explanation": "The passage discusses daily screen time, passwords, privacy settings, and staying safe online."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-3-m03-listening",
+      "moduleId": "A2.3-M03",
+      "skillType": "listening",
+      "title": "Listening Mission: Staying Safe Online",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a2-3-m03-l-theory",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Develop essential listening skills for understanding conversations about digital habits and cybersecurity. Practice catching key details about online threats, passwords, and screen time while noticing how words connect in spoken English.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about online safety.",
+              "Identify details such as passwords, scams, and screen time.",
+              "Notice how words link together in connected speech."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "phishing scam",
+                "meaning": "penipuan online untuk mencuri data",
+                "note": "Used to describe fraudulent emails trying to steal personal information."
+              },
+              {
+                "phrase": "privacy settings",
+                "meaning": "pengaturan privasi akun",
+                "note": "Controls who can view your profile and photos on social media."
+              },
+              {
+                "phrase": "strong password",
+                "meaning": "kata sandi yang kuat",
+                "note": "A secure combination of letters, numbers, and special symbols."
+              },
+              {
+                "phrase": "screen time",
+                "meaning": "waktu penggunaan layar gadget",
+                "note": "The total amount of time spent looking at a phone or computer screen."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "did you see",
+                "fast": "didya see",
+                "slowIpa": "/dɪd juː siː/",
+                "fastIpa": "/dɪdʒə siː/",
+                "note": "The sound /d/ and /j/ merge into /dʒ/ in fast natural speech."
+              },
+              {
+                "id": 2,
+                "slow": "asked for",
+                "fast": "askfor",
+                "slowIpa": "/æskt fɔːr/",
+                "fastIpa": "/æskt fɔːr/",
+                "note": "Final consonant /t/ links smoothly into the starting consonant /f/."
+              },
+              {
+                "id": 3,
+                "slow": "need a",
+                "fast": "needa",
+                "slowIpa": "/niːd ə/",
+                "fastIpa": "/niːdə/",
+                "note": "The final /d/ in need links directly to the weak vowel in a."
+              },
+              {
+                "id": 4,
+                "slow": "lot of",
+                "fast": "lotov",
+                "slowIpa": "/lɒt ɒv/",
+                "fastIpa": "/lɒtəv/",
+                "note": "The preposition of often reduces to schwa /əv/ in fast conversation."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m03-l-dialogue",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Cybersecurity Chat",
+          "orderIndex": 2,
+          "content": {
+            "context": "Mira and Tom talk about online security after Tom nearly fell for an email scam.",
+            "audioPrompt": "Listen to the conversation between two friends.",
+            "lines": [
+              {
+                "speaker": "Mira",
+                "text": "Tom, did you see that strange email?",
+                "translation": "Tom, apakah kamu melihat email aneh itu?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Yes, it asked for my password.",
+                "translation": "Ya, email itu meminta kata sandi ku.",
+                "emotion": "concerned"
+              },
+              {
+                "speaker": "Mira",
+                "text": "That was definitely a phishing scam.",
+                "translation": "Itu pasti penipuan phishing.",
+                "emotion": "serious"
+              },
+              {
+                "speaker": "Tom",
+                "text": "I almost clicked the fake link.",
+                "translation": "Aku hampir mengklik tautan palsu itu.",
+                "emotion": "relieved"
+              },
+              {
+                "speaker": "Mira",
+                "text": "You must never share your password.",
+                "translation": "Kamu tidak boleh membagikan kata sandi mu.",
+                "emotion": "firm"
+              },
+              {
+                "speaker": "Tom",
+                "text": "I know, I need a stronger one.",
+                "translation": "Aku tahu, aku butuh yang lebih kuat.",
+                "emotion": "thoughtful"
+              },
+              {
+                "speaker": "Mira",
+                "text": "Use letters, numbers, and symbols too.",
+                "translation": "Gunakan huruf, angka, dan simbol juga.",
+                "emotion": "helpful"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Good idea. What about my privacy settings?",
+                "translation": "Ide bagus. Bagaimana dengan pengaturan privasi ku?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Mira",
+                "text": "Make sure strangers cannot see your photos.",
+                "translation": "Pastikan orang asing tidak bisa melihat foto mu.",
+                "emotion": "advising"
+              },
+              {
+                "speaker": "Tom",
+                "text": "And I spend too much screen time.",
+                "translation": "Dan aku menghabiskan terlalu banyak waktu layar.",
+                "emotion": "realizing"
+              },
+              {
+                "speaker": "Mira",
+                "text": "Six hours on your phone is crazy!",
+                "translation": "Enam jam di ponsel mu itu gila!",
+                "emotion": "surprised"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Thanks for helping me stay safe.",
+                "translation": "Terima kasih sudah membantuku tetap aman.",
+                "emotion": "grateful"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m03-l-quiz",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Tom, did you see that strange email?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mira: \"Tom, did you see that strange _____?\"",
+                "targetWord": "email",
+                "explanation": "Full audio: \"Tom, did you see that strange email?\". The missing word is \"email\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Yes, it asked for my password.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Yes, it asked for my _____.\"",
+                "targetWord": "password",
+                "explanation": "Full audio: \"Yes, it asked for my password.\". The missing word is \"password\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "That was definitely a phishing scam.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mira: \"That was definitely a phishing _____.\"",
+                "targetWord": "scam",
+                "explanation": "Full audio: \"That was definitely a phishing scam.\". The missing word is \"scam\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I almost clicked the fake link.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"I almost clicked the fake _____.\"",
+                "targetWord": "link",
+                "explanation": "Full audio: \"I almost clicked the fake link.\". The missing word is \"link\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "You must never share your password.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mira: \"You must never _____ your password.\"",
+                "targetWord": "share",
+                "explanation": "Full audio: \"You must never share your password.\". The missing word is \"share\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Use letters, numbers, and symbols too.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Use letters numbers and symbols too",
+                "words": [
+                  "symbols",
+                  "Use",
+                  "numbers",
+                  "and",
+                  "letters",
+                  "too"
+                ],
+                "explanation": "Correct sentence order: \"Use letters, numbers, and symbols too.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What about my privacy settings?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What about my privacy settings",
+                "words": [
+                  "What",
+                  "settings",
+                  "my",
+                  "about",
+                  "privacy"
+                ],
+                "explanation": "Correct sentence order: \"What about my privacy settings?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Make sure strangers cannot see your photos.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Make sure strangers cannot see your photos",
+                "words": [
+                  "cannot",
+                  "see",
+                  "your",
+                  "sure",
+                  "Make",
+                  "strangers",
+                  "photos"
+                ],
+                "explanation": "Correct sentence order: \"Make sure strangers cannot see your photos.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "And I spend too much screen time.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "And I spend too much screen time",
+                "words": [
+                  "And",
+                  "too",
+                  "spend",
+                  "much",
+                  "time",
+                  "I",
+                  "screen"
+                ],
+                "explanation": "Correct sentence order: \"And I spend too much screen time.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Six hours on your phone is crazy!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Six hours on your phone is crazy",
+                "words": [
+                  "your",
+                  "hours",
+                  "Six",
+                  "crazy",
+                  "on",
+                  "phone",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"Six hours on your phone is crazy!\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Tom, did you see that strange email?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mira: \"Tom, did you see that strange _____?\"",
+                "targetWord": "email",
+                "explanation": "Full audio: \"Tom, did you see that strange email?\". The missing word is \"email\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Yes, it asked for my password.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Yes, it asked for my _____.\"",
+                "targetWord": "password",
+                "explanation": "Full audio: \"Yes, it asked for my password.\". The missing word is \"password\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "That was definitely a phishing scam.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mira: \"That was definitely a phishing _____.\"",
+                "targetWord": "scam",
+                "explanation": "Full audio: \"That was definitely a phishing scam.\". The missing word is \"scam\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I almost clicked the fake link.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"I almost clicked the fake _____.\"",
+                "targetWord": "link",
+                "explanation": "Full audio: \"I almost clicked the fake link.\". The missing word is \"link\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "You must never share your password.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mira: \"You must never _____ your password.\"",
+                "targetWord": "share",
+                "explanation": "Full audio: \"You must never share your password.\". The missing word is \"share\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Use letters, numbers, and symbols too.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Use letters numbers and symbols too",
+                "words": [
+                  "symbols",
+                  "Use",
+                  "numbers",
+                  "and",
+                  "letters",
+                  "too"
+                ],
+                "explanation": "Correct sentence order: \"Use letters, numbers, and symbols too.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What about my privacy settings?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What about my privacy settings",
+                "words": [
+                  "What",
+                  "settings",
+                  "my",
+                  "about",
+                  "privacy"
+                ],
+                "explanation": "Correct sentence order: \"What about my privacy settings?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Make sure strangers cannot see your photos.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Make sure strangers cannot see your photos",
+                "words": [
+                  "cannot",
+                  "see",
+                  "your",
+                  "sure",
+                  "Make",
+                  "strangers",
+                  "photos"
+                ],
+                "explanation": "Correct sentence order: \"Make sure strangers cannot see your photos.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "And I spend too much screen time.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "And I spend too much screen time",
+                "words": [
+                  "And",
+                  "too",
+                  "spend",
+                  "much",
+                  "time",
+                  "I",
+                  "screen"
+                ],
+                "explanation": "Correct sentence order: \"And I spend too much screen time.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Six hours on your phone is crazy!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Six hours on your phone is crazy",
+                "words": [
+                  "your",
+                  "hours",
+                  "Six",
+                  "crazy",
+                  "on",
+                  "phone",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"Six hours on your phone is crazy!\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-3-m03-writing",
+      "moduleId": "A2.3-M03",
+      "skillType": "writing",
+      "title": "Writing Mission: Modern Digital Habits & Online Cybersecurity Basics",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a2-3-m03-w-theory",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on sentence structure and paragraph building in English for discussing digital habits, screen time, and basic cybersecurity rules using modal verbs and imperatives.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Giving Advice with Should and Shouldn't",
+                "formula": "Subject + should / shouldn't + base verb + complement",
+                "example": "You should use a strong password for your email accounts."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Expressing Rules with Must and Mustn't",
+                "formula": "Subject + must / mustn't + base verb + complement",
+                "example": "You must keep your private information safe online."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Writing Direct Instructions with Imperatives",
+                "formula": "Base verb + complement",
+                "example": "Never click on unknown links in suspicious messages."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Capitalize platform names, applications, and proper nouns correctly.",
+                "badExample": "we check our instagram accounts every morning.",
+                "goodExample": "We check our Instagram accounts every morning.",
+                "why": "Names of specific platforms like Instagram are proper nouns and require capitalization."
+              },
+              {
+                "rule": "Use apostrophes correctly in negative modal and auxiliary contractions.",
+                "badExample": "You shouldnt share your personal details online.",
+                "goodExample": "You shouldn't share your personal details online.",
+                "why": "Contractions like shouldn't and mustn't require an apostrophe between the n and the t."
+              },
+              {
+                "rule": "End imperative sentences and safety rules with a clear full stop or exclamation mark.",
+                "badExample": "Always check the sender email address",
+                "goodExample": "Always check the sender email address.",
+                "why": "Every complete sentence in English must end with appropriate punctuation."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "I check my social media notifications every morning before breakfast.",
+                "id": "Saya memeriksa pemberitahuan media sosial saya setiap pagi sebelum sarapan.",
+                "focus": "Present simple for digital habits"
+              },
+              {
+                "en": "You should update your software regularly to stay safe online.",
+                "id": "Kamu sebaiknya memperbarui perangkat lunakmu secara teratur agar tetap aman secara daring.",
+                "focus": "Modal verb should for advice"
+              },
+              {
+                "en": "Never share your personal passwords with anyone on the internet.",
+                "id": "Jangan pernah membagikan kata sandi pribadimu kepada siapa pun di internet.",
+                "focus": "Imperative for direct instruction"
+              },
+              {
+                "en": "We must enable two-factor authentication on all our accounts.",
+                "id": "Kita harus mengaktifkan autentikasi dua faktor di semua akun kita.",
+                "focus": "Modal verb must for strong obligation"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m03-w-practice",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "you should change your password regularly.",
+                "targetSentence": "You should change your password regularly.",
+                "translation": "Kamu harus mengganti kata sandimu secara teratur.",
+                "keyRule": "Capitalize the first word of the sentence.",
+                "requiredCapitals": [
+                  "You"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "never click on unknown links in emails.",
+                "targetSentence": "Never click on unknown links in emails.",
+                "translation": "Jangan pernah mengklik tautan yang tidak dikenal di email.",
+                "keyRule": "Capitalize the first letter of an imperative sentence.",
+                "requiredCapitals": [
+                  "Never"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "we must protect our privacy settings on facebook.",
+                "targetSentence": "We must protect our privacy settings on Facebook.",
+                "translation": "Kita harus melindungi pengaturan privasi kita di Facebook.",
+                "keyRule": "Capitalize proper nouns like Facebook and the first word.",
+                "requiredCapitals": [
+                  "We",
+                  "Facebook"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Cybersecurity Advice",
+                "meaning": "Kamu sebaiknya menggunakan kata sandi yang kuat untuk akunmu.",
+                "tokens": [
+                  "You",
+                  "should",
+                  "use",
+                  "a",
+                  "strong",
+                  "password",
+                  "for",
+                  "your",
+                  "account."
+                ],
+                "fullSentence": "You should use a strong password for your account."
+              },
+              {
+                "id": "b-2",
+                "category": "Digital Habits",
+                "meaning": "Saya memeriksa media sosial setiap malam sebelum tidur.",
+                "tokens": [
+                  "I",
+                  "check",
+                  "social",
+                  "media",
+                  "every",
+                  "night",
+                  "before",
+                  "sleeping."
+                ],
+                "fullSentence": "I check social media every night before sleeping."
+              },
+              {
+                "id": "b-3",
+                "category": "Online Safety",
+                "meaning": "Jangan pernah membagikan kata sandimu kepada orang lain.",
+                "tokens": [
+                  "Never",
+                  "share",
+                  "your",
+                  "password",
+                  "with",
+                  "other",
+                  "people."
+                ],
+                "fullSentence": "Never share your password with other people."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Cybersecurity Rules",
+                "badge": "Security Expert",
+                "instruction": "Write three sentences about online safety rules using should, must, and imperatives.",
+                "example": "You should use strong passwords. Never click suspicious links. We must protect our privacy.",
+                "placeholder": "Type your cybersecurity rules here...",
+                "minWords": 15,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Daily Digital Habits",
+                "badge": "Digital Citizen",
+                "instruction": "Write three sentences about your daily digital habits, such as checking messages, screen time, and social media use.",
+                "example": "I check my email every morning. I spend two hours on social media. I update my phone software weekly.",
+                "placeholder": "Type your daily digital habits here...",
+                "minWords": 15,
+                "xpReward": 35
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m03-w-quiz",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following affirmative sentence into a complete negative sentence:",
+                "promptText": "I check my social media accounts every hour.",
+                "hint": "Use 'don't check' or 'do not check'.",
+                "targetAnswers": [
+                  "I don't check my social media accounts every hour.",
+                  "I do not check my social media accounts every hour."
+                ],
+                "explanation": "With the first-person subject 'I', use 'don't' or 'do not' followed by the base verb 'check'."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using the modal verb 'should' for advice:",
+                "promptText": "It is a good idea to update your software.",
+                "hint": "Use 'You should update'.",
+                "targetAnswers": [
+                  "You should update your software.",
+                  "We should update our software."
+                ],
+                "explanation": "To give advice at A2 level, replace 'It is a good idea to' with 'You should' followed by the base verb."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Conjunctions",
+                "instruction": "Combine the two sentences using the conjunction 'because':",
+                "promptText": "I changed my password. It was weak.",
+                "hint": "Place 'because' between the two clauses.",
+                "targetAnswers": [
+                  "I changed my password because it was weak.",
+                  "I changed my password because it was too weak."
+                ],
+                "explanation": "The conjunction 'because' connects an action with its reason."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the capitalization and punctuation in this sentence:",
+                "promptText": "we must verify links before clicking them on twitter.",
+                "hint": "Capitalize the first word and the proper noun Twitter.",
+                "targetAnswers": [
+                  "We must verify links before clicking them on Twitter."
+                ],
+                "explanation": "Sentences must start with a capital letter, and platform names like Twitter require capitalization."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Short Response",
+                "instruction": "Fill in the blank with the correct negative modal verb for a strict rule:",
+                "promptText": "You _____ share your personal passwords with strangers.",
+                "hint": "Use 'mustn't' or 'must not'.",
+                "targetAnswers": [
+                  "mustn't",
+                  "must not"
+                ],
+                "explanation": "Use 'mustn't' or 'must not' to express prohibition or strict rules."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change this statement into a direct imperative instruction:",
+                "promptText": "You need to be careful when downloading files.",
+                "hint": "Start directly with the base verb 'Be'.",
+                "targetAnswers": [
+                  "Be careful when downloading files."
+                ],
+                "explanation": "Imperative sentences omit the subject pronoun and start directly with the base verb."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Conjunctions",
+                "instruction": "Combine the clauses using the conjunction 'but':",
+                "promptText": "I want to check my email. My internet connection is down.",
+                "hint": "Use 'but' to connect the contrasting ideas.",
+                "targetAnswers": [
+                  "I want to check my email, but my internet connection is down.",
+                  "I want to check my email but my internet connection is down."
+                ],
+                "explanation": "Use 'but' to link two clauses that show contrast or opposition."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the missing apostrophe error in this sentence:",
+                "promptText": "You shouldnt click on suspicious email links.",
+                "hint": "Add an apostrophe to 'shouldnt'.",
+                "targetAnswers": [
+                  "You shouldn't click on suspicious email links."
+                ],
+                "explanation": "Contractions such as shouldn't require an apostrophe between n and t."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Short Response",
+                "instruction": "Complete the digital security collocation in the sentence:",
+                "promptText": "Always use a strong _________ for your email account.",
+                "hint": "The missing word refers to a secret combination of letters and numbers.",
+                "targetAnswers": [
+                  "password"
+                ],
+                "explanation": "The standard security collocation is 'strong password'."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change this rule into a negative imperative sentence:",
+                "promptText": "It is important that you do not open strange attachments.",
+                "hint": "Start with 'Never' or 'Do not'.",
+                "targetAnswers": [
+                  "Never open strange attachments.",
+                  "Do not open strange attachments."
+                ],
+                "explanation": "Negative imperatives start with 'Never' or 'Do not' followed by the base verb."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-3-m03-speaking",
+      "moduleId": "A2.3-M03",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Modern Digital Habits & Online Cybersecurity Basics",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a2-3-m03-s-theory",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This guide helps you speak clearly about daily digital habits, screen time, and online safety at an A2 level.",
+            "audioGuidance": "Focus on clear consonant clusters in words like screen and strong, and pronounce vowel sounds accurately in technical words like password and update.",
+            "pillars": [
+              {
+                "name": "Vowel Clarity",
+                "target": "Clear short and long vowels in digital terms",
+                "explanation": "Pronounce vowels distinctly in words like password, screen, and update so listeners understand you easily."
+              },
+              {
+                "name": "Consonant Clusters",
+                "target": "Smooth blending of consonant groups",
+                "explanation": "Practice consonant blends at the start of words, such as scr in screen and str in strong, without adding extra vowel sounds."
+              },
+              {
+                "name": "Sentence Stress",
+                "target": "Emphasizing key content words",
+                "explanation": "Put more volume and pitch on important words like verbs and nouns, while keeping grammar words softer."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m03-s-practice",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "PAS-sword",
+                "countryAudio": "password",
+                "countrySyllables": [
+                  {
+                    "text": "PAS",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "sword",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "pass-WORD-protected",
+                "natAudio": "passwordprotected",
+                "natSyllables": [
+                  {
+                    "text": "pass",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "WORD",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "pro",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tec",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ted",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice how the stress shifts and adapts when the noun expands into a compound modifier."
+              },
+              {
+                "id": "pair-2",
+                "country": "UP-date",
+                "countryAudio": "update",
+                "countrySyllables": [
+                  {
+                    "text": "UP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "date",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "up-DAT-ed",
+                "natAudio": "updated",
+                "natSyllables": [
+                  {
+                    "text": "up",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "DAT",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ed",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress moves to the second syllable in the past participle form."
+              },
+              {
+                "id": "pair-3",
+                "country": "PRI-va-cy",
+                "countryAudio": "privacy",
+                "countrySyllables": [
+                  {
+                    "text": "PRI",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "va",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "cy",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "pri-VA-te",
+                "natAudio": "private",
+                "natSyllables": [
+                  {
+                    "text": "pri",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "VA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "te",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Stress shifts from the first syllable to the second syllable when changing from noun to adjective."
+              },
+              {
+                "id": "pair-4",
+                "country": "VER-i-fy",
+                "countryAudio": "verify",
+                "countrySyllables": [
+                  {
+                    "text": "VER",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "fy",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ver-i-fi-CA-tion",
+                "natAudio": "verification",
+                "natSyllables": [
+                  {
+                    "text": "ver",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "fi",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Longer noun derivations move the primary stress closer to the suffix."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "I always create a strong password with letters and numbers.",
+                "phonetic": "/aɪ ˈɔːlweɪz kriːˈeɪt ə strɒŋ ˈpɑːswɜːd wɪð ˈletəz ænd ˈnʌmbəz/",
+                "focus": "Clear pronunciation of password and natural sentence rhythm",
+                "hint": "Emphasize strong, password, letters, and numbers."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "You should check your privacy settings on social media regularly.",
+                "phonetic": "/juː ʃʊd tʃek jɔːr ˈprɪvəsi ˈsetɪŋz ɒn ˈsəʊʃəl ˈmiːdiə ˈreɡjələli/",
+                "focus": "Phrasing and stress on privacy settings",
+                "hint": "Group privacy and settings closely together."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Always verify links before clicking on them.",
+                "phonetic": "/ˈɔːlweɪz ˈverɪfaɪ lɪŋks bɪˈfɔːr ˈklɪkɪŋ ɒn ðem/",
+                "focus": "Imperative sentence delivery and verb clarity",
+                "hint": "Start strongly with always and verify."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Remember to update your apps and software regularly.",
+                "phonetic": "/rɪˈmembə tuː ˈʌpdeɪt jɔːr æps ænd ˈsɒftweə ˈreɡjələli/",
+                "focus": "Consonant linking in update your apps",
+                "hint": "Link update and your smoothly without pausing."
+              }
+            ],
+            "roleplay": {
+              "context": "You meet your teacher, Mr. Khoirul, in the school lobby to talk about daily screen time and cybersecurity.",
+              "roles": [
+                "Mr. Khoirul",
+                "Student"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "How much screen time do you usually have every day?",
+                  "translation": "Berapa banyak waktu layar yang biasanya kamu miliki setiap hari?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "I usually spend about two hours a day on my phone.",
+                  "translation": "Saya biasanya menghabiskan waktu sekitar dua jam sehari di ponsel saya."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Do you use strong passwords for your social media accounts?",
+                  "translation": "Apakah kamu menggunakan kata sandi yang kuat untuk akun media sosialmu?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, I always use letters and numbers to keep my account safe.",
+                  "translation": "Ya, saya selalu menggunakan huruf dan angka untuk menjaga akun saya tetap aman."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-3-m03-s-quiz",
+          "moduleId": "A2.3-M03",
+          "subModuleId": "sub-a2-3-m03-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about your daily screen time and device usage.",
+                "audioPrompt": "Tell me about how much time you spend on your phone and what apps you use.",
+                "storyPoints": [
+                  "How many hours a day you use your phone",
+                  "Your favorite apps for studying or relaxing",
+                  "How you manage your screen time"
+                ],
+                "targetSentence": "I use my phone for two hours a day to check social media and study English.",
+                "phonetic": "/aɪ juːs maɪ foʊn fɔːr tuː ˈaʊəz a deɪ/",
+                "expectedKeywords": [
+                  "screen time",
+                  "phone",
+                  "apps",
+                  "hours"
+                ],
+                "explanation": "Speak clearly using simple present tense sentences to describe your routine."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about online safety and passwords.",
+                "audioPrompt": "Describe how you keep your online accounts safe and secure.",
+                "storyPoints": [
+                  "Why having a strong password is important",
+                  "How often you update your software",
+                  "What you do when you see a suspicious email"
+                ],
+                "targetSentence": "I create a strong password and never click on suspicious links in emails.",
+                "phonetic": "/aɪ kriːˈeɪt ə strɒŋ ˈpɑːswɜːd ænd ˈnevə klɪk ɒn səˈspɪʃəs lɪŋks/",
+                "expectedKeywords": [
+                  "password",
+                  "suspicious",
+                  "links",
+                  "safe"
+                ],
+                "explanation": "Describe your cybersecurity habits clearly using full sentences."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to the security warning in a roleplay dialogue.",
+                "scenarioContext": "You receive a notification that an unknown device tried to log into your account.",
+                "characterRole": "Account Owner",
+                "audioPrompt": "Security Alert: A new device logged into your email. Was this you?",
+                "targetSentence": "No, that was not me. I need to change my password immediately.",
+                "phonetic": "/noʊ ðæt wɒz nɒt miː aɪ niːd tuː tʃeɪndʒ maɪ ˈpɑːswɜːd ɪˈmiːdiətli/",
+                "expectedKeywords": [
+                  "not me",
+                  "password",
+                  "change",
+                  "immediately"
+                ],
+                "explanation": "React quickly and clearly to the security alert."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Discuss privacy settings with your friend.",
+                "scenarioContext": "Your friend asks why your social media profile is locked.",
+                "characterRole": "Student",
+                "audioPrompt": "Why can I not see your photos on Instagram?",
+                "targetSentence": "I updated my privacy settings to keep my personal photos safe.",
+                "phonetic": "/aɪ ˈʌpdeɪtɪd maɪ ˈprɪvəsi ˈsetɪŋz tuː kiːp maɪ ˈpɜːsənəl ˈfəʊtəʊz seɪf/",
+                "expectedKeywords": [
+                  "privacy settings",
+                  "photos",
+                  "safe",
+                  "profile"
+                ],
+                "explanation": "Explain your privacy choices politely and clearly."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Talk about software updates with a classmate.",
+                "scenarioContext": "Your classmate asks if you should install the new app update.",
+                "characterRole": "Tech-savvy Student",
+                "audioPrompt": "Should I install this software update on my laptop?",
+                "targetSentence": "Yes, you should update your software to protect against online scams.",
+                "phonetic": "/jes juː ʃʊd ˈʌpdeɪt jɔːr ˈsɒftweə tuː prəˈtekt əˈɡenst ˈɒnlaɪn skæmz/",
+                "expectedKeywords": [
+                  "update",
+                  "software",
+                  "protect",
+                  "scams"
+                ],
+                "explanation": "Give clear advice using modal verbs."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Handle a suspicious message in a chat roleplay.",
+                "scenarioContext": "A stranger sends you a link claiming you won a prize.",
+                "characterRole": "Cautious User",
+                "audioPrompt": "Look at this message. It says you won a free phone. Should we click it?",
+                "targetSentence": "Do not click that link. It looks like a suspicious scam.",
+                "phonetic": "/duː nɒt klɪk ðæt lɪŋk ɪt lʊks laɪk ə səˈspɪʃəs skæm/",
+                "expectedKeywords": [
+                  "click",
+                  "link",
+                  "suspicious",
+                  "scam"
+                ],
+                "explanation": "Warn others about online risks clearly and firmly."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "focus": "vocab",
+                "instruction": "Pronounce the vocabulary item related to digital security.",
+                "audioPrompt": "Say the word for secret letters and numbers used to log into an account: password.",
+                "targetSentence": "Password",
+                "phonetic": "/ˈpɑːswɜːd/",
+                "expectedKeywords": [
+                  "password"
+                ],
+                "explanation": "Pronounce the target vocabulary item clearly with stress on the first syllable."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "focus": "grammar",
+                "instruction": "Practice modal verbs for advice.",
+                "audioPrompt": "Say this sentence using should for advice: You should enable two-factor authentication.",
+                "targetSentence": "You should enable two-factor authentication.",
+                "phonetic": "/juː ʃʊd ɪˈneɪbəl tuː ˈfæktər ɔːˌθentɪˈkeɪʃən/",
+                "expectedKeywords": [
+                  "should",
+                  "enable",
+                  "authentication"
+                ],
+                "explanation": "Use modal verb should with correct sentence rhythm and clarity."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Practice syllable stress in cybersecurity vocabulary.",
+                "audioPrompt": "Read this word with stress on the second syllable: security.",
+                "targetSentence": "Security",
+                "phonetic": "/sɪˈkjʊərɪti/",
+                "expectedKeywords": [
+                  "security"
+                ],
+                "explanation": "Place primary stress on the second syllable of security."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Intonation Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Practice rising intonation for yes-no questions.",
+                "audioPrompt": "Ask this question with rising intonation at the end: Did you verify the link?",
+                "targetSentence": "Did you verify the link?",
+                "phonetic": "/dɪd juː ˈverɪfaɪ ðə lɪŋk/",
+                "expectedKeywords": [
+                  "verify",
+                  "link"
+                ],
+                "explanation": "Raise your pitch at the end of the question to show it is a yes-no question."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

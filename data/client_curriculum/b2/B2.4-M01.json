@@ -1,0 +1,209 @@
+{
+  "id": "B2.4-M01",
+  "levelId": "B2.4",
+  "title": "Unit 1: Structuring Academic Theses & Topic Sentences",
+  "cefr": "B2",
+  "group": "Academic Writing & Rhetoric",
+  "objective": "Mampu menyusun tesis akademik yang tajam dan kalimat topik paragraf dengan nominalisasi dan kohesi formal.",
+  "complexity": "deep",
+  "estimatedMinutes": 15,
+  "isExam": false,
+  "passingScore": 70,
+  "orderIndex": 40,
+  "sections": {
+    "theory": {
+      "summary": "Dalam penulisan akademik tingkat B2, kemampuan menyusun thesis statement (pernyataan tesis) yang tajam dan topic sentence (kalimat topik) yang efektif adalah fondasi utama. Thesis statement adalah kalimat yang menyatakan argumen utama atau posisi penulis dalam sebuah esai, biasanya terletak di akhir paragraf pendahuluan. Topic sentence adalah kalimat pertama di setiap body paragraph yang menghubungkan ide paragraf tersebut kembali ke tesis. Modul ini juga memperkenalkan nominalisasi — yaitu teknik mengubah kata kerja atau kata sifat menjadi kata benda — untuk menciptakan gaya penulisan yang lebih formal dan padat. Selain itu, kita akan mempelajari perangkat kohesi formal seperti transition signals dan referensi pronoun untuk menjaga alur logis antar kalimat dan antar paragraf.",
+      "rules": [
+        {
+          "pattern": "Thesis Statement = Topic + Controlling Idea + (Reasons/Scope)",
+          "meaning": "Pernyataan tesis harus memuat topik yang dibahas, sikap/argumen penulis, dan cakupan atau alasan pendukung. Ini memberikan peta jalan bagi pembaca.",
+          "example": "The widespread adoption of remote work has fundamentally improved employee productivity, work-life balance, and organizational flexibility."
+        },
+        {
+          "pattern": "Topic Sentence = Transition Signal + Topic + Controlling Idea (echoing thesis)",
+          "meaning": "Kalimat topik paragraf harus menggunakan sinyal transisi, menyebutkan sub-topik paragraf tersebut, dan menghubungkannya kembali ke tesis utama agar kohesi terjaga.",
+          "example": "First and foremost, the shift to remote work has led to a measurable increase in employee productivity across multiple industries."
+        },
+        {
+          "pattern": "Nominalisation: Verb/Adjective → Noun form (e.g., 'improve' → 'improvement', 'significant' → 'significance')",
+          "meaning": "Nominalisasi mengubah kata kerja atau kata sifat menjadi bentuk kata benda untuk menciptakan register formal, mengurangi penggunaan kalimat personal, dan memadatkan informasi dalam penulisan akademik.",
+          "example": "The improvement of public transportation infrastructure has contributed to the reduction of carbon emissions in urban areas."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Tesis Terlalu Umum vs. Tesis yang Spesifik dan Dapat Diargumentasikan",
+        "explanation": "Banyak pelajar menulis thesis statement yang terlalu luas atau hanya menyatakan fakta umum yang tidak bisa diperdebatkan. Thesis yang efektif harus spesifik, mengandung posisi yang bisa didukung atau ditentang, dan memberikan arah yang jelas. Bandingkan: 'Education is important' (terlalu umum, semua orang setuju) dengan thesis yang menyatakan argumen spesifik. Cara menghindarinya: selalu tanyakan 'Bisakah seseorang tidak setuju dengan pernyataan ini?' — jika tidak, tesis Anda belum cukup tajam.",
+        "wrong": "Technology has changed the world in many ways.",
+        "correct": "The integration of artificial intelligence into healthcare diagnostics has significantly reduced misdiagnosis rates, though it raises critical concerns about data privacy and physician autonomy."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah di antara kalimat berikut yang merupakan thesis statement akademik yang paling efektif?",
+          "options": [
+            "Mandatory community service programs in universities cultivate civic responsibility, enhance employability, and bridge socioeconomic divides among students.",
+            "Community service is a good thing that everyone should do because it helps people.",
+            "This essay will talk about community service and why it matters to society."
+          ],
+          "correctIndex": 0,
+          "explanation": "Pilihan pertama adalah thesis statement yang efektif karena memiliki topik yang jelas (mandatory community service programs in universities), controlling idea (cultivate, enhance, bridge), dan cakupan spesifik dengan tiga alasan pendukung. Pilihan kedua terlalu umum dan informal. Pilihan ketiga hanya mengumumkan topik tanpa menyatakan argumen."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan kalimat berikut. Manakah yang menggunakan nominalisasi dengan benar untuk register akademik formal?",
+          "options": [
+            "When people pollute rivers, it makes fish die and people get sick.",
+            "The contamination of freshwater sources has resulted in a significant decline in aquatic biodiversity and a corresponding deterioration of public health outcomes.",
+            "Polluting is bad because it destroys nature and hurts the environment a lot."
+          ],
+          "correctIndex": 1,
+          "explanation": "Pilihan kedua menggunakan nominalisasi secara tepat: 'contamination' (dari 'contaminate'), 'decline' (bentuk nomina), 'deterioration' (dari 'deteriorate'). Ini menciptakan gaya formal dan padat yang sesuai untuk penulisan akademik. Pilihan pertama dan ketiga menggunakan bahasa informal dan struktur kalimat sederhana yang tidak sesuai dengan register akademik."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Sebuah esai memiliki thesis: 'Urban green spaces enhance mental health, promote social cohesion, and mitigate the urban heat island effect.' Paragraf kedua membahas aspek sosial. Manakah topic sentence yang paling tepat untuk paragraf tersebut?",
+          "options": [
+            "Green spaces are really nice places where people can hang out and meet their friends on weekends.",
+            "There are many parks in cities around the world, and they have different sizes and features.",
+            "In addition to their psychological benefits, urban green spaces serve as vital communal gathering points that foster social cohesion among diverse neighborhood residents."
+          ],
+          "correctIndex": 2,
+          "explanation": "Pilihan ketiga adalah topic sentence yang paling tepat karena: (1) menggunakan transition signal 'In addition to their psychological benefits' yang menghubungkan ke paragraf sebelumnya tentang mental health, (2) menyebutkan sub-topik paragraf ini yaitu social cohesion, dan (3) menggemakan kata kunci dari thesis statement. Pilihan pertama terlalu informal, dan pilihan kedua hanya menyatakan fakta umum tanpa controlling idea."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "thesis statement",
+        "translation": "pernyataan tesis; kalimat argumen utama esai",
+        "example": "A strong thesis statement should present a clear, arguable claim that guides the entire essay.",
+        "context": "Digunakan di paragraf pendahuluan esai akademik untuk menyatakan posisi penulis secara eksplisit."
+      },
+      {
+        "word": "topic sentence",
+        "translation": "kalimat topik; kalimat utama paragraf",
+        "example": "Each body paragraph should begin with a topic sentence that directly supports the thesis.",
+        "context": "Ditempatkan di awal setiap body paragraph untuk mengarahkan pembaca tentang isi paragraf tersebut."
+      },
+      {
+        "word": "nominalisation",
+        "translation": "nominalisasi; pengubahan kata kerja/sifat menjadi kata benda",
+        "example": "The nominalisation of 'develop' into 'development' creates a more formal academic tone.",
+        "context": "Teknik linguistik yang digunakan dalam penulisan akademik untuk memadatkan informasi dan meningkatkan formalitas."
+      },
+      {
+        "word": "cohesion",
+        "translation": "kohesi; keterkaitan logis antar bagian teks",
+        "example": "Effective cohesion ensures that each paragraph flows logically into the next.",
+        "context": "Merujuk pada penggunaan perangkat penghubung (transition words, pronoun reference, lexical repetition) agar teks terbaca sebagai satu kesatuan."
+      },
+      {
+        "word": "controlling idea",
+        "translation": "ide pengendali; aspek spesifik yang membatasi cakupan topik",
+        "example": "In the topic sentence 'Social media has eroded adolescent self-esteem,' the controlling idea is 'eroded adolescent self-esteem.'",
+        "context": "Bagian dari thesis statement atau topic sentence yang menyatakan apa yang akan dibuktikan atau dijelaskan oleh penulis."
+      },
+      {
+        "word": "transition signal",
+        "translation": "sinyal transisi; kata/frasa penghubung antar ide",
+        "example": "Transition signals such as 'furthermore,' 'in contrast,' and 'as a result' strengthen the logical flow of academic writing.",
+        "context": "Digunakan di awal kalimat atau paragraf untuk menunjukkan hubungan logis seperti penambahan, pertentangan, sebab-akibat, atau urutan."
+      }
+    ],
+    "dialogue": {
+      "context": "Alex dan Morgan adalah mahasiswa universitas yang sedang berdiskusi di perpustakaan kampus tentang draft esai akademik Morgan untuk mata kuliah Academic Writing. Morgan merasa kesulitan menyusun thesis statement dan topic sentence yang kuat, dan Alex — yang sudah lebih berpengalaman — memberikan masukan kritis.",
+      "lines": [
+        {
+          "speaker": "Morgan",
+          "text": "Alex, could you take a look at my thesis? I wrote: 'Climate change is a serious problem that affects everyone.' I feel like something's off, but I can't pinpoint what.",
+          "translation": "Alex, bisakah kamu melihat tesisku? Aku menulis: 'Perubahan iklim adalah masalah serius yang mempengaruhi semua orang.' Aku merasa ada yang kurang tepat, tapi aku tidak bisa menunjukkan apa."
+        },
+        {
+          "speaker": "Alex",
+          "text": "I see the issue. Your thesis is too broad and it's stating a fact rather than an arguable claim. Try narrowing it down — what specific aspect of climate change is your essay about, and what's your position on it?",
+          "translation": "Aku melihat masalahnya. Tesismu terlalu luas dan hanya menyatakan fakta, bukan klaim yang bisa diargumentasikan. Coba persempit — aspek spesifik apa dari perubahan iklim yang esaimu bahas, dan apa posisimu?"
+        },
+        {
+          "speaker": "Morgan",
+          "text": "Well, I'm focusing on carbon taxation policies. How about this revision: 'The implementation of progressive carbon taxation represents the most effective governmental strategy for reducing industrial emissions, despite the short-term economic burden on developing nations'?",
+          "translation": "Hmm, aku fokus pada kebijakan pajak karbon. Bagaimana dengan revisi ini: 'Penerapan pajak karbon progresif merupakan strategi pemerintah yang paling efektif untuk mengurangi emisi industri, meskipun ada beban ekonomi jangka pendek bagi negara berkembang'?"
+        },
+        {
+          "speaker": "Alex",
+          "text": "That's significantly stronger! Notice how you used nominalisation — 'implementation' instead of 'implement,' 'reduction' embedded in 'reducing.' Now, for your first body paragraph's topic sentence, make sure it echoes one aspect of this thesis and uses a transition signal to connect it to your introduction. Something like: 'To begin with, the effectiveness of carbon taxation in curbing emissions is well-documented in several longitudinal studies.'",
+          "translation": "Itu jauh lebih kuat! Perhatikan bagaimana kamu menggunakan nominalisasi — 'implementation' bukan 'implement,' 'reduction' tertanam dalam 'reducing.' Sekarang, untuk kalimat topik paragraf pertamamu, pastikan itu menggemakan satu aspek dari tesis ini dan menggunakan sinyal transisi untuk menghubungkannya ke pendahuluan. Misalnya: 'Untuk memulai, efektivitas pajak karbon dalam menekan emisi telah terdokumentasi dengan baik dalam beberapa studi longitudinal.'"
+        },
+        {
+          "speaker": "Morgan",
+          "text": "I see — so each topic sentence should function like a mini-thesis for its paragraph while maintaining a clear link back to the main argument. And I should avoid starting body paragraphs with vague statements like 'There are many reasons why...'?",
+          "translation": "Aku paham — jadi setiap kalimat topik harus berfungsi seperti tesis mini untuk paragrafnya sambil mempertahankan hubungan yang jelas kembali ke argumen utama. Dan aku harus menghindari memulai body paragraph dengan pernyataan samar seperti 'Ada banyak alasan mengapa...'?"
+        },
+        {
+          "speaker": "Alex",
+          "text": "Exactly. And one more thing — pay attention to cohesion between paragraphs. Use backward-looking transitions like 'Building on this evidence' or 'While the environmental benefits are clear' to create a logical chain. Your reader should never have to guess how one paragraph relates to the next.",
+          "translation": "Tepat sekali. Dan satu hal lagi — perhatikan kohesi antar paragraf. Gunakan transisi yang merujuk ke belakang seperti 'Building on this evidence' atau 'While the environmental benefits are clear' untuk menciptakan rantai logis. Pembacamu tidak boleh harus menebak bagaimana satu paragraf berhubungan dengan paragraf berikutnya."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Mampu menyusun thesis statement yang tajam dan arguable, serta menulis topic sentence untuk tiga body paragraph yang kohesif, menggunakan nominalisasi dan transition signals yang tepat.",
+      "scenario": "You are preparing a 5-paragraph academic essay for your university writing course on the following topic: 'Should governments invest more in renewable energy or nuclear energy to combat climate change?' First, state your position by writing a clear, specific, and arguable thesis statement. Then, write three topic sentences — one for each body paragraph — that each support a different aspect of your thesis. Use at least one nominalisation in each sentence and appropriate transition signals to show logical progression. After writing, explain to your speaking partner why your thesis is arguable (not just a fact) and how each topic sentence connects back to it."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Which of the following is the most effective academic thesis statement?",
+          "options": [
+            "The privatisation of public healthcare systems in developing nations exacerbates health inequities, undermines preventive care infrastructure, and disproportionately burdens low-income populations.",
+            "Healthcare is very important and governments should do more to help people stay healthy.",
+            "This essay will discuss healthcare and its importance in modern society.",
+            "Many people around the world do not have access to good healthcare services."
+          ],
+          "correctIndex": 0,
+          "explanation": "Pilihan A adalah thesis statement yang paling efektif karena memiliki topik spesifik (privatisation of public healthcare in developing nations), posisi yang jelas dan dapat diargumentasikan (exacerbates, undermines, burdens), serta tiga cakupan yang akan dibahas di body paragraphs. Pilihan B terlalu umum, C hanya mengumumkan topik, dan D menyatakan fakta tanpa argumen."
+        },
+        {
+          "id": 2,
+          "prompt": "Kalimat manakah yang menunjukkan penggunaan nominalisasi yang tepat untuk mengubah gaya informal menjadi akademik formal?",
+          "options": [
+            "People need to cooperate more if they want to solve global problems quickly.",
+            "The enhancement of international cooperation is essential for the effective resolution of transnational challenges.",
+            "Countries should work together because working together helps everyone solve big problems.",
+            "It is important that nations cooperate and resolve their issues together as soon as possible."
+          ],
+          "correctIndex": 1,
+          "explanation": "Pilihan B menggunakan nominalisasi secara efektif: 'enhancement' (dari 'enhance'), 'cooperation' (dari 'cooperate'), 'resolution' (dari 'resolve'). Ini menciptakan register formal dan padat yang khas penulisan akademik. Pilihan lain menggunakan bentuk kata kerja langsung dan gaya yang lebih informal atau conversational."
+        },
+        {
+          "id": 3,
+          "prompt": "An essay's thesis states: 'Bilingual education programs strengthen cognitive development, improve cross-cultural understanding, and increase long-term career opportunities.' Which is the best topic sentence for the second body paragraph?",
+          "options": [
+            "Learning two languages is fun and many children enjoy it at school.",
+            "There are many bilingual schools in Europe, Asia, and North America today.",
+            "Beyond their cognitive advantages, bilingual education programs cultivate cross-cultural empathy by exposing students to diverse linguistic worldviews from an early age.",
+            "Bilingual education has both advantages and disadvantages that need to be considered carefully."
+          ],
+          "correctIndex": 2,
+          "explanation": "Pilihan C adalah topic sentence terbaik untuk paragraf kedua karena: (1) menggunakan backward-looking transition 'Beyond their cognitive advantages' yang merujuk ke paragraf pertama tentang cognitive development, (2) membahas sub-topik kedua dari tesis yaitu cross-cultural understanding, (3) menggunakan nominalisasi dan bahasa formal. Pilihan A terlalu informal, B hanya menyatakan fakta, dan D terlalu umum dan tidak sesuai dengan posisi tesis."
+        },
+        {
+          "id": 4,
+          "prompt": "Perhatikan topic sentence berikut: 'Furthermore, the significant reduction in operational costs demonstrates the long-term financial viability of solar energy adoption in industrial sectors.' Apa fungsi kata 'Furthermore' dalam kalimat ini?",
+          "options": [
+            "Menunjukkan pertentangan dengan ide di paragraf sebelumnya.",
+            "Memberikan contoh spesifik untuk mendukung klaim sebelumnya.",
+            "Menunjukkan hubungan sebab-akibat antara dua peristiwa.",
+            "Menambahkan poin pendukung baru yang memperkuat argumen dari paragraf sebelumnya."
+          ],
+          "correctIndex": 3,
+          "explanation": "Kata 'Furthermore' adalah transition signal yang berfungsi sebagai penanda penambahan (addition). Ia menunjukkan bahwa paragraf ini akan menyajikan poin pendukung tambahan yang memperkuat argumen yang sudah dibangun di paragraf sebelumnya. Bukan pertentangan (yang menggunakan 'However'), bukan contoh spesifik (yang menggunakan 'For instance'), dan bukan sebab-akibat (yang menggunakan 'As a result')."
+        }
+      ]
+    }
+  }
+}

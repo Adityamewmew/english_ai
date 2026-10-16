@@ -1,0 +1,1654 @@
+{
+  "module": {
+    "id": "A2.2-M01",
+    "levelId": "A2.2",
+    "title": "Professions, Workplaces & Job Responsibilities",
+    "cefr": "A2",
+    "group": "A2.2 - Social Dynamics, Work & Everyday Life",
+    "objective": "Discuss careers, job responsibilities, and workplace environments using professional vocabulary and action verbs.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 1
+  },
+  "subModules": [
+    {
+      "id": "sub-a2-2-m01-reading",
+      "moduleId": "A2.2-M01",
+      "skillType": "reading",
+      "title": "Reading Mission: Professions and Daily Workplaces",
+      "theme": "Professions, Workplaces & Job Responsibilities",
+      "grammarFocus": "Present Simple for job descriptions and daily routines",
+      "vocabularyFocus": "Jobs, workplaces, and daily job duties",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a2-2-m01-r-theory",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to the reading module on professions, workplaces, and daily job responsibilities. In this lesson, you will read about different workers, learn how to describe what they do, and practice finding key details in short texts.",
+            "linguisticTarget": {
+              "grammar": "Present Simple tense for daily routines and job responsibilities using affirmative sentences and questions.",
+              "vocabulary": "Key profession nouns, workplace locations, and common action verbs related to work.",
+              "readingStrategy": "Scanning texts to locate specific profession names, workplace locations, and daily job duties."
+            },
+            "learningObjectives": [
+              "Understand the main idea of short A2 texts about different professions and workplaces.",
+              "Locate specific details such as job duties, tools, and workplace locations.",
+              "Recognize and practice grammar patterns for describing what people do every day."
+            ],
+            "contextWarmup": {
+              "prompt": "Where does a nurse usually work?",
+              "options": [
+                "In a hospital",
+                "In a restaurant",
+                "In a garage"
+              ],
+              "correctIndex": 0,
+              "explanation": "Nurses care for patients and work in medical facilities like hospitals."
+            },
+            "rules": [
+              "Use 'What does a/an + profession + do?' to ask about job responsibilities.",
+              "Answer questions using 'A/An + profession + verb + object' to describe tasks.",
+              "Use 'work in/at + place' to explain where different professionals perform their jobs."
+            ],
+            "commonTrap": {
+              "trapTitle": "Confusing Job Titles and Workplaces",
+              "explanation": "Learners sometimes match the wrong verb or workplace to a profession, such as saying an architect works in a hospital.",
+              "wrong": "An architect works in a hospital and cares for patients.",
+              "correct": "An architect designs buildings and works in an office or on construction sites."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Professions and Work",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in everyday English:",
+            "contractions": [
+              {
+                "subject": "He",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "He's",
+                "exampleFull": "He is an architect.",
+                "exampleContracted": "He's an architect."
+              },
+              {
+                "subject": "She",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "She's",
+                "exampleFull": "She is a nurse.",
+                "exampleContracted": "She's a nurse."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Present Simple for Jobs",
+              "description": "Assemble sentence blocks to describe what people do:",
+              "subjects": [
+                {
+                  "label": "An architect",
+                  "pronoun": "He/She",
+                  "correctToBe": "is",
+                  "role": "Profession Subject"
+                },
+                {
+                  "label": "A nurse",
+                  "pronoun": "He/She",
+                  "correctToBe": "is",
+                  "role": "Profession Subject"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "design",
+                  "thirdPerson": "designs",
+                  "continuous": "designing"
+                },
+                {
+                  "base": "care",
+                  "thirdPerson": "cares",
+                  "continuous": "caring"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "buildings and houses",
+                  "type": "Job Object"
+                },
+                {
+                  "text": "for patients in hospitals",
+                  "type": "Job Object"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-2-m01-r-vocab",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "architect",
+                "ipa": "/ˈɑːr.kɪ.tekt/",
+                "meaning": "arsitek",
+                "partOfSpeech": "noun",
+                "exampleSentence": "An architect designs buildings and houses.",
+                "collocation": "architect / design buildings"
+              },
+              {
+                "word": "electrician",
+                "ipa": "/ɪ.lekˈtrɪʃ.ən/",
+                "meaning": "teknisi listrik",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The electrician repairs the wiring in our office.",
+                "collocation": "electrician / repair wiring"
+              },
+              {
+                "word": "journalist",
+                "ipa": "/ˈdʒɜːr.nə.lɪst/",
+                "meaning": "jurnalis, wartawan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "A journalist writes articles about current events.",
+                "collocation": "journalist / write articles"
+              },
+              {
+                "word": "nurse",
+                "ipa": "/nɜːrs/",
+                "meaning": "perawat",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Nurses care for patients in hospitals.",
+                "collocation": "nurse / care for patients"
+              },
+              {
+                "word": "flight attendant",
+                "ipa": "/flaɪt əˈten.dənt/",
+                "meaning": "pramugari/pramugara",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Flight attendants serve food and drinks on the plane.",
+                "collocation": "flight attendant / serve passengers"
+              },
+              {
+                "word": "manage",
+                "ipa": "/ˈmæn.ɪdʒ/",
+                "meaning": "mengelola, mengatur",
+                "partOfSpeech": "verb",
+                "exampleSentence": "She manages a team of ten people.",
+                "collocation": "manage a team"
+              },
+              {
+                "word": "design",
+                "ipa": "/dɪˈzaɪn/",
+                "meaning": "merancang, mendesain",
+                "partOfSpeech": "verb",
+                "exampleSentence": "He designs websites for small businesses.",
+                "collocation": "design websites"
+              },
+              {
+                "word": "repair",
+                "ipa": "/rɪˈper/",
+                "meaning": "memperbaiki",
+                "partOfSpeech": "verb",
+                "exampleSentence": "The technician repairs computers every day.",
+                "collocation": "repair computers"
+              },
+              {
+                "word": "care for",
+                "ipa": "/ker fɔːr/",
+                "meaning": "merawat, menjaga",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Doctors care for sick people in the hospital.",
+                "collocation": "care for patients"
+              },
+              {
+                "word": "operate",
+                "ipa": "/ˈɑː.pə.reɪt/",
+                "meaning": "mengoperasikan, menjalankan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "The pilot operates the aircraft safely.",
+                "collocation": "operate an aircraft"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m01-r-guided",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "A Busy Day at Work",
+            "audioUrl": "/audio/modules/a2-2-m01/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Every morning, Sarah wakes up early because she is a nurse. She works in a busy city hospital. Her daily job is to care for patients, check their temperature, and give them medicine. She likes helping people and talking to their families.",
+              "In the same building, David works as an architect. He sits at his desk and designs modern houses and offices. Sometimes, he visits construction sites to talk to electricians and builders. Both Sarah and David have very important jobs in our community."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "Every morning, Sarah wakes up early because she is a nurse.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 4.6,
+                "end": 8,
+                "text": "She works in a busy city hospital.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 8.1,
+                "end": 14,
+                "text": "Her daily job is to care for patients, check their temperature, and give them medicine.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 14.1,
+                "end": 18,
+                "text": "She likes helping people and talking to their families.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 18.1,
+                "end": 22.5,
+                "text": "In the same building, David works as an architect.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 22.6,
+                "end": 27,
+                "text": "He sits at his desk and designs modern houses and offices.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 27.1,
+                "end": 33,
+                "text": "Sometimes, he visits construction sites to talk to electricians and builders.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 33.1,
+                "end": 38,
+                "text": "Both Sarah and David have very important jobs in our community.",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m01-r-practice",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-1",
+                "term": "Architect",
+                "match": "Designs buildings and houses"
+              },
+              {
+                "id": "drill-2",
+                "term": "Nurse",
+                "match": "Cares for patients in hospitals"
+              },
+              {
+                "id": "drill-3",
+                "term": "Electrician",
+                "match": "Repairs wiring and electrical systems"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m01-r-quiz",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "Where does Sarah work?",
+                "options": [
+                  "In a school",
+                  "In a city hospital",
+                  "In an office"
+                ],
+                "answer": "In a city hospital",
+                "explanation": "The passage states that Sarah works in a busy city hospital."
+              },
+              {
+                "id": "q-r-2",
+                "question": "What is Sarah's profession?",
+                "options": [
+                  "Nurse",
+                  "Architect",
+                  "Journalist"
+                ],
+                "answer": "Nurse",
+                "explanation": "The text confirms that Sarah is a nurse."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What does Sarah do for patients?",
+                "options": [
+                  "She designs their houses",
+                  "She cares for them and gives medicine",
+                  "She repairs their computers"
+                ],
+                "answer": "She cares for them and gives medicine",
+                "explanation": "The passage notes her daily job is to care for patients, check their temperature, and give them medicine."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What is David's profession?",
+                "options": [
+                  "Electrician",
+                  "Architect",
+                  "Pilot"
+                ],
+                "answer": "Architect",
+                "explanation": "The text states that David works as an architect."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What does David design?",
+                "options": [
+                  "Modern houses and offices",
+                  "Airplane engines",
+                  "Medical equipment"
+                ],
+                "answer": "Modern houses and offices",
+                "explanation": "The passage explains that David designs modern houses and offices."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Where does David sometimes go to talk to workers?",
+                "options": [
+                  "To a hospital",
+                  "To construction sites",
+                  "To a news station"
+                ],
+                "answer": "To construction sites",
+                "explanation": "The text mentions that he visits construction sites to talk to workers."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Who does David talk to at construction sites?",
+                "options": [
+                  "Electricians and builders",
+                  "Nurses and doctors",
+                  "Flight attendants"
+                ],
+                "answer": "Electricians and builders",
+                "explanation": "The passage specifies that he talks to electricians and builders."
+              },
+              {
+                "id": "q-r-8",
+                "question": "How does Sarah feel about helping people?",
+                "options": [
+                  "She dislikes it",
+                  "She likes it",
+                  "She feels bored"
+                ],
+                "answer": "She likes it",
+                "explanation": "The text states that she likes helping people and talking to their families."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What kind of hospital does Sarah work in?",
+                "options": [
+                  "A quiet village hospital",
+                  "A busy city hospital",
+                  "An empty animal hospital"
+                ],
+                "answer": "A busy city hospital",
+                "explanation": "The passage describes her workplace as a busy city hospital."
+              },
+              {
+                "id": "q-r-10",
+                "question": "According to the passage, what kind of jobs do Sarah and David have?",
+                "options": [
+                  "Unimportant jobs",
+                  "Very important jobs in our community",
+                  "Boring office jobs"
+                ],
+                "answer": "Very important jobs in our community",
+                "explanation": "The final sentence states that both Sarah and David have very important jobs in our community."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m01-listening",
+      "moduleId": "A2.2-M01",
+      "skillType": "listening",
+      "title": "Listening Mission: Exploring Jobs and Workplaces",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a2-2-m01-l-theory",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Focus on catching key job titles and workplaces when listening to casual chats. Pay attention to how native speakers link words together in fast speech.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about jobs.",
+              "Identify details such as workplaces and daily tasks.",
+              "Notice how words link together in connected speech."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "What does your sister do?",
+                "meaning": "Apa pekerjaan saudari perempuanmu?",
+                "note": "Used to ask about someone's job."
+              },
+              {
+                "phrase": "cares for patients",
+                "meaning": "merawat pasien",
+                "note": "Common collocation for nursing."
+              },
+              {
+                "phrase": "architecture firm",
+                "meaning": "perusahaan arsitektur",
+                "note": "Office where architects work."
+              },
+              {
+                "phrase": "repairs electrical systems",
+                "meaning": "memperbaiki sistem kelistrikan",
+                "note": "Description of an electrician's duty."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "What does",
+                "fast": "Wha-does",
+                "slowIpa": "/wɒt dʌz/",
+                "fastIpa": "/wʌdʌz/",
+                "note": "The final t in what links smoothly into does."
+              },
+              {
+                "id": 2,
+                "slow": "works in",
+                "fast": "worksin",
+                "slowIpa": "/wɜːks ɪn/",
+                "fastIpa": "/wɜːksɪn/",
+                "note": "The consonant sound at the end of works links to the vowel in in."
+              },
+              {
+                "id": 3,
+                "slow": "an architect",
+                "fast": "anarchitect",
+                "slowIpa": "/æn ˈɑːkɪtɛkt/",
+                "fastIpa": "/ænɑːkɪtɛkt/",
+                "note": "The n in an links directly to the vowel in architect."
+              },
+              {
+                "id": 4,
+                "slow": "enjoys his",
+                "fast": "enjoy-zis",
+                "slowIpa": "/ɪnˈdʒɔɪz hɪz/",
+                "fastIpa": "/ɪnˈdʒɔɪzɪz/",
+                "note": "The h in his is often dropped in fast casual speech."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m01-l-dialogue",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Talking About Family Jobs",
+          "orderIndex": 2,
+          "content": {
+            "context": "Sarah and Tom talk about jobs and workplaces at a local cafe.",
+            "audioPrompt": "Listen to the conversation between two friends.",
+            "lines": [
+              {
+                "speaker": "Sarah",
+                "text": "Hi Tom, what does your sister do?",
+                "translation": "Hai Tom, apa pekerjaan kakakmu?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Tom",
+                "text": "She is a nurse in a hospital.",
+                "translation": "Dia adalah seorang perawat di rumah sakit.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Does she care for sick patients?",
+                "translation": "Apakah dia merawat pasien yang sakit?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Yes, she helps them every single day.",
+                "translation": "Ya, dia membantu mereka setiap hari.",
+                "emotion": "positive"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "That is a very important job.",
+                "translation": "Itu adalah pekerjaan yang sangat penting.",
+                "emotion": "impressed"
+              },
+              {
+                "speaker": "Tom",
+                "text": "What about your older brother?",
+                "translation": "Bagaimana dengan kakak laki-lakimu?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "He works as an architect.",
+                "translation": "Dia bekerja sebagai seorang arsitek.",
+                "emotion": "proud"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Does he design big modern buildings?",
+                "translation": "Apakah dia merancang bangunan besar yang modern?",
+                "emotion": "interested"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Yes, in a large design firm.",
+                "translation": "Ya, di sebuah perusahaan desain besar.",
+                "emotion": "casual"
+              },
+              {
+                "speaker": "Tom",
+                "text": "My father is an electrician too.",
+                "translation": "Ayahku juga seorang teknisi listrik.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Does he repair house wiring systems?",
+                "translation": "Apakah dia memperbaiki sistem kabel rumah?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Yes, he loves fixing electrical problems.",
+                "translation": "Ya, dia suka memperbaiki masalah kelistrikan.",
+                "emotion": "happy"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m01-l-quiz",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Hi Tom, what does your sister do?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Hi Tom, what does your _____ do?\"",
+                "targetWord": "sister",
+                "explanation": "Full audio: \"Hi Tom, what does your sister do?\". The missing word is \"sister\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "She is a nurse in a hospital.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"She is a nurse in a _____.\"",
+                "targetWord": "hospital",
+                "explanation": "Full audio: \"She is a nurse in a hospital.\". The missing word is \"hospital\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Does she care for sick patients?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Does she care for sick _____?\"",
+                "targetWord": "patients",
+                "explanation": "Full audio: \"Does she care for sick patients?\". The missing word is \"patients\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Yes, she helps them every single day.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Yes, she helps them every single _____.\"",
+                "targetWord": "day",
+                "explanation": "Full audio: \"Yes, she helps them every single day.\". The missing word is \"day\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "That is a very important job.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"That is a very important _____.\"",
+                "targetWord": "job",
+                "explanation": "Full audio: \"That is a very important job.\". The missing word is \"job\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "What about your older brother?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What about your older brother",
+                "words": [
+                  "about",
+                  "brother",
+                  "your",
+                  "What",
+                  "older"
+                ],
+                "explanation": "Correct sentence order: \"What about your older brother?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "He works as an architect.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He works as an architect",
+                "words": [
+                  "He",
+                  "an",
+                  "architect",
+                  "as",
+                  "works"
+                ],
+                "explanation": "Correct sentence order: \"He works as an architect.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Does he design big modern buildings?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Does he design big modern buildings",
+                "words": [
+                  "buildings",
+                  "Does",
+                  "design",
+                  "he",
+                  "big",
+                  "modern"
+                ],
+                "explanation": "Correct sentence order: \"Does he design big modern buildings?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Yes, in a large design firm.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes in a large design firm",
+                "words": [
+                  "firm",
+                  "large",
+                  "Yes",
+                  "in",
+                  "design",
+                  "a"
+                ],
+                "explanation": "Correct sentence order: \"Yes, in a large design firm.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "My father is an electrician too.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "My father is an electrician too",
+                "words": [
+                  "My",
+                  "too",
+                  "electrician",
+                  "is",
+                  "father",
+                  "an"
+                ],
+                "explanation": "Correct sentence order: \"My father is an electrician too.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Hi Tom, what does your sister do?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Hi Tom, what does your _____ do?\"",
+                "targetWord": "sister",
+                "explanation": "Full audio: \"Hi Tom, what does your sister do?\". The missing word is \"sister\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "She is a nurse in a hospital.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"She is a nurse in a _____.\"",
+                "targetWord": "hospital",
+                "explanation": "Full audio: \"She is a nurse in a hospital.\". The missing word is \"hospital\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Does she care for sick patients?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Does she care for sick _____?\"",
+                "targetWord": "patients",
+                "explanation": "Full audio: \"Does she care for sick patients?\". The missing word is \"patients\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Yes, she helps them every single day.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Yes, she helps them every single _____.\"",
+                "targetWord": "day",
+                "explanation": "Full audio: \"Yes, she helps them every single day.\". The missing word is \"day\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "That is a very important job.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"That is a very important _____.\"",
+                "targetWord": "job",
+                "explanation": "Full audio: \"That is a very important job.\". The missing word is \"job\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "What about your older brother?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What about your older brother",
+                "words": [
+                  "about",
+                  "brother",
+                  "your",
+                  "What",
+                  "older"
+                ],
+                "explanation": "Correct sentence order: \"What about your older brother?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "He works as an architect.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He works as an architect",
+                "words": [
+                  "He",
+                  "an",
+                  "architect",
+                  "as",
+                  "works"
+                ],
+                "explanation": "Correct sentence order: \"He works as an architect.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Does he design big modern buildings?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Does he design big modern buildings",
+                "words": [
+                  "buildings",
+                  "Does",
+                  "design",
+                  "he",
+                  "big",
+                  "modern"
+                ],
+                "explanation": "Correct sentence order: \"Does he design big modern buildings?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Yes, in a large design firm.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes in a large design firm",
+                "words": [
+                  "firm",
+                  "large",
+                  "Yes",
+                  "in",
+                  "design",
+                  "a"
+                ],
+                "explanation": "Correct sentence order: \"Yes, in a large design firm.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "My father is an electrician too.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "My father is an electrician too",
+                "words": [
+                  "My",
+                  "too",
+                  "electrician",
+                  "is",
+                  "father",
+                  "an"
+                ],
+                "explanation": "Correct sentence order: \"My father is an electrician too.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m01-writing",
+      "moduleId": "A2.2-M01",
+      "skillType": "writing",
+      "title": "Writing Mission: Professions, Workplaces & Job Responsibilities",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a2-2-m01-w-theory",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Learn how to write clear sentences about jobs, workplace locations, and daily job duties using simple present tense and correct prepositions.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Asking About Job Responsibilities",
+                "formula": "What does a/an + [profession] + do?",
+                "example": "What does an architect do?"
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Describing Job Duties",
+                "formula": "A/An + [profession] + [verb with s/es] + [object].",
+                "example": "An architect designs buildings."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Stating Workplaces",
+                "formula": "[Profession plural or pronoun] + work in/at + [place].",
+                "example": "Nurses work in hospitals."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Use the indefinite article 'a' before consonant sounds and 'an' before vowel sounds for professions.",
+                "badExample": "He is a architect who works in a office.",
+                "goodExample": "He is an architect who works in an office.",
+                "why": "Architect and office start with vowel sounds, so they require 'an' instead of 'a'."
+              },
+              {
+                "rule": "Add 's' or 'es' to the base verb when describing third-person singular job responsibilities.",
+                "goodExample": "A journalist writes news articles every day.",
+                "badExample": "A journalist write news articles every day.",
+                "why": "Singular profession subjects require the third-person singular present simple verb form."
+              },
+              {
+                "rule": "Use the preposition 'in' for enclosed indoor spaces and 'at' for specific outdoor or work sites.",
+                "goodExample": "Nurses work in hospitals and electricians work at construction sites.",
+                "badExample": "Nurses work at hospitals and electricians work in construction sites.",
+                "why": "Hospitals are enclosed buildings requiring 'in', while construction sites are specific locations requiring 'at'."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "What does a flight attendant do during a flight?",
+                "id": "Apa yang dilakukan pramugari selama penerbangan?",
+                "focus": "Question formation for job duties"
+              },
+              {
+                "en": "A flight attendant serves passengers and ensures safety.",
+                "id": "Pramugari melayani penumpang dan memastikan keselamatan.",
+                "focus": "Singular subject verb agreement"
+              },
+              {
+                "en": "Chefs work in restaurant kitchens to prepare delicious meals.",
+                "id": "Koki bekerja di dapur restoran untuk menyiapkan makanan lezat.",
+                "focus": "Workplace preposition 'in'"
+              },
+              {
+                "en": "Electricians work at various construction sites every week.",
+                "id": "Ahli listrik bekerja di berbagai lokasi konstruksi setiap minggu.",
+                "focus": "Workplace preposition 'at'"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m01-w-practice",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "a nurse work in a hospital and help sick patients",
+                "targetSentence": "A nurse works in a hospital and helps sick patients.",
+                "translation": "Perawat bekerja di rumah sakit dan membantu pasien sakit.",
+                "keyRule": "Capitalize the first word, add 's' to third-person verbs, and use 'an' or 'a' correctly.",
+                "requiredCapitals": [
+                  "A"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "what does an architect do in the office",
+                "targetSentence": "What does an architect do in the office?",
+                "translation": "Apa yang dilakukan seorang arsitek di kantor?",
+                "keyRule": "Start questions with a capital letter and end with a question mark.",
+                "requiredCapitals": [
+                  "What"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "electricians works at construction sites every morning",
+                "targetSentence": "Electricians work at construction sites every morning.",
+                "translation": "Ahli listrik bekerja di lokasi konstruksi setiap pagi.",
+                "keyRule": "Plural subjects like electricians take the base verb form without an 's'.",
+                "requiredCapitals": [
+                  "Electricians"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Job Responsibilities",
+                "meaning": "Seorang koki menyiapkan makanan di dapur restoran.",
+                "tokens": [
+                  "A",
+                  "chef",
+                  "prepares",
+                  "food",
+                  "in",
+                  "the",
+                  "restaurant",
+                  "kitchen."
+                ],
+                "fullSentence": "A chef prepares food in the restaurant kitchen."
+              },
+              {
+                "id": "b-2",
+                "category": "Asking About Jobs",
+                "meaning": "Apa yang dilakukan oleh seorang jurnalis?",
+                "tokens": [
+                  "What",
+                  "does",
+                  "a",
+                  "journalist",
+                  "do?"
+                ],
+                "fullSentence": "What does a journalist do?"
+              },
+              {
+                "id": "b-3",
+                "category": "Workplaces",
+                "meaning": "Perawat bekerja di rumah sakit setiap hari.",
+                "tokens": [
+                  "Nurses",
+                  "work",
+                  "in",
+                  "hospitals",
+                  "every",
+                  "day."
+                ],
+                "fullSentence": "Nurses work in hospitals every day."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Describe a Profession",
+                "badge": "Profession Writer",
+                "instruction": "Write three sentences about a profession of your choice. Mention what the professional does and where they work.",
+                "example": "A teacher works in a school. A teacher explains lessons to students. A teacher also grades homework every evening.",
+                "placeholder": "Type your sentences about the profession here...",
+                "minWords": 15,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Daily Job Responsibilities",
+                "badge": "Workplace Expert",
+                "instruction": "Write three sentences explaining your dream job. Describe your daily responsibilities and workplace.",
+                "example": "I want to be a web developer. I will work in a modern office in Jakarta. I will write code and build useful software applications.",
+                "placeholder": "Type your sentences about your dream job here...",
+                "minWords": 15,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m01-w-quiz",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change this affirmative sentence into a negative sentence:",
+                "promptText": "A journalist writes news articles for the magazine.",
+                "hint": "Use 'does not write' or 'doesn't write'.",
+                "targetAnswers": [
+                  "A journalist doesn't write news articles for the magazine.",
+                  "A journalist does not write news articles for the magazine."
+                ],
+                "explanation": "For third-person singular subjects in the present simple, use 'does not' or 'doesn't' followed by the base verb."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Question Formulation",
+                "instruction": "Form a correct question asking about an architect's responsibilities:",
+                "promptText": "an architect / do / what / ?",
+                "hint": "Start with 'What does'.",
+                "targetAnswers": [
+                  "What does an architect do?"
+                ],
+                "explanation": "The standard question structure for job duties is 'What does a/an [profession] do?'."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the capitalization and punctuation errors in the following sentence:",
+                "promptText": "nurses work in hospitals in london",
+                "hint": "Capitalize the first word and proper noun London, add a period at the end.",
+                "targetAnswers": [
+                  "Nurses work in hospitals in London."
+                ],
+                "explanation": "Sentences begin with a capital letter, cities like London require capital letters, and statements end with a period."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Preposition Choice",
+                "instruction": "Fill in the missing preposition (in or at): Electricians work ___ construction sites.",
+                "promptText": "Electricians work ___ construction sites.",
+                "hint": "Use 'at' for specific work locations.",
+                "targetAnswers": [
+                  "at"
+                ],
+                "explanation": "We use the preposition 'at' for specific sites like construction sites."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Verb Agreement",
+                "instruction": "Choose the correct verb form for the singular subject: A chef (prepare / prepares) meals every evening.",
+                "promptText": "A chef prepares meals every evening.",
+                "hint": "Select the verb with 's'.",
+                "targetAnswers": [
+                  "prepares"
+                ],
+                "explanation": "Singular professions require the third-person singular verb ending in 's'."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this statement into a yes/no question:",
+                "promptText": "An accountant works in an office.",
+                "hint": "Start with 'Does'.",
+                "targetAnswers": [
+                  "Does an accountant work in an office?"
+                ],
+                "explanation": "Present simple yes/no questions with third-person singular subjects start with 'Does' followed by the base verb 'work'."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Short Response",
+                "instruction": "Write a complete sentence stating where nurses work:",
+                "promptText": "Where do nurses work?",
+                "hint": "Use 'Nurses work in...'",
+                "targetAnswers": [
+                  "Nurses work in hospitals.",
+                  "Nurses work in a hospital."
+                ],
+                "explanation": "State the workplace clearly using the plural profession and the correct preposition 'in'."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the article error in this sentence:",
+                "promptText": "He is architect who designs buildings.",
+                "hint": "Add 'an' before architect.",
+                "targetAnswers": [
+                  "He is an architect who designs buildings."
+                ],
+                "explanation": "Profession nouns starting with a vowel sound require the indefinite article 'an'."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Preposition Choice",
+                "instruction": "Fill in the missing preposition (in or at): Teachers work ___ schools.",
+                "promptText": "Teachers work ___ schools.",
+                "hint": "Use 'in' for enclosed indoor buildings.",
+                "targetAnswers": [
+                  "in"
+                ],
+                "explanation": "Schools are enclosed indoor workplaces, so we use 'in'."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Sentence Construction",
+                "instruction": "Write a complete sentence describing what a flight attendant does:",
+                "promptText": "flight attendant / serve / passengers",
+                "hint": "Use 'A flight attendant serves passengers.'",
+                "targetAnswers": [
+                  "A flight attendant serves passengers.",
+                  "A flight attendant serves passengers on planes."
+                ],
+                "explanation": "Combine the article, singular profession, verb with 's', and object to form a complete descriptive sentence."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m01-speaking",
+      "moduleId": "A2.2-M01",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Professions, Workplaces and Job Responsibilities",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a2-2-m01-s-theory",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation and Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Focus on articulating job titles clearly, stressing the correct syllables in multisyllabic professions like electrician and architect, and using natural rhythm when describing daily work routines.",
+            "audioGuidance": "Pay close attention to consonant clusters in words like architect and journalist. Keep your voice clear and project your voice when speaking about professional responsibilities.",
+            "pillars": [
+              {
+                "name": "Vowel Clarity",
+                "target": "Clear pronunciation of job titles",
+                "explanation": "Ensure vowels in words like nurse and flight attendant are pronounced clearly without adding extra sounds."
+              },
+              {
+                "name": "Syllable Stress",
+                "target": "Accurate stress on professional nouns",
+                "explanation": "Place the main stress on the correct syllable, such as elec-TRI-cian or AR-chi-tect."
+              },
+              {
+                "name": "Sentence Rhythm",
+                "target": "Linking verbs and nouns",
+                "explanation": "Link verbs like manage and design smoothly with their objects in natural conversation."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m01-s-practice",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills and Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "AR-chi-tect",
+                "countryAudio": "architect",
+                "countrySyllables": [
+                  {
+                    "text": "AR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "chi",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tect",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ar-chi-TEC-tural",
+                "natAudio": "architectural",
+                "natSyllables": [
+                  {
+                    "text": "ar",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "chi",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TEC",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tu",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ral",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice how the stress shifts when the word form changes from noun to adjective."
+              },
+              {
+                "id": "pair-2",
+                "country": "elec-TRI-cian",
+                "countryAudio": "electrician",
+                "countrySyllables": [
+                  {
+                    "text": "e",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "lec",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TRI",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "cian",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "e-lec-TRIC-i-ty",
+                "natAudio": "electricity",
+                "natSyllables": [
+                  {
+                    "text": "e",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "lec",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TRIC",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ty",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice how the stress moves to the third syllable in the noun form electricity."
+              },
+              {
+                "id": "pair-3",
+                "country": "JOUR-nal-ist",
+                "countryAudio": "journalist",
+                "countrySyllables": [
+                  {
+                    "text": "JOUR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "nal",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ist",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "JOUR-nal-ism",
+                "natAudio": "journalism",
+                "natSyllables": [
+                  {
+                    "text": "JOUR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "nal",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ism",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The primary stress remains on the first syllable in both the person noun and the field noun."
+              },
+              {
+                "id": "pair-4",
+                "country": "O-per-ate",
+                "countryAudio": "operate",
+                "countrySyllables": [
+                  {
+                    "text": "O",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "per",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ate",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "o-per-A-tion",
+                "natAudio": "operation",
+                "natSyllables": [
+                  {
+                    "text": "o",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "per",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "A",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice the stress shift to the third syllable when the suffix changes the word to a noun."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "An architect designs buildings and houses for clients.",
+                "phonetic": "/ən ˈɑːkɪtɛkt dɪˈzaɪnz ˈbɪldɪŋz ænd ˈhaʊzɪz/",
+                "focus": "Vocabulary phrase 'designs buildings' and word stress",
+                "hint": "Pronounce each syllable in architect clearly."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "The electrician repairs the faulty wiring in our office.",
+                "phonetic": "/ði ɪˈlɛktrɪʃən rɪˈpeəz ðə ˈfɔːlti ˈwaɪərɪŋ/",
+                "focus": "Word stress in 'electrician' and action verb 'repairs'",
+                "hint": "Place the main stress on the middle syllable of electrician."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Flight attendants serve food and drinks on the airplane.",
+                "phonetic": "/flaɪt əˈtɛndənts sɜːv fuːd ænd drɪŋks/",
+                "focus": "Linking words and plural noun pronunciation",
+                "hint": "Blend 'serve' and 'food' smoothly together."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "She manages a team of ten people every day.",
+                "phonetic": "/ʃiː ˈmænɪdʒɪz ə tiːm ɒv tɛn ˈpiːpəl/",
+                "focus": "Third person singular verb ending 'manages'",
+                "hint": "Ensure the ending sound 'is' on manages is distinct."
+              }
+            ],
+            "roleplay": {
+              "context": "You are talking to a colleague about your daily job responsibilities in the office.",
+              "roles": [
+                "Colleague",
+                "You"
+              ],
+              "turns": [
+                {
+                  "speaker": "Colleague",
+                  "text": "What do you usually do in your job every morning?",
+                  "translation": "Apa yang biasanya kamu lakukan dalam pekerjaanmu setiap pagi?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "I manage a team of ten people and check daily reports.",
+                  "translation": "Saya mengelola tim yang terdiri dari sepuluh orang dan memeriksa laporan harian."
+                },
+                {
+                  "speaker": "Colleague",
+                  "text": "That sounds busy. Do you also design new projects?",
+                  "translation": "Itu kedengarannya sibuk. Apakah kamu juga merancang proyek baru?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Yes, I design websites and help clients solve technical problems.",
+                  "translation": "Ya, saya mendesain situs web dan membantu klien menyelesaikan masalah teknis."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-2-m01-s-quiz",
+          "moduleId": "A2.2-M01",
+          "subModuleId": "sub-a2-2-m01-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum and AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about your dream job and what you want to do.",
+                "audioPrompt": "Tell me what job you want to have in the future and why you like it.",
+                "storyPoints": [
+                  "The specific profession you want to choose",
+                  "Where you want to work every day",
+                  "What main responsibilities you will have"
+                ],
+                "targetSentence": "I want to be an architect because I love designing modern buildings.",
+                "phonetic": "/aɪ wɒnt tuː biː ən ˈɑːkɪtɛkt bɪˈkɒz aɪ lʌv dɪˈzaɪnɪŋ/",
+                "expectedKeywords": [
+                  "architect",
+                  "designs",
+                  "buildings",
+                  "work"
+                ],
+                "explanation": "Use the Present Simple tense and clear noun phrasing to describe your dream profession."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Workplace Storytelling",
+                "instruction": "Describe a typical workday of a profession you know well.",
+                "audioPrompt": "Describe what a nurse does during a normal shift at the hospital.",
+                "storyPoints": [
+                  "The workplace and starting time of the shift",
+                  "How the nurse cares for sick patients",
+                  "How the shift ends in the evening"
+                ],
+                "targetSentence": "Nurses care for patients in hospitals and check their health every morning.",
+                "phonetic": "/nɜːsɪz keər fɔːr ˈpeɪʃənts ɪn ˈhɒspɪtəlz/",
+                "expectedKeywords": [
+                  "nurses",
+                  "care",
+                  "patients",
+                  "hospital"
+                ],
+                "explanation": "Describe routine professional duties clearly using plural nouns and action verbs."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Job Interview Roleplay",
+                "instruction": "Respond to the interviewer asking about your past experience.",
+                "audioPrompt": "Welcome to the interview. Can you tell me what you did in your previous job as a journalist?",
+                "scenarioContext": "You are in a job interview for a media company. The interviewer asks about your journalism experience.",
+                "characterRole": "Job applicant",
+                "targetSentence": "As a journalist, I wrote articles about current events and interviewed local people.",
+                "phonetic": "/æz ə ˈdʒɜːnəlɪst aɪ rəʊt ˈɑːtɪkəlz/",
+                "expectedKeywords": [
+                  "journalist",
+                  "wrote",
+                  "articles",
+                  "interview"
+                ],
+                "explanation": "Answer confidently using past tense verbs for previous work experience."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Workplace Assistance Roleplay",
+                "instruction": "Respond to an office manager who needs help with equipment.",
+                "audioPrompt": "Excuse me, the office printer is broken again. Can someone fix it?",
+                "scenarioContext": "An office colleague tells you about a broken machine and asks for help.",
+                "characterRole": "Colleague or Technician",
+                "targetSentence": "Do not worry, the electrician can repair the wiring and machines today.",
+                "phonetic": "/duː nɒt ˈwʌri ði ɪˈlɛktrɪʃən kæn rɪˈpeə/",
+                "expectedKeywords": [
+                  "electrician",
+                  "repair",
+                  "machine",
+                  "today"
+                ],
+                "explanation": "Use modal verbs and workplace vocabulary to offer practical solutions."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Flight Assistance Roleplay",
+                "instruction": "Respond to a passenger asking for help on an airplane.",
+                "audioPrompt": "Excuse me, can you help me find my seat and serve some water?",
+                "scenarioContext": "You are acting as a flight attendant on a commercial airplane speaking to a passenger.",
+                "characterRole": "Flight Attendant",
+                "targetSentence": "Of course, flight attendants are happy to serve food and drinks on board.",
+                "phonetic": "/ɒv kɔːs flaɪt əˈtɛndənts ɑː ˈhæpi tuː sɜːv/",
+                "expectedKeywords": [
+                  "flight attendant",
+                  "serve",
+                  "drinks",
+                  "seat"
+                ],
+                "explanation": "Maintain polite professional tone as a service worker."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Team Management Roleplay",
+                "instruction": "Speak with your supervisor about team responsibilities.",
+                "audioPrompt": "How many people do you manage in your department this month?",
+                "scenarioContext": "Your manager is discussing department organization and leadership roles with you.",
+                "characterRole": "Team Manager",
+                "targetSentence": "I manage a team of ten people and help them design new web pages.",
+                "phonetic": "/aɪ ˈmænɪdʒ ə tiːm ɒv tɛn ˈpiːpəl/",
+                "expectedKeywords": [
+                  "manage",
+                  "team",
+                  "people",
+                  "design"
+                ],
+                "explanation": "Describe management duties clearly in present simple tense."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Substitution Drill",
+                "instruction": "Read the sentence aloud, replacing the blank with the correct profession vocabulary word.",
+                "audioPrompt": "Complete the sentence: An architect designs buildings and houses.",
+                "focus": "vocab",
+                "targetSentence": "An architect designs buildings and houses for clients.",
+                "phonetic": "/ən ˈɑːkɪtɛkt dɪˈzaɪnz ˈbɪldɪŋz ænd ˈhaʊzɪz/",
+                "expectedKeywords": [
+                  "architect",
+                  "designs",
+                  "buildings"
+                ],
+                "explanation": "Focus on correct vocabulary usage for professions."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Transformation Drill",
+                "instruction": "Transform the sentence into the third-person singular present simple form.",
+                "audioPrompt": "Change I manage a team to start with She.",
+                "focus": "grammar",
+                "targetSentence": "She manages a team of ten people in the office.",
+                "phonetic": "/ʃiː ˈmænɪdʒɪz ə tiːm ɒv tɛn ˈpiːpəl/",
+                "expectedKeywords": [
+                  "she",
+                  "manages",
+                  "team"
+                ],
+                "explanation": "Practice third-person singular s endings for present simple verbs."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Syllable Stress Drill",
+                "instruction": "Read the sentence placing strong syllable stress on the profession title.",
+                "audioPrompt": "Say this sentence and stress the second syllable in electrician.",
+                "focus": "pronunciation_stress",
+                "targetSentence": "The electrician repairs the faulty wiring in the building.",
+                "phonetic": "/ði ɪˈlɛktrɪʃən rɪˈpeəz ðə ˈfɔːlti ˈwaɪərɪŋ/",
+                "expectedKeywords": [
+                  "electrician",
+                  "repairs",
+                  "wiring"
+                ],
+                "explanation": "Master word stress on multisyllabic professional titles."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Pattern Drill",
+                "instruction": "Read the question with rising intonation and the answer with falling intonation.",
+                "audioPrompt": "Ask Do you operate heavy machinery with rising intonation.",
+                "focus": "pronunciation_intonation",
+                "targetSentence": "Do you operate heavy machinery? Yes, I operate machines safely every day.",
+                "phonetic": "/duː juː ˈɒpəreɪt ˈhɛvi məˈʃiːnəri/",
+                "expectedKeywords": [
+                  "operate",
+                  "machinery",
+                  "safely"
+                ],
+                "explanation": "Use rising intonation for yes-no questions and falling intonation for statements."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

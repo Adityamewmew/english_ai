@@ -1,0 +1,197 @@
+{
+  "id": "C2-M10",
+  "levelId": "C2",
+  "title": "Unit 10: Learning for Life: Education, Memory & Nominalization",
+  "cefr": "C2",
+  "group": "Core Units",
+  "objective": "Mampu menggunakan pola reported speech (passive & active), menguasai kosakata pendidikan tinggi, dan berdiskusi tentang kebijakan pendidikan dengan argumentasi yang terstruktur.",
+  "orderIndex": 10,
+  "sections": {
+    "theory": {
+      "summary": "Unit ini membahas cara melaporkan perkataan orang lain menggunakan reported verbs dan passive report structures. Kamu akan belajar pola seperti 'Experts think that...' atau 'It is believed that...', serta nominalisasi untuk membuat tulisan lebih formal. Materi ini penting untuk diskusi akademis dan penulisan esai tingkat lanjut.",
+      "rules": [
+        "Reported verb patterns: Subject + reporting verb + that-clause (e.g., 'Experts think that more research is needed')",
+        "Passive report structures: It + passive verb + that-clause (e.g., 'It is believed that music helps memory')",
+        "Nominalization: Mengubah verb/adjective menjadi noun untuk tone formal (e.g., 'decide' → 'decision', 'expensive' → 'expense')",
+        "Hedging expressions: Menggunakan 'seem', 'appear', 'probably', 'are thought to' untuk menunjukkan kehati-hatian dalam klaim"
+      ],
+      "commonTrap": {
+        "trapTitle": "Kesalahan Menggunakan Infinitive setelah Reporting Verbs",
+        "explanation": "Banyak pemula salah menggunakan infinitive (to + verb) setelah reporting verbs seperti 'suggest', 'recommend', atau 'decide'. Padahal, kata-kata ini membutuhkan that-clause atau gerund, bukan infinitive.",
+        "wrong": "The teacher suggested to study Physics instead of Drama.",
+        "correct": "The teacher suggested studying Physics instead of Drama."
+      }
+    },
+    "vocab": [
+      {
+        "word": "sail through",
+        "ipa": "/seɪl θruː/",
+        "meaning": "lulus atau berhasil dengan sangat mudah",
+        "collocation": "Margaret sailed through her end-of-term exams."
+      },
+      {
+        "word": "drop out",
+        "ipa": "/drɒp aʊt/",
+        "meaning": "berhenti atau keluar dari sekolah/universitas sebelum lulus",
+        "collocation": "She wrote her dissertation on 20th-century dropouts."
+      },
+      {
+        "word": "dissertation",
+        "ipa": "/ˌdɪsəˈteɪʃən/",
+        "meaning": "karya tulis ilmiah panjang (skripsi/tesis)",
+        "collocation": "She wrote her dissertation on 20th-century literature."
+      },
+      {
+        "word": "enrol",
+        "ipa": "/ɪnˈrəʊl/",
+        "meaning": "mendaftar sebagai anggota atau peserta program",
+        "collocation": "Students can enrol in undergraduate or master's programs."
+      },
+      {
+        "word": "indecisive",
+        "ipa": "/ˌɪndɪˈsaɪsɪv/",
+        "meaning": "tidak bisa membuat keputusan dengan tegas",
+        "collocation": "One parent accused her of being indecisive about dropping subjects."
+      },
+      {
+        "word": "viable",
+        "ipa": "/ˈvaɪəbəl/",
+        "meaning": "dapat dilaksanakan atau realistis",
+        "collocation": "Making the school more financially viable is important."
+      },
+      {
+        "word": "dopamine",
+        "ipa": "/ˈdəʊpəmiːn/",
+        "meaning": "zat kimia di otak yang mengatur perasaan senang dan motivasi",
+        "collocation": "Dopamine plays an important role with regard to the brain."
+      },
+      {
+        "word": "hedging",
+        "ipa": "/ˈhedʒɪŋ/",
+        "meaning": "cara berbicara/menulis yang hati-hati untuk menghindari klaim yang terlalu pasti",
+        "collocation": "Hedging expressions like 'seem' or 'appear' make statements less direct."
+      }
+    ],
+    "dialogue": {
+      "context": "Joanna, Harry, dan Tanya berdiskusi tentang kehidupan mereka setelah lulus sekolah dan pilihan yang mereka buat.",
+      "lines": [
+        {
+          "speaker": "Joanna",
+          "text": "Did they go to university? If not, what are they now doing?",
+          "translation": "Apakah mereka kuliah? Kalau tidak, apa yang mereka lakukan sekarang?"
+        },
+        {
+          "speaker": "Harry",
+          "text": "What factors helped them make their decision?",
+          "translation": "Faktor apa yang membantu mereka membuat keputusan?"
+        },
+        {
+          "speaker": "Tanya",
+          "text": "How do they feel now about the decision they made?",
+          "translation": "Bagaimana perasaan mereka sekarang tentang keputusan yang sudah diambil?"
+        },
+        {
+          "speaker": "Joanna",
+          "text": "I'd disagree. She sounds a bit selfish. I'll rather talk to Harry. He seems the most mature.",
+          "translation": "Aku tidak setuju. Dia terdengar agak egois. Aku lebih suka bicara dengan Harry. Dia tampak paling dewasa."
+        }
+      ]
+    },
+    "speakingLab": {
+      "context": "Mr. Khoirul meminta pendapatmu tentang kebijakan pendidikan tinggi dan apakah semua orang harus kuliah atau tidak.",
+      "roles": [
+        "Mr. Khoirul",
+        "You"
+      ],
+      "defaultUserRole": "You",
+      "turns": [
+        {
+          "speaker": "Mr. Khoirul",
+          "text": "Do you think everyone should go to university, or are there good reasons not to? What's your view?"
+        },
+        {
+          "speaker": "You",
+          "text": "I think it depends on each person's goals. University is great for certain careers, but not everyone needs a degree to succeed."
+        },
+        {
+          "speaker": "Mr. Khoirul",
+          "text": "That's a fair point. Can you give me an example of someone who might benefit more from not going to university?"
+        },
+        {
+          "speaker": "You",
+          "text": "Sure. Someone who wants to start their own business might learn more from real work experience than from studying theory at university."
+        },
+        {
+          "speaker": "Mr. Khoirul",
+          "text": "Interesting perspective. Now, what about the argument that higher education helps people become more well-rounded and informed citizens?"
+        },
+        {
+          "speaker": "You",
+          "text": "That's true, but I believe people can also become well-informed through reading, online courses, and life experience without formal university education."
+        }
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Complete the sentence with the correct reported verb pattern: 'The education minister _____ cutting at least one subject from the school curriculum.'",
+        "options": [
+          "recommended",
+          "recommended to cut",
+          "recommended us cutting"
+        ],
+        "answer": "recommended",
+        "explanation": "Kata 'recommend' diikuti langsung oleh gerund (verb+ing) atau that-clause, bukan infinitive. Pola yang benar: 'recommended cutting' atau 'recommended that we cut'."
+      },
+      {
+        "question": "Which passive report structure is correct? 'Scientists ___ that music has beneficial effects on memory.'",
+        "options": [
+          "are believing",
+          "believe",
+          "are believed"
+        ],
+        "answer": "believe",
+        "explanation": "Dalam kalimat aktif dengan subject jelas (Scientists), gunakan simple present 'believe'. Passive structure 'It is believed that...' digunakan tanpa subject spesifik."
+      },
+      {
+        "question": "Choose the correct hedging expression: 'Playing music in hospital waiting rooms ___ patients' moods.'",
+        "options": [
+          "definitely improves",
+          "improves",
+          "seems to improve"
+        ],
+        "answer": "seems to improve",
+        "explanation": "Hedging expression 'seems to' menunjukkan kehati-hatian dalam membuat klaim, cocok untuk konteks akademis. Ini lebih ilmiah daripada klaim absolut."
+      },
+      {
+        "question": "I was very lucky that I _____ a scholarship to do my master's degree.",
+        "options": [
+          "won",
+          "took",
+          "went"
+        ],
+        "answer": "won",
+        "explanation": "Collocation yang tepat adalah 'won a scholarship' (memenangkan beasiswa). Kata 'took' digunakan untuk courses/exams, bukan scholarships."
+      },
+      {
+        "question": "Complete with the correct nominalization: 'After graduating, I want to do a postgrad course at Columbia University. It doesn't want to do his master's part-time, he wants to study full-time and finish within a year.' What's the noun form of 'graduate'?",
+        "options": [
+          "graduation",
+          "graduating",
+          "graduate"
+        ],
+        "answer": "graduation",
+        "explanation": "Nominalisasi dari verb 'graduate' adalah noun 'graduation'. Ini digunakan untuk membuat kalimat lebih formal: 'After graduation' lebih formal dari 'After graduating'."
+      },
+      {
+        "question": "Which sentence uses the correct reporting verb pattern? 'The headteacher...'",
+        "options": [
+          "Let's discuss this more before making a decision",
+          "suggested discussing the matter before deciding",
+          "suggested to discuss the issue first"
+        ],
+        "answer": "suggested discussing the matter before deciding",
+        "explanation": "Verb 'suggest' harus diikuti gerund (verb+ing), bukan infinitive. Pola: 'suggest doing something' atau 'suggest that someone do something'."
+      }
+    ]
+  }
+}

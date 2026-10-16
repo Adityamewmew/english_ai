@@ -1,0 +1,1625 @@
+{
+  "module": {
+    "id": "A2.1-M08",
+    "levelId": "A2.1",
+    "title": "Unit 8: Sporting Moments: Sports, Rules & Modals of Advice",
+    "cefr": "A2",
+    "group": "A2.1 - Elementary Actions",
+    "objective": "Describe sporting events, competition rules, and give advice or recommendations using 'should' and 'shouldn't'.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 8
+  },
+  "subModules": [
+    {
+      "id": "sub-a2-1-m08-reading",
+      "moduleId": "A2.1-M08",
+      "skillType": "reading",
+      "title": "Reading Mission: Famous Sporting Moments",
+      "theme": "Sporting Moments: Sports, Rules & Modals of Advice",
+      "grammarFocus": "Past Continuous vs Past Simple & Modals of Advice",
+      "vocabularyFocus": "Sports, Athletes, and Injuries",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a2-1-m08-r-theory",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to the reading mission on famous sporting moments. In this lesson, you will read about incredible stories of athletes, dramatic races, and unexpected events during competitions. You will also learn how to use the past continuous tense to describe actions happening at a specific moment in the past, and review useful language for sports training.",
+            "linguisticTarget": {
+              "grammar": "Past continuous (was/were plus verb-ing) for background actions, contrasted with past simple for completed actions.",
+              "vocabulary": "Sports nouns, athlete equipment, race verbs, and injury vocabulary.",
+              "readingStrategy": "Scanning texts for specific names and dates, and skimming paragraphs to understand the general story before answering questions."
+            },
+            "learningObjectives": [
+              "Understand the main idea of short A2 reading passages about sports history.",
+              "Locate specific details such as athlete names, injuries, and race results.",
+              "Recognize and practice grammar patterns with the past continuous and past simple."
+            ],
+            "contextWarmup": {
+              "prompt": "When you watch a sports competition on television, what do you usually notice first?",
+              "options": [
+                "The dramatic moments when athletes overcome injuries or unexpected challenges",
+                "Only the final score at the very end of the match",
+                "The commercial advertisements shown during the half-time break"
+              ],
+              "correctIndex": 0,
+              "explanation": "Sports stories often become famous because of the dramatic human perseverance shown on the field, not just the final score."
+            },
+            "rules": [
+              "Past Continuous: Use was or were plus a verb ending in ing to describe an action that was in progress at a specific time in the past.",
+              "Past Simple vs Past Continuous: Use the past continuous for a long background action and the past simple for a short action that interrupts it.",
+              "When and While: Use when before a past simple clause and while before a past continuous clause."
+            ],
+            "commonTrap": {
+              "trapTitle": "Confusing Past Continuous and Past Simple",
+              "explanation": "Students often use the past simple for everything in a story, but you need the past continuous to show that an action was ongoing when another event happened.",
+              "wrong": "Derek ran when he felt a sudden pain in his leg.",
+              "correct": "Derek was running when he felt a sudden pain in his leg."
+            },
+            "contractionsTitle": "Natural Spoken Contractions in Past Tenses",
+            "contractionsSubtitle": "Observe how subjects and auxiliary verbs merge in everyday English speech:",
+            "contractions": [
+              {
+                "subject": "He",
+                "verb": "was",
+                "vowelDropped": "a",
+                "remainder": "s",
+                "contracted": "He's",
+                "exampleFull": "He was running very fast.",
+                "exampleContracted": "He's running very fast."
+              },
+              {
+                "subject": "They",
+                "verb": "were",
+                "vowelDropped": "e",
+                "remainder": "re",
+                "contracted": "They're",
+                "exampleFull": "They were watching the race.",
+                "exampleContracted": "They're watching the race."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Past Continuous",
+              "description": "Assemble sentence blocks to practice affirmative, negative, and question forms:",
+              "subjects": [
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "was",
+                  "role": "Third Person Singular"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "were",
+                  "role": "Third Person Plural"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "run",
+                  "thirdPerson": "runs",
+                  "continuous": "running"
+                },
+                {
+                  "base": "climb",
+                  "thirdPerson": "climbs",
+                  "continuous": "climbing"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "towards the finish line in the stadium",
+                  "type": "Location Object"
+                },
+                {
+                  "text": "up the steep mountain when the storm started",
+                  "type": "Clause Object"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-1-m08-r-vocab",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "athlete",
+                "ipa": "/ˈæθ.liːt/",
+                "meaning": "atlet",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The British athlete Derek Redmond was a top runner.",
+                "collocation": "professional athlete"
+              },
+              {
+                "word": "race",
+                "ipa": "/reɪs/",
+                "meaning": "perlombaan lari",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The race began, and at first, Derek was running well.",
+                "collocation": "win a race"
+              },
+              {
+                "word": "mountaineering",
+                "ipa": "/ˌmaʊn.tɪˈnɪə.rɪŋ/",
+                "meaning": "pendakian gunung",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Mountaineer Gerlinde Kaltenbrunner was trying to climb K2.",
+                "collocation": "mountaineering expedition"
+              },
+              {
+                "word": "gymnastics",
+                "ipa": "/dʒɪmˈnæs.tɪks/",
+                "meaning": "senam",
+                "partOfSpeech": "noun",
+                "exampleSentence": "What do we call someone who does gymnastics?",
+                "collocation": "do gymnastics"
+              },
+              {
+                "word": "fell",
+                "ipa": "/fel/",
+                "meaning": "jatuh",
+                "partOfSpeech": "verb",
+                "exampleSentence": "He felt a pain in his leg and fell down on one knee.",
+                "collocation": "fell down"
+              },
+              {
+                "word": "injury",
+                "ipa": "/ˈɪn.dʒər.i/",
+                "meaning": "cedera",
+                "partOfSpeech": "noun",
+                "exampleSentence": "He had a bad injury and could not carry on.",
+                "collocation": "suffer an injury"
+              },
+              {
+                "word": "cross",
+                "ipa": "/krɒs/",
+                "meaning": "menyeberangi",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Derek walked the last fifty metres and crossed the line.",
+                "collocation": "cross the finish line"
+              },
+              {
+                "word": "medal",
+                "ipa": "/ˈmed.əl/",
+                "meaning": "medali",
+                "partOfSpeech": "noun",
+                "exampleSentence": "He won the bronze medal in the marathon.",
+                "collocation": "win a gold medal"
+              },
+              {
+                "word": "referee",
+                "ipa": "/ˌref.əˈriː/",
+                "meaning": "wasit",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The referee blew the whistle to stop the match.",
+                "collocation": "the referee's decision"
+              },
+              {
+                "word": "training",
+                "ipa": "/ˈtreɪ.nɪŋ/",
+                "meaning": "pelatihan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Athletes need hard training every single day.",
+                "collocation": "daily training session"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m08-r-guided",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Unforgettable Sporting Moments",
+            "audioUrl": "/audio/modules/a2-1-m08/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Sports history is full of emotional moments that people never forget. One famous story happened at the 1992 Olympic Games in Barcelona. A British athlete named Derek Redmond was running in the 400-metre semi-final race. Thousands of fans were watching him closely because he was running very well and had a great chance of winning a medal.",
+              "Suddenly, halfway through the race, Derek felt a terrible pain in his right leg. He fell down hard onto the track. It was a severe injury to his hamstring. Medical staff rushed toward him with a stretcher, but Derek refused to give up. He stood up on one leg and started to walk. His father ran down from the stands, put his arm around Derek, and helped him cross the finish line together while the entire stadium stood up and cheered."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 5,
+                "text": "Sports history is full of emotional moments that people never forget.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 5.1,
+                "end": 10.5,
+                "text": "One famous story happened at the 1992 Olympic Games in Barcelona.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 10.6,
+                "end": 16,
+                "text": "A British athlete named Derek Redmond was running in the 400-metre semi-final race.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 16.1,
+                "end": 22,
+                "text": "Thousands of fans were watching him closely because he was running very well.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 22.1,
+                "end": 28,
+                "text": "Suddenly, halfway through the race, Derek felt a terrible pain in his right leg.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 28.1,
+                "end": 33,
+                "text": "He fell down hard onto the running track.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 33.1,
+                "end": 39,
+                "text": "Medical staff rushed toward him, but Derek refused to stop.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 39.1,
+                "end": 46,
+                "text": "His father ran from the stands and helped him cross the finish line.",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m08-r-practice",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-1",
+                "prompt": "Match the sports vocabulary to the correct definition.",
+                "pairs": [
+                  {
+                    "left": "Athlete",
+                    "right": "A person who competes in sports"
+                  },
+                  {
+                    "left": "Referee",
+                    "right": "An official who controls a sports match"
+                  },
+                  {
+                    "left": "Injury",
+                    "right": "Physical harm or damage to the body"
+                  },
+                  {
+                    "left": "Medal",
+                    "right": "A metal prize given to the winner"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m08-r-quiz",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What event did Derek Redmond participate in at the 1992 Olympic Games?",
+                "options": [
+                  "The 400-metre semi-final race",
+                  "The 100-metre sprint final",
+                  "The marathon"
+                ],
+                "answer": "The 400-metre semi-final race",
+                "explanation": "The passage states Derek Redmond was running in the 400-metre semi-final race in Barcelona."
+              },
+              {
+                "id": "q-r-2",
+                "question": "What was happening just before Derek felt pain in his leg?",
+                "options": [
+                  "He was running very well",
+                  "He was sitting in the stands",
+                  "He was talking to the referee"
+                ],
+                "answer": "He was running very well",
+                "explanation": "The text mentions he was running very well and had a great chance before the injury occurred."
+              },
+              {
+                "id": "q-r-3",
+                "question": "Where did Derek feel the terrible pain?",
+                "options": [
+                  "In his right leg",
+                  "In his left arm",
+                  "In his head"
+                ],
+                "answer": "In his right leg",
+                "explanation": "The passage clearly states he felt a terrible pain in his right leg."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What did Derek do after he fell down on the track?",
+                "options": [
+                  "He stood up and walked to finish the race",
+                  "He got into an ambulance immediately",
+                  "He stayed on the track until the race ended"
+                ],
+                "answer": "He stood up and walked to finish the race",
+                "explanation": "Despite his injury, Derek stood up on one leg and walked to cross the finish line."
+              },
+              {
+                "id": "q-r-5",
+                "question": "Who helped Derek cross the finish line?",
+                "options": [
+                  "His father",
+                  "The referee",
+                  "A medical doctor"
+                ],
+                "answer": "His father",
+                "explanation": "His father ran down from the stands and put his arm around Derek to help him."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Choose the correct sentence using the past continuous tense.",
+                "options": [
+                  "Derek was running when he felt pain",
+                  "Derek ran when he was feeling pain",
+                  "Derek runs while he was falling"
+                ],
+                "answer": "Derek was running when he felt pain",
+                "explanation": "Past continuous (was running) describes the background action, and past simple (felt) describes the interrupting event."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Which word from the passage means a physical harm or damage to the body?",
+                "options": [
+                  "Injury",
+                  "Medal",
+                  "Race"
+                ],
+                "answer": "Injury",
+                "explanation": "An injury is physical damage, such as the severe problem Derek had with his leg."
+              },
+              {
+                "id": "q-r-8",
+                "question": "How did the crowd react when Derek and his father crossed the finish line?",
+                "options": [
+                  "They stood up and cheered",
+                  "They left the stadium quietly",
+                  "They started a new race"
+                ],
+                "answer": "They stood up and cheered",
+                "explanation": "The passage notes that the entire stadium stood up and cheered for them."
+              },
+              {
+                "id": "q-r-9",
+                "question": "Complete the sentence: While the athletes ________, it started to rain.",
+                "options": [
+                  "were training",
+                  "trained",
+                  "train"
+                ],
+                "answer": "were training",
+                "explanation": "The word while is followed by the past continuous tense (were training) for an ongoing background action."
+              },
+              {
+                "id": "q-r-10",
+                "question": "What is the main message of this reading passage?",
+                "options": [
+                  "Determination and support matter more than winning a gold medal",
+                  "Athletes should never participate in the Olympic Games",
+                  "Running is the easiest sport in the world"
+                ],
+                "answer": "Determination and support matter more than winning a gold medal",
+                "explanation": "The story highlights human perseverance, family support, and finishing what you start despite adversity."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m08-listening",
+      "moduleId": "A2.1-M08",
+      "skillType": "listening",
+      "title": "Listening Mission: Sporting Opinions and Rules",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a2-1-m08-l-theory",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing and Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This listening mission focuses on catching main ideas and specific details when friends discuss sports preferences, personal feelings, and helpful advice. You will practice identifying weak forms in connected speech and listening for key opinion phrases.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about sports preferences.",
+              "Identify specific details such as reasons why someone likes or dislikes an activity.",
+              "Notice how words link together naturally in fast spoken English."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "How do you feel about...",
+                "meaning": "Bagaimana perasaanmu tentang...",
+                "note": "Used to ask for someone's personal opinion or feelings on a topic."
+              },
+              {
+                "phrase": "I'm not really into...",
+                "meaning": "Aku tidak begitu suka...",
+                "note": "Used to politely express mild dislike or lack of interest in an activity."
+              },
+              {
+                "phrase": "You should try...",
+                "meaning": "Kamu harus mencoba...",
+                "note": "Used to give friendly advice or recommend an action."
+              },
+              {
+                "phrase": "That sounds amazing",
+                "meaning": "Kedengarannya luar biasa",
+                "note": "Used to show enthusiastic agreement or strong interest in a suggestion."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "feel about",
+                "fast": "fee-labout",
+                "slowIpa": "/fiːl əˈbaʊt/",
+                "fastIpa": "/fiːləˈbaʊt/",
+                "note": "The final consonant sound of feel links smoothly to the vowel sound of about."
+              },
+              {
+                "id": 2,
+                "slow": "like a",
+                "fast": "li-ka",
+                "slowIpa": "/laɪk ə/",
+                "fastIpa": "/ˈlaɪ.kə/",
+                "note": "The hard k sound at the end of like connects directly to the article a."
+              },
+              {
+                "id": 3,
+                "slow": "try it",
+                "fast": "try-it",
+                "slowIpa": "/traɪ ɪt/",
+                "fastIpa": "/ˈtraɪ.ɪt/",
+                "note": "The verb try links to the pronoun it without any pause between them."
+              },
+              {
+                "id": 4,
+                "slow": "do you",
+                "fast": "d'you",
+                "slowIpa": "/duː juː/",
+                "fastIpa": "/dʒu/",
+                "note": "In fast spoken English, the auxiliary verb do and pronoun you blend into a weak sound."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m08-l-dialogue",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Sporting Opinions",
+          "orderIndex": 2,
+          "content": {
+            "context": "Two students are talking after school about their favorite sports and personal preferences.",
+            "audioPrompt": "Listen to the conversation between Leo and Mia.",
+            "lines": [
+              {
+                "speaker": "Leo",
+                "text": "How do you feel about sport?",
+                "translation": "Bagaimana perasaanmu tentang olahraga?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Mia",
+                "text": "I don't really like running much.",
+                "translation": "Aku tidak begitu suka lari.",
+                "emotion": "honest"
+              },
+              {
+                "speaker": "Leo",
+                "text": "Why do you find it boring?",
+                "translation": "Kenapa kamu menganggapnya membosankan?",
+                "emotion": "inquisitive"
+              },
+              {
+                "speaker": "Mia",
+                "text": "Because it is far too tiring.",
+                "translation": "Karena itu terlalu melelahkan.",
+                "emotion": "unenthusiastic"
+              },
+              {
+                "speaker": "Leo",
+                "text": "Swimming is much more fun.",
+                "translation": "Berenang jauh lebih menyenangkan.",
+                "emotion": "enthusiastic"
+              },
+              {
+                "speaker": "Mia",
+                "text": "Yes, swimming is amazing.",
+                "translation": "Ya, berenang itu luar biasa.",
+                "emotion": "positive"
+              },
+              {
+                "speaker": "Leo",
+                "text": "You should try surfing too.",
+                "translation": "Kamu harus mencoba berselancar juga.",
+                "emotion": "encouraging"
+              },
+              {
+                "speaker": "Mia",
+                "text": "Surfing is difficult to do.",
+                "translation": "Berselancar itu sulit dilakukan.",
+                "emotion": "doubtful"
+              },
+              {
+                "speaker": "Leo",
+                "text": "But it is very exciting.",
+                "translation": "Tapi itu sangat mengasyikkan.",
+                "emotion": "persuasive"
+              },
+              {
+                "speaker": "Mia",
+                "text": "Maybe I will try it.",
+                "translation": "Mungkin aku akan mencobanya.",
+                "emotion": "open"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m08-l-quiz",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "How do you feel about sport?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"How do you feel about _____?\"",
+                "targetWord": "sport",
+                "explanation": "Full audio: \"How do you feel about sport?\". The missing word is \"sport\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I don't really like running much.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"I don't really like running _____.\"",
+                "targetWord": "much",
+                "explanation": "Full audio: \"I don't really like running much.\". The missing word is \"much\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Why do you find it boring?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Why do you find it _____?\"",
+                "targetWord": "boring",
+                "explanation": "Full audio: \"Why do you find it boring?\". The missing word is \"boring\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Because it is far too tiring.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"Because it is far too _____.\"",
+                "targetWord": "tiring",
+                "explanation": "Full audio: \"Because it is far too tiring.\". The missing word is \"tiring\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Swimming is much more fun.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Swimming is much more _____.\"",
+                "targetWord": "fun",
+                "explanation": "Full audio: \"Swimming is much more fun.\". The missing word is \"fun\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Yes, swimming is amazing.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes swimming is amazing",
+                "words": [
+                  "swimming",
+                  "amazing",
+                  "is",
+                  "Yes"
+                ],
+                "explanation": "Correct sentence order: \"Yes, swimming is amazing.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "You should try surfing too.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You should try surfing too",
+                "words": [
+                  "too",
+                  "should",
+                  "try",
+                  "You",
+                  "surfing"
+                ],
+                "explanation": "Correct sentence order: \"You should try surfing too.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Surfing is difficult to do.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Surfing is difficult to do",
+                "words": [
+                  "difficult",
+                  "Surfing",
+                  "is",
+                  "do",
+                  "to"
+                ],
+                "explanation": "Correct sentence order: \"Surfing is difficult to do.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "But it is very exciting.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "But it is very exciting",
+                "words": [
+                  "it",
+                  "But",
+                  "very",
+                  "exciting",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"But it is very exciting.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Maybe I will try it.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Maybe I will try it",
+                "words": [
+                  "Maybe",
+                  "it",
+                  "I",
+                  "try",
+                  "will"
+                ],
+                "explanation": "Correct sentence order: \"Maybe I will try it.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "How do you feel about sport?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"How do you feel about _____?\"",
+                "targetWord": "sport",
+                "explanation": "Full audio: \"How do you feel about sport?\". The missing word is \"sport\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I don't really like running much.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"I don't really like running _____.\"",
+                "targetWord": "much",
+                "explanation": "Full audio: \"I don't really like running much.\". The missing word is \"much\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Why do you find it boring?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Why do you find it _____?\"",
+                "targetWord": "boring",
+                "explanation": "Full audio: \"Why do you find it boring?\". The missing word is \"boring\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Because it is far too tiring.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"Because it is far too _____.\"",
+                "targetWord": "tiring",
+                "explanation": "Full audio: \"Because it is far too tiring.\". The missing word is \"tiring\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Swimming is much more fun.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Swimming is much more _____.\"",
+                "targetWord": "fun",
+                "explanation": "Full audio: \"Swimming is much more fun.\". The missing word is \"fun\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Yes, swimming is amazing.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes swimming is amazing",
+                "words": [
+                  "swimming",
+                  "amazing",
+                  "is",
+                  "Yes"
+                ],
+                "explanation": "Correct sentence order: \"Yes, swimming is amazing.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "You should try surfing too.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You should try surfing too",
+                "words": [
+                  "too",
+                  "should",
+                  "try",
+                  "You",
+                  "surfing"
+                ],
+                "explanation": "Correct sentence order: \"You should try surfing too.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Surfing is difficult to do.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Surfing is difficult to do",
+                "words": [
+                  "difficult",
+                  "Surfing",
+                  "is",
+                  "do",
+                  "to"
+                ],
+                "explanation": "Correct sentence order: \"Surfing is difficult to do.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "But it is very exciting.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "But it is very exciting",
+                "words": [
+                  "it",
+                  "But",
+                  "very",
+                  "exciting",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"But it is very exciting.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Maybe I will try it.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Maybe I will try it",
+                "words": [
+                  "Maybe",
+                  "it",
+                  "I",
+                  "try",
+                  "will"
+                ],
+                "explanation": "Correct sentence order: \"Maybe I will try it.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m08-writing",
+      "moduleId": "A2.1-M08",
+      "skillType": "writing",
+      "title": "Writing Mission: Sporting Moments and Rules",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a2-1-m08-w-theory",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on sentence structure, sports collocations, and past continuous actions in English.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Sports Collocations",
+                "formula": "Subject + play/go/do + sport or activity + time phrase",
+                "example": "Liam plays football every Saturday morning."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Past Continuous for Background Actions",
+                "formula": "Subject + was/were + verb-ing + when + Past Simple action",
+                "example": "The team was running on the track when it started to rain."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Combining Clauses with While and When",
+                "formula": "While + Past Continuous clause, + Past Simple clause",
+                "example": "While Sarah was practicing tennis, her coach arrived."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Capitalize the first letter of sentences, names of people, and days of the week.",
+                "badExample": "tom played football on monday.",
+                "goodExample": "Tom played football on Monday.",
+                "why": "Names and days of the week are proper nouns requiring capital letters."
+              },
+              {
+                "rule": "Use correct sports verbs with sports nouns.",
+                "badExample": "She goes football after school.",
+                "goodExample": "She plays football after school.",
+                "why": "Team sports with balls use play, sports ending in -ing use go, and individual fitness activities use do."
+              },
+              {
+                "rule": "Place commas correctly when starting a sentence with While.",
+                "badExample": "While the match was starting the fans cheered.",
+                "goodExample": "While the match was starting, the fans cheered.",
+                "why": "A comma separates the dependent time clause from the main clause."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "David was running on the field when he lost his shoe.",
+                "id": "David sedang berlari di lapangan ketika dia kehilangan sepatunya.",
+                "focus": "Past continuous and past simple with when"
+              },
+              {
+                "en": "While the players were resting, the coach gave important advice.",
+                "id": "Saat para pemain sedang beristirahat, pelatih memberikan saran penting.",
+                "focus": "While clause with past continuous"
+              },
+              {
+                "en": "Emma does gymnastics three times a week at the local gym.",
+                "id": "Emma melakukan senam tiga kali seminggu di gimnasium lokal.",
+                "focus": "Sports verb do with gymnastics"
+              },
+              {
+                "en": "We should always follow the referee rules during a match.",
+                "id": "Kami harus selalu mengikuti aturan wasit selama pertandingan.",
+                "focus": "Modals of advice should"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m08-w-practice",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "sarah was playing tennis when it begin to rain",
+                "targetSentence": "Sarah was playing tennis when it began to rain.",
+                "translation": "Sarah sedang bermain tenis ketika hari mulai hujan.",
+                "keyRule": "Capitalize proper names and use the past simple form began.",
+                "requiredCapitals": [
+                  "Sarah"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "they was swimming in the pool on tuesday",
+                "targetSentence": "They were swimming in the pool on Tuesday.",
+                "translation": "Mereka sedang berenang di kolam renang pada hari Selasa.",
+                "keyRule": "Use were with plural pronoun They and capitalize Tuesday.",
+                "requiredCapitals": [
+                  "Tuesday"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "while mark was running the coach watched him",
+                "targetSentence": "While Mark was running, the coach watched him.",
+                "translation": "Saat Mark sedang berlari, pelatih mengawasinya.",
+                "keyRule": "Add a comma after the introductory While clause and capitalize Mark.",
+                "requiredCapitals": [
+                  "Mark"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Sports and Actions",
+                "meaning": "Tim sedang bermain sepak bola ketika wasit meniup peluit.",
+                "tokens": [
+                  "The",
+                  "team",
+                  "was",
+                  "playing",
+                  "football",
+                  "when",
+                  "the",
+                  "referee",
+                  "blew",
+                  "the",
+                  "whistle."
+                ],
+                "fullSentence": "The team was playing football when the referee blew the whistle."
+              },
+              {
+                "id": "b-2",
+                "category": "Sports Routines",
+                "meaning": "Saya melakukan senam di akhir pekan.",
+                "tokens": [
+                  "I",
+                  "do",
+                  "gymnastics",
+                  "on",
+                  "the",
+                  "weekend."
+                ],
+                "fullSentence": "I do gymnastics on the weekend."
+              },
+              {
+                "id": "b-3",
+                "category": "Past Actions",
+                "meaning": "Dia sedang berlari di taman saat matahari terbit.",
+                "tokens": [
+                  "She",
+                  "was",
+                  "running",
+                  "in",
+                  "the",
+                  "park",
+                  "when",
+                  "the",
+                  "sun",
+                  "rose."
+                ],
+                "fullSentence": "She was running in the park when the sun rose."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: A Memorable Sports Moment",
+                "badge": "Sporting Reporter",
+                "instruction": "Write three sentences describing a sports event. Mention what sport was played, what someone was doing, and what happened suddenly.",
+                "example": "Yesterday, our school football team was playing a tough match. Tom was running fast down the field when he scored a wonderful goal. Everyone cheered loudly.",
+                "placeholder": "Type your sentences about the sports moment here...",
+                "minWords": 20,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Sports Rules and Advice",
+                "badge": "Rules Expert",
+                "instruction": "Write three sentences giving advice about a sport. Mention what players should do and what they should avoid during a game.",
+                "example": "In basketball, players should always follow the referee instructions. You should pass the ball to your teammates. You should not hold the ball for too long.",
+                "placeholder": "Type your sentences about sports rules here...",
+                "minWords": 20,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m08-w-quiz",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following affirmative sentence into a negative sentence using the past continuous tense:",
+                "promptText": "The players were practicing their moves in the gym.",
+                "hint": "Change were to were not or weren't.",
+                "targetAnswers": [
+                  "The players were not practicing their moves in the gym.",
+                  "The players weren't practicing their moves in the gym."
+                ],
+                "explanation": "To form the negative in past continuous with plural subjects, use were not or weren't followed by the verb-ing."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Conjunction Choice",
+                "instruction": "Complete the sentence with the correct conjunction (when or while):",
+                "promptText": "Anna was stretching before the race, her coach checked the stopwatch.",
+                "hint": "Use the conjunction that introduces a continuous background action.",
+                "targetAnswers": [
+                  "While",
+                  "while"
+                ],
+                "explanation": "Use while directly before a past continuous clause indicating a background action."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Rewrite the sentence with correct capitalization and punctuation:",
+                "promptText": "alex was playing tennis on thursday afternoon",
+                "hint": "Capitalize the name Alex and the day Thursday, and add a period.",
+                "targetAnswers": [
+                  "Alex was playing tennis on Thursday afternoon."
+                ],
+                "explanation": "Names of people and days of the week must always be capitalized, and sentences need a final period."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the past simple sentence into the past continuous tense using the pronoun He:",
+                "promptText": "He ran across the running track.",
+                "hint": "Use He was followed by the -ing form of run.",
+                "targetAnswers": [
+                  "He was running across the running track."
+                ],
+                "explanation": "The past continuous is formed with was or were plus the verb-ing."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Short Response",
+                "instruction": "Fill in the blank with the correct sports verb (play, go, or do):",
+                "promptText": "My brother likes to swimming at the sports center every weekend.",
+                "hint": "Activities ending in -ing use this specific verb.",
+                "targetAnswers": [
+                  "go",
+                  "Go"
+                ],
+                "explanation": "We use go with sports and activities ending in -ing, such as swimming, running, and cycling."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Conjunction Choice",
+                "instruction": "Complete the sentence with when or while:",
+                "promptText": "The referee blew the whistle the two players were arguing.",
+                "hint": "Use the conjunction that connects a short action to an ongoing background action.",
+                "targetAnswers": [
+                  "when",
+                  "When"
+                ],
+                "explanation": "Use when before a past simple action that interrupts or happens during a past continuous background action."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Form a yes/no question in the past continuous from this sentence:",
+                "promptText": "You were watching the football match.",
+                "hint": "Put Were at the beginning of the sentence.",
+                "targetAnswers": [
+                  "Were you watching the football match?"
+                ],
+                "explanation": "To make a past continuous question, invert the subject and auxiliary verb."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Short Response",
+                "instruction": "Complete the sentence with a modal of advice (should or shouldn't):",
+                "promptText": "Football players respect the referee decisions during a tense match.",
+                "hint": "Think about what good athletes are advised to do.",
+                "targetAnswers": [
+                  "should",
+                  "Should"
+                ],
+                "explanation": "Should is used to give positive advice or state proper rules of conduct."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the spelling and grammar error in this sentence:",
+                "promptText": "the basketball team were train hard yesterday afternoon.",
+                "hint": "Check the verb form after were.",
+                "targetAnswers": [
+                  "The basketball team were training hard yesterday afternoon.",
+                  "The basketball team was training hard yesterday afternoon."
+                ],
+                "explanation": "In past continuous, the verb must take the -ing form. Also, capitalize the first letter."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Choose the correct verb (play, go, or do) to complete the sentence:",
+                "promptText": "Emma and her friends basketball in the school yard after classes.",
+                "hint": "Team sports with a ball use this verb.",
+                "targetAnswers": [
+                  "play",
+                  "Play"
+                ],
+                "explanation": "We use play with team sports and games that involve balls, such as basketball, football, and tennis."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m08-speaking",
+      "moduleId": "A2.1-M08",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Sporting Moments, Rules and Advice",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a2-1-m08-s-theory",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This guide helps you speak clearly about sports events, describe actions using past continuous and past simple tenses, and give advice using modal verbs.",
+            "audioGuidance": "Pay attention to sentence stress when giving advice with should and must. Keep your voice steady when describing past sporting moments.",
+            "pillars": [
+              {
+                "name": "Vowel Clarity",
+                "target": "Clear short and long vowels in sports vocabulary",
+                "explanation": "Pronounce vowels distinctly in words like athlete, race, and medal so listeners understand you clearly."
+              },
+              {
+                "name": "Sentence Stress",
+                "target": "Stress key words in modal advice sentences",
+                "explanation": "Emphasize modal verbs like should and must when giving important sports rules or safety advice."
+              },
+              {
+                "name": "Intonation",
+                "target": "Use falling intonation for statements and rising intonation for questions",
+                "explanation": "Lower your voice at the end of completed thoughts about past races and injuries."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m08-s-practice",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "ATH-lete",
+                "countryAudio": "athlete",
+                "countrySyllables": [
+                  {
+                    "text": "ATH",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "lete",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ath-LET-ic",
+                "natAudio": "athletic",
+                "natSyllables": [
+                  {
+                    "text": "ath",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LET",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ic",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that the main stress shifts from the first syllable to the second syllable."
+              },
+              {
+                "id": "pair-2",
+                "country": "GYM-nas-tics",
+                "countryAudio": "gymnastics",
+                "countrySyllables": [
+                  {
+                    "text": "GYM",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "nas",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tics",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "gym-NAS-tic",
+                "natAudio": "gymnastic",
+                "natSyllables": [
+                  {
+                    "text": "gym",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "NAS",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tic",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress moves between the first and second syllables depending on the word form."
+              },
+              {
+                "id": "pair-3",
+                "country": "MED-al",
+                "countryAudio": "medal",
+                "countrySyllables": [
+                  {
+                    "text": "MED",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "al",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "med-AL-list",
+                "natAudio": "medallist",
+                "natSyllables": [
+                  {
+                    "text": "med",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "AL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "list",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The main stress moves to the middle syllable when adding suffixes."
+              },
+              {
+                "id": "pair-4",
+                "country": "MOUN-tain",
+                "countryAudio": "mountain",
+                "countrySyllables": [
+                  {
+                    "text": "MOUN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tain",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "moun-tain-EE-ring",
+                "natAudio": "mountaineering",
+                "natSyllables": [
+                  {
+                    "text": "moun",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tain",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "EE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ring",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Longer compound words shift the primary stress towards the end."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "The athlete ran fast during the running race.",
+                "phonetic": "/ði ˈæθliːt ræn fɑːst ˈdjʊərɪŋ ðə ˈrʌnɪŋ reɪs/",
+                "focus": "Clear vowel sounds in athlete and race",
+                "hint": "Pronounce each vowel sound distinctly."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "She was doing gymnastics when she had an injury.",
+                "phonetic": "/ʃiː wɒz ˈduːɪŋ dʒɪmˈnæstɪks wen ʃiː hæd ən ˈɪndʒəri/",
+                "focus": "Past continuous and past simple conjunction",
+                "hint": "Link was doing smoothly into gymnastics."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "You should stretch your legs before you run.",
+                "phonetic": "/juː ʃʊd stretʃ jɔː legz bɪˈfɔː juː rʌn/",
+                "focus": "Modal verb should for advice",
+                "hint": "Emphasize the word should clearly."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "He crossed the finish line and won a bronze medal.",
+                "phonetic": "/hiː krɒst ðə ˈfɪnɪʃ laɪn ənd wʌn ə brɒnz ˈmedəl/",
+                "focus": "Consonant clusters in crossed and bronze",
+                "hint": "Pronounce the final consonant sounds in past tense verbs."
+              }
+            ],
+            "roleplay": {
+              "context": "You are talking to your sports coach after practice about an injury.",
+              "roles": [
+                "Coach",
+                "Student"
+              ],
+              "turns": [
+                {
+                  "speaker": "Coach",
+                  "text": "You look tired after practice. Are you okay?",
+                  "translation": "Kamu kelihatan lelah setelah latihan. Kamu baik-baik saja?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, I fell down while I was running on the track.",
+                  "translation": "Ya, saya terjatuh saat saya sedang berlari di lintasan."
+                },
+                {
+                  "speaker": "Coach",
+                  "text": "You should rest your leg and take a break today.",
+                  "translation": "Kamu harus mengistirahatkan kakimu dan beristirahat hari ini."
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Thank you coach, I will follow your advice.",
+                  "translation": "Terima kasih pelatih, saya akan mengikuti saran Anda."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-1-m08-s-quiz",
+          "moduleId": "A2.1-M08",
+          "subModuleId": "sub-a2-1-m08-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a sports event you watched or participated in.",
+                "audioPrompt": "Tell me about a memorable sports race or game you remember.",
+                "storyPoints": [
+                  "What sport or race you were watching or playing",
+                  "What happened during the event and how players moved",
+                  "Who won the medal or finished the race"
+                ],
+                "targetSentence": "While the athlete was running, he fell down but crossed the finish line.",
+                "phonetic": "/waɪl ði ˈæθliːt wɒz ˈrʌnɪŋ hiː fel daʊn/",
+                "expectedKeywords": [
+                  "athlete",
+                  "running",
+                  "fell",
+                  "line"
+                ],
+                "explanation": "Use past continuous and past simple to describe actions in a story."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Sports Rules Monologue",
+                "instruction": "Speak for at least 20 seconds about the rules of your favorite sport.",
+                "audioPrompt": "Describe what players must and must not do in your favorite sport.",
+                "storyPoints": [
+                  "Name the sport you like best",
+                  "Explain what players must do to score points",
+                  "Mention what rules players must not break"
+                ],
+                "targetSentence": "In football, players must kick the ball and must not touch it with their hands.",
+                "phonetic": "/ɪn ˈfʊtbɔːl ˈpleɪəz mʌst kɪk ðə bɔːl/",
+                "expectedKeywords": [
+                  "football",
+                  "must",
+                  "ball",
+                  "hands"
+                ],
+                "explanation": "Use modal verbs of obligation to talk about rules."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to your partner discussing a running race.",
+                "audioPrompt": "Your friend asks how you felt during yesterday's race. What do you say?",
+                "scenarioContext": "You are talking to a friend about a difficult running race you finished yesterday.",
+                "characterRole": "Tired Runner",
+                "targetSentence": "I felt very tired during the race, but I crossed the finish line.",
+                "phonetic": "/aɪ felt ˈveri ˈtaɪəd ˈdjʊərɪŋ ðə reɪs/",
+                "expectedKeywords": [
+                  "tired",
+                  "race",
+                  "crossed",
+                  "line"
+                ],
+                "explanation": "Describe your feelings and actions clearly using past tense."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to your teammate talking about gymnastics practice.",
+                "audioPrompt": "Your teammate asks what you were doing when the coach arrived.",
+                "scenarioContext": "You are discussing a gymnastics training session with your teammate.",
+                "characterRole": "Gymnast",
+                "targetSentence": "I was practicing gymnastics when the coach walked into the gym.",
+                "phonetic": "/aɪ wɒz ˈpræktɪsɪŋ dʒɪmˈnæstɪks wen ðə kəʊtʃ wɔːkt/",
+                "expectedKeywords": [
+                  "practicing",
+                  "gymnastics",
+                  "coach",
+                  "gym"
+                ],
+                "explanation": "Combine past continuous and past simple to talk about ongoing actions."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Give advice to a friend who wants to try mountaineering.",
+                "audioPrompt": "Your friend says they want to climb a high mountain tomorrow without any gear.",
+                "scenarioContext": "You are advising a friend about safety rules in mountaineering.",
+                "characterRole": "Experienced Mountaineer",
+                "targetSentence": "You should not climb without gear because you might get an injury.",
+                "phonetic": "/juː ʃʊd nɒt klaɪm wɪˈðaʊt gɪə/",
+                "expectedKeywords": [
+                  "should",
+                  "climb",
+                  "gear",
+                  "injury"
+                ],
+                "explanation": "Use should and should not to give helpful advice."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Discuss winning a sports medal with your teammate.",
+                "audioPrompt": "Your teammate congratulates you on winning a medal in the athletics competition.",
+                "scenarioContext": "You are celebrating your sports victory with a teammate.",
+                "characterRole": "Medal Winner",
+                "targetSentence": "Thank you, I trained hard every day to win this bronze medal.",
+                "phonetic": "/ˈθæŋk juː aɪ treɪnd hɑːd ˈevri deɪ/",
+                "expectedKeywords": [
+                  "thank",
+                  "trained",
+                  "medal",
+                  "bronze"
+                ],
+                "explanation": "Express gratitude and talk about past preparation."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "focus": "vocab",
+                "instruction": "Read and pronounce the target sentence focusing on sports vocabulary.",
+                "audioPrompt": "Say the sentence containing the words athlete, injury, and medal.",
+                "targetSentence": "The injured athlete won a bronze medal after the race.",
+                "phonetic": "/ði ˈɪndʒəd ˈæθliːt wʌn ə brɒnz ˈmedəl ˈɑːftə ðə reɪs/",
+                "expectedKeywords": [
+                  "athlete",
+                  "injury",
+                  "medal",
+                  "race"
+                ],
+                "explanation": "Pronounce sports terms clearly with correct word stress."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "focus": "grammar",
+                "instruction": "Read the sentence using past continuous and past simple correctly.",
+                "audioPrompt": "Say the sentence about what happened while running.",
+                "targetSentence": "While she was running, she fell down and hurt her leg.",
+                "phonetic": "/waɪl ʃiː wɒz ˈrʌnɪŋ ʃiː fel daʊn ənd hɜːt hɜː leg/",
+                "expectedKeywords": [
+                  "while",
+                  "running",
+                  "fell",
+                  "hurt"
+                ],
+                "explanation": "Use past continuous for ongoing actions and past simple for interrupted actions."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Practice syllable stress in multi-syllable sports words.",
+                "audioPrompt": "Say the sentence emphasizing the correct syllable stress in gymnastics and mountaineering.",
+                "targetSentence": "She loves doing gymnastics and trying mountaineering.",
+                "phonetic": "/ʃiː lʌvz ˈduːɪŋ dʒɪmˈnæstɪks ənd ˈtraɪɪŋ ˌmaʊn.tɪˈnɪə.rɪŋ/",
+                "expectedKeywords": [
+                  "gymnastics",
+                  "mountaineering",
+                  "loves",
+                  "trying"
+                ],
+                "explanation": "Place primary stress on the correct syllables for longer sports terms."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Intonation Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Practice rising and falling intonation when giving advice.",
+                "audioPrompt": "Say the advice sentence with natural falling intonation at the end.",
+                "targetSentence": "You must follow the rules and you should wear safety gear.",
+                "phonetic": "/juː mʌst ˈfɒləʊ ðə ruːlz ənd juː ʃʊd weə ˈseɪfti gɪə/",
+                "expectedKeywords": [
+                  "must",
+                  "rules",
+                  "should",
+                  "gear"
+                ],
+                "explanation": "Use a falling tone at the end of statements giving modal advice."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

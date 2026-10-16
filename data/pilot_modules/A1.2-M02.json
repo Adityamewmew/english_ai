@@ -1,0 +1,1702 @@
+{
+  "module": {
+    "id": "A1.2-M02",
+    "levelId": "A1.2",
+    "title": "Shopping, Prices & Numbers",
+    "cefr": "A1",
+    "group": "A1.2 - Daily Logistics & Practical Actions",
+    "objective": "Shop with confidence, ask about prices using 'How much is this / are these?', and understand large numbers and prices in English.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 2
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-2-m02-reading",
+      "moduleId": "A1.2-M02",
+      "skillType": "reading",
+      "title": "Reading Mission: Shopping at the Market",
+      "theme": "Shopping, Prices & Numbers",
+      "grammarFocus": "How much is this/are these? with singular and plural nouns; It's / They're + price",
+      "vocabularyFocus": "Shopping items, currency words, numbers 20–100, and price expressions",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-2-m02-r-theory",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to your Reading Mission! In this lesson, you will read a short passage about a shopping trip. You will practise understanding prices, numbers, and how people ask about costs in a shop. By the end of this mission, you will feel confident reading simple shopping conversations and finding important details like item names and prices. Let's go shopping — with English!",
+            "linguisticTarget": {
+              "grammar": "Using 'How much is this + singular noun?' and 'How much are these + plural noun?' to ask about prices. Answering with 'It's + price' for one item and 'They're + price' for more than one item.",
+              "vocabulary": "Shopping items (shirt, shoes, bag, keychain, postcard, souvenir), currency words (pound, dollar, euro), numbers from twenty to one hundred, and adjectives for price (cheap, expensive).",
+              "readingStrategy": "Scanning for specific details: quickly find numbers, prices, and item names in a text without reading every word. Also practise skimming to understand the main idea of a short passage."
+            },
+            "learningObjectives": [
+              "Understand the main idea of a short passage about a shopping experience.",
+              "Identify key details including item names, prices, and currencies.",
+              "Recognise the difference between 'How much is this…?' (singular) and 'How much are these…?' (plural) in a reading text.",
+              "Read and understand numbers and prices written in English words (e.g., twenty-five pounds).",
+              "Use scanning to locate specific information quickly in a short text."
+            ],
+            "contextWarmup": {
+              "prompt": "You are in a shop and you see a nice bag. You want to know the price. What do you say?",
+              "options": [
+                "How much is this bag?",
+                "Where is this bag?",
+                "How old is this bag?"
+              ],
+              "correctIndex": 0,
+              "explanation": "Great! 'How much is this bag?' is the correct way to ask about the price of one item. We use 'How much is this…?' with a singular noun like 'bag'."
+            },
+            "rules": [
+              "Use 'How much is this + singular noun?' to ask the price of ONE item near you. Example: 'How much is this shirt?'",
+              "Use 'How much are these + plural noun?' to ask the price of MORE THAN ONE item near you. Example: 'How much are these shoes?'",
+              "Answer with 'It's + number + currency' for one item. Example: 'It's twenty pounds.' Answer with 'They're + number + currency' for more than one item. Example: 'They're fifty dollars.'",
+              "Numbers between tens use a hyphen: twenty-one (21), thirty-five (35), forty-nine (49), sixty-seven (67).",
+              "When you scan a text for prices, look for number words (twenty, thirty, fifty) and currency words (pounds, dollars, euros) — they often appear together."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Beginner Pitfall: Mixing 'this' and 'these'",
+              "explanation": "Many beginners use 'this' with plural nouns or 'these' with singular nouns. Remember: 'this' goes with ONE item (singular) and 'these' goes with MORE THAN ONE item (plural). The verb must also match: 'is' with 'this' and 'are' with 'these'.",
+              "wrong": "How much is these shoes?",
+              "correct": "How much are these shoes?"
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Shopping & Prices",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in natural spoken English:",
+            "contractions": [
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It is thirty pounds.",
+                "exampleContracted": "It's thirty pounds."
+              },
+              {
+                "subject": "They",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "They're",
+                "exampleFull": "They are fifty dollars.",
+                "exampleContracted": "They're fifty dollars."
+              },
+              {
+                "subject": "That",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "That's",
+                "exampleFull": "That is very cheap.",
+                "exampleContracted": "That's very cheap."
+              },
+              {
+                "subject": "I",
+                "verb": "would",
+                "vowelDropped": "woul",
+                "remainder": "d",
+                "contracted": "I'd",
+                "exampleFull": "I would like to buy this.",
+                "exampleContracted": "I'd like to buy this."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Structure with Shopping Questions & Answers",
+              "description": "Assemble and swap sentence blocks to explore affirmative, negative, and question patterns when shopping:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person (Singular)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "It",
+                  "pronoun": "It",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular — for one item)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "First Person Plural"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Third Person Plural — for multiple items"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Second Person"
+                }
+              ],
+              "complements": [
+                "looking for a souvenir",
+                "twenty-five pounds",
+                "too expensive for me",
+                "very cheap today",
+                "buying these postcards",
+                "forty dollars each"
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m02-r-vocab",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "price",
+                "ipa": "/praɪs/",
+                "meaning": "harga",
+                "collocation": "What's the price of this jacket?"
+              },
+              {
+                "word": "shirt",
+                "ipa": "/ʃɜːt/",
+                "meaning": "kemeja",
+                "collocation": "This shirt is very comfortable."
+              },
+              {
+                "word": "shoes",
+                "ipa": "/ʃuːz/",
+                "meaning": "sepatu",
+                "collocation": "These shoes are too expensive."
+              },
+              {
+                "word": "souvenir",
+                "ipa": "/ˌsuːvəˈnɪə(r)/",
+                "meaning": "cindera mata",
+                "collocation": "I want to buy a souvenir for my friend."
+              },
+              {
+                "word": "pound",
+                "ipa": "/paʊnd/",
+                "meaning": "poundsterling (mata uang Inggris)",
+                "collocation": "It costs twenty pounds."
+              },
+              {
+                "word": "dollar",
+                "ipa": "/ˈdɒlə(r)/",
+                "meaning": "dolar (mata uang Amerika)",
+                "collocation": "That's fifty dollars, please."
+              },
+              {
+                "word": "euro",
+                "ipa": "/ˈjʊərəʊ/",
+                "meaning": "euro (mata uang Eropa)",
+                "collocation": "The ticket is fifteen euros."
+              },
+              {
+                "word": "expensive",
+                "ipa": "/ɪkˈspensɪv/",
+                "meaning": "mahal",
+                "collocation": "This watch is too expensive for me."
+              },
+              {
+                "word": "cheap",
+                "ipa": "/tʃiːp/",
+                "meaning": "murah",
+                "collocation": "These postcards are very cheap."
+              },
+              {
+                "word": "buy",
+                "ipa": "/baɪ/",
+                "meaning": "membeli",
+                "collocation": "I'd like to buy this bag."
+              },
+              {
+                "word": "shop",
+                "ipa": "/ʃɒp/",
+                "meaning": "toko",
+                "collocation": "There is a nice shop near the hotel."
+              },
+              {
+                "word": "market",
+                "ipa": "/ˈmɑːkɪt/",
+                "meaning": "pasar",
+                "collocation": "We go to the market every Saturday."
+              },
+              {
+                "word": "keychain",
+                "ipa": "/ˈkiːtʃeɪn/",
+                "meaning": "gantungan kunci",
+                "collocation": "These keychains are three pounds each."
+              },
+              {
+                "word": "postcard",
+                "ipa": "/ˈpəʊstkɑːd/",
+                "meaning": "kartu pos",
+                "collocation": "I'd like to buy a postcard for my mother."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m02-r-guided",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-reading",
+          "sectionType": "dialogue",
+          "title": "Reading Passage: A Day at Camden Market",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "A Day at Camden Market",
+            "context": "Mia is a tourist visiting London. She goes to Camden Market to buy some gifts for her family and friends. Read about her shopping experience.",
+            "text": "Mia is at Camden Market in London. She wants to buy gifts for her family. First, she sees a nice blue shirt. She asks the shop assistant, \"How much is this shirt?\" The assistant says, \"It's twenty-five pounds.\" Mia thinks it is a good price, so she buys it for her brother.\n\nNext, Mia looks at some shoes. They are red and very pretty. She asks, \"How much are these shoes?\" The assistant answers, \"They're forty-five pounds.\" Mia thinks they are too expensive.\n\nThen, Mia finds a small souvenir shop. She sees some keychains. \"How much are these keychains?\" she asks. \"They're three pounds each, or two for five pounds,\" the assistant says. \"That's very cheap!\" Mia says. She buys four keychains for her friends.\n\nFinally, Mia buys a postcard for her mother. It's only one pound. Mia is happy. She spends thirty-seven pounds in total.",
+            "wordCount": 152,
+            "highlights": [
+              {
+                "text": "How much is this shirt?",
+                "note": "'How much is this' + singular noun — used to ask the price of one item.",
+                "type": "grammar"
+              },
+              {
+                "text": "It's twenty-five pounds",
+                "note": "'It's' + number + currency — used to state the price of one item.",
+                "type": "grammar"
+              },
+              {
+                "text": "How much are these shoes?",
+                "note": "'How much are these' + plural noun — used to ask the price of more than one item.",
+                "type": "grammar"
+              },
+              {
+                "text": "They're forty-five pounds",
+                "note": "'They're' + number + currency — used to state the price of plural items.",
+                "type": "grammar"
+              },
+              {
+                "text": "expensive",
+                "note": "Adjective meaning the price is very high.",
+                "type": "vocab"
+              },
+              {
+                "text": "cheap",
+                "note": "Adjective meaning the price is very low — the opposite of expensive.",
+                "type": "vocab"
+              },
+              {
+                "text": "thirty-seven pounds",
+                "note": "A compound number: thirty (30) + seven (7) = 37. Notice the hyphen between tens and units.",
+                "type": "vocab"
+              },
+              {
+                "text": "souvenir shop",
+                "note": "A shop that sells small gifts and souvenirs for tourists.",
+                "type": "vocab"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m02-r-practice",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-reading",
+          "sectionType": "practice",
+          "title": "Guided Comprehension Check",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "prompt": "What is this passage mainly about?",
+              "options": [
+                "A tourist buying gifts at a market in London.",
+                "A shop assistant working at a shoe store.",
+                "A woman cooking dinner for her family."
+              ],
+              "correctIndex": 0,
+              "explanation": "The passage is about Mia, a tourist, shopping at Camden Market in London. She buys gifts like a shirt, keychains, and a postcard for her family and friends."
+            },
+            "detailQuestions": [
+              {
+                "id": 1,
+                "prompt": "How much is the blue shirt?",
+                "options": [
+                  "Twenty-five pounds.",
+                  "Forty-five pounds.",
+                  "Thirty-seven pounds."
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage says the assistant tells Mia, 'It's twenty-five pounds' when she asks about the shirt."
+              },
+              {
+                "id": 2,
+                "prompt": "Why doesn't Mia buy the red shoes?",
+                "options": [
+                  "They are too expensive.",
+                  "They are too small.",
+                  "They are not pretty."
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage says 'Mia thinks they are too expensive.' The shoes cost forty-five pounds, which is too much for Mia."
+              },
+              {
+                "id": 3,
+                "prompt": "How many keychains does Mia buy?",
+                "options": [
+                  "Two keychains.",
+                  "Three keychains.",
+                  "Four keychains."
+                ],
+                "correctIndex": 2,
+                "explanation": "The passage clearly states: 'She buys four keychains for her friends.'"
+              },
+              {
+                "id": 4,
+                "prompt": "How much does Mia spend in total?",
+                "options": [
+                  "Twenty-five pounds.",
+                  "Thirty-seven pounds.",
+                  "Forty-five pounds."
+                ],
+                "correctIndex": 1,
+                "explanation": "The last sentence of the passage says: 'She spends thirty-seven pounds in total.'"
+              },
+              {
+                "id": 5,
+                "prompt": "Who does Mia buy the postcard for?",
+                "options": [
+                  "Her brother.",
+                  "Her friend.",
+                  "Her mother."
+                ],
+                "correctIndex": 2,
+                "explanation": "The passage says: 'Mia buys a postcard for her mother. It's only one pound.'"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m02-r-quiz",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-reading",
+          "sectionType": "quiz",
+          "title": "Reading Mastery Quiz",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "In the passage, what does Mia buy for her brother?",
+                "options": [
+                  "A blue shirt.",
+                  "Red shoes.",
+                  "A keychain."
+                ],
+                "answer": "A blue shirt.",
+                "explanation": "The passage says Mia buys the blue shirt 'for her brother.' It costs twenty-five pounds."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which question is correct to ask about the price of ONE bag?",
+                "options": [
+                  "How much are these bag?",
+                  "How much is this bag?",
+                  "How much is these bag?"
+                ],
+                "answer": "How much is this bag?",
+                "explanation": "'Bag' is a singular noun, so we use 'How much is this bag?' We use 'this' + 'is' for one item."
+              },
+              {
+                "id": "q-r-3",
+                "question": "The keychains cost 'three pounds each, or two for five pounds.' Mia buys four keychains. Based on the best deal, how much does she probably pay?",
+                "options": [
+                  "Twelve pounds.",
+                  "Ten pounds.",
+                  "Fifteen pounds."
+                ],
+                "answer": "Ten pounds.",
+                "explanation": "The best deal is two keychains for five pounds. Mia buys four keychains, so that is two pairs: 5 + 5 = ten pounds."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Choose the correct answer: 'How much _____ these postcards?'",
+                "options": [
+                  "is",
+                  "are",
+                  "am"
+                ],
+                "answer": "are",
+                "explanation": "'Postcards' is a plural noun, so we must use 'are' with 'these.' The correct question is: 'How much are these postcards?'"
+              },
+              {
+                "id": "q-r-5",
+                "question": "What does 'cheap' mean in the passage when Mia says 'That's very cheap!'?",
+                "options": [
+                  "The price is very low — it does not cost a lot of money.",
+                  "The quality is very bad.",
+                  "The item is very old."
+                ],
+                "answer": "The price is very low — it does not cost a lot of money.",
+                "explanation": "In the passage, Mia says 'That's very cheap!' because the keychains cost only three pounds each. 'Cheap' means the price is low. It is the opposite of 'expensive.'"
+              },
+              {
+                "id": "q-r-6",
+                "question": "Which sentence correctly states the price of plural items?",
+                "options": [
+                  "It's forty-five pounds.",
+                  "They're forty-five pounds.",
+                  "They is forty-five pounds."
+                ],
+                "answer": "They're forty-five pounds.",
+                "explanation": "For plural items (like shoes), we use 'They're' (They are) + price. 'It's' is for one item only, and 'They is' is grammatically incorrect."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Read this sentence: 'Mia spends thirty-seven pounds in total.' What number is thirty-seven?",
+                "options": [
+                  "27",
+                  "37",
+                  "73"
+                ],
+                "answer": "37",
+                "explanation": "Thirty = 30, seven = 7. Together, thirty-seven = 37. Notice the hyphen (-) between the tens and the units in English."
+              },
+              {
+                "id": "q-r-8",
+                "question": "According to the passage, which item does Mia NOT buy?",
+                "options": [
+                  "A postcard.",
+                  "Red shoes.",
+                  "Keychains."
+                ],
+                "answer": "Red shoes.",
+                "explanation": "Mia thinks the red shoes are too expensive (forty-five pounds), so she does not buy them. She buys a shirt, keychains, and a postcard."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m02-listening",
+      "moduleId": "A1.2-M02",
+      "skillType": "listening",
+      "title": "Listening Mission: Shopping at a Souvenir Shop",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-2-m02-l-theory",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening mission, you will hear a conversation between a customer and a shop assistant in a souvenir shop in London. The customer asks about prices and buys some items. Listen carefully for numbers, prices, and common shopping phrases. Pay special attention to the difference between 'How much is this?' for one item and 'How much are these?' for more than one item. Numbers and prices can be tricky to hear in fast speech, so focus on the key words around the numbers.",
+            "learningObjectives": [
+              "Understand and identify prices and numbers when spoken in a shopping conversation.",
+              "Recognise the difference between 'How much is this?' (singular) and 'How much are these?' (plural).",
+              "Identify key shopping phrases such as 'I'll take...', 'Cash or card?', and 'Here's your receipt.'",
+              "Follow a short transactional dialogue and understand the total cost of items purchased."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "How much is this?",
+                "meaning": "Berapa harga ini? (untuk satu barang)",
+                "note": "Use 'is this' when you point to one item or hold one item."
+              },
+              {
+                "phrase": "How much are these?",
+                "meaning": "Berapa harga barang-barang ini? (untuk lebih dari satu barang)",
+                "note": "Use 'are these' when you point to or hold more than one item."
+              },
+              {
+                "phrase": "I'll take it / I'll take them",
+                "meaning": "Saya ambil ini / Saya ambil semuanya",
+                "note": "A common way to say you want to buy something. Use 'it' for one item and 'them' for multiple items."
+              },
+              {
+                "phrase": "Cash or card?",
+                "meaning": "Tunai atau kartu?",
+                "note": "The shop assistant asks this to find out how you want to pay."
+              },
+              {
+                "phrase": "Here's your receipt.",
+                "meaning": "Ini struk Anda.",
+                "note": "The shop assistant gives you a receipt after you pay. 'Here's' is a short form of 'Here is'."
+              },
+              {
+                "phrase": "That's ... in total.",
+                "meaning": "Totalnya ... / Semuanya ...",
+                "note": "Used to tell the customer the final price for all items together."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "How much is this?",
+                "fast": "How much'z this?",
+                "slowIpa": "/haʊ mʌtʃ ɪz ðɪs/",
+                "fastIpa": "/haʊ mʌtʃɪz ðɪs/",
+                "note": "In natural speech, 'much' and 'is' link together. The 'is' loses its vowel and sounds like a quick 'z' sound attached to 'much'."
+              },
+              {
+                "id": 2,
+                "slow": "They are three pounds each.",
+                "fast": "They're three pounds each.",
+                "slowIpa": "/ðeɪ ɑːr θriː paʊndz iːtʃ/",
+                "fastIpa": "/ðeər θriː paʊndz iːtʃ/",
+                "note": "In fast speech, 'they are' contracts to 'they're', which sounds like one short syllable. The 'r' links smoothly to the next word."
+              },
+              {
+                "id": 3,
+                "slow": "I will take it.",
+                "fast": "I'll take it.",
+                "slowIpa": "/aɪ wɪl teɪk ɪt/",
+                "fastIpa": "/aɪl teɪk ɪt/",
+                "note": "The words 'I will' contract to 'I'll' in natural speech. It sounds like a single syllable with a quick 'l' sound."
+              },
+              {
+                "id": 4,
+                "slow": "That is twenty pounds in total.",
+                "fast": "That's twenty pounds in total.",
+                "slowIpa": "/ðæt ɪz ˈtwɛnti paʊndz ɪn ˈtəʊtəl/",
+                "fastIpa": "/ðæts ˈtwɛnti paʊndz ɪn ˈtəʊtəl/",
+                "note": "In fast speech, 'that is' contracts to 'that's'. The 'ts' sound blends quickly before the number."
+              },
+              {
+                "id": 5,
+                "slow": "Here is your receipt.",
+                "fast": "Here's your receipt.",
+                "slowIpa": "/hɪər ɪz jɔːr rɪˈsiːt/",
+                "fastIpa": "/hɪəz jɔːr rɪˈsiːt/",
+                "note": "The words 'here is' contract to 'here's'. The 'z' sound links directly to 'your'. Also note that 'receipt' has a silent 'p'."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m02-l-dialogue",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: At the Souvenir Shop",
+          "orderIndex": 2,
+          "content": {
+            "context": "Sarah is shopping at a souvenir shop in London. She wants to buy some gifts for her family. She talks to the shop assistant about prices and decides what to buy.",
+            "audioPrompt": "Listen carefully to the following dialogue between Sarah and the shop assistant. Pay attention to the prices and numbers.",
+            "lines": [
+              {
+                "speaker": "Sarah",
+                "text": "Excuse me, how much is this T-shirt?",
+                "audioUrl": "/audio/modules/a1-2-m02/dialogue-1.mp3",
+                "translation": "Permisi, berapa harga kaos ini?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Shop Assistant",
+                "text": "It's fifteen pounds.",
+                "audioUrl": "/audio/modules/a1-2-m02/dialogue-2.mp3",
+                "translation": "Harganya lima belas poundsterling.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "OK. And how much are these keychains?",
+                "audioUrl": "/audio/modules/a1-2-m02/dialogue-3.mp3",
+                "translation": "Oke. Dan berapa harga gantungan kunci ini?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Shop Assistant",
+                "text": "They're three pounds each, or two for five pounds.",
+                "audioUrl": "/audio/modules/a1-2-m02/dialogue-4.mp3",
+                "translation": "Harganya tiga poundsterling per buah, atau dua untuk lima poundsterling.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Oh, that's a good deal! How much is this mug?",
+                "audioUrl": "/audio/modules/a1-2-m02/dialogue-5.mp3",
+                "translation": "Oh, itu penawaran yang bagus! Berapa harga mug ini?",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Shop Assistant",
+                "text": "That mug is eight pounds.",
+                "audioUrl": "/audio/modules/a1-2-m02/dialogue-6.mp3",
+                "translation": "Mug itu harganya delapan poundsterling.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Hmm, that's a bit expensive. I'll just take the T-shirt and two keychains, please.",
+                "audioUrl": "/audio/modules/a1-2-m02/dialogue-7.mp3",
+                "translation": "Hmm, itu agak mahal. Saya ambil kaosnya dan dua gantungan kunci saja, ya.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Shop Assistant",
+                "text": "Sure! That's twenty pounds in total. Cash or card?",
+                "audioUrl": "/audio/modules/a1-2-m02/dialogue-8.mp3",
+                "translation": "Tentu! Totalnya dua puluh poundsterling. Tunai atau kartu?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Card, please.",
+                "audioUrl": "/audio/modules/a1-2-m02/dialogue-9.mp3",
+                "translation": "Kartu, tolong.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Shop Assistant",
+                "text": "Here's your receipt. Thank you and have a nice day!",
+                "audioUrl": "/audio/modules/a1-2-m02/dialogue-10.mp3",
+                "translation": "Ini struk Anda. Terima kasih dan semoga hari Anda menyenangkan!",
+                "emotion": "friendly"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m02-l-quiz",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Excuse me, how much is this T-shirt?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Excuse me, how much is this _____?\"",
+                "targetWord": "T-shirt",
+                "explanation": "Full audio: \"Excuse me, how much is this T-shirt?\". The missing word is \"T-shirt\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "It's fifteen pounds.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Shop Assistant: \"It's fifteen _____.\"",
+                "targetWord": "pounds",
+                "explanation": "Full audio: \"It's fifteen pounds.\". The missing word is \"pounds\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "And how much are these keychains?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"And how much are these _____?\"",
+                "targetWord": "keychains",
+                "explanation": "Full audio: \"And how much are these keychains?\". The missing word is \"keychains\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "They're three pounds each",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Shop Assistant: \"They're three pounds _____\"",
+                "targetWord": "each",
+                "explanation": "Full audio: \"They're three pounds each\". The missing word is \"each\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "or two for five pounds.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Shop Assistant: \"or two for _____ pounds.\"",
+                "targetWord": "five",
+                "explanation": "Full audio: \"or two for five pounds.\". The missing word is \"five\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Oh, that's a good deal!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Oh that's a good deal",
+                "words": [
+                  "deal",
+                  "Oh",
+                  "that's",
+                  "good",
+                  "a"
+                ],
+                "explanation": "Correct sentence order: \"Oh, that's a good deal!\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "How much is this mug?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "How much is this mug",
+                "words": [
+                  "How",
+                  "this",
+                  "is",
+                  "much",
+                  "mug"
+                ],
+                "explanation": "Correct sentence order: \"How much is this mug?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "That mug is eight pounds.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That mug is eight pounds",
+                "words": [
+                  "is",
+                  "eight",
+                  "mug",
+                  "That",
+                  "pounds"
+                ],
+                "explanation": "Correct sentence order: \"That mug is eight pounds.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Hmm, that's a bit expensive.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Hmm that's a bit expensive",
+                "words": [
+                  "Hmm",
+                  "expensive",
+                  "a",
+                  "bit",
+                  "that's"
+                ],
+                "explanation": "Correct sentence order: \"Hmm, that's a bit expensive.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "That's twenty pounds in total.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That's twenty pounds in total",
+                "words": [
+                  "in",
+                  "twenty",
+                  "pounds",
+                  "That's",
+                  "total"
+                ],
+                "explanation": "Correct sentence order: \"That's twenty pounds in total.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Excuse me, how much is this T-shirt?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Excuse me, how much is this _____?\"",
+                "targetWord": "T-shirt",
+                "explanation": "Full audio: \"Excuse me, how much is this T-shirt?\". The missing word is \"T-shirt\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "It's fifteen pounds.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Shop Assistant: \"It's fifteen _____.\"",
+                "targetWord": "pounds",
+                "explanation": "Full audio: \"It's fifteen pounds.\". The missing word is \"pounds\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "And how much are these keychains?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"And how much are these _____?\"",
+                "targetWord": "keychains",
+                "explanation": "Full audio: \"And how much are these keychains?\". The missing word is \"keychains\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "They're three pounds each",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Shop Assistant: \"They're three pounds _____\"",
+                "targetWord": "each",
+                "explanation": "Full audio: \"They're three pounds each\". The missing word is \"each\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "or two for five pounds.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Shop Assistant: \"or two for _____ pounds.\"",
+                "targetWord": "five",
+                "explanation": "Full audio: \"or two for five pounds.\". The missing word is \"five\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Oh, that's a good deal!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Oh that's a good deal",
+                "words": [
+                  "deal",
+                  "Oh",
+                  "that's",
+                  "good",
+                  "a"
+                ],
+                "explanation": "Correct sentence order: \"Oh, that's a good deal!\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "How much is this mug?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "How much is this mug",
+                "words": [
+                  "How",
+                  "this",
+                  "is",
+                  "much",
+                  "mug"
+                ],
+                "explanation": "Correct sentence order: \"How much is this mug?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "That mug is eight pounds.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That mug is eight pounds",
+                "words": [
+                  "is",
+                  "eight",
+                  "mug",
+                  "That",
+                  "pounds"
+                ],
+                "explanation": "Correct sentence order: \"That mug is eight pounds.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Hmm, that's a bit expensive.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Hmm that's a bit expensive",
+                "words": [
+                  "Hmm",
+                  "expensive",
+                  "a",
+                  "bit",
+                  "that's"
+                ],
+                "explanation": "Correct sentence order: \"Hmm, that's a bit expensive.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "That's twenty pounds in total.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That's twenty pounds in total",
+                "words": [
+                  "in",
+                  "twenty",
+                  "pounds",
+                  "That's",
+                  "total"
+                ],
+                "explanation": "Correct sentence order: \"That's twenty pounds in total.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m02-writing",
+      "moduleId": "A1.2-M02",
+      "skillType": "writing",
+      "title": "Writing Mission: Shopping Lists, Prices & Asking How Much",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-2-m02-w-theory",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this writing blueprint, you will learn how to write sentences about shopping. You will ask about prices using 'How much is this...?' for one item and 'How much are these...?' for more than one item. You will also learn to write prices with numbers and currency words like dollars, pounds, and euros. Let's start writing about shopping!",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Ask the Price of One Item",
+                "formula": "How much is this + singular noun + ?",
+                "example": "How much is this jacket?"
+              },
+              {
+                "step": 2,
+                "title": "Ask the Price of More Than One Item",
+                "formula": "How much are these + plural noun + ?",
+                "example": "How much are these oranges?"
+              },
+              {
+                "step": 3,
+                "title": "Answer with the Price (One Item)",
+                "formula": "It's + number + currency word + .",
+                "example": "It's fifteen dollars."
+              },
+              {
+                "step": 4,
+                "title": "Answer with the Price (More Than One Item)",
+                "formula": "They're + number + currency word + .",
+                "example": "They're twenty-five pounds."
+              },
+              {
+                "step": 5,
+                "title": "Write a Short Shopping Dialogue",
+                "formula": "Question (How much...?) + Answer (It's / They're + price) + Response (I'll take it/them.)",
+                "example": "How much is this hat? It's ten euros. I'll take it."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always start 'How much' with a capital H. It is the beginning of a question.",
+                "badExample": "how much is this bag?",
+                "goodExample": "How much is this bag?",
+                "why": "Every sentence must start with a capital letter. Questions with 'How much' always begin with a capital H."
+              },
+              {
+                "rule": "Use a question mark (?) at the end of every price question.",
+                "badExample": "How much are these shoes.",
+                "goodExample": "How much are these shoes?",
+                "why": "When you ask a question, you must end with a question mark (?), not a period (.)."
+              },
+              {
+                "rule": "Use 'this' + singular noun for one item and 'these' + plural noun for more than one item.",
+                "badExample": "How much is these apples?",
+                "goodExample": "How much are these apples?",
+                "why": "'This' goes with one item (singular) and uses 'is'. 'These' goes with many items (plural) and uses 'are'. They must match."
+              },
+              {
+                "rule": "Use 'It's' to answer about one item and 'They're' to answer about more than one item.",
+                "badExample": "They're twelve dollars. (talking about one book)",
+                "goodExample": "It's twelve dollars.",
+                "why": "When the question is about one item (this book), the answer uses 'It's'. When the question is about many items (these books), the answer uses 'They're'."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "How much is this shirt?",
+                "id": "Berapa harga kemeja ini?",
+                "focus": "How much is this + singular noun + ?"
+              },
+              {
+                "en": "How much are these shoes?",
+                "id": "Berapa harga sepatu-sepatu ini?",
+                "focus": "How much are these + plural noun + ?"
+              },
+              {
+                "en": "It's thirty-five dollars.",
+                "id": "Harganya tiga puluh lima dolar.",
+                "focus": "It's + number + currency for one item"
+              },
+              {
+                "en": "They're fifty pounds.",
+                "id": "Harganya lima puluh pound.",
+                "focus": "They're + number + currency for plural items"
+              },
+              {
+                "en": "I want to buy this bag. How much is it?",
+                "id": "Saya ingin membeli tas ini. Berapa harganya?",
+                "focus": "Combining a statement with a price question"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m02-w-practice",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "how much is this dress.",
+                "targetSentence": "How much is this dress?",
+                "translation": "Berapa harga gaun ini?",
+                "keyRule": "Start with a capital letter and end a question with a question mark (?).",
+                "requiredCapitals": [
+                  "How"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "they're forty five euros",
+                "targetSentence": "They're forty-five euros.",
+                "translation": "Harganya empat puluh lima euro.",
+                "keyRule": "Use a hyphen (-) between compound numbers like forty-five. End the sentence with a period.",
+                "requiredCapitals": [
+                  "They're"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "how much are this bananas?",
+                "targetSentence": "How much are these bananas?",
+                "translation": "Berapa harga pisang-pisang ini?",
+                "keyRule": "Use 'these' with plural nouns and 'are'. Start with a capital H.",
+                "requiredCapitals": [
+                  "How"
+                ]
+              },
+              {
+                "id": "sent-4",
+                "faultySentence": "it's twenty pound.",
+                "targetSentence": "It's twenty pounds.",
+                "translation": "Harganya dua puluh pound.",
+                "keyRule": "When the number is more than one, the currency word must be plural: 'pounds', not 'pound'.",
+                "requiredCapitals": [
+                  "It's"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Asking the Price of One Item",
+                "meaning": "Berapa harga jaket ini?",
+                "tokens": [
+                  "How",
+                  "much",
+                  "is",
+                  "this",
+                  "jacket?"
+                ],
+                "fullSentence": "How much is this jacket?"
+              },
+              {
+                "id": "b-2",
+                "category": "Answering with a Price (Plural)",
+                "meaning": "Harganya enam puluh dolar.",
+                "tokens": [
+                  "They're",
+                  "sixty",
+                  "dollars."
+                ],
+                "fullSentence": "They're sixty dollars."
+              },
+              {
+                "id": "b-3",
+                "category": "Asking the Price of Multiple Items",
+                "meaning": "Berapa harga buku-buku ini?",
+                "tokens": [
+                  "How",
+                  "much",
+                  "are",
+                  "these",
+                  "books?"
+                ],
+                "fullSentence": "How much are these books?"
+              },
+              {
+                "id": "b-4",
+                "category": "Answering with a Price (Singular)",
+                "meaning": "Harganya lima belas euro.",
+                "tokens": [
+                  "It's",
+                  "fifteen",
+                  "euros."
+                ],
+                "fullSentence": "It's fifteen euros."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: At the Market",
+                "badge": "Market Shopper",
+                "instruction": "You are at a market. Write a short dialogue between you (the customer) and the seller. Ask the price of two different items. The seller answers with prices. Use 'How much is this...?' and 'How much are these...?' Write at least four sentences.",
+                "example": "Customer: How much is this watermelon?\nSeller: It's three dollars.\nCustomer: How much are these strawberries?\nSeller: They're five dollars.",
+                "placeholder": "Start your market dialogue here...",
+                "minWords": 16,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: My Shopping List",
+                "badge": "Smart Shopper",
+                "instruction": "Write a short paragraph about your shopping trip. Tell us what you want to buy, ask the price of each item, and write the price. Use at least three items. Include both singular and plural items. Write at least five sentences.",
+                "example": "I go to the shop. I want to buy a bag. How much is this bag? It's twenty-five dollars. I also want these socks. They're eight dollars. I buy the bag and the socks.",
+                "placeholder": "Start writing about your shopping trip here...",
+                "minWords": 25,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m02-w-quiz",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-writing",
+          "sectionType": "quiz",
+          "title": "Writing Practicum & Assessment",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": "w-p-1",
+                "prompt": "You see a nice T-shirt in a shop. Write one question to ask the price and one sentence to give the answer. The T-shirt costs eighteen dollars.",
+                "criteria": "The question uses 'How much is this T-shirt?' correctly with a capital letter and question mark. The answer uses 'It's eighteen dollars.' with correct spelling and a period.",
+                "sampleGoodAnswer": "How much is this T-shirt? It's eighteen dollars."
+              },
+              {
+                "id": "w-p-2",
+                "prompt": "You want to buy some apples at the market. The apples cost four pounds. Write a question asking the price and a sentence answering with the price. Use 'these' because there are many apples.",
+                "criteria": "The question uses 'How much are these apples?' with correct plural form, 'are', and a question mark. The answer uses 'They're four pounds.' with correct subject and a period.",
+                "sampleGoodAnswer": "How much are these apples? They're four pounds."
+              },
+              {
+                "id": "w-p-3",
+                "prompt": "Write a short shopping dialogue (at least six sentences). A customer asks about two items: one singular item and one plural item. The seller gives prices. The customer decides to buy one of them. Use correct capital letters, question marks, and periods.",
+                "criteria": "The dialogue includes at least one 'How much is this...?' question and one 'How much are these...?' question. Prices are answered with 'It's' for singular and 'They're' for plural. All sentences have correct capitalization and punctuation. The customer makes a decision at the end. At least six sentences total.",
+                "sampleGoodAnswer": "Customer: Hello! How much is this watch?\nSeller: It's ninety-five dollars.\nCustomer: That is expensive. How much are these sunglasses?\nSeller: They're thirty dollars.\nCustomer: That is good. I'll take the sunglasses.\nSeller: Here you are. Thank you!"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m02-speaking",
+      "moduleId": "A1.2-M02",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Shopping, Prices & Numbers",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-2-m02-s-theory",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this speaking lab, you will practise asking about prices, saying numbers correctly, and having simple shopping conversations. You will learn how to use rising intonation for questions like 'How much is this?' and falling intonation for statements like 'That's forty-five pounds.' You will also practise stressing the correct syllables in shopping vocabulary such as 'expensive', 'receipt', and 'discount'.",
+            "audioGuidance": "Pay close attention to how your voice goes UP at the end of yes/no questions like 'Do you accept credit cards?' and goes DOWN at the end of information questions like 'How much is this jacket?' When saying prices with numbers, speak each number clearly and pause slightly between the number and the currency word. For example, say 'FOUR-ty FIVE... pounds' with a tiny pause before 'pounds'.",
+            "pillars": [
+              {
+                "name": "Question Intonation for Shopping",
+                "target": "Use correct rising and falling intonation when asking about prices",
+                "explanation": "When you ask 'How much is this?' your voice should rise slightly on 'this' and then fall. This is a WH-question so it uses falling intonation at the end. But when you ask 'Do you accept credit cards?' your voice should rise at the end because it is a yes/no question. Practise both patterns to sound natural in a shop."
+              },
+              {
+                "name": "Clear Number Pronunciation",
+                "target": "Pronounce prices and numbers accurately so the shopkeeper understands",
+                "explanation": "Numbers can be confusing if you do not stress the right part. For example, 'thirteen' has stress on the SECOND syllable (thir-TEEN), but 'thirty' has stress on the FIRST syllable (THIR-ty). Mixing these up can cause big problems when talking about money! Always stress the correct syllable so people understand the right price."
+              },
+              {
+                "name": "Polite Shopping Phrases",
+                "target": "Use polite expressions and natural rhythm in shopping transactions",
+                "explanation": "In English shops, people use polite phrases like 'I'll take this, please', 'Here you are', and 'Thank you very much'. Practise saying these with a friendly, natural rhythm. Do not rush. Pause slightly after 'please' and 'thank you' to sound polite and confident."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m02-s-practice",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "THIRTEEN",
+                "countryAudio": "thirteen",
+                "countrySyllables": [
+                  {
+                    "text": "thir",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TEEN",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "THIR-ty",
+                "natAudio": "thirty",
+                "natSyllables": [
+                  {
+                    "text": "THIR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ty",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice how the stress moves from the second syllable in 'thir-TEEN' to the first syllable in 'THIR-ty'. This is very important when saying prices. If you say 'thirteen' when you mean 'thirty', the price changes a lot!"
+              },
+              {
+                "id": "pair-2",
+                "country": "FIFTEEN",
+                "countryAudio": "fifteen",
+                "countrySyllables": [
+                  {
+                    "text": "fif",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TEEN",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "FIF-ty",
+                "natAudio": "fifty",
+                "natSyllables": [
+                  {
+                    "text": "FIF",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ty",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress shifts from the end in 'fif-TEEN' to the beginning in 'FIF-ty'. Always make the stressed syllable louder and longer so the listener hears the correct number."
+              },
+              {
+                "id": "pair-3",
+                "country": "EXPENSIVE",
+                "countryAudio": "expensive",
+                "countrySyllables": [
+                  {
+                    "text": "ex",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PEN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "sive",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "in-ex-PEN-sive",
+                "natAudio": "inexpensive",
+                "natSyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ex",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PEN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "sive",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Both 'expensive' and 'inexpensive' keep the stress on 'PEN'. The word gets longer with the prefix 'in-', but the stress stays in the same place. Practise keeping 'PEN' strong and clear in both words."
+              },
+              {
+                "id": "pair-4",
+                "country": "RECEIPT",
+                "countryAudio": "receipt",
+                "countrySyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CEIPT",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "DIS-count",
+                "natAudio": "discount",
+                "natSyllables": [
+                  {
+                    "text": "DIS",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "count",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "In 'receipt', the stress is on the second syllable: re-CEIPT. In 'discount', the stress is on the first syllable: DIS-count. These are both common shopping words, so practise the different stress positions."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "How much is this blue jacket?",
+                "phonetic": "/haʊ mʌtʃ ɪz ðɪs bluː ˈdʒækɪt/",
+                "focus": "WH-question intonation with falling tone at the end",
+                "hint": "Start with your voice at a normal pitch, rise slightly on 'this', then let your voice fall on 'jacket'. This shows you are asking a confident information question."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "How much are these black shoes?",
+                "phonetic": "/haʊ mʌtʃ ɑːr ðiːz blæk ʃuːz/",
+                "focus": "Plural form 'are these' and the /ʃ/ sound in 'shoes'",
+                "hint": "Make sure you say 'are these' clearly, not 'is this'. Push your lips forward to make the 'sh' sound in 'shoes'. Your voice should fall at the end."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "That jacket is forty-five pounds.",
+                "phonetic": "/ðæt ˈdʒækɪt ɪz ˈfɔːti faɪv paʊndz/",
+                "focus": "Clear number pronunciation and the /ð/ sound in 'that'",
+                "hint": "Put your tongue between your teeth for the 'th' in 'that'. Stress the first syllable of 'FOR-ty' and say 'five' clearly. Do not say 'fifty-five' by mistake!"
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Do you accept credit cards?",
+                "phonetic": "/duː juː əkˈsept ˈkredɪt kɑːdz/",
+                "focus": "Yes/no question with rising intonation at the end",
+                "hint": "This is a yes/no question, so your voice must go UP at the end on 'cards'. Stress the second syllable of 'ac-CEPT' and the first syllable of 'CRED-it'."
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "I'll take the jacket, please.",
+                "phonetic": "/aɪl teɪk ðə ˈdʒækɪt pliːz/",
+                "focus": "Contraction 'I'll' and polite delivery with 'please'",
+                "hint": "Say 'I'll' as one short sound, like 'aisle'. Add a small pause before 'please' to sound polite. Let your voice fall gently on 'please'."
+              },
+              {
+                "id": "spk-d-6",
+                "targetText": "These shoes are sixty pounds.",
+                "phonetic": "/ðiːz ʃuːz ɑːr ˈsɪksti paʊndz/",
+                "focus": "The /ð/ in 'these', /ʃ/ in 'shoes', and number clarity",
+                "hint": "Tongue between teeth for 'these'. Lips forward for 'shoes'. Stress the first syllable: 'SIX-ty', not 'six-TY'. This is a statement, so your voice goes down at the end."
+              }
+            ],
+            "roleplay": {
+              "context": "You are shopping at a clothing store. Mr. Khoirul is the shop assistant. You want to ask about prices, choose something to buy, and pay for it. Practise asking 'How much is this?' and 'How much are these?' and use polite phrases like 'I'll take...' and 'Here you are.'",
+              "roles": [
+                "Mr. Khoirul",
+                "You"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Good afternoon! Welcome to Fashion Store. Can I help you?",
+                  "translation": "Selamat siang! Selamat datang di Fashion Store. Bisa saya bantu?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Good afternoon! Yes, how much is this blue jacket?",
+                  "translation": "Selamat siang! Ya, berapa harga jaket biru ini?"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "That jacket is forty-five pounds. It's very popular!",
+                  "translation": "Jaket itu empat puluh lima pound. Sangat populer!"
+                },
+                {
+                  "speaker": "You",
+                  "text": "I see. And how much are these black shoes?",
+                  "translation": "Oh begitu. Dan berapa harga sepatu hitam ini?"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "These shoes are sixty pounds. They're Italian leather.",
+                  "translation": "Sepatu ini enam puluh pound. Ini kulit Italia."
+                },
+                {
+                  "speaker": "You",
+                  "text": "Okay, I'll take the jacket. Do you accept credit cards?",
+                  "translation": "Baik, saya ambil jaketnya. Apakah Anda menerima kartu kredit?"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Yes, of course. That's forty-five pounds, please.",
+                  "translation": "Ya, tentu saja. Empat puluh lima pound, silakan."
+                },
+                {
+                  "speaker": "You",
+                  "text": "Here you are. Thank you!",
+                  "translation": "Ini silakan. Terima kasih!"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m02-s-quiz",
+          "moduleId": "A1.2-M02",
+          "subModuleId": "sub-a1-2-m02-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about a time you went shopping. Use the three story points below to guide your story. Speak for about 30 seconds. Use simple sentences and include at least one price.",
+                "audioPrompt": "Now, I want you to tell me a story about going shopping. Look at the three points and talk about each one. Ready? Go ahead!",
+                "storyPoints": [
+                  "Where did you go shopping and what did you want to buy?",
+                  "How much was the item? Was it expensive or cheap?",
+                  "Did you buy it? How did you pay?"
+                ],
+                "targetSentence": "Last weekend, I went to a clothes shop. I wanted a new jacket. The jacket was thirty pounds. It was not expensive. I bought the jacket and I paid with my credit card.",
+                "phonetic": "/lɑːst ˈwiːkend aɪ went tuː ə kləʊðz ʃɒp aɪ ˈwɒntɪd ə njuː ˈdʒækɪt ðə ˈdʒækɪt wɒz ˈθɜːti paʊndz ɪt wɒz nɒt ɪkˈspensɪv aɪ bɔːt ðə ˈdʒækɪt ænd aɪ peɪd wɪð maɪ ˈkredɪt kɑːd/",
+                "expectedKeywords": [
+                  "shop",
+                  "buy",
+                  "bought",
+                  "pounds",
+                  "paid",
+                  "jacket",
+                  "expensive",
+                  "cheap",
+                  "credit card"
+                ],
+                "hint": "Use past tense: 'I went', 'I bought', 'I paid'. Say the price clearly with the number first, then the currency.",
+                "explanation": "This storytelling task practises your ability to narrate a simple shopping experience in the past tense. You need to mention the place, the price, and how you paid. This builds fluency for real shopping situations."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about helping a friend buy a gift. Follow the three story points below. Speak clearly and include numbers for the prices.",
+                "audioPrompt": "Great! Now tell me a story about helping your friend buy a gift. Use the three points to help you. Take your time and speak clearly.",
+                "storyPoints": [
+                  "Who was the gift for and what shop did you go to?",
+                  "What items did you look at and how much were they?",
+                  "Which gift did you choose and why?"
+                ],
+                "targetSentence": "My friend wanted a gift for his mother. We went to a department store. We looked at scarves and bags. The scarf was twenty pounds and the bag was fifty-five pounds. We chose the scarf because it was cheaper.",
+                "phonetic": "/maɪ frend ˈwɒntɪd ə ɡɪft fɔːr hɪz ˈmʌðər wiː went tuː ə dɪˈpɑːtmənt stɔːr wiː lʊkt æt skɑːvz ænd bæɡz ðə skɑːf wɒz ˈtwenti paʊndz ænd ðə bæɡ wɒz ˈfɪfti faɪv paʊndz wiː tʃəʊz ðə skɑːf bɪˈkɒz ɪt wɒz ˈtʃiːpər/",
+                "expectedKeywords": [
+                  "gift",
+                  "shop",
+                  "store",
+                  "pounds",
+                  "cheaper",
+                  "chose",
+                  "scarf",
+                  "bag",
+                  "mother"
+                ],
+                "hint": "Compare prices using 'cheaper' or 'more expensive'. Remember to say both prices clearly: 'twenty pounds' and 'fifty-five pounds'.",
+                "explanation": "This task practises comparing prices and explaining a shopping decision. You need to mention at least two items with their prices and give a reason for your choice. This builds your ability to talk about shopping preferences."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay Call",
+                "instruction": "You are a customer at a fruit market. Mr. Khoirul is the fruit seller. Ask about the prices of different fruits and buy some. Use 'How much is...?' and 'How much are...?' correctly.",
+                "audioPrompt": "Let's do a roleplay! You are at a fruit market. I am the fruit seller. Come to my stall and ask me about prices. Let's begin!",
+                "scenarioContext": "You are standing at a fruit market stall. There are apples, bananas, and oranges on display. You want to buy fruit for the week. You have fifteen pounds to spend. Ask about prices and decide what to buy.",
+                "characterRole": "Mr. Khoirul is a friendly fruit seller at the market. He greets customers warmly, tells them the prices, and suggests good deals. He speaks slowly and clearly.",
+                "targetSentence": "How much are the apples? I'll take one kilo, please.",
+                "phonetic": "/haʊ mʌtʃ ɑːr ðə ˈæpəlz aɪl teɪk wʌn ˈkiːləʊ pliːz/",
+                "expectedKeywords": [
+                  "how much",
+                  "apples",
+                  "bananas",
+                  "oranges",
+                  "kilo",
+                  "please",
+                  "take",
+                  "pounds"
+                ],
+                "hint": "Use 'How much are...' for plural items like apples and bananas. Use 'How much is...' for one item or uncountable things. Always say 'please' to be polite.",
+                "explanation": "This roleplay practises the difference between 'How much is...?' (singular) and 'How much are...?' (plural) in a natural market setting. You also practise polite buying phrases."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay Call",
+                "instruction": "You are in a shoe shop. Mr. Khoirul is the shop assistant. You want to buy trainers but you think the price is too high. Ask about the price and try to find a cheaper option.",
+                "audioPrompt": "Now you are in a shoe shop. I am the shop assistant. You want trainers but you need a good price. Come in and let's talk!",
+                "scenarioContext": "You walk into a shoe shop. You see some nice trainers in the window. You have a budget of forty pounds. The trainers you like might be more expensive than your budget. You need to ask about prices and find something you can afford.",
+                "characterRole": "Mr. Khoirul is a helpful shoe shop assistant. He shows different shoes, explains the prices, and offers alternatives if something is too expensive. He is patient and friendly.",
+                "targetSentence": "That's too expensive for me. Do you have anything cheaper?",
+                "phonetic": "/ðæts tuː ɪkˈspensɪv fɔːr miː duː juː hæv ˈeniθɪŋ ˈtʃiːpər/",
+                "expectedKeywords": [
+                  "how much",
+                  "expensive",
+                  "cheaper",
+                  "trainers",
+                  "shoes",
+                  "pounds",
+                  "budget",
+                  "afford"
+                ],
+                "hint": "To say something costs too much, use 'That's too expensive.' To ask for a lower price option, say 'Do you have anything cheaper?' Remember rising intonation on yes/no questions.",
+                "explanation": "This roleplay practises expressing that a price is too high and asking for alternatives. These are essential skills for real shopping situations where you need to stay within a budget."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay Call",
+                "instruction": "You are at a souvenir shop on holiday. Mr. Khoirul is the shop owner. Ask about prices of different souvenirs and buy gifts for your family. You want to buy three items.",
+                "audioPrompt": "Welcome to the souvenir shop! You are on holiday and you want to buy gifts for your family. I am the shop owner. Ask me about prices and choose your gifts!",
+                "scenarioContext": "You are on holiday in London. You enter a souvenir shop that sells postcards, keychains, mugs, and T-shirts. You want to buy gifts for three family members. You have twenty-five pounds to spend on all three gifts.",
+                "characterRole": "Mr. Khoirul is the owner of a small souvenir shop in London. He is very friendly to tourists. He tells you the prices and helps you choose good gifts. He can also put items in a gift bag.",
+                "targetSentence": "I'd like three postcards and two keychains, please. How much is that in total?",
+                "phonetic": "/aɪd laɪk θriː ˈpəʊstkɑːdz ænd tuː ˈkiːtʃeɪnz pliːz haʊ mʌtʃ ɪz ðæt ɪn ˈtəʊtəl/",
+                "expectedKeywords": [
+                  "how much",
+                  "postcards",
+                  "keychains",
+                  "mug",
+                  "T-shirt",
+                  "total",
+                  "please",
+                  "pounds",
+                  "gift"
+                ],
+                "hint": "When buying multiple items, you can ask 'How much is that in total?' to know the full price. Use 'I'd like...' as a polite way to say what you want to buy.",
+                "explanation": "This roleplay practises buying multiple items and asking for a total price. You also practise using numbers for quantities (three postcards, two keychains) alongside prices."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay Call",
+                "instruction": "You bought a shirt yesterday but it is too small. Go back to the shop and talk to Mr. Khoirul. Ask to exchange it or get your money back. Be polite.",
+                "audioPrompt": "Oh no! The shirt you bought yesterday is too small. Go back to the shop and talk to me. I am the shop assistant. Tell me your problem and let's find a solution.",
+                "scenarioContext": "Yesterday you bought a blue shirt for twenty-five pounds. When you tried it at home, it was too small. You have the receipt. You go back to the shop today to exchange it for a bigger size or get a refund.",
+                "characterRole": "Mr. Khoirul is the shop assistant who sold you the shirt yesterday. He remembers you. He is helpful and wants to solve your problem. He can offer an exchange or a refund if you have the receipt.",
+                "targetSentence": "Excuse me, I bought this shirt yesterday but it's too small. Can I exchange it for a larger size, please?",
+                "phonetic": "/ɪkˈskjuːz miː aɪ bɔːt ðɪs ʃɜːt ˈjestədeɪ bʌt ɪts tuː smɔːl kæn aɪ ɪksˈtʃeɪndʒ ɪt fɔːr ə ˈlɑːdʒər saɪz pliːz/",
+                "expectedKeywords": [
+                  "bought",
+                  "yesterday",
+                  "too small",
+                  "exchange",
+                  "larger",
+                  "size",
+                  "receipt",
+                  "refund",
+                  "please"
+                ],
+                "hint": "Start politely with 'Excuse me'. Explain the problem: 'It's too small.' Then ask for what you want: 'Can I exchange it?' or 'Can I get a refund?' Always have your receipt ready!",
+                "explanation": "This roleplay practises returning or exchanging items, which is a common real-life shopping situation. You learn to explain a problem politely and ask for a solution using 'Can I...?' questions."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "focus": "vocab",
+                "instruction": "Say the following shopping sentence out loud. Make sure you use the correct vocabulary for asking about prices and paying.",
+                "audioPrompt": "Please say this sentence clearly. Focus on using the right shopping words.",
+                "targetSentence": "Excuse me, how much is this red scarf? I'll pay with cash, please.",
+                "phonetic": "/ɪkˈskjuːz miː haʊ mʌtʃ ɪz ðɪs red skɑːf aɪl peɪ wɪð kæʃ pliːz/",
+                "expectedKeywords": [
+                  "excuse me",
+                  "how much",
+                  "scarf",
+                  "pay",
+                  "cash",
+                  "please"
+                ],
+                "hint": "Key shopping vocabulary: 'How much is...?' to ask the price, 'pay with cash' means using money notes and coins, 'pay with card' means using a credit or debit card.",
+                "explanation": "This drill tests your ability to use essential shopping vocabulary in a complete sentence. 'How much is this...?' is the most important question for shopping. Knowing payment words like 'cash' and 'card' helps you complete any transaction."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "focus": "grammar",
+                "instruction": "Say this sentence out loud. Pay attention to the correct use of 'is' for singular and 'are' for plural when asking about prices.",
+                "audioPrompt": "Now say this sentence. Be careful with 'is' and 'are'. They must match the noun!",
+                "targetSentence": "How much is this bag and how much are these gloves?",
+                "phonetic": "/haʊ mʌtʃ ɪz ðɪs bæɡ ænd haʊ mʌtʃ ɑːr ðiːz ɡlʌvz/",
+                "expectedKeywords": [
+                  "how much is",
+                  "this bag",
+                  "how much are",
+                  "these gloves"
+                ],
+                "hint": "Use 'How much IS this...' for ONE item (singular). Use 'How much ARE these...' for MORE THAN ONE item (plural). 'This' goes with 'is'. 'These' goes with 'are'.",
+                "explanation": "This grammar drill focuses on subject-verb agreement in price questions. Singular items use 'is this' and plural items use 'are these'. This is one of the most common grammar mistakes learners make when shopping in English."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Say the following two sentences. In the first sentence, stress 'FIF-teen' on the second syllable. In the second sentence, stress 'FIF-ty' on the first syllable. The stress difference changes the number completely!",
+                "audioPrompt": "Listen carefully to the stress. Say both sentences. Make the stressed syllable louder and longer. The difference between fifteen and fifty is very important!",
+                "targetSentence": "The book costs fifteen pounds. The shoes cost fifty pounds.",
+                "phonetic": "/ðə bʊk kɒsts fɪfˈtiːn paʊndz ðə ʃuːz kɒst ˈfɪfti paʊndz/",
+                "expectedKeywords": [
+                  "fifteen",
+                  "fifty",
+                  "pounds",
+                  "costs",
+                  "cost"
+                ],
+                "hint": "FIFTEEN = fif-TEEN (stress on TEEN, the second syllable). FIFTY = FIF-ty (stress on FIF, the first syllable). If you stress the wrong syllable, the shopkeeper might charge you the wrong price! Also notice: 'costs' has an 's' for singular 'book', but 'cost' has no 's' for plural 'shoes'.",
+                "explanation": "This drill practises the critical stress difference between '-teen' numbers (13-19) and '-ty' numbers (20-90). Misplacing the stress can cause serious misunderstandings about prices. '-teen' numbers have stress on the final syllable, while '-ty' numbers have stress on the first syllable."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Say these two questions. The first is a WH-question (use falling intonation at the end). The second is a yes/no question (use rising intonation at the end). Feel the difference in your voice!",
+                "audioPrompt": "Now practise intonation! Say both questions. Let your voice go DOWN at the end of the first question and UP at the end of the second question. Ready? Go!",
+                "targetSentence": "How much is this jacket? Do you have it in a smaller size?",
+                "phonetic": "/haʊ mʌtʃ ɪz ðɪs ˈdʒækɪt ↘ duː juː hæv ɪt ɪn ə ˈsmɔːlər saɪz ↗/",
+                "expectedKeywords": [
+                  "how much",
+                  "jacket",
+                  "do you have",
+                  "smaller size"
+                ],
+                "hint": "FALLING intonation (↘): 'How much is this jacket?' — Your voice goes DOWN on 'jacket' because this is a WH-question (starts with 'How'). RISING intonation (↗): 'Do you have it in a smaller size?' — Your voice goes UP on 'size' because this is a yes/no question (starts with 'Do').",
+                "explanation": "This drill practises the two main intonation patterns in English shopping conversations. WH-questions (How much, What, Where) use falling intonation because you are asking for specific information. Yes/no questions (Do you, Can I, Is there) use rising intonation because you are asking for a yes or no answer. Using the correct intonation makes you sound more natural and confident."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

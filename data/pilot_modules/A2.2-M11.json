@@ -1,0 +1,1647 @@
+{
+  "module": {
+    "id": "A2.2-M11",
+    "levelId": "A2.2",
+    "title": "Narrative Time: Past Continuous Interrupted by Past Simple",
+    "cefr": "A2",
+    "group": "A2.2 - Social Dynamics, Work & Everyday Life",
+    "objective": "Narrate stories where an ongoing background action is interrupted by a sudden event (Past Continuous with Past Simple).",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 11
+  },
+  "subModules": [
+    {
+      "id": "sub-a2-2-m11-reading",
+      "moduleId": "A2.2-M11",
+      "skillType": "reading",
+      "title": "Reading Mission: Unexpected Moments in the Past",
+      "theme": "Unexpected Events and Stories",
+      "grammarFocus": "Past Continuous interrupted by Past Simple (when / while)",
+      "vocabularyFocus": "Events, interruptions, and sudden actions",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a2-2-m11-r-theory",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to this reading mission where you will explore short stories about unexpected events. You will learn how to describe an activity that was happening when another action suddenly interrupted it using the past continuous and past simple tenses.",
+            "linguisticTarget": {
+              "grammar": "Past continuous (was/were + verb-ing) and past simple (verb-2) with 'when' and 'while'.",
+              "vocabulary": "Words for unexpected moments, interruptions, and sudden actions like interrupt, suddenly, and doorbell.",
+              "readingStrategy": "Skimming short stories for the main sequence of events and scanning for specific words like when and while."
+            },
+            "learningObjectives": [
+              "Understand the main idea of short A2 stories about unexpected moments.",
+              "Locate specific details about what characters were doing when interruptions happened.",
+              "Recognize and practice grammar patterns with past continuous and past simple."
+            ],
+            "contextWarmup": {
+              "prompt": "What tense do we use for a long action that was in progress in the past?",
+              "options": [
+                "Past Continuous",
+                "Past Simple",
+                "Present Continuous"
+              ],
+              "correctIndex": 0,
+              "explanation": "We use the past continuous (was/were + verb-ing) for an action that was happening over a period of time in the past."
+            },
+            "rules": [
+              "Past Continuous for background activities that were in progress: Subject + was/were + verb-ing. Example: I was reading a book, They were playing football.",
+              "Past Simple for sudden actions or interruptions: Subject + verb-2. Example: the phone rang, she arrived, it started to rain.",
+              "Use 'when' followed by the past simple for the interrupting action: I was cooking when the doorbell rang. Use 'while' followed by the past continuous for the ongoing activity: While I was cooking, the doorbell rang."
+            ],
+            "commonTrap": {
+              "trapTitle": "Mixing up When and While",
+              "explanation": "Learners often put 'while' before a short past simple action, but 'while' almost always goes with the long past continuous action.",
+              "wrong": "While the phone rang, I cooked dinner.",
+              "correct": "When the phone rang, I was cooking dinner, or While I was cooking dinner, the phone rang."
+            },
+            "contractionsTitle": "Natural Spoken Contractions in Past Stories",
+            "contractionsSubtitle": "Observe how subjects and auxiliary verbs smoothly merge in everyday English:",
+            "contractions": [
+              {
+                "subject": "was",
+                "verb": "not",
+                "vowelDropped": "o",
+                "remainder": "snt",
+                "contracted": "wasn't",
+                "exampleFull": "He was not paying attention.",
+                "exampleContracted": "He wasn't paying attention."
+              },
+              {
+                "subject": "were",
+                "verb": "not",
+                "vowelDropped": "o",
+                "remainder": "rent",
+                "contracted": "weren't",
+                "exampleFull": "They were not listening.",
+                "exampleContracted": "They weren't listening."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Past Continuous and Past Simple",
+              "description": "Assemble sentence blocks to practice affirmative, negative, and question forms:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "was",
+                  "role": "First Person Singular"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "were",
+                  "role": "Third Person Plural"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "read",
+                  "thirdPerson": "reads",
+                  "continuous": "reading"
+                },
+                {
+                  "base": "cook",
+                  "thirdPerson": "cooks",
+                  "continuous": "cooking"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "a book when the lights went out",
+                  "type": "Interrupting Event Object"
+                },
+                {
+                  "text": "dinner when someone knocked on the door",
+                  "type": "Interrupting Event Object"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-2-m11-r-vocab",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "interrupt",
+                "ipa": "/ˌɪn.təˈrʌpt/",
+                "meaning": "menyela, mengganggu",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Sorry to interrupt, but there's a phone call for you.",
+                "collocation": "Sorry to interrupt"
+              },
+              {
+                "word": "suddenly",
+                "ipa": "/ˈsʌd.ən.li/",
+                "meaning": "tiba-tiba, secara mendadak",
+                "partOfSpeech": "adverb",
+                "exampleSentence": "I was reading when suddenly the lights went out.",
+                "collocation": "suddenly appeared"
+              },
+              {
+                "word": "doorbell",
+                "ipa": "/ˈdɔːr.bel/",
+                "meaning": "bel pintu",
+                "partOfSpeech": "noun",
+                "exampleSentence": "We were having dinner when the doorbell rang.",
+                "collocation": "ring the doorbell"
+              },
+              {
+                "word": "notice",
+                "ipa": "/ˈnəʊ.tɪs/",
+                "meaning": "menyadari, memperhatikan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "I was walking home when I noticed a strange car.",
+                "collocation": "notice something unusual"
+              },
+              {
+                "word": "crash",
+                "ipa": "/kræʃ/",
+                "meaning": "tabrakan, benturan keras",
+                "partOfSpeech": "noun",
+                "exampleSentence": "While I was driving, I heard a loud crash.",
+                "collocation": "hear a loud crash"
+              },
+              {
+                "word": "drop",
+                "ipa": "/drɒp/",
+                "meaning": "menjatuhkan, jatuh",
+                "partOfSpeech": "verb",
+                "exampleSentence": "She was carrying plates when she dropped one.",
+                "collocation": "drop a plate"
+              },
+              {
+                "word": "realize",
+                "ipa": "/ˈrɪə.laɪz/",
+                "meaning": "menyadari, sadar",
+                "partOfSpeech": "verb",
+                "exampleSentence": "I was checking my bag when I realized my wallet was missing.",
+                "collocation": "realize a mistake"
+              },
+              {
+                "word": "power cut",
+                "ipa": "/ˈpaʊə kʌt/",
+                "meaning": "pemadaman listrik",
+                "partOfSpeech": "noun",
+                "exampleSentence": "We were watching TV when there was a power cut.",
+                "collocation": "experience a power cut"
+              },
+              {
+                "word": "scream",
+                "ipa": "/skriːm/",
+                "meaning": "berteriak",
+                "partOfSpeech": "verb",
+                "exampleSentence": "I was sleeping when I heard someone scream.",
+                "collocation": "hear someone scream"
+              },
+              {
+                "word": "bump into",
+                "ipa": "/bʌmp ˈɪn.tuː/",
+                "meaning": "bertemu secara kebetulan, menabrak",
+                "partOfSpeech": "phrasal verb",
+                "exampleSentence": "I was shopping when I bumped into my old teacher.",
+                "collocation": "bump into a friend"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m11-r-guided",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "A Very Strange Tuesday Afternoon",
+            "audioUrl": "/audio/modules/a2-2-m11/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Last Tuesday started like any other normal day, but it turned into a very surprising afternoon. Sarah was sitting in her living room and reading her favourite book about travel. The sun was shining brightly outside, and the birds were singing in the trees. Everything was quiet and peaceful.",
+              "Suddenly, without any warning, a loud crash came from the street outside. Sarah immediately dropped her book and ran to the window. While she was looking outside, she noticed that two cars had stopped in the middle of the road. A few seconds later, the doorbell rang loudly, and her neighbour stood there with a huge smile, holding a package that was delivered to the wrong house."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 5,
+                "text": "Last Tuesday started like any other normal day, but it turned into a very surprising afternoon.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 5,
+                "end": 10.5,
+                "text": "Sarah was sitting in her living room and reading her favourite book about travel.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 10.5,
+                "end": 16,
+                "text": "The sun was shining brightly outside, and the birds were singing in the trees.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 16,
+                "end": 20,
+                "text": "Everything was quiet and peaceful.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 20,
+                "end": 25.5,
+                "text": "Suddenly, without any warning, a loud crash came from the street outside.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 25.5,
+                "end": 31,
+                "text": "Sarah immediately dropped her book and ran to the window.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 31,
+                "end": 37,
+                "text": "While she was looking outside, she noticed that two cars had stopped in the middle of the road.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 37,
+                "end": 45,
+                "text": "A few seconds later, the doorbell rang loudly, and her neighbour stood there with a huge smile, holding a package that was delivered to the wrong house.",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m11-r-practice",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-1",
+                "instruction": "Match the word with its correct meaning.",
+                "pairs": [
+                  {
+                    "term": "suddenly",
+                    "definition": "tiba-tiba, secara mendadak"
+                  },
+                  {
+                    "term": "doorbell",
+                    "definition": "bel pintu"
+                  },
+                  {
+                    "term": "crash",
+                    "definition": "tabrakan, benturan keras"
+                  },
+                  {
+                    "term": "realize",
+                    "definition": "menyadari, sadar"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m11-r-quiz",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What was Sarah doing at the beginning of the story?",
+                "options": [
+                  "Reading a travel book",
+                  "Cooking dinner",
+                  "Watching television"
+                ],
+                "answer": "Reading a travel book",
+                "explanation": "The passage states that Sarah was sitting in her living room and reading her favourite book about travel."
+              },
+              {
+                "id": "q-r-2",
+                "question": "What interrupted Sarah's quiet afternoon?",
+                "options": [
+                  "A loud crash from the street",
+                  "A sudden power cut",
+                  "A phone call from her friend"
+                ],
+                "answer": "A loud crash from the street",
+                "explanation": "The text mentions that suddenly, a loud crash came from the street outside."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What did Sarah do after hearing the noise?",
+                "options": [
+                  "She went back to sleep",
+                  "She dropped her book and ran to the window",
+                  "She called the police immediately"
+                ],
+                "answer": "She dropped her book and ran to the window",
+                "explanation": "The passage states that Sarah immediately dropped her book and ran to the window."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What did Sarah notice when she looked outside?",
+                "options": [
+                  "Two cars had stopped in the middle of the road",
+                  "A dog was running in the street",
+                  "It started to rain heavily"
+                ],
+                "answer": "Two cars had stopped in the middle of the road",
+                "explanation": "The text says she noticed that two cars had stopped in the middle of the road."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What happened right after she looked outside?",
+                "options": [
+                  "The doorbell rang loudly",
+                  "Someone shouted her name",
+                  "The lights went out"
+                ],
+                "answer": "The doorbell rang loudly",
+                "explanation": "The passage notes that a few seconds later, the doorbell rang loudly."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Who was at the door?",
+                "options": [
+                  "Her neighbour",
+                  "The mail carrier",
+                  "Her teacher"
+                ],
+                "answer": "Her neighbour",
+                "explanation": "The text explains that her neighbour stood there with a huge smile."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Why did the neighbour come to her house?",
+                "options": [
+                  "To bring a package delivered to the wrong house",
+                  "To ask for help with his car",
+                  "To invite her for coffee"
+                ],
+                "answer": "To bring a package delivered to the wrong house",
+                "explanation": "The passage states the neighbour was holding a package that was delivered to the wrong house."
+              },
+              {
+                "id": "q-r-8",
+                "question": "Which tense is used to describe Sarah reading her book while the sun was shining?",
+                "options": [
+                  "Past Continuous",
+                  "Past Simple",
+                  "Present Simple"
+                ],
+                "answer": "Past Continuous",
+                "explanation": "Past continuous (was sitting, was shining) is used for background activities in progress in the past."
+              },
+              {
+                "id": "q-r-9",
+                "question": "Which grammar structure correctly describes an interruption in a past narrative?",
+                "options": [
+                  "Past Continuous + when + Past Simple",
+                  "Past Simple + while + Past Simple",
+                  "Present Continuous + when + Past Simple"
+                ],
+                "answer": "Past Continuous + when + Past Simple",
+                "explanation": "We use the past continuous for the long ongoing action, followed by 'when' and the past simple for the short interrupting action."
+              },
+              {
+                "id": "q-r-10",
+                "question": "Which sentence uses 'while' correctly according to grammar rules?",
+                "options": [
+                  "While she was looking outside, she noticed the cars.",
+                  "While she looked outside, she was noticing the cars.",
+                  "She was looking outside while a loud crash happened suddenly."
+                ],
+                "answer": "While she was looking outside, she noticed the cars.",
+                "explanation": "'While' is correctly used with the past continuous tense (was looking) for the ongoing action."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m11-listening",
+      "moduleId": "A2.2-M11",
+      "skillType": "listening",
+      "title": "Listening Mission: Unexpected Encounters",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a2-2-m11-l-theory",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This listening session focuses on catching details in stories where past continuous actions are interrupted by past simple events. Listen for key transition words like while and when to track what was happening and what suddenly occurred.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about unexpected events.",
+              "Identify details such as actions, locations, and reactions.",
+              "Notice how words link together in connected speech during natural conversation."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "You won't believe",
+                "meaning": "Kamu tidak akan percaya",
+                "note": "Used to grab someone's attention before sharing an exciting or surprising story."
+              },
+              {
+                "phrase": "While I was taking",
+                "meaning": "Ketika aku sedang mengambil",
+                "note": "Introduces an ongoing action in the past continuous tense interrupted by another event."
+              },
+              {
+                "phrase": "Right now",
+                "meaning": "Sekarang juga",
+                "note": "An expression used to ask for immediate action or details."
+              },
+              {
+                "phrase": "In time",
+                "meaning": "Tepat waktu / sempat",
+                "note": "Used to indicate doing something before it is too late."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "What happened yesterday",
+                "fast": "What happened yesterday",
+                "slowIpa": "/wɒt ˈhæpənd ˈjɛstədeɪ/",
+                "fastIpa": "/wɒtˈhæpnd ˈjɛstərdeɪ/",
+                "note": "The schwa sound in yesterday reduces, and the t in what links smoothly."
+              },
+              {
+                "id": 2,
+                "slow": "Who was it",
+                "fast": "Who was it",
+                "slowIpa": "/huː wɒz ɪt/",
+                "fastIpa": "/huːwəzɪt/",
+                "note": "A w sound links who and was, and was weakens to /wəz/."
+              },
+              {
+                "id": 3,
+                "slow": "Drinking coffee",
+                "fast": "Drinkin' coffee",
+                "slowIpa": "/ˈdrɪŋkɪŋ ˈkɒfi/",
+                "fastIpa": "/ˈdrɪŋkɪn ˈkɒfi/",
+                "note": "The final ng sound in drinking drops the g in casual fast speech."
+              },
+              {
+                "id": 4,
+                "slow": "Stop in time",
+                "fast": "Stop in time",
+                "slowIpa": "/stɒp ɪn taɪm/",
+                "fastIpa": "/stɒpɪn taɪm/",
+                "note": "The final p of stop links directly into the vowel sound of in."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m11-l-dialogue",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Celebrity Sighting and Street Drama",
+          "orderIndex": 2,
+          "content": {
+            "context": "Sarah and Tom share surprising stories about unexpected things that happened to them yesterday.",
+            "audioPrompt": "Listen to the conversation between two friends.",
+            "lines": [
+              {
+                "speaker": "Sarah",
+                "text": "You won't believe what happened yesterday.",
+                "translation": "Kamu tidak akan percaya apa yang terjadi kemarin.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Tell me everything right now.",
+                "translation": "Ceritakan semuanya sekarang juga.",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "I saw a famous actor outside!",
+                "translation": "Aku melihat seorang aktor terkenal di luar!",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Really? Who was it, Sarah?",
+                "translation": "Benarkah? Siapa itu, Sarah?",
+                "emotion": "surprised"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "It was Daniel Chen.",
+                "translation": "Itu adalah Daniel Chen.",
+                "emotion": "proud"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "He was drinking coffee near my office.",
+                "translation": "Dia sedang minum kopi di dekat kantorku.",
+                "emotion": "casual"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Did you talk to him?",
+                "translation": "Apakah kamu berbicara dengannya?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "While I was taking a photo, he smiled.",
+                "translation": "Saat aku sedang mengambil foto, dia tersenyum.",
+                "emotion": "amazed"
+              },
+              {
+                "speaker": "Tom",
+                "text": "That is so lucky!",
+                "translation": "Itu sangat beruntung!",
+                "emotion": "impressed"
+              },
+              {
+                "speaker": "Tom",
+                "text": "I had a crazy moment too.",
+                "translation": "Aku juga mengalami momen gila.",
+                "emotion": "amused"
+              },
+              {
+                "speaker": "Tom",
+                "text": "A cat jumped across the road.",
+                "translation": "Seekor kucing melompat menyeberangi jalan.",
+                "emotion": "dramatic"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Oh no, did you stop in time?",
+                "translation": "Oh tidak, apakah kamu berhenti tepat waktu?",
+                "emotion": "concerned"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m11-l-quiz",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "You won't believe what happened yesterday.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"You won't believe what happened _____.\"",
+                "targetWord": "yesterday",
+                "explanation": "Full audio: \"You won't believe what happened yesterday.\". The missing word is \"yesterday\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Tell me everything right now.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Tell me everything right _____.\"",
+                "targetWord": "now",
+                "explanation": "Full audio: \"Tell me everything right now.\". The missing word is \"now\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "I saw a famous actor outside!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"I saw a famous actor _____!\"",
+                "targetWord": "outside",
+                "explanation": "Full audio: \"I saw a famous actor outside!\". The missing word is \"outside\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Who was it, Sarah?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"_____ was it, Sarah?\"",
+                "targetWord": "Who",
+                "explanation": "Full audio: \"Who was it, Sarah?\". The missing word is \"Who\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "It was Daniel Chen.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"It was Daniel _____.\"",
+                "targetWord": "Chen",
+                "explanation": "Full audio: \"It was Daniel Chen.\". The missing word is \"Chen\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "He was drinking coffee near my office.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He was drinking coffee near my office",
+                "words": [
+                  "my",
+                  "office",
+                  "drinking",
+                  "coffee",
+                  "He",
+                  "was",
+                  "near"
+                ],
+                "explanation": "Correct sentence order: \"He was drinking coffee near my office.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Did you talk to him?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Did you talk to him",
+                "words": [
+                  "talk",
+                  "him",
+                  "Did",
+                  "to",
+                  "you"
+                ],
+                "explanation": "Correct sentence order: \"Did you talk to him?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "That is so lucky!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That is so lucky",
+                "words": [
+                  "is",
+                  "lucky",
+                  "That",
+                  "so"
+                ],
+                "explanation": "Correct sentence order: \"That is so lucky!\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "I had a crazy moment too.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I had a crazy moment too",
+                "words": [
+                  "a",
+                  "had",
+                  "too",
+                  "I",
+                  "crazy",
+                  "moment"
+                ],
+                "explanation": "Correct sentence order: \"I had a crazy moment too.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "A cat jumped across the road.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "A cat jumped across the road",
+                "words": [
+                  "road",
+                  "A",
+                  "cat",
+                  "the",
+                  "across",
+                  "jumped"
+                ],
+                "explanation": "Correct sentence order: \"A cat jumped across the road.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "You won't believe what happened yesterday.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"You won't believe what happened _____.\"",
+                "targetWord": "yesterday",
+                "explanation": "Full audio: \"You won't believe what happened yesterday.\". The missing word is \"yesterday\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Tell me everything right now.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Tell me everything right _____.\"",
+                "targetWord": "now",
+                "explanation": "Full audio: \"Tell me everything right now.\". The missing word is \"now\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "I saw a famous actor outside!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"I saw a famous actor _____!\"",
+                "targetWord": "outside",
+                "explanation": "Full audio: \"I saw a famous actor outside!\". The missing word is \"outside\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Who was it, Sarah?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"_____ was it, Sarah?\"",
+                "targetWord": "Who",
+                "explanation": "Full audio: \"Who was it, Sarah?\". The missing word is \"Who\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "It was Daniel Chen.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"It was Daniel _____.\"",
+                "targetWord": "Chen",
+                "explanation": "Full audio: \"It was Daniel Chen.\". The missing word is \"Chen\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "He was drinking coffee near my office.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He was drinking coffee near my office",
+                "words": [
+                  "my",
+                  "office",
+                  "drinking",
+                  "coffee",
+                  "He",
+                  "was",
+                  "near"
+                ],
+                "explanation": "Correct sentence order: \"He was drinking coffee near my office.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Did you talk to him?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Did you talk to him",
+                "words": [
+                  "talk",
+                  "him",
+                  "Did",
+                  "to",
+                  "you"
+                ],
+                "explanation": "Correct sentence order: \"Did you talk to him?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "That is so lucky!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That is so lucky",
+                "words": [
+                  "is",
+                  "lucky",
+                  "That",
+                  "so"
+                ],
+                "explanation": "Correct sentence order: \"That is so lucky!\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "I had a crazy moment too.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I had a crazy moment too",
+                "words": [
+                  "a",
+                  "had",
+                  "too",
+                  "I",
+                  "crazy",
+                  "moment"
+                ],
+                "explanation": "Correct sentence order: \"I had a crazy moment too.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "A cat jumped across the road.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "A cat jumped across the road",
+                "words": [
+                  "road",
+                  "A",
+                  "cat",
+                  "the",
+                  "across",
+                  "jumped"
+                ],
+                "explanation": "Correct sentence order: \"A cat jumped across the road.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m11-writing",
+      "moduleId": "A2.2-M11",
+      "skillType": "writing",
+      "title": "Writing Mission: Telling Stories with Past Continuous and Past Simple",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a2-2-m11-w-theory",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Learn how to write about interrupted actions in the past using the Past Continuous and Past Simple tenses with 'when' and 'while'.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Long Action with Past Continuous",
+                "formula": "Subject + was/were + verb-ing",
+                "example": "I was watching a movie yesterday evening."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Sudden Action with Past Simple",
+                "formula": "Subject + verb-2",
+                "example": "The phone rang loudly."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Connecting with When and While",
+                "formula": "Past Continuous + when + Past Simple / While + Past Continuous, Past Simple",
+                "example": "While I was walking home, it started to rain."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Use a comma when the sentence starts with a 'while' or 'when' clause.",
+                "badExample": "While I was sleeping the dog barked.",
+                "goodExample": "While I was sleeping, the dog barked.",
+                "why": "A comma separates the dependent time clause from the main clause in English."
+              },
+              {
+                "rule": "Drop the final silent 'e' in verbs before adding '-ing'.",
+                "badExample": "She was writting a letter to her friend.",
+                "goodExample": "She was writing a letter to her friend.",
+                "why": "Standard spelling rules require dropping a silent 'e' before adding an '-ing' ending."
+              },
+              {
+                "rule": "Match 'was' with singular subjects and 'were' with plural subjects.",
+                "badExample": "They was playing football in the yard.",
+                "goodExample": "They were playing football in the yard.",
+                "why": "Subject-verb agreement requires 'were' when using plural pronouns like they, we, and you."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "I was reading a book when the lights went out.",
+                "id": "Saya sedang membaca buku ketika lampu padam.",
+                "focus": "Past continuous interrupted by past simple with when"
+              },
+              {
+                "en": "While she was cooking dinner, her friend arrived.",
+                "id": "Saat dia sedang memasak makan malam, temannya tiba.",
+                "focus": "While clause with past continuous"
+              },
+              {
+                "en": "They were playing tennis when it started to rain.",
+                "id": "Mereka sedang bermain tenis ketika mulai hujan.",
+                "focus": "Interrupted action with plural subject"
+              },
+              {
+                "en": "He was driving to work when he saw an accident.",
+                "id": "Dia sedang mengemudi ke tempat kerja ketika dia melihat sebuah kecelakaan.",
+                "focus": "Past continuous action interrupted by a visual event"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m11-w-practice",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "i was walking in the park when it start to rain",
+                "targetSentence": "I was walking in the park when it started to rain.",
+                "translation": "Saya sedang berjalan-jalan di taman ketika mulai hujan.",
+                "keyRule": "Capitalize the first word, use past simple 'started' after 'when', and add a period.",
+                "requiredCapitals": [
+                  "I"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "while they was eating dinner the phone ring",
+                "targetSentence": "While they were eating dinner, the phone rang.",
+                "translation": "Saat mereka sedang makan malam, telepon berdering.",
+                "keyRule": "Use 'were' with plural 'they', add a comma after the dependent clause, and use past simple 'rang'.",
+                "requiredCapitals": [
+                  "While"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "she were reading a book when her brother come home",
+                "targetSentence": "She was reading a book when her brother came home.",
+                "translation": "Dia sedang membaca buku ketika saudara laki-lakinya pulang ke rumah.",
+                "keyRule": "Use 'was' with singular 'she' and past simple 'came' instead of 'come'.",
+                "requiredCapitals": [
+                  "She"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Interrupted Actions",
+                "meaning": "Saya sedang tidur ketika kucing itu melompat ke tempat tidur.",
+                "tokens": [
+                  "I",
+                  "was",
+                  "sleeping",
+                  "when",
+                  "the",
+                  "cat",
+                  "jumped",
+                  "onto",
+                  "the",
+                  "bed."
+                ],
+                "fullSentence": "I was sleeping when the cat jumped onto the bed."
+              },
+              {
+                "id": "b-2",
+                "category": "Daily Stories",
+                "meaning": "Saat mereka sedang belajar, lampu padam.",
+                "tokens": [
+                  "While",
+                  "they",
+                  "were",
+                  "studying,",
+                  "the",
+                  "lights",
+                  "went",
+                  "out."
+                ],
+                "fullSentence": "While they were studying, the lights went out."
+              },
+              {
+                "id": "b-3",
+                "category": "Travel Stories",
+                "meaning": "Dia sedang menunggu bus ketika dia bertemu temannya.",
+                "tokens": [
+                  "He",
+                  "was",
+                  "waiting",
+                  "for",
+                  "the",
+                  "bus",
+                  "when",
+                  "he",
+                  "met",
+                  "his",
+                  "friend."
+                ],
+                "fullSentence": "He was waiting for the bus when he met his friend."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: An Unexpected Interruption",
+                "badge": "Story Teller",
+                "instruction": "Write three sentences about something you were doing yesterday when an unexpected event happened. Use 'when'.",
+                "example": "I was cooking dinner yesterday evening. Suddenly, the doorbell rang. It was my neighbor asking for help.",
+                "placeholder": "Write your sentences here...",
+                "minWords": 15,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: While Something Was Happening",
+                "badge": "Narrative Master",
+                "instruction": "Write three sentences using 'while' to describe two things happening at the same time or an action interrupted by a sudden sound.",
+                "example": "While I was studying in my room, my brother played loud music. I asked him to turn it down.",
+                "placeholder": "Write your sentences here...",
+                "minWords": 15,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m11-w-quiz",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following affirmative sentence into a negative sentence:",
+                "promptText": "I was watching television.",
+                "hint": "Use 'was not' or 'wasn't' before the verb-ing.",
+                "targetAnswers": [
+                  "I wasn't watching television.",
+                  "I was not watching television."
+                ],
+                "explanation": "To make a past continuous sentence negative, add 'not' after 'was' or 'were'."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Conjunction Choice",
+                "instruction": "Complete the sentence with 'When' or 'While':",
+                "promptText": "___ I was walking home, I lost my house keys.",
+                "hint": "Use the conjunction that goes with the past continuous long action clause.",
+                "targetAnswers": [
+                  "While",
+                  "while"
+                ],
+                "explanation": "We typically use 'while' directly before a past continuous clause describing a long ongoing action."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the grammar, capitalization, and punctuation in this sentence:",
+                "promptText": "they were playing football when it start to rain",
+                "hint": "Capitalize the first word, use the past simple form of 'start', and add a period.",
+                "targetAnswers": [
+                  "They were playing football when it started to rain."
+                ],
+                "explanation": "Start sentences with capital letters, use past simple 'started' after 'when', and finish with a period."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this statement into a yes/no question:",
+                "promptText": "You were sleeping at 10 PM.",
+                "hint": "Put the auxiliary verb 'were' at the beginning of the sentence.",
+                "targetAnswers": [
+                  "Were you sleeping at 10 PM?"
+                ],
+                "explanation": "To form a question in the past continuous, place 'was' or 'were' before the subject."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Conjunction Choice",
+                "instruction": "Fill in the blank with the correct past simple verb form:",
+                "promptText": "She was reading a magazine when the phone ___ (ring).",
+                "hint": "Change 'ring' into its past simple form.",
+                "targetAnswers": [
+                  "rang"
+                ],
+                "explanation": "The interrupting action uses the past simple tense. The past simple of 'ring' is 'rang'."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Combine these two thoughts into one sentence using 'while':",
+                "promptText": "I was cooking dinner. The doorbell rang.",
+                "hint": "Put 'while' before the past continuous action.",
+                "targetAnswers": [
+                  "While I was cooking dinner, the doorbell rang.",
+                  "The doorbell rang while I was cooking dinner."
+                ],
+                "explanation": "You can place the 'while' clause at the beginning with a comma or at the end without a comma."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the spelling and verb tense errors in this sentence:",
+                "promptText": "He was writting an email when his computer crash.",
+                "hint": "Check the spelling of 'writing' and the past simple form of 'crash'.",
+                "targetAnswers": [
+                  "He was writing an email when his computer crashed."
+                ],
+                "explanation": "Drop the silent 'e' in 'writing' and add '-ed' to make 'crashed' in the past simple."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Short Response",
+                "instruction": "Type the correct auxiliary verb for this past continuous sentence:",
+                "promptText": "They ___ playing basketball in the park.",
+                "hint": "Use the past auxiliary verb that matches the plural pronoun 'they'.",
+                "targetAnswers": [
+                  "were"
+                ],
+                "explanation": "The pronoun 'they' is plural, so it requires the auxiliary verb 'were'."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change this past simple sentence into the past continuous tense:",
+                "promptText": "Tom walked in the park.",
+                "hint": "Use 'was' and add '-ing' to the main verb.",
+                "targetAnswers": [
+                  "Tom was walking in the park."
+                ],
+                "explanation": "Past continuous requires the subject + was/were + verb-ing."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Conjunction Choice",
+                "instruction": "Complete the sentence with 'when' or 'while':",
+                "promptText": "We were having a picnic ___ it started to rain.",
+                "hint": "Use the conjunction that precedes the sudden short action.",
+                "targetAnswers": [
+                  "when"
+                ],
+                "explanation": "We use 'when' before the short, interrupting past simple action ('it started to rain')."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m11-speaking",
+      "moduleId": "A2.2-M11",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Narrative Time and Interrupted Actions",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a2-2-m11-s-theory",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Mastering the rhythm of narrative time requires contrasting a steady background action with a sharp, sudden interruption. When speaking, keep your voice smooth and flowing during the past continuous part, and deliver the past simple action with clear emphasis.",
+            "audioGuidance": "Keep your voice steady and slightly lower during the background action using was or were. When you reach the interruption word like when or suddenly, raise your energy slightly to make the event sound immediate and clear.",
+            "pillars": [
+              {
+                "name": "Continuous Rhythm",
+                "target": "Smooth linkage of was and were with verb-ing",
+                "explanation": "Pronounce 'was' and 'were' as weak forms in sentences so the main verb carries the vocal weight."
+              },
+              {
+                "name": "Interruption Contrast",
+                "target": "Clear articulation of past simple verbs",
+                "explanation": "Deliver words like rang, crashed, or dropped with a crisp consonant sound to signal the sudden event."
+              },
+              {
+                "name": "Narrative Pausing",
+                "target": "Natural pauses between clauses",
+                "explanation": "Take a micro-pause after the background clause before introducing the interrupting event."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m11-s-practice",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "RE-lax",
+                "countryAudio": "relax",
+                "countrySyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LAX",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "RE-la-xing",
+                "natAudio": "relaxing",
+                "natSyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LAX",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ing",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that the main stress stays on the second syllable across both forms."
+              },
+              {
+                "id": "pair-2",
+                "country": "SUD-den",
+                "countryAudio": "sudden",
+                "countrySyllables": [
+                  {
+                    "text": "SUD",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "den",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "SUD-den-ly",
+                "natAudio": "suddenly",
+                "natSyllables": [
+                  {
+                    "text": "SUD",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "den",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ly",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The primary stress remains on the first syllable when adding the suffix."
+              },
+              {
+                "id": "pair-3",
+                "country": "IN-ter-rupt",
+                "countryAudio": "interrupt",
+                "countrySyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ter",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "RUPT",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "IN-ter-rup-ted",
+                "natAudio": "interrupted",
+                "natSyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ter",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "RUP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ted",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The primary stress stays firmly on the third syllable in both the base verb and the past tense form."
+              },
+              {
+                "id": "pair-4",
+                "country": "RE-a-lize",
+                "countryAudio": "realize",
+                "countrySyllables": [
+                  {
+                    "text": "RE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "a",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "lize",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "RE-a-li-zed",
+                "natAudio": "realized",
+                "natSyllables": [
+                  {
+                    "text": "RE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "a",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "lized",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress stays on the first syllable for both forms."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "I was reading a book when the phone rang.",
+                "phonetic": "/aɪ wɒz ˈriːdɪŋ ə bʊk wɛn ðə fəʊn ræŋ/",
+                "focus": "Past continuous background action interrupted by past simple",
+                "hint": "Blend 'was reading' smoothly before pausing slightly before 'when'."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "She was walking home when suddenly it started to rain.",
+                "phonetic": "/ʃiː wɒz ˈwɔːkɪŋ həʊm wɛn ˈsʌdənli ɪt ˈstɑːtɪd tuː reɪn/",
+                "focus": "Using 'suddenly' to introduce an unexpected event",
+                "hint": "Emphasize the word 'suddenly' with higher pitch."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "We were having dinner when the doorbell rang.",
+                "phonetic": "/wiː wə ˈhævɪŋ ˈdɪnə wɛn ðə ˈdɔːbɛl ræŋ/",
+                "focus": "Pronunciation of plural past continuous and noun 'doorbell'",
+                "hint": "Pronounce 'were' as a weak sound /wə/ in normal spoken English."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "He was driving to work when he bumped into an old friend.",
+                "phonetic": "/hiː wɒz ˈdraɪvɪŋ tuː wɜːk wɛn hiː bʌmpt ˈɪntuː ən əʊld frɛnd/",
+                "focus": "Phrasal verb 'bump into' and smooth clause linking",
+                "hint": "Link 'bump' and 'into' together naturally without stopping."
+              }
+            ],
+            "roleplay": {
+              "context": "You are talking to your friend about a strange incident that happened to you yesterday evening.",
+              "roles": [
+                "Friend",
+                "Student"
+              ],
+              "turns": [
+                {
+                  "speaker": "Friend",
+                  "text": "What were you doing at eight o'clock last night?",
+                  "translation": "Apa yang kamu lakukan jam delapan malam tadi?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "I was watching television in my living room when the power cut happened.",
+                  "translation": "Saya sedang menonton televisi di ruang tamu ketika pemadaman listrik terjadi."
+                },
+                {
+                  "speaker": "Friend",
+                  "text": "Did anything else happen while you were sitting in the dark?",
+                  "translation": "Apakah ada hal lain yang terjadi saat kamu sedang duduk dalam kegelapan?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, I was looking for my flashlight when I heard someone scream outside.",
+                  "translation": "Ya, saya sedang mencari senter saya ketika saya mendengar seseorang berteriak di luar."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-2-m11-s-quiz",
+          "moduleId": "A2.2-M11",
+          "subModuleId": "sub-a2-2-m11-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about what you were doing yesterday when an interruption occurred.",
+                "audioPrompt": "Tell me about an activity you were doing yesterday evening and what happened to interrupt it.",
+                "storyPoints": [
+                  "What background action you were doing at a specific time",
+                  "What sudden event happened to interrupt your activity",
+                  "How you responded to the interruption"
+                ],
+                "targetSentence": "I was studying English in my room when my friend dropped by for a visit.",
+                "phonetic": "/aɪ wɒz ˈstʌdiɪŋ ˈɪŋglɪʃ ɪn maɪ ruːm wɛn maɪ frɛnd drɒpt baɪ fɔː ə ˈvɪzɪt/",
+                "expectedKeywords": [
+                  "studying",
+                  "room",
+                  "friend",
+                  "dropped"
+                ],
+                "explanation": "Ensure you use the past continuous for the ongoing action and past simple for the interruption."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a time you were traveling or walking somewhere.",
+                "audioPrompt": "Describe a time when you were walking outside and something unexpected happened.",
+                "storyPoints": [
+                  "Where you were walking and the weather conditions",
+                  "What you noticed or heard while walking",
+                  "What action you took immediately after"
+                ],
+                "targetSentence": "I was walking to the bus stop when it started to rain heavily.",
+                "phonetic": "/aɪ wɒz ˈwɔːkɪŋ tuː ðə bʊs stɒp wɛn ɪt ˈstɑːtɪd tuː reɪn ˈhɛvɪli/",
+                "expectedKeywords": [
+                  "walking",
+                  "bus",
+                  "stop",
+                  "rain"
+                ],
+                "explanation": "Maintain good pacing and clear pronunciation of the past continuous and past simple verbs."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are talking to your neighbor about a loud noise you both heard last night while sleeping.",
+                "characterRole": "Neighbor discussing a strange noise",
+                "instruction": "Respond to your neighbor by explaining what you were doing when you heard the sound.",
+                "audioPrompt": "Did you hear that loud noise last night? What were you doing when it happened?",
+                "targetSentence": "I was sleeping in my bedroom when I heard a loud crash.",
+                "phonetic": "/aɪ wɒz ˈsliːpɪŋ ɪn maɪ ˈbɛdruːm wɛn aɪ hɜːd ə laʊd kræʃ/",
+                "expectedKeywords": [
+                  "sleeping",
+                  "bedroom",
+                  "heard",
+                  "crash"
+                ],
+                "explanation": "Speak naturally as if talking to a neighbor in a real conversation."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are talking to a teacher who is asking why you were late to class this morning.",
+                "characterRole": "Teacher asking about your delay",
+                "instruction": "Explain to your teacher what you were doing when a problem delayed your journey.",
+                "audioPrompt": "Why were you late this morning? What happened on your way to school?",
+                "targetSentence": "I was driving to school when my car suddenly broke down.",
+                "phonetic": "/aɪ wɒz ˈdraɪvɪŋ tuː skuːl wɛn maɪ kɑː ˈsʌdənli brəʊk daʊn/",
+                "expectedKeywords": [
+                  "driving",
+                  "school",
+                  "suddenly",
+                  "broke"
+                ],
+                "explanation": "Use polite tone and clear sentence structure to explain the situation."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are talking to a colleague who is asking about a phone call you missed yesterday.",
+                "characterRole": "Colleague inquiring about a missed call",
+                "instruction": "Explain why you did not answer the phone by describing what you were doing at that moment.",
+                "audioPrompt": "I tried calling you yesterday afternoon, but you did not answer. What were you doing?",
+                "targetSentence": "I was cooking dinner in the kitchen when my phone rang.",
+                "phonetic": "/aɪ wɒz ˈkʊkɪŋ ˈdɪnə ɪn ðə ˈkɪtʃɪn wɛn maɪ fəʊn ræŋ/",
+                "expectedKeywords": [
+                  "cooking",
+                  "dinner",
+                  "kitchen",
+                  "rang"
+                ],
+                "explanation": "Connect the background task smoothly with the interrupting phone call."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are talking to a friend about a chance meeting with someone you used to know.",
+                "characterRole": "Curious friend asking about your day",
+                "instruction": "Tell your friend who you met while you were out shopping.",
+                "audioPrompt": "How was your shopping trip yesterday? Did you see anyone interesting?",
+                "targetSentence": "I was shopping at the mall when I bumped into my old teacher.",
+                "phonetic": "/aɪ wɒz ˈʃɒpɪŋ æt ðə mɔːl wɛn aɪ bʌmpt ˈɪntuː maɪ əʊld ˈtiːʧə/",
+                "expectedKeywords": [
+                  "shopping",
+                  "mall",
+                  "bumped",
+                  "teacher"
+                ],
+                "explanation": "Pronounce the phrasal verb 'bump into' naturally within the sentence."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "focus": "vocab",
+                "instruction": "Read the sentence aloud, paying special attention to the target vocabulary word 'suddenly'.",
+                "audioPrompt": "Read this sentence clearly: I was walking home when suddenly the lights went out.",
+                "targetSentence": "I was walking home when suddenly the lights went out.",
+                "phonetic": "/aɪ wɒz ˈwɔːkɪŋ həʊm wɛn ˈsʌdənli ðə laɪts wɛnt aʊt/",
+                "expectedKeywords": [
+                  "walking",
+                  "suddenly",
+                  "lights",
+                  "out"
+                ],
+                "explanation": "Ensure the word 'suddenly' is pronounced with a distinct first-syllable stress."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "focus": "grammar",
+                "instruction": "Read the sentence aloud, making sure the past continuous and past simple forms contrast clearly.",
+                "audioPrompt": "Read this sentence clearly: While she was reading a book, the doorbell rang.",
+                "targetSentence": "While she was reading a book, the doorbell rang.",
+                "phonetic": "/waɪl ʃiː wɒz ˈriːdɪŋ ə bʊk, ðə ˈdɔːbɛl ræŋ/",
+                "expectedKeywords": [
+                  "While",
+                  "reading",
+                  "doorbell",
+                  "rang"
+                ],
+                "explanation": "Pause slightly after the comma to separate the background clause from the interrupting event."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Read the sentence aloud, emphasizing the correct syllable stress in the word 'interrupt'.",
+                "audioPrompt": "Read this sentence with correct stress: Please do not interrupt me while I am speaking.",
+                "targetSentence": "Please do not interrupt me while I am speaking.",
+                "phonetic": "/pliːz duː nɒt ˌɪntəˈrʌpt miː waɪl aɪ æm ˈspiːkɪŋ/",
+                "expectedKeywords": [
+                  "Please",
+                  "interrupt",
+                  "while",
+                  "speaking"
+                ],
+                "explanation": "Place the primary vocal stress firmly on the final syllable of the word 'interrupt'."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Intonation Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Read the sentence aloud using natural falling intonation at the end of the statement.",
+                "audioPrompt": "Read this sentence with falling intonation: She dropped her keys while she was opening the door.",
+                "targetSentence": "She dropped her keys while she was opening the door.",
+                "phonetic": "/ʃiː drɒpt hɜː kiːz waɪl ʃiː wɒz ˈəʊpənɪŋ ðə dɔː/",
+                "expectedKeywords": [
+                  "dropped",
+                  "keys",
+                  "opening",
+                  "door"
+                ],
+                "explanation": "Lower your pitch slightly on the final word 'door' to signal the completion of the sentence."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

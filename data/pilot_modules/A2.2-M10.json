@@ -1,0 +1,1608 @@
+{
+  "module": {
+    "id": "A2.2-M10",
+    "levelId": "A2.2",
+    "title": "Giving Lifestyle Advice: Should, Shouldn't & Ought To",
+    "cefr": "A2",
+    "group": "A2.2 - Social Dynamics, Work & Everyday Life",
+    "objective": "Offer lifestyle, health, and study advice using modal verbs 'should', 'shouldn't', and 'ought to'.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 10
+  },
+  "subModules": [
+    {
+      "id": "sub-a2-2-m10-reading",
+      "moduleId": "A2.2-M10",
+      "skillType": "reading",
+      "title": "Reading Mission: Healthy Lifestyle Choices",
+      "theme": "Health and Lifestyle",
+      "grammarFocus": "Modals of advice: should, shouldn't, and ought to",
+      "vocabularyFocus": "Health, habits, and lifestyle advice",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a2-2-m10-r-theory",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to the reading mission on giving lifestyle advice. In this unit, you will read about daily habits, health tips, and how to use should, shouldn't, and ought to to give good advice to friends and family.",
+            "linguisticTarget": {
+              "grammar": "Using should, shouldn't, and ought to for advice and recommendations.",
+              "vocabulary": "Words related to daily routines, health, stress, and habits.",
+              "readingStrategy": "Skimming for general ideas and scanning for specific health recommendations in short texts."
+            },
+            "learningObjectives": [
+              "Understand the main ideas of short A2 texts about healthy habits and routines.",
+              "Locate specific lifestyle advice details in written passages.",
+              "Recognize and apply grammar patterns with should, shouldn't, and ought to."
+            ],
+            "contextWarmup": {
+              "prompt": "When your friend feels tired all day, what is the best advice to give them?",
+              "options": [
+                "You should sleep earlier and drink more water.",
+                "You ought to eat fast food every night.",
+                "You shouldn't rest at all."
+              ],
+              "correctIndex": 0,
+              "explanation": "Sleeping earlier and drinking water are healthy habits that help cure tiredness."
+            },
+            "rules": [
+              "Should + verb without 'to': Use this to give positive advice or recommendations. Example: You should drink more water.",
+              "Shouldn't + verb without 'to': Use this to give negative advice or light warnings. Example: You shouldn't eat too much sugar.",
+              "Ought to + verb: This has the same meaning as should but sounds a bit more formal. Example: You ought to get enough sleep."
+            ],
+            "commonTrap": {
+              "trapTitle": "Adding 'to' after Should",
+              "explanation": "Learners often put the word 'to' after should, but modal verbs are followed directly by the base verb without 'to'.",
+              "wrong": "You should to exercise every day.",
+              "correct": "You should exercise every day."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Modals and Pronouns",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in everyday English:",
+            "contractions": [
+              {
+                "subject": "He",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "He's",
+                "exampleFull": "He is very tired today.",
+                "exampleContracted": "He's very tired today."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Should and Ought To",
+              "description": "Assemble sentence blocks to practice advice structures:",
+              "subjects": [
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Second Person"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "should eat",
+                  "thirdPerson": "should eat",
+                  "continuous": "should eating"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "a balanced diet every day",
+                  "type": "Advice Complement"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-2-m10-r-vocab",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "lifestyle",
+                "ipa": "/ˈlaɪf.staɪl/",
+                "meaning": "gaya hidup",
+                "partOfSpeech": "noun",
+                "exampleSentence": "You should change your lifestyle to be healthier.",
+                "collocation": "change lifestyle / healthy lifestyle"
+              },
+              {
+                "word": "advice",
+                "ipa": "/ədˈvaɪs/",
+                "meaning": "nasihat, saran",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Can you give me some advice about healthy eating?",
+                "collocation": "give advice / ask for advice"
+              },
+              {
+                "word": "regularly",
+                "ipa": "/ˈreɡ.jə.lə.li/",
+                "meaning": "secara teratur",
+                "partOfSpeech": "adverb",
+                "exampleSentence": "You ought to exercise regularly, at least three times a week.",
+                "collocation": "exercise regularly / eat regularly"
+              },
+              {
+                "word": "balanced",
+                "ipa": "/ˈbæl.ənst/",
+                "meaning": "seimbang",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "You should eat a balanced diet with vegetables and protein.",
+                "collocation": "balanced diet / balanced lifestyle"
+              },
+              {
+                "word": "stress",
+                "ipa": "/stres/",
+                "meaning": "stres, tekanan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "You shouldn't worry too much because stress is bad for your health.",
+                "collocation": "reduce stress / high stress"
+              },
+              {
+                "word": "avoid",
+                "ipa": "/əˈvɔɪd/",
+                "meaning": "menghindari",
+                "partOfSpeech": "verb",
+                "exampleSentence": "You should avoid junk food if you want to lose weight.",
+                "collocation": "avoid junk food / avoid stress"
+              },
+              {
+                "word": "improve",
+                "ipa": "/ɪmˈpruːv/",
+                "meaning": "memperbaiki, meningkatkan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "You ought to improve your sleeping habits.",
+                "collocation": "improve health / improve habits"
+              },
+              {
+                "word": "habits",
+                "ipa": "/ˈhæb.ɪts/",
+                "meaning": "kebiasaan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "You should develop good habits like drinking water every morning.",
+                "collocation": "good habits / bad habits"
+              },
+              {
+                "word": "reduce",
+                "ipa": "/rɪˈdʒuːs/",
+                "meaning": "mengurangi",
+                "partOfSpeech": "verb",
+                "exampleSentence": "You shouldn't drink so much coffee. You should reduce your caffeine intake.",
+                "collocation": "reduce sugar / reduce stress"
+              },
+              {
+                "word": "routine",
+                "ipa": "/ruːˈtiːn/",
+                "meaning": "rutinitas",
+                "partOfSpeech": "noun",
+                "exampleSentence": "You ought to have a morning routine to start your day well.",
+                "collocation": "morning routine / daily routine"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m10-r-guided",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Healthy Living Guide for Teens",
+            "audioUrl": "/audio/modules/a2-2-m10/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Are you feeling tired all the time? Do you want to feel better and have more energy for school and sports? You ought to look at your daily lifestyle and make some positive changes. Many teenagers have bad habits like sleeping late and eating junk food every day. However, small changes can make a big difference in your health.",
+              "First, you should eat a balanced diet with plenty of fresh vegetables, fruit, and water. You shouldn't drink too much soda or coffee because they are bad for your sleep. Second, you should exercise regularly. You can play football, ride a bike, or walk to school. Finally, you ought to reduce stress by relaxing and sleeping eight hours every night. A good morning routine helps you start the day with a smile."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 5.2,
+                "text": "Are you feeling tired all the time?",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 5.3,
+                "end": 11.5,
+                "text": "Do you want to feel better and have more energy for school and sports?",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 11.6,
+                "end": 17.8,
+                "text": "You ought to look at your daily lifestyle and make some positive changes.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 17.9,
+                "end": 24.1,
+                "text": "Many teenagers have bad habits like sleeping late and eating junk food every day.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 24.2,
+                "end": 30,
+                "text": "However, small changes can make a big difference in your health.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 30.1,
+                "end": 37,
+                "text": "First, you should eat a balanced diet with plenty of fresh vegetables, fruit, and water.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 37.1,
+                "end": 43.5,
+                "text": "You shouldn't drink too much soda or coffee because they are bad for your sleep.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 43.6,
+                "end": 50,
+                "text": "Second, you should exercise regularly. You can play football, ride a bike, or walk to school.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 50.1,
+                "end": 60,
+                "text": "Finally, you ought to reduce stress by relaxing and sleeping eight hours every night.",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m10-r-practice",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-1",
+                "instruction": "Match the term with its correct definition.",
+                "pairs": [
+                  {
+                    "left": "Balanced diet",
+                    "right": "Eating the right amount of vegetables, fruit, and protein"
+                  },
+                  {
+                    "left": "Regular exercise",
+                    "right": "Physical activity done often like walking or playing sports"
+                  },
+                  {
+                    "left": "Stress",
+                    "right": "Feeling worried or tense under pressure"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m10-r-quiz",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What is the main topic of the reading passage?",
+                "options": [
+                  "Healthy living and lifestyle advice for teens",
+                  "How to become a professional football player",
+                  "The history of sleeping habits"
+                ],
+                "answer": "Healthy living and lifestyle advice for teens",
+                "explanation": "The passage discusses how teenagers can improve their health through positive lifestyle changes."
+              },
+              {
+                "id": "q-r-2",
+                "question": "According to the text, what do many teenagers do incorrectly?",
+                "options": [
+                  "Sleep late and eat junk food",
+                  "Exercise too much every day",
+                  "Drink too much water"
+                ],
+                "answer": "Sleep late and eat junk food",
+                "explanation": "Paragraph one states that many teenagers have bad habits like sleeping late and eating junk food."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What kind of diet should teenagers eat?",
+                "options": [
+                  "A balanced diet with vegetables, fruit, and water",
+                  "A diet with only fast food and soda",
+                  "A diet with no water at all"
+                ],
+                "answer": "A balanced diet with vegetables, fruit, and water",
+                "explanation": "Paragraph two recommends eating a balanced diet with plenty of fresh vegetables, fruit, and water."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Why shouldn't teenagers drink too much soda or coffee?",
+                "options": [
+                  "Because they are bad for your sleep",
+                  "Because they cost too much money",
+                  "Because they make you run too fast"
+                ],
+                "answer": "Because they are bad for your sleep",
+                "explanation": "The text explains that soda and coffee should be limited because they negatively affect sleep."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What physical activities does the passage suggest?",
+                "options": [
+                  "Playing football, riding a bike, or walking to school",
+                  "Playing video games all night",
+                  "Sleeping during physical education class"
+                ],
+                "answer": "Playing football, riding a bike, or walking to school",
+                "explanation": "The text gives examples of regular exercise such as playing football, riding a bike, or walking to school."
+              },
+              {
+                "id": "q-r-6",
+                "question": "How can teenagers reduce stress according to the second paragraph?",
+                "options": [
+                  "By relaxing and sleeping eight hours every night",
+                  "By drinking more coffee and staying up late",
+                  "By worrying about school tests"
+                ],
+                "answer": "By relaxing and sleeping eight hours every night",
+                "explanation": "Paragraph two states you ought to reduce stress by relaxing and sleeping eight hours every night."
+              },
+              {
+                "id": "q-r-7",
+                "question": "What helps you start the day with a smile?",
+                "options": [
+                  "A good morning routine",
+                  "Eating junk food for breakfast",
+                  "Skipping school"
+                ],
+                "answer": "A good morning routine",
+                "explanation": "The final sentence of the passage notes that a good morning routine helps you start the day with a smile."
+              },
+              {
+                "id": "q-r-8",
+                "question": "Which modal verb is used in the text to give advice about eating a balanced diet?",
+                "options": [
+                  "should",
+                  "mustn't",
+                  "can't"
+                ],
+                "answer": "should",
+                "explanation": "The text states: 'First, you should eat a balanced diet...'"
+              },
+              {
+                "id": "q-r-9",
+                "question": "Which modal verb phrase is used in the text to talk about reducing stress?",
+                "options": [
+                  "ought to",
+                  "might",
+                  "will"
+                ],
+                "answer": "ought to",
+                "explanation": "The text states: 'Finally, you ought to reduce stress...'"
+              },
+              {
+                "id": "q-r-10",
+                "question": "What is the author's overall message in the reading passage?",
+                "options": [
+                  "Small lifestyle changes can improve your health and energy.",
+                  "Teenagers should never rest or relax.",
+                  "Diet and exercise are not important for health."
+                ],
+                "answer": "Small lifestyle changes can improve your health and energy.",
+                "explanation": "The passage highlights that small changes in daily habits make a big difference in health and energy levels."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m10-listening",
+      "moduleId": "A2.2-M10",
+      "skillType": "listening",
+      "title": "Listening Mission: Daily Health Habits",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a2-2-m10-l-theory",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Focus on listening for specific suggestions and recommendations using modal verbs. Notice how speakers emphasize should and ought to when giving advice in everyday conversations.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about daily habits.",
+              "Identify details such as advice and recommendations using modal verbs.",
+              "Notice how words link together in connected speech during fast conversations."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "feel tired all the time",
+                "meaning": "merasa lelah sepanjang waktu",
+                "note": "Used to describe chronic fatigue or lack of daily energy."
+              },
+              {
+                "phrase": "skip breakfast",
+                "meaning": "melewatkan sarapan",
+                "note": "Common habit of missing the first meal of the day."
+              },
+              {
+                "phrase": "stay up late",
+                "meaning": "begadang / tidur larut malam",
+                "note": "Remaining awake past normal bedtime to watch shows or work."
+              },
+              {
+                "phrase": "get some rest",
+                "meaning": "beristirahat sejenak",
+                "note": "Taking time to relax or sleep to recover physical energy."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "You should eat",
+                "fast": "You-should-eat",
+                "slowIpa": "/juː ʃʊd iːt/",
+                "fastIpa": "/juːʃəd iːt/",
+                "note": "The word should often reduces to a weak form /ʃəd/ in fast speech."
+              },
+              {
+                "id": 2,
+                "slow": "ought to sleep",
+                "fast": "ought-ta sleep",
+                "slowIpa": "/ɔːt tuː sliːp/",
+                "fastIpa": "/ɔːtə sliːp/",
+                "note": "The preposition to in ought to reduces to /tə/."
+              },
+              {
+                "id": 3,
+                "slow": "What should I do",
+                "fast": "What-should-I do",
+                "slowIpa": "/wɒt ʃʊd aɪ duː/",
+                "fastIpa": "/wɒtʃəd aɪ duː/",
+                "note": "Pronoun I links smoothly after should."
+              },
+              {
+                "id": 4,
+                "slow": "stay up",
+                "fast": "stay-up",
+                "slowIpa": "/steɪ ʌp/",
+                "fastIpa": "/steɪ.jʌp/",
+                "note": "A linking sound /j/ is inserted between stay and up."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m10-l-dialogue",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Healthy Choices",
+          "orderIndex": 2,
+          "content": {
+            "context": "Lisa complains about feeling exhausted at work, and David gives her advice on sleep, breakfast, and exercise.",
+            "audioPrompt": "Listen to the conversation between Lisa and David.",
+            "lines": [
+              {
+                "speaker": "Lisa",
+                "text": "I feel so tired lately.",
+                "translation": "Aku merasa sangat lelah akhir-akhir ini.",
+                "emotion": "tired"
+              },
+              {
+                "speaker": "David",
+                "text": "What is wrong with you?",
+                "translation": "Ada apa denganmu?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Lisa",
+                "text": "I have no energy.",
+                "translation": "Aku tidak punya energi.",
+                "emotion": "sad"
+              },
+              {
+                "speaker": "David",
+                "text": "You shouldn't skip breakfast.",
+                "translation": "Kamu tidak seharusnya melewatkan sarapan.",
+                "emotion": "helpful"
+              },
+              {
+                "speaker": "Lisa",
+                "text": "I never have time.",
+                "translation": "Aku tidak pernah punya waktu.",
+                "emotion": "stressed"
+              },
+              {
+                "speaker": "David",
+                "text": "You should prepare simple food.",
+                "translation": "Kamu sebaiknya menyiapkan makanan sederhana.",
+                "emotion": "advisory"
+              },
+              {
+                "speaker": "Lisa",
+                "text": "What else should I do?",
+                "translation": "Apa lagi yang sebaiknya aku lakukan?",
+                "emotion": "interested"
+              },
+              {
+                "speaker": "David",
+                "text": "You ought to sleep earlier.",
+                "translation": "Kamu sebaiknya tidur lebih awal.",
+                "emotion": "firm"
+              },
+              {
+                "speaker": "Lisa",
+                "text": "I always watch series late.",
+                "translation": "Aku selalu menonton serial sampai larut.",
+                "emotion": "guilty"
+              },
+              {
+                "speaker": "David",
+                "text": "You really shouldn't do that.",
+                "translation": "Kamu benar-benar tidak seharusnya melakukan itu.",
+                "emotion": "concerned"
+              },
+              {
+                "speaker": "Lisa",
+                "text": "Should I start exercising too?",
+                "translation": "Apakah aku sebaiknya mulai berolahraga juga?",
+                "emotion": "hopeful"
+              },
+              {
+                "speaker": "David",
+                "text": "Yes, you ought to walk daily.",
+                "translation": "Ya, kamu sebaiknya berjalan kaki setiap hari.",
+                "emotion": "encouraging"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m10-l-quiz",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "I feel so tired lately.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"I feel so tired _____.\"",
+                "targetWord": "lately",
+                "explanation": "Full audio: \"I feel so tired lately.\". The missing word is \"lately\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "What is wrong with you?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "David: \"What is _____ with you?\"",
+                "targetWord": "wrong",
+                "explanation": "Full audio: \"What is wrong with you?\". The missing word is \"wrong\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "I have no energy.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"I have no _____.\"",
+                "targetWord": "energy",
+                "explanation": "Full audio: \"I have no energy.\". The missing word is \"energy\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "You shouldn't skip breakfast.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "David: \"You shouldn't skip _____.\"",
+                "targetWord": "breakfast",
+                "explanation": "Full audio: \"You shouldn't skip breakfast.\". The missing word is \"breakfast\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "I never have time.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"I never have _____.\"",
+                "targetWord": "time",
+                "explanation": "Full audio: \"I never have time.\". The missing word is \"time\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "You should prepare simple food.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You should prepare simple food",
+                "words": [
+                  "You",
+                  "simple",
+                  "prepare",
+                  "should",
+                  "food"
+                ],
+                "explanation": "Correct sentence order: \"You should prepare simple food.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What else should I do?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What else should I do",
+                "words": [
+                  "should",
+                  "do",
+                  "What",
+                  "I",
+                  "else"
+                ],
+                "explanation": "Correct sentence order: \"What else should I do?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "You ought to sleep earlier.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You ought to sleep earlier",
+                "words": [
+                  "earlier",
+                  "to",
+                  "ought",
+                  "sleep",
+                  "You"
+                ],
+                "explanation": "Correct sentence order: \"You ought to sleep earlier.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "I always watch series late.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I always watch series late",
+                "words": [
+                  "I",
+                  "series",
+                  "late",
+                  "always",
+                  "watch"
+                ],
+                "explanation": "Correct sentence order: \"I always watch series late.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "You really shouldn't do that.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You really shouldn't do that",
+                "words": [
+                  "You",
+                  "shouldn't",
+                  "do",
+                  "really",
+                  "that"
+                ],
+                "explanation": "Correct sentence order: \"You really shouldn't do that.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "I feel so tired lately.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"I feel so tired _____.\"",
+                "targetWord": "lately",
+                "explanation": "Full audio: \"I feel so tired lately.\". The missing word is \"lately\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "What is wrong with you?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "David: \"What is _____ with you?\"",
+                "targetWord": "wrong",
+                "explanation": "Full audio: \"What is wrong with you?\". The missing word is \"wrong\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "I have no energy.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"I have no _____.\"",
+                "targetWord": "energy",
+                "explanation": "Full audio: \"I have no energy.\". The missing word is \"energy\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "You shouldn't skip breakfast.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "David: \"You shouldn't skip _____.\"",
+                "targetWord": "breakfast",
+                "explanation": "Full audio: \"You shouldn't skip breakfast.\". The missing word is \"breakfast\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "I never have time.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"I never have _____.\"",
+                "targetWord": "time",
+                "explanation": "Full audio: \"I never have time.\". The missing word is \"time\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "You should prepare simple food.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You should prepare simple food",
+                "words": [
+                  "You",
+                  "simple",
+                  "prepare",
+                  "should",
+                  "food"
+                ],
+                "explanation": "Correct sentence order: \"You should prepare simple food.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What else should I do?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What else should I do",
+                "words": [
+                  "should",
+                  "do",
+                  "What",
+                  "I",
+                  "else"
+                ],
+                "explanation": "Correct sentence order: \"What else should I do?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "You ought to sleep earlier.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You ought to sleep earlier",
+                "words": [
+                  "earlier",
+                  "to",
+                  "ought",
+                  "sleep",
+                  "You"
+                ],
+                "explanation": "Correct sentence order: \"You ought to sleep earlier.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "I always watch series late.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I always watch series late",
+                "words": [
+                  "I",
+                  "series",
+                  "late",
+                  "always",
+                  "watch"
+                ],
+                "explanation": "Correct sentence order: \"I always watch series late.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "You really shouldn't do that.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You really shouldn't do that",
+                "words": [
+                  "You",
+                  "shouldn't",
+                  "do",
+                  "really",
+                  "that"
+                ],
+                "explanation": "Correct sentence order: \"You really shouldn't do that.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m10-writing",
+      "moduleId": "A2.2-M10",
+      "skillType": "writing",
+      "title": "Writing Mission: Giving Lifestyle Advice",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a2-2-m10-w-theory",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on sentence structure and paragraph building in English for giving healthy lifestyle advice using modal verbs.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Positive Advice with Should",
+                "formula": "Subject + should + base verb + complement",
+                "example": "You should drink more water every day."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Negative Advice with Shouldn't",
+                "formula": "Subject + shouldn't + base verb + complement",
+                "example": "You shouldn't eat too much sugar at night."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Formal Advice with Ought To",
+                "formula": "Subject + ought to + base verb + complement",
+                "example": "We ought to get enough sleep before work."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Modal verbs like should and ought to are followed by the base form of the verb without 'to'.",
+                "badExample": "You should to exercise every morning.",
+                "goodExample": "You should exercise every morning.",
+                "why": "Modal verbs take bare infinitives directly."
+              },
+              {
+                "rule": "Do not use auxiliary verbs like 'do' or 'does' with modals when forming negative advice.",
+                "badExample": "You don't should stay up late.",
+                "goodExample": "You shouldn't stay up late.",
+                "why": "Modals act as their own auxiliaries in negative forms."
+              },
+              {
+                "rule": "Always capitalize the first word of a sentence and place a full stop at the end.",
+                "badExample": "we should eat more fresh vegetables.",
+                "goodExample": "We should eat more fresh vegetables.",
+                "why": "Standard English sentence punctuation rules apply to all advice sentences."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "You should drink eight glasses of water every day.",
+                "id": "Kamu harus minum delapan gelas air setiap hari.",
+                "focus": "Affirmative advice using should"
+              },
+              {
+                "en": "He shouldn't stay up late watching videos before work.",
+                "id": "Dia seharusnya tidak begadang menonton video sebelum bekerja.",
+                "focus": "Negative advice using shouldn't"
+              },
+              {
+                "en": "We ought to eat more fresh fruits and vegetables.",
+                "id": "Kita seharusnya makan lebih banyak buah segar dan sayuran.",
+                "focus": "Formal advice using ought to"
+              },
+              {
+                "en": "What should I do to improve my daily energy levels?",
+                "id": "Apa yang harus saya lakukan untuk meningkatkan tingkat energi harian saya?",
+                "focus": "Question form for seeking advice"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m10-w-practice",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "you should drinks more water everyday",
+                "targetSentence": "You should drink more water every day.",
+                "translation": "Kamu harus minum lebih banyak air setiap hari.",
+                "keyRule": "Use the base verb after 'should' and capitalize the first word.",
+                "requiredCapitals": [
+                  "You"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "she shouldnt eating junk food at night",
+                "targetSentence": "She shouldn't eat junk food at night.",
+                "translation": "Dia seharusnya tidak makan makanan cepat saji di malam hari.",
+                "keyRule": "Use 'shouldn't' followed by the base verb without 'ing'.",
+                "requiredCapitals": [
+                  "She"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "they ought to gets more sleep",
+                "targetSentence": "They ought to get more sleep.",
+                "translation": "Mereka seharusnya mendapatkan lebih banyak tidur.",
+                "keyRule": "Use the base verb 'get' after 'ought to'.",
+                "requiredCapitals": [
+                  "They"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Daily Routine Advice",
+                "meaning": "Kamu harus berjalan kaki ke kantor setiap pagi.",
+                "tokens": [
+                  "You",
+                  "should",
+                  "walk",
+                  "to",
+                  "office",
+                  "every",
+                  "morning."
+                ],
+                "fullSentence": "You should walk to office every morning."
+              },
+              {
+                "id": "b-2",
+                "category": "Health Warnings",
+                "meaning": "Kita tidak boleh merokok di dalam rumah.",
+                "tokens": [
+                  "We",
+                  "shouldn't",
+                  "smoke",
+                  "inside",
+                  "the",
+                  "house."
+                ],
+                "fullSentence": "We shouldn't smoke inside the house."
+              },
+              {
+                "id": "b-3",
+                "category": "Healthy Diet",
+                "meaning": "Dia harus makan lebih banyak sayuran hijau.",
+                "tokens": [
+                  "He",
+                  "ought",
+                  "to",
+                  "eat",
+                  "more",
+                  "green",
+                  "vegetables."
+                ],
+                "fullSentence": "He ought to eat more green vegetables."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Healthy Daily Habits",
+                "badge": "Health Writer",
+                "instruction": "Write three sentences about healthy habits using 'should' and 'shouldn't'. Mention what people should eat and what they should avoid.",
+                "example": "People should eat fresh fruit every day. They should drink plenty of water. They shouldn't eat too much fast food.",
+                "placeholder": "Start typing your healthy habit sentences here...",
+                "minWords": 15,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Lifestyle Advice for a Friend",
+                "badge": "Advice Coach",
+                "instruction": "Write three sentences giving lifestyle advice to a friend who feels tired all the time. Use 'ought to' and 'should'.",
+                "example": "You ought to go to bed earlier at night. You should stop drinking coffee in the evening. You should also relax more on weekends.",
+                "placeholder": "Start typing your advice for your friend here...",
+                "minWords": 15,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m10-w-quiz",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following affirmative sentence into a negative sentence using shouldn't:",
+                "promptText": "You should eat fast food every single day.",
+                "hint": "Replace 'should' with 'shouldn't'.",
+                "targetAnswers": [
+                  "You shouldn't eat fast food every single day."
+                ],
+                "explanation": "To give negative lifestyle advice, use 'shouldn't' followed by the base verb 'eat'."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using 'ought to' instead of 'should':",
+                "promptText": "We should protect our environment.",
+                "hint": "Replace 'should' with 'ought to'.",
+                "targetAnswers": [
+                  "We ought to protect our environment."
+                ],
+                "explanation": "'Ought to' has the same meaning as 'should' but is slightly more formal."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the capitalization and punctuation in this sentence:",
+                "promptText": "you should visit the doctor.",
+                "hint": "Capitalize the first letter and keep the full stop.",
+                "targetAnswers": [
+                  "You should visit the doctor."
+                ],
+                "explanation": "Every sentence in English must begin with a capital letter."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Short Response",
+                "instruction": "Complete the advice sentence with the correct modal verb for positive advice:",
+                "promptText": "You ___ sleep for eight hours every night to stay healthy.",
+                "hint": "Use the modal verb for positive recommendation.",
+                "targetAnswers": [
+                  "should",
+                  "ought to"
+                ],
+                "explanation": "Both 'should' and 'ought to' can express positive recommendations."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Turn this statement into a question asking for advice:",
+                "promptText": "I should join a gym.",
+                "hint": "Put 'Should' at the beginning of the sentence and add a question mark.",
+                "targetAnswers": [
+                  "Should I join a gym?"
+                ],
+                "explanation": "To ask for advice, place the modal verb 'Should' before the subject 'I'."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the verb form error after the modal verb in this sentence:",
+                "promptText": "He should eats more vegetables.",
+                "hint": "Remove the 's' from the main verb.",
+                "targetAnswers": [
+                  "He should eat more vegetables."
+                ],
+                "explanation": "Modal verbs must always be followed by the base form of the verb without adding 's' or 'es'."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Conjunctions",
+                "instruction": "Combine the two advice sentences using 'because':",
+                "promptText": "You should wear a jacket. It is cold outside.",
+                "hint": "Join the sentences with 'because' in the middle.",
+                "targetAnswers": [
+                  "You should wear a jacket because it is cold outside."
+                ],
+                "explanation": "Use 'because' to explain the reason behind the advice."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Conjunctions",
+                "instruction": "Combine the two sentences using 'so':",
+                "promptText": "She exercises every morning. She stays very healthy.",
+                "hint": "Use 'so' to show the result of the action.",
+                "targetAnswers": [
+                  "She exercises every morning so she stays very healthy.",
+                  "She exercises every morning, so she stays very healthy."
+                ],
+                "explanation": "Use 'so' to connect an action to its positive result."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change this negative advice into positive advice:",
+                "promptText": "You shouldn't stay up late on weekdays.",
+                "hint": "Change 'shouldn't' to 'should' and adjust the verb if necessary (e.g., sleep early).",
+                "targetAnswers": [
+                  "You should sleep early on weekdays."
+                ],
+                "explanation": "Replacing 'shouldn't' with 'should' requires an opposite positive action such as sleeping early."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Write a complete sentence giving advice to someone who has a headache:",
+                "promptText": "Write advice for a headache using 'should'.",
+                "hint": "Example: You should rest in a quiet room.",
+                "targetAnswers": [
+                  "You should rest in a quiet room.",
+                  "You should take a rest.",
+                  "You should drink some water.",
+                  "You should take medicine."
+                ],
+                "explanation": "A correct advice sentence starts with a subject, uses 'should', and ends with a base verb phrase and a full stop."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m10-speaking",
+      "moduleId": "A2.2-M10",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Giving Lifestyle Advice with Should and Ought To",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a2-2-m10-s-theory",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this speaking lab, you will learn how to give lifestyle advice clearly using modal verbs such as should, shouldn't, and ought to. Focus on clear vowel sounds, sentence stress on key advice words, and friendly intonation when talking about health habits.",
+            "audioGuidance": "Listen carefully to how modal verbs are often unstressed in fast speech, while main verbs and advice nouns carry the main sentence stress. Keep your tone encouraging and polite.",
+            "pillars": [
+              {
+                "name": "Modal Reduction",
+                "target": "Pronouncing should and shouldn't naturally",
+                "explanation": "In fast spoken English, should often sounds like /ʃəd/ and shouldn't sounds like /ˈʃʊdnt/ with a quick final /t/."
+              },
+              {
+                "name": "Sentence Stress",
+                "target": "Emphasizing advice keywords",
+                "explanation": "Stress words like advice, lifestyle, balanced, and reduce to make your suggestions sound clear and helpful."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m10-s-practice",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "AD-vice",
+                "countryAudio": "advice",
+                "countrySyllables": [
+                  {
+                    "text": "ad",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "VICE",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "ad-VI-sory",
+                "natAudio": "advisory",
+                "natSyllables": [
+                  {
+                    "text": "ad",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "VI",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "so",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ry",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice how the primary stress shifts when changing from the noun to the related adjective."
+              },
+              {
+                "id": "pair-2",
+                "country": "RE-gular",
+                "countryAudio": "regular",
+                "countrySyllables": [
+                  {
+                    "text": "RE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "gu",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "lar",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "re-gu-LAR-i-ty",
+                "natAudio": "regularity",
+                "natSyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "gu",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LAR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ty",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress moves to the fourth syllable in the noun form."
+              },
+              {
+                "id": "pair-3",
+                "country": "BAL-anced",
+                "countryAudio": "balanced",
+                "countrySyllables": [
+                  {
+                    "text": "BAL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "anced",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ba-LANC-ing",
+                "natAudio": "balancing",
+                "natSyllables": [
+                  {
+                    "text": "ba",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LANC",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ing",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress moves to the second syllable in the continuous form."
+              },
+              {
+                "id": "pair-4",
+                "country": "RE-duce",
+                "countryAudio": "reduce",
+                "countrySyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "DUCE",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "RE-duc-tion",
+                "natAudio": "reduction",
+                "natSyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "DUC",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress shifts to the second syllable in both words, but the vowel changes slightly."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "You should eat a balanced diet every single day.",
+                "phonetic": "/juː ʃʊd iːt ə ˈbælənst ˈdaɪət ˈevri ˈsɪŋɡl deɪ/",
+                "focus": "Modal verb should with clean vowel sounds",
+                "hint": "Keep should short and stress balanced and diet."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "You ought to exercise regularly to improve your health.",
+                "phonetic": "/juː ˈɔːt tuː ˈeksəsaɪz ˈreɡjʊləli tuː ɪmˈpruːv jɔː helθ/",
+                "focus": "Using ought to smoothly in advice",
+                "hint": "Link ought to together as ought-ta."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "You shouldn't stress too much about small problems.",
+                "phonetic": "/juː ˈʃʊdnt stres tuː mʌtʃ əˈbaʊt smɔːl ˈprɒbləmz/",
+                "focus": "Negative advice with shouldn't",
+                "hint": "Pronounce the quick final t in shouldn't clearly."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "You should reduce your coffee intake to sleep better.",
+                "phonetic": "/juː ʃʊd rɪˈdʒuːs jɔː ˈkɒfi ˈɪnteɪk tuː sliːp ˈbetə/",
+                "focus": "Giving advice with phrasal goals",
+                "hint": "Emphasize reduce and sleep."
+              }
+            ],
+            "roleplay": {
+              "context": "You are talking with your friend about how to change your daily lifestyle to be healthier.",
+              "roles": [
+                "Friend",
+                "You"
+              ],
+              "turns": [
+                {
+                  "speaker": "Friend",
+                  "text": "I feel very tired every morning. What should I do?",
+                  "translation": "Saya merasa sangat lelah setiap pagi. Apa yang harus saya lakukan?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "You ought to sleep earlier and avoid looking at your phone late at night.",
+                  "translation": "Kamu seharusnya tidur lebih awal dan menghindari melihat ponsel larut malam."
+                },
+                {
+                  "speaker": "Friend",
+                  "text": "That sounds difficult, but my routine is terrible right now.",
+                  "translation": "Itu terdengar sulit, tetapi rutinitas saya sangat buruk sekarang."
+                },
+                {
+                  "speaker": "You",
+                  "text": "You should start small and build good habits step by step.",
+                  "translation": "Kamu harus mulai dari hal kecil dan membangun kebiasaan baik langkah demi langkah."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-2-m10-s-quiz",
+          "moduleId": "A2.2-M10",
+          "subModuleId": "sub-a2-2-m10-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about your current lifestyle and daily routine.",
+                "audioPrompt": "Tell me about your daily routine and what habits you want to change.",
+                "storyPoints": [
+                  "What time you wake up and how you start your morning",
+                  "What you usually eat and whether your diet is balanced",
+                  "One healthy habit you want to improve this month"
+                ],
+                "targetSentence": "I wake up early, eat a healthy breakfast, and want to exercise regularly.",
+                "phonetic": "/aɪ weɪk ʌp ˈɜːli, iːt ə ˈhelθi ˈbrekfəst, ənd wɒnt tuː ˈeksəsaɪz ˈreɡjʊləli/",
+                "expectedKeywords": [
+                  "routine",
+                  "breakfast",
+                  "exercise",
+                  "habits"
+                ],
+                "explanation": "Speak clearly in full sentences using present simple verbs."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about giving lifestyle advice to a friend.",
+                "audioPrompt": "Describe a time when you gave advice to someone about stress and health.",
+                "storyPoints": [
+                  "Who needed advice and what problem they had",
+                  "What modal verbs you used to give suggestions",
+                  "How they reacted to your recommendations"
+                ],
+                "targetSentence": "I told my friend that he should reduce his coffee intake and sleep more.",
+                "phonetic": "/aɪ təʊld maɪ frend ðæt hiː ʃʊd rɪˈdʒuːs hɪz ˈkɒfi ˈɪnteɪk ənd sliːp mɔː/",
+                "expectedKeywords": [
+                  "friend",
+                  "reduce",
+                  "coffee",
+                  "sleep"
+                ],
+                "explanation": "Use past tense for the story and modal verbs for the advice given."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay",
+                "instruction": "Respond to your friend who is asking for advice about feeling stressed.",
+                "scenarioContext": "Your friend is feeling overwhelmed with work and asks you for lifestyle advice.",
+                "characterRole": "Supportive Friend",
+                "audioPrompt": "I am so stressed with my daily work. What should I do?",
+                "targetSentence": "You ought to take short breaks and avoid working late at night.",
+                "phonetic": "/juː ˈɔːt tuː teɪk ʃɔːt breɪks ənd əˈvɔɪd ˈwɜːkɪŋ leɪt æt naɪt/",
+                "expectedKeywords": [
+                  "stressed",
+                  "breaks",
+                  "avoid",
+                  "work"
+                ],
+                "explanation": "Use ought to to give clear and friendly advice."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay",
+                "instruction": "Respond to your doctor who is giving you diet recommendations.",
+                "scenarioContext": "You are at a health checkup and the doctor tells you to eat healthier.",
+                "characterRole": "Patient",
+                "audioPrompt": "You should eat more vegetables and reduce junk food.",
+                "targetSentence": "I understand, doctor. I will eat a balanced diet starting today.",
+                "phonetic": "/aɪ ˌʌndəˈstænd, ˈdɒktə. aɪ wɪl iːt ə ˈbælənst ˈdaɪət ˈstɑːtɪŋ təˈdeɪ/",
+                "expectedKeywords": [
+                  "understand",
+                  "balanced",
+                  "diet",
+                  "vegetables"
+                ],
+                "explanation": "Acknowledge the advice politely using future intention."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay",
+                "instruction": "Give advice to your classmate who wants to improve their sleep routine.",
+                "scenarioContext": "Your classmate sleeps very late every night and is tired in class.",
+                "characterRole": "Helpful Classmate",
+                "audioPrompt": "I always feel sleepy during lessons because I go to bed at two in the morning.",
+                "targetSentence": "You shouldn't stay up so late. You ought to sleep by eleven.",
+                "phonetic": "/juː ˈʃʊdnt steɪ ʌp səʊ leɪt. juː ˈɔːt tuː sliːp baɪ ɪˈlevn/",
+                "expectedKeywords": [
+                  "sleepy",
+                  "shouldn't",
+                  "ought",
+                  "eleven"
+                ],
+                "explanation": "Combine shouldn't and ought to in your advice response."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay",
+                "instruction": "Respond to your fitness coach about starting a new exercise habit.",
+                "scenarioContext": "Your fitness coach asks about your weekly physical activity.",
+                "characterRole": "Gym Member",
+                "audioPrompt": "How often do you exercise during the week?",
+                "targetSentence": "I should exercise regularly, but I only go to the gym once a week.",
+                "phonetic": "/aɪ ʃʊd ˈeksəsaɪz ˈreɡjʊləli, bʌt aɪ ˈəʊnli ɡəʊ tuː ðə dʒɪm wʌns ə wiːk/",
+                "expectedKeywords": [
+                  "exercise",
+                  "regularly",
+                  "gym",
+                  "week"
+                ],
+                "explanation": "Be honest about your routine and use should to state your goal."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Focus Drill",
+                "focus": "vocab",
+                "instruction": "Pronounce the target sentence clearly, emphasizing the target vocabulary word lifestyle.",
+                "audioPrompt": "Say this sentence: You should change your lifestyle to be healthier.",
+                "targetSentence": "You should change your lifestyle to be healthier.",
+                "phonetic": "/juː ʃʊd tʃeɪndʒ jɔː ˈlaɪfstaɪl tuː biː ˈhelθiə/",
+                "expectedKeywords": [
+                  "lifestyle",
+                  "healthier",
+                  "change"
+                ],
+                "explanation": "Focus on the two parts of the compound noun lifestyle."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Focus Drill",
+                "focus": "grammar",
+                "instruction": "Pronounce the sentence using shouldn't and ought to correctly.",
+                "audioPrompt": "Say this sentence: You shouldn't worry, but you ought to relax.",
+                "targetSentence": "You shouldn't worry, but you ought to relax.",
+                "phonetic": "/juː ˈʃʊdnt ˈwʌri, bʌt juː ˈɔːt tuː rɪˈlæks/",
+                "expectedKeywords": [
+                  "shouldn't",
+                  "worry",
+                  "ought",
+                  "relax"
+                ],
+                "explanation": "Make sure the modal verbs contrast clearly in your delivery."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Syllable Stress Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Pronounce the word regularly with correct syllable stress on the first syllable.",
+                "audioPrompt": "Say this sentence: You ought to exercise regularly every week.",
+                "targetSentence": "You ought to exercise regularly every week.",
+                "phonetic": "/juː ˈɔːt tuː ˈeksəsaɪz ˈreɡjʊləli ˈevri wiːk/",
+                "expectedKeywords": [
+                  "regularly",
+                  "exercise",
+                  "week"
+                ],
+                "explanation": "Place the primary stress on REG in regularly."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Pattern Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Use falling intonation at the end of giving advice statements.",
+                "audioPrompt": "Say this sentence: You should eat a balanced diet.",
+                "targetSentence": "You should eat a balanced diet.",
+                "phonetic": "/juː ʃʊd iːt ə ˈbælənst ˈdaɪət/",
+                "expectedKeywords": [
+                  "balanced",
+                  "diet",
+                  "should"
+                ],
+                "explanation": "Lower your pitch at the end of the sentence to sound confident and reassuring."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

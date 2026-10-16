@@ -1,0 +1,1728 @@
+{
+  "module": {
+    "id": "A1.2-M10",
+    "levelId": "A1.2",
+    "title": "Obligations & Rules: Must, Mustn't & Have to",
+    "cefr": "A1",
+    "group": "A1.2 - Daily Logistics & Practical Actions",
+    "objective": "Express rules, obligations, and prohibitions in public places and school using 'must', 'mustn't', and 'have to'.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 10
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-2-m10-reading",
+      "moduleId": "A1.2-M10",
+      "skillType": "reading",
+      "title": "Reading Mission: Rules Around Us",
+      "theme": "Obligations & Rules in Everyday Life",
+      "grammarFocus": "Must, Mustn't, Have to, Don't have to — expressing obligations, prohibitions, and lack of obligation",
+      "vocabularyFocus": "School rules, public place regulations, everyday obligations and prohibitions",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-2-m10-r-theory",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to your Reading Mission! In this lesson, you will read a short passage about rules at a school and a public swimming pool. You will learn to understand sentences with 'must', 'mustn't', 'have to', and 'don't have to'. These words help us talk about things we need to do (obligations), things we cannot do (prohibitions), and things that are optional (not necessary). By the end of this mission, you will feel confident reading signs, notices, and short texts about rules in English. Let's get started!",
+            "linguisticTarget": {
+              "grammar": "Modal verbs 'must' and 'mustn't' for strong obligations and prohibitions; 'have to / has to' for external obligations; 'don't have to / doesn't have to' for lack of obligation. All followed by the base form of the verb.",
+              "vocabulary": "Words related to rules, schools, and public places: helmet, uniform, corridor, library, queue, deadline, permission, rule, fine, sign, allowed, forbidden, locker.",
+              "readingStrategy": "Scanning for key modal verbs (must, mustn't, have to, don't have to) to quickly identify what is required, what is prohibited, and what is optional in a text."
+            },
+            "learningObjectives": [
+              "Understand the main idea of a short A1 passage about rules and obligations.",
+              "Identify specific rules, obligations, and prohibitions mentioned in the passage.",
+              "Recognize the difference between 'mustn't' (prohibition) and 'don't have to' (not necessary) in context.",
+              "Match modal verbs to their correct meaning when reading signs and notices.",
+              "Build confidence reading everyday English texts about rules at school and in public places."
+            ],
+            "contextWarmup": {
+              "prompt": "You see a sign at a swimming pool that says: 'You must shower before entering the pool.' What does this sign mean?",
+              "options": [
+                "You need to take a shower before you swim. It is a rule.",
+                "You can take a shower if you want, but it is not necessary.",
+                "You must not take a shower at the pool."
+              ],
+              "correctIndex": 0,
+              "explanation": "Great job! The word 'must' tells us this is a strong rule — it is required. You need to shower before you enter the pool. It is not optional!"
+            },
+            "rules": [
+              "When you see 'must' + verb in a text, it means something is very important or required. Example: 'You must wear a helmet.' = It is a rule. You need to wear a helmet.",
+              "When you see 'mustn't' + verb, it means something is NOT allowed — it is a prohibition. Example: 'You mustn't run in the corridor.' = Running is forbidden. Do not run!",
+              "When you see 'have to' or 'has to' + verb, it means there is an obligation, often because of an external rule. Example: 'She has to arrive on time.' = The school requires her to be on time.",
+              "When you see 'don't have to' or 'doesn't have to' + verb, it means something is NOT necessary — you can choose. Example: 'You don't have to bring lunch.' = Bringing lunch is optional. You can bring it or not.",
+              "Important reading tip: 'mustn't' and 'don't have to' look similar but have very different meanings! Always check carefully: mustn't = forbidden, don't have to = not necessary."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Beginner Pitfall: Mustn't vs. Don't Have To",
+              "explanation": "Many beginners confuse 'mustn't' with 'don't have to'. Remember: 'mustn't' means it is FORBIDDEN — you cannot do it. 'Don't have to' means it is NOT NECESSARY — you can do it if you want, but you don't need to. When reading, pay close attention to which phrase is used because the meaning is completely different!",
+              "wrong": "Reading 'You don't have to park here' and thinking it means parking is forbidden.",
+              "correct": "'You don't have to park here' means parking here is not necessary — you can park somewhere else if you prefer. If parking is forbidden, the sign says 'You mustn't park here.'"
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Must, Mustn't & Have to",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in natural spoken English:",
+            "contractions": [
+              {
+                "subject": "must not",
+                "verb": "must not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "mustn't",
+                "exampleFull": "You must not use your phone in class.",
+                "exampleContracted": "You mustn't use your phone in class."
+              },
+              {
+                "subject": "do not",
+                "verb": "do not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "don't",
+                "exampleFull": "You do not have to bring lunch.",
+                "exampleContracted": "You don't have to bring lunch."
+              },
+              {
+                "subject": "does not",
+                "verb": "does not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "doesn't",
+                "exampleFull": "She does not have to wear a tie.",
+                "exampleContracted": "She doesn't have to wear a tie."
+              },
+              {
+                "subject": "I",
+                "verb": "have",
+                "vowelDropped": "-",
+                "remainder": "-",
+                "contracted": "I've",
+                "exampleFull": "I have got to go now.",
+                "exampleContracted": "I've got to go now."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Structure with Must, Mustn't & Have to",
+              "description": "Assemble and swap sentence blocks to explore affirmative, negative, and question patterns with modal verbs of obligation:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "have to",
+                  "role": "First Person (Singular)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "has to",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "has to",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "have to",
+                  "role": "First Person Plural"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "have to",
+                  "role": "Third Person Plural"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "have to",
+                  "role": "Second Person"
+                }
+              ],
+              "complements": [
+                "wear a uniform to school",
+                "be quiet in the library",
+                "finish homework before the deadline",
+                "wait in the queue at the cafeteria",
+                "ask for permission before leaving",
+                "pay a fine for late books"
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m10-r-vocab",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "helmet",
+                "ipa": "/ˈhel.mɪt/",
+                "meaning": "helm",
+                "collocation": "You must wear a helmet when riding a motorcycle."
+              },
+              {
+                "word": "library",
+                "ipa": "/ˈlaɪ.brər.i/",
+                "meaning": "perpustakaan",
+                "collocation": "You mustn't talk loudly in the library."
+              },
+              {
+                "word": "uniform",
+                "ipa": "/ˈjuː.nɪ.fɔːm/",
+                "meaning": "seragam",
+                "collocation": "Students must wear their school uniform every day."
+              },
+              {
+                "word": "corridor",
+                "ipa": "/ˈkɒr.ɪ.dɔːr/",
+                "meaning": "koridor",
+                "collocation": "We mustn't run in the corridor because it is dangerous."
+              },
+              {
+                "word": "homework",
+                "ipa": "/ˈhəʊm.wɜːk/",
+                "meaning": "pekerjaan rumah (PR)",
+                "collocation": "I have to finish my homework before dinner."
+              },
+              {
+                "word": "permission",
+                "ipa": "/pəˈmɪʃ.ən/",
+                "meaning": "izin",
+                "collocation": "You must ask for permission before leaving the classroom."
+              },
+              {
+                "word": "queue",
+                "ipa": "/kjuː/",
+                "meaning": "antrian",
+                "collocation": "You have to wait in the queue at the cafeteria."
+              },
+              {
+                "word": "deadline",
+                "ipa": "/ˈded.laɪn/",
+                "meaning": "batas waktu",
+                "collocation": "We have to submit the project before the deadline."
+              },
+              {
+                "word": "rule",
+                "ipa": "/ruːl/",
+                "meaning": "aturan",
+                "collocation": "Everyone must follow the school rules."
+              },
+              {
+                "word": "fine",
+                "ipa": "/faɪn/",
+                "meaning": "denda",
+                "collocation": "You have to pay a fine if you return the book late."
+              },
+              {
+                "word": "sign",
+                "ipa": "/saɪn/",
+                "meaning": "tanda; papan peringatan",
+                "collocation": "There is a sign on the wall that says 'No running.'"
+              },
+              {
+                "word": "allowed",
+                "ipa": "/əˈlaʊd/",
+                "meaning": "diizinkan; diperbolehkan",
+                "collocation": "You are not allowed to eat in the computer room."
+              },
+              {
+                "word": "locker",
+                "ipa": "/ˈlɒk.ər/",
+                "meaning": "loker; lemari kecil berkunci",
+                "collocation": "You have to put your bag in the locker before the lesson."
+              },
+              {
+                "word": "forbidden",
+                "ipa": "/fəˈbɪd.ən/",
+                "meaning": "dilarang",
+                "collocation": "Running near the swimming pool is forbidden."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m10-r-guided",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-reading",
+          "sectionType": "dialogue",
+          "title": "Reading Passage: New Student, New Rules",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "New Student, New Rules",
+            "context": "Rina is a new student at Greenfield International School. On her first day, her teacher, Mr. Adams, gives the class a list of school rules. Rina also visits the public swimming pool near her house after school. Read about the rules she learns in both places.",
+            "text": "Today is Rina's first day at Greenfield International School. Mr. Adams, her teacher, says: 'Welcome, everyone! Let me tell you about our school rules. First, all students must wear their uniform every day. You mustn't wear jeans or T-shirts. Second, you must be quiet in the library. You mustn't use your phone there. Third, you have to finish your homework before the deadline. If you return a library book late, you have to pay a fine. But don't worry — you don't have to bring lunch from home. You can buy food at the school cafeteria.'\n\nAfter school, Rina goes to the swimming pool near her house. She sees a big sign at the entrance. It says: 'Pool Rules: You must shower before entering the pool. You mustn't run near the pool. Children under 12 must be with an adult. You don't have to bring your own towel — we have towels here.' Rina smiles. 'There are rules everywhere!' she thinks.",
+            "wordCount": 158,
+            "highlights": [
+              {
+                "text": "must wear",
+                "note": "Strong obligation: wearing a uniform is required by the school.",
+                "type": "grammar"
+              },
+              {
+                "text": "mustn't wear",
+                "note": "Prohibition: jeans and T-shirts are not allowed at school.",
+                "type": "grammar"
+              },
+              {
+                "text": "must be quiet",
+                "note": "Strong rule: silence is required in the library.",
+                "type": "grammar"
+              },
+              {
+                "text": "mustn't use",
+                "note": "Prohibition: using phones in the library is forbidden.",
+                "type": "grammar"
+              },
+              {
+                "text": "have to finish",
+                "note": "'Have to' shows an external obligation — the school requires it.",
+                "type": "grammar"
+              },
+              {
+                "text": "have to pay a fine",
+                "note": "An obligation as a consequence: you must pay money if a book is late.",
+                "type": "grammar"
+              },
+              {
+                "text": "don't have to bring",
+                "note": "Not necessary: bringing lunch is optional, not required.",
+                "type": "grammar"
+              },
+              {
+                "text": "must shower",
+                "note": "Strong rule at the pool: showering is required before swimming.",
+                "type": "grammar"
+              },
+              {
+                "text": "mustn't run",
+                "note": "Prohibition: running near the pool is dangerous and not allowed.",
+                "type": "grammar"
+              },
+              {
+                "text": "don't have to bring",
+                "note": "Not necessary: bringing a towel is optional because the pool provides them.",
+                "type": "grammar"
+              },
+              {
+                "text": "uniform",
+                "note": "Special clothes that students wear at school.",
+                "type": "vocab"
+              },
+              {
+                "text": "deadline",
+                "note": "The last day or time to finish something.",
+                "type": "vocab"
+              },
+              {
+                "text": "fine",
+                "note": "Money you must pay as a penalty for breaking a rule.",
+                "type": "vocab"
+              },
+              {
+                "text": "sign",
+                "note": "A board or notice with information or rules.",
+                "type": "vocab"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m10-r-practice",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-reading",
+          "sectionType": "practice",
+          "title": "Guided Comprehension Check",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "prompt": "What is the main idea of the passage?",
+              "options": [
+                "Rina learns about rules at her new school and at a public swimming pool.",
+                "Rina does not like the rules at her new school.",
+                "Rina goes swimming with her teacher, Mr. Adams."
+              ],
+              "correctIndex": 0,
+              "explanation": "The passage is about the rules Rina learns in two places: her new school (Greenfield International School) and the public swimming pool near her house. The text describes what she must do, what she mustn't do, and what she doesn't have to do."
+            },
+            "detailQuestions": [
+              {
+                "id": 1,
+                "prompt": "According to the school rules, what mustn't students wear?",
+                "options": [
+                  "Jeans or T-shirts",
+                  "Uniforms",
+                  "Helmets"
+                ],
+                "correctIndex": 0,
+                "explanation": "Mr. Adams says: 'You mustn't wear jeans or T-shirts.' The word 'mustn't' tells us these clothes are not allowed at school. Students must wear their uniform instead."
+              },
+              {
+                "id": 2,
+                "prompt": "What happens if a student returns a library book late?",
+                "options": [
+                  "The student has to pay a fine.",
+                  "The student mustn't go to the library again.",
+                  "The student doesn't have to do anything."
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage says: 'If you return a library book late, you have to pay a fine.' This means paying a fine (a small amount of money) is an obligation when a book is returned after the deadline."
+              },
+              {
+                "id": 3,
+                "prompt": "At the swimming pool, do visitors have to bring their own towel?",
+                "options": [
+                  "No, they don't have to. The pool has towels.",
+                  "Yes, they must bring a towel from home.",
+                  "Yes, they have to buy a towel at the pool."
+                ],
+                "correctIndex": 0,
+                "explanation": "The sign at the pool says: 'You don't have to bring your own towel — we have towels here.' This means bringing a towel is NOT necessary. The pool provides towels for visitors."
+              },
+              {
+                "id": 4,
+                "prompt": "Who must be with children under 12 at the swimming pool?",
+                "options": [
+                  "An adult",
+                  "A teacher",
+                  "A lifeguard"
+                ],
+                "correctIndex": 0,
+                "explanation": "The pool rules state: 'Children under 12 must be with an adult.' This is a strong obligation — young children cannot go to the pool alone."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m10-r-quiz",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-reading",
+          "sectionType": "quiz",
+          "title": "Reading Mastery Quiz",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "In the passage, Mr. Adams says students must be quiet in the library. What does 'must be quiet' mean?",
+                "options": [
+                  "It is a strong rule — students need to be silent in the library.",
+                  "It is a suggestion — students can be quiet if they want.",
+                  "It is not important — students can talk if they want."
+                ],
+                "answer": "It is a strong rule — students need to be silent in the library.",
+                "explanation": "'Must' expresses a strong obligation. When Mr. Adams says 'You must be quiet in the library,' he means it is a rule that all students need to follow. Being quiet in the library is required, not optional."
+              },
+              {
+                "id": "q-r-2",
+                "question": "The passage says: 'You don't have to bring lunch from home.' What does this mean?",
+                "options": [
+                  "Bringing lunch from home is not necessary. You can buy food at school.",
+                  "Bringing lunch from home is forbidden. You must buy food at school.",
+                  "You must bring lunch from home every day."
+                ],
+                "answer": "Bringing lunch from home is not necessary. You can buy food at school.",
+                "explanation": "'Don't have to' means something is NOT necessary — it is optional. Students can bring lunch if they want, but they can also buy food at the school cafeteria. It is their choice!"
+              },
+              {
+                "id": "q-r-3",
+                "question": "Which of these is a PROHIBITION (something you cannot do) mentioned in the passage?",
+                "options": [
+                  "You mustn't run near the pool.",
+                  "You don't have to bring your own towel.",
+                  "You have to finish your homework."
+                ],
+                "answer": "You mustn't run near the pool.",
+                "explanation": "'Mustn't' expresses a prohibition — something that is forbidden. Running near the pool is not allowed because it is dangerous. 'Don't have to' (option B) means not necessary, and 'have to' (option C) means an obligation, not a prohibition."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Read this sentence from the passage: 'You mustn't use your phone there.' The word 'there' refers to which place?",
+                "options": [
+                  "The library",
+                  "The swimming pool",
+                  "The cafeteria"
+                ],
+                "answer": "The library",
+                "explanation": "In the passage, Mr. Adams talks about the library rules. He says: 'You must be quiet in the library. You mustn't use your phone there.' The word 'there' refers to the library, which was mentioned in the sentence before."
+              },
+              {
+                "id": "q-r-5",
+                "question": "A sign says: 'You must shower before entering the pool.' Which sentence has the SAME meaning?",
+                "options": [
+                  "You have to take a shower before you swim. It is a rule.",
+                  "You don't have to shower. It is your choice.",
+                  "You mustn't shower at the pool."
+                ],
+                "answer": "You have to take a shower before you swim. It is a rule.",
+                "explanation": "Both 'must' and 'have to' can express obligation. 'You must shower' and 'You have to take a shower' have the same meaning here — showering before swimming is a rule that everyone needs to follow."
+              },
+              {
+                "id": "q-r-6",
+                "question": "At the end of the passage, Rina thinks: 'There are rules everywhere!' Why does she think this?",
+                "options": [
+                  "Because she finds rules both at school and at the swimming pool.",
+                  "Because she does not like any rules.",
+                  "Because there are no rules at the swimming pool."
+                ],
+                "answer": "Because she finds rules both at school and at the swimming pool.",
+                "explanation": "Rina learns rules at two different places on the same day — at her new school and at the swimming pool. She notices that rules exist in many places in daily life, so she thinks 'There are rules everywhere!'"
+              },
+              {
+                "id": "q-r-7",
+                "question": "Choose the correct sentence about the school rules in the passage:",
+                "options": [
+                  "Students have to finish their homework before the deadline.",
+                  "Students don't have to wear a uniform.",
+                  "Students mustn't finish their homework."
+                ],
+                "answer": "Students have to finish their homework before the deadline.",
+                "explanation": "The passage clearly states: 'You have to finish your homework before the deadline.' This is an obligation. Option B is wrong because students MUST wear a uniform. Option C is wrong because 'mustn't finish' would mean finishing homework is forbidden, which does not make sense."
+              },
+              {
+                "id": "q-r-8",
+                "question": "What is the difference between 'You mustn't eat here' and 'You don't have to eat here'?",
+                "options": [
+                  "'Mustn't eat' means eating is forbidden. 'Don't have to eat' means eating is not necessary but allowed.",
+                  "They have the same meaning.",
+                  "'Don't have to eat' means eating is forbidden. 'Mustn't eat' means eating is optional."
+                ],
+                "answer": "'Mustn't eat' means eating is forbidden. 'Don't have to eat' means eating is not necessary but allowed.",
+                "explanation": "This is a very important difference! 'Mustn't' = prohibition (you cannot do it). 'Don't have to' = not necessary (you can choose). 'You mustn't eat here' means eating is NOT allowed. 'You don't have to eat here' means you can eat here if you want, but it is not required."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m10-listening",
+      "moduleId": "A1.2-M10",
+      "skillType": "listening",
+      "title": "Listening Mission: Understanding School Rules and Obligations",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-2-m10-l-theory",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening mission, you will hear a teacher explaining school rules to a new student on the first day of school. Listen carefully for the words 'must', 'mustn't', 'have to', and 'don't have to'. These words tell us about obligations (things we need to do), prohibitions (things we cannot do), and things that are not necessary. Pay attention to the speaker's tone of voice. When a teacher says 'mustn't', the voice is often firm and serious. When they say 'don't have to', the voice is more relaxed because it means something is optional, not required.",
+            "learningObjectives": [
+              "Identify when a speaker uses 'must' to express a strong obligation or rule.",
+              "Recognize 'mustn't' in spoken English as a prohibition, meaning something is not allowed.",
+              "Understand the difference between 'have to' (it is necessary) and 'don't have to' (it is not necessary) when listening to natural speech.",
+              "Catch key details about specific rules mentioned in a conversation about school or public places."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "You must wear your uniform.",
+                "meaning": "Kamu harus memakai seragammu.",
+                "note": "Used to express a strong rule or obligation. The speaker is telling you it is required."
+              },
+              {
+                "phrase": "You mustn't use phones in class.",
+                "meaning": "Kamu tidak boleh menggunakan HP di kelas.",
+                "note": "Used to express a prohibition. This means it is not allowed. 'Mustn't' is a strong 'no'."
+              },
+              {
+                "phrase": "You have to keep them in your bags.",
+                "meaning": "Kamu harus menyimpannya di tasmu.",
+                "note": "Used to express a necessary action or obligation, similar to 'must' but slightly less formal."
+              },
+              {
+                "phrase": "You don't have to wear it on Saturday.",
+                "meaning": "Kamu tidak harus memakainya di hari Sabtu.",
+                "note": "Used to say something is NOT necessary. It is your choice. This is different from 'mustn't' which means not allowed."
+              },
+              {
+                "phrase": "You must be quiet.",
+                "meaning": "Kamu harus tenang.",
+                "note": "A common rule in places like libraries, hospitals, or during exams. 'Be quiet' means do not make noise."
+              },
+              {
+                "phrase": "You mustn't talk loudly.",
+                "meaning": "Kamu tidak boleh berbicara keras.",
+                "note": "This prohibits loud talking. Notice 'mustn't' is followed by the base verb without 'to'."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "You must wear your uniform.",
+                "fast": "You mus' wear your uniform.",
+                "slowIpa": "/juː mʌst weər jɔːr ˈjuːnɪfɔːm/",
+                "fastIpa": "/jə mʌs weə jər ˈjuːnɪfɔːm/",
+                "note": "In fast speech, the 't' at the end of 'must' is often dropped or unreleased before the 'w' sound. Also, 'you' reduces to 'yuh' and 'your' reduces to 'yer'."
+              },
+              {
+                "id": 2,
+                "slow": "You mustn't use phones.",
+                "fast": "You musn' use phones.",
+                "slowIpa": "/juː ˈmʌsənt juːz fəʊnz/",
+                "fastIpa": "/jə ˈmʌsn̩ juːz fəʊnz/",
+                "note": "In natural speech, 'mustn't' often sounds like 'mussnt' with the second 't' almost silent. The word blends quickly, so listen for the nasal 'n' sound to catch the negative."
+              },
+              {
+                "id": 3,
+                "slow": "Do we have to wear uniforms?",
+                "fast": "D'we hafta wear uniforms?",
+                "slowIpa": "/duː wiː hæv tuː weər ˈjuːnɪfɔːmz/",
+                "fastIpa": "/dwi ˈhæftə weər ˈjuːnɪfɔːmz/",
+                "note": "In fast speech, 'have to' becomes 'hafta' with the 'v' changing to an 'f' sound. 'Do we' blends together into 'dwee'. This is very common in everyday English."
+              },
+              {
+                "id": 4,
+                "slow": "You don't have to wear it.",
+                "fast": "You don' hafta wear it.",
+                "slowIpa": "/juː dəʊnt hæv tuː weər ɪt/",
+                "fastIpa": "/jə dəʊn ˈhæftə weər ɪt/",
+                "note": "The 't' in 'don't' is often dropped before the 'h' in 'have'. 'Have to' again becomes 'hafta'. Listen for 'don' hafta' as one smooth phrase."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m10-l-dialogue",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: First Day School Rules",
+          "orderIndex": 2,
+          "content": {
+            "context": "A teacher is explaining the school rules to a new student on the first day of school. The teacher talks about uniforms, phones, the library, and the cafeteria. Listen carefully for the words 'must', 'mustn't', 'have to', and 'don't have to'.",
+            "audioPrompt": "Listen carefully to the following dialogue between a teacher and a new student. Pay attention to the rules the teacher explains.",
+            "lines": [
+              {
+                "speaker": "Teacher",
+                "text": "Good morning, everyone! Welcome to our school. Let me tell you about our school rules.",
+                "audioUrl": "/audio/modules/a1-2-m10/dialogue-1.mp3",
+                "translation": "Selamat pagi, semuanya! Selamat datang di sekolah kami. Saya akan jelaskan aturan sekolah kami.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Student",
+                "text": "Do we have to wear uniforms every day?",
+                "audioUrl": "/audio/modules/a1-2-m10/dialogue-2.mp3",
+                "translation": "Apakah kami harus pakai seragam setiap hari?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Teacher",
+                "text": "Yes, you must wear your uniform from Monday to Friday. But you don't have to wear it on Saturday for sports day.",
+                "audioUrl": "/audio/modules/a1-2-m10/dialogue-3.mp3",
+                "translation": "Ya, kalian harus pakai seragam dari Senin sampai Jumat. Tapi kalian tidak harus pakainya di hari Sabtu untuk hari olahraga.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Student",
+                "text": "Can we use our phones during class?",
+                "audioUrl": "/audio/modules/a1-2-m10/dialogue-4.mp3",
+                "translation": "Bisakah kami pakai HP selama kelas?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Teacher",
+                "text": "No, you mustn't use phones in class. You have to keep them in your bags.",
+                "audioUrl": "/audio/modules/a1-2-m10/dialogue-5.mp3",
+                "translation": "Tidak, kalian tidak boleh pakai HP di kelas. Kalian harus simpan di tas.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Student",
+                "text": "What about in the library?",
+                "audioUrl": "/audio/modules/a1-2-m10/dialogue-6.mp3",
+                "translation": "Bagaimana di perpustakaan?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Teacher",
+                "text": "In the library, you must be quiet. You mustn't talk loudly or eat food there.",
+                "audioUrl": "/audio/modules/a1-2-m10/dialogue-7.mp3",
+                "translation": "Di perpustakaan, kalian harus tenang. Kalian tidak boleh bicara keras atau makan di sana.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Student",
+                "text": "Do we have to bring our own lunch to school?",
+                "audioUrl": "/audio/modules/a1-2-m10/dialogue-8.mp3",
+                "translation": "Apakah kami harus bawa makan siang sendiri ke sekolah?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Teacher",
+                "text": "No, you don't have to bring lunch. You can buy food in the cafeteria. But you must eat in the cafeteria. You mustn't eat in the classroom.",
+                "audioUrl": "/audio/modules/a1-2-m10/dialogue-9.mp3",
+                "translation": "Tidak, kalian tidak harus bawa makan siang. Kalian bisa beli makanan di kantin. Tapi kalian harus makan di kantin. Kalian tidak boleh makan di ruang kelas.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Student",
+                "text": "Thank you, Miss. I understand the rules now.",
+                "audioUrl": "/audio/modules/a1-2-m10/dialogue-10.mp3",
+                "translation": "Terima kasih, Bu. Saya mengerti aturannya sekarang.",
+                "emotion": "friendly"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m10-l-quiz",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Good morning, everyone!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Teacher: \"Good morning, _____!\"",
+                "targetWord": "everyone",
+                "explanation": "Full audio: \"Good morning, everyone!\". The missing word is \"everyone\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Welcome to our school.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Teacher: \"Welcome to our _____.\"",
+                "targetWord": "school",
+                "explanation": "Full audio: \"Welcome to our school.\". The missing word is \"school\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Let me tell you about our school rules.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Teacher: \"Let me tell you about our school _____.\"",
+                "targetWord": "rules",
+                "explanation": "Full audio: \"Let me tell you about our school rules.\". The missing word is \"rules\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Do we have to wear uniforms every day?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Student: \"Do we have to wear uniforms every _____?\"",
+                "targetWord": "day",
+                "explanation": "Full audio: \"Do we have to wear uniforms every day?\". The missing word is \"day\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Can we use our phones during class?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Student: \"Can we use our phones during _____?\"",
+                "targetWord": "class",
+                "explanation": "Full audio: \"Can we use our phones during class?\". The missing word is \"class\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "No, you mustn't use phones in class.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "No you mustn't use phones in class",
+                "words": [
+                  "No",
+                  "class",
+                  "use",
+                  "phones",
+                  "you",
+                  "in",
+                  "mustn't"
+                ],
+                "explanation": "Correct sentence order: \"No, you mustn't use phones in class.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What about in the library?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What about in the library",
+                "words": [
+                  "library",
+                  "the",
+                  "What",
+                  "in",
+                  "about"
+                ],
+                "explanation": "Correct sentence order: \"What about in the library?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "In the library, you must be quiet.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "In the library you must be quiet",
+                "words": [
+                  "must",
+                  "the",
+                  "you",
+                  "In",
+                  "quiet",
+                  "be",
+                  "library"
+                ],
+                "explanation": "Correct sentence order: \"In the library, you must be quiet.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "No, you don't have to bring lunch.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "No you don't have to bring lunch",
+                "words": [
+                  "have",
+                  "to",
+                  "bring",
+                  "you",
+                  "don't",
+                  "lunch",
+                  "No"
+                ],
+                "explanation": "Correct sentence order: \"No, you don't have to bring lunch.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "You can buy food in the cafeteria.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You can buy food in the cafeteria",
+                "words": [
+                  "in",
+                  "buy",
+                  "can",
+                  "the",
+                  "You",
+                  "food",
+                  "cafeteria"
+                ],
+                "explanation": "Correct sentence order: \"You can buy food in the cafeteria.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Good morning, everyone!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Teacher: \"Good morning, _____!\"",
+                "targetWord": "everyone",
+                "explanation": "Full audio: \"Good morning, everyone!\". The missing word is \"everyone\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Welcome to our school.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Teacher: \"Welcome to our _____.\"",
+                "targetWord": "school",
+                "explanation": "Full audio: \"Welcome to our school.\". The missing word is \"school\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Let me tell you about our school rules.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Teacher: \"Let me tell you about our school _____.\"",
+                "targetWord": "rules",
+                "explanation": "Full audio: \"Let me tell you about our school rules.\". The missing word is \"rules\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Do we have to wear uniforms every day?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Student: \"Do we have to wear uniforms every _____?\"",
+                "targetWord": "day",
+                "explanation": "Full audio: \"Do we have to wear uniforms every day?\". The missing word is \"day\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Can we use our phones during class?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Student: \"Can we use our phones during _____?\"",
+                "targetWord": "class",
+                "explanation": "Full audio: \"Can we use our phones during class?\". The missing word is \"class\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "No, you mustn't use phones in class.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "No you mustn't use phones in class",
+                "words": [
+                  "No",
+                  "class",
+                  "use",
+                  "phones",
+                  "you",
+                  "in",
+                  "mustn't"
+                ],
+                "explanation": "Correct sentence order: \"No, you mustn't use phones in class.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What about in the library?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What about in the library",
+                "words": [
+                  "library",
+                  "the",
+                  "What",
+                  "in",
+                  "about"
+                ],
+                "explanation": "Correct sentence order: \"What about in the library?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "In the library, you must be quiet.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "In the library you must be quiet",
+                "words": [
+                  "must",
+                  "the",
+                  "you",
+                  "In",
+                  "quiet",
+                  "be",
+                  "library"
+                ],
+                "explanation": "Correct sentence order: \"In the library, you must be quiet.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "No, you don't have to bring lunch.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "No you don't have to bring lunch",
+                "words": [
+                  "have",
+                  "to",
+                  "bring",
+                  "you",
+                  "don't",
+                  "lunch",
+                  "No"
+                ],
+                "explanation": "Correct sentence order: \"No, you don't have to bring lunch.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "You can buy food in the cafeteria.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You can buy food in the cafeteria",
+                "words": [
+                  "in",
+                  "buy",
+                  "can",
+                  "the",
+                  "You",
+                  "food",
+                  "cafeteria"
+                ],
+                "explanation": "Correct sentence order: \"You can buy food in the cafeteria.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m10-writing",
+      "moduleId": "A1.2-M10",
+      "skillType": "writing",
+      "title": "Writing Mission: Rules & Obligations at School and Public Places",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-2-m10-w-theory",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this lesson, you will learn how to write sentences and short paragraphs about rules, obligations, and things that are not allowed. You will use 'must', 'mustn't', 'have to', 'has to', 'don't have to', and 'doesn't have to'. These words help you talk about rules at school, at the library, and in other public places. Pay attention to the sentence formulas and punctuation rules below.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Writing a Strong Rule with 'Must'",
+                "formula": "Subject + must + base verb + rest of sentence.",
+                "example": "Students must wear uniforms at school."
+              },
+              {
+                "step": 2,
+                "title": "Writing a Prohibition with 'Mustn't'",
+                "formula": "Subject + mustn't + base verb + rest of sentence.",
+                "example": "You mustn't run in the corridor."
+              },
+              {
+                "step": 3,
+                "title": "Writing an Obligation with 'Have to / Has to'",
+                "formula": "Subject + have to / has to + base verb + rest of sentence.",
+                "example": "She has to arrive on time every day."
+              },
+              {
+                "step": 4,
+                "title": "Writing About No Obligation with 'Don't have to / Doesn't have to'",
+                "formula": "Subject + don't have to / doesn't have to + base verb + rest of sentence.",
+                "example": "You don't have to bring lunch to school."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always use the base form of the verb after 'must', 'mustn't', 'have to', and 'has to'. Never add '-s', '-ing', or '-ed' to the verb.",
+                "badExample": "She must arrives on time.",
+                "goodExample": "She must arrive on time.",
+                "why": "Modal verbs like 'must' and phrases like 'have to' are always followed by the base form of the verb. We do not change the verb."
+              },
+              {
+                "rule": "Use 'has to' only with he, she, and it. Use 'have to' with I, you, we, and they.",
+                "badExample": "He have to finish his homework.",
+                "goodExample": "He has to finish his homework.",
+                "why": "For third person singular subjects (he, she, it), we change 'have' to 'has'. This is a grammar rule for 'have to'."
+              },
+              {
+                "rule": "Write 'mustn't' as one word with an apostrophe. Do not write 'must not' as 'mustn t' or 'must'nt'.",
+                "badExample": "You mustn t use your phone.",
+                "goodExample": "You mustn't use your phone.",
+                "why": "The apostrophe in 'mustn't' replaces the missing letter 'o' from 'must not'. It must be placed correctly between 'n' and 't'."
+              },
+              {
+                "rule": "Start every sentence with a capital letter and end it with a period (full stop).",
+                "badExample": "students must be quiet in the library",
+                "goodExample": "Students must be quiet in the library.",
+                "why": "Every English sentence begins with a capital letter and ends with a period. This is a basic punctuation rule."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "You must be quiet in the library.",
+                "id": "Kamu harus diam di perpustakaan.",
+                "focus": "must + base verb for a strong rule"
+              },
+              {
+                "en": "You mustn't use your phone in class.",
+                "id": "Kamu tidak boleh menggunakan HP di kelas.",
+                "focus": "mustn't + base verb for prohibition"
+              },
+              {
+                "en": "I have to finish my homework before 9 PM.",
+                "id": "Saya harus menyelesaikan PR sebelum jam 9 malam.",
+                "focus": "have to + base verb for obligation"
+              },
+              {
+                "en": "She has to arrive on time every morning.",
+                "id": "Dia harus tiba tepat waktu setiap pagi.",
+                "focus": "has to + base verb for third person singular"
+              },
+              {
+                "en": "You don't have to bring lunch to school.",
+                "id": "Kamu tidak harus membawa makan siang ke sekolah.",
+                "focus": "don't have to + base verb for no obligation"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m10-w-practice",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "students must wears uniforms at school",
+                "targetSentence": "Students must wear uniforms at school.",
+                "translation": "Murid-murid harus memakai seragam di sekolah.",
+                "keyRule": "Capitalize the first word of the sentence. Use the base form 'wear' after 'must', not 'wears'. Add a period at the end.",
+                "requiredCapitals": [
+                  "Students"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "you mustn t run in the corridor",
+                "targetSentence": "You mustn't run in the corridor.",
+                "translation": "Kamu tidak boleh berlari di koridor.",
+                "keyRule": "Write 'mustn't' correctly with an apostrophe between 'n' and 't'. Capitalize 'You' at the start. Add a period at the end.",
+                "requiredCapitals": [
+                  "You"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "he have to finish his homework before 9 pm",
+                "targetSentence": "He has to finish his homework before 9 PM.",
+                "translation": "Dia harus menyelesaikan PR-nya sebelum jam 9 malam.",
+                "keyRule": "Use 'has to' with 'he' (third person singular), not 'have to'. Capitalize 'He' and write 'PM' in capital letters. Add a period at the end.",
+                "requiredCapitals": [
+                  "He",
+                  "PM"
+                ]
+              },
+              {
+                "id": "sent-4",
+                "faultySentence": "we mustn't eating in the classroom",
+                "targetSentence": "We mustn't eat in the classroom.",
+                "translation": "Kita tidak boleh makan di ruang kelas.",
+                "keyRule": "Use the base form 'eat' after 'mustn't', not 'eating'. Capitalize 'We' at the start and add a period at the end.",
+                "requiredCapitals": [
+                  "We"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "School Rule (Obligation)",
+                "meaning": "Kamu harus membawa buku pelajaranmu setiap hari.",
+                "tokens": [
+                  "You",
+                  "must",
+                  "bring",
+                  "your",
+                  "textbooks",
+                  "every",
+                  "day."
+                ],
+                "fullSentence": "You must bring your textbooks every day."
+              },
+              {
+                "id": "b-2",
+                "category": "Public Place Rule (Prohibition)",
+                "meaning": "Pengunjung tidak boleh menyentuh lukisan-lukisan di museum.",
+                "tokens": [
+                  "Visitors",
+                  "mustn't",
+                  "touch",
+                  "the",
+                  "paintings",
+                  "in",
+                  "the",
+                  "museum."
+                ],
+                "fullSentence": "Visitors mustn't touch the paintings in the museum."
+              },
+              {
+                "id": "b-3",
+                "category": "Daily Obligation (Have to)",
+                "meaning": "Dia harus mengerjakan PR-nya setelah sekolah.",
+                "tokens": [
+                  "She",
+                  "has",
+                  "to",
+                  "do",
+                  "her",
+                  "homework",
+                  "after",
+                  "school."
+                ],
+                "fullSentence": "She has to do her homework after school."
+              },
+              {
+                "id": "b-4",
+                "category": "No Obligation (Don't have to)",
+                "meaning": "Kita tidak harus memakai dasi pada hari Jumat.",
+                "tokens": [
+                  "We",
+                  "don't",
+                  "have",
+                  "to",
+                  "wear",
+                  "a",
+                  "tie",
+                  "on",
+                  "Fridays."
+                ],
+                "fullSentence": "We don't have to wear a tie on Fridays."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: My School Rules",
+                "badge": "Rule Writer",
+                "instruction": "Write a short paragraph about the rules at your school. Use 'must', 'mustn't', and 'have to' at least once each. Write at least 4 sentences. Think about what students must do, what they mustn't do, and what they have to do every day.",
+                "example": "At my school, students must wear uniforms every day. We mustn't use our phones in class. We have to arrive before 7 AM. We don't have to bring lunch because the school has a canteen.",
+                "placeholder": "At my school, students must...",
+                "minWords": 20,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Rules at the Library",
+                "badge": "Library Guardian",
+                "instruction": "Imagine you work at a library. Write a list of rules for visitors. Use 'must', 'mustn't', 'have to', and 'don't have to'. Write at least 5 sentences. Think about noise, food, books, and library cards.",
+                "example": "Welcome to our library! You must be quiet at all times. You mustn't eat or drink near the books. You have to show your library card to borrow books. You don't have to return books on the same day. You mustn't write in the books.",
+                "placeholder": "Welcome to our library! You must...",
+                "minWords": 25,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m10-w-quiz",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-writing",
+          "sectionType": "quiz",
+          "title": "Writing Practicum & Assessment",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": "w-p-1",
+                "prompt": "Write 3 sentences about rules in a swimming pool. Use 'must' in one sentence, 'mustn't' in one sentence, and 'have to' in one sentence.",
+                "criteria": "Each sentence uses the correct modal verb or phrase. The base form of the verb follows 'must', 'mustn't', or 'have to'. Each sentence starts with a capital letter and ends with a period. The rules make sense for a swimming pool.",
+                "sampleGoodAnswer": "You must take a shower before you swim. You mustn't run near the pool. Children have to stay with an adult."
+              },
+              {
+                "id": "w-p-2",
+                "prompt": "Your friend is new at your school. Write a short paragraph (at least 4 sentences) telling your friend about the school rules. Use 'must', 'mustn't', 'have to', and 'don't have to' at least once each.",
+                "criteria": "The paragraph has at least 4 sentences. It uses 'must', 'mustn't', 'have to', and 'don't have to' correctly. All verbs after these modals are in base form. Sentences have correct capitalization and punctuation. The content is about school rules.",
+                "sampleGoodAnswer": "Welcome to our school! You must wear a uniform every day. You mustn't bring food into the classroom. You have to do your homework every night. You don't have to join a sports club, but it is fun."
+              },
+              {
+                "id": "w-p-3",
+                "prompt": "Write 4 sentences about rules on a bus. Use 'must', 'mustn't', 'has to', and 'don't have to'. One sentence should be about the bus driver.",
+                "criteria": "Four sentences are written. 'Must', 'mustn't', 'has to', and 'don't have to' are each used once. 'Has to' is used correctly with a third person singular subject (for example, the bus driver). All verbs after modals are in base form. Correct capitalization and punctuation are used throughout.",
+                "sampleGoodAnswer": "Passengers must sit down when the bus is moving. You mustn't talk to the bus driver. The bus driver has to stop at every bus stop. You don't have to buy a ticket online because you can pay on the bus."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m10-speaking",
+      "moduleId": "A1.2-M10",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Rules & Obligations – Must, Mustn't & Have to",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-2-m10-s-theory",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this speaking lab, you will practise talking about rules, obligations, and things that are not allowed. You will use 'must', 'mustn't', 'have to', and 'don't have to' to describe rules at school, in the library, at the hospital, and other public places. Pay special attention to how you stress the modal verbs to sound clear and natural.",
+            "audioGuidance": "When you say 'must' or 'mustn't', make the word short and strong. Say 'MUST' with a clear /m/ sound and a short /ʌ/ vowel. For 'mustn't', be careful: the 't' in the middle is almost silent – say it like 'MUSS-nt'. For 'have to', in natural speech we often say 'HAF-tuh', not 'HAVE-TOO'. Use falling intonation at the end of rule statements like 'You must wear a uniform.' Use rising intonation for yes/no questions like 'Do I have to bring my book?'",
+            "pillars": [
+              {
+                "name": "Modal Stress & Clarity",
+                "target": "Clear pronunciation of must, mustn't, have to",
+                "explanation": "Practise saying 'must' /mʌst/, 'mustn't' /ˈmʌs.ənt/, and 'have to' /ˈhæf.tə/. These words carry the meaning of the rule, so they need to be clear and strong in your sentence."
+              },
+              {
+                "name": "Falling Intonation for Rules",
+                "target": "Use falling tone when stating rules and obligations",
+                "explanation": "When you tell someone a rule, your voice should go DOWN at the end. For example: 'You must wear a seatbelt. ↘' This falling intonation shows that you are giving a firm statement, not asking a question."
+              },
+              {
+                "name": "Rising Intonation for Questions",
+                "target": "Use rising tone for yes/no questions about rules",
+                "explanation": "When you ask a yes/no question about a rule, your voice should go UP at the end. For example: 'Do I have to bring my ID? ↗' This rising intonation tells the listener you are asking, not telling."
+              },
+              {
+                "name": "Sentence Rhythm & Linking",
+                "target": "Smooth delivery of obligation sentences",
+                "explanation": "In natural speech, words connect together. 'Have to' sounds like 'haf-tuh'. 'Must I' links to sound like 'mus-tai'. Practise linking these words so your speech flows smoothly and sounds natural."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m10-s-practice",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "MUST",
+                "countryAudio": "must",
+                "countrySyllables": [
+                  {
+                    "text": "MUST",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "MUST-n't",
+                "natAudio": "mustn't",
+                "natSyllables": [
+                  {
+                    "text": "MUST",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "n't",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Both 'must' and 'mustn't' keep the stress on the first syllable. The negative ending '-n't' is short and soft. Be careful not to add an extra vowel sound – say 'MUSS-nt', not 'MUS-suh-NOT'."
+              },
+              {
+                "id": "pair-2",
+                "country": "HAVE",
+                "countryAudio": "have",
+                "countrySyllables": [
+                  {
+                    "text": "HAVE",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "have TO",
+                "natAudio": "have to",
+                "natSyllables": [
+                  {
+                    "text": "HAF",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tuh",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "When 'have' is used alone, we say /hæv/ with a /v/ sound. But in 'have to', the /v/ changes to /f/ and 'to' becomes a weak 'tuh'. So 'have to' sounds like 'HAF-tuh'. The stress stays on 'HAF'."
+              },
+              {
+                "id": "pair-3",
+                "country": "U-ni-form",
+                "countryAudio": "uniform",
+                "countrySyllables": [
+                  {
+                    "text": "U",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ni",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "form",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ob-li-GA-tion",
+                "natAudio": "obligation",
+                "natSyllables": [
+                  {
+                    "text": "ob",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "li",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "GA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "'Uniform' has stress on the first syllable: 'U-ni-form'. But 'obligation' has stress on the third syllable: 'ob-li-GA-tion'. Notice how the stress moves to a different position in longer words."
+              },
+              {
+                "id": "pair-4",
+                "country": "AL-lowed",
+                "countryAudio": "allowed",
+                "countrySyllables": [
+                  {
+                    "text": "al",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LOWED",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "for-BID-den",
+                "natAudio": "forbidden",
+                "natSyllables": [
+                  {
+                    "text": "for",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "BID",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "den",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "'Allowed' has stress on the second syllable: 'al-LOWED'. 'Forbidden' also has stress on the second syllable: 'for-BID-den'. Both words relate to rules, and both stress the middle part."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "You must wear a uniform at school.",
+                "phonetic": "/juː mʌst weər ə ˈjuː.nɪ.fɔːm ət skuːl/",
+                "focus": "Clear pronunciation of 'must' and falling intonation for a rule statement",
+                "hint": "Say 'must' with a short, strong /ʌ/ sound. Let your voice fall at the end of the sentence to show it is a firm rule."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "You mustn't run in the hallway.",
+                "phonetic": "/juː ˈmʌs.ənt rʌn ɪn ðə ˈhɔːl.weɪ/",
+                "focus": "Pronouncing 'mustn't' without adding extra syllables",
+                "hint": "Say 'mustn't' as two syllables: 'MUSS-nt'. The 't' in the middle is almost silent. Do not say 'must-uh-not'."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "I have to do my homework every day.",
+                "phonetic": "/aɪ ˈhæf.tə duː maɪ ˈhəʊm.wɜːk ˈev.ri deɪ/",
+                "focus": "Natural pronunciation of 'have to' as /hæf.tə/",
+                "hint": "Remember: 'have to' sounds like 'HAF-tuh' in natural speech. The /v/ changes to /f/ before 'to'."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Do I have to bring my passport?",
+                "phonetic": "/duː aɪ ˈhæf.tə brɪŋ maɪ ˈpɑːs.pɔːt/",
+                "focus": "Rising intonation for a yes/no question about obligation",
+                "hint": "This is a yes/no question, so your voice should rise at the end: 'passport? ↗' Keep 'have to' as 'HAF-tuh'."
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "We don't have to come on Saturday.",
+                "phonetic": "/wiː dəʊnt ˈhæf.tə kʌm ɒn ˈsæt.ə.deɪ/",
+                "focus": "Expressing no obligation with 'don't have to'",
+                "hint": "Stress 'don't' slightly to show there is NO obligation. Say 'don't have to' smoothly: 'dohnt-HAF-tuh'."
+              },
+              {
+                "id": "spk-d-6",
+                "targetText": "You must be quiet in the library.",
+                "phonetic": "/juː mʌst biː ˈkwaɪ.ət ɪn ðə ˈlaɪ.brər.i/",
+                "focus": "Stress on 'must' and clear pronunciation of 'quiet' and 'library'",
+                "hint": "'Quiet' has two syllables: 'KWAI-uht'. 'Library' has three syllables: 'LY-bruh-ree'. Use falling intonation at the end."
+              }
+            ],
+            "roleplay": {
+              "context": "You are practising with Mr. Khoirul about rules in different public places. Mr. Khoirul asks you about rules at school, in the library, and at the hospital. You answer using 'must', 'mustn't', 'have to', or 'don't have to'.",
+              "roles": [
+                "Mr. Khoirul",
+                "You"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Hello! Today we're talking about rules in public places. Let's start with a simple question: What's one rule at school?",
+                  "translation": "Halo! Hari ini kita akan berbicara tentang aturan di tempat umum. Mari kita mulai dengan pertanyaan sederhana: Apa satu aturan di sekolah?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "We must wear uniforms at school.",
+                  "translation": "Kita harus memakai seragam di sekolah."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Perfect! Now tell me, can you use your phone during lessons?",
+                  "translation": "Sempurna! Sekarang beritahu saya, bolehkah kamu menggunakan teleponmu selama pelajaran?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "No, we mustn't use our phones during lessons.",
+                  "translation": "Tidak, kita tidak boleh menggunakan telepon selama pelajaran."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Excellent! What about homework? Is it necessary to do it every day?",
+                  "translation": "Bagus sekali! Bagaimana dengan pekerjaan rumah? Apakah perlu mengerjakannya setiap hari?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Yes, I have to do my homework every day.",
+                  "translation": "Ya, saya harus mengerjakan pekerjaan rumah saya setiap hari."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Great job! Last question: Do you have to come to school on Sunday?",
+                  "translation": "Kerja bagus! Pertanyaan terakhir: Apakah kamu harus datang ke sekolah pada hari Minggu?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "No, I don't have to come to school on Sunday.",
+                  "translation": "Tidak, saya tidak harus datang ke sekolah pada hari Minggu."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m10-s-quiz",
+          "moduleId": "A1.2-M10",
+          "subModuleId": "sub-a1-2-m10-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about the rules at your school. Use the three story points below to guide your story. Speak for about 30 seconds. Use 'must', 'mustn't', and 'have to' in your story.",
+                "audioPrompt": "Now it's your turn to tell a story! Imagine you are explaining your school rules to a new student. Talk about what students must do, what they mustn't do, and what they have to do every day. Use the three points to help you.",
+                "storyPoints": [
+                  "Talk about one thing students must do at school, for example wearing a uniform.",
+                  "Talk about one thing students mustn't do, for example using phones in class.",
+                  "Talk about one thing students have to do every day, for example doing homework."
+                ],
+                "targetSentence": "At my school, we must wear uniforms. We mustn't use our phones in class. We also have to do homework every day.",
+                "phonetic": "/ət maɪ skuːl wiː mʌst weər ˈjuː.nɪ.fɔːmz. wiː ˈmʌs.ənt juːz aʊər fəʊnz ɪn klɑːs. wiː ˈɔːl.səʊ ˈhæf.tə duː ˈhəʊm.wɜːk ˈev.ri deɪ/",
+                "expectedKeywords": [
+                  "must",
+                  "wear",
+                  "uniforms",
+                  "mustn't",
+                  "phones",
+                  "have to",
+                  "homework"
+                ],
+                "hint": "Remember to use falling intonation when you state each rule. Say 'mustn't' as 'MUSS-nt' and 'have to' as 'HAF-tuh'.",
+                "explanation": "This storytelling task practises using obligation modals in connected speech. Each story point targets a different modal: 'must' for obligation, 'mustn't' for prohibition, and 'have to' for necessity."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about the rules in a hospital. Use the three story points below to guide your story. Speak for about 30 seconds. Use 'must', 'mustn't', and 'don't have to' in your story.",
+                "audioPrompt": "Great! Now imagine you are visiting a hospital. Tell me about the rules there. What must visitors do? What mustn't they do? What don't they have to do? Use the three points below.",
+                "storyPoints": [
+                  "Talk about one thing visitors must do at the hospital, for example being quiet.",
+                  "Talk about one thing visitors mustn't do, for example smoking.",
+                  "Talk about one thing visitors don't have to do, for example wearing a uniform."
+                ],
+                "targetSentence": "At the hospital, visitors must be quiet. They mustn't smoke inside. They don't have to wear a uniform.",
+                "phonetic": "/ət ðə ˈhɒs.pɪ.təl ˈvɪz.ɪ.tərz mʌst biː ˈkwaɪ.ət. ðeɪ ˈmʌs.ənt sməʊk ɪnˈsaɪd. ðeɪ dəʊnt ˈhæf.tə weər ə ˈjuː.nɪ.fɔːm/",
+                "expectedKeywords": [
+                  "hospital",
+                  "must",
+                  "quiet",
+                  "mustn't",
+                  "smoke",
+                  "don't have to",
+                  "uniform"
+                ],
+                "hint": "Speak slowly and clearly. Stress the modal verbs: 'MUST be quiet', 'MUSTN'T smoke', 'DON'T have to wear'. Use falling intonation for each rule.",
+                "explanation": "This task extends obligation language to a hospital setting. It practises the contrast between 'mustn't' (prohibition) and 'don't have to' (no obligation), which is an important distinction for A1 learners."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are a new student at a school. Mr. Khoirul is the teacher. He asks you about school rules. Answer his questions using 'must' or 'mustn't'. Speak naturally and clearly.",
+                "audioPrompt": "Welcome to your new school! I am Mr. Khoirul, your teacher. I want to check if you know the school rules. Are you ready? Let me ask you some questions.",
+                "scenarioContext": "You are a new student on your first day at school. Your teacher, Mr. Khoirul, wants to make sure you understand the important school rules. He will ask you about uniforms, being on time, and behaviour in class.",
+                "characterRole": "You are a new student. You are polite and you know the basic school rules. Answer Mr. Khoirul's questions using 'must' or 'mustn't' to show you understand the rules.",
+                "targetSentence": "I must wear a uniform. I mustn't be late for class.",
+                "phonetic": "/aɪ mʌst weər ə ˈjuː.nɪ.fɔːm. aɪ ˈmʌs.ənt biː leɪt fɔːr klɑːs/",
+                "expectedKeywords": [
+                  "must",
+                  "wear",
+                  "uniform",
+                  "mustn't",
+                  "late"
+                ],
+                "hint": "When Mr. Khoirul asks about a rule, answer with 'I must...' or 'I mustn't...' Keep your answers short and clear.",
+                "explanation": "This roleplay practises responding to questions about obligations using 'must' and 'mustn't' in a natural school conversation context."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are visiting a library. Mr. Khoirul is the librarian. He explains the library rules. Ask him questions using 'Do I have to...?' and respond to his rules.",
+                "audioPrompt": "Hello! Welcome to the city library. I am the librarian. Before you go inside, let me tell you some rules. You can also ask me questions if you are not sure about something.",
+                "scenarioContext": "You are at a public library for the first time. The librarian, Mr. Khoirul, is explaining the rules to you. You need to ask about what you have to do and what you mustn't do in the library.",
+                "characterRole": "You are a visitor at the library. You are curious and polite. Ask questions like 'Do I have to...?' and respond with 'I understand, I must...' or 'OK, I mustn't...'",
+                "targetSentence": "Do I have to show my library card? OK, I mustn't eat in the library.",
+                "phonetic": "/duː aɪ ˈhæf.tə ʃəʊ maɪ ˈlaɪ.brər.i kɑːd? əʊˈkeɪ aɪ ˈmʌs.ənt iːt ɪn ðə ˈlaɪ.brər.i/",
+                "expectedKeywords": [
+                  "have to",
+                  "library card",
+                  "mustn't",
+                  "eat",
+                  "quiet"
+                ],
+                "hint": "Use rising intonation when asking 'Do I have to...? ↗' Use falling intonation when confirming a rule: 'I mustn't eat here. ↘'",
+                "explanation": "This roleplay practises asking about obligations with 'Do I have to...?' and confirming understanding of prohibitions with 'mustn't'. It builds question-and-answer fluency."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are at an airport. Mr. Khoirul is the security officer. He tells you the rules. Respond and ask questions about what you must do and what you don't have to do.",
+                "audioPrompt": "Good morning, passenger. I am the security officer. Before you go through security, I need to tell you some important rules. Please listen carefully and ask me if you have any questions.",
+                "scenarioContext": "You are a passenger at the airport, going through security. The security officer, Mr. Khoirul, explains the rules about bags, liquids, and documents. You need to show you understand the rules.",
+                "characterRole": "You are a passenger at the airport. You are a little nervous because it is your first time flying. Ask polite questions and confirm you understand the rules using 'must', 'have to', and 'don't have to'.",
+                "targetSentence": "I must show my passport. Do I have to take off my shoes? I don't have to remove my watch.",
+                "phonetic": "/aɪ mʌst ʃəʊ maɪ ˈpɑːs.pɔːt. duː aɪ ˈhæf.tə teɪk ɒf maɪ ʃuːz? aɪ dəʊnt ˈhæf.tə rɪˈmuːv maɪ wɒtʃ/",
+                "expectedKeywords": [
+                  "must",
+                  "passport",
+                  "have to",
+                  "shoes",
+                  "don't have to"
+                ],
+                "hint": "Practise the difference: 'must' = it is very important. 'Have to' = it is necessary. 'Don't have to' = it is NOT necessary, but you can if you want.",
+                "explanation": "This airport scenario practises all three modal structures in a real-life situation. It helps learners distinguish between obligation (must/have to), prohibition (mustn't), and no obligation (don't have to)."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are a tour guide at a museum. Mr. Khoirul is a tourist. Tell him the museum rules using 'must', 'mustn't', and 'don't have to'. Answer his questions politely.",
+                "audioPrompt": "Hello! I am a tourist visiting this museum. Can you tell me the rules here? What must I do? What mustn't I do? I want to make sure I follow all the rules.",
+                "scenarioContext": "You are working as a tour guide at a local museum. A tourist, Mr. Khoirul, has just arrived and wants to know the rules before he starts his visit. You need to explain the rules clearly.",
+                "characterRole": "You are a friendly tour guide at the museum. You explain rules clearly and politely. Use 'You must...', 'You mustn't...', and 'You don't have to...' to help the tourist understand.",
+                "targetSentence": "You must buy a ticket. You mustn't touch the paintings. You don't have to take a guided tour.",
+                "phonetic": "/juː mʌst baɪ ə ˈtɪk.ɪt. juː ˈmʌs.ənt tʌtʃ ðə ˈpeɪn.tɪŋz. juː dəʊnt ˈhæf.tə teɪk ə ˈɡaɪ.dɪd tʊər/",
+                "expectedKeywords": [
+                  "must",
+                  "ticket",
+                  "mustn't",
+                  "touch",
+                  "paintings",
+                  "don't have to",
+                  "guided tour"
+                ],
+                "hint": "As a tour guide, speak slowly and clearly. Stress the modal verbs so the tourist understands what is required and what is not allowed.",
+                "explanation": "This roleplay reverses the dynamic – the learner gives rules instead of receiving them. This builds confidence in using obligation language actively and practises all three modal forms."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Say the following sentence out loud. Focus on pronouncing the key vocabulary words clearly: 'obligation', 'forbidden', and 'allowed'.",
+                "audioPrompt": "Let's practise some important vocabulary for talking about rules. Please say this sentence clearly. Pay attention to the words 'obligation', 'forbidden', and 'allowed'.",
+                "targetSentence": "It is an obligation to follow the rules. Smoking is forbidden. Talking is not allowed.",
+                "phonetic": "/ɪt ɪz ən ˌɒb.lɪˈɡeɪ.ʃən tə ˈfɒl.əʊ ðə ruːlz. ˈsməʊ.kɪŋ ɪz fəˈbɪd.ən. ˈtɔː.kɪŋ ɪz nɒt əˈlaʊd/",
+                "expectedKeywords": [
+                  "obligation",
+                  "rules",
+                  "forbidden",
+                  "smoking",
+                  "allowed",
+                  "talking"
+                ],
+                "hint": "Say 'obligation' as 'ob-li-GAY-shun' with stress on the third syllable. Say 'forbidden' as 'fuh-BID-un' with stress on the second syllable. Say 'allowed' as 'uh-LOUD' with stress on the second syllable.",
+                "explanation": "These vocabulary words are important for understanding and discussing rules at a higher level. Even at A1, exposure to these words helps build recognition. Focus on clear syllable stress."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Say these three sentences out loud. Each sentence uses a different grammar structure for rules. Focus on the correct form of each modal verb.",
+                "audioPrompt": "Now let's practise the grammar of obligation. I want you to say three sentences. The first uses 'must', the second uses 'mustn't', and the third uses 'have to'. Listen to the grammar carefully.",
+                "targetSentence": "Students must arrive on time. They mustn't cheat on exams. They have to bring their books every day.",
+                "phonetic": "/ˈstjuː.dənts mʌst əˈraɪv ɒn taɪm. ðeɪ ˈmʌs.ənt tʃiːt ɒn ɪɡˈzæmz. ðeɪ ˈhæf.tə brɪŋ ðeər bʊks ˈev.ri deɪ/",
+                "expectedKeywords": [
+                  "must",
+                  "arrive",
+                  "time",
+                  "mustn't",
+                  "cheat",
+                  "exams",
+                  "have to",
+                  "bring",
+                  "books"
+                ],
+                "hint": "Notice the grammar pattern: 'must + base verb' (must arrive), 'mustn't + base verb' (mustn't cheat), 'have to + base verb' (have to bring). Never add '-s' or '-ing' after these modals.",
+                "explanation": "This drill reinforces the grammar rule that modal verbs (must, mustn't) and 'have to' are always followed by the base form of the verb. Speaking these patterns aloud helps build automatic grammatical accuracy."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Syllable Stress Drill",
+                "instruction": "Say the following words and sentences out loud. Pay careful attention to which syllable is stressed in each word. The stressed syllable is written in CAPITAL letters.",
+                "audioPrompt": "Let's work on syllable stress. I will show you some words related to rules and obligations. Say each word and sentence clearly, making the stressed syllable louder and longer than the others.",
+                "targetSentence": "You must follow the rules. It is an ob-li-GA-tion. It is for-BID-den. It is not al-LOWED. It is NE-ces-sa-ry.",
+                "phonetic": "/juː mʌst ˈfɒl.əʊ ðə ruːlz. ɪt ɪz ən ˌɒb.lɪˈɡeɪ.ʃən. ɪt ɪz fəˈbɪd.ən. ɪt ɪz nɒt əˈlaʊd. ɪt ɪz ˈnes.ə.sər.i/",
+                "expectedKeywords": [
+                  "follow",
+                  "rules",
+                  "obligation",
+                  "forbidden",
+                  "allowed",
+                  "necessary"
+                ],
+                "hint": "Stress patterns: 'FOL-low', 'ob-li-GA-tion' (stress on 3rd syllable), 'for-BID-den' (stress on 2nd syllable), 'al-LOWED' (stress on 2nd syllable), 'NE-ces-sa-ry' (stress on 1st syllable). Make the stressed syllable louder and longer.",
+                "explanation": "Correct syllable stress is essential for being understood. English listeners rely on stress patterns to recognise words. Placing stress on the wrong syllable can make a word unrecognisable, even if all the sounds are correct."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Intonation Drill",
+                "instruction": "Say the following sentences out loud. Use FALLING intonation (↘) for rule statements and RISING intonation (↗) for yes/no questions. Pay attention to how your voice moves at the end of each sentence.",
+                "audioPrompt": "Now let's practise intonation. When you state a rule, your voice should go DOWN at the end. When you ask a yes/no question about a rule, your voice should go UP at the end. Say each sentence with the correct intonation.",
+                "targetSentence": "You must wear a seatbelt. ↘ Do I have to show my ticket? ↗ You mustn't park here. ↘ Do we have to wait? ↗",
+                "phonetic": "/juː mʌst weər ə ˈsiːt.belt ↘ duː aɪ ˈhæf.tə ʃəʊ maɪ ˈtɪk.ɪt ↗ juː ˈmʌs.ənt pɑːk hɪər ↘ duː wiː ˈhæf.tə weɪt ↗/",
+                "expectedKeywords": [
+                  "must",
+                  "seatbelt",
+                  "have to",
+                  "ticket",
+                  "mustn't",
+                  "park",
+                  "wait"
+                ],
+                "hint": "For statements like 'You must wear a seatbelt', let your voice fall naturally at the end, like you are finishing a thought. For questions like 'Do I have to show my ticket?', let your voice rise at the end, like you are waiting for an answer.",
+                "explanation": "Intonation carries meaning in English. Falling intonation signals a complete statement or a firm rule. Rising intonation signals a yes/no question. Using the wrong intonation can confuse listeners about whether you are telling or asking."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1541 @@
+{
+  "module": {
+    "id": "A2.2-M05",
+    "levelId": "A2.2",
+    "title": "Culinary Traditions, Recipes & Kitchen Verbs",
+    "cefr": "A2",
+    "group": "A2.2 - Social Dynamics, Work & Everyday Life",
+    "objective": "Explain cooking recipes, culinary traditions, and preparation steps using kitchen verbs and sequence markers.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 5
+  },
+  "subModules": [
+    {
+      "id": "sub-a2-2-m05-reading",
+      "moduleId": "A2.2-M05",
+      "skillType": "reading",
+      "title": "Reading Mission: Culinary Traditions and Kitchen Verbs",
+      "theme": "Culinary Traditions, Recipes & Kitchen Verbs",
+      "grammarFocus": "Imperatives for recipes and sequence connectors",
+      "vocabularyFocus": "Kitchen verbs and measurement units",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a2-2-m05-r-theory",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to the reading mission on culinary traditions and recipes. In this section, you will read short texts about cooking, learn how to understand kitchen instructions, and practice reading strategies like scanning for specific ingredients and sequence words.",
+            "linguisticTarget": {
+              "grammar": "Imperative verbs (chop, boil, mix) and sequence words (First, Next, Then, Finally).",
+              "vocabulary": "Cooking verbs, ingredients, and measurement words.",
+              "readingStrategy": "Scanning for sequence words and key cooking steps in procedural texts."
+            },
+            "learningObjectives": [
+              "Understand the main idea of short A2 texts about traditional recipes and cooking steps.",
+              "Locate specific details such as ingredients, measurements, and cooking times.",
+              "Recognize and practice imperative sentence structures used in recipe instructions."
+            ],
+            "contextWarmup": {
+              "prompt": "When you follow a recipe to cook something new at home, what is the very first thing you should always do?",
+              "options": [
+                "Read all the ingredients and instructions carefully before starting.",
+                "Throw everything into a hot pan immediately without measuring.",
+                "Clean your bedroom and wash your clothes."
+              ],
+              "correctIndex": 0,
+              "explanation": "Checking the ingredients and reading instructions first helps you prepare properly and prevents mistakes while cooking."
+            },
+            "rules": [
+              "Use kitchen verbs in the imperative form without a subject to write recipes: 'Chop the onions', 'Boil the water', 'Mix the ingredients'.",
+              "Use sequence words to order steps: 'First, wash the vegetables. Next, chop them into small pieces. Then, heat the oil. Finally, serve the dish hot.'",
+              "State measurements clearly using measurement words: '2 tablespoons of sugar', '1 cup of flour', '500 grams of chicken', 'a pinch of salt'."
+            ],
+            "commonTrap": {
+              "trapTitle": "Forgetting to Check Ingredients First",
+              "explanation": "Learners often start cooking immediately without reading the full ingredient list, which leads to missing items halfway through.",
+              "wrong": "Starting to fry chicken without checking if you have oil and salt.",
+              "correct": "Always read the recipe completely and gather all ingredients on the counter before you start cooking."
+            },
+            "contractionsTitle": "Natural Spoken Contractions in Cooking Instructions",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in everyday English:",
+            "contractions": [
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It is ready to serve.",
+                "exampleContracted": "It's ready to serve."
+              },
+              {
+                "subject": "You",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "You're",
+                "exampleFull": "You are cooking very well.",
+                "exampleContracted": "You're cooking very well."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Imperatives",
+              "description": "Assemble sentence blocks to practice cooking instructions:",
+              "subjects": [
+                {
+                  "label": "Chop",
+                  "pronoun": "Verb",
+                  "correctToBe": "Imperative",
+                  "role": "Base Action"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "slice",
+                  "thirdPerson": "slices",
+                  "continuous": "slicing"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "the fresh tomatoes into small pieces",
+                  "type": "Direct Object"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-2-m05-r-vocab",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "chop",
+                "ipa": "/tʃɒp/",
+                "meaning": "memotong kecil-kecil",
+                "partOfSpeech": "verb",
+                "exampleSentence": "First, chop the garlic and onions into small pieces.",
+                "collocation": "chop garlic / chop onions"
+              },
+              {
+                "word": "slice",
+                "ipa": "/slaɪs/",
+                "meaning": "mengiris tipis",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Slice the tomatoes thinly for the salad.",
+                "collocation": "Slice the tomatoes thinly"
+              },
+              {
+                "word": "boil",
+                "ipa": "/bɔɪl/",
+                "meaning": "merebus",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Boil the water before adding the pasta.",
+                "collocation": "Boil the water"
+              },
+              {
+                "word": "fry",
+                "ipa": "/fraɪ/",
+                "meaning": "menggoreng",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Fry the chicken until it turns golden brown.",
+                "collocation": "Fry the chicken"
+              },
+              {
+                "word": "bake",
+                "ipa": "/beɪk/",
+                "meaning": "memanggang",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Bake the cake in the oven for 30 minutes.",
+                "collocation": "Bake the cake"
+              },
+              {
+                "word": "stir",
+                "ipa": "/stɜː(r)/",
+                "meaning": "mengaduk",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Stir the soup gently while it is cooking.",
+                "collocation": "Stir the soup"
+              },
+              {
+                "word": "mix",
+                "ipa": "/mɪks/",
+                "meaning": "mencampur",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Mix all the ingredients together in a large bowl.",
+                "collocation": "Mix all ingredients"
+              },
+              {
+                "word": "tablespoon",
+                "ipa": "/ˈteɪ.bl̩.spuːn/",
+                "meaning": "sendok makan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Add two tablespoons of soy sauce to the mixture.",
+                "collocation": "two tablespoons of soy sauce"
+              },
+              {
+                "word": "ingredient",
+                "ipa": "/ɪnˈɡriː.di.ənt/",
+                "meaning": "bahan makanan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Make sure you have all the ingredients before you start cooking.",
+                "collocation": "all the ingredients"
+              },
+              {
+                "word": "traditional",
+                "ipa": "/trəˈdɪʃ.ən.əl/",
+                "meaning": "tradisional",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "This is a traditional dish from my grandmother's recipe.",
+                "collocation": "traditional dish"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m05-r-guided",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "A Family Recipe from Italy",
+            "audioUrl": "/audio/modules/a2-2-m05/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Cooking traditional food is an important part of family life around the world. In Italy, Sunday lunch is a special event where families gather to enjoy home-cooked meals. Maria loves helping her grandmother in the kitchen every weekend. First, they check the recipe book to make sure they have every ingredient ready on the kitchen table. Maria learns how to chop fresh garlic and slice ripe tomatoes carefully.",
+              "Next, they boil water in a large pot for the pasta. While the water is heating, Maria helps mix the flour and eggs for homemade bread. Then, her grandmother shows her how to fry vegetables in a pan and stir the tomato sauce gently. Finally, they bake a sweet dessert in the oven. Cooking together is fun, and sharing delicious food makes family traditions alive and special."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "Cooking traditional food is an important part of family life around the world.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 4.6,
+                "end": 10,
+                "text": "In Italy, Sunday lunch is a special event where families gather to enjoy home-cooked meals.",
+                "paragraphIndex": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m05-r-practice",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": []
+          }
+        },
+        {
+          "id": "sec-a2-2-m05-r-quiz",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What is Sunday lunch in Italy according to the text?",
+                "options": [
+                  "A special event for families",
+                  "A quick breakfast",
+                  "A cooking test"
+                ],
+                "answer": "A special event for families",
+                "explanation": "The text states that Sunday lunch is a special event where families gather to enjoy home-cooked meals."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Who does Maria help in the kitchen every weekend?",
+                "options": [
+                  "Her grandmother",
+                  "Her brother",
+                  "Her friend"
+                ],
+                "answer": "Her grandmother",
+                "explanation": "The text mentions that Maria loves helping her grandmother in the kitchen every weekend."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What do Maria and her grandmother check first?",
+                "options": [
+                  "The recipe book",
+                  "The television",
+                  "The weather"
+                ],
+                "answer": "The recipe book",
+                "explanation": "They check the recipe book to make sure they have every ingredient ready."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What does Maria chop and slice?",
+                "options": [
+                  "Garlic and tomatoes",
+                  "Chicken and potatoes",
+                  "Apples and oranges"
+                ],
+                "answer": "Garlic and tomatoes",
+                "explanation": "Maria learns how to chop fresh garlic and slice ripe tomatoes carefully."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What do they boil in a large pot?",
+                "options": [
+                  "Water for the pasta",
+                  "Milk for tea",
+                  "Soup for dinner"
+                ],
+                "answer": "Water for the pasta",
+                "explanation": "The text notes they boil water in a large pot for the pasta."
+              },
+              {
+                "id": "q-r-6",
+                "question": "What ingredients does Maria mix for homemade bread?",
+                "options": [
+                  "Flour and eggs",
+                  "Sugar and salt",
+                  "Butter and cheese"
+                ],
+                "answer": "Flour and eggs",
+                "explanation": "Maria helps mix the flour and eggs for homemade bread."
+              },
+              {
+                "id": "q-r-7",
+                "question": "How does grandmother tell Maria to stir the tomato sauce?",
+                "options": [
+                  "Gently",
+                  "Quickly",
+                  "Loudly"
+                ],
+                "answer": "Gently",
+                "explanation": "Grandmother shows her how to stir the tomato sauce gently."
+              },
+              {
+                "id": "q-r-8",
+                "question": "Where do they bake a sweet dessert?",
+                "options": [
+                  "In the oven",
+                  "On the table",
+                  "In the fridge"
+                ],
+                "answer": "In the oven",
+                "explanation": "The text states they bake a sweet dessert in the oven."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What makes family traditions alive and special in the text?",
+                "options": [
+                  "Sharing delicious food",
+                  "Buying expensive plates",
+                  "Eating very fast"
+                ],
+                "answer": "Sharing delicious food",
+                "explanation": "Sharing delicious food makes family traditions alive and special."
+              },
+              {
+                "id": "q-r-10",
+                "question": "Which kitchen verb is used for cooking vegetables in a pan?",
+                "options": [
+                  "Fry",
+                  "Boil",
+                  "Bake"
+                ],
+                "answer": "Fry",
+                "explanation": "The text mentions her grandmother shows her how to fry vegetables in a pan."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m05-listening",
+      "moduleId": "A2.2-M05",
+      "skillType": "listening",
+      "title": "Listening Mission: Cooking Indonesian Fried Rice",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a2-2-m05-l-theory",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This briefing helps you understand spoken instructions about cooking and recipes. Focus on kitchen verbs like chop, heat, and fry, and listen for sequence words such as first, next, and finally.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about cooking.",
+              "Identify details such as ingredients, actions, and sequence.",
+              "Notice how words link together in connected speech during natural conversations."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "chop the garlic",
+                "meaning": "memotong bawang putih",
+                "note": "Used when cutting vegetables into small pieces."
+              },
+              {
+                "phrase": "heat some oil",
+                "meaning": "memanaskan sedikit minyak",
+                "note": "Used before frying ingredients in a pan."
+              },
+              {
+                "phrase": "stir them for two minutes",
+                "meaning": "aduk selama dua menit",
+                "note": "Used to keep food from burning while cooking."
+              },
+              {
+                "phrase": "ready to serve",
+                "meaning": "siap disajikan",
+                "note": "Said when a dish is finished and ready to eat."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "heat some oil",
+                "fast": "heat-s-moil",
+                "slowIpa": "/hiːt sʌm ɔɪl/",
+                "fastIpa": "/hiːt səm ɔɪl/",
+                "note": "The words blend together smoothly in fast speech."
+              },
+              {
+                "id": 2,
+                "slow": "fry the garlic",
+                "fast": "fry th' garlic",
+                "slowIpa": "/fraɪ ðə ˈɡɑːlɪk/",
+                "fastIpa": "/fraɪ ðə ˈɡɑːlɪk/",
+                "note": "The th sound in the becomes very weak."
+              },
+              {
+                "id": 3,
+                "slow": "mix everything",
+                "fast": "mix-everything",
+                "slowIpa": "/mɪks ˈevriθɪŋ/",
+                "fastIpa": "/mɪkˈsevriθɪŋ/",
+                "note": "The final consonant links directly to the vowel."
+              },
+              {
+                "id": 4,
+                "slow": "add some salt",
+                "fast": "add-s-salt",
+                "slowIpa": "/æd sʌm sɔːlt/",
+                "fastIpa": "/æd səm sɔːlt/",
+                "note": "The word some sounds reduced in fast conversation."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m05-l-dialogue",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Making Fried Rice",
+          "orderIndex": 2,
+          "content": {
+            "context": "Sarah is teaching her friend David how to make Indonesian fried rice in the kitchen.",
+            "audioPrompt": "Listen to the conversation between two friends.",
+            "lines": [
+              {
+                "speaker": "Sarah",
+                "text": "Hi David, let's cook today!",
+                "translation": "Hai David, ayo kita memasak hari ini!",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "David",
+                "text": "What are we making?",
+                "translation": "Apa yang sedang kita buat?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "We are making fried rice.",
+                "translation": "Kita sedang membuat nasi goreng.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "David",
+                "text": "Great, I have all ingredients.",
+                "translation": "Bagus, aku punya semua bahan.",
+                "emotion": "positive"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "First, chop the garlic finely.",
+                "translation": "Pertama, cincang bawang putih dengan halus.",
+                "emotion": "helpful"
+              },
+              {
+                "speaker": "David",
+                "text": "Like this, is it okay?",
+                "translation": "Seperti ini, apakah tidak apa-apa?",
+                "emotion": "inquiring"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Yes, that looks very good.",
+                "translation": "Ya, itu terlihat sangat bagus.",
+                "emotion": "encouraging"
+              },
+              {
+                "speaker": "David",
+                "text": "What should I do next?",
+                "translation": "Apa yang harus kulakukan selanjutnya?",
+                "emotion": "focused"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Heat oil in the pan.",
+                "translation": "Panaskan minyak di dalam wajan.",
+                "emotion": "instructional"
+              },
+              {
+                "speaker": "David",
+                "text": "Should I add the rice?",
+                "translation": "Haruskah aku memasukkan nasinya?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Not yet, add garlic first.",
+                "translation": "Belum, masukkan bawang putih dulu.",
+                "emotion": "helpful"
+              },
+              {
+                "speaker": "David",
+                "text": "Now the rice goes in.",
+                "translation": "Sekarang nasinya dimasukkan.",
+                "emotion": "active"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Mix it with soy sauce.",
+                "translation": "Campur dengan kecap asin.",
+                "emotion": "instructional"
+              },
+              {
+                "speaker": "David",
+                "text": "This smells truly amazing now!",
+                "translation": "Ini benar-benar harum sekarang!",
+                "emotion": "delighted"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m05-l-quiz",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Hi David, let's cook today!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Hi David, let's cook _____!\"",
+                "targetWord": "today",
+                "explanation": "Full audio: \"Hi David, let's cook today!\". The missing word is \"today\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "What are we making?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "David: \"What are we _____?\"",
+                "targetWord": "making",
+                "explanation": "Full audio: \"What are we making?\". The missing word is \"making\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "We are making fried rice.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"We are making fried _____.\"",
+                "targetWord": "rice",
+                "explanation": "Full audio: \"We are making fried rice.\". The missing word is \"rice\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Great, I have all ingredients.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "David: \"Great, I have all _____.\"",
+                "targetWord": "ingredients",
+                "explanation": "Full audio: \"Great, I have all ingredients.\". The missing word is \"ingredients\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "First, chop the garlic finely.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"First, chop the garlic _____.\"",
+                "targetWord": "finely",
+                "explanation": "Full audio: \"First, chop the garlic finely.\". The missing word is \"finely\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Like this, is it okay?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Like this is it okay",
+                "words": [
+                  "okay",
+                  "is",
+                  "Like",
+                  "this",
+                  "it"
+                ],
+                "explanation": "Correct sentence order: \"Like this, is it okay?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Yes, that looks very good.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes that looks very good",
+                "words": [
+                  "looks",
+                  "that",
+                  "Yes",
+                  "good",
+                  "very"
+                ],
+                "explanation": "Correct sentence order: \"Yes, that looks very good.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "What should I do next?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What should I do next",
+                "words": [
+                  "should",
+                  "do",
+                  "I",
+                  "What",
+                  "next"
+                ],
+                "explanation": "Correct sentence order: \"What should I do next?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Heat oil in the pan.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Heat oil in the pan",
+                "words": [
+                  "pan",
+                  "oil",
+                  "Heat",
+                  "in",
+                  "the"
+                ],
+                "explanation": "Correct sentence order: \"Heat oil in the pan.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Should I add the rice?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Should I add the rice",
+                "words": [
+                  "the",
+                  "rice",
+                  "add",
+                  "I",
+                  "Should"
+                ],
+                "explanation": "Correct sentence order: \"Should I add the rice?\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Hi David, let's cook today!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Hi David, let's cook _____!\"",
+                "targetWord": "today",
+                "explanation": "Full audio: \"Hi David, let's cook today!\". The missing word is \"today\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "What are we making?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "David: \"What are we _____?\"",
+                "targetWord": "making",
+                "explanation": "Full audio: \"What are we making?\". The missing word is \"making\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "We are making fried rice.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"We are making fried _____.\"",
+                "targetWord": "rice",
+                "explanation": "Full audio: \"We are making fried rice.\". The missing word is \"rice\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Great, I have all ingredients.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "David: \"Great, I have all _____.\"",
+                "targetWord": "ingredients",
+                "explanation": "Full audio: \"Great, I have all ingredients.\". The missing word is \"ingredients\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "First, chop the garlic finely.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"First, chop the garlic _____.\"",
+                "targetWord": "finely",
+                "explanation": "Full audio: \"First, chop the garlic finely.\". The missing word is \"finely\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Like this, is it okay?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Like this is it okay",
+                "words": [
+                  "okay",
+                  "is",
+                  "Like",
+                  "this",
+                  "it"
+                ],
+                "explanation": "Correct sentence order: \"Like this, is it okay?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Yes, that looks very good.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes that looks very good",
+                "words": [
+                  "looks",
+                  "that",
+                  "Yes",
+                  "good",
+                  "very"
+                ],
+                "explanation": "Correct sentence order: \"Yes, that looks very good.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "What should I do next?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What should I do next",
+                "words": [
+                  "should",
+                  "do",
+                  "I",
+                  "What",
+                  "next"
+                ],
+                "explanation": "Correct sentence order: \"What should I do next?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Heat oil in the pan.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Heat oil in the pan",
+                "words": [
+                  "pan",
+                  "oil",
+                  "Heat",
+                  "in",
+                  "the"
+                ],
+                "explanation": "Correct sentence order: \"Heat oil in the pan.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Should I add the rice?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Should I add the rice",
+                "words": [
+                  "the",
+                  "rice",
+                  "add",
+                  "I",
+                  "Should"
+                ],
+                "explanation": "Correct sentence order: \"Should I add the rice?\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m05-writing",
+      "moduleId": "A2.2-M05",
+      "skillType": "writing",
+      "title": "Writing Mission: Writing Recipes and Culinary Instructions",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a2-2-m05-w-theory",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on writing simple recipes, kitchen verbs, and sequence words in English.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Imperative Verbs for Recipes",
+                "formula": "Kitchen Verb + Noun / Ingredient",
+                "example": "Chop the onions and slice the tomatoes."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Sequence Words for Steps",
+                "formula": "Sequence Word + Comma + Imperative Sentence",
+                "example": "First, boil the water. Next, add the pasta."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Measurement Expressions",
+                "formula": "Number + Measurement Unit + of + Ingredient",
+                "example": "Add two tablespoons of sugar and one cup of flour."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Start recipe instructions with base verbs instead of subjects.",
+                "badExample": "You chop the onions finely.",
+                "goodExample": "Chop the onions finely.",
+                "why": "Recipe steps give direct commands to the cook."
+              },
+              {
+                "rule": "Put a comma after sequence words at the beginning of a sentence.",
+                "badExample": "First boil the water in a large pot.",
+                "goodExample": "First, boil the water in a large pot.",
+                "why": "Sequence words like First, Next, and Then need a comma when introducing a step."
+              },
+              {
+                "rule": "Capitalize the first letter of every sentence and keep food names lowercase unless they are proper nouns.",
+                "badExample": "then add italian cheese to the pasta.",
+                "goodExample": "Then, add Italian cheese to the pasta.",
+                "why": "Italian is a proper adjective, so it needs capitalization."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "First, wash the fresh vegetables thoroughly.",
+                "id": "Pertama, cuci sayuran segar secara menyeluruh.",
+                "focus": "Sequence word and imperative verb"
+              },
+              {
+                "en": "Chop the onions into small pieces.",
+                "id": "Potong bawang bombay menjadi bagian kecil-kecil.",
+                "focus": "Kitchen action verb"
+              },
+              {
+                "en": "Add two tablespoons of olive oil to the pan.",
+                "id": "Tambahkan dua sendok makan minyak zaitun ke dalam panci.",
+                "focus": "Measurement expression"
+              },
+              {
+                "en": "Finally, serve the delicious soup hot with bread.",
+                "id": "Terakhir, sajikan sup yang lezat selagi panas dengan roti.",
+                "focus": "Final sequence word and complement"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m05-w-practice",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "chop the onions and boil water",
+                "targetSentence": "Chop the onions and boil the water.",
+                "translation": "Potong bawang bombay dan didihkan air.",
+                "keyRule": "Capitalize the first letter, use articles correctly, and end with a period.",
+                "requiredCapitals": [
+                  "Chop"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "first add two cup of flour to the bowl",
+                "targetSentence": "First, add two cups of flour to the bowl.",
+                "translation": "Pertama, tambahkan dua cangkir tepung ke dalam mangkuk.",
+                "keyRule": "Use a comma after sequence words, pluralize measurement nouns when greater than one, and capitalize the first word.",
+                "requiredCapitals": [
+                  "First"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "then heat 500 gram of chicken in a pan",
+                "targetSentence": "Then, heat 500 grams of chicken in a pan.",
+                "translation": "Kemudian, panaskan 500 gram ayam di dalam wajan.",
+                "keyRule": "Use a comma after sequence words, pluralize units like grams, and capitalize the beginning of the sentence.",
+                "requiredCapitals": [
+                  "Then"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Recipe Instructions",
+                "meaning": "Potong sayuran dengan hati-hati.",
+                "tokens": [
+                  "Chop",
+                  "the",
+                  "vegetables",
+                  "carefully."
+                ],
+                "fullSentence": "Chop the vegetables carefully."
+              },
+              {
+                "id": "b-2",
+                "category": "Measurements",
+                "meaning": "Tambahkan satu cangkir susu.",
+                "tokens": [
+                  "Add",
+                  "one",
+                  "cup",
+                  "of",
+                  "milk."
+                ],
+                "fullSentence": "Add one cup of milk."
+              },
+              {
+                "id": "b-3",
+                "category": "Cooking Steps",
+                "meaning": "Pertama, didihkan air dalam panci.",
+                "tokens": [
+                  "First,",
+                  "boil",
+                  "the",
+                  "water",
+                  "in",
+                  "a",
+                  "pot."
+                ],
+                "fullSentence": "First, boil the water in a pot."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Write a Simple Recipe Step",
+                "badge": "Recipe Writer",
+                "instruction": "Write three sentences describing how to make a simple dish, such as scrambled eggs or tea. Use sequence words like First, Next, and Finally.",
+                "example": "First, break two eggs into a bowl. Next, mix them with a fork. Finally, cook the eggs in a hot pan.",
+                "placeholder": "Type your recipe steps here...",
+                "minWords": 15,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Describe a Family Culinary Tradition",
+                "badge": "Tradition Expert",
+                "instruction": "Write three sentences about a traditional food your family prepares on special occasions. Mention what the food is, when you eat it, and why you like it.",
+                "example": "My family makes chicken soup every Sunday. We use fresh garlic and ginger. It is warm and delicious.",
+                "placeholder": "Type your description here...",
+                "minWords": 18,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m05-w-quiz",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the affirmative instruction into a negative instruction using 'Don't':",
+                "promptText": "Add salt to the soup.",
+                "hint": "Use 'Don't' at the beginning of the sentence.",
+                "targetAnswers": [
+                  "Don't add salt to the soup.",
+                  "Do not add salt to the soup."
+                ],
+                "explanation": "Negative imperative sentences in English start with 'Don't' or 'Do not' followed by the base verb."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the capitalization and punctuation in this recipe instruction:",
+                "promptText": "next slice the tomatoes thin.",
+                "hint": "Capitalize the first letter and ensure proper punctuation.",
+                "targetAnswers": [
+                  "Next, slice the tomatoes thin.",
+                  "Next, slice the tomatoes thinly."
+                ],
+                "explanation": "Sequence words at the start of a sentence require a comma and capital letter."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Sequence Words",
+                "instruction": "Complete the sentence with the correct sequence word for the middle cooking step:",
+                "promptText": "Boil the water. _____, add the pasta to the pot.",
+                "hint": "Use a sequence word that means after that.",
+                "targetAnswers": [
+                  "Next,",
+                  "Then,",
+                  "After that,"
+                ],
+                "explanation": "Words like 'Next' or 'Then' are used for intermediate steps in a recipe."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using a measurement expression with 'cup':",
+                "promptText": "Add flour to the bowl.",
+                "hint": "Include 'one cup of' before the ingredient.",
+                "targetAnswers": [
+                  "Add one cup of flour to the bowl.",
+                  "Add a cup of flour to the bowl."
+                ],
+                "explanation": "Measurement expressions require a number or article, the unit, 'of', and the ingredient noun."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Short Response",
+                "instruction": "Write a complete sentence describing what kitchen action you do with onions:",
+                "promptText": "(onion / chop)",
+                "hint": "Use an imperative verb and the object noun.",
+                "targetAnswers": [
+                  "Chop the onions.",
+                  "Chop the onion.",
+                  "Please chop the onions."
+                ],
+                "explanation": "Kitchen actions for vegetables use verbs like 'chop', 'slice', or 'peel'."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the error in measurement pluralization in this sentence:",
+                "promptText": "Add three tablespoon of sugar.",
+                "hint": "Measurement units pluralize when the number is greater than one.",
+                "targetAnswers": [
+                  "Add three tablespoons of sugar."
+                ],
+                "explanation": "When a number is greater than one (three), the unit (tablespoon) must be pluralized (tablespoons)."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Sequence Words",
+                "instruction": "Fill in the final sequence word for the last step of the recipe:",
+                "promptText": "_____, serve the hot soup in bowls.",
+                "hint": "Use the sequence word that indicates the final step.",
+                "targetAnswers": [
+                  "Finally,",
+                  "At last,"
+                ],
+                "explanation": "'Finally' is the standard sequence word used to introduce the last step in instructions."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change this declarative sentence into an imperative recipe instruction:",
+                "promptText": "You wash the potatoes carefully.",
+                "hint": "Remove the subject pronoun 'You'.",
+                "targetAnswers": [
+                  "Wash the potatoes carefully."
+                ],
+                "explanation": "Recipe instructions are direct commands, so they omit the subject 'you' and start with the base verb."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Short Response",
+                "instruction": "Write a sentence explaining how to heat oil in a pan using the sequence word 'First':",
+                "promptText": "(First / heat / oil / pan)",
+                "hint": "Start with 'First,' followed by the imperative action.",
+                "targetAnswers": [
+                  "First, heat oil in a pan.",
+                  "First, heat the oil in the pan."
+                ],
+                "explanation": "A correct recipe step combines the sequence word, comma, imperative verb, object, and prepositional phrase."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the punctuation and article in this sentence:",
+                "promptText": "then add pinch of salt.",
+                "hint": "Capitalize the first word, add a comma after the sequence word, and include 'a' before 'pinch'.",
+                "targetAnswers": [
+                  "Then, add a pinch of salt."
+                ],
+                "explanation": "Expressions like 'pinch of salt' need the article 'a', and sentences must begin with a capital letter and a comma after introductory sequence words."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m05-speaking",
+      "moduleId": "A2.2-M05",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Culinary Traditions, Recipes & Kitchen Verbs",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a2-2-m05-s-theory",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Clear pronunciation and descriptive vocabulary are essential for explaining recipes and sharing culinary traditions at the A2 level.",
+            "audioGuidance": "Focus on clear articulation of kitchen action verbs and natural intonation when giving instructions.",
+            "pillars": [
+              {
+                "name": "Vowel Clarity",
+                "target": "Clear short and long vowels in kitchen verbs",
+                "explanation": "Ensure vowels in words like chop, boil, and bake are distinct and easy to understand."
+              },
+              {
+                "name": "Verb Stress",
+                "target": "Emphasizing action verbs in instructions",
+                "explanation": "Place natural sentence stress on kitchen verbs to make your directions clear to listeners."
+              },
+              {
+                "name": "Sentence Flow",
+                "target": "Linking words in recipe steps",
+                "explanation": "Connect sequence words like first and then smoothly with the following action verbs."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m05-s-practice",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "CHOP",
+                "countryAudio": "chop",
+                "countrySyllables": [
+                  {
+                    "text": "CHOP",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "CHOP-ping",
+                "natAudio": "chopping",
+                "natSyllables": [
+                  {
+                    "text": "CHOP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ping",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The primary stress remains on the first syllable in both forms."
+              },
+              {
+                "id": "pair-2",
+                "country": "BOIL",
+                "countryAudio": "boil",
+                "countrySyllables": [
+                  {
+                    "text": "BOIL",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "BOIL-ing",
+                "natAudio": "boiling",
+                "natSyllables": [
+                  {
+                    "text": "BOIL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ing",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that the main stress stays on the root verb syllable."
+              },
+              {
+                "id": "pair-3",
+                "country": "BAKE",
+                "countryAudio": "bake",
+                "countrySyllables": [
+                  {
+                    "text": "BAKE",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "BA-king",
+                "natAudio": "baking",
+                "natSyllables": [
+                  {
+                    "text": "BA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "king",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Keep the stress strong on the first syllable."
+              },
+              {
+                "id": "pair-4",
+                "country": "TRA-di-tion",
+                "countryAudio": "tradition",
+                "countrySyllables": [
+                  {
+                    "text": "tra",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "DI",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "tra-di-TION-al",
+                "natAudio": "traditional",
+                "natSyllables": [
+                  {
+                    "text": "tra",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "di",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TION",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "al",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress shifts when adding the adjective suffix, landing on the third syllable."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "First, chop the garlic and onions into small pieces.",
+                "phonetic": "/fɜːst tʃɒp ði ˈɡɑːlɪk ənd ˈʌnjənz ˈɪntuː smɔːl ˈpiːsɪz/",
+                "focus": "Kitchen action verb 'chop' and sequence word",
+                "hint": "Pause briefly after 'first' before saying 'chop'."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "Slice the tomatoes thinly for the salad.",
+                "phonetic": "/slaɪs ðə təˈmɑːtəʊz ˈθɪnli fəðə ˈsæləd/",
+                "focus": "Action verb 'slice' and adverb placement",
+                "hint": "Pronounce 'thinly' with clear emphasis on the first syllable."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Boil the water before adding the pasta.",
+                "phonetic": "/bɔɪl ðə ˈwɔːtə bɪˈfɔːr ˈædɪŋ ðə ˈpæstə/",
+                "focus": "Verb 'boil' and prepositions",
+                "hint": "Link 'boil' and 'the' smoothly together."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Add two tablespoons of soy sauce to the mixture.",
+                "phonetic": "/æd tuː ˈteɪbl̩spuːnz əv sɔɪ sɔːs tuː ðə ˈmɪkstʃə/",
+                "focus": "Measurement vocabulary 'tablespoon'",
+                "hint": "Pronounce 'tablespoon' as a compound word with primary stress on table."
+              }
+            ],
+            "roleplay": {
+              "context": "You are in the kitchen preparing dinner with Chef Budi.",
+              "roles": [
+                "Chef Budi",
+                "Student"
+              ],
+              "turns": [
+                {
+                  "speaker": "Chef Budi",
+                  "text": "What are we cooking for dinner tonight?",
+                  "translation": "Apa yang akan kita masak untuk makan malam nanti?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "We are making a traditional vegetable soup and fried chicken.",
+                  "translation": "Kita sedang membuat sup sayur tradisional dan ayam goreng."
+                },
+                {
+                  "speaker": "Chef Budi",
+                  "text": "Wonderful! Did you chop the garlic and slice the onions?",
+                  "translation": "Bagus sekali! Apakah kamu sudah memotong bawang putih dan mengiris bawang bombay?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, they are ready on the counter now.",
+                  "translation": "Ya, mereka sudah siap di atas meja sekarang."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-2-m05-s-quiz",
+          "moduleId": "A2.2-M05",
+          "subModuleId": "sub-a2-2-m05-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about your favorite traditional dish.",
+                "audioPrompt": "Tell me about a traditional dish you love eating and who usually cooks it.",
+                "storyPoints": [
+                  "Name the traditional dish and where it comes from",
+                  "Describe the main ingredients used in the recipe",
+                  "Explain why you enjoy eating it with your family"
+                ],
+                "targetSentence": "My favorite traditional dish is chicken soup, which my mother cooks every Sunday using fresh vegetables.",
+                "phonetic": "/maɪ ˈfeɪvərɪt trəˈdɪʃənəl dɪʃ ɪz ˈtʃɪkɪn suːp/",
+                "expectedKeywords": [
+                  "traditional",
+                  "dish",
+                  "soup",
+                  "vegetables"
+                ],
+                "explanation": "Speak fluently in full sentences using descriptive adjectives."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a time you helped in the kitchen.",
+                "audioPrompt": "Describe a time when you helped prepare a meal at home.",
+                "storyPoints": [
+                  "What meal you were helping to prepare",
+                  "Which kitchen verbs you used, such as chop, slice, or stir",
+                  "How the final dish tasted when it was finished"
+                ],
+                "targetSentence": "Yesterday I helped my father chop onions and stir the tomato sauce for dinner.",
+                "phonetic": "/ˈjɛstədeɪ aɪ hɛlpt maɪ ˈfɑːðə tʃɒp ˈʌnjənz/",
+                "expectedKeywords": [
+                  "chop",
+                  "onions",
+                  "stir",
+                  "dinner"
+                ],
+                "explanation": "Use past tense verbs correctly when recounting a past kitchen experience."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to Chef Budi about preparing the vegetables.",
+                "audioPrompt": "We need to start cooking now. What should we do with the vegetables?",
+                "scenarioContext": "You are working in a restaurant kitchen with Chef Budi.",
+                "characterRole": "Junior Cook",
+                "targetSentence": "First, we should chop the garlic and slice the tomatoes into thin pieces.",
+                "phonetic": "/fɜːst wiː ʃʊd tʃɒp ði ˈɡɑːlɪk/",
+                "expectedKeywords": [
+                  "chop",
+                  "garlic",
+                  "slice",
+                  "tomatoes"
+                ],
+                "explanation": "Use sequence words and kitchen verbs to give clear instructions."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Talk with your friend about a recipe you found online.",
+                "audioPrompt": "I heard you found a new recipe online. What ingredients do we need?",
+                "scenarioContext": "You are planning a weekend cooking session with your friend.",
+                "characterRole": "Home Cook",
+                "targetSentence": "We need chicken, two tablespoons of soy sauce, and fresh vegetables.",
+                "phonetic": "/wiː niːd ˈtʃɪkɪn tuː ˈteɪbl̩spuːnz əv sɔɪ sɔːs/",
+                "expectedKeywords": [
+                  "chicken",
+                  "tablespoons",
+                  "ingredients",
+                  "vegetables"
+                ],
+                "explanation": "List recipe ingredients clearly using accurate measurements."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Ask the market vendor for help with kitchen items.",
+                "audioPrompt": "Hello! What can I get for you at the market today?",
+                "scenarioContext": "You are shopping at a local market for cooking ingredients.",
+                "characterRole": "Customer",
+                "targetSentence": "I would like to buy fresh tomatoes and onions for my traditional soup.",
+                "phonetic": "/aɪ wʊd laɪk tuː baɪ frɛʃ təˈmɑːtəʊz/",
+                "expectedKeywords": [
+                  "tomatoes",
+                  "onions",
+                  "soup",
+                  "fresh"
+                ],
+                "explanation": "Politely request items using appropriate food vocabulary."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Explain baking instructions to your younger sibling.",
+                "audioPrompt": "Can you teach me how to bake this chocolate cake?",
+                "scenarioContext": "You are teaching your younger sibling how to use the kitchen oven.",
+                "characterRole": "Older Sibling",
+                "targetSentence": "First mix all the ingredients in a bowl, then bake the cake in the oven.",
+                "phonetic": "/fɜːst mɪks ɔːl ði ɪnˈɡriːdiənts/",
+                "expectedKeywords": [
+                  "mix",
+                  "ingredients",
+                  "bake",
+                  "oven"
+                ],
+                "explanation": "Give step by step instructions using imperative kitchen verbs."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Pronounce the target sentence focusing on kitchen measurements.",
+                "audioPrompt": "Say this sentence clearly: Add two tablespoons of soy sauce.",
+                "focus": "vocab",
+                "targetSentence": "Add two tablespoons of soy sauce to the mixture.",
+                "phonetic": "/æd tuː ˈteɪbl̩spuːnz əv sɔɪ sɔːs tuː ðə ˈmɪkstʃə/",
+                "expectedKeywords": [
+                  "tablespoons",
+                  "soy",
+                  "sauce",
+                  "mixture"
+                ],
+                "explanation": "Articulate each vocabulary word distinctly without rushing."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Pronounce the imperative instruction sentence correctly.",
+                "audioPrompt": "Say this sentence: Stir the soup gently while it is cooking.",
+                "focus": "grammar",
+                "targetSentence": "Stir the soup gently while it is cooking.",
+                "phonetic": "/stɜː ðə suːp ˈdʒɛntli waɪl ɪt ɪz ˈkʊkɪŋ/",
+                "expectedKeywords": [
+                  "Stir",
+                  "soup",
+                  "gently",
+                  "cooking"
+                ],
+                "explanation": "Practice using imperative verbs combined with present continuous clauses."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress Drill",
+                "instruction": "Practice syllable stress on the word traditional.",
+                "audioPrompt": "Say this sentence: This is a traditional recipe from my grandmother.",
+                "focus": "pronunciation_stress",
+                "targetSentence": "This is a traditional recipe from my grandmother.",
+                "phonetic": "/ðɪs ɪz ə trəˈdɪʃənəl ˈrɛsɪpi frəm maɪ ˈɡrænmʌðə/",
+                "expectedKeywords": [
+                  "traditional",
+                  "recipe",
+                  "grandmother"
+                ],
+                "explanation": "Emphasize the stressed syllable di in traditional clearly."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Intonation Drill",
+                "instruction": "Practice rising intonation for a yes/no question about cooking.",
+                "audioPrompt": "Say this question with a rising tone at the end: Is the water boiling?",
+                "focus": "pronunciation_intonation",
+                "targetSentence": "Is the water boiling?",
+                "phonetic": "/ɪz ðə ˈwɔːtə ˈbɔɪlɪŋ/",
+                "expectedKeywords": [
+                  "water",
+                  "boiling"
+                ],
+                "explanation": "Raise your voice pitch at the end of the question to signal inquiry."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

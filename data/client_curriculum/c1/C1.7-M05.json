@@ -1,0 +1,199 @@
+{
+  "id": "C1.7-M05",
+  "levelId": "C1.7",
+  "title": "Unit 5: Emergency Public Health Directives & Overcoming Skepticism",
+  "cefr": "C1",
+  "group": "Public Health Oratory",
+  "objective": "Mampu menyusun maklumat darurat kesehatan masyarakat yang menyeimbangkan otoritas medis dan empati publik.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": false,
+  "passingScore": 75,
+  "orderIndex": 83,
+  "sections": {
+    "theory": {
+      "summary": "Dalam komunikasi krisis kesehatan masyarakat tingkat lanjut (C1/C2), menyeimbangkan otoritas medis dengan empati publik adalah hal yang sangat krusial. Modul ini berfokus pada penguasaan 'Attitude Adverbials' (adverbia sikap) untuk membingkai pernyataan secara retoris—menunjukkan empati, penekanan, atau opini secara elegan—serta 'Dependent Prepositions' tingkat lanjut yang esensial untuk menjaga akurasi forensik dan ilmiah saat menjelaskan kausalitas atau kebijakan (misalnya, attribute to, stem from, resort to).",
+      "rules": [
+        {
+          "pattern": "Attitude Adverbial + Comma + Main Clause",
+          "meaning": "Menetapkan nada emosional, konteks, atau opini di awal kalimat untuk meredam skeptisisme atau menunjukkan empati.",
+          "example": "Regrettably, the recent surge in hospitalizations stems from widespread vaccine hesitancy among the populace."
+        },
+        {
+          "pattern": "Subject + Auxiliary + Comma + Attitude Adverbial + Comma + Main Verb",
+          "meaning": "Memberikan penekanan nuansa (nuanced emphasis) di tengah kalimat, sering digunakan oleh penutur asli untuk terdengar lebih diplomatis namun tegas.",
+          "example": "The administration has, frankly, failed to provide for the most vulnerable demographics during this outbreak."
+        },
+        {
+          "pattern": "Advanced Verb/Noun/Adjective + Specific Dependent Preposition",
+          "meaning": "Menyatakan hubungan kausalitas, pelarangan, atau tindakan ekstrem dengan presisi leksikal tingkat tinggi.",
+          "example": "Under no circumstances should citizens resort to unverified alternative treatments, as these complications are directly attributed to self-medication."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Jebakan Preposisi Ketergantungan dan Penempatan Adverbia",
+        "explanation": "Pembelajar tingkat lanjut sering menerjemahkan preposisi secara harfiah dari bahasa ibu mereka (misalnya menggunakan 'attribute with' alih-alih 'attribute to') dan menempatkan attitude adverbials di akhir kalimat, yang secara drastis melemahkan dampak retoris dan otoritas pembicara.",
+        "wrong": "The rapid transmission of the virus was attributed with a lack of hygiene, frankly.",
+        "correct": "Frankly, the rapid transmission of the virus was attributed to a lack of hygiene."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Manakah dari kalimat berikut yang menunjukkan penempatan 'attitude adverbial' di tengah kalimat dengan tanda baca yang tepat sesuai standar C1/C2?",
+          "options": [
+            "The committee has, surprisingly, decided to prohibit citizens from traveling.",
+            "The committee has surprisingly decided to prohibit citizens, from traveling.",
+            "The committee, has surprisingly, decided to prohibit citizens from traveling."
+          ],
+          "correctIndex": 0,
+          "explanation": "Dalam bahasa Inggris C1/C2, saat attitude adverbial ditempatkan di antara auxiliary verb dan main verb, ia harus diapit oleh dua koma (has, surprisingly, decided)."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Lengkapi kalimat medis forensik berikut dengan preposisi yang tepat: 'The unprecedented efficacy of the new protocol can be largely attributed ___ the rigorous clinical trials.'",
+          "options": [
+            "with",
+            "to",
+            "for"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kata kerja 'attribute' (menghubungkan/menganggap sebagai akibat dari) selalu berpasangan dengan preposisi 'to' (attribute something to something)."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Dalam konferensi pers darurat, Anda ingin menyatakan secara tegas bahwa pemerintah tidak akan mengambil jalan ekstrem menggunakan tindakan militer untuk karantina. Manakah yang paling tepat?",
+          "options": [
+            "Generally speaking, the government will not resort with military action for quarantine.",
+            "As a matter of fact, the government will not depend to military action for quarantine.",
+            "Frankly, the government will not resort to military action to enforce the quarantine."
+          ],
+          "correctIndex": 2,
+          "explanation": "Pilihan C menggunakan attitude adverbial 'Frankly' untuk ketegasan dan pasangan dependent preposition yang tepat 'resort to' (mengambil jalan ekstrem)."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Regrettably",
+        "translation": "Dengan sangat menyesal / Sayangnya",
+        "example": "Regrettably, the supply chain disruptions have hindered us from distributing the vaccines.",
+        "context": "Digunakan di awal kalimat untuk menyampaikan berita buruk dengan empati dan formalitas tinggi."
+      },
+      {
+        "word": "Attribute to",
+        "translation": "Menghubungkan dengan / Menganggap sebagai akibat dari",
+        "example": "The sudden decline in mortality rates can be attributed to the new public health directives.",
+        "context": "Digunakan dalam konteks ilmiah atau analitis untuk menunjukkan kausalitas."
+      },
+      {
+        "word": "Resort to",
+        "translation": "Mengambil jalan / Beralih ke (tindakan ekstrem)",
+        "example": "We hope the public complies voluntarily so we do not have to resort to punitive measures.",
+        "context": "Digunakan saat membahas tindakan terakhir atau opsi ekstrem yang terpaksa diambil."
+      },
+      {
+        "word": "Stem from",
+        "translation": "Berasal dari / Bersumber dari",
+        "example": "Much of the public skepticism stems from a fundamental misunderstanding of epidemiology.",
+        "context": "Digunakan untuk mengidentifikasi akar penyebab suatu masalah atau fenomena."
+      },
+      {
+        "word": "Prohibit from",
+        "translation": "Melarang dari",
+        "example": "The new mandate will strictly prohibit unauthorized personnel from entering the containment zone.",
+        "context": "Digunakan dalam dokumen hukum atau arahan resmi untuk menyatakan larangan."
+      },
+      {
+        "word": "Frankly",
+        "translation": "Sejujurnya / Terus terang",
+        "example": "Frankly, the administration's initial response was inadequate to cope with the crisis.",
+        "context": "Digunakan sebagai attitude adverbial untuk menyatakan opini yang jujur, seringkali kritis atau blak-blakan."
+      }
+    ],
+    "dialogue": {
+      "context": "Konferensi pers darurat di Markas Besar WHO. Kepala Petugas Medis (CMO) sedang menghadapi pertanyaan tajam dari seorang jurnalis senior terkait mandat karantina wilayah yang baru dan skeptisisme publik yang meluas.",
+      "lines": [
+        {
+          "speaker": "Journalist",
+          "text": "Dr. Aris, the public is increasingly hostile. Many relate this new mandate to political overreach rather than genuine public health concerns.",
+          "translation": "Dr. Aris, publik semakin bersikap bermusuhan. Banyak yang mengaitkan mandat baru ini dengan tindakan politik yang berlebihan alih-alih kekhawatiran kesehatan masyarakat yang sebenarnya."
+        },
+        {
+          "speaker": "CMO",
+          "text": "Frankly, such skepticism stems from widespread misinformation. We base our directives strictly on epidemiological data, not politics.",
+          "translation": "Terus terang, skeptisisme semacam itu bersumber dari misinformasi yang meluas. Kami mendasarkan arahan kami secara ketat pada data epidemiologis, bukan politik."
+        },
+        {
+          "speaker": "Journalist",
+          "text": "But will the administration resort to penalizing citizens who refuse to comply with these strict measures?",
+          "translation": "Namun, apakah pemerintah akan mengambil jalan menghukum warga yang menolak untuk mematuhi langkah-langkah ketat ini?"
+        },
+        {
+          "speaker": "CMO",
+          "text": "As a matter of fact, we are focusing on community engagement; however, we will, regrettably, prohibit individuals from endangering public safety if necessary.",
+          "translation": "Faktanya, kami berfokus pada pelibatan masyarakat; namun, dengan sangat menyesal, kami akan melarang individu dari membahayakan keselamatan publik jika diperlukan."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Menyampaikan arahan darurat kesehatan masyarakat yang persuasif dan otoritatif dengan menyeimbangkan empati dan ketegasan ilmiah.",
+      "scenario": "Anda adalah Direktur Jenderal WHO yang sedang berpidato di hadapan Dewan Keamanan PBB yang skeptis mengenai patogen baru. Gunakan 'attitude adverbials' (seperti Regrettably, Frankly, As a matter of fact) untuk menunjukkan empati dan ketegasan, serta 'dependent prepositions' (seperti stem from, attribute to, resort to) untuk menjelaskan asal-usul krisis dan tindakan yang diperlukan."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Dalam kalimat 'As far as I'm concerned, all public health data should be transparent,' apa fungsi retoris dari frasa yang digarisbawahi?",
+          "options": [
+            "Menyatakan fakta objektif yang tidak dapat dibantah.",
+            "Mengekspresikan opini pribadi pembicara secara formal.",
+            "Menunjukkan emosi kesedihan atau penyesalan.",
+            "Memberikan penekanan pada statistik yang mengejutkan."
+          ],
+          "correctIndex": 1,
+          "explanation": "'As far as I'm concerned' adalah attitude adverbial yang secara spesifik digunakan untuk menyatakan opini atau sudut pandang pribadi pembicara dalam register yang formal."
+        },
+        {
+          "id": 2,
+          "prompt": "Pilih preposisi yang tepat untuk melengkapi kalimat berikut: 'The sudden drop in community immunity levels ___ from a lack of exposure to common pathogens during the lockdown.'",
+          "options": [
+            "attributes",
+            "resorts",
+            "stems",
+            "relates"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kata kerja 'stem' berpasangan dengan preposisi 'from' (stem from) yang berarti 'berasal dari' atau 'bersumber dari', sangat cocok untuk menjelaskan akar penyebab turunnya tingkat kekebalan."
+        },
+        {
+          "id": 3,
+          "prompt": "Manakah penulisan tanda baca yang paling tepat untuk menyisipkan attitude adverbial di tengah kalimat?",
+          "options": [
+            "The virus was surprisingly contained within the initial quarantine zone.",
+            "The virus was, surprisingly contained, within the initial quarantine zone.",
+            "The virus was, surprisingly, contained within the initial quarantine zone.",
+            "The virus, was surprisingly contained within the initial quarantine zone."
+          ],
+          "correctIndex": 2,
+          "explanation": "Ketika attitude adverbial (surprisingly) ditempatkan di antara auxiliary verb (was) dan main verb (contained), ia harus diapit oleh dua koma."
+        },
+        {
+          "id": 4,
+          "prompt": "Lengkapi kalimat tingkat tinggi berikut dengan kombinasi adverbia dan preposisi yang tepat: '___, the failure to contain the outbreak can be directly attributed ___ a lack of early intervention.'",
+          "options": [
+            "Sadly / to",
+            "Frankly / with",
+            "Generally speaking / for",
+            "Actually / from"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Sadly' berfungsi sebagai attitude adverbial yang menunjukkan emosi/penyesalan di awal kalimat, dan 'attributed' selalu berpasangan dengan preposisi 'to'."
+        }
+      ]
+    }
+  }
+}

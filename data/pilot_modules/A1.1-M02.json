@@ -1,0 +1,1701 @@
+{
+  "module": {
+    "id": "A1.1-M02",
+    "levelId": "A1.1",
+    "title": "Unit 2: I Feel Happy: Feelings, Adjectives & Questions",
+    "cefr": "A1",
+    "group": "A1.1 - Starter Foundations",
+    "objective": "Express feelings using adjectives, form negative sentences with 'to be', ask simple questions, and express likes or dislikes with accurate sentence structure.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 2
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-1-m02-reading",
+      "moduleId": "A1.1-M02",
+      "skillType": "reading",
+      "title": "Reading Mission: Understanding Feelings & Simple Questions",
+      "theme": "Feelings, Adjectives & Questions",
+      "grammarFocus": "Negative sentences with 'to be' (am not, isn't, aren't), Yes/No questions with 'to be', object pronouns, like/don't like",
+      "vocabularyFocus": "Feeling adjectives (happy, sad, tired, worried, angry, bored, excited, cold, scared, hungry, thirsty, nervous)",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-1-m02-r-theory",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to the Unit 2 Reading Mission! 🎉 In this section, you will practise reading short English texts about feelings and emotions. You will learn to recognise feeling adjectives, understand negative sentences with 'to be', and understand simple questions and their answers. You will also practise recognising object pronouns (me, him, her, us, them) and expressions of like/don't like in a reading passage. The reading strategies we will use are skimming (reading quickly for the main idea) and scanning (looking for specific information). You can do this — let's go! 💪",
+            "linguisticTarget": {
+              "grammar": "Negative sentences with 'to be' (I am not tired, She isn't happy, They aren't bored), Yes/No questions with 'to be' (Are you happy? Is he sad?), short answers (Yes, I am. / No, she isn't.), and using like/don't like.",
+              "vocabulary": "Feeling adjectives: happy, sad, tired, worried, angry, bored, excited, cold, scared, hungry, thirsty, nervous. Object pronouns: me, him, her, us, them.",
+              "readingStrategy": "Skimming: Read the whole text quickly to understand the main idea (who is it about, what is it about). Scanning: Look for specific key words (for example, feeling words or the word 'not') to answer detail questions."
+            },
+            "learningObjectives": [
+              "Understand the main idea of a short A1 English text about feelings and emotions.",
+              "Recognise and understand feeling adjectives and negative sentences with 'to be' in a reading passage.",
+              "Answer comprehension questions based on details in the text, including questions about likes and dislikes.",
+              "Recognise the use of object pronouns (me, him, her, us, them) in sentences from the reading passage."
+            ],
+            "contextWarmup": {
+              "prompt": "Imagine you read a short message from your friend: 'I'm not happy today. I'm tired and bored.' How does your friend feel?",
+              "options": [
+                "My friend feels unhappy, tired, and bored.",
+                "My friend feels happy and excited.",
+                "My friend feels hungry and thirsty."
+              ],
+              "correctIndex": 0,
+              "explanation": "Great job! 👏 The words 'not happy' mean unhappy, 'tired' means very low on energy, and 'bored' means not interested in anything. So your friend feels unhappy, tired, and bored. Notice the word 'not' — it makes the sentence negative."
+            },
+            "rules": [
+              "When you read, look for the word 'not' after 'am/is/are' — this shows a negative sentence. Example: 'She is NOT angry' means she is NOT angry.",
+              "If a sentence starts with 'Am/Is/Are' + subject, it is a question. Example: 'Are you tired?' is a question, not a statement.",
+              "Short answers follow this pattern: 'Yes, + subject + be' or 'No, + subject + be + not'. Example: 'Yes, I am.' or 'No, she isn't.'",
+              "Object pronouns (me, him, her, us, them) usually come after a verb or a preposition. Example: 'I like HER.' — 'her' replaces a girl's name.",
+              "Look for the pattern 'I like...' (I enjoy something) and 'I don't like...' (I do not enjoy something) in the text to understand a person's preferences."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Mistake: Confusing 'He's angry' and 'Is he angry?'",
+              "explanation": "Beginners often find it hard to tell the difference between a statement and a question when reading. Pay attention to word order and punctuation! Statement: Subject + be (He's angry.). Question: Be + subject (Is he angry?). The question mark (?) at the end of a sentence is also an important clue that it is a question.",
+              "wrong": "He is angry? (This looks like a question because of the question mark, but the word order is like a statement — this is not correct grammar.)",
+              "correct": "Is he angry? (The word order is correct for a question: 'Is' comes before the subject 'he'.)"
+            },
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "am",
+                "vowelDropped": "a",
+                "remainder": "m",
+                "contracted": "I'm",
+                "exampleFull": "I am happy.",
+                "exampleContracted": "I'm happy."
+              },
+              {
+                "subject": "She",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "She's",
+                "exampleFull": "She is not tired.",
+                "exampleContracted": "She's not tired. / She isn't tired."
+              },
+              {
+                "subject": "They",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "They're",
+                "exampleFull": "They are not bored.",
+                "exampleContracted": "They're not bored. / They aren't bored."
+              },
+              {
+                "subject": "is",
+                "verb": "not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "isn't",
+                "exampleFull": "He is not worried.",
+                "exampleContracted": "He isn't worried."
+              },
+              {
+                "subject": "are",
+                "verb": "not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "aren't",
+                "exampleFull": "We are not cold.",
+                "exampleContracted": "We aren't cold."
+              }
+            ],
+            "grammarFormulas": {
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person Singular (I)"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Second Person (You)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "is",
+                  "role": "Third Person Singular Masculine (He)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "is",
+                  "role": "Third Person Singular Feminine (She)"
+                },
+                {
+                  "label": "It",
+                  "pronoun": "It",
+                  "correctToBe": "is",
+                  "role": "Third Person Singular Neuter (It — for things or animals)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "First Person Plural (We)"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Third Person Plural (They)"
+                }
+              ],
+              "title": "Sentence Structure with Feelings and Adjectives",
+              "description": "Assemble and swap sentence blocks to explore affirmative, negative, and question patterns:",
+              "complements": [
+                "happy today",
+                "tired after school",
+                "cold in the morning",
+                "excited about the party",
+                "hungry right now",
+                "worried about the exam"
+              ]
+            },
+            "contractionsTitle": "Natural Contractions with Feelings and Negatives",
+            "contractionsSubtitle": "Observe how subject pronouns and verbs merge smoothly in natural speaking:"
+          }
+        },
+        {
+          "id": "sec-a1-1-m02-r-vocab",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "happy",
+                "ipa": "/ˈhæp.i/",
+                "meaning": "bahagia, senang",
+                "collocation": "I'm very happy today."
+              },
+              {
+                "word": "sad",
+                "ipa": "/sæd/",
+                "meaning": "sedih",
+                "collocation": "She's sad because her cat is sick."
+              },
+              {
+                "word": "tired",
+                "ipa": "/taɪəd/",
+                "meaning": "lelah, capek",
+                "collocation": "We're tired after school."
+              },
+              {
+                "word": "worried",
+                "ipa": "/ˈwʌr.id/",
+                "meaning": "khawatir, cemas",
+                "collocation": "My mom is worried about me."
+              },
+              {
+                "word": "angry",
+                "ipa": "/ˈæŋ.ɡri/",
+                "meaning": "marah",
+                "collocation": "He isn't angry at you."
+              },
+              {
+                "word": "bored",
+                "ipa": "/bɔːd/",
+                "meaning": "bosan",
+                "collocation": "Are you bored? Let's play a game!"
+              },
+              {
+                "word": "excited",
+                "ipa": "/ɪkˈsaɪ.tɪd/",
+                "meaning": "bersemangat, antusias",
+                "collocation": "They're excited about the trip."
+              },
+              {
+                "word": "cold",
+                "ipa": "/kəʊld/",
+                "meaning": "dingin (merasa kedinginan)",
+                "collocation": "Are you cold? Here's a jacket."
+              },
+              {
+                "word": "scared",
+                "ipa": "/skeəd/",
+                "meaning": "takut, ketakutan",
+                "collocation": "I'm scared of the dark."
+              },
+              {
+                "word": "hungry",
+                "ipa": "/ˈhʌŋ.ɡri/",
+                "meaning": "lapar",
+                "collocation": "I'm hungry. Is there any food?"
+              },
+              {
+                "word": "thirsty",
+                "ipa": "/ˈθɜː.sti/",
+                "meaning": "haus",
+                "collocation": "She's thirsty. She wants water."
+              },
+              {
+                "word": "nervous",
+                "ipa": "/ˈnɜː.vəs/",
+                "meaning": "gugup, gelisah",
+                "collocation": "I'm nervous about the test."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m02-r-guided",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-reading",
+          "sectionType": "dialogue",
+          "title": "Reading Passage: A Busy Saturday",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "A Busy Saturday",
+            "context": "This is a short story about a group of young friends who spend a Saturday together. They have different feelings throughout the day. Read carefully and pay attention to feeling adjectives, negative sentences, and questions in the text.",
+            "text": "It is Saturday morning. My name is Dani, and I'm with my friends: Rina, Tom, and Suki. We are at the park.\n\nI'm happy because the weather is nice. Rina is excited. She likes the park a lot. But Tom isn't happy. He's tired because he doesn't sleep well last night. \"Are you okay, Tom?\" I ask him. \"No, I'm not,\" he says. \"I'm tired and a little hungry.\"\n\nSuki is worried about her exam on Monday. \"Are you scared?\" Rina asks her. \"No, I'm not scared. I'm just nervous,\" Suki says.\n\nWe sit on a bench. I give Tom my sandwich. He likes it. \"Thanks! I like you, Dani. You're a good friend,\" Tom says. Now he isn't hungry.\n\nRina doesn't like cold weather, but today it isn't cold. It's warm and sunny. We are all happy now. Tom isn't tired anymore. Suki isn't worried anymore. We like this Saturday. We like it a lot!",
+            "wordCount": 155,
+            "highlights": [
+              {
+                "text": "I'm happy",
+                "note": "Contraction of 'I am happy' — expressing a positive feeling",
+                "type": "grammar"
+              },
+              {
+                "text": "isn't happy",
+                "note": "Negative form of 'is not happy' — Tom is not happy",
+                "type": "grammar"
+              },
+              {
+                "text": "Are you okay",
+                "note": "A question with 'to be' — the verb 'are' comes before the subject 'you'",
+                "type": "grammar"
+              },
+              {
+                "text": "No, I'm not",
+                "note": "A short negative answer to a Yes/No question",
+                "type": "grammar"
+              },
+              {
+                "text": "tired",
+                "note": "Feeling adjective: tired (low on energy)",
+                "type": "vocab"
+              },
+              {
+                "text": "worried",
+                "note": "Feeling adjective: worried (feeling uneasy about something)",
+                "type": "vocab"
+              },
+              {
+                "text": "nervous",
+                "note": "Feeling adjective: nervous — different from 'scared' (afraid)",
+                "type": "vocab"
+              },
+              {
+                "text": "I like you",
+                "note": "Using the object pronoun 'you' after the verb 'like'",
+                "type": "grammar"
+              },
+              {
+                "text": "doesn't like cold weather",
+                "note": "Expressing a dislike: doesn't like + noun",
+                "type": "grammar"
+              },
+              {
+                "text": "We like it",
+                "note": "Object pronoun 'it' replaces 'this Saturday'",
+                "type": "grammar"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m02-r-practice",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-reading",
+          "sectionType": "practice",
+          "title": "Guided Comprehension Check",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "prompt": "What is the main idea of the text 'A Busy Saturday'?",
+              "options": [
+                "A group of friends spend Saturday at the park. They have different feelings, but in the end, everyone is happy.",
+                "Dani goes to school on Saturday and feels bored.",
+                "Tom is angry at his friends because the weather is cold."
+              ],
+              "correctIndex": 0,
+              "explanation": "Exactly right! 🌟 The text is about Dani and his friends at the park on Saturday. They have different feelings (happy, tired, worried, nervous), but at the end of the story, everyone feels happy. This is the main idea of the text."
+            },
+            "detailQuestions": [
+              {
+                "id": 1,
+                "prompt": "Why isn't Tom happy at the beginning of the story?",
+                "options": [
+                  "Because he is tired and didn't sleep well last night.",
+                  "Because he is angry at Dani.",
+                  "Because the weather is cold."
+                ],
+                "correctIndex": 0,
+                "explanation": "Correct! 👍 The text says: 'He's tired because he doesn't sleep well last night.' Tom isn't happy because he is tired and didn't sleep well. Try to find the word 'tired' in the text to check your answer."
+              },
+              {
+                "id": 2,
+                "prompt": "How does Suki really feel? She says she is not 'scared', but she feels...",
+                "options": [
+                  "nervous",
+                  "angry",
+                  "bored"
+                ],
+                "correctIndex": 0,
+                "explanation": "That's right! 🎯 Suki says: 'No, I'm not scared. I'm just nervous.' She makes a difference between 'scared' (afraid) and 'nervous' (a little uneasy). This is an important difference: 'scared' is stronger than 'nervous'."
+              },
+              {
+                "id": 3,
+                "prompt": "What does Dani give to Tom, and how does Tom react?",
+                "options": [
+                  "Dani gives Tom his sandwich, and Tom likes it. Tom says thank you.",
+                  "Dani gives Tom a jacket, and Tom feels warm.",
+                  "Dani gives Tom some water, and Tom is not thirsty anymore."
+                ],
+                "correctIndex": 0,
+                "explanation": "That's correct! 😊 The text says: 'I give Tom my sandwich. He likes it.' Then Tom says: 'Thanks! I like you, Dani.' Notice the object pronoun 'it' (replacing sandwich) and 'you' (replacing Dani)."
+              },
+              {
+                "id": 4,
+                "prompt": "What kind of weather does Rina not like?",
+                "options": [
+                  "Cold weather",
+                  "Hot weather",
+                  "Rainy weather"
+                ],
+                "correctIndex": 0,
+                "explanation": "Correct! ✅ The text says: 'Rina doesn't like cold weather.' Notice the pattern 'doesn't like', which shows a dislike. But that day it isn't cold, so Rina is happy!"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m02-r-quiz",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-reading",
+          "sectionType": "quiz",
+          "title": "Reading Mastery Quiz",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "Based on the text, where are Dani and his friends on Saturday?",
+                "options": [
+                  "At the park",
+                  "At school",
+                  "At home"
+                ],
+                "answer": "At the park",
+                "explanation": "The first paragraph says: 'We are at the park.' This means they are at the park. The word 'park' means a green outdoor area. 🌳"
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which sentence is the CORRECT negative form based on the text?",
+                "options": [
+                  "Tom isn't happy.",
+                  "Tom not is happy.",
+                  "Tom aren't happy."
+                ],
+                "answer": "Tom isn't happy.",
+                "explanation": "The correct negative form is 'Subject + be + not'. Because Tom is 'he' (third person singular), we use 'is + not' = 'isn't'. So 'Tom isn't happy' is correct. ✅"
+              },
+              {
+                "id": "q-r-3",
+                "question": "In the sentence 'Are you scared?', which word shows that this is a question (besides the question mark)?",
+                "options": [
+                  "'Are' comes before the subject 'you'",
+                  "'scared' is an adjective",
+                  "'you' is the subject of the sentence"
+                ],
+                "answer": "'Are' comes before the subject 'you'",
+                "explanation": "Correct! 🎉 In Yes/No questions with 'to be', the verb 'be' (am/is/are) is placed BEFORE the subject. 'Are you scared?' — 'Are' before 'you' shows this is a question."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What does the sentence 'I'm not scared. I'm just nervous.' mean in Indonesian?",
+                "options": [
+                  "Saya tidak takut. Saya hanya gugup.",
+                  "Saya tidak marah. Saya hanya bosan.",
+                  "Saya tidak sedih. Saya hanya lelah."
+                ],
+                "answer": "Saya tidak takut. Saya hanya gugup.",
+                "explanation": "That's right! 'Scared' means afraid and 'nervous' means a little uneasy. The word 'just' here means 'only'. Suki makes a difference between being afraid and being nervous — she is only nervous, not afraid. 😊"
+              },
+              {
+                "id": "q-r-5",
+                "question": "In the sentence 'We like it a lot!', what does the word 'it' replace?",
+                "options": [
+                  "This Saturday",
+                  "The sandwich",
+                  "The park"
+                ],
+                "answer": "This Saturday",
+                "explanation": "Correct! 💡 The sentence before says: 'We like this Saturday.' Then 'We like it a lot!' — the word 'it' is an object pronoun that replaces 'this Saturday'. We use object pronouns to avoid repeating the same words."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Which short answer is CORRECT for the question 'Is Rina excited?'",
+                "options": [
+                  "Yes, she is.",
+                  "Yes, she are.",
+                  "Yes, Rina excited."
+                ],
+                "answer": "Yes, she is.",
+                "explanation": "Well done! 🌟 Short answers follow the pattern 'Yes, + subject pronoun + be'. Rina is 'she' and uses 'is'. So the answer is: 'Yes, she is.' You don't need to repeat the adjective 'excited' in a short answer."
+              },
+              {
+                "id": "q-r-7",
+                "question": "The sentence 'Rina doesn't like cold weather' tells us that Rina...",
+                "options": [
+                  "does not like cold weather",
+                  "likes cold weather",
+                  "feels cold today"
+                ],
+                "answer": "does not like cold weather",
+                "explanation": "Correct! ✅ The pattern 'doesn't like' shows a dislike. 'Rina doesn't like cold weather' means Rina does not enjoy cold weather. But that day the weather is warm, so Rina is happy."
+              },
+              {
+                "id": "q-r-8",
+                "question": "At the end of the story, how do all the friends feel?",
+                "options": [
+                  "They are all happy.",
+                  "Tom is still tired and Suki is still worried.",
+                  "They are all bored."
+                ],
+                "answer": "They are all happy.",
+                "explanation": "Exactly right! 🎊 At the end of the text it says: 'We are all happy now. Tom isn't tired anymore. Suki isn't worried anymore.' The word 'anymore' means 'any longer', so Tom is no longer tired and Suki is no longer worried. Everyone is happy!"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m02-listening",
+      "moduleId": "A1.1-M02",
+      "skillType": "listening",
+      "title": "Listening Mission: Weekend Plans & Feelings",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-1-m02-l-theory",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening section, you will listen to a conversation between two friends talking about their weekend plans. One of them feels bored and is not interested in the different options offered. Pay attention to how they express feelings using adjectives, make negative sentences with 'to be' and 'don't like', and ask simple questions. Key strategy: focus on important words like feeling adjectives (tired, bored, funny, terrible) and like/dislike expressions (I don't like...).",
+            "learningObjectives": [
+              "Understand adjectives used to express feelings in everyday conversations, such as tired, bored, funny, and terrible.",
+              "Recognise negative sentences using 'to be' (I'm not tired) and 'don't like' (I don't like it) when listening.",
+              "Understand simple questions such as 'Are you tired?', 'Why are you bored?', and 'What about...?' in the context of a conversation.",
+              "Pick out specific information from a conversation, such as why someone feels bored and what they think about something."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "What's the matter?",
+                "meaning": "Ada apa? / Kenapa?",
+                "note": "Used to ask someone what is wrong when they don't look okay."
+              },
+              {
+                "phrase": "I'm not tired. I'm bored.",
+                "meaning": "Aku tidak lelah. Aku bosan.",
+                "note": "An example of a negative sentence with 'to be' (I'm not...) and expressing feelings with an adjective."
+              },
+              {
+                "phrase": "I don't like it.",
+                "meaning": "Aku tidak suka itu.",
+                "note": "Used to say you do not like something. We use 'don't' with I/you/we/they."
+              },
+              {
+                "phrase": "What about a film?",
+                "meaning": "Bagaimana kalau film?",
+                "note": "An expression used to suggest an alternative or make a suggestion. You can also say 'How about...?'"
+              },
+              {
+                "phrase": "He's so funny.",
+                "meaning": "Dia sangat lucu.",
+                "note": "We use 'so' before an adjective to add emphasis. It means 'very' or 'really'."
+              },
+              {
+                "phrase": "Who's in it?",
+                "meaning": "Siapa yang main (di film itu)?",
+                "note": "A short question to ask who the actors or actresses in a film are. 'Who's' is the short form of 'Who is'."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "I am not tired",
+                "fast": "I'm not tired",
+                "slowIpa": "/aɪ æm nɒt ˈtaɪəd/",
+                "fastIpa": "/aɪm nɒt ˈtaɪəd/",
+                "note": "The subject 'I am' joins together to become 'I'm' in faster speech."
+              },
+              {
+                "id": 2,
+                "slow": "She is not sad",
+                "fast": "She isn't sad",
+                "slowIpa": "/ʃiː ɪz nɒt sæd/",
+                "fastIpa": "/ʃiː ˈɪznt sæd/",
+                "note": "The negative verb 'is not' naturally blends into 'isn't'."
+              },
+              {
+                "id": 3,
+                "slow": "Are you cold?",
+                "fast": "Are you cold?",
+                "slowIpa": "/ɑː juː kəʊld/",
+                "fastIpa": "/ə jʊ kəʊld/",
+                "note": "The words 'Are you' are said in a relaxed way, with a rising tone at the end of the question."
+              },
+              {
+                "id": 4,
+                "slow": "They are not bored",
+                "fast": "They aren't bored",
+                "slowIpa": "/ðeɪ ɑː nɒt bɔːd/",
+                "fastIpa": "/ðeɪ ɑːnt bɔːd/",
+                "note": "The form 'are not' blends into 'aren't' in everyday spoken English."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m02-l-dialogue",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: A Boring Weekend",
+          "orderIndex": 2,
+          "content": {
+            "context": "Nick and Connor are friends. They are at home on a Saturday afternoon. Nick looks unenthusiastic, and Connor tries to find something fun for them to do. Listen to how Nick expresses his feelings and responds to each of Connor's suggestions.",
+            "audioPrompt": "Listen carefully to the conversation between Nick and Connor below. Pay attention to how they express feelings and opinions.",
+            "lines": [
+              {
+                "speaker": "Connor",
+                "text": "What's the matter, Nick? Are you tired?",
+                "audioUrl": "/audio/modules/a1-1-m02/dialogue-1.mp3",
+                "translation": "Ada apa, Nick? Kamu lelah?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Nick",
+                "text": "Tired? No, no, I'm not tired. I'm bored.",
+                "audioUrl": "/audio/modules/a1-1-m02/dialogue-2.mp3",
+                "translation": "Lelah? Tidak, tidak, aku tidak lelah. Aku bosan.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Connor",
+                "text": "Why are you bored?",
+                "audioUrl": "/audio/modules/a1-1-m02/dialogue-3.mp3",
+                "translation": "Kenapa kamu bosan?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Nick",
+                "text": "Because there's nothing to do. Nothing to do at all.",
+                "audioUrl": "/audio/modules/a1-1-m02/dialogue-4.mp3",
+                "translation": "Karena tidak ada yang bisa dilakukan. Tidak ada sama sekali.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Connor",
+                "text": "Well, there's a Formula One race at five. It's on TV.",
+                "audioUrl": "/audio/modules/a1-1-m02/dialogue-5.mp3",
+                "translation": "Hmm, ada balapan Formula One jam lima. Di TV.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Nick",
+                "text": "Formula One? I don't like it.",
+                "audioUrl": "/audio/modules/a1-1-m02/dialogue-6.mp3",
+                "translation": "Formula One? Aku tidak suka.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Connor",
+                "text": "Really? What about a film? There's a new film on at the cinema.",
+                "audioUrl": "/audio/modules/a1-1-m02/dialogue-7.mp3",
+                "translation": "Benarkah? Bagaimana dengan film? Ada film baru di bioskop.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Nick",
+                "text": "A film? Who's in it?",
+                "audioUrl": "/audio/modules/a1-1-m02/dialogue-8.mp3",
+                "translation": "Film? Siapa yang main?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Connor",
+                "text": "Ben Stiller. He's so funny.",
+                "audioUrl": "/audio/modules/a1-1-m02/dialogue-9.mp3",
+                "translation": "Ben Stiller. Dia sangat lucu.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Nick",
+                "text": "Ben Stiller? I don't like him. He's not funny. He's terrible.",
+                "audioUrl": "/audio/modules/a1-1-m02/dialogue-10.mp3",
+                "translation": "Ben Stiller? Aku tidak suka dia. Dia tidak lucu. Dia buruk.",
+                "emotion": "neutral"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m02-l-quiz",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "What's the matter, Nick?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Connor: \"What's the _____, Nick?\"",
+                "targetWord": "matter",
+                "explanation": "Full audio: \"What's the matter, Nick?\". The missing word is \"matter\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Are you tired?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Connor: \"Are you _____?\"",
+                "targetWord": "tired",
+                "explanation": "Full audio: \"Are you tired?\". The missing word is \"tired\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "No, no, I'm not tired.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Nick: \"No, no, I'm _____ tired.\"",
+                "targetWord": "not",
+                "explanation": "Full audio: \"No, no, I'm not tired.\". The missing word is \"not\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Why are you bored?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Connor: \"Why are you _____?\"",
+                "targetWord": "bored",
+                "explanation": "Full audio: \"Why are you bored?\". The missing word is \"bored\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Because there's nothing to do.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Nick: \"Because there's _____ to do.\"",
+                "targetWord": "nothing",
+                "explanation": "Full audio: \"Because there's nothing to do.\". The missing word is \"nothing\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Nothing to do at all.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Nothing to do at all",
+                "words": [
+                  "Nothing",
+                  "at",
+                  "do",
+                  "to",
+                  "all"
+                ],
+                "explanation": "Correct sentence order: \"Nothing to do at all.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "It's on TV.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It's on TV",
+                "words": [
+                  "on",
+                  "It's",
+                  "TV"
+                ],
+                "explanation": "Correct sentence order: \"It's on TV.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "I don't like it.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I don't like it",
+                "words": [
+                  "don't",
+                  "I",
+                  "it",
+                  "like"
+                ],
+                "explanation": "Correct sentence order: \"I don't like it.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "What about a film?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What about a film",
+                "words": [
+                  "about",
+                  "What",
+                  "film",
+                  "a"
+                ],
+                "explanation": "Correct sentence order: \"What about a film?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Who's in it?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Who's in it",
+                "words": [
+                  "in",
+                  "Who's",
+                  "it"
+                ],
+                "explanation": "Correct sentence order: \"Who's in it?\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "What's the matter, Nick?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Connor: \"What's the _____, Nick?\"",
+                "targetWord": "matter",
+                "explanation": "Full audio: \"What's the matter, Nick?\". The missing word is \"matter\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Are you tired?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Connor: \"Are you _____?\"",
+                "targetWord": "tired",
+                "explanation": "Full audio: \"Are you tired?\". The missing word is \"tired\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "No, no, I'm not tired.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Nick: \"No, no, I'm _____ tired.\"",
+                "targetWord": "not",
+                "explanation": "Full audio: \"No, no, I'm not tired.\". The missing word is \"not\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Why are you bored?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Connor: \"Why are you _____?\"",
+                "targetWord": "bored",
+                "explanation": "Full audio: \"Why are you bored?\". The missing word is \"bored\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Because there's nothing to do.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Nick: \"Because there's _____ to do.\"",
+                "targetWord": "nothing",
+                "explanation": "Full audio: \"Because there's nothing to do.\". The missing word is \"nothing\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Nothing to do at all.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Nothing to do at all",
+                "words": [
+                  "Nothing",
+                  "at",
+                  "do",
+                  "to",
+                  "all"
+                ],
+                "explanation": "Correct sentence order: \"Nothing to do at all.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "It's on TV.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It's on TV",
+                "words": [
+                  "on",
+                  "It's",
+                  "TV"
+                ],
+                "explanation": "Correct sentence order: \"It's on TV.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "I don't like it.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I don't like it",
+                "words": [
+                  "don't",
+                  "I",
+                  "it",
+                  "like"
+                ],
+                "explanation": "Correct sentence order: \"I don't like it.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "What about a film?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What about a film",
+                "words": [
+                  "about",
+                  "What",
+                  "film",
+                  "a"
+                ],
+                "explanation": "Correct sentence order: \"What about a film?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Who's in it?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Who's in it",
+                "words": [
+                  "in",
+                  "Who's",
+                  "it"
+                ],
+                "explanation": "Correct sentence order: \"Who's in it?\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m02-writing",
+      "moduleId": "A1.1-M02",
+      "skillType": "writing",
+      "title": "Writing Mission: Express Your Feelings",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-1-m02-w-theory",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "A guide to building simple sentences and paragraphs about feelings, adjectives, questions with 'to be', and expressing likes and dislikes. In this unit, you will learn to write positive, negative, and question sentences using the verb 'to be' and the structure 'I like / I don't like'. All sentences must follow correct capitalization and punctuation rules.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Feeling Sentences with Adjectives",
+                "formula": "Subject + am/is/are + adjective.",
+                "example": "I am happy. She is tired. They are excited."
+              },
+              {
+                "step": 2,
+                "title": "Negative Sentences with 'to be'",
+                "formula": "Subject + am/is/are + not + adjective.",
+                "example": "I am not sad. He is not angry. We are not bored."
+              },
+              {
+                "step": 3,
+                "title": "Questions with 'to be'",
+                "formula": "Am/Is/Are + subject + adjective/noun?",
+                "example": "Are you happy? Is she tired? Are they your friends?"
+              },
+              {
+                "step": 4,
+                "title": "Short Answers",
+                "formula": "Yes, + subject + am/is/are. / No, + subject + am/is/are + not.",
+                "example": "Yes, I am. No, she isn't. Yes, they are."
+              },
+              {
+                "step": 5,
+                "title": "Expressing Likes and Dislikes",
+                "formula": "I like + noun/person. / I don't like + noun/person.",
+                "example": "I like ice cream. I don't like rainy days."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "The first letter of a sentence always starts with a capital letter, and every sentence ends with a full stop (.) or a question mark (?).",
+                "badExample": "she is happy",
+                "goodExample": "She is happy.",
+                "why": "A correct sentence must begin with a capital letter and end with punctuation so it is easy to read and understand."
+              },
+              {
+                "rule": "The pronoun 'I' is always written with a capital letter, no matter where it appears in the sentence.",
+                "badExample": "Today i am very happy.",
+                "goodExample": "Today I am very happy.",
+                "why": "In English, 'I' is the only personal pronoun that is always capitalized. This is a standard rule."
+              },
+              {
+                "rule": "A question sentence must end with a question mark (?), not a full stop.",
+                "badExample": "Are you tired.",
+                "goodExample": "Are you tired?",
+                "why": "A question mark shows that the sentence is a question. Without it, the reader does not know you are asking something."
+              },
+              {
+                "rule": "Use an apostrophe (') correctly in negative contractions: isn't, aren't, don't.",
+                "badExample": "She isnt happy. I dont like it.",
+                "goodExample": "She isn't happy. I don't like it.",
+                "why": "An apostrophe shows that a letter has been removed in a contraction. Without it, the word is misspelled and hard to understand."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "I am happy today.",
+                "id": "Saya senang hari ini.",
+                "focus": "Subject + am + adjective (positive sentence with 'to be')"
+              },
+              {
+                "en": "She is not tired.",
+                "id": "Dia (perempuan) tidak lelah.",
+                "focus": "Subject + is + not + adjective (negative sentence with 'to be')"
+              },
+              {
+                "en": "Are you hungry?",
+                "id": "Apakah kamu lapar?",
+                "focus": "Are + subject + adjective? (question sentence with 'to be')"
+              },
+              {
+                "en": "I like her, but I don't like him.",
+                "id": "Saya suka dia (perempuan), tapi saya tidak suka dia (laki-laki).",
+                "focus": "I like + object pronoun / I don't like + object pronoun"
+              },
+              {
+                "en": "No, they aren't sad. They are excited.",
+                "id": "Tidak, mereka tidak sedih. Mereka bersemangat.",
+                "focus": "Short negative answer + follow-up positive sentence"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m02-w-practice",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "are you happy today",
+                "targetSentence": "Are you happy today?",
+                "translation": "Apakah kamu senang hari ini?",
+                "keyRule": "A question sentence starts with a capital letter on the first word and ends with a question mark (?).",
+                "requiredCapitals": [
+                  "Are"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "i am not angry and she isnt sad",
+                "targetSentence": "I am not angry and she isn't sad.",
+                "translation": "Saya tidak marah dan dia (perempuan) tidak sedih.",
+                "keyRule": "The pronoun 'I' is always capitalized. The contraction 'isn't' needs an apostrophe. The sentence ends with a full stop.",
+                "requiredCapitals": [
+                  "I"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "i like ice cream but i dont like coffee",
+                "targetSentence": "I like ice cream, but I don't like coffee.",
+                "translation": "Saya suka es krim, tapi saya tidak suka kopi.",
+                "keyRule": "The pronoun 'I' is always capitalized. Use a comma before 'but' when joining two clauses. The contraction 'don't' needs an apostrophe. End with a full stop.",
+                "requiredCapitals": [
+                  "I",
+                  "I"
+                ]
+              },
+              {
+                "id": "sent-4",
+                "faultySentence": "is he your teacher. no he isnt",
+                "targetSentence": "Is he your teacher? No, he isn't.",
+                "translation": "Apakah dia gurumu? Tidak, bukan.",
+                "keyRule": "A question sentence ends with a question mark. A short answer starts with a capital letter, use a comma after 'No', and an apostrophe in 'isn't'.",
+                "requiredCapitals": [
+                  "Is",
+                  "No"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Positive Feeling Sentence",
+                "meaning": "Saya sangat senang hari ini.",
+                "tokens": [
+                  "I",
+                  "am",
+                  "very",
+                  "happy",
+                  "today."
+                ],
+                "fullSentence": "I am very happy today."
+              },
+              {
+                "id": "b-2",
+                "category": "Negative Sentence with 'to be'",
+                "meaning": "Mereka tidak lelah setelah sekolah.",
+                "tokens": [
+                  "They",
+                  "are",
+                  "not",
+                  "tired",
+                  "after",
+                  "school."
+                ],
+                "fullSentence": "They are not tired after school."
+              },
+              {
+                "id": "b-3",
+                "category": "Question Sentence with 'to be'",
+                "meaning": "Apakah dia (perempuan) temanmu?",
+                "tokens": [
+                  "Is",
+                  "she",
+                  "your",
+                  "friend?"
+                ],
+                "fullSentence": "Is she your friend?"
+              },
+              {
+                "id": "b-4",
+                "category": "Expressing Likes and Dislikes",
+                "meaning": "Saya suka dia (laki-laki), tapi saya tidak suka mereka.",
+                "tokens": [
+                  "I",
+                  "like",
+                  "him,",
+                  "but",
+                  "I",
+                  "don't",
+                  "like",
+                  "them."
+                ],
+                "fullSentence": "I like him, but I don't like them."
+              },
+              {
+                "id": "b-5",
+                "category": "Short Answers",
+                "meaning": "Ya, kami bersemangat. / Tidak, dia tidak bosan.",
+                "tokens": [
+                  "Yes,",
+                  "we",
+                  "are.",
+                  "No,",
+                  "he",
+                  "isn't."
+                ],
+                "fullSentence": "Yes, we are. No, he isn't."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: My Feelings Today",
+                "badge": "Feelings Writer",
+                "instruction": "Write 3–5 sentences about how you feel today in English. Use at least 2 feeling adjectives (for example: happy, sad, tired, excited, hungry, bored). Include at least 1 negative sentence using 'am not / is not / are not'. Make sure every sentence starts with a capital letter and ends with the correct punctuation.",
+                "example": "I am happy today. I am not tired. My friend is excited because it is Friday. We are not bored. I like Fridays!",
+                "placeholder": "Start writing here...",
+                "minWords": 12,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Questions About Friends",
+                "badge": "Question Master",
+                "instruction": "Write a short conversation (3–5 sentences) between two friends. Use at least 2 questions with 'to be' (Am/Is/Are + subject + adjective?) and give short answers (Yes/No). Also add 1 sentence about something you like or don't like using 'I like' or 'I don't like'. Pay attention to question marks and full stops.",
+                "example": "A: Are you happy today?\nB: Yes, I am. Are you tired?\nA: No, I am not. I am excited!\nB: I like happy days. I don't like sad days.",
+                "placeholder": "Start writing here...",
+                "minWords": 15,
+                "xpReward": 40
+              },
+              {
+                "id": "ch-3",
+                "title": "Challenge 3: People I Like",
+                "badge": "Likes & Dislikes Pro",
+                "instruction": "Write 4–6 sentences about people or things you like and don't like. Use 'I like' and 'I don't like' at least 2 times each. Use object pronouns (him, her, them, it, us) at least 2 times. Also include 1 feeling sentence using 'to be + adjective'.",
+                "example": "I like my teacher. I like her because she is kind. I like my friends. I like them a lot. I don't like rainy days. I don't like them because I am sad when it rains. I am happy when the sun is out.",
+                "placeholder": "Start writing here...",
+                "minWords": 20,
+                "xpReward": 50
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m02-w-quiz",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-writing",
+          "sectionType": "quiz",
+          "title": "Writing Practicum & Assessment",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": "w-p-1",
+                "prompt": "Answer this question in English with complete sentences (at least 2 sentences): 'How do you feel today? Are you happy or sad?' Use 'I am' or 'I am not' and include a feeling adjective.",
+                "criteria": "You must use the verb 'to be' (am) with an appropriate feeling adjective. Write at least 2 complete sentences with correct capitalization and punctuation.",
+                "sampleGoodAnswer": "I am very happy today. I am not tired because I slept well last night."
+              },
+              {
+                "id": "w-p-2",
+                "prompt": "Write 2 questions using 'to be' (Is/Are) about your friend's feelings, then give a short answer for each question. Use this format: Question → Answer.",
+                "criteria": "You must use the question structure 'Be + subject + adjective?' correctly. Short answers must follow the format 'Yes, subject + be' or 'No, subject + be + not'. Question marks and full stops must be correct.",
+                "sampleGoodAnswer": "Is Maria happy? Yes, she is. Are your friends tired? No, they aren't."
+              },
+              {
+                "id": "w-p-3",
+                "prompt": "Write a short paragraph (4–6 sentences) about things you like and don't like. Use 'I like' and 'I don't like' along with object pronouns (him, her, it, them). Also include 1 sentence about how you feel.",
+                "criteria": "You must use 'I like' and 'I don't like' at least 1 time each. You must use at least 2 object pronouns. You must include 1 feeling sentence with 'to be + adjective'. Capitalization, apostrophes, and punctuation must be correct.",
+                "sampleGoodAnswer": "I like my brother. I like him because he is funny. I like pizza. I like it very much. I don't like spiders. I don't like them because they are scary. I am happy when I am with my family."
+              },
+              {
+                "id": "w-p-4",
+                "prompt": "Imagine you meet a new friend. Write a short conversation (4–6 sentences) where you ask each other about feelings and likes. Use questions with 'to be' and sentences with 'I like / I don't like'.",
+                "criteria": "You must include at least 2 questions with 'to be'. You must include at least 1 'I like' sentence and 1 'I don't like' sentence. The dialogue must use the A:/B: format with correct punctuation.",
+                "sampleGoodAnswer": "A: Hi! Are you happy today?\nB: Yes, I am! I am very excited. Are you tired?\nA: No, I am not. I am great! I like this school.\nB: I like it too. I don't like homework, but I like my new friends."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m02-speaking",
+      "moduleId": "A1.1-M02",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Talking About Feelings and Asking Questions",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-1-m02-s-theory",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Speaking and pronunciation guide for Unit 2: In this unit, you will learn how to pronounce feeling adjectives (happy, sad, tired, excited, angry, scared, bored, hungry) correctly, form negative sentences using 'I'm not...', ask simple questions with 'Are you...?' and 'Do you like...?', and answer them with the right intonation. Pay attention to syllable stress on adjectives and the rising intonation pattern on Yes/No questions.",
+            "audioGuidance": "Intonation and articulation tips: (1) For Yes/No questions like 'Are you happy?', use RISING intonation at the end of the sentence. (2) For statements like 'I am happy.', use FALLING intonation at the end. (3) Notice the contraction 'I'm' which is pronounced /aɪm/ — your lips come together at the end of the 'm' sound. (4) The word 'excited' has 3 syllables with stress in the middle: ex-CI-ted. (5) Practise the /æ/ sound in 'happy' and 'sad' — open your mouth wide to the sides like a smile.",
+            "pillars": [
+              {
+                "name": "Stress on Feeling Adjectives",
+                "target": "Correct syllable stress on adjectives",
+                "explanation": "Each feeling adjective has a specific stress pattern. For example, 'HAP-py' is stressed on the first syllable, while 'ex-CI-ted' is stressed on the second syllable. Pronouncing the stress correctly will make your speech much easier for native speakers to understand."
+              },
+              {
+                "name": "Question vs Statement Intonation",
+                "target": "Rising and falling intonation patterns",
+                "explanation": "Yes/No questions like 'Are you happy?' use rising intonation (your voice goes up at the end). Statements like 'I am happy.' use falling intonation (your voice goes down at the end). This pattern is very important so the person you are talking to knows whether you are asking a question or making a statement."
+              },
+              {
+                "name": "Contractions and Negative Forms",
+                "target": "Pronunciation of 'I'm', 'I'm not', 'isn't'",
+                "explanation": "In everyday conversation, English speakers almost always use contractions. 'I am' becomes 'I'm' /aɪm/, and 'I am not' becomes 'I'm not' /aɪm nɒt/. Practise pronouncing these contractions so your speech sounds natural and fluent."
+              },
+              {
+                "name": "Short Vowel Sound /æ/",
+                "target": "Articulation of the /æ/ sound in words like happy, sad, angry",
+                "explanation": "The /æ/ sound does not exist in Indonesian. To pronounce it, open your mouth wider than a normal 'e' sound and pull your lips slightly to the sides. Practise with these words: 'happy' /ˈhæp.i/, 'sad' /sæd/, 'angry' /ˈæŋ.ɡri/."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m02-s-practice",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "HAPPY",
+                "countryAudio": "happy",
+                "countrySyllables": [
+                  {
+                    "text": "HAP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "py",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "un-HAP-py",
+                "natAudio": "unhappy",
+                "natSyllables": [
+                  {
+                    "text": "un",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "HAP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "py",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that in both 'happy' and 'unhappy', the stress always falls on the syllable 'HAP'. The prefix 'un-' does not change the stress position. Say 'HAP' louder and a little longer."
+              },
+              {
+                "id": "pair-2",
+                "country": "TIRED",
+                "countryAudio": "tired",
+                "countrySyllables": [
+                  {
+                    "text": "TIRED",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "ex-HAU-sted",
+                "natAudio": "exhausted",
+                "natSyllables": [
+                  {
+                    "text": "ex",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "HAU",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "sted",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "'Tired' has only one syllable, so it automatically gets the stress. Its synonym 'exhausted' has 3 syllables with stress in the middle: ex-HAU-sted. Notice how the rhythm shifts between these two words."
+              },
+              {
+                "id": "pair-3",
+                "country": "ANGRY",
+                "countryAudio": "angry",
+                "countrySyllables": [
+                  {
+                    "text": "ANG",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ry",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ex-CI-ted",
+                "natAudio": "excited",
+                "natSyllables": [
+                  {
+                    "text": "ex",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CI",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ted",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "'Angry' is stressed on the first syllable: ANG-ry. Meanwhile, 'excited' is stressed on the second syllable: ex-CI-ted. Compare these first-syllable vs middle-syllable stress patterns as you practise."
+              },
+              {
+                "id": "pair-4",
+                "country": "BORED",
+                "countryAudio": "bored",
+                "countrySyllables": [
+                  {
+                    "text": "BORED",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "BOR-ing",
+                "natAudio": "boring",
+                "natSyllables": [
+                  {
+                    "text": "BOR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ing",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "'Bored' (one syllable) describes how a person feels, while 'boring' (two syllables, stress at the beginning) describes something that is not interesting. Both words are stressed on the 'BOR' sound."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "I am happy today.",
+                "phonetic": "/aɪ æm ˈhæp.i təˈdeɪ/",
+                "focus": "The /æ/ vowel sound in 'happy' and first-syllable stress",
+                "hint": "Open your mouth wide to the sides when saying 'hæ' in 'happy'. Make sure the stress falls on 'HAP', not on 'py'."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "I'm not sad. I'm excited!",
+                "phonetic": "/aɪm nɒt sæd | aɪm ɪkˈsaɪ.tɪd/",
+                "focus": "The contraction 'I'm not' and stress on 'excited'",
+                "hint": "Say 'I'm not' quickly as one unit. For 'excited', stress the second syllable: ex-SAI-ted."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Are you hungry?",
+                "phonetic": "/ɑːr juː ˈhʌŋ.ɡri/",
+                "focus": "Rising intonation on Yes/No questions",
+                "hint": "Raise your voice at the end of the sentence on the word 'hungry?' because this is a Yes/No question. Imagine your voice is going up a staircase at the end."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "She is angry, but he is not angry.",
+                "phonetic": "/ʃiː ɪz ˈæŋ.ɡri | bʌt hiː ɪz nɒt ˈæŋ.ɡri/",
+                "focus": "Contrast between positive and negative sentences with 'is' and 'is not'",
+                "hint": "Stress the word 'angry' in both parts of the sentence. In the negative part, give a little extra emphasis to 'not' to show the contrast."
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "Do you like English class?",
+                "phonetic": "/duː juː laɪk ˈɪŋ.ɡlɪʃ klɑːs/",
+                "focus": "Question structure 'Do you like...?' with rising intonation",
+                "hint": "Start with a flat tone on 'Do you like' then raise your voice on 'English class?' to show it is a question."
+              },
+              {
+                "id": "spk-d-6",
+                "targetText": "Yes, I like it. It is fun!",
+                "phonetic": "/jes | aɪ laɪk ɪt | ɪt ɪz fʌn/",
+                "focus": "Falling intonation on statement answers and the /ʌ/ sound in 'fun'",
+                "hint": "Use falling intonation at the end of both sentences because these are statements. The /ʌ/ sound in 'fun' is similar to a short 'a' sound in Indonesian."
+              }
+            ],
+            "roleplay": {
+              "context": "You are chatting with Mr. Khoirul about your feelings and daily activities. Mr. Khoirul will ask you about how you are doing and what you are up to, and you will answer honestly using feeling adjectives and the sentence structures you have learned.",
+              "roles": [
+                "Mr. Khoirul",
+                "Student"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Hi there! How are you today? Are you happy?",
+                  "translation": "Hai! Apa kabarmu hari ini? Apakah kamu senang?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, I'm happy. Thank you!",
+                  "translation": "Ya, saya senang. Terima kasih!"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "That's great! Are you tired or excited right now?",
+                  "translation": "Bagus! Apakah kamu lelah atau bersemangat sekarang?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "I'm not tired. I'm excited!",
+                  "translation": "Saya tidak lelah. Saya bersemangat!"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Oh, I see. Are you at school now or at home?",
+                  "translation": "Oh, begitu. Apakah kamu di sekolah sekarang atau di rumah?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "I'm at home right now.",
+                  "translation": "Saya di rumah sekarang."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "That's good. Do you like your English class?",
+                  "translation": "Bagus. Apakah kamu suka pelajaran bahasa Inggrismu?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, I like my English class. It is fun!",
+                  "translation": "Ya, saya suka pelajaran bahasa Inggris saya. Itu menyenangkan!"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Wonderful! Are you excited about learning new things today?",
+                  "translation": "Luar biasa! Apakah kamu bersemangat belajar hal-hal baru hari ini?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, I am very excited. I like learning English!",
+                  "translation": "Ya, saya sangat bersemangat. Saya suka belajar bahasa Inggris!"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-1-m02-s-quiz",
+          "moduleId": "A1.1-M02",
+          "subModuleId": "sub-a1-1-m02-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Storytelling & Personal Narration",
+                "instruction": "Tell me about your feelings today in 3–4 English sentences. Follow the story points below as a guide. Use the feeling adjectives you have learned and the sentence structures 'I am...' or 'I'm not...'.",
+                "audioPrompt": "Tell me about your feelings today. How do you feel right now? Are you happy, sad, or tired? Why do you feel that way?",
+                "storyPoints": [
+                  "Say how you feel right now (for example: happy, tired, excited)",
+                  "Say a feeling you do NOT have (use 'I'm not...')",
+                  "Give a short reason why you feel that way"
+                ],
+                "targetSentence": "I am happy today. I'm not sad. I'm not tired. I am happy because I like my English class.",
+                "phonetic": "/aɪ æm ˈhæp.i təˈdeɪ | aɪm nɒt sæd | aɪm nɒt ˈtaɪəd | aɪ æm ˈhæp.i bɪˈkɒz aɪ laɪk maɪ ˈɪŋ.ɡlɪʃ klɑːs/",
+                "expectedKeywords": [
+                  "happy",
+                  "not",
+                  "sad",
+                  "tired",
+                  "like",
+                  "because",
+                  "today"
+                ],
+                "hint": "Start with 'I am...' or 'I'm...' to say how you feel. Use 'I'm not...' to say a feeling you do NOT have. End with a simple reason using 'because'.",
+                "explanation": "This exercise practises simple storytelling about your own feelings. You will practise using positive sentences ('I am happy'), negative sentences ('I'm not sad'), and giving a simple reason. This is an essential everyday communication skill."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Storytelling & Personal Narration",
+                "instruction": "Tell me about your family's feelings in 3–4 English sentences. Describe how your family members feel using 'He is...', 'She is...', or 'They are...'. Follow the story points below.",
+                "audioPrompt": "Tell me about your family's feelings. How does your mother feel? How does your father feel? Is anyone in your family sad or angry today?",
+                "storyPoints": [
+                  "Tell me how your mother or father feels (use 'She is...' or 'He is...')",
+                  "Say whether any family member feels sad or angry (use a negative sentence if needed)",
+                  "Tell me how you feel compared to your family"
+                ],
+                "targetSentence": "My mother is happy today. She is not tired. My father is excited. He is not angry. I am happy too!",
+                "phonetic": "/maɪ ˈmʌð.ər ɪz ˈhæp.i təˈdeɪ | ʃiː ɪz nɒt ˈtaɪəd | maɪ ˈfɑː.ðər ɪz ɪkˈsaɪ.tɪd | hiː ɪz nɒt ˈæŋ.ɡri | aɪ æm ˈhæp.i tuː/",
+                "expectedKeywords": [
+                  "mother",
+                  "father",
+                  "she",
+                  "he",
+                  "happy",
+                  "not",
+                  "tired",
+                  "excited",
+                  "angry"
+                ],
+                "hint": "Use 'She is...' for your mother and 'He is...' for your father. Don't forget to use 'is not' or 'isn't' for third-person negative sentences. End with your own feelings using 'I am...'.",
+                "explanation": "This storytelling exercise practises using third-person pronouns (he/she) with feeling adjectives. You also practise comparing the feelings of different people, which is an important communication skill in everyday conversation."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "You meet Mr. Khoirul in the morning. He greets you and asks about your feelings. Answer his questions honestly using the right feeling adjectives. Use complete sentences.",
+                "audioPrompt": "Good morning! How are you feeling today? Are you happy or sad?",
+                "scenarioContext": "You meet your teacher, Mr. Khoirul, in the school corridor in the morning. He greets you warmly and wants to know how you are feeling today.",
+                "characterRole": "You are a student who has just arrived at school. You feel happy because today there is a class you enjoy.",
+                "targetSentence": "Good morning, Mr. Khoirul! I'm feeling happy today. I'm not sad.",
+                "phonetic": "/ɡʊd ˈmɔːr.nɪŋ ˈmɪs.tər kɔɪ.rʊl | aɪm ˈfiːl.ɪŋ ˈhæp.i təˈdeɪ | aɪm nɒt sæd/",
+                "expectedKeywords": [
+                  "good morning",
+                  "happy",
+                  "feeling",
+                  "not sad"
+                ],
+                "hint": "Start with the greeting 'Good morning!' then answer the question about your feelings. Use 'I'm feeling...' or 'I am...' followed by a feeling adjective.",
+                "explanation": "This roleplay practises morning greetings and responding about feelings. You practise in a real school context, using polite greetings and answering questions about feelings with complete sentences."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Mr. Khoirul asks whether you like certain things. Answer honestly using 'Yes, I like...' or 'No, I don't like...'. Give complete answers.",
+                "audioPrompt": "Do you like English? Do you like music? What do you like at school?",
+                "scenarioContext": "You are having a break in the classroom and Mr. Khoirul is having a friendly chat with you about things you like and don't like at school.",
+                "characterRole": "You are a student who likes English and music, but does not really like maths.",
+                "targetSentence": "Yes, I like English. I like music too. I don't like math very much.",
+                "phonetic": "/jes | aɪ laɪk ˈɪŋ.ɡlɪʃ | aɪ laɪk ˈmjuː.zɪk tuː | aɪ dəʊnt laɪk mæθ ˈver.i mʌtʃ/",
+                "expectedKeywords": [
+                  "like",
+                  "English",
+                  "music",
+                  "don't like"
+                ],
+                "hint": "Use 'I like...' for things you enjoy and 'I don't like...' for things you do not enjoy. You can add 'very much' to give more detail.",
+                "explanation": "This roleplay practises expressing likes and dislikes using 'like' and 'don't like'. The casual classroom conversation context makes the exercise feel natural and relevant to your daily life."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Mr. Khoirul notices you look tired. He asks about how you are doing. Explain your feelings and answer his questions using both negative and positive sentences.",
+                "audioPrompt": "You look tired today. Are you okay? Are you sick or just tired? Are you hungry?",
+                "scenarioContext": "You look a little low on energy during the afternoon class. Mr. Khoirul notices and asks you with concern about how you are doing.",
+                "characterRole": "You are a student who feels tired because you did not sleep well last night, but you are not sick. You also feel a little hungry.",
+                "targetSentence": "I'm a little tired today, but I'm okay. I'm not sick. Yes, I'm hungry.",
+                "phonetic": "/aɪm ə ˈlɪt.əl ˈtaɪəd təˈdeɪ | bʌt aɪm ˌəʊˈkeɪ | aɪm nɒt sɪk | jes | aɪm ˈhʌŋ.ɡri/",
+                "expectedKeywords": [
+                  "tired",
+                  "okay",
+                  "not sick",
+                  "hungry",
+                  "little"
+                ],
+                "hint": "Use 'a little' before an adjective to mean 'slightly'. Use 'I'm not...' to deny something. Answer each of Mr. Khoirul's questions with a complete sentence.",
+                "explanation": "This roleplay practises describing your physical condition and feelings in more detail. Using 'a little' as a modifier and the negative sentence 'I'm not sick' helps you develop richer and more natural communication."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Mr. Khoirul wants to know about your friend. He asks about your friend's feelings. Answer using 'He is...' or 'She is...' and the right feeling adjectives. Also ask Mr. Khoirul one question back.",
+                "audioPrompt": "Tell me about your friend. Is your friend happy today? Is he or she excited about the class? And do you have a question for me?",
+                "scenarioContext": "Mr. Khoirul is chatting with you about your classmates. He wants to know how your friends are feeling and encourages you to ask a question back.",
+                "characterRole": "You are a student who has a good friend named Rina. Rina feels happy today because she likes English class. You also want to ask Mr. Khoirul about his feelings.",
+                "targetSentence": "My friend Rina is happy today. She is excited about the class. She likes English. Are you happy today, Mr. Khoirul?",
+                "phonetic": "/maɪ frend ˈriː.nə ɪz ˈhæp.i təˈdeɪ | ʃiː ɪz ɪkˈsaɪ.tɪd əˈbaʊt ðə klɑːs | ʃiː laɪks ˈɪŋ.ɡlɪʃ | ɑːr juː ˈhæp.i təˈdeɪ ˈmɪs.tər kɔɪ.rʊl/",
+                "expectedKeywords": [
+                  "friend",
+                  "she",
+                  "happy",
+                  "excited",
+                  "likes",
+                  "are you"
+                ],
+                "hint": "Use 'She is...' to describe a female friend or 'He is...' for a male friend. Don't forget to add 's' to 'like' to make 'likes' for the third person. To ask a question back, use 'Are you...?'.",
+                "explanation": "This roleplay practises using third-person pronouns with feeling adjectives, adding '-s' to verbs for the third-person singular, and asking questions back. This helps you develop two-way conversation skills."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Feeling Vocabulary Drill",
+                "instruction": "Listen to the situation described below, then say the most suitable feeling adjective in a complete sentence. Make sure your pronunciation is clear and correct.",
+                "audioPrompt": "Your friend gives you a birthday present. You open it and it is a beautiful book. How do you feel? Say: I am... and I am...",
+                "targetSentence": "I am happy and I am excited.",
+                "phonetic": "/aɪ æm ˈhæp.i ænd aɪ æm ɪkˈsaɪ.tɪd/",
+                "expectedKeywords": [
+                  "happy",
+                  "excited"
+                ],
+                "hint": "Think about the feelings you would have when you receive a gift. Two suitable adjectives are 'happy' and 'excited'. Say both of them in a complete sentence with 'I am...'.",
+                "explanation": "This exercise tests your understanding of feeling vocabulary in a real-life situation. You need to choose the right adjectives and pronounce them correctly in a complete sentence, connecting the situation with the matching emotions."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Sentence Structure Drill",
+                "instruction": "Change the following positive sentences into negative sentences, then say both sentences out loud. Pay attention to the correct use of 'not' with the verb 'to be'.",
+                "audioPrompt": "Listen and change to negative. The sentence is: She is angry. Now say the negative form. Then say: He is scared. Change it to negative too.",
+                "targetSentence": "She is not angry. He is not scared.",
+                "phonetic": "/ʃiː ɪz nɒt ˈæŋ.ɡri | hiː ɪz nɒt skeəd/",
+                "expectedKeywords": [
+                  "not angry",
+                  "not scared",
+                  "she is not",
+                  "he is not"
+                ],
+                "hint": "To make a negative sentence with 'to be', add 'not' after 'is'. 'She is angry' becomes 'She is not angry'. The same pattern works for 'He is scared', which becomes 'He is not scared'.",
+                "explanation": "This exercise tests your understanding of forming negative sentences with 'to be'. You need to show that you understand where 'not' goes in the sentence (after 'is/am/are') and pronounce it with the correct structure."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Syllable Stress Drill",
+                "instruction": "Say the following word pairs while paying attention to how the syllable stress shifts. Stress the syllable written in capital letters. Notice how the stress moves when the word changes form.",
+                "audioPrompt": "Say these word pairs clearly. First: HAP-py. Now say: un-HAP-py. Next: ex-CI-ted. Now say: ex-CI-ting. Listen to where the stress falls in each word.",
+                "targetSentence": "HAP-py, un-HAP-py, ex-CI-ted, ex-CI-ting.",
+                "phonetic": "/ˈhæp.i | ʌnˈhæp.i | ɪkˈsaɪ.tɪd | ɪkˈsaɪ.tɪŋ/",
+                "expectedKeywords": [
+                  "happy",
+                  "unhappy",
+                  "excited",
+                  "exciting"
+                ],
+                "hint": "In 'happy' and 'unhappy', the stress always falls on the syllable 'HAP'. The prefix 'un-' does not change the stress position. In 'excited' and 'exciting', the stress always falls on the syllable 'CI' (pronounced 'SAI'). Say the stressed syllable louder and a little longer.",
+                "explanation": "This exercise practises syllable stress awareness and how the stress stays consistent even when the word changes form (happy → unhappy, excited → exciting). This skill is important so your pronunciation sounds natural and is easy to understand."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Rising & Falling Intonation Drill",
+                "instruction": "Say the following sentence pairs with the correct intonation. Yes/No questions use RISING intonation (↑) at the end. Statements use FALLING intonation (↓) at the end. Notice the difference.",
+                "audioPrompt": "Say these sentences with correct intonation. Question with rising intonation: Are you happy? Now statement with falling intonation: I am happy. Question: Is she tired? Statement: She is not tired.",
+                "targetSentence": "Are you happy? ↑ I am happy. ↓ Is she tired? ↑ She is not tired. ↓",
+                "phonetic": "/ɑːr juː ˈhæp.i ↑ | aɪ æm ˈhæp.i ↓ | ɪz ʃiː ˈtaɪəd ↑ | ʃiː ɪz nɒt ˈtaɪəd ↓/",
+                "expectedKeywords": [
+                  "are you happy",
+                  "I am happy",
+                  "is she tired",
+                  "she is not tired"
+                ],
+                "hint": "For Yes/No questions ('Are you happy?', 'Is she tired?'), raise your voice on the last word — imagine your voice is going up a staircase. For statements ('I am happy.', 'She is not tired.'), lower your voice at the end — imagine your voice is going down a staircase. This difference in intonation is very important so the person you are talking to knows whether you are asking a question or making a statement.",
+                "explanation": "This exercise practises the basic English intonation patterns: rising intonation for Yes/No questions and falling intonation for statements. Mastering these intonation patterns is very important because wrong intonation can change the meaning of what you say — a statement can sound like a question and the other way around."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

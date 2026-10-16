@@ -98,7 +98,7 @@ export function ModuleStudyView({
         { id: 2, title: "2. Multi-Speaker Audio Player", type: "Dialogue", duration: "6 min", isCompleted: completedSteps.includes(2) },
         { id: 3, title: "3. Spoken Contraction Trainer", type: "Ear Trainer", duration: "4 min", isCompleted: completedSteps.includes(3) },
         { id: 4, title: "4. Audio Dictation & Echo", type: "Practice", duration: "5 min", isCompleted: completedSteps.includes(4) },
-        { id: 5, title: "5. Audio Comprehension Quiz", type: "Evaluation", duration: "5 min", isCompleted: completedSteps.includes(5) },
+        { id: 5, title: "5. Listening Practicum (10 Tasks)", type: "Practicum", duration: "6 min", isCompleted: completedSteps.includes(5) },
       ];
     }
 

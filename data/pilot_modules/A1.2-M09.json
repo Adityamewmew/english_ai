@@ -1,0 +1,1678 @@
+{
+  "module": {
+    "id": "A1.2-M09",
+    "levelId": "A1.2",
+    "title": "Hobbies & Preferences: Like, Love & Hate + -ing",
+    "cefr": "A1",
+    "group": "A1.2 - Daily Logistics & Practical Actions",
+    "objective": "Express personal hobbies and preferences using verbs of preference followed by gerunds (like, love, enjoy, hate + -ing).",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 9
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-2-m09-reading",
+      "moduleId": "A1.2-M09",
+      "skillType": "reading",
+      "title": "Reading Mission: What Do You Love Doing?",
+      "theme": "Hobbies and Preferences",
+      "grammarFocus": "Like, Love, Enjoy, Don't Mind, Dislike, Hate + Verb-ing (Gerund)",
+      "vocabularyFocus": "Hobby activities in gerund form and preference verbs",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-2-m09-r-theory",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to your Reading Mission! In this lesson, you will read a fun passage about people talking about their hobbies and preferences. You will learn how to understand sentences that use verbs like 'like', 'love', 'enjoy', 'don't mind', 'dislike', and 'hate' followed by the -ing form of another verb (called a gerund). For example: 'I love swimming' or 'She hates waking up early.' By the end of this mission, you will be able to read short texts about hobbies and understand what people enjoy doing and what they don't enjoy doing. Let's get started!",
+            "linguisticTarget": {
+              "grammar": "Subject + like / love / enjoy / don't mind / dislike / hate + verb-ing. Pay attention to subject-verb agreement: He likes (with -s), They like (no -s).",
+              "vocabulary": "Common hobby and activity words in their -ing form: swimming, cooking, reading, dancing, watching, shopping, jogging, singing, drawing, listening.",
+              "readingStrategy": "Skim the passage first to understand the main topic (What is the text about?). Then scan for specific details: Which person likes which activity? Look for preference verbs (love, like, hate, etc.) as signal words to find key information quickly."
+            },
+            "learningObjectives": [
+              "Understand the main idea of a short A1 passage about people's hobbies and preferences.",
+              "Identify key details including who likes, loves, or hates specific activities.",
+              "Recognize the grammar pattern: preference verb + verb-ing (gerund) in written sentences.",
+              "Distinguish between different levels of preference from 'love' (strongest positive) to 'hate' (strongest negative).",
+              "Build confidence reading natural A1-level English texts about everyday topics."
+            ],
+            "contextWarmup": {
+              "prompt": "Read this sentence: 'Maria loves painting pictures on Sunday mornings.' What does Maria feel about painting?",
+              "options": [
+                "She really enjoys painting.",
+                "She does not like painting.",
+                "She doesn't care about painting."
+              ],
+              "correctIndex": 0,
+              "explanation": "The verb 'loves' tells us Maria has a very strong positive feeling about painting. 'Love' is the strongest way to say you enjoy something. Notice that 'painting' uses the -ing form after 'loves' — this is the pattern we will practice in this reading mission!"
+            },
+            "rules": [
+              "After the verbs like, love, enjoy, don't mind, dislike, and hate, always use the -ing form of the next verb. Example: 'I enjoy reading books.' NOT 'I enjoy read books.'",
+              "Remember subject-verb agreement: Use 'likes', 'loves', 'enjoys', 'hates', 'dislikes' (with -s) for He, She, and It. Use 'like', 'love', 'enjoy', 'hate', 'dislike' (no -s) for I, You, We, and They.",
+              "The preference scale from most positive to most negative is: love → enjoy → like → don't mind → dislike → hate. When you read, these verbs are your clues to understand how someone feels about an activity.",
+              "When adding -ing to verbs: most verbs just add -ing (play → playing). Verbs ending in -e drop the -e (dance → dancing). Short verbs with consonant-vowel-consonant double the last letter (swim → swimming, run → running)."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Beginner Pitfall: Using 'to + verb' Instead of Verb-ing",
+              "explanation": "Many beginners write or expect to read 'to + verb' after preference verbs. For example, they might think 'I enjoy to play tennis' is correct. But in English, after like, love, enjoy, don't mind, dislike, and hate, we must use the -ing form. When you read a passage, look for the -ing form after these verbs — that is the correct and natural pattern.",
+              "wrong": "I enjoy to play tennis. / She loves to dance every day.",
+              "correct": "I enjoy playing tennis. / She loves dancing every day."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Hobbies & Preferences",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in natural spoken English:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "do not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "don't",
+                "exampleFull": "I do not like shopping.",
+                "exampleContracted": "I don't like shopping."
+              },
+              {
+                "subject": "He",
+                "verb": "does not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "doesn't",
+                "exampleFull": "He does not enjoy cooking.",
+                "exampleContracted": "He doesn't enjoy cooking."
+              },
+              {
+                "subject": "She",
+                "verb": "does not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "doesn't",
+                "exampleFull": "She does not like jogging.",
+                "exampleContracted": "She doesn't like jogging."
+              },
+              {
+                "subject": "We",
+                "verb": "do not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "don't",
+                "exampleFull": "We do not mind waiting.",
+                "exampleContracted": "We don't mind waiting."
+              },
+              {
+                "subject": "They",
+                "verb": "do not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "don't",
+                "exampleFull": "They do not like waking up early.",
+                "exampleContracted": "They don't like waking up early."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Structure with Like, Love, Enjoy, Hate + Verb-ing",
+              "description": "Assemble and swap sentence blocks to explore affirmative, negative, and question patterns with preference verbs and gerunds:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person (Singular)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "First Person Plural"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Third Person Plural"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Second Person"
+                }
+              ],
+              "complements": [
+                "like swimming in the pool on weekends.",
+                "love cooking dinner for my family.",
+                "enjoy reading books before bed.",
+                "don't mind jogging in the rain.",
+                "dislike shopping at crowded malls.",
+                "hate waking up early on Mondays."
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m09-r-vocab",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "swimming",
+                "ipa": "/ˈswɪm.ɪŋ/",
+                "meaning": "berenang",
+                "collocation": "I love swimming in the sea every summer."
+              },
+              {
+                "word": "cooking",
+                "ipa": "/ˈkʊk.ɪŋ/",
+                "meaning": "memasak",
+                "collocation": "My mother enjoys cooking traditional food."
+              },
+              {
+                "word": "reading",
+                "ipa": "/ˈriː.dɪŋ/",
+                "meaning": "membaca",
+                "collocation": "He loves reading mystery novels before bed."
+              },
+              {
+                "word": "dancing",
+                "ipa": "/ˈdɑːn.sɪŋ/",
+                "meaning": "menari",
+                "collocation": "They enjoy dancing at parties on weekends."
+              },
+              {
+                "word": "watching",
+                "ipa": "/ˈwɒtʃ.ɪŋ/",
+                "meaning": "menonton",
+                "collocation": "I like watching comedy films with my friends."
+              },
+              {
+                "word": "shopping",
+                "ipa": "/ˈʃɒp.ɪŋ/",
+                "meaning": "berbelanja",
+                "collocation": "She hates shopping for clothes at crowded malls."
+              },
+              {
+                "word": "jogging",
+                "ipa": "/ˈdʒɒɡ.ɪŋ/",
+                "meaning": "jogging (berlari santai)",
+                "collocation": "I don't mind jogging in the park every morning."
+              },
+              {
+                "word": "singing",
+                "ipa": "/ˈsɪŋ.ɪŋ/",
+                "meaning": "bernyanyi",
+                "collocation": "My sister loves singing pop songs in her room."
+              },
+              {
+                "word": "drawing",
+                "ipa": "/ˈdrɔː.ɪŋ/",
+                "meaning": "menggambar",
+                "collocation": "He enjoys drawing cartoon characters in his notebook."
+              },
+              {
+                "word": "listening",
+                "ipa": "/ˈlɪs.ən.ɪŋ/",
+                "meaning": "mendengarkan",
+                "collocation": "We love listening to music while studying."
+              },
+              {
+                "word": "hobby",
+                "ipa": "/ˈhɒb.i/",
+                "meaning": "hobi",
+                "collocation": "My favourite hobby is playing the guitar."
+              },
+              {
+                "word": "prefer",
+                "ipa": "/prɪˈfɜːr/",
+                "meaning": "lebih suka",
+                "collocation": "I prefer reading to watching television."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m09-r-guided",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-reading",
+          "sectionType": "dialogue",
+          "title": "Reading Passage: Our Weekend Hobbies",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Our Weekend Hobbies",
+            "context": "Four friends — Rina, Tom, Ayu, and Ben — are writing short messages in their school magazine about what they enjoy doing on weekends. Read their messages to find out about their hobbies and preferences.",
+            "text": "Hi! My name is Rina. I love cooking on Saturdays. I enjoy making cakes and cookies for my family. I also like listening to music while I cook. It makes me happy!\n\nHey, I'm Tom. I really like playing football with my friends at the park. I also enjoy swimming at the sports centre on Sundays. But I hate shopping — it is so boring!\n\nHello! I'm Ayu. I love reading books, especially stories about animals. I also enjoy drawing pictures in my notebook. I don't mind jogging in the morning, but I dislike waking up early!\n\nHi there! My name is Ben. I love singing and dancing at home. I enjoy watching funny videos online too. But I hate cooking — I always burn the food!",
+            "wordCount": 137,
+            "highlights": [
+              {
+                "text": "love cooking",
+                "note": "'Love' shows the strongest positive feeling, followed by the gerund 'cooking'.",
+                "type": "grammar"
+              },
+              {
+                "text": "enjoy making",
+                "note": "'Enjoy' is always followed by a verb in the -ing form.",
+                "type": "grammar"
+              },
+              {
+                "text": "like listening",
+                "note": "'Like' + verb-ing shows a positive preference.",
+                "type": "grammar"
+              },
+              {
+                "text": "hate shopping",
+                "note": "'Hate' shows the strongest negative feeling, followed by the gerund 'shopping'.",
+                "type": "grammar"
+              },
+              {
+                "text": "don't mind jogging",
+                "note": "'Don't mind' means 'it is okay for me' — a neutral feeling, followed by verb-ing.",
+                "type": "grammar"
+              },
+              {
+                "text": "dislike waking up",
+                "note": "'Dislike' + verb-ing means you do not enjoy something, but it is softer than 'hate'.",
+                "type": "grammar"
+              },
+              {
+                "text": "swimming",
+                "note": "Notice the double 'm' — swim → swimming (consonant-vowel-consonant rule).",
+                "type": "vocab"
+              },
+              {
+                "text": "drawing",
+                "note": "Draw → drawing. Just add -ing to most verbs.",
+                "type": "vocab"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m09-r-practice",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-reading",
+          "sectionType": "practice",
+          "title": "Guided Comprehension Check",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "prompt": "What is the passage mainly about?",
+              "options": [
+                "Four friends talking about their weekend hobbies and what they like or dislike doing.",
+                "Four friends planning a trip to the shopping mall together.",
+                "Four friends studying for a school exam on Saturday."
+              ],
+              "correctIndex": 0,
+              "explanation": "The passage is about four friends — Rina, Tom, Ayu, and Ben — sharing their weekend hobbies. Each person talks about activities they love, like, enjoy, don't mind, dislike, or hate. The main topic is hobbies and preferences."
+            },
+            "detailQuestions": [
+              {
+                "id": 1,
+                "prompt": "What does Rina enjoy doing on Saturdays?",
+                "options": [
+                  "She enjoys cooking and making cakes and cookies.",
+                  "She enjoys playing football at the park.",
+                  "She enjoys drawing pictures in her notebook."
+                ],
+                "correctIndex": 0,
+                "explanation": "Rina says: 'I love cooking on Saturdays. I enjoy making cakes and cookies for my family.' This clearly tells us she enjoys cooking and baking."
+              },
+              {
+                "id": 2,
+                "prompt": "Which activity does Tom hate?",
+                "options": [
+                  "Swimming",
+                  "Shopping",
+                  "Playing football"
+                ],
+                "correctIndex": 1,
+                "explanation": "Tom says: 'I hate shopping — it is so boring!' The word 'hate' is a strong negative preference verb. Tom hates shopping."
+              },
+              {
+                "id": 3,
+                "prompt": "How does Ayu feel about jogging in the morning?",
+                "options": [
+                  "She loves it very much.",
+                  "She doesn't mind it, but she dislikes waking up early.",
+                  "She hates it because it is boring."
+                ],
+                "correctIndex": 1,
+                "explanation": "Ayu says: 'I don't mind jogging in the morning, but I dislike waking up early!' The phrase 'don't mind' means it is okay for her — she has a neutral feeling about jogging. However, she dislikes the early wake-up."
+              },
+              {
+                "id": 4,
+                "prompt": "Why does Ben hate cooking?",
+                "options": [
+                  "Because he always burns the food.",
+                  "Because he prefers shopping.",
+                  "Because he doesn't have a kitchen."
+                ],
+                "correctIndex": 0,
+                "explanation": "Ben says: 'I hate cooking — I always burn the food!' He gives a clear reason: he always burns the food, so cooking is not enjoyable for him."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m09-r-quiz",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-reading",
+          "sectionType": "quiz",
+          "title": "Reading Mastery Quiz",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "According to the passage, who loves reading books about animals?",
+                "options": [
+                  "Rina",
+                  "Ayu",
+                  "Ben"
+                ],
+                "answer": "Ayu",
+                "explanation": "Ayu says: 'I love reading books, especially stories about animals.' The word 'especially' tells us her favourite type of book is about animals."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which sentence uses the correct grammar pattern from the passage?",
+                "options": [
+                  "Tom enjoys swimming at the sports centre.",
+                  "Tom enjoys to swim at the sports centre.",
+                  "Tom enjoys swim at the sports centre."
+                ],
+                "answer": "Tom enjoys swimming at the sports centre.",
+                "explanation": "After the verb 'enjoys', we must use the -ing form (gerund). 'Swimming' is correct. 'To swim' and 'swim' are incorrect patterns after 'enjoy'."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What does Rina like doing while she cooks?",
+                "options": [
+                  "Listening to music",
+                  "Watching funny videos",
+                  "Drawing pictures"
+                ],
+                "answer": "Listening to music",
+                "explanation": "Rina says: 'I also like listening to music while I cook.' The phrase 'while I cook' tells us she listens to music at the same time as cooking."
+              },
+              {
+                "id": "q-r-4",
+                "question": "In the passage, the phrase 'don't mind' means ___.",
+                "options": [
+                  "It is okay — I have a neutral feeling about it.",
+                  "I love it very much.",
+                  "I hate it strongly."
+                ],
+                "answer": "It is okay — I have a neutral feeling about it.",
+                "explanation": "'Don't mind' sits in the middle of the preference scale. It means the activity is acceptable — not great, not bad. Ayu uses it about jogging: she is okay with it, but she doesn't love it."
+              },
+              {
+                "id": "q-r-5",
+                "question": "Which list correctly orders the preference verbs from MOST positive to MOST negative?",
+                "options": [
+                  "love → enjoy → like → don't mind → dislike → hate",
+                  "hate → dislike → don't mind → like → enjoy → love",
+                  "like → love → enjoy → don't mind → hate → dislike"
+                ],
+                "answer": "love → enjoy → like → don't mind → dislike → hate",
+                "explanation": "The correct order from most positive to most negative is: love (strongest positive) → enjoy → like → don't mind (neutral) → dislike → hate (strongest negative). This scale helps you understand how strongly someone feels about an activity."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Ben loves singing and dancing. What else does he enjoy?",
+                "options": [
+                  "Watching funny videos online",
+                  "Swimming at the sports centre",
+                  "Making cakes and cookies"
+                ],
+                "answer": "Watching funny videos online",
+                "explanation": "Ben says: 'I enjoy watching funny videos online too.' The word 'too' means 'also' — it is an additional hobby. Swimming is Tom's hobby, and making cakes is Rina's hobby."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Read this sentence: 'She _____ dancing at parties.' Which verb correctly completes the sentence using the grammar from this unit?",
+                "options": [
+                  "enjoys",
+                  "enjoys to",
+                  "enjoying"
+                ],
+                "answer": "enjoys",
+                "explanation": "The correct pattern is: Subject + preference verb + verb-ing. 'She enjoys dancing at parties.' is correct. We do not need 'to' after 'enjoys', and 'enjoying' would need a helping verb like 'is' before it."
+              },
+              {
+                "id": "q-r-8",
+                "question": "Both Tom and Ben share a strong negative feeling about one type of activity. Tom hates shopping and Ben hates cooking. What grammar pattern do both sentences follow?",
+                "options": [
+                  "Subject + hate + verb-ing",
+                  "Subject + hate + to + verb",
+                  "Subject + hating + verb"
+                ],
+                "answer": "Subject + hate + verb-ing",
+                "explanation": "Both 'Tom hates shopping' and 'Ben hates cooking' follow the pattern: Subject + hate + verb-ing. After 'hate', we always use the -ing form of the verb (gerund). This is the key grammar rule of this unit."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m09-listening",
+      "moduleId": "A1.2-M09",
+      "skillType": "listening",
+      "title": "Listening Mission: Hearing Hobbies and Preferences",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-2-m09-l-theory",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening mission, you will hear two friends talking about their hobbies and free-time activities. They use verbs like 'like', 'love', 'enjoy', 'hate', 'dislike', and 'don't mind' followed by a verb with -ing (a gerund). Your strategy is to listen carefully for these preference verbs because they tell you HOW MUCH the speaker likes or dislikes an activity. Pay attention to the verb before the -ing word. For example, 'love playing' means a very strong positive feeling, while 'hate washing' means a very strong negative feeling. Also listen for the tone of voice — excited voices often go with 'love' and unhappy voices often go with 'hate'.",
+            "learningObjectives": [
+              "Identify preference verbs (like, love, enjoy, hate, dislike, don't mind) when spoken in natural conversation.",
+              "Understand which activity (gerund / -ing form) follows each preference verb.",
+              "Distinguish between positive preferences (love, like, enjoy) and negative preferences (hate, dislike) in spoken English.",
+              "Recognise connected speech patterns such as linking and reductions in phrases like 'I love playing' and 'I don't mind cooking'."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "I love playing football.",
+                "meaning": "Aku sangat suka bermain sepak bola.",
+                "note": "Use 'love + -ing' to express a very strong positive feeling about an activity."
+              },
+              {
+                "phrase": "I like cooking on weekends.",
+                "meaning": "Aku suka memasak di akhir pekan.",
+                "note": "Use 'like + -ing' to express a general positive feeling about an activity."
+              },
+              {
+                "phrase": "I enjoy reading novels.",
+                "meaning": "Aku menikmati membaca novel.",
+                "note": "Use 'enjoy + -ing' to say you get pleasure from an activity. 'Enjoy' is always followed by -ing, never by 'to'."
+              },
+              {
+                "phrase": "I don't mind washing dishes.",
+                "meaning": "Aku tidak keberatan mencuci piring.",
+                "note": "Use 'don't mind + -ing' to say something is okay for you — not good, not bad."
+              },
+              {
+                "phrase": "I hate waking up early.",
+                "meaning": "Aku benci bangun pagi-pagi.",
+                "note": "Use 'hate + -ing' to express a very strong negative feeling about an activity."
+              },
+              {
+                "phrase": "I dislike shopping for clothes.",
+                "meaning": "Aku tidak suka belanja pakaian.",
+                "note": "Use 'dislike + -ing' to express a negative feeling. It is softer than 'hate'."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "I love playing football.",
+                "fast": "I love playin' football.",
+                "slowIpa": "/aɪ lʌv ˈpleɪ.ɪŋ ˈfʊt.bɔːl/",
+                "fastIpa": "/aɪ lʌv ˈpleɪ.ɪn ˈfʊt.bɔːl/",
+                "note": "In fast speech, the final 'g' in 'playing' is often dropped, so it sounds like 'playin'. This is very common with all -ing verbs in casual conversation."
+              },
+              {
+                "id": 2,
+                "slow": "I do not mind cooking.",
+                "fast": "I don't mind cookin'.",
+                "slowIpa": "/aɪ duː nɒt maɪnd ˈkʊk.ɪŋ/",
+                "fastIpa": "/aɪ doʊnt maɪnd ˈkʊk.ɪn/",
+                "note": "The words 'do not' contract to 'don't' in natural speech. Also, 'cooking' becomes 'cookin' with the dropped g sound."
+              },
+              {
+                "id": 3,
+                "slow": "What do you like doing?",
+                "fast": "Whaddya like doin'?",
+                "slowIpa": "/wɒt duː juː laɪk ˈduː.ɪŋ/",
+                "fastIpa": "/ˈwɒd.ə.jə laɪk ˈduː.ɪn/",
+                "note": "In fast speech, 'What do you' blends together into something that sounds like 'Whaddya'. This is very common in everyday spoken English."
+              },
+              {
+                "id": 4,
+                "slow": "I really hate waking up early.",
+                "fast": "I really hate wakin' up early.",
+                "slowIpa": "/aɪ ˈrɪə.li heɪt ˈweɪk.ɪŋ ʌp ˈɜː.li/",
+                "fastIpa": "/aɪ ˈrɪː.li heɪt ˈweɪk.ɪn ʌp ˈɜː.li/",
+                "note": "The word 'really' is often stressed to emphasise the strong feeling. The 'waking' becomes 'wakin' in casual speech."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m09-l-dialogue",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Chatting About Free Time",
+          "orderIndex": 2,
+          "content": {
+            "context": "Two friends, Emma and Ryan, meet at a cafe after class. They start talking about what they enjoy doing in their free time. Listen carefully to the verbs they use before each -ing activity to understand how much they like or dislike each hobby.",
+            "audioPrompt": "Listen carefully to the following dialogue between two friends, Emma and Ryan. Pay attention to the words they use to talk about their hobbies and preferences.",
+            "lines": [
+              {
+                "speaker": "Emma",
+                "text": "Hi Ryan! What do you like doing in your free time?",
+                "audioUrl": "/audio/modules/a1-2-m09/dialogue-1.mp3",
+                "translation": "Hai Ryan! Apa yang kamu suka lakukan di waktu luangmu?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Ryan",
+                "text": "I love playing football with my friends. What about you?",
+                "audioUrl": "/audio/modules/a1-2-m09/dialogue-2.mp3",
+                "translation": "Aku sangat suka bermain sepak bola dengan teman-temanku. Kalau kamu?",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Emma",
+                "text": "I enjoy reading novels and listening to music. I also like cooking on weekends.",
+                "audioUrl": "/audio/modules/a1-2-m09/dialogue-3.mp3",
+                "translation": "Aku menikmati membaca novel dan mendengarkan musik. Aku juga suka memasak di akhir pekan.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Ryan",
+                "text": "That's nice! I don't mind cooking, but I hate washing the dishes!",
+                "audioUrl": "/audio/modules/a1-2-m09/dialogue-4.mp3",
+                "translation": "Bagus! Aku tidak keberatan memasak, tapi aku benci mencuci piring!",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Emma",
+                "text": "Ha ha! I don't mind washing dishes. But I really hate waking up early in the morning.",
+                "audioUrl": "/audio/modules/a1-2-m09/dialogue-5.mp3",
+                "translation": "Ha ha! Aku tidak keberatan mencuci piring. Tapi aku sangat benci bangun pagi-pagi sekali.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Ryan",
+                "text": "Me too! I also dislike shopping for clothes. It's so boring!",
+                "audioUrl": "/audio/modules/a1-2-m09/dialogue-6.mp3",
+                "translation": "Aku juga! Aku juga tidak suka belanja pakaian. Sangat membosankan!",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Emma",
+                "text": "Really? I love shopping! Everyone has different hobbies, right?",
+                "audioUrl": "/audio/modules/a1-2-m09/dialogue-7.mp3",
+                "translation": "Benarkah? Aku suka belanja! Setiap orang punya hobi yang berbeda, kan?",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Ryan",
+                "text": "Yes, that's true. Do you enjoy watching movies?",
+                "audioUrl": "/audio/modules/a1-2-m09/dialogue-8.mp3",
+                "translation": "Ya, itu benar. Apakah kamu menikmati menonton film?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Emma",
+                "text": "Yes, I love watching comedies! But I dislike watching horror movies. They're too scary!",
+                "audioUrl": "/audio/modules/a1-2-m09/dialogue-9.mp3",
+                "translation": "Ya, aku suka sekali menonton film komedi! Tapi aku tidak suka menonton film horor. Terlalu menakutkan!",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Ryan",
+                "text": "I don't mind horror movies. Anyway, I enjoy talking about hobbies with you, Emma!",
+                "audioUrl": "/audio/modules/a1-2-m09/dialogue-10.mp3",
+                "translation": "Aku tidak keberatan dengan film horor. Ngomong-ngomong, aku menikmati ngobrol tentang hobi denganmu, Emma!",
+                "emotion": "friendly"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m09-l-quiz",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "I love playing football with my friends.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ryan: \"I love playing football with my _____.\"",
+                "targetWord": "friends",
+                "explanation": "Full audio: \"I love playing football with my friends.\". The missing word is \"friends\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "What about you?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ryan: \"What _____ you?\"",
+                "targetWord": "about",
+                "explanation": "Full audio: \"What about you?\". The missing word is \"about\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "I enjoy reading novels and listening to music.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Emma: \"I enjoy reading novels and listening to _____.\"",
+                "targetWord": "music",
+                "explanation": "Full audio: \"I enjoy reading novels and listening to music.\". The missing word is \"music\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I also like cooking on weekends.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Emma: \"I also like cooking on _____.\"",
+                "targetWord": "weekends",
+                "explanation": "Full audio: \"I also like cooking on weekends.\". The missing word is \"weekends\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "I don't mind cooking",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ryan: \"I don't mind _____\"",
+                "targetWord": "cooking",
+                "explanation": "Full audio: \"I don't mind cooking\". The missing word is \"cooking\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "but I hate washing the dishes!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "but I hate washing the dishes",
+                "words": [
+                  "but",
+                  "dishes",
+                  "I",
+                  "hate",
+                  "the",
+                  "washing"
+                ],
+                "explanation": "Correct sentence order: \"but I hate washing the dishes!\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "I don't mind washing dishes.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I don't mind washing dishes",
+                "words": [
+                  "don't",
+                  "mind",
+                  "washing",
+                  "I",
+                  "dishes"
+                ],
+                "explanation": "Correct sentence order: \"I don't mind washing dishes.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "I also dislike shopping for clothes.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I also dislike shopping for clothes",
+                "words": [
+                  "dislike",
+                  "also",
+                  "for",
+                  "clothes",
+                  "I",
+                  "shopping"
+                ],
+                "explanation": "Correct sentence order: \"I also dislike shopping for clothes.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "It's so boring!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It's so boring",
+                "words": [
+                  "so",
+                  "It's",
+                  "boring"
+                ],
+                "explanation": "Correct sentence order: \"It's so boring!\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "I love shopping!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I love shopping",
+                "words": [
+                  "I",
+                  "shopping",
+                  "love"
+                ],
+                "explanation": "Correct sentence order: \"I love shopping!\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "I love playing football with my friends.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ryan: \"I love playing football with my _____.\"",
+                "targetWord": "friends",
+                "explanation": "Full audio: \"I love playing football with my friends.\". The missing word is \"friends\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "What about you?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ryan: \"What _____ you?\"",
+                "targetWord": "about",
+                "explanation": "Full audio: \"What about you?\". The missing word is \"about\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "I enjoy reading novels and listening to music.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Emma: \"I enjoy reading novels and listening to _____.\"",
+                "targetWord": "music",
+                "explanation": "Full audio: \"I enjoy reading novels and listening to music.\". The missing word is \"music\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I also like cooking on weekends.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Emma: \"I also like cooking on _____.\"",
+                "targetWord": "weekends",
+                "explanation": "Full audio: \"I also like cooking on weekends.\". The missing word is \"weekends\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "I don't mind cooking",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ryan: \"I don't mind _____\"",
+                "targetWord": "cooking",
+                "explanation": "Full audio: \"I don't mind cooking\". The missing word is \"cooking\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "but I hate washing the dishes!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "but I hate washing the dishes",
+                "words": [
+                  "but",
+                  "dishes",
+                  "I",
+                  "hate",
+                  "the",
+                  "washing"
+                ],
+                "explanation": "Correct sentence order: \"but I hate washing the dishes!\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "I don't mind washing dishes.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I don't mind washing dishes",
+                "words": [
+                  "don't",
+                  "mind",
+                  "washing",
+                  "I",
+                  "dishes"
+                ],
+                "explanation": "Correct sentence order: \"I don't mind washing dishes.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "I also dislike shopping for clothes.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I also dislike shopping for clothes",
+                "words": [
+                  "dislike",
+                  "also",
+                  "for",
+                  "clothes",
+                  "I",
+                  "shopping"
+                ],
+                "explanation": "Correct sentence order: \"I also dislike shopping for clothes.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "It's so boring!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It's so boring",
+                "words": [
+                  "so",
+                  "It's",
+                  "boring"
+                ],
+                "explanation": "Correct sentence order: \"It's so boring!\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "I love shopping!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I love shopping",
+                "words": [
+                  "I",
+                  "shopping",
+                  "love"
+                ],
+                "explanation": "Correct sentence order: \"I love shopping!\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m09-writing",
+      "moduleId": "A1.2-M09",
+      "skillType": "writing",
+      "title": "Writing Mission: Express Your Hobbies and Preferences",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-2-m09-w-theory",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this writing lesson, you will learn how to write sentences and short paragraphs about your hobbies and preferences. You will use verbs like 'love', 'enjoy', 'like', 'don't mind', 'dislike', and 'hate' followed by a verb with -ing. For example: 'I love swimming.' or 'She hates cleaning.' You will also learn the spelling rules for adding -ing to verbs. By the end, you can write a paragraph about what you love, like, and hate doing!",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Write a Simple Preference Sentence",
+                "formula": "Subject + like/love/enjoy/hate + verb-ing.",
+                "example": "I love reading books."
+              },
+              {
+                "step": 2,
+                "title": "Add a Negative Preference",
+                "formula": "Subject + don't/doesn't + like/enjoy + verb-ing.",
+                "example": "He doesn't like cooking dinner."
+              },
+              {
+                "step": 3,
+                "title": "Show the Scale of Preference",
+                "formula": "Subject + love/enjoy/like/don't mind/dislike/hate + verb-ing.",
+                "example": "I love dancing, but I hate ironing clothes."
+              },
+              {
+                "step": 4,
+                "title": "Build a Short Paragraph About Your Hobbies",
+                "formula": "Sentence 1 (what you love) + Sentence 2 (what you like) + Sentence 3 (what you don't like or hate).",
+                "example": "I love playing football. I also like swimming. But I hate running in the morning."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "When you add -ing to most verbs, just add -ing at the end. For example: play → playing, read → reading, cook → cooking.",
+                "badExample": "I like plaing tennis.",
+                "goodExample": "I like playing tennis.",
+                "why": "Most verbs simply take -ing at the end. Do not remove any letters. 'Play' becomes 'playing', not 'plaing'."
+              },
+              {
+                "rule": "When a verb ends in -e, remove the -e and then add -ing. For example: dance → dancing, write → writing, make → making.",
+                "badExample": "She loves danceing every day.",
+                "goodExample": "She loves dancing every day.",
+                "why": "You must drop the final -e before adding -ing. 'Dance' becomes 'dancing', not 'danceing'."
+              },
+              {
+                "rule": "When a short verb (one syllable) ends in consonant-vowel-consonant (CVC), double the last consonant and add -ing. For example: run → running, swim → swimming, sit → sitting.",
+                "badExample": "They enjoy swiming in the pool.",
+                "goodExample": "They enjoy swimming in the pool.",
+                "why": "For short CVC verbs, you must double the final consonant. 'Swim' becomes 'swimming' (double m), not 'swiming'."
+              },
+              {
+                "rule": "Always use a capital letter at the start of a sentence and a full stop (period) at the end.",
+                "badExample": "i love cooking",
+                "goodExample": "I love cooking.",
+                "why": "Every sentence in English must begin with a capital letter and end with a full stop. The pronoun 'I' is always a capital letter."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "I love playing guitar in the evening.",
+                "id": "Saya sangat suka bermain gitar di malam hari.",
+                "focus": "love + verb-ing (strongest positive preference)"
+              },
+              {
+                "en": "She enjoys reading books at the library.",
+                "id": "Dia menikmati membaca buku di perpustakaan.",
+                "focus": "enjoy + verb-ing (positive preference)"
+              },
+              {
+                "en": "We don't mind washing the dishes after dinner.",
+                "id": "Kami tidak keberatan mencuci piring setelah makan malam.",
+                "focus": "don't mind + verb-ing (neutral preference)"
+              },
+              {
+                "en": "He hates getting up early on Mondays.",
+                "id": "Dia sangat tidak suka bangun pagi di hari Senin.",
+                "focus": "hate + verb-ing (strongest negative preference)"
+              },
+              {
+                "en": "They like watching movies, but they dislike eating popcorn.",
+                "id": "Mereka suka menonton film, tetapi mereka tidak suka makan popcorn.",
+                "focus": "like + verb-ing and dislike + verb-ing (contrast of preferences)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m09-w-practice",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "i love swiming in the sea",
+                "targetSentence": "I love swimming in the sea.",
+                "translation": "Saya sangat suka berenang di laut.",
+                "keyRule": "Capitalize 'I' at the start of the sentence. Double the 'm' in 'swimming' (CVC rule: swim → swimming). Add a full stop at the end.",
+                "requiredCapitals": [
+                  "I"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "she enjoys danceing with her friends",
+                "targetSentence": "She enjoys dancing with her friends.",
+                "translation": "Dia menikmati menari bersama teman-temannya.",
+                "keyRule": "Capitalize 'She' at the start. Remove the -e from 'dance' before adding -ing: 'dancing', not 'danceing'. Add a full stop at the end.",
+                "requiredCapitals": [
+                  "She"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "they dont mind cooking but they hate cleanning the kitchen",
+                "targetSentence": "They don't mind cooking, but they hate cleaning the kitchen.",
+                "translation": "Mereka tidak keberatan memasak, tetapi mereka sangat tidak suka membersihkan dapur.",
+                "keyRule": "Capitalize 'They' at the start. Write 'don't' with an apostrophe. 'Cleaning' has only one 'n' (clean → cleaning, no doubling needed). Add a comma before 'but' and a full stop at the end.",
+                "requiredCapitals": [
+                  "They"
+                ]
+              },
+              {
+                "id": "sent-4",
+                "faultySentence": "my brother likes runing in the park every morning",
+                "targetSentence": "My brother likes running in the park every morning.",
+                "translation": "Saudara laki-laki saya suka berlari di taman setiap pagi.",
+                "keyRule": "Capitalize 'My' at the start. Double the 'n' in 'running' (CVC rule: run → running). Add a full stop at the end.",
+                "requiredCapitals": [
+                  "My"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Expressing Strong Positive Preference",
+                "meaning": "Saya sangat suka bermain sepak bola di akhir pekan.",
+                "tokens": [
+                  "I",
+                  "love",
+                  "playing",
+                  "football",
+                  "on",
+                  "weekends."
+                ],
+                "fullSentence": "I love playing football on weekends."
+              },
+              {
+                "id": "b-2",
+                "category": "Expressing Dislike",
+                "meaning": "Dia tidak suka bangun pagi.",
+                "tokens": [
+                  "She",
+                  "dislikes",
+                  "getting",
+                  "up",
+                  "early."
+                ],
+                "fullSentence": "She dislikes getting up early."
+              },
+              {
+                "id": "b-3",
+                "category": "Expressing Neutral Preference",
+                "meaning": "Kami tidak keberatan menunggu di sini.",
+                "tokens": [
+                  "We",
+                  "don't",
+                  "mind",
+                  "waiting",
+                  "here."
+                ],
+                "fullSentence": "We don't mind waiting here."
+              },
+              {
+                "id": "b-4",
+                "category": "Contrasting Two Preferences",
+                "meaning": "Dia menikmati memasak tetapi dia benci mencuci piring.",
+                "tokens": [
+                  "He",
+                  "enjoys",
+                  "cooking,",
+                  "but",
+                  "he",
+                  "hates",
+                  "washing",
+                  "dishes."
+                ],
+                "fullSentence": "He enjoys cooking, but he hates washing dishes."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: My Hobbies Paragraph",
+                "badge": "Hobby Writer",
+                "instruction": "Write a short paragraph (at least 4 sentences) about your hobbies and preferences. Use at least THREE different preference verbs from this list: love, enjoy, like, don't mind, dislike, hate. Each verb must be followed by a verb with -ing. Tell the reader what activities you love, what you like, and what you hate.",
+                "example": "I love playing basketball after school. I also enjoy listening to music in my room. I like cooking pasta for my family. But I hate cleaning my bedroom on Saturdays!",
+                "placeholder": "Start writing about your hobbies here. Use love, like, enjoy, hate + verb-ing...",
+                "minWords": 20,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: My Friend's Preferences",
+                "badge": "Friendship Reporter",
+                "instruction": "Write a short paragraph (at least 4 sentences) about a friend or family member. Describe what he or she loves, likes, doesn't mind, and hates doing. Use 'he' or 'she' as the subject. Remember to use the correct verb form: 'likes', 'loves', 'enjoys', 'doesn't mind', 'dislikes', 'hates' + verb-ing.",
+                "example": "My friend Anna loves drawing pictures of animals. She enjoys singing songs in English class. She doesn't mind doing homework after school. But she hates waking up early on Mondays!",
+                "placeholder": "Start writing about your friend's hobbies here. Use he/she + loves/likes/hates + verb-ing...",
+                "minWords": 20,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-3",
+                "title": "Challenge 3: Weekend Activities Survey",
+                "badge": "Weekend Explorer",
+                "instruction": "Imagine you asked three people about their weekend hobbies. Write a short report (at least 5 sentences). Describe what each person loves, likes, or hates doing on weekends. Use different subjects (I, my mother, my brother, my friend, etc.) and different preference verbs with -ing.",
+                "example": "On weekends, I love riding my bicycle in the park. My mother enjoys gardening in the morning. She likes making cakes for us. My brother hates tidying his room. But he loves playing video games all afternoon!",
+                "placeholder": "Start writing your weekend survey report here...",
+                "minWords": 25,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m09-w-quiz",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-writing",
+          "sectionType": "quiz",
+          "title": "Writing Practicum & Assessment",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": "w-p-1",
+                "prompt": "Write 3 complete sentences about activities you love, like, and hate. Use a different verb-ing in each sentence. For example, use 'love + verb-ing' in the first sentence, 'like + verb-ing' in the second, and 'hate + verb-ing' in the third.",
+                "criteria": "Each sentence must: (1) start with a capital letter, (2) end with a full stop, (3) use a preference verb (love/like/hate) followed by a verb-ing form, (4) have correct -ing spelling (e.g., swimming not swiming, dancing not danceing). Three different activities must be mentioned.",
+                "sampleGoodAnswer": "I love swimming in the ocean. I like reading comics before bed. I hate cleaning my room on Sundays."
+              },
+              {
+                "id": "w-p-2",
+                "prompt": "Write a short paragraph (4–5 sentences) about your best friend's hobbies. Use 'He' or 'She' as the subject. Include at least one sentence with 'enjoys', one with 'doesn't mind', and one with 'dislikes' or 'hates'. Remember to add -s to the verb for he/she (loves, likes, enjoys, hates, dislikes).",
+                "criteria": "The paragraph must: (1) use third person (he/she) correctly with verb-s forms (loves, enjoys, hates, dislikes, doesn't mind), (2) use at least 3 different preference verbs, (3) have correct -ing spelling on all gerunds, (4) use proper capitalization and punctuation throughout.",
+                "sampleGoodAnswer": "My best friend is Tom. He enjoys playing football every Saturday. He doesn't mind studying for exams. He loves watching action movies with me. But he dislikes washing the dishes after dinner."
+              },
+              {
+                "id": "w-p-3",
+                "prompt": "Write a short paragraph (5–6 sentences) comparing your hobbies with a family member's hobbies. Use 'I' for yourself and 'he/she' for your family member. Show at least one hobby you both love and one hobby where you have different preferences (for example, you love it but he/she hates it).",
+                "criteria": "The paragraph must: (1) include at least 5 sentences, (2) use both 'I' and 'he/she' subjects correctly, (3) include at least 4 different preference verbs from the scale (love, enjoy, like, don't mind, dislike, hate), (4) show a clear comparison or contrast between preferences, (5) have correct -ing spelling, capitalization, and punctuation throughout.",
+                "sampleGoodAnswer": "I love cooking Italian food at home. My sister also enjoys cooking with me. We both like listening to pop music in the kitchen. I don't mind cleaning up after cooking, but my sister hates washing the pots. She dislikes getting her hands dirty. We are different, but we have fun together!"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m09-speaking",
+      "moduleId": "A1.2-M09",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Talking About Hobbies & Preferences with Like, Love & Hate + -ing",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-2-m09-s-theory",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this speaking lab, you will practise talking about your hobbies and preferences. You will use verbs like 'love', 'like', 'enjoy', 'don't mind', 'dislike', and 'hate' followed by the -ing form of another verb (gerund). Good pronunciation of the -ing ending is very important. You will also learn how to use natural intonation when listing things you like and dislike. Pay attention to stress on key words like 'LOVE', 'HATE', and 'EN-joy' to sound clear and natural.",
+            "audioGuidance": "When you say the -ing ending, make sure you pronounce the /ŋ/ sound at the back of your mouth — not /n/. For example, 'reading' is /ˈriː.dɪŋ/, not /ˈriː.dɪn/. When you list hobbies, use rising intonation on each item and falling intonation on the last item. For example: 'I love READING ↗, SWIMMING ↗, and COOKING ↘.' Stress the preference verb to show how strong your feeling is: 'I LOVE reading' vs 'I HATE reading.'",
+            "pillars": [
+              {
+                "name": "The -ing Ending",
+                "target": "Clear pronunciation of /ɪŋ/ in gerunds",
+                "explanation": "The -ing ending uses the nasal sound /ŋ/. Your tongue should touch the back of your mouth, not the front. Practise words like 'swimming', 'cooking', 'reading', and 'playing'. Say them slowly first, then at normal speed."
+              },
+              {
+                "name": "Stress on Preference Verbs",
+                "target": "Emphasising love, like, enjoy, hate, dislike",
+                "explanation": "When you talk about your preferences, stress the verb that shows your feeling. Say 'I LOVE cooking' with strong stress on 'LOVE'. Say 'I HATE cleaning' with strong stress on 'HATE'. This helps the listener understand how strong your feeling is."
+              },
+              {
+                "name": "List Intonation",
+                "target": "Rising and falling intonation in lists of hobbies",
+                "explanation": "When you list two or more hobbies, your voice should go up on each item and go down on the last item. For example: 'I like READING ↗, DANCING ↗, and SWIMMING ↘.' This pattern sounds natural and helps the listener know when your list is finished."
+              },
+              {
+                "name": "Linking Words Smoothly",
+                "target": "Connecting preference verbs to gerunds fluently",
+                "explanation": "Practise saying the preference verb and the gerund together smoothly without a long pause. For example, 'I enjoy_playing' should flow as one phrase. Link 'love_eating', 'hate_waking', and 'like_listening' so they sound connected and natural."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m09-s-practice",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "ENJOY",
+                "countryAudio": "enjoy",
+                "countrySyllables": [
+                  {
+                    "text": "en",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "JOY",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "en-JOY-able",
+                "natAudio": "enjoyable",
+                "natSyllables": [
+                  {
+                    "text": "en",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "JOY",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "a",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ble",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "In both 'enjoy' and 'enjoyable', the stress stays on the second syllable 'JOY'. The word gets longer but the stress does not move. Practise: en-JOY → en-JOY-a-ble."
+              },
+              {
+                "id": "pair-2",
+                "country": "PREFER",
+                "countryAudio": "prefer",
+                "countrySyllables": [
+                  {
+                    "text": "pre",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "FER",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "PREF-er-ence",
+                "natAudio": "preference",
+                "natSyllables": [
+                  {
+                    "text": "PREF",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "er",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ence",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice the stress shift! In 'prefer', the stress is on the second syllable: pre-FER. But in 'preference', the stress moves to the first syllable: PREF-er-ence. This is a common rhythm change in English."
+              },
+              {
+                "id": "pair-3",
+                "country": "HOBBY",
+                "countryAudio": "hobby",
+                "countrySyllables": [
+                  {
+                    "text": "HOB",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "by",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "HOB-bies",
+                "natAudio": "hobbies",
+                "natSyllables": [
+                  {
+                    "text": "HOB",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "bies",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress stays on the first syllable in both 'hobby' and 'hobbies'. The plural form just adds a small ending. Practise: HOB-by → HOB-bies."
+              },
+              {
+                "id": "pair-4",
+                "country": "ACTIVE",
+                "countryAudio": "active",
+                "countrySyllables": [
+                  {
+                    "text": "AC",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tive",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ac-TIV-i-ty",
+                "natAudio": "activity",
+                "natSyllables": [
+                  {
+                    "text": "ac",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TIV",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ty",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "In 'active', the stress is on the first syllable: AC-tive. But in 'activity', the stress shifts to the second syllable: ac-TIV-i-ty. Listen carefully and practise this shift."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "I love reading books.",
+                "phonetic": "/aɪ lʌv ˈriː.dɪŋ bʊks/",
+                "focus": "Clear /ɪŋ/ ending on 'reading' and stress on 'love'",
+                "hint": "Stress the word 'love' to show strong feeling. Make sure 'reading' ends with /ŋ/, not /n/."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "She enjoys playing badminton.",
+                "phonetic": "/ʃiː ɪnˈdʒɔɪz ˈpleɪ.ɪŋ ˈbæd.mɪn.tən/",
+                "focus": "Linking 'enjoys' to 'playing' and stress on 'enjoys'",
+                "hint": "Say 'enjoys playing' smoothly as one phrase. Stress the 'JOY' part of 'enjoys'."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "I hate waking up early.",
+                "phonetic": "/aɪ heɪt ˈweɪ.kɪŋ ʌp ˈɜː.li/",
+                "focus": "Strong stress on 'hate' and clear /eɪ/ in 'waking'",
+                "hint": "Say 'hate' with strong emphasis to show a negative feeling. Connect 'waking up' smoothly."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "We like swimming and dancing.",
+                "phonetic": "/wiː laɪk ˈswɪm.ɪŋ ənd ˈdɑːn.sɪŋ/",
+                "focus": "List intonation — rising on 'swimming', falling on 'dancing'",
+                "hint": "Your voice should go up slightly on 'swimming' and come down on 'dancing' to show the list is finished."
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "I don't mind cooking dinner.",
+                "phonetic": "/aɪ dəʊnt maɪnd ˈkʊk.ɪŋ ˈdɪn.ər/",
+                "focus": "Neutral intonation for 'don't mind' and clear /ʊ/ in 'cooking'",
+                "hint": "Say 'don't mind' with a flat, neutral tone — it means you are okay with it, not excited or unhappy."
+              },
+              {
+                "id": "spk-d-6",
+                "targetText": "He really loves listening to music.",
+                "phonetic": "/hiː ˈrɪə.li lʌvz ˈlɪs.nɪŋ tuː ˈmjuː.zɪk/",
+                "focus": "Stress on 'really' and 'loves' for emphasis",
+                "hint": "Use extra stress on 'really' and 'loves' to show very strong preference. Link 'listening to' smoothly."
+              }
+            ],
+            "roleplay": {
+              "context": "Mr. Khoirul wants to learn about your hobbies and preferences. He will ask you what activities you love, like, enjoy, and hate doing. Answer honestly using the verb + -ing pattern you have learned. Try to use different preference verbs in your answers.",
+              "roles": [
+                "Mr. Khoirul",
+                "You"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Hello! Nice to meet you. I want to know about your hobbies. What do you love doing in your free time?",
+                  "translation": "Halo! Senang bertemu denganmu. Saya ingin tahu tentang hobimu. Apa yang kamu suka lakukan di waktu luang?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Hi Mr. Khoirul! I love reading books and listening to music.",
+                  "translation": "Hai Pak Khoirul! Saya suka sekali membaca buku dan mendengarkan musik."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "That's wonderful! Reading and listening to music are great hobbies. Do you enjoy playing any sports?",
+                  "translation": "Itu luar biasa! Membaca dan mendengarkan musik adalah hobi yang bagus. Apakah kamu menikmati bermain olahraga?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Yes, I enjoy playing badminton with my friends on weekends.",
+                  "translation": "Ya, saya menikmati bermain bulu tangkis dengan teman-teman saya di akhir pekan."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Excellent! Now tell me, what activities do you hate or dislike doing?",
+                  "translation": "Bagus sekali! Sekarang ceritakan, aktivitas apa yang kamu benci atau tidak suka lakukan?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "I hate waking up early in the morning, and I dislike doing homework at night.",
+                  "translation": "Saya benci bangun pagi-pagi, dan saya tidak suka mengerjakan PR di malam hari."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "I understand! Many students feel the same way. What about cooking? Do you like cooking?",
+                  "translation": "Saya mengerti! Banyak siswa merasakan hal yang sama. Bagaimana dengan memasak? Apakah kamu suka memasak?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "I don't mind cooking, but I really hate washing the dishes after eating!",
+                  "translation": "Saya tidak keberatan memasak, tapi saya sangat benci mencuci piring setelah makan!"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m09-s-quiz",
+          "moduleId": "A1.2-M09",
+          "subModuleId": "sub-a1-2-m09-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about your weekend hobbies. Talk about what you love doing, what you enjoy doing, and what you hate doing on weekends. Use at least three different preference verbs with -ing.",
+                "audioPrompt": "Hello! Please tell me about your weekend. What hobbies do you love, enjoy, and hate doing? Speak for about 30 seconds.",
+                "storyPoints": [
+                  "Talk about one or two activities you love doing on weekends (e.g., I love sleeping late, I love watching movies).",
+                  "Mention an activity you enjoy doing with friends or family (e.g., I enjoy cooking with my mother).",
+                  "Share one activity you hate or dislike doing on weekends (e.g., I hate cleaning my room)."
+                ],
+                "targetSentence": "On weekends, I love sleeping late and watching movies. I enjoy cooking with my mother. But I hate cleaning my room.",
+                "phonetic": "/ɒn ˈwiːk.endz aɪ lʌv ˈsliː.pɪŋ leɪt ənd ˈwɒtʃ.ɪŋ ˈmuː.viz. aɪ ɪnˈdʒɔɪ ˈkʊk.ɪŋ wɪð maɪ ˈmʌð.ər. bʌt aɪ heɪt ˈkliː.nɪŋ maɪ ruːm/",
+                "expectedKeywords": [
+                  "love",
+                  "sleeping",
+                  "watching",
+                  "enjoy",
+                  "cooking",
+                  "hate",
+                  "cleaning"
+                ],
+                "hint": "Remember to stress the preference verbs: LOVE, ENJOY, HATE. Pronounce all -ing endings clearly with /ŋ/.",
+                "explanation": "This storytelling task checks if you can use different preference verbs (love, enjoy, hate) followed by gerunds (-ing) to describe your weekend hobbies in a natural, connected way."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about the hobbies of your family members. Describe what your family members like, love, or dislike doing. Use the verb + -ing pattern.",
+                "audioPrompt": "Now, please tell me about your family's hobbies. What do your family members love or hate doing? Speak for about 30 seconds.",
+                "storyPoints": [
+                  "Describe what one family member loves doing (e.g., My mother loves gardening).",
+                  "Describe what another family member likes or enjoys doing (e.g., My brother enjoys playing football).",
+                  "Mention something a family member dislikes or hates doing (e.g., My father hates shopping)."
+                ],
+                "targetSentence": "My mother loves gardening every morning. My brother enjoys playing football after school. My father hates shopping at the mall.",
+                "phonetic": "/maɪ ˈmʌð.ər lʌvz ˈɡɑː.dən.ɪŋ ˈev.ri ˈmɔː.nɪŋ. maɪ ˈbrʌð.ər ɪnˈdʒɔɪz ˈpleɪ.ɪŋ ˈfʊt.bɔːl ˈɑːf.tər skuːl. maɪ ˈfɑː.ðər heɪts ˈʃɒp.ɪŋ ət ðə mɔːl/",
+                "expectedKeywords": [
+                  "mother",
+                  "loves",
+                  "gardening",
+                  "brother",
+                  "enjoys",
+                  "playing",
+                  "father",
+                  "hates",
+                  "shopping"
+                ],
+                "hint": "Use third person forms: 'loves', 'enjoys', 'hates' (with -s). Keep your -ing pronunciation clear.",
+                "explanation": "This task practises using preference verbs in the third person singular (he/she loves, enjoys, hates) with gerunds. It also checks your ability to talk about other people's hobbies."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are calling a new friend to talk about hobbies. Your friend wants to know what activities you like and dislike. Answer the questions using verb + -ing.",
+                "audioPrompt": "Ring ring! Hi there, this is your new friend Sari. I want to get to know you better. What do you like doing after school?",
+                "scenarioContext": "You have just made a new friend named Sari at school. She calls you on the phone to chat about hobbies and free time activities. She is friendly and curious about what you like and dislike doing.",
+                "characterRole": "You are a student talking to your new friend Sari on the phone. Share your hobbies and preferences honestly.",
+                "targetSentence": "I like playing video games and watching cartoons after school.",
+                "phonetic": "/aɪ laɪk ˈpleɪ.ɪŋ ˈvɪd.i.əʊ ɡeɪmz ənd ˈwɒtʃ.ɪŋ kɑːˈtuːnz ˈɑːf.tər skuːl/",
+                "expectedKeywords": [
+                  "like",
+                  "playing",
+                  "watching",
+                  "after school"
+                ],
+                "hint": "Use 'I like' + verb-ing to answer. You can mention any hobby you enjoy after school.",
+                "explanation": "This roleplay practises answering a question about your hobbies using 'like + -ing' in a natural phone conversation with a friend."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are talking to your English teacher, Mr. Khoirul, about a class survey on hobbies. He asks you about activities you love and hate. Respond politely using complete sentences.",
+                "audioPrompt": "Good morning! I am doing a class survey about hobbies. Can you tell me two things you love doing and one thing you really hate doing?",
+                "scenarioContext": "Mr. Khoirul is conducting a class survey about students' hobbies and preferences. He is asking each student about what they love and hate doing. You need to give clear answers for the survey.",
+                "characterRole": "You are a student answering Mr. Khoirul's survey questions about your hobbies and preferences. Be polite and give complete answers.",
+                "targetSentence": "I love drawing pictures and I love singing songs. I really hate ironing clothes.",
+                "phonetic": "/aɪ lʌv ˈdrɔː.ɪŋ ˈpɪk.tʃərz ənd aɪ lʌv ˈsɪŋ.ɪŋ sɒŋz. aɪ ˈrɪə.li heɪt ˈaɪ.ən.ɪŋ kləʊðz/",
+                "expectedKeywords": [
+                  "love",
+                  "drawing",
+                  "singing",
+                  "hate",
+                  "ironing"
+                ],
+                "hint": "Answer with two things you love and one thing you hate. Use 'I love + -ing' and 'I hate + -ing'.",
+                "explanation": "This roleplay checks your ability to express strong positive and negative preferences using 'love + -ing' and 'hate + -ing' in a polite classroom context."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are at a hobby club meeting. The club leader asks you what activities you enjoy and what you don't mind doing. Respond naturally.",
+                "audioPrompt": "Welcome to our hobby club! We have many activities here — painting, cooking, dancing, and gardening. What do you enjoy doing? And is there anything you don't mind trying?",
+                "scenarioContext": "You are joining a new hobby club at your community centre. The club leader is asking new members about their interests to assign them to activity groups. There are many options available.",
+                "characterRole": "You are a new member of the hobby club. Tell the club leader what activities you enjoy and what you don't mind trying.",
+                "targetSentence": "I enjoy painting and I don't mind trying cooking. They both sound fun!",
+                "phonetic": "/aɪ ɪnˈdʒɔɪ ˈpeɪn.tɪŋ ənd aɪ dəʊnt maɪnd ˈtraɪ.ɪŋ ˈkʊk.ɪŋ. ðeɪ bəʊθ saʊnd fʌn/",
+                "expectedKeywords": [
+                  "enjoy",
+                  "painting",
+                  "don't mind",
+                  "cooking"
+                ],
+                "hint": "Use 'I enjoy + -ing' for things you like and 'I don't mind + -ing' for things you are okay with.",
+                "explanation": "This roleplay practises using 'enjoy + -ing' and 'don't mind + -ing' to express moderate preferences in a social setting."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are video-calling your cousin who lives in another city. Your cousin asks about your daily routine and what activities you like or dislike. Share your preferences.",
+                "audioPrompt": "Hey cousin! Long time no see! Tell me about your daily life. What do you like doing every day? Is there anything you dislike doing?",
+                "scenarioContext": "You are having a video call with your cousin who lives far away. You haven't talked in a while, and your cousin is curious about your daily life, hobbies, and what activities you like or dislike.",
+                "characterRole": "You are chatting with your cousin on a video call. Talk about your daily activities and share what you like and dislike doing.",
+                "targetSentence": "Every day I like walking to school and I like chatting with friends. But I dislike studying maths at night.",
+                "phonetic": "/ˈev.ri deɪ aɪ laɪk ˈwɔː.kɪŋ tuː skuːl ənd aɪ laɪk ˈtʃæt.ɪŋ wɪð frendz. bʌt aɪ dɪsˈlaɪk ˈstʌd.i.ɪŋ mæθs ət naɪt/",
+                "expectedKeywords": [
+                  "like",
+                  "walking",
+                  "chatting",
+                  "dislike",
+                  "studying"
+                ],
+                "hint": "Use 'I like + -ing' for positive activities and 'I dislike + -ing' for negative ones. Talk about your real daily routine.",
+                "explanation": "This roleplay practises expressing daily preferences using 'like + -ing' and 'dislike + -ing' in an informal family conversation."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Say the following sentence clearly. Focus on using the correct preference verb and hobby vocabulary.",
+                "audioPrompt": "Please say this sentence: 'My sister enjoys collecting stamps and reading comics.'",
+                "targetSentence": "My sister enjoys collecting stamps and reading comics.",
+                "phonetic": "/maɪ ˈsɪs.tər ɪnˈdʒɔɪz kəˈlek.tɪŋ stæmps ənd ˈriː.dɪŋ ˈkɒm.ɪks/",
+                "expectedKeywords": [
+                  "sister",
+                  "enjoys",
+                  "collecting",
+                  "stamps",
+                  "reading",
+                  "comics"
+                ],
+                "hint": "Make sure you pronounce 'enjoys' with stress on 'JOY' and say 'collecting' and 'reading' with clear -ing endings.",
+                "explanation": "This drill checks your pronunciation of hobby vocabulary words like 'collecting', 'stamps', 'reading', and 'comics', along with the preference verb 'enjoys'."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Say the following sentence clearly. Focus on the correct grammar pattern: subject + preference verb + verb-ing.",
+                "audioPrompt": "Please say this sentence: 'They don't like eating vegetables, but they love drinking fruit juice.'",
+                "targetSentence": "They don't like eating vegetables, but they love drinking fruit juice.",
+                "phonetic": "/ðeɪ dəʊnt laɪk ˈiː.tɪŋ ˈvedʒ.tə.bəlz bʌt ðeɪ lʌv ˈdrɪŋk.ɪŋ fruːt dʒuːs/",
+                "expectedKeywords": [
+                  "don't",
+                  "like",
+                  "eating",
+                  "vegetables",
+                  "love",
+                  "drinking",
+                  "juice"
+                ],
+                "hint": "Pay attention to the negative form 'don't like + -ing' and the positive form 'love + -ing'. Say both parts of the sentence clearly.",
+                "explanation": "This drill practises the grammar pattern of negative preference (don't like + -ing) contrasted with positive preference (love + -ing) in one sentence. It checks correct verb form usage."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Syllable Stress Drill",
+                "instruction": "Say the following words and sentence. Pay careful attention to which syllable is stressed in each word.",
+                "audioPrompt": "Listen to the stress pattern and repeat: 'ac-TIV-i-ty'. Now say the full sentence: 'Swimming is my favourite activity.'",
+                "targetSentence": "Swimming is my favourite activity.",
+                "phonetic": "/ˈswɪm.ɪŋ ɪz maɪ ˈfeɪ.vər.ɪt ækˈtɪv.ɪ.ti/",
+                "expectedKeywords": [
+                  "swimming",
+                  "favourite",
+                  "activity"
+                ],
+                "hint": "Stress the first syllable of 'SWIM-ming' and 'FA-vour-ite'. Stress the second syllable of 'ac-TIV-i-ty'. Get the rhythm right!",
+                "explanation": "This drill focuses on syllable stress patterns. 'Swimming' has stress on the first syllable (SWIM-ming), 'favourite' on the first (FA-vour-ite), and 'activity' on the second (ac-TIV-i-ty). Correct stress makes your English sound natural."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Intonation Drill",
+                "instruction": "Say the following sentence using the correct intonation pattern. Use rising intonation on each hobby in the list and falling intonation on the last one.",
+                "audioPrompt": "Say this sentence with list intonation: 'I love cooking ↗, reading ↗, swimming ↗, and dancing ↘.'",
+                "targetSentence": "I love cooking, reading, swimming, and dancing.",
+                "phonetic": "/aɪ lʌv ˈkʊk.ɪŋ ˈriː.dɪŋ ˈswɪm.ɪŋ ənd ˈdɑːn.sɪŋ/",
+                "expectedKeywords": [
+                  "love",
+                  "cooking",
+                  "reading",
+                  "swimming",
+                  "dancing"
+                ],
+                "hint": "Your voice should go UP slightly after 'cooking', 'reading', and 'swimming', then come DOWN on 'dancing' to show the list is finished. This is called list intonation.",
+                "explanation": "This drill practises rising and falling intonation in lists. In English, when you list items, your voice rises on each item to signal 'there is more coming' and falls on the last item to signal 'the list is complete'. This pattern is essential for natural-sounding English."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

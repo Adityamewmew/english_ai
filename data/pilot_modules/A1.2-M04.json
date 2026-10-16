@@ -1,0 +1,1709 @@
+{
+  "module": {
+    "id": "A1.2-M04",
+    "levelId": "A1.2",
+    "title": "Clothing, Colors & Weather Descriptions",
+    "cefr": "A1",
+    "group": "A1.2 - Daily Logistics & Practical Actions",
+    "objective": "Describe clothes and current weather conditions accurately using the Present Continuous (wearing) and descriptive adjectives.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 4
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-2-m04-reading",
+      "moduleId": "A1.2-M04",
+      "skillType": "reading",
+      "title": "Reading Mission: What Are They Wearing Today?",
+      "theme": "Clothing, Colors & Weather Descriptions",
+      "grammarFocus": "Present Continuous with 'wearing' and weather descriptions with 'It is + adjective'",
+      "vocabularyFocus": "Clothing items, colors, weather adjectives, and seasonal accessories",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-2-m04-r-theory",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to your Reading Mission! In this lesson, you will read a fun passage about people choosing their clothes based on the weather. You will practice understanding sentences that use the Present Continuous tense with 'wearing' to describe what people have on, and 'It is + adjective' to describe the weather. By the end of this mission, you will feel confident reading short descriptions about clothing, colors, and weather in everyday English. Let's get started!",
+            "linguisticTarget": {
+              "grammar": "Present Continuous for clothing: Subject + am/is/are + wearing + (color) + clothing item. Weather descriptions: It is + weather adjective (sunny, rainy, cold, windy, freezing).",
+              "vocabulary": "Clothing items (jacket, jeans, dress, shoes, hat, T-shirt, scarf, boots, umbrella, sweater), colors (red, blue, black, white, yellow, green), and weather adjectives (sunny, rainy, cold, windy, freezing, cloudy, warm, hot).",
+              "readingStrategy": "Skimming the passage first to understand the main idea (Who is in the story? What is the weather like?), then scanning for specific details (What color is each clothing item? What is each person wearing?)."
+            },
+            "learningObjectives": [
+              "Understand the main idea of a short A1 passage about people describing their clothes and the weather.",
+              "Identify key details including specific clothing items, their colors, and weather conditions mentioned in the text.",
+              "Recognize and understand Present Continuous sentences with 'wearing' and weather descriptions using 'It is + adjective'.",
+              "Build confidence in reading natural, everyday English about appearance and weather topics."
+            ],
+            "contextWarmup": {
+              "prompt": "It is very cold and windy outside today. Which sentence best describes what you should wear?",
+              "options": [
+                "I am wearing a warm jacket and a scarf.",
+                "I am wearing shorts and sandals.",
+                "I am wearing a swimsuit."
+              ],
+              "correctIndex": 0,
+              "explanation": "When it is cold and windy, you need warm clothes! 'I am wearing a warm jacket and a scarf' is the best choice. Shorts, sandals, and swimsuits are for warm or hot weather, not cold and windy days."
+            },
+            "rules": [
+              "To describe what someone is wearing RIGHT NOW, use the Present Continuous: Subject + am/is/are + wearing + clothing. Example: 'She is wearing a green dress.'",
+              "Colors always come BEFORE the clothing noun: a + color + clothing item. Example: 'a red hat', 'black shoes', 'a white T-shirt'. Never say 'a hat red'.",
+              "To describe the weather right now, use: It is + weather adjective. Example: 'It is sunny today.' You can also use the contraction: 'It's rainy outside.'",
+              "Some clothing words are always plural: jeans, shoes, boots, shorts, glasses. We say 'blue jeans' (not 'a blue jean') and 'black shoes' (not 'a black shoe').",
+              "When reading a passage, look for the words 'am', 'is', or 'are' followed by 'wearing' — this tells you someone is describing clothes they have on right now."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Beginner Pitfall",
+              "explanation": "Many beginners forget to include the verb 'wearing' when describing clothes. Without 'wearing', the sentence has a completely different (and often nonsensical) meaning. Always remember the full pattern: Subject + am/is/are + WEARING + clothing item.",
+              "wrong": "She is a red dress. (This means 'She is a red dress' — she IS the dress! That makes no sense.)",
+              "correct": "She is wearing a red dress. (This correctly means she has a red dress on her body right now.)"
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Clothing & Weather",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in natural spoken English:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "am",
+                "vowelDropped": "a",
+                "remainder": "m",
+                "contracted": "I'm",
+                "exampleFull": "I am wearing a blue jacket.",
+                "exampleContracted": "I'm wearing a blue jacket."
+              },
+              {
+                "subject": "He",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "He's",
+                "exampleFull": "He is wearing black shoes.",
+                "exampleContracted": "He's wearing black shoes."
+              },
+              {
+                "subject": "She",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "She's",
+                "exampleFull": "She is wearing a yellow dress.",
+                "exampleContracted": "She's wearing a yellow dress."
+              },
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It is cold and windy today.",
+                "exampleContracted": "It's cold and windy today."
+              },
+              {
+                "subject": "We",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "We're",
+                "exampleFull": "We are wearing warm sweaters.",
+                "exampleContracted": "We're wearing warm sweaters."
+              },
+              {
+                "subject": "They",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "They're",
+                "exampleFull": "They are wearing rain boots.",
+                "exampleContracted": "They're wearing rain boots."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Structure with Present Continuous (Wearing) & Weather",
+              "description": "Assemble and swap sentence blocks to explore affirmative, negative, and question patterns:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person (Singular)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "First Person Plural"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Third Person Plural"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Second Person"
+                }
+              ],
+              "complements": [
+                "wearing a warm blue jacket",
+                "wearing black jeans and white shoes",
+                "wearing a beautiful red dress",
+                "wearing a green scarf and a hat",
+                "not wearing boots today",
+                "wearing a yellow T-shirt because it's sunny"
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m04-r-vocab",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "jacket",
+                "ipa": "/ˈdʒækɪt/",
+                "meaning": "jaket",
+                "collocation": "I'm wearing a warm jacket because it's cold outside."
+              },
+              {
+                "word": "jeans",
+                "ipa": "/dʒiːnz/",
+                "meaning": "celana jeans",
+                "collocation": "He is wearing blue jeans and a white T-shirt."
+              },
+              {
+                "word": "dress",
+                "ipa": "/dres/",
+                "meaning": "gaun, rok terusan",
+                "collocation": "She is wearing a beautiful yellow dress today."
+              },
+              {
+                "word": "shoes",
+                "ipa": "/ʃuːz/",
+                "meaning": "sepatu",
+                "collocation": "I need to buy new shoes for work."
+              },
+              {
+                "word": "hat",
+                "ipa": "/hæt/",
+                "meaning": "topi",
+                "collocation": "He's wearing a black hat to protect from the sun."
+              },
+              {
+                "word": "scarf",
+                "ipa": "/skɑːrf/",
+                "meaning": "syal, selendang",
+                "collocation": "She is wearing a red scarf because it's freezing outside."
+              },
+              {
+                "word": "boots",
+                "ipa": "/buːts/",
+                "meaning": "sepatu bot",
+                "collocation": "They are wearing brown boots because it's rainy today."
+              },
+              {
+                "word": "sweater",
+                "ipa": "/ˈswetər/",
+                "meaning": "sweter, baju hangat rajut",
+                "collocation": "I'm wearing a green sweater because it's cold this morning."
+              },
+              {
+                "word": "umbrella",
+                "ipa": "/ʌmˈbrelə/",
+                "meaning": "payung",
+                "collocation": "Don't forget your umbrella — it's rainy outside!"
+              },
+              {
+                "word": "sunny",
+                "ipa": "/ˈsʌni/",
+                "meaning": "cerah, terik",
+                "collocation": "It's sunny today, perfect weather for a picnic."
+              },
+              {
+                "word": "rainy",
+                "ipa": "/ˈreɪni/",
+                "meaning": "hujan",
+                "collocation": "It's rainy outside, don't forget your umbrella."
+              },
+              {
+                "word": "cold",
+                "ipa": "/kəʊld/",
+                "meaning": "dingin",
+                "collocation": "It's very cold this morning, wear a warm jacket."
+              },
+              {
+                "word": "windy",
+                "ipa": "/ˈwɪndi/",
+                "meaning": "berangin",
+                "collocation": "It's windy today, hold your hat tight."
+              },
+              {
+                "word": "freezing",
+                "ipa": "/ˈfriːzɪŋ/",
+                "meaning": "sangat dingin, membeku",
+                "collocation": "It's freezing outside! I need gloves and a scarf."
+              },
+              {
+                "word": "cloudy",
+                "ipa": "/ˈklaʊdi/",
+                "meaning": "berawan, mendung",
+                "collocation": "It's cloudy today, so maybe it will rain later."
+              },
+              {
+                "word": "T-shirt",
+                "ipa": "/ˈtiːʃɜːrt/",
+                "meaning": "kaos oblong",
+                "collocation": "He's wearing a white T-shirt because it's hot today."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m04-r-guided",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-reading",
+          "sectionType": "dialogue",
+          "title": "Reading Passage: A Day at the Park",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "A Day at the Park",
+            "context": "It is Saturday morning. Three friends — Mia, Tom, and Lily — are going to the park. The weather is changing today, so they are all wearing different clothes. Read the passage to find out what each person is wearing and why.",
+            "text": "It is Saturday morning. Mia, Tom, and Lily are going to the park together.\n\nMia looks out the window. \"It's cloudy and cold today,\" she says. She is wearing a warm red jacket, blue jeans, and brown boots. She is also wearing a white scarf around her neck.\n\nTom is wearing a green sweater and black jeans. He is wearing white shoes. \"I think it's going to rain later,\" he says. He is carrying a big blue umbrella.\n\nLily is wearing a yellow T-shirt and a light blue dress over it. She is wearing black shoes and a small pink hat. \"I hope it gets sunny this afternoon!\" she says with a big smile.\n\nThe three friends walk to the park. It is windy, and Tom holds his umbrella tight. Mia is happy because her jacket is very warm. Lily holds her hat so it doesn't fly away. They are all having a great time together!",
+            "wordCount": 152,
+            "highlights": [
+              {
+                "text": "is wearing",
+                "note": "Present Continuous (is + wearing) describes what someone has on right now.",
+                "type": "grammar"
+              },
+              {
+                "text": "are wearing",
+                "note": "Present Continuous with plural subject (are + wearing) for 'they'.",
+                "type": "grammar"
+              },
+              {
+                "text": "red jacket",
+                "note": "Color (red) comes before the clothing noun (jacket).",
+                "type": "vocab"
+              },
+              {
+                "text": "blue jeans",
+                "note": "Color + plural clothing item. 'Jeans' is always plural.",
+                "type": "vocab"
+              },
+              {
+                "text": "It's cloudy and cold",
+                "note": "Weather description: It is + adjective. Two adjectives joined by 'and'.",
+                "type": "grammar"
+              },
+              {
+                "text": "brown boots",
+                "note": "Color + plural clothing item. 'Boots' is always plural.",
+                "type": "vocab"
+              },
+              {
+                "text": "white scarf",
+                "note": "Color (white) placed before the clothing noun (scarf).",
+                "type": "vocab"
+              },
+              {
+                "text": "It is windy",
+                "note": "Weather description using 'It is + adjective'.",
+                "type": "grammar"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m04-r-practice",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-reading",
+          "sectionType": "practice",
+          "title": "Guided Comprehension Check",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "prompt": "What is this passage mainly about?",
+              "options": [
+                "Three friends getting dressed for a day at the park in changing weather.",
+                "Three friends cooking lunch together at home.",
+                "Three friends shopping for new clothes at the mall."
+              ],
+              "correctIndex": 0,
+              "explanation": "The passage describes three friends — Mia, Tom, and Lily — and what they are wearing as they go to the park. It also talks about the weather (cloudy, cold, windy). So the main idea is about friends getting dressed for a day at the park in changing weather."
+            },
+            "detailQuestions": [
+              {
+                "id": 1,
+                "prompt": "What color is Mia's jacket?",
+                "options": [
+                  "Red",
+                  "Green",
+                  "Blue"
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage says 'She is wearing a warm red jacket.' So Mia's jacket is red."
+              },
+              {
+                "id": 2,
+                "prompt": "Why is Tom carrying an umbrella?",
+                "options": [
+                  "Because he thinks it's going to rain later.",
+                  "Because it is very sunny outside.",
+                  "Because Lily asked him to carry it."
+                ],
+                "correctIndex": 0,
+                "explanation": "Tom says, 'I think it's going to rain later.' That is why he is carrying a big blue umbrella — he is preparing for rain."
+              },
+              {
+                "id": 3,
+                "prompt": "What is Lily wearing on her head?",
+                "options": [
+                  "A small pink hat.",
+                  "A white scarf.",
+                  "A green sweater."
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage says 'She is wearing black shoes and a small pink hat.' A hat goes on your head, so Lily is wearing a small pink hat on her head."
+              },
+              {
+                "id": 4,
+                "prompt": "What is the weather like when the three friends walk to the park?",
+                "options": [
+                  "It is windy.",
+                  "It is sunny and hot.",
+                  "It is snowing."
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage says, 'It is windy, and Tom holds his umbrella tight.' So the weather is windy when they walk to the park."
+              },
+              {
+                "id": 5,
+                "prompt": "What color are Tom's jeans?",
+                "options": [
+                  "Black",
+                  "Blue",
+                  "White"
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage says 'Tom is wearing a green sweater and black jeans.' So Tom's jeans are black."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m04-r-quiz",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-reading",
+          "sectionType": "quiz",
+          "title": "Reading Mastery Quiz",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "According to the passage, what is Mia wearing around her neck?",
+                "options": [
+                  "A white scarf",
+                  "A red scarf",
+                  "A blue hat"
+                ],
+                "answer": "A white scarf",
+                "explanation": "The passage clearly states: 'She is also wearing a white scarf around her neck.' So the correct answer is a white scarf."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which sentence correctly uses the Present Continuous to describe clothing?",
+                "options": [
+                  "He is wearing a green sweater.",
+                  "He wearing a green sweater.",
+                  "He is a green sweater."
+                ],
+                "answer": "He is wearing a green sweater.",
+                "explanation": "The correct Present Continuous pattern is: Subject + is/am/are + wearing + clothing. 'He is wearing a green sweater' follows this pattern perfectly. The second option is missing 'is', and the third option is missing 'wearing'."
+              },
+              {
+                "id": "q-r-3",
+                "question": "In the passage, what does Lily hope will happen in the afternoon?",
+                "options": [
+                  "She hopes it gets sunny.",
+                  "She hopes it starts raining.",
+                  "She hopes it gets very cold."
+                ],
+                "answer": "She hopes it gets sunny.",
+                "explanation": "Lily says, 'I hope it gets sunny this afternoon!' She wants the sun to come out later in the day."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Which is the correct way to describe today's weather?",
+                "options": [
+                  "It is windy and cold today.",
+                  "Today is wearing windy and cold.",
+                  "It wearing cold and windy today."
+                ],
+                "answer": "It is windy and cold today.",
+                "explanation": "To describe the weather, we use: It is + weather adjective. 'It is windy and cold today' is correct. We do NOT use 'wearing' for weather — 'wearing' is only for clothing."
+              },
+              {
+                "id": "q-r-5",
+                "question": "Why does Lily hold her hat when they walk to the park?",
+                "options": [
+                  "Because it is windy and the hat might fly away.",
+                  "Because the hat is too big for her head.",
+                  "Because Tom asks her to hold it."
+                ],
+                "answer": "Because it is windy and the hat might fly away.",
+                "explanation": "The passage says, 'Lily holds her hat so it doesn't fly away.' The wind is strong, so she holds her hat to keep it on her head."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Choose the correct sentence: 'They _____ brown boots and warm jackets.'",
+                "options": [
+                  "are wearing",
+                  "is wearing",
+                  "am wearing"
+                ],
+                "answer": "are wearing",
+                "explanation": "'They' is a plural pronoun, so we use 'are' with it. The correct sentence is: 'They are wearing brown boots and warm jackets.' We use 'is' with he/she/it and 'am' with I."
+              },
+              {
+                "id": "q-r-7",
+                "question": "What color is Tom's umbrella in the passage?",
+                "options": [
+                  "Blue",
+                  "Red",
+                  "Green"
+                ],
+                "answer": "Blue",
+                "explanation": "The passage says, 'He is carrying a big blue umbrella.' So Tom's umbrella is blue."
+              },
+              {
+                "id": "q-r-8",
+                "question": "Read this sentence: 'She is wearing a beautiful yellow dress.' Where is the color word placed?",
+                "options": [
+                  "Before the clothing noun (yellow comes before dress).",
+                  "After the clothing noun (dress comes before yellow).",
+                  "At the beginning of the sentence."
+                ],
+                "answer": "Before the clothing noun (yellow comes before dress).",
+                "explanation": "In English, the color adjective always comes BEFORE the clothing noun. We say 'a yellow dress', not 'a dress yellow'. This is an important rule for describing clothes!"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m04-listening",
+      "moduleId": "A1.2-M04",
+      "skillType": "listening",
+      "title": "Listening Mission: What Are You Wearing Today?",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-2-m04-l-theory",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening mission, you will hear two colleagues, Sarah and Tom, talking about their clothes and the weather on a cold morning at the office. Listen carefully for clothing words like jacket, dress, and shoes. Pay attention to color words like blue, red, black, and brown. Also listen for weather descriptions like cold, windy, freezing, and sunny. Notice how speakers use the Present Continuous tense with the verb wearing to describe clothes they have on right now. The key pattern is: subject + am/is/are + wearing + clothing item.",
+            "learningObjectives": [
+              "Identify clothing items mentioned in a spoken conversation, such as jacket, dress, and shoes.",
+              "Recognize color words used to describe clothing, including blue, red, black, and brown.",
+              "Understand weather descriptions in spoken English, such as cold, windy, freezing, and sunny.",
+              "Notice the Present Continuous structure with wearing to describe what someone has on right now."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "You're wearing a nice blue jacket.",
+                "meaning": "Kamu mengenakan jaket biru yang bagus.",
+                "note": "Present Continuous (are wearing) is used to describe clothes someone has on right now."
+              },
+              {
+                "phrase": "It's freezing outside.",
+                "meaning": "Di luar sangat dingin sekali.",
+                "note": "Freezing means extremely cold. It is stronger than just cold."
+              },
+              {
+                "phrase": "It's very cold today.",
+                "meaning": "Hari ini sangat dingin.",
+                "note": "We use it's to talk about the weather. Very makes the adjective stronger."
+              },
+              {
+                "phrase": "I'm also wearing black shoes.",
+                "meaning": "Saya juga mengenakan sepatu hitam.",
+                "note": "Also is placed between am and wearing to add extra information about clothing."
+              },
+              {
+                "phrase": "It's not sunny today.",
+                "meaning": "Hari ini tidak cerah.",
+                "note": "Use it's not or it isn't plus a weather adjective to describe what the weather is not like."
+              },
+              {
+                "phrase": "It's getting colder.",
+                "meaning": "Cuacanya semakin dingin.",
+                "note": "Getting plus a comparative adjective describes a change happening now."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "You are wearing a nice blue jacket.",
+                "fast": "You're wearin' a nice blue jacket.",
+                "slowIpa": "/juː ɑːr ˈweərɪŋ ə naɪs bluː ˈdʒækɪt/",
+                "fastIpa": "/jɔːr ˈweərɪn ə naɪs bluː ˈdʒækɪt/",
+                "note": "In fast speech, you are contracts to you're, and the final g in wearing is often dropped, sounding like wearin'."
+              },
+              {
+                "id": 2,
+                "slow": "It is freezing outside.",
+                "fast": "It's freezin' outside.",
+                "slowIpa": "/ɪt ɪz ˈfriːzɪŋ ˌaʊtˈsaɪd/",
+                "fastIpa": "/ɪts ˈfriːzɪn ˌaʊtˈsaɪd/",
+                "note": "It is contracts to it's, and the final g in freezing is often dropped in natural speech."
+              },
+              {
+                "id": 3,
+                "slow": "I am also wearing black shoes.",
+                "fast": "I'm also wearin' black shoes.",
+                "slowIpa": "/aɪ æm ˈɔːlsoʊ ˈweərɪŋ blæk ʃuːz/",
+                "fastIpa": "/aɪm ˈɔːlsoʊ ˈweərɪn blæk ʃuːz/",
+                "note": "I am contracts to I'm. The g at the end of wearing drops in casual speech."
+              },
+              {
+                "id": 4,
+                "slow": "Let us go inside.",
+                "fast": "Let's go inside.",
+                "slowIpa": "/lɛt ʌs ɡoʊ ɪnˈsaɪd/",
+                "fastIpa": "/lɛts ɡoʊ ɪnˈsaɪd/",
+                "note": "Let us always contracts to let's in spoken English. The words flow together quickly."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m04-l-dialogue",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: A Cold Morning at the Office",
+          "orderIndex": 2,
+          "content": {
+            "context": "Sarah and Tom meet outside their office on a cold, windy morning. They talk about the clothes they are wearing and the weather today. Listen for clothing items, colors, and weather words.",
+            "audioPrompt": "Listen carefully to the following dialogue between Sarah and Tom. Pay attention to the clothing, colors, and weather descriptions they use.",
+            "lines": [
+              {
+                "speaker": "Sarah",
+                "text": "Good morning, Tom! You're wearing a nice blue jacket today.",
+                "audioUrl": "/audio/modules/a1-2-m04/dialogue-1.mp3",
+                "translation": "Selamat pagi, Tom! Kamu mengenakan jaket biru yang bagus hari ini.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Thank you, Sarah! It's freezing outside, so I need a warm jacket.",
+                "audioUrl": "/audio/modules/a1-2-m04/dialogue-2.mp3",
+                "translation": "Terima kasih, Sarah! Di luar sangat dingin, jadi saya perlu jaket yang hangat.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Yes, it's very cold today. And it's windy too!",
+                "audioUrl": "/audio/modules/a1-2-m04/dialogue-3.mp3",
+                "translation": "Ya, hari ini sangat dingin. Dan juga berangin!",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Tom",
+                "text": "I know! I'm wearing a warm scarf and a hat as well.",
+                "audioUrl": "/audio/modules/a1-2-m04/dialogue-4.mp3",
+                "translation": "Saya tahu! Saya juga mengenakan syal hangat dan topi.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Tom",
+                "text": "I like your red dress. Is it new?",
+                "audioUrl": "/audio/modules/a1-2-m04/dialogue-5.mp3",
+                "translation": "Saya suka gaun merah kamu. Apakah itu baru?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Yes, it is! I'm also wearing black shoes with it.",
+                "audioUrl": "/audio/modules/a1-2-m04/dialogue-6.mp3",
+                "translation": "Ya, benar! Saya juga mengenakan sepatu hitam dengan gaun ini.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Tom",
+                "text": "It looks great. But maybe you need a jacket? It's not sunny today.",
+                "audioUrl": "/audio/modules/a1-2-m04/dialogue-7.mp3",
+                "translation": "Terlihat bagus. Tapi mungkin kamu perlu jaket? Hari ini tidak cerah.",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "You're right. I have a brown jacket in my bag.",
+                "audioUrl": "/audio/modules/a1-2-m04/dialogue-8.mp3",
+                "translation": "Kamu benar. Saya punya jaket cokelat di tas saya.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Good! Let's go inside. It's getting colder.",
+                "audioUrl": "/audio/modules/a1-2-m04/dialogue-9.mp3",
+                "translation": "Bagus! Ayo masuk ke dalam. Semakin dingin.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Yes, let's go! I need a hot cup of coffee.",
+                "audioUrl": "/audio/modules/a1-2-m04/dialogue-10.mp3",
+                "translation": "Ya, ayo pergi! Saya butuh secangkir kopi panas.",
+                "emotion": "excited"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m04-l-quiz",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Good morning, Tom!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Good _____, Tom!\"",
+                "targetWord": "morning",
+                "explanation": "Full audio: \"Good morning, Tom!\". The missing word is \"morning\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "You're wearing a nice blue jacket today.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"You're wearing a nice blue jacket _____.\"",
+                "targetWord": "today",
+                "explanation": "Full audio: \"You're wearing a nice blue jacket today.\". The missing word is \"today\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Thank you, Sarah!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"_____ you, Sarah!\"",
+                "targetWord": "Thank",
+                "explanation": "Full audio: \"Thank you, Sarah!\". The missing word is \"Thank\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "It's freezing outside",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"It's freezing _____\"",
+                "targetWord": "outside",
+                "explanation": "Full audio: \"It's freezing outside\". The missing word is \"outside\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "so I need a warm jacket.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"so I need a warm _____.\"",
+                "targetWord": "jacket",
+                "explanation": "Full audio: \"so I need a warm jacket.\". The missing word is \"jacket\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Yes, it's very cold today.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes it's very cold today",
+                "words": [
+                  "very",
+                  "cold",
+                  "it's",
+                  "Yes",
+                  "today"
+                ],
+                "explanation": "Correct sentence order: \"Yes, it's very cold today.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "And it's windy too!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "And it's windy too",
+                "words": [
+                  "too",
+                  "And",
+                  "it's",
+                  "windy"
+                ],
+                "explanation": "Correct sentence order: \"And it's windy too!\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "I like your red dress.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I like your red dress",
+                "words": [
+                  "red",
+                  "I",
+                  "your",
+                  "dress",
+                  "like"
+                ],
+                "explanation": "Correct sentence order: \"I like your red dress.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Is it new?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Is it new",
+                "words": [
+                  "it",
+                  "Is",
+                  "new"
+                ],
+                "explanation": "Correct sentence order: \"Is it new?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Yes, it is!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes it is",
+                "words": [
+                  "it",
+                  "is",
+                  "Yes"
+                ],
+                "explanation": "Correct sentence order: \"Yes, it is!\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Good morning, Tom!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Good _____, Tom!\"",
+                "targetWord": "morning",
+                "explanation": "Full audio: \"Good morning, Tom!\". The missing word is \"morning\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "You're wearing a nice blue jacket today.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"You're wearing a nice blue jacket _____.\"",
+                "targetWord": "today",
+                "explanation": "Full audio: \"You're wearing a nice blue jacket today.\". The missing word is \"today\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Thank you, Sarah!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"_____ you, Sarah!\"",
+                "targetWord": "Thank",
+                "explanation": "Full audio: \"Thank you, Sarah!\". The missing word is \"Thank\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "It's freezing outside",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"It's freezing _____\"",
+                "targetWord": "outside",
+                "explanation": "Full audio: \"It's freezing outside\". The missing word is \"outside\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "so I need a warm jacket.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"so I need a warm _____.\"",
+                "targetWord": "jacket",
+                "explanation": "Full audio: \"so I need a warm jacket.\". The missing word is \"jacket\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Yes, it's very cold today.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes it's very cold today",
+                "words": [
+                  "very",
+                  "cold",
+                  "it's",
+                  "Yes",
+                  "today"
+                ],
+                "explanation": "Correct sentence order: \"Yes, it's very cold today.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "And it's windy too!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "And it's windy too",
+                "words": [
+                  "too",
+                  "And",
+                  "it's",
+                  "windy"
+                ],
+                "explanation": "Correct sentence order: \"And it's windy too!\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "I like your red dress.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I like your red dress",
+                "words": [
+                  "red",
+                  "I",
+                  "your",
+                  "dress",
+                  "like"
+                ],
+                "explanation": "Correct sentence order: \"I like your red dress.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Is it new?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Is it new",
+                "words": [
+                  "it",
+                  "Is",
+                  "new"
+                ],
+                "explanation": "Correct sentence order: \"Is it new?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Yes, it is!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes it is",
+                "words": [
+                  "it",
+                  "is",
+                  "Yes"
+                ],
+                "explanation": "Correct sentence order: \"Yes, it is!\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m04-writing",
+      "moduleId": "A1.2-M04",
+      "skillType": "writing",
+      "title": "Writing Mission: Describe What You Wear and Today's Weather",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-2-m04-w-theory",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this writing blueprint, you will learn how to write sentences and short paragraphs about clothing, colors, and weather. You will use the Present Continuous tense to describe what you or other people are wearing right now. You will also learn how to put colors before clothing words and how to describe the weather using 'It is + weather adjective.' Follow each step carefully, pay attention to capitalization and punctuation, and practice building your own sentences!",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Describe What You Are Wearing",
+                "formula": "Subject + am/is/are + wearing + a/an + color + clothing item.",
+                "example": "I am wearing a blue jacket."
+              },
+              {
+                "step": 2,
+                "title": "Describe What Someone Else Is Wearing",
+                "formula": "He/She + is + wearing + a/an + color + clothing item.",
+                "example": "She is wearing a red dress."
+              },
+              {
+                "step": 3,
+                "title": "Describe Today's Weather",
+                "formula": "It + is + weather adjective + (today/now).",
+                "example": "It is sunny today."
+              },
+              {
+                "step": 4,
+                "title": "Combine Clothing and Weather in One Paragraph",
+                "formula": "Weather sentence + Because of the weather, + Subject + am/is/are + wearing + clothing.",
+                "example": "It is cold and windy today. I am wearing a warm coat and a white scarf."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always start a sentence with a capital letter and end it with a period.",
+                "badExample": "she is wearing a green hat",
+                "goodExample": "She is wearing a green hat.",
+                "why": "Every English sentence must begin with a capital letter and finish with a period (full stop). This shows where a sentence starts and ends."
+              },
+              {
+                "rule": "Always capitalize the word 'I' when talking about yourself.",
+                "badExample": "i am wearing black shoes.",
+                "goodExample": "I am wearing black shoes.",
+                "why": "In English, the pronoun 'I' is always written as a capital letter, no matter where it appears in the sentence."
+              },
+              {
+                "rule": "Place the color word before the clothing noun, not after it.",
+                "badExample": "I am wearing a dress red.",
+                "goodExample": "I am wearing a red dress.",
+                "why": "In English, adjectives like colors come before the noun they describe. We say 'a red dress,' not 'a dress red.'"
+              },
+              {
+                "rule": "Use 'a' before consonant sounds and 'an' before vowel sounds for singular clothing items.",
+                "badExample": "She is wearing a orange shirt.",
+                "goodExample": "She is wearing an orange shirt.",
+                "why": "We use 'an' before words that start with a vowel sound (a, e, i, o, u). 'Orange' starts with an 'o' sound, so we write 'an orange shirt.'"
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "I am wearing a yellow T-shirt and blue jeans.",
+                "id": "Saya sedang memakai kaos kuning dan celana jins biru.",
+                "focus": "Present Continuous with 'I am wearing' + color before clothing noun"
+              },
+              {
+                "en": "He is wearing a black coat because it is cold today.",
+                "id": "Dia (laki-laki) sedang memakai mantel hitam karena hari ini dingin.",
+                "focus": "Present Continuous with 'He is wearing' + weather reason using 'because'"
+              },
+              {
+                "en": "It is raining now, so she is wearing a red raincoat.",
+                "id": "Sekarang sedang hujan, jadi dia (perempuan) sedang memakai jas hujan merah.",
+                "focus": "Weather description with 'It is raining' + clothing response with 'so'"
+              },
+              {
+                "en": "They are wearing white shirts and brown shoes.",
+                "id": "Mereka sedang memakai kemeja putih dan sepatu cokelat.",
+                "focus": "Present Continuous with 'They are wearing' + plural clothing items"
+              },
+              {
+                "en": "It is sunny and hot today. I am wearing a green hat and sunglasses.",
+                "id": "Hari ini cerah dan panas. Saya sedang memakai topi hijau dan kacamata hitam.",
+                "focus": "Two-sentence paragraph combining weather and clothing descriptions"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m04-w-practice",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "i am wearing a jacket blue today",
+                "targetSentence": "I am wearing a blue jacket today.",
+                "translation": "Saya sedang memakai jaket biru hari ini.",
+                "keyRule": "Capitalize 'I,' place the color before the clothing noun, and add a period at the end.",
+                "requiredCapitals": [
+                  "I"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "she is wearing a orange dress and it is sunny",
+                "targetSentence": "She is wearing an orange dress and it is sunny.",
+                "translation": "Dia sedang memakai gaun oranye dan cuacanya cerah.",
+                "keyRule": "Use 'an' before vowel sounds like 'orange.' Start with a capital 'S' and end with a period.",
+                "requiredCapitals": [
+                  "She"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "it is cold and windy he is wearing a coat brown and a hat white",
+                "targetSentence": "It is cold and windy. He is wearing a brown coat and a white hat.",
+                "translation": "Cuacanya dingin dan berangin. Dia sedang memakai mantel cokelat dan topi putih.",
+                "keyRule": "Separate two complete ideas into two sentences with periods. Place colors before clothing nouns. Capitalize the first word of each sentence.",
+                "requiredCapitals": [
+                  "It",
+                  "He"
+                ]
+              },
+              {
+                "id": "sent-4",
+                "faultySentence": "they are wearing shoes black because it is raining now",
+                "targetSentence": "They are wearing black shoes because it is raining now.",
+                "translation": "Mereka sedang memakai sepatu hitam karena sekarang sedang hujan.",
+                "keyRule": "Place the color 'black' before the noun 'shoes.' Start with a capital letter and end with a period.",
+                "requiredCapitals": [
+                  "They"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Describing Your Own Clothing",
+                "meaning": "Saya sedang memakai kemeja putih dan celana hitam.",
+                "tokens": [
+                  "I",
+                  "am",
+                  "wearing",
+                  "a",
+                  "white",
+                  "shirt",
+                  "and",
+                  "black",
+                  "pants."
+                ],
+                "fullSentence": "I am wearing a white shirt and black pants."
+              },
+              {
+                "id": "b-2",
+                "category": "Describing Someone Else's Clothing",
+                "meaning": "Dia (perempuan) sedang memakai rok merah dan sepatu cokelat.",
+                "tokens": [
+                  "She",
+                  "is",
+                  "wearing",
+                  "a",
+                  "red",
+                  "skirt",
+                  "and",
+                  "brown",
+                  "shoes."
+                ],
+                "fullSentence": "She is wearing a red skirt and brown shoes."
+              },
+              {
+                "id": "b-3",
+                "category": "Describing Weather and Clothing Together",
+                "meaning": "Hari ini hujan, jadi saya sedang memakai jas hujan kuning.",
+                "tokens": [
+                  "It",
+                  "is",
+                  "raining",
+                  "today,",
+                  "so",
+                  "I",
+                  "am",
+                  "wearing",
+                  "a",
+                  "yellow",
+                  "raincoat."
+                ],
+                "fullSentence": "It is raining today, so I am wearing a yellow raincoat."
+              },
+              {
+                "id": "b-4",
+                "category": "Describing Weather",
+                "meaning": "Hari ini cerah dan panas.",
+                "tokens": [
+                  "It",
+                  "is",
+                  "sunny",
+                  "and",
+                  "hot",
+                  "today."
+                ],
+                "fullSentence": "It is sunny and hot today."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: What Are You Wearing Today?",
+                "badge": "Fashion Writer",
+                "instruction": "Write a short paragraph (at least 3 sentences) describing what you are wearing right now. Use the Present Continuous tense (I am wearing...). Include at least two colors and two clothing items. Remember to start each sentence with a capital letter and end with a period.",
+                "example": "I am wearing a blue T-shirt and grey pants today. I am also wearing white sneakers. My jacket is green and warm.",
+                "placeholder": "Start writing about your clothes here...",
+                "minWords": 12,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Weather and Clothing Report",
+                "badge": "Weather Reporter",
+                "instruction": "Write a short paragraph (at least 4 sentences) about today's weather and what you and one other person are wearing because of the weather. First, describe the weather using 'It is...' Then describe your clothing and one friend's or family member's clothing. Use at least three different colors and the word 'because' or 'so' to connect weather and clothing.",
+                "example": "It is cold and cloudy today. It is also very windy. I am wearing a brown coat and a red scarf because it is cold. My sister is wearing a black jacket and blue jeans. She is also wearing a white hat.",
+                "placeholder": "Start writing about the weather and clothing here...",
+                "minWords": 20,
+                "xpReward": 50
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m04-w-quiz",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-writing",
+          "sectionType": "quiz",
+          "title": "Writing Practicum & Assessment",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": "w-p-1",
+                "prompt": "Look outside or imagine the weather right now. Write 2 sentences: one sentence about the weather and one sentence about what you are wearing because of the weather. Use 'It is...' for weather and 'I am wearing...' for clothing. Include at least one color.",
+                "criteria": "The response must contain two complete sentences. The first sentence uses 'It is + weather adjective.' The second sentence uses 'I am wearing + a/an + color + clothing item.' Both sentences must have correct capitalization and end with a period. At least one color must appear before a clothing noun.",
+                "sampleGoodAnswer": "It is rainy and cold today. I am wearing a warm blue jacket and black boots."
+              },
+              {
+                "id": "w-p-2",
+                "prompt": "Describe what your friend or a family member is wearing today. Write at least 3 sentences using 'He is wearing...' or 'She is wearing...' Include at least two different colors and two different clothing items.",
+                "criteria": "The response must contain at least 3 complete sentences using 'He is wearing' or 'She is wearing' in the Present Continuous tense. At least two different colors must be placed correctly before clothing nouns. Sentences must begin with a capital letter and end with a period. The article 'a' or 'an' must be used correctly before singular items.",
+                "sampleGoodAnswer": "My brother is wearing a red T-shirt today. He is wearing blue jeans and white sneakers. He is also wearing a black cap because it is sunny outside."
+              },
+              {
+                "id": "w-p-3",
+                "prompt": "Write a short paragraph (4 to 5 sentences) about a day at school or at work. Describe the weather that day and what you and two other people are wearing. Use 'It is...' for weather, 'I am wearing...' for yourself, and 'He/She is wearing...' for others. Use at least three different colors.",
+                "criteria": "The response must contain 4 to 5 complete sentences. It must include at least one weather description using 'It is + adjective.' It must describe the writer's clothing using 'I am wearing...' and at least two other people's clothing using 'He/She is wearing...' At least three different colors must appear before clothing nouns. All sentences must have correct capitalization, proper use of 'a/an,' and end with periods. The word 'because' or 'so' should be used at least once to connect weather and clothing.",
+                "sampleGoodAnswer": "It is sunny and hot today at school. I am wearing a white shirt and brown shorts. My friend Anna is wearing a yellow dress and sandals. My teacher is wearing a blue shirt and black pants. We are all wearing light clothes because it is very warm."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m04-speaking",
+      "moduleId": "A1.2-M04",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Describing Clothes, Colors & Today's Weather",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-2-m04-s-theory",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this speaking lab, you will practise describing what you are wearing right now and what the weather is like today. You will use the Present Continuous tense with 'wearing' and simple adjectives for colours and weather. Focus on clear pronunciation of clothing words, colour names, and weather descriptions. Pay attention to the natural rhythm of sentences like 'I'm wearing a blue jacket' and 'It's raining outside.'",
+            "audioGuidance": "When you say clothing and colour words, stress the important syllable clearly. For example, say 'JACK-et' with stress on the first part. For weather words, say 'SUN-ny' and 'CLOUD-y' with stress on the first syllable. Use falling intonation for statements like 'I'm wearing a red dress.' and rising intonation for yes/no questions like 'Are you wearing a coat?' Practise linking words smoothly: 'I'm‿wearing‿a' should flow together naturally.",
+            "pillars": [
+              {
+                "name": "Clothing Vocabulary Clarity",
+                "target": "Pronounce clothing items accurately",
+                "explanation": "Practise saying common clothing words clearly: T-shirt, jeans, jacket, dress, shoes, skirt, sweater, coat, hat, scarf. Make sure each word is easy to understand. For example, 'shirt' has the 'sh' sound at the start, and 'jeans' has the 'j' sound like in 'just'."
+              },
+              {
+                "name": "Colour Adjective Stress",
+                "target": "Stress colour words correctly before nouns",
+                "explanation": "When you describe clothing with a colour, stress the colour word slightly: 'a RED jacket', 'BLUE jeans', 'a WHITE shirt'. The colour comes before the clothing noun. Practise the pattern: colour + clothing item."
+              },
+              {
+                "name": "Present Continuous Rhythm",
+                "target": "Use natural contraction and rhythm with 'I'm wearing'",
+                "explanation": "In spoken English, we almost always contract 'I am' to 'I'm'. Say 'I'm wearing' as one smooth phrase, not 'I... am... wearing'. The stress falls on 'WEAR-ing'. Similarly, say 'It's raining' not 'It is raining' in casual speech."
+              },
+              {
+                "name": "Weather Description Intonation",
+                "target": "Use appropriate intonation for weather statements and questions",
+                "explanation": "For weather statements, use falling intonation at the end: 'It's sunny today.' ↘ For questions about weather, use rising intonation: 'Is it cold outside?' ↗ This helps your listener know if you are telling or asking."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m04-s-practice",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "JACK-et",
+                "countryAudio": "jacket",
+                "countrySyllables": [
+                  {
+                    "text": "JACK",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "et",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "SWEAT-er",
+                "natAudio": "sweater",
+                "natSyllables": [
+                  {
+                    "text": "SWEAT",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "er",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Both 'jacket' and 'sweater' have stress on the first syllable. This is very common for two-syllable clothing words in English. Say the first part louder and longer."
+              },
+              {
+                "id": "pair-2",
+                "country": "SUN-ny",
+                "countryAudio": "sunny",
+                "countrySyllables": [
+                  {
+                    "text": "SUN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ny",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "CLOUD-y",
+                "natAudio": "cloudy",
+                "natSyllables": [
+                  {
+                    "text": "CLOUD",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "y",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Weather adjectives ending in '-y' keep the stress on the root word. 'SUN-ny' stresses 'SUN', and 'CLOUD-y' stresses 'CLOUD'. The '-y' ending is always unstressed."
+              },
+              {
+                "id": "pair-3",
+                "country": "WEAR-ing",
+                "countryAudio": "wearing",
+                "countrySyllables": [
+                  {
+                    "text": "WEAR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ing",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "um-BREL-la",
+                "natAudio": "umbrella",
+                "natSyllables": [
+                  {
+                    "text": "um",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "BREL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "la",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice the stress shift: 'WEAR-ing' has stress on the first syllable, but 'um-BREL-la' has stress on the second syllable. When you say 'umbrella', make 'BREL' the loudest part."
+              },
+              {
+                "id": "pair-4",
+                "country": "RAIN-ing",
+                "countryAudio": "raining",
+                "countrySyllables": [
+                  {
+                    "text": "RAIN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ing",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "RAIN-coat",
+                "natAudio": "raincoat",
+                "natSyllables": [
+                  {
+                    "text": "RAIN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "coat",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Both 'raining' and 'raincoat' keep the stress on 'RAIN'. In compound words like 'raincoat', the first part usually gets the main stress. Say 'RAIN-coat', not 'rain-COAT'."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "I'm wearing a blue jacket today.",
+                "phonetic": "/aɪm ˈweərɪŋ ə bluː ˈdʒækɪt təˈdeɪ/",
+                "focus": "Smooth contraction of 'I'm' and clear pronunciation of 'jacket'",
+                "hint": "Connect 'I'm wearing' as one smooth phrase. Stress the first syllable of 'JACK-et'. Make the 'j' sound clear at the start."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "She is wearing a red dress and white shoes.",
+                "phonetic": "/ʃiː ɪz ˈweərɪŋ ə red dres ənd waɪt ʃuːz/",
+                "focus": "Clear colour adjectives before clothing nouns",
+                "hint": "Stress the colour words 'RED' and 'WHITE' slightly. Make sure 'shoes' ends with a 'z' sound, not an 's' sound."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "It's sunny and warm outside.",
+                "phonetic": "/ɪts ˈsʌni ənd wɔːm aʊtˈsaɪd/",
+                "focus": "Weather description with natural linking",
+                "hint": "Say 'It's' quickly as one sound. Link 'sunny‿and' together smoothly. Stress 'SUN-ny' on the first syllable."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Are you wearing a coat? It's cold and windy.",
+                "phonetic": "/ɑːr juː ˈweərɪŋ ə kəʊt ɪts kəʊld ənd ˈwɪndi/",
+                "focus": "Rising intonation for question, falling for statement",
+                "hint": "Use rising intonation at the end of 'coat?' ↗ Then use falling intonation for 'windy.' ↘ This shows the difference between asking and telling."
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "I'm not wearing a sweater because it's hot today.",
+                "phonetic": "/aɪm nɒt ˈweərɪŋ ə ˈswetər bɪˈkɒz ɪts hɒt təˈdeɪ/",
+                "focus": "Negative Present Continuous and giving a reason",
+                "hint": "Say 'I'm not' clearly — don't skip the 'not'. Stress 'SWEAT-er' on the first syllable. The word 'because' connects your two ideas."
+              },
+              {
+                "id": "spk-d-6",
+                "targetText": "What color is your shirt? My shirt is green.",
+                "phonetic": "/wɒt ˈkʌlər ɪz jɔːr ʃɜːrt maɪ ʃɜːrt ɪz ɡriːn/",
+                "focus": "Question word stress and clear 'sh' sound in 'shirt'",
+                "hint": "Stress 'COL-or' on the first syllable. The 'sh' sound in 'shirt' is soft — push air through your teeth gently. Don't confuse 'shirt' with 'short'."
+              }
+            ],
+            "roleplay": {
+              "context": "You meet Mr. Khoirul at a café on a rainy morning. He wants to practise describing clothes and weather with you. He will ask you about what you are wearing today and about the weather. Answer his questions using the Present Continuous tense and simple weather descriptions.",
+              "roles": [
+                "Mr. Khoirul",
+                "You"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Hello! Let's practice describing clothes and weather. What are you wearing today?",
+                  "translation": "Halo! Ayo berlatih mendeskripsikan pakaian dan cuaca. Apa yang kamu kenakan hari ini?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Hi! I'm wearing a white T-shirt and black jeans.",
+                  "translation": "Hai! Saya sedang mengenakan kaos putih dan jeans hitam."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Great! And what color shoes are you wearing?",
+                  "translation": "Bagus! Dan sepatu warna apa yang kamu kenakan?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "I'm wearing brown shoes.",
+                  "translation": "Saya sedang mengenakan sepatu cokelat."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Perfect! Now tell me, how is the weather today where you are?",
+                  "translation": "Sempurna! Sekarang ceritakan, bagaimana cuaca hari ini di tempatmu?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "It's sunny and warm today.",
+                  "translation": "Hari ini cerah dan hangat."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Wonderful! So you don't need a jacket, right?",
+                  "translation": "Luar biasa! Jadi kamu tidak perlu jaket, kan?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "No, I don't. It's not cold today.",
+                  "translation": "Tidak. Hari ini tidak dingin."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m04-s-quiz",
+          "moduleId": "A1.2-M04",
+          "subModuleId": "sub-a1-2-m04-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about what you are wearing today and why. Use the Present Continuous tense and mention at least two colours. Speak for about 30 seconds.",
+                "audioPrompt": "Please describe what you are wearing right now. Tell me about the colours of your clothes and why you chose them today. Think about the weather too!",
+                "storyPoints": [
+                  "Describe at least two clothing items you are wearing right now using 'I'm wearing...'",
+                  "Mention the colours of your clothes, for example 'a blue shirt' or 'black trousers'",
+                  "Explain why you chose these clothes today — is it because of the weather?"
+                ],
+                "targetSentence": "Today I'm wearing a blue T-shirt and grey trousers because it's warm and sunny outside.",
+                "phonetic": "/təˈdeɪ aɪm ˈweərɪŋ ə bluː ˈtiːʃɜːrt ənd ɡreɪ ˈtraʊzərz bɪˈkɒz ɪts wɔːm ənd ˈsʌni aʊtˈsaɪd/",
+                "expectedKeywords": [
+                  "wearing",
+                  "blue",
+                  "warm",
+                  "sunny",
+                  "shirt",
+                  "trousers"
+                ],
+                "hint": "Start with 'Today I'm wearing...' and then add colours before each clothing item. End with a reason about the weather.",
+                "explanation": "This storytelling task practises using the Present Continuous 'I'm wearing' with colour adjectives and connecting your clothing choice to the weather using 'because'."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about a rainy day. Describe the weather and what clothes people around you are wearing. Use the Present Continuous tense.",
+                "audioPrompt": "Imagine it is a rainy day. Tell me about the weather and describe what people near you are wearing. Are they wearing jackets? Do they have umbrellas?",
+                "storyPoints": [
+                  "Describe the rainy weather using phrases like 'It's raining' or 'It's cold and cloudy'",
+                  "Describe what one or two people are wearing using 'He/She is wearing...'",
+                  "Mention weather-related clothing items like a jacket, raincoat, boots, or umbrella"
+                ],
+                "targetSentence": "It's raining and cold today. My friend is wearing a yellow raincoat and brown boots. She is also carrying a black umbrella.",
+                "phonetic": "/ɪts ˈreɪnɪŋ ənd kəʊld təˈdeɪ maɪ frend ɪz ˈweərɪŋ ə ˈjeləʊ ˈreɪnkəʊt ənd braʊn buːts ʃiː ɪz ˈɔːlsəʊ ˈkæriɪŋ ə blæk ʌmˈbrelə/",
+                "expectedKeywords": [
+                  "raining",
+                  "cold",
+                  "wearing",
+                  "raincoat",
+                  "boots",
+                  "umbrella"
+                ],
+                "hint": "Start by describing the weather: 'It's raining...' Then describe someone's clothes: 'My friend is wearing...' Use colour words before each clothing item.",
+                "explanation": "This task combines weather vocabulary with clothing descriptions using the Present Continuous for third person ('He/She is wearing'). It practises connecting weather conditions to appropriate clothing choices."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are at a clothing shop. The shop assistant, Mr. Khoirul, asks you what you are looking for. Tell him what clothes you want and what colours you prefer.",
+                "audioPrompt": "Hello! Welcome to our clothing shop. What are you looking for today? What colour do you like?",
+                "scenarioContext": "You walk into a small clothing shop on a sunny afternoon. The friendly shop assistant, Mr. Khoirul, greets you and wants to help you find clothes. You need a new T-shirt and trousers for the warm weather. Tell him what colours you want.",
+                "characterRole": "Mr. Khoirul is a friendly shop assistant at a clothing store. He speaks slowly and clearly. He asks simple questions about what clothes you need and what colours you prefer.",
+                "targetSentence": "I'm looking for a new T-shirt. I like blue or green. And I need black trousers, please.",
+                "phonetic": "/aɪm ˈlʊkɪŋ fɔːr ə njuː ˈtiːʃɜːrt aɪ laɪk bluː ɔːr ɡriːn ənd aɪ niːd blæk ˈtraʊzərz pliːz/",
+                "expectedKeywords": [
+                  "looking",
+                  "T-shirt",
+                  "blue",
+                  "green",
+                  "trousers",
+                  "black"
+                ],
+                "hint": "Use 'I'm looking for...' to say what you want. Then say 'I like...' with your favourite colours. Remember to say 'please'!",
+                "explanation": "This roleplay practises using Present Continuous ('I'm looking for') in a real shopping situation. You also practise naming clothing items with colour preferences."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You call your friend Mr. Khoirul to ask about the weather in his city. Then describe the weather in your city and what you are wearing.",
+                "audioPrompt": "Hey! Thanks for calling. How is the weather in your city today? What are you wearing?",
+                "scenarioContext": "You are calling your friend Mr. Khoirul who lives in a different city. You want to know about the weather there because you are planning to visit him this weekend. Share information about your weather and clothes too.",
+                "characterRole": "Mr. Khoirul is your good friend who lives in another city. He is happy to hear from you and wants to chat about the weather. He speaks in simple, clear English.",
+                "targetSentence": "Hi! It's very hot and sunny here. I'm wearing shorts and a white T-shirt. How is the weather there?",
+                "phonetic": "/haɪ ɪts ˈveri hɒt ənd ˈsʌni hɪər aɪm ˈweərɪŋ ʃɔːrts ənd ə waɪt ˈtiːʃɜːrt haʊ ɪz ðə ˈweðər ðeər/",
+                "expectedKeywords": [
+                  "hot",
+                  "sunny",
+                  "wearing",
+                  "shorts",
+                  "T-shirt",
+                  "weather"
+                ],
+                "hint": "First describe your weather: 'It's hot and sunny here.' Then say what you are wearing. Finally, ask about his weather: 'How is the weather there?'",
+                "explanation": "This roleplay practises exchanging weather information and clothing descriptions in a phone conversation. You use Present Continuous and weather adjectives in a natural context."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are getting ready to go outside. Mr. Khoirul, your housemate, asks you about the weather and suggests what to wear. Respond and describe your clothing choices.",
+                "audioPrompt": "Hey, are you going outside? What's the weather like? Do you need a jacket? What are you wearing?",
+                "scenarioContext": "It is a cold and windy morning. You are at home getting ready to go to school. Your housemate Mr. Khoirul sees you near the door and wants to make sure you are dressed warmly enough for the cold weather.",
+                "characterRole": "Mr. Khoirul is your caring housemate. He is worried that you might be cold outside. He asks about the weather and gives simple advice about what clothes to wear.",
+                "targetSentence": "Yes, I'm going to school. It's cold and windy today. I'm wearing a warm jacket, a scarf, and brown boots.",
+                "phonetic": "/jes aɪm ˈɡəʊɪŋ tə skuːl ɪts kəʊld ənd ˈwɪndi təˈdeɪ aɪm ˈweərɪŋ ə wɔːm ˈdʒækɪt ə skɑːrf ənd braʊn buːts/",
+                "expectedKeywords": [
+                  "cold",
+                  "windy",
+                  "wearing",
+                  "jacket",
+                  "scarf",
+                  "boots"
+                ],
+                "hint": "Answer his question first, then describe the weather. Use 'I'm wearing...' and list your warm clothes. Remember to use 'and' before the last item.",
+                "explanation": "This roleplay connects weather conditions to clothing choices in a daily life situation. You practise responding to questions and listing multiple clothing items with the Present Continuous."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are at a park with Mr. Khoirul. He asks you to describe what other people in the park are wearing. Use 'He is wearing...' and 'She is wearing...' with colours.",
+                "audioPrompt": "Look at all the people in the park! Can you describe what that man over there is wearing? And what about the woman near the tree?",
+                "scenarioContext": "You and Mr. Khoirul are sitting on a bench in a park on a beautiful sunny day. There are many people around you. Mr. Khoirul wants you to practise English by describing what other people are wearing. Look around and describe their clothes and colours.",
+                "characterRole": "Mr. Khoirul is your English practice partner. You are both sitting in a park and he points at different people, asking you to describe their clothing. He is patient and encouraging.",
+                "targetSentence": "The man is wearing a red T-shirt and blue jeans. The woman near the tree is wearing a yellow dress and white shoes.",
+                "phonetic": "/ðə mæn ɪz ˈweərɪŋ ə red ˈtiːʃɜːrt ənd bluː dʒiːnz ðə ˈwʊmən nɪər ðə triː ɪz ˈweərɪŋ ə ˈjeləʊ dres ənd waɪt ʃuːz/",
+                "expectedKeywords": [
+                  "man",
+                  "wearing",
+                  "red",
+                  "jeans",
+                  "woman",
+                  "dress",
+                  "yellow",
+                  "white"
+                ],
+                "hint": "Use 'The man is wearing...' and 'The woman is wearing...' Put the colour word before the clothing item. For example: 'a red T-shirt'.",
+                "explanation": "This roleplay practises third-person Present Continuous descriptions ('He/She is wearing') with multiple colour-clothing combinations. Describing others is a key real-world speaking skill."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Say the following sentence aloud. Focus on pronouncing each clothing and weather word clearly and correctly.",
+                "audioPrompt": "Please say this sentence clearly. Make sure you pronounce every clothing item and weather word correctly.",
+                "targetSentence": "I'm wearing a green sweater and grey boots because it's cloudy and cold outside.",
+                "phonetic": "/aɪm ˈweərɪŋ ə ɡriːn ˈswetər ənd ɡreɪ buːts bɪˈkɒz ɪts ˈklaʊdi ənd kəʊld aʊtˈsaɪd/",
+                "expectedKeywords": [
+                  "wearing",
+                  "green",
+                  "sweater",
+                  "grey",
+                  "boots",
+                  "cloudy",
+                  "cold"
+                ],
+                "hint": "Focus on the key vocabulary: 'sweater' (SWEAT-er), 'boots' (long 'oo' sound), 'cloudy' (CLOUD-y), and 'grey' (rhymes with 'day'). Say each word clearly.",
+                "explanation": "This drill tests your ability to pronounce essential clothing vocabulary (sweater, boots) and weather vocabulary (cloudy, cold) in a complete sentence. Clear vocabulary pronunciation is the foundation of good speaking."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Say the following sentences aloud. Pay attention to the correct Present Continuous form: 'am wearing', 'is wearing', 'are wearing'.",
+                "audioPrompt": "Please say these sentences. Focus on using the correct form of the Present Continuous tense for each subject.",
+                "targetSentence": "I am wearing a hat. She is wearing a skirt. They are wearing jackets because it is raining.",
+                "phonetic": "/aɪ æm ˈweərɪŋ ə hæt ʃiː ɪz ˈweərɪŋ ə skɜːrt ðeɪ ɑːr ˈweərɪŋ ˈdʒækɪts bɪˈkɒz ɪt ɪz ˈreɪnɪŋ/",
+                "expectedKeywords": [
+                  "am wearing",
+                  "is wearing",
+                  "are wearing",
+                  "hat",
+                  "skirt",
+                  "jackets",
+                  "raining"
+                ],
+                "hint": "Remember: 'I AM wearing', 'She IS wearing', 'They ARE wearing'. The verb 'to be' changes with the subject, but 'wearing' stays the same. Say each form clearly.",
+                "explanation": "This grammar drill practises the three main forms of Present Continuous with clothing: 'I am wearing' (first person), 'She is wearing' (third person singular), and 'They are wearing' (plural). Correct subject-verb agreement is essential for clear communication."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Syllable Stress Drill",
+                "instruction": "Say the following words and sentence aloud. Pay careful attention to which syllable is stressed in each word. The stressed syllable is shown in CAPITAL letters.",
+                "audioPrompt": "Listen to the stress pattern and repeat. Stress the correct syllable in each word: SWEAT-er, um-BREL-la, RAIN-coat, beau-TI-ful.",
+                "targetSentence": "She is wearing a beautiful sweater and carrying an umbrella because she forgot her raincoat.",
+                "phonetic": "/ʃiː ɪz ˈweərɪŋ ə ˈbjuːtɪfəl ˈswetər ənd ˈkæriɪŋ ən ʌmˈbrelə bɪˈkɒz ʃiː fəˈɡɒt hɜːr ˈreɪnkəʊt/",
+                "expectedKeywords": [
+                  "wearing",
+                  "beautiful",
+                  "sweater",
+                  "umbrella",
+                  "raincoat"
+                ],
+                "hint": "Stress patterns: 'SWEAT-er' (stress on first), 'um-BREL-la' (stress on second), 'RAIN-coat' (stress on first), 'BEAU-ti-ful' (stress on first). Make the stressed syllable louder and longer than the others.",
+                "explanation": "This drill focuses on syllable stress in multi-syllable clothing and weather words. Notice that 'umbrella' has stress on the SECOND syllable (um-BREL-la), which is different from most two-syllable clothing words that stress the FIRST syllable (JACK-et, SWEAT-er). Getting stress right makes your English much easier to understand."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Intonation Drill",
+                "instruction": "Say the following sentences aloud. Use RISING intonation ↗ for yes/no questions and FALLING intonation ↘ for statements and information questions.",
+                "audioPrompt": "Practise the correct intonation pattern. Remember: your voice goes UP at the end of yes/no questions and DOWN at the end of statements and 'wh-' questions.",
+                "targetSentence": "Is it raining outside? Yes, it is raining. What are you wearing? I'm wearing a warm coat and a red scarf.",
+                "phonetic": "/ɪz ɪt ˈreɪnɪŋ aʊtˈsaɪd↗ jes ɪt ɪz ˈreɪnɪŋ↘ wɒt ɑːr juː ˈweərɪŋ↘ aɪm ˈweərɪŋ ə wɔːm kəʊt ənd ə red skɑːrf↘/",
+                "expectedKeywords": [
+                  "raining",
+                  "outside",
+                  "wearing",
+                  "coat",
+                  "scarf"
+                ],
+                "hint": "For 'Is it raining outside?' your voice should go UP ↗ at the end because it is a yes/no question. For 'Yes, it is raining.' your voice goes DOWN ↘ because it is an answer. For 'What are you wearing?' your voice also goes DOWN ↘ because 'what' questions use falling intonation.",
+                "explanation": "This drill practises the two main intonation patterns in English. Yes/no questions ('Is it raining?') use RISING intonation — your voice goes up at the end. Statements ('It is raining.') and wh-questions ('What are you wearing?') use FALLING intonation — your voice goes down at the end. Correct intonation helps listeners understand whether you are asking or telling."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

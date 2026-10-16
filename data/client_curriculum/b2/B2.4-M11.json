@@ -1,0 +1,209 @@
+{
+  "id": "B2.4-M11",
+  "levelId": "B2.4",
+  "title": "Unit 11: Critical Evaluation of Sources & Avoiding Plagiarism",
+  "cefr": "B2",
+  "group": "Scholarly Integrity",
+  "objective": "Mampu melakukan paraphrase canggih, sintesis multi-sumber, dan atribusi referensi tanpa kehilangan makna asli.",
+  "complexity": "deep",
+  "estimatedMinutes": 15,
+  "isExam": false,
+  "passingScore": 70,
+  "orderIndex": 50,
+  "sections": {
+    "theory": {
+      "summary": "Dalam dunia akademik, kemampuan mengevaluasi sumber secara kritis dan menghindari plagiarisme adalah keterampilan esensial bagi penulis level B2. Modul ini berfokus pada tiga pilar utama: (1) Paraphrase canggih — mengubah kalimat sumber tanpa kehilangan makna asli menggunakan teknik perubahan struktur kalimat, sinonim kontekstual, dan pergeseran voice (aktif/pasif); (2) Sintesis multi-sumber — menggabungkan ide dari beberapa referensi menjadi satu argumen koheren dengan menggunakan reporting verbs dan frasa atribusi yang tepat; (3) Atribusi referensi — memberikan kredit kepada penulis asli secara akurat melalui in-text citation dan signal phrases. Kesalahan umum pelajar adalah mengganti beberapa kata saja dari teks asli (patchwriting) dan menganggapnya sudah cukup sebagai parafrase. Penulis akademik yang kompeten harus mampu mengubah struktur kalimat secara fundamental sambil mempertahankan inti pesan.",
+      "rules": [
+        {
+          "pattern": "According to [Author] ([Year]), + paraphrased clause",
+          "meaning": "Digunakan untuk mengaitkan ide yang di-parafrase kepada penulis aslinya, menunjukkan bahwa informasi berasal dari sumber tertentu.",
+          "example": "According to Harmer (2015), effective language acquisition requires consistent exposure to authentic input rather than mere memorisation of rules."
+        },
+        {
+          "pattern": "[Author] ([Year]) argues / suggests / contends / maintains + that-clause",
+          "meaning": "Menggunakan reporting verb yang bervariasi untuk menyampaikan posisi atau klaim penulis asli dengan nuansa yang berbeda-beda (argues = berargumen kuat, suggests = menyarankan, contends = menegaskan dengan perdebatan, maintains = mempertahankan pendapat).",
+          "example": "Richards (2018) contends that communicative competence cannot be measured solely through standardised testing."
+        },
+        {
+          "pattern": "While [Source A] emphasises X, [Source B] highlights Y, suggesting that Z.",
+          "meaning": "Pola sintesis multi-sumber yang menggabungkan dua perspektif berbeda menjadi satu kalimat koheren dengan kesimpulan penulis sendiri, menunjukkan kemampuan berpikir kritis.",
+          "example": "While Thompson (2019) emphasises the role of intrinsic motivation, Dörnyei (2020) highlights environmental factors, suggesting that both internal and external elements contribute to sustained learning."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Patchwriting: Mengganti Beberapa Kata Bukan Berarti Parafrase",
+        "explanation": "Banyak pelajar mengira bahwa mengganti beberapa kata dengan sinonim sudah cukup sebagai parafrase. Ini disebut 'patchwriting' dan masih dianggap plagiarisme di dunia akademik. Parafrase yang benar memerlukan perubahan struktur kalimat secara menyeluruh, perubahan voice (aktif ke pasif atau sebaliknya), dan/atau reorganisasi urutan informasi — sambil tetap mempertahankan makna asli. Selalu sertakan atribusi meskipun sudah di-parafrase.",
+        "wrong": "Original: 'Social media has significantly transformed the way people communicate globally.' → Patchwriting: 'Social media has greatly changed the way individuals communicate worldwide.'",
+        "correct": "The global landscape of human communication has undergone a profound shift as a result of social media platforms (Smith, 2021)."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Manakah kalimat berikut yang menunjukkan parafrase canggih yang benar dari kalimat asli: 'Climate change poses a serious threat to biodiversity in tropical regions'?",
+          "options": [
+            "Biodiversity in tropical areas faces considerable risk due to the ongoing effects of a shifting climate (IPCC, 2022).",
+            "Climate change is a serious threat to biodiversity in tropical regions.",
+            "Climate change poses a big threat to the biodiversity of tropical areas."
+          ],
+          "correctIndex": 0,
+          "explanation": "Opsi pertama mengubah struktur kalimat secara fundamental (subjek berubah dari 'climate change' menjadi 'biodiversity'), menggunakan sinonim kontekstual ('considerable risk', 'shifting climate'), dan menyertakan atribusi. Opsi kedua dan ketiga hanya mengganti sedikit kata tanpa mengubah struktur — ini adalah patchwriting."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Perhatikan kalimat berikut: 'Technology has revolutionised education in the 21st century.' Seorang mahasiswa menulis: 'Technology has transformed education in the 21st century.' Apa masalah utama dari tulisan mahasiswa tersebut?",
+          "options": [
+            "Kalimat tersebut terlalu pendek untuk esai akademik.",
+            "Kalimat tersebut adalah patchwriting karena hanya mengganti satu kata tanpa mengubah struktur dan tidak menyertakan atribusi sumber.",
+            "Kalimat tersebut salah secara gramatikal karena menggunakan present perfect."
+          ],
+          "correctIndex": 1,
+          "explanation": "Masalah utamanya adalah patchwriting — mahasiswa hanya mengganti 'revolutionised' dengan 'transformed' tanpa mengubah struktur kalimat secara signifikan dan tanpa memberikan atribusi kepada sumber asli. Ini masih dianggap plagiarisme dalam konteks akademik."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Dosen: 'You need to synthesise these two sources in your paragraph. Source A says remote work increases productivity. Source B says remote work reduces team collaboration.' Mahasiswa: '[...]'",
+          "options": [
+            "Remote work increases productivity but reduces team collaboration.",
+            "Source A and Source B have different opinions about remote work.",
+            "While Henderson (2021) argues that remote work enhances individual productivity, Park (2022) cautions that it may weaken team collaboration, indicating that organisations must balance flexibility with structured teamwork."
+          ],
+          "correctIndex": 2,
+          "explanation": "Opsi ketiga menunjukkan sintesis multi-sumber yang canggih: menggunakan signal phrases dengan reporting verbs yang bervariasi ('argues', 'cautions'), menyertakan atribusi lengkap, dan menambahkan kesimpulan analitis penulis sendiri. Opsi pertama hanya menyandingkan dua ide tanpa atribusi, dan opsi kedua terlalu umum tanpa analisis."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "paraphrase",
+        "translation": "menguraikan ulang dengan kata-kata sendiri",
+        "example": "A good paraphrase restructures the original sentence while preserving its core meaning.",
+        "context": "Digunakan dalam penulisan akademik ketika penulis ingin menyampaikan ide orang lain tanpa mengutip langsung."
+      },
+      {
+        "word": "attribution",
+        "translation": "atribusi; pengakuan sumber",
+        "example": "Proper attribution ensures that the original author receives credit for their ideas.",
+        "context": "Wajib digunakan setiap kali penulis merujuk pada ide, data, atau argumen dari sumber lain dalam teks akademik."
+      },
+      {
+        "word": "synthesise",
+        "translation": "menyintesis; menggabungkan berbagai ide menjadi satu kesatuan",
+        "example": "The literature review should synthesise findings from multiple studies rather than summarise them individually.",
+        "context": "Digunakan saat penulis menggabungkan perspektif dari beberapa sumber untuk membangun argumen yang lebih kuat."
+      },
+      {
+        "word": "contend",
+        "translation": "menegaskan; berargumen (dengan nada perdebatan)",
+        "example": "Several researchers contend that standardised testing fails to capture students' true abilities.",
+        "context": "Reporting verb yang digunakan ketika penulis asli menyampaikan pendapat yang mungkin kontroversial atau diperdebatkan."
+      },
+      {
+        "word": "patchwriting",
+        "translation": "penulisan tambal-sulam (mengganti beberapa kata dari sumber tanpa mengubah struktur)",
+        "example": "The professor identified several instances of patchwriting in the student's essay and required a complete revision.",
+        "context": "Istilah akademik untuk praktik yang dianggap sebagai bentuk plagiarisme ringan namun tetap tidak dapat diterima."
+      },
+      {
+        "word": "credible",
+        "translation": "kredibel; dapat dipercaya",
+        "example": "Academic essays should rely on credible, peer-reviewed sources rather than unverified websites.",
+        "context": "Digunakan saat mengevaluasi kualitas dan keandalan sumber referensi sebelum digunakan dalam tulisan."
+      }
+    ],
+    "dialogue": {
+      "context": "Dua mahasiswa, Alex dan Morgan, sedang berdiskusi di perpustakaan kampus tentang tugas esai mereka. Mereka membahas cara melakukan parafrase yang benar, menghindari plagiarisme, dan menyintesis beberapa sumber untuk esai argumentatif tentang dampak media sosial terhadap kesehatan mental remaja.",
+      "lines": [
+        {
+          "speaker": "Alex",
+          "text": "Morgan, I'm struggling with this essay. I found a great quote from Williams' study, but my professor said I can't just use direct quotes for everything. How do I paraphrase without accidentally plagiarising?",
+          "translation": "Morgan, aku kesulitan dengan esai ini. Aku menemukan kutipan bagus dari studi Williams, tapi dosenku bilang aku tidak bisa hanya menggunakan kutipan langsung untuk semuanya. Bagaimana cara aku memparafrase tanpa tidak sengaja melakukan plagiarisme?"
+        },
+        {
+          "speaker": "Morgan",
+          "text": "The key is to completely restructure the sentence, not just swap a few words. For instance, if Williams wrote 'Social media usage correlates with increased anxiety among teenagers,' you could write something like 'Adolescent anxiety levels have been shown to rise in connection with frequent engagement on social media platforms, as Williams (2023) suggests.'",
+          "translation": "Kuncinya adalah mengubah struktur kalimat secara total, bukan hanya mengganti beberapa kata. Misalnya, jika Williams menulis 'Penggunaan media sosial berkorelasi dengan peningkatan kecemasan di kalangan remaja,' kamu bisa menulis sesuatu seperti 'Tingkat kecemasan remaja telah terbukti meningkat sehubungan dengan keterlibatan yang sering di platform media sosial, seperti yang disarankan Williams (2023).'."
+        },
+        {
+          "speaker": "Alex",
+          "text": "That makes sense. But what if I have two sources that say slightly different things? Chen's research focuses on cyberbullying, while Williams emphasises general screen time. How do I bring them together?",
+          "translation": "Itu masuk akal. Tapi bagaimana jika aku punya dua sumber yang mengatakan hal yang sedikit berbeda? Penelitian Chen berfokus pada perundungan siber, sementara Williams menekankan waktu layar secara umum. Bagaimana cara menggabungkan keduanya?"
+        },
+        {
+          "speaker": "Morgan",
+          "text": "That's where synthesis comes in. You could write: 'While Williams (2023) argues that prolonged screen time contributes to adolescent anxiety, Chen (2022) highlights cyberbullying as the primary mechanism through which social media harms mental health, suggesting that both the duration and nature of online interactions play critical roles.' See how you weave both perspectives together and add your own analytical conclusion?",
+          "translation": "Di situlah sintesis berperan. Kamu bisa menulis: 'Sementara Williams (2023) berargumen bahwa waktu layar yang berkepanjangan berkontribusi pada kecemasan remaja, Chen (2022) menyoroti perundungan siber sebagai mekanisme utama yang melaluinya media sosial merusak kesehatan mental, menunjukkan bahwa baik durasi maupun sifat interaksi daring memainkan peran kritis.' Lihat bagaimana kamu menjalin kedua perspektif dan menambahkan kesimpulan analitismu sendiri?"
+        },
+        {
+          "speaker": "Alex",
+          "text": "Oh, I see! So I shouldn't just list what each author says separately. I need to connect their ideas and show how they relate to each other — and to my own argument.",
+          "translation": "Oh, aku mengerti! Jadi aku tidak boleh hanya mendaftar apa yang dikatakan setiap penulis secara terpisah. Aku perlu menghubungkan ide-ide mereka dan menunjukkan bagaimana mereka saling berkaitan — dan dengan argumenku sendiri."
+        },
+        {
+          "speaker": "Morgan",
+          "text": "Exactly. And always remember to use varied reporting verbs — 'argues,' 'contends,' 'maintains,' 'suggests' — each one carries a slightly different nuance. 'Suggests' is tentative, while 'contends' implies the author is making a strong, possibly debated claim. Choosing the right verb shows your professor that you've critically evaluated each source.",
+          "translation": "Tepat sekali. Dan selalu ingat untuk menggunakan reporting verbs yang bervariasi — 'argues,' 'contends,' 'maintains,' 'suggests' — masing-masing membawa nuansa yang sedikit berbeda. 'Suggests' bersifat tentatif, sementara 'contends' menyiratkan bahwa penulis membuat klaim yang kuat dan mungkin diperdebatkan. Memilih kata kerja yang tepat menunjukkan kepada dosenmu bahwa kamu telah mengevaluasi setiap sumber secara kritis."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Melatih kemampuan melakukan parafrase canggih, sintesis multi-sumber, dan atribusi referensi yang tepat dalam konteks penulisan akademik.",
+      "scenario": "You are preparing a short academic paragraph for a university assignment on the topic: 'The impact of artificial intelligence on employment.' You have two sources: Source A (Johnson, 2023) states that 'AI will eliminate millions of routine jobs within the next decade.' Source B (Tanaka, 2022) states that 'AI will create new categories of employment that currently do not exist.' Your task: (1) Paraphrase each source using advanced techniques (restructuring, voice change, contextual synonyms). (2) Synthesise both sources into one cohesive paragraph that includes proper attribution with varied reporting verbs. (3) Add your own analytical conclusion that connects both perspectives. Present your paragraph aloud as if you were defending it in a seminar discussion."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Kalimat asli: 'Regular exercise significantly reduces the risk of cardiovascular disease.' Manakah parafrase yang paling tepat dan terhindar dari plagiarisme?",
+          "options": [
+            "The likelihood of developing heart-related conditions can be substantially lowered through consistent physical activity (Lee, 2021).",
+            "Regular exercise greatly reduces the risk of heart disease.",
+            "Exercise significantly lowers the risk of cardiovascular disease in most people.",
+            "Doing regular exercise can significantly reduce cardiovascular disease risk."
+          ],
+          "correctIndex": 0,
+          "explanation": "Opsi A mengubah struktur kalimat secara fundamental (subjek berubah, voice berubah ke pasif, sinonim kontekstual digunakan secara menyeluruh) dan menyertakan atribusi sumber. Opsi B, C, dan D hanya mengganti beberapa kata tanpa perubahan struktur yang signifikan dan tanpa atribusi — ini adalah patchwriting."
+        },
+        {
+          "id": 2,
+          "prompt": "Which reporting verb best conveys that an author is making a cautious, tentative claim?",
+          "options": [
+            "asserts",
+            "suggests",
+            "insists",
+            "declares"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Suggests' menunjukkan bahwa penulis membuat klaim yang bersifat tentatif atau hati-hati. 'Asserts', 'insists', dan 'declares' semuanya menunjukkan klaim yang kuat dan tegas, bukan tentatif."
+        },
+        {
+          "id": 3,
+          "prompt": "Perhatikan kalimat berikut: 'While Kumar (2020) _______ that online learning offers greater flexibility, Perez (2021) _______ that it lacks the social interaction essential for deep learning.' Pasangan reporting verbs mana yang paling tepat untuk melengkapi kalimat sintesis ini?",
+          "options": [
+            "says ... says",
+            "tells ... speaks",
+            "maintains ... argues",
+            "talks ... mentions"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Maintains' dan 'argues' adalah reporting verbs akademik yang tepat dan bervariasi. 'Maintains' menunjukkan Kumar mempertahankan pendapatnya, sementara 'argues' menunjukkan Perez menyampaikan argumen yang berlawanan. 'Says...says' terlalu repetitif dan informal. 'Tells' dan 'speaks' tidak diikuti that-clause dalam konteks ini. 'Talks' dan 'mentions' terlalu kasual untuk penulisan akademik."
+        },
+        {
+          "id": 4,
+          "prompt": "Seorang mahasiswa menulis paragraf berikut dalam esainya: 'Technology has changed education. Many students now learn online. This is very different from the past.' Apa kelemahan utama paragraf ini dari perspektif integritas akademik dan penulisan level B2?",
+          "options": [
+            "Paragraf tersebut terlalu panjang untuk esai akademik.",
+            "Paragraf tersebut menggunakan terlalu banyak kutipan langsung.",
+            "Paragraf tersebut menggunakan kosakata yang terlalu kompleks untuk level B2.",
+            "Paragraf tersebut tidak menyertakan atribusi sumber, tidak menggunakan reporting verbs, dan menyajikan klaim umum tanpa bukti dari referensi yang kredibel."
+          ],
+          "correctIndex": 3,
+          "explanation": "Kelemahan utama paragraf tersebut adalah tidak adanya atribusi sumber sama sekali. Klaim seperti 'technology has changed education' memerlukan dukungan dari sumber yang kredibel dengan atribusi yang tepat. Paragraf tersebut juga tidak menggunakan reporting verbs dan tidak menunjukkan kemampuan sintesis atau evaluasi kritis terhadap sumber."
+        }
+      ]
+    }
+  }
+}

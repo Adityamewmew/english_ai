@@ -1,0 +1,199 @@
+{
+  "id": "C2.5-M04",
+  "levelId": "C2.5",
+  "title": "Unit 4: The Art of the Socratic Dialogue: Dismantling Dogma through Inquiry",
+  "cefr": "C2",
+  "group": "Socratic Method",
+  "objective": "Mampu memandu lawan bicara mengakui kontradiksi logikanya sendiri melalui untaian pertanyaan Sokrates yang bertingkat.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": false,
+  "passingScore": 75,
+  "orderIndex": 56,
+  "sections": {
+    "theory": {
+      "summary": "Dalam wacana akademik dan dialektika tingkat tinggi (C2), Metode Sokrates bukan sekadar proses tanya-jawab biasa, melainkan seni membongkar dogma dan bias kognitif lawan bicara melalui inkuiri yang terstruktur (maieutics). Alih-alih menyerang argumen secara langsung yang sering memicu sikap defensif, penutur C2 menggunakan pertanyaan hipotetis bersyarat, inversi negatif, dan implikatur pragmatis untuk membimbing lawan bicara agar menyadari sendiri kontradiksi logis atau kekeliruan (fallacy) dalam premis mereka. Pendekatan ini menuntut penguasaan register yang sangat halus dan 'academic hedging' agar terdengar sebagai penyelidikan intelektual yang objektif, bukan interogasi yang konfrontatif.",
+      "rules": [
+        {
+          "pattern": "Were we to accept [Premise A], would it not logically follow that [Contradictory Consequence B]?",
+          "meaning": "Menguji keabsahan sebuah premis dengan memproyeksikan konsekuensi logisnya yang absurd atau kontradiktif (Reductio ad absurdum).",
+          "example": "Were we to accept that absolute freedom supersedes all societal norms, would it not logically follow that the very fabric of our legal system is rendered obsolete?"
+        },
+        {
+          "pattern": "Seldom do we consider [Assumption], yet under no circumstances can we reconcile it with [Fact].",
+          "meaning": "Menyoroti pertentangan tajam (cognitive dissonance) antara asumsi dogmatis yang diyakini lawan bicara dengan fakta empiris yang tak terbantahkan melalui inversi negatif.",
+          "example": "Seldom do we consider the ethical ramifications of unchecked AI, yet under no circumstances can we reconcile its autonomous decision-making with our current moral frameworks."
+        },
+        {
+          "pattern": "Granting that [Concession], how then do we account for [Anomaly/Contradiction]?",
+          "meaning": "Memberikan konsesi retoris (mengakui sebagian argumen lawan) untuk kemudian melontarkan pertanyaan tajam yang membongkar celah fatal dalam argumen tersebut (Dialectical Synthesis).",
+          "example": "Granting that economic deregulation stimulates short-term innovation, how then do we account for the irreversible ecological degradation that directly undermines long-term prosperity?"
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Jebakan Interogasi Konfrontatif (The Interrogation Pitfall)",
+        "explanation": "Pembelajar tingkat lanjut sering kali menggunakan pertanyaan retoris yang terlalu agresif atau menyerang secara langsung (direct attack). Hal ini menghancurkan nuansa dialektika dan memicu sikap defensif. Penutur asli C2 menggunakan 'hedging' dan struktur pasif atau hipotetis untuk menjaga kesopanan akademik (academic politeness) sambil tetap membongkar logika lawan secara mematikan.",
+        "wrong": "Your argument makes no sense because if you say that, you are contradicting your own point about human rights.",
+        "correct": "If we proceed with that line of reasoning, might we not inadvertently contradict the very human rights principles we are striving to uphold?"
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Pilih struktur inversi negatif yang paling tepat secara gramatikal untuk menyoroti kontradiksi logika dalam sebuah debat akademik:",
+          "options": [
+            "Under no circumstances we should accept this flawed premise without further scrutiny.",
+            "Rarely do proponents of this theory acknowledge the glaring paradox inherent in their methodology.",
+            "Not only they ignore the empirical evidence, but they also manipulate the historical data."
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi kedua menggunakan inversi negatif yang benar ('Rarely do proponents...'). Opsi pertama dan ketiga salah karena tidak membalik posisi subjek dan auxiliary verb setelah frasa negatif ('Under no circumstances should we...', 'Not only do they ignore...')."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Manakah dari pertanyaan berikut yang paling mencerminkan register C2 dalam membongkar dogma tanpa terdengar menyerang secara personal?",
+          "options": [
+            "Why do you consistently fail to see that your fundamental axiom is completely illogical?",
+            "Assuming your premise holds true, how might we reconcile it with the empirical anomalies observed in recent studies?",
+            "Don't you think it's blatantly obvious that your argument collapses under its own weight?"
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi kedua menggunakan 'hedging' (Assuming..., how might we...) yang elegan dan objektif. Opsi pertama dan ketiga terlalu agresif, konfrontatif, dan menggunakan bahasa yang emosional ('fail to see', 'blatantly obvious')."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Dalam sidang disertasi, seorang penguji ingin menguji tesis kandidat tentang efisiensi pasar bebas. Lengkapi kalimat ini dengan gaya Sokrates: 'Granting that deregulation stimulates short-term innovation, [...]'",
+          "options": [
+            "...it is completely wrong to ignore the devastating long-term consequences on the working class.",
+            "...so you must admit that your thesis is fundamentally flawed and lacks comprehensive analysis.",
+            "...by what mechanism do we prevent the monopolistic stagnation that historically follows such policies?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Opsi ketiga melanjutkan konsesi retoris dengan pertanyaan inkuiri yang tajam namun tetap menjaga register akademik tingkat tinggi ('by what mechanism do we prevent...'). Opsi lainnya berupa pernyataan langsung yang mematikan ruang dialektika."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Maieutic",
+        "translation": "Berkaitan dengan Metode Sokrates (memancing ide laten)",
+        "example": "The professor employed a maieutic approach to guide the students to their own intellectual epiphanies.",
+        "context": "Academic pedagogy and philosophical discourse."
+      },
+      {
+        "word": "Equivocation",
+        "translation": "Penggunaan bahasa ambigu untuk menyembunyikan kebenaran",
+        "example": "The politician's testimony was a masterclass in equivocation, carefully avoiding any definitive stance on the policy.",
+        "context": "Political debates, legal cross-examinations, and forensic linguistics."
+      },
+      {
+        "word": "Axiom",
+        "translation": "Prinsip atau kebenaran yang diterima tanpa perlu pembuktian",
+        "example": "It is a fundamental axiom of modern jurisprudence that an individual is presumed innocent until proven guilty.",
+        "context": "Logic, mathematics, and foundational philosophical arguments."
+      },
+      {
+        "word": "Dialectic",
+        "translation": "Seni menyelidiki kebenaran melalui resolusi kontradiksi",
+        "example": "Hegelian dialectic posits that societal progress occurs inevitably through the clash of thesis and antithesis.",
+        "context": "Advanced academic writing, historical analysis, and debate."
+      },
+      {
+        "word": "Cognitive dissonance",
+        "translation": "Ketegangan mental akibat memegang dua keyakinan yang bertentangan",
+        "example": "The committee experienced severe cognitive dissonance when their dogmatic economic models failed to predict the market crash.",
+        "context": "Psychology, behavioral economics, and dismantling logical fallacies."
+      },
+      {
+        "word": "Fallacious",
+        "translation": "Didasarkan pada penalaran atau logika yang keliru",
+        "example": "To assert that correlation inherently implies causation is a fundamentally fallacious line of reasoning.",
+        "context": "Critiquing arguments in IELTS Task 2 essays or academic peer reviews."
+      }
+    ],
+    "dialogue": {
+      "context": "Sidang Mahkamah Agung (Supreme Court oral argument) di mana seorang Hakim Agung menggunakan Metode Sokrates untuk membongkar celah logika dalam argumen seorang Pengacara Negara terkait kebijakan pengawasan massal (mass surveillance).",
+      "lines": [
+        {
+          "speaker": "Chief Justice",
+          "text": "Counsel, granting your premise that national security necessitates mass surveillance, how then do we prevent the erosion of the very civil liberties this security ostensibly aims to protect?",
+          "translation": "Pengacara, dengan asumsi bahwa keamanan nasional mewajibkan pengawasan massal, lalu bagaimana kita mencegah terkikisnya kebebasan sipil yang justru ingin dilindungi oleh keamanan tersebut?"
+        },
+        {
+          "speaker": "State Counsel",
+          "text": "Your Honor, the surveillance is strictly metadata-driven; it does not infringe upon the substantive content of private communications.",
+          "translation": "Yang Mulia, pengawasan ini murni berbasis metadata; hal ini tidak melanggar konten substantif dari komunikasi pribadi."
+        },
+        {
+          "speaker": "Chief Justice",
+          "text": "Were we to accept that metadata is benign, would it not logically follow that the state could map an individual's entire life trajectory without ever reading a single word they wrote?",
+          "translation": "Jika kita menerima bahwa metadata itu tidak berbahaya, bukankah secara logis berarti negara dapat memetakan seluruh lintasan kehidupan seseorang tanpa pernah membaca satu kata pun yang mereka tulis?"
+        },
+        {
+          "speaker": "State Counsel",
+          "text": "I concede that the aggregate data paints a highly detailed picture, which is precisely why robust judicial oversight is the indispensable safeguard here.",
+          "translation": "Saya mengakui bahwa data agregat memberikan gambaran yang sangat mendetail, itulah sebabnya pengawasan yudisial yang kuat menjadi pengaman yang mutlak diperlukan di sini."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Membimbing lawan bicara untuk mengakui cacat fatal dalam argumen mereka sendiri menggunakan pertanyaan hipotetis bersyarat dan konsesi retoris tanpa memicu sikap defensif.",
+      "scenario": "Anda adalah seorang penguji utama dalam sidang disertasi doktoral di Oxford. Kandidat mempertahankan tesis dogmatis bahwa 'Kecerdasan Buatan (AI) harus diberikan hak cipta penuh atas karya seni yang dihasilkannya.' Gunakan Metode Sokrates untuk membongkar kontradiksi logis antara 'ketiadaan kesadaran (lack of consciousness)' pada AI dan 'tanggung jawab moral (moral culpability)' yang melekat dalam hukum hak cipta."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Which of the following sentences correctly employs subjunctive inversion to stress-test a premise in a formal C2 academic context?",
+          "options": [
+            "If we was to assume your data is correct, the conclusion is undeniably wrong.",
+            "Were we to extrapolate this trend, would we not arrive at a mathematically impossible scenario?",
+            "Had we accept the axiom, the dialectic will inevitably fail.",
+            "Should we to believe this dogma, the cognitive dissonance is clear."
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi B menggunakan inversi subjungtif yang tepat ('Were we to extrapolate...') untuk membentuk kalimat pengandaian tipe 2 yang formal. Opsi A salah grammar ('was' alih-alih 'were'), Opsi C salah bentuk kata kerja ('accept' seharusnya 'accepted'), dan Opsi D salah struktur ('Should we to believe' seharusnya 'Should we believe')."
+        },
+        {
+          "id": 2,
+          "prompt": "In the context of dismantling a fallacious argument, what does the term 'equivocation' refer to?",
+          "options": [
+            "The act of speaking with absolute certainty and dogmatic authority.",
+            "The deliberate use of ambiguous language to conceal the truth or avoid committing to a stance.",
+            "The logical process of synthesizing a thesis and an antithesis.",
+            "The psychological discomfort of holding contradictory beliefs."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Equivocation' adalah kesesatan logika atau taktik retoris di mana seseorang menggunakan kata atau frasa yang ambigu secara sengaja untuk menyembunyikan kebenaran atau menghindari komitmen (Opsi B). Opsi D merujuk pada 'cognitive dissonance', dan Opsi C merujuk pada 'dialectic'."
+        },
+        {
+          "id": 3,
+          "prompt": "An interlocutor dogmatically asserts: 'Censorship is always detrimental to society, without exception.' Which Socratic response best demonstrates C2 dialectical persuasion?",
+          "options": [
+            "You are completely wrong because hate speech laws exist in every civilized country.",
+            "That is a fallacious argument that ignores the basic principles of public safety.",
+            "Granting that freedom of expression is vital, how might we address the proliferation of algorithmic disinformation that incites physical violence?",
+            "Why do you always insist on such extreme, black-and-white axioms?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Opsi C adalah contoh sempurna dari Metode Sokrates tingkat lanjut (Dialectical Synthesis). Ia memberikan konsesi ('Granting that...'), lalu mengajukan pertanyaan inkuiri yang memaksa lawan bicara menghadapi anomali dalam dogma absolut mereka tanpa menyerang secara personal."
+        },
+        {
+          "id": 4,
+          "prompt": "When writing an IELTS Task 2 essay, how can the Socratic principle of 'dialectical synthesis' be effectively applied to achieve a Band 9 in Task Response?",
+          "options": [
+            "By aggressively attacking the opposing view in the introduction to establish dominance.",
+            "By listing as many statistics as possible to overwhelm the reader with empirical data.",
+            "By ignoring the counter-argument entirely to maintain a clear, unified position.",
+            "By objectively presenting a counter-premise, conceding its partial validity, and then systematically dismantling its core logic."
+          ],
+          "correctIndex": 3,
+          "explanation": "Untuk mencapai Band 9 di IELTS Task 2, penulis harus menunjukkan pemikiran kritis yang mendalam. Menggunakan sintesis dialektis (Opsi D)—yaitu menyajikan argumen lawan, mengakui sebagian kebenarannya (concession), lalu membongkar kelemahan logisnya (refutation)—menunjukkan penguasaan wacana akademik yang sangat matang."
+        }
+      ]
+    }
+  }
+}

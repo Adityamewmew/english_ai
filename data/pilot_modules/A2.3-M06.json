@@ -1,0 +1,1575 @@
+{
+  "module": {
+    "id": "A2.3-M06",
+    "levelId": "A2.3",
+    "title": "Imaginary Scenarios: Introduction to Second Conditional",
+    "cefr": "A2",
+    "group": "A2.3 - World Explorations, Stories & Bridge to B1",
+    "objective": "Explore imaginary situations and hypothetical wishes using the Second Conditional ('If I had... I would...').",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 6
+  },
+  "subModules": [
+    {
+      "id": "sub-a2-3-m06-reading",
+      "moduleId": "A2.3-M06",
+      "skillType": "reading",
+      "title": "Reading Mission: Imaginary Scenarios and Future Dreams",
+      "theme": "Imaginary Scenarios and Future Dreams",
+      "grammarFocus": "Second Conditional (If + Past Simple, would + base verb)",
+      "vocabularyFocus": "Life choices, hypothetical situations, and ambitions",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a2-3-m06-r-theory",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this reading mission, you will explore short stories and blog posts about people imagining different lives. You will learn how to use the second conditional to talk about imaginary situations and unreal dreams in the present or future.",
+            "linguisticTarget": {
+              "grammar": "Second conditional sentences using If plus past simple, followed by would and the base form of the verb.",
+              "vocabulary": "Words related to life choices, ambitions, and hypothetical situations like lottery, career, and adventure.",
+              "readingStrategy": "Scanning texts for specific hypothetical outcomes and skimming paragraphs to understand main life goals."
+            },
+            "learningObjectives": [
+              "Understand the main ideas of short A2 texts about imaginary scenarios.",
+              "Locate specific details such as hypothetical results and personal choices.",
+              "Recognize and practice second conditional grammar patterns in context."
+            ],
+            "contextWarmup": {
+              "prompt": "What would you do if you found a bag full of money on the street?",
+              "options": [
+                "I would take it to the police station.",
+                "I would buy a new video game.",
+                "I would hide it in my room."
+              ],
+              "correctIndex": 0,
+              "explanation": "Taking found money to the police station is the responsible and honest choice in this imaginary situation."
+            },
+            "rules": [
+              "Formula: If plus subject plus past simple, subject plus would plus base verb. Example: If I had more time, I would learn Spanish.",
+              "Use 'were' for all subjects (I, he, she, it, we, you, they) in formal second conditional sentences. Example: If I were rich, I would buy a house.",
+              "The if clause and main clause can switch places. If the if clause comes first, use a comma. Example: If I won the lottery, I would travel the world."
+            ],
+            "commonTrap": {
+              "trapTitle": "Using will instead of would in the result clause",
+              "explanation": "Learners often mix up first and second conditionals. Second conditionals talk about unreal or imaginary situations, so you must use would, not will.",
+              "wrong": "If I had a million dollars, I will buy a car.",
+              "correct": "If I had a million dollars, I would buy a car."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Would and Pronouns",
+            "contractionsSubtitle": "Observe how subjects and the modal verb would merge in everyday English:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "would",
+                "vowelDropped": "wou",
+                "remainder": "'d",
+                "contracted": "I'd",
+                "exampleFull": "I would travel more.",
+                "exampleContracted": "I'd travel more."
+              },
+              {
+                "subject": "She",
+                "verb": "would",
+                "vowelDropped": "wou",
+                "remainder": "'d",
+                "contracted": "She'd",
+                "exampleFull": "She would help us.",
+                "exampleContracted": "She'd help us."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Second Conditional",
+              "description": "Assemble sentence blocks to practice hypothetical situations:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "had",
+                  "role": "First Person Singular"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "travel",
+                  "thirdPerson": "travels",
+                  "continuous": "travelling"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "around the world if I had money",
+                  "type": "Conditional Clause"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-3-m06-r-vocab",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "lottery",
+                "ipa": "/ˈlɒt.ər.i/",
+                "meaning": "lotre, undian berhadiah",
+                "partOfSpeech": "noun",
+                "exampleSentence": "If I won the lottery, I would donate to charity.",
+                "collocation": "win the lottery / play the lottery"
+              },
+              {
+                "word": "million",
+                "ipa": "/ˈmɪl.jən/",
+                "meaning": "juta",
+                "partOfSpeech": "noun",
+                "exampleSentence": "If I had a million dollars, I would travel around the world.",
+                "collocation": "a million dollars / a million people"
+              },
+              {
+                "word": "island",
+                "ipa": "/ˈaɪ.lənd/",
+                "meaning": "pulau",
+                "partOfSpeech": "noun",
+                "exampleSentence": "If I were rich, I would buy a private island.",
+                "collocation": "private island / tropical island"
+              },
+              {
+                "word": "opportunity",
+                "ipa": "/ˌɒp.əˈtʃuː.nə.ti/",
+                "meaning": "kesempatan, peluang",
+                "partOfSpeech": "noun",
+                "exampleSentence": "If I had the opportunity, I would study abroad.",
+                "collocation": "have an opportunity / miss an opportunity"
+              },
+              {
+                "word": "career",
+                "ipa": "/kəˈrɪər/",
+                "meaning": "karier, jalur profesi",
+                "partOfSpeech": "noun",
+                "exampleSentence": "If I could change my career, I would become a pilot.",
+                "collocation": "change career / successful career"
+              },
+              {
+                "word": "confident",
+                "ipa": "/ˈkɒn.fɪ.dənt/",
+                "meaning": "percaya diri",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "If I were more confident, I would speak in public easily.",
+                "collocation": "feel confident / confident person"
+              },
+              {
+                "word": "fluent",
+                "ipa": "/ˈfluː.ənt/",
+                "meaning": "fasih, lancar",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "If I were fluent in English, I would get a better job.",
+                "collocation": "fluent in English / fluent speaker"
+              },
+              {
+                "word": "invest",
+                "ipa": "/ɪnˈvest/",
+                "meaning": "berinvestasi, menanamkan modal",
+                "partOfSpeech": "verb",
+                "exampleSentence": "If I had extra money, I would invest in property.",
+                "collocation": "invest money / invest in business"
+              },
+              {
+                "word": "volunteer",
+                "ipa": "/ˌvɒl.ənˈtɪər/",
+                "meaning": "relawan, sukarelawan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "If I had more free time, I would volunteer at an animal shelter.",
+                "collocation": "volunteer at a shelter / work as a volunteer"
+              },
+              {
+                "word": "adventure",
+                "ipa": "/ədˈven.tʃər/",
+                "meaning": "petualangan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "If I were braver, I would go on more adventures.",
+                "collocation": "go on an adventure / seeking adventure"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m06-r-guided",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "What Would You Do?",
+            "audioUrl": "/audio/modules/a2-3-m06/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Every year, a local teen magazine asks students about their biggest dreams and imaginary scenarios. Maya, a fifteen-year-old student from London, shared her thoughts. She said that if she won the lottery, she would buy a big house near the beach. She also mentioned that if she had a million dollars, she would donate half of it to local animal shelters.",
+              "Another student, Leo, has different ambitions. Leo loves languages and travel. He explained that if he were fluent in Spanish and French, he would travel across South America and Europe without a guide. Furthermore, Leo believes that if he had the opportunity to study abroad next year, he would take it immediately to build a better career for his future."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "Every year, a local teen magazine asks students about their biggest dreams.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 4.6,
+                "end": 9,
+                "text": "Maya, a fifteen-year-old student from London, shared her thoughts.",
+                "paragraphIndex": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m06-r-practice",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-1",
+                "prompt": "Match the word with its correct definition.",
+                "pairs": [
+                  {
+                    "left": "lottery",
+                    "right": "a game where people buy tickets to win money prizes"
+                  },
+                  {
+                    "left": "island",
+                    "right": "a piece of land completely surrounded by water"
+                  },
+                  {
+                    "left": "fluent",
+                    "right": "able to speak or write a language easily and well"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m06-r-quiz",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What would Maya do if she won the lottery?",
+                "options": [
+                  "She would buy a big house near the beach.",
+                  "She would travel across South America.",
+                  "She would start a new career as a pilot."
+                ],
+                "answer": "She would buy a big house near the beach.",
+                "explanation": "The passage states that Maya said if she won the lottery, she would buy a big house near the beach."
+              },
+              {
+                "id": "q-r-2",
+                "question": "How much money would Maya donate to animal shelters if she had a million dollars?",
+                "options": [
+                  "All of it",
+                  "Half of it",
+                  "Ten percent"
+                ],
+                "answer": "Half of it",
+                "explanation": "The passage notes that she would donate half of her money to local animal shelters."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What does Leo love according to the text?",
+                "options": [
+                  "Animals and sports",
+                  "Languages and travel",
+                  "Cooking and art"
+                ],
+                "answer": "Languages and travel",
+                "explanation": "The text mentions that Leo loves languages and travel."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Which languages does Leo want to be fluent in for his travels?",
+                "options": [
+                  "Spanish and French",
+                  "German and Italian",
+                  "Japanese and Chinese"
+                ],
+                "answer": "Spanish and French",
+                "explanation": "Leo explained that if he were fluent in Spanish and French, he would travel across South America and Europe."
+              },
+              {
+                "id": "q-r-5",
+                "question": "Would Leo take the opportunity to study abroad?",
+                "options": [
+                  "Yes, immediately",
+                  "No, he prefers staying home",
+                  "Only if his parents pay"
+                ],
+                "answer": "Yes, immediately",
+                "explanation": "The passage states he would take the opportunity immediately to build a better career."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Choose the correct second conditional sentence structure.",
+                "options": [
+                  "If I had money, I would buy a car.",
+                  "If I have money, I will buy a car.",
+                  "If I had money, I will buy a car."
+                ],
+                "answer": "If I had money, I would buy a car.",
+                "explanation": "Second conditional uses past simple in the if clause and would plus base verb in the result clause."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Why do we use 'were' instead of 'was' in formal second conditional sentences like 'If I were rich'?",
+                "options": [
+                  "It is a rule for all subjects in hypothetical situations.",
+                  "It is only used for plural nouns.",
+                  "It is a mistake in grammar."
+                ],
+                "answer": "It is a rule for all subjects in hypothetical situations.",
+                "explanation": "In formal second conditional sentences, 'were' is used for all subjects to express unreal situations."
+              },
+              {
+                "id": "q-r-8",
+                "question": "What does the word 'career' mean in Indonesian?",
+                "options": [
+                  "Karier, jalur profesi",
+                  "Pulau terpencil",
+                  "Undian berhadiah"
+                ],
+                "answer": "Karier, jalur profesi",
+                "explanation": "The Indonesian meaning for 'career' is karier or jalur profesi."
+              },
+              {
+                "id": "q-r-9",
+                "question": "If someone wants to invest in property, what are they doing?",
+                "options": [
+                  "Putting money into buildings or land to make a profit",
+                  "Spending all money on vacation",
+                  "Giving away money for free"
+                ],
+                "answer": "Putting money into buildings or land to make a profit",
+                "explanation": "To invest means to put money into something like property to gain financial returns."
+              },
+              {
+                "id": "q-r-10",
+                "question": "When skimming a text about imaginary scenarios, what should you look for?",
+                "options": [
+                  "General ideas about what people would do in unreal situations",
+                  "Every single spelling mistake",
+                  "The exact dates of past events"
+                ],
+                "answer": "General ideas about what people would do in unreal situations",
+                "explanation": "Skimming helps you quickly grasp the main themes and hypothetical outcomes of the text."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-3-m06-listening",
+      "moduleId": "A2.3-M06",
+      "skillType": "listening",
+      "title": "Listening Mission: Imaginary Scenarios",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a2-3-m06-l-theory",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening mission, you will hear a conversation between two friends discussing imaginary situations and future wishes using second conditional structures. Pay attention to how speakers use past verb forms to talk about unreal present or future possibilities, and notice how words blend together in fast spoken English.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about imaginary situations.",
+              "Identify details about conditional preferences and wishes.",
+              "Notice how words link together in connected speech during conditional sentences."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "what would you do",
+                "meaning": "apa yang akan kamu lakukan",
+                "note": "Used to ask about someone's reaction in an imaginary situation."
+              },
+              {
+                "phrase": "if I had",
+                "meaning": "jika aku punya",
+                "note": "Introduces an unreal present or future condition."
+              },
+              {
+                "phrase": "if I were you",
+                "meaning": "jika aku jadi kamu",
+                "note": "Common phrase used to give advice based on imagination."
+              },
+              {
+                "phrase": "start over",
+                "meaning": "mulai dari awal",
+                "note": "Meaning to begin something again from the beginning."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "What would you do",
+                "fast": "What'd you do",
+                "slowIpa": "/wɒt wʊd juː duː/",
+                "fastIpa": "/wɒtʃuː duː/",
+                "note": "The sounds /d/ and /y/ blend together to make a /dʒ/ sound."
+              },
+              {
+                "id": 2,
+                "slow": "If I had",
+                "fast": "If I'ad",
+                "slowIpa": "/ɪf aɪ hæd/",
+                "fastIpa": "/ɪf aɪ æd/",
+                "note": "The pronoun 'I' and auxiliary 'had' link smoothly, often dropping the /h/ sound."
+              },
+              {
+                "id": 3,
+                "slow": "If I were",
+                "fast": "If I were",
+                "slowIpa": "/ɪf aɪ wɜːr/",
+                "fastIpa": "/ɪf aɪ wɜːr/",
+                "note": "Spoken with a smooth liaison between conditional 'if' and subject 'I'."
+              },
+              {
+                "id": 4,
+                "slow": "What about you",
+                "fast": "Whata bout you",
+                "slowIpa": "/wɒt əˈbaʊt juː/",
+                "fastIpa": "/wɒtəˈbaʊtʃuː/",
+                "note": "The word 'about' links to 'you', changing the /t/ sound into a soft blend."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m06-l-dialogue",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Coffee Shop Dreams",
+          "orderIndex": 2,
+          "content": {
+            "context": "Sarah and Tom chat in a local cafe about their dreams and wishes if their lives were completely different.",
+            "audioPrompt": "Listen to the conversation between two friends.",
+            "lines": [
+              {
+                "speaker": "Sarah",
+                "text": "Tom, if you won the lottery?",
+                "translation": "Tom, jika kamu menang lotre?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Tom",
+                "text": "I would travel the world.",
+                "translation": "Aku akan berkeliling dunia.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "What would you buy first?",
+                "translation": "Apa yang akan kamu beli dulu?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Tom",
+                "text": "I would buy a mansion.",
+                "translation": "Aku akan membeli sebuah rumah besar.",
+                "emotion": "confident"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "If I were rich...",
+                "translation": "Jika aku kaya...",
+                "emotion": "thoughtful"
+              },
+              {
+                "speaker": "Tom",
+                "text": "What would you do then?",
+                "translation": "Apa yang akan kamu lakukan kalau begitu?",
+                "emotion": "interested"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "I would help my family.",
+                "translation": "Aku akan membantu keluargaku.",
+                "emotion": "warm"
+              },
+              {
+                "speaker": "Tom",
+                "text": "That is very generous.",
+                "translation": "Itu sangat dermawan.",
+                "emotion": "admiring"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "If you could change jobs...",
+                "translation": "Jika kamu bisa mengubah pekerjaan...",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Tom",
+                "text": "I would become a photographer.",
+                "translation": "Aku akan menjadi seorang fotografer.",
+                "emotion": "passionate"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "That sounds like fun.",
+                "translation": "Itu terdengar menyenangkan.",
+                "emotion": "pleased"
+              },
+              {
+                "speaker": "Tom",
+                "text": "What about you?",
+                "translation": "Bagaimana denganmu?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "I would write a book.",
+                "translation": "Aku akan menulis sebuah buku.",
+                "emotion": "inspired"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m06-l-quiz",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Tom, if you won the lottery?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Tom, if you won the _____?\"",
+                "targetWord": "lottery",
+                "explanation": "Full audio: \"Tom, if you won the lottery?\". The missing word is \"lottery\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I would travel the world.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"I would travel the _____.\"",
+                "targetWord": "world",
+                "explanation": "Full audio: \"I would travel the world.\". The missing word is \"world\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "What would you buy first?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"What would you buy _____?\"",
+                "targetWord": "first",
+                "explanation": "Full audio: \"What would you buy first?\". The missing word is \"first\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I would buy a mansion.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"I would buy a _____.\"",
+                "targetWord": "mansion",
+                "explanation": "Full audio: \"I would buy a mansion.\". The missing word is \"mansion\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "If I were rich...",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"If I were _____...\"",
+                "targetWord": "rich",
+                "explanation": "Full audio: \"If I were rich...\". The missing word is \"rich\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "What would you do then?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What would you do then",
+                "words": [
+                  "then",
+                  "you",
+                  "do",
+                  "What",
+                  "would"
+                ],
+                "explanation": "Correct sentence order: \"What would you do then?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "I would help my family.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I would help my family",
+                "words": [
+                  "my",
+                  "I",
+                  "help",
+                  "family",
+                  "would"
+                ],
+                "explanation": "Correct sentence order: \"I would help my family.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "That is very generous.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That is very generous",
+                "words": [
+                  "very",
+                  "generous",
+                  "is",
+                  "That"
+                ],
+                "explanation": "Correct sentence order: \"That is very generous.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "If you could change jobs...",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "If you could change jobs",
+                "words": [
+                  "jobs",
+                  "change",
+                  "If",
+                  "could",
+                  "you"
+                ],
+                "explanation": "Correct sentence order: \"If you could change jobs...\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "I would become a photographer.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I would become a photographer",
+                "words": [
+                  "a",
+                  "would",
+                  "I",
+                  "become",
+                  "photographer"
+                ],
+                "explanation": "Correct sentence order: \"I would become a photographer.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Tom, if you won the lottery?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Tom, if you won the _____?\"",
+                "targetWord": "lottery",
+                "explanation": "Full audio: \"Tom, if you won the lottery?\". The missing word is \"lottery\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I would travel the world.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"I would travel the _____.\"",
+                "targetWord": "world",
+                "explanation": "Full audio: \"I would travel the world.\". The missing word is \"world\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "What would you buy first?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"What would you buy _____?\"",
+                "targetWord": "first",
+                "explanation": "Full audio: \"What would you buy first?\". The missing word is \"first\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I would buy a mansion.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"I would buy a _____.\"",
+                "targetWord": "mansion",
+                "explanation": "Full audio: \"I would buy a mansion.\". The missing word is \"mansion\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "If I were rich...",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"If I were _____...\"",
+                "targetWord": "rich",
+                "explanation": "Full audio: \"If I were rich...\". The missing word is \"rich\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "What would you do then?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What would you do then",
+                "words": [
+                  "then",
+                  "you",
+                  "do",
+                  "What",
+                  "would"
+                ],
+                "explanation": "Correct sentence order: \"What would you do then?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "I would help my family.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I would help my family",
+                "words": [
+                  "my",
+                  "I",
+                  "help",
+                  "family",
+                  "would"
+                ],
+                "explanation": "Correct sentence order: \"I would help my family.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "That is very generous.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That is very generous",
+                "words": [
+                  "very",
+                  "generous",
+                  "is",
+                  "That"
+                ],
+                "explanation": "Correct sentence order: \"That is very generous.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "If you could change jobs...",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "If you could change jobs",
+                "words": [
+                  "jobs",
+                  "change",
+                  "If",
+                  "could",
+                  "you"
+                ],
+                "explanation": "Correct sentence order: \"If you could change jobs...\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "I would become a photographer.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I would become a photographer",
+                "words": [
+                  "a",
+                  "would",
+                  "I",
+                  "become",
+                  "photographer"
+                ],
+                "explanation": "Correct sentence order: \"I would become a photographer.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-3-m06-writing",
+      "moduleId": "A2.3-M06",
+      "skillType": "writing",
+      "title": "Writing Mission: Imaginary Scenarios",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a2-3-m06-w-theory",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on sentence structure and paragraph building for imaginary scenarios using the second conditional in English.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Second Conditional Basic Formula",
+                "formula": "If + Subject + Past Simple, Subject + would + Verb (base form)",
+                "example": "If I had more money, I would buy a fast car."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Using 'Were' for All Subjects",
+                "formula": "If + Subject (I / he / she / it / we / you / they) + were + complement, Subject + would + Verb",
+                "example": "If she were here, she would help us with our homework."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Changing Clause Order",
+                "formula": "Subject + would + Verb + if + Subject + Past Simple (no comma)",
+                "example": "I would travel around the world if I won the lottery."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always put a comma after the 'if' clause when it comes first in a sentence.",
+                "badExample": "If I lived near the beach I would swim every day.",
+                "goodExample": "If I lived near the beach, I would swim every day.",
+                "why": "A comma separates the conditional clause from the main result clause."
+              },
+              {
+                "rule": "Use the base form of the verb after 'would', not an -ing form or past tense.",
+                "badExample": "If I had a camera, I would taking photos.",
+                "goodExample": "If I had a camera, I would take photos.",
+                "why": "Modal verbs like 'would' are always followed by the base infinitive verb."
+              },
+              {
+                "rule": "Use 'were' instead of 'was' for all subjects in formal conditional imaginary statements.",
+                "badExample": "If I was a bird, I would fly high in the sky.",
+                "goodExample": "If I were a bird, I would fly high in the sky.",
+                "why": "In second conditional grammar, 'were' is standard for unreal present states with all pronouns."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "If I had a million dollars, I would build a big animal shelter.",
+                "id": "Jika saya punya satu juta dolar, saya akan membangun tempat penampungan hewan besar.",
+                "focus": "Second conditional basic structure"
+              },
+              {
+                "en": "She would speak English fluently if she lived in London.",
+                "id": "Dia akan berbicara bahasa Inggris dengan lancar jika dia tinggal di London.",
+                "focus": "Result clause first (no comma)"
+              },
+              {
+                "en": "If I were you, I would study harder for the exam.",
+                "id": "Jika saya jadi kamu, saya akan belajar lebih giat untuk ujian.",
+                "focus": "Using 'were' with first person"
+              },
+              {
+                "en": "What would you do if you saw a famous actor?",
+                "id": "Apa yang akan kamu lakukan jika kamu melihat seorang aktor terkenal?",
+                "focus": "Second conditional question format"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m06-w-practice",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "if I have more free time I would learn Spanish",
+                "targetSentence": "If I had more free time, I would learn Spanish.",
+                "translation": "Jika saya memiliki lebih banyak waktu luang, saya akan belajar bahasa Spanyol.",
+                "keyRule": "Use past simple in the 'if' clause and add a comma after the conditional clause.",
+                "requiredCapitals": [
+                  "If"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "she would buy a new phone if she was rich",
+                "targetSentence": "She would buy a new phone if she were rich.",
+                "translation": "Dia akan membeli ponsel baru jika dia kaya.",
+                "keyRule": "Use 'were' for hypothetical states with all subjects in formal writing, and capitalize the beginning of the sentence.",
+                "requiredCapitals": [
+                  "She"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "what would you did if you won the race",
+                "targetSentence": "What would you do if you won the race?",
+                "translation": "Apa yang akan kamu lakukan jika kamu memenangkan perlombaan itu?",
+                "keyRule": "Use the base verb 'do' after 'would', and end the sentence with a question mark.",
+                "requiredCapitals": [
+                  "What"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Imaginary Scenarios",
+                "meaning": "Jika saya punya mobil, saya akan pergi ke pantai.",
+                "tokens": [
+                  "If",
+                  "I",
+                  "had",
+                  "a",
+                  "car,",
+                  "I",
+                  "would",
+                  "go",
+                  "to",
+                  "the",
+                  "beach."
+                ],
+                "fullSentence": "If I had a car, I would go to the beach."
+              },
+              {
+                "id": "b-2",
+                "category": "Future Dreams",
+                "meaning": "Dia akan membantu kami jika dia di sini.",
+                "tokens": [
+                  "She",
+                  "would",
+                  "help",
+                  "us",
+                  "if",
+                  "she",
+                  "were",
+                  "here."
+                ],
+                "fullSentence": "She would help us if she were here."
+              },
+              {
+                "id": "b-3",
+                "category": "Hypothetical Questions",
+                "meaning": "Apa yang akan kamu lakukan jika kamu melihat beruang?",
+                "tokens": [
+                  "What",
+                  "would",
+                  "you",
+                  "do",
+                  "if",
+                  "you",
+                  "saw",
+                  "a",
+                  "bear?"
+                ],
+                "fullSentence": "What would you do if you saw a bear?"
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Describe Your Dream House",
+                "badge": "Dream Architect",
+                "instruction": "Write three sentences about your dream house using the second conditional. Mention where it would be, what it would look like, and who you would invite.",
+                "example": "If I had a lot of money, I would build a house near the mountains. It would have a large wooden balcony. I would invite all my best friends to stay there.",
+                "placeholder": "Start typing your dream house sentences here...",
+                "minWords": 20,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Imaginary Superpowers",
+                "badge": "Super Hero",
+                "instruction": "Write three sentences about what you would do if you had a superpower. Explain your power and how you would help people.",
+                "example": "If I could fly, I would travel around the world every weekend. I would help people trapped on tall buildings. Everyone would feel safe.",
+                "placeholder": "Start typing your superpower sentences here...",
+                "minWords": 20,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m06-w-quiz",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using the second conditional structure:",
+                "promptText": "I don't have a bicycle, so I walk to school.",
+                "hint": "Start with 'If I had a bicycle...'",
+                "targetAnswers": [
+                  "If I had a bicycle, I would ride to school.",
+                  "If I had a bicycle, I would not walk to school.",
+                  "If I had a bicycle, I would ride it to school."
+                ],
+                "explanation": "Change present simple 'don't have' to past simple 'had', and use 'would' with the base verb."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Conjunction & Clause Order",
+                "instruction": "Combine the two clauses into a correct second conditional sentence starting with the 'if' clause:",
+                "promptText": "I see a ghost / I run away",
+                "hint": "Remember the comma after the if clause.",
+                "targetAnswers": [
+                  "If I saw a ghost, I would run away."
+                ],
+                "explanation": "Use past simple 'saw' in the if clause, add a comma, and use 'would run' in the main clause."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the grammatical error in this second conditional sentence:",
+                "promptText": "if i was rich i will buy a big house",
+                "hint": "Check capitalization, 'were' instead of 'was', and 'would' instead of 'will'.",
+                "targetAnswers": [
+                  "If I were rich, I would buy a big house."
+                ],
+                "explanation": "Capitalize 'If', use 'were' for the conditional state, add a comma, and use 'would buy' instead of 'will buy'."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change this positive second conditional sentence into a negative result sentence:",
+                "promptText": "If it rained, we would go outside.",
+                "hint": "Change 'would go' to 'wouldn't go'.",
+                "targetAnswers": [
+                  "If it rained, we wouldn't go outside.",
+                  "If it rained, we would not go outside."
+                ],
+                "explanation": "Make the result clause negative by using 'wouldn't' or 'would not' before the base verb."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Short Response",
+                "instruction": "Complete the second conditional sentence with the correct form of the verb in brackets:",
+                "promptText": "If she (know) the answer, she would tell us.",
+                "hint": "Use the past simple form of 'know'.",
+                "targetAnswers": [
+                  "If she knew the answer, she would tell us."
+                ],
+                "explanation": "The past simple form of 'know' is 'knew'."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence placing the main clause first (no comma):",
+                "promptText": "If I lived in Paris, I would speak French every day.",
+                "hint": "Put 'I would speak French every day' at the beginning.",
+                "targetAnswers": [
+                  "I would speak French every day if I lived in Paris."
+                ],
+                "explanation": "When the main clause comes first, do not use a comma before 'if'."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the punctuation and verb form in this sentence:",
+                "promptText": "What you would do if you find a wallet on the street",
+                "hint": "Add auxiliary verb 'would' correctly in a question and use past simple 'found'.",
+                "targetAnswers": [
+                  "What would you do if you found a wallet on the street?"
+                ],
+                "explanation": "In second conditional questions, use 'What would + subject + verb' and past simple 'found' in the if clause."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Short Response",
+                "instruction": "Complete the sentence with 'was' or 'were' according to formal second conditional grammar:",
+                "promptText": "If I _____ a famous singer, I would give free concerts.",
+                "hint": "Use 'were' for all subjects in formal conditional sentences.",
+                "targetAnswers": [
+                  "If I were a famous singer, I would give free concerts."
+                ],
+                "explanation": "In formal second conditional sentences, 'were' is used for all persons including I, he, she, and it."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Create a second conditional sentence from the prompt:",
+                "promptText": "have a magic wand / turn the desert into a forest",
+                "hint": "If I had a magic wand, I would turn the desert into a forest.",
+                "targetAnswers": [
+                  "If I had a magic wand, I would turn the desert into a forest."
+                ],
+                "explanation": "Use 'had' in the if clause and 'would turn' in the main clause."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the error in this second conditional sentence:",
+                "promptText": "If he worked harder, he will pass the exam.",
+                "hint": "Change 'will' to 'would'.",
+                "targetAnswers": [
+                  "If he worked harder, he would pass the exam."
+                ],
+                "explanation": "Second conditional requires 'would' + base verb in the result clause, not 'will'."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-3-m06-speaking",
+      "moduleId": "A2.3-M06",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Imaginary Scenarios and Dreams",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a2-3-m06-s-theory",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This module guides you through speaking about imaginary situations and future dreams using the second conditional. You will learn how to link words smoothly, use contractions like I would to I would or I'd, and control sentence stress to sound natural.",
+            "audioGuidance": "Keep your voice steady and stress the main action verbs and nouns in both clauses. Use a slight pause between the if clause and the main clause to make your meaning clear to listeners.",
+            "pillars": [
+              {
+                "name": "Conditional Rhythm",
+                "target": "Smooth transitions between clauses",
+                "explanation": "Pronounce the past simple verb clearly in the if clause, then use a clear contraction for would in the main clause."
+              },
+              {
+                "name": "Sentence Stress",
+                "target": "Emphasizing key imaginary concepts",
+                "explanation": "Highlight words like lottery, million, island, and fluent so listeners immediately understand the hypothetical nature of your statement."
+              },
+              {
+                "name": "Intonation Contours",
+                "target": "Rising tone for conditions and falling tone for outcomes",
+                "explanation": "Raise your pitch slightly at the end of the if clause, and let your voice drop at the end of the main clause."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m06-s-practice",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "LOT-ter-y",
+                "countryAudio": "lottery",
+                "countrySyllables": [
+                  {
+                    "text": "LOT",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ter",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "y",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "mil-LION",
+                "natAudio": "million",
+                "natSyllables": [
+                  {
+                    "text": "mil",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LION",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "Notice how stress shifts from the first syllable in lottery to the second syllable in million."
+              },
+              {
+                "id": "pair-2",
+                "country": "IS-land",
+                "countryAudio": "island",
+                "countrySyllables": [
+                  {
+                    "text": "IS",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "land",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "a-DVEN-ture",
+                "natAudio": "adventure",
+                "natSyllables": [
+                  {
+                    "text": "a",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "DVEN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ture",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that island places stress on the first syllable, while adventure places stress on the second syllable."
+              },
+              {
+                "id": "pair-3",
+                "country": "CON-fi-dent",
+                "countryAudio": "confident",
+                "countrySyllables": [
+                  {
+                    "text": "CON",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "fi",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "dent",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "FLU-ent",
+                "natAudio": "fluent",
+                "natSyllables": [
+                  {
+                    "text": "FLU",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ent",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Both adjectives have primary stress on their first syllable."
+              },
+              {
+                "id": "pair-4",
+                "country": "IN-vest",
+                "countryAudio": "invest",
+                "countrySyllables": [
+                  {
+                    "text": "IN",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "VEST",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "vo-lun-TEER",
+                "natAudio": "volunteer",
+                "natSyllables": [
+                  {
+                    "text": "vo",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "lun",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TEER",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "Notice that invest stresses the second syllable, while volunteer places primary stress on the final syllable."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "If I won the lottery, I would travel around the world.",
+                "phonetic": "/ɪf aɪ wʌn ðə ˈlɒt.ər.i, aɪ wʊd ˈtræv.əl əˈraʊnd ðə wɜːld/",
+                "focus": "Second conditional structure and natural clause linking",
+                "hint": "Pause briefly after the comma before starting the main clause."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "If I had a million dollars, I would buy a private island.",
+                "phonetic": "/ɪf aɪ hæd ə ˈmɪl.jən ˈdɒl.əz, aɪ wʊd baɪ ə ˈpraɪ.vət ˈaɪ.lənd/",
+                "focus": "Pronunciation of million and island",
+                "hint": "Do not pronounce the s in island."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "If I were fluent in English, I would get a better job.",
+                "phonetic": "/ɪf aɪ wɜːr ˈfluː.ənt ɪn ˈɪŋ.ɡlɪʃ, aɪ wʊd ɡet ə ˈbet.ər dʒɒb/",
+                "focus": "Using were for all subjects in hypothetical statements",
+                "hint": "Link fluent and in smoothly together."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "If I had more free time, I would volunteer at an animal shelter.",
+                "phonetic": "/ɪf aɪ hæd mɔːr friː taɪm, aɪ wʊd ˌvɒl.ənˈtɪər æt ən ˈæn.ɪ.məl ˈʃel.tər/",
+                "focus": "Phrasal rhythm and stress on volunteer",
+                "hint": "Stress the final syllable of volunteer."
+              }
+            ],
+            "roleplay": {
+              "context": "You meet your English teacher, Mr. Khoirul, in the school courtyard during break time and talk about your dreams.",
+              "roles": [
+                "Mr. Khoirul",
+                "Student"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "If you could travel anywhere right now, where would you go?",
+                  "translation": "Jika kamu bisa bepergian ke mana saja sekarang, ke mana kamu akan pergi?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "If I had enough money, I would visit a private island in the Pacific.",
+                  "translation": "Jika saya punya cukup uang, saya akan mengunjungi pulau pribadi di Pasifik."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "That sounds wonderful! What would you do there all day?",
+                  "translation": "Itu terdengar luar biasa! Apa yang akan kamu lakukan di sana sepanjang hari?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "I would relax on the beach and read books without any stress.",
+                  "translation": "Saya akan bersantai di pantai dan membaca buku tanpa stres apa pun."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-3-m06-s-quiz",
+          "moduleId": "A2.3-M06",
+          "subModuleId": "sub-a2-3-m06-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about what you would do if you won the lottery.",
+                "audioPrompt": "Tell me about your imaginary plans if you won a million dollars.",
+                "storyPoints": [
+                  "What you would buy first for yourself or your family",
+                  "Which country or island you would visit",
+                  "Who you would help with the extra money"
+                ],
+                "targetSentence": "If I won a million dollars, I would buy a house and travel around the world.",
+                "phonetic": "/ɪf aɪ wʌn ə ˈmɪl.jən ˈdɒl.əz, aɪ wʊd baɪ ə haʊs/",
+                "expectedKeywords": [
+                  "million",
+                  "buy",
+                  "travel",
+                  "family"
+                ],
+                "explanation": "Speak fluently using the second conditional structure with correct past simple and would verbs."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about changing your career or learning new skills.",
+                "audioPrompt": "Describe what career you would choose if you had a completely new opportunity.",
+                "storyPoints": [
+                  "Your ideal dream career or job",
+                  "Why you find that career interesting",
+                  "How your daily life would change"
+                ],
+                "targetSentence": "If I had the opportunity, I would change my career and become a pilot.",
+                "phonetic": "/ɪf aɪ hæd ði ˌɒp.əˈtʃuː.nə.ti, aɪ wʊd tʃeɪndʒ maɪ kəˈrɪər/",
+                "expectedKeywords": [
+                  "opportunity",
+                  "career",
+                  "pilot",
+                  "change"
+                ],
+                "explanation": "Maintain good rhythm and pause naturally between clauses while describing your career dreams."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Live Roleplay Call",
+                "instruction": "Respond to your partner discussing a hypothetical vacation plan.",
+                "audioPrompt": "Your friend asks what you would do if you had a month of free time.",
+                "scenarioContext": "You and your friend are discussing what you would do if you had a month of vacation.",
+                "characterRole": "Friend",
+                "targetSentence": "If I had more free time, I would go on an amazing adventure.",
+                "phonetic": "/ɪf aɪ hæd mɔːr friː taɪm, aɪ wʊd ɡəʊ ɒn ən əˈmeɪ.zɪŋ ədˈven.tʃər/",
+                "expectedKeywords": [
+                  "free time",
+                  "adventure",
+                  "month",
+                  "vacation"
+                ],
+                "explanation": "Deliver a natural conversational response using the second conditional."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Live Roleplay Call",
+                "instruction": "Respond to a colleague asking about language skills and jobs.",
+                "audioPrompt": "Your colleague asks how your life would change if you spoke English fluently.",
+                "scenarioContext": "You talk with a colleague about learning new languages and career growth.",
+                "characterRole": "Colleague",
+                "targetSentence": "If I were fluent in English, I would get a much better job.",
+                "phonetic": "/ɪf aɪ wɜːr ˈfluː.ənt ɪn ˈɪŋ.ɡlɪʃ, aɪ wʊd ɡet ə mʌtʃ ˈbet.ər dʒɒb/",
+                "expectedKeywords": [
+                  "fluent",
+                  "English",
+                  "job",
+                  "better"
+                ],
+                "explanation": "Use were instead of was with all subjects in this hypothetical question."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Live Roleplay Call",
+                "instruction": "Respond to an advisor regarding financial investments.",
+                "audioPrompt": "Your advisor asks what you would do if you had extra money to invest.",
+                "scenarioContext": "You are talking to an advisor about studying or managing extra money.",
+                "characterRole": "Advisor",
+                "targetSentence": "If I had extra money, I would invest in property.",
+                "phonetic": "/ɪf aɪ hæd ˈek.strə ˈmʌn.i, aɪ wʊd ɪnˈvest ɪn ˈprɒp.ə.ti/",
+                "expectedKeywords": [
+                  "money",
+                  "invest",
+                  "property",
+                  "extra"
+                ],
+                "explanation": "Pronounce invest with stress on the second syllable and keep your tone polite."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Live Roleplay Call",
+                "instruction": "Respond to a volunteer coordinator about helping animals.",
+                "audioPrompt": "The coordinator asks how you would help if you were more confident.",
+                "scenarioContext": "You are talking to a volunteer coordinator at an animal shelter.",
+                "characterRole": "Coordinator",
+                "targetSentence": "If I were more confident, I would volunteer at the shelter every week.",
+                "phonetic": "/ɪf aɪ wɜːr mɔːr ˈkɒn.fɪ.dənt, aɪ wʊd ˌvɒl.ənˈtɪər æt ðə ˈʃel.tər/",
+                "expectedKeywords": [
+                  "confident",
+                  "volunteer",
+                  "shelter",
+                  "week"
+                ],
+                "explanation": "Demonstrate clear articulation on confident and volunteer."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Pronounce the target sentence clearly focusing on unit vocabulary.",
+                "audioPrompt": "Say this sentence using correct vocabulary and clear vowel sounds.",
+                "focus": "vocab",
+                "targetSentence": "If I had the opportunity, I would invest my money wisely.",
+                "phonetic": "/ɪf aɪ hæd ði ˌɒp.əˈtʃuː.nə.ti, aɪ wʊd ɪnˈvest maɪ ˈmʌn.i ˈwaɪz.li/",
+                "expectedKeywords": [
+                  "opportunity",
+                  "invest",
+                  "money"
+                ],
+                "explanation": "Focus on accurate pronunciation of opportunity and invest."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Pronounce the second conditional sentence with accurate grammar structure.",
+                "audioPrompt": "Say this sentence focusing on the past simple and would auxiliary verb.",
+                "focus": "grammar",
+                "targetSentence": "If I were rich, I would buy a private island.",
+                "phonetic": "/ɪf aɪ wɜːr rɪtʃ, aɪ wʊd baɪ ə ˈpraɪ.vət ˈaɪ.lənd/",
+                "expectedKeywords": [
+                  "were",
+                  "rich",
+                  "would",
+                  "island"
+                ],
+                "explanation": "Ensure you use were with I and emphasize the modal verb would."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress Drill",
+                "instruction": "Practice correct syllable stress on multi-syllable words.",
+                "audioPrompt": "Read the sentence and stress the word confident correctly.",
+                "focus": "pronunciation_stress",
+                "targetSentence": "If I were more confident, I would speak in public easily.",
+                "phonetic": "/ɪf aɪ wɜːr mɔːr ˈkɒn.fɪ.dənt, aɪ wʊd spiːk ɪn ˈpʌb.lɪk ˈiː.zɪ.li/",
+                "expectedKeywords": [
+                  "confident",
+                  "speak",
+                  "public",
+                  "easily"
+                ],
+                "explanation": "Place primary stress on the first syllable of confident."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Intonation Drill",
+                "instruction": "Practice rising intonation in the if clause and falling intonation in the main clause.",
+                "audioPrompt": "Read the sentence using a rising pitch on the condition and falling pitch on the result.",
+                "focus": "pronunciation_intonation",
+                "targetSentence": "If I won the lottery, I would travel around the world.",
+                "phonetic": "/ɪf aɪ wʌn ðə ˈlɒt.ər.i, aɪ wʊd ˈtræv.əl əˈraʊnd ðə wɜːld/",
+                "expectedKeywords": [
+                  "lottery",
+                  "travel",
+                  "world"
+                ],
+                "explanation": "Raise your voice slightly at the end of lottery and lower it at the end of world."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

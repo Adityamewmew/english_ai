@@ -5,8 +5,8 @@ export interface OmniRouteChatOptions {
 }
 
 export class OmniRouteClient {
-  private baseUrl = "http://localhost:20128/v1/chat/completions";
-  private apiKey = "sk-96f2316f84884524-286a68-e9103247";
+  private baseUrl = process.env.AI_BASE_URL ? `${process.env.AI_BASE_URL.replace(/\/+$/, "")}/chat/completions` : "http://localhost:20128/v1/chat/completions";
+  private apiKey = process.env.AI_API_KEY || "sk-96f2316f84884524-44ce7a-a0ee3336";
   private defaultModel = "antigravity/claude-opus-4-6-thinking";
 
   constructor(options?: { apiKey?: string; defaultModel?: string; baseUrl?: string }) {

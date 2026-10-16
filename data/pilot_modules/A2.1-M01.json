@@ -1,0 +1,1590 @@
+{
+  "module": {
+    "id": "A2.1-M01",
+    "levelId": "A2.1",
+    "title": "Unit 1: Having Fun: Present Tenses & Hobbies",
+    "cefr": "A2",
+    "group": "A2.1 - Elementary Actions",
+    "objective": "Talk about daily habits, routines, and hobbies using the Present Simple, adverbs of frequency, and verb + -ing preferences.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 1
+  },
+  "subModules": [
+    {
+      "id": "sub-a2-1-m01-reading",
+      "moduleId": "A2.1-M01",
+      "skillType": "reading",
+      "title": "Reading Mission: Hobbies and Daily Routines",
+      "theme": "Having Fun: Present Tenses & Hobbies",
+      "grammarFocus": "Present Simple & Verb + -ing",
+      "vocabularyFocus": "Hobbies, Free Time Activities, and Adverbs of Frequency",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a2-1-m01-r-theory",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to your first reading mission. In this lesson, you will read short texts about hobbies and free-time activities. You will learn how to use the Present Simple tense to talk about daily routines and habits, and practice using verb + -ing forms to express likes and dislikes.",
+            "linguisticTarget": {
+              "grammar": "Present Simple affirmative, negative, and question forms, plus verb + -ing for preferences.",
+              "vocabulary": "Words related to free time, hobbies, and frequency adverbs.",
+              "readingStrategy": "Skimming short paragraphs to get the main idea and scanning for specific details like names and activities."
+            },
+            "learningObjectives": [
+              "Understand the main idea of short A2 texts about hobbies and routines.",
+              "Locate specific details such as frequency adverbs and personal preferences.",
+              "Recognize and practice grammar patterns with Present Simple and -ing verbs."
+            ],
+            "contextWarmup": {
+              "prompt": "When do most teenagers usually practice their hobbies in a typical week?",
+              "options": [
+                "During the weekend and after school",
+                "Only during midnight hours",
+                "Before waking up in the morning"
+              ],
+              "correctIndex": 0,
+              "explanation": "Students typically have free time after school and during the weekend to enjoy their hobbies."
+            },
+            "rules": [
+              "Present Simple Affirmative: I, you, we, and they use the base verb. He, she, and it add -s or -es to the verb.",
+              "Present Simple Negative: Use don't with I, you, we, and they, and doesn't with he, she, and it before the base verb.",
+              "Present Simple Questions: Start questions with Do for I, you, we, and they, and Does for he, she, and it.",
+              "Verb + -ing for Preferences: Use verbs like like, love, hate, and enjoy followed by a verb with -ing.",
+              "Adverbs of Frequency: Place frequency words like often or occasionally before main verbs, but after the verb to be."
+            ],
+            "commonTrap": {
+              "trapTitle": "Forgetting the third-person -s",
+              "explanation": "Learners often forget to add -s to the verb when talking about he, she, or it in the Present Simple tense.",
+              "wrong": "My brother play football every Saturday.",
+              "correct": "My brother plays football every Saturday."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Present Forms",
+            "contractionsSubtitle": "Observe how subjects and auxiliary verbs smoothly merge in everyday English:",
+            "contractions": [
+              {
+                "subject": "He",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "He's",
+                "exampleFull": "He is collecting stamps.",
+                "exampleContracted": "He's collecting stamps."
+              },
+              {
+                "subject": "Do",
+                "verb": "not",
+                "vowelDropped": "o",
+                "remainder": "nt",
+                "contracted": "Don't",
+                "exampleFull": "I do not like tidying up.",
+                "exampleContracted": "I don't like tidying up."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Present Simple",
+              "description": "Assemble sentence blocks to practice affirmative, negative, and question forms:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person Singular"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "play",
+                  "thirdPerson": "plays",
+                  "continuous": "playing"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "football every Saturday",
+                  "type": "Routine Object"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-1-m01-r-vocab",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "hobby",
+                "ipa": "/ˈhɒbi/",
+                "meaning": "hobi, kegemaran",
+                "partOfSpeech": "noun",
+                "exampleSentence": "I've got lots of hobbies. What's your hobby?",
+                "collocation": "I've got lots of hobbies. What's your hobby?"
+              },
+              {
+                "word": "collect",
+                "ipa": "/kəˈlekt/",
+                "meaning": "mengumpulkan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "I love collecting autographs. Do you collect something?",
+                "collocation": "collect autographs / collect stamps"
+              },
+              {
+                "word": "relax",
+                "ipa": "/rɪˈlæks/",
+                "meaning": "bersantai, rileks",
+                "partOfSpeech": "verb",
+                "exampleSentence": "When do you relax? I relax when I have time.",
+                "collocation": "When do you relax? I relax when I have time."
+              },
+              {
+                "word": "tidy up",
+                "ipa": "/ˈtaɪdi ʌp/",
+                "meaning": "merapikan, membereskan",
+                "partOfSpeech": "phrasal verb",
+                "exampleSentence": "Tidying up is never fun.",
+                "collocation": "Tidying up is never fun."
+              },
+              {
+                "word": "blog",
+                "ipa": "/blɒɡ/",
+                "meaning": "blog",
+                "partOfSpeech": "noun",
+                "exampleSentence": "I like writing a blog about my life.",
+                "collocation": "I like writing a blog about my life."
+              },
+              {
+                "word": "occasionally",
+                "ipa": "/əˈkeɪʒnəli/",
+                "meaning": "kadang-kadang, sesekali",
+                "partOfSpeech": "adverb",
+                "exampleSentence": "I occasionally go to the cinema.",
+                "collocation": "I occasionally go to the cinema."
+              },
+              {
+                "word": "often",
+                "ipa": "/ˈɒfən/",
+                "meaning": "sering",
+                "partOfSpeech": "adverb",
+                "exampleSentence": "How often do you play tennis? I often play at weekends.",
+                "collocation": "How often do you play tennis? I often play at weekends."
+              },
+              {
+                "word": "be careful",
+                "ipa": "/bi ˈkeəfəl/",
+                "meaning": "hati-hati",
+                "partOfSpeech": "phrase",
+                "exampleSentence": "Be careful! Don't push too hard.",
+                "collocation": "Be careful! Don't push too hard."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m01-r-guided",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Life and Hobbies of Two Teenagers",
+            "audioUrl": "/audio/modules/a2-1-m01/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Hi! My name is Leo, and I am fourteen years old. I live in a busy city with my family. During the week, I go to school and study hard. In my free time, I love relaxing at home. I often play computer games with my friends online. My sister Mia does not like video games. She prefers outdoor activities and enjoys collecting rare stamps.",
+              "Mia is twelve years old. She spends her weekends visiting local markets and looking for old stamps. Occasionally, she writes a blog about her hobby to share tips with other young collectors. On Sunday evenings, our parents always ask us to tidy up our rooms before school starts again. Tidying up is never fun, but we do it anyway. Be careful when you clean your desk, Mia always says!"
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "Hi! My name is Leo, and I am fourteen years old.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 4.6,
+                "end": 9,
+                "text": "I live in a busy city with my family.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 9.1,
+                "end": 13.5,
+                "text": "During the week, I go to school and study hard.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 13.6,
+                "end": 17.5,
+                "text": "In my free time, I love relaxing at home.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 17.6,
+                "end": 22,
+                "text": "I often play computer games with my friends online.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 22.1,
+                "end": 26,
+                "text": "My sister Mia does not like video games.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 26.1,
+                "end": 30.5,
+                "text": "She prefers outdoor activities and enjoys collecting rare stamps.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 30.6,
+                "end": 35,
+                "text": "Mia is twelve years old.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 35.1,
+                "end": 40,
+                "text": "She spends her weekends visiting local markets and looking for old stamps.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 40.1,
+                "end": 45,
+                "text": "Occasionally, she writes a blog about her hobby to share tips with other young collectors.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 45.1,
+                "end": 50,
+                "text": "On Sunday evenings, our parents always ask us to tidy up our rooms before school starts again.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 50.1,
+                "end": 55,
+                "text": "Tidying up is never fun, but we do it anyway.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 55.1,
+                "end": 60,
+                "text": "Be careful when you clean your desk, Mia always says!",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m01-r-practice",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": []
+          }
+        },
+        {
+          "id": "sec-a2-1-m01-r-quiz",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What is the name of the older sibling in the passage?",
+                "options": [
+                  "Leo",
+                  "Mia",
+                  "Tom"
+                ],
+                "answer": "Leo",
+                "explanation": "Leo states that he is fourteen years old, while Mia is twelve."
+              },
+              {
+                "id": "q-r-2",
+                "question": "What does Leo like to do in his free time?",
+                "options": [
+                  "Collect rare stamps",
+                  "Play computer games online",
+                  "Write a blog"
+                ],
+                "answer": "Play computer games online",
+                "explanation": "Leo mentions that he often plays computer games with his friends online."
+              },
+              {
+                "id": "q-r-3",
+                "question": "How old is Mia?",
+                "options": [
+                  "Ten years old",
+                  "Twelve years old",
+                  "Fourteen years old"
+                ],
+                "answer": "Twelve years old",
+                "explanation": "The text states that Mia is twelve years old."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What is Mia's favorite hobby?",
+                "options": [
+                  "Collecting rare stamps",
+                  "Playing video games",
+                  "Cooking dinner"
+                ],
+                "answer": "Collecting rare stamps",
+                "explanation": "Mia enjoys collecting rare stamps and visits local markets to find them."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What does Mia write to share tips with other collectors?",
+                "options": [
+                  "A diary",
+                  "A blog",
+                  "A storybook"
+                ],
+                "answer": "A blog",
+                "explanation": "The text states that occasionally, she writes a blog about her hobby."
+              },
+              {
+                "id": "q-r-6",
+                "question": "When do Leo and Mia tidy up their rooms?",
+                "options": [
+                  "On Monday mornings",
+                  "On Sunday evenings",
+                  "Every afternoon"
+                ],
+                "answer": "On Sunday evenings",
+                "explanation": "The passage notes that on Sunday evenings, their parents ask them to tidy up."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Which sentence uses the correct Present Simple negative form?",
+                "options": [
+                  "She doesn't like video games.",
+                  "She don't likes video games.",
+                  "She doesn't likes video games."
+                ],
+                "answer": "She doesn't like video games.",
+                "explanation": "For he, she, and it, the negative uses doesn't followed by the base verb without -s."
+              },
+              {
+                "id": "q-r-8",
+                "question": "Which sentence correctly uses an adverb of frequency?",
+                "options": [
+                  "I play often computer games.",
+                  "I often play computer games.",
+                  "Often I am play computer games."
+                ],
+                "answer": "I often play computer games.",
+                "explanation": "Adverbs of frequency like often go before the main verb."
+              },
+              {
+                "id": "q-r-9",
+                "question": "How do Leo and Mia feel about tidying up?",
+                "options": [
+                  "They think it is very fun.",
+                  "They think it is never fun.",
+                  "They love doing it every day."
+                ],
+                "answer": "They think it is never fun.",
+                "explanation": "The text explicitly states that tidying up is never fun."
+              },
+              {
+                "id": "q-r-10",
+                "question": "Which sentence correctly follows the verb + -ing rule for preferences?",
+                "options": [
+                  "He loves collecting stamps.",
+                  "He loves collect stamps.",
+                  "He love collecting stamps."
+                ],
+                "answer": "He loves collecting stamps.",
+                "explanation": "Verbs like love are followed by a verb ending in -ing."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m01-listening",
+      "moduleId": "A2.1-M01",
+      "skillType": "listening",
+      "title": "Listening Mission: Capturing Fun Moments",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a2-1-m01-l-theory",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This listening briefing helps you tune into natural conversations about hobbies and everyday activities. Focus on picking up key phrases used by teenagers when talking about their free time and plans.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about hobbies and activities.",
+              "Identify specific details such as actions, locations, and personal preferences.",
+              "Notice how words link together in fast connected speech."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "What are you up to?",
+                "meaning": "Apa yang sedang kamu lakukan?",
+                "note": "Used informally to ask what someone is currently doing or planning."
+              },
+              {
+                "phrase": "Have a good time",
+                "meaning": "Bersenang-senang",
+                "note": "A common expression meaning to enjoy oneself during an activity."
+              },
+              {
+                "phrase": "Find out",
+                "meaning": "Mencari tahu",
+                "note": "A phrasal verb meaning to discover or learn new information."
+              },
+              {
+                "phrase": "Come on",
+                "meaning": "Ayo",
+                "note": "An encouraging phrase used to urge someone to join an activity or hurry up."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "What are they up to",
+                "fast": "Wha-rat-they up-to",
+                "slowIpa": "/wɒt ɑː ðeɪ ʌp tuː/",
+                "fastIpa": "/ˈwɒtərətiː ʌptʊ/",
+                "note": "The final /t/ in what links smoothly with are, and the /ð/ in they is elided in rapid speech."
+              },
+              {
+                "id": 2,
+                "slow": "Find out",
+                "fast": "Fin-dout",
+                "slowIpa": "/faɪnd aʊt/",
+                "fastIpa": "/ˈfaɪn daʊt/",
+                "note": "The final consonant /d/ in find links directly to the vowel sound in out."
+              },
+              {
+                "id": 3,
+                "slow": "Look at that",
+                "fast": "Loo-ka-that",
+                "slowIpa": "/lʊk æt ðæt/",
+                "fastIpa": "/ˈlʊkəðæt/",
+                "note": "The final /k/ sound in look connects with at, creating a single flowing syllable."
+              },
+              {
+                "id": 4,
+                "slow": "Good time",
+                "fast": "Goo-time",
+                "slowIpa": "/ɡʊd taɪm/",
+                "fastIpa": "/ˈɡʊtaɪm/",
+                "note": "The /d/ sound at the end of good blends into the /t/ sound of time."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m01-l-dialogue",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Fun in the Park",
+          "orderIndex": 2,
+          "content": {
+            "context": "Ryan, Luke, and Olivia are hanging out at the local park. Olivia shows off her unusual new hobby of photographing Megan reading books in strange places.",
+            "audioPrompt": "Listen to the conversation between the friends in the park.",
+            "lines": [
+              {
+                "speaker": "Luke",
+                "text": "Look at Olivia and Megan.",
+                "translation": "Lihat Olivia dan Megan.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Ryan",
+                "text": "What are they up to?",
+                "translation": "Apa yang sedang mereka lakukan?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Luke",
+                "text": "They are having a good time.",
+                "translation": "Mereka sedang bersenang-senang.",
+                "emotion": "casual"
+              },
+              {
+                "speaker": "Ryan",
+                "text": "Let us go find out.",
+                "translation": "Ayo kita pergi mencari tahu.",
+                "emotion": "enthusiastic"
+              },
+              {
+                "speaker": "Olivia",
+                "text": "Hi Ryan and Luke.",
+                "translation": "Hai Ryan dan Luke.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Megan",
+                "text": "Hello guys, welcome over.",
+                "translation": "Halo teman-teman, selamat datang.",
+                "emotion": "cheerful"
+              },
+              {
+                "speaker": "Ryan",
+                "text": "What is that camera for?",
+                "translation": "Untuk apa kamera itu?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Olivia",
+                "text": "It is my new hobby.",
+                "translation": "Itu hobi baruku.",
+                "emotion": "proud"
+              },
+              {
+                "speaker": "Megan",
+                "text": "She takes photos of me.",
+                "translation": "Dia memotret diriku.",
+                "emotion": "smiling"
+              },
+              {
+                "speaker": "Olivia",
+                "text": "Megan reads books in strange places.",
+                "translation": "Megan membaca buku di tempat aneh.",
+                "emotion": "playful"
+              },
+              {
+                "speaker": "Luke",
+                "text": "Can I film you both?",
+                "translation": "Bolehkan aku merekam kalian berdua?",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Olivia",
+                "text": "Of course you can. Come on.",
+                "translation": "Tentu saja boleh. Ayo.",
+                "emotion": "welcoming"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m01-l-quiz",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Look at Olivia and Megan.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Luke: \"_____ at Olivia and Megan.\"",
+                "targetWord": "Look",
+                "explanation": "Full audio: \"Look at Olivia and Megan.\". The missing word is \"Look\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "What are they up to?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ryan: \"_____ are they up to?\"",
+                "targetWord": "What",
+                "explanation": "Full audio: \"What are they up to?\". The missing word is \"What\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "They are having a good time.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Luke: \"They are having a good _____.\"",
+                "targetWord": "time",
+                "explanation": "Full audio: \"They are having a good time.\". The missing word is \"time\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Let us go find out.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ryan: \"Let us go find _____.\"",
+                "targetWord": "out",
+                "explanation": "Full audio: \"Let us go find out.\". The missing word is \"out\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Hi Ryan and Luke.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Olivia: \"Hi Ryan _____ Luke.\"",
+                "targetWord": "and",
+                "explanation": "Full audio: \"Hi Ryan and Luke.\". The missing word is \"and\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Hello guys, welcome over.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Hello guys welcome over",
+                "words": [
+                  "guys",
+                  "Hello",
+                  "over",
+                  "welcome"
+                ],
+                "explanation": "Correct sentence order: \"Hello guys, welcome over.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What is that camera for?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What is that camera for",
+                "words": [
+                  "What",
+                  "is",
+                  "camera",
+                  "for",
+                  "that"
+                ],
+                "explanation": "Correct sentence order: \"What is that camera for?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "It is my new hobby.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It is my new hobby",
+                "words": [
+                  "hobby",
+                  "is",
+                  "new",
+                  "my",
+                  "It"
+                ],
+                "explanation": "Correct sentence order: \"It is my new hobby.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "She takes photos of me.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "She takes photos of me",
+                "words": [
+                  "She",
+                  "of",
+                  "takes",
+                  "photos",
+                  "me"
+                ],
+                "explanation": "Correct sentence order: \"She takes photos of me.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Megan reads books in strange places.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Megan reads books in strange places",
+                "words": [
+                  "in",
+                  "books",
+                  "reads",
+                  "strange",
+                  "places",
+                  "Megan"
+                ],
+                "explanation": "Correct sentence order: \"Megan reads books in strange places.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Look at Olivia and Megan.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Luke: \"_____ at Olivia and Megan.\"",
+                "targetWord": "Look",
+                "explanation": "Full audio: \"Look at Olivia and Megan.\". The missing word is \"Look\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "What are they up to?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ryan: \"_____ are they up to?\"",
+                "targetWord": "What",
+                "explanation": "Full audio: \"What are they up to?\". The missing word is \"What\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "They are having a good time.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Luke: \"They are having a good _____.\"",
+                "targetWord": "time",
+                "explanation": "Full audio: \"They are having a good time.\". The missing word is \"time\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Let us go find out.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ryan: \"Let us go find _____.\"",
+                "targetWord": "out",
+                "explanation": "Full audio: \"Let us go find out.\". The missing word is \"out\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Hi Ryan and Luke.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Olivia: \"Hi Ryan _____ Luke.\"",
+                "targetWord": "and",
+                "explanation": "Full audio: \"Hi Ryan and Luke.\". The missing word is \"and\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Hello guys, welcome over.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Hello guys welcome over",
+                "words": [
+                  "guys",
+                  "Hello",
+                  "over",
+                  "welcome"
+                ],
+                "explanation": "Correct sentence order: \"Hello guys, welcome over.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What is that camera for?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What is that camera for",
+                "words": [
+                  "What",
+                  "is",
+                  "camera",
+                  "for",
+                  "that"
+                ],
+                "explanation": "Correct sentence order: \"What is that camera for?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "It is my new hobby.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It is my new hobby",
+                "words": [
+                  "hobby",
+                  "is",
+                  "new",
+                  "my",
+                  "It"
+                ],
+                "explanation": "Correct sentence order: \"It is my new hobby.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "She takes photos of me.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "She takes photos of me",
+                "words": [
+                  "She",
+                  "of",
+                  "takes",
+                  "photos",
+                  "me"
+                ],
+                "explanation": "Correct sentence order: \"She takes photos of me.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Megan reads books in strange places.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Megan reads books in strange places",
+                "words": [
+                  "in",
+                  "books",
+                  "reads",
+                  "strange",
+                  "places",
+                  "Megan"
+                ],
+                "explanation": "Correct sentence order: \"Megan reads books in strange places.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m01-writing",
+      "moduleId": "A2.1-M01",
+      "skillType": "writing",
+      "title": "Writing Mission: Hobbies and Free Time",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a2-1-m01-w-theory",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on sentence structure, present tenses, and hobby expressions in English.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Affirmative Sentences",
+                "formula": "Subject + Verb (-s/-es for he/she/it) + Object / Complement",
+                "example": "I play tennis on Saturdays and my brother plays football."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Negative Sentences",
+                "formula": "Subject + don't / doesn't + base verb + Object",
+                "example": "She doesn't like cooking dinner on weeknights."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Expressing Hobbies with -ing",
+                "formula": "Subject + like / love / hate / enjoy + verb-ing + Complement",
+                "example": "They love swimming at the community pool on Sundays."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always capitalize days of the week, months, and proper names.",
+                "badExample": "we visit london on monday.",
+                "goodExample": "We visit London on Monday.",
+                "why": "Names of cities and days are proper nouns in English."
+              },
+              {
+                "rule": "Add -s or -es to verbs for third-person singular in affirmative present simple sentences.",
+                "badExample": "He play guitar after school.",
+                "goodExample": "He plays guitar after school.",
+                "why": "The subject 'he' requires the verb form with an -s ending."
+              },
+              {
+                "rule": "Drop the final letter 'e' when adding -ing to verbs ending in a silent 'e'.",
+                "badExample": "She likes danceing on weekends.",
+                "goodExample": "She likes dancing on weekends.",
+                "why": "Silent 'e' is removed before adding the -ing suffix."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "I usually tidy my bedroom on Saturday mornings.",
+                "id": "Saya biasanya merapikan kamar saya pada Sabtu pagi.",
+                "focus": "Adverb of frequency position"
+              },
+              {
+                "en": "She doesn't enjoy running in the rain.",
+                "id": "Dia tidak suka berlari di dalam hujan.",
+                "focus": "Negative present simple with verb-ing"
+              },
+              {
+                "en": "Do you listen to music after school?",
+                "id": "Apakah kamu mendengarkan musik sepulang sekolah?",
+                "focus": "Present simple question structure"
+              },
+              {
+                "en": "They always play board games together on Friday evenings.",
+                "id": "Mereka selalu bermain papan permainan bersama pada Jumat malam.",
+                "focus": "Frequency adverb and plural subject"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m01-w-practice",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "ryan dont like tidying his room on sundays",
+                "targetSentence": "Ryan doesn't like tidying his room on Sundays.",
+                "translation": "Ryan tidak suka merapikan kamarnya pada hari Minggu.",
+                "keyRule": "Use doesn't for third-person singular and capitalize proper names and days.",
+                "requiredCapitals": [
+                  "Ryan",
+                  "Sundays"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "sarah love reading books in london",
+                "targetSentence": "Sarah loves reading books in London.",
+                "translation": "Sarah suka membaca buku di London.",
+                "keyRule": "Add -s to the verb love for third-person singular and capitalize proper nouns.",
+                "requiredCapitals": [
+                  "Sarah",
+                  "London"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "we does not watch tv on monday",
+                "targetSentence": "We do not watch TV on Monday.",
+                "translation": "Kami tidak menonton TV pada hari Senin.",
+                "keyRule": "Use do not with plural subjects like we, and capitalize the day of the week.",
+                "requiredCapitals": [
+                  "Monday"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Daily Routines",
+                "meaning": "Saya suka bermain gitar setelah sekolah.",
+                "tokens": [
+                  "I",
+                  "like",
+                  "playing",
+                  "the",
+                  "guitar",
+                  "after",
+                  "school."
+                ],
+                "fullSentence": "I like playing the guitar after school."
+              },
+              {
+                "id": "b-2",
+                "category": "Hobbies",
+                "meaning": "Dia menikmati berenang di pagi hari.",
+                "tokens": [
+                  "He",
+                  "enjoys",
+                  "swimming",
+                  "in",
+                  "the",
+                  "morning."
+                ],
+                "fullSentence": "He enjoys swimming in the morning."
+              },
+              {
+                "id": "b-3",
+                "category": "Preferences",
+                "meaning": "Mereka tidak suka berlari pada hari hujan.",
+                "tokens": [
+                  "They",
+                  "don't",
+                  "like",
+                  "running",
+                  "on",
+                  "rainy",
+                  "days."
+                ],
+                "fullSentence": "They don't like running on rainy days."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Describe Your Favorite Hobby",
+                "badge": "Hobby Writer",
+                "instruction": "Write three to four sentences about a hobby you enjoy. Mention what it is, how often you do it, and why you like it.",
+                "example": "I love taking photos of nature. I usually go to the park on weekends with my camera. It helps me relax.",
+                "placeholder": "Start typing your sentences here...",
+                "minWords": 15,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Weekend Activities",
+                "badge": "Weekend Expert",
+                "instruction": "Write three sentences about what you and your friends do on weekends. Use present tense and frequency adverbs.",
+                "example": "My friends and I always play football on Saturdays. We sometimes eat pizza together after the game. It is a lot of fun.",
+                "placeholder": "Write your weekend routine here...",
+                "minWords": 15,
+                "xpReward": 35
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m01-w-quiz",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following affirmative sentence into a complete negative sentence:",
+                "promptText": "Luke enjoys playing video games after dinner.",
+                "hint": "Use 'does not enjoy' or 'doesn't enjoy'.",
+                "targetAnswers": [
+                  "Luke doesn't enjoy playing video games after dinner.",
+                  "Luke does not enjoy playing video games after dinner."
+                ],
+                "explanation": "With third-person singular (Luke), use 'does not' or 'doesn't' followed by the base verb 'enjoy'."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following sentence into a question:",
+                "promptText": "You play tennis on weekends.",
+                "hint": "Start the question with 'Do'.",
+                "targetAnswers": [
+                  "Do you play tennis on weekends?"
+                ],
+                "explanation": "To form a present simple question with 'you', place 'Do' at the beginning of the sentence."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Conjunctions",
+                "instruction": "Complete the sentence using the correct conjunction (and / but):",
+                "promptText": "Emma likes swimming, ___ she doesn't like running.",
+                "hint": "Use 'but' to show a contrast between two likes or dislikes.",
+                "targetAnswers": [
+                  "but"
+                ],
+                "explanation": "We use 'but' to connect contrasting ideas or preferences."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Rewrite the sentence with correct capitalization and punctuation:",
+                "promptText": "anna visits london on monday",
+                "hint": "Capitalize the name and the day of the week, and add a period.",
+                "targetAnswers": [
+                  "Anna visits London on Monday."
+                ],
+                "explanation": "Proper nouns like 'Anna' and 'London', as well as days like 'Monday', must be capitalized."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Short Response",
+                "instruction": "Complete the sentence with the correct -ing form of the verb in brackets:",
+                "promptText": "My sister loves [cook] new recipes on Sundays.",
+                "hint": "Add -ing to the verb cook.",
+                "targetAnswers": [
+                  "cooking"
+                ],
+                "explanation": "Verbs following 'love' take the -ing form, so cook becomes cooking."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the subject from 'I' to 'He' and adjust the verb correctly:",
+                "promptText": "I read books every evening.",
+                "hint": "Add an -s to the verb read for third-person singular.",
+                "targetAnswers": [
+                  "He reads books every evening."
+                ],
+                "explanation": "Third-person singular subjects (He) require an -s ending on the present simple verb (reads)."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Conjunctions",
+                "instruction": "Choose the correct linking word to complete the sentence:",
+                "promptText": "Mark plays guitar ___ sings in a band.",
+                "hint": "Use 'and' to add similar activities together.",
+                "targetAnswers": [
+                  "and"
+                ],
+                "explanation": "We use 'and' to link two related actions or hobbies."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the spelling error in the -ing verb in this sentence:",
+                "promptText": "They like writeing stories in their free time.",
+                "hint": "Remove the extra 'e' before adding -ing.",
+                "targetAnswers": [
+                  "They like writing stories in their free time."
+                ],
+                "explanation": "Verbs ending in a silent 'e' drop the 'e' before adding -ing."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Short Response",
+                "instruction": "Put the adverb of frequency in the correct position within the sentence:",
+                "promptText": "I [always] listen to music in the morning.",
+                "hint": "Place 'always' before the main verb 'listen'.",
+                "targetAnswers": [
+                  "I always listen to music in the morning."
+                ],
+                "explanation": "Adverbs of frequency like 'always' are placed before the main verb in present simple sentences."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following negative sentence into an affirmative sentence:",
+                "promptText": "Tom doesn't play basketball after school.",
+                "hint": "Remove 'doesn't' and add 's' to the verb 'play'.",
+                "targetAnswers": [
+                  "Tom plays basketball after school."
+                ],
+                "explanation": "To make a third-person singular sentence affirmative, remove auxiliary 'does not' and add '-s' to the main verb."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m01-speaking",
+      "moduleId": "A2.1-M01",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Hobbies and Free Time",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a2-1-m01-s-theory",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Learn how to talk about your hobbies and daily routines using the Present Simple tense and -ing forms clearly and naturally at an A2 level.",
+            "audioGuidance": "Focus on sentence stress, linking words, and clear vowel sounds when speaking about your free time.",
+            "pillars": [
+              {
+                "name": "Vowel Clarity",
+                "target": "Clear short and long vowels",
+                "explanation": "Pronounce short vowels like in hobby and long vowels like in relax with distinct mouth shapes."
+              },
+              {
+                "name": "Sentence Stress",
+                "target": "Emphasize content words",
+                "explanation": "Stress main verbs and nouns such as collect, blog, and weekend to make your speech easy to understand."
+              },
+              {
+                "name": "Intonation",
+                "target": "Use rising and falling pitch",
+                "explanation": "Use a rising tone for asking questions and a falling tone when giving clear answers about your daily habits."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m01-s-practice",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "RE-lax",
+                "countryAudio": "relax",
+                "countrySyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LAX",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "re-LAX-ing",
+                "natAudio": "relaxing",
+                "natSyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LAX",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ing",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that the main stress stays on the second syllable."
+              },
+              {
+                "id": "pair-2",
+                "country": "HOB-by",
+                "countryAudio": "hobby",
+                "countrySyllables": [
+                  {
+                    "text": "HOB",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "by",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "HOB-bies",
+                "natAudio": "hobbies",
+                "natSyllables": [
+                  {
+                    "text": "HOB",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "bies",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress remains firmly on the first syllable in both singular and plural forms."
+              },
+              {
+                "id": "pair-3",
+                "country": "COL-lect",
+                "countryAudio": "collect",
+                "countrySyllables": [
+                  {
+                    "text": "col",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LECT",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "col-LEC-tion",
+                "natAudio": "collection",
+                "natSyllables": [
+                  {
+                    "text": "col",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LEC",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress shifts slightly to the middle syllable when changing from verb to noun."
+              },
+              {
+                "id": "pair-4",
+                "country": "OC-ca-sion",
+                "countryAudio": "occasion",
+                "countrySyllables": [
+                  {
+                    "text": "oc",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "sion",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "oc-ca-sion-AL-ly",
+                "natAudio": "occasionally",
+                "natSyllables": [
+                  {
+                    "text": "oc",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ca",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "sion",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "AL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ly",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Adding the adverb ending moves the primary stress to the fourth syllable."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "I usually hang out with my classmates after school.",
+                "phonetic": "/aɪ ˈjuːʒuəli hæŋ aʊt wɪð maɪ ˈklɑːsmeɪts ˈɑːftə skuːl/",
+                "focus": "Phrasal verb hang out and natural rhythm",
+                "hint": "Link hang and out smoothly together."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "Do you like collecting old stamps in your free time?",
+                "phonetic": "/duː juː laɪk kəˈlektɪŋ əʊld stæmps ɪn jɔː friː taɪm/",
+                "focus": "Verb plus ing form and question intonation",
+                "hint": "Raise your voice slightly at the end of the question."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "She occasionally writes a blog about her weekend hobbies.",
+                "phonetic": "/ʃiː əˈkeɪʒnəli raɪts ə blɒɡ əˈbaʊt hɜː ˈwiːkend ˈhɒbiːz/",
+                "focus": "Third person singular verb ending and adverbs",
+                "hint": "Pronounce the final s in writes and relaxes clearly."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Be careful when you tidy up your room today.",
+                "phonetic": "/bi ˈkeəfəl wen juː ˈtaɪdi ʌp jɔː ruːm təˈdeɪ/",
+                "focus": "Warning phrase and phrasal verb stress",
+                "hint": "Stress the word careful and tidy up clearly."
+              }
+            ],
+            "roleplay": {
+              "context": "You meet your friend at the park to talk about your favorite hobbies and weekend plans.",
+              "roles": [
+                "Friend",
+                "Student"
+              ],
+              "turns": [
+                {
+                  "speaker": "Friend",
+                  "text": "Hi there! What do you usually do on weekends?",
+                  "translation": "Halo! Apa yang biasanya kamu lakukan di akhir pekan?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "I often play badminton or relax at home with a book.",
+                  "translation": "Aku sering bermain bulu tangkis atau bersantai di rumah dengan buku."
+                },
+                {
+                  "speaker": "Friend",
+                  "text": "That sounds fun. Do you collect anything special?",
+                  "translation": "Terdengar seru. Apakah kamu mengumpulkan sesuatu yang spesial?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, I love collecting badges from places I visit.",
+                  "translation": "Ya, aku suka mengumpulkan lencana dari tempat-tempat yang aku kunjungi."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-1-m01-s-quiz",
+          "moduleId": "A2.1-M01",
+          "subModuleId": "sub-a2-1-m01-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about your weekend routine and favorite activity.",
+                "audioPrompt": "Tell me about what you usually do on Saturdays and why you enjoy it.",
+                "storyPoints": [
+                  "What time you wake up and how you start your morning",
+                  "Your favorite hobby or sport you do on Saturday",
+                  "Who you spend time with and how it makes you feel"
+                ],
+                "targetSentence": "On Saturdays I wake up at eight, play football with my friends, and relax in the evening.",
+                "phonetic": "/ɒn ˈsætədeɪz aɪ weɪk ʌp æt eɪt/",
+                "expectedKeywords": [
+                  "Saturdays",
+                  "football",
+                  "friends",
+                  "relax"
+                ],
+                "explanation": "Speak fluently in full sentences using the Present Simple tense."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about your hobbies and free time activities.",
+                "audioPrompt": "Describe your favorite hobby and how often you do it during the week.",
+                "storyPoints": [
+                  "What your favorite hobby is and when you discovered it",
+                  "How often you practice or do this activity",
+                  "Why this hobby helps you relax after a busy school day"
+                ],
+                "targetSentence": "My favorite hobby is writing a blog because it helps me relax after school.",
+                "phonetic": "/maɪ ˈfeɪvərɪt ˈhɒbi ɪz ˈraɪtɪŋ ə blɒɡ/",
+                "expectedKeywords": [
+                  "hobby",
+                  "blog",
+                  "relax",
+                  "school"
+                ],
+                "explanation": "Use present tenses and descriptive words clearly."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to your partner asking about your after-school activities.",
+                "audioPrompt": "What do you usually do right after school finishes?",
+                "scenarioContext": "Talking with a classmate about afternoon plans.",
+                "characterRole": "Student",
+                "targetSentence": "I usually tidy up my desk and then go home to relax.",
+                "phonetic": "/aɪ ˈjuːʒuəli ˈtaɪdi ʌp maɪ desk/",
+                "expectedKeywords": [
+                  "usually",
+                  "tidy up",
+                  "relax"
+                ],
+                "explanation": "Answer directly using frequency adverbs."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to a question about collecting items as a hobby.",
+                "audioPrompt": "Do you collect anything interesting like stamps or postcards?",
+                "scenarioContext": "Discussing hobbies with a new friend.",
+                "characterRole": "Student",
+                "targetSentence": "Yes, I love collecting old postcards from different cities.",
+                "phonetic": "/jes aɪ lʌv kəˈlektɪŋ əʊld ˈpəʊstkɑːdz/",
+                "expectedKeywords": [
+                  "love",
+                  "collecting",
+                  "postcards"
+                ],
+                "explanation": "Use verb plus ing form correctly."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Reply to a warning about safety during sports.",
+                "audioPrompt": "Be careful on that skateboard, the ground is wet!",
+                "scenarioContext": "Reacting to safety advice from a friend.",
+                "characterRole": "Student",
+                "targetSentence": "Thanks for the warning. I will be very careful.",
+                "phonetic": "/tæŋks fɔː ðə ˈwɔːnɪŋ aɪ wɪl bi ˈvɛri ˈkeəfəl/",
+                "expectedKeywords": [
+                  "careful",
+                  "warning",
+                  "thanks"
+                ],
+                "explanation": "Acknowledge advice politely and clearly."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Answer how often you visit the cinema.",
+                "audioPrompt": "How often do you go to the cinema with your friends?",
+                "scenarioContext": "Talking about weekend entertainment.",
+                "characterRole": "Student",
+                "targetSentence": "I occasionally go to the cinema on Saturday nights.",
+                "phonetic": "/aɪ əˈkeɪʒnəli ɡəʊ tuː ðə ˈsɪnəmə/",
+                "expectedKeywords": [
+                  "occasionally",
+                  "cinema",
+                  "Saturday"
+                ],
+                "explanation": "Use frequency adverbs like occasionally correctly."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Read aloud the target sentence focusing on the word hobby.",
+                "audioPrompt": "Say this sentence clearly: My main hobby is playing guitar.",
+                "targetSentence": "My main hobby is playing guitar.",
+                "phonetic": "/maɪ meɪn ˈhɒbi ɪz ˈpleɪɪŋ ɡɪˈtɑː/",
+                "focus": "vocab",
+                "expectedKeywords": [
+                  "hobby"
+                ],
+                "explanation": "Pronounce the target vocabulary item clearly with correct stress."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Read aloud the sentence using Present Simple third person singular.",
+                "audioPrompt": "Say this sentence clearly: She often relaxes on Sunday mornings.",
+                "targetSentence": "She often relaxes on Sunday mornings.",
+                "phonetic": "/ʃiː ˈɒfən rɪˈlæksɪz ɒn ˈsʌndeɪ ˈmɔːnɪŋz/",
+                "focus": "grammar",
+                "expectedKeywords": [
+                  "relaxes"
+                ],
+                "explanation": "Ensure the third person singular verb ending s is pronounced clearly."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Syllable Stress Drill",
+                "instruction": "Read aloud paying attention to syllable stress on the target word.",
+                "audioPrompt": "Say this sentence focusing on stress: We need to tidy up the room.",
+                "targetSentence": "We need to tidy up the room.",
+                "phonetic": "/wiː niːd tuː ˈtaɪdi ʌp ðə ruːm/",
+                "focus": "pronunciation_stress",
+                "expectedKeywords": [
+                  "tidy up"
+                ],
+                "explanation": "Place primary stress on the first syllable of tidy."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Drill",
+                "instruction": "Read aloud with falling intonation for a direct statement.",
+                "audioPrompt": "Say this statement with a falling tone: I love collecting stamps.",
+                "targetSentence": "I love collecting stamps.",
+                "phonetic": "/aɪ lʌv kəˈlektɪŋ stæmps/",
+                "focus": "pronunciation_intonation",
+                "expectedKeywords": [
+                  "collecting stamps"
+                ],
+                "explanation": "Lower your pitch at the end of the sentence to show completion."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

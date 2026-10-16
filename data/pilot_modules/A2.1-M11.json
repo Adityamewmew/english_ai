@@ -1,0 +1,1590 @@
+{
+  "module": {
+    "id": "A2.1-M11",
+    "levelId": "A2.1",
+    "title": "Unit 11: Future Bodies: Health, Illness & Present Perfect vs Past Simple",
+    "cefr": "A2",
+    "group": "A2.1 - Elementary Actions",
+    "objective": "Describe health conditions, illnesses, and contrast indefinite experiences with specific past events (Present Perfect vs Past Simple).",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 11
+  },
+  "subModules": [
+    {
+      "id": "sub-a2-1-m11-reading",
+      "moduleId": "A2.1-M11",
+      "skillType": "reading",
+      "title": "Reading Mission: Future Bodies and Health",
+      "theme": "Future Bodies: Health, Illness & Predictions",
+      "grammarFocus": "Present Perfect vs Past Simple & Future Predictions with Will/Won't",
+      "vocabularyFocus": "Health, Illness, Body Parts & Physical Conditions",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a2-1-m11-r-theory",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to Unit 11. In this reading mission, you will explore how human bodies might change in the future, learn vocabulary for health and body parts, and study grammar rules for talking about past experiences and future predictions.",
+            "linguisticTarget": {
+              "grammar": "Future predictions with will and won't, first conditional sentences, and contrasting Past Simple with Present Perfect.",
+              "vocabulary": "Body parts, physical conditions, illnesses, and medical terms.",
+              "readingStrategy": "Scanning texts for specific medical details and skimming paragraphs to understand general predictions about the human body."
+            },
+            "learningObjectives": [
+              "Understand the main ideas of short A2 texts about future human evolution and health.",
+              "Locate specific details such as body parts, symptoms, and lifestyle predictions.",
+              "Recognize and practice grammar patterns with will, won't, and conditional sentences."
+            ],
+            "contextWarmup": {
+              "prompt": "What do you think our hands and fingers will do differently in one hundred years because of smartphones?",
+              "options": [
+                "They will get longer and stronger from typing.",
+                "They will stay exactly the same size.",
+                "They will disappear completely."
+              ],
+              "correctIndex": 0,
+              "explanation": "Scientists and experts predict that constant phone use might change how our fingers move and grow over time."
+            },
+            "rules": [
+              "Use will and won't followed by the base form of a verb to make predictions about the future, such as our fingers will get longer.",
+              "Use the first conditional with if plus present simple in the clause, followed by will in the main clause, to talk about realistic future possibilities.",
+              "Use time clauses with when or as soon as followed by present simple, not future, when referring to future events."
+            ],
+            "commonTrap": {
+              "trapTitle": "Using future tense after if or when",
+              "explanation": "Learners often put will after if or when in conditional sentences and time clauses. You must use the present simple tense instead.",
+              "wrong": "If we will eat unhealthy food, we will get sick.",
+              "correct": "If we eat unhealthy food, we will get sick."
+            },
+            "contractionsTitle": "Natural Spoken Contractions in Predictions",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in everyday English:",
+            "contractions": [
+              {
+                "subject": "We",
+                "verb": "will",
+                "vowelDropped": "wi",
+                "remainder": "ll",
+                "contracted": "We'll",
+                "exampleFull": "We will have weaker muscles in the future.",
+                "exampleContracted": "We'll have weaker muscles in the future."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Future Predictions",
+              "description": "Assemble sentence blocks to practice affirmative, negative, and question forms:",
+              "subjects": [
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "will",
+                  "role": "First/Third Person Plural"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "change",
+                  "thirdPerson": "changes",
+                  "continuous": "changing"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "a lot in the next century",
+                  "type": "Future Adverbial"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-1-m11-r-vocab",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "muscle",
+                "ipa": "/ˈmʌs.əl/",
+                "meaning": "otot",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Our muscles will not be as strong as now because we do less physical work.",
+                "collocation": "strong muscle / weak muscle"
+              },
+              {
+                "word": "shoulder",
+                "ipa": "/ˈʃəʊl.dər/",
+                "meaning": "bahu",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Katie hurt her shoulder while she was skateboarding yesterday.",
+                "collocation": "hurt one's shoulder / broad shoulder"
+              },
+              {
+                "word": "stomach ache",
+                "ipa": "/ˈstʌm.ək eɪk/",
+                "meaning": "sakit perut",
+                "partOfSpeech": "noun",
+                "exampleSentence": "I ate too much fast food and now I have a stomach ache.",
+                "collocation": "have a stomach ache / get a stomach ache"
+              },
+              {
+                "word": "headache",
+                "ipa": "/ˈhed.eɪk/",
+                "meaning": "sakit kepala",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Looking at a computer screen all day can give you a bad headache.",
+                "collocation": "have a headache / cure a headache"
+              },
+              {
+                "word": "weaker",
+                "ipa": "/ˈwiː.kər/",
+                "meaning": "lebih lemah",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "If we stop exercising, our bodies will become weaker over time.",
+                "collocation": "get weaker / feel weaker"
+              },
+              {
+                "word": "hurt",
+                "ipa": "/hɜːt/",
+                "meaning": "terluka, sakit",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Does your arm hurt after the football match?",
+                "collocation": "hurt a muscle / hurt badly"
+              },
+              {
+                "word": "illness",
+                "ipa": "/ˈɪl.nəs/",
+                "meaning": "penyakit, sakit",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Doctors are working hard to find cures for every serious illness.",
+                "collocation": "serious illness / catch an illness"
+              },
+              {
+                "word": "prediction",
+                "ipa": "/prɪˈdɪk.ʃən/",
+                "meaning": "prediksi, ramalan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Making a prediction about human health in 2100 is very interesting.",
+                "collocation": "make a prediction / bold prediction"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m11-r-guided",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "The Human Body in the Year 2100",
+            "audioUrl": "/audio/modules/a2-1-m11/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "What will our bodies look like in the year 2100? Scientists and doctors often make interesting predictions about human health and physical changes. Because we use machines and computers for almost everything, our daily lives are very different from the lives of our grandparents. Experts believe that our muscles will get weaker because we do not lift heavy things as often as before.",
+              "Furthermore, constant computer and phone use might change our hands and posture. If people look down at screens all day, they will likely experience neck pain and shoulder stiffness. However, modern medicine is also improving fast. Doctors hope that new treatments will stop many dangerous illnesses before they start, helping people live longer and healthier lives."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "What will our bodies look like in the year 2100?",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 4.6,
+                "end": 9.2,
+                "text": "Scientists and doctors often make interesting predictions about human health and physical changes.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 9.3,
+                "end": 14.5,
+                "text": "Because we use machines and computers for almost everything, our daily lives are very different from the lives of our grandparents.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 14.6,
+                "end": 19.5,
+                "text": "Experts believe that our muscles will get weaker because we do not lift heavy things as often as before.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 20,
+                "end": 25,
+                "text": "Furthermore, constant computer and phone use might change our hands and posture.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 25.1,
+                "end": 30.5,
+                "text": "If people look down at screens all day, they will likely experience neck pain and shoulder stiffness.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 30.6,
+                "end": 35.5,
+                "text": "However, modern medicine is also improving fast.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 35.6,
+                "end": 42,
+                "text": "Doctors hope that new treatments will stop many dangerous illnesses before they start, helping people live longer and healthier lives.",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m11-r-practice",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-1",
+                "prompt": "Match the word with its correct definition.",
+                "pairs": [
+                  {
+                    "left": "muscle",
+                    "right": "tissue in the body that helps us move"
+                  },
+                  {
+                    "left": "shoulder",
+                    "right": "the part where your arm connects to your body"
+                  },
+                  {
+                    "left": "stomach ache",
+                    "right": "pain in your belly area"
+                  },
+                  {
+                    "left": "illness",
+                    "right": "a disease or period of being sick"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m11-r-quiz",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What year do scientists make predictions about in the text?",
+                "options": [
+                  "2050",
+                  "2100",
+                  "2200"
+                ],
+                "answer": "2100",
+                "explanation": "The text opens by discussing what our bodies will look like in the year 2100."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Why do experts believe our muscles will get weaker?",
+                "options": [
+                  "Because we sleep less.",
+                  "Because we do not lift heavy things as often.",
+                  "Because we eat too much fruit."
+                ],
+                "answer": "Because we do not lift heavy things as often.",
+                "explanation": "The passage states that muscles will get weaker because we do less physical lifting than before."
+              },
+              {
+                "id": "q-r-3",
+                "question": "How do our daily lives compare to the lives of our grandparents?",
+                "options": [
+                  "They are very different.",
+                  "They are exactly the same.",
+                  "They are much slower."
+                ],
+                "answer": "They are very different.",
+                "explanation": "The text mentions that our daily lives are very different from our grandparents' lives because of machines and computers."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What device use might change our hands and posture?",
+                "options": [
+                  "Televisions and radios",
+                  "Computers and phones",
+                  "Books and notebooks"
+                ],
+                "answer": "Computers and phones",
+                "explanation": "Constant computer and phone use is linked to changes in hands and posture."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What might happen if people look down at screens all day?",
+                "options": [
+                  "They will experience neck pain and shoulder stiffness.",
+                  "They will grow taller.",
+                  "They will run faster."
+                ],
+                "answer": "They will experience neck pain and shoulder stiffness.",
+                "explanation": "The passage explicitly states that looking down at screens all day leads to neck pain and shoulder stiffness."
+              },
+              {
+                "id": "q-r-6",
+                "question": "What part of the body is mentioned alongside stiffness in the second paragraph?",
+                "options": [
+                  "Shoulder",
+                  "Knee",
+                  "Ankle"
+                ],
+                "answer": "Shoulder",
+                "explanation": "The text mentions shoulder stiffness and neck pain."
+              },
+              {
+                "id": "q-r-7",
+                "question": "What is happening to modern medicine according to the text?",
+                "options": [
+                  "It is improving fast.",
+                  "It is becoming less important.",
+                  "It is staying the same."
+                ],
+                "answer": "It is improving fast.",
+                "explanation": "The text notes that modern medicine is improving fast."
+              },
+              {
+                "id": "q-r-8",
+                "question": "What do doctors hope new treatments will do?",
+                "options": [
+                  "Stop many dangerous illnesses before they start",
+                  "Make people sleep all day",
+                  "Create more computer games"
+                ],
+                "answer": "Stop many dangerous illnesses before they start",
+                "explanation": "Doctors hope new treatments will stop dangerous illnesses before they start."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What is the overall topic of the reading passage?",
+                "options": [
+                  "Future human bodies and health",
+                  "How to build a computer",
+                  "Cooking healthy meals"
+                ],
+                "answer": "Future human bodies and health",
+                "explanation": "The passage discusses how human bodies, health, and medical treatments might change in the future."
+              },
+              {
+                "id": "q-r-10",
+                "question": "According to the text, what will help people live longer and healthier lives?",
+                "options": [
+                  "New medical treatments",
+                  "Eating fast food every day",
+                  "Not using any technology"
+                ],
+                "answer": "New medical treatments",
+                "explanation": "The text concludes that new treatments will help people live longer and healthier lives."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m11-listening",
+      "moduleId": "A2.1-M11",
+      "skillType": "listening",
+      "title": "Listening Mission: Talking About Health and Past Illnesses",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a2-1-m11-l-theory",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This audio briefing helps you understand conversations about health symptoms and past medical experiences. You will practice listening for specific time markers and distinguishing between completed past actions and ongoing states.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about health and illness.",
+              "Identify details such as symptoms, doctor visits, and recovery times.",
+              "Notice how words link together in natural connected speech."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "I have a terrible headache",
+                "meaning": "Aku sakit kepala parah",
+                "note": "Used to describe a current physical pain or health issue."
+              },
+              {
+                "phrase": "Have you ever broken a bone?",
+                "meaning": "Pernahkah kamu patah tulang?",
+                "note": "Used to ask about life experiences concerning past physical injuries."
+              },
+              {
+                "phrase": "I sprained my ankle last week",
+                "meaning": "Aku keseleo pergelangan kaki minggu lalu",
+                "note": "Used with past simple to state a specific completed time in the past."
+              },
+              {
+                "phrase": "I have felt sick since Monday",
+                "meaning": "Aku merasa sakit sejak hari Senin",
+                "note": "Used with present perfect and since for a state starting in the past and continuing now."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "Have you ever",
+                "fast": "Have youver",
+                "slowIpa": "/hæv juː ˈev.ər/",
+                "fastIpa": "/hæv jʊv.ər/",
+                "note": "The pronoun you links with ever and softens the strong sound in fast speech."
+              },
+              {
+                "id": 2,
+                "slow": "What is wrong",
+                "fast": "What's wrong",
+                "slowIpa": "/wɒt ɪz rɒŋ/",
+                "fastIpa": "/wɒts rɒŋ/",
+                "note": "The auxiliary verb is contracts with what in natural spoken English."
+              },
+              {
+                "id": 3,
+                "slow": "Feel better",
+                "fast": "Feel better",
+                "slowIpa": "/fiːl ˈbet.ər/",
+                "fastIpa": "/fiːl ˈbet.ər/",
+                "note": "The final sound in feel connects smoothly to the vowel sound in better."
+              },
+              {
+                "id": 4,
+                "slow": "Sick since",
+                "fast": "Sick since",
+                "slowIpa": "/sɪk sɪns/",
+                "fastIpa": "/sɪk sɪns/",
+                "note": "The consonant sound at the end of sick blends into the start of since."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m11-l-dialogue",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Talking About Health Problems",
+          "orderIndex": 2,
+          "content": {
+            "context": "Leo and Mia talk at school about health symptoms, recent clinic visits, and how to recover from a bad cold.",
+            "audioPrompt": "Listen to the conversation between two friends.",
+            "lines": [
+              {
+                "speaker": "Leo",
+                "text": "Hi Mia, you look really pale today.",
+                "translation": "Hai Mia, kamu terlihat sangat pucat hari ini.",
+                "emotion": "concerned"
+              },
+              {
+                "speaker": "Mia",
+                "text": "I have had a bad cold all week.",
+                "translation": "Aku terkena flu berat sepanjang minggu.",
+                "emotion": "tired"
+              },
+              {
+                "speaker": "Leo",
+                "text": "Have you seen a doctor yet?",
+                "translation": "Apakah kamu sudah ke dokter?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Mia",
+                "text": "Yes, I went to the clinic yesterday.",
+                "translation": "Ya, aku pergi ke klinik kemarin.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Leo",
+                "text": "Did the doctor give you any medicine?",
+                "translation": "Apakah dokter memberimu obat?",
+                "emotion": "supportive"
+              },
+              {
+                "speaker": "Mia",
+                "text": "She gave me some cough syrup.",
+                "translation": "Dia memberiku beberapa obat batuk cair.",
+                "emotion": "calm"
+              },
+              {
+                "speaker": "Leo",
+                "text": "That sounds terrible. Do you feel better?",
+                "translation": "Itu kedengarannya mengerikan. Apakah kamu merasa lebih baik?",
+                "emotion": "sympathetic"
+              },
+              {
+                "speaker": "Mia",
+                "text": "Not really, my throat still hurts badly.",
+                "translation": "Tidak begitu, tenggorokanku masih sakit sekali.",
+                "emotion": "painful"
+              },
+              {
+                "speaker": "Leo",
+                "text": "You should stay in bed today.",
+                "translation": "Kamu sebaiknya tinggal di tempat tidur hari ini.",
+                "emotion": "advice"
+              },
+              {
+                "speaker": "Mia",
+                "text": "I have slept for ten hours already.",
+                "translation": "Aku sudah tidur selama sepuluh jam.",
+                "emotion": "tired"
+              },
+              {
+                "speaker": "Leo",
+                "text": "Good, rest is important for your body.",
+                "translation": "Bagus, istirahat itu penting untuk tubuhmu.",
+                "emotion": "encouraging"
+              },
+              {
+                "speaker": "Mia",
+                "text": "Thanks Leo, I hope I recover soon.",
+                "translation": "Terima kasih Leo, aku harap aku segera pulih.",
+                "emotion": "hopeful"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m11-l-quiz",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Hi Mia, you look really pale today.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Hi Mia, you look really pale _____.\"",
+                "targetWord": "today",
+                "explanation": "Full audio: \"Hi Mia, you look really pale today.\". The missing word is \"today\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I have had a bad cold all week.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"I have had a bad cold all _____.\"",
+                "targetWord": "week",
+                "explanation": "Full audio: \"I have had a bad cold all week.\". The missing word is \"week\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Have you seen a doctor yet?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Have you seen a doctor _____?\"",
+                "targetWord": "yet",
+                "explanation": "Full audio: \"Have you seen a doctor yet?\". The missing word is \"yet\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Yes, I went to the clinic yesterday.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"Yes, I went to the clinic _____.\"",
+                "targetWord": "yesterday",
+                "explanation": "Full audio: \"Yes, I went to the clinic yesterday.\". The missing word is \"yesterday\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Did the doctor give you any medicine?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Did the doctor give you any _____?\"",
+                "targetWord": "medicine",
+                "explanation": "Full audio: \"Did the doctor give you any medicine?\". The missing word is \"medicine\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "She gave me some cough syrup.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "She gave me some cough syrup",
+                "words": [
+                  "She",
+                  "me",
+                  "cough",
+                  "syrup",
+                  "gave",
+                  "some"
+                ],
+                "explanation": "Correct sentence order: \"She gave me some cough syrup.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "That sounds terrible.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds terrible",
+                "words": [
+                  "sounds",
+                  "That",
+                  "terrible"
+                ],
+                "explanation": "Correct sentence order: \"That sounds terrible.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Do you feel better?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Do you feel better",
+                "words": [
+                  "you",
+                  "better",
+                  "feel",
+                  "Do"
+                ],
+                "explanation": "Correct sentence order: \"Do you feel better?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Not really, my throat still hurts badly.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Not really my throat still hurts badly",
+                "words": [
+                  "throat",
+                  "still",
+                  "really",
+                  "my",
+                  "badly",
+                  "Not",
+                  "hurts"
+                ],
+                "explanation": "Correct sentence order: \"Not really, my throat still hurts badly.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "You should stay in bed today.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You should stay in bed today",
+                "words": [
+                  "in",
+                  "today",
+                  "stay",
+                  "should",
+                  "You",
+                  "bed"
+                ],
+                "explanation": "Correct sentence order: \"You should stay in bed today.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Hi Mia, you look really pale today.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Hi Mia, you look really pale _____.\"",
+                "targetWord": "today",
+                "explanation": "Full audio: \"Hi Mia, you look really pale today.\". The missing word is \"today\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I have had a bad cold all week.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"I have had a bad cold all _____.\"",
+                "targetWord": "week",
+                "explanation": "Full audio: \"I have had a bad cold all week.\". The missing word is \"week\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Have you seen a doctor yet?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Have you seen a doctor _____?\"",
+                "targetWord": "yet",
+                "explanation": "Full audio: \"Have you seen a doctor yet?\". The missing word is \"yet\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Yes, I went to the clinic yesterday.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"Yes, I went to the clinic _____.\"",
+                "targetWord": "yesterday",
+                "explanation": "Full audio: \"Yes, I went to the clinic yesterday.\". The missing word is \"yesterday\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Did the doctor give you any medicine?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Did the doctor give you any _____?\"",
+                "targetWord": "medicine",
+                "explanation": "Full audio: \"Did the doctor give you any medicine?\". The missing word is \"medicine\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "She gave me some cough syrup.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "She gave me some cough syrup",
+                "words": [
+                  "She",
+                  "me",
+                  "cough",
+                  "syrup",
+                  "gave",
+                  "some"
+                ],
+                "explanation": "Correct sentence order: \"She gave me some cough syrup.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "That sounds terrible.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds terrible",
+                "words": [
+                  "sounds",
+                  "That",
+                  "terrible"
+                ],
+                "explanation": "Correct sentence order: \"That sounds terrible.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Do you feel better?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Do you feel better",
+                "words": [
+                  "you",
+                  "better",
+                  "feel",
+                  "Do"
+                ],
+                "explanation": "Correct sentence order: \"Do you feel better?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Not really, my throat still hurts badly.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Not really my throat still hurts badly",
+                "words": [
+                  "throat",
+                  "still",
+                  "really",
+                  "my",
+                  "badly",
+                  "Not",
+                  "hurts"
+                ],
+                "explanation": "Correct sentence order: \"Not really, my throat still hurts badly.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "You should stay in bed today.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You should stay in bed today",
+                "words": [
+                  "in",
+                  "today",
+                  "stay",
+                  "should",
+                  "You",
+                  "bed"
+                ],
+                "explanation": "Correct sentence order: \"You should stay in bed today.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m11-writing",
+      "moduleId": "A2.1-M11",
+      "skillType": "writing",
+      "title": "Writing Mission: Future Bodies and Health Predictions",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a2-1-m11-w-theory",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on writing clear sentences and paragraphs about future health changes, medical conditions, and predictions using will, won't, and conditional structures in English.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Future Predictions with Will and Won't",
+                "formula": "Subject + will / won't + base verb + complement",
+                "example": "Our fingers will get longer from typing on phones."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: First Conditional for Health and Illness",
+                "formula": "If + present simple, subject + will / won't + base verb",
+                "example": "If you eat healthy food, you will feel much better."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Time Clauses with When and As Soon As",
+                "formula": "When / As soon as + present simple, subject + will + base verb",
+                "example": "When we get to the clinic, the doctor will check your throat."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Never use the future tense inside the if-clause of a first conditional sentence.",
+                "badExample": "If you will eat too much sugar, you will get sick.",
+                "goodExample": "If you eat too much sugar, you will get sick.",
+                "why": "The condition clause must use the present simple tense, while the main clause uses will."
+              },
+              {
+                "rule": "Use a comma after a time clause or if-clause when it comes at the beginning of a sentence.",
+                "badExample": "When the nurse arrives she will give you medicine.",
+                "goodExample": "When the nurse arrives, she will give you medicine.",
+                "why": "A comma separates the introductory clause from the main clause for clear reading."
+              },
+              {
+                "rule": "Always capitalize the pronoun I and the first letter of every new sentence.",
+                "badExample": "i think our bodies will change. if you rest, i will help you.",
+                "goodExample": "I think our bodies will change. If you rest, I will help you.",
+                "why": "Standard English mechanics require proper capitalization for pronouns and sentence starts."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "If you catch a cold, you will need to stay in bed.",
+                "id": "Jika kamu terkena batuk pilek, kamu harus tetap di tempat tidur.",
+                "focus": "First conditional structure for health advice"
+              },
+              {
+                "en": "People will use fewer medical pills in the future.",
+                "id": "Orang-orang akan menggunakan lebih sedikit pil obat di masa depan.",
+                "focus": "Future prediction with will"
+              },
+              {
+                "en": "As soon as my head stops aching, I will finish my homework.",
+                "id": "Begitu kepala saya berhenti sakit, saya akan menyelesaikan PR saya.",
+                "focus": "Time clause with as soon as"
+              },
+              {
+                "en": "Our eyes won't need glasses if scientists invent new eye drops.",
+                "id": "Mata kita tidak akan membutuhkan kacamata jika ilmuwan menemukan tetes mata baru.",
+                "focus": "First conditional with negative main clause"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m11-w-practice",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "if you will run too fast you will hurt your knee",
+                "targetSentence": "If you run too fast, you will hurt your knee.",
+                "translation": "Jika kamu berlari terlalu cepat, kamu akan melukai lututmu.",
+                "keyRule": "Use present simple in the if-clause, not will. Add a comma after the conditional clause.",
+                "requiredCapitals": [
+                  "If"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "when the doctor will call my name i will go inside",
+                "targetSentence": "When the doctor calls my name, I will go inside.",
+                "translation": "Ketika dokter memanggil nama saya, saya akan masuk ke dalam.",
+                "keyRule": "Use present simple after when and capitalize the pronoun I.",
+                "requiredCapitals": [
+                  "When",
+                  "I"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "people wont have backache if they sit straight",
+                "targetSentence": "People won't have backache if they sit straight.",
+                "translation": "Orang-orang tidak akan sakit punggung jika mereka duduk tegak.",
+                "keyRule": "Use the contracted form won't and capitalize the start of the sentence.",
+                "requiredCapitals": [
+                  "People"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Health & First Conditional",
+                "meaning": "Jika kamu minum air hangat, tenggorokanmu akan membaik.",
+                "tokens": [
+                  "If",
+                  "you",
+                  "drink",
+                  "warm",
+                  "water,",
+                  "your",
+                  "throat",
+                  "will",
+                  "feel",
+                  "better."
+                ],
+                "fullSentence": "If you drink warm water, your throat will feel better."
+              },
+              {
+                "id": "b-2",
+                "category": "Future Predictions",
+                "meaning": "Tubuh kita akan berubah dalam seratus tahun.",
+                "tokens": [
+                  "Our",
+                  "bodies",
+                  "will",
+                  "change",
+                  "in",
+                  "one",
+                  "hundred",
+                  "years."
+                ],
+                "fullSentence": "Our bodies will change in one hundred years."
+              },
+              {
+                "id": "b-3",
+                "category": "Time Clauses",
+                "meaning": "Begitu saya merasa lebih baik, saya akan kembali bekerja.",
+                "tokens": [
+                  "As",
+                  "soon",
+                  "as",
+                  "I",
+                  "feel",
+                  "better,",
+                  "I",
+                  "will",
+                  "return",
+                  "to",
+                  "work."
+                ],
+                "fullSentence": "As soon as I feel better, I will return to work."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Future Body Predictions",
+                "badge": "Future Predictor",
+                "instruction": "Write three sentences about how human bodies might change in the future. Use will or won't and mention parts of the body like fingers, eyes, or legs.",
+                "example": "Humans will type a lot on phones. Our thumbs will become stronger and longer. People won't walk as much because robots will carry things.",
+                "placeholder": "Type your predictions here...",
+                "minWords": 20,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Health and First Conditional Advice",
+                "badge": "Health Advisor",
+                "instruction": "Write three sentences giving health advice using first conditional sentences with if and will.",
+                "example": "If you sleep eight hours every night, you will have more energy. If you eat fresh vegetables, your immune system will stay strong. If you catch a fever, you will need to rest.",
+                "placeholder": "Type your health advice here...",
+                "minWords": 20,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m11-w-quiz",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change this sentence into a first conditional sentence starting with If: 'You eat junk food every day and you gain weight.'",
+                "promptText": "Eat junk food every day -> gain weight",
+                "hint": "Use If you eat..., you will...",
+                "targetAnswers": [
+                  "If you eat junk food every day, you will gain weight.",
+                  "If you eat junk food every day you will gain weight."
+                ],
+                "explanation": "In first conditional sentences, use present simple in the conditional clause and will in the result clause."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the capitalization and punctuation in this sentence:",
+                "promptText": "if doctor smith examines my arm she will give me advice",
+                "hint": "Capitalize proper names and sentence starts, and add a comma after the if-clause.",
+                "targetAnswers": [
+                  "If Doctor Smith examines my arm, she will give me advice.",
+                  "If Dr. Smith examines my arm, she will give me advice."
+                ],
+                "explanation": "Proper nouns like Doctor Smith and the start of the sentence require capitalization, and a comma follows the introductory conditional clause."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Conjunction Integration",
+                "instruction": "Combine these two sentences using as soon as: 'I finish my medicine. I will go outside.'",
+                "promptText": "I finish my medicine. / I will go outside.",
+                "hint": "Start with As soon as I finish my medicine...",
+                "targetAnswers": [
+                  "As soon as I finish my medicine, I will go outside.",
+                  "As soon as I finish my medicine I will go outside."
+                ],
+                "explanation": "Time clauses with as soon as take the present simple tense in the dependent clause and will in the main clause."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Short Response",
+                "instruction": "Write a prediction about human eyes in the future using will:",
+                "promptText": "Prediction about human eyes",
+                "hint": "Start with Human eyes will...",
+                "targetAnswers": [
+                  "Human eyes will change because of computers.",
+                  "Human eyes will get weaker from looking at screens.",
+                  "Human eyes will adapt to screens.",
+                  "Our eyes will change."
+                ],
+                "explanation": "Use will followed by a base verb to create a clear future prediction."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change this sentence into the negative form using won't: 'Our thumbs will stay the same size.'",
+                "promptText": "Our thumbs will stay the same size.",
+                "hint": "Change will to won't.",
+                "targetAnswers": [
+                  "Our thumbs won't stay the same size.",
+                  "Our thumbs will not stay the same size."
+                ],
+                "explanation": "The negative form of will is won't or will not."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Conjunction Integration",
+                "instruction": "Combine these two sentences using when: 'We arrive at the hospital. The nurse will check our temperature.'",
+                "promptText": "We arrive at the hospital. / The nurse will check our temperature.",
+                "hint": "Start with When we arrive...",
+                "targetAnswers": [
+                  "When we arrive at the hospital, the nurse will check our temperature.",
+                  "When we arrive at the hospital the nurse will check our temperature."
+                ],
+                "explanation": "Time clauses using when take the present simple tense in the time clause and will in the main clause."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the error in this conditional sentence: 'If he will cough all night, he won't sleep.'",
+                "promptText": "If he will cough all night, he won't sleep.",
+                "hint": "Remove will from the if-clause.",
+                "targetAnswers": [
+                  "If he coughs all night, he won't sleep.",
+                  "If he coughs all night he won't sleep."
+                ],
+                "explanation": "Never use will in the if-clause of first conditional sentences. Use the present simple form coughs."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite this sentence as a question: 'People will live longer lives in the future.'",
+                "promptText": "People will live longer lives in the future.",
+                "hint": "Move Will to the beginning of the sentence.",
+                "targetAnswers": [
+                  "Will people live longer lives in the future?",
+                  "Will people live longer in the future?"
+                ],
+                "explanation": "To form yes/no questions with modal will, place will before the subject."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Short Response",
+                "instruction": "Complete this first conditional health sentence: 'If you don't wash your hands before eating, ...'",
+                "promptText": "If you don't wash your hands before eating, ...",
+                "hint": "Finish with a result using will or won't.",
+                "targetAnswers": [
+                  "you will get sick.",
+                  "you will catch germs.",
+                  "you will fall ill.",
+                  "you will have a stomachache."
+                ],
+                "explanation": "The result clause of a first conditional sentence requires will or won't plus a base verb."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the punctuation and spelling in this sentence: 'i have a sore throat so i will visit the doctor tomorrow.'",
+                "promptText": "i have a sore throat so i will visit the doctor tomorrow.",
+                "hint": "Capitalize the pronoun i and sentence starts.",
+                "targetAnswers": [
+                  "I have a sore throat, so I will visit the doctor tomorrow.",
+                  "I have a sore throat so I will visit the doctor tomorrow."
+                ],
+                "explanation": "The pronoun I must always be capitalized in English, and starting a sentence requires a capital letter."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m11-speaking",
+      "moduleId": "A2.1-M11",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Future Bodies, Health & Experiences",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a2-1-m11-s-theory",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Health Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This guide helps you speak clearly about health, body parts, and future predictions. You will practice linking words and pronouncing health vocabulary correctly in everyday conversations.",
+            "audioGuidance": "Pay attention to sentence stress when talking about illnesses and future changes. Notice how emphatic words like hurt or weaker carry stronger voice volume.",
+            "pillars": [
+              {
+                "name": "Consonant Clusters",
+                "target": "Clear pronunciation of health terms",
+                "explanation": "Pronounce all sounds in words like stomach ache and shoulder without rushing."
+              },
+              {
+                "name": "Sentence Stress",
+                "target": "Highlighting key information",
+                "explanation": "Emphasize main verbs and nouns such as muscle, headache, and prediction so listeners understand your exact meaning."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m11-s-practice",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "MUS-cle",
+                "countryAudio": "muscle",
+                "countrySyllables": [
+                  {
+                    "text": "MUS",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "cle",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "MUS-cu-lar",
+                "natAudio": "muscular",
+                "natSyllables": [
+                  {
+                    "text": "MUS",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "cu",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "lar",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that the main stress stays on the first syllable in both words."
+              },
+              {
+                "id": "pair-2",
+                "country": "HEAD-ache",
+                "countryAudio": "headache",
+                "countrySyllables": [
+                  {
+                    "text": "HEAD",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ache",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "STOM-ach ache",
+                "natAudio": "stomach ache",
+                "natSyllables": [
+                  {
+                    "text": "STOM",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ach",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ache",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Both compound health words place the primary stress on the first part."
+              },
+              {
+                "id": "pair-3",
+                "country": "WEAK",
+                "countryAudio": "weak",
+                "countrySyllables": [
+                  {
+                    "text": "WEAK",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "WEA-ker",
+                "natAudio": "weaker",
+                "natSyllables": [
+                  {
+                    "text": "WEA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ker",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The comparative form keeps the stress on the first syllable."
+              },
+              {
+                "id": "pair-4",
+                "country": "ILL-ness",
+                "countryAudio": "illness",
+                "countrySyllables": [
+                  {
+                    "text": "ILL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ness",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ILL-ness-es",
+                "natAudio": "illnesses",
+                "natSyllables": [
+                  {
+                    "text": "ILL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ness",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "es",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Plural forms maintain the primary stress on the initial syllable."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "My shoulder hurts because I carried heavy bags.",
+                "phonetic": "/maɪ ˈʃəʊl.dər hɜːts bɪˈkɒz aɪ ˈkærid ˈhevi bæɡz/",
+                "focus": "Past simple verbs and body parts pronunciation",
+                "hint": "Pronounce shoulder clearly with an open sh sound."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "We will have weaker muscles if we do not exercise.",
+                "phonetic": "/wi wɪl hæv ˈwiː.kər ˈmʌs.əlz ɪf wi duː nɒt ˈeksəsaɪz/",
+                "focus": "Future predictions with will and plural nouns",
+                "hint": "Link will have smoothly without pausing."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Have you ever had a bad stomach ache?",
+                "phonetic": "/hæv juː ˈevər hæd ə bæd ˈstʌm.ək eɪk/",
+                "focus": "Present perfect questions about health",
+                "hint": "Use a rising intonation at the end of the question."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "She has visited the doctor three times this month.",
+                "phonetic": "/ʃiː hæz ˈvɪzɪtɪd ðə ˈdɒktə θriː taɪmz ðɪs mʌnθ/",
+                "focus": "Present perfect tense with frequency",
+                "hint": "Pronounce the ed ending in visited clearly."
+              }
+            ],
+            "roleplay": {
+              "context": "You are talking to a clinic receptionist about your health issue and recent symptoms.",
+              "roles": [
+                "Receptionist",
+                "Patient"
+              ],
+              "turns": [
+                {
+                  "speaker": "Receptionist",
+                  "text": "Good morning. What seems to be the problem today?",
+                  "translation": "Selamat pagi. Apa keluhannya hari ini?"
+                },
+                {
+                  "speaker": "Patient",
+                  "text": "Good morning. I have a terrible headache and a sore shoulder.",
+                  "translation": "Selamat pagi. Saya mengalami sakit kepala yang parah dan bahu yang nyeri."
+                },
+                {
+                  "speaker": "Receptionist",
+                  "text": "Have you taken any medicine for your headache yet?",
+                  "translation": "Apakah kamu sudah minum obat untuk sakit kepalamu?"
+                },
+                {
+                  "speaker": "Patient",
+                  "text": "Yes, I took some painkillers this morning, but it still hurts.",
+                  "translation": "Ya, saya minum obat pereda nyeri tadi pagi, tapi masih sakit."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-1-m11-s-quiz",
+          "moduleId": "A2.1-M11",
+          "subModuleId": "sub-a2-1-m11-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Talk about a time when you had a health problem or injury.",
+                "audioPrompt": "Tell me about a time you were sick or hurt. What happened and how did you recover?",
+                "storyPoints": [
+                  "What illness or injury you had",
+                  "When and how it happened",
+                  "How long it took to feel better"
+                ],
+                "targetSentence": "Last month I had a bad stomach ache and stayed in bed for two days.",
+                "phonetic": "/lɑːst mʌnθ aɪ hæd ə bæd ˈstʌm.ək eɪk/",
+                "expectedKeywords": [
+                  "stomach ache",
+                  "bed",
+                  "days",
+                  "hurt"
+                ],
+                "explanation": "Use past simple verbs to describe past health events."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Future Prediction Storytelling",
+                "instruction": "Describe your predictions for human bodies in the future.",
+                "audioPrompt": "Tell me how human bodies will change in the future and why.",
+                "storyPoints": [
+                  "How daily work and technology will change",
+                  "Why our muscles might become weaker",
+                  "What people will do to stay healthy"
+                ],
+                "targetSentence": "In the future, people will have weaker muscles because machines will do all the heavy work.",
+                "phonetic": "/ɪn ðə ˈfjuːtʃə ˈpiːpl wɪl hæv ˈwiː.kər ˈmʌs.əlz/",
+                "expectedKeywords": [
+                  "future",
+                  "weaker",
+                  "muscles",
+                  "machines"
+                ],
+                "explanation": "Use will to make future predictions clearly."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Talk to a doctor about your shoulder pain.",
+                "audioPrompt": "You are at the doctor office. Explain when your shoulder started hurting and answer the doctor questions.",
+                "scenarioContext": "You visit a doctor because your shoulder hurts after playing sports.",
+                "characterRole": "Patient",
+                "targetSentence": "My shoulder started hurting yesterday after I played basketball.",
+                "phonetic": "/maɪ ˈʃəʊl.dər ˈstɑːtɪd ˈhɜːtɪŋ ˈjestədeɪ/",
+                "expectedKeywords": [
+                  "shoulder",
+                  "hurts",
+                  "yesterday",
+                  "basketball"
+                ],
+                "explanation": "Describe symptoms and timeline clearly using the past simple tense."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Discuss health habits with a fitness coach.",
+                "audioPrompt": "You are talking to a coach about how to prevent future health problems.",
+                "scenarioContext": "A fitness coach asks you about your exercise routine.",
+                "characterRole": "Gym Member",
+                "targetSentence": "I exercise three times a week to keep my muscles strong.",
+                "phonetic": "/aɪ ˈeksəsaɪz θriː taɪmz ə wiːk tuː kiːp maɪ ˈmʌs.əlz strɒŋ/",
+                "expectedKeywords": [
+                  "exercise",
+                  "times",
+                  "week",
+                  "muscles"
+                ],
+                "explanation": "Talk about routines using the present simple tense."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Talk with a friend about past illnesses.",
+                "audioPrompt": "Tell your friend about an illness you had recently and how you felt.",
+                "scenarioContext": "Your friend asks why you were absent from school last week.",
+                "characterRole": "Student",
+                "targetSentence": "I had a severe headache and stayed home to rest.",
+                "phonetic": "/aɪ hæd ə sɪˈvɪə ˈhed.eɪk ənd steɪd həʊm tuː rest/",
+                "expectedKeywords": [
+                  "headache",
+                  "stayed",
+                  "home",
+                  "rest"
+                ],
+                "explanation": "Use past simple action verbs for recent events."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Plan a healthy lifestyle change with a family member.",
+                "audioPrompt": "Discuss what you will do next week to avoid feeling weak or tired.",
+                "scenarioContext": "You and your family member are discussing health goals.",
+                "characterRole": "Family Member",
+                "targetSentence": "We will eat more fresh vegetables and walk every evening.",
+                "phonetic": "/wiː wɪl iːt mɔː freʃ ˈvedʒtəbəlz ənd wɔːk ˈevri ˈiːvnɪŋ/",
+                "expectedKeywords": [
+                  "eat",
+                  "vegetables",
+                  "walk",
+                  "evening"
+                ],
+                "explanation": "Use will for future intentions and promises."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Focus Drill",
+                "instruction": "Pronounce the health and body vocabulary sentence accurately.",
+                "audioPrompt": "Read this sentence focusing on body parts: My shoulder and stomach ache made me feel weak.",
+                "focus": "vocab",
+                "targetSentence": "My shoulder and stomach ache made me feel weak.",
+                "phonetic": "/maɪ ˈʃəʊl.dər ənd ˈstʌm.ək eɪk meɪd miː fiːl wiːk/",
+                "expectedKeywords": [
+                  "shoulder",
+                  "stomach",
+                  "ache",
+                  "weak"
+                ],
+                "explanation": "Pronounce specific body and health terms with clear articulation."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Focus Drill",
+                "instruction": "Contrast present perfect and past simple in speaking.",
+                "audioPrompt": "Read this sentence: I have had a headache twice this week, and it started on Monday.",
+                "focus": "grammar",
+                "targetSentence": "I have had a headache twice this week, and it started on Monday.",
+                "phonetic": "/aɪ hæv hæd ə ˈhed.eɪk twaɪs ðɪs wiːk ənd ɪt ˈstɑːtɪd ɒn ˈmʌndeɪ/",
+                "expectedKeywords": [
+                  "have",
+                  "had",
+                  "headache",
+                  "started"
+                ],
+                "explanation": "Notice how present perfect connects past time to now, while past simple refers to a finished point."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Syllable Stress Drill",
+                "instruction": "Practice word stress in health and prediction words.",
+                "audioPrompt": "Repeat these words with correct stress: MUS-cle, HEAD-ache, pre-DIC-tion.",
+                "focus": "pronunciation_stress",
+                "targetSentence": "Muscles, headaches, and predictions are important topics in health science.",
+                "phonetic": "/ˈmʌs.əlz ˈhed.eɪks ənd prɪˈdɪk.ʃənz ɑːr ɪmˈpɔːtənt ˈtɒpɪks/",
+                "expectedKeywords": [
+                  "muscles",
+                  "headaches",
+                  "predictions",
+                  "health"
+                ],
+                "explanation": "Place primary stress on the correct syllables for multisyllabic health terms."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Drill",
+                "instruction": "Practice rising and falling intonation in health questions and statements.",
+                "audioPrompt": "Say this sentence with falling intonation at the end: Will humans really have weaker bodies in the future?",
+                "focus": "pronunciation_intonation",
+                "targetSentence": "Will humans really have weaker bodies in the future?",
+                "phonetic": "/wɪl ˈhjuːmənz ˈriːəli hæv ˈwiː.kər ˈbɒdiz ɪn ðə ˈfjuːtʃə/",
+                "expectedKeywords": [
+                  "humans",
+                  "weaker",
+                  "bodies",
+                  "future"
+                ],
+                "explanation": "Use proper intonation to clearly express questions about future changes."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

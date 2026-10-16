@@ -1,0 +1,1568 @@
+{
+  "module": {
+    "id": "A2.2-M09",
+    "levelId": "A2.2",
+    "title": "Airport Logistics, Flights & Hotel Reservations",
+    "cefr": "A2",
+    "group": "A2.2 - Social Dynamics, Work & Everyday Life",
+    "objective": "Navigate airport logistics, flight departures, and hotel check-in procedures with confidence.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 9
+  },
+  "subModules": [
+    {
+      "id": "sub-a2-2-m09-reading",
+      "moduleId": "A2.2-M09",
+      "skillType": "reading",
+      "title": "Reading Mission: Airport Logistics, Flights and Hotel Reservations",
+      "theme": "Airport Logistics, Flights & Hotel Reservations",
+      "grammarFocus": "Polite requests with I'd like to and Could you tell me",
+      "vocabularyFocus": "Airport and hotel terminology",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a2-2-m09-r-theory",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to the reading sub-module for airport logistics and hotel reservations. In this lesson, you will read short informational texts and dialogues about traveling by air and checking into a hotel. You will learn how to make polite requests and find important travel information quickly.",
+            "linguisticTarget": {
+              "grammar": "Polite request phrases like I'd like to, Could you tell me, and Where is.",
+              "vocabulary": "Essential airport and hotel terms such as check-in desk, boarding pass, and key card.",
+              "readingStrategy": "Skimming short texts for main ideas and scanning specific details like gate numbers and times."
+            },
+            "learningObjectives": [
+              "Understand the main idea of short A2 travel notices and messages.",
+              "Locate specific details such as gate numbers, baggage claim locations, and hotel checkout times.",
+              "Recognize and practice polite request patterns for travel situations."
+            ],
+            "contextWarmup": {
+              "prompt": "When you arrive at the airport for a flight, where do you usually go first to get your physical ticket and drop off big luggage?",
+              "options": [
+                "The check-in desk",
+                "The baggage claim",
+                "The hotel lobby"
+              ],
+              "correctIndex": 0,
+              "explanation": "You go to the check-in desk to drop off checked bags and get your boarding pass before going through security."
+            },
+            "rules": [
+              "Use I'd like to or I need to when requesting services, for example, I'd like to check in for my flight or I need to collect my luggage.",
+              "To ask for information politely, use Could you tell me or Where is, for example, Could you tell me which gate is for flight BA123?",
+              "When making a hotel reservation, state specific details clearly, such as I have a reservation for a double room under the name Smith."
+            ],
+            "commonTrap": {
+              "trapTitle": "Confusing Check-in and Boarding Pass",
+              "explanation": "Learners often think checking in and getting a boarding pass happen at the exact same place and time as boarding the plane. In reality, you check in at the terminal counter or online hours before, and you board at the gate right before the flight.",
+              "wrong": "I went straight to the boarding gate without my boarding pass or passport.",
+              "correct": "I visited the check-in desk first to get my boarding pass, went through security, and then walked to the boarding gate."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Polite Requests",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in everyday English:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "would",
+                "vowelDropped": "woul",
+                "remainder": "'d",
+                "contracted": "I'd",
+                "exampleFull": "I would like to check in.",
+                "exampleContracted": "I'd like to check in."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Polite Requests",
+              "description": "Assemble sentence blocks to practice affirmative polite requests:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "would",
+                  "role": "First Person Singular"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "like",
+                  "thirdPerson": "likes",
+                  "continuous": "liking"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "to book a double room for two nights",
+                  "type": "Service Request"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-2-m09-r-vocab",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "check-in desk",
+                "ipa": "/ˈtʃek.ɪn desk/",
+                "meaning": "meja check-in",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Please go to the check-in desk with your passport and booking reference.",
+                "collocation": "check-in desk / airport counter"
+              },
+              {
+                "word": "boarding pass",
+                "ipa": "/ˈbɔː.dɪŋ pɑːs/",
+                "meaning": "kartu boarding",
+                "partOfSpeech": "noun",
+                "exampleSentence": "You will receive your boarding pass after checking in at the counter.",
+                "collocation": "boarding pass / printed pass"
+              },
+              {
+                "word": "hand luggage",
+                "ipa": "/hænd ˈlʌɡ.ɪdʒ/",
+                "meaning": "bagasi kabin",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Your hand luggage must not exceed 7 kilograms.",
+                "collocation": "hand luggage / cabin bag"
+              },
+              {
+                "word": "boarding gate",
+                "ipa": "/ˈbɔː.dɪŋ ɡeɪt/",
+                "meaning": "gerbang keberangkatan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Boarding will begin at gate 15 in thirty minutes.",
+                "collocation": "boarding gate / departure gate"
+              },
+              {
+                "word": "baggage claim",
+                "ipa": "/ˈbæɡ.ɪdʒ kleɪm/",
+                "meaning": "tempat pengambilan bagasi",
+                "partOfSpeech": "noun",
+                "exampleSentence": "After landing, proceed to baggage claim to collect your suitcase.",
+                "collocation": "baggage claim / luggage area"
+              },
+              {
+                "word": "passport control",
+                "ipa": "/ˈpɑːs.pɔːt kənˈtrəʊl/",
+                "meaning": "pemeriksaan paspor",
+                "partOfSpeech": "noun",
+                "exampleSentence": "You must pass through passport control before entering the country.",
+                "collocation": "passport control / immigration desk"
+              },
+              {
+                "word": "double room",
+                "ipa": "/ˈdʌb.əl ruːm/",
+                "meaning": "kamar double",
+                "partOfSpeech": "noun",
+                "exampleSentence": "I would like to book a double room for two nights, please.",
+                "collocation": "double room / hotel room"
+              },
+              {
+                "word": "key card",
+                "ipa": "/kiː kɑːd/",
+                "meaning": "kartu kunci",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Here is your key card for room 305 on the third floor.",
+                "collocation": "key card / room key"
+              },
+              {
+                "word": "checkout time",
+                "ipa": "/ˈtʃek.aʊt taɪm/",
+                "meaning": "waktu checkout",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The checkout time is 11 a.m., but you can request a late checkout.",
+                "collocation": "checkout time / departure time"
+              },
+              {
+                "word": "reservation",
+                "ipa": "/ˌrez.əˈveɪ.ʃən/",
+                "meaning": "reservasi",
+                "partOfSpeech": "noun",
+                "exampleSentence": "I have a reservation under the name Sarah Johnson for tonight.",
+                "collocation": "make a reservation / hotel reservation"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m09-r-guided",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "A Smooth Trip to London",
+            "audioUrl": "/audio/modules/a2-2-m09/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Last Friday, David traveled from Paris to London for a business meeting. He arrived at Charles de Gaulle Airport two hours before his flight. First, he walked to the check-in desk to drop off his large suitcase and receive his boarding pass. The airline agent checked his passport and reminded him that his hand luggage must stay under seven kilograms.",
+              "After clearing passport control and security, David checked the departure monitors to find his boarding gate. Gate 22 was open, so he walked there directly. When he landed in London, he followed the signs to baggage claim to collect his suitcase. Finally, he took a taxi to his hotel, where he showed his reservation and received his key card for room 412."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "Last Friday, David traveled from Paris to London for a business meeting.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 4.6,
+                "end": 9,
+                "text": "He arrived at Charles de Gaulle Airport two hours before his flight.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 9.1,
+                "end": 14,
+                "text": "First, he walked to the check-in desk to drop off his large suitcase and receive his boarding pass.",
+                "paragraphIndex": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m09-r-practice",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": []
+          }
+        },
+        {
+          "id": "sec-a2-2-m09-r-quiz",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "When did David travel to London?",
+                "options": [
+                  "Last Friday",
+                  "Last Monday",
+                  "Yesterday"
+                ],
+                "answer": "Last Friday",
+                "explanation": "Paragraph one states that last Friday, David traveled from Paris to London for a business meeting."
+              },
+              {
+                "id": "q-r-2",
+                "question": "How long before his flight did David arrive at the airport?",
+                "options": [
+                  "One hour",
+                  "Two hours",
+                  "Three hours"
+                ],
+                "answer": "Two hours",
+                "explanation": "The text states he arrived at Charles de Gaulle Airport two hours before his flight."
+              },
+              {
+                "id": "q-r-3",
+                "question": "Where did David drop off his large suitcase?",
+                "options": [
+                  "At the baggage claim",
+                  "At the check-in desk",
+                  "At the boarding gate"
+                ],
+                "answer": "At the check-in desk",
+                "explanation": "He walked to the check-in desk to drop off his large suitcase and receive his boarding pass."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What did the airline agent check along with his suitcase?",
+                "options": [
+                  "His passport",
+                  "His hotel reservation",
+                  "His key card"
+                ],
+                "answer": "His passport",
+                "explanation": "The airline agent checked his passport and gave him his boarding pass."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What is the weight rule for hand luggage mentioned in the text?",
+                "options": [
+                  "Under 5 kilograms",
+                  "Under 7 kilograms",
+                  "Under 10 kilograms"
+                ],
+                "answer": "Under 7 kilograms",
+                "explanation": "The agent reminded him that his hand luggage must stay under seven kilograms."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Where did David look to find his departure gate?",
+                "options": [
+                  "The departure monitors",
+                  "The hotel reception",
+                  "The baggage claim signs"
+                ],
+                "answer": "The departure monitors",
+                "explanation": "He checked the departure monitors to find his boarding gate."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Which gate number was open for David?",
+                "options": [
+                  "Gate 12",
+                  "Gate 22",
+                  "Gate 32"
+                ],
+                "answer": "Gate 22",
+                "explanation": "Gate 22 was open, so he walked there directly."
+              },
+              {
+                "id": "q-r-8",
+                "question": "What did David do after landing in London?",
+                "options": [
+                  "He went straight to the hotel",
+                  "He followed signs to baggage claim",
+                  "He booked another flight"
+                ],
+                "answer": "He followed signs to baggage claim",
+                "explanation": "When he landed in London, he followed the signs to baggage claim to collect his suitcase."
+              },
+              {
+                "id": "q-r-9",
+                "question": "How did David travel from the airport to his hotel?",
+                "options": [
+                  "By train",
+                  "By bus",
+                  "By taxi"
+                ],
+                "answer": "By taxi",
+                "explanation": "Finally, he took a taxi to his hotel."
+              },
+              {
+                "id": "q-r-10",
+                "question": "What room number was on David's hotel key card?",
+                "options": [
+                  "Room 305",
+                  "Room 412",
+                  "Room 510"
+                ],
+                "answer": "Room 412",
+                "explanation": "He received his key card for room 412 at the hotel reception."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m09-listening",
+      "moduleId": "A2.2-M09",
+      "skillType": "listening",
+      "title": "Listening Mission: Airport Check-in and Flights",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a2-2-m09-l-theory",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This audio briefing guides you through listening to airport check-in interactions, flight details, gate numbers, and luggage instructions at level A2.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about airport check-in",
+              "Identify details such as times, gate numbers, and bag weights",
+              "Notice how words link together in connected speech during travel conversations"
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "booking reference",
+                "meaning": "referensi pemesanan",
+                "note": "Used when identifying a flight or hotel reservation."
+              },
+              {
+                "phrase": "check in",
+                "meaning": "melakukan pendaftaran atau check-in",
+                "note": "Used at airport desks or hotel receptions."
+              },
+              {
+                "phrase": "boarding gate",
+                "meaning": "gerbang keberangkatan",
+                "note": "The specific exit area where passengers board the aircraft."
+              },
+              {
+                "phrase": "hand luggage",
+                "meaning": "bagasi kabin",
+                "note": "Bags you carry with you inside the plane cabin."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "Check in today",
+                "fast": "Check-in-today",
+                "slowIpa": "/tʃek ɪn təˈdeɪ/",
+                "fastIpa": "/tʃekɪntəˈdeɪ/",
+                "note": "The final sound of check-in links smoothly to the vowel sound of today."
+              },
+              {
+                "id": 2,
+                "slow": "Bag on the scale",
+                "fast": "Bagon the scale",
+                "slowIpa": "/bæɡ ɒn ðə skeɪl/",
+                "fastIpa": "/bæɡɒnðəskeɪl/",
+                "note": "The consonant sound links directly to the preposition on."
+              },
+              {
+                "id": 3,
+                "slow": "At gate twenty-two",
+                "fast": "At gate twenty-two",
+                "slowIpa": "/æt ɡeɪt ˈtwenti tuː/",
+                "fastIpa": "/ætɡeɪtˈtwenti tuː/",
+                "note": "The stop sound in gate connects softly to the word twenty."
+              },
+              {
+                "id": 4,
+                "slow": "Thank you so much",
+                "fast": "Thank you so much",
+                "slowIpa": "/θæŋk juː səʊ mʌtʃ/",
+                "fastIpa": "/θæŋkjuːsəʊmʌtʃ/",
+                "note": "Pronouns like you blend naturally with preceding verbs."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m09-l-dialogue",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: At the Airport Check-in Desk",
+          "orderIndex": 2,
+          "content": {
+            "context": "Sarah arrives at the airport for her international flight. She goes to the check-in desk to get her boarding pass and find her departure gate.",
+            "audioPrompt": "Listen to the conversation between the check-in agent and Sarah.",
+            "lines": [
+              {
+                "speaker": "Agent",
+                "text": "Good morning! Passport and booking reference, please?",
+                "translation": "Selamat pagi! Paspor dan referensi pemesanan, silakan?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Here is my passport and ticket.",
+                "translation": "Ini paspor dan tiket saya.",
+                "emotion": "polite"
+              },
+              {
+                "speaker": "Agent",
+                "text": "Thank you. Any bags to check today?",
+                "translation": "Terima kasih. Ada tas yang ingin dicheck hari ini?",
+                "emotion": "helpful"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Yes, just this one large suitcase.",
+                "translation": "Ya, hanya satu koper besar ini.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Agent",
+                "text": "Place your bag on the scale.",
+                "translation": "Letakkan tas Anda di atas timbangan.",
+                "emotion": "instructing"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Sure. Is my handbag too heavy?",
+                "translation": "Tentu. Apakah tas tangan saya terlalu berat?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Agent",
+                "text": "No, your handbag looks fine and light.",
+                "translation": "Tidak, tas tangan Anda terlihat bagus dan ringan.",
+                "emotion": "reassuring"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Great. Which gate is my flight?",
+                "translation": "Bagus. Di gerbang mana penerbangan saya?",
+                "emotion": "interested"
+              },
+              {
+                "speaker": "Agent",
+                "text": "You are boarding at gate twenty-two.",
+                "translation": "Anda naik pesawat di gerbang dua puluh dua.",
+                "emotion": "informative"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "When does the boarding time start?",
+                "translation": "Kapan waktu boarding dimulai?",
+                "emotion": "inquisitive"
+              },
+              {
+                "speaker": "Agent",
+                "text": "Boarding starts at ten thirty sharp.",
+                "translation": "Boarding dimulai tepat pukul setengah sebelas.",
+                "emotion": "precise"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Thank you so much for help.",
+                "translation": "Terima kasih banyak atas bantuannya.",
+                "emotion": "grateful"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m09-l-quiz",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Passport and booking reference, please?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Agent: \"Passport and booking reference, _____?\"",
+                "targetWord": "please",
+                "explanation": "Full audio: \"Passport and booking reference, please?\". The missing word is \"please\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Here is my passport and ticket.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Here is my passport and _____.\"",
+                "targetWord": "ticket",
+                "explanation": "Full audio: \"Here is my passport and ticket.\". The missing word is \"ticket\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Any bags to check today?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Agent: \"Any bags to check _____?\"",
+                "targetWord": "today",
+                "explanation": "Full audio: \"Any bags to check today?\". The missing word is \"today\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Yes, just this one large suitcase.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Yes, just this one large _____.\"",
+                "targetWord": "suitcase",
+                "explanation": "Full audio: \"Yes, just this one large suitcase.\". The missing word is \"suitcase\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Place your bag on the scale.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Agent: \"Place your bag on the _____.\"",
+                "targetWord": "scale",
+                "explanation": "Full audio: \"Place your bag on the scale.\". The missing word is \"scale\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Is my handbag too heavy?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Is my handbag too heavy",
+                "words": [
+                  "handbag",
+                  "Is",
+                  "too",
+                  "my",
+                  "heavy"
+                ],
+                "explanation": "Correct sentence order: \"Is my handbag too heavy?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "No, your handbag looks fine and light.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "No your handbag looks fine and light",
+                "words": [
+                  "fine",
+                  "handbag",
+                  "your",
+                  "and",
+                  "No",
+                  "light",
+                  "looks"
+                ],
+                "explanation": "Correct sentence order: \"No, your handbag looks fine and light.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Which gate is my flight?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Which gate is my flight",
+                "words": [
+                  "gate",
+                  "my",
+                  "flight",
+                  "is",
+                  "Which"
+                ],
+                "explanation": "Correct sentence order: \"Which gate is my flight?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "You are boarding at gate twenty-two.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You are boarding at gate twenty-two",
+                "words": [
+                  "twenty-two",
+                  "You",
+                  "gate",
+                  "at",
+                  "boarding",
+                  "are"
+                ],
+                "explanation": "Correct sentence order: \"You are boarding at gate twenty-two.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "When does the boarding time start?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "When does the boarding time start",
+                "words": [
+                  "start",
+                  "time",
+                  "does",
+                  "boarding",
+                  "the",
+                  "When"
+                ],
+                "explanation": "Correct sentence order: \"When does the boarding time start?\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Passport and booking reference, please?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Agent: \"Passport and booking reference, _____?\"",
+                "targetWord": "please",
+                "explanation": "Full audio: \"Passport and booking reference, please?\". The missing word is \"please\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Here is my passport and ticket.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Here is my passport and _____.\"",
+                "targetWord": "ticket",
+                "explanation": "Full audio: \"Here is my passport and ticket.\". The missing word is \"ticket\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Any bags to check today?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Agent: \"Any bags to check _____?\"",
+                "targetWord": "today",
+                "explanation": "Full audio: \"Any bags to check today?\". The missing word is \"today\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Yes, just this one large suitcase.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Yes, just this one large _____.\"",
+                "targetWord": "suitcase",
+                "explanation": "Full audio: \"Yes, just this one large suitcase.\". The missing word is \"suitcase\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Place your bag on the scale.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Agent: \"Place your bag on the _____.\"",
+                "targetWord": "scale",
+                "explanation": "Full audio: \"Place your bag on the scale.\". The missing word is \"scale\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Is my handbag too heavy?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Is my handbag too heavy",
+                "words": [
+                  "handbag",
+                  "Is",
+                  "too",
+                  "my",
+                  "heavy"
+                ],
+                "explanation": "Correct sentence order: \"Is my handbag too heavy?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "No, your handbag looks fine and light.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "No your handbag looks fine and light",
+                "words": [
+                  "fine",
+                  "handbag",
+                  "your",
+                  "and",
+                  "No",
+                  "light",
+                  "looks"
+                ],
+                "explanation": "Correct sentence order: \"No, your handbag looks fine and light.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Which gate is my flight?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Which gate is my flight",
+                "words": [
+                  "gate",
+                  "my",
+                  "flight",
+                  "is",
+                  "Which"
+                ],
+                "explanation": "Correct sentence order: \"Which gate is my flight?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "You are boarding at gate twenty-two.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You are boarding at gate twenty-two",
+                "words": [
+                  "twenty-two",
+                  "You",
+                  "gate",
+                  "at",
+                  "boarding",
+                  "are"
+                ],
+                "explanation": "Correct sentence order: \"You are boarding at gate twenty-two.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "When does the boarding time start?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "When does the boarding time start",
+                "words": [
+                  "start",
+                  "time",
+                  "does",
+                  "boarding",
+                  "the",
+                  "When"
+                ],
+                "explanation": "Correct sentence order: \"When does the boarding time start?\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m09-writing",
+      "moduleId": "A2.2-M09",
+      "skillType": "writing",
+      "title": "Writing Mission: Airport Logistics, Flights and Hotel Reservations",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a2-2-m09-w-theory",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on writing clear requests for airport check-in, flight information, and hotel reservations using simple CEFR A2 structures.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Requesting Airport Services",
+                "formula": "I'd like to + base verb + [service or object]",
+                "example": "I'd like to check in for my flight to London."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Asking for Information",
+                "formula": "Could you tell me + [question word and clause]? OR Where is + [location]?",
+                "example": "Could you tell me which gate boarding starts from?"
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Making Hotel Reservations",
+                "formula": "I have a reservation for + [room type] + under the name + [name]",
+                "example": "I have a reservation for a double room under the name Smith."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Capitalize proper nouns such as airline names, cities, and hotels.",
+                "badExample": "we fly with british airways to paris.",
+                "goodExample": "We fly with British Airways to Paris.",
+                "why": "Names of specific companies, cities, and airlines are proper nouns in English."
+              },
+              {
+                "rule": "Use polite modal phrases instead of direct commands when requesting services.",
+                "badExample": "Give me my boarding pass now.",
+                "goodExample": "Could I have my boarding pass, please?",
+                "why": "Modal verbs like 'could' make requests polite and appropriate in travel situations."
+              },
+              {
+                "rule": "Always include punctuation at the end of every sentence, using question marks for inquiries.",
+                "badExample": "Where is the baggage claim",
+                "goodExample": "Where is the baggage claim?",
+                "why": "Direct questions require a question mark at the end."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "I need to collect my luggage before leaving the terminal.",
+                "id": "Saya perlu mengambil bagasi saya sebelum meninggalkan terminal.",
+                "focus": "Expressing needs with 'need to'"
+              },
+              {
+                "en": "Could you tell me if breakfast is included in the room price?",
+                "id": "Bisakah Anda memberi tahu saya apakah sarapan sudah termasuk dalam harga kamar?",
+                "focus": "Polite inquiry about hotel amenities"
+              },
+              {
+                "en": "I would like to change my seat to a window seat near the front.",
+                "id": "Saya ingin mengganti kursi saya ke kursi dekat jendela di bagian depan.",
+                "focus": "Making polite preferences"
+              },
+              {
+                "en": "Where is the nearest check-in desk for international flights?",
+                "id": "Di mana meja check-in terdekat untuk penerbangan internasional?",
+                "focus": "Asking for specific airport locations"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m09-w-practice",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "i would like to check in for flight ba123",
+                "targetSentence": "I would like to check in for flight BA123.",
+                "translation": "Saya ingin melakukan check-in untuk penerbangan BA123.",
+                "keyRule": "Capitalize the beginning of the sentence, the pronoun 'I', and flight numbers.",
+                "requiredCapitals": [
+                  "I",
+                  "BA123"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "where is the baggage claim for flight lhr456",
+                "targetSentence": "Where is the baggage claim for flight LHR456?",
+                "translation": "Di mana tempat pengambilan bagasi untuk penerbangan LHR456?",
+                "keyRule": "Start sentences with capital letters, use capital letters for airport codes, and end with a question mark.",
+                "requiredCapitals": [
+                  "Where",
+                  "LHR456"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "i have a reservation for a single room at the grand hotel",
+                "targetSentence": "I have a reservation for a single room at the Grand Hotel.",
+                "translation": "Saya memiliki reservasi untuk kamar single di Grand Hotel.",
+                "keyRule": "Capitalize 'I' and the full proper name of the hotel.",
+                "requiredCapitals": [
+                  "I",
+                  "Grand",
+                  "Hotel"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Airport Check-in",
+                "meaning": "Saya ingin melakukan check-in untuk penerbangan saya ke Paris.",
+                "tokens": [
+                  "I",
+                  "would",
+                  "like",
+                  "to",
+                  "check",
+                  "in",
+                  "for",
+                  "my",
+                  "flight",
+                  "to",
+                  "Paris."
+                ],
+                "fullSentence": "I would like to check in for my flight to Paris."
+              },
+              {
+                "id": "b-2",
+                "category": "Hotel Booking",
+                "meaning": "Apakah kamar ini sudah termasuk sarapan setiap pagi?",
+                "tokens": [
+                  "Does",
+                  "this",
+                  "room",
+                  "include",
+                  "breakfast",
+                  "every",
+                  "morning?"
+                ],
+                "fullSentence": "Does this room include breakfast every morning?"
+              },
+              {
+                "id": "b-3",
+                "category": "Airport Navigation",
+                "meaning": "Bisakah Anda memberi tahu saya di mana gerbang keberangkatan?",
+                "tokens": [
+                  "Could",
+                  "you",
+                  "tell",
+                  "me",
+                  "where",
+                  "the",
+                  "departure",
+                  "gate",
+                  "is?"
+                ],
+                "fullSentence": "Could you tell me where the departure gate is?"
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Airport Arrival and Check-in",
+                "badge": "Traveler",
+                "instruction": "Write three sentences about arriving at the airport. Mention what you need to do at the check-in desk, which flight you are taking, and how you ask for your boarding pass.",
+                "example": "I arrive at the airport two hours before departure. I need to visit the check-in desk for my flight to Tokyo. I politely ask the agent for my boarding pass.",
+                "placeholder": "Write your sentences here...",
+                "minWords": 20,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Hotel Reservation Inquiry",
+                "badge": "Hotel Guest",
+                "instruction": "Write three sentences about checking into a hotel. Mention your room reservation under your name, ask if breakfast is included, and ask about checkout time.",
+                "example": "I have a reservation for a double room under the name Smith. I ask the receptionist if breakfast is included in the price. I also ask what time checkout is on Sunday.",
+                "placeholder": "Write your hotel inquiry sentences here...",
+                "minWords": 20,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m09-w-quiz",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following affirmative sentence into a negative sentence:",
+                "promptText": "I need to collect my luggage right now.",
+                "hint": "Use 'don't need to' or 'do not need to'.",
+                "targetAnswers": [
+                  "I don't need to collect my luggage right now.",
+                  "I do not need to collect my luggage right now."
+                ],
+                "explanation": "In the present simple tense with 'I', use 'don't' or 'do not' before the base verb 'need'."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Polite Request",
+                "instruction": "Rewrite the direct question into a polite request using 'Could you tell me...':",
+                "promptText": "Where is the boarding gate?",
+                "hint": "Start with 'Could you tell me where...'",
+                "targetAnswers": [
+                  "Could you tell me where the boarding gate is?"
+                ],
+                "explanation": "Indirect questions use subject-verb word order after the question word, placing 'is' at the end."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Rewrite the sentence with correct capitalization and punctuation:",
+                "promptText": "i would like to book a double room at the grand hotel",
+                "hint": "Capitalize the pronoun 'I' and the proper hotel name, and add a period.",
+                "targetAnswers": [
+                  "I would like to book a double room at the Grand Hotel."
+                ],
+                "explanation": "The pronoun 'I' and proper names like 'Grand Hotel' must always be capitalized in English."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Conjunctions",
+                "instruction": "Combine the two sentences using the conjunction 'and':",
+                "promptText": "I arrived at the airport. I went straight to the check-in counter.",
+                "hint": "Remove the second subject and connect the actions with 'and'.",
+                "targetAnswers": [
+                  "I arrived at the airport and went straight to the check-in counter."
+                ],
+                "explanation": "Use 'and' to join two sequential actions performed by the same subject."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Short Response",
+                "instruction": "Write a complete sentence answering the hotel question affirmatively:",
+                "promptText": "Does the room include breakfast?",
+                "hint": "Start with 'Yes' and state that breakfast is included.",
+                "targetAnswers": [
+                  "Yes, the room includes breakfast.",
+                  "Yes, breakfast is included.",
+                  "Yes, it includes breakfast."
+                ],
+                "explanation": "A clear affirmative response confirms that breakfast is part of the room booking."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the affirmative sentence into a negative sentence:",
+                "promptText": "The flight departs on time.",
+                "hint": "Use 'doesn't depart' or 'does not depart'.",
+                "targetAnswers": [
+                  "The flight doesn't depart on time.",
+                  "The flight does not depart on time."
+                ],
+                "explanation": "For third-person singular subjects like 'The flight', use 'doesn't' or 'does not' with the base verb."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the capitalization errors in the following sentence:",
+                "promptText": "we fly to paris with air france on monday.",
+                "hint": "Capitalize the first word, the city, the airline, and the day of the week.",
+                "targetAnswers": [
+                  "We fly to Paris with Air France on Monday."
+                ],
+                "explanation": "Proper nouns such as cities (Paris), airlines (Air France), days of the week (Monday), and sentence starters (We) must be capitalized."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Sentence Building",
+                "instruction": "Order the words to make a correct hotel reservation sentence:",
+                "promptText": "reservation / name / under / Smith / the / have / I / a",
+                "hint": "Start with 'I have a reservation...'",
+                "targetAnswers": [
+                  "I have a reservation under the name Smith."
+                ],
+                "explanation": "The standard structure for identifying a booking is subject ('I') + verb ('have') + object ('a reservation') + prepositional phrase ('under the name Smith')."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Conjunctions",
+                "instruction": "Combine the sentences using the conjunction 'because':",
+                "promptText": "I missed my flight. I arrived late at the airport.",
+                "hint": "Place 'because' before the reason (arriving late).",
+                "targetAnswers": [
+                  "I missed my flight because I arrived late at the airport."
+                ],
+                "explanation": "Use 'because' to introduce the reason or cause of an action."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Write a complete sentence explaining what you need to show at airport security:",
+                "promptText": "What do you show at the security check?",
+                "hint": "Mention your passport and boarding pass.",
+                "targetAnswers": [
+                  "I show my passport and boarding pass at the security check.",
+                  "At the security check, I show my passport and boarding pass."
+                ],
+                "explanation": "When going through airport security, passengers must present both a passport and a boarding pass."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-2-m09-speaking",
+      "moduleId": "A2.2-M09",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Airport Logistics, Flights & Hotel Reservations",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a2-2-m09-s-theory",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Focus on speaking clearly when asking for travel information, checking in at airports, and talking to hotel receptionists at an A2 level.",
+            "audioGuidance": "Pay attention to sentence stress and natural phrasing when requesting services or asking for directions in a terminal.",
+            "pillars": [
+              {
+                "name": "Vowel Clarity",
+                "target": "Clear short and long vowels",
+                "explanation": "Pronounce words like gate, bag, and room distinctly so staff understand you easily."
+              },
+              {
+                "name": "Sentence Stress",
+                "target": "Highlighting key words",
+                "explanation": "Emphasize important content words like check-in, passport, and reservation in your sentences."
+              },
+              {
+                "name": "Polite Intonation",
+                "target": "Rising and falling tones for requests",
+                "explanation": "Use polite rising tones when asking questions like where is the boarding gate."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-2-m09-s-practice",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "CHECK-in",
+                "countryAudio": "check-in",
+                "countrySyllables": [
+                  {
+                    "text": "CHECK",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "CHECK-ing",
+                "natAudio": "checking",
+                "natSyllables": [
+                  {
+                    "text": "CHECK",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ing",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that the primary stress stays on the first syllable."
+              },
+              {
+                "id": "pair-2",
+                "country": "PASS-port",
+                "countryAudio": "passport",
+                "countrySyllables": [
+                  {
+                    "text": "PASS",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "port",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "pas-SPORT-control",
+                "natAudio": "passport control",
+                "natSyllables": [
+                  {
+                    "text": "pass",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PORT",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "con",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TROL",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "Compound nouns often have stress shifting across the phrase."
+              },
+              {
+                "id": "pair-3",
+                "country": "RE-serve",
+                "countryAudio": "reserve",
+                "countrySyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "SERVE",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "res-er-VA-tion",
+                "natAudio": "reservation",
+                "natSyllables": [
+                  {
+                    "text": "rez",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "er",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "VA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "shun",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Adding suffixes moves the main stress syllable."
+              },
+              {
+                "id": "pair-4",
+                "country": "AR-rive",
+                "countryAudio": "arrive",
+                "countrySyllables": [
+                  {
+                    "text": "ar",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "RIVE",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "ar-ri-VAL",
+                "natAudio": "arrival",
+                "natSyllables": [
+                  {
+                    "text": "ar",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "RI",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "val",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress shifts to the second syllable in the noun form."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "Where is the check-in desk for flight QR four zero two?",
+                "phonetic": "/weər ɪz ðə ˈtʃek.ɪn desk fɔːr flaɪt kjuː ɑːr fɔːr ˈzɪərəʊ tuː/",
+                "focus": "Polite question intonation and vocabulary pronunciation",
+                "hint": "Keep your voice rising slightly at the end of the question."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "I have a reservation for a double room under the name Smith.",
+                "phonetic": "/aɪ hæv ə ˌrez.əˈveɪ.ʃən fɔːr ə ˈdʌb.əl ruːm ˈʌndə ðə neɪm smɪθ/",
+                "focus": "Linking words and smooth pacing",
+                "hint": "Link 'reservation for' together smoothly."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "My hand luggage is under seven kilograms.",
+                "phonetic": "/maɪ hænd ˈlʌɡ.ɪdʒ ɪz ˈʌndə ˈsev.ən ˈkɪlə.ɡræmz/",
+                "focus": "Clear consonants and short vowels",
+                "hint": "Pronounce the 'h' in hand and luggage clearly."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Please proceed to baggage claim to collect your suitcase.",
+                "phonetic": "/pliːz prəˈsiːd tuː ˈbæɡ.ɪdʒ kleɪm tuː kəˈlekt jɔːr ˈsuːt.keɪs/",
+                "focus": "Clear instruction delivery",
+                "hint": "Pause slightly after baggage claim."
+              }
+            ],
+            "roleplay": {
+              "context": "You are talking to the hotel receptionist to check in for your stay.",
+              "roles": [
+                "Receptionist",
+                "Traveler"
+              ],
+              "turns": [
+                {
+                  "speaker": "Receptionist",
+                  "text": "Good afternoon! Welcome to the grand hotel. How can I help you today?",
+                  "translation": "Selamat siang! Selamat datang di grand hotel. Ada yang bisa saya bantu hari ini?"
+                },
+                {
+                  "speaker": "Traveler",
+                  "text": "Good afternoon. I have a reservation for a double room under the name David Brown.",
+                  "translation": "Selamat siang. Saya punya reservasi untuk kamar double atas nama David Brown."
+                },
+                {
+                  "speaker": "Receptionist",
+                  "text": "Thank you, Mr. Brown. May I see your passport and booking reference, please?",
+                  "translation": "Terima kasih, Tuan Brown. Bolehkah saya melihat paspor dan nomor referensi pemesanan Anda?"
+                },
+                {
+                  "speaker": "Traveler",
+                  "text": "Here is my passport and my phone showing the confirmation email.",
+                  "translation": "Ini paspor saya dan ponsel saya yang menunjukkan email konfirmasi."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-2-m09-s-quiz",
+          "moduleId": "A2.2-M09",
+          "subModuleId": "sub-a2-2-m09-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about your last trip to the airport.",
+                "audioPrompt": "Tell me about how you prepared for your flight and arrived at the airport.",
+                "storyPoints": [
+                  "What time you left your house and how you traveled",
+                  "How you found the check-in desk and dropped off your luggage",
+                  "Where you waited before getting on the airplane"
+                ],
+                "targetSentence": "I left my house early, went straight to the check-in desk, and waited at the boarding gate.",
+                "phonetic": "/aɪ left maɪ haʊs ˈɜːli went streɪt tuː ðə ˈtʃek.ɪn desk/",
+                "expectedKeywords": [
+                  "house",
+                  "check-in desk",
+                  "boarding gate",
+                  "luggage"
+                ],
+                "explanation": "Use past simple verbs like left, went, and waited to describe your travel steps."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about your experience staying at a hotel.",
+                "audioPrompt": "Describe arriving at a hotel and getting your room key.",
+                "storyPoints": [
+                  "How you greeted the receptionist at the front desk",
+                  "What information you gave for your reservation",
+                  "How you felt when you entered your double room"
+                ],
+                "targetSentence": "I talked to the receptionist, showed my booking, and went to my comfortable double room.",
+                "phonetic": "/aɪ tɔːkt tuː ðə rɪˈsep.ʃən.ɪst ʃəʊd maɪ ˈbʊk.ɪŋ/",
+                "expectedKeywords": [
+                  "receptionist",
+                  "reservation",
+                  "double room",
+                  "key card"
+                ],
+                "explanation": "Describe your hotel check-in experience using clear past tense sentences."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Act out this roleplay scenario with the AI assistant.",
+                "audioPrompt": "You are at the airport check-in counter. Ask the agent about your hand luggage weight.",
+                "scenarioContext": "You are at the check-in desk. You want to ask the agent if your hand luggage is too heavy.",
+                "characterRole": "Airline Passenger",
+                "targetSentence": "Excuse me, does my hand luggage meet the weight limit?",
+                "phonetic": "/ɪkˈskjuːz miː dʌz maɪ hænd ˈlʌɡ.ɪdʒ miːt ðə weɪt ˈlɪm.ɪt/",
+                "expectedKeywords": [
+                  "hand luggage",
+                  "weight limit",
+                  "kilograms",
+                  "check-in"
+                ],
+                "explanation": "Use polite opening phrases like excuse me when asking airport staff questions."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Act out this roleplay scenario with the AI assistant.",
+                "audioPrompt": "Ask the airport staff where to find your boarding gate.",
+                "scenarioContext": "You cleared passport control and need to find where your flight leaves.",
+                "characterRole": "Traveler looking for directions",
+                "targetSentence": "Could you please tell me which way to go for boarding gate fifteen?",
+                "phonetic": "/kʊd juː pliːz tel miː wɪtʃ weɪ tuː ɡəʊ fɔːr ˈbɔː.dɪŋ ɡeɪt fɪfˈtiːn/",
+                "expectedKeywords": [
+                  "boarding gate",
+                  "fifteen",
+                  "directions",
+                  "please"
+                ],
+                "explanation": "Ask clear, polite questions to airport staff when looking for your gate."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Act out this roleplay scenario with the AI assistant.",
+                "audioPrompt": "Ask the hotel receptionist what time checkout is tomorrow.",
+                "scenarioContext": "You are in your hotel room and want to plan your morning departure.",
+                "characterRole": "Hotel Guest",
+                "targetSentence": "What time is checkout tomorrow morning, please?",
+                "phonetic": "/wɒt taɪm ɪz ˈtʃek.aʊt təˈmɒr.əʊ ˈmɔː.nɪŋ pliːz/",
+                "expectedKeywords": [
+                  "checkout time",
+                  "tomorrow",
+                  "morning",
+                  "please"
+                ],
+                "explanation": "Ask direct questions about hotel timing with polite intonation."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Act out this roleplay scenario with the AI assistant.",
+                "audioPrompt": "Tell the baggage claim staff that your suitcase is missing.",
+                "scenarioContext": "You waited at baggage claim, but your suitcase did not arrive on the belt.",
+                "characterRole": "Passenger with missing luggage",
+                "targetSentence": "Excuse me, I cannot find my suitcase at the baggage claim area.",
+                "phonetic": "/ɪkˈskjuːz miː aɪ ˈkæn.ɒt faɪnd maɪ ˈsuːt.keɪs æt ðə ˈbæɡ.ɪdʒ kleɪm/",
+                "expectedKeywords": [
+                  "baggage claim",
+                  "suitcase",
+                  "missing",
+                  "help"
+                ],
+                "explanation": "Explain problems calmly to airport service staff using clear vocabulary."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Vocabulary Pronunciation",
+                "instruction": "Read the target vocabulary sentence clearly with accurate word pronunciation.",
+                "audioPrompt": "Please say this sentence containing key travel vocabulary: 'You must show your boarding pass at the gate.'",
+                "targetSentence": "You must show your boarding pass at the boarding gate.",
+                "phonetic": "/juː mʌst ʃəʊ jɔːr ˈbɔː.dɪŋ pɑːs æt ðə ˈbɔː.dɪŋ ɡeɪt/",
+                "expectedKeywords": [
+                  "boarding pass",
+                  "boarding gate",
+                  "show",
+                  "must"
+                ],
+                "explanation": "Pronounce each aviation vocabulary term distinctly."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Grammar Accuracy",
+                "instruction": "Read the sentence using the correct future modal form.",
+                "audioPrompt": "Say this sentence about future travel plans: 'I will book a double room for my holiday.'",
+                "targetSentence": "I will book a double room for my holiday next week.",
+                "phonetic": "/aɪ wɪl bʊk ə ˈdʌb.əl ruːm fɔːr maɪ ˈhɒl.ə.deɪ nekst wiːk/",
+                "expectedKeywords": [
+                  "will book",
+                  "double room",
+                  "holiday",
+                  "next week"
+                ],
+                "explanation": "Ensure modal verb 'will' is pronounced clearly before the main action."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Syllable Stress Drill",
+                "instruction": "Pronounce the multi-syllable travel words with correct stress placement.",
+                "audioPrompt": "Say these three words with correct syllable stress: reservation, passport, baggage.",
+                "targetSentence": "Reservation, passport, and baggage claim are important travel terms.",
+                "phonetic": "/ˌrez.əˈveɪ.ʃən ˈpɑːs.pɔːt ænd ˈbæɡ.ɪdʒ kleɪm/",
+                "expectedKeywords": [
+                  "reservation",
+                  "passport",
+                  "baggage",
+                  "terms"
+                ],
+                "explanation": "Place stress on the correct syllable for each multi-syllable noun."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Intonation Drill",
+                "instruction": "Practice rising intonation for requests and falling intonation for statements.",
+                "audioPrompt": "Say this question with a polite rising tone: 'Is breakfast included in my room reservation?'",
+                "targetSentence": "Is breakfast included in my room reservation?",
+                "phonetic": "/ɪz ˈbrek.fəst ɪnˈkluːd.ɪd ɪn maɪ ruːm ˌrez.əˈveɪ.ʃən/",
+                "expectedKeywords": [
+                  "breakfast",
+                  "included",
+                  "room",
+                  "reservation"
+                ],
+                "explanation": "Raise your voice pitch at the end of yes-no questions to sound polite and natural."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

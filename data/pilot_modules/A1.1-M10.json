@@ -1,0 +1,1699 @@
+{
+  "module": {
+    "id": "A1.1-M10",
+    "levelId": "A1.1",
+    "title": "Unit 10: High Flyers - Past Simple & Famous People",
+    "cefr": "A1",
+    "group": "A1.1 - Starter Foundations",
+    "objective": "Talk about past experiences and achievements, ask questions about past events, and use 'was/were' and simple past verbs accurately.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 10
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-1-m10-reading",
+      "moduleId": "A1.1-M10",
+      "skillType": "reading",
+      "title": "Reading Mission: Stories of Amazing People",
+      "theme": "Famous People and Their Past Achievements",
+      "grammarFocus": "Past Simple with was/were and regular verbs (-ed)",
+      "vocabularyFocus": "Achievements, famous people, past time expressions",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-1-m10-r-theory",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to your Reading Mission! In this unit, you will read short, exciting texts about famous people and their amazing achievements in the past. You will learn to understand Past Simple sentences using 'was', 'were', and regular verbs with '-ed'. By the end of this mission, you will be able to read about past events, understand key details about famous people's lives, and answer questions about what they did. Let's discover some incredible stories together!",
+            "linguisticTarget": {
+              "grammar": "Past Simple with 'was/were' (affirmative, negative, and question forms) and regular past tense verbs ending in '-ed' (worked, traveled, discovered).",
+              "vocabulary": "Words related to achievements, famous people, space travel, professions, and past time expressions such as 'yesterday', 'last year', 'in 1963'.",
+              "readingStrategy": "Skimming for the main idea of a passage (Who is this person? What did they do?), then scanning for specific details like dates, places, and achievements."
+            },
+            "learningObjectives": [
+              "Understand the main idea of short A1 passages about famous people and their past achievements.",
+              "Identify key details including names, dates, places, and what people did in the past.",
+              "Recognize Past Simple forms ('was', 'were', 'worked', 'traveled') in reading passages.",
+              "Distinguish between 'was' and 'were' based on the subject of the sentence.",
+              "Use context clues to guess the meaning of new vocabulary about achievements and famous people."
+            ],
+            "contextWarmup": {
+              "prompt": "Read this sentence: 'Marie Curie was a famous scientist. She discovered radium in 1898.' What is the main idea?",
+              "options": [
+                "Marie Curie made an important discovery in science.",
+                "Marie Curie was a teacher at a school.",
+                "Marie Curie lived in a big house."
+              ],
+              "correctIndex": 0,
+              "explanation": "The sentence tells us Marie Curie 'was a famous scientist' and 'discovered radium.' This means the main idea is about her important discovery in science. The words 'famous scientist' and 'discovered' are key clues!"
+            },
+            "rules": [
+              "Use 'was' with I, he, she, and it: 'She was a famous astronaut.' Use 'were' with you, we, and they: 'They were brave explorers.'",
+              "To make a negative sentence, add 'not': 'was not' (wasn't) and 'were not' (weren't). Example: 'He wasn't a doctor. They weren't from England.'",
+              "To ask a question, put 'was' or 'were' before the subject: 'Was she famous?' 'Were they astronauts?'",
+              "For regular Past Simple verbs, add '-ed' to the base verb: work → worked, travel → traveled, discover → discovered.",
+              "Look for time expressions like 'in 1963', 'last year', 'yesterday', and 'many years ago' — these tell you the sentence is about the past."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Beginner Pitfall: Was vs. Were",
+              "explanation": "Many beginners use 'was' with plural subjects like 'they' or 'we'. Remember: I/he/she/it uses 'was', and you/we/they uses 'were'. When you read a sentence, always check the subject first to know which form is correct.",
+              "wrong": "They was famous athletes. We was happy.",
+              "correct": "They were famous athletes. We were happy."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Past Simple with Was/Were",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in natural spoken English:",
+            "contractions": [
+              {
+                "subject": "was not",
+                "verb": "was not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "wasn't",
+                "exampleFull": "She was not a pilot.",
+                "exampleContracted": "She wasn't a pilot."
+              },
+              {
+                "subject": "were not",
+                "verb": "were not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "weren't",
+                "exampleFull": "They were not from Italy.",
+                "exampleContracted": "They weren't from Italy."
+              },
+              {
+                "subject": "I",
+                "verb": "was not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "wasn't",
+                "exampleFull": "I was not at home yesterday.",
+                "exampleContracted": "I wasn't at home yesterday."
+              },
+              {
+                "subject": "We",
+                "verb": "were not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "weren't",
+                "exampleFull": "We were not ready for the test.",
+                "exampleContracted": "We weren't ready for the test."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Structure with Past Simple (Was/Were)",
+              "description": "Assemble and swap sentence blocks to explore affirmative, negative, and question patterns with 'was' and 'were':",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "was",
+                  "role": "First Person (Singular)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "was",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "was",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "It",
+                  "pronoun": "It",
+                  "correctToBe": "was",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "were",
+                  "role": "First Person Plural"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "were",
+                  "role": "Third Person Plural"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "were",
+                  "role": "Second Person"
+                }
+              ],
+              "complements": [
+                "a famous astronaut in the 1960s",
+                "brave explorers from Europe",
+                "a hardworking factory worker",
+                "the first woman in space",
+                "very happy about the achievement",
+                "named 'Woman of the Century'"
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-1-m10-r-vocab",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "achievement",
+                "ipa": "/əˈtʃiːvmənt/",
+                "meaning": "pencapaian, prestasi",
+                "collocation": "Her greatest achievement was traveling to space."
+              },
+              {
+                "word": "astronaut",
+                "ipa": "/ˈæstrənɔːt/",
+                "meaning": "astronot, angkasawan",
+                "collocation": "He wanted to become an astronaut when he was young."
+              },
+              {
+                "word": "spacecraft",
+                "ipa": "/ˈspeɪskrɑːft/",
+                "meaning": "pesawat luar angkasa",
+                "collocation": "The spacecraft traveled around the Earth for three days."
+              },
+              {
+                "word": "factory",
+                "ipa": "/ˈfæktəri/",
+                "meaning": "pabrik",
+                "collocation": "She worked in a factory before she became famous."
+              },
+              {
+                "word": "famous",
+                "ipa": "/ˈfeɪməs/",
+                "meaning": "terkenal",
+                "collocation": "Albert Einstein was a famous scientist."
+              },
+              {
+                "word": "century",
+                "ipa": "/ˈsentʃəri/",
+                "meaning": "abad, seratus tahun",
+                "collocation": "Many things changed in the twentieth century."
+              },
+              {
+                "word": "discover",
+                "ipa": "/dɪˈskʌvər/",
+                "meaning": "menemukan",
+                "collocation": "Scientists discovered many new things in the past."
+              },
+              {
+                "word": "brave",
+                "ipa": "/breɪv/",
+                "meaning": "berani, pemberani",
+                "collocation": "The brave astronaut wasn't afraid of danger."
+              },
+              {
+                "word": "competition",
+                "ipa": "/ˌkɒmpəˈtɪʃən/",
+                "meaning": "kompetisi, perlombaan",
+                "collocation": "There was a competition to find the best astronauts."
+              },
+              {
+                "word": "travel",
+                "ipa": "/ˈtrævəl/",
+                "meaning": "bepergian, melakukan perjalanan",
+                "collocation": "She traveled around the world after her space flight."
+              },
+              {
+                "word": "parachute",
+                "ipa": "/ˈpærəʃuːt/",
+                "meaning": "parasut",
+                "collocation": "She used a parachute to land safely on the ground."
+              },
+              {
+                "word": "inspire",
+                "ipa": "/ɪnˈspaɪər/",
+                "meaning": "menginspirasi, memberi ilham",
+                "collocation": "Her story inspired many young people around the world."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m10-r-guided",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-reading",
+          "sectionType": "dialogue",
+          "title": "Reading Passage: The First Woman in Space",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "The First Woman in Space",
+            "context": "This passage is about Valentina Tereshkova, a famous Russian woman who made history in 1963. Read about her life and her amazing achievement.",
+            "text": "Valentina Tereshkova was born in Russia in 1937. Her family was not rich. Her father was a tractor driver, and her mother worked in a factory. Valentina also worked in a factory when she was young. She loved sky diving, and she was very good at it.\n\nIn 1962, there was a competition to find women astronauts. Valentina entered the competition, and she was the winner! On June 16, 1963, she traveled to space in a spacecraft called Vostok 6. She was in space for almost three days. She traveled around the Earth 48 times!\n\nAfter her space flight, Valentina was very famous. She traveled to many countries and inspired millions of people. She was named 'Woman of the Century.' Her achievement was truly amazing. She showed the world that women were brave and strong. Today, she is still a hero to many people around the world.",
+            "wordCount": 150,
+            "highlights": [
+              {
+                "text": "was born",
+                "note": "Past Simple of 'be born' — used to talk about when and where someone started life.",
+                "type": "grammar"
+              },
+              {
+                "text": "was not rich",
+                "note": "Negative form of 'was' — 'was not' (wasn't) shows something was NOT true in the past.",
+                "type": "grammar"
+              },
+              {
+                "text": "worked",
+                "note": "Past Simple regular verb: work → worked. The '-ed' ending shows this happened in the past.",
+                "type": "grammar"
+              },
+              {
+                "text": "traveled",
+                "note": "Past Simple regular verb: travel → traveled. Notice the '-ed' ending.",
+                "type": "grammar"
+              },
+              {
+                "text": "achievement",
+                "note": "A great thing someone did — a success or accomplishment.",
+                "type": "vocab"
+              },
+              {
+                "text": "spacecraft",
+                "note": "A vehicle that flies in space, like a rocket or shuttle.",
+                "type": "vocab"
+              },
+              {
+                "text": "inspired",
+                "note": "Past Simple of 'inspire' — to make someone feel excited and want to do great things.",
+                "type": "vocab"
+              },
+              {
+                "text": "were brave",
+                "note": "'Were' is used with plural subjects (women). 'Brave' means not afraid.",
+                "type": "grammar"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m10-r-practice",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-reading",
+          "sectionType": "practice",
+          "title": "Guided Comprehension Check",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "prompt": "What is the main idea of the passage?",
+              "options": [
+                "Valentina Tereshkova was the first woman in space and became very famous for her achievement.",
+                "Valentina Tereshkova worked in a factory all her life.",
+                "Valentina Tereshkova wanted to be a teacher."
+              ],
+              "correctIndex": 0,
+              "explanation": "The passage tells the story of Valentina Tereshkova — from her early life in a factory to becoming the first woman in space in 1963. The main idea is about her amazing achievement and how she became famous. The other options mention only a small detail or are not in the text."
+            },
+            "detailQuestions": [
+              {
+                "id": 1,
+                "prompt": "When did Valentina Tereshkova travel to space?",
+                "options": [
+                  "On June 16, 1963",
+                  "On June 16, 1937",
+                  "On June 16, 1962"
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage says: 'On June 16, 1963, she traveled to space in a spacecraft called Vostok 6.' The year 1937 was when she was born, and 1962 was when the competition started."
+              },
+              {
+                "id": 2,
+                "prompt": "What did Valentina do before she became an astronaut?",
+                "options": [
+                  "She worked in a factory and loved sky diving.",
+                  "She was a doctor in a hospital.",
+                  "She was a teacher at a school."
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage clearly states: 'Valentina also worked in a factory when she was young. She loved sky diving.' The other options are not mentioned in the text."
+              },
+              {
+                "id": 3,
+                "prompt": "How long was Valentina in space?",
+                "options": [
+                  "Almost three days",
+                  "One week",
+                  "Forty-eight days"
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage says: 'She was in space for almost three days.' She traveled around the Earth 48 times, but that is the number of orbits, not days."
+              },
+              {
+                "id": 4,
+                "prompt": "What special title was Valentina given?",
+                "options": [
+                  "Woman of the Century",
+                  "Queen of Space",
+                  "Best Astronaut in the World"
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage states: 'She was named Woman of the Century.' This title shows how important her achievement was. The other titles are not mentioned in the text."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m10-r-quiz",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-reading",
+          "sectionType": "quiz",
+          "title": "Reading Mastery Quiz",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "According to the passage, where was Valentina Tereshkova born?",
+                "options": [
+                  "Russia",
+                  "America",
+                  "England"
+                ],
+                "answer": "Russia",
+                "explanation": "The first sentence of the passage says: 'Valentina Tereshkova was born in Russia in 1937.' This clearly tells us she was born in Russia."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Choose the correct sentence about Valentina's family:",
+                "options": [
+                  "Her family wasn't rich.",
+                  "Her family were very rich.",
+                  "Her family was from America."
+                ],
+                "answer": "Her family wasn't rich.",
+                "explanation": "The passage says: 'Her family was not rich.' The contraction 'wasn't' means 'was not.' This matches the information in the text."
+              },
+              {
+                "id": "q-r-3",
+                "question": "Which Past Simple form correctly completes this sentence? 'Valentina _____ to space in 1963.'",
+                "options": [
+                  "traveled",
+                  "travels",
+                  "traveling"
+                ],
+                "answer": "traveled",
+                "explanation": "'Traveled' is the Past Simple form of 'travel.' We use Past Simple because the sentence talks about 1963, which is in the past. 'Travels' is present tense, and 'traveling' is the -ing form."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Which sentence uses 'were' correctly?",
+                "options": [
+                  "They were brave and strong.",
+                  "She were a famous astronaut.",
+                  "He were born in 1937."
+                ],
+                "answer": "They were brave and strong.",
+                "explanation": "'Were' is used with plural subjects like 'they', 'we', and also with 'you.' For 'she' and 'he,' we must use 'was.' So 'They were brave and strong' is the only correct sentence."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What does the word 'achievement' mean in the passage?",
+                "options": [
+                  "A great thing someone did successfully",
+                  "A type of spacecraft",
+                  "A place where people work"
+                ],
+                "answer": "A great thing someone did successfully",
+                "explanation": "The passage says: 'Her achievement was truly amazing.' An 'achievement' is something great or important that a person has done. It is not a spacecraft or a workplace."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Read this sentence from the passage: 'She was named Woman of the Century.' What does this tell us?",
+                "options": [
+                  "People thought she was one of the most important women of her time.",
+                  "She changed her name to 'Century.'",
+                  "She lived for one hundred years."
+                ],
+                "answer": "People thought she was one of the most important women of her time.",
+                "explanation": "Being 'named Woman of the Century' means people recognized her as one of the most important and inspiring women. It is a title of honor, not her actual name, and 'century' here refers to a period of 100 years, not her age."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Which question is correctly formed in Past Simple?",
+                "options": [
+                  "Was she famous after her space flight?",
+                  "She was famous after her space flight?",
+                  "Did was she famous after her space flight?"
+                ],
+                "answer": "Was she famous after her space flight?",
+                "explanation": "To make a yes/no question with 'was/were,' we put 'was' or 'were' before the subject: 'Was she famous?' We do NOT add 'did' before 'was.' The second option has no question word at the beginning, so it is not a proper question form."
+              },
+              {
+                "id": "q-r-8",
+                "question": "What happened FIRST in Valentina's life according to the passage?",
+                "options": [
+                  "She worked in a factory.",
+                  "She traveled to space.",
+                  "She was named Woman of the Century."
+                ],
+                "answer": "She worked in a factory.",
+                "explanation": "The passage describes events in order: first, Valentina worked in a factory when she was young. Then she entered the competition and traveled to space in 1963. After that, she was named 'Woman of the Century.' Working in a factory happened first."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m10-listening",
+      "moduleId": "A1.1-M10",
+      "skillType": "listening",
+      "title": "Listening Mission: Stories of Famous People",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-1-m10-l-theory",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening mission, you will hear a teacher and a student talking about famous people from history. They discuss where these people were from, what they did, and why they are famous. Listen carefully for Past Simple verbs like 'was', 'were', 'helped', 'lived', and 'worked'. These words tell you about things that happened in the past. Pay attention to the difference between 'was' (for one person) and 'were' (for two or more people). Also listen for regular past tense verbs that end in '-ed' sounds.",
+            "learningObjectives": [
+              "Understand spoken sentences using 'was' and 'were' to describe famous people in the past.",
+              "Identify past simple regular verbs (e.g., 'helped', 'lived', 'worked') when spoken naturally.",
+              "Recognise key information about famous people such as their names, countries, and achievements.",
+              "Distinguish between present and past forms in spoken English at a natural A1 pace."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "was from",
+                "meaning": "berasal dari (untuk satu orang)",
+                "note": "Used to talk about where one person came from. Example: 'She was from Albania.'"
+              },
+              {
+                "phrase": "were famous",
+                "meaning": "terkenal (untuk lebih dari satu orang)",
+                "note": "Used to describe more than one person who was well-known. Example: 'They were famous.'"
+              },
+              {
+                "phrase": "helped many people",
+                "meaning": "membantu banyak orang",
+                "note": "A regular past tense verb. 'Help' becomes 'helped' to show it happened in the past."
+              },
+              {
+                "phrase": "was born in",
+                "meaning": "lahir di/pada",
+                "note": "Used to talk about when or where a person was born. Example: 'He was born in 1918.'"
+              },
+              {
+                "phrase": "lived in",
+                "meaning": "tinggal di (masa lampau)",
+                "note": "Past tense of 'live'. Used to say where someone lived before. Example: 'She lived in India.'"
+              },
+              {
+                "phrase": "worked as",
+                "meaning": "bekerja sebagai (masa lampau)",
+                "note": "Past tense of 'work'. Used to describe someone's past job. Example: 'He worked as a leader.'"
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "Where were they from?",
+                "fast": "Where were they from?",
+                "slowIpa": "/weər wɜːr ðeɪ frɒm/",
+                "fastIpa": "/weə wə ðeɪ frɒm/",
+                "note": "In natural speech, 'were' is reduced from /wɜːr/ to a quick /wə/. The 'r' sound almost disappears and the vowel becomes very short. Listen for this weak form after question words."
+              },
+              {
+                "id": 2,
+                "slow": "She was from Albania.",
+                "fast": "She was from Albania.",
+                "slowIpa": "/ʃiː wɒz frɒm ælˈbeɪniə/",
+                "fastIpa": "/ʃi wəz frəm ælˈbeɪniə/",
+                "note": "In fast speech, 'was' reduces from /wɒz/ to /wəz/ and 'from' reduces from /frɒm/ to /frəm/. The vowels become the weak schwa /ə/ sound because these words are not stressed."
+              },
+              {
+                "id": 3,
+                "slow": "They helped many people.",
+                "fast": "They helped many people.",
+                "slowIpa": "/ðeɪ helpt ˈmeni ˈpiːpəl/",
+                "fastIpa": "/ðeɪ helpt ˈmeni ˈpiːpəl/",
+                "note": "The '-ed' ending in 'helped' is pronounced as /t/ because 'help' ends in a voiceless consonant /p/. It sounds like 'helpt', not 'help-ed'. This is a common pattern for verbs ending in /p/, /k/, /s/, /f/."
+              },
+              {
+                "id": 4,
+                "slow": "He was born in 1918.",
+                "fast": "He was born in 1918.",
+                "slowIpa": "/hiː wɒz bɔːn ɪn naɪnˈtiːn eɪˈtiːn/",
+                "fastIpa": "/hi wəz bɔːn ɪn naɪnˈtiːn eɪˈtiːn/",
+                "note": "In connected speech, 'He' loses its /h/ sound and 'was' reduces to /wəz/. The stress falls on the year number. 'Born in' can sound like 'bornin' as the words link together."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m10-l-dialogue",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Reading About Famous People",
+          "orderIndex": 2,
+          "content": {
+            "context": "A teacher and a student are in a classroom. They are looking at photos and a short article about two famous people: Mother Teresa and Nelson Mandela. The teacher asks questions and the student answers using Past Simple forms.",
+            "audioPrompt": "Listen carefully to the following dialogue between a teacher and a student discussing famous people from history.",
+            "lines": [
+              {
+                "speaker": "Teacher",
+                "text": "OK, let's look at these photos. What are the names of the two people in the photos?",
+                "audioUrl": "/audio/modules/a1-1-m10/dialogue-1.mp3",
+                "translation": "OK, mari kita lihat foto-foto ini. Siapa nama dua orang di foto-foto ini?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Student",
+                "text": "They are Mother Teresa and Nelson Mandela.",
+                "audioUrl": "/audio/modules/a1-1-m10/dialogue-2.mp3",
+                "translation": "Mereka adalah Ibu Teresa dan Nelson Mandela.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Teacher",
+                "text": "Very good! Where were they from?",
+                "audioUrl": "/audio/modules/a1-1-m10/dialogue-3.mp3",
+                "translation": "Bagus sekali! Mereka berasal dari mana?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Student",
+                "text": "Mother Teresa was from Albania, and Nelson Mandela was from South Africa.",
+                "audioUrl": "/audio/modules/a1-1-m10/dialogue-4.mp3",
+                "translation": "Ibu Teresa berasal dari Albania, dan Nelson Mandela berasal dari Afrika Selatan.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Teacher",
+                "text": "That's right. When was Nelson Mandela born?",
+                "audioUrl": "/audio/modules/a1-1-m10/dialogue-5.mp3",
+                "translation": "Betul. Kapan Nelson Mandela lahir?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Student",
+                "text": "He was born in 1918 in South Africa.",
+                "audioUrl": "/audio/modules/a1-1-m10/dialogue-6.mp3",
+                "translation": "Dia lahir pada tahun 1918 di Afrika Selatan.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Teacher",
+                "text": "And where did Mother Teresa live and work?",
+                "audioUrl": "/audio/modules/a1-1-m10/dialogue-7.mp3",
+                "translation": "Dan di mana Ibu Teresa tinggal dan bekerja?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Student",
+                "text": "She lived in India. She worked as a helper for poor people.",
+                "audioUrl": "/audio/modules/a1-1-m10/dialogue-8.mp3",
+                "translation": "Dia tinggal di India. Dia bekerja sebagai penolong bagi orang-orang miskin.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Teacher",
+                "text": "Excellent! Why are they famous?",
+                "audioUrl": "/audio/modules/a1-1-m10/dialogue-9.mp3",
+                "translation": "Luar biasa! Mengapa mereka terkenal?",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Student",
+                "text": "They were famous because they helped many people. They were very kind and brave.",
+                "audioUrl": "/audio/modules/a1-1-m10/dialogue-10.mp3",
+                "translation": "Mereka terkenal karena telah membantu banyak orang. Mereka sangat baik hati dan berani.",
+                "emotion": "excited"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m10-l-quiz",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "OK, let's look at these photos.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Teacher: \"OK, let's look at these _____.\"",
+                "targetWord": "photos",
+                "explanation": "Full audio: \"OK, let's look at these photos.\". The missing word is \"photos\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "They are Mother Teresa and Nelson Mandela.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Student: \"They are Mother Teresa and Nelson _____.\"",
+                "targetWord": "Mandela",
+                "explanation": "Full audio: \"They are Mother Teresa and Nelson Mandela.\". The missing word is \"Mandela\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Where were they from?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Teacher: \"Where were they _____?\"",
+                "targetWord": "from",
+                "explanation": "Full audio: \"Where were they from?\". The missing word is \"from\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Mother Teresa was from Albania",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Student: \"Mother Teresa was from _____\"",
+                "targetWord": "Albania",
+                "explanation": "Full audio: \"Mother Teresa was from Albania\". The missing word is \"Albania\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "and Nelson Mandela was from South Africa.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Student: \"and Nelson Mandela was from South _____.\"",
+                "targetWord": "Africa",
+                "explanation": "Full audio: \"and Nelson Mandela was from South Africa.\". The missing word is \"Africa\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "When was Nelson Mandela born?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "When was Nelson Mandela born",
+                "words": [
+                  "was",
+                  "born",
+                  "Mandela",
+                  "When",
+                  "Nelson"
+                ],
+                "explanation": "Correct sentence order: \"When was Nelson Mandela born?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "She lived in India.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "She lived in India",
+                "words": [
+                  "She",
+                  "lived",
+                  "India",
+                  "in"
+                ],
+                "explanation": "Correct sentence order: \"She lived in India.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Why are they famous?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Why are they famous",
+                "words": [
+                  "famous",
+                  "Why",
+                  "are",
+                  "they"
+                ],
+                "explanation": "Correct sentence order: \"Why are they famous?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "They were very kind and brave.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "They were very kind and brave",
+                "words": [
+                  "were",
+                  "They",
+                  "brave",
+                  "kind",
+                  "very",
+                  "and"
+                ],
+                "explanation": "Correct sentence order: \"They were very kind and brave.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "helped many people",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "helped many people",
+                "words": [
+                  "many",
+                  "helped",
+                  "people"
+                ],
+                "explanation": "Correct sentence order: \"helped many people\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "OK, let's look at these photos.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Teacher: \"OK, let's look at these _____.\"",
+                "targetWord": "photos",
+                "explanation": "Full audio: \"OK, let's look at these photos.\". The missing word is \"photos\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "They are Mother Teresa and Nelson Mandela.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Student: \"They are Mother Teresa and Nelson _____.\"",
+                "targetWord": "Mandela",
+                "explanation": "Full audio: \"They are Mother Teresa and Nelson Mandela.\". The missing word is \"Mandela\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Where were they from?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Teacher: \"Where were they _____?\"",
+                "targetWord": "from",
+                "explanation": "Full audio: \"Where were they from?\". The missing word is \"from\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Mother Teresa was from Albania",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Student: \"Mother Teresa was from _____\"",
+                "targetWord": "Albania",
+                "explanation": "Full audio: \"Mother Teresa was from Albania\". The missing word is \"Albania\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "and Nelson Mandela was from South Africa.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Student: \"and Nelson Mandela was from South _____.\"",
+                "targetWord": "Africa",
+                "explanation": "Full audio: \"and Nelson Mandela was from South Africa.\". The missing word is \"Africa\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "When was Nelson Mandela born?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "When was Nelson Mandela born",
+                "words": [
+                  "was",
+                  "born",
+                  "Mandela",
+                  "When",
+                  "Nelson"
+                ],
+                "explanation": "Correct sentence order: \"When was Nelson Mandela born?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "She lived in India.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "She lived in India",
+                "words": [
+                  "She",
+                  "lived",
+                  "India",
+                  "in"
+                ],
+                "explanation": "Correct sentence order: \"She lived in India.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Why are they famous?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Why are they famous",
+                "words": [
+                  "famous",
+                  "Why",
+                  "are",
+                  "they"
+                ],
+                "explanation": "Correct sentence order: \"Why are they famous?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "They were very kind and brave.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "They were very kind and brave",
+                "words": [
+                  "were",
+                  "They",
+                  "brave",
+                  "kind",
+                  "very",
+                  "and"
+                ],
+                "explanation": "Correct sentence order: \"They were very kind and brave.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "helped many people",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "helped many people",
+                "words": [
+                  "many",
+                  "helped",
+                  "people"
+                ],
+                "explanation": "Correct sentence order: \"helped many people\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m10-writing",
+      "moduleId": "A1.1-M10",
+      "skillType": "writing",
+      "title": "Writing Mission: Stories of Famous People",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-1-m10-w-theory",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this unit, you will learn how to write sentences and short paragraphs about famous people and their achievements in the past. You will use the Past Simple with 'was/were' and regular verbs ending in '-ed'. You will describe what people did, where they were, and what happened in the past. Let's start writing about high flyers!",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Introduce the Famous Person",
+                "formula": "Subject + was/were + description.",
+                "example": "Marie Curie was a famous scientist."
+              },
+              {
+                "step": 2,
+                "title": "Describe What They Did",
+                "formula": "Subject + past verb (-ed) + object/detail.",
+                "example": "She studied science in Paris."
+              },
+              {
+                "step": 3,
+                "title": "Add Time or Place Details",
+                "formula": "Subject + was/were + in + place / time expression.",
+                "example": "She was in France in 1891."
+              },
+              {
+                "step": 4,
+                "title": "Add a Negative or Question for Interest",
+                "formula": "Subject + wasn't/weren't + complement. OR Was/Were + subject + complement?",
+                "example": "She wasn't from France. Was she famous in her country?"
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always capitalize the names of people and places.",
+                "badExample": "valentina tereshkova was from russia.",
+                "goodExample": "Valentina Tereshkova was from Russia.",
+                "why": "Names of people and countries are proper nouns. They always start with a capital letter."
+              },
+              {
+                "rule": "Use a period (.) at the end of every statement sentence.",
+                "badExample": "She worked very hard",
+                "goodExample": "She worked very hard.",
+                "why": "Every sentence needs a period at the end so the reader knows the sentence is finished."
+              },
+              {
+                "rule": "Use a question mark (?) at the end of every question.",
+                "badExample": "Was he a pilot.",
+                "goodExample": "Was he a pilot?",
+                "why": "Questions must end with a question mark, not a period. This tells the reader it is a question."
+              },
+              {
+                "rule": "For regular past verbs, add '-ed' to the base verb. Do not forget the '-ed' ending.",
+                "badExample": "They arrive yesterday.",
+                "goodExample": "They arrived yesterday.",
+                "why": "When you talk about the past, regular verbs need '-ed' at the end. Without '-ed', the sentence sounds like the present."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "Valentina Tereshkova was in space for three days.",
+                "id": "Valentina Tereshkova berada di luar angkasa selama tiga hari.",
+                "focus": "Past Simple with 'was' + time expression"
+              },
+              {
+                "en": "They weren't from the same country.",
+                "id": "Mereka bukan berasal dari negara yang sama.",
+                "focus": "Past Simple negative with 'weren't'"
+              },
+              {
+                "en": "She worked hard every day.",
+                "id": "Dia bekerja keras setiap hari.",
+                "focus": "Past Simple regular verb 'worked' (-ed)"
+              },
+              {
+                "en": "Was he famous when he was young?",
+                "id": "Apakah dia terkenal ketika dia masih muda?",
+                "focus": "Past Simple question with 'Was'"
+              },
+              {
+                "en": "The astronauts arrived at the station yesterday.",
+                "id": "Para astronot tiba di stasiun kemarin.",
+                "focus": "Past Simple regular verb 'arrived' + time word"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m10-w-practice",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "marie curie was a famous scientist she work in paris",
+                "targetSentence": "Marie Curie was a famous scientist. She worked in Paris.",
+                "translation": "Marie Curie adalah seorang ilmuwan terkenal. Dia bekerja di Paris.",
+                "keyRule": "Capitalize proper nouns (Marie Curie, Paris). Add a period between two sentences. Use 'worked' (past tense with -ed), not 'work'.",
+                "requiredCapitals": [
+                  "Marie",
+                  "Curie",
+                  "She",
+                  "Paris"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "was valentina tereshkova from russia. she wasn't from america",
+                "targetSentence": "Was Valentina Tereshkova from Russia? She wasn't from America.",
+                "translation": "Apakah Valentina Tereshkova berasal dari Rusia? Dia bukan berasal dari Amerika.",
+                "keyRule": "Questions end with a question mark (?), not a period. Capitalize all proper nouns (Valentina Tereshkova, Russia, She, America). End the statement with a period.",
+                "requiredCapitals": [
+                  "Was",
+                  "Valentina",
+                  "Tereshkova",
+                  "Russia",
+                  "She",
+                  "America"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "the students arrive at school yesterday. they was very happy",
+                "targetSentence": "The students arrived at school yesterday. They were very happy.",
+                "translation": "Para siswa tiba di sekolah kemarin. Mereka sangat senang.",
+                "keyRule": "Use 'arrived' (past tense -ed) for past events. Use 'were' with plural subjects (they were), not 'was'. End each sentence with a period.",
+                "requiredCapitals": [
+                  "The",
+                  "They"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Describing a Famous Person",
+                "meaning": "Albert Einstein adalah seorang ilmuwan terkenal dari Jerman.",
+                "tokens": [
+                  "Albert",
+                  "Einstein",
+                  "was",
+                  "a",
+                  "famous",
+                  "scientist",
+                  "from",
+                  "Germany."
+                ],
+                "fullSentence": "Albert Einstein was a famous scientist from Germany."
+              },
+              {
+                "id": "b-2",
+                "category": "Past Action with Regular Verb",
+                "meaning": "Dia belajar fisika dan bekerja sangat keras.",
+                "tokens": [
+                  "He",
+                  "studied",
+                  "physics",
+                  "and",
+                  "worked",
+                  "very",
+                  "hard."
+                ],
+                "fullSentence": "He studied physics and worked very hard."
+              },
+              {
+                "id": "b-3",
+                "category": "Past Simple Negative",
+                "meaning": "Mereka bukan berasal dari negara yang sama.",
+                "tokens": [
+                  "They",
+                  "weren't",
+                  "from",
+                  "the",
+                  "same",
+                  "country."
+                ],
+                "fullSentence": "They weren't from the same country."
+              },
+              {
+                "id": "b-4",
+                "category": "Past Simple Question",
+                "meaning": "Apakah dia terkenal ketika dia masih muda?",
+                "tokens": [
+                  "Was",
+                  "she",
+                  "famous",
+                  "when",
+                  "she",
+                  "was",
+                  "young?"
+                ],
+                "fullSentence": "Was she famous when she was young?"
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: My Favourite Famous Person",
+                "badge": "History Writer",
+                "instruction": "Write a short paragraph (at least 4 sentences) about a famous person from the past. Use 'was' or 'were' to describe them. Use at least one regular past verb (-ed). Tell us: Who was this person? Where were they from? What did they do? Why were they famous?",
+                "example": "Valentina Tereshkova was a famous astronaut. She was from Russia. She travelled to space in 1963. She wasn't afraid. She was very brave!",
+                "placeholder": "Start writing about a famous person here...",
+                "minWords": 20,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: A Day in the Past",
+                "badge": "Time Traveller",
+                "instruction": "Imagine you visited a famous place yesterday. Write a short paragraph (at least 4 sentences) about your visit. Use 'was/were' and regular past verbs (-ed). Tell us: Where were you? What did you do there? Who was with you? How was it?",
+                "example": "Yesterday, I was at a big museum. I walked around and looked at old paintings. My friend was with me. We talked about the artists. It was very interesting!",
+                "placeholder": "Start writing about your visit here...",
+                "minWords": 20,
+                "xpReward": 35
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m10-w-quiz",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-writing",
+          "sectionType": "quiz",
+          "title": "Writing Practicum & Assessment",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": "w-p-1",
+                "prompt": "Write 3 sentences about a famous scientist, singer, or athlete from the past. Use 'was' or 'were' in at least two sentences. Tell us their name, where they were from, and one thing they did.",
+                "criteria": "Uses 'was' or 'were' correctly in at least 2 sentences. Includes the person's name (capitalized). Mentions where they were from. Uses at least one past tense verb. Sentences end with correct punctuation (period or question mark).",
+                "sampleGoodAnswer": "Amelia Earhart was a famous pilot. She was from America. She travelled across the Atlantic Ocean in 1932."
+              },
+              {
+                "id": "w-p-2",
+                "prompt": "Write 3 sentences using the negative form of 'was/were'. Talk about things that were NOT true about a famous person or a past event. For example, what they were NOT or where they were NOT from.",
+                "criteria": "Uses 'wasn't' or 'weren't' correctly in at least 2 sentences. Sentences are about the past. Proper nouns are capitalized. Each sentence ends with a period. Grammar is correct for A1 level.",
+                "sampleGoodAnswer": "Leonardo da Vinci wasn't from Spain. He wasn't just a painter. His inventions weren't simple."
+              },
+              {
+                "id": "w-p-3",
+                "prompt": "Write a short paragraph (4-5 sentences) about what you or your family did last weekend. Use at least two regular past verbs (-ed) and at least one sentence with 'was' or 'were'. Remember to capitalize names and use correct punctuation.",
+                "criteria": "Uses at least 2 regular past verbs with '-ed' correctly. Uses 'was' or 'were' at least once. Paragraph has 4-5 sentences. Proper nouns are capitalized. Each sentence has correct end punctuation. Content is about a past event.",
+                "sampleGoodAnswer": "Last weekend, I was at my grandmother's house. I helped her in the kitchen. We cooked rice and chicken together. My brother played in the garden. It was a very nice day."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m10-speaking",
+      "moduleId": "A1.1-M10",
+      "skillType": "speaking",
+      "title": "Speaking Lab: High Flyers - Talking About Famous People and Past Achievements",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-1-m10-s-theory",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this speaking lab, you will practice talking about famous people and their achievements in the past. You will use Past Simple verbs like 'was', 'were', 'lived', 'worked', 'discovered', and 'invented'. You will learn how to pronounce regular past tense endings (-ed) correctly, use proper intonation when asking and answering questions about the past, and stress the right syllables in key vocabulary words related to achievements and famous people.",
+            "audioGuidance": "Pay special attention to the '-ed' ending in past tense verbs. There are three sounds: /t/ as in 'worked', /d/ as in 'lived', and /ɪd/ as in 'invented'. Also practice the falling intonation pattern for 'Wh-' questions like 'Where was she born?' and the rising intonation for Yes/No questions like 'Was he famous?' Make sure to clearly pronounce 'was' /wɒz/ and 'were' /wɜːr/ in your sentences.",
+            "pillars": [
+              {
+                "name": "Past Tense '-ed' Pronunciation",
+                "target": "Correctly produce the three '-ed' sounds: /t/, /d/, and /ɪd/",
+                "explanation": "When we add '-ed' to regular verbs, the sound changes depending on the last sound of the base verb. After voiceless sounds like /k/, /p/, /s/, we say /t/ (e.g., 'worked' = /wɜːrkt/). After voiced sounds like /v/, /n/, /l/, we say /d/ (e.g., 'lived' = /lɪvd/). After /t/ or /d/ sounds, we say /ɪd/ (e.g., 'invented' = /ɪnˈventɪd/). Practice each type slowly."
+              },
+              {
+                "name": "Was/Were Sentence Rhythm",
+                "target": "Use natural rhythm when saying sentences with 'was' and 'were'",
+                "explanation": "In sentences like 'She was a famous scientist', the word 'was' is usually unstressed and sounds like /wəz/. But in short answers like 'Yes, she was', it is stressed and sounds like /wɒz/. Practice saying full sentences with a natural, flowing rhythm. Do not pause too long between words."
+              },
+              {
+                "name": "Question Intonation for Past Events",
+                "target": "Use correct rising and falling intonation in past tense questions",
+                "explanation": "When you ask a 'Wh-' question about the past, like 'Where was he born?', your voice should go DOWN at the end. When you ask a Yes/No question like 'Was she a teacher?', your voice should go UP at the end. This helps the listener understand if you are asking for information or asking for confirmation."
+              },
+              {
+                "name": "Key Vocabulary Stress",
+                "target": "Stress the correct syllable in words about achievements and famous people",
+                "explanation": "Words like 'achievement' (a-CHIEVE-ment), 'discover' (dis-COV-er), 'invention' (in-VEN-tion), and 'famous' (FA-mous) have specific stress patterns. Putting the stress on the wrong syllable can make it hard for people to understand you. Listen carefully and repeat these words with the correct stress."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m10-s-practice",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "FAMOUS",
+                "countryAudio": "famous",
+                "countrySyllables": [
+                  {
+                    "text": "FA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "mous",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "in-FA-mous",
+                "natAudio": "infamous",
+                "natSyllables": [
+                  {
+                    "text": "IN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "fa",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "mous",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "In 'famous', the stress is on the first syllable: FA-mous. In 'infamous', the stress stays on the first syllable but the word has a prefix 'in-': IN-fa-mous. Notice how the rhythm changes with the extra syllable at the beginning."
+              },
+              {
+                "id": "pair-2",
+                "country": "INVENT",
+                "countryAudio": "invent",
+                "countrySyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "VENT",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "in-VEN-tion",
+                "natAudio": "invention",
+                "natSyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "VEN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The verb 'invent' has stress on the second syllable: in-VENT. When it becomes the noun 'invention', the stress stays on the second syllable: in-VEN-tion. The ending '-tion' is added but it is not stressed."
+              },
+              {
+                "id": "pair-3",
+                "country": "ACHIEVE",
+                "countryAudio": "achieve",
+                "countrySyllables": [
+                  {
+                    "text": "a",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CHIEVE",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "a-CHIEVE-ment",
+                "natAudio": "achievement",
+                "natSyllables": [
+                  {
+                    "text": "a",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CHIEVE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ment",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The verb 'achieve' has stress on the second syllable: a-CHIEVE. The noun 'achievement' keeps the stress on the same syllable: a-CHIEVE-ment. The suffix '-ment' does not change the stress position."
+              },
+              {
+                "id": "pair-4",
+                "country": "DISCOVER",
+                "countryAudio": "discover",
+                "countrySyllables": [
+                  {
+                    "text": "dis",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "COV",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "er",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "dis-COV-er-y",
+                "natAudio": "discovery",
+                "natSyllables": [
+                  {
+                    "text": "dis",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "COV",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "er",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "y",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The verb 'discover' has stress on the second syllable: dis-COV-er. The noun 'discovery' also keeps the stress on the second syllable: dis-COV-er-y. The extra '-y' ending does not move the stress."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "She was born in eighteen sixty-seven.",
+                "phonetic": "/ʃiː wɒz bɔːrn ɪn ˌeɪˈtiːn ˌsɪksti ˈsevən/",
+                "focus": "Pronouncing 'was born' smoothly and saying years correctly",
+                "hint": "Link 'was' and 'born' together so it sounds like 'wuz-born'. For the year, say 'eighteen' then 'sixty-seven' as two separate parts."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "He worked very hard and discovered something new.",
+                "phonetic": "/hiː wɜːrkt ˈveri hɑːrd ənd dɪsˈkʌvərd ˈsʌmθɪŋ njuː/",
+                "focus": "Past tense '-ed' endings: /t/ in 'worked' and /d/ in 'discovered'",
+                "hint": "Say 'workt' with a quick /t/ at the end. Say 'discovered' with a /d/ sound at the end: dis-CUV-erd. Do not add an extra syllable."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "They were famous scientists in the past.",
+                "phonetic": "/ðeɪ wɜːr ˈfeɪməs ˈsaɪəntɪsts ɪn ðə pɑːst/",
+                "focus": "Pronouncing 'were' and 'scientists' clearly",
+                "hint": "Say 'were' as /wɜːr/ — it rhymes with 'her'. For 'scientists', say 'SY-un-tists' with three syllables. Do not skip the middle syllable."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Was he a great leader? Yes, he was.",
+                "phonetic": "/wɒz hiː ə ɡreɪt ˈliːdər ˈjes hiː wɒz/",
+                "focus": "Rising intonation in Yes/No questions and stress on 'was' in short answers",
+                "hint": "Make your voice go UP at the end of 'Was he a great leader?' Then in the answer 'Yes, he was', stress the word 'was' — say it clearly and strongly."
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "She invented the telephone and changed the world.",
+                "phonetic": "/ʃiː ɪnˈventɪd ðə ˈtelɪfəʊn ənd tʃeɪndʒd ðə wɜːrld/",
+                "focus": "Past tense '-ed' as /ɪd/ in 'invented' and /d/ in 'changed'",
+                "hint": "Say 'in-VEN-tid' with three syllables — the '-ed' is a separate syllable here because 'invent' ends in a /t/ sound. But 'changed' is one syllable: 'chainjd'."
+              },
+              {
+                "id": "spk-d-6",
+                "targetText": "Where was she born and what did she do?",
+                "phonetic": "/weər wɒz ʃiː bɔːrn ənd wɒt dɪd ʃiː duː/",
+                "focus": "Falling intonation on Wh- questions and linking words",
+                "hint": "This is a Wh- question, so your voice should go DOWN at the end. Link 'where was' together smoothly: 'wher-wuz'. Also link 'what did' as 'wut-did'."
+              }
+            ],
+            "roleplay": {
+              "context": "You are visiting a history museum with your English teacher, Mr. Khoirul. You stop in front of a display about a famous person from your country. Mr. Khoirul asks you questions about this person's life, achievements, and why they are important. Answer his questions using Past Simple tense with 'was', 'were', and regular past tense verbs.",
+              "roles": [
+                "Mr. Khoirul",
+                "Student"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Hello! Today we are going to talk about famous people. Can you name a famous person from your country?",
+                  "translation": "Halo! Hari ini kita akan berbicara tentang orang-orang terkenal. Bisakah kamu menyebutkan seorang tokoh terkenal dari negaramu?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, I can. One famous person from my country is R.A. Kartini.",
+                  "translation": "Ya, bisa. Satu orang terkenal dari negara saya adalah R.A. Kartini."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Great choice! Where was she from? And when was she born?",
+                  "translation": "Pilihan bagus! Dari mana asalnya? Dan kapan dia lahir?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "She was from Jepara, Central Java. She was born in eighteen seventy-nine.",
+                  "translation": "Dia berasal dari Jepara, Jawa Tengah. Dia lahir pada tahun seribu delapan ratus tujuh puluh sembilan."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Excellent! Now tell me, why is this person famous? What was her achievement?",
+                  "translation": "Bagus sekali! Sekarang ceritakan, mengapa orang ini terkenal? Apa pencapaiannya?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "She is famous because she fought for women's education. Her achievement was opening a school for girls.",
+                  "translation": "Dia terkenal karena memperjuangkan pendidikan perempuan. Pencapaiannya adalah membuka sekolah untuk anak perempuan."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Well done! That is very interesting. Were there any challenges this person faced?",
+                  "translation": "Bagus sekali! Itu sangat menarik. Apakah ada tantangan yang dihadapi orang ini?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, there were. She had to fight against old traditions. Many people did not want girls to go to school.",
+                  "translation": "Ya, ada. Dia harus melawan tradisi lama. Banyak orang tidak ingin anak perempuan pergi ke sekolah."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "That was very brave of her. Was she successful in the end?",
+                  "translation": "Itu sangat berani. Apakah dia berhasil pada akhirnya?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, she was. She helped many girls get an education. People remember her every year on Kartini Day.",
+                  "translation": "Ya, dia berhasil. Dia membantu banyak anak perempuan mendapat pendidikan. Orang-orang mengenangnya setiap tahun pada Hari Kartini."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-1-m10-s-quiz",
+          "moduleId": "A1.1-M10",
+          "subModuleId": "sub-a1-1-m10-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about a famous person you admire. Use Past Simple tense. Follow the three story points below to guide your story. Speak for about 30 to 45 seconds.",
+                "audioPrompt": "Now it is your turn to tell a story. Think of a famous person you know about. Tell me who they were, what they did, and why they were important. Use past tense words like 'was', 'were', 'lived', and 'worked'. Ready? Please begin.",
+                "storyPoints": [
+                  "Say who the famous person was, where they were from, and when they were born or lived.",
+                  "Describe what this person did — their job, their discovery, or their achievement.",
+                  "Explain why this person was important and how they helped other people."
+                ],
+                "targetSentence": "There was a famous person named Albert Einstein. He was from Germany. He was born in eighteen seventy-nine. He was a great scientist. He discovered important things about physics. He was important because he changed how we understand the world.",
+                "phonetic": "/ðeər wɒz ə ˈfeɪməs ˈpɜːrsən neɪmd ˈælbərt ˈaɪnstaɪn hiː wɒz frɒm ˈdʒɜːrməni/",
+                "expectedKeywords": [
+                  "was",
+                  "were",
+                  "born",
+                  "famous",
+                  "because",
+                  "important"
+                ],
+                "hint": "Remember to use 'was' and 'were' for past descriptions. Say the person's name clearly. Use simple sentences like 'He was a scientist' or 'She lived in...'.",
+                "explanation": "This storytelling task helps you practice organizing information about a famous person's life using Past Simple. Focus on using 'was/were' for descriptions and past tense verbs for actions."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about a great achievement or event from the past. It can be something a famous person did or a historical event. Use Past Simple tense and follow the story points below.",
+                "audioPrompt": "I would like you to tell me about something amazing that happened in the past. It could be an invention, a discovery, or a big event. Tell me what happened, when it happened, and why it was important. Use past tense. Go ahead!",
+                "storyPoints": [
+                  "Describe what the achievement or event was and when it happened.",
+                  "Tell who was involved — the person or people who did it.",
+                  "Explain why this achievement or event was important for the world."
+                ],
+                "targetSentence": "In nineteen sixty-nine, people walked on the moon for the first time. Neil Armstrong was the first person on the moon. He was an American astronaut. It was a very important event because it showed that humans could travel to space.",
+                "phonetic": "/ɪn ˌnaɪnˈtiːn ˌsɪksti naɪn ˈpiːpəl wɔːkt ɒn ðə muːn/",
+                "expectedKeywords": [
+                  "was",
+                  "walked",
+                  "first",
+                  "important",
+                  "happened",
+                  "because"
+                ],
+                "hint": "Start with 'In [year]...' to set the time. Use 'was' or 'were' to describe people and things. Use past verbs like 'walked', 'discovered', 'invented' for actions.",
+                "explanation": "This task practices narrating a past event in sequence. You need to set the time, identify the people involved, and explain the significance — all using Past Simple structures."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are a student in an English class. Your teacher, Mr. Khoirul, asks you about a famous scientist. Answer his questions using Past Simple. Talk about where the scientist was from, what they discovered, and why they were important.",
+                "audioPrompt": "Hello! I am Mr. Khoirul, your English teacher. Today I want to ask you about a famous scientist. Are you ready? Let's start. Can you tell me the name of a famous scientist?",
+                "scenarioContext": "You are in an English classroom. Your teacher is asking you about famous scientists from history. You need to answer questions about one scientist you know, using 'was', 'were', and past tense verbs. Keep your answers simple and clear.",
+                "characterRole": "You are a student answering your teacher's questions about a famous scientist. Use Past Simple tense in your answers. For example: 'He was a scientist. He discovered...'",
+                "targetSentence": "His name was Thomas Edison. He was from America. He was born in eighteen forty-seven. He invented the light bulb. He was very important because his invention changed people's lives.",
+                "phonetic": "/hɪz neɪm wɒz ˈtɒməs ˈedɪsən hiː wɒz frɒm əˈmerɪkə/",
+                "expectedKeywords": [
+                  "was",
+                  "born",
+                  "invented",
+                  "scientist",
+                  "important",
+                  "discovered"
+                ],
+                "hint": "When Mr. Khoirul asks a question, listen carefully and answer with a full sentence. Use 'He was...' or 'She was...' to describe the person. Use past verbs for what they did.",
+                "explanation": "This roleplay practices answering questions about historical figures in a classroom setting. You need to provide factual information using Past Simple forms naturally in conversation."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are visiting a museum with Mr. Khoirul. You see a picture of a famous leader on the wall. Mr. Khoirul asks you questions about this leader. Answer using Past Simple tense.",
+                "audioPrompt": "Look at this picture on the wall! It is a famous leader. Do you know who this person was? Tell me about this leader. Where was he or she from? What did he or she do?",
+                "scenarioContext": "You are standing in a history museum in front of a large portrait of a famous leader. Mr. Khoirul, your guide, points at the picture and asks you to share what you know about this person. Use simple past tense to describe the leader's life and actions.",
+                "characterRole": "You are a museum visitor talking to your guide, Mr. Khoirul. Share what you know about a famous leader using Past Simple. Say where they were from, what they did, and why they were a great leader.",
+                "targetSentence": "This was Soekarno. He was the first president of Indonesia. He was born in nineteen oh one. He was a great leader because he helped Indonesia become independent.",
+                "phonetic": "/ðɪs wɒz suːˈkɑːrnoʊ hiː wɒz ðə fɜːrst ˈprezɪdənt əv ˌɪndəˈniːʒə/",
+                "expectedKeywords": [
+                  "was",
+                  "leader",
+                  "born",
+                  "president",
+                  "great",
+                  "helped"
+                ],
+                "hint": "Start by saying who the person was: 'This was...' or 'He was...'. Then add details about their life. Use 'He helped...' or 'She fought for...' to describe their actions.",
+                "explanation": "This museum roleplay helps you practice describing historical leaders. You use 'was/were' for identity and description, and past tense verbs for their actions and achievements."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are talking to Mr. Khoirul about your favorite famous person from the past. He wants to know about their early life and challenges. Answer his questions using Past Simple.",
+                "audioPrompt": "I want to know more about your favorite famous person. Tell me about their early life. Where were they born? What was their childhood like? Were there any problems or challenges they faced when they were young?",
+                "scenarioContext": "You are having a conversation with Mr. Khoirul during a break at school. He is curious about a famous person you admire. He asks about the person's early life, childhood, and the challenges they faced before becoming successful.",
+                "characterRole": "You are a student sharing information about a famous person's early life with your teacher. Describe where they were born, what their childhood was like, and what challenges they had. Use 'was', 'were', 'had', and other past tense verbs.",
+                "targetSentence": "My favorite famous person was Marie Curie. She was born in Poland in eighteen sixty-seven. Her childhood was difficult because her family was poor. She worked very hard and moved to France to study science.",
+                "phonetic": "/maɪ ˈfeɪvərɪt ˈfeɪməs ˈpɜːrsən wɒz məˈriː ˈkjʊri/",
+                "expectedKeywords": [
+                  "was",
+                  "born",
+                  "childhood",
+                  "difficult",
+                  "worked",
+                  "moved"
+                ],
+                "hint": "Talk about the person's early years. Use 'was born in...' for birthplace. Use 'Her life was...' or 'His childhood was...' for descriptions. Use past verbs like 'worked', 'studied', 'moved' for actions.",
+                "explanation": "This roleplay focuses on describing someone's early life and challenges. It helps you practice using 'was/were' for states and descriptions, and regular past tense verbs for actions in a biographical context."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are a tour guide at a historical site. Mr. Khoirul is a tourist visiting the site. He asks you questions about what happened there in the past. Answer his questions using Past Simple.",
+                "audioPrompt": "Excuse me! I am visiting this historical place for the first time. Can you tell me what happened here? Who lived here? When was this place built? I am very curious about the history!",
+                "scenarioContext": "You are working as a young tour guide at a famous historical site in your city or country. A tourist named Mr. Khoirul arrives and asks you about the history of the place. You need to explain what happened there, who was involved, and when events took place.",
+                "characterRole": "You are a tour guide explaining the history of a famous place to a tourist. Use Past Simple to describe events, people, and dates. Say things like 'This place was built in...', 'A king lived here...', 'People used this place for...'.",
+                "targetSentence": "Welcome! This place was built in the eighteenth century. A great king lived here with his family. He ruled the kingdom for many years. Many important meetings happened in this building. It was a very important place in history.",
+                "phonetic": "/ˈwelkəm ðɪs pleɪs wɒz bɪlt ɪn ðə ˌeɪˈtiːnθ ˈsentʃəri/",
+                "expectedKeywords": [
+                  "was",
+                  "built",
+                  "lived",
+                  "happened",
+                  "important",
+                  "years"
+                ],
+                "hint": "As a tour guide, start with 'Welcome!' and then describe the place. Use 'was built' for when it was made. Use 'lived', 'ruled', 'happened' for past events. Keep your sentences short and clear.",
+                "explanation": "This roleplay puts you in the role of a tour guide, which requires you to narrate historical facts using Past Simple. It practices passive voice basics ('was built') and active past tense verbs in a real-world context."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Say each vocabulary word clearly. These are important words for talking about famous people and their achievements in the past. Pay attention to the correct pronunciation of each word.",
+                "audioPrompt": "Let's practice some important vocabulary words. I will give you a word, and you say it out loud. Make sure you pronounce each word clearly and put the stress on the correct syllable. Here is your first word.",
+                "targetSentence": "achievement, discovery, invention, scientist, president, explorer, leader, successful, famous, important",
+                "phonetic": "/əˈtʃiːvmənt/ /dɪsˈkʌvəri/ /ɪnˈvenʃən/ /ˈsaɪəntɪst/ /ˈprezɪdənt/ /ɪkˈsplɔːrər/ /ˈliːdər/ /səkˈsesfl/ /ˈfeɪməs/ /ɪmˈpɔːrtənt/",
+                "expectedKeywords": [
+                  "achievement",
+                  "discovery",
+                  "invention",
+                  "scientist",
+                  "president",
+                  "explorer",
+                  "leader",
+                  "successful",
+                  "famous",
+                  "important"
+                ],
+                "hint": "Focus on the stressed syllable in each word: a-CHIEVE-ment, dis-COV-er-y, in-VEN-tion, SCI-en-tist, PRES-i-dent, ex-PLOR-er, LEA-der, suc-CESS-ful, FA-mous, im-POR-tant.",
+                "explanation": "These vocabulary words are essential for discussing famous people and their contributions. Correct pronunciation of these words, especially the stressed syllables, will make your speech clearer and more natural when talking about historical figures."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Say each sentence out loud. Focus on using the correct Past Simple form. Pay attention to 'was', 'were', and the past tense of regular and irregular verbs.",
+                "audioPrompt": "Now let's practice grammar. I will show you sentences in Past Simple. Please say each sentence clearly. Make sure you use 'was', 'were', and past tense verbs correctly. Listen to the difference between present and past forms.",
+                "targetSentence": "She was a famous scientist. They were great leaders. He discovered a new land. She invented a machine. We were happy about the news. The children walked to school. He lived in a small house. They worked very hard every day.",
+                "phonetic": "/ʃiː wɒz ə ˈfeɪməs ˈsaɪəntɪst/ /ðeɪ wɜːr ɡreɪt ˈliːdərz/ /hiː dɪsˈkʌvərd ə njuː lænd/ /ʃiː ɪnˈventɪd ə məˈʃiːn/ /wiː wɜːr ˈhæpi əˈbaʊt ðə njuːz/ /ðə ˈtʃɪldrən wɔːkt tuː skuːl/ /hiː lɪvd ɪn ə smɔːl haʊs/ /ðeɪ wɜːrkt ˈveri hɑːrd ˈevri deɪ/",
+                "expectedKeywords": [
+                  "was",
+                  "were",
+                  "discovered",
+                  "invented",
+                  "walked",
+                  "lived",
+                  "worked"
+                ],
+                "hint": "Remember: use 'was' with I/he/she/it and 'were' with you/we/they. For regular past verbs, add '-ed' but pronounce it correctly: 'walked' = /wɔːkt/, 'lived' = /lɪvd/, 'invented' = /ɪnˈventɪd/.",
+                "explanation": "This grammar drill reinforces Past Simple sentence structures. You practice subject-verb agreement with 'was/were' and the correct pronunciation of regular past tense endings. These are the core grammar patterns needed to talk about famous people and past events."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Syllable Stress Shift Drill",
+                "instruction": "Practice saying these word pairs. Notice how the stress moves or stays when the word changes form. Say each word clearly with the correct stress pattern.",
+                "audioPrompt": "Now let's practice syllable stress. I will give you pairs of words. Notice which syllable is stressed in each word. Sometimes the stress moves when the word changes from a verb to a noun. Say each word and feel the rhythm change.",
+                "targetSentence": "inVENT → inVENtion, disCOVer → disCOVery, aCHIEVE → aCHIEVEment, exPLORE → exPLORer, preSENT → PREsent, reCORD → REcord",
+                "phonetic": "/ɪnˈvent → ɪnˈvenʃən/ /dɪsˈkʌvər → dɪsˈkʌvəri/ /əˈtʃiːv → əˈtʃiːvmənt/ /ɪkˈsplɔːr → ɪkˈsplɔːrər/ /prɪˈzent → ˈprezənt/ /rɪˈkɔːrd → ˈrekɔːrd/",
+                "expectedKeywords": [
+                  "invent",
+                  "invention",
+                  "discover",
+                  "discovery",
+                  "achieve",
+                  "achievement",
+                  "explore",
+                  "explorer",
+                  "present",
+                  "record"
+                ],
+                "hint": "For most pairs, the stress stays on the same syllable: in-VENT and in-VEN-tion both stress the second syllable. But watch out for 'present' and 'record' — the stress MOVES: pre-SENT (verb) becomes PRES-ent (noun), and re-CORD (verb) becomes REC-ord (noun).",
+                "explanation": "Understanding syllable stress shifts is important for clear communication. Most verb-to-noun changes in this unit keep the same stress, but some common English words shift stress between verb and noun forms. Practicing these pairs trains your ear and mouth to produce natural English rhythm."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Rising / Falling Intonation Drill",
+                "instruction": "Practice the correct intonation pattern for each sentence. Use FALLING intonation (voice goes down) for Wh- questions and statements. Use RISING intonation (voice goes up) for Yes/No questions.",
+                "audioPrompt": "Let's practice intonation now. Your voice should go DOWN at the end of Wh- questions and statements. Your voice should go UP at the end of Yes/No questions. Listen to the pattern and then repeat each sentence with the correct intonation.",
+                "targetSentence": "Where was she born? ↘ | Was he a great leader? ↗ | She was a famous scientist. ↘ | Did they discover something new? ↗ | What was his achievement? ↘ | Were there any challenges? ↗ | He invented the light bulb. ↘ | Was she successful? ↗",
+                "phonetic": "/weər wɒz ʃiː bɔːrn ↘/ /wɒz hiː ə ɡreɪt ˈliːdər ↗/ /ʃiː wɒz ə ˈfeɪməs ˈsaɪəntɪst ↘/ /dɪd ðeɪ dɪsˈkʌvər ˈsʌmθɪŋ njuː ↗/ /wɒt wɒz hɪz əˈtʃiːvmənt ↘/ /wɜːr ðeər ˈeni ˈtʃælɪndʒɪz ↗/ /hiː ɪnˈventɪd ðə laɪt bʌlb ↘/ /wɒz ʃiː səkˈsesfl ↗/",
+                "expectedKeywords": [
+                  "where",
+                  "was",
+                  "born",
+                  "leader",
+                  "famous",
+                  "discover",
+                  "achievement",
+                  "challenges",
+                  "invented",
+                  "successful"
+                ],
+                "hint": "Remember the rule: Wh- questions (Where, What, When, Who, Why) and statements always end with your voice going DOWN ↘. Yes/No questions (Was he...? Did they...? Were there...?) always end with your voice going UP ↗. Exaggerate the intonation at first to feel the pattern.",
+                "explanation": "Correct intonation is essential for being understood in English. Falling intonation on Wh- questions signals that you are asking for specific information. Rising intonation on Yes/No questions signals that you expect a 'yes' or 'no' answer. Practicing these patterns with past tense questions helps you sound natural when discussing famous people and historical events."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "id": "B1.5-M10",
+  "levelId": "B1.5",
+  "title": "Unit 10: Digital Privacy, Cybersecurity & Personal Data",
+  "cefr": "B1",
+  "group": "Cyber Society",
+  "objective": "Mampu membahas isu keamanan data dan hak privasi digital dengan tata bahasa passive reporting (is said to be, is believed that).",
+  "complexity": "medium",
+  "estimatedMinutes": 15,
+  "isExam": false,
+  "passingScore": 70,
+  "orderIndex": 62,
+  "sections": {
+    "theory": {
+      "summary": "Dalam unit ini, kita akan mempelajari **Passive Reporting Structures** — struktur kalimat pasif yang digunakan untuk melaporkan informasi, pendapat, atau klaim tanpa menyebut sumber secara langsung. Struktur ini sangat umum digunakan dalam berita, laporan teknologi, diskusi akademik, dan artikel tentang keamanan siber. Contohnya: *'It is said that hackers can access your data in seconds'* atau *'Personal data is believed to be at risk.'* Mengapa ini penting? Karena dalam dunia digital saat ini, kita sering membaca atau mendengar klaim tentang privasi dan keamanan data yang belum tentu bisa dikonfirmasi sumbernya. Passive reporting membantu kita menyampaikan informasi tersebut secara objektif dan akademis, sesuai dengan gaya bahasa B1 ke atas.",
+      "rules": [
+        {
+          "pattern": "It + is/was + reported/said/believed/thought/claimed + that + Subject + Verb",
+          "meaning": "Digunakan untuk melaporkan informasi atau klaim umum tanpa menyebut siapa yang mengatakannya. Cocok untuk konteks berita dan laporan formal.",
+          "example": "It is reported that millions of user accounts were compromised in the data breach."
+        },
+        {
+          "pattern": "Subject + is/are + said/believed/thought/reported/claimed + to + base verb / to be + adjective/noun",
+          "meaning": "Digunakan untuk mendeskripsikan subjek tertentu berdasarkan laporan atau kepercayaan umum. Lebih ringkas dan sering muncul dalam artikel teknologi dan keamanan siber.",
+          "example": "Personal data collected by social media platforms is believed to be sold to third-party advertisers."
+        },
+        {
+          "pattern": "Subject + is/are + said/believed/thought + to have + past participle",
+          "meaning": "Digunakan ketika kejadian yang dilaporkan terjadi di masa lalu relatif terhadap waktu pelaporan. Menunjukkan bahwa aksi sudah selesai sebelum pernyataan dibuat.",
+          "example": "The cybercriminal is said to have stolen over two million passwords before being caught."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Jebakan: Mencampur 'It is said that' dengan subjek langsung tanpa penyesuaian",
+        "explanation": "Banyak pelajar mencoba menggabungkan dua struktur sekaligus, misalnya menulis 'It is said that the hacker is believed to...' — ini redundan dan tidak gramatikal. Pilih SATU struktur saja. Selain itu, kesalahan umum lainnya adalah menggunakan kata kerja aktif setelah 'to be said' tanpa mengubahnya ke bentuk infinitif yang benar. Ingat: setelah 'is said/believed/thought', gunakan 'to + base verb' (bukan 'that + verb').",
+        "wrong": "The app is believed that it collects your location data secretly.",
+        "correct": "The app is believed to collect your location data secretly."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Bentuk",
+          "prompt": "Kalimat mana yang menggunakan struktur passive reporting dengan benar?",
+          "options": [
+            "Cybercriminals are said to target elderly users more frequently.",
+            "Cybercriminals said that they are targeting elderly users.",
+            "It is said cybercriminals that target elderly users frequently."
+          ],
+          "correctIndex": 0,
+          "explanation": "Kalimat pertama menggunakan struktur 'Subject + are said + to + base verb' dengan benar. Kalimat kedua adalah kalimat aktif biasa, bukan passive reporting. Kalimat ketiga salah secara gramatikal karena menempatkan subjek di tengah struktur 'It is said'."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Aturan",
+          "prompt": "Manakah kalimat yang SALAH karena mencampur dua struktur passive reporting sekaligus?",
+          "options": [
+            "It is claimed that the new privacy law will protect users' data.",
+            "It is believed that the app is said to track your location.",
+            "User passwords are thought to have been leaked in the attack."
+          ],
+          "correctIndex": 1,
+          "explanation": "Kalimat kedua salah karena menggabungkan 'It is believed that' dan 'is said to' dalam satu kalimat — ini redundan dan tidak gramatikal. Gunakan hanya satu struktur: misalnya 'It is believed that the app tracks your location' ATAU 'The app is said to track your location.'"
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks",
+          "prompt": "Dua teman sedang mendiskusikan berita keamanan siber. Alex berkata: 'Did you read about that huge data breach last week?' Morgan menjawab: 'Yes! Apparently, the hackers [...] over fifty million accounts before anyone noticed.' Pilih jawaban Morgan yang paling tepat menggunakan passive reporting.",
+          "options": [
+            "are said they accessed",
+            "said to access",
+            "are said to have accessed"
+          ],
+          "correctIndex": 2,
+          "explanation": "Jawaban yang benar adalah 'are said to have accessed' karena kejadian (mengakses akun) terjadi di masa lalu sebelum pernyataan dibuat. Struktur 'Subject + are said + to have + past participle' digunakan untuk melaporkan aksi yang sudah selesai. Opsi pertama salah karena tidak menggunakan infinitif, dan opsi kedua tidak lengkap tanpa subjek."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "data breach",
+        "translation": "kebocoran data",
+        "example": "The data breach exposed the personal information of over ten million users.",
+        "context": "Digunakan ketika data pribadi diakses atau dicuri secara ilegal oleh pihak yang tidak berwenang."
+      },
+      {
+        "word": "cybersecurity",
+        "translation": "keamanan siber",
+        "example": "Companies are investing heavily in cybersecurity to protect their customers' information.",
+        "context": "Merujuk pada praktik dan teknologi yang digunakan untuk melindungi sistem komputer dan data dari serangan digital."
+      },
+      {
+        "word": "digital privacy",
+        "translation": "privasi digital",
+        "example": "Many people are concerned about their digital privacy when using social media platforms.",
+        "context": "Hak seseorang untuk mengontrol informasi pribadi mereka di dunia digital."
+      },
+      {
+        "word": "phishing",
+        "translation": "penipuan daring / phishing",
+        "example": "She almost fell for a phishing email that pretended to be from her bank.",
+        "context": "Teknik penipuan siber di mana pelaku menyamar sebagai entitas terpercaya untuk mencuri informasi sensitif."
+      },
+      {
+        "word": "encryption",
+        "translation": "enkripsi",
+        "example": "End-to-end encryption ensures that only the sender and receiver can read the messages.",
+        "context": "Proses mengubah data menjadi kode rahasia agar tidak bisa dibaca oleh pihak yang tidak berwenang."
+      },
+      {
+        "word": "personal data",
+        "translation": "data pribadi",
+        "example": "Under the new regulation, companies must ask for consent before collecting personal data.",
+        "context": "Informasi yang dapat mengidentifikasi seseorang, seperti nama, alamat, nomor telepon, atau data keuangan."
+      }
+    ],
+    "dialogue": {
+      "context": "Alex dan Morgan adalah dua mahasiswa yang sedang berdiskusi di kafe kampus setelah membaca artikel tentang kebocoran data besar-besaran yang melibatkan sebuah aplikasi media sosial populer.",
+      "lines": [
+        {
+          "speaker": "Alex",
+          "text": "Have you seen the news? That popular social media app is reported to have leaked the personal data of over thirty million users.",
+          "translation": "Kamu sudah lihat beritanya? Aplikasi media sosial populer itu dilaporkan telah membocorkan data pribadi lebih dari tiga puluh juta pengguna."
+        },
+        {
+          "speaker": "Morgan",
+          "text": "Seriously? I use that app every day! It is believed that the company knew about the breach for weeks before telling anyone.",
+          "translation": "Serius? Aku pakai aplikasi itu setiap hari! Dipercaya bahwa perusahaan tersebut sudah mengetahui kebocoran itu selama berminggu-minggu sebelum memberitahu siapa pun."
+        },
+        {
+          "speaker": "Alex",
+          "text": "Exactly. And the hackers are said to have used a phishing technique to get past the company's encryption systems.",
+          "translation": "Tepat sekali. Dan para peretas itu dikatakan telah menggunakan teknik phishing untuk menembus sistem enkripsi perusahaan tersebut."
+        },
+        {
+          "speaker": "Morgan",
+          "text": "This is why digital privacy matters so much. I think everyone should use strong passwords and enable two-factor authentication to protect their personal data.",
+          "translation": "Inilah mengapa privasi digital sangat penting. Menurutku semua orang harus menggunakan kata sandi yang kuat dan mengaktifkan autentikasi dua faktor untuk melindungi data pribadi mereka."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Mampu mendiskusikan isu keamanan data dan privasi digital menggunakan struktur passive reporting (is said to, is believed that, is reported to have) secara alami dan percaya diri dalam percakapan sehari-hari.",
+      "scenario": "You are talking to a classmate about a recent cybersecurity scandal you read about online. A well-known e-commerce website is said to have suffered a massive data breach. Use passive reporting structures to share what you have read, express your opinion about digital privacy, and ask your classmate what they do to protect their personal data. Try to use at least three different passive reporting expressions during the conversation."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Pilih kalimat yang menggunakan passive reporting structure dengan BENAR untuk melaporkan informasi masa lalu.",
+          "options": [
+            "The hacker is said to steal passwords last year.",
+            "The hacker is said to have stolen passwords last year.",
+            "The hacker said to have stolen passwords last year.",
+            "It is said the hacker to have stolen passwords last year."
+          ],
+          "correctIndex": 1,
+          "explanation": "Untuk melaporkan kejadian yang terjadi di masa lalu, gunakan 'Subject + is/are said + to have + past participle'. Opsi B ('is said to have stolen') adalah satu-satunya yang benar. Opsi A salah karena menggunakan base verb tanpa 'have'. Opsi C tidak memiliki 'is'. Opsi D salah secara gramatikal karena menempatkan subjek setelah 'It is said'."
+        },
+        {
+          "id": 2,
+          "prompt": "Kalimat mana yang paling tepat untuk melengkapi artikel berita ini? 'According to cybersecurity experts, the new malware ______ capable of bypassing most antivirus software.'",
+          "options": [
+            "says to be",
+            "is believed to be",
+            "believed that is",
+            "is said that it is"
+          ],
+          "correctIndex": 1,
+          "explanation": "Struktur yang benar adalah 'Subject + is believed + to be + adjective/noun'. Opsi B ('is believed to be') tepat karena mengikuti pola ini. Opsi A ('says to be') tidak gramatikal. Opsi C ('believed that is') tidak memiliki auxiliary verb. Opsi D ('is said that it is') salah karena setelah 'Subject + is said', harus diikuti 'to + verb', bukan 'that + clause'."
+        },
+        {
+          "id": 3,
+          "prompt": "Ubah kalimat aktif ini ke passive reporting: 'People think that the government collects citizens' data without permission.' Manakah transformasi yang BENAR?",
+          "options": [
+            "The government is thought that it collects citizens' data without permission.",
+            "It is thought the government to collect citizens' data without permission.",
+            "The government is thought to collect citizens' data without permission.",
+            "It thinks that the government collects citizens' data without permission."
+          ],
+          "correctIndex": 2,
+          "explanation": "Transformasi yang benar menggunakan pola 'Subject + is thought + to + base verb'. Opsi C ('The government is thought to collect...') adalah jawaban yang tepat. Opsi A salah karena menggunakan 'that it' setelah subjek. Opsi B salah karena menggunakan 'It is thought' tetapi kemudian menempatkan subjek dan infinitif secara tidak gramatikal. Opsi D adalah kalimat aktif biasa."
+        },
+        {
+          "id": 4,
+          "prompt": "Manakah pernyataan yang BENAR tentang penggunaan passive reporting structures?",
+          "options": [
+            "Passive reporting hanya bisa digunakan dalam kalimat negatif.",
+            "Kita harus selalu menyebutkan sumber informasi secara eksplisit saat menggunakan passive reporting.",
+            "Struktur 'It is said that' dan 'Subject + is said to' memiliki makna yang sama tetapi bentuk yang berbeda.",
+            "Passive reporting hanya digunakan untuk melaporkan kejadian di masa depan."
+          ],
+          "correctIndex": 2,
+          "explanation": "Pernyataan yang benar adalah opsi C. Kedua struktur — 'It is said that the app tracks users' dan 'The app is said to track users' — memiliki makna yang sama (keduanya melaporkan informasi tanpa menyebut sumber), hanya berbeda dalam konstruksi gramatikalnya. Opsi A salah karena passive reporting bisa digunakan dalam kalimat positif, negatif, dan tanya. Opsi B salah karena justru fungsi utama passive reporting adalah untuk TIDAK menyebut sumber secara eksplisit. Opsi D salah karena passive reporting bisa digunakan untuk masa kini, masa lalu, maupun masa depan."
+        }
+      ]
+    }
+  }
+}

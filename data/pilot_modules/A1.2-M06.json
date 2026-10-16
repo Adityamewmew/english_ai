@@ -1,0 +1,1704 @@
+{
+  "module": {
+    "id": "A1.2-M06",
+    "levelId": "A1.2",
+    "title": "Public Transportation & Commuting",
+    "cefr": "A1",
+    "group": "A1.2 - Daily Logistics & Practical Actions",
+    "objective": "Navigate public transportation (buses, trains, taxis), ask for schedule information, and purchase travel tickets in English.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 6
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-2-m06-reading",
+      "moduleId": "A1.2-M06",
+      "skillType": "reading",
+      "title": "Reading Mission: Getting Around Town by Bus, Train & Taxi",
+      "theme": "Public Transportation & Commuting",
+      "grammarFocus": "Prepositions of movement and location (to, from, at) with transportation verbs (go, depart, arrive)",
+      "vocabularyFocus": "Public transport vocabulary: types of tickets, station facilities, schedules, and common commuter phrases",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-2-m06-r-theory",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to your Reading Mission about Public Transportation & Commuting! In this mission, you will read a short, real-life passage about someone using buses and trains to get around a city. You will learn how to understand schedules, buy tickets, and ask for directions at a station. By the end of this mission, you will feel more confident reading signs, timetables, and simple travel information in English. Let's get moving!",
+            "linguisticTarget": {
+              "grammar": "Using prepositions 'to', 'from', and 'at' with transportation verbs: 'go to', 'depart from', 'arrive at'. Also practising 'Which + noun + goes to...?' question patterns for asking about transport routes.",
+              "vocabulary": "Key words for public transport: platform, schedule, fare, delay, single ticket, return ticket, departure, arrival, commute, ticket office, timetable, and passenger.",
+              "readingStrategy": "Scanning for specific details such as times, prices, and platform numbers. Skimming the passage first to understand the main idea, then reading again slowly to find key information."
+            },
+            "learningObjectives": [
+              "Understand the main idea of a short A1 passage about using public transportation in a city.",
+              "Identify key details including ticket types, departure times, platform numbers, and fares.",
+              "Recognize and practise the correct use of prepositions 'to', 'from', and 'at' in transportation contexts.",
+              "Learn to scan a reading passage for specific information like prices and schedules.",
+              "Build confidence with common phrases used at bus stops, train stations, and ticket offices."
+            ],
+            "contextWarmup": {
+              "prompt": "You are at a train station and you want to go to the airport. What do you say to the ticket officer?",
+              "options": [
+                "A single ticket to the airport, please.",
+                "I depart from the airport, please.",
+                "The airport arrives at me, please."
+              ],
+              "correctIndex": 0,
+              "explanation": "Great job! 'A single ticket to the airport, please.' is the correct and natural way to buy a one-way ticket. We use 'to' to show the destination — the place we want to go. Option B incorrectly uses 'depart from' (which means to leave a place), and Option C does not make sense in English."
+            },
+            "rules": [
+              "Use 'go TO + destination' when you talk about where you want to travel: 'This bus goes to the city centre.' The preposition 'to' always shows the direction or destination.",
+              "Use 'depart FROM + place' to say where a bus or train leaves: 'The train departs from platform 3.' The preposition 'from' shows the starting point.",
+              "Use 'arrive AT + place' to say where a bus or train stops: 'The bus arrives at the station at 10:00.' The preposition 'at' shows the specific location of arrival.",
+              "Use 'Which + noun + goes to...?' to ask about routes: 'Which bus goes to the hospital?' This is a very useful question pattern for travellers.",
+              "Remember the difference between ticket types: a 'single ticket' is for one way only, a 'return ticket' is for going and coming back, and a 'day pass' lets you travel all day."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Beginner Pitfall: Mixing Up 'to', 'from', and 'at'",
+              "explanation": "Many beginners confuse the prepositions 'to', 'from', and 'at' when talking about transportation. Remember this simple rule: 'to' = destination (where you want to go), 'from' = origin (where you start), 'at' = specific location (where you are or where something happens). Mixing these up can completely change the meaning of your sentence!",
+              "wrong": "The bus goes from the airport. (when you mean you want to GO to the airport)",
+              "correct": "The bus goes to the airport. (use 'to' for your destination)"
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Public Transportation & Commuting",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in natural spoken English:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "am",
+                "vowelDropped": "a",
+                "remainder": "m",
+                "contracted": "I'm",
+                "exampleFull": "I am waiting for the bus.",
+                "exampleContracted": "I'm waiting for the bus."
+              },
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It is a 15-minute delay.",
+                "exampleContracted": "It's a 15-minute delay."
+              },
+              {
+                "subject": "We",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "We're",
+                "exampleFull": "We are on platform 2.",
+                "exampleContracted": "We're on platform 2."
+              },
+              {
+                "subject": "They",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "They're",
+                "exampleFull": "They are taking the train to London.",
+                "exampleContracted": "They're taking the train to London."
+              },
+              {
+                "subject": "The train",
+                "verb": "does not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "doesn't",
+                "exampleFull": "The train does not stop here.",
+                "exampleContracted": "The train doesn't stop here."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Structure with Transportation Prepositions (to, from, at)",
+              "description": "Assemble and swap sentence blocks to explore affirmative, negative, and question patterns:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person (Singular)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "First Person Plural"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Third Person Plural"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Second Person"
+                }
+              ],
+              "complements": [
+                "waiting at the bus stop",
+                "going to the train station",
+                "arriving at platform 4",
+                "departing from the city centre",
+                "buying a return ticket to Manchester",
+                "commuting to work by bus"
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m06-r-vocab",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "platform",
+                "ipa": "/ˈplæt.fɔːm/",
+                "meaning": "peron, tempat naik kereta",
+                "collocation": "The train leaves from platform 5."
+              },
+              {
+                "word": "schedule",
+                "ipa": "/ˈsked.juːl/",
+                "meaning": "jadwal",
+                "collocation": "Can I see the bus schedule, please?"
+              },
+              {
+                "word": "delay",
+                "ipa": "/dɪˈleɪ/",
+                "meaning": "keterlambatan",
+                "collocation": "There is a 15-minute delay on the train."
+              },
+              {
+                "word": "fare",
+                "ipa": "/feər/",
+                "meaning": "ongkos, tarif",
+                "collocation": "The bus fare is £2.50."
+              },
+              {
+                "word": "departure",
+                "ipa": "/dɪˈpɑː.tʃər/",
+                "meaning": "keberangkatan",
+                "collocation": "The departure time is 9:30 AM."
+              },
+              {
+                "word": "arrival",
+                "ipa": "/əˈraɪ.vəl/",
+                "meaning": "kedatangan",
+                "collocation": "The arrival time is 11:00 AM."
+              },
+              {
+                "word": "ticket office",
+                "ipa": "/ˈtɪk.ɪt ˈɒf.ɪs/",
+                "meaning": "loket tiket",
+                "collocation": "You can buy tickets at the ticket office."
+              },
+              {
+                "word": "return ticket",
+                "ipa": "/rɪˈtɜːn ˈtɪk.ɪt/",
+                "meaning": "tiket pulang-pergi",
+                "collocation": "I need a return ticket to Cambridge."
+              },
+              {
+                "word": "single ticket",
+                "ipa": "/ˈsɪŋ.ɡəl ˈtɪk.ɪt/",
+                "meaning": "tiket sekali jalan",
+                "collocation": "A single ticket to the airport costs £10."
+              },
+              {
+                "word": "commute",
+                "ipa": "/kəˈmjuːt/",
+                "meaning": "perjalanan rutin (rumah-kantor)",
+                "collocation": "I commute to work by train every day."
+              },
+              {
+                "word": "passenger",
+                "ipa": "/ˈpæs.ən.dʒər/",
+                "meaning": "penumpang",
+                "collocation": "There are many passengers on the morning bus."
+              },
+              {
+                "word": "timetable",
+                "ipa": "/ˈtaɪm.teɪ.bəl/",
+                "meaning": "jadwal waktu perjalanan",
+                "collocation": "I check the timetable before I leave home."
+              },
+              {
+                "word": "bus stop",
+                "ipa": "/bʌs stɒp/",
+                "meaning": "halte bus",
+                "collocation": "Please wait at the bus stop."
+              },
+              {
+                "word": "route",
+                "ipa": "/ruːt/",
+                "meaning": "rute, jalur perjalanan",
+                "collocation": "Bus number 42 takes the fastest route to the centre."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m06-r-guided",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-reading",
+          "sectionType": "dialogue",
+          "title": "Reading Passage: Maria's Morning Commute",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Maria's Morning Commute",
+            "context": "Maria is a student in London. Every morning, she uses public transportation to go to her university. Read about her daily journey and find out how she travels.",
+            "text": "Maria lives in North London. Every morning, she commutes to her university in the city centre. First, she walks to the bus stop near her house. She usually takes bus number 73. The bus fare is £1.65. The bus departs from her stop at 7:45 AM and arrives at King's Cross station at 8:15 AM.\n\nAt King's Cross, Maria goes to the ticket office. She buys a single ticket to Russell Square. The ticket costs £2.40. She checks the timetable on the wall. Her train departs from platform 2 at 8:25 AM. Today, there is a small delay. The announcement says: \"The 8:25 train is delayed by 10 minutes.\"\n\nMaria waits with the other passengers on the platform. The train finally arrives at 8:35 AM. She gets on the train and arrives at Russell Square at 8:42 AM. Her university is a short walk from the station. Maria is happy because she is not late for her class!",
+            "wordCount": 155,
+            "highlights": [
+              {
+                "text": "commutes",
+                "note": "This verb means to travel regularly between home and work or school.",
+                "type": "vocab"
+              },
+              {
+                "text": "bus fare",
+                "note": "The price you pay to ride the bus. 'Fare' means the cost of a journey.",
+                "type": "vocab"
+              },
+              {
+                "text": "departs from",
+                "note": "Notice the preposition 'from' — we use 'depart FROM' to show the starting place.",
+                "type": "grammar"
+              },
+              {
+                "text": "arrives at",
+                "note": "Notice the preposition 'at' — we use 'arrive AT' to show the destination point.",
+                "type": "grammar"
+              },
+              {
+                "text": "single ticket",
+                "note": "A ticket for one way only, not a return (round) trip.",
+                "type": "vocab"
+              },
+              {
+                "text": "platform 2",
+                "note": "The specific area at a station where you wait for and board a train.",
+                "type": "vocab"
+              },
+              {
+                "text": "delay",
+                "note": "When a bus or train is late. Here the train is delayed by 10 minutes.",
+                "type": "vocab"
+              },
+              {
+                "text": "passengers",
+                "note": "People who travel on a bus, train, or other public transport.",
+                "type": "vocab"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m06-r-practice",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-reading",
+          "sectionType": "practice",
+          "title": "Guided Comprehension Check",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "prompt": "What is the main idea of this passage?",
+              "options": [
+                "Maria uses buses and trains to travel to her university every morning.",
+                "Maria drives her car to work in North London.",
+                "Maria buys a return ticket and takes a taxi to school."
+              ],
+              "correctIndex": 0,
+              "explanation": "The passage describes Maria's daily commute using public transportation — a bus and then a train — to get to her university. She does not drive a car or take a taxi."
+            },
+            "detailQuestions": [
+              {
+                "id": 1,
+                "prompt": "How much is the bus fare for Maria's journey?",
+                "options": [
+                  "£1.65",
+                  "£2.40",
+                  "£2.50"
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage says: 'The bus fare is £1.65.' The price of £2.40 is for her train ticket, not the bus."
+              },
+              {
+                "id": 2,
+                "prompt": "Which platform does Maria's train depart from?",
+                "options": [
+                  "Platform 5",
+                  "Platform 2",
+                  "Platform 7"
+                ],
+                "correctIndex": 1,
+                "explanation": "The passage clearly states: 'Her train departs from platform 2 at 8:25 AM.' Remember, we use 'depart FROM' to show the starting point."
+              },
+              {
+                "id": 3,
+                "prompt": "How long is the train delayed?",
+                "options": [
+                  "5 minutes",
+                  "10 minutes",
+                  "15 minutes"
+                ],
+                "correctIndex": 1,
+                "explanation": "The announcement in the passage says: 'The 8:25 train is delayed by 10 minutes.' That is why the train arrives at 8:35 AM instead of 8:25 AM."
+              },
+              {
+                "id": 4,
+                "prompt": "What type of ticket does Maria buy at King's Cross?",
+                "options": [
+                  "A return ticket",
+                  "A day pass",
+                  "A single ticket"
+                ],
+                "correctIndex": 2,
+                "explanation": "The passage says: 'She buys a single ticket to Russell Square.' A single ticket is for one way only. She does not buy a return ticket or a day pass."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m06-r-quiz",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-reading",
+          "sectionType": "quiz",
+          "title": "Reading Mastery Quiz",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "According to the passage, where does Maria live?",
+                "options": [
+                  "In the city centre",
+                  "In North London",
+                  "Near Russell Square"
+                ],
+                "answer": "In North London",
+                "explanation": "The very first sentence of the passage says: 'Maria lives in North London.' Her university is in the city centre, not her home."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which bus does Maria usually take?",
+                "options": [
+                  "Bus number 42",
+                  "Bus number 73",
+                  "Bus number 15"
+                ],
+                "answer": "Bus number 73",
+                "explanation": "The passage states: 'She usually takes bus number 73.' This is the bus that goes from her stop to King's Cross station."
+              },
+              {
+                "id": "q-r-3",
+                "question": "Choose the correct sentence: 'The train departs ___ platform 2.'",
+                "options": [
+                  "to",
+                  "at",
+                  "from"
+                ],
+                "answer": "from",
+                "explanation": "We use 'depart FROM' to show the starting point or place of departure. 'The train departs from platform 2' is the correct pattern. We do NOT say 'depart to' or 'depart at'."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What time does the bus arrive at King's Cross station?",
+                "options": [
+                  "7:45 AM",
+                  "8:15 AM",
+                  "8:25 AM"
+                ],
+                "answer": "8:15 AM",
+                "explanation": "The passage says: 'The bus departs from her stop at 7:45 AM and arrives at King's Cross station at 8:15 AM.' The bus journey takes 30 minutes."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What is a 'return ticket'?",
+                "options": [
+                  "A ticket for one way only",
+                  "A ticket for going and coming back",
+                  "A ticket that lets you travel all day"
+                ],
+                "answer": "A ticket for going and coming back",
+                "explanation": "A 'return ticket' covers two journeys — going to your destination AND coming back. A 'single ticket' is for one way only, and a 'day pass' lets you travel all day."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Choose the correct sentence: 'The bus ___ at the city centre at 9:00 AM.'",
+                "options": [
+                  "departs",
+                  "arrives",
+                  "goes from"
+                ],
+                "answer": "arrives",
+                "explanation": "We use 'arrive AT + place' to say where a bus or train reaches its destination. 'The bus arrives at the city centre at 9:00 AM' is correct. 'Departs' means to leave, not to reach a place."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Why is Maria happy at the end of the passage?",
+                "options": [
+                  "Because she finds a cheap ticket",
+                  "Because she is not late for her class",
+                  "Because there is no delay today"
+                ],
+                "answer": "Because she is not late for her class",
+                "explanation": "The last sentence says: 'Maria is happy because she is not late for her class!' Even though there was a 10-minute delay, she still arrived on time."
+              },
+              {
+                "id": "q-r-8",
+                "question": "Which question pattern is correct for asking about a bus route?",
+                "options": [
+                  "What bus goes from the hospital?",
+                  "Which bus goes to the hospital?",
+                  "Where bus goes at the hospital?"
+                ],
+                "answer": "Which bus goes to the hospital?",
+                "explanation": "The correct pattern is 'Which + noun + goes to + destination?' So 'Which bus goes to the hospital?' is correct. We use 'to' to show the destination we want to reach."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m06-listening",
+      "moduleId": "A1.2-M06",
+      "skillType": "listening",
+      "title": "Listening Mission: Navigating the Train Station",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-2-m06-l-theory",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening mission, you will hear a conversation at a train station. A traveller named Sarah asks a ticket officer about train schedules, ticket prices, and platform information. At A1 level, focus on listening for key words like numbers, times, prices, and place names. You do not need to understand every single word. Listen for the important information: Where is she going? What time is the train? How much does the ticket cost? These are the kinds of questions you will answer in real life when you use public transportation.",
+            "learningObjectives": [
+              "Understand basic questions and answers about train schedules and departure times.",
+              "Identify ticket prices and types (single, return) when spoken in a conversation.",
+              "Recognise platform numbers and arrival times in spoken English.",
+              "Follow a short transactional dialogue at a ticket counter with natural speech."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "Which train goes to...?",
+                "meaning": "Kereta mana yang menuju ke...?",
+                "note": "Use this phrase to ask about the correct train for your destination."
+              },
+              {
+                "phrase": "How much is a return ticket?",
+                "meaning": "Berapa harga tiket pulang-pergi?",
+                "note": "A return ticket means a ticket to go and come back. A single ticket is one way only."
+              },
+              {
+                "phrase": "It departs from platform...",
+                "meaning": "Kereta berangkat dari peron...",
+                "note": "The word 'platform' refers to the area at the station where you wait for and board the train."
+              },
+              {
+                "phrase": "What time does it arrive?",
+                "meaning": "Jam berapa tiba?",
+                "note": "Use 'arrive' for when the train reaches the destination. Use 'depart' for when it leaves."
+              },
+              {
+                "phrase": "One return ticket, please.",
+                "meaning": "Satu tiket pulang-pergi, tolong.",
+                "note": "This is a polite and simple way to buy a ticket at a counter."
+              },
+              {
+                "phrase": "Have a good journey!",
+                "meaning": "Semoga perjalanan Anda menyenangkan!",
+                "note": "A common friendly phrase that staff say to passengers. You can reply with 'Thank you!'"
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "Which train goes to Cambridge?",
+                "fast": "Which train goezta Cambridge?",
+                "slowIpa": "/wɪtʃ treɪn ɡəʊz tuː ˈkeɪm.brɪdʒ/",
+                "fastIpa": "/wɪtʃ treɪn ɡəʊztə ˈkeɪm.brɪdʒ/",
+                "note": "In natural speech, 'goes to' often links together and the 'to' reduces to a short 'tuh' sound, becoming 'goezta'."
+              },
+              {
+                "id": 2,
+                "slow": "How much is a return ticket?",
+                "fast": "How much izza return ticket?",
+                "slowIpa": "/haʊ mʌtʃ ɪz ə rɪˈtɜːn ˈtɪk.ɪt/",
+                "fastIpa": "/haʊ mʌtʃ ɪzə rɪˈtɜːn ˈtɪk.ɪt/",
+                "note": "The words 'is a' blend together in fast speech. The 'a' becomes very short, sounding like 'izza'."
+              },
+              {
+                "id": 3,
+                "slow": "Here you are.",
+                "fast": "Here y'are.",
+                "slowIpa": "/hɪər juː ɑːr/",
+                "fastIpa": "/hɪə jɑːr/",
+                "note": "In fast speech, 'you are' contracts and links, sounding like 'y'are'. This is very common when handing something to someone."
+              },
+              {
+                "id": 4,
+                "slow": "What time does it arrive?",
+                "fast": "What time duzit arrive?",
+                "slowIpa": "/wɒt taɪm dʌz ɪt əˈraɪv/",
+                "fastIpa": "/wɒt taɪm dʌzɪt əˈraɪv/",
+                "note": "The words 'does it' link together in natural speech. The 'it' loses its strong vowel and attaches to 'does', becoming 'duzit'."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m06-l-dialogue",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: At the Train Station Ticket Counter",
+          "orderIndex": 2,
+          "content": {
+            "context": "Sarah is at a train station. She wants to buy a ticket to Cambridge. She goes to the ticket counter and speaks with the ticket officer about the schedule, price, and platform information.",
+            "audioPrompt": "Listen carefully to the following dialogue between Sarah and the Ticket Officer at the train station.",
+            "lines": [
+              {
+                "speaker": "Sarah",
+                "text": "Excuse me, which train goes to Cambridge?",
+                "audioUrl": "/audio/modules/a1-2-m06/dialogue-1.mp3",
+                "translation": "Permisi, kereta mana yang menuju Cambridge?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Ticket Officer",
+                "text": "The next train departs from platform 7 at 10:15.",
+                "audioUrl": "/audio/modules/a1-2-m06/dialogue-2.mp3",
+                "translation": "Kereta berikutnya berangkat dari peron 7 pukul 10:15.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "How much is a return ticket?",
+                "audioUrl": "/audio/modules/a1-2-m06/dialogue-3.mp3",
+                "translation": "Berapa harga tiket pulang-pergi?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Ticket Officer",
+                "text": "A return ticket costs twenty-five pounds.",
+                "audioUrl": "/audio/modules/a1-2-m06/dialogue-4.mp3",
+                "translation": "Tiket pulang-pergi harganya dua puluh lima poundsterling.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "OK. And what time does it arrive in Cambridge?",
+                "audioUrl": "/audio/modules/a1-2-m06/dialogue-5.mp3",
+                "translation": "OK. Dan jam berapa tiba di Cambridge?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Ticket Officer",
+                "text": "It arrives at 11:30. There is no delay today.",
+                "audioUrl": "/audio/modules/a1-2-m06/dialogue-6.mp3",
+                "translation": "Tiba pukul 11:30. Tidak ada keterlambatan hari ini.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "That is great! Is there a café on the train?",
+                "audioUrl": "/audio/modules/a1-2-m06/dialogue-7.mp3",
+                "translation": "Bagus sekali! Apakah ada kafe di kereta?",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Ticket Officer",
+                "text": "Yes, there is a small café in carriage 4. You can buy coffee and snacks.",
+                "audioUrl": "/audio/modules/a1-2-m06/dialogue-8.mp3",
+                "translation": "Ya, ada kafe kecil di gerbong 4. Anda bisa membeli kopi dan makanan ringan.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Perfect! One return ticket, please.",
+                "audioUrl": "/audio/modules/a1-2-m06/dialogue-9.mp3",
+                "translation": "Sempurna! Satu tiket pulang-pergi, tolong.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Ticket Officer",
+                "text": "Here you are. Have a good journey!",
+                "audioUrl": "/audio/modules/a1-2-m06/dialogue-10.mp3",
+                "translation": "Ini dia. Semoga perjalanan Anda menyenangkan!",
+                "emotion": "friendly"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m06-l-quiz",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Excuse me, which train goes to Cambridge?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Excuse me, which train goes to _____?\"",
+                "targetWord": "Cambridge",
+                "explanation": "Full audio: \"Excuse me, which train goes to Cambridge?\". The missing word is \"Cambridge\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "How much is a return ticket?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"How much is a _____ ticket?\"",
+                "targetWord": "return",
+                "explanation": "Full audio: \"How much is a return ticket?\". The missing word is \"return\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "A return ticket costs twenty-five pounds.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ticket Officer: \"A return ticket costs twenty-five _____.\"",
+                "targetWord": "pounds",
+                "explanation": "Full audio: \"A return ticket costs twenty-five pounds.\". The missing word is \"pounds\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "And what time does it arrive in Cambridge?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"And what time does it _____ in Cambridge?\"",
+                "targetWord": "arrive",
+                "explanation": "Full audio: \"And what time does it arrive in Cambridge?\". The missing word is \"arrive\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "It arrives at 11:30.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ticket Officer: \"It arrives at _____.\"",
+                "targetWord": "11:30",
+                "explanation": "Full audio: \"It arrives at 11:30.\". The missing word is \"11:30\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "There is no delay today.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "There is no delay today",
+                "words": [
+                  "is",
+                  "There",
+                  "no",
+                  "today",
+                  "delay"
+                ],
+                "explanation": "Correct sentence order: \"There is no delay today.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "That is great!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That is great",
+                "words": [
+                  "great",
+                  "That",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"That is great!\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Is there a café on the train?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Is there a café on the train",
+                "words": [
+                  "Is",
+                  "on",
+                  "the",
+                  "a",
+                  "train",
+                  "there",
+                  "café"
+                ],
+                "explanation": "Correct sentence order: \"Is there a café on the train?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "You can buy coffee and snacks.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You can buy coffee and snacks",
+                "words": [
+                  "coffee",
+                  "You",
+                  "buy",
+                  "snacks",
+                  "can",
+                  "and"
+                ],
+                "explanation": "Correct sentence order: \"You can buy coffee and snacks.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "One return ticket, please.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "One return ticket please",
+                "words": [
+                  "return",
+                  "please",
+                  "ticket",
+                  "One"
+                ],
+                "explanation": "Correct sentence order: \"One return ticket, please.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Excuse me, which train goes to Cambridge?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Excuse me, which train goes to _____?\"",
+                "targetWord": "Cambridge",
+                "explanation": "Full audio: \"Excuse me, which train goes to Cambridge?\". The missing word is \"Cambridge\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "How much is a return ticket?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"How much is a _____ ticket?\"",
+                "targetWord": "return",
+                "explanation": "Full audio: \"How much is a return ticket?\". The missing word is \"return\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "A return ticket costs twenty-five pounds.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ticket Officer: \"A return ticket costs twenty-five _____.\"",
+                "targetWord": "pounds",
+                "explanation": "Full audio: \"A return ticket costs twenty-five pounds.\". The missing word is \"pounds\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "And what time does it arrive in Cambridge?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"And what time does it _____ in Cambridge?\"",
+                "targetWord": "arrive",
+                "explanation": "Full audio: \"And what time does it arrive in Cambridge?\". The missing word is \"arrive\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "It arrives at 11:30.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Ticket Officer: \"It arrives at _____.\"",
+                "targetWord": "11:30",
+                "explanation": "Full audio: \"It arrives at 11:30.\". The missing word is \"11:30\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "There is no delay today.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "There is no delay today",
+                "words": [
+                  "is",
+                  "There",
+                  "no",
+                  "today",
+                  "delay"
+                ],
+                "explanation": "Correct sentence order: \"There is no delay today.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "That is great!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That is great",
+                "words": [
+                  "great",
+                  "That",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"That is great!\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Is there a café on the train?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Is there a café on the train",
+                "words": [
+                  "Is",
+                  "on",
+                  "the",
+                  "a",
+                  "train",
+                  "there",
+                  "café"
+                ],
+                "explanation": "Correct sentence order: \"Is there a café on the train?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "You can buy coffee and snacks.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "You can buy coffee and snacks",
+                "words": [
+                  "coffee",
+                  "You",
+                  "buy",
+                  "snacks",
+                  "can",
+                  "and"
+                ],
+                "explanation": "Correct sentence order: \"You can buy coffee and snacks.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "One return ticket, please.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "One return ticket please",
+                "words": [
+                  "return",
+                  "please",
+                  "ticket",
+                  "One"
+                ],
+                "explanation": "Correct sentence order: \"One return ticket, please.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m06-writing",
+      "moduleId": "A1.2-M06",
+      "skillType": "writing",
+      "title": "Writing Mission: Navigating Public Transportation & Buying Tickets",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-2-m06-w-theory",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this writing blueprint, you will learn how to write sentences and short paragraphs about public transportation. You will practice asking which bus or train goes to a place, talking about departures and arrivals, and buying different types of tickets. These are very useful skills for traveling by bus, train, or taxi.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Ask About Transportation Routes",
+                "formula": "Which + transport (bus/train) + goes to + place?",
+                "example": "Which bus goes to the airport?"
+              },
+              {
+                "step": 2,
+                "title": "Describe Departures and Arrivals",
+                "formula": "The + transport + departs from / arrives at + location.",
+                "example": "The train departs from platform 3."
+              },
+              {
+                "step": 3,
+                "title": "Buy a Ticket",
+                "formula": "I need / I would like + a + ticket type + to + destination + please.",
+                "example": "I need a return ticket to Manchester, please."
+              },
+              {
+                "step": 4,
+                "title": "Ask About Time and Price",
+                "formula": "What time does the + transport + depart/arrive? / How much is a + ticket type + to + place?",
+                "example": "What time does the bus depart? How much is a single ticket to London?"
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always capitalize the names of specific places, cities, and stations.",
+                "badExample": "the train goes to london from king's cross station.",
+                "goodExample": "The train goes to London from King's Cross Station.",
+                "why": "Place names, city names, and station names are proper nouns. Proper nouns always start with a capital letter in English."
+              },
+              {
+                "rule": "Use a question mark (?) at the end of every question sentence.",
+                "badExample": "Which bus goes to the airport.",
+                "goodExample": "Which bus goes to the airport?",
+                "why": "When you ask a question, you must end the sentence with a question mark. A period (.) is only for statements."
+              },
+              {
+                "rule": "Use 'departs from' for the starting place and 'arrives at' for the ending place. Do not mix them up.",
+                "badExample": "The bus departs at the city center.",
+                "goodExample": "The bus arrives at the city center.",
+                "why": "We use 'departs from' with the place where the journey starts and 'arrives at' with the place where the journey ends. The prepositions 'from' and 'at' are fixed with these verbs."
+              },
+              {
+                "rule": "Use 'please' at the end of a request to be polite.",
+                "badExample": "I need a single ticket to Oxford.",
+                "goodExample": "I need a single ticket to Oxford, please.",
+                "why": "Adding 'please' makes your request polite. In English, it is important to be polite when you buy things or ask for help. Use a comma before 'please' at the end of a sentence."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "Which train goes to the city center?",
+                "id": "Kereta mana yang pergi ke pusat kota?",
+                "focus": "Which + noun + goes to + place?"
+              },
+              {
+                "en": "The bus departs from the main station at 9 o'clock.",
+                "id": "Bus berangkat dari stasiun utama pukul 9.",
+                "focus": "Subject + departs from + location + time"
+              },
+              {
+                "en": "I would like a return ticket to Birmingham, please.",
+                "id": "Saya ingin tiket pulang-pergi ke Birmingham.",
+                "focus": "Polite request + ticket type + to + destination"
+              },
+              {
+                "en": "The train arrives at platform 5 in ten minutes.",
+                "id": "Kereta tiba di peron 5 dalam sepuluh menit.",
+                "focus": "Subject + arrives at + location + time expression"
+              },
+              {
+                "en": "How much is a day pass for the metro?",
+                "id": "Berapa harga tiket harian untuk metro?",
+                "focus": "How much + is + ticket type + for + transport?"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m06-w-practice",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "which bus goes to the airport.",
+                "targetSentence": "Which bus goes to the airport?",
+                "translation": "Bus mana yang pergi ke bandara?",
+                "keyRule": "Start a question with a capital letter and end it with a question mark (?), not a period.",
+                "requiredCapitals": [
+                  "Which"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "the train departs from king's cross station at 8 o'clock",
+                "targetSentence": "The train departs from King's Cross Station at 8 o'clock.",
+                "translation": "Kereta berangkat dari Stasiun King's Cross pukul 8.",
+                "keyRule": "Capitalize the first word of the sentence and all proper nouns (station names). End the sentence with a period.",
+                "requiredCapitals": [
+                  "The",
+                  "King's",
+                  "Cross",
+                  "Station"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "i need a return ticket to manchester please",
+                "targetSentence": "I need a return ticket to Manchester, please.",
+                "translation": "Saya butuh tiket pulang-pergi ke Manchester.",
+                "keyRule": "Always capitalize 'I' and city names. Use a comma before 'please' at the end and finish with a period.",
+                "requiredCapitals": [
+                  "I",
+                  "Manchester"
+                ]
+              },
+              {
+                "id": "sent-4",
+                "faultySentence": "how much is a single ticket to london",
+                "targetSentence": "How much is a single ticket to London?",
+                "translation": "Berapa harga tiket sekali jalan ke London?",
+                "keyRule": "Start the question with a capital letter, capitalize city names, and end with a question mark.",
+                "requiredCapitals": [
+                  "How",
+                  "London"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Asking About Routes",
+                "meaning": "Kereta mana yang pergi ke pusat kota?",
+                "tokens": [
+                  "Which",
+                  "train",
+                  "goes",
+                  "to",
+                  "the",
+                  "city",
+                  "center?"
+                ],
+                "fullSentence": "Which train goes to the city center?"
+              },
+              {
+                "id": "b-2",
+                "category": "Describing Departures",
+                "meaning": "Bus berangkat dari peron 2 pukul 10.",
+                "tokens": [
+                  "The",
+                  "bus",
+                  "departs",
+                  "from",
+                  "platform",
+                  "2",
+                  "at",
+                  "10",
+                  "o'clock."
+                ],
+                "fullSentence": "The bus departs from platform 2 at 10 o'clock."
+              },
+              {
+                "id": "b-3",
+                "category": "Buying Tickets",
+                "meaning": "Saya ingin tiket harian untuk metro.",
+                "tokens": [
+                  "I",
+                  "would",
+                  "like",
+                  "a",
+                  "day",
+                  "pass",
+                  "for",
+                  "the",
+                  "metro,",
+                  "please."
+                ],
+                "fullSentence": "I would like a day pass for the metro, please."
+              },
+              {
+                "id": "b-4",
+                "category": "Describing Arrivals",
+                "meaning": "Kereta tiba di Stasiun Oxford pukul 3 sore.",
+                "tokens": [
+                  "The",
+                  "train",
+                  "arrives",
+                  "at",
+                  "Oxford",
+                  "Station",
+                  "at",
+                  "3",
+                  "p.m."
+                ],
+                "fullSentence": "The train arrives at Oxford Station at 3 p.m."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: At the Ticket Office",
+                "badge": "Ticket Buyer",
+                "instruction": "You are at a train station. Write a short conversation (4 to 6 sentences) between you and the ticket seller. Ask which train goes to your destination. Ask for a ticket type (single, return, or day pass). Ask about the price and the departure time. Use capital letters and correct punctuation.",
+                "example": "Me: Hello! Which train goes to Cambridge?\nTicket seller: Train number 5 goes to Cambridge.\nMe: I need a return ticket to Cambridge, please. How much is it?\nTicket seller: It is 15 pounds. The train departs from platform 3 at 2 o'clock.\nMe: Thank you very much!",
+                "placeholder": "Start your ticket office conversation here...",
+                "minWords": 20,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: My Daily Commute",
+                "badge": "Daily Commuter",
+                "instruction": "Write a short paragraph (4 to 6 sentences) about your daily commute or an imaginary one. Describe which bus or train you take, where it departs from, where it arrives at, and what type of ticket you use. Use 'departs from' and 'arrives at' correctly. Remember to capitalize place names.",
+                "example": "Every morning, I take the bus to work. The bus departs from Green Street Station at 7:30 a.m. It arrives at the city center at 8 o'clock. I use a day pass because it is cheaper. The bus is usually on time. I like my commute because I can read my book.",
+                "placeholder": "Start writing about your daily commute here...",
+                "minWords": 25,
+                "xpReward": 35
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m06-w-quiz",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-writing",
+          "sectionType": "quiz",
+          "title": "Writing Practicum & Assessment",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": "w-p-1",
+                "prompt": "You are a tourist in London. Write 3 questions you would ask at a bus station. Ask about which bus goes to a place, the ticket price, and the departure time. Use correct question words and punctuation.",
+                "criteria": "The answer must contain 3 complete questions. Each question must start with a capital letter and end with a question mark. Use 'Which bus goes to...?' for the route question. Use 'How much...?' for the price question. Use 'What time...?' for the time question. Place names must be capitalized.",
+                "sampleGoodAnswer": "Which bus goes to the British Museum? How much is a single ticket to the British Museum? What time does the next bus depart?"
+              },
+              {
+                "id": "w-p-2",
+                "prompt": "Write a short paragraph (3 to 5 sentences) describing a train journey. Include where the train departs from, where it arrives at, what time it leaves, and what type of ticket you buy. Use 'departs from' and 'arrives at' correctly.",
+                "criteria": "The answer must have 3 to 5 complete sentences. It must use 'departs from' with the starting location and 'arrives at' with the ending location. It must mention a ticket type (single ticket, return ticket, or day pass). All sentences must start with a capital letter and end with a period. City and station names must be capitalized.",
+                "sampleGoodAnswer": "I take the train from Manchester to Liverpool every Friday. The train departs from Manchester Piccadilly Station at 6 p.m. It arrives at Liverpool Lime Street Station at 7 p.m. I always buy a return ticket because I come back on Sunday. The ticket costs 25 pounds."
+              },
+              {
+                "id": "w-p-3",
+                "prompt": "Your friend wants to visit you. Write a short message (4 to 6 sentences) explaining how to get to your city by public transportation. Tell your friend which bus or train to take, where to buy a ticket, and where the bus or train arrives. Give simple and clear directions.",
+                "criteria": "The answer must have 4 to 6 sentences. It must mention a type of public transportation (bus, train, or metro). It must include directions using 'take the...', 'departs from', or 'arrives at'. It must mention a ticket type. All proper nouns must be capitalized. Sentences must have correct punctuation. The tone should be friendly and helpful.",
+                "sampleGoodAnswer": "Hi Anna! You can take the train to visit me. Go to Central Station and buy a single ticket to Brighton. The train departs from platform 7 at 10 o'clock in the morning. It arrives at Brighton Station at 11:30 a.m. I will meet you at the station!"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m06-speaking",
+      "moduleId": "A1.2-M06",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Getting Around by Public Transport",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-2-m06-s-theory",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this speaking lab you will practise asking for information at a bus station, buying tickets, and talking about your daily commute. You will learn how to pronounce transport words clearly, use polite rising intonation when asking questions, and speak with confidence when you need help from station staff or bus drivers.",
+            "audioGuidance": "Pay close attention to rising intonation at the end of yes/no questions like 'Does this bus go to the airport?' and falling intonation for information questions like 'What time does the bus leave?' Practise stressing the key content words in each sentence, such as 'BUS', 'TICKet', 'AIRport', and 'dePARTS'. Speak slowly and clearly — at A1 level, clarity is more important than speed.",
+            "pillars": [
+              {
+                "name": "Transport Vocabulary Pronunciation",
+                "target": "Clear articulation of key transport words",
+                "explanation": "You need to say words like 'ticket', 'platform', 'departure', 'station', and 'commute' clearly. Focus on which syllable is stressed: TICKet (first syllable), platFORM (second syllable), dePARture (second syllable). Practise each word slowly, then say it at normal speed."
+              },
+              {
+                "name": "Polite Question Intonation",
+                "target": "Using rising and falling intonation correctly in transport questions",
+                "explanation": "When you ask a yes/no question like 'Is this the right bus?', your voice should go UP at the end. When you ask a 'wh-' question like 'Where is bus stop 4?', your voice should go DOWN at the end. This helps people understand that you are asking a question and sounds polite."
+              },
+              {
+                "name": "Fluency in Short Exchanges",
+                "target": "Speaking in complete short sentences without long pauses",
+                "explanation": "At a bus station or train station, you need to speak quickly and clearly. Practise saying full short sentences like 'I would like a single ticket, please' or 'Which bus goes to the airport?' without stopping in the middle. Link words together naturally: 'Which-bus-goes-to...' should flow smoothly."
+              },
+              {
+                "name": "Stress on Content Words",
+                "target": "Emphasising the most important words in a sentence",
+                "explanation": "In a sentence like 'The NEXT bus LEAVES at THREE fifteen', the important words are 'next', 'leaves', and 'three fifteen'. These words carry the meaning. Say them a little louder and longer than small words like 'the', 'at', and 'is'. This makes your speech easy to understand."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m06-s-practice",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "TICKet",
+                "countryAudio": "ticket",
+                "countrySyllables": [
+                  {
+                    "text": "TICK",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "et",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "tick-ET-ing",
+                "natAudio": "ticketing",
+                "natSyllables": [
+                  {
+                    "text": "TICK",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "et",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ing",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress stays on the first syllable 'TICK' in both 'ticket' and 'ticketing'. The word gets longer but the rhythm stays the same. Say 'TICK' strongly and let '-eting' be soft and quick."
+              },
+              {
+                "id": "pair-2",
+                "country": "dePART",
+                "countryAudio": "depart",
+                "countrySyllables": [
+                  {
+                    "text": "de",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PART",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "de-PAR-ture",
+                "natAudio": "departure",
+                "natSyllables": [
+                  {
+                    "text": "de",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PAR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ture",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress is on the second syllable in both words: 'dePART' and 'dePARture'. When we add '-ture', the stress does not move. Say 'PAR' loudly and clearly in both words."
+              },
+              {
+                "id": "pair-3",
+                "country": "comMUTE",
+                "countryAudio": "commute",
+                "countrySyllables": [
+                  {
+                    "text": "com",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "MUTE",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "com-MU-ter",
+                "natAudio": "commuter",
+                "natSyllables": [
+                  {
+                    "text": "com",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "MU",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ter",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress stays on the second syllable: 'comMUTE' becomes 'comMUter'. The stressed part 'MU' stays strong. The ending '-ter' is soft and short."
+              },
+              {
+                "id": "pair-4",
+                "country": "STAtion",
+                "countryAudio": "station",
+                "countrySyllables": [
+                  {
+                    "text": "STA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "trans-por-TA-tion",
+                "natAudio": "transportation",
+                "natSyllables": [
+                  {
+                    "text": "trans",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "por",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "In 'STAtion' the stress is on the first syllable. But in the longer word 'transportation', the stress shifts to the third syllable 'TA'. Notice how '-tion' is always unstressed at the end."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "Which bus goes to the airport?",
+                "phonetic": "/wɪtʃ bʌs ɡəʊz tuː ðə ˈeə.pɔːt/",
+                "focus": "Rising intonation on 'which' questions and clear pronunciation of 'airport'",
+                "hint": "Say 'AIR-port' with stress on the first syllable. Let your voice fall slightly at the end because this is a 'wh-' question."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "How much is a single ticket?",
+                "phonetic": "/haʊ mʌtʃ ɪz ə ˈsɪŋ.ɡəl ˈtɪk.ɪt/",
+                "focus": "Stress on 'single' and 'ticket', falling intonation for 'how much' question",
+                "hint": "Stress 'SINgle' on the first syllable and 'TICKet' on the first syllable. Your voice should go down at the end."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "The next bus departs at three fifteen.",
+                "phonetic": "/ðə nekst bʌs dɪˈpɑːts æt θriː fɪfˈtiːn/",
+                "focus": "Clear pronunciation of 'departs' and the time expression",
+                "hint": "Say 'dePARTS' with stress on the second syllable. For 'fifteen', stress the second syllable: 'fifTEEN'. Practise the 'th' sound in 'three' — put your tongue between your teeth."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "I would like a return ticket, please.",
+                "phonetic": "/aɪ wʊd laɪk ə rɪˈtɜːn ˈtɪk.ɪt pliːz/",
+                "focus": "Polite request form and stress on 'return' and 'ticket'",
+                "hint": "Say 'reTURN' with stress on the second syllable. Use a warm, polite tone. 'Please' at the end should sound friendly, not rushed."
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "Does this train stop at Central Station?",
+                "phonetic": "/dʌz ðɪs treɪn stɒp æt ˈsen.trəl ˈsteɪ.ʃən/",
+                "focus": "Rising intonation for yes/no question and clear 'station' pronunciation",
+                "hint": "This is a yes/no question, so your voice must go UP at the end on 'Station'. Say 'CENtral' with stress on the first syllable."
+              },
+              {
+                "id": "spk-d-6",
+                "targetText": "Where is the nearest bus stop?",
+                "phonetic": "/weər ɪz ðə ˈnɪə.rɪst bʌs stɒp/",
+                "focus": "Pronunciation of 'nearest' and falling intonation for 'where' question",
+                "hint": "Say 'NEARest' with stress on the first syllable. Your voice should fall at the end because this is a 'wh-' question."
+              }
+            ],
+            "roleplay": {
+              "context": "You are at a bus station and you want to go to the airport. Mr. Khoirul is the information desk officer. He will help you find the right bus and buy a ticket. Practise asking questions politely and clearly.",
+              "roles": [
+                "Mr. Khoirul",
+                "You"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Good morning! How can I help you today?",
+                  "translation": "Selamat pagi! Ada yang bisa saya bantu hari ini?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Good morning! Which bus goes to the airport?",
+                  "translation": "Selamat pagi! Bus mana yang pergi ke bandara?"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Bus number 77 goes to the airport. It leaves every 30 minutes.",
+                  "translation": "Bus nomor 77 pergi ke bandara. Bus ini berangkat setiap 30 menit."
+                },
+                {
+                  "speaker": "You",
+                  "text": "What time is the next bus?",
+                  "translation": "Jam berapa bus berikutnya?"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "The next bus departs at 3:15 PM from bus stop 4.",
+                  "translation": "Bus berikutnya berangkat pukul 3:15 sore dari halte bus 4."
+                },
+                {
+                  "speaker": "You",
+                  "text": "How much is a single ticket?",
+                  "translation": "Berapa harga tiket sekali jalan?"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "A single ticket is £8. You can buy it from the driver or at the ticket machine.",
+                  "translation": "Tiket sekali jalan harganya £8. Kamu bisa membelinya dari sopir atau di mesin tiket."
+                },
+                {
+                  "speaker": "You",
+                  "text": "Thank you very much!",
+                  "translation": "Terima kasih banyak!"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m06-s-quiz",
+          "moduleId": "A1.2-M06",
+          "subModuleId": "sub-a1-2-m06-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about a time you took a bus to go somewhere. Use the three story points below to guide your story. Speak in complete sentences and try to use transport vocabulary.",
+                "audioPrompt": "Please tell me about a time you took a bus. Where did you go? What happened at the bus stop? How was the journey?",
+                "storyPoints": [
+                  "Talk about where you wanted to go and why you chose the bus.",
+                  "Describe what happened at the bus stop — for example, buying a ticket or waiting for the bus.",
+                  "Tell me about the bus journey — was it long or short? Did you enjoy it?"
+                ],
+                "targetSentence": "Last week, I took bus number 12 to the city centre. I bought a single ticket at the bus stop. The journey was about 20 minutes and it was very comfortable.",
+                "phonetic": "/lɑːst wiːk aɪ tʊk bʌs ˈnʌm.bər twelv tuː ðə ˈsɪt.i ˈsen.tər aɪ bɔːt ə ˈsɪŋ.ɡəl ˈtɪk.ɪt æt ðə bʌs stɒp ðə ˈdʒɜː.ni wɒz əˈbaʊt ˈtwen.ti ˈmɪn.ɪts ænd ɪt wɒz ˈver.i ˈkʌm.fə.tə.bəl/",
+                "expectedKeywords": [
+                  "bus",
+                  "ticket",
+                  "stop",
+                  "journey",
+                  "took"
+                ],
+                "hint": "Remember to use past tense: 'I took', 'I bought'. Speak slowly and clearly. Stress the important words like 'BUS', 'TICKet', and 'JOURney'.",
+                "explanation": "This storytelling task helps you practise talking about a past transport experience. Using past tense verbs like 'took' and 'bought' and transport vocabulary like 'single ticket', 'bus stop', and 'journey' is important for real-life communication."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about your daily commute to work or school. Use the three story points below to help you. Speak clearly and use simple sentences.",
+                "audioPrompt": "Please tell me about how you travel to work or school every day. What transport do you use? How long does it take? Do you like your commute?",
+                "storyPoints": [
+                  "Explain what type of transport you use every day — bus, train, taxi, or walking.",
+                  "Say how long your commute takes and what time you usually leave home.",
+                  "Share whether you enjoy your commute or not, and explain why."
+                ],
+                "targetSentence": "Every day, I take the train to work. I leave home at 7 o'clock in the morning. The train ride takes about 30 minutes. I like my commute because I can read my book.",
+                "phonetic": "/ˈev.ri deɪ aɪ teɪk ðə treɪn tuː wɜːk aɪ liːv həʊm æt ˈsev.ən əˈklɒk ɪn ðə ˈmɔː.nɪŋ ðə treɪn raɪd teɪks əˈbaʊt ˈθɜː.ti ˈmɪn.ɪts aɪ laɪk maɪ kəˈmjuːt bɪˈkɒz aɪ kæn riːd maɪ bʊk/",
+                "expectedKeywords": [
+                  "train",
+                  "commute",
+                  "take",
+                  "morning",
+                  "minutes"
+                ],
+                "hint": "Use present simple tense for daily routines: 'I take', 'I leave', 'it takes'. Pronounce 'comMUTE' with stress on the second syllable.",
+                "explanation": "Talking about your daily commute is a very common conversation topic. This task practises present simple tense for routines and transport vocabulary. Being able to describe your daily journey is useful in social and work situations."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay Call",
+                "instruction": "You are at a train station. You want to buy a ticket to London. Mr. Khoirul is the ticket seller. Ask him about ticket prices, train times, and the platform number.",
+                "audioPrompt": "Welcome to the ticket office. You want to travel to London by train. Ask me for the information you need and buy your ticket.",
+                "scenarioContext": "You are standing at the ticket counter inside a busy train station. You need to travel to London today. The ticket seller, Mr. Khoirul, is ready to help you. You need to find out the price, the departure time, and which platform to go to.",
+                "characterRole": "Mr. Khoirul is a friendly and patient ticket seller at the train station. He speaks slowly and clearly. He will answer your questions about trains to London, ticket prices, and platform numbers.",
+                "targetSentence": "Hello, I would like a ticket to London, please. How much is a return ticket? What time does the next train leave? Which platform is it?",
+                "phonetic": "/həˈləʊ aɪ wʊd laɪk ə ˈtɪk.ɪt tuː ˈlʌn.dən pliːz haʊ mʌtʃ ɪz ə rɪˈtɜːn ˈtɪk.ɪt wɒt taɪm dʌz ðə nekst treɪn liːv wɪtʃ ˈplæt.fɔːm ɪz ɪt/",
+                "expectedKeywords": [
+                  "ticket",
+                  "London",
+                  "return",
+                  "time",
+                  "platform",
+                  "please"
+                ],
+                "hint": "Use polite language: 'I would like..., please.' Remember rising intonation for yes/no questions and falling intonation for 'wh-' questions.",
+                "explanation": "Buying a train ticket is a real-life situation you may face when travelling. This roleplay practises polite requests ('I would like...'), question forms ('How much...?', 'What time...?', 'Which...?'), and key transport vocabulary."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay Call",
+                "instruction": "You are on the street and you want to take a taxi to the hospital. Mr. Khoirul is the taxi driver. Tell him where you want to go, ask about the fare, and ask how long the journey will take.",
+                "audioPrompt": "A taxi has just stopped for you. Tell the driver where you need to go and ask your questions.",
+                "scenarioContext": "You are standing on a busy street and you have just stopped a taxi. You need to go to City Hospital quickly. The taxi driver, Mr. Khoirul, is waiting for you to tell him your destination. You want to know the cost and the travel time.",
+                "characterRole": "Mr. Khoirul is a helpful taxi driver. He knows the city very well. He will tell you the fare and how long it takes to get to the hospital. He speaks in simple, clear English.",
+                "targetSentence": "Hello! Can you take me to City Hospital, please? How much will it cost? How long does it take to get there?",
+                "phonetic": "/həˈləʊ kæn juː teɪk miː tuː ˈsɪt.i ˈhɒs.pɪ.təl pliːz haʊ mʌtʃ wɪl ɪt kɒst haʊ lɒŋ dʌz ɪt teɪk tuː ɡet ðeər/",
+                "expectedKeywords": [
+                  "taxi",
+                  "hospital",
+                  "cost",
+                  "take",
+                  "long",
+                  "please"
+                ],
+                "hint": "Use 'Can you take me to...?' to tell the driver your destination. Stress 'HOSpital' on the first syllable. Use falling intonation for 'How much' and 'How long' questions.",
+                "explanation": "Taking a taxi is a common transport situation. This roleplay practises giving directions to a driver, asking about cost ('How much will it cost?'), and asking about duration ('How long does it take?'). These are essential phrases for any traveller."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay Call",
+                "instruction": "You are at a bus stop and you are not sure if you are waiting at the right stop. Mr. Khoirul is another passenger waiting there. Ask him for help to find the correct bus to the shopping centre.",
+                "audioPrompt": "You are at a bus stop but you are not sure this is the right one. Another passenger is standing there. Ask him for help.",
+                "scenarioContext": "You are at a bus stop in a town you do not know very well. You want to go to the shopping centre but you are not sure which bus to take or if this is the correct bus stop. Another passenger, Mr. Khoirul, is waiting at the same stop.",
+                "characterRole": "Mr. Khoirul is a local resident who takes the bus every day. He is friendly and happy to help. He knows all the bus routes in the town and can tell you which bus goes to the shopping centre.",
+                "targetSentence": "Excuse me, does this bus go to the shopping centre? Which bus number should I take? How many stops is it from here?",
+                "phonetic": "/ɪkˈskjuːz miː dʌz ðɪs bʌs ɡəʊ tuː ðə ˈʃɒp.ɪŋ ˈsen.tər wɪtʃ bʌs ˈnʌm.bər ʃʊd aɪ teɪk haʊ ˈmen.i stɒps ɪz ɪt frɒm hɪər/",
+                "expectedKeywords": [
+                  "excuse",
+                  "bus",
+                  "shopping",
+                  "centre",
+                  "stops",
+                  "number"
+                ],
+                "hint": "Start with 'Excuse me' to be polite. Use rising intonation on 'Does this bus go to the shopping centre?' because it is a yes/no question.",
+                "explanation": "Asking a stranger for help at a bus stop is a very common real-life situation. This roleplay practises polite openings ('Excuse me'), yes/no questions ('Does this bus go to...?'), and asking for specific information ('Which bus number?', 'How many stops?')."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay Call",
+                "instruction": "You are at the airport and you want to take a shuttle bus to the city centre. Mr. Khoirul works at the airport information desk. Ask him about the shuttle bus schedule, the ticket price, and where to catch the bus.",
+                "audioPrompt": "You have just arrived at the airport and you need to get to the city centre. Go to the information desk and ask for help.",
+                "scenarioContext": "You have just arrived at a large international airport. You need to travel to the city centre by shuttle bus. You see an information desk near the exit. Mr. Khoirul is the information officer on duty.",
+                "characterRole": "Mr. Khoirul is an airport information officer. He is professional and speaks clearly. He can give you information about shuttle buses, schedules, prices, and where to find the bus stop outside the airport.",
+                "targetSentence": "Hello, I need to get to the city centre. Is there a shuttle bus? How often does it run? Where can I catch it? How much is the fare?",
+                "phonetic": "/həˈləʊ aɪ niːd tuː ɡet tuː ðə ˈsɪt.i ˈsen.tər ɪz ðeər ə ˈʃʌt.əl bʌs haʊ ˈɒf.ən dʌz ɪt rʌn weər kæn aɪ kætʃ ɪt haʊ mʌtʃ ɪz ðə feər/",
+                "expectedKeywords": [
+                  "shuttle",
+                  "bus",
+                  "city",
+                  "centre",
+                  "fare",
+                  "catch"
+                ],
+                "hint": "Use 'I need to get to...' to explain your destination. 'Shuttle' is pronounced 'SHUTtle' with stress on the first syllable. Remember rising intonation for 'Is there a shuttle bus?'",
+                "explanation": "Navigating airport transport is essential for travellers. This roleplay practises asking about shuttle services, schedules ('How often does it run?'), locations ('Where can I catch it?'), and prices ('How much is the fare?'). These are key survival phrases."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Say the following sentence out loud. Focus on pronouncing the transport vocabulary words correctly and clearly.",
+                "audioPrompt": "Please read this sentence aloud. Make sure you pronounce each transport word clearly.",
+                "targetSentence": "I need to buy a return ticket at the station before the train departs from platform three.",
+                "phonetic": "/aɪ niːd tuː baɪ ə rɪˈtɜːn ˈtɪk.ɪt æt ðə ˈsteɪ.ʃən bɪˈfɔːr ðə treɪn dɪˈpɑːts frɒm ˈplæt.fɔːm θriː/",
+                "expectedKeywords": [
+                  "return",
+                  "ticket",
+                  "station",
+                  "train",
+                  "departs",
+                  "platform"
+                ],
+                "hint": "Key words to focus on: 'reTURN' (stress on second syllable), 'TICKet' (stress on first), 'STAtion' (stress on first), 'dePARTS' (stress on second), 'PLATform' (stress on first). Say each word clearly.",
+                "explanation": "This drill tests your ability to pronounce essential transport vocabulary in a complete sentence. Words like 'return ticket', 'station', 'departs', and 'platform' are words you will hear and use every time you travel by train. Correct pronunciation ensures that station staff and other passengers understand you."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Say the following sentence out loud. Pay attention to the correct grammar structure: 'does + subject + verb' for questions and 'I would like' for polite requests.",
+                "audioPrompt": "Please read this sentence aloud. Focus on using the correct question form and polite request structure.",
+                "targetSentence": "What time does the next bus leave? I would like two single tickets to the airport, please.",
+                "phonetic": "/wɒt taɪm dʌz ðə nekst bʌs liːv aɪ wʊd laɪk tuː ˈsɪŋ.ɡəl ˈtɪk.ɪts tuː ðə ˈeə.pɔːt pliːz/",
+                "expectedKeywords": [
+                  "does",
+                  "leave",
+                  "would",
+                  "like",
+                  "single",
+                  "tickets",
+                  "please"
+                ],
+                "hint": "For questions in present simple with 'he/she/it', use 'does + base verb': 'does the bus leave' (NOT 'does the bus leaves'). For polite requests, say 'I would like' (NOT 'I want'). 'Would' is pronounced /wʊd/ — the 'l' is silent.",
+                "explanation": "This drill practises two important A1 grammar structures: present simple questions with 'does' (the main verb stays in base form) and polite requests with 'I would like'. Both structures are essential when asking for information and buying tickets at transport stations."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Syllable Stress Drill",
+                "instruction": "Say the following sentence out loud. Pay careful attention to which syllable is stressed in each underlined word. The stressed syllable is written in CAPITAL letters in the hint.",
+                "audioPrompt": "Please read this sentence aloud. Focus on putting the stress on the correct syllable in the longer words.",
+                "targetSentence": "The departure time for public transportation to the terminal is on the schedule.",
+                "phonetic": "/ðə dɪˈpɑː.tʃər taɪm fɔːr ˈpʌb.lɪk træns.pɔːˈteɪ.ʃən tuː ðə ˈtɜː.mɪ.nəl ɪz ɒn ðə ˈʃed.juːl/",
+                "expectedKeywords": [
+                  "departure",
+                  "public",
+                  "transportation",
+                  "terminal",
+                  "schedule"
+                ],
+                "hint": "Stress patterns: dePARture (second syllable), PUBlic (first syllable), transporTAtion (third syllable — 'TA'), TERminal (first syllable), SCHEdule (first syllable). Practise each word alone first, then say the full sentence.",
+                "explanation": "Syllable stress is very important in English. If you stress the wrong syllable, people may not understand you. In transport contexts, words like 'departure', 'transportation', and 'terminal' are long words with specific stress patterns. This drill helps you build the habit of stressing the correct syllable."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Intonation Drill",
+                "instruction": "Say the following two sentences out loud. The first sentence is a yes/no question — use RISING intonation at the end. The second sentence is a 'wh-' question — use FALLING intonation at the end.",
+                "audioPrompt": "Please read both sentences aloud. Pay attention to whether your voice goes up or down at the end of each question.",
+                "targetSentence": "Is this the right platform for the London train? ↗ Where can I buy a ticket for the bus? ↘",
+                "phonetic": "/ɪz ðɪs ðə raɪt ˈplæt.fɔːm fɔːr ðə ˈlʌn.dən treɪn ↗ weər kæn aɪ baɪ ə ˈtɪk.ɪt fɔːr ðə bʌs ↘/",
+                "expectedKeywords": [
+                  "platform",
+                  "London",
+                  "train",
+                  "buy",
+                  "ticket",
+                  "bus"
+                ],
+                "hint": "Sentence 1 is a yes/no question ('Is this...?'), so your voice should RISE at the end on 'train?' — like going up a hill. Sentence 2 is a 'wh-' question ('Where can I...?'), so your voice should FALL at the end on 'bus?' — like going down a hill. This difference helps listeners know what type of question you are asking.",
+                "explanation": "English uses intonation to signal the type of question. Yes/no questions (starting with 'Is', 'Do', 'Can') typically have rising intonation — your voice goes up at the end. Information questions (starting with 'Where', 'What', 'How') typically have falling intonation — your voice goes down at the end. Mastering this pattern makes your English sound natural and helps people understand your questions immediately."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

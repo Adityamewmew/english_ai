@@ -1,0 +1,199 @@
+{
+  "id": "C2.5-M06",
+  "levelId": "C2.5",
+  "title": "Unit 6: Oxford Union Parliamentary Sparring: Mastering Points of Information",
+  "cefr": "C2",
+  "group": "Parliamentary Oratory",
+  "objective": "Mampu mengajukan dan membalas interupsi (Point of Information) dalam debat parlementer Oxford dengan tangkas dan tajam.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": false,
+  "passingScore": 75,
+  "orderIndex": 58,
+  "sections": {
+    "theory": {
+      "summary": "Dalam debat parlementer tingkat tinggi seperti Oxford Union, Point of Information (POI) bukanlah sekadar interupsi, melainkan manuver retoris taktis. Penguasaan POI menuntut kelincahan sintaksis (syntactic agility) untuk menyisipkan sanggahan tajam dalam bingkai kesantunan formal (hyper-formal politeness). Di level C2, pembicara harus mampu menggunakan struktur inversi bersyarat, pertanyaan retoris bersarang (nested rhetorical questions), dan frasa konsesi untuk membongkar argumen lawan secara instan tanpa kehilangan kendali atas mimbar (the floor).",
+      "rules": [
+        {
+          "pattern": "On that [adjective] point, would the speaker not concede that + [clause]?",
+          "meaning": "Mengajukan interupsi yang memaksa lawan mengakui celah logika atau kontradiksi dalam argumen mereka sendiri.",
+          "example": "On that precise point, would the honorable member not concede that their proposed paradigm fundamentally conflates correlation with causation?"
+        },
+        {
+          "pattern": "I note the member's eagerness, but I shall address that contention in due course.",
+          "meaning": "Menolak POI secara elegan dan asertif tanpa terlihat defensif, mempertahankan otoritas atas alur pidato.",
+          "example": "I see the gentleman rising, but I shall take his point in due course, once this premise is fully established."
+        },
+        {
+          "pattern": "I yield to the member, though I suspect we are about to be subjected to...",
+          "meaning": "Menerima POI sambil secara preemptif merendahkan atau mengantisipasi argumen lawan untuk melemahkan dampaknya.",
+          "example": "I yield to the opposition, though I suspect we are about to be subjected to yet another exercise in semantic equivocation."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Jebakan Agresi Informal (The Informal Aggression Pitfall)",
+        "explanation": "Pembicara tingkat menengah sering kali menggunakan bahasa konfrontatif langsung yang merusak etiket parlementer. Di level C2, serangan dilakukan melalui kesantunan yang mematikan (weaponized politeness) dan presisi leksikal, bukan emosi mentah.",
+        "wrong": "Can I interrupt? You are totally wrong about the economic statistics.",
+        "correct": "If I may interject, the member's statistical premise appears to be built on rather shaky empirical ground."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Manakah dari struktur berikut yang paling tepat untuk mengajukan Point of Information dengan tingkat formalitas C2?",
+          "options": [
+            "On that very point, would it not be fair to assert that your data is obsolete?",
+            "Wait a minute, doesn't that mean your entire argument is fundamentally flawed?",
+            "I have a point to make regarding the statistics you just mentioned."
+          ],
+          "correctIndex": 0,
+          "explanation": "Opsi pertama menggunakan inversi negatif ('would it not be fair') dan kosakata tingkat tinggi ('assert', 'obsolete') yang sangat sesuai dengan register debat parlementer."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Bagaimana cara menolak interupsi (POI) dari lawan dengan otoritas tertinggi tanpa terdengar kasar?",
+          "options": [
+            "Please sit down, I am not finished with my current point.",
+            "I decline the member's point at this juncture, but will return to it shortly.",
+            "Stop interrupting my speech, I will let you speak later."
+          ],
+          "correctIndex": 1,
+          "explanation": "Frasa 'at this juncture' dan 'decline the member's point' menunjukkan penguasaan register formal (weaponized politeness) yang menjaga wibawa pembicara."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Lengkapi kalimat penerimaan POI berikut agar memiliki efek preemptif yang meruntuhkan mental lawan: 'I concede the premise, yet...'",
+          "options": [
+            "...you are still completely wrong about the final outcome.",
+            "...it doesn't make any sense when applied to the real world.",
+            "...I reject your conclusion entirely as a textbook logical fallacy."
+          ],
+          "correctIndex": 2,
+          "explanation": "Opsi ketiga menggunakan terminologi akademis ('reject your conclusion entirely', 'textbook logical fallacy') yang secara elegan menghancurkan argumen lawan setelah memberikan konsesi palsu."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Equivocation",
+        "translation": "Penggunaan kata-kata ambigu untuk menyembunyikan kebenaran",
+        "example": "The minister's response was a masterclass in political equivocation, answering everything yet saying nothing.",
+        "context": "Digunakan untuk menyerang lawan yang menghindari pertanyaan langsung."
+      },
+      {
+        "word": "To yield the floor",
+        "translation": "Menyerahkan giliran bicara (kepada interuptor)",
+        "example": "I will yield the floor to the opposition for a brief point of information.",
+        "context": "Frasa prosedural standar dalam debat parlementer saat menerima POI."
+      },
+      {
+        "word": "Contention",
+        "translation": "Pernyataan atau argumen yang diperdebatkan dengan kuat",
+        "example": "It is our core contention that this policy will disproportionately affect the marginalized.",
+        "context": "Digunakan untuk memperkenalkan tesis utama atau menyerang tesis lawan."
+      },
+      {
+        "word": "To concede a premise",
+        "translation": "Mengakui dasar argumen lawan (biasanya sebelum menyerang kesimpulannya)",
+        "example": "I am willing to concede the premise that inflation is rising, but not the absurd solution you propose.",
+        "context": "Taktik retoris tingkat tinggi untuk terlihat objektif sebelum melancarkan serangan balik."
+      },
+      {
+        "word": "Dialectical",
+        "translation": "Berkaitan dengan penyelidikan logis atas kebenaran melalui diskusi/debat",
+        "example": "The debate devolved from a rigorous dialectical exchange into mere ad hominem attacks.",
+        "context": "Digunakan dalam metawacana untuk mengkritik atau memuji kualitas perdebatan."
+      },
+      {
+        "word": "Straw man",
+        "translation": "Argumen palsu yang sengaja dibuat lemah agar mudah dipatahkan",
+        "example": "The honorable member is merely attacking a straw man rather than addressing our actual policy.",
+        "context": "Digunakan untuk membongkar kelemahan logika lawan (logical fallacy) secara langsung."
+      }
+    ],
+    "dialogue": {
+      "context": "Dalam babak final debat Oxford Union, Pembicara A sedang memaparkan argumen tentang bahaya kedaulatan absolut negara. Pembicara B mencoba mematahkan momentum tersebut dengan Point of Information (POI) yang tajam.",
+      "lines": [
+        {
+          "speaker": "Speaker A",
+          "text": "The proposition's entire framework rests on the dangerous illusion that state sovereignty is an absolute, unassailable right.",
+          "translation": "Seluruh kerangka kerja pihak prodisisi bertumpu pada ilusi berbahaya bahwa kedaulatan negara adalah hak mutlak yang tidak dapat diganggu gugat."
+        },
+        {
+          "speaker": "Speaker B",
+          "text": "On that precise point, sir. Does the speaker not recognize that without sovereignty, international law becomes a mere suggestion?",
+          "translation": "Tepat pada poin tersebut, Tuan. Tidakkah pembicara menyadari bahwa tanpa kedaulatan, hukum internasional hanya menjadi sekadar saran?"
+        },
+        {
+          "speaker": "Speaker A",
+          "text": "I thank the member for the interruption, but conflating conditional sovereignty with anarchy is precisely the straw man fallacy we are exposing today.",
+          "translation": "Saya berterima kasih atas interupsi anggota tersebut, tetapi menyamakan kedaulatan bersyarat dengan anarki adalah tepatnya kesesatan logika 'straw man' yang sedang kami bongkar hari ini."
+        },
+        {
+          "speaker": "Speaker B",
+          "text": "Yet, to dismiss the foundational pillar of the UN Charter so cavalierly is to surrender to intellectual complacency.",
+          "translation": "Namun, mengabaikan pilar fundamental Piagam PBB dengan begitu sembrono sama dengan menyerah pada kepuasan intelektual yang semu."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Menguasai seni interupsi (POI) dan penolakan elegan dalam debat parlementer bertekanan tinggi menggunakan weaponized politeness.",
+      "scenario": "Simulasi Debat Oxford Union: Mosi perdebatan adalah 'This House Believes that Artificial Intelligence Should Be Granted Legal Personhood'. Anda bertindak sebagai pihak Oposisi. Saat pihak Proposisi sedang berbicara, Anda harus merumuskan satu POI yang menghancurkan premis mereka menggunakan struktur inversi negatif. Kemudian, simulasikan skenario di mana Anda sedang berpidato dan harus menolak POI dari lawan dengan kesantunan tingkat tinggi (C2 register)."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Dalam konteks debat parlementer, apa fungsi retoris utama dari frasa 'I shall address that contention in due course'?",
+          "options": [
+            "Untuk mengakui kekalahan atas poin yang diajukan lawan.",
+            "Untuk menunda jawaban karena pembicara tidak tahu harus berkata apa.",
+            "Untuk menolak interupsi secara elegan sambil mempertahankan kendali atas alur argumen.",
+            "Untuk mengundang lawan berbicara lebih panjang mengenai topik tersebut."
+          ],
+          "correctIndex": 2,
+          "explanation": "Frasa ini adalah taktik 'weaponized politeness' untuk menolak POI tanpa terlihat defensif, memastikan pembicara tetap memegang kendali (the floor)."
+        },
+        {
+          "id": 2,
+          "prompt": "Manakah dari kalimat berikut yang merupakan contoh terbaik dari 'conceding a premise to attack a conclusion'?",
+          "options": [
+            "Your data is completely fabricated and your conclusion is therefore invalid.",
+            "While I accept your statistical findings, the policy extrapolation you draw from them is fundamentally flawed.",
+            "I do not understand your premise, but I know your conclusion is wrong.",
+            "Both your premise and your conclusion are textbook examples of equivocation."
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi B secara eksplisit menerima dasar argumen ('accept your statistical findings') namun menghancurkan kesimpulannya ('policy extrapolation... is fundamentally flawed')."
+        },
+        {
+          "id": 3,
+          "prompt": "Pilih penyelesaian kalimat yang paling mencerminkan register C2 untuk menyerang logical fallacy lawan: 'The honorable member is not addressing our actual policy; rather, they are...'",
+          "options": [
+            "...making a big mistake.",
+            "...talking about something else entirely.",
+            "...attacking a straw man of their own creation.",
+            "...lying to the audience."
+          ],
+          "correctIndex": 2,
+          "explanation": "Penggunaan idiom akademis 'attacking a straw man' menunjukkan tingkat kemahiran leksikal C2 dalam mengidentifikasi kesesatan logika."
+        },
+        {
+          "id": 4,
+          "prompt": "Apa makna dari kata 'equivocation' dalam konteks debat tingkat tinggi?",
+          "options": [
+            "Kesetaraan hak berbicara antara kedua belah pihak.",
+            "Penggunaan suara yang keras untuk mengintimidasi lawan.",
+            "Penyampaian argumen yang sangat jelas dan tidak terbantahkan.",
+            "Penggunaan bahasa yang ambigu secara sengaja untuk menghindari komitmen atau menyembunyikan kebenaran."
+          ],
+          "correctIndex": 3,
+          "explanation": "Equivocation merujuk pada taktik menggunakan kata-kata yang bermakna ganda atau ambigu untuk menghindari memberikan jawaban yang langsung dan jujur."
+        }
+      ]
+    }
+  }
+}

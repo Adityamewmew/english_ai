@@ -1,0 +1,1732 @@
+{
+  "module": {
+    "id": "A1.2-M01",
+    "levelId": "A1.2",
+    "title": "Asking for & Giving Directions in the City",
+    "cefr": "A1",
+    "group": "A1.2 - Daily Logistics & Practical Actions",
+    "objective": "Ask for and give directions in town using imperative verbs (turn left, turn right, go straight) and prepositions of place (next to, opposite).",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 1
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-2-m01-reading",
+      "moduleId": "A1.2-M01",
+      "skillType": "reading",
+      "title": "Reading Mission: Finding Your Way Around the City",
+      "theme": "Asking for & Giving Directions in the City",
+      "grammarFocus": "Imperative sentences for giving directions and prepositions of place (next to, opposite, between, in front of, on your left/right)",
+      "vocabularyFocus": "City places, direction words, and location prepositions",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-2-m01-r-theory",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to your Reading Mission! In this lesson, you will read short, real-life texts about asking for and giving directions in a city. You will learn how to understand simple instructions like 'Turn left' and 'Go straight,' and how to find key details about locations using words like 'next to,' 'opposite,' and 'between.' By the end of this mission, you will feel confident reading simple maps, signs, and short conversations about directions. Let's explore the city together!",
+            "linguisticTarget": {
+              "grammar": "Imperative sentences for directions (Turn left, Go straight, Walk past) and prepositions of place (next to, opposite, between, in front of, on your left/right).",
+              "vocabulary": "City places (bank, post office, supermarket, museum, library, pharmacy, café, train station), direction words (turn left, turn right, go straight, corner, traffic light), and location prepositions.",
+              "readingStrategy": "Scanning for key direction words and location prepositions to quickly find specific information in a text. Skimming short passages to understand the main idea: Where is the person going? How do they get there?"
+            },
+            "learningObjectives": [
+              "Understand the main idea of short A1 passages about asking for and giving directions in a city.",
+              "Identify key details including specific places, direction words (turn left, go straight), and location prepositions (next to, opposite).",
+              "Recognize and practice imperative sentence patterns used for giving directions.",
+              "Use scanning skills to find specific location information in a reading passage.",
+              "Build confidence reading simple real-life texts such as directions, maps, and short dialogues."
+            ],
+            "contextWarmup": {
+              "prompt": "You are a tourist in a new city. You want to find the museum. What do you say to a person on the street?",
+              "options": [
+                "Excuse me, how do I get to the museum?",
+                "I like museums very much.",
+                "The museum is very big."
+              ],
+              "correctIndex": 0,
+              "explanation": "When you want to find a place, you ask for directions. 'Excuse me, how do I get to the museum?' is the correct way to ask someone for help finding a place. The other options are statements, not questions asking for directions."
+            },
+            "rules": [
+              "Use imperative sentences (commands) to give directions. Start with a verb: 'Turn left,' 'Go straight,' 'Walk past the bank.' Do NOT add 'to' before 'left' or 'right' — say 'Turn left,' NOT 'Turn to left.'",
+              "Use prepositions of place to describe where something is: 'next to' (beside), 'opposite' (across from), 'between' (in the middle of two things), 'in front of' (facing), 'on your left/right' (to your left or right side).",
+              "To ask for directions, use polite question patterns: 'Excuse me, where is the bank?' or 'How do I get to the train station?' Always start with 'Excuse me' to be polite.",
+              "Use 'the' before common city places: 'the bank,' 'the post office,' 'the museum.' This is important because you are talking about a specific place.",
+              "When reading directions, look for sequence words and key verbs: 'first,' 'then,' 'turn,' 'go,' 'walk,' 'you will see.' These words help you follow the route step by step."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Beginner Pitfall",
+              "explanation": "Many beginners add the word 'to' before 'left' or 'right' when giving directions, or they forget the article 'the' before city places. Also, beginners sometimes confuse 'next to' with 'in next to' — the word 'in' is not needed!",
+              "wrong": "Turn to left at the traffic light. The bank is in next to the hospital.",
+              "correct": "Turn left at the traffic light. The bank is next to the hospital."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Asking for & Giving Directions",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in natural spoken English:",
+            "contractions": [
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It is next to the bank.",
+                "exampleContracted": "It's next to the bank."
+              },
+              {
+                "subject": "You",
+                "verb": "will",
+                "vowelDropped": "wi",
+                "remainder": "ll",
+                "contracted": "You'll",
+                "exampleFull": "You will see the museum on your left.",
+                "exampleContracted": "You'll see the museum on your left."
+              },
+              {
+                "subject": "That",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "That's",
+                "exampleFull": "That is on the corner.",
+                "exampleContracted": "That's on the corner."
+              },
+              {
+                "subject": "There",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "There's",
+                "exampleFull": "There is a café opposite the park.",
+                "exampleContracted": "There's a café opposite the park."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Structure with Imperative Directions & Prepositions of Place",
+              "description": "Assemble and swap sentence blocks to explore affirmative, negative, and question patterns:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person (Singular)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "First Person Plural"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Third Person Plural"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Second Person"
+                }
+              ],
+              "complements": [
+                "next to the supermarket",
+                "opposite the train station",
+                "between the bank and the library",
+                "on the corner of Park Street",
+                "in front of the museum",
+                "on your left after the traffic light"
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m01-r-vocab",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "turn left",
+                "ipa": "/tɜːn left/",
+                "meaning": "belok kiri",
+                "collocation": "Turn left at the corner and you'll see the bank."
+              },
+              {
+                "word": "turn right",
+                "ipa": "/tɜːn raɪt/",
+                "meaning": "belok kanan",
+                "collocation": "Turn right after the traffic light."
+              },
+              {
+                "word": "go straight",
+                "ipa": "/ɡəʊ streɪt/",
+                "meaning": "lurus terus",
+                "collocation": "Go straight ahead for about 200 meters."
+              },
+              {
+                "word": "next to",
+                "ipa": "/nekst tuː/",
+                "meaning": "di sebelah",
+                "collocation": "The post office is next to the supermarket."
+              },
+              {
+                "word": "opposite",
+                "ipa": "/ˈɒpəzɪt/",
+                "meaning": "di seberang",
+                "collocation": "The café is opposite the train station."
+              },
+              {
+                "word": "traffic light",
+                "ipa": "/ˈtræfɪk laɪt/",
+                "meaning": "lampu lalu lintas",
+                "collocation": "Stop at the traffic light and turn left."
+              },
+              {
+                "word": "corner",
+                "ipa": "/ˈkɔːnə(r)/",
+                "meaning": "sudut jalan, pojok",
+                "collocation": "There's a café on the corner of the street."
+              },
+              {
+                "word": "on your left",
+                "ipa": "/ɒn jɔː(r) left/",
+                "meaning": "di sebelah kirimu",
+                "collocation": "The museum is on your left."
+              },
+              {
+                "word": "on your right",
+                "ipa": "/ɒn jɔː(r) raɪt/",
+                "meaning": "di sebelah kananmu",
+                "collocation": "You'll see the library on your right."
+              },
+              {
+                "word": "between",
+                "ipa": "/bɪˈtwiːn/",
+                "meaning": "di antara",
+                "collocation": "The pharmacy is between the bank and the bookshop."
+              },
+              {
+                "word": "walk past",
+                "ipa": "/wɔːk pɑːst/",
+                "meaning": "berjalan melewati",
+                "collocation": "Walk past the supermarket and turn right."
+              },
+              {
+                "word": "in front of",
+                "ipa": "/ɪn frʌnt ɒv/",
+                "meaning": "di depan",
+                "collocation": "The bus stop is in front of the hospital."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m01-r-guided",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-reading",
+          "sectionType": "dialogue",
+          "title": "Reading Passage: A Tourist in Greenfield City",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "A Tourist in Greenfield City",
+            "context": "Maria is a tourist visiting Greenfield City for the first time. She is standing near the train station and she wants to visit the city museum. She asks a friendly local man named Tom for directions.",
+            "text": "Maria is at the train station. She wants to visit the museum. She sees a man near the station.\n\n\"Excuse me,\" Maria says. \"How do I get to the museum?\"\n\n\"Sure!\" says Tom. \"It's not far. Go straight ahead on King Street. Walk past the supermarket. Then, turn left at the traffic light. Go straight for about one minute. You'll see a big park on your right. The museum is opposite the park, next to the library.\"\n\n\"Is it on the left side of the street?\" Maria asks.\n\n\"Yes, that's right! It's on your left. There's a café between the museum and the post office. You can have coffee there after your visit!\"\n\n\"Thank you so much!\" says Maria.\n\n\"You're welcome. Enjoy the museum!\" Tom replies with a smile.",
+            "wordCount": 142,
+            "highlights": [
+              {
+                "text": "Go straight ahead",
+                "note": "Imperative sentence — a command giving a direction. No subject needed.",
+                "type": "grammar"
+              },
+              {
+                "text": "Walk past",
+                "note": "Imperative verb phrase meaning 'continue walking beyond something.'",
+                "type": "grammar"
+              },
+              {
+                "text": "turn left",
+                "note": "Imperative direction — notice there is no 'to' before 'left.'",
+                "type": "grammar"
+              },
+              {
+                "text": "on your right",
+                "note": "Preposition phrase showing location relative to the listener.",
+                "type": "vocab"
+              },
+              {
+                "text": "opposite",
+                "note": "Preposition meaning 'across from' or 'facing.'",
+                "type": "vocab"
+              },
+              {
+                "text": "next to",
+                "note": "Preposition meaning 'beside' — the museum is beside the library.",
+                "type": "vocab"
+              },
+              {
+                "text": "between",
+                "note": "Preposition meaning 'in the middle of two things.'",
+                "type": "vocab"
+              },
+              {
+                "text": "traffic light",
+                "note": "A signal with red, yellow, and green lights that controls traffic.",
+                "type": "vocab"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m01-r-practice",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-reading",
+          "sectionType": "practice",
+          "title": "Guided Comprehension Check",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "prompt": "What is the main idea of this passage?",
+              "options": [
+                "A tourist asks for directions to the museum and a local man helps her.",
+                "A tourist wants to buy coffee at a café near the train station.",
+                "A local man is lost and asks a tourist for help."
+              ],
+              "correctIndex": 0,
+              "explanation": "The passage is about Maria, a tourist, who asks Tom for directions to the museum. Tom gives her clear step-by-step directions. This is the main idea of the text."
+            },
+            "detailQuestions": [
+              {
+                "id": 1,
+                "prompt": "Where does Maria start her journey?",
+                "options": [
+                  "At the train station.",
+                  "At the museum.",
+                  "At the supermarket."
+                ],
+                "correctIndex": 0,
+                "explanation": "The passage says 'Maria is at the train station.' This is where she starts before walking to the museum."
+              },
+              {
+                "id": 2,
+                "prompt": "Where is the museum located?",
+                "options": [
+                  "Opposite the park, next to the library.",
+                  "Between the train station and the supermarket.",
+                  "In front of the traffic light."
+                ],
+                "correctIndex": 0,
+                "explanation": "Tom tells Maria: 'The museum is opposite the park, next to the library.' This tells us the exact location of the museum."
+              },
+              {
+                "id": 3,
+                "prompt": "What is between the museum and the post office?",
+                "options": [
+                  "A café.",
+                  "A library.",
+                  "A supermarket."
+                ],
+                "correctIndex": 0,
+                "explanation": "Tom says: 'There's a café between the museum and the post office.' So the café is in the middle of these two places."
+              },
+              {
+                "id": 4,
+                "prompt": "What does Maria need to do at the traffic light?",
+                "options": [
+                  "Turn left.",
+                  "Turn right.",
+                  "Go straight."
+                ],
+                "correctIndex": 0,
+                "explanation": "Tom's directions say: 'Turn left at the traffic light.' So Maria needs to turn left when she reaches the traffic light."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m01-r-quiz",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-reading",
+          "sectionType": "quiz",
+          "title": "Reading Mastery Quiz",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "In the passage, what does Tom tell Maria to do first?",
+                "options": [
+                  "Go straight ahead on King Street.",
+                  "Turn left at the traffic light.",
+                  "Walk past the library."
+                ],
+                "answer": "Go straight ahead on King Street.",
+                "explanation": "Tom's first instruction is: 'Go straight ahead on King Street.' This is the first step in the directions he gives Maria."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which sentence uses the correct direction pattern?",
+                "options": [
+                  "Turn left at the corner.",
+                  "Turn to left at the corner.",
+                  "Turn in left at the corner."
+                ],
+                "answer": "Turn left at the corner.",
+                "explanation": "The correct pattern is 'Turn left' without 'to' or 'in.' We say 'Turn left at the corner,' NOT 'Turn to left' or 'Turn in left.'"
+              },
+              {
+                "id": "q-r-3",
+                "question": "What does the word 'opposite' mean in this sentence: 'The museum is opposite the park'?",
+                "options": [
+                  "The museum is across from the park, facing it.",
+                  "The museum is inside the park.",
+                  "The museum is very far from the park."
+                ],
+                "answer": "The museum is across from the park, facing it.",
+                "explanation": "'Opposite' means 'across from' or 'on the other side, facing something.' The museum and the park face each other across the street."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Read this sentence: 'The pharmacy is _____ the bank and the bookshop.' Which word completes it correctly?",
+                "options": [
+                  "between",
+                  "opposite",
+                  "in front of"
+                ],
+                "answer": "between",
+                "explanation": "'Between' means 'in the middle of two things.' The pharmacy is in the middle — with the bank on one side and the bookshop on the other side."
+              },
+              {
+                "id": "q-r-5",
+                "question": "Which is the correct way to ask for directions politely?",
+                "options": [
+                  "Excuse me, where is the post office?",
+                  "Post office where?",
+                  "I want post office now."
+                ],
+                "answer": "Excuse me, where is the post office?",
+                "explanation": "The polite way to ask for directions is: 'Excuse me, where is the post office?' Starting with 'Excuse me' is polite, and 'where is...?' is the correct question pattern."
+              },
+              {
+                "id": "q-r-6",
+                "question": "In the passage, what can Maria see on her right side?",
+                "options": [
+                  "A big park.",
+                  "The museum.",
+                  "The train station."
+                ],
+                "answer": "A big park.",
+                "explanation": "Tom says: 'You'll see a big park on your right.' So the park is on Maria's right side as she walks along the street."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Which sentence is INCORRECT?",
+                "options": [
+                  "The bank is in next to the hospital.",
+                  "The bank is next to the hospital.",
+                  "The bank is opposite the hospital."
+                ],
+                "answer": "The bank is in next to the hospital.",
+                "explanation": "The sentence 'The bank is in next to the hospital' is incorrect because we do NOT use 'in' before 'next to.' The correct form is simply 'next to' — for example: 'The bank is next to the hospital.'"
+              },
+              {
+                "id": "q-r-8",
+                "question": "What does 'Walk past the supermarket' mean?",
+                "options": [
+                  "Continue walking and go beyond the supermarket.",
+                  "Stop and go inside the supermarket.",
+                  "Turn around and walk away from the supermarket."
+                ],
+                "answer": "Continue walking and go beyond the supermarket.",
+                "explanation": "'Walk past' means to continue walking and go beyond something without stopping. You pass the supermarket and keep going."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m01-listening",
+      "moduleId": "A1.2-M01",
+      "skillType": "listening",
+      "title": "Listening Mission: Finding Your Way Around the City",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-2-m01-l-theory",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening mission, you will hear a tourist asking a local person for directions to the train station in a city centre. You will practise listening for key direction words like 'go straight', 'turn left', 'turn right', 'next to', and 'opposite'. At A1 level, you do not need to understand every single word. Focus on the direction words and place names. These are the most important words that tell you where to go. Listen for stressed words — speakers usually say direction words a little louder and slower because they are the most important information.",
+            "learningObjectives": [
+              "Identify key direction phrases such as 'go straight', 'turn left', and 'turn right' in spoken English.",
+              "Recognise location phrases like 'next to', 'opposite', and 'on your left/right' when listening to natural speech.",
+              "Understand simple questions about distance and location, such as 'How far is it?' and 'Where is the train station?'.",
+              "Follow a short set of spoken directions from one place to another in a city."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "Go straight ahead",
+                "meaning": "Jalan lurus ke depan",
+                "note": "Used to tell someone to continue walking or driving forward without turning."
+              },
+              {
+                "phrase": "Turn left / Turn right",
+                "meaning": "Belok kiri / Belok kanan",
+                "note": "Used to tell someone to change direction at a corner or intersection."
+              },
+              {
+                "phrase": "Next to",
+                "meaning": "Di sebelah / di samping",
+                "note": "Used to describe something that is very close beside another thing. For example: 'The bank is next to the post office.'"
+              },
+              {
+                "phrase": "Opposite",
+                "meaning": "Di seberang / berseberangan",
+                "note": "Used to describe something that is on the other side of the street or facing another building. For example: 'The café is opposite the park.'"
+              },
+              {
+                "phrase": "At the traffic light",
+                "meaning": "Di lampu lalu lintas",
+                "note": "Used to indicate a specific point where the listener should perform an action like turning."
+              },
+              {
+                "phrase": "On your left / On your right",
+                "meaning": "Di sebelah kirimu / Di sebelah kananmu",
+                "note": "Used to tell someone which side of the street or path a place is located on."
+              },
+              {
+                "phrase": "How far is it?",
+                "meaning": "Seberapa jauh?",
+                "note": "A common question to ask about the distance to a place. The answer is usually in metres, kilometres, or minutes."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "Go straight ahead on this street.",
+                "fast": "Go straight'head on this street.",
+                "slowIpa": "/ɡəʊ streɪt əˈhɛd ɒn ðɪs striːt/",
+                "fastIpa": "/ɡəʊ streɪtˈhɛd ɒn ðɪs striːt/",
+                "note": "In natural speech, the 'a' in 'ahead' often disappears and links directly to 'straight', sounding like 'straight-head'. The vowel /ə/ is dropped."
+              },
+              {
+                "id": 2,
+                "slow": "Turn left at the traffic light.",
+                "fast": "Turn lef' at the traffic light.",
+                "slowIpa": "/tɜːn lɛft æt ðə ˈtræfɪk laɪt/",
+                "fastIpa": "/tɜːn lɛf æt ðə ˈtræfɪk laɪt/",
+                "note": "The final 't' in 'left' is often unreleased or dropped before the vowel 'a' in 'at'. This is very common in natural British and American English."
+              },
+              {
+                "id": 3,
+                "slow": "It is on your right.",
+                "fast": "It's on yer right.",
+                "slowIpa": "/ɪt ɪz ɒn jɔːr raɪt/",
+                "fastIpa": "/ɪts ɒn jər raɪt/",
+                "note": "'It is' contracts to 'it's', and 'your' reduces to a quick 'yer' /jər/ in fast speech. Listen for the key word 'right' which carries the main meaning."
+              },
+              {
+                "id": 4,
+                "slow": "Next to a big supermarket.",
+                "fast": "Nex' to a big supermarket.",
+                "slowIpa": "/nɛkst tuː ə bɪɡ ˈsuːpəˌmɑːkɪt/",
+                "fastIpa": "/nɛks tə ə bɪɡ ˈsuːpəˌmɑːkɪt/",
+                "note": "The 't' at the end of 'next' often blends into the 't' of 'to', so you hear only one /t/ sound. Also, 'to' reduces from /tuː/ to /tə/."
+              },
+              {
+                "id": 5,
+                "slow": "Where is the train station?",
+                "fast": "Where's the train station?",
+                "slowIpa": "/wɛər ɪz ðə treɪn ˈsteɪʃən/",
+                "fastIpa": "/wɛəz ðə treɪn ˈsteɪʃən/",
+                "note": "'Where is' contracts to 'where's' in natural speech. The /ɪz/ reduces and links directly to the /w/ sound. This is one of the most common contractions in spoken English."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m01-l-dialogue",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Finding the Train Station",
+          "orderIndex": 2,
+          "content": {
+            "context": "A tourist is looking for the train station in the city centre. The tourist stops a friendly local person who is walking on the pavement and asks for directions. The local person gives step-by-step directions. Listen carefully to the direction words and place names.",
+            "audioPrompt": "Listen carefully to the following dialogue between a tourist and a local person on the street. Pay special attention to the direction words.",
+            "lines": [
+              {
+                "speaker": "Tourist",
+                "text": "Excuse me, where is the train station?",
+                "audioUrl": "/audio/modules/a1-2-m01/dialogue-1.mp3",
+                "translation": "Permisi, di mana stasiun kereta api?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Local",
+                "text": "The train station? Go straight ahead on this street.",
+                "audioUrl": "/audio/modules/a1-2-m01/dialogue-2.mp3",
+                "translation": "Stasiun kereta? Lurus terus di jalan ini.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Tourist",
+                "text": "Go straight ahead. OK. How far is it?",
+                "audioUrl": "/audio/modules/a1-2-m01/dialogue-3.mp3",
+                "translation": "Lurus terus. Oke. Seberapa jauh?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Local",
+                "text": "About 300 meters. Then turn left at the traffic light.",
+                "audioUrl": "/audio/modules/a1-2-m01/dialogue-4.mp3",
+                "translation": "Sekitar 300 meter. Lalu belok kiri di lampu lalu lintas.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Tourist",
+                "text": "Turn left at the traffic light. Is it on the left or right?",
+                "audioUrl": "/audio/modules/a1-2-m01/dialogue-5.mp3",
+                "translation": "Belok kiri di lampu lalu lintas. Apakah di sebelah kiri atau kanan?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Local",
+                "text": "It's on your right, next to a big supermarket.",
+                "audioUrl": "/audio/modules/a1-2-m01/dialogue-6.mp3",
+                "translation": "Di sebelah kananmu, di sebelah supermarket besar.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Tourist",
+                "text": "Next to the supermarket. Got it! Is there a café opposite the station?",
+                "audioUrl": "/audio/modules/a1-2-m01/dialogue-7.mp3",
+                "translation": "Di sebelah supermarket. Mengerti! Apakah ada kafe di seberang stasiun?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Local",
+                "text": "Yes, there is a small café opposite the station. You can't miss it!",
+                "audioUrl": "/audio/modules/a1-2-m01/dialogue-8.mp3",
+                "translation": "Ya, ada kafe kecil di seberang stasiun. Kamu tidak akan melewatkannya!",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Tourist",
+                "text": "That's great! Thank you so much for your help!",
+                "audioUrl": "/audio/modules/a1-2-m01/dialogue-9.mp3",
+                "translation": "Bagus sekali! Terima kasih banyak atas bantuanmu!",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Local",
+                "text": "You're welcome. Have a nice day!",
+                "audioUrl": "/audio/modules/a1-2-m01/dialogue-10.mp3",
+                "translation": "Sama-sama. Semoga harimu menyenangkan!",
+                "emotion": "friendly"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m01-l-quiz",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Excuse me, where is the train station?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tourist: \"Excuse me, where is the train _____?\"",
+                "targetWord": "station",
+                "explanation": "Full audio: \"Excuse me, where is the train station?\". The missing word is \"station\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "The train station?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Local: \"The _____ station?\"",
+                "targetWord": "train",
+                "explanation": "Full audio: \"The train station?\". The missing word is \"train\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Go straight ahead on this street.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Local: \"Go straight ahead on this _____.\"",
+                "targetWord": "street",
+                "explanation": "Full audio: \"Go straight ahead on this street.\". The missing word is \"street\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Go straight ahead.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tourist: \"Go straight _____.\"",
+                "targetWord": "ahead",
+                "explanation": "Full audio: \"Go straight ahead.\". The missing word is \"ahead\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "How far is it?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tourist: \"How _____ is it?\"",
+                "targetWord": "far",
+                "explanation": "Full audio: \"How far is it?\". The missing word is \"far\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "About 300 meters.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "About 300 meters",
+                "words": [
+                  "300",
+                  "About",
+                  "meters"
+                ],
+                "explanation": "Correct sentence order: \"About 300 meters.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Then turn left at the traffic light.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Then turn left at the traffic light",
+                "words": [
+                  "traffic",
+                  "light",
+                  "Then",
+                  "turn",
+                  "the",
+                  "at",
+                  "left"
+                ],
+                "explanation": "Correct sentence order: \"Then turn left at the traffic light.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Turn left at the traffic light.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Turn left at the traffic light",
+                "words": [
+                  "left",
+                  "light",
+                  "Turn",
+                  "the",
+                  "at",
+                  "traffic"
+                ],
+                "explanation": "Correct sentence order: \"Turn left at the traffic light.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Is it on the left or right?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Is it on the left or right",
+                "words": [
+                  "right",
+                  "the",
+                  "left",
+                  "or",
+                  "Is",
+                  "it",
+                  "on"
+                ],
+                "explanation": "Correct sentence order: \"Is it on the left or right?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "It's on your right",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It's on your right",
+                "words": [
+                  "It's",
+                  "right",
+                  "your",
+                  "on"
+                ],
+                "explanation": "Correct sentence order: \"It's on your right\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Excuse me, where is the train station?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tourist: \"Excuse me, where is the train _____?\"",
+                "targetWord": "station",
+                "explanation": "Full audio: \"Excuse me, where is the train station?\". The missing word is \"station\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "The train station?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Local: \"The _____ station?\"",
+                "targetWord": "train",
+                "explanation": "Full audio: \"The train station?\". The missing word is \"train\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Go straight ahead on this street.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Local: \"Go straight ahead on this _____.\"",
+                "targetWord": "street",
+                "explanation": "Full audio: \"Go straight ahead on this street.\". The missing word is \"street\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Go straight ahead.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tourist: \"Go straight _____.\"",
+                "targetWord": "ahead",
+                "explanation": "Full audio: \"Go straight ahead.\". The missing word is \"ahead\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "How far is it?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tourist: \"How _____ is it?\"",
+                "targetWord": "far",
+                "explanation": "Full audio: \"How far is it?\". The missing word is \"far\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "About 300 meters.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "About 300 meters",
+                "words": [
+                  "300",
+                  "About",
+                  "meters"
+                ],
+                "explanation": "Correct sentence order: \"About 300 meters.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Then turn left at the traffic light.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Then turn left at the traffic light",
+                "words": [
+                  "traffic",
+                  "light",
+                  "Then",
+                  "turn",
+                  "the",
+                  "at",
+                  "left"
+                ],
+                "explanation": "Correct sentence order: \"Then turn left at the traffic light.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Turn left at the traffic light.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Turn left at the traffic light",
+                "words": [
+                  "left",
+                  "light",
+                  "Turn",
+                  "the",
+                  "at",
+                  "traffic"
+                ],
+                "explanation": "Correct sentence order: \"Turn left at the traffic light.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Is it on the left or right?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Is it on the left or right",
+                "words": [
+                  "right",
+                  "the",
+                  "left",
+                  "or",
+                  "Is",
+                  "it",
+                  "on"
+                ],
+                "explanation": "Correct sentence order: \"Is it on the left or right?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "It's on your right",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It's on your right",
+                "words": [
+                  "It's",
+                  "right",
+                  "your",
+                  "on"
+                ],
+                "explanation": "Correct sentence order: \"It's on your right\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m01-writing",
+      "moduleId": "A1.2-M01",
+      "skillType": "writing",
+      "title": "Writing Mission: Asking for & Giving Directions in the City",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-2-m01-w-theory",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this writing blueprint, you will learn how to write sentences and short paragraphs about asking for and giving directions in the city. You will practise using imperative sentences like 'Turn left' and 'Go straight ahead', prepositions of place like 'next to', 'opposite', and 'between', and polite question patterns like 'Excuse me, where is...?' and 'How do I get to...?'. Follow the steps below to build clear and correct direction sentences in English.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Ask for Directions Politely",
+                "formula": "Excuse me, + where is + [place]? / How do I get to + [place]?",
+                "example": "Excuse me, where is the train station?"
+              },
+              {
+                "step": 2,
+                "title": "Give Directions with Imperative Verbs",
+                "formula": "[Verb] + [direction/place]",
+                "example": "Turn left at the traffic light, then go straight ahead."
+              },
+              {
+                "step": 3,
+                "title": "Describe a Location with Prepositions of Place",
+                "formula": "The + [place] + is + [preposition of place] + the + [landmark]",
+                "example": "The bank is next to the post office."
+              },
+              {
+                "step": 4,
+                "title": "Combine Asking and Giving in a Short Dialogue",
+                "formula": "Question (Excuse me, where is...?) + Answer (Go straight, turn..., it is [preposition] the...)",
+                "example": "Excuse me, how do I get to the museum? Go straight ahead. Turn right at the park. The museum is opposite the library."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always start a sentence with a capital letter. Place names like 'Park Street' also need capital letters because they are proper nouns.",
+                "badExample": "turn left on park street.",
+                "goodExample": "Turn left on Park Street.",
+                "why": "Every sentence begins with a capital letter. Street names and place names are proper nouns, so each word in the name starts with a capital letter."
+              },
+              {
+                "rule": "Use a question mark (?) at the end of a question sentence, not a full stop.",
+                "badExample": "Excuse me, where is the hospital.",
+                "goodExample": "Excuse me, where is the hospital?",
+                "why": "When you ask a question, you must end the sentence with a question mark so the reader knows it is a question."
+              },
+              {
+                "rule": "Use a comma (,) after introductory words like 'Excuse me' and between two direction instructions joined in one sentence.",
+                "badExample": "Excuse me where is the bank?",
+                "goodExample": "Excuse me, where is the bank?",
+                "why": "A comma after 'Excuse me' makes the sentence polite and clear. It separates the greeting from the question."
+              },
+              {
+                "rule": "Use a full stop (.) at the end of imperative direction sentences.",
+                "badExample": "Go straight ahead and turn right",
+                "goodExample": "Go straight ahead and turn right.",
+                "why": "Imperative sentences that give instructions are statements. They must end with a full stop."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "Excuse me, where is the supermarket?",
+                "id": "Permisi, di mana supermarketnya?",
+                "focus": "Polite question pattern: Excuse me, where is + place?"
+              },
+              {
+                "en": "Turn right at the traffic light.",
+                "id": "Belok kanan di lampu lalu lintas.",
+                "focus": "Imperative sentence: Verb + direction + at + landmark"
+              },
+              {
+                "en": "The pharmacy is between the bank and the bookshop.",
+                "id": "Apotek ada di antara bank dan toko buku.",
+                "focus": "Preposition of place: between + place + and + place"
+              },
+              {
+                "en": "How do I get to the train station?",
+                "id": "Bagaimana cara saya ke stasiun kereta?",
+                "focus": "Question pattern: How do I get to + place?"
+              },
+              {
+                "en": "The hospital is opposite the park.",
+                "id": "Rumah sakit ada di seberang taman.",
+                "focus": "Preposition of place: opposite + landmark"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m01-w-practice",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "excuse me where is the library.",
+                "targetSentence": "Excuse me, where is the library?",
+                "translation": "Permisi, di mana perpustakaannya?",
+                "keyRule": "Start with a capital letter, add a comma after 'Excuse me', and end a question with a question mark.",
+                "requiredCapitals": [
+                  "Excuse"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "turn left on baker street and go straight ahead",
+                "targetSentence": "Turn left on Baker Street and go straight ahead.",
+                "translation": "Belok kiri di Baker Street dan lurus terus.",
+                "keyRule": "Start with a capital letter, capitalise proper nouns (street names), and end the sentence with a full stop.",
+                "requiredCapitals": [
+                  "Turn",
+                  "Baker",
+                  "Street"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "the museum is opposite the post office",
+                "targetSentence": "The museum is opposite the post office.",
+                "translation": "Museum ada di seberang kantor pos.",
+                "keyRule": "Start the sentence with a capital letter and end it with a full stop.",
+                "requiredCapitals": [
+                  "The"
+                ]
+              },
+              {
+                "id": "sent-4",
+                "faultySentence": "how do i get to the hospital.",
+                "targetSentence": "How do I get to the hospital?",
+                "translation": "Bagaimana cara saya ke rumah sakit?",
+                "keyRule": "Start with a capital letter, always capitalise the pronoun 'I', and end a question with a question mark instead of a full stop.",
+                "requiredCapitals": [
+                  "How",
+                  "I"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Asking for Directions",
+                "meaning": "Permisi, di mana stasiun kereta?",
+                "tokens": [
+                  "Excuse",
+                  "me,",
+                  "where",
+                  "is",
+                  "the",
+                  "train",
+                  "station?"
+                ],
+                "fullSentence": "Excuse me, where is the train station?"
+              },
+              {
+                "id": "b-2",
+                "category": "Giving Directions",
+                "meaning": "Belok kanan di lampu lalu lintas.",
+                "tokens": [
+                  "Turn",
+                  "right",
+                  "at",
+                  "the",
+                  "traffic",
+                  "light."
+                ],
+                "fullSentence": "Turn right at the traffic light."
+              },
+              {
+                "id": "b-3",
+                "category": "Describing a Location",
+                "meaning": "Bank ada di sebelah supermarket.",
+                "tokens": [
+                  "The",
+                  "bank",
+                  "is",
+                  "next",
+                  "to",
+                  "the",
+                  "supermarket."
+                ],
+                "fullSentence": "The bank is next to the supermarket."
+              },
+              {
+                "id": "b-4",
+                "category": "Asking for Directions",
+                "meaning": "Bagaimana cara saya ke museum?",
+                "tokens": [
+                  "How",
+                  "do",
+                  "I",
+                  "get",
+                  "to",
+                  "the",
+                  "museum?"
+                ],
+                "fullSentence": "How do I get to the museum?"
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Give Directions to a Tourist",
+                "badge": "City Guide Star",
+                "instruction": "A tourist asks you: 'Excuse me, how do I get to the hospital?' Write 3 to 5 sentences giving clear directions. Use imperative verbs (go, turn, walk) and at least one preposition of place (next to, opposite, between, in front of).",
+                "example": "Go straight ahead on Main Street. Turn left at the traffic light. Walk past the supermarket. The hospital is next to the park. You will see it on your right.",
+                "placeholder": "Start writing your directions here...",
+                "minWords": 15,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Write a Short Direction Dialogue",
+                "badge": "Direction Dialogue Master",
+                "instruction": "Write a short dialogue between a visitor and a local person. The visitor asks for directions to the library. The local person gives directions using at least 2 imperative sentences and 1 preposition of place. Write at least 4 lines of dialogue. Use 'Visitor:' and 'Local:' to show who is speaking.",
+                "example": "Visitor: Excuse me, where is the library?\nLocal: Go straight ahead. Turn right at the bookshop.\nVisitor: Is it far from here?\nLocal: No, it is not far. The library is opposite the park. You will see a big white building.",
+                "placeholder": "Visitor: Excuse me, ...\nLocal: ...",
+                "minWords": 20,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m01-w-quiz",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-writing",
+          "sectionType": "quiz",
+          "title": "Writing Practicum & Assessment",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": "w-p-1",
+                "prompt": "A friend sends you a message: 'I am lost! How do I get to the supermarket from the train station?' Write a reply with 3 to 5 sentences. Use imperative verbs and at least one preposition of place.",
+                "criteria": "Uses at least 2 imperative direction sentences (e.g., Turn left, Go straight). Includes at least 1 preposition of place (next to, opposite, between, in front of). Sentences start with capital letters and end with correct punctuation. The directions are clear and easy to follow. Minimum 3 sentences.",
+                "sampleGoodAnswer": "Go out of the train station and turn right. Walk straight ahead on King Street. Turn left at the traffic light. The supermarket is next to the pharmacy. It is a big red building."
+              },
+              {
+                "id": "w-p-2",
+                "prompt": "You are writing an email to a new student at your school. Explain where 3 important places are near the school (for example: the library, the bus stop, the café). Use prepositions of place in your description.",
+                "criteria": "Describes at least 3 places near the school. Uses at least 3 different prepositions of place (next to, opposite, between, in front of, behind). Sentences are grammatically correct at A1 level. Starts with a greeting and ends politely. Minimum 4 sentences.",
+                "sampleGoodAnswer": "Hi! Welcome to our school. The library is next to the main building. The bus stop is opposite the school gate. There is a nice café between the bookshop and the bank. It is in front of the park. I hope this helps!"
+              },
+              {
+                "id": "w-p-3",
+                "prompt": "Look at this situation: You are standing in front of the post office. A person asks you, 'Excuse me, how do I get to the museum?' Write the full conversation (question and answer) with at least 5 lines of dialogue.",
+                "criteria": "Includes a polite question using 'Excuse me, where is...?' or 'How do I get to...?'. The answer uses at least 2 imperative direction sentences. Uses at least 1 preposition of place correctly. Correct capitalisation and punctuation throughout. The dialogue has at least 5 lines and feels natural.",
+                "sampleGoodAnswer": "Person: Excuse me, how do I get to the museum?\nYou: Sure! Go straight ahead on this street.\nPerson: Do I need to turn?\nYou: Yes, turn left at the big church. Then walk for two minutes. The museum is opposite the city park.\nPerson: Thank you very much!\nYou: You are welcome!"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m01-speaking",
+      "moduleId": "A1.2-M01",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Asking for & Giving Directions in the City",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-2-m01-s-theory",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this speaking lab, you will learn how to ask for and give directions in a city. You will practise key phrases like 'turn left', 'turn right', 'go straight', 'next to', and 'opposite'. Good pronunciation and clear intonation are very important when asking for directions, because if someone cannot understand you, you may get lost! We will focus on rising intonation for questions such as 'Where is the library?' and falling intonation for instructions such as 'Turn right at the corner.' You will also learn how to stress the important words in direction phrases so that people understand you easily.",
+            "audioGuidance": "When you ask for directions, your voice should go UP at the end of yes/no questions like 'Is the library near the park?' and go DOWN at the end of Wh-questions like 'Where is the bank?' For instruction sentences like 'Go straight ahead' and 'Turn left at the corner', use a clear falling tone to sound confident. Speak slowly and clearly. Pause between phrases so the listener can follow. Stress the direction words: 'Turn LEFT', 'Go STRAIGHT', 'NEXT to the park', 'OPPOSITE the school'. This helps the listener catch the most important information.",
+            "pillars": [
+              {
+                "name": "Rising Intonation for Questions",
+                "target": "Use rising intonation when asking yes/no direction questions",
+                "explanation": "When you ask a yes/no question like 'Is the bank near here?', your voice should rise at the end. This tells the listener you are asking a question and you expect an answer. Practise saying 'Is there a hospital nearby?' with your voice going up on 'nearby'."
+              },
+              {
+                "name": "Falling Intonation for Instructions",
+                "target": "Use falling intonation when giving direction commands",
+                "explanation": "When you give directions like 'Turn right at the traffic light' or 'Go straight for two blocks', your voice should fall at the end. This sounds confident and clear. A falling tone tells the listener that you are giving information, not asking a question."
+              },
+              {
+                "name": "Word Stress on Direction Words",
+                "target": "Stress key direction vocabulary clearly",
+                "explanation": "In direction phrases, stress the most important words. Say 'Turn LEFT at the CORner' with strong stress on 'LEFT' and 'CORner'. Say 'The bank is NEXT to the PARK' with stress on 'NEXT' and 'PARK'. This helps the listener understand the key information quickly."
+              },
+              {
+                "name": "Clear Consonant Sounds",
+                "target": "Pronounce consonant clusters in direction words accurately",
+                "explanation": "Many direction words have consonant sounds that need to be clear. The word 'straight' has the cluster /str/ at the beginning. The word 'left' ends with /ft/. Practise these sounds slowly, then speed up. Say 'straight' as /streɪt/, not 'setrait'. Say 'right' as /raɪt/, making sure the 'r' sound is clear."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m01-s-practice",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "STRAIGHT",
+                "countryAudio": "straight",
+                "countrySyllables": [
+                  {
+                    "text": "STRAIGHT",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "go STRAIGHT a-HEAD",
+                "natAudio": "go straight ahead",
+                "natSyllables": [
+                  {
+                    "text": "go",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "STRAIGHT",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "a",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "HEAD",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "When 'straight' stands alone, it has one strong beat. In the phrase 'go straight ahead', the stress falls on both 'STRAIGHT' and 'HEAD'. The word 'go' and the syllable 'a-' are weak and quick. This creates a natural English rhythm: weak-STRONG-weak-STRONG."
+              },
+              {
+                "id": "pair-2",
+                "country": "CORNER",
+                "countryAudio": "corner",
+                "countrySyllables": [
+                  {
+                    "text": "COR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ner",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "at the COR-ner",
+                "natAudio": "at the corner",
+                "natSyllables": [
+                  {
+                    "text": "at",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "the",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "COR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ner",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The word 'corner' always has stress on the first syllable: COR-ner. In the phrase 'at the corner', the small words 'at' and 'the' are unstressed and spoken quickly. The stress stays on 'COR'. This pattern helps the listener focus on the important word."
+              },
+              {
+                "id": "pair-3",
+                "country": "OPPOSITE",
+                "countryAudio": "opposite",
+                "countrySyllables": [
+                  {
+                    "text": "OP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "po",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "site",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "OP-po-site the PARK",
+                "natAudio": "opposite the park",
+                "natSyllables": [
+                  {
+                    "text": "OP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "po",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "site",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "the",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PARK",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "The word 'opposite' has three syllables with stress on the first: OP-po-site. In the phrase 'opposite the park', there are two stressed words: 'OP' and 'PARK'. The words in between are spoken softly and quickly. This double-stress pattern is very common in direction phrases."
+              },
+              {
+                "id": "pair-4",
+                "country": "LIBRARY",
+                "countryAudio": "library",
+                "countrySyllables": [
+                  {
+                    "text": "LI",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "bra",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ry",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "the PUB-lic LI-bra-ry",
+                "natAudio": "the public library",
+                "natSyllables": [
+                  {
+                    "text": "the",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PUB",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "lic",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LI",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "bra",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ry",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The word 'library' has stress on the first syllable: LI-bra-ry. Be careful to pronounce all three syllables clearly — do not skip the middle syllable 'bra'. In the phrase 'the public library', both 'PUB' and 'LI' carry stress, creating a rhythmic pattern."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "Excuse me, where is the bank?",
+                "phonetic": "/ɪkˈskjuːz miː, weər ɪz ðə bæŋk/",
+                "focus": "Rising intonation on the question",
+                "hint": "Start with a polite tone on 'Excuse me', then let your voice rise at the end on 'bank?' to show you are asking a question."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "Go straight ahead for two blocks.",
+                "phonetic": "/ɡəʊ streɪt əˈhed fɔːr tuː blɒks/",
+                "focus": "Clear pronunciation of 'straight' and falling intonation",
+                "hint": "Make sure you say the 'str' cluster clearly in 'straight'. Do not add an extra vowel before it. Your voice should fall at the end because this is an instruction."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Turn left at the traffic light.",
+                "phonetic": "/tɜːn left æt ðə ˈtræfɪk laɪt/",
+                "focus": "Consonant cluster /ft/ in 'left' and word stress",
+                "hint": "Say 'left' with a clear /f/ and /t/ at the end. Stress the words 'LEFT' and 'LIGHT'. The small words 'at' and 'the' should be quick and soft."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "The hospital is next to the supermarket.",
+                "phonetic": "/ðə ˈhɒspɪtl ɪz nekst tuː ðə ˈsuːpəˌmɑːkɪt/",
+                "focus": "Stress on 'hospital', 'next', and 'supermarket'",
+                "hint": "Stress the first syllable of 'HOS-pi-tal' and 'SU-per-mar-ket'. Say 'next to' as one unit with stress on 'NEXT'. Keep 'the' and 'is' short and soft."
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "Is there a pharmacy near here?",
+                "phonetic": "/ɪz ðeər ə ˈfɑːməsi nɪər hɪər/",
+                "focus": "Rising intonation for yes/no question",
+                "hint": "This is a yes/no question, so your voice must go UP at the end on 'here?'. Stress the word 'PHAR-ma-cy' on the first syllable."
+              },
+              {
+                "id": "spk-d-6",
+                "targetText": "The post office is opposite the park.",
+                "phonetic": "/ðə pəʊst ˈɒfɪs ɪz ˈɒpəzɪt ðə pɑːk/",
+                "focus": "Pronunciation of 'opposite' and falling intonation",
+                "hint": "Say 'OP-po-site' with three clear syllables and stress on 'OP'. This is a statement, so your voice should fall at the end on 'park'."
+              }
+            ],
+            "roleplay": {
+              "context": "You are in the city centre. You want to find the public library. Mr. Khoirul is a friendly local person standing near a bus stop. You walk up to him and ask for directions. He will help you find the way. Practise asking politely and repeating the directions to make sure you understand them.",
+              "roles": [
+                "Mr. Khoirul",
+                "You"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Hello! You look lost. Can I help you?",
+                  "translation": "Halo! Kamu terlihat tersesat. Bisa saya bantu?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Yes, please. Where is the public library?",
+                  "translation": "Ya, tolong. Di mana perpustakaan umum?"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "The library is not far from here. Go straight ahead for about 100 meters.",
+                  "translation": "Perpustakaannya tidak jauh dari sini. Jalan lurus ke depan sekitar 100 meter."
+                },
+                {
+                  "speaker": "You",
+                  "text": "Go straight ahead. Then what should I do?",
+                  "translation": "Jalan lurus ke depan. Lalu apa yang harus saya lakukan?"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Then turn right at the corner. You will see a park on your left.",
+                  "translation": "Lalu belok kanan di tikungan. Kamu akan melihat taman di sebelah kirimu."
+                },
+                {
+                  "speaker": "You",
+                  "text": "Turn right at the corner. Is the library near the park?",
+                  "translation": "Belok kanan di tikungan. Apakah perpustakaannya dekat taman?"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Yes! The library is opposite the park, next to a coffee shop.",
+                  "translation": "Ya! Perpustakaannya di seberang taman, di sebelah kedai kopi."
+                },
+                {
+                  "speaker": "You",
+                  "text": "Opposite the park, next to a coffee shop. Thank you very much for your help!",
+                  "translation": "Di seberang taman, di sebelah kedai kopi. Terima kasih banyak atas bantuanmu!"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "You are welcome! Have a nice day!",
+                  "translation": "Sama-sama! Semoga harimu menyenangkan!"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Thank you! You too!",
+                  "translation": "Terima kasih! Kamu juga!"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m01-s-quiz",
+          "moduleId": "A1.2-M01",
+          "subModuleId": "sub-a1-2-m01-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about a time you were lost in a city and asked someone for directions. Use the three story points below to guide your story. Speak clearly and use direction vocabulary like 'turn left', 'go straight', 'next to', and 'opposite'.",
+                "audioPrompt": "Now it is your turn to tell a story. Imagine you were lost in a new city last weekend. You stopped a friendly person on the street and asked for help. Tell me what happened. Use the three story points on your screen to help you.",
+                "storyPoints": [
+                  "You were walking in a new city and you could not find the train station.",
+                  "You asked a woman on the street for directions. She said: go straight, then turn left at the big supermarket.",
+                  "You followed her directions and found the train station next to a hotel. You said thank you."
+                ],
+                "targetSentence": "Last weekend, I was lost in a new city. I could not find the train station. I asked a woman for help. She said, go straight and turn left at the supermarket. I followed her directions and I found the train station. It was next to a hotel. I said thank you to the woman.",
+                "phonetic": "/lɑːst ˈwiːkˌend aɪ wɒz lɒst ɪn ə njuː ˈsɪti/",
+                "expectedKeywords": [
+                  "lost",
+                  "train station",
+                  "go straight",
+                  "turn left",
+                  "supermarket",
+                  "next to",
+                  "hotel",
+                  "thank you"
+                ],
+                "hint": "Use past tense for your story: 'I was lost', 'She said', 'I found'. Speak slowly and clearly. Remember to stress the direction words.",
+                "explanation": "This storytelling task helps you practise using direction vocabulary in a real-life narrative. By telling a story, you connect direction phrases with personal experience, which makes them easier to remember and use naturally."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about helping a tourist find a place in your city. Use the three story points below. Include direction words like 'turn right', 'go straight ahead', 'opposite', and 'on your left'.",
+                "audioPrompt": "Now tell me a story about a time you helped someone find a place. A tourist asked you for directions to a famous mosque. What did you tell them? Use the story points on your screen.",
+                "storyPoints": [
+                  "A tourist stopped you on the street and asked where the big mosque was.",
+                  "You told the tourist to go straight ahead and then turn right at the corner near the bank.",
+                  "The mosque was opposite a restaurant and the tourist thanked you and took a photo with you."
+                ],
+                "targetSentence": "One day, a tourist stopped me on the street. He asked me where the big mosque was. I told him to go straight ahead and turn right at the corner near the bank. The mosque was opposite a restaurant. He thanked me and we took a photo together.",
+                "phonetic": "/wʌn deɪ ə ˈtʊərɪst stɒpt miː ɒn ðə striːt/",
+                "expectedKeywords": [
+                  "tourist",
+                  "mosque",
+                  "go straight",
+                  "turn right",
+                  "corner",
+                  "bank",
+                  "opposite",
+                  "restaurant",
+                  "thanked"
+                ],
+                "hint": "When you give directions in a story, use clear phrases: 'Go straight ahead', 'Turn right at the corner'. Pause between each direction so the listener can follow.",
+                "explanation": "This task practises giving directions from the helper's perspective. Being able to give clear directions is just as important as asking for them. Using a story format helps you practise connected speech and natural delivery."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are a tourist in a new city. You want to find the nearest hospital. Call Mr. Khoirul, who is a local resident, and ask him for directions. Listen to his directions and repeat them to confirm you understand.",
+                "audioPrompt": "Ring ring! Hello, this is Mr. Khoirul speaking. How can I help you today?",
+                "scenarioContext": "You have just arrived in a city you do not know. You feel a little sick and you need to find the nearest hospital quickly. You see a phone number for a local information line and you call it. Mr. Khoirul answers the phone and is ready to help you.",
+                "characterRole": "Mr. Khoirul is a friendly local information officer who knows the city very well. He speaks slowly and clearly to help tourists. He will give you step-by-step directions to the hospital.",
+                "targetSentence": "Excuse me, can you tell me where the nearest hospital is? I need to go there quickly.",
+                "phonetic": "/ɪkˈskjuːz miː kæn juː tel miː weər ðə ˈnɪərɪst ˈhɒspɪtl ɪz/",
+                "expectedKeywords": [
+                  "excuse me",
+                  "where",
+                  "hospital",
+                  "nearest",
+                  "directions",
+                  "how do I get"
+                ],
+                "hint": "Start politely with 'Excuse me' or 'Hello'. Ask your question clearly: 'Where is the nearest hospital?' or 'Can you tell me how to get to the hospital?'",
+                "explanation": "This roleplay practises asking for directions in an urgent but polite way. Even when you need help quickly, it is important to use polite phrases like 'Excuse me' and 'Can you tell me'. This makes people more willing to help you."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are walking in the city and a tourist asks you for directions to the museum. You know where the museum is. Give the tourist clear, step-by-step directions using 'go straight', 'turn left', and 'next to'.",
+                "audioPrompt": "Excuse me! I am looking for the city museum. Do you know where it is? Can you help me, please?",
+                "scenarioContext": "You are a local person walking near the city centre. A friendly tourist stops you and asks for help finding the city museum. You know the museum is about 200 meters away. You need to give clear directions.",
+                "characterRole": "The tourist is a polite visitor from another country. They speak basic English and need simple, clear directions. They may ask you to repeat or explain if they do not understand.",
+                "targetSentence": "Sure! Go straight ahead for about 200 meters. Then turn left at the traffic light. The museum is next to the big bookshop. You cannot miss it!",
+                "phonetic": "/ʃʊər ɡəʊ streɪt əˈhed fɔːr əˈbaʊt tuː ˈhʌndrəd ˈmiːtəz/",
+                "expectedKeywords": [
+                  "go straight",
+                  "turn left",
+                  "traffic light",
+                  "museum",
+                  "next to",
+                  "meters"
+                ],
+                "hint": "Give directions step by step. First say 'Go straight ahead'. Then say 'Turn left at...' Finally, describe where the place is: 'It is next to...' or 'It is opposite...'",
+                "explanation": "This roleplay practises giving directions. When you give directions, use short, clear sentences. Give one instruction at a time. Use landmarks like 'the traffic light' or 'the big bookshop' to help the listener understand where to go."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are at a bus stop and you want to find a good restaurant for lunch. Mr. Khoirul is waiting at the same bus stop. Start a conversation and ask him to recommend a restaurant and tell you how to get there.",
+                "audioPrompt": "Hello there! Nice weather today, isn't it? Are you waiting for the bus too?",
+                "scenarioContext": "It is lunchtime and you are hungry. You are standing at a bus stop in the city centre. Mr. Khoirul, a friendly local man, is also waiting for the bus. You want to ask him if he knows a good restaurant nearby and how to walk there.",
+                "characterRole": "Mr. Khoirul is a cheerful local man who loves food and knows all the best restaurants in the city. He is happy to chat and give recommendations with clear directions.",
+                "targetSentence": "Hello! Yes, nice weather! Excuse me, do you know a good restaurant near here? Can you tell me how to get there?",
+                "phonetic": "/həˈləʊ jes naɪs ˈweðər ɪkˈskjuːz miː duː juː nəʊ ə ɡʊd ˈrestərɒnt nɪər hɪər/",
+                "expectedKeywords": [
+                  "restaurant",
+                  "near here",
+                  "how to get there",
+                  "excuse me",
+                  "good",
+                  "where"
+                ],
+                "hint": "Start with a friendly greeting to be natural. Then ask your question politely. You can say 'Do you know a good restaurant near here?' and then 'How do I get there?'",
+                "explanation": "This roleplay practises combining social conversation with asking for directions. In real life, you often need to start with small talk before asking for help. This makes the conversation more natural and friendly."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are inside a shopping mall and you cannot find the exit. Call the information desk and ask for directions to the nearest exit. Mr. Khoirul works at the information desk.",
+                "audioPrompt": "Good afternoon! This is the information desk. Mr. Khoirul speaking. How may I help you?",
+                "scenarioContext": "You have been shopping in a very large mall and now you are confused. You cannot find the way out. You see a phone on the wall that connects to the information desk. You pick up the phone and call for help.",
+                "characterRole": "Mr. Khoirul works at the mall information desk. He is patient and helpful. He will give you simple directions to the nearest exit using landmarks inside the mall like shops and escalators.",
+                "targetSentence": "Hello, I am lost in the mall. Can you tell me how to get to the nearest exit, please?",
+                "phonetic": "/həˈləʊ aɪ æm lɒst ɪn ðə mɔːl kæn juː tel miː haʊ tuː ɡet tuː ðə ˈnɪərɪst ˈeksɪt pliːz/",
+                "expectedKeywords": [
+                  "lost",
+                  "mall",
+                  "exit",
+                  "nearest",
+                  "how to get",
+                  "where",
+                  "please"
+                ],
+                "hint": "Explain your problem first: 'I am lost.' Then ask for help: 'Can you tell me how to get to the exit?' Always say 'please' to be polite.",
+                "explanation": "This roleplay practises asking for directions inside a building. The same direction phrases work indoors too: 'go straight', 'turn left', 'next to the escalator'. Practising in different settings helps you use these phrases in many real situations."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "focus": "vocab",
+                "instruction": "Say the following sentence out loud. Focus on using the correct direction vocabulary. Make sure you pronounce each direction word clearly.",
+                "audioPrompt": "Please say this sentence clearly. Pay attention to the direction words.",
+                "targetSentence": "The pharmacy is opposite the bank, next to the post office.",
+                "phonetic": "/ðə ˈfɑːməsi ɪz ˈɒpəzɪt ðə bæŋk nekst tuː ðə pəʊst ˈɒfɪs/",
+                "expectedKeywords": [
+                  "pharmacy",
+                  "opposite",
+                  "bank",
+                  "next to",
+                  "post office"
+                ],
+                "hint": "Remember: 'opposite' means on the other side of the street, facing something. 'Next to' means very close, beside something. Say each word clearly and do not rush.",
+                "explanation": "This drill tests your ability to use and pronounce key direction vocabulary: 'opposite' and 'next to'. These are prepositions of place that are essential for describing where things are located in a city. Pronounce 'opposite' as OP-po-site with three syllables."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "focus": "grammar",
+                "instruction": "Say the following sentence out loud. Focus on the correct use of the imperative form for giving directions and the preposition 'at'.",
+                "audioPrompt": "Please say this sentence. Focus on the grammar: the imperative verb and the preposition.",
+                "targetSentence": "Turn right at the traffic light and go straight for one block.",
+                "phonetic": "/tɜːn raɪt æt ðə ˈtræfɪk laɪt ænd ɡəʊ streɪt fɔːr wʌn blɒk/",
+                "expectedKeywords": [
+                  "turn",
+                  "right",
+                  "at",
+                  "traffic light",
+                  "go straight",
+                  "one block"
+                ],
+                "hint": "When giving directions, we use the imperative form: 'Turn right' (not 'You turn right' or 'You should turn right'). We use 'at' before a specific point: 'at the traffic light', 'at the corner'.",
+                "explanation": "This drill focuses on the imperative mood, which is the grammar structure used for giving instructions and directions. In English, we drop the subject 'you' and start directly with the verb: 'Turn right', 'Go straight', 'Walk past the bank'. The preposition 'at' is used before specific points or landmarks."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Say the following sentence out loud. Focus on putting the correct syllable stress on the multi-syllable words. The stressed syllables are shown in CAPITAL letters in the hint.",
+                "audioPrompt": "Please say this sentence. Pay careful attention to which syllable is stressed in each long word.",
+                "targetSentence": "The supermarket is opposite the hospital on the corner.",
+                "phonetic": "/ðə ˈsuːpəˌmɑːkɪt ɪz ˈɒpəzɪt ðə ˈhɒspɪtl ɒn ðə ˈkɔːnər/",
+                "expectedKeywords": [
+                  "supermarket",
+                  "opposite",
+                  "hospital",
+                  "corner"
+                ],
+                "hint": "Stress pattern: SU-per-mar-ket (stress on SU), OP-po-site (stress on OP), HOS-pi-tal (stress on HOS), COR-ner (stress on COR). Say the stressed syllable louder and longer than the other syllables.",
+                "explanation": "This drill practises syllable stress in multi-syllable words commonly used in directions. English words have a natural stress pattern, and putting stress on the wrong syllable can make it hard for listeners to understand you. 'Supermarket' has four syllables with primary stress on the first: SU-per-mar-ket. 'Hospital' has three syllables with stress on the first: HOS-pi-tal."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Intonation Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Say the following two sentences out loud. The first sentence is a question and needs RISING intonation at the end. The second sentence is a statement and needs FALLING intonation at the end. Pay attention to the difference.",
+                "audioPrompt": "Please say both sentences. Make your voice go UP at the end of the question and DOWN at the end of the statement. Listen to the difference in your own voice.",
+                "targetSentence": "Is the library near the park? Yes, the library is opposite the park.",
+                "phonetic": "/ɪz ðə ˈlaɪbrəri nɪər ðə pɑːk ↗ jes ðə ˈlaɪbrəri ɪz ˈɒpəzɪt ðə pɑːk ↘/",
+                "expectedKeywords": [
+                  "library",
+                  "near",
+                  "park",
+                  "opposite",
+                  "yes"
+                ],
+                "hint": "For the question 'Is the library near the park?', your voice should rise on the word 'park'. For the answer 'Yes, the library is opposite the park.', your voice should fall on the word 'park'. The rising tone shows you are asking. The falling tone shows you are giving information.",
+                "explanation": "This drill practises the difference between rising and falling intonation, which is crucial for clear communication. In English, yes/no questions like 'Is the library near the park?' use rising intonation to signal that you expect an answer. Statements and answers like 'The library is opposite the park' use falling intonation to signal that you are giving complete information. Mastering this difference helps you sound natural and be understood easily."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

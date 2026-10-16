@@ -1,0 +1,1707 @@
+{
+  "module": {
+    "id": "A1.1-M05",
+    "levelId": "A1.1",
+    "title": "Unit 5: In My Free Time: Present Simple & Adverbs of Frequency",
+    "cefr": "A1",
+    "group": "A1.1 - Starter Foundations",
+    "objective": "Talk about daily habits and free-time activities, use the Present Simple in affirmative, negative, and question forms, and use adverbs of frequency to describe routine schedules.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 5
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-1-m05-reading",
+      "moduleId": "A1.1-M05",
+      "skillType": "reading",
+      "title": "Reading Mission: Free Time Fun with Friends",
+      "theme": "Hobbies, Free Time Activities & Daily Habits",
+      "grammarFocus": "Present Simple (affirmative, negative, questions) & Adverbs of Frequency (always, often, sometimes, never)",
+      "vocabularyFocus": "Free time activities, hobbies, daily routines, and frequency expressions",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-1-m05-r-theory",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to your Reading Mission! In this module, you will read about young people and their free time activities. You will learn how they talk about what they do every day, every week, and how often they do these things. By reading short, fun passages, you will practise understanding the Present Simple tense and adverbs of frequency like 'always', 'often', 'sometimes', and 'never'. Let's discover what people love to do in their free time!",
+            "linguisticTarget": {
+              "grammar": "Present Simple in affirmative (I play, she plays), negative (I don't play, she doesn't play), and question forms (Do you play? Does she play?). Adverbs of frequency placed before the main verb or after the verb 'to be'.",
+              "vocabulary": "Free time activities such as listen to music, play sport, watch TV, chat to friends online, hang out with friends, go shopping, do homework, and play computer games.",
+              "readingStrategy": "Skim the passage first to understand the main idea (What is the text about?). Then scan for key details like names, activities, and frequency words (always, often, sometimes, never)."
+            },
+            "learningObjectives": [
+              "Understand the main idea of short A1 passages about free time habits and hobbies.",
+              "Identify key details including who does what activity and how often they do it.",
+              "Recognize Present Simple verb forms (affirmative, negative, and question) in context.",
+              "Spot adverbs of frequency and understand their meaning and position in sentences.",
+              "Build confidence reading simple English texts about everyday life."
+            ],
+            "contextWarmup": {
+              "prompt": "Read this sentence: 'Maria always listens to music after school.' How often does Maria listen to music?",
+              "options": [
+                "Every day, all the time",
+                "Only on weekends",
+                "She never listens to music"
+              ],
+              "correctIndex": 0,
+              "explanation": "'Always' means 100% of the time. So Maria listens to music every day after school. 'Always' is the strongest adverb of frequency!"
+            },
+            "rules": [
+              "Present Simple Affirmative: Use the base verb for I/you/we/they (I play football). Add -s or -es for he/she/it (She plays football, He watches TV).",
+              "Present Simple Negative: Use don't + base verb for I/you/we/they (I don't like cooking). Use doesn't + base verb for he/she/it (He doesn't like cooking). Never add -s to the main verb after doesn't.",
+              "Present Simple Questions: Use Do + subject + base verb for I/you/we/they (Do you play sport?). Use Does + subject + base verb for he/she/it (Does she play sport?). Never add -s to the main verb after does.",
+              "Adverbs of Frequency go BEFORE the main verb: I always eat breakfast. She never plays games. They sometimes go shopping.",
+              "Adverbs of Frequency go AFTER the verb 'to be': I am always happy. She is never late. They are often tired.",
+              "Frequency order from most to least: always (100%) → often (about 70%) → sometimes (about 50%) → never (0%)."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Beginner Pitfall: Double -s with does/doesn't",
+              "explanation": "Many beginners add -s to the main verb even when using 'does' or 'doesn't'. Remember: the -s is already inside 'does/doesn't', so the main verb stays in its base form. Also, watch out for adverb placement — frequency adverbs go BEFORE the main verb, not at the end of the sentence.",
+              "wrong": "She doesn't likes music. Does he plays football? He listens always to music.",
+              "correct": "She doesn't like music. Does he play football? He always listens to music."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Free Time Talk",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in natural spoken English:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "do not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "don't",
+                "exampleFull": "I do not play computer games.",
+                "exampleContracted": "I don't play computer games."
+              },
+              {
+                "subject": "She",
+                "verb": "does not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "doesn't",
+                "exampleFull": "She does not watch TV.",
+                "exampleContracted": "She doesn't watch TV."
+              },
+              {
+                "subject": "I",
+                "verb": "am",
+                "vowelDropped": "a",
+                "remainder": "m",
+                "contracted": "I'm",
+                "exampleFull": "I am always busy after school.",
+                "exampleContracted": "I'm always busy after school."
+              },
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It is never boring.",
+                "exampleContracted": "It's never boring."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Structure with Present Simple & Adverbs of Frequency",
+              "description": "Assemble and swap sentence blocks to explore affirmative, negative, and question patterns:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person (Singular)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "First Person Plural"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Third Person Plural"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Second Person"
+                }
+              ],
+              "complements": [
+                "always listen to music after school",
+                "often play sport with my friends",
+                "sometimes watch TV in the evening",
+                "never play computer games in the morning",
+                "usually do homework before dinner",
+                "often hang out with friends at the weekend"
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-1-m05-r-vocab",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "always",
+                "ipa": "/ˈɔːlweɪz/",
+                "meaning": "selalu (100% dari waktu)",
+                "collocation": "I always have breakfast before school."
+              },
+              {
+                "word": "often",
+                "ipa": "/ˈɒfn/",
+                "meaning": "sering (sekitar 70% dari waktu)",
+                "collocation": "She often listens to music in her room."
+              },
+              {
+                "word": "sometimes",
+                "ipa": "/ˈsʌmtaɪmz/",
+                "meaning": "kadang-kadang (sekitar 50% dari waktu)",
+                "collocation": "We sometimes go shopping on Saturdays."
+              },
+              {
+                "word": "never",
+                "ipa": "/ˈnevə/",
+                "meaning": "tidak pernah (0% dari waktu)",
+                "collocation": "He never plays computer games during the week."
+              },
+              {
+                "word": "free time",
+                "ipa": "/friː taɪm/",
+                "meaning": "waktu luang",
+                "collocation": "What do you do in your free time?"
+              },
+              {
+                "word": "hobby",
+                "ipa": "/ˈhɒbi/",
+                "meaning": "hobi",
+                "collocation": "My favourite hobby is playing the guitar."
+              },
+              {
+                "word": "after school",
+                "ipa": "/ˈɑːftə skuːl/",
+                "meaning": "setelah sekolah",
+                "collocation": "I always chat to friends online after school."
+              },
+              {
+                "word": "at the weekend",
+                "ipa": "/æt ðə ˌwiːkˈend/",
+                "meaning": "pada akhir pekan",
+                "collocation": "They often hang out with friends at the weekend."
+              },
+              {
+                "word": "every day",
+                "ipa": "/ˈevri deɪ/",
+                "meaning": "setiap hari",
+                "collocation": "She does homework every day."
+              },
+              {
+                "word": "favourite",
+                "ipa": "/ˈfeɪvərɪt/",
+                "meaning": "favorit; paling disukai",
+                "collocation": "My favourite activity is playing sport."
+              },
+              {
+                "word": "together",
+                "ipa": "/təˈɡeðə/",
+                "meaning": "bersama-sama",
+                "collocation": "We always watch TV together on Friday evenings."
+              },
+              {
+                "word": "lunchtime",
+                "ipa": "/ˈlʌntʃtaɪm/",
+                "meaning": "waktu makan siang",
+                "collocation": "We meet in the school hall at lunchtime."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m05-r-guided",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-reading",
+          "sectionType": "dialogue",
+          "title": "Reading Passage: Our Free Time",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Our Free Time",
+            "context": "Four students from Greenhill School write about their free time activities for the school newsletter. Read what they say about their hobbies and habits.",
+            "text": "Hi! My name is Tom. I always play football after school. I love sport! I sometimes watch TV in the evening, but I never play computer games. They are boring!\n\nI'm Lily. I often listen to music in my room. My favourite singer is Taylor Swift. I sometimes do homework and listen to music at the same time! I don't play sport very often.\n\nHello! I'm Carlos. I always hang out with my friends at the weekend. We often go shopping together. I sometimes chat to friends online too. I don't watch TV very often because I am always busy!\n\nMy name is Aya. I often do homework after school. I sometimes play computer games with my brother. He always wins! We never go shopping — we don't like it. At the weekend, I usually read books. I am never bored because I always have something to do!",
+            "wordCount": 152,
+            "highlights": [
+              {
+                "text": "always",
+                "note": "Adverb of frequency meaning 100% of the time. It comes BEFORE the main verb.",
+                "type": "grammar"
+              },
+              {
+                "text": "sometimes",
+                "note": "Adverb of frequency meaning about 50% of the time. It comes BEFORE the main verb.",
+                "type": "grammar"
+              },
+              {
+                "text": "never",
+                "note": "Adverb of frequency meaning 0% of the time. It comes BEFORE the main verb. The sentence is already negative, so don't add 'not'.",
+                "type": "grammar"
+              },
+              {
+                "text": "often",
+                "note": "Adverb of frequency meaning about 70% of the time. It comes BEFORE the main verb.",
+                "type": "grammar"
+              },
+              {
+                "text": "don't watch",
+                "note": "Present Simple negative for I/you/we/they: don't + base verb.",
+                "type": "grammar"
+              },
+              {
+                "text": "don't like",
+                "note": "Present Simple negative: don't + base verb (no -s on 'like').",
+                "type": "grammar"
+              },
+              {
+                "text": "plays",
+                "note": "Notice Tom says 'I play' but about Aya's brother: 'He always wins' — third person singular adds -s.",
+                "type": "grammar"
+              },
+              {
+                "text": "hang out with",
+                "note": "A phrasal verb meaning to spend time with friends in a relaxed way.",
+                "type": "vocab"
+              },
+              {
+                "text": "at the weekend",
+                "note": "A time expression meaning on Saturday and Sunday.",
+                "type": "vocab"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m05-r-practice",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-reading",
+          "sectionType": "practice",
+          "title": "Guided Comprehension Check",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "prompt": "What is the passage mainly about?",
+              "options": [
+                "Four students talking about what they do in their free time.",
+                "A teacher explaining school rules to new students.",
+                "Four students describing their favourite school subjects."
+              ],
+              "correctIndex": 0,
+              "explanation": "The passage is about four students — Tom, Lily, Carlos, and Aya — sharing what they like to do in their free time. They talk about hobbies like sport, music, shopping, and games."
+            },
+            "detailQuestions": [
+              {
+                "id": 1,
+                "prompt": "What does Tom NEVER do?",
+                "options": [
+                  "Play computer games",
+                  "Play football",
+                  "Watch TV"
+                ],
+                "correctIndex": 0,
+                "explanation": "Tom says 'I never play computer games. They are boring!' So he never plays computer games. He always plays football and sometimes watches TV."
+              },
+              {
+                "id": 2,
+                "prompt": "How often does Lily listen to music?",
+                "options": [
+                  "Often",
+                  "Never",
+                  "Always"
+                ],
+                "correctIndex": 0,
+                "explanation": "Lily says 'I often listen to music in my room.' The word 'often' tells us she does this frequently, about 70% of the time."
+              },
+              {
+                "id": 3,
+                "prompt": "Why doesn't Carlos watch TV very often?",
+                "options": [
+                  "Because he is always busy.",
+                  "Because he doesn't have a TV.",
+                  "Because he thinks TV is boring."
+                ],
+                "correctIndex": 0,
+                "explanation": "Carlos says 'I don't watch TV very often because I am always busy!' Notice that 'always' comes AFTER the verb 'to be' (am)."
+              },
+              {
+                "id": 4,
+                "prompt": "What does Aya usually do at the weekend?",
+                "options": [
+                  "She reads books.",
+                  "She goes shopping.",
+                  "She plays football."
+                ],
+                "correctIndex": 0,
+                "explanation": "Aya says 'At the weekend, I usually read books.' She also says 'We never go shopping — we don't like it.' So reading books is her weekend activity."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m05-r-quiz",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-reading",
+          "sectionType": "quiz",
+          "title": "Reading Mastery Quiz",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "According to the passage, who always plays football after school?",
+                "options": [
+                  "Tom",
+                  "Carlos",
+                  "Aya"
+                ],
+                "answer": "Tom",
+                "explanation": "Tom says 'I always play football after school.' He loves sport and does this every day."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which sentence uses the correct Present Simple negative form?",
+                "options": [
+                  "Lily doesn't play sport very often.",
+                  "Lily doesn't plays sport very often.",
+                  "Lily don't play sport very often."
+                ],
+                "answer": "Lily doesn't play sport very often.",
+                "explanation": "For he/she/it (third person singular), we use 'doesn't + base verb'. The verb stays as 'play' — no -s! 'Don't' is for I/you/we/they."
+              },
+              {
+                "id": "q-r-3",
+                "question": "In the sentence 'I sometimes do homework and listen to music at the same time', where is the adverb of frequency?",
+                "options": [
+                  "Before the main verb 'do'",
+                  "After the main verb 'do'",
+                  "At the end of the sentence"
+                ],
+                "answer": "Before the main verb 'do'",
+                "explanation": "The adverb 'sometimes' comes BEFORE the main verb 'do'. This is the correct position for adverbs of frequency with main verbs."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Aya says 'He always wins!' Who is 'he' in this sentence?",
+                "options": [
+                  "Aya's brother",
+                  "Tom",
+                  "Carlos"
+                ],
+                "answer": "Aya's brother",
+                "explanation": "Aya says 'I sometimes play computer games with my brother. He always wins!' So 'he' refers to Aya's brother. Notice the -s on 'wins' for third person singular."
+              },
+              {
+                "id": "q-r-5",
+                "question": "Which adverb of frequency means 0% — you NEVER do the activity?",
+                "options": [
+                  "never",
+                  "sometimes",
+                  "often"
+                ],
+                "answer": "never",
+                "explanation": "'Never' means 0% — you do not do the activity at any time. 'Sometimes' means about 50%, and 'often' means about 70%. Remember: a sentence with 'never' is already negative, so you don't need 'not'."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Carlos says 'I am always busy.' Why does 'always' come AFTER 'am' here?",
+                "options": [
+                  "Because adverbs of frequency go after the verb 'to be'.",
+                  "Because 'always' is a special word that always goes at the end.",
+                  "Because Carlos is making a question."
+                ],
+                "answer": "Because adverbs of frequency go after the verb 'to be'.",
+                "explanation": "When we use the verb 'to be' (am, is, are), the adverb of frequency goes AFTER it: 'I am always busy.' But with other verbs, it goes BEFORE: 'I always play football.'"
+              },
+              {
+                "id": "q-r-7",
+                "question": "Read: 'We never go shopping — we don't like it.' What TWO things does this sentence tell us?",
+                "options": [
+                  "Aya and her brother never go shopping, and they don't like shopping.",
+                  "Aya goes shopping sometimes, but her brother doesn't like it.",
+                  "Aya and her brother always go shopping together."
+                ],
+                "answer": "Aya and her brother never go shopping, and they don't like shopping.",
+                "explanation": "The sentence has two parts: 'We never go shopping' (they do it 0% of the time) and 'we don't like it' (the reason — they don't enjoy shopping). Both parts use correct Present Simple forms."
+              },
+              {
+                "id": "q-r-8",
+                "question": "Choose the correct question form: '_____ Lily listen to music often?'",
+                "options": [
+                  "Does",
+                  "Do",
+                  "Is"
+                ],
+                "answer": "Does",
+                "explanation": "Lily is 'she' — third person singular. For Present Simple questions with he/she/it, we use 'Does + subject + base verb': 'Does Lily listen to music often?' We use 'Do' for I/you/we/they."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m05-listening",
+      "moduleId": "A1.1-M05",
+      "skillType": "listening",
+      "title": "Listening Mission: The Glee Club Newsletter",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-1-m05-l-theory",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening mission, you will hear a school newsletter being read aloud. The newsletter is about a Glee club — a singing club at school. You will practise listening for Present Simple verbs (has, chooses, helps, sing, meet, gives) and adverbs of frequency (often, sometimes, every). Focus on hearing the key verbs and how often things happen. A good strategy is to listen for the frequency words first, then connect them to the activity.",
+            "learningObjectives": [
+              "Identify Present Simple verbs in spoken English about habits and free-time activities.",
+              "Recognise adverbs of frequency (often, sometimes, always, every) when listening to natural speech.",
+              "Understand the main idea and specific details of a short spoken text about a school club.",
+              "Distinguish between third-person singular verb forms (she chooses, he sings) and plural forms (we sing, they meet)."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "We often sing popular songs.",
+                "meaning": "Kami sering menyanyikan lagu-lagu populer.",
+                "note": "The adverb 'often' comes before the main verb 'sing' in Present Simple."
+              },
+              {
+                "phrase": "She chooses the songs.",
+                "meaning": "Dia memilih lagu-lagunya.",
+                "note": "Third-person singular: 'choose' becomes 'chooses' with she/he/it."
+              },
+              {
+                "phrase": "We sometimes sing old songs.",
+                "meaning": "Kami kadang-kadang menyanyikan lagu-lagu lama.",
+                "note": "'Sometimes' can go before the verb or at the beginning of a sentence."
+              },
+              {
+                "phrase": "We meet every Tuesday.",
+                "meaning": "Kami bertemu setiap hari Selasa.",
+                "note": "'Every + day' shows a regular habit. It usually goes at the end of the sentence."
+              },
+              {
+                "phrase": "The club gives two concerts every year.",
+                "meaning": "Klub itu mengadakan dua konser setiap tahun.",
+                "note": "'Every year' tells us how often the concerts happen — once a year, twice a year, etc."
+              },
+              {
+                "phrase": "She helps us to sing.",
+                "meaning": "Dia membantu kami untuk bernyanyi.",
+                "note": "'Helps' has the -s ending because the subject is 'she' (third person singular)."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "it is brilliant",
+                "fast": "it's brilliant",
+                "slowIpa": "/ɪt ɪz ˈbrɪl.i.ənt/",
+                "fastIpa": "/ɪts ˈbrɪl.jənt/",
+                "note": "'It is' contracts to 'it's' in natural speech. The two words blend into one syllable."
+              },
+              {
+                "id": 2,
+                "slow": "helps us to sing them",
+                "fast": "helps us t' sing 'em",
+                "slowIpa": "/hɛlps ʌs tuː sɪŋ ðɛm/",
+                "fastIpa": "/hɛlps əs tə sɪŋ əm/",
+                "note": "In fast speech, 'us' reduces to /əs/, 'to' reduces to /tə/, and 'them' becomes /əm/. Listen for the weak forms of these small words."
+              },
+              {
+                "id": 3,
+                "slow": "I am a member",
+                "fast": "I'm a member",
+                "slowIpa": "/aɪ æm ə ˈmɛm.bər/",
+                "fastIpa": "/aɪm ə ˈmɛm.bər/",
+                "note": "'I am' contracts to 'I'm'. The word 'a' uses a weak schwa sound /ə/."
+              },
+              {
+                "id": 4,
+                "slow": "and it is brilliant",
+                "fast": "an' it's brilliant",
+                "slowIpa": "/ænd ɪt ɪz ˈbrɪl.i.ənt/",
+                "fastIpa": "/ən ɪts ˈbrɪl.jənt/",
+                "note": "'And' often loses its /d/ sound and becomes /ən/ in fast speech. This is very common in everyday English."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m05-l-dialogue",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Reading the Glee Club Newsletter",
+          "orderIndex": 2,
+          "content": {
+            "context": "Two students, Tom and Lily, are in the school corridor. Lily is reading the school newsletter about the Glee club. Tom is curious and asks her questions about it. They discuss what the club does, how often they meet, and what songs they sing.",
+            "audioPrompt": "Listen carefully to the following dialogue between Tom and Lily as they talk about the school Glee club newsletter.",
+            "lines": [
+              {
+                "speaker": "Tom",
+                "text": "Hey Lily, what are you reading?",
+                "audioUrl": "/audio/modules/a1-1-m05/dialogue-1.mp3",
+                "translation": "Hei Lily, kamu sedang membaca apa?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Lily",
+                "text": "It's the school newsletter. It says our school has a Glee club and it's brilliant!",
+                "audioUrl": "/audio/modules/a1-1-m05/dialogue-2.mp3",
+                "translation": "Ini buletin sekolah. Tertulis sekolah kita punya klub Glee dan itu luar biasa!",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Tom",
+                "text": "A Glee club? What do they do?",
+                "audioUrl": "/audio/modules/a1-1-m05/dialogue-3.mp3",
+                "translation": "Klub Glee? Apa yang mereka lakukan?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Lily",
+                "text": "They sing songs! Miss Higgins is the club leader. She chooses the songs and helps them to sing.",
+                "audioUrl": "/audio/modules/a1-1-m05/dialogue-4.mp3",
+                "translation": "Mereka menyanyikan lagu! Miss Higgins adalah pemimpin klub. Dia memilih lagu-lagu dan membantu mereka bernyanyi.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Tom",
+                "text": "What kind of songs do they sing?",
+                "audioUrl": "/audio/modules/a1-1-m05/dialogue-5.mp3",
+                "translation": "Lagu jenis apa yang mereka nyanyikan?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Lily",
+                "text": "They often sing popular songs from films, but they sometimes sing old songs from the 1960s and 1970s.",
+                "audioUrl": "/audio/modules/a1-1-m05/dialogue-6.mp3",
+                "translation": "Mereka sering menyanyikan lagu populer dari film, tetapi kadang mereka menyanyikan lagu lama dari tahun 1960an dan 1970an.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Tom",
+                "text": "That sounds fun! How often do they meet?",
+                "audioUrl": "/audio/modules/a1-1-m05/dialogue-7.mp3",
+                "translation": "Kedengarannya menyenangkan! Seberapa sering mereka bertemu?",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Lily",
+                "text": "They meet every Tuesday at lunchtime and every Friday after school.",
+                "audioUrl": "/audio/modules/a1-1-m05/dialogue-8.mp3",
+                "translation": "Mereka bertemu setiap Selasa saat makan siang dan setiap Jumat setelah sekolah.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Do they have concerts?",
+                "audioUrl": "/audio/modules/a1-1-m05/dialogue-9.mp3",
+                "translation": "Apakah mereka punya konser?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Lily",
+                "text": "Yes! The Glee club gives two concerts every year. And the best part is — the club is for all ages. Do you want to join?",
+                "audioUrl": "/audio/modules/a1-1-m05/dialogue-10.mp3",
+                "translation": "Ya! Klub Glee mengadakan dua konser setiap tahun. Dan bagian terbaiknya — klub ini untuk semua usia. Apakah kamu mau bergabung?",
+                "emotion": "excited"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m05-l-quiz",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Hey Lily, what are you reading?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Hey Lily, what are you _____?\"",
+                "targetWord": "reading",
+                "explanation": "Full audio: \"Hey Lily, what are you reading?\". The missing word is \"reading\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "It's the school newsletter.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lily: \"It's the school _____.\"",
+                "targetWord": "newsletter",
+                "explanation": "Full audio: \"It's the school newsletter.\". The missing word is \"newsletter\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "A Glee club?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"A Glee _____?\"",
+                "targetWord": "club",
+                "explanation": "Full audio: \"A Glee club?\". The missing word is \"club\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "What do they do?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"_____ do they do?\"",
+                "targetWord": "What",
+                "explanation": "Full audio: \"What do they do?\". The missing word is \"What\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "They sing songs!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lily: \"They sing _____!\"",
+                "targetWord": "songs",
+                "explanation": "Full audio: \"They sing songs!\". The missing word is \"songs\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Miss Higgins is the club leader.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Miss Higgins is the club leader",
+                "words": [
+                  "Higgins",
+                  "club",
+                  "the",
+                  "Miss",
+                  "leader",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"Miss Higgins is the club leader.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What kind of songs do they sing?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What kind of songs do they sing",
+                "words": [
+                  "of",
+                  "do",
+                  "sing",
+                  "What",
+                  "they",
+                  "songs",
+                  "kind"
+                ],
+                "explanation": "Correct sentence order: \"What kind of songs do they sing?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "They often sing popular songs from films",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "They often sing popular songs from films",
+                "words": [
+                  "often",
+                  "from",
+                  "popular",
+                  "sing",
+                  "films",
+                  "They",
+                  "songs"
+                ],
+                "explanation": "Correct sentence order: \"They often sing popular songs from films\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "That sounds fun!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds fun",
+                "words": [
+                  "fun",
+                  "That",
+                  "sounds"
+                ],
+                "explanation": "Correct sentence order: \"That sounds fun!\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "How often do they meet?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "How often do they meet",
+                "words": [
+                  "meet",
+                  "do",
+                  "often",
+                  "they",
+                  "How"
+                ],
+                "explanation": "Correct sentence order: \"How often do they meet?\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Hey Lily, what are you reading?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Hey Lily, what are you _____?\"",
+                "targetWord": "reading",
+                "explanation": "Full audio: \"Hey Lily, what are you reading?\". The missing word is \"reading\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "It's the school newsletter.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lily: \"It's the school _____.\"",
+                "targetWord": "newsletter",
+                "explanation": "Full audio: \"It's the school newsletter.\". The missing word is \"newsletter\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "A Glee club?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"A Glee _____?\"",
+                "targetWord": "club",
+                "explanation": "Full audio: \"A Glee club?\". The missing word is \"club\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "What do they do?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"_____ do they do?\"",
+                "targetWord": "What",
+                "explanation": "Full audio: \"What do they do?\". The missing word is \"What\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "They sing songs!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lily: \"They sing _____!\"",
+                "targetWord": "songs",
+                "explanation": "Full audio: \"They sing songs!\". The missing word is \"songs\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Miss Higgins is the club leader.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Miss Higgins is the club leader",
+                "words": [
+                  "Higgins",
+                  "club",
+                  "the",
+                  "Miss",
+                  "leader",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"Miss Higgins is the club leader.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What kind of songs do they sing?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What kind of songs do they sing",
+                "words": [
+                  "of",
+                  "do",
+                  "sing",
+                  "What",
+                  "they",
+                  "songs",
+                  "kind"
+                ],
+                "explanation": "Correct sentence order: \"What kind of songs do they sing?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "They often sing popular songs from films",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "They often sing popular songs from films",
+                "words": [
+                  "often",
+                  "from",
+                  "popular",
+                  "sing",
+                  "films",
+                  "They",
+                  "songs"
+                ],
+                "explanation": "Correct sentence order: \"They often sing popular songs from films\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "That sounds fun!",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds fun",
+                "words": [
+                  "fun",
+                  "That",
+                  "sounds"
+                ],
+                "explanation": "Correct sentence order: \"That sounds fun!\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "How often do they meet?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "How often do they meet",
+                "words": [
+                  "meet",
+                  "do",
+                  "often",
+                  "they",
+                  "How"
+                ],
+                "explanation": "Correct sentence order: \"How often do they meet?\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m05-writing",
+      "moduleId": "A1.1-M05",
+      "skillType": "writing",
+      "title": "Writing Mission: My Free Time Habits",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-1-m05-w-theory",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this lesson, you will learn how to write sentences and short paragraphs about your free time habits. You will use the Present Simple tense in positive, negative, and question forms. You will also use adverbs of frequency (always, often, sometimes, never) to say how often you do things. Follow the blueprint steps below to build strong sentences about your hobbies and daily routines.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Write a Positive Present Simple Sentence",
+                "formula": "Subject + verb (add -s/-es for he/she/it) + object/detail.",
+                "example": "I play football after school."
+              },
+              {
+                "step": 2,
+                "title": "Add an Adverb of Frequency",
+                "formula": "Subject + adverb of frequency + verb + object/detail.",
+                "example": "I always play football after school."
+              },
+              {
+                "step": 3,
+                "title": "Write a Negative Present Simple Sentence",
+                "formula": "Subject + don't/doesn't + base verb + object/detail.",
+                "example": "She doesn't like swimming."
+              },
+              {
+                "step": 4,
+                "title": "Write a Present Simple Question",
+                "formula": "Do/Does + subject + base verb + object/detail?",
+                "example": "Do you watch TV in the evening?"
+              },
+              {
+                "step": 5,
+                "title": "Build a Short Paragraph About Free Time",
+                "formula": "Topic sentence + 2–3 detail sentences (positive, negative, frequency) + closing sentence.",
+                "example": "I love my free time. I always listen to music after school. I sometimes play video games with my brother. I never watch horror movies. My free time is fun!"
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always start a sentence with a capital letter and end with a full stop, question mark, or exclamation mark.",
+                "badExample": "she often reads books",
+                "goodExample": "She often reads books.",
+                "why": "Every sentence in English must begin with a capital letter and finish with correct punctuation. This makes your writing clear and correct."
+              },
+              {
+                "rule": "Use 'doesn't' (not 'don't') with he, she, and it. Use the base verb after doesn't — do not add -s.",
+                "badExample": "He don't plays tennis.",
+                "goodExample": "He doesn't play tennis.",
+                "why": "For third person singular (he, she, it), we use 'doesn't' in negative sentences. The main verb stays in its base form without -s."
+              },
+              {
+                "rule": "Place adverbs of frequency before the main verb, but after the verb 'to be' (am/is/are).",
+                "badExample": "I go always to the park.",
+                "goodExample": "I always go to the park.",
+                "why": "Adverbs of frequency like always, often, sometimes, and never go before action verbs. But they go after am/is/are. For example: 'She is always happy.'"
+              },
+              {
+                "rule": "Use 'Do' with I/you/we/they and 'Does' with he/she/it to start Present Simple questions.",
+                "badExample": "Does you like cooking?",
+                "goodExample": "Do you like cooking?",
+                "why": "'Does' is only for he, she, and it. For I, you, we, and they, always use 'Do' at the start of a question."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "I always read books in my free time.",
+                "id": "Saya selalu membaca buku di waktu luang saya.",
+                "focus": "Adverb of frequency (always) before main verb (read)"
+              },
+              {
+                "en": "She doesn't play video games.",
+                "id": "Dia tidak bermain video game.",
+                "focus": "Present Simple negative with doesn't + base verb"
+              },
+              {
+                "en": "Do you often go to the cinema?",
+                "id": "Apakah kamu sering pergi ke bioskop?",
+                "focus": "Present Simple question with Do + adverb of frequency"
+              },
+              {
+                "en": "My brother never watches horror movies.",
+                "id": "Saudara laki-laki saya tidak pernah menonton film horor.",
+                "focus": "Adverb of frequency (never) + third person verb (watches)"
+              },
+              {
+                "en": "We sometimes cook dinner together on Sundays.",
+                "id": "Kami kadang-kadang memasak makan malam bersama pada hari Minggu.",
+                "focus": "Adverb of frequency (sometimes) in a positive sentence with time expression"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m05-w-practice",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "she always listen to music after school",
+                "targetSentence": "She always listens to music after school.",
+                "translation": "Dia selalu mendengarkan musik setelah sekolah.",
+                "keyRule": "Start with a capital letter. Add -s to the verb for he/she/it in Present Simple. End with a full stop.",
+                "requiredCapitals": [
+                  "She"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "my dad don't plays football on saturdays",
+                "targetSentence": "My dad doesn't play football on Saturdays.",
+                "translation": "Ayah saya tidak bermain sepak bola pada hari Sabtu.",
+                "keyRule": "Use 'doesn't' (not 'don't') for he/she/it. Use the base verb after doesn't. Capitalize days of the week. End with a full stop.",
+                "requiredCapitals": [
+                  "My",
+                  "Saturdays"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "does your sister often watches tv in the evening",
+                "targetSentence": "Does your sister often watch TV in the evening?",
+                "translation": "Apakah saudara perempuanmu sering menonton TV di malam hari?",
+                "keyRule": "After 'Does', use the base verb (watch, not watches). End a question with a question mark. TV is written in capital letters.",
+                "requiredCapitals": [
+                  "Does",
+                  "TV"
+                ]
+              },
+              {
+                "id": "sent-4",
+                "faultySentence": "i never am late for my dance class",
+                "targetSentence": "I am never late for my dance class.",
+                "translation": "Saya tidak pernah terlambat untuk kelas tari saya.",
+                "keyRule": "Always capitalize 'I'. Adverbs of frequency go after the verb 'to be' (am/is/are), not before it. End with a full stop.",
+                "requiredCapitals": [
+                  "I"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Positive Sentence with Adverb of Frequency",
+                "meaning": "Saya sering bermain basket setelah sekolah.",
+                "tokens": [
+                  "I",
+                  "often",
+                  "play",
+                  "basketball",
+                  "after",
+                  "school."
+                ],
+                "fullSentence": "I often play basketball after school."
+              },
+              {
+                "id": "b-2",
+                "category": "Negative Sentence with Present Simple",
+                "meaning": "Dia tidak pernah memasak makan malam.",
+                "tokens": [
+                  "He",
+                  "never",
+                  "cooks",
+                  "dinner."
+                ],
+                "fullSentence": "He never cooks dinner."
+              },
+              {
+                "id": "b-3",
+                "category": "Present Simple Question",
+                "meaning": "Apakah kamu kadang-kadang membaca buku di malam hari?",
+                "tokens": [
+                  "Do",
+                  "you",
+                  "sometimes",
+                  "read",
+                  "books",
+                  "in",
+                  "the",
+                  "evening?"
+                ],
+                "fullSentence": "Do you sometimes read books in the evening?"
+              },
+              {
+                "id": "b-4",
+                "category": "Negative Sentence with Doesn't",
+                "meaning": "Adik perempuan saya tidak suka berenang.",
+                "tokens": [
+                  "My",
+                  "sister",
+                  "doesn't",
+                  "like",
+                  "swimming."
+                ],
+                "fullSentence": "My sister doesn't like swimming."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: My Weekly Free Time",
+                "badge": "Free Time Writer",
+                "instruction": "Write a short paragraph (4–6 sentences) about what you do in your free time during the week. Use at least two adverbs of frequency (always, often, sometimes, never). Include one positive sentence, one negative sentence, and one question to a friend. Start with a topic sentence about your free time.",
+                "example": "I love my free time after school. I always listen to music in my room. I sometimes play football with my friends. I never watch scary movies because I don't like them. My mum often cooks a nice dinner for us. Do you like your free time too?",
+                "placeholder": "Start writing about your free time here...",
+                "minWords": 25,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: My Best Friend's Hobbies",
+                "badge": "Friendship Reporter",
+                "instruction": "Write a short paragraph (4–6 sentences) about your best friend's hobbies and free time activities. Use he/she with Present Simple verbs (remember to add -s/-es). Use at least two adverbs of frequency. Include one negative sentence with 'doesn't'. End with a question about the reader's friend.",
+                "example": "My best friend is Rina. She always draws pictures after school. She often listens to K-pop music. She sometimes plays badminton with me. She doesn't like running because it is tiring. She is always happy in her free time. Does your best friend like drawing too?",
+                "placeholder": "Start writing about your best friend's hobbies here...",
+                "minWords": 25,
+                "xpReward": 35
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m05-w-quiz",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-writing",
+          "sectionType": "quiz",
+          "title": "Writing Practicum & Assessment",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": "w-p-1",
+                "prompt": "Write 3 sentences about your free time hobbies. Use a different adverb of frequency (always, often, sometimes, or never) in each sentence. Use correct Present Simple form.",
+                "criteria": "Each sentence uses a different adverb of frequency correctly placed before the main verb. Present Simple verbs are correct. Sentences start with a capital letter and end with a full stop. At least 3 complete sentences are written.",
+                "sampleGoodAnswer": "I always play guitar after school. I sometimes watch funny videos on my phone. I never go swimming because I don't like cold water."
+              },
+              {
+                "id": "w-p-2",
+                "prompt": "Write 2 negative sentences and 1 question about free time activities. Use 'don't' or 'doesn't' in the negative sentences. Use 'Do' or 'Does' to start the question.",
+                "criteria": "Two negative sentences correctly use don't or doesn't with the base verb. One question correctly starts with Do or Does and ends with a question mark. Sentences are about free time activities. Capital letters and punctuation are correct.",
+                "sampleGoodAnswer": "I don't like playing chess. My sister doesn't watch cartoons after school. Does your brother play video games in the evening?"
+              },
+              {
+                "id": "w-p-3",
+                "prompt": "Write a short paragraph (5–7 sentences) about your weekend free time. Include positive and negative sentences. Use at least 3 different adverbs of frequency. Ask the reader one question at the end.",
+                "criteria": "The paragraph has 5–7 sentences about weekend free time. It includes at least one positive and one negative sentence. At least 3 different adverbs of frequency are used and correctly placed. There is one question at the end with a question mark. Present Simple verbs are correct, including -s/-es for he/she/it. Sentences begin with capital letters and have correct end punctuation.",
+                "sampleGoodAnswer": "I love my weekends. I always wake up late on Saturday morning. I often play football with my friends in the park. I sometimes help my mum cook lunch. I never do homework on Saturday because I am tired. My dad doesn't work on Sundays, so we often go to the mall together. Do you enjoy your weekends too?"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-1-m05-speaking",
+      "moduleId": "A1.1-M05",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Talking About My Free Time Habits",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-1-m05-s-theory",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this speaking lab, you will practise talking about your free time activities and daily habits. You will use the Present Simple tense in positive, negative, and question forms. You will also use adverbs of frequency like 'always', 'usually', 'sometimes', 'often', and 'never' to say how often you do things. Good pronunciation and natural rhythm are very important when you speak about your routines.",
+            "audioGuidance": "Pay attention to how your voice goes up at the end of Yes/No questions like 'Do you play football?' and goes down at the end of statements like 'I usually read books.' Adverbs of frequency should flow naturally in the sentence — do not pause before or after them. Practise saying 'I USUALLY play' with stress on the main verb, not on the adverb. Also, remember the third person 's' sound: 'She plays', 'He watches' — the ending can sound like /s/, /z/, or /ɪz/.",
+            "pillars": [
+              {
+                "name": "Intonation in Questions vs Statements",
+                "target": "Rising and falling intonation patterns",
+                "explanation": "When you ask a Yes/No question like 'Do you play sports?', your voice should rise at the end. When you make a statement like 'I always play football', your voice should fall at the end. This helps the listener know if you are asking or telling."
+              },
+              {
+                "name": "Stress on Content Words",
+                "target": "Correct word stress in frequency expressions",
+                "explanation": "In a sentence like 'I USUALLY PLAY football AFTER school', the important words (usually, play, football, after, school) get more stress. Small grammar words like 'I' and 'in' are softer and quicker. This creates a natural English rhythm."
+              },
+              {
+                "name": "Third Person -s Pronunciation",
+                "target": "Correct pronunciation of verb endings in third person",
+                "explanation": "When you talk about someone else's habits, you add -s or -es to the verb. 'Plays' ends with a /z/ sound. 'Watches' ends with an /ɪz/ sound. 'Likes' ends with an /s/ sound. Practise these endings clearly so people understand you."
+              },
+              {
+                "name": "Smooth Adverb Placement",
+                "target": "Natural flow when using adverbs of frequency",
+                "explanation": "Adverbs of frequency go before the main verb: 'I always listen to music.' They go after the verb 'be': 'I am never late.' When speaking, do not pause around the adverb. Say the whole phrase smoothly: 'I-usually-go' as one group of sounds."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-1-m05-s-practice",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "ALWAYS",
+                "countryAudio": "always",
+                "countrySyllables": [
+                  {
+                    "text": "AL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ways",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "not AL-ways",
+                "natAudio": "not always",
+                "natSyllables": [
+                  {
+                    "text": "not",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "AL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ways",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress stays on the first syllable 'AL' in both 'always' and 'not always'. The word 'not' is unstressed and spoken quickly before the main word."
+              },
+              {
+                "id": "pair-2",
+                "country": "USUALLY",
+                "countryAudio": "usually",
+                "countrySyllables": [
+                  {
+                    "text": "U",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "su",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "al",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ly",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "un-U-su-al-ly",
+                "natAudio": "unusually",
+                "natSyllables": [
+                  {
+                    "text": "un",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "U",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "su",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "al",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ly",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress stays on 'U' in both words. When the prefix 'un-' is added, it is unstressed. The rhythm shifts because there is an extra syllable at the beginning, but the main stress does not move."
+              },
+              {
+                "id": "pair-3",
+                "country": "EVENING",
+                "countryAudio": "evening",
+                "countrySyllables": [
+                  {
+                    "text": "EVE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ning",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "good EVE-ning",
+                "natAudio": "good evening",
+                "natSyllables": [
+                  {
+                    "text": "good",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "EVE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ning",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "In the greeting 'good evening', the word 'good' is softer and the stress falls on 'EVE' in 'evening'. The rhythm flows naturally: soft-STRONG-soft."
+              },
+              {
+                "id": "pair-4",
+                "country": "SOMETIMES",
+                "countryAudio": "sometimes",
+                "countrySyllables": [
+                  {
+                    "text": "SOME",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "times",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "some-TIME",
+                "natAudio": "sometime",
+                "natSyllables": [
+                  {
+                    "text": "some",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TIME",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "In 'SOMEtimes' (the adverb meaning 'occasionally'), the stress is on the first syllable. But in 'someTIME' (meaning 'at an unspecified time'), the stress shifts to the second syllable. Notice how the meaning changes with the stress."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "I usually play football after school.",
+                "phonetic": "/aɪ ˈjuːʒuəli pleɪ ˈfʊtbɔːl ˈɑːftə skuːl/",
+                "focus": "Smooth placement of 'usually' before the verb",
+                "hint": "Say 'I usually play' as one smooth group. Do not pause between 'usually' and 'play'. Stress the words 'usually', 'play', 'football', and 'school'."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "She always listens to music in the morning.",
+                "phonetic": "/ʃiː ˈɔːlweɪz ˈlɪsənz tə ˈmjuːzɪk ɪn ðə ˈmɔːnɪŋ/",
+                "focus": "Third person -s ending and adverb placement",
+                "hint": "Say 'listens' with a clear /z/ sound at the end. The word 'always' comes before 'listens'. Keep the flow natural: 'She-always-listens'."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Do you sometimes watch TV at the weekend?",
+                "phonetic": "/duː juː ˈsʌmtaɪmz wɒtʃ ˌtiːˈviː ət ðə ˌwiːkˈend/",
+                "focus": "Rising intonation for Yes/No questions",
+                "hint": "Your voice should go up at the end of this question on the word 'weekend'. Start with 'Do you' spoken quickly and softly."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "I never go swimming on Monday.",
+                "phonetic": "/aɪ ˈnevə ɡəʊ ˈswɪmɪŋ ɒn ˈmʌndeɪ/",
+                "focus": "Clear pronunciation of 'never' and falling intonation",
+                "hint": "Say 'never' clearly with stress on 'NEV'. This is a statement, so your voice should go down at the end on 'Monday'."
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "He often reads books before bed.",
+                "phonetic": "/hiː ˈɒfən riːdz bʊks bɪˈfɔː bed/",
+                "focus": "Pronunciation of 'often' and linking words",
+                "hint": "The word 'often' can be said as /ˈɒfən/ — the 't' is usually silent. Link 'reads books' smoothly together."
+              },
+              {
+                "id": "spk-d-6",
+                "targetText": "What do you usually do in your free time?",
+                "phonetic": "/wɒt duː juː ˈjuːʒuəli duː ɪn jɔː friː taɪm/",
+                "focus": "Falling intonation for Wh- questions",
+                "hint": "This is a Wh- question, so your voice goes down at the end on 'free time'. Stress the words 'what', 'usually', 'do', 'free', and 'time'."
+              }
+            ],
+            "roleplay": {
+              "context": "You meet your English tutor, Mr. Khoirul, at a café. He wants to learn about your free time activities and daily habits. He will ask you questions about what you do after school, your hobbies, and how often you do different activities. Answer his questions using the Present Simple tense and adverbs of frequency.",
+              "roles": [
+                "Mr. Khoirul",
+                "Student"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Hello! I'd like to know about your free time activities. What do you usually do after school?",
+                  "translation": "Halo! Saya ingin tahu tentang aktivitas waktu luangmu. Apa yang biasanya kamu lakukan setelah sekolah?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "I usually do my homework and then I chat to my friends online.",
+                  "translation": "Saya biasanya mengerjakan PR dan kemudian saya mengobrol dengan teman-teman saya secara online."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "That sounds nice! Do you play any computer games?",
+                  "translation": "Kedengarannya bagus! Apakah kamu bermain game komputer?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, I sometimes play computer games in the evening with my friends.",
+                  "translation": "Ya, saya kadang-kadang bermain game komputer di malam hari dengan teman-teman saya."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Great! And what about music? Do you listen to music?",
+                  "translation": "Bagus! Dan bagaimana dengan musik? Apakah kamu mendengarkan musik?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, I always listen to music. I love it!",
+                  "translation": "Ya, saya selalu mendengarkan musik. Saya suka sekali!"
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Wonderful! One more question — do you watch TV with your family?",
+                  "translation": "Luar biasa! Satu pertanyaan lagi — apakah kamu menonton TV dengan keluargamu?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "I sometimes watch TV with my family at the weekend.",
+                  "translation": "Saya kadang-kadang menonton TV dengan keluarga saya di akhir pekan."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-1-m05-s-quiz",
+          "moduleId": "A1.1-M05",
+          "subModuleId": "sub-a1-1-m05-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about what you usually do on a normal school day. Use adverbs of frequency and the Present Simple tense. Speak for about 30 seconds and try to cover all three story points below.",
+                "audioPrompt": "Hello! Please tell me about your normal school day. What do you usually do from morning to evening? Use words like 'always', 'usually', 'sometimes', and 'never'.",
+                "storyPoints": [
+                  "Talk about what you always or usually do in the morning before school.",
+                  "Describe what you sometimes do after school, like homework or hobbies.",
+                  "Say what you often or never do in the evening."
+                ],
+                "targetSentence": "I always wake up early in the morning. After school, I usually do my homework. In the evening, I sometimes watch TV but I never go to bed late.",
+                "phonetic": "/aɪ ˈɔːlweɪz weɪk ʌp ˈɜːli ɪn ðə ˈmɔːnɪŋ. ˈɑːftə skuːl, aɪ ˈjuːʒuəli duː maɪ ˈhəʊmwɜːk. ɪn ðə ˈiːvnɪŋ, aɪ ˈsʌmtaɪmz wɒtʃ ˌtiːˈviː bʌt aɪ ˈnevə ɡəʊ tə bed leɪt/",
+                "expectedKeywords": [
+                  "always",
+                  "usually",
+                  "sometimes",
+                  "never",
+                  "morning",
+                  "homework",
+                  "evening"
+                ],
+                "hint": "Use falling intonation at the end of each statement. Stress the adverbs of frequency and the main verbs. Speak slowly and clearly.",
+                "explanation": "This storytelling task helps you practise organising your ideas about daily routines. Using adverbs of frequency in a natural order (always, usually, sometimes, never) shows you can describe how often you do things."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about your free time activities at the weekend. Describe what you do, who you do it with, and how often. Try to cover all three story points below.",
+                "audioPrompt": "Now, please tell me about your weekends. What do you like to do in your free time on Saturday and Sunday? Who do you spend time with?",
+                "storyPoints": [
+                  "Say what you usually do on Saturday morning or afternoon.",
+                  "Describe a hobby or activity you sometimes do with friends or family.",
+                  "Mention something you never do at the weekend."
+                ],
+                "targetSentence": "On Saturday, I usually play football with my friends. I sometimes go to the cinema with my family. I never study at the weekend because I want to relax.",
+                "phonetic": "/ɒn ˈsætədeɪ, aɪ ˈjuːʒuəli pleɪ ˈfʊtbɔːl wɪð maɪ frendz. aɪ ˈsʌmtaɪmz ɡəʊ tə ðə ˈsɪnəmə wɪð maɪ ˈfæməli. aɪ ˈnevə ˈstʌdi ət ðə ˌwiːkˈend bɪˈkɒz aɪ wɒnt tə rɪˈlæks/",
+                "expectedKeywords": [
+                  "usually",
+                  "sometimes",
+                  "never",
+                  "weekend",
+                  "Saturday",
+                  "friends",
+                  "family"
+                ],
+                "hint": "Remember to use falling intonation for statements. Group your words into phrases: 'On Saturday' (pause) 'I usually play football' (pause) 'with my friends'. This makes your speech easier to understand.",
+                "explanation": "This task practises talking about weekend habits. You need to use different adverbs of frequency to show variety in how often you do activities. Mentioning other people (friends, family) makes your story more interesting and natural."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "scenarioContext": "You are at a school English club meeting. A new student from another country wants to know about your daily routine and hobbies. You need to answer their questions about what you do in your free time and how often you do different activities.",
+                "characterRole": "You are a friendly student at the English club. The new student (played by the AI tutor) will ask you about your hobbies and free time. Answer using Present Simple and adverbs of frequency. Be friendly and give details.",
+                "instruction": "The new student will ask you about your hobbies. Answer the question using the Present Simple tense and an adverb of frequency. Say what you usually do after school.",
+                "audioPrompt": "Hi! I'm new here. I want to make friends. What do you usually do after school?",
+                "targetSentence": "I usually do my homework first, and then I sometimes play video games or listen to music.",
+                "phonetic": "/aɪ ˈjuːʒuəli duː maɪ ˈhəʊmwɜːk fɜːst, ənd ðen aɪ ˈsʌmtaɪmz pleɪ ˈvɪdiəʊ ɡeɪmz ɔːr ˈlɪsən tə ˈmjuːzɪk/",
+                "expectedKeywords": [
+                  "usually",
+                  "homework",
+                  "sometimes",
+                  "play",
+                  "listen",
+                  "music"
+                ],
+                "hint": "Start with 'I usually...' to describe your main activity. Then add another activity with 'and then I sometimes...' to show variety.",
+                "explanation": "In this roleplay, you practise answering questions about your routine in a natural conversation. Using 'usually' and 'sometimes' together in one answer shows you can express different levels of frequency."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "scenarioContext": "You are having a phone call with your English pen pal from London. They want to compare their free time activities with yours. You talk about sports and exercise habits.",
+                "characterRole": "You are chatting with your pen pal (played by the AI tutor) on a video call. They will ask about sports and exercise. Answer honestly using Present Simple and adverbs of frequency. Ask them a question back if you can.",
+                "instruction": "Your pen pal asks about sports. Tell them what sport you play and how often. Use an adverb of frequency in your answer.",
+                "audioPrompt": "Hey! So tell me, do you play any sports? How often do you exercise?",
+                "targetSentence": "Yes, I often play badminton with my friends. I sometimes go running in the morning. Do you play any sports?",
+                "phonetic": "/jes, aɪ ˈɒfən pleɪ ˈbædmɪntən wɪð maɪ frendz. aɪ ˈsʌmtaɪmz ɡəʊ ˈrʌnɪŋ ɪn ðə ˈmɔːnɪŋ. duː juː pleɪ ˈeni spɔːts/",
+                "expectedKeywords": [
+                  "often",
+                  "play",
+                  "sometimes",
+                  "morning",
+                  "sports"
+                ],
+                "hint": "Use 'often' or 'sometimes' before the main verb. If you ask a question back, remember to use rising intonation at the end: 'Do you play any SPORTS?'",
+                "explanation": "This roleplay practises talking about sports and exercise habits. Asking a question back ('Do you play any sports?') is a great conversation skill that makes the dialogue more natural and interactive."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "scenarioContext": "You are at a community centre signing up for weekend activities. The receptionist asks you about your interests and schedule to recommend the best class for you.",
+                "characterRole": "You are a student looking for a fun weekend activity. The receptionist (played by the AI tutor) will ask about your interests and what you usually do at the weekend. Answer clearly so they can help you find the right class.",
+                "instruction": "The receptionist asks what you like to do. Tell them about your weekend habits and what activities interest you. Use the Present Simple and adverbs of frequency.",
+                "audioPrompt": "Welcome to the community centre! We have many weekend classes. What do you usually do at the weekend? What activities do you enjoy?",
+                "targetSentence": "I usually stay at home at the weekend. I sometimes read books and I often listen to music. I never try new activities, but I want to start something fun.",
+                "phonetic": "/aɪ ˈjuːʒuəli steɪ ət həʊm ət ðə ˌwiːkˈend. aɪ ˈsʌmtaɪmz riːd bʊks ənd aɪ ˈɒfən ˈlɪsən tə ˈmjuːzɪk. aɪ ˈnevə traɪ njuː ækˈtɪvətiz, bʌt aɪ wɒnt tə stɑːt ˈsʌmθɪŋ fʌn/",
+                "expectedKeywords": [
+                  "usually",
+                  "weekend",
+                  "sometimes",
+                  "read",
+                  "often",
+                  "listen",
+                  "never"
+                ],
+                "hint": "Try to use at least three different adverbs of frequency in your answer: 'usually', 'sometimes', 'often', or 'never'. This shows you can describe your habits well.",
+                "explanation": "This scenario practises giving information about yourself in a practical situation. Using multiple adverbs of frequency in one response demonstrates good control of the language and helps the listener understand your habits clearly."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "scenarioContext": "You are talking to your English teacher, Mr. Khoirul, during a one-on-one speaking practice session. He wants to know about your evening routine and whether you practise English at home.",
+                "characterRole": "You are a student having a speaking practice session with Mr. Khoirul (played by the AI tutor). He will ask about your evening habits and English practice. Be honest and use Present Simple with adverbs of frequency.",
+                "instruction": "Mr. Khoirul asks about your evening routine and English practice. Tell him what you do in the evening and how often you practise English at home.",
+                "audioPrompt": "Good afternoon! Let's talk about your evenings. What do you usually do in the evening? And how often do you practise English at home?",
+                "targetSentence": "In the evening, I usually watch TV or play games. I sometimes practise English by listening to songs. I always try to learn new words before bed.",
+                "phonetic": "/ɪn ðə ˈiːvnɪŋ, aɪ ˈjuːʒuəli wɒtʃ ˌtiːˈviː ɔːr pleɪ ɡeɪmz. aɪ ˈsʌmtaɪmz ˈpræktɪs ˈɪŋɡlɪʃ baɪ ˈlɪsənɪŋ tə sɒŋz. aɪ ˈɔːlweɪz traɪ tə lɜːn njuː wɜːdz bɪˈfɔːr bed/",
+                "expectedKeywords": [
+                  "evening",
+                  "usually",
+                  "watch",
+                  "sometimes",
+                  "practise",
+                  "English",
+                  "always",
+                  "learn"
+                ],
+                "hint": "Structure your answer by time: first say what you usually do, then add what you sometimes do, and finish with what you always do. This creates a clear and organised response.",
+                "explanation": "This roleplay combines talking about evening routines with language learning habits. Using three different adverbs of frequency (usually, sometimes, always) in order from general to specific creates a well-structured and impressive response for A1 level."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Say the following sentence out loud. Focus on pronouncing the free time activity vocabulary clearly. Make sure each word is easy to understand.",
+                "audioPrompt": "Please say this sentence clearly. Focus on the activity words.",
+                "targetSentence": "I enjoy reading books, playing football, and listening to music in my free time.",
+                "phonetic": "/aɪ ɪnˈdʒɔɪ ˈriːdɪŋ bʊks, ˈpleɪɪŋ ˈfʊtbɔːl, ənd ˈlɪsənɪŋ tə ˈmjuːzɪk ɪn maɪ friː taɪm/",
+                "expectedKeywords": [
+                  "enjoy",
+                  "reading",
+                  "books",
+                  "playing",
+                  "football",
+                  "listening",
+                  "music",
+                  "free time"
+                ],
+                "hint": "Pronounce 'reading' as /ˈriːdɪŋ/ with a long 'ee' sound. Say 'listening' as /ˈlɪsənɪŋ/ — three syllables, not two. The word 'enjoy' has stress on the second syllable: en-JOY.",
+                "explanation": "This drill focuses on key vocabulary for free time activities. Clear pronunciation of activity words like 'reading', 'playing', 'listening', and 'football' is essential for being understood when talking about hobbies."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Say the following three sentences out loud. Pay attention to the correct Present Simple form: positive, negative, and question. Notice where the adverb of frequency goes in each sentence.",
+                "audioPrompt": "Please say these three sentences. Be careful with the verb forms and where you put the adverb of frequency.",
+                "targetSentence": "She always drinks coffee in the morning. He does not usually eat breakfast. Do they sometimes play tennis after school?",
+                "phonetic": "/ʃiː ˈɔːlweɪz drɪŋks ˈkɒfi ɪn ðə ˈmɔːnɪŋ. hiː dʌz nɒt ˈjuːʒuəli iːt ˈbrekfəst. duː ðeɪ ˈsʌmtaɪmz pleɪ ˈtenɪs ˈɑːftə skuːl/",
+                "expectedKeywords": [
+                  "always",
+                  "drinks",
+                  "does not",
+                  "usually",
+                  "eat",
+                  "do",
+                  "sometimes",
+                  "play"
+                ],
+                "hint": "In the positive sentence, say 'drinks' with a clear /s/ at the end for third person. In the negative, say 'does not' clearly — the main verb 'eat' has NO 's'. In the question, your voice should rise at the end.",
+                "explanation": "This drill practises three forms of the Present Simple: positive ('She drinks'), negative ('He does not eat'), and question ('Do they play?'). Notice that adverbs of frequency go before the main verb in all three forms. The third person -s only appears on the main verb in positive sentences."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Syllable Stress Drill",
+                "instruction": "Say each word pair out loud. Notice how the syllable stress changes between the two words. The stressed syllable is written in CAPITAL LETTERS. Practise saying each pair three times.",
+                "audioPrompt": "Listen to the stress pattern and repeat each word pair. Pay attention to which syllable is louder and longer.",
+                "targetSentence": "SOME-times vs some-TIME. U-su-al-ly vs un-U-su-al. AF-ter-noon vs af-ter-NOON tea. EV-er-y vs ev-er-y-DAY.",
+                "phonetic": "/ˈsʌmtaɪmz/ vs /sʌmˈtaɪm/. /ˈjuːʒuəli/ vs /ʌnˈjuːʒuəl/. /ˈɑːftənuːn/ vs /ˌɑːftəˈnuːn tiː/. /ˈevri/ vs /ˌevrɪˈdeɪ/",
+                "expectedKeywords": [
+                  "sometimes",
+                  "sometime",
+                  "usually",
+                  "unusual",
+                  "afternoon",
+                  "every",
+                  "everyday"
+                ],
+                "hint": "For 'SOMEtimes', stress the first syllable. For 'someTIME', stress the second syllable. For 'Usually', stress 'U'. For 'unUsual', stress 'U' again but add the soft 'un' before it. Practise by clapping on the stressed syllable.",
+                "explanation": "Syllable stress can change the meaning and part of speech of a word. 'SOMEtimes' (adverb, meaning occasionally) has stress on 'SOME', while 'someTIME' (meaning at an unspecified future time) has stress on 'TIME'. Practising these pairs helps you sound more natural and be better understood."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Intonation Drill",
+                "instruction": "Say each sentence out loud with the correct intonation pattern. Use RISING intonation (voice goes up ↑) for Yes/No questions. Use FALLING intonation (voice goes down ↓) for statements and Wh- questions. The arrow shows you the direction.",
+                "audioPrompt": "Practise these sentences with the correct intonation. Listen carefully to whether your voice goes up or down at the end.",
+                "targetSentence": "I always play football after school. ↓ Do you sometimes read books? ↑ What do you usually do in the evening? ↓ Does she often listen to music? ↑",
+                "phonetic": "/aɪ ˈɔːlweɪz pleɪ ˈfʊtbɔːl ˈɑːftə skuːl ↓/ /duː juː ˈsʌmtaɪmz riːd bʊks ↑/ /wɒt duː juː ˈjuːʒuəli duː ɪn ðə ˈiːvnɪŋ ↓/ /dʌz ʃiː ˈɒfən ˈlɪsən tə ˈmjuːzɪk ↑/",
+                "expectedKeywords": [
+                  "always",
+                  "play",
+                  "sometimes",
+                  "read",
+                  "usually",
+                  "evening",
+                  "often",
+                  "listen"
+                ],
+                "hint": "For the statement 'I always play football after school', let your voice fall naturally on 'school'. For the Yes/No question 'Do you sometimes read books?', make your voice rise on 'books'. Wh- questions like 'What do you usually do?' have falling intonation on the last word.",
+                "explanation": "English uses intonation to show the difference between statements and questions. Statements and Wh- questions use falling intonation — your voice goes down at the end. Yes/No questions use rising intonation — your voice goes up at the end. This is very important for clear communication because the listener uses intonation to understand if you are asking or telling."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1564 @@
+{
+  "module": {
+    "id": "A2.1-M12",
+    "levelId": "A2.1",
+    "title": "Unit 12: Travellers' Tales: Travel, Transport & Relative Clauses",
+    "cefr": "A2",
+    "group": "A2.1 - Elementary Actions",
+    "objective": "Narrate travel adventures, transport choices, and provide additional details about people and places using defining relative clauses.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 12
+  },
+  "subModules": [
+    {
+      "id": "sub-a2-1-m12-reading",
+      "moduleId": "A2.1-M12",
+      "skillType": "reading",
+      "title": "Reading Mission: Travellers' Tales and Amazing Transport",
+      "theme": "Travel, Transport and Life Experiences",
+      "grammarFocus": "Present Perfect Simple and Relative Clauses",
+      "vocabularyFocus": "Travel and transport vocabulary",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a2-1-m12-r-theory",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to Unit 12. In this reading module, you will explore stories about travellers, different kinds of transport, and exciting places around the world. You will learn how to read for specific details and understand how to talk about life experiences using grammar patterns.",
+            "linguisticTarget": {
+              "grammar": "Present Perfect Simple for life experiences and defining relative clauses with who, which, and where.",
+              "vocabulary": "Words related to travel, transport, and accommodation.",
+              "readingStrategy": "Scanning texts to find specific names, dates, and transport types."
+            },
+            "learningObjectives": [
+              "Understand the main ideas of short A2 reading passages about travel.",
+              "Locate specific details regarding transport methods and destinations.",
+              "Recognize grammar structures like the Present Perfect Simple and relative clauses in texts."
+            ],
+            "contextWarmup": {
+              "prompt": "When you go on holiday, what is your favorite way to travel long distances?",
+              "options": [
+                "Taking a fast train or tram",
+                "Flying in a big airplane",
+                "Driving a car or minibus"
+              ],
+              "correctIndex": 0,
+              "explanation": "Trains and trams are popular transport choices for viewing scenery during short and long trips."
+            },
+            "rules": [
+              "Use the Present Perfect Simple (have/has + past participle) to talk about life experiences when the exact time is not important.",
+              "Use 'who' for people, 'which' for things, and 'where' for places in relative clauses.",
+              "Use the Past Simple when you mention a specific time in the past, such as yesterday or last year."
+            ],
+            "commonTrap": {
+              "trapTitle": "Confusing Past Simple and Present Perfect",
+              "explanation": "Learners often use the Present Perfect when they mention a specific past time.",
+              "wrong": "I have visited Bali last year.",
+              "correct": "I visited Bali last year. Use Past Simple with specific past times."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Have and Has",
+            "contractionsSubtitle": "Notice how auxiliary verbs merge with pronouns in conversation:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "have",
+                "vowelDropped": "h, a",
+                "remainder": "'ve",
+                "contracted": "I've",
+                "exampleFull": "I have travelled to many countries.",
+                "exampleContracted": "I've travelled to many countries."
+              },
+              {
+                "subject": "She",
+                "verb": "has",
+                "vowelDropped": "h, a",
+                "remainder": "'s",
+                "contracted": "She's",
+                "exampleFull": "She has visited three museums.",
+                "exampleContracted": "She's visited three museums."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Present Perfect",
+              "description": "Build correct sentences for affirmative experiences:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "have",
+                  "role": "First Person"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "visit",
+                  "thirdPerson": "visits",
+                  "continuous": "visiting"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "many different cities",
+                  "type": "Object Phrase"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-1-m12-r-vocab",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "traveller",
+                "ipa": "/ˈtrævələr/",
+                "meaning": "musafir, orang yang bepergian",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Nora is a professional world traveller.",
+                "collocation": "traveller / world traveller"
+              },
+              {
+                "word": "accommodation",
+                "ipa": "/əˌkɒməˈdeɪʃən/",
+                "meaning": "akomodasi, tempat tinggal sementara",
+                "partOfSpeech": "noun",
+                "exampleSentence": "She has found accommodation in Hawaii, Australia, and New Zealand.",
+                "collocation": "find accommodation / book accommodation"
+              },
+              {
+                "word": "journey",
+                "ipa": "/ˈdʒɜːni/",
+                "meaning": "perjalanan (proses bepergian)",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Children have to go on a difficult trip to get to their lessons.",
+                "collocation": "long journey / safe journey"
+              },
+              {
+                "word": "minibus",
+                "ipa": "/ˈmɪnibʌs/",
+                "meaning": "minibus, bus kecil",
+                "partOfSpeech": "noun",
+                "exampleSentence": "It was a minibus on the road to the school.",
+                "collocation": "take a minibus / drive a minibus"
+              },
+              {
+                "word": "motorbike",
+                "ipa": "/ˈməʊtəbaɪk/",
+                "meaning": "sepeda motor",
+                "partOfSpeech": "noun",
+                "exampleSentence": "My brother's got a motorbike and now he's learning to ride it.",
+                "collocation": "ride a motorbike / buy a motorbike"
+              },
+              {
+                "word": "tram",
+                "ipa": "/træm/",
+                "meaning": "trem, kereta listrik kota",
+                "partOfSpeech": "noun",
+                "exampleSentence": "I took a tram in Lisbon when I was on holiday.",
+                "collocation": "ride a tram / take a tram"
+              },
+              {
+                "word": "catch",
+                "ipa": "/kætʃ/",
+                "meaning": "menangkap, naik (kendaraan)",
+                "partOfSpeech": "verb",
+                "exampleSentence": "I had to catch the train but I missed the bus.",
+                "collocation": "catch a train / catch a bus"
+              },
+              {
+                "word": "admire",
+                "ipa": "/ədˈmaɪər/",
+                "meaning": "mengagumi, menghormati",
+                "partOfSpeech": "verb",
+                "exampleSentence": "My uncle is someone I admire because he helps other people.",
+                "collocation": "admire someone / deeply admire"
+              },
+              {
+                "word": "airport",
+                "ipa": "/ˈeəpɔːt/",
+                "meaning": "bandara, pelabuhan udara",
+                "partOfSpeech": "noun",
+                "exampleSentence": "We arrived at the airport two hours before our flight.",
+                "collocation": "international airport / go to the airport"
+              },
+              {
+                "word": "platform",
+                "ipa": "/ˈplætfɔːm/",
+                "meaning": "peron, platform stasiun",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The train for London is waiting at platform four.",
+                "collocation": "station platform / wait on the platform"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m12-r-guided",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Amazing Travel Adventures Around the World",
+            "audioUrl": "/audio/modules/a2-1-m12/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Leo is an adventurous traveller who loves exploring new countries. He has visited over twenty nations in the last five years. Last summer, he went on a long trip across Europe. He rode a motorbike through mountain roads and took a tram in busy cities. Leo always finds comfortable accommodation in small local houses where he meets friendly residents.",
+              "Travelling by public transport is one of Leo's favorite things. He often needs to catch an early morning train or a local minibus to reach remote villages. During his trips, he meets many interesting people whom he deeply admires. Leo believes that seeing the world opens your mind and teaches you important lessons about different cultures and daily life."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 5.2,
+                "text": "Leo is an adventurous traveller who loves exploring new countries.",
+                "paragraphIndex": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m12-r-practice",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection",
+          "orderIndex": 4,
+          "content": {
+            "drills": []
+          }
+        },
+        {
+          "id": "sec-a2-1-m12-r-quiz",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "Who is Leo in the reading passage?",
+                "options": [
+                  "A musician from London",
+                  "An adventurous traveller",
+                  "A train driver in Europe"
+                ],
+                "answer": "An adventurous traveller",
+                "explanation": "The passage states that Leo is an adventurous traveller who loves exploring new countries."
+              },
+              {
+                "id": "q-r-2",
+                "question": "How many nations has Leo visited in the last five years?",
+                "options": [
+                  "Over twenty nations",
+                  "Exactly ten nations",
+                  "Only five nations"
+                ],
+                "answer": "Over twenty nations",
+                "explanation": "The text mentions he has visited over twenty nations in the last five years."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What transport did Leo ride through mountain roads last summer?",
+                "options": [
+                  "A bicycle",
+                  "A motorbike",
+                  "A tram"
+                ],
+                "answer": "A motorbike",
+                "explanation": "Paragraph 1 notes that he rode a motorbike through mountain roads."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Where did Leo ride a tram?",
+                "options": [
+                  "In busy cities",
+                  "On mountain roads",
+                  "In small villages"
+                ],
+                "answer": "In busy cities",
+                "explanation": "The text explains that he took a tram in busy cities."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What kind of accommodation does Leo usually find?",
+                "options": [
+                  "Large expensive hotels",
+                  "Small local houses",
+                  "Camping tents outside cities"
+                ],
+                "answer": "Small local houses",
+                "explanation": "Paragraph 1 states he always finds comfortable accommodation in small local houses."
+              },
+              {
+                "id": "q-r-6",
+                "question": "What is one of Leo's favorite things?",
+                "options": [
+                  "Flying in private helicopters",
+                  "Travelling by public transport",
+                  "Driving fast sports cars"
+                ],
+                "answer": "Travelling by public transport",
+                "explanation": "The beginning of paragraph 2 says travelling by public transport is one of Leo's favorite things."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Why does Leo need to catch an early morning train or minibus?",
+                "options": [
+                  "To reach remote villages",
+                  "To go back to his office",
+                  "To meet his family"
+                ],
+                "answer": "To reach remote villages",
+                "explanation": "The passage says he often needs to catch an early morning train or local minibus to reach remote villages."
+              },
+              {
+                "id": "q-r-8",
+                "question": "How does Leo feel about the people he meets on his trips?",
+                "options": [
+                  "He ignores them completely",
+                  "He deeply admires them",
+                  "He forgets them quickly"
+                ],
+                "answer": "He deeply admires them",
+                "explanation": "Paragraph 2 states he meets many interesting people whom he deeply admires."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What does Leo believe seeing the world does?",
+                "options": [
+                  "Makes you tired and stressed",
+                  "Opens your mind and teaches important lessons",
+                  "Costs too much money"
+                ],
+                "answer": "Opens your mind and teaches important lessons",
+                "explanation": "Leo believes that seeing the world opens your mind and teaches you important lessons."
+              },
+              {
+                "id": "q-r-10",
+                "question": "Which tense is used to describe Leo visiting over twenty nations?",
+                "options": [
+                  "Present Perfect Simple",
+                  "Past Simple",
+                  "Future Simple"
+                ],
+                "answer": "Present Perfect Simple",
+                "explanation": "The sentence uses 'has visited', which is the Present Perfect Simple tense."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m12-listening",
+      "moduleId": "A2.1-M12",
+      "skillType": "listening",
+      "title": "Listening Mission: Tales from the Mountains",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a2-1-m12-l-theory",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Listen closely to natural conversations about past travel experiences and transport. Focus on catching key details such as locations, vehicles, and unexpected events while noticing how words link together in spoken English.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about travel and transport.",
+              "Identify details such as times, vehicles, and unexpected events.",
+              "Notice how words link together in connected speech."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "Welcome back",
+                "meaning": "Selamat datang kembali",
+                "note": "Used when greeting someone returning to a place or group."
+              },
+              {
+                "phrase": "Take a train",
+                "meaning": "Naik kereta",
+                "note": "Common collocation for using rail transport."
+              },
+              {
+                "phrase": "Happen to",
+                "meaning": "Terjadi pada",
+                "note": "Used when describing events or incidents affecting someone."
+              },
+              {
+                "phrase": "Unforgettable",
+                "meaning": "Tak terlupakan",
+                "note": "Adjective used for experiences that leave a strong positive impression."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "Welcome back to the travel club",
+                "fast": "Welcom back to the travel club",
+                "slowIpa": "/ˈwel.kəm bæk tuː ðə ˈtræv.əl klʌb/",
+                "fastIpa": "/ˈwel.kəm bæk tə ðə ˈtræv.əl klʌb/",
+                "note": "The word 'to' is weakened to schwa /tə/ in fast speech."
+              },
+              {
+                "id": 2,
+                "slow": "Did you ride a local train",
+                "fast": "Didju ride a local train",
+                "slowIpa": "/dɪd juː raɪd ə ˈloʊ.kəl treɪn/",
+                "fastIpa": "/ˈdɪdʒu raɪd ə ˈloʊ.kəl treɪn/",
+                "note": "The sounds /d/ and /j/ merge into /dʒ/ in rapid speech."
+              },
+              {
+                "id": 3,
+                "slow": "Take an old train",
+                "fast": "Tay-kan old train",
+                "slowIpa": "/teɪk ən oʊld treɪn/",
+                "fastIpa": "/ˈteɪ.kən oʊld treɪn/",
+                "note": "Linking final consonant /k/ to initial vowel /æ/ of 'an'."
+              },
+              {
+                "id": 4,
+                "slow": "What happened there",
+                "fast": "What happend there",
+                "slowIpa": "/wʌt ˈhæp.ənd ðer/",
+                "fastIpa": "/wʌt ˈhæp.ən(d) ðer/",
+                "note": "The final /t/ in 'what' links smoothly and the /d/ in 'happened' is often elided before consonants."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m12-l-dialogue",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Travel Stories in Class",
+          "orderIndex": 2,
+          "content": {
+            "context": "Steve Anderson talks with his students about memorable travel experiences and transport adventures.",
+            "audioPrompt": "Listen to the conversation between Steve and his students.",
+            "lines": [
+              {
+                "speaker": "Steve",
+                "text": "Welcome back to the travel club.",
+                "translation": "Selamat datang kembali di klub perjalanan.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Leo",
+                "text": "Tell us about your best trip.",
+                "translation": "Ceritakan kepada kami tentang perjalanan terbaikmu.",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Steve",
+                "text": "I visited the mountains in Peru.",
+                "translation": "Saya mengunjungi pegunungan di Peru.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Mia",
+                "text": "Did you ride a local train?",
+                "translation": "Apakah kamu naik kereta lokal?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Steve",
+                "text": "Yes, I took an old train.",
+                "translation": "Ya, saya naik kereta tua.",
+                "emotion": "happy"
+              },
+              {
+                "speaker": "Leo",
+                "text": "Was the train ride long?",
+                "translation": "Apakah perjalanan kereta itu panjang?",
+                "emotion": "interested"
+              },
+              {
+                "speaker": "Steve",
+                "text": "It took five hours to arrive.",
+                "translation": "Butuh waktu lima jam untuk tiba.",
+                "emotion": "casual"
+              },
+              {
+                "speaker": "Mia",
+                "text": "Did anything strange happen there?",
+                "translation": "Apakah sesuatu yang aneh terjadi di sana?",
+                "emotion": "surprised"
+              },
+              {
+                "speaker": "Steve",
+                "text": "A monkey stole my snack bag.",
+                "translation": "Seekor monyet mencuri kantong camilan saya.",
+                "emotion": "amused"
+              },
+              {
+                "speaker": "Leo",
+                "text": "That sounds like a great adventure.",
+                "translation": "Itu terdengar seperti petualangan hebat.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Steve",
+                "text": "It was unforgettable for me.",
+                "translation": "Itu tidak terlupakan bagiku.",
+                "emotion": "happy"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m12-l-quiz",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Welcome back to the travel club.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Steve: \"Welcome back to the travel _____.\"",
+                "targetWord": "club",
+                "explanation": "Full audio: \"Welcome back to the travel club.\". The missing word is \"club\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Tell us about your best trip.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Tell us about your best _____.\"",
+                "targetWord": "trip",
+                "explanation": "Full audio: \"Tell us about your best trip.\". The missing word is \"trip\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "I visited the mountains in Peru.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Steve: \"I visited the mountains in _____.\"",
+                "targetWord": "Peru",
+                "explanation": "Full audio: \"I visited the mountains in Peru.\". The missing word is \"Peru\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Did you ride a local train?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"Did you ride a local _____?\"",
+                "targetWord": "train",
+                "explanation": "Full audio: \"Did you ride a local train?\". The missing word is \"train\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Yes, I took an old train.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Steve: \"Yes, I took an _____ train.\"",
+                "targetWord": "old",
+                "explanation": "Full audio: \"Yes, I took an old train.\". The missing word is \"old\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Was the train ride long?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Was the train ride long",
+                "words": [
+                  "long",
+                  "the",
+                  "Was",
+                  "ride",
+                  "train"
+                ],
+                "explanation": "Correct sentence order: \"Was the train ride long?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "It took five hours to arrive.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It took five hours to arrive",
+                "words": [
+                  "hours",
+                  "took",
+                  "It",
+                  "five",
+                  "arrive",
+                  "to"
+                ],
+                "explanation": "Correct sentence order: \"It took five hours to arrive.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Did anything strange happen there?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Did anything strange happen there",
+                "words": [
+                  "Did",
+                  "strange",
+                  "there",
+                  "happen",
+                  "anything"
+                ],
+                "explanation": "Correct sentence order: \"Did anything strange happen there?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "A monkey stole my snack bag.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "A monkey stole my snack bag",
+                "words": [
+                  "monkey",
+                  "bag",
+                  "my",
+                  "A",
+                  "stole",
+                  "snack"
+                ],
+                "explanation": "Correct sentence order: \"A monkey stole my snack bag.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "That sounds like a great adventure.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds like a great adventure",
+                "words": [
+                  "sounds",
+                  "like",
+                  "a",
+                  "That",
+                  "adventure",
+                  "great"
+                ],
+                "explanation": "Correct sentence order: \"That sounds like a great adventure.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Welcome back to the travel club.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Steve: \"Welcome back to the travel _____.\"",
+                "targetWord": "club",
+                "explanation": "Full audio: \"Welcome back to the travel club.\". The missing word is \"club\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Tell us about your best trip.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Tell us about your best _____.\"",
+                "targetWord": "trip",
+                "explanation": "Full audio: \"Tell us about your best trip.\". The missing word is \"trip\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "I visited the mountains in Peru.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Steve: \"I visited the mountains in _____.\"",
+                "targetWord": "Peru",
+                "explanation": "Full audio: \"I visited the mountains in Peru.\". The missing word is \"Peru\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Did you ride a local train?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"Did you ride a local _____?\"",
+                "targetWord": "train",
+                "explanation": "Full audio: \"Did you ride a local train?\". The missing word is \"train\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Yes, I took an old train.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Steve: \"Yes, I took an _____ train.\"",
+                "targetWord": "old",
+                "explanation": "Full audio: \"Yes, I took an old train.\". The missing word is \"old\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Was the train ride long?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Was the train ride long",
+                "words": [
+                  "long",
+                  "the",
+                  "Was",
+                  "ride",
+                  "train"
+                ],
+                "explanation": "Correct sentence order: \"Was the train ride long?\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "It took five hours to arrive.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It took five hours to arrive",
+                "words": [
+                  "hours",
+                  "took",
+                  "It",
+                  "five",
+                  "arrive",
+                  "to"
+                ],
+                "explanation": "Correct sentence order: \"It took five hours to arrive.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Did anything strange happen there?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Did anything strange happen there",
+                "words": [
+                  "Did",
+                  "strange",
+                  "there",
+                  "happen",
+                  "anything"
+                ],
+                "explanation": "Correct sentence order: \"Did anything strange happen there?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "A monkey stole my snack bag.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "A monkey stole my snack bag",
+                "words": [
+                  "monkey",
+                  "bag",
+                  "my",
+                  "A",
+                  "stole",
+                  "snack"
+                ],
+                "explanation": "Correct sentence order: \"A monkey stole my snack bag.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "That sounds like a great adventure.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds like a great adventure",
+                "words": [
+                  "sounds",
+                  "like",
+                  "a",
+                  "That",
+                  "adventure",
+                  "great"
+                ],
+                "explanation": "Correct sentence order: \"That sounds like a great adventure.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m12-writing",
+      "moduleId": "A2.1-M12",
+      "skillType": "writing",
+      "title": "Writing Mission: Travel Stories and Relative Clauses",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a2-1-m12-w-theory",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on writing about travel experiences, transport methods, and connecting sentences using relative clauses in English.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Present Perfect for Life Experiences",
+                "formula": "Subject + have/has + past participle",
+                "example": "I have visited three different countries in Europe."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Describing Transport and Travel",
+                "formula": "Subject + verb (took / travelled by) + transport method",
+                "example": "We travelled by train from London to Paris."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Connecting Ideas with Relative Clauses",
+                "formula": "Noun + relative pronoun (who / which / where) + clause",
+                "example": "This is the hotel where we stayed last summer."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always capitalize proper names of countries, cities, and nationalities.",
+                "badExample": "i went to paris and spent time in france.",
+                "goodExample": "I went to Paris and spent time in France.",
+                "why": "Countries, cities, and the pronoun 'I' must always start with a capital letter."
+              },
+              {
+                "rule": "Use correct past participle forms for irregular verbs in the Present Perfect.",
+                "badExample": "She has went to Tokyo by plane.",
+                "goodExample": "She has gone to Tokyo by plane.",
+                "why": "The past participle of 'go' is 'gone' or 'been', not 'went'."
+              },
+              {
+                "rule": "Use relative pronouns correctly for people, things, and places.",
+                "badExample": "He is the guide which showed us the city.",
+                "goodExample": "He is the guide who showed us the city.",
+                "why": "Use 'who' for people, 'which' for things, and 'where' for places."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "I have never flown in a helicopter before.",
+                "id": "Saya belum pernah naik helikopter sebelumnya.",
+                "focus": "Present Perfect with never"
+              },
+              {
+                "en": "She visited Rome last year with her family.",
+                "id": "Dia mengunjungi Roma tahun lalu bersama keluarganya.",
+                "focus": "Past Simple for specific past time"
+              },
+              {
+                "en": "We missed the train because we arrived late at the station.",
+                "id": "Kami tertinggal kereta karena kami tiba terlambat di stasiun.",
+                "focus": "Transport and conjunctions"
+              },
+              {
+                "en": "He is the guide who showed us around the old castle.",
+                "id": "Dia adalah pemandu yang menunjukkan kepada kami kastil tua tersebut.",
+                "focus": "Relative clause with who"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m12-w-practice",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "i have went to japan twice by plane",
+                "targetSentence": "I have been to Japan twice by plane.",
+                "translation": "Saya telah pergi ke Jepang dua kali dengan pesawat.",
+                "keyRule": "Use 'been' with 'have' for travel experiences and capitalize the pronoun 'I' and country 'Japan'.",
+                "requiredCapitals": [
+                  "I",
+                  "Japan"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "they catched the bus to london yesterday morning",
+                "targetSentence": "They caught the bus to London yesterday morning.",
+                "translation": "Mereka naik bus ke London kemarin pagi.",
+                "keyRule": "The past tense of 'catch' is 'caught', and proper nouns like 'London' must be capitalized.",
+                "requiredCapitals": [
+                  "They",
+                  "London"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "she has never saw a big ship like that one",
+                "targetSentence": "She has never seen a big ship like that one.",
+                "translation": "Dia belum pernah melihat kapal besar seperti itu.",
+                "keyRule": "The past participle of 'see' is 'seen' after 'has never'.",
+                "requiredCapitals": [
+                  "She"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Travel Experiences",
+                "meaning": "Kami telah mengunjungi banyak museum di Paris.",
+                "tokens": [
+                  "We",
+                  "have",
+                  "visited",
+                  "many",
+                  "museums",
+                  "in",
+                  "Paris."
+                ],
+                "fullSentence": "We have visited many museums in Paris."
+              },
+              {
+                "id": "b-2",
+                "category": "Transport and Travel",
+                "meaning": "Dia pergi ke bandara dengan taksi kemarin.",
+                "tokens": [
+                  "He",
+                  "went",
+                  "to",
+                  "the",
+                  "airport",
+                  "by",
+                  "taxi",
+                  "yesterday."
+                ],
+                "fullSentence": "He went to the airport by taxi yesterday."
+              },
+              {
+                "id": "b-3",
+                "category": "Relative Clauses",
+                "meaning": "Ini adalah hotel tempat kami menginap saat liburan.",
+                "tokens": [
+                  "This",
+                  "is",
+                  "the",
+                  "hotel",
+                  "where",
+                  "we",
+                  "stayed",
+                  "on",
+                  "holiday."
+                ],
+                "fullSentence": "This is the hotel where we stayed on holiday."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: My Dream Trip",
+                "badge": "Travel Writer",
+                "instruction": "Write three sentences about a memorable trip you took or want to take. Mention the transport you used, a place you visited, and what you saw.",
+                "example": "I travelled to Bali by plane last year. I visited an amazing temple near the beach. I saw many beautiful green rice fields.",
+                "placeholder": "Write your sentences here...",
+                "minWords": 15,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Amazing Places",
+                "badge": "Explorer",
+                "instruction": "Write three sentences describing a place using relative clauses (who, which, where). Mention a person who helped you, a place you went, or a thing you bought.",
+                "example": "This is the shop where I bought my new camera. It is a camera which takes very clear photos. The man who sold it was very kind.",
+                "placeholder": "Write your sentences here...",
+                "minWords": 15,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m12-w-quiz",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following affirmative sentence into a negative sentence:",
+                "promptText": "I have visited London three times.",
+                "hint": "Use 'haven't' or 'have not'.",
+                "targetAnswers": [
+                  "I haven't visited London three times.",
+                  "I have not visited London three times."
+                ],
+                "explanation": "To make the Present Perfect negative, add 'not' after 'have', resulting in 'haven't' or 'have not'."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following Past Simple sentence into the Present Perfect by removing the specific time phrase:",
+                "promptText": "She travelled to Spain last year.",
+                "hint": "Use 'has travelled' without 'last year'.",
+                "targetAnswers": [
+                  "She has travelled to Spain."
+                ],
+                "explanation": "Present Perfect uses 'has' plus the past participle and does not include specific past time markers like 'last year'."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Conjunctions",
+                "instruction": "Choose the correct conjunction to complete the sentence: 'We missed our train ___ we arrived late at the station.'",
+                "promptText": "We missed our train ___ we arrived late at the station.",
+                "hint": "Use the word that gives the reason.",
+                "targetAnswers": [
+                  "because"
+                ],
+                "explanation": "Use 'because' to introduce the reason why something happened."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Rewrite the sentence with correct capitalization and punctuation:",
+                "promptText": "my brother flew to paris on friday.",
+                "hint": "Capitalize the first word, cities, and days of the week.",
+                "targetAnswers": [
+                  "My brother flew to Paris on Friday."
+                ],
+                "explanation": "Always capitalize the beginning of a sentence, proper city names like Paris, and days of the week like Friday."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Relative Clauses",
+                "instruction": "Combine the two sentences using the relative pronoun 'who':",
+                "promptText": "This is the pilot. He flew our plane to Rome.",
+                "hint": "Replace 'He' with 'who'.",
+                "targetAnswers": [
+                  "This is the pilot who flew our plane to Rome."
+                ],
+                "explanation": "Use 'who' to connect a person in the main clause to the relative clause describing them."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Relative Clauses",
+                "instruction": "Combine the two sentences using the relative pronoun 'where':",
+                "promptText": "That is the station. We caught the train there.",
+                "hint": "Use 'where' instead of 'there'.",
+                "targetAnswers": [
+                  "That is the station where we caught the train."
+                ],
+                "explanation": "Use 'where' to refer to a place in a relative clause."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Short Response",
+                "instruction": "Write a short negative answer to the question:",
+                "promptText": "Have you ever ridden a camel?",
+                "hint": "Start with 'No, I...'",
+                "targetAnswers": [
+                  "No, I haven't.",
+                  "No, I have not."
+                ],
+                "explanation": "Short answers in the Present Perfect use 'Yes, I have' or 'No, I haven't'."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the affirmative sentence into an interrogative question:",
+                "promptText": "They have travelled by ship.",
+                "hint": "Put 'Have' at the beginning of the sentence.",
+                "targetAnswers": [
+                  "Have they travelled by ship?"
+                ],
+                "explanation": "To form a question in the Present Perfect, place 'Have' or 'Has' before the subject."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the grammar error in the sentence:",
+                "promptText": "She has take many photos on her holiday.",
+                "hint": "Change 'take' to the past participle form.",
+                "targetAnswers": [
+                  "She has taken many photos on her holiday."
+                ],
+                "explanation": "After 'has', you must use the past participle form of the verb, which is 'taken'."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Complete the sentence with the correct transport verb: 'We had to ___ a taxi because the bus was late.'",
+                "promptText": "We had to ___ a taxi because the bus was late.",
+                "hint": "Think of the verb used with taxis.",
+                "targetAnswers": [
+                  "take"
+                ],
+                "explanation": "In English, we use the verb 'take' with taxis, buses, trains, and planes."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m12-speaking",
+      "moduleId": "A2.1-M12",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Travellers Tales and Transport",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a2-1-m12-s-theory",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Mastering the sounds of travel vocabulary and linking words in connected speech at the A2 level.",
+            "audioGuidance": "Focus on clear syllable stress in compound transport words and natural intonation when asking travel questions.",
+            "pillars": [
+              {
+                "name": "Vowel Clarity",
+                "target": "Clear short and long vowels",
+                "explanation": "Ensure distinct pronunciation of vowels in words like tram and catch."
+              },
+              {
+                "name": "Sentence Stress",
+                "target": "Emphasizing key information words",
+                "explanation": "Stress nouns and verbs like traveller and accommodation while weakening auxiliary words."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m12-s-practice",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "TRAV-el",
+                "countryAudio": "travel",
+                "countrySyllables": [
+                  {
+                    "text": "TRAV",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "el",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "TRAV-el-ler",
+                "natAudio": "traveller",
+                "natSyllables": [
+                  {
+                    "text": "TRAV",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "el",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ler",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The primary stress remains on the first syllable in both words."
+              },
+              {
+                "id": "pair-2",
+                "country": "MIN-i-bus",
+                "countryAudio": "minibus",
+                "countrySyllables": [
+                  {
+                    "text": "MIN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "bus",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "MIN-i-bus-es",
+                "natAudio": "minibuses",
+                "natSyllables": [
+                  {
+                    "text": "MIN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "bus",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "es",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The primary stress stays on the first syllable."
+              },
+              {
+                "id": "pair-3",
+                "country": "MO-tor-bike",
+                "countryAudio": "motorbike",
+                "countrySyllables": [
+                  {
+                    "text": "MO",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tor",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "BIKE",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "MO-tor-bikes",
+                "natAudio": "motorbikes",
+                "natSyllables": [
+                  {
+                    "text": "MO",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tor",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "BIKES",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "The main stress stays on the third syllable."
+              },
+              {
+                "id": "pair-4",
+                "country": "AC-com-mo-date",
+                "countryAudio": "accommodate",
+                "countrySyllables": [
+                  {
+                    "text": "ac",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "COM",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "mo",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "date",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ac-com-mo-DA-tion",
+                "natAudio": "accommodation",
+                "natSyllables": [
+                  {
+                    "text": "ac",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "com",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "mo",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "DA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice how the stress shifts to the fourth syllable in accommodation."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "I need to find a cheap accommodation near the station.",
+                "phonetic": "/aɪ niːd tuː faɪnd ə tʃiːp əˌkɒməˈdeɪʃən nɪə ðə ˈsteɪʃən/",
+                "focus": "Word stress in accommodation and linking sounds",
+                "hint": "Pronounce each syllable clearly and emphasize the fourth syllable in accommodation."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "She caught the early morning tram to the city center.",
+                "phonetic": "/ʃiː kɔːt ði ˈɜːli ˈmɔːnɪŋ træm tuː ðə ˈsɪti ˈsentər/",
+                "focus": "Past tense verb catch and noun tram",
+                "hint": "Link caught and the smoothly together without pausing."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "My uncle is a famous traveller whom everyone admires.",
+                "phonetic": "/maɪ ˈʌŋkəl ɪz ə ˈfeɪməs ˈtrævələr huːm ˈevriwʌn ədˈmaɪərz/",
+                "focus": "Relative pronoun whom and verb admire",
+                "hint": "Emphasize the second syllable of admires."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "They rode their motorbikes along the long country road.",
+                "phonetic": "/ðeɪ rəʊd ðeə ˈməʊtəbaɪks əˈlɒŋ ðə lɒŋ ˈkʌntri rəʊd/",
+                "focus": "Plural nouns and compound transport words",
+                "hint": "Keep your voice steady on motorbikes and stress road."
+              }
+            ],
+            "roleplay": {
+              "context": "You are talking to a tourist at a station ticket office about buying tickets and finding accommodation.",
+              "roles": [
+                "Ticket Clerk",
+                "Traveller"
+              ],
+              "turns": [
+                {
+                  "speaker": "Ticket Clerk",
+                  "text": "Good morning! How can I help you with your travel plans today?",
+                  "translation": "Selamat pagi! Bagaimana saya bisa membantu rencana perjalanan Anda hari ini?"
+                },
+                {
+                  "speaker": "Traveller",
+                  "text": "I need a ticket for the minibus to the beach and some information about local accommodation.",
+                  "translation": "Saya butuh tiket minibus ke pantai dan beberapa informasi tentang akomodasi lokal."
+                },
+                {
+                  "speaker": "Ticket Clerk",
+                  "text": "The next minibus leaves in ten minutes. There are nice hotels near the main square.",
+                  "translation": "Minibus berikutnya berangkat dalam sepuluh menit. Ada hotel bagus dekat alun-alun utama."
+                },
+                {
+                  "speaker": "Traveller",
+                  "text": "Perfect. I will catch that minibus and check out the accommodation right away.",
+                  "translation": "Sempurna. Saya akan naik minibus itu dan langsung mengecek akomodasinya."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-1-m12-s-quiz",
+          "moduleId": "A2.1-M12",
+          "subModuleId": "sub-a2-1-m12-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a memorable trip you took using public transport.",
+                "audioPrompt": "Tell me about a time you traveled somewhere by bus, tram, or train.",
+                "storyPoints": [
+                  "Where you went and what transport you used",
+                  "What you saw during the trip",
+                  "How you felt when you arrived"
+                ],
+                "targetSentence": "Last month I took a tram to the city center and visited the old museum.",
+                "phonetic": "/lɑːst mʌnθ aɪ tʊk ə træm tuː ðə ˈsɪti ˈsentər ənd ˈvɪzɪtɪd ði əʊld mjuˈziːəm/",
+                "expectedKeywords": [
+                  "tram",
+                  "city",
+                  "museum",
+                  "visited"
+                ],
+                "explanation": "Speak fluently in full sentences using the Past Simple tense."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about your ideal holiday accommodation and location.",
+                "audioPrompt": "Describe the place where you want to stay on your next holiday.",
+                "storyPoints": [
+                  "The type of accommodation you prefer",
+                  "Who you want to travel with",
+                  "Why you like this specific place"
+                ],
+                "targetSentence": "I want to stay in a quiet hotel near the beach with my family.",
+                "phonetic": "/aɪ wɒnt tuː steɪ ɪn ə ˈkwaɪət həʊˈtel nɪə ðə biːtʃ wɪð maɪ ˈfæməli/",
+                "expectedKeywords": [
+                  "hotel",
+                  "beach",
+                  "family",
+                  "quiet"
+                ],
+                "explanation": "Use descriptive adjectives and clear phrasing."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Act as a traveller asking about transport schedules at an information desk.",
+                "audioPrompt": "Ask the clerk when the next tram leaves for the museum.",
+                "scenarioContext": "You are standing at a busy tram station in a new city and need to reach the national museum.",
+                "characterRole": "Traveller",
+                "targetSentence": "Excuse me, what time does the next tram leave for the museum?",
+                "phonetic": "/ɪkˈskjuːz miː, wɒt taɪm dʌz ðə nekst træm liːv fɔː ðə mjuˈziːəm/",
+                "expectedKeywords": [
+                  "tram",
+                  "leave",
+                  "museum",
+                  "time"
+                ],
+                "explanation": "Use polite phrasing and clear intonation when asking questions."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Act as a ticket clerk selling a minibus ticket.",
+                "audioPrompt": "Tell the customer the price of the minibus ticket and departure time.",
+                "scenarioContext": "A customer is at your counter asking for transport to the mountain village.",
+                "characterRole": "Ticket Clerk",
+                "targetSentence": "The minibus ticket costs ten dollars and departs in five minutes.",
+                "phonetic": "/ðə ˈmɪnibʌs ˈtɪkɪt kɒsts ten ˈdɒlərz ənd dɪˈpɑːts ɪn faɪv ˈmɪnɪts/",
+                "expectedKeywords": [
+                  "minibus",
+                  "ticket",
+                  "dollars",
+                  "minutes"
+                ],
+                "explanation": "Speak clearly with confident pricing and schedule details."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Act as a tourist asking an officer about local accommodation options.",
+                "audioPrompt": "Ask if there are any affordable places to stay near the station.",
+                "scenarioContext": "You just arrived by train and need a place to sleep for the night.",
+                "characterRole": "Tourist",
+                "targetSentence": "Are there any cheap places for accommodation near the train station?",
+                "phonetic": "/ɑː ðeə ˈeni tʃiːp ˈpleɪsɪz fɔːr əˌkɒməˈdeɪʃən nɪə ðə treɪn ˈsteɪʃən/",
+                "expectedKeywords": [
+                  "accommodation",
+                  "cheap",
+                  "station",
+                  "places"
+                ],
+                "explanation": "Pronounce accommodation with correct syllable stress."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Act as a local resident giving directions about catching a motorbike.",
+                "audioPrompt": "Explain where the traveller can find a reliable motorbike.",
+                "scenarioContext": "A visitor asks you how to rent a motorbike to explore the countryside safely.",
+                "characterRole": "Local Resident",
+                "targetSentence": "You can catch a motorbike rental shop right around the corner.",
+                "phonetic": "/juː kæn kætʃ ə ˈməʊtəbaɪk ˈrentəl ʃɒp raɪt əˈraʊnd ðə ˈkɔːnər/",
+                "expectedKeywords": [
+                  "motorbike",
+                  "rental",
+                  "shop",
+                  "corner"
+                ],
+                "explanation": "Give clear and direct instructions using natural phrasing."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Linguistic Drill",
+                "focus": "vocab",
+                "instruction": "Read the sentence clearly using the target vocabulary word admire.",
+                "audioPrompt": "Say this sentence aloud: I admire people who travel around the world alone.",
+                "targetSentence": "I admire people who travel around the world alone.",
+                "phonetic": "/aɪ ədˈmaɪər ˈpiːpəl huː ˈtrævəl əˈraʊnd ðə wɜːld əˈləʊn/",
+                "expectedKeywords": [
+                  "admire",
+                  "travel",
+                  "world"
+                ],
+                "explanation": "Pronounce the second syllable of admire clearly with primary stress."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Linguistic Drill",
+                "focus": "grammar",
+                "instruction": "Use a relative clause correctly to complete and speak the sentence about a traveller.",
+                "audioPrompt": "Say: This is the traveller who visited fifty countries last year.",
+                "targetSentence": "This is the traveller who visited fifty countries last year.",
+                "phonetic": "/ðɪs ɪz ðə ˈtrævələr huː ˈvɪzɪtɪd ˈfɪfti ˈkʌntriz lɑːst jɪər/",
+                "expectedKeywords": [
+                  "traveller",
+                  "who",
+                  "visited"
+                ],
+                "explanation": "Use the relative pronoun who correctly for people."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Linguistic Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Practice syllable stress in the word accommodation.",
+                "audioPrompt": "Say this word clearly: accommodation.",
+                "targetSentence": "We booked a lovely accommodation near the beach.",
+                "phonetic": "/wiː bʊkt ə ˈlʌvli əˌkɒməˈdeɪʃən nɪə ðə biːtʃ/",
+                "expectedKeywords": [
+                  "accommodation",
+                  "booked",
+                  "beach"
+                ],
+                "explanation": "Emphasize the fourth syllable da in accommodation."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Linguistic Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Practice rising intonation for a yes or no question about travel.",
+                "audioPrompt": "Ask this question with rising intonation at the end: Did you catch the early tram?",
+                "targetSentence": "Did you catch the early tram?",
+                "phonetic": "/dɪd juː kætʃ ði ˈɜːli træm/",
+                "expectedKeywords": [
+                  "catch",
+                  "early",
+                  "tram"
+                ],
+                "explanation": "Raise your pitch slightly on the final word tram to indicate a question."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

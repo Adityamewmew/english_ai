@@ -1,0 +1,1614 @@
+{
+  "module": {
+    "id": "A2.1-M10",
+    "levelId": "A2.1",
+    "title": "Unit 10: Around Town: Places in Town & Present Perfect with Ever/Never",
+    "cefr": "A2",
+    "group": "A2.1 - Elementary Actions",
+    "objective": "Navigate city landmarks and recount life experiences using the Present Perfect with 'ever' and 'never'.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 10
+  },
+  "subModules": [
+    {
+      "id": "sub-a2-1-m10-reading",
+      "moduleId": "A2.1-M10",
+      "skillType": "reading",
+      "title": "Reading Mission: Exploring Towns and Future Plans",
+      "theme": "Around Town and Future Plans",
+      "grammarFocus": "Present Perfect with Ever/Never & Future Plans",
+      "vocabularyFocus": "Places in Town & Travel",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a2-1-m10-r-theory",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to Unit 10. In this reading mission, you will explore texts about different places in town, travel experiences, and talking about future plans using be going to and the present continuous. You will practice reading short descriptions and dialogues to find specific information.",
+            "linguisticTarget": {
+              "grammar": "Present Perfect with ever and never, be going to for future plans, and present continuous for definite arrangements.",
+              "vocabulary": "Places in town such as harbour, shopping mall, concert hall, bus station, police station, post office, sports centre, and festival.",
+              "readingStrategy": "Scanning texts for specific keywords and locations, and skimming paragraphs to grasp general travel plans."
+            },
+            "learningObjectives": [
+              "Understand the main idea of short A2 texts about town places and travel plans.",
+              "Locate specific details such as locations, times, and activities in reading passages.",
+              "Recognize and practice grammar patterns with present perfect ever and never, and future structures."
+            ],
+            "contextWarmup": {
+              "prompt": "Which place in town do you usually visit on weekends to meet friends or buy things?",
+              "options": [
+                "A shopping mall or sports centre",
+                "A police station or post office",
+                "An empty street corner"
+              ],
+              "correctIndex": 0,
+              "explanation": "Shopping malls and sports centres are common places to visit on weekends for recreation and meeting friends."
+            },
+            "rules": [
+              "Use be going to plus the base verb to talk about intentions and future plans, such as I am going to visit the harbour tomorrow.",
+              "Use the present continuous tense for fixed arrangements and scheduled plans, as in We are having dinner at the restaurant tonight.",
+              "Use ever in questions and never in negative sentences with the present perfect to talk about life experiences without stating an exact time."
+            ],
+            "commonTrap": {
+              "trapTitle": "Confusing Future Intentions and Fixed Arrangements",
+              "explanation": "Learners often mix up be going to and the present continuous. Remember that be going to is for general intentions, while present continuous is for specific fixed dates and times.",
+              "wrong": "I am going to meet my friend at two o'clock tomorrow at the cafe.",
+              "correct": "Use present continuous for confirmed diary arrangements and be going to for general plans."
+            },
+            "contractionsTitle": "Natural Spoken Contractions in Future Plans",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in everyday English:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "am",
+                "vowelDropped": "a",
+                "remainder": "m",
+                "contracted": "I'm",
+                "exampleFull": "I am going to visit the shopping mall.",
+                "exampleContracted": "I'm going to visit the shopping mall."
+              },
+              {
+                "subject": "We",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "We're",
+                "exampleFull": "We are meeting at the bus station.",
+                "exampleContracted": "We're meeting at the bus station."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Future Plans and Places",
+              "description": "Assemble sentence blocks to practice affirmative, negative, and question forms:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person Singular"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Third Person Plural"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "visit",
+                  "thirdPerson": "visits",
+                  "continuous": "visiting"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "the concert hall this evening",
+                  "type": "Future Plan"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-1-m10-r-vocab",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "harbour",
+                "ipa": "/ˈhɑːbər/",
+                "meaning": "pelabuhan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Visit Port Jebel Ali, the largest man-made harbour in the world.",
+                "collocation": "visit the harbour / busy harbour"
+              },
+              {
+                "word": "shopping mall",
+                "ipa": "/ˈʃɒpɪŋ mɔːl/",
+                "meaning": "pusat perbelanjaan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "There are many shopping malls in the city center.",
+                "collocation": "go to a shopping mall / large shopping mall"
+              },
+              {
+                "word": "concert hall",
+                "ipa": "/ˈkɒnsət hɔːl/",
+                "meaning": "gedung konser",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The concert hall is a beautiful building for tourists.",
+                "collocation": "visit a concert hall / new concert hall"
+              },
+              {
+                "word": "bus station",
+                "ipa": "/bʌs ˈsteɪʃən/",
+                "meaning": "stasiun bis",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Tom wants to take Annie to the bus station.",
+                "collocation": "bustling bus station / wait at the bus station"
+              },
+              {
+                "word": "police station",
+                "ipa": "/pəˈliːs ˈsteɪʃən/",
+                "meaning": "kantor polisi",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The police station is an important place in a town.",
+                "collocation": "near the police station / local police station"
+              },
+              {
+                "word": "post office",
+                "ipa": "/pəʊst ˈɒfɪs/",
+                "meaning": "kantor pos",
+                "partOfSpeech": "noun",
+                "exampleSentence": "You can send letters and packages at the post office.",
+                "collocation": "visit the post office / post office near the square"
+              },
+              {
+                "word": "sports centre",
+                "ipa": "/spɔːts ˈsentər/",
+                "meaning": "pusat olahraga",
+                "partOfSpeech": "noun",
+                "exampleSentence": "There is a good sports centre for playing tennis and swimming.",
+                "collocation": "local sports centre / go to the sports centre"
+              },
+              {
+                "word": "festival",
+                "ipa": "/ˈfestɪvəl/",
+                "meaning": "festival, perayaan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The winter festival takes place on ice every year.",
+                "collocation": "winter festival / attend a festival"
+              },
+              {
+                "word": "town square",
+                "ipa": "/taʊn skweər/",
+                "meaning": "alun-alun kota",
+                "partOfSpeech": "noun",
+                "exampleSentence": "People gather in the town square for national celebrations.",
+                "collocation": "central town square / walk around the town square"
+              },
+              {
+                "word": "museum",
+                "ipa": "/mjuˈziːəm/",
+                "meaning": "museum",
+                "partOfSpeech": "noun",
+                "exampleSentence": "We are going to visit the history museum on Saturday.",
+                "collocation": "local museum / visit a museum"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m10-r-guided",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "A Busy Weekend in Town",
+            "audioUrl": "/audio/modules/a2-1-m10/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Tom and his friend Sarah are making big plans for the weekend. On Saturday morning, they are going to meet at the bustling bus station before heading into the city centre. Sarah has never visited the new concert hall before, so Tom wants to show it to her. They also need to drop off a package at the post office near the central town square.",
+              "Later in the afternoon, they plan to visit the local sports centre for a quick tennis match. On Sunday, a traditional winter festival is starting by the harbour, featuring music, food stalls, and ice sculptures. Sarah says she has never seen an ice festival in her life, and she is very excited. They are meeting their other friends at the shopping mall on Sunday evening to finish their busy weekend."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 5,
+                "text": "Tom and his friend Sarah are making big plans for the weekend.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 5.1,
+                "end": 11,
+                "text": "On Saturday morning, they are going to meet at the bustling bus station before heading into the city centre.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 11.1,
+                "end": 17,
+                "text": "Sarah has never visited the new concert hall before, so Tom wants to show it to her.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 17.1,
+                "end": 22,
+                "text": "They also need to drop off a package at the post office near the central town square.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 22.1,
+                "end": 29,
+                "text": "Later in the afternoon, they plan to visit the local sports centre for a quick tennis match.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 29.1,
+                "end": 36,
+                "text": "On Sunday, a traditional winter festival is starting by the harbour, featuring music, food stalls, and ice sculptures.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 36.1,
+                "end": 42,
+                "text": "Sarah says she has never seen an ice festival in her life, and she is very excited.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 42.1,
+                "end": 48,
+                "text": "They are meeting their other friends at the shopping mall on Sunday evening to finish their busy weekend.",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m10-r-practice",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": []
+          }
+        },
+        {
+          "id": "sec-a2-1-m10-r-quiz",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "Who is making big plans for the weekend with Tom?",
+                "options": [
+                  "Sarah",
+                  "David",
+                  "Emma"
+                ],
+                "answer": "Sarah",
+                "explanation": "The passage states that Tom and his friend Sarah are making big plans for the weekend."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Where are Tom and Sarah going to meet on Saturday morning?",
+                "options": [
+                  "At the bus station",
+                  "At the concert hall",
+                  "At the post office"
+                ],
+                "answer": "At the bus station",
+                "explanation": "The text mentions they are going to meet at the bustling bus station."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What place has Sarah never visited before?",
+                "options": [
+                  "The concert hall",
+                  "The shopping mall",
+                  "The sports centre"
+                ],
+                "answer": "The concert hall",
+                "explanation": "The text says Sarah has never visited the new concert hall before."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What do they need to drop off at the post office?",
+                "options": [
+                  "A package",
+                  "A letter",
+                  "A postcard"
+                ],
+                "answer": "A package",
+                "explanation": "The passage states they need to drop off a package at the post office."
+              },
+              {
+                "id": "q-r-5",
+                "question": "Where is the post office located?",
+                "options": [
+                  "Near the central town square",
+                  "Next to the harbour",
+                  "Behind the shopping mall"
+                ],
+                "answer": "Near the central town square",
+                "explanation": "The text notes the post office is near the central town square."
+              },
+              {
+                "id": "q-r-6",
+                "question": "What activity do they plan to do at the sports centre in the afternoon?",
+                "options": [
+                  "A quick tennis match",
+                  "Swimming lessons",
+                  "A basketball game"
+                ],
+                "answer": "A quick tennis match",
+                "explanation": "The passage mentions a quick tennis match at the local sports centre."
+              },
+              {
+                "id": "q-r-7",
+                "question": "What event is starting by the harbour on Sunday?",
+                "options": [
+                  "A traditional winter festival",
+                  "A music concert",
+                  "A food market"
+                ],
+                "answer": "A traditional winter festival",
+                "explanation": "The text says a traditional winter festival is starting by the harbour."
+              },
+              {
+                "id": "q-r-8",
+                "question": "What can people see at the winter festival?",
+                "options": [
+                  "Ice sculptures and food stalls",
+                  "Art paintings and books",
+                  "Clothes and shoes"
+                ],
+                "answer": "Ice sculptures and food stalls",
+                "explanation": "The festival features music, food stalls, and ice sculptures."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What has Sarah never seen in her life before?",
+                "options": [
+                  "An ice festival",
+                  "A shopping mall",
+                  "A bus station"
+                ],
+                "answer": "An ice festival",
+                "explanation": "Sarah says she has never seen an ice festival in her life."
+              },
+              {
+                "id": "q-r-10",
+                "question": "Where are they meeting their other friends on Sunday evening?",
+                "options": [
+                  "At the shopping mall",
+                  "At the concert hall",
+                  "At the sports centre"
+                ],
+                "answer": "At the shopping mall",
+                "explanation": "The final sentence states they are meeting their other friends at the shopping mall on Sunday evening."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m10-listening",
+      "moduleId": "A2.1-M10",
+      "skillType": "listening",
+      "title": "Listening Mission: Exploring Town Spots",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a2-1-m10-l-theory",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Develop your ability to listen for specific details about places in town and life experiences using ever and never. Practice recognizing how words link together in fast natural speech.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about town spots.",
+              "Identify details such as locations, places, and life experiences.",
+              "Notice how words link together in connected speech."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "Have you ever been to",
+                "meaning": "Pernahkah kamu ke",
+                "note": "Used to ask someone about their life experiences visiting different places."
+              },
+              {
+                "phrase": "I have never seen",
+                "meaning": "Aku tidak pernah melihat",
+                "note": "Used to describe things you have not experienced in your life."
+              },
+              {
+                "phrase": "next to the library",
+                "meaning": "di sebelah perpustakaan",
+                "note": "Giving specific directions using local town landmarks."
+              },
+              {
+                "phrase": "across from the station",
+                "meaning": "di seberang stasiun",
+                "note": "Describing locations relative to transportation hubs."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "Have you ever been",
+                "fast": "Have you-ever been",
+                "slowIpa": "/hæv juː ˈev.ər biːn/",
+                "fastIpa": "/hæv jUv ˈev.ər biːn/",
+                "note": "The auxiliary have links with you to create a smooth transition."
+              },
+              {
+                "id": 2,
+                "slow": "never seen that",
+                "fast": "never seen-that",
+                "slowIpa": "/ˈnev.ər siːn ðæt/",
+                "fastIpa": "/ˈnev.ər siːn ðæt/",
+                "note": "The final consonant of seen links directly into the start of that."
+              },
+              {
+                "id": 3,
+                "slow": "to the park",
+                "fast": "to-the park",
+                "slowIpa": "/tuː ðə pɑːk/",
+                "fastIpa": "/tə ðə pɑːk/",
+                "note": "The preposition to reduces its vowel sound in fast natural speech."
+              },
+              {
+                "id": 4,
+                "slow": "What are you",
+                "fast": "Whatcha doing",
+                "slowIpa": "/wɒt ɑː juː/",
+                "fastIpa": "/ˈwɒtʃə ˈduːɪŋ/",
+                "note": "What and are blend together in informal teenage conversation."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m10-l-dialogue",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Exploring Town Spots",
+          "orderIndex": 2,
+          "content": {
+            "context": "Leo and Mia meet near the town center and discuss places they have visited and new spots they want to check out today.",
+            "audioPrompt": "Listen to the conversation between two friends.",
+            "lines": [
+              {
+                "speaker": "Leo",
+                "text": "Hey Mia, where are you going?",
+                "translation": "Hei Mia, mau pergi ke mana?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Mia",
+                "text": "I am walking to the museum.",
+                "translation": "Aku sedang berjalan ke museum.",
+                "emotion": "casual"
+              },
+              {
+                "speaker": "Leo",
+                "text": "Have you ever been there before?",
+                "translation": "Pernahkah kamu ke sana sebelumnya?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Mia",
+                "text": "No, I have never visited it.",
+                "translation": "Tidak, aku belum pernah mengunjunginya.",
+                "emotion": "honest"
+              },
+              {
+                "speaker": "Leo",
+                "text": "Really? It is a great place.",
+                "translation": "Benarkah? Tempat itu bagus sekali.",
+                "emotion": "surprised"
+              },
+              {
+                "speaker": "Mia",
+                "text": "I want to see the cafe.",
+                "translation": "Aku ingin melihat kafe itu.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Leo",
+                "text": "The new cafe next to cinema?",
+                "translation": "Kafe baru di sebelah bioskop?",
+                "emotion": "questioning"
+              },
+              {
+                "speaker": "Mia",
+                "text": "Yes, have you ever eaten there?",
+                "translation": "Ya, pernahkah kamu makan di sana?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Leo",
+                "text": "No, I have never tried it.",
+                "translation": "Tidak, aku tidak pernah mencobanya.",
+                "emotion": "casual"
+              },
+              {
+                "speaker": "Mia",
+                "text": "Let us go there together now.",
+                "translation": "Ayo kita pergi ke sana bersama sekarang.",
+                "emotion": "enthusiastic"
+              },
+              {
+                "speaker": "Leo",
+                "text": "Awesome, let us walk fast.",
+                "translation": "Hebat, ayo kita jalan cepat.",
+                "emotion": "excited"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m10-l-quiz",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Hey Mia, where are you going?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Hey Mia, where are you _____?\"",
+                "targetWord": "going",
+                "explanation": "Full audio: \"Hey Mia, where are you going?\". The missing word is \"going\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I am walking to the museum.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"I am walking to the _____.\"",
+                "targetWord": "museum",
+                "explanation": "Full audio: \"I am walking to the museum.\". The missing word is \"museum\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Have you ever been there before?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Have you ever been there _____?\"",
+                "targetWord": "before",
+                "explanation": "Full audio: \"Have you ever been there before?\". The missing word is \"before\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "No, I have never visited it.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"No, I have never _____ it.\"",
+                "targetWord": "visited",
+                "explanation": "Full audio: \"No, I have never visited it.\". The missing word is \"visited\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "It is a great place.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"It is a great _____.\"",
+                "targetWord": "place",
+                "explanation": "Full audio: \"It is a great place.\". The missing word is \"place\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "I want to see the cafe.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I want to see the cafe",
+                "words": [
+                  "cafe",
+                  "want",
+                  "see",
+                  "I",
+                  "the",
+                  "to"
+                ],
+                "explanation": "Correct sentence order: \"I want to see the cafe.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "The new cafe next to cinema?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "The new cafe next to cinema",
+                "words": [
+                  "next",
+                  "cafe",
+                  "cinema",
+                  "to",
+                  "The",
+                  "new"
+                ],
+                "explanation": "Correct sentence order: \"The new cafe next to cinema?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Yes, have you ever eaten there?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes have you ever eaten there",
+                "words": [
+                  "have",
+                  "Yes",
+                  "you",
+                  "there",
+                  "ever",
+                  "eaten"
+                ],
+                "explanation": "Correct sentence order: \"Yes, have you ever eaten there?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "No, I have never tried it.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "No I have never tried it",
+                "words": [
+                  "I",
+                  "tried",
+                  "have",
+                  "never",
+                  "No",
+                  "it"
+                ],
+                "explanation": "Correct sentence order: \"No, I have never tried it.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Let us go there together now.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Let us go there together now",
+                "words": [
+                  "us",
+                  "together",
+                  "now",
+                  "there",
+                  "Let",
+                  "go"
+                ],
+                "explanation": "Correct sentence order: \"Let us go there together now.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Hey Mia, where are you going?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Hey Mia, where are you _____?\"",
+                "targetWord": "going",
+                "explanation": "Full audio: \"Hey Mia, where are you going?\". The missing word is \"going\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I am walking to the museum.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"I am walking to the _____.\"",
+                "targetWord": "museum",
+                "explanation": "Full audio: \"I am walking to the museum.\". The missing word is \"museum\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Have you ever been there before?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Have you ever been there _____?\"",
+                "targetWord": "before",
+                "explanation": "Full audio: \"Have you ever been there before?\". The missing word is \"before\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "No, I have never visited it.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mia: \"No, I have never _____ it.\"",
+                "targetWord": "visited",
+                "explanation": "Full audio: \"No, I have never visited it.\". The missing word is \"visited\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "It is a great place.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"It is a great _____.\"",
+                "targetWord": "place",
+                "explanation": "Full audio: \"It is a great place.\". The missing word is \"place\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "I want to see the cafe.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I want to see the cafe",
+                "words": [
+                  "cafe",
+                  "want",
+                  "see",
+                  "I",
+                  "the",
+                  "to"
+                ],
+                "explanation": "Correct sentence order: \"I want to see the cafe.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "The new cafe next to cinema?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "The new cafe next to cinema",
+                "words": [
+                  "next",
+                  "cafe",
+                  "cinema",
+                  "to",
+                  "The",
+                  "new"
+                ],
+                "explanation": "Correct sentence order: \"The new cafe next to cinema?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Yes, have you ever eaten there?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes have you ever eaten there",
+                "words": [
+                  "have",
+                  "Yes",
+                  "you",
+                  "there",
+                  "ever",
+                  "eaten"
+                ],
+                "explanation": "Correct sentence order: \"Yes, have you ever eaten there?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "No, I have never tried it.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "No I have never tried it",
+                "words": [
+                  "I",
+                  "tried",
+                  "have",
+                  "never",
+                  "No",
+                  "it"
+                ],
+                "explanation": "Correct sentence order: \"No, I have never tried it.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Let us go there together now.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Let us go there together now",
+                "words": [
+                  "us",
+                  "together",
+                  "now",
+                  "there",
+                  "Let",
+                  "go"
+                ],
+                "explanation": "Correct sentence order: \"Let us go there together now.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m10-writing",
+      "moduleId": "A2.1-M10",
+      "skillType": "writing",
+      "title": "Writing Mission: Exploring Town and Life Experiences",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a2-1-m10-w-theory",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on writing about places in town, future plans with be going to, and life experiences using the present perfect tense with ever and never.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Talking About Places and Future Plans",
+                "formula": "Subject + am/is/are + going to + base verb + place",
+                "example": "I am going to visit the new museum downtown tomorrow."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Expressing Life Experiences with Ever and Never",
+                "formula": "Subject + have/has + ever/never + past participle + complement",
+                "example": "She has never visited the old castle in the city center."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Making Invitations and Giving Arrangements",
+                "formula": "Would you like to + base verb + place? / Subject + am/is/are + verb-ing + time",
+                "example": "Would you like to go to the cinema tonight? We are meeting at five o'clock."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Capitalize proper names of places, streets, and specific locations in town.",
+                "badExample": "we are going to visit central park on saturday.",
+                "goodExample": "We are going to visit Central Park on Saturday.",
+                "why": "Names of parks, streets, and cities are proper nouns and require capital letters."
+              },
+              {
+                "rule": "Use the correct auxiliary verb in the present perfect tense.",
+                "badExample": "He have ever visited the museum.",
+                "goodExample": "He has ever visited the museum.",
+                "why": "Third-person singular subjects use 'has', while I, you, we, and they use 'have'."
+              },
+              {
+                "rule": "Place 'never' between the auxiliary verb and the past participle.",
+                "badExample": "I have visited never the old library.",
+                "goodExample": "I have never visited the old library.",
+                "why": "In negative present perfect sentences with 'never', the word 'never' comes immediately after 'have' or 'has'."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "We are going to walk to the post office after lunch.",
+                "id": "Kami akan berjalan ke kantor pos setelah makan siang.",
+                "focus": "Future plans with be going to"
+              },
+              {
+                "en": "Have you ever visited the art gallery near the station?",
+                "id": "Apakah kamu pernah mengunjungi galeri seni dekat stasiun?",
+                "focus": "Questions with ever"
+              },
+              {
+                "en": "She has never seen such a tall building in her town.",
+                "id": "Dia belum pernah melihat bangunan setinggi itu di kotanya.",
+                "focus": "Negative experiences with never"
+              },
+              {
+                "en": "They are meeting their friends at the shopping mall tonight.",
+                "id": "Mereka akan bertemu teman-teman mereka di pusat perbelanjaan malam ini.",
+                "focus": "Present continuous for arrangements"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m10-w-practice",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "we is going to visit the museum on sunday",
+                "targetSentence": "We are going to visit the museum on Sunday.",
+                "translation": "Kami akan mengunjungi museum pada hari Minggu.",
+                "keyRule": "Use 'are' with 'we' and capitalize the proper day of the week.",
+                "requiredCapitals": [
+                  "We",
+                  "Sunday"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "she have never been to the new library downtown",
+                "targetSentence": "She has never been to the new library downtown.",
+                "translation": "Dia belum pernah pergi ke perpustakaan baru di pusat kota.",
+                "keyRule": "Use 'has' for third-person singular subjects with the present perfect tense.",
+                "requiredCapitals": [
+                  "She"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "would you like to go to the park on friday",
+                "targetSentence": "Would you like to go to the park on Friday?",
+                "translation": "Maukah kamu pergi ke taman pada hari Jumat?",
+                "keyRule": "Start sentences with a capital letter and capitalize days of the week.",
+                "requiredCapitals": [
+                  "Would",
+                  "Friday"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Places in Town",
+                "meaning": "Kami akan pergi ke kantor pos sore ini.",
+                "tokens": [
+                  "We",
+                  "are",
+                  "going",
+                  "to",
+                  "visit",
+                  "the",
+                  "post",
+                  "office",
+                  "this",
+                  "afternoon."
+                ],
+                "fullSentence": "We are going to visit the post office this afternoon."
+              },
+              {
+                "id": "b-2",
+                "category": "Life Experiences",
+                "meaning": "Saya belum pernah mengunjungi galeri seni itu sebelumnya.",
+                "tokens": [
+                  "I",
+                  "have",
+                  "never",
+                  "visited",
+                  "that",
+                  "art",
+                  "gallery",
+                  "before."
+                ],
+                "fullSentence": "I have never visited that art gallery before."
+              },
+              {
+                "id": "b-3",
+                "category": "Town Invitations",
+                "meaning": "Maukah kamu pergi ke bioskop malam ini?",
+                "tokens": [
+                  "Would",
+                  "you",
+                  "like",
+                  "to",
+                  "go",
+                  "to",
+                  "the",
+                  "cinema",
+                  "tonight?"
+                ],
+                "fullSentence": "Would you like to go to the cinema tonight?"
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Describe Your Town",
+                "badge": "Town Guide",
+                "instruction": "Write three sentences about places in your town. Mention a place you are going to visit this week and a place you have never been to.",
+                "example": "There is a great park in my town. I am going to visit the park tomorrow. I have never been to the big museum near the station.",
+                "placeholder": "Type your sentences here...",
+                "minWords": 20,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Making Plans and Invitations",
+                "badge": "Social Planner",
+                "instruction": "Write three sentences inviting a friend to a place in town and explaining your plans for the weekend.",
+                "example": "Would you like to go to the cafe on Saturday? I am meeting my cousin there at two o'clock. We are going to drink hot chocolate.",
+                "placeholder": "Type your invitation and plans here...",
+                "minWords": 20,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m10-w-quiz",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following affirmative sentence into a negative sentence:",
+                "promptText": "We are going to visit the museum tomorrow.",
+                "hint": "Use 'are not' or 'aren't' before 'going to'.",
+                "targetAnswers": [
+                  "We aren't going to visit the museum tomorrow.",
+                  "We are not going to visit the museum tomorrow."
+                ],
+                "explanation": "To make a future plan negative with be going to, add 'not' after the verb to be."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence into a question using 'ever':",
+                "promptText": "You have visited the new library.",
+                "hint": "Place 'ever' between 'have' and the past participle.",
+                "targetAnswers": [
+                  "Have you ever visited the new library?",
+                  "Have you ever visited the new library"
+                ],
+                "explanation": "In present perfect questions, put 'ever' right after the subject."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Conjunctions",
+                "instruction": "Combine the two sentences using 'because':",
+                "promptText": "I am going to the supermarket. I need to buy some bread.",
+                "hint": "Put 'because' between the two clauses to show the reason.",
+                "targetAnswers": [
+                  "I am going to the supermarket because I need to buy some bread.",
+                  "I am going to the supermarket because I need to buy some bread"
+                ],
+                "explanation": "The conjunction 'because' explains the reason for going to the supermarket."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the capitalization and punctuation errors in this sentence:",
+                "promptText": "i live near london on oak street",
+                "hint": "Capitalize the first word, the city name, and the street name. Add a period at the end.",
+                "targetAnswers": [
+                  "I live near London on Oak Street.",
+                  "I live near London on Oak Street"
+                ],
+                "explanation": "Proper nouns such as city names and street names require capital letters."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Short Response",
+                "instruction": "Write a polite refusal to the invitation below:",
+                "promptText": "Would you like to go to the cinema tonight?",
+                "hint": "Start with an apology and say you are busy.",
+                "targetAnswers": [
+                  "I'm sorry, I'm busy.",
+                  "I am sorry, I am busy.",
+                  "Sorry, I'm busy."
+                ],
+                "explanation": "A polite refusal in English uses an apology followed by a reason like being busy."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the verb in brackets into the present continuous tense for a fixed arrangement:",
+                "promptText": "I (have) dinner with my grandparents on Sunday.",
+                "hint": "Use 'am having' for the first-person singular.",
+                "targetAnswers": [
+                  "I am having dinner with my grandparents on Sunday.",
+                  "I'm having dinner with my grandparents on Sunday."
+                ],
+                "explanation": "Present continuous uses am, is, or are plus the ing form to express fixed personal arrangements."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Conjunctions",
+                "instruction": "Combine the two sentences using 'and':",
+                "promptText": "I am going to visit the post office. I am going to visit the bank.",
+                "hint": "Connect the two places using the conjunction 'and'.",
+                "targetAnswers": [
+                  "I am going to visit the post office and the bank.",
+                  "I am going to visit the post office and the bank"
+                ],
+                "explanation": "The conjunction 'and' links similar items or places in a sentence."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the grammar error in this sentence:",
+                "promptText": "She have never been to Paris.",
+                "hint": "Change 'have' to 'has' for third-person singular.",
+                "targetAnswers": [
+                  "She has never been to Paris.",
+                  "She has never been to Paris"
+                ],
+                "explanation": "Third-person singular subjects require the auxiliary verb 'has'."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using 'never' instead of 'not ever':",
+                "promptText": "They have not ever visited the old castle.",
+                "hint": "Replace 'have not ever' with 'have never'.",
+                "targetAnswers": [
+                  "They have never visited the old castle.",
+                  "They have never visited the old castle"
+                ],
+                "explanation": "The word 'never' already makes the sentence negative, so you do not need 'not'."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Write a short sentence about a place in your town using 'is next to':",
+                "promptText": "Where is the post office in your town?",
+                "hint": "Example: The post office is next to the bank.",
+                "targetAnswers": [
+                  "The post office is next to the bank.",
+                  "The cafe is next to the park.",
+                  "The library is next to the museum.",
+                  "The supermarket is next to the station."
+                ],
+                "explanation": "Prepositions of place like 'next to' help describe where buildings are located in town."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-1-m10-speaking",
+      "moduleId": "A2.1-M10",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Around Town and Life Experiences",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a2-1-m10-s-theory",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This module helps you speak clearly about places in town and talk about your life experiences using the present perfect tense with ever and never. You will practice sentence rhythm, word stress in compound nouns, and natural intonation for questions.",
+            "audioGuidance": "Listen closely to the audio models. Focus on linking words together smoothly and raising your voice at the end of yes-no questions.",
+            "pillars": [
+              {
+                "name": "Compound Noun Stress",
+                "target": "Correct stress on town places",
+                "explanation": "In compound nouns like shopping mall or police station, place the main stress on the first word to sound natural."
+              },
+              {
+                "name": "Experience Intonation",
+                "target": "Rising pitch for ever questions",
+                "explanation": "When asking questions with ever, your voice should rise at the end to show curiosity and engage the listener."
+              },
+              {
+                "name": "Consonant Linking",
+                "target": "Smooth transitions between words",
+                "explanation": "Link the final consonant of a verb to the starting vowel of the next word, such as visiting a harbour."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-1-m10-s-practice",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "HAR-bour",
+                "countryAudio": "harbour",
+                "countrySyllables": [
+                  {
+                    "text": "HAR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "bour",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "HAR-bours",
+                "natAudio": "harbours",
+                "natSyllables": [
+                  {
+                    "text": "HAR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "bours",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The primary stress stays firmly on the first syllable."
+              },
+              {
+                "id": "pair-2",
+                "country": "SHOP-ping mall",
+                "countryAudio": "shopping mall",
+                "countrySyllables": [
+                  {
+                    "text": "SHOP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ping",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "mall",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "SHOP-ping malls",
+                "natAudio": "shopping malls",
+                "natSyllables": [
+                  {
+                    "text": "SHOP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ping",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "malls",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Stress the first word strongly when speaking compound town nouns."
+              },
+              {
+                "id": "pair-3",
+                "country": "CON-cert hall",
+                "countryAudio": "concert hall",
+                "countrySyllables": [
+                  {
+                    "text": "CON",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "cert",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "hall",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "CON-cert halls",
+                "natAudio": "concert halls",
+                "natSyllables": [
+                  {
+                    "text": "CON",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "cert",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "halls",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Keep your voice higher on the first syllable of concert."
+              },
+              {
+                "id": "pair-4",
+                "country": "FES-ti-val",
+                "countryAudio": "festival",
+                "countrySyllables": [
+                  {
+                    "text": "FES",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ti",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "val",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "FES-ti-vals",
+                "natAudio": "festivals",
+                "natSyllables": [
+                  {
+                    "text": "FES",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ti",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "vals",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Maintain stress on the first syllable even in plural forms."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "Have you ever visited the new shopping mall in town?",
+                "phonetic": "/hæv juː ˈevə ˈvɪzɪtɪd ðə njuː ˈʃɒpɪŋ mɔːl ɪn taʊn/",
+                "focus": "Present perfect question rhythm",
+                "hint": "Raise your voice slightly on the word ever."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "She has never been to the big concert hall downtown.",
+                "phonetic": "/ʃiː hæz ˈnevə biːn tuː ðə bɪɡ ˈkɒnsət hɔːl ˈdaʊntaʊn/",
+                "focus": "Using never with the present perfect tense",
+                "hint": "Pronounce never clearly before the past participle."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "We walked past the post office and the police station.",
+                "phonetic": "/wiː wɔːkt pɑːst ðə pəʊst ˈɒfɪs ænd ðə pəʊˈliːs ˈsteɪʃən/",
+                "focus": "Listing public places in town",
+                "hint": "Pause briefly between each building name."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Does your town have a festival each year?",
+                "phonetic": "/dʌz jɔː taʊn hæv ə ˈfestɪvəl iːtʃ jɪər/",
+                "focus": "Present simple question intonation",
+                "hint": "Keep your voice steady and end with a rising tone."
+              }
+            ],
+            "roleplay": {
+              "context": "You meet your English teacher, Mr. Khoirul, near the harbour in town.",
+              "roles": [
+                "Mr. Khoirul",
+                "Student"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Have you ever been to the new shopping mall near the harbour?",
+                  "translation": "Pernahkah kamu pergi ke pusat perbelanjaan baru dekat pelabuhan?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, I have! I went there last weekend with my friends.",
+                  "translation": "Ya, pernah! Saya pergi ke sana akhir pekan lalu bersama teman-teman saya."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "That is great. Have you ever visited the concert hall next to it?",
+                  "translation": "Itu bagus. Pernahkah kamu mengunjungi gedung konser di sebelah mal itu?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "No, I have never visited the concert hall, but I want to go there soon.",
+                  "translation": "Tidak, saya belum pernah mengunjungi gedung konser itu, tetapi saya ingin pergi ke sana segera."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-1-m10-s-quiz",
+          "moduleId": "A2.1-M10",
+          "subModuleId": "sub-a2-1-m10-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a place in town you visited recently.",
+                "audioPrompt": "Tell me about a time you went to a shopping mall or sports centre in your town.",
+                "storyPoints": [
+                  "Which place in town you visited",
+                  "Who you went with",
+                  "What you did there"
+                ],
+                "targetSentence": "I went to the shopping mall with my brother last Friday to buy a new jacket.",
+                "phonetic": "/aɪ went tuː ðə ˈʃɒpɪŋ mɔːl wɪð maɪ ˈbrʌðər/",
+                "expectedKeywords": [
+                  "shopping mall",
+                  "brother",
+                  "Friday",
+                  "jacket"
+                ],
+                "explanation": "Speak in full sentences using the past simple tense."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a town festival or public event.",
+                "audioPrompt": "Describe a festival or public event you have seen in your town.",
+                "storyPoints": [
+                  "Name of the festival or event",
+                  "Where it takes place",
+                  "What people do during the celebration"
+                ],
+                "targetSentence": "Our town has a big festival every year where people watch music and eat local food.",
+                "phonetic": "/ˈaʊə taʊn hæz ə bɪɡ ˈfestɪvəl ˈevri jɪər/",
+                "expectedKeywords": [
+                  "festival",
+                  "year",
+                  "music",
+                  "food"
+                ],
+                "explanation": "Describe recurring events using the present simple tense."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to the question about visiting the city harbour.",
+                "scenarioContext": "A tourist asks you for directions to the harbour and local police station.",
+                "characterRole": "Helpful Local Resident",
+                "audioPrompt": "Excuse me, can you tell me how to get to the harbour and the police station?",
+                "targetSentence": "Go straight down this street, turn left at the post office, and you will see the harbour.",
+                "phonetic": "/ɡəʊ streɪt daʊn ðɪs striːt tɜːn left/",
+                "expectedKeywords": [
+                  "straight",
+                  "left",
+                  "post office",
+                  "harbour"
+                ],
+                "explanation": "Give clear directions using imperative verbs."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to the question about life experiences using ever.",
+                "scenarioContext": "Your friend is asking about your experiences visiting different places in town.",
+                "characterRole": "Curious Friend",
+                "audioPrompt": "Have you ever been to the new concert hall downtown?",
+                "targetSentence": "No, I have never been to the concert hall, but I have visited the sports centre many times.",
+                "phonetic": "/nəʊ aɪ hæv ˈnevə biːn tuː ðə ˈkɒnsət hɔːl/",
+                "expectedKeywords": [
+                  "never",
+                  "concert hall",
+                  "sports centre",
+                  "times"
+                ],
+                "explanation": "Use the present perfect tense with ever and never."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to the inquiry about sending a letter or package.",
+                "scenarioContext": "You are talking to a classmate about where to find public services.",
+                "characterRole": "Classmate",
+                "audioPrompt": "Where should I go if I need to send a letter and visit the bus station?",
+                "targetSentence": "You should go to the post office on Main Street, and the bus station is right next to it.",
+                "phonetic": "/juː ʃʊd ɡəʊ tuː ðə pəʊst ˈɒfɪs/",
+                "expectedKeywords": [
+                  "post office",
+                  "Main Street",
+                  "bus station",
+                  "next to"
+                ],
+                "explanation": "Suggest locations using modal verbs like should."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to the question about weekend plans in town.",
+                "scenarioContext": "Your cousin asks you about your plans for the weekend.",
+                "characterRole": "Local Teenager",
+                "audioPrompt": "What are you going to do this weekend around town?",
+                "targetSentence": "I am going to meet my friends at the shopping mall and then visit the sports centre.",
+                "phonetic": "/aɪ æm ˈɡəʊɪŋ tuː miːt maɪ frendz/",
+                "expectedKeywords": [
+                  "going to",
+                  "shopping mall",
+                  "sports centre",
+                  "weekend"
+                ],
+                "explanation": "Express future plans using be going to."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Read aloud the target sentence focusing on town vocabulary.",
+                "audioPrompt": "Read this sentence clearly: The police station is opposite the post office.",
+                "targetSentence": "The police station is opposite the post office.",
+                "phonetic": "/ðə pəʊˈliːs ˈsteɪʃən ɪz ˈɒpəzɪt ðə pəʊst ˈɒfɪs/",
+                "expectedKeywords": [
+                  "police station",
+                  "opposite",
+                  "post office"
+                ],
+                "explanation": "Pronounce town building names clearly and distinctly."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Read aloud the sentence using the present perfect tense.",
+                "audioPrompt": "Read this sentence clearly: I have never visited the big harbour before.",
+                "targetSentence": "I have never visited the big harbour before.",
+                "phonetic": "/aɪ hæv ˈnevə ˈvɪzɪtɪd ðə bɪɡ ˈhɑːbər bɪˈfɔː/",
+                "expectedKeywords": [
+                  "never",
+                  "visited",
+                  "harbour"
+                ],
+                "explanation": "Practice subject plus have plus past participle structure."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Syllable Stress Drill",
+                "instruction": "Read aloud the compound nouns paying attention to word stress.",
+                "audioPrompt": "Read this sentence with correct compound noun stress: We love the new concert hall and shopping mall.",
+                "targetSentence": "We love the new concert hall and shopping mall.",
+                "phonetic": "/wiː lʌv ðə njuː ˈkɒnsət hɔːl ænd ˈʃɒpɪŋ mɔːl/",
+                "expectedKeywords": [
+                  "concert hall",
+                  "shopping mall"
+                ],
+                "explanation": "Place primary stress on the first word of compound nouns."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Intonation Drill",
+                "instruction": "Read aloud the question using rising intonation.",
+                "audioPrompt": "Read this question with rising intonation: Have you ever been to a festival?",
+                "targetSentence": "Have you ever been to a festival?",
+                "phonetic": "/hæv juː ˈevə biːn tuː ə ˈfestɪvəl/",
+                "expectedKeywords": [
+                  "Have",
+                  "ever",
+                  "festival"
+                ],
+                "explanation": "Use rising intonation at the end of yes-no questions."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

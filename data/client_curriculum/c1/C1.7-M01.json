@@ -1,0 +1,199 @@
+{
+  "id": "C1.7-M01",
+  "levelId": "C1.7",
+  "title": "Unit 1: The Anatomy of a High-Stakes Public Apology & Crisis Press Briefing",
+  "cefr": "C1",
+  "group": "Crisis Communications",
+  "objective": "Mampu menyampaikan konferensi pers krisis publik yang tulus, bertanggung jawab, dan memitigasi litigasi hukum.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": false,
+  "passingScore": 75,
+  "orderIndex": 79,
+  "sections": {
+    "theory": {
+      "summary": "Dalam komunikasi krisis tingkat tinggi (C1/C2), penyampaian permintaan maaf publik menuntut penguasaan 'attitude adverbials' untuk membingkai narasi secara empatik namun strategis, serta 'dependent prepositions' untuk menetapkan akuntabilitas tanpa memicu liabilitas hukum yang tidak perlu. Penggunaan frasa seperti 'Regrettably' atau 'Fundamentally' di awal kalimat mengarahkan persepsi audiens dan menetapkan nada emosional. Sementara itu, penguasaan preposisi dependen (misalnya, 'attribute to', 'stem from', 'apologise for') memastikan presisi forensik dalam menjelaskan akar masalah, sehingga pernyataan Anda terdengar bertanggung jawab, profesional, dan kebal terhadap misinterpretasi hukum.",
+      "rules": [
+        {
+          "pattern": "Attitude Adverbial + Comma + Subject + Verb + Dependent Preposition",
+          "meaning": "Menetapkan nada emosional atau sikap pembicara terhadap keseluruhan pernyataan sebelum fakta disajikan, sering digunakan untuk membuka pernyataan krisis.",
+          "example": "Regrettably, the systemic failures we witnessed yesterday stem from a severe misallocation of oversight resources."
+        },
+        {
+          "pattern": "Subject + Auxiliary + Comma + Attitude Adverbial + Comma + Main Verb",
+          "meaning": "Memberikan penekanan halus pada sikap pembicara tanpa mendominasi awal kalimat (mid-position), sangat efektif untuk meredam nada konfrontatif dalam sidang atau debat.",
+          "example": "The executive board has, frankly, failed to anticipate the magnitude of this operational breach."
+        },
+        {
+          "pattern": "Verb / Noun / Adjective + Specific Preposition (e.g., compensate for, object to, rely on)",
+          "meaning": "Menghubungkan tindakan dengan penyebab, kompensasi, atau sanggahan secara presisi absolut untuk menghindari ambiguitas semantik dan hukum.",
+          "example": "We unequivocally attribute this catastrophic oversight to a software anomaly, and we are fully committed to compensating our clients for the ensuing disruptions."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Jebakan Ambiguitas Preposisi dan Tanda Baca Adverbia",
+        "explanation": "Pembelajar tingkat lanjut sering mengabaikan penggunaan koma ganda saat menempatkan 'attitude adverbials' di tengah kalimat, atau menggunakan preposisi yang salah setelah kata kerja akuntabilitas (misal: 'apologise about' alih-alih 'apologise for'). Kesalahan kecil ini dapat merusak ritme retoris dan mengubah makna forensik dari sebuah pernyataan krisis resmi.",
+        "wrong": "The CEO apologised about the incident and was surprisingly defensive during the cross-examination.",
+        "correct": "The CEO apologised for the incident and was, surprisingly, defensive during the cross-examination."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Manakah dari kalimat berikut yang menggunakan 'attitude adverbial' dan 'dependent preposition' dengan struktur sintaksis C1/C2 yang paling tepat?",
+          "options": [
+            "Fundamentally, we must attribute this breach to a lapse in our security protocols.",
+            "We must attribute fundamentally this breach for a lapse in our security protocols.",
+            "Fundamentally we must attribute this breach at a lapse in our security protocols."
+          ],
+          "correctIndex": 0,
+          "explanation": "Opsi A menempatkan 'attitude adverbial' (Fundamentally) di awal dengan koma yang tepat, dan menggunakan pasangan preposisi yang benar 'attribute [something] to [something]'."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Dalam konteks memitigasi litigasi hukum, mengapa kalimat 'We are, admittedly, responsible for the oversight' lebih disukai daripada 'Admittedly we take all the blame about the oversight'?",
+          "options": [
+            "Karena 'take all the blame' adalah idiom formal yang terlalu kaku untuk konferensi pers krisis.",
+            "Karena penempatan 'admittedly' diapit koma memberikan nuansa terukur, dan 'responsible for' adalah kolokasi preposisi yang tepat secara forensik.",
+            "Karena 'about' adalah preposisi yang lebih tepat untuk menunjukkan tanggung jawab penuh dalam bahasa Inggris hukum."
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi B benar karena 'responsible for' adalah 'dependent preposition' yang baku. Selain itu, penempatan 'mid-position adverbial' yang diapit koma menunjukkan kontrol register yang sangat tinggi dan ketenangan emosional."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Lengkapi pernyataan CEO ini dalam sidang dengar pendapat: '[...] speaking, we cannot attribute the recent data leak solely to human error; it stems [...] a deeper infrastructural flaw.'",
+          "options": [
+            "Honestly / at",
+            "Frankly / in",
+            "Generally / from"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Generally speaking' adalah frasa 'attitude adverbial' yang tepat untuk memberikan konteks luas, dan kata kerja 'stems' selalu berpasangan dengan preposisi 'from' untuk menunjukkan akar masalah."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "Mitigate",
+        "translation": "Memitigasi / Mengurangi dampak",
+        "example": "The corporation took immediate, decisive steps to mitigate the environmental damage caused by the spill.",
+        "context": "Digunakan saat menjelaskan tindakan perbaikan dalam manajemen krisis."
+      },
+      {
+        "word": "Attribute to",
+        "translation": "Mengaitkan dengan / Menyandarkan pada",
+        "example": "The systemic failure was directly attributed to a severe lack of executive oversight.",
+        "context": "Digunakan untuk menjelaskan penyebab atau menyalahkan suatu faktor secara formal."
+      },
+      {
+        "word": "Stem from",
+        "translation": "Berasal dari / Berakar dari",
+        "example": "These operational vulnerabilities stem from outdated legacy systems that were never upgraded.",
+        "context": "Digunakan dalam analisis akar penyebab (root cause analysis) saat investigasi."
+      },
+      {
+        "word": "Unequivocally",
+        "translation": "Secara tegas / Tanpa keraguan",
+        "example": "We unequivocally condemn the actions of the rogue contractors involved in this scandal.",
+        "context": "Digunakan sebagai adverbia penegas untuk mengambil sikap moral atau hukum yang kuat."
+      },
+      {
+        "word": "Oversight",
+        "translation": "Kelalaian / Kekhilafan (juga berarti pengawasan)",
+        "example": "Regrettably, this catastrophic data breach was a monumental oversight on our part.",
+        "context": "Digunakan untuk mengakui kesalahan tanpa menggunakan kata 'mistake' yang terdengar kurang profesional."
+      },
+      {
+        "word": "Remuneration",
+        "translation": "Kompensasi / Ganti rugi finansial",
+        "example": "We are fully committed to providing adequate remuneration to all affected stakeholders.",
+        "context": "Digunakan saat menawarkan solusi atau ganti rugi kepada korban krisis."
+      }
+    ],
+    "dialogue": {
+      "context": "Sebuah konferensi pers darurat di mana seorang CEO (Speaker A) menghadapi rentetan pertanyaan tajam dari seorang Jurnalis Investigasi senior (Speaker B) mengenai insiden tumpahan bahan kimia berskala besar yang dilakukan oleh perusahaannya.",
+      "lines": [
+        {
+          "speaker": "Speaker A",
+          "text": "Regrettably, the incident stems from a catastrophic failure in our safety valves, for which we take full responsibility.",
+          "translation": "Sayangnya, insiden ini berakar dari kegagalan fatal pada katup keselamatan kami, yang mana kami bertanggung jawab penuh."
+        },
+        {
+          "speaker": "Speaker B",
+          "text": "Frankly, your apology amounts to very little when local communities are suffering from unprecedented ecological damage.",
+          "translation": "Sejujurnya, permintaan maaf Anda tidak berarti banyak ketika masyarakat lokal menderita akibat kerusakan ekologis yang belum pernah terjadi sebelumnya."
+        },
+        {
+          "speaker": "Speaker A",
+          "text": "I understand your frustration; as a matter of fact, we are already dedicating substantial resources to the cleanup efforts.",
+          "translation": "Saya memahami rasa frustrasi Anda; faktanya, kami telah mendedikasikan sumber daya yang besar untuk upaya pembersihan."
+        },
+        {
+          "speaker": "Speaker B",
+          "text": "But can we rely on your corporation to fully compensate the local fishermen whose livelihoods have been destroyed?",
+          "translation": "Namun, dapatkah kami mengandalkan perusahaan Anda untuk memberikan kompensasi penuh kepada para nelayan lokal yang mata pencahariannya telah hancur?"
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Menyampaikan pernyataan pembuka dalam konferensi pers krisis, mengakui kesalahan tanpa membuka celah hukum yang tidak perlu, menggunakan 'attitude adverbials' dan 'dependent prepositions' secara presisi.",
+      "scenario": "Anda adalah Kepala Komunikasi Korporat untuk sebuah maskapai penerbangan global. Terjadi insiden di mana ratusan penerbangan dibatalkan karena kegagalan sistem TI, menyebabkan kekacauan massal di berbagai bandara internasional. Anda harus menghadapi pers, menjelaskan bahwa masalah tersebut 'berasal dari' (stems from) pembaruan perangkat lunak pihak ketiga, meminta maaf 'atas' (apologise for) gangguan tersebut, dan secara tegas (frankly/unequivocally) berjanji untuk memberikan kompensasi (compensate for) kepada penumpang."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Which sentence correctly employs an attitude adverbial and a dependent preposition to express accountability?",
+          "options": [
+            "Admittedly, we must apologise for the severe inconvenience caused by the delay.",
+            "We must apologise, admittedly for the severe inconvenience caused by the delay.",
+            "Admittedly we must apologise about the severe inconvenience caused by the delay.",
+            "We must admittedly apologise on the severe inconvenience caused by the delay."
+          ],
+          "correctIndex": 0,
+          "explanation": "Opsi A benar karena menempatkan 'Admittedly' di awal kalimat yang dipisahkan dengan koma, dan menggunakan preposisi yang tepat 'apologise for'."
+        },
+        {
+          "id": 2,
+          "prompt": "Identify the correct preposition to complete the crisis statement: 'The board of directors strongly disapproves ___ the unauthorized actions taken by the regional manager.'",
+          "options": [
+            "to",
+            "of",
+            "against",
+            "on"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kata kerja 'disapprove' selalu diikuti oleh dependent preposition 'of' dalam bahasa Inggris baku tingkat lanjut."
+        },
+        {
+          "id": 3,
+          "prompt": "How should the attitude adverbial 'surprisingly' be correctly punctuated when placed in mid-position to emphasize the speaker's stance?",
+          "options": [
+            "The spokesperson was surprisingly, candid about the financial losses.",
+            "The spokesperson, was surprisingly candid about the financial losses.",
+            "The spokesperson was, surprisingly, candid about the financial losses.",
+            "The spokesperson was surprisingly candid, about the financial losses."
+          ],
+          "correctIndex": 2,
+          "explanation": "Saat 'attitude adverbial' ditempatkan di tengah kalimat (mid-position) dan memisahkan kata kerja (was) dari pelengkapnya (candid), ia harus diapit oleh dua koma untuk menunjukkan jeda retoris."
+        },
+        {
+          "id": 4,
+          "prompt": "Complete the sentence with the most appropriate C1/C2 vocabulary and prepositions: 'As far as I am ___, this crisis ___ a fundamental lack of ethical oversight.'",
+          "options": [
+            "knowing / relates with",
+            "aware / results to",
+            "believing / attributes to",
+            "concerned / stems from"
+          ],
+          "correctIndex": 3,
+          "explanation": "'As far as I am concerned' adalah frasa 'attitude adverbial' yang sangat umum di level C1/C2 untuk menyatakan opini, dan 'stems from' adalah kolokasi yang tepat untuk menunjukkan akar penyebab suatu krisis."
+        }
+      ]
+    }
+  }
+}

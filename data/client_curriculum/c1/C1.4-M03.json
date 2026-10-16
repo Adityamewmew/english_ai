@@ -1,0 +1,195 @@
+{
+  "id": "C1.4-M03",
+  "levelId": "C1.4",
+  "title": "Unit 3: Rhetorical Fronting, Topicalisation & Information Packaging",
+  "cefr": "C1",
+  "group": "Discourse Grammar",
+  "objective": "Mampu memanipulasi urutan klausa melalui fronting untuk mengendalikan fokus perhatian pendengar secara presisi.",
+  "complexity": "deep",
+  "estimatedMinutes": 20,
+  "isExam": false,
+  "passingScore": 75,
+  "orderIndex": 42,
+  "sections": {
+    "theory": {
+      "summary": "Rhetorical fronting dan topicalisation adalah teknik sintaksis tingkat lanjut yang memungkinkan penutur C1/C2 memanipulasi struktur klausa untuk mengontrol aliran informasi dan fokus perhatian pendengar. Berbeda dengan struktur kanonikal Subject-Verb-Object, fronting menempatkan elemen non-subjek di posisi awal klausa untuk menciptakan efek retoris tertentu: penekanan dramatis, kontras, kohesi wacana, atau prioritas topikal. Dalam ranah akademik, diplomatik, dan forensik, kemampuan ini bukan sekadar gaya melainkan kebutuhan strategis untuk membangun argumen yang presisif dan persuasif. Fronting mencakup berbagai konstruk: attitude adverbials, prepositional phrase fronting, object fronting, hingga negative adverbial inversion yang mengharuskan inversi subjek-auxiliary.",
+      "rules": [
+        {
+          "pattern": "Attitude Adverbial + comma + Main Clause (Surprisingly / Frankly / Understandably / Regrettably / Admittedly)",
+          "meaning": "Mengungkapkan sikap, emosi, atau evaluasi penutur terhadap proposisi yang akan disampaikan; menciptakan jarak retoris atau kedekatan emosional dengan audiens",
+          "example": "Regrettably, the committee's recommendations were ignored by the administration, resulting in prolonged institutional paralysis."
+        },
+        {
+          "pattern": "Negative Adverbial + Auxiliary + Subject + Main Verb (Under no circumstances / At no point / In no way / On no account / Rarely / Seldom)",
+          "meaning": "Menyatakan penekanan negatif yang kuat dengan inversi wajib; menghadirkan pembukaan dramatis dan formal yang intensif",
+          "example": "Under no circumstances should classified information be disclosed to unauthorized personnel, regardless of operational pressures."
+        },
+        {
+          "pattern": "Prepositional Phrase Fronting + Main Clause (In the context of... / With respect to... / As far as... is concerned)",
+          "meaning": "Menetapkan kerangka kontekstual atau topikal sebelum menyampaikan proposisi utama; mengarahkan fokus pendengar ke domain yang relevan",
+          "example": "In light of recent epidemiological findings, mandatory vaccination policies have become increasingly difficult to justify from an ethical standpoint."
+        }
+      ],
+      "commonTrap": {
+        "trapTitle": "Kesalahan Inversi pada Negative Adverbial Fronting",
+        "explanation": "Banyak pembelajar tingkat lanjut yang telah menguasai fronting biasa lupa bahwa negative adverbial fronting memicu inversi subjek-auxiliary yang WAJIB. Tanpa inversi, kalimat menjadi gramatikal tetapi kehilangan register formal dan kekuatan retoris. Penutur native C1/C2 secara otomatis melakukan inversi karena konstruksi ini terasa tidak lengkap tanpanya.",
+        "wrong": "Under no circumstances the government should compromise on national security protocols.",
+        "correct": "Under no circumstances should the government compromise on national security protocols."
+      },
+      "readinessQuestions": [
+        {
+          "id": 1,
+          "category": "Pengenalan Pola Sintaksis",
+          "prompt": "Dalam pidato akademik, Anda ingin menyampaikan kekecewaan profesional terhadap keputusan dewan sambil mempertahankan nada formal. Konstruksi mana yang paling tepat?",
+          "options": [
+            "Admittedly, the board's decision was unexpected.",
+            "Regrettably, the board's decision overlooked critical stakeholder input.",
+            "Surprisingly, the board made a decision yesterday."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Regrettably' mengekspresikan kekecewaan profesional sambil mempertahankan register formal, sedangkan 'Admittedly' lebih cocok untuk konsesi argumenatif dan 'Surprisingly' hanya menyatakan kejutan tanpa evaluasi normatif."
+        },
+        {
+          "id": 2,
+          "category": "Pemahaman Nuansa & Register",
+          "prompt": "Seorang diplomat ingin menegaskan bahwa delegasinya tidak akan pernah menyetujui perjanjian yang melanggar kedaulatan nasional. Mana yang gramatikal dan memiliki register tertinggi?",
+          "options": [
+            "In no way our delegation will accept any treaty violating national sovereignty.",
+            "At no point will our delegation accept any treaty that violates national sovereignty.",
+            "Our delegation will never accept any treaty that violates national sovereignty."
+          ],
+          "correctIndex": 1,
+          "explanation": "Opsi kedua menggunakan inversi yang benar (will our delegation) setelah negative adverbial 'At no point', menciptakan register formal tertinggi. Opsi pertama melanggar aturan inversi, sedangkan opsi ketiga gramatikal tetapi kurang dramatis dan formal."
+        },
+        {
+          "id": 3,
+          "category": "Penerapan Konteks Tinggi",
+          "prompt": "Dalam perdebatan Parlemen, Anda ingin mengalihkan fokus dari isu ekonomi ke isu sosial sambil menyatakan posisi Anda. Lengkapi: [...], universal healthcare access remains a fundamental human right that transcends fiscal considerations.",
+          "options": [
+            "As far as the social implications are concerned",
+            "Generally speaking",
+            "Of course"
+          ],
+          "correctIndex": 0,
+          "explanation": "'As far as the social implications are concerned' secara eksplisit menetapkan kerangka topikal baru, mengarahkan perhatian pendengar ke dimensi sosial sambil mempersiapkan argumen tentang hak kesehatan. Konstruksi ini khas wacana akademik dan politik tingkat tinggi."
+        }
+      ]
+    },
+    "vocab": [
+      {
+        "word": "admittedly",
+        "translation": "memang, tak dapat dipungkiri (digunakan untuk mengakui kebenaran titik lawan bicara sebelum mengajukan kontra-argumen)",
+        "example": "Admittedly, the initial investment is substantial; however, the long-term environmental benefits far outweigh the costs.",
+        "context": "Konsesi argumenatif dalam debat akademik atau negosiasi diplomatik"
+      },
+      {
+        "word": "invariably",
+        "translation": "selalu, tanpa terkecuali; secara konsisten dapat diprediksi",
+        "example": "Invariably, attempts to suppress dissent only serve to amplify opposition movements.",
+        "context": "Generalisasi kuat dalam wacana analitik atau historis"
+      },
+      {
+        "word": "conceivably",
+        "translation": "mungkin saja, dapat dibayangkan (menyatakan kemungkinan teoretis)",
+        "example": "Conceivably, quantum computing could render current encryption standards obsolete within a decade.",
+        "context": "Spekulasi terkendali dalam diskursus teknologi atau ilmiah"
+      },
+      {
+        "word": "under no circumstances",
+        "translation": "dalam keadaan apa pun juga tidak; secara mutlak tidak",
+        "example": "Under no circumstances may classified documents be removed from this facility without written authorization.",
+        "context": "Pelarangan mutlak dalam konteks hukum, militer, atau kebijakan institusional"
+      },
+      {
+        "word": "notwithstanding",
+        "translation": "meskipun demikian; terlepas dari (preposisi formal yang menandakan kontras)",
+        "example": "Notwithstanding the objections raised by several member states, the resolution passed with a substantial majority.",
+        "context": "Kontras formal dalam dokumen hukum atau resolusi internasional"
+      },
+      {
+        "word": "as regards",
+        "translation": "mengenai, terkait dengan (frase preposisional untuk transisi topikal)",
+        "example": "As regards the proposed tariff adjustments, the committee has requested additional economic impact assessments.",
+        "context": "Transisi topikal dalam korespondensi formal atau laporan institusional"
+      }
+    ],
+    "dialogue": {
+      "context": "Sidang komite etik universitas di mana seorang profesor membela mahasiswa doktoralnya dari tudungan plagiarisme sambil mengakui kelemahan prosedural dalam supervisi.",
+      "lines": [
+        {
+          "speaker": "Prof. Harrington",
+          "text": "Admittedly, my supervision protocols during Dr. Chen's fieldwork period were not as rigorous as our institutional standards demand.",
+          "translation": "Memang, protokol supervisi saya selama periode kerja lapangan Dr. Chen tidak serigas standar institusional kita."
+        },
+        {
+          "speaker": "Prof. Harrington",
+          "text": "Under no circumstances, however, should procedural oversight be conflated with deliberate academic malpractice.",
+          "translation": "Namun, dalam keadaan apa pun, pengawasan prosedural tidak boleh disamakan dengan praktik akademik malpraktik yang disengaja."
+        },
+        {
+          "speaker": "Chair of Ethics Committee",
+          "text": "Regrettably, the board must consider that precedent in similar cases has resulted in dissertation nullification.",
+          "translation": "Dengan penyesalan, dewan harus mempertimbangkan bahwa preseden dalam kasus serupa telah mengakibatkan pembatalan disertasi."
+        },
+        {
+          "speaker": "Prof. Harrington",
+          "text": "With all due respect, rarely has a case been adjudicated where the candidate demonstrated such comprehensive methodological innovation.",
+          "translation": "Dengan segala hormat, jarang sekali ada kasus yang diadili di mana kandidat menunjukkan inovasi metodologis yang begitu komprehensif."
+        }
+      ]
+    },
+    "practice": {
+      "goal": "Menggunakan minimal tiga konstruksi fronting berbeda untuk membangun argumen persuasif dalam konteks formal tanpa terdengar repetitif atau tidak natural.",
+      "scenario": "Anda adalah penasihat hukum yang mempresentasikan argumen oral di hadapan Mahkamah Konstitusi. Klien Anda adalah organisasi jurnalistik yang dituntut karena mempublikasikan dokumen yang mengungkap korupsi pejabat tinggi. Dalam 4-5 kalimat, jawab tuduhan bahwa publikasi tersebut membahayakan keamanan nasional. Gunakan fronting untuk menekankan bahwa: (1) tidak ada bukti kerugian keamanan aktual, (2) kepentingan publik lebih utama, dan (3) preseden historis mendukung transparansi."
+    },
+    "quiz": {
+      "passingScore": 75,
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Pilih kalimat yang menggunakan negative adverbial fronting dengan gramatikal benar:",
+          "options": [
+            "Seldom the committee has reached such a unanimous decision on contentious legislation.",
+            "Seldom has the committee reached such a unanimous decision on contentious legislation.",
+            "Seldom the committee reached such a unanimous decision on contentious legislation."
+          ],
+          "correctIndex": 1,
+          "explanation": "Negative adverbial 'Seldom' memicu inversi wajib subjek-auxiliary. Struktur yang benar adalah 'Seldom has the committee reached...' dengan auxiliary 'has' mendahului subjek 'the committee'."
+        },
+        {
+          "id": 2,
+          "prompt": "Dalam konteks pidato kenegaraan, mana attitude adverbial yang paling tepat untuk mengawali pernyataan konsesi sebelum mengajukan argumen utama?",
+          "options": [
+            "Frankly, the previous administration established several effective policies.",
+            "Admittedly, the previous administration established several effective policies.",
+            "Surprisingly, the previous administration established several effective policies."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Admittedly' adalah marker konsesi klasik yang mengakui titik lawan bicara sebelum menyampaikan kontra-argumen. 'Frankly' menyatakan kejujuran blak-blakan, sedangkan 'Surprisingly' hanya menandai kejutan."
+        },
+        {
+          "id": 3,
+          "prompt": "Identifikasi kesalahan dalam kalimat berikut: 'Under no circumstances diplomatic immunity can be waived without explicit consent of the sending state.'",
+          "options": [
+            "Kata 'circumstances' harus singular",
+            "Inversi subjek-auxiliary tidak dilakukan",
+            "Preposisi 'under' harus diganti 'in'"
+          ],
+          "correctIndex": 1,
+          "explanation": "Negative adverbial 'Under no circumstances' memerlukan inversi. Kalimat yang benar adalah 'Under no circumstances can diplomatic immunity be waived...' dengan auxiliary 'can' mendahului subjek 'diplomatic immunity'."
+        },
+        {
+          "id": 4,
+          "prompt": "Manakah yang BUKAN merupakan fungsi retoris dari attitude adverbial fronting?",
+          "options": [
+            "Mengekspresikan evaluasi penutur terhadap proposisi",
+            "Menetapkan kerangka kontekstual sebelum argumen utama",
+            "Menghasilkan inversi wajib subjek-auxiliary"
+          ],
+          "correctIndex": 2,
+          "explanation": "Attitude adverbial fronting TIDAK memicu inversi. Inversi hanya terjadi pada negative adverbial fronting (Seldom, Rarely, Under no circumstances, dll). Attitude adverbials seperti Frankly, Surprisingly, Admittedly tidak mengubah struktur klausa."
+        }
+      ]
+    }
+  }
+}

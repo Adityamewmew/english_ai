@@ -1,0 +1,1516 @@
+{
+  "module": {
+    "id": "A1.3-M06",
+    "levelId": "A1.3",
+    "title": "Personalities, Character Traits & Feelings",
+    "cefr": "A1",
+    "group": "A1.3 - Experiences, Comparisons & Future Intentions",
+    "objective": "Describe character traits, personality qualities, and personal feelings using adjectives like cheerful, polite, honest, shy, and confident.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 6
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-3-m06-reading",
+      "moduleId": "A1.3-M06",
+      "skillType": "reading",
+      "title": "Reading Mission: Friends and Feelings",
+      "theme": "Personalities, Character Traits and Feelings",
+      "grammarFocus": "Using am, is, and are with personality adjectives; using because to give a reason",
+      "vocabularyFocus": "Personality adjectives and feeling words: cheerful, polite, honest, shy, confident, friendly, helpful, happy",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-3-m06-r-theory",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this reading mission, you will read a short text about two friends with different personalities. You will learn how to find the main idea and important details. You will also notice how English uses am, is, and are before adjectives such as cheerful, shy, and confident. Read carefully to learn why people like their friends.",
+            "linguisticTarget": {
+              "grammar": "Use subject + am/is/are + adjective: She is cheerful. They are kind. Use because + subject + am/is/are + adjective to give a reason.",
+              "vocabulary": "Personality traits and feelings, including cheerful, polite, honest, shy, confident, friendly, helpful, and happy.",
+              "readingStrategy": "First, skim the text to understand who the people are and what the text is about. Then, scan the text for names, personality words, and reasons."
+            },
+            "learningObjectives": [
+              "Understand the main idea of a short A1 passage about friends and their personalities.",
+              "Identify key details, including names, character traits, actions, and feelings.",
+              "Recognize and practice am, is, and are with personality adjectives.",
+              "Find reasons with because in a short reading text."
+            ],
+            "contextWarmup": {
+              "prompt": "Your friend always says hello, smiles, and helps people. Which word describes your friend best?",
+              "options": [
+                "Cheerful and helpful",
+                "Shy and quiet",
+                "Serious and angry"
+              ],
+              "correctIndex": 0,
+              "explanation": "A person who smiles and helps people is often cheerful and helpful."
+            },
+            "rules": [
+              "Use am, is, or are before an adjective: I am happy. She is polite. They are friendly.",
+              "Use because to give a reason: I like him because he is honest.",
+              "A person can have more than one trait: Maya is cheerful and confident.",
+              "Look for actions in the text. Actions can show personality: A helpful person helps others."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Beginner Pitfall",
+              "explanation": "Do not forget am, is, or are before a personality adjective. Also, do not choose an answer only because you see one familiar word. Read the full sentence for the meaning.",
+              "wrong": "She cheerful and kind.",
+              "correct": "She is cheerful and kind."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Personality Descriptions",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in natural spoken English:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "am",
+                "vowelDropped": "a",
+                "remainder": "m",
+                "contracted": "I'm",
+                "exampleFull": "I am confident today.",
+                "exampleContracted": "I'm confident today."
+              },
+              {
+                "subject": "He",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "He's",
+                "exampleFull": "He is polite to everyone.",
+                "exampleContracted": "He's polite to everyone."
+              },
+              {
+                "subject": "She",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "She's",
+                "exampleFull": "She is cheerful this morning.",
+                "exampleContracted": "She's cheerful this morning."
+              },
+              {
+                "subject": "We",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "We're",
+                "exampleFull": "We are happy to help.",
+                "exampleContracted": "We're happy to help."
+              },
+              {
+                "subject": "They",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "They're",
+                "exampleFull": "They are honest friends.",
+                "exampleContracted": "They're honest friends."
+              },
+              {
+                "subject": "You",
+                "verb": "are",
+                "vowelDropped": "a",
+                "remainder": "re",
+                "contracted": "You're",
+                "exampleFull": "You are very friendly.",
+                "exampleContracted": "You're very friendly."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Structure with Personality Adjectives",
+              "description": "Assemble and swap sentence blocks to explore affirmative, negative, and question patterns:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person (Singular)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "First Person Plural"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Third Person Plural"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Second Person"
+                }
+              ],
+              "complements": [
+                "cheerful and friendly",
+                "polite to everyone",
+                "honest with me",
+                "shy but helpful",
+                "confident in class",
+                "happy today"
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-3-m06-r-vocab",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "cheerful",
+                "ipa": "/ˈtʃɪə.fəl/",
+                "meaning": "ceria, periang",
+                "collocation": "Maya is cheerful every morning."
+              },
+              {
+                "word": "polite",
+                "ipa": "/pəˈlaɪt/",
+                "meaning": "sopan",
+                "collocation": "Amir is polite to his teacher."
+              },
+              {
+                "word": "honest",
+                "ipa": "/ˈɒn.ɪst/",
+                "meaning": "jujur",
+                "collocation": "An honest friend tells the truth."
+              },
+              {
+                "word": "shy",
+                "ipa": "/ʃaɪ/",
+                "meaning": "pemalu",
+                "collocation": "He is shy in a new class."
+              },
+              {
+                "word": "confident",
+                "ipa": "/ˈkɒn.fɪ.dənt/",
+                "meaning": "percaya diri",
+                "collocation": "She feels confident when she speaks."
+              },
+              {
+                "word": "friendly",
+                "ipa": "/ˈfrend.li/",
+                "meaning": "ramah",
+                "collocation": "Our new student is friendly."
+              },
+              {
+                "word": "helpful",
+                "ipa": "/ˈhelp.fəl/",
+                "meaning": "suka menolong",
+                "collocation": "He is helpful in class."
+              },
+              {
+                "word": "happy",
+                "ipa": "/ˈhæp.i/",
+                "meaning": "senang, bahagia",
+                "collocation": "They are happy at lunch."
+              },
+              {
+                "word": "kind",
+                "ipa": "/kaɪnd/",
+                "meaning": "baik hati",
+                "collocation": "My friend is kind to everyone."
+              },
+              {
+                "word": "quietly",
+                "ipa": "/ˈkwaɪ.ət.li/",
+                "meaning": "dengan pelan",
+                "collocation": "He says hello quietly."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m06-r-guided",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-reading",
+          "sectionType": "dialogue",
+          "title": "Reading Passage: Lina's Two Friends",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Lina's Two Friends",
+            "context": "Lina introduces two friends to her class and describes their personalities and feelings.",
+            "text": "Today, Lina introduces her two friends to the class. “This is Maya,” she says. “Maya is cheerful and friendly. She smiles every morning, and she is helpful in class.” Maya feels confident because she knows the answer to a question. She puts up her hand and speaks clearly.\n\n“Next, this is Amir,” Lina says. “Amir is shy, but he is very polite and honest.” Amir does not talk a lot at first. He says, “Hello,” quietly to the class. Then a student drops some books. Amir helps the student and asks, “Are you OK?” Everyone thanks him.\n\nAt lunch, Maya shares her fruit with Amir. Amir is happy and smiles. Lina likes both friends because they are kind in different ways. Maya is cheerful and confident, and Amir is polite and helpful.",
+            "wordCount": 132,
+            "highlights": [
+              {
+                "text": "cheerful and friendly",
+                "note": "These adjectives describe Maya's personality.",
+                "type": "vocab"
+              },
+              {
+                "text": "feels confident",
+                "note": "Confident describes Maya's feeling when she knows an answer.",
+                "type": "vocab"
+              },
+              {
+                "text": "he is very polite and honest",
+                "note": "Use he is before personality adjectives.",
+                "type": "grammar"
+              },
+              {
+                "text": "because they are kind",
+                "note": "Because gives the reason why Lina likes her friends.",
+                "type": "grammar"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m06-r-practice",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-reading",
+          "sectionType": "practice",
+          "title": "Guided Comprehension Check",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "prompt": "What is the main idea of the passage?",
+              "options": [
+                "Lina describes two friends with different personalities.",
+                "Lina teaches a lesson about fruit.",
+                "Maya and Amir plan a school trip."
+              ],
+              "correctIndex": 0,
+              "explanation": "The passage is about Lina's friends, Maya and Amir, and their different personalities."
+            },
+            "detailQuestions": [
+              {
+                "id": 1,
+                "prompt": "Why does Maya feel confident?",
+                "options": [
+                  "She knows the answer to a question.",
+                  "She has new books.",
+                  "She eats fruit at lunch."
+                ],
+                "correctIndex": 0,
+                "explanation": "Maya feels confident because she knows the answer to a question."
+              },
+              {
+                "id": 2,
+                "prompt": "How does Amir help the student?",
+                "options": [
+                  "He shares his fruit.",
+                  "He helps after the student drops books.",
+                  "He answers a question for the student."
+                ],
+                "correctIndex": 1,
+                "explanation": "A student drops some books, and Amir helps the student."
+              },
+              {
+                "id": 3,
+                "prompt": "Which two words describe Amir?",
+                "options": [
+                  "Cheerful and confident",
+                  "Polite and honest",
+                  "Friendly and creative"
+                ],
+                "correctIndex": 1,
+                "explanation": "Lina says that Amir is shy, polite, and honest."
+              },
+              {
+                "id": 4,
+                "prompt": "Why does Lina like both friends?",
+                "options": [
+                  "They are kind in different ways.",
+                  "They are in the same family.",
+                  "They both know every answer."
+                ],
+                "correctIndex": 0,
+                "explanation": "Lina likes both friends because they are kind in different ways."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m06-r-quiz",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-reading",
+          "sectionType": "quiz",
+          "title": "Reading Mastery Quiz",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "Who introduces Maya and Amir to the class?",
+                "options": [
+                  "Lina",
+                  "Maya",
+                  "A student"
+                ],
+                "answer": "A",
+                "explanation": "Lina introduces her two friends to the class."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which sentence is true about Maya?",
+                "options": [
+                  "She is shy and quiet.",
+                  "She is cheerful and helpful.",
+                  "She does not speak in class."
+                ],
+                "answer": "B",
+                "explanation": "The passage says Maya is cheerful, friendly, and helpful. She also speaks clearly in class."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What does Amir say when he first talks to the class?",
+                "options": [
+                  "Thank you.",
+                  "Hello.",
+                  "I am confident."
+                ],
+                "answer": "B",
+                "explanation": "Amir says “Hello” quietly to the class."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Choose the correct sentence about Amir.",
+                "options": [
+                  "Amir polite and honest.",
+                  "Amir is polite and honest.",
+                  "Amir are polite and honest."
+                ],
+                "answer": "B",
+                "explanation": "Use is with Amir: Amir is polite and honest."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What does the word because show in this sentence: “Lina likes both friends because they are kind”?",
+                "options": [
+                  "A reason",
+                  "A place",
+                  "A time"
+                ],
+                "answer": "A",
+                "explanation": "Because introduces the reason. Lina likes her friends because they are kind."
+              },
+              {
+                "id": "q-r-6",
+                "question": "How does Amir feel after Maya shares her fruit with him?",
+                "options": [
+                  "Happy",
+                  "Angry",
+                  "Tired"
+                ],
+                "answer": "A",
+                "explanation": "The passage says Amir is happy and smiles after Maya shares her fruit."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-3-m06-listening",
+      "moduleId": "A1.3-M06",
+      "skillType": "listening",
+      "title": "Listening Mission: Meet David",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-3-m06-l-theory",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening mission, Maya and Rina talk about David, a new student. Listen for personality words, such as friendly, polite, cheerful, honest, shy, and confident. First, listen for the main idea. Then, listen again for details about why the girls like David and how he feels in front of the class.",
+            "learningObjectives": [
+              "Identify simple personality and character words in a short conversation.",
+              "Understand basic details about a person's feelings and behaviour.",
+              "Recognise common connected speech in natural A1 conversations."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "He seems very friendly.",
+                "meaning": "Dia terlihat sangat ramah.",
+                "note": "Use this phrase when you have an impression about a person."
+              },
+              {
+                "phrase": "He is always cheerful.",
+                "meaning": "Dia selalu ceria.",
+                "note": "Use always to say that a quality happens very often."
+              },
+              {
+                "phrase": "He is very honest.",
+                "meaning": "Dia sangat jujur.",
+                "note": "Honest means a person tells the truth."
+              },
+              {
+                "phrase": "He is a bit shy.",
+                "meaning": "Dia agak pemalu.",
+                "note": "A bit means a little. Use it to make an adjective softer."
+              },
+              {
+                "phrase": "He is becoming more confident.",
+                "meaning": "Dia menjadi lebih percaya diri.",
+                "note": "Use becoming to describe a change over time."
+              },
+              {
+                "phrase": "I hope we can be good friends.",
+                "meaning": "Aku harap kita bisa menjadi teman baik.",
+                "note": "Use I hope to talk about a wish for the future."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "Do you know David?",
+                "fast": "D'you know David?",
+                "slowIpa": "/duː juː nəʊ ˈdeɪvɪd/",
+                "fastIpa": "/dʒə nəʊ ˈdeɪvɪd/",
+                "note": "In fast speech, do you often joins together and sounds like d'you."
+              },
+              {
+                "id": 2,
+                "slow": "He is always cheerful.",
+                "fast": "He's always cheerful.",
+                "slowIpa": "/hiː ɪz ˈɔːlweɪz ˈtʃɪəfəl/",
+                "fastIpa": "/hiːz ˈɔːlweɪz ˈtʃɪəfəl/",
+                "note": "He is is often shortened to he's in natural conversation."
+              },
+              {
+                "id": 3,
+                "slow": "That is true.",
+                "fast": "That's true.",
+                "slowIpa": "/ðæt ɪz truː/",
+                "fastIpa": "/ðæts truː/",
+                "note": "That is becomes that's. The final /t/ connects directly to the next sound."
+              },
+              {
+                "id": 4,
+                "slow": "I hope we can be good friends.",
+                "fast": "I hope we can be good friends.",
+                "slowIpa": "/aɪ həʊp wiː kæn biː ɡʊd frendz/",
+                "fastIpa": "/aɪ həʊp wi kən bi ɡʊd frendz/",
+                "note": "In fast speech, can is often weak and sounds like /kən/."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m06-l-dialogue",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Talking About a New Friend",
+          "orderIndex": 2,
+          "content": {
+            "context": "Maya and Rina are at school. They are talking about David, a new student in their class. They describe his personality and talk about his confidence.",
+            "audioPrompt": "Listen carefully to the following dialogue between Maya and Rina. Listen for David's personality and feelings.",
+            "lines": [
+              {
+                "speaker": "Maya",
+                "text": "Do you know David, the new student in our class?",
+                "audioUrl": "/audio/modules/a1-3-m06/dialogue-1.mp3",
+                "translation": "Apakah kamu kenal David, murid baru di kelas kita?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Rina",
+                "text": "Yes, I do! He seems very friendly and polite.",
+                "audioUrl": "/audio/modules/a1-3-m06/dialogue-2.mp3",
+                "translation": "Ya, aku kenal! Dia terlihat sangat ramah dan sopan.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Maya",
+                "text": "I agree. Why do you like him?",
+                "audioUrl": "/audio/modules/a1-3-m06/dialogue-3.mp3",
+                "translation": "Aku setuju. Mengapa kamu menyukainya?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Rina",
+                "text": "Because he is always cheerful and helpful to everyone.",
+                "audioUrl": "/audio/modules/a1-3-m06/dialogue-4.mp3",
+                "translation": "Karena dia selalu ceria dan suka menolong semua orang.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Maya",
+                "text": "That's true. He is also very honest and generous.",
+                "audioUrl": "/audio/modules/a1-3-m06/dialogue-5.mp3",
+                "translation": "Itu benar. Dia juga sangat jujur dan murah hati.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Rina",
+                "text": "But I think he is a bit shy when speaking in front of the class.",
+                "audioUrl": "/audio/modules/a1-3-m06/dialogue-6.mp3",
+                "translation": "Tapi aku pikir dia agak pemalu ketika berbicara di depan kelas.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Maya",
+                "text": "Yes, but he is becoming more confident now.",
+                "audioUrl": "/audio/modules/a1-3-m06/dialogue-7.mp3",
+                "translation": "Ya, tapi dia menjadi lebih percaya diri sekarang.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Rina",
+                "text": "That is good. He speaks more in our English class now.",
+                "audioUrl": "/audio/modules/a1-3-m06/dialogue-8.mp3",
+                "translation": "Itu bagus. Dia sekarang lebih banyak berbicara di kelas bahasa Inggris kami.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Maya",
+                "text": "Yes! I hope we can be good friends with him.",
+                "audioUrl": "/audio/modules/a1-3-m06/dialogue-9.mp3",
+                "translation": "Ya! Aku harap kita bisa menjadi teman baik dengannya.",
+                "emotion": "friendly"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m06-l-quiz",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Do you know David",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Maya: \"Do you know _____\"",
+                "targetWord": "David",
+                "explanation": "Full audio: \"Do you know David\". The missing word is \"David\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "the new student in our class?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Maya: \"the new student in our _____?\"",
+                "targetWord": "class",
+                "explanation": "Full audio: \"the new student in our class?\". The missing word is \"class\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Yes, I do!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Rina: \"_____, I do!\"",
+                "targetWord": "Yes",
+                "explanation": "Full audio: \"Yes, I do!\". The missing word is \"Yes\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "He seems very friendly and polite.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Rina: \"He seems very friendly and _____.\"",
+                "targetWord": "polite",
+                "explanation": "Full audio: \"He seems very friendly and polite.\". The missing word is \"polite\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Why do you like him?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Maya: \"Why do you _____ him?\"",
+                "targetWord": "like",
+                "explanation": "Full audio: \"Why do you like him?\". The missing word is \"like\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "He is also very honest and generous.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He is also very honest and generous",
+                "words": [
+                  "honest",
+                  "also",
+                  "He",
+                  "very",
+                  "and",
+                  "generous",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"He is also very honest and generous.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "That is good.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That is good",
+                "words": [
+                  "good",
+                  "is",
+                  "That"
+                ],
+                "explanation": "Correct sentence order: \"That is good.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "He seems very friendly.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He seems very friendly",
+                "words": [
+                  "very",
+                  "friendly",
+                  "seems",
+                  "He"
+                ],
+                "explanation": "Correct sentence order: \"He seems very friendly.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "He is always cheerful.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He is always cheerful",
+                "words": [
+                  "is",
+                  "always",
+                  "cheerful",
+                  "He"
+                ],
+                "explanation": "Correct sentence order: \"He is always cheerful.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "He is very honest.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He is very honest",
+                "words": [
+                  "He",
+                  "honest",
+                  "is",
+                  "very"
+                ],
+                "explanation": "Correct sentence order: \"He is very honest.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Do you know David",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Maya: \"Do you know _____\"",
+                "targetWord": "David",
+                "explanation": "Full audio: \"Do you know David\". The missing word is \"David\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "the new student in our class?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Maya: \"the new student in our _____?\"",
+                "targetWord": "class",
+                "explanation": "Full audio: \"the new student in our class?\". The missing word is \"class\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Yes, I do!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Rina: \"_____, I do!\"",
+                "targetWord": "Yes",
+                "explanation": "Full audio: \"Yes, I do!\". The missing word is \"Yes\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "He seems very friendly and polite.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Rina: \"He seems very friendly and _____.\"",
+                "targetWord": "polite",
+                "explanation": "Full audio: \"He seems very friendly and polite.\". The missing word is \"polite\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Why do you like him?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Maya: \"Why do you _____ him?\"",
+                "targetWord": "like",
+                "explanation": "Full audio: \"Why do you like him?\". The missing word is \"like\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "He is also very honest and generous.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He is also very honest and generous",
+                "words": [
+                  "honest",
+                  "also",
+                  "He",
+                  "very",
+                  "and",
+                  "generous",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"He is also very honest and generous.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "That is good.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That is good",
+                "words": [
+                  "good",
+                  "is",
+                  "That"
+                ],
+                "explanation": "Correct sentence order: \"That is good.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "He seems very friendly.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He seems very friendly",
+                "words": [
+                  "very",
+                  "friendly",
+                  "seems",
+                  "He"
+                ],
+                "explanation": "Correct sentence order: \"He seems very friendly.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "He is always cheerful.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He is always cheerful",
+                "words": [
+                  "is",
+                  "always",
+                  "cheerful",
+                  "He"
+                ],
+                "explanation": "Correct sentence order: \"He is always cheerful.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "He is very honest.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He is very honest",
+                "words": [
+                  "He",
+                  "honest",
+                  "is",
+                  "very"
+                ],
+                "explanation": "Correct sentence order: \"He is very honest.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-3-m06-writing",
+      "moduleId": "A1.3-M06",
+      "skillType": "writing",
+      "title": "Writing Mission: Describe People and Feelings",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-3-m06-w-theory",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Write simple sentences about a person's personality and feelings. Use a subject, the correct form of be, and an adjective. You can join two adjectives with and or but. Use because to give a reason.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Name the Person",
+                "formula": "Subject + am / is / are",
+                "example": "My friend is"
+              },
+              {
+                "step": 2,
+                "title": "Add a Personality Adjective",
+                "formula": "Subject + am / is / are + adjective.",
+                "example": "She is cheerful."
+              },
+              {
+                "step": 3,
+                "title": "Join Two Traits",
+                "formula": "Subject + am / is / are + adjective + and / but + adjective.",
+                "example": "Tom is shy but honest."
+              },
+              {
+                "step": 4,
+                "title": "Give a Reason",
+                "formula": "Sentence + because + subject + am / is / are + adjective.",
+                "example": "I like Mia because she is polite."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Start every sentence with a capital letter.",
+                "badExample": "my brother is confident.",
+                "goodExample": "My brother is confident.",
+                "why": "The first word in a sentence needs a capital letter."
+              },
+              {
+                "rule": "Use a full stop at the end of a statement.",
+                "badExample": "She is honest",
+                "goodExample": "She is honest.",
+                "why": "A full stop shows that the sentence is complete."
+              },
+              {
+                "rule": "Use am, is, or are before a personality adjective.",
+                "badExample": "He friendly.",
+                "goodExample": "He is friendly.",
+                "why": "English sentences need the verb be before an adjective."
+              },
+              {
+                "rule": "Use because to introduce a reason.",
+                "badExample": "I like Ben because polite.",
+                "goodExample": "I like Ben because he is polite.",
+                "why": "After because, write a subject and the verb be."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "My sister is cheerful and kind.",
+                "id": "My sister is cheerful and kind.",
+                "focus": "Two personality adjectives with and"
+              },
+              {
+                "en": "Rina is shy, but she is very honest.",
+                "id": "Rina is shy, but she is very honest.",
+                "focus": "Two ideas joined with but"
+              },
+              {
+                "en": "I am happy today.",
+                "id": "I am happy today.",
+                "focus": "Feelings with am"
+              },
+              {
+                "en": "We like Adam because he is polite.",
+                "id": "We like Adam because he is polite.",
+                "focus": "Giving a reason with because"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m06-w-practice",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "my friend is cheerful and polite",
+                "targetSentence": "My friend is cheerful and polite.",
+                "translation": "Teman saya ceria dan sopan.",
+                "keyRule": "Begin with a capital letter and end the sentence with a full stop.",
+                "requiredCapitals": [
+                  "My"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "he confident today.",
+                "targetSentence": "He is confident today.",
+                "translation": "Dia percaya diri hari ini.",
+                "keyRule": "Use is before an adjective with he.",
+                "requiredCapitals": [
+                  "He"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "I like sara because she honest.",
+                "targetSentence": "I like Sara because she is honest.",
+                "translation": "Saya menyukai Sara karena dia jujur.",
+                "keyRule": "Use a capital letter for a name and write she is after because.",
+                "requiredCapitals": [
+                  "I",
+                  "Sara"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Personality Description",
+                "meaning": "Teman saya ceria dan percaya diri.",
+                "tokens": [
+                  "My",
+                  "friend",
+                  "is",
+                  "cheerful",
+                  "and",
+                  "confident."
+                ],
+                "fullSentence": "My friend is cheerful and confident."
+              },
+              {
+                "id": "b-2",
+                "category": "Feeling Description",
+                "meaning": "Saya merasa senang hari ini.",
+                "tokens": [
+                  "I",
+                  "am",
+                  "happy",
+                  "today."
+                ],
+                "fullSentence": "I am happy today."
+              },
+              {
+                "id": "b-3",
+                "category": "Reason Sentence",
+                "meaning": "Saya menyukai dia karena dia sopan.",
+                "tokens": [
+                  "I",
+                  "like",
+                  "him",
+                  "because",
+                  "he",
+                  "is",
+                  "polite."
+                ],
+                "fullSentence": "I like him because he is polite."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: My Friend",
+                "badge": "Friend Finder",
+                "instruction": "Write 2 or 3 sentences about a friend. Include the friend's name and two personality adjectives. Use and or but.",
+                "example": "My friend Anna is cheerful and confident. She is polite to everyone.",
+                "placeholder": "My friend ...",
+                "minWords": 12,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Why I Like This Person",
+                "badge": "Kind Writer",
+                "instruction": "Write 2 or 3 sentences about a person you like. Describe the person and give a reason with because.",
+                "example": "I like my brother. He is funny and honest. I like him because he is kind.",
+                "placeholder": "I like ...",
+                "minWords": 16,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m06-w-quiz",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-writing",
+          "sectionType": "quiz",
+          "title": "Writing Practicum & Assessment",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": "w-p-1",
+                "prompt": "Write two complete sentences about your mood today. Use I am and one feeling adjective.",
+                "criteria": "Write at least two complete sentences. Use I am correctly, use a feeling adjective, begin with capital letters, and use full stops.",
+                "sampleGoodAnswer": "I am happy today. I am confident at school."
+              },
+              {
+                "id": "w-p-2",
+                "prompt": "Write two or three sentences about a friend. Use at least two personality adjectives.",
+                "criteria": "Write a friend's name or relationship. Use is correctly and include two personality adjectives. Use and or but in one sentence.",
+                "sampleGoodAnswer": "My friend Leo is cheerful and polite. He is shy but very honest."
+              },
+              {
+                "id": "w-p-3",
+                "prompt": "Write three sentences about a person you like. Give one reason with because.",
+                "criteria": "Write three complete sentences. Describe the person with an adjective. Use because + subject + is + adjective correctly.",
+                "sampleGoodAnswer": "I like my teacher. She is kind and confident. I like her because she is helpful."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-3-m06-speaking",
+      "moduleId": "A1.3-M06",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Talking About Friends and Feelings",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-3-m06-s-theory",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Talk about your friends with clear, short sentences. Use personality words such as cheerful, polite, honest, shy, and confident. You can also say how a person feels, for example: happy, sad, excited, or tired.",
+            "audioGuidance": "Speak slowly and clearly. Stress the important adjective in your sentence: She is CHEERful. He is conFIdent. Use a falling voice for statements. Use a rising voice for yes or no questions, such as: Is she shy?",
+            "pillars": [
+              {
+                "name": "Clear Personality Words",
+                "target": "Say common personality adjectives clearly",
+                "explanation": "Practise cheerful, polite, honest, shy, and confident. Make the stressed syllable stronger and longer."
+              },
+              {
+                "name": "Simple Descriptions",
+                "target": "Use be with adjectives",
+                "explanation": "Use short patterns: My friend is cheerful. She is honest. He is not shy."
+              },
+              {
+                "name": "Feelings and Reasons",
+                "target": "Say feelings and give one simple reason",
+                "explanation": "Use because to explain: I like her because she is helpful. I feel happy because she is kind."
+              },
+              {
+                "name": "Natural Intonation",
+                "target": "Use rising and falling intonation",
+                "explanation": "Let your voice rise at the end of a yes or no question. Let your voice fall at the end of a statement."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-3-m06-s-practice",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "PER-son",
+                "countryAudio": "person",
+                "countrySyllables": [
+                  {
+                    "text": "PER",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "son",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "per-son-AL-i-ty",
+                "natAudio": "personality",
+                "natSyllables": [
+                  {
+                    "text": "per",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "son",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "AL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ty",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "In person, stress the first syllable: PER-son. In personality, stress moves to AL: per-son-AL-i-ty."
+              },
+              {
+                "id": "pair-2",
+                "country": "KIND",
+                "countryAudio": "kind",
+                "countrySyllables": [
+                  {
+                    "text": "KIND",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "KIND-ness",
+                "natAudio": "kindness",
+                "natSyllables": [
+                  {
+                    "text": "KIND",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ness",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Keep the strong beat on KIND in both words. Make the last syllable in kindness short and weak."
+              },
+              {
+                "id": "pair-3",
+                "country": "CHEER-ful",
+                "countryAudio": "cheerful",
+                "countrySyllables": [
+                  {
+                    "text": "CHEER",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ful",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "CHEER-ful-ly",
+                "natAudio": "cheerfully",
+                "natSyllables": [
+                  {
+                    "text": "CHEER",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ful",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ly",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Keep the stress on CHEER. Say the final syllables quickly: CHEER-ful-ly."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "My best friend is cheerful and polite.",
+                "phonetic": "/maɪ best frend ɪz ˈtʃɪəfəl ænd pəˈlaɪt/",
+                "focus": "Personality adjectives",
+                "hint": "Make CHEER strong in cheerful and LITE strong in polite."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "She is honest and helpful.",
+                "phonetic": "/ʃiː ɪz ˈɒnɪst ænd ˈhelpfəl/",
+                "focus": "Clear adjective endings",
+                "hint": "Say the h clearly in helpful. Keep honest smooth and clear."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "He is shy, but he is very kind.",
+                "phonetic": "/hiː ɪz ʃaɪ bət hiː ɪz ˈveri kaɪnd/",
+                "focus": "Contrast with but",
+                "hint": "Pause a little before but, then say very kind with a warm voice."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "She is confident when she speaks in public.",
+                "phonetic": "/ʃiː ɪz ˈkɒnfɪdənt wen ʃiː spiːks ɪn ˈpʌblɪk/",
+                "focus": "Word stress and sentence rhythm",
+                "hint": "Stress CON in confident and PUB in public."
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "Is your friend happy today?",
+                "phonetic": "/ɪz jɔː frend ˈhæpi təˈdeɪ/",
+                "focus": "Rising intonation in a question",
+                "hint": "Let your voice rise on today because this is a yes or no question."
+              }
+            ],
+            "roleplay": {
+              "context": "You are speaking with Mr. Khoirul about your best friend. He asks about your friend's name, personality, and feelings. Describe your friend with simple adjectives and give a reason why you like this person.",
+              "roles": [
+                "Mr. Khoirul",
+                "You"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Hello! Today, let's talk about your best friend. What is your best friend's name?",
+                  "translation": "Halo! Hari ini, mari kita bicara tentang sahabatmu. Siapa nama sahabatmu?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Hi, Mr. Khoirul! My best friend's name is Sarah.",
+                  "translation": "Hai, Pak Khoirul! Nama sahabat saya Sarah."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Nice! Can you describe Sarah's personality? What is she like?",
+                  "translation": "Bagus! Bisakah kamu menggambarkan kepribadian Sarah? Seperti apa dia?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "She is very friendly and cheerful. She always smiles.",
+                  "translation": "Dia sangat ramah dan ceria. Dia selalu tersenyum."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "That sounds wonderful! Why do you like her?",
+                  "translation": "Itu terdengar menyenangkan! Mengapa kamu menyukainya?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Because she is honest and helpful. She helps me with my homework.",
+                  "translation": "Karena dia jujur dan suka membantu. Dia membantu saya mengerjakan pekerjaan rumah."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Excellent! Is she shy or confident?",
+                  "translation": "Bagus sekali! Apakah dia pemalu atau percaya diri?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "She is confident. She is not shy when speaking in public.",
+                  "translation": "Dia percaya diri. Dia tidak pemalu saat berbicara di depan umum."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-3-m06-s-quiz",
+          "moduleId": "A1.3-M06",
+          "subModuleId": "sub-a1-3-m06-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "My Best Friend",
+                "instruction": "Talk about your best friend in three or four short sentences.",
+                "audioPrompt": "Please tell me about your best friend.",
+                "storyPoints": [
+                  "Say your friend's name.",
+                  "Say two personality words.",
+                  "Say why you like your friend."
+                ],
+                "targetSentence": "My best friend is Sarah. She is cheerful and honest. I like her because she is helpful.",
+                "phonetic": "/maɪ best frend ɪz ˈsærə. ʃiː ɪz ˈtʃɪəfəl ænd ˈɒnɪst. aɪ laɪk hɜː bɪˈkɒz ʃiː ɪz ˈhelpfəl/",
+                "expectedKeywords": [
+                  "best friend",
+                  "cheerful",
+                  "honest",
+                  "helpful"
+                ],
+                "hint": "Speak in short sentences. Stress the first syllable in cheerful and honest.",
+                "explanation": "This task checks if you can introduce a friend, describe personality, and give a simple reason."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "A Happy Day",
+                "instruction": "Tell a short story about a time when you felt happy or excited.",
+                "audioPrompt": "What happened on your happy day?",
+                "storyPoints": [
+                  "Say when or where it happened.",
+                  "Say how you felt.",
+                  "Say why you felt this way."
+                ],
+                "targetSentence": "Yesterday, I felt happy because my friend helped me with my homework.",
+                "phonetic": "/ˈjestədeɪ aɪ felt ˈhæpi bɪˈkɒz maɪ frend helpt miː wɪð maɪ ˈhəʊmwɜːk/",
+                "expectedKeywords": [
+                  "yesterday",
+                  "happy",
+                  "friend",
+                  "because"
+                ],
+                "hint": "Use a clear falling voice at the end of your story.",
+                "explanation": "This task checks if you can describe a feeling and give a simple reason."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Talking About a Friend",
+                "instruction": "Answer Mr. Khoirul's question about your friend's personality.",
+                "audioPrompt": "What is your friend like?",
+                "scenarioContext": "You are talking to Mr. Khoirul about a good friend at school. He wants to know your friend's personality.",
+                "characterRole": "You are a student. Describe your friend using two personality adjectives.",
+                "targetSentence": "My friend is polite and cheerful.",
+                "phonetic": "/maɪ frend ɪz pəˈlaɪt ænd ˈtʃɪəfəl/",
+                "expectedKeywords": [
+                  "friend",
+                  "polite",
+                  "cheerful"
+                ],
+                "hint": "Stress LITE in polite and CHEER in cheerful.",
+                "explanation": "This roleplay checks if you can use be plus adjectives to describe a person."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Why Do You Like Your Friend?",
+                "instruction": "Give Mr. Khoirul a reason why you like your friend.",
+                "audioPrompt": "Why do you like your friend?",
+                "scenarioContext": "Mr. Khoirul asks why your friend is special to you.",
+                "characterRole": "You are a student. Give one reason using because.",
+                "targetSentence": "I like her because she is honest and helpful.",
+                "phonetic": "/aɪ laɪk hɜː bɪˈkɒz ʃiː ɪz ˈɒnɪst ænd ˈhelpfəl/",
+                "expectedKeywords": [
+                  "because",
+                  "honest",
+                  "helpful"
+                ],
+                "hint": "Pause after her, then say because clearly.",
+                "explanation": "This roleplay checks if you can give a simple reason with because."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Shy or Confident?",
+                "instruction": "Answer the question and describe your friend in public.",
+                "audioPrompt": "Is your friend shy or confident?",
+                "scenarioContext": "Mr. Khoirul wants to know how your friend feels when speaking in front of other people.",
+                "characterRole": "You are a student. Choose shy or confident and make one complete sentence.",
+                "targetSentence": "She is confident. She is not shy in public.",
+                "phonetic": "/ʃiː ɪz ˈkɒnfɪdənt. ʃiː ɪz nɒt ʃaɪ ɪn ˈpʌblɪk/",
+                "expectedKeywords": [
+                  "confident",
+                  "not shy",
+                  "public"
+                ],
+                "hint": "Stress CON in confident and PUB in public.",
+                "explanation": "This roleplay checks if you can describe confidence and use not for a negative description."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "How Do You Feel Today?",
+                "instruction": "Tell Mr. Khoirul how you feel today and give one reason.",
+                "audioPrompt": "How are you feeling today?",
+                "scenarioContext": "You meet Mr. Khoirul before class. He asks about your mood today.",
+                "characterRole": "You are a student. Say one feeling and one simple reason.",
+                "targetSentence": "I feel excited today because I have English class.",
+                "phonetic": "/aɪ fiːl ɪkˈsaɪtɪd təˈdeɪ bɪˈkɒz aɪ hæv ˈɪŋɡlɪʃ klɑːs/",
+                "expectedKeywords": [
+                  "feel",
+                  "excited",
+                  "because",
+                  "English class"
+                ],
+                "hint": "Stress CITE in excited. Use a happy, clear voice.",
+                "explanation": "This roleplay checks if you can talk about your current feeling and give a reason."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "focus": "vocab",
+                "instruction": "Say the adjective that means a person tells the truth.",
+                "audioPrompt": "A person who tells the truth is...",
+                "targetSentence": "An honest person tells the truth.",
+                "phonetic": "/ən ˈɒnɪst ˈpɜːsən telz ðə truːθ/",
+                "expectedKeywords": [
+                  "honest",
+                  "truth"
+                ],
+                "hint": "Say honest with a silent h sound at the beginning.",
+                "explanation": "Honest describes a person who tells the truth."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "focus": "grammar",
+                "instruction": "Make a complete sentence with she, be, and confident.",
+                "audioPrompt": "Please say: she, confident.",
+                "targetSentence": "She is confident.",
+                "phonetic": "/ʃiː ɪz ˈkɒnfɪdənt/",
+                "expectedKeywords": [
+                  "she",
+                  "is",
+                  "confident"
+                ],
+                "hint": "Remember to use is after she.",
+                "explanation": "Use she is before an adjective: She is confident."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Stress Shift Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Say both words clearly. Notice that the strong syllable changes.",
+                "audioPrompt": "Say: person, personality.",
+                "targetSentence": "PER-son. Per-son-AL-i-ty.",
+                "phonetic": "/ˈpɜːsən. ˌpɜːsəˈnælɪti/",
+                "expectedKeywords": [
+                  "person",
+                  "personality"
+                ],
+                "hint": "Stress PER in person. Stress AL in personality.",
+                "explanation": "The stress changes from the first syllable in person to the third syllable in personality."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Say the question with a rising voice, then say the answer with a falling voice.",
+                "audioPrompt": "Is she cheerful? Yes, she is.",
+                "targetSentence": "Is she cheerful? Yes, she is.",
+                "phonetic": "/ɪz ʃiː ˈtʃɪəfəl? jes ʃiː ɪz/",
+                "expectedKeywords": [
+                  "cheerful",
+                  "yes",
+                  "she is"
+                ],
+                "hint": "Raise your voice at the end of the question. Lower your voice at the end of the answer.",
+                "explanation": "Yes or no questions usually have rising intonation. Statements usually have falling intonation."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

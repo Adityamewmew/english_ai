@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: process.platform === "win32" ? undefined : "standalone",
   async rewrites() {
     const rawApiUrl = process.env.NEXT_PUBLIC_API_URL || process.env.API_URL;
     const apiUrl = rawApiUrl

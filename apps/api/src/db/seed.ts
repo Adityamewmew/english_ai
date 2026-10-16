@@ -70,29 +70,64 @@ async function runSeed() {
     console.log(`✅ ${inserted} soal resmi berhasil diimpor.`);
   }
 
-  // 3. Seed Default Admin Account
-  console.log("👤 Memeriksa akun Administrator default...");
-  const adminEmail = "admin@eddy.ai";
-  const [existingAdmin] = await db
-    .select()
-    .from(users)
-    .where(eq(users.email, adminEmail))
-    .limit(1);
-
-  if (!existingAdmin) {
-    await db.insert(users).values({
+  // 3. Seed Default Admin Accounts
+  console.log("👤 Memeriksa akun Administrator...");
+  const adminAccounts = [
+    {
       id: "admin-default-001",
       name: "Administrator",
-      email: adminEmail,
-      password: "admin123",
+      email: "admin@eddy.ai",
+      plainPassword: "admin123",
       role: "admin",
+      accessType: 1,
       currentCefr: "C2",
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    });
-    console.log("✅ Akun admin default berhasil dibuat: admin@eddy.ai / admin123");
-  } else {
-    console.log("ℹ️ Akun admin default sudah ada.");
+    },
+    {
+      id: "user-admin-mrkhoirul",
+      name: "Mr. Khoirul",
+      email: "mrkhoriul@gmail.com",
+      plainPassword: "asdasd",
+      role: "admin",
+      accessType: 1,
+      currentCefr: "C2",
+    },
+  ];
+
+  for (const acc of adminAccounts) {
+    const [existing] = await db
+      .select()
+      .from(users)
+      .where(eq(users.email, acc.email))
+      .limit(1);
+
+    const hashedPassword = await Bun.password.hash(acc.plainPassword);
+
+    if (!existing) {
+      await db.insert(users).values({
+        id: acc.id,
+        name: acc.name,
+        email: acc.email,
+        password: hashedPassword,
+        role: acc.role,
+        accessType: acc.accessType,
+        currentCefr: acc.currentCefr,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      });
+      console.log(`✅ Akun ${acc.role} berhasil dibuat: ${acc.email}`);
+    } else {
+      await db
+        .update(users)
+        .set({
+          name: acc.name,
+          password: hashedPassword,
+          role: acc.role,
+          accessType: acc.accessType,
+          updatedAt: new Date(),
+        })
+        .where(eq(users.email, acc.email));
+      console.log(`ℹ️ Akun ${acc.role} diperbarui: ${acc.email}`);
+    }
   }
 
   console.log("🎉 Seeding data selesai!");

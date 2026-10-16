@@ -1,0 +1,1654 @@
+{
+  "module": {
+    "id": "A1.2-M07",
+    "levelId": "A1.2",
+    "title": "Describing Health, Body Parts & Ailments",
+    "cefr": "A1",
+    "group": "A1.2 - Daily Logistics & Practical Actions",
+    "objective": "Describe common health issues, name body parts, and talk about everyday ailments using phrases like 'I have a headache / sore throat'.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 7
+  },
+  "subModules": [
+    {
+      "id": "sub-a1-2-m07-reading",
+      "moduleId": "A1.2-M07",
+      "skillType": "reading",
+      "title": "Reading Mission: Understanding Health Problems & Simple Advice",
+      "theme": "Describing Health, Body Parts & Ailments",
+      "grammarFocus": "I have a + ailment, My + body part + hurts, You should + verb",
+      "vocabularyFocus": "Body parts, common ailments, health advice verbs",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a1-2-m07-r-theory",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to your Reading Mission about health, body parts, and ailments! In everyday life, we sometimes feel sick or have pain. We need to tell other people how we feel so they can help us. In this mission, you will read a short passage about people who are not feeling well. You will learn to understand sentences like 'I have a headache,' 'My stomach hurts,' and 'You should rest.' By the end, you will be able to read and understand simple health descriptions and advice. Let's get started — you can do this!",
+            "linguisticTarget": {
+              "grammar": "Three key patterns: (1) 'I have a + ailment' to describe a health problem, (2) 'My + body part + hurts' to say where the pain is, and (3) 'You should + base verb' to give simple health advice.",
+              "vocabulary": "Body parts (head, stomach, throat, back, tooth, leg, arm, ear), common ailments (headache, stomachache, sore throat, fever, cough, cold, toothache, backache), and health advice words (rest, medicine, doctor, water, sleep).",
+              "readingStrategy": "Scan the passage for key health words like 'headache,' 'hurts,' and 'should.' These signal words help you quickly find who is sick, what the problem is, and what advice is given."
+            },
+            "learningObjectives": [
+              "Understand the main idea of a short A1 passage about people describing their health problems.",
+              "Identify key details including which body part hurts, what ailment someone has, and what advice is given.",
+              "Recognize and practice the grammar patterns 'I have a...,' 'My... hurts,' and 'You should...' in context.",
+              "Build confidence reading simple health-related English texts."
+            ],
+            "contextWarmup": {
+              "prompt": "Imagine you wake up and your head hurts a lot. What do you say to your friend?",
+              "options": [
+                "I have a headache.",
+                "I have a head.",
+                "My headache has me."
+              ],
+              "correctIndex": 0,
+              "explanation": "Great! 'I have a headache' is the correct and natural way to tell someone about pain in your head. We use the pattern 'I have a + ailment name.' Notice the article 'a' before 'headache' — don't forget it!"
+            },
+            "rules": [
+              "Use 'I have a + ailment' to describe a health complaint: 'I have a headache,' 'I have a fever,' 'I have a cold.' Always include the article 'a' before countable ailments.",
+              "Use 'My + body part + hurts' to explain where the pain is: 'My stomach hurts,' 'My back hurts,' 'My ear hurts.' Use the singular form of the body part with 'hurts.'",
+              "Use 'You should + base verb' to give simple advice: 'You should rest,' 'You should drink water,' 'You should see a doctor.' The verb after 'should' is always in its base form — no 'to,' no '-s,' no '-ing.'"
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Beginner Pitfall",
+              "explanation": "Many beginners forget the article 'a' after 'have' when talking about ailments, or they use the plural form of a body part with 'hurts.' Remember: 'hurts' (with -s) goes with a singular subject like 'My leg,' not 'My legs.'",
+              "wrong": "I have headache. My legs hurts.",
+              "correct": "I have a headache. My leg hurts."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Health & Ailments",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in natural spoken English:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "am",
+                "vowelDropped": "a",
+                "remainder": "m",
+                "contracted": "I'm",
+                "exampleFull": "I am not feeling well today.",
+                "exampleContracted": "I'm not feeling well today."
+              },
+              {
+                "subject": "I",
+                "verb": "do not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "don't",
+                "exampleFull": "I do not feel good.",
+                "exampleContracted": "I don't feel good."
+              },
+              {
+                "subject": "He",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "He's",
+                "exampleFull": "He is sick today.",
+                "exampleContracted": "He's sick today."
+              },
+              {
+                "subject": "She",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "She's",
+                "exampleFull": "She is at the doctor.",
+                "exampleContracted": "She's at the doctor."
+              },
+              {
+                "subject": "You",
+                "verb": "should not",
+                "vowelDropped": "o",
+                "remainder": "n't",
+                "contracted": "shouldn't",
+                "exampleFull": "You should not go to work.",
+                "exampleContracted": "You shouldn't go to work."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Structure with Health Descriptions & Advice",
+              "description": "Assemble and swap sentence blocks to explore affirmative, negative, and question patterns:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person (Singular)"
+                },
+                {
+                  "label": "He",
+                  "pronoun": "He",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "She",
+                  "pronoun": "She",
+                  "correctToBe": "is",
+                  "role": "Third Person (Singular)"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "First Person Plural"
+                },
+                {
+                  "label": "They",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Third Person Plural"
+                },
+                {
+                  "label": "You",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Second Person"
+                }
+              ],
+              "complements": [
+                "have a headache and need to rest.",
+                "have a sore throat and can't speak well.",
+                "should drink warm water and take medicine.",
+                "should see a doctor today.",
+                "not feeling well because my stomach hurts.",
+                "sick with a fever and a cough."
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m07-r-vocab",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "headache",
+                "ipa": "/ˈhedeɪk/",
+                "meaning": "sakit kepala",
+                "collocation": "I have a bad headache today."
+              },
+              {
+                "word": "stomachache",
+                "ipa": "/ˈstʌməkeɪk/",
+                "meaning": "sakit perut",
+                "collocation": "She has a stomachache after eating too much."
+              },
+              {
+                "word": "sore throat",
+                "ipa": "/sɔːr θroʊt/",
+                "meaning": "sakit tenggorokan",
+                "collocation": "I have a sore throat and can't speak well."
+              },
+              {
+                "word": "fever",
+                "ipa": "/ˈfiːvər/",
+                "meaning": "demam",
+                "collocation": "He has a high fever and needs to rest."
+              },
+              {
+                "word": "cough",
+                "ipa": "/kɒf/",
+                "meaning": "batuk",
+                "collocation": "I have a bad cough and need medicine."
+              },
+              {
+                "word": "toothache",
+                "ipa": "/ˈtuːθeɪk/",
+                "meaning": "sakit gigi",
+                "collocation": "She has a toothache and will see the dentist."
+              },
+              {
+                "word": "cold",
+                "ipa": "/koʊld/",
+                "meaning": "pilek; flu ringan",
+                "collocation": "I caught a cold and my nose is running."
+              },
+              {
+                "word": "backache",
+                "ipa": "/ˈbækeɪk/",
+                "meaning": "sakit punggung",
+                "collocation": "My father has a backache from working too hard."
+              },
+              {
+                "word": "medicine",
+                "ipa": "/ˈmedɪsən/",
+                "meaning": "obat",
+                "collocation": "You should take this medicine twice a day."
+              },
+              {
+                "word": "rest",
+                "ipa": "/rest/",
+                "meaning": "istirahat",
+                "collocation": "You should rest at home when you are sick."
+              },
+              {
+                "word": "doctor",
+                "ipa": "/ˈdɒktər/",
+                "meaning": "dokter",
+                "collocation": "You should see a doctor if you feel very sick."
+              },
+              {
+                "word": "hurt",
+                "ipa": "/hɜːrt/",
+                "meaning": "sakit; terasa nyeri",
+                "collocation": "My arm hurts when I move it."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m07-r-guided",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-reading",
+          "sectionType": "dialogue",
+          "title": "Reading Passage: A Sick Day at School",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "A Sick Day at School",
+            "context": "It is Monday morning at school. Three students are not feeling well. They talk to their teacher, Mrs. Green, about their health problems. Mrs. Green gives them simple advice.",
+            "text": "It is Monday morning. Mrs. Green is the teacher. She sees that some students are not feeling well.\n\nTom says, \"Mrs. Green, I have a headache and my back hurts. I don't feel good.\" Mrs. Green says, \"Oh no, Tom. You should rest and drink some water.\"\n\nLisa says, \"I have a sore throat and a cough. It hurts when I talk.\" Mrs. Green says, \"You should drink warm water and take some medicine. You should also see a doctor after school.\"\n\nThen Ben comes in. He looks very tired. He says, \"I have a fever and a stomachache. My stomach really hurts.\" Mrs. Green says, \"Ben, you should go home and rest. You should not be at school today. I will call your mother.\"\n\nMrs. Green tells the class, \"When you are sick, please tell me. Your health is important!\"",
+            "wordCount": 148,
+            "highlights": [
+              {
+                "text": "I have a headache",
+                "note": "Pattern: 'I have a + ailment' — used to describe a health problem.",
+                "type": "grammar"
+              },
+              {
+                "text": "my back hurts",
+                "note": "Pattern: 'My + body part + hurts' — used to say where the pain is.",
+                "type": "grammar"
+              },
+              {
+                "text": "sore throat",
+                "note": "A common ailment meaning pain in the throat area.",
+                "type": "vocab"
+              },
+              {
+                "text": "cough",
+                "note": "A health problem when air comes out of your mouth loudly and repeatedly.",
+                "type": "vocab"
+              },
+              {
+                "text": "You should rest",
+                "note": "Pattern: 'You should + base verb' — used to give advice.",
+                "type": "grammar"
+              },
+              {
+                "text": "fever",
+                "note": "When your body temperature is very high because you are sick.",
+                "type": "vocab"
+              },
+              {
+                "text": "stomachache",
+                "note": "Pain in the stomach area.",
+                "type": "vocab"
+              },
+              {
+                "text": "medicine",
+                "note": "Something you take (pills or liquid) to feel better when you are sick.",
+                "type": "vocab"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m07-r-practice",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-reading",
+          "sectionType": "practice",
+          "title": "Guided Comprehension Check",
+          "orderIndex": 4,
+          "content": {
+            "gistQuestion": {
+              "prompt": "What is the passage mainly about?",
+              "options": [
+                "Three students tell their teacher about their health problems, and she gives them advice.",
+                "Three students play sports at school and get tired.",
+                "A teacher is sick and goes home early."
+              ],
+              "correctIndex": 0,
+              "explanation": "The passage is about three students — Tom, Lisa, and Ben — who are not feeling well. They describe their ailments to Mrs. Green, and she gives each of them simple health advice."
+            },
+            "detailQuestions": [
+              {
+                "id": 1,
+                "prompt": "What health problems does Tom have?",
+                "options": [
+                  "A headache and a backache.",
+                  "A sore throat and a cough.",
+                  "A fever and a stomachache."
+                ],
+                "correctIndex": 0,
+                "explanation": "Tom says, 'I have a headache and my back hurts.' This means he has a headache and a backache (pain in his back)."
+              },
+              {
+                "id": 2,
+                "prompt": "What advice does Mrs. Green give to Lisa?",
+                "options": [
+                  "She should drink warm water, take medicine, and see a doctor after school.",
+                  "She should go home and rest.",
+                  "She should drink cold water and sleep."
+                ],
+                "correctIndex": 0,
+                "explanation": "Mrs. Green tells Lisa, 'You should drink warm water and take some medicine. You should also see a doctor after school.' This is the complete advice for Lisa."
+              },
+              {
+                "id": 3,
+                "prompt": "Why does Mrs. Green tell Ben to go home?",
+                "options": [
+                  "Because Ben has a fever and a stomachache.",
+                  "Because Ben has a toothache.",
+                  "Because Ben is late for school."
+                ],
+                "correctIndex": 0,
+                "explanation": "Ben says he has a fever and a stomachache. Mrs. Green tells him he should go home and rest because he should not be at school when he is that sick."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m07-r-quiz",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-reading",
+          "sectionType": "quiz",
+          "title": "Reading Mastery Quiz",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "According to the passage, who has a sore throat and a cough?",
+                "options": [
+                  "Lisa",
+                  "Tom",
+                  "Ben"
+                ],
+                "answer": "Lisa",
+                "explanation": "Lisa says, 'I have a sore throat and a cough.' Tom has a headache and backache, and Ben has a fever and stomachache."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which sentence uses the correct pattern to describe a health problem?",
+                "options": [
+                  "I have a stomachache.",
+                  "I have stomachache.",
+                  "I has a stomachache."
+                ],
+                "answer": "I have a stomachache.",
+                "explanation": "The correct pattern is 'I have a + ailment.' You need the article 'a' before 'stomachache,' and the verb 'have' is correct with the subject 'I.'"
+              },
+              {
+                "id": "q-r-3",
+                "question": "Mrs. Green says Ben should NOT be at school. What does she tell him to do?",
+                "options": [
+                  "Go home and rest.",
+                  "Take medicine and stay at school.",
+                  "See a dentist."
+                ],
+                "answer": "Go home and rest.",
+                "explanation": "Mrs. Green tells Ben, 'You should go home and rest. You should not be at school today.' She also says she will call his mother."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Choose the correct sentence: 'My arm _____.'",
+                "options": [
+                  "hurts",
+                  "hurt",
+                  "hurting"
+                ],
+                "answer": "hurts",
+                "explanation": "'My arm' is a singular subject (third person singular), so the verb needs an '-s': 'My arm hurts.' We do not say 'My arm hurt' (past tense) or 'My arm hurting' (incomplete)."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What does Mrs. Green tell the whole class at the end of the passage?",
+                "options": [
+                  "When you are sick, please tell me. Your health is important!",
+                  "You should all go home today.",
+                  "Don't come to school on Monday."
+                ],
+                "answer": "When you are sick, please tell me. Your health is important!",
+                "explanation": "At the end of the passage, Mrs. Green says, 'When you are sick, please tell me. Your health is important!' She wants students to communicate their health problems."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Which is the correct way to give advice using 'should'?",
+                "options": [
+                  "You should see a doctor.",
+                  "You should to see a doctor.",
+                  "You should seeing a doctor."
+                ],
+                "answer": "You should see a doctor.",
+                "explanation": "After 'should,' we always use the base form of the verb — no 'to,' no '-ing,' no '-s.' So 'You should see a doctor' is correct."
+              },
+              {
+                "id": "q-r-7",
+                "question": "In the passage, Lisa says 'It hurts when I talk.' What hurts?",
+                "options": [
+                  "Her throat.",
+                  "Her stomach.",
+                  "Her head."
+                ],
+                "answer": "Her throat.",
+                "explanation": "Lisa says she has a sore throat and a cough. Then she says, 'It hurts when I talk.' Talking uses the throat, so her throat is what hurts."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m07-listening",
+      "moduleId": "A1.2-M07",
+      "skillType": "listening",
+      "title": "Listening Mission: Understanding Health Complaints at Work",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a1-2-m07-l-theory",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this listening mission, you will hear a conversation between two colleagues at an office. One person is feeling sick and describes her health problems. The other person asks about her symptoms and gives advice. Listen carefully for words about body parts, common illnesses, and health suggestions. Pay special attention to phrases like 'I have a headache,' 'a sore throat,' and 'you should rest.' These are very common phrases that English speakers use every day when talking about health. Focus on how the speakers use 'I have' to describe symptoms and 'you should' to give advice.",
+            "learningObjectives": [
+              "Identify common body parts and ailments mentioned in a spoken conversation (headache, sore throat, fever, cold).",
+              "Understand when a speaker describes how they feel using phrases like 'I'm not feeling good' and 'My body feels hot.'",
+              "Recognise health advice given with 'you should' such as 'You should go home and rest' or 'You should see a doctor.'",
+              "Distinguish between different health complaints and match them to the correct body part or symptom."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "I have a headache.",
+                "meaning": "Saya sakit kepala.",
+                "note": "Used to describe pain in your head. 'I have a + body part + ache' is a common pattern."
+              },
+              {
+                "phrase": "I have a sore throat.",
+                "meaning": "Saya sakit tenggorokan.",
+                "note": "Used when your throat hurts, especially when swallowing. 'Sore' means painful."
+              },
+              {
+                "phrase": "Do you have a fever?",
+                "meaning": "Apakah kamu demam?",
+                "note": "A question to ask if someone has a high body temperature. 'Fever' means your body is very hot because of illness."
+              },
+              {
+                "phrase": "I'm not feeling good.",
+                "meaning": "Saya tidak enak badan.",
+                "note": "A general way to say you are unwell. You can also say 'I'm not feeling well' or 'I feel sick.'"
+              },
+              {
+                "phrase": "You should go home and rest.",
+                "meaning": "Kamu sebaiknya pulang dan istirahat.",
+                "note": "'You should' is used to give friendly advice. It is softer than 'You must.'"
+              },
+              {
+                "phrase": "You should see a doctor.",
+                "meaning": "Kamu sebaiknya ke dokter.",
+                "note": "Common advice when someone is sick. 'See a doctor' means to visit a doctor for a medical check."
+              },
+              {
+                "phrase": "Maybe you have a cold.",
+                "meaning": "Mungkin kamu pilek/flu.",
+                "note": "A cold is a common illness with symptoms like a runny nose, sore throat, and sneezing."
+              },
+              {
+                "phrase": "Take some medicine.",
+                "meaning": "Minum obat.",
+                "note": "In English we say 'take medicine,' not 'drink medicine.' This is an important difference to remember."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "Are you okay?",
+                "fast": "Are y'okay?",
+                "slowIpa": "/ɑːr juː oʊˈkeɪ/",
+                "fastIpa": "/ɑːr jəˈkeɪ/",
+                "note": "In fast speech, 'you' reduces to 'yə' and blends with 'okay,' sounding like 'y'okay.' The 'ou' sound in 'you' becomes a quick, weak 'ə' sound."
+              },
+              {
+                "id": 2,
+                "slow": "You don't look well.",
+                "fast": "You don't look well.",
+                "slowIpa": "/juː doʊnt lʊk wɛl/",
+                "fastIpa": "/jə doʊn(t) lʊk wɛl/",
+                "note": "The 't' at the end of 'don't' is often not fully pronounced before the 'l' in 'look.' It becomes a glottal stop or is dropped entirely."
+              },
+              {
+                "id": 3,
+                "slow": "I'm not feeling good.",
+                "fast": "I'm not feelin' good.",
+                "slowIpa": "/aɪm nɒt ˈfiːlɪŋ ɡʊd/",
+                "fastIpa": "/aɪm nɒt ˈfiːlɪn ɡʊd/",
+                "note": "The '-ing' ending in 'feeling' often sounds like '-in' in casual speech. The final 'g' sound is dropped. This is very common in everyday English."
+              },
+              {
+                "id": 4,
+                "slow": "I have a headache and a sore throat.",
+                "fast": "I have a headache 'n a sore throat.",
+                "slowIpa": "/aɪ hæv ə ˈhɛdeɪk ænd ə sɔːr θroʊt/",
+                "fastIpa": "/aɪ hæv ə ˈhɛdeɪk ən ə sɔːr θroʊt/",
+                "note": "'And' is reduced to 'n' or 'ən' in fast speech. This is one of the most common reductions in English. Listen for this small connecting sound between the two symptoms."
+              },
+              {
+                "id": 5,
+                "slow": "You should see a doctor.",
+                "fast": "You should see a doctor.",
+                "slowIpa": "/juː ʃʊd siː ə ˈdɒktər/",
+                "fastIpa": "/jə ʃəd siː ə ˈdɒktər/",
+                "note": "Both 'you' and 'should' weaken in natural speech. 'You' becomes 'yə' and 'should' becomes 'shəd.' The stress falls on 'see' and 'doctor' because they carry the main meaning."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m07-l-dialogue",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Feeling Sick at the Office",
+          "orderIndex": 2,
+          "content": {
+            "context": "Lisa does not look well at the office today. Her colleague, Tom, notices and asks about her health. Lisa describes her symptoms, and Tom gives her some friendly advice about what she should do to feel better.",
+            "audioPrompt": "Listen carefully to the following dialogue between Tom and Lisa. Pay attention to the health words, body parts, and advice that they use.",
+            "lines": [
+              {
+                "speaker": "Tom",
+                "text": "Hi Lisa. Are you okay? You don't look well.",
+                "audioUrl": "/audio/modules/a1-2-m07/dialogue-1.mp3",
+                "translation": "Hai Lisa. Kamu baik-baik saja? Kamu terlihat tidak sehat.",
+                "emotion": "concerned"
+              },
+              {
+                "speaker": "Lisa",
+                "text": "Hi Tom. I'm not feeling good. I have a headache and a sore throat.",
+                "audioUrl": "/audio/modules/a1-2-m07/dialogue-2.mp3",
+                "translation": "Hai Tom. Aku tidak enak badan. Aku sakit kepala dan sakit tenggorokan.",
+                "emotion": "tired"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Oh no! Do you have a fever too?",
+                "audioUrl": "/audio/modules/a1-2-m07/dialogue-3.mp3",
+                "translation": "Oh tidak! Kamu juga demam?",
+                "emotion": "concerned"
+              },
+              {
+                "speaker": "Lisa",
+                "text": "Yes, I think so. My body feels hot.",
+                "audioUrl": "/audio/modules/a1-2-m07/dialogue-4.mp3",
+                "translation": "Ya, sepertinya begitu. Badanku terasa panas.",
+                "emotion": "uncomfortable"
+              },
+              {
+                "speaker": "Tom",
+                "text": "That sounds bad. Does your stomach hurt too?",
+                "audioUrl": "/audio/modules/a1-2-m07/dialogue-5.mp3",
+                "translation": "Kedengarannya parah. Perutmu juga sakit?",
+                "emotion": "concerned"
+              },
+              {
+                "speaker": "Lisa",
+                "text": "No, my stomach is fine. But my arms and legs feel weak.",
+                "audioUrl": "/audio/modules/a1-2-m07/dialogue-6.mp3",
+                "translation": "Tidak, perutku baik-baik saja. Tapi tangan dan kakiku terasa lemas.",
+                "emotion": "tired"
+              },
+              {
+                "speaker": "Tom",
+                "text": "You should go home and rest. Maybe you have a cold.",
+                "audioUrl": "/audio/modules/a1-2-m07/dialogue-7.mp3",
+                "translation": "Kamu sebaiknya pulang dan istirahat. Mungkin kamu pilek.",
+                "emotion": "caring"
+              },
+              {
+                "speaker": "Lisa",
+                "text": "You're right. I should also drink warm tea and take some medicine.",
+                "audioUrl": "/audio/modules/a1-2-m07/dialogue-8.mp3",
+                "translation": "Kamu benar. Aku juga sebaiknya minum teh hangat dan minum obat.",
+                "emotion": "agreeable"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Yes, and you should see a doctor if you don't feel better tomorrow.",
+                "audioUrl": "/audio/modules/a1-2-m07/dialogue-9.mp3",
+                "translation": "Ya, dan kamu sebaiknya ke dokter kalau tidak merasa lebih baik besok.",
+                "emotion": "serious"
+              },
+              {
+                "speaker": "Lisa",
+                "text": "Thank you, Tom. I'll do that. See you later.",
+                "audioUrl": "/audio/modules/a1-2-m07/dialogue-10.mp3",
+                "translation": "Terima kasih, Tom. Akan aku lakukan. Sampai jumpa nanti.",
+                "emotion": "grateful"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m07-l-quiz",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Are you okay?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Are you _____?\"",
+                "targetWord": "okay",
+                "explanation": "Full audio: \"Are you okay?\". The missing word is \"okay\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "You don't look well.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"You don't look _____.\"",
+                "targetWord": "well",
+                "explanation": "Full audio: \"You don't look well.\". The missing word is \"well\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "I'm not feeling good.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"I'm not feeling _____.\"",
+                "targetWord": "good",
+                "explanation": "Full audio: \"I'm not feeling good.\". The missing word is \"good\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I have a headache and a sore throat.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"I have a headache and a sore _____.\"",
+                "targetWord": "throat",
+                "explanation": "Full audio: \"I have a headache and a sore throat.\". The missing word is \"throat\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Do you have a fever too?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Do you have a fever _____?\"",
+                "targetWord": "too",
+                "explanation": "Full audio: \"Do you have a fever too?\". The missing word is \"too\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Yes, I think so.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes I think so",
+                "words": [
+                  "so",
+                  "I",
+                  "think",
+                  "Yes"
+                ],
+                "explanation": "Correct sentence order: \"Yes, I think so.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "My body feels hot.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "My body feels hot",
+                "words": [
+                  "My",
+                  "hot",
+                  "body",
+                  "feels"
+                ],
+                "explanation": "Correct sentence order: \"My body feels hot.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "That sounds bad.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds bad",
+                "words": [
+                  "sounds",
+                  "That",
+                  "bad"
+                ],
+                "explanation": "Correct sentence order: \"That sounds bad.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Does your stomach hurt too?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Does your stomach hurt too",
+                "words": [
+                  "stomach",
+                  "too",
+                  "hurt",
+                  "your",
+                  "Does"
+                ],
+                "explanation": "Correct sentence order: \"Does your stomach hurt too?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "No, my stomach is fine.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "No my stomach is fine",
+                "words": [
+                  "fine",
+                  "stomach",
+                  "is",
+                  "No",
+                  "my"
+                ],
+                "explanation": "Correct sentence order: \"No, my stomach is fine.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Are you okay?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Are you _____?\"",
+                "targetWord": "okay",
+                "explanation": "Full audio: \"Are you okay?\". The missing word is \"okay\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "You don't look well.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"You don't look _____.\"",
+                "targetWord": "well",
+                "explanation": "Full audio: \"You don't look well.\". The missing word is \"well\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "I'm not feeling good.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"I'm not feeling _____.\"",
+                "targetWord": "good",
+                "explanation": "Full audio: \"I'm not feeling good.\". The missing word is \"good\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I have a headache and a sore throat.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Lisa: \"I have a headache and a sore _____.\"",
+                "targetWord": "throat",
+                "explanation": "Full audio: \"I have a headache and a sore throat.\". The missing word is \"throat\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Do you have a fever too?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Do you have a fever _____?\"",
+                "targetWord": "too",
+                "explanation": "Full audio: \"Do you have a fever too?\". The missing word is \"too\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Yes, I think so.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes I think so",
+                "words": [
+                  "so",
+                  "I",
+                  "think",
+                  "Yes"
+                ],
+                "explanation": "Correct sentence order: \"Yes, I think so.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "My body feels hot.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "My body feels hot",
+                "words": [
+                  "My",
+                  "hot",
+                  "body",
+                  "feels"
+                ],
+                "explanation": "Correct sentence order: \"My body feels hot.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "That sounds bad.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds bad",
+                "words": [
+                  "sounds",
+                  "That",
+                  "bad"
+                ],
+                "explanation": "Correct sentence order: \"That sounds bad.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Does your stomach hurt too?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Does your stomach hurt too",
+                "words": [
+                  "stomach",
+                  "too",
+                  "hurt",
+                  "your",
+                  "Does"
+                ],
+                "explanation": "Correct sentence order: \"Does your stomach hurt too?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "No, my stomach is fine.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "No my stomach is fine",
+                "words": [
+                  "fine",
+                  "stomach",
+                  "is",
+                  "No",
+                  "my"
+                ],
+                "explanation": "Correct sentence order: \"No, my stomach is fine.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m07-writing",
+      "moduleId": "A1.2-M07",
+      "skillType": "writing",
+      "title": "Writing Mission: Talking About Health and Body Pain",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a1-2-m07-w-theory",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this lesson, you will learn how to write sentences about your health. You will describe body parts, talk about pain and sickness, and give simple health advice. You will use three important patterns: 'I have a + ailment', 'My + body part + hurts', and 'You should + verb'. These patterns help you communicate when you feel sick and help others who feel sick too.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Describe Your Sickness with 'I have a...'",
+                "formula": "I have a + ailment (noun).",
+                "example": "I have a headache."
+              },
+              {
+                "step": 2,
+                "title": "Say Where It Hurts with 'My ... hurts'",
+                "formula": "My + body part + hurts.",
+                "example": "My stomach hurts."
+              },
+              {
+                "step": 3,
+                "title": "Give Health Advice with 'You should...'",
+                "formula": "You should + base verb (+ extra information).",
+                "example": "You should drink warm water."
+              },
+              {
+                "step": 4,
+                "title": "Combine Patterns to Write a Short Health Message",
+                "formula": "Greeting + Problem (I have a... / My ... hurts) + Advice request or action.",
+                "example": "Hi, I feel sick. I have a sore throat. I should see a doctor."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always capitalize the word 'I' when talking about yourself. It is always a capital letter, even in the middle of a sentence.",
+                "badExample": "i have a fever and i feel tired.",
+                "goodExample": "I have a fever and I feel tired.",
+                "why": "In English, the pronoun 'I' is always written as a capital letter. This is a fixed rule."
+              },
+              {
+                "rule": "Use the article 'a' before ailment nouns like headache, cold, fever, cough, and sore throat. Write 'I have a headache', not 'I have headache'.",
+                "badExample": "I have headache.",
+                "goodExample": "I have a headache.",
+                "why": "Most ailment nouns in English need the article 'a' after 'have'. This makes the sentence grammatically correct."
+              },
+              {
+                "rule": "Every sentence must end with a period (.), a question mark (?), or an exclamation mark (!). Do not forget the punctuation at the end.",
+                "badExample": "My back hurts",
+                "goodExample": "My back hurts.",
+                "why": "End punctuation tells the reader that the sentence is finished. Without it, the sentence is incomplete."
+              },
+              {
+                "rule": "Use 'hurts' (with an 's') after a singular body part. The body part is the subject, so the verb needs the third-person singular form.",
+                "badExample": "My head hurt.",
+                "goodExample": "My head hurts.",
+                "why": "'My head' is a third-person singular subject (like 'it'), so the verb must be 'hurts' with an 's' in the present tense."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "I have a headache.",
+                "id": "Saya sakit kepala.",
+                "focus": "Pattern: I have a + ailment noun"
+              },
+              {
+                "en": "My stomach hurts.",
+                "id": "Perut saya sakit.",
+                "focus": "Pattern: My + body part + hurts"
+              },
+              {
+                "en": "You should rest and drink warm water.",
+                "id": "Kamu sebaiknya istirahat dan minum air hangat.",
+                "focus": "Pattern: You should + base verb (compound advice)"
+              },
+              {
+                "en": "I have a sore throat and I cannot eat.",
+                "id": "Saya sakit tenggorokan dan saya tidak bisa makan.",
+                "focus": "Combining two clauses with 'and' to describe a health problem"
+              },
+              {
+                "en": "My back hurts because I sit too long.",
+                "id": "Punggung saya sakit karena saya duduk terlalu lama.",
+                "focus": "Using 'because' to give a reason for pain"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m07-w-practice",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "i have a fever and i should see a doctor",
+                "targetSentence": "I have a fever and I should see a doctor.",
+                "translation": "Saya demam dan saya sebaiknya ke dokter.",
+                "keyRule": "Always capitalize the pronoun 'I' and add a period at the end of the sentence.",
+                "requiredCapitals": [
+                  "I",
+                  "I"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "my leg hurts i cannot walk today",
+                "targetSentence": "My leg hurts. I cannot walk today.",
+                "translation": "Kaki saya sakit. Saya tidak bisa berjalan hari ini.",
+                "keyRule": "Start each sentence with a capital letter. Separate two complete ideas into two sentences with a period.",
+                "requiredCapitals": [
+                  "My",
+                  "I"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "you should drink warm water and take medicine",
+                "targetSentence": "You should drink warm water and take medicine.",
+                "translation": "Kamu sebaiknya minum air hangat dan minum obat.",
+                "keyRule": "Capitalize the first word of the sentence and add a period at the end.",
+                "requiredCapitals": [
+                  "You"
+                ]
+              },
+              {
+                "id": "sent-4",
+                "faultySentence": "i have headache and sore throat",
+                "targetSentence": "I have a headache and a sore throat.",
+                "translation": "Saya sakit kepala dan sakit tenggorokan.",
+                "keyRule": "Capitalize 'I', add the article 'a' before each ailment noun, and end with a period.",
+                "requiredCapitals": [
+                  "I"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Describing a Sickness",
+                "meaning": "Saya sakit perut.",
+                "tokens": [
+                  "I",
+                  "have",
+                  "a",
+                  "stomachache."
+                ],
+                "fullSentence": "I have a stomachache."
+              },
+              {
+                "id": "b-2",
+                "category": "Describing Body Pain",
+                "meaning": "Punggung saya sakit.",
+                "tokens": [
+                  "My",
+                  "back",
+                  "hurts."
+                ],
+                "fullSentence": "My back hurts."
+              },
+              {
+                "id": "b-3",
+                "category": "Giving Health Advice",
+                "meaning": "Kamu sebaiknya istirahat di rumah.",
+                "tokens": [
+                  "You",
+                  "should",
+                  "rest",
+                  "at",
+                  "home."
+                ],
+                "fullSentence": "You should rest at home."
+              },
+              {
+                "id": "b-4",
+                "category": "Describing a Sickness with Reason",
+                "meaning": "Saya demam karena saya kehujanan.",
+                "tokens": [
+                  "I",
+                  "have",
+                  "a",
+                  "fever",
+                  "because",
+                  "I",
+                  "got",
+                  "wet",
+                  "in",
+                  "the",
+                  "rain."
+                ],
+                "fullSentence": "I have a fever because I got wet in the rain."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Write a Sick Day Message to Your Teacher",
+                "badge": "Health Messenger",
+                "instruction": "Imagine you are sick today and cannot go to school. Write a short message to your teacher. Tell your teacher what is wrong with you. Use 'I have a...' or 'My ... hurts' to describe your problem. Say what you will do to get better. Write at least 3 sentences.",
+                "example": "Dear Teacher, I am sorry, I cannot come to school today. I have a bad cold and my throat hurts. I should rest at home and drink warm water. I hope I feel better tomorrow. Thank you.",
+                "placeholder": "Dear Teacher, I am sorry, I cannot come to school today because...",
+                "minWords": 15,
+                "xpReward": 30
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Give Health Advice to a Friend",
+                "badge": "Helpful Friend",
+                "instruction": "Your friend tells you: 'I have a headache and my eyes hurt.' Write a short reply to your friend. Give your friend at least two pieces of advice. Use 'You should + verb' for each piece of advice. Be kind and helpful. Write at least 3 sentences.",
+                "example": "Oh no, I am sorry to hear that! You should take some medicine and rest in a dark room. You should not look at your phone. You should drink a lot of water too. I hope you feel better soon!",
+                "placeholder": "Oh no, I am sorry to hear that! You should...",
+                "minWords": 15,
+                "xpReward": 35
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m07-w-quiz",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-writing",
+          "sectionType": "quiz",
+          "title": "Writing Practicum & Assessment",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": "w-p-1",
+                "prompt": "Write 3 sentences about a time you felt sick. In sentence 1, say what sickness you had (use 'I have a...'). In sentence 2, say which body part hurt (use 'My ... hurts'). In sentence 3, say what you did to feel better.",
+                "criteria": "Uses 'I have a + ailment' correctly in sentence 1. Uses 'My + body part + hurts' correctly in sentence 2. Sentence 3 describes an action taken. All sentences start with a capital letter and end with a period. The pronoun 'I' is always capitalized.",
+                "sampleGoodAnswer": "I have a cold. My nose hurts and my head hurts too. I rest at home and drink warm tea."
+              },
+              {
+                "id": "w-p-2",
+                "prompt": "Your classmate says: 'I have a stomachache and my legs hurt.' Write a short reply with at least 3 sentences. Give your classmate two or more pieces of advice using 'You should...'.",
+                "criteria": "Uses 'You should + base verb' at least twice. The reply is kind and relevant to the health problems mentioned. Sentences are complete with correct capitalization and end punctuation. Uses at least 15 words in total.",
+                "sampleGoodAnswer": "I am sorry you feel sick. You should lie down and rest. You should not eat spicy food. You should drink warm water. If you do not feel better, you should see a doctor."
+              },
+              {
+                "id": "w-p-3",
+                "prompt": "Write a short paragraph (at least 4 sentences) about health. Describe a common sickness, say which body parts are affected, and give advice to someone who has this sickness.",
+                "criteria": "The paragraph has at least 4 sentences. It uses 'I have a...' or 'He/She has a...' at least once. It uses 'My/His/Her + body part + hurts' at least once. It uses 'You should + verb' at least once for advice. All sentences have correct capitalization and punctuation. The paragraph is clear and easy to understand.",
+                "sampleGoodAnswer": "A cold is a very common sickness. When you have a cold, your nose hurts and your throat hurts too. You feel tired and you cannot breathe well. You should rest at home, drink warm water, and eat healthy food. You should also see a doctor if you do not feel better after three days."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a1-2-m07-speaking",
+      "moduleId": "A1.2-M07",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Describing Health, Body Parts & Ailments",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a1-2-m07-s-theory",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this speaking lab, you will learn how to talk about your health, name body parts, and describe common ailments like headaches, stomachaches, and sore throats. You will practise saying sentences such as 'I have a headache,' 'My throat is sore,' and 'I feel tired.' Good pronunciation of health words is very important so that a doctor, nurse, or friend can understand you clearly. We will focus on the correct stress in words like 'headache,' 'stomachache,' and 'temperature,' and practise the rising intonation used in yes/no health questions like 'Do you have a fever?'",
+            "audioGuidance": "Pay special attention to how you stress compound nouns about health. In 'HEADache,' the stress is on the first part: HEAD. In 'STOMachache,' the stress is on STOM. When you ask yes/no questions like 'Do you have a sore throat?', your voice should go UP at the end. When you make a statement like 'I have a cold,' your voice should go DOWN at the end. Practise speaking slowly and clearly. Open your mouth wide for the /æ/ sound in 'bad' and 'have.' Round your lips for the /oʊ/ sound in 'throat' and 'cold.'",
+            "pillars": [
+              {
+                "name": "Body Part Vocabulary Clarity",
+                "target": "Clear pronunciation of body part words",
+                "explanation": "You need to say body part words clearly so people understand which part hurts. Practise words like 'head,' 'stomach,' 'throat,' 'back,' 'arm,' 'leg,' and 'chest.' Make sure each word sounds different from the others."
+              },
+              {
+                "name": "Compound Noun Stress",
+                "target": "Correct stress on health compound words",
+                "explanation": "Health words like 'headache,' 'stomachache,' 'toothache,' and 'backache' are compound nouns. The stress always falls on the FIRST part of the word. Say 'HEADache,' not 'headACHE.' This pattern helps listeners understand you quickly."
+              },
+              {
+                "name": "Intonation for Health Questions",
+                "target": "Rising intonation for yes/no health questions",
+                "explanation": "When you ask someone about their health using a yes/no question, your voice should rise at the end. For example: 'Do you have a fever?' goes UP. But when you answer with a statement like 'Yes, I have a fever,' your voice goes DOWN. This difference is very important in English."
+              },
+              {
+                "name": "Expressing Sympathy and Advice",
+                "target": "Natural delivery of advice sentences",
+                "explanation": "When giving health advice, use 'You should' plus a verb. Say 'You should REST' with slight stress on the action word. When expressing sympathy, say 'I'm SORry to hear that' with stress on 'SOR.' Practise these phrases until they feel natural."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a1-2-m07-s-practice",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "HEAD",
+                "countryAudio": "head",
+                "countrySyllables": [
+                  {
+                    "text": "HEAD",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "HEAD-ache",
+                "natAudio": "headache",
+                "natSyllables": [
+                  {
+                    "text": "HEAD",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ache",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The word 'headache' is a compound noun. The stress stays on the first part 'HEAD.' The second part 'ache' is said more softly. This is the normal pattern for all '-ache' health words."
+              },
+              {
+                "id": "pair-2",
+                "country": "STOM-ach",
+                "countryAudio": "stomach",
+                "countrySyllables": [
+                  {
+                    "text": "STOM",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ach",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "STOM-ach-ache",
+                "natAudio": "stomachache",
+                "natSyllables": [
+                  {
+                    "text": "STOM",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ach",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ache",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "When 'stomach' becomes 'stomachache,' the stress remains on the first syllable 'STOM.' The word gets longer but the stress pattern does not change. Keep 'STOM' strong and let the rest be softer."
+              },
+              {
+                "id": "pair-3",
+                "country": "TOOTH",
+                "countryAudio": "tooth",
+                "countrySyllables": [
+                  {
+                    "text": "TOOTH",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "TOOTH-ache",
+                "natAudio": "toothache",
+                "natSyllables": [
+                  {
+                    "text": "TOOTH",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ache",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Like 'headache,' the compound word 'toothache' keeps the stress on the first part 'TOOTH.' Remember to put your tongue between your teeth for the 'th' sound at the beginning."
+              },
+              {
+                "id": "pair-4",
+                "country": "TEM-per-a-ture",
+                "countryAudio": "temperature",
+                "countrySyllables": [
+                  {
+                    "text": "TEM",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "per",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "a",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ture",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "MED-i-cine",
+                "natAudio": "medicine",
+                "natSyllables": [
+                  {
+                    "text": "MED",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "cine",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Both 'temperature' and 'medicine' have stress on the first syllable. Notice that 'temperature' has four syllables but we often say it as three: 'TEM-pra-cher.' 'Medicine' also has three syllables with stress on 'MED.'"
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "I have a headache.",
+                "phonetic": "/aɪ hæv ə ˈhɛd.eɪk/",
+                "focus": "Compound noun stress on 'HEADache'",
+                "hint": "Stress the first syllable HEAD strongly. The word 'ache' should be softer. Say 'I have a HEADache' with falling intonation at the end."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "My stomach hurts.",
+                "phonetic": "/maɪ ˈstʌm.ək hɜːrts/",
+                "focus": "Pronunciation of 'stomach' and final 'ts' cluster",
+                "hint": "Say 'STUM-uk' with stress on the first syllable. The 'ch' in stomach sounds like 'k.' Make sure to pronounce the final 'ts' sound in 'hurts' clearly."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "I have a sore throat.",
+                "phonetic": "/aɪ hæv ə sɔːr θroʊt/",
+                "focus": "The 'th' sound in 'throat' and long 'o' vowel",
+                "hint": "Put your tongue between your teeth for the 'th' in 'throat.' The 'oa' makes a long /oʊ/ sound. Say 'throht' not 'trot.'"
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Do you have a fever?",
+                "phonetic": "/duː juː hæv ə ˈfiː.vər/",
+                "focus": "Rising intonation for yes/no health questions",
+                "hint": "This is a yes/no question, so your voice must go UP at the end on 'fever.' Start at a normal pitch and rise on the last word."
+              },
+              {
+                "id": "spk-d-5",
+                "targetText": "You should take some medicine.",
+                "phonetic": "/juː ʃʊd teɪk sʌm ˈmɛd.ɪ.sɪn/",
+                "focus": "Pronunciation of 'should' and 'medicine'",
+                "hint": "The 'l' in 'should' is silent — say 'shud.' Stress the first syllable of 'MEDicine.' Use falling intonation because this is advice, not a question."
+              },
+              {
+                "id": "spk-d-6",
+                "targetText": "I feel tired and dizzy.",
+                "phonetic": "/aɪ fiːl taɪərd ænd ˈdɪz.i/",
+                "focus": "Vowel sounds in 'tired' and 'dizzy'",
+                "hint": "'Tired' has a long sound: 'TY-erd.' 'Dizzy' has a short 'i' sound: 'DIZ-ee.' Stress the first syllable of 'DIZzy.'"
+              }
+            ],
+            "roleplay": {
+              "context": "You are not feeling well and you visit Mr. Khoirul, a friendly health advisor at your school. You need to describe your health problems to him. He will ask you about your symptoms and give you simple advice. Practise describing body parts that hurt and explaining how you feel.",
+              "roles": [
+                "Mr. Khoirul",
+                "You"
+              ],
+              "turns": [
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Hello! How are you feeling today?",
+                  "translation": "Halo! Bagaimana perasaanmu hari ini?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "I'm not feeling well. I have a stomachache.",
+                  "translation": "Saya tidak merasa baik. Saya sakit perut."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "Oh, I'm sorry to hear that. Do you have any other symptoms? Like a fever or headache?",
+                  "translation": "Oh, saya turut prihatin mendengarnya. Apakah kamu punya gejala lain? Seperti demam atau sakit kepala?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Yes, I also have a headache and feel tired.",
+                  "translation": "Ya, saya juga sakit kepala dan merasa lelah."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "That doesn't sound good. You should rest and drink lots of water. Have you eaten anything today?",
+                  "translation": "Kedengarannya tidak baik. Kamu harus istirahat dan minum banyak air. Apakah kamu sudah makan hari ini?"
+                },
+                {
+                  "speaker": "You",
+                  "text": "Not yet. I don't feel like eating.",
+                  "translation": "Belum. Saya tidak ingin makan."
+                },
+                {
+                  "speaker": "Mr. Khoirul",
+                  "text": "You should eat something light, like soup or porridge. And you should take some medicine for your headache.",
+                  "translation": "Kamu harus makan sesuatu yang ringan, seperti sup atau bubur. Dan kamu harus minum obat untuk sakit kepalamu."
+                },
+                {
+                  "speaker": "You",
+                  "text": "Thank you for the advice. I'll rest at home today.",
+                  "translation": "Terima kasih atas sarannya. Saya akan istirahat di rumah hari ini."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a1-2-m07-s-quiz",
+          "moduleId": "A1.2-M07",
+          "subModuleId": "sub-a1-2-m07-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about a time you were sick. Use the three story points below to guide your story. Speak clearly and use simple sentences about your health, body parts, and how you felt.",
+                "audioPrompt": "Please tell me about a time when you were not feeling well. What happened? What was wrong with your body? What did you do to feel better? Use simple English and speak slowly.",
+                "storyPoints": [
+                  "Describe when you got sick and what symptoms you had (for example: headache, stomachache, fever, sore throat).",
+                  "Tell which body parts hurt and how you felt (for example: tired, dizzy, cold, weak).",
+                  "Explain what you did to get better (for example: rested, took medicine, drank water, went to the doctor)."
+                ],
+                "targetSentence": "Last week, I had a bad headache and a sore throat. I felt very tired. I took some medicine and rested at home. After two days, I felt better.",
+                "phonetic": "/læst wiːk aɪ hæd ə bæd ˈhɛd.eɪk ænd ə sɔːr θroʊt. aɪ fɛlt ˈvɛr.i ˈtaɪ.ərd. aɪ tʊk sʌm ˈmɛd.ɪ.sɪn ænd ˈrɛs.tɪd æt hoʊm. ˈæf.tər tuː deɪz aɪ fɛlt ˈbɛt.ər/",
+                "expectedKeywords": [
+                  "headache",
+                  "sore throat",
+                  "tired",
+                  "medicine",
+                  "rest",
+                  "felt",
+                  "better"
+                ],
+                "hint": "Remember to stress the first part of compound health words: HEADache, STOMachache. Use past tense: 'I had,' 'I felt,' 'I took.'",
+                "explanation": "This storytelling task practises your ability to describe a past health experience. You need to name body parts, describe symptoms, and explain actions you took. Using past tense verbs like 'had,' 'felt,' and 'took' is important at this level."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Self Storytelling",
+                "instruction": "Tell a short story about helping a friend or family member who was sick. Use the three story points below. Speak in simple English and describe their symptoms and the advice you gave them.",
+                "audioPrompt": "Please tell me about a time when someone you know was sick. Who was it? What was wrong with them? How did you help them? Speak slowly and clearly.",
+                "storyPoints": [
+                  "Say who was sick and what their symptoms were (for example: my friend had a fever, my mother had a cough).",
+                  "Describe how they looked or felt (for example: they looked pale, they felt cold, they were in pain).",
+                  "Explain what advice you gave them or how you helped (for example: I said 'You should rest,' I gave them water)."
+                ],
+                "targetSentence": "My friend was sick last Monday. She had a fever and a bad cough. She looked very pale and tired. I told her to drink warm water and rest. I said, 'You should see a doctor.'",
+                "phonetic": "/maɪ frɛnd wɒz sɪk læst ˈmʌn.deɪ. ʃiː hæd ə ˈfiː.vər ænd ə bæd kɒf. ʃiː lʊkt ˈvɛr.i peɪl ænd ˈtaɪ.ərd. aɪ toʊld hɜːr tuː drɪŋk wɔːrm ˈwɔː.tər ænd rɛst. aɪ sɛd juː ʃʊd siː ə ˈdɒk.tər/",
+                "expectedKeywords": [
+                  "friend",
+                  "sick",
+                  "fever",
+                  "cough",
+                  "tired",
+                  "rest",
+                  "doctor",
+                  "should"
+                ],
+                "hint": "Use 'She had' or 'He had' to describe someone else's symptoms. Use 'You should' to give advice. Remember falling intonation for statements.",
+                "explanation": "This task practises describing another person's health condition. You need to use third-person forms like 'she had' and 'he felt,' and practise giving advice with 'You should.' This builds your ability to communicate about health in real situations."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are a patient visiting a doctor. The doctor will ask you questions about how you feel. Answer the doctor's questions by describing your symptoms. Say which body parts hurt.",
+                "audioPrompt": "Good morning! I am Doctor Khoirul. Please sit down. Now, tell me — what is the problem today? Where does it hurt?",
+                "scenarioContext": "You are at a small clinic. You have been feeling unwell since yesterday. You have a headache, a sore throat, and you feel very tired. The doctor needs to know all your symptoms so he can help you. Answer his questions honestly and clearly.",
+                "characterRole": "You are a patient at a clinic. You have a headache, a sore throat, and you feel tired. You did not sleep well last night. You have not taken any medicine yet.",
+                "targetSentence": "Good morning, Doctor. I have a headache and a sore throat. I feel very tired. I didn't sleep well last night.",
+                "phonetic": "/ɡʊd ˈmɔːr.nɪŋ ˈdɒk.tər. aɪ hæv ə ˈhɛd.eɪk ænd ə sɔːr θroʊt. aɪ fiːl ˈvɛr.i ˈtaɪ.ərd. aɪ ˈdɪd.ənt sliːp wɛl læst naɪt/",
+                "expectedKeywords": [
+                  "headache",
+                  "sore throat",
+                  "tired",
+                  "sleep",
+                  "morning",
+                  "doctor"
+                ],
+                "hint": "Use 'I have a...' for symptoms and 'I feel...' for how you feel. Speak clearly and stress the health words: HEADache, SORE throat.",
+                "explanation": "In this roleplay, you practise a real-life doctor visit scenario. Being able to clearly describe your symptoms to a doctor is an essential life skill. Use simple present tense: 'I have,' 'I feel,' and past tense: 'I didn't sleep.'"
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are calling your teacher, Mr. Khoirul, to tell him you cannot come to school today because you are sick. Explain what is wrong with you and ask if you can rest at home.",
+                "audioPrompt": "Hello? This is Mr. Khoirul speaking. Who is calling, please?",
+                "scenarioContext": "It is early morning and you woke up feeling very sick. You have a high fever and a stomachache. You need to call your teacher to explain that you cannot attend class today. Be polite and explain your symptoms clearly.",
+                "characterRole": "You are a student who is sick at home. You have a high fever and a stomachache. You need to ask your teacher for permission to stay home and rest today.",
+                "targetSentence": "Good morning, Mr. Khoirul. This is your student. I'm sorry, but I can't come to school today. I have a high fever and a stomachache. Can I rest at home today?",
+                "phonetic": "/ɡʊd ˈmɔːr.nɪŋ ˈmɪs.tər kɔɪ.rʊl. ðɪs ɪz jɔːr ˈstjuː.dənt. aɪm ˈsɒr.i bʌt aɪ kænt kʌm tuː skuːl təˈdeɪ. aɪ hæv ə haɪ ˈfiː.vər ænd ə ˈstʌm.ək.eɪk. kæn aɪ rɛst æt hoʊm təˈdeɪ/",
+                "expectedKeywords": [
+                  "morning",
+                  "sorry",
+                  "school",
+                  "fever",
+                  "stomachache",
+                  "rest",
+                  "home"
+                ],
+                "hint": "Be polite! Start with 'Good morning.' Use 'I'm sorry, but...' to be polite. Use 'I have a...' for your symptoms. Ask permission with 'Can I...?'",
+                "explanation": "This roleplay practises a common real-life situation: calling in sick. You need to be polite, clearly state your symptoms, and ask for permission. This combines health vocabulary with polite request language."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "You are at a pharmacy. The pharmacist asks you what you need. Tell the pharmacist about your health problem and ask for the right medicine.",
+                "audioPrompt": "Welcome to the pharmacy! How can I help you today? Are you looking for some medicine?",
+                "scenarioContext": "You have had a bad cough and a runny nose for two days. You go to the pharmacy to buy some medicine. The pharmacist will ask you about your symptoms. Describe your problems and ask what medicine you should take.",
+                "characterRole": "You are a customer at a pharmacy. You have a bad cough and a runny nose. You want to buy cough medicine. You also want to know if you should see a doctor.",
+                "targetSentence": "Hello! Yes, I need some medicine, please. I have a bad cough and a runny nose. What medicine should I take? Do I need to see a doctor?",
+                "phonetic": "/hɛˈloʊ. jɛs aɪ niːd sʌm ˈmɛd.ɪ.sɪn pliːz. aɪ hæv ə bæd kɒf ænd ə ˈrʌn.i noʊz. wɒt ˈmɛd.ɪ.sɪn ʃʊd aɪ teɪk. duː aɪ niːd tuː siː ə ˈdɒk.tər/",
+                "expectedKeywords": [
+                  "medicine",
+                  "cough",
+                  "runny nose",
+                  "take",
+                  "doctor",
+                  "need"
+                ],
+                "hint": "Use 'I have a...' to describe symptoms. Use 'What should I...?' to ask for advice. Remember rising intonation on yes/no questions like 'Do I need to see a doctor?'",
+                "explanation": "Buying medicine at a pharmacy is a practical situation. You need to describe symptoms clearly and ask questions. This roleplay combines health vocabulary with the skill of asking for help and advice in a shop."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Live Roleplay Call",
+                "instruction": "Your classmate looks unwell. Ask them about their health and give them simple advice. Be a caring friend.",
+                "audioPrompt": "Hi... I don't feel so good today. I think I might be getting sick...",
+                "scenarioContext": "You are at school and you notice your classmate looks pale and unwell. They are sitting quietly and not talking much. You go to them and ask what is wrong. After they tell you their symptoms, give them friendly advice about what to do.",
+                "characterRole": "You are a caring classmate. You notice your friend looks sick. Ask them questions about how they feel and which body parts hurt. Then give them advice like 'You should rest' or 'You should drink warm water.'",
+                "targetSentence": "Hey, are you okay? You don't look well. Do you have a fever? You should go to the nurse. You should drink some warm water and rest.",
+                "phonetic": "/heɪ ɑːr juː oʊˈkeɪ. juː doʊnt lʊk wɛl. duː juː hæv ə ˈfiː.vər. juː ʃʊd ɡoʊ tuː ðə nɜːrs. juː ʃʊd drɪŋk sʌm wɔːrm ˈwɔː.tər ænd rɛst/",
+                "expectedKeywords": [
+                  "okay",
+                  "look",
+                  "well",
+                  "fever",
+                  "should",
+                  "rest",
+                  "water",
+                  "nurse"
+                ],
+                "hint": "Use 'Do you have a...?' with rising intonation to ask about symptoms. Use 'You should...' with falling intonation to give advice. Show you care by saying 'Are you okay?'",
+                "explanation": "This roleplay practises asking about someone else's health and giving advice. You use question forms like 'Do you have...?' and 'Are you okay?' and advice forms like 'You should rest.' This is important for real conversations with friends."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "focus": "vocab",
+                "instruction": "Say the following sentence out loud. Focus on pronouncing each health and body part word correctly and clearly.",
+                "audioPrompt": "Please say this sentence clearly. Make sure you pronounce each body part and health word correctly.",
+                "targetSentence": "I have a stomachache, a sore throat, and my back hurts.",
+                "phonetic": "/aɪ hæv ə ˈstʌm.ək.eɪk ə sɔːr θroʊt ænd maɪ bæk hɜːrts/",
+                "expectedKeywords": [
+                  "stomachache",
+                  "sore",
+                  "throat",
+                  "back",
+                  "hurts"
+                ],
+                "hint": "Remember: 'stomach' sounds like 'STUM-uk.' 'Throat' starts with a 'th' sound — put your tongue between your teeth. 'Sore' rhymes with 'more.' 'Hurts' ends with a 'ts' sound.",
+                "explanation": "This drill tests your ability to pronounce key health vocabulary words in one sentence. The words 'stomachache,' 'sore throat,' 'back,' and 'hurts' are essential for describing health problems. Clear pronunciation ensures others understand your symptoms."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "focus": "grammar",
+                "instruction": "Say the following sentence out loud. Focus on the correct grammar structure: 'I have a...' for symptoms and 'You should...' for advice.",
+                "audioPrompt": "Please say this sentence. Pay attention to the grammar: use 'have a' before the symptom and 'should' before the advice verb.",
+                "targetSentence": "I have a high fever, so you should take me to the doctor.",
+                "phonetic": "/aɪ hæv ə haɪ ˈfiː.vər soʊ juː ʃʊd teɪk miː tuː ðə ˈdɒk.tər/",
+                "expectedKeywords": [
+                  "have",
+                  "a",
+                  "fever",
+                  "should",
+                  "take",
+                  "doctor"
+                ],
+                "hint": "Use 'I have a' (not 'I have' alone) before countable symptoms like 'fever' and 'headache.' Use 'should' (not 'should to') before the base verb 'take.' The 'l' in 'should' is silent.",
+                "explanation": "This drill focuses on two important A1 grammar structures for health topics. First: 'I have a + symptom' (I have a fever, I have a cold). Second: 'You should + base verb' for giving advice (You should rest, You should take medicine). These patterns are essential for health conversations."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Say the following words and sentence. Pay careful attention to which syllable is stressed in each word. The stressed syllable is shown in CAPITAL LETTERS.",
+                "audioPrompt": "Listen carefully to the stress pattern. Say each word with the correct stress, then say the full sentence.",
+                "targetSentence": "I need some MEDicine for my HEADache and STOMachache.",
+                "phonetic": "/aɪ niːd sʌm ˈmɛd.ɪ.sɪn fɔːr maɪ ˈhɛd.eɪk ænd ˈstʌm.ək.eɪk/",
+                "expectedKeywords": [
+                  "medicine",
+                  "headache",
+                  "stomachache"
+                ],
+                "hint": "All three key words have stress on the FIRST syllable: MEDicine (not mediCINE), HEADache (not headACHE), STOMachache (not stomachACHE). Say the first syllable louder and longer than the others.",
+                "explanation": "Syllable stress is very important in English. Health compound nouns like 'headache,' 'stomachache,' 'toothache,' and 'backache' always have stress on the FIRST part. The word 'medicine' also has first-syllable stress: MED-i-cine. Incorrect stress can make these words very hard to understand."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Intonation Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Say both sentences below. The first is a yes/no question — use RISING intonation (voice goes up at the end). The second is a statement — use FALLING intonation (voice goes down at the end).",
+                "audioPrompt": "Say these two sentences. For the question, make your voice go UP at the end. For the statement, make your voice go DOWN at the end. Notice the difference!",
+                "targetSentence": "Do you have a sore throat? ↗ Yes, I have a sore throat. ↘",
+                "phonetic": "/duː juː hæv ə sɔːr θroʊt ↗ jɛs aɪ hæv ə sɔːr θroʊt ↘/",
+                "expectedKeywords": [
+                  "do",
+                  "you",
+                  "have",
+                  "sore",
+                  "throat",
+                  "yes"
+                ],
+                "hint": "For the question 'Do you have a sore throat?', start at a normal pitch and let your voice RISE on 'throat?' For the answer 'Yes, I have a sore throat,' let your voice FALL on 'throat.' The rising pattern signals a question; the falling pattern signals a statement.",
+                "explanation": "In English, yes/no questions use rising intonation — your voice goes up at the end. This tells the listener you are asking a question and expecting a 'yes' or 'no' answer. Statements and answers use falling intonation — your voice goes down at the end. This tells the listener you are giving information, not asking. Mastering this difference is essential for clear communication about health."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

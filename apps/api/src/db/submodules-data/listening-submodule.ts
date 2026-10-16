@@ -23,51 +23,102 @@ export const listeningSubModule = {
     },
     {
       sectionType: "quiz",
-      title: "Audio Listening Practice (Listening Quiz - 5 Questions)",
+      title: "Audio Listening Practicum (10 Interactive Tasks)",
       orderIndex: 2,
       content: {
-        questions: [
+        passingScore: 80,
+        practicumQuestions: [
           {
-            id: "A1.1-LISTEN-Q1",
-            question: "Listen to the audio: Where is Marco's home city?",
-            audioScript: "Sarah: Where are you from, Mr. Rossi? Marco: I am from Rome, Italy.",
-            options: ["Milan", "Rome", "Venice", "Naples"],
-            answer: "Rome",
-            explanation: "Marco clearly states: 'I am from Rome, Italy.'"
+            id: 1,
+            type: "dictation",
+            audioText: "Good afternoon! Welcome to the Grand International Hotel.",
+            instruction: "Listen to the audio clip and type the missing word:",
+            promptSentence: "Sarah: \"Good afternoon! Welcome to the Grand International _____.\"",
+            targetWord: "Hotel",
+            explanation: "Full audio: \"Welcome to the Grand International Hotel.\". The correct word is \"Hotel\"."
           },
           {
-            id: "A1.1-LISTEN-Q2",
-            question: "Listen to the audio: What is Marco's purpose for visiting London?",
-            audioScript: "Sarah: Are you here for business or on holiday? Marco: I am here on vacation with my family.",
-            options: ["Business trip", "Family vacation", "University study", "Medical checkup"],
-            answer: "Family vacation",
-            explanation: "Marco answers that he is on holiday with his family ('on vacation with my family')."
+            id: 2,
+            type: "dictation",
+            audioText: "I am from Rome, Italy. It is my very first time visiting London.",
+            instruction: "Listen to the audio clip and type the missing word:",
+            promptSentence: "Marco: \"I am from _____, Italy.\"",
+            targetWord: "Rome",
+            explanation: "Full audio: \"I am from Rome, Italy.\". The correct word is \"Rome\"."
           },
           {
-            id: "A1.1-LISTEN-Q3",
-            question: "Listen to the audio: What is Marco's hotel room number?",
-            audioScript: "Sarah: Your room is on the fourth floor, room number 402. Here is your keycard.",
-            options: ["Room 204", "Room 402", "Room 420", "Room 412"],
-            answer: "Room 402",
-            explanation: "Sarah confirms the room is on the fourth floor, number 402 ('room number 402')."
+            id: 3,
+            type: "dictation",
+            audioText: "I am here on vacation with my family.",
+            instruction: "Listen to the audio clip and type the missing word:",
+            promptSentence: "Marco: \"I am here on _____ with my family.\"",
+            targetWord: "vacation",
+            explanation: "Full audio: \"I am here on vacation with my family.\". The correct word is \"vacation\"."
           },
           {
-            id: "A1.1-LISTEN-Q4",
-            question: "Listen to the audio: Where is Marco's family during the conversation?",
-            audioScript: "Marco: They are still at Heathrow Airport. Sarah: Understood.",
-            options: ["In the hotel taxi", "In Rome", "At Heathrow Airport", "In the restaurant"],
-            answer: "At Heathrow Airport",
-            explanation: "Marco explains that his family is still at the airport ('still at Heathrow Airport')."
+            id: 4,
+            type: "dictation",
+            audioText: "Your room is on the fourth floor, room number 402.",
+            instruction: "Listen to the audio clip and type the missing word:",
+            promptSentence: "Sarah: \"Your room is on the _____ floor, room number 402.\"",
+            targetWord: "fourth",
+            explanation: "Full audio: \"Your room is on the fourth floor.\". The correct word is \"fourth\"."
           },
           {
-            id: "A1.1-LISTEN-Q5",
-            question: "Listen to the audio: How does Marco spell his surname?",
-            audioScript: "Marco: Hello! My name is Marco Rossi. That is spelled R-O-S-S-I.",
-            options: ["R-O-S-E-I", "R-U-S-S-I", "R-O-S-S-I", "R-O-S-S-Y"],
-            answer: "R-O-S-S-I",
-            explanation: "Marco spells his surname as: R-O-S-S-I."
+            id: 5,
+            type: "dictation",
+            audioText: "Here is your keycard.",
+            instruction: "Listen to the audio clip and type the missing word:",
+            promptSentence: "Sarah: \"Here is your _____.\"",
+            targetWord: "keycard",
+            explanation: "Full audio: \"Here is your keycard.\". The correct word is \"keycard\"."
+          },
+          {
+            id: 6,
+            type: "arrange",
+            audioText: "What is your full name please?",
+            instruction: "Listen to the sentence and arrange the words in the correct order:",
+            targetSentence: "What is your full name please",
+            words: ["full", "please", "is", "name", "your", "What"],
+            explanation: "Correct sentence order: \"What is your full name please?\"."
+          },
+          {
+            id: 7,
+            type: "arrange",
+            audioText: "Where are you from?",
+            instruction: "Listen to the sentence and arrange the words in the correct order:",
+            targetSentence: "Where are you from",
+            words: ["from", "you", "are", "Where"],
+            explanation: "Correct sentence order: \"Where are you from?\"."
+          },
+          {
+            id: 8,
+            type: "arrange",
+            audioText: "I am from Rome Italy.",
+            instruction: "Listen to the sentence and arrange the words in the correct order:",
+            targetSentence: "I am from Rome Italy",
+            words: ["Rome", "from", "Italy", "am", "I"],
+            explanation: "Correct sentence order: \"I am from Rome Italy.\"."
+          },
+          {
+            id: 9,
+            type: "arrange",
+            audioText: "They are still at Heathrow Airport.",
+            instruction: "Listen to the sentence and arrange the words in the correct order:",
+            targetSentence: "They are still at Heathrow Airport",
+            words: ["Heathrow", "still", "are", "Airport", "They", "at"],
+            explanation: "Correct sentence order: \"They are still at Heathrow Airport.\"."
+          },
+          {
+            id: 10,
+            type: "arrange",
+            audioText: "Thank you very much for your kind help.",
+            instruction: "Listen to the sentence and arrange the words in the correct order:",
+            targetSentence: "Thank you very much for your kind help",
+            words: ["very", "kind", "Thank", "for", "much", "help", "your", "you"],
+            explanation: "Correct sentence order: \"Thank you very much for your kind help.\"."
           }
-        ],
+        ]
       },
     },
   ],

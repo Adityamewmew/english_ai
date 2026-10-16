@@ -1,0 +1,1668 @@
+{
+  "module": {
+    "id": "A2.3-M10",
+    "levelId": "A2.3",
+    "title": "Defining Relative Clauses: Who, Which, That & Where",
+    "cefr": "A2",
+    "group": "A2.3 - World Explorations, Stories & Bridge to B1",
+    "objective": "Add concise descriptive detail to people, objects, and places using defining relative pronouns (who, which, that, where).",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 10
+  },
+  "subModules": [
+    {
+      "id": "sub-a2-3-m10-reading",
+      "moduleId": "A2.3-M10",
+      "skillType": "reading",
+      "title": "Reading Mission: Discovering History and Famous Places",
+      "theme": "History, Places, and Famous Inventions",
+      "grammarFocus": "Defining Relative Clauses (Who, Which, That, Where)",
+      "vocabularyFocus": "Museums, Explorers, and Ancient Monuments",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-a2-3-m10-r-theory",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this reading mission, you will explore short texts about museums, ancient monuments, and famous inventions. You will learn how to connect two ideas into one smooth sentence using relative pronouns like who, which, that, and where.",
+            "linguisticTarget": {
+              "grammar": "Defining relative clauses using who for people, which and that for things, and where for places.",
+              "vocabulary": "Key terms related to history, architecture, science, and museum exhibits.",
+              "readingStrategy": "Scanning texts to identify specific definitions and relative pronouns that describe nouns."
+            },
+            "learningObjectives": [
+              "Understand the main idea and key details of short A2 texts about historical places and inventions.",
+              "Recognize how relative clauses give extra information about people, things, and places.",
+              "Practice identifying relative pronouns in descriptive reading passages."
+            ],
+            "contextWarmup": {
+              "prompt": "What is the best way to learn about ancient history?",
+              "options": [
+                "Visiting a museum where old artifacts are displayed",
+                "Reading a recipe book in the kitchen",
+                "Watching a cartoon about modern technology"
+              ],
+              "correctIndex": 0,
+              "explanation": "Museums are places where people go to see ancient artifacts and learn about history."
+            },
+            "rules": [
+              "WHO: Used for people. Formula: noun (person) + who + verb or clause. Example: 'An architect is someone who designs buildings.'",
+              "WHICH / THAT: Used for things or animals. Formula: noun (thing) + which/that + verb or clause. Example: 'Egypt is a country which has many ancient monuments.'",
+              "WHERE: Used for places. Formula: noun (place) + where + subject + verb. Example: 'A gallery is a place where artists display their paintings.'"
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Learner Pitfall",
+              "explanation": "Students often mix up who and which, or use where for things instead of places.",
+              "wrong": "This is the museum who I visited yesterday.",
+              "correct": "This is the museum which I visited yesterday, or this is the city where I live."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Relative Sentences",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in everyday English:",
+            "contractions": [
+              {
+                "subject": "That",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "That's",
+                "exampleFull": "That is the monument which we saw yesterday.",
+                "exampleContracted": "That's the monument which we saw yesterday."
+              },
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It is a temple where people pray.",
+                "exampleContracted": "It's a temple where people pray."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Defining Relative Clauses",
+              "description": "Assemble sentence blocks to practice connecting nouns with relative pronouns:",
+              "subjects": [
+                {
+                  "label": "An explorer",
+                  "pronoun": "who",
+                  "correctToBe": "is",
+                  "role": "Person Subject"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "travels",
+                  "thirdPerson": "travels",
+                  "continuous": "traveling"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "to discover new places",
+                  "type": "Defining Clause"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-3-m10-r-vocab",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "explorer",
+                "ipa": "/ɪkˈsplɔːrər/",
+                "meaning": "penjelajah",
+                "partOfSpeech": "noun",
+                "exampleSentence": "An explorer is someone who travels to discover new places.",
+                "collocation": "An explorer is someone who travels to discover new places."
+              },
+              {
+                "word": "century",
+                "ipa": "/ˈsentʃəri/",
+                "meaning": "abad",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The 21st century is the time period where we live now.",
+                "collocation": "The 21st century is the time period where we live now."
+              },
+              {
+                "word": "ancient",
+                "ipa": "/ˈeɪnʃənt/",
+                "meaning": "kuno",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "Egypt is a country which has many ancient monuments.",
+                "collocation": "Egypt is a country which has many ancient monuments."
+              },
+              {
+                "word": "architect",
+                "ipa": "/ˈɑːkɪtekt/",
+                "meaning": "arsitek",
+                "partOfSpeech": "noun",
+                "exampleSentence": "An architect is someone who designs buildings.",
+                "collocation": "An architect is someone who designs buildings."
+              },
+              {
+                "word": "artifact",
+                "ipa": "/ˈɑːtɪfækt/",
+                "meaning": "artefak, benda bersejarah",
+                "partOfSpeech": "noun",
+                "exampleSentence": "An artifact is an object that people made long ago.",
+                "collocation": "An artifact is an object that people made long ago."
+              },
+              {
+                "word": "gallery",
+                "ipa": "/ˈɡæləri/",
+                "meaning": "galeri",
+                "partOfSpeech": "noun",
+                "exampleSentence": "A gallery is a place where artists display their paintings.",
+                "collocation": "A gallery is a place where artists display their paintings."
+              },
+              {
+                "word": "invention",
+                "ipa": "/ɪnˈvenʃn/",
+                "meaning": "penemuan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The internet is an invention that changed the world.",
+                "collocation": "The internet is an invention that changed the world."
+              },
+              {
+                "word": "monument",
+                "ipa": "/ˈmɒnjumənt/",
+                "meaning": "monumen",
+                "partOfSpeech": "noun",
+                "exampleSentence": "A monument is a structure which people build to remember important events.",
+                "collocation": "A monument is a structure which people build to remember important events."
+              },
+              {
+                "word": "scientist",
+                "ipa": "/ˈsaɪəntɪst/",
+                "meaning": "ilmuwan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "A scientist is someone who studies how things work.",
+                "collocation": "A scientist is someone who studies how things work."
+              },
+              {
+                "word": "temple",
+                "ipa": "/ˈtempl/",
+                "meaning": "candi, kuil",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Borobudur is a temple where people worship and pray.",
+                "collocation": "Borobudur is a temple where people worship and pray."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m10-r-guided",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Exploring Our World Museum",
+            "audioUrl": "/audio/modules/a2-3-m10/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Welcome to the Global History Museum, which is a fantastic place where visitors can learn about the past. An architect named Thomas designed this amazing building in the nineteenth century. Inside the halls, you can see every ancient artifact that people discovered during old expeditions around the world. Every explorer who traveled across deserts and mountains left special items here.",
+              "Another popular section is the science gallery, which displays famous inventions that changed human life. A scientist works in this area to show how machines operate. Visitors love walking through the sculpture room, where local artists show their creative work. If you want to understand history, this museum is a building that you must visit."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "Welcome to the Global History Museum, which is a fantastic place where visitors can learn about the past.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 4.6,
+                "end": 9,
+                "text": "An architect named Thomas designed this amazing building in the nineteenth century.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 9.1,
+                "end": 14.5,
+                "text": "Inside the halls, you can see every ancient artifact that people discovered during old expeditions around the world.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 14.6,
+                "end": 19,
+                "text": "Every explorer who traveled across deserts and mountains left special items here.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 20,
+                "end": 25,
+                "text": "Another popular section is the science gallery, which displays famous inventions that changed human life.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 25.1,
+                "end": 29.5,
+                "text": "A scientist works in this area to show how machines operate.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 29.6,
+                "end": 34,
+                "text": "Visitors love walking through the sculpture room, where local artists show their creative work.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 34.1,
+                "end": 39,
+                "text": "If you want to understand history, this museum is a building that you must visit.",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m10-r-practice",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-1",
+                "prompt": "Match the term with its correct definition.",
+                "pairs": [
+                  {
+                    "left": "Architect",
+                    "right": "Someone who designs buildings"
+                  },
+                  {
+                    "left": "Explorer",
+                    "right": "Someone who travels to discover new places"
+                  },
+                  {
+                    "left": "Gallery",
+                    "right": "A place where artists display paintings"
+                  },
+                  {
+                    "left": "Artifact",
+                    "right": "An object that people made long ago"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m10-r-quiz",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What kind of place is the Global History Museum according to the passage?",
+                "options": [
+                  "A fantastic place where visitors can learn about the past",
+                  "A boring office building with no visitors",
+                  "A modern shopping mall for clothes"
+                ],
+                "answer": "A fantastic place where visitors can learn about the past",
+                "explanation": "The text states that the museum is a fantastic place where visitors can learn about the past."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Who designed the amazing building of the museum?",
+                "options": [
+                  "An architect named Thomas",
+                  "A famous scientist",
+                  "An old explorer"
+                ],
+                "answer": "An architect named Thomas",
+                "explanation": "The passage notes that an architect named Thomas designed this amazing building."
+              },
+              {
+                "id": "q-r-3",
+                "question": "When was the museum building designed?",
+                "options": [
+                  "In the twenty-first century",
+                  "In the nineteenth century",
+                  "In ancient times"
+                ],
+                "answer": "In the nineteenth century",
+                "explanation": "The text mentions that the building was designed in the nineteenth century."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What can visitors see inside the museum halls?",
+                "options": [
+                  "Modern video games",
+                  "Ancient artifacts discovered during old expeditions",
+                  "Fast racing cars"
+                ],
+                "answer": "Ancient artifacts discovered during old expeditions",
+                "explanation": "The passage states you can see every ancient artifact that people discovered during old expeditions."
+              },
+              {
+                "id": "q-r-5",
+                "question": "Who left special items in the museum?",
+                "options": [
+                  "Every explorer who traveled across deserts and mountains",
+                  "Modern office workers in the city",
+                  "Movie directors from Hollywood"
+                ],
+                "answer": "Every explorer who traveled across deserts and mountains",
+                "explanation": "The text states that every explorer who traveled across deserts and mountains left special items here."
+              },
+              {
+                "id": "q-r-6",
+                "question": "What does the science gallery display?",
+                "options": [
+                  "Paintings of wild animals",
+                  "Famous inventions that changed human life",
+                  "Old cooking recipes"
+                ],
+                "answer": "Famous inventions that changed human life",
+                "explanation": "The passage explains that the science gallery displays famous inventions that changed human life."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Who works in the science area to show how machines operate?",
+                "options": [
+                  "A scientist",
+                  "An architect",
+                  "A tour guide"
+                ],
+                "answer": "A scientist",
+                "explanation": "The text mentions that a scientist works in this area to show how machines operate."
+              },
+              {
+                "id": "q-r-8",
+                "question": "What do visitors love walking through?",
+                "options": [
+                  "The sculpture room",
+                  "The parking lot",
+                  "The museum kitchen"
+                ],
+                "answer": "The sculpture room",
+                "explanation": "The text states that visitors love walking through the sculpture room."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What do local artists do in the sculpture room?",
+                "options": [
+                  "Sell food to guests",
+                  "Show their creative work",
+                  "Fix old machines"
+                ],
+                "answer": "Show their creative work",
+                "explanation": "The passage notes that local artists show their creative work in the sculpture room."
+              },
+              {
+                "id": "q-r-10",
+                "question": "How is the museum described at the very end of the reading passage?",
+                "options": [
+                  "As a building that you must visit if you want to understand history",
+                  "As a place that is closed to the public",
+                  "As a boring location with nothing to see"
+                ],
+                "answer": "As a building that you must visit if you want to understand history",
+                "explanation": "The text concludes that the museum is a building that you must visit if you want to understand history."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-3-m10-listening",
+      "moduleId": "A2.3-M10",
+      "skillType": "listening",
+      "title": "Listening Mission: Exploring City Landmarks",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-a2-3-m10-l-theory",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Focus on listening for defining relative clauses when speakers describe places, people, and objects. Pay attention to how relative pronouns like who, which, that, and where link details together smoothly in conversation.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about city landmarks.",
+              "Identify details such as specific people, locations, and functions.",
+              "Notice how words link together in connected speech during descriptions."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "the place that",
+                "meaning": "tempat yang",
+                "note": "Used to define a specific location or building."
+              },
+              {
+                "phrase": "a person who",
+                "meaning": "seseorang yang",
+                "note": "Used to define people and their roles."
+              },
+              {
+                "phrase": "the room where",
+                "meaning": "ruangan di mana",
+                "note": "Used to specify a location for an activity."
+              },
+              {
+                "phrase": "something which",
+                "meaning": "sesuatu yang",
+                "note": "Used for objects and things."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "the place that opened",
+                "fast": "the plac-that opened",
+                "slowIpa": "/ðə pleɪs ðæt ˈoʊpənd/",
+                "fastIpa": "/ðə ˈplæs ðæt ˈoʊpənd/",
+                "note": "Consonant blending when /s/ meets /ð/."
+              },
+              {
+                "id": 2,
+                "slow": "a guide who knows",
+                "fast": "a guide-who knows",
+                "slowIpa": "/ə ɡaɪd huː noʊz/",
+                "fastIpa": "/ə ɡaɪd huː noʊz/",
+                "note": "Pronoun who is often unstressed in fast conversation."
+              },
+              {
+                "id": 3,
+                "slow": "the shop which sells",
+                "fast": "the shop-which sells",
+                "slowIpa": "/ðə ʃɑːp wɪtʃ sɛlz/",
+                "fastIpa": "/ðə ʃɑːp wɪtʃ sɛlz/",
+                "note": "Connecting the final stop /p/ smoothly into which."
+              },
+              {
+                "id": 4,
+                "slow": "room where you see",
+                "fast": "room-where-you see",
+                "slowIpa": "/ruːm wɛr juː siː/",
+                "fastIpa": "/ruːm wɛr jə siː/",
+                "note": "The pronoun you reduces to /jə/ in rapid speech."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m10-l-dialogue",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Planning Our City Tour",
+          "orderIndex": 2,
+          "content": {
+            "context": "Sarah and Tom discuss their weekend plans to visit a museum, a gallery, and a local café using defining relative clauses.",
+            "audioPrompt": "Listen to the conversation between Sarah and Tom.",
+            "lines": [
+              {
+                "speaker": "Sarah",
+                "text": "I want to visit the new museum.",
+                "translation": "Aku ingin mengunjungi museum baru itu.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Tom",
+                "text": "It is the place that opened recently.",
+                "translation": "Itu adalah tempat yang baru saja dibuka.",
+                "emotion": "informative"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Is there a guide who knows history?",
+                "translation": "Apakah ada pemandu yang tahu sejarah?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Yes, a historian works in that gallery.",
+                "translation": "Ya, seorang sejarawan bekerja di galeri itu.",
+                "emotion": "helpful"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "She is the person that explains ancient artifacts.",
+                "translation": "Dia adalah orang yang menjelaskan artefak kuno.",
+                "emotion": "interested"
+              },
+              {
+                "speaker": "Tom",
+                "text": "They have a room where you see armor.",
+                "translation": "Mereka punya ruangan di mana kamu melihat baju zirah.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "That sounds like a place which is amazing.",
+                "translation": "Itu terdengar seperti tempat yang luar biasa.",
+                "emotion": "impressed"
+              },
+              {
+                "speaker": "Tom",
+                "text": "After that, let us visit the old café.",
+                "translation": "Setelah itu, mari kita kunjungi kafe lama.",
+                "emotion": "casual"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Is it the shop which sells sweet pastries?",
+                "translation": "Apakah itu toko yang menjual kue manis?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Yes, the chef who bakes them is friendly.",
+                "translation": "Ya, koki yang memanggangnya ramah.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "We can meet friends who love local food.",
+                "translation": "Kita bisa menemui teman-teman yang suka makanan lokal.",
+                "emotion": "happy"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Let us go there this afternoon together.",
+                "translation": "Mari kita pergi ke sana sore ini bersama.",
+                "emotion": "enthusiastic"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m10-l-quiz",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "I want to visit the new museum.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"I want to visit the new _____.\"",
+                "targetWord": "museum",
+                "explanation": "Full audio: \"I want to visit the new museum.\". The missing word is \"museum\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "It is the place that opened recently.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"It is the place that opened _____.\"",
+                "targetWord": "recently",
+                "explanation": "Full audio: \"It is the place that opened recently.\". The missing word is \"recently\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Is there a guide who knows history?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Is there a guide who knows _____?\"",
+                "targetWord": "history",
+                "explanation": "Full audio: \"Is there a guide who knows history?\". The missing word is \"history\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Yes, a historian works in that gallery.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Yes, a historian works in that _____.\"",
+                "targetWord": "gallery",
+                "explanation": "Full audio: \"Yes, a historian works in that gallery.\". The missing word is \"gallery\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "She is the person that explains ancient artifacts.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"She is the person that explains ancient _____.\"",
+                "targetWord": "artifacts",
+                "explanation": "Full audio: \"She is the person that explains ancient artifacts.\". The missing word is \"artifacts\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "They have a room where you see armor.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "They have a room where you see armor",
+                "words": [
+                  "have",
+                  "you",
+                  "a",
+                  "They",
+                  "room",
+                  "see",
+                  "where",
+                  "armor"
+                ],
+                "explanation": "Correct sentence order: \"They have a room where you see armor.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "That sounds like a place which is amazing.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds like a place which is amazing",
+                "words": [
+                  "That",
+                  "is",
+                  "a",
+                  "sounds",
+                  "which",
+                  "amazing",
+                  "like",
+                  "place"
+                ],
+                "explanation": "Correct sentence order: \"That sounds like a place which is amazing.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "After that, let us visit the old café.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "After that let us visit the old café",
+                "words": [
+                  "the",
+                  "let",
+                  "us",
+                  "café",
+                  "old",
+                  "After",
+                  "visit",
+                  "that"
+                ],
+                "explanation": "Correct sentence order: \"After that, let us visit the old café.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Is it the shop which sells sweet pastries?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Is it the shop which sells sweet pastries",
+                "words": [
+                  "sweet",
+                  "the",
+                  "pastries",
+                  "it",
+                  "Is",
+                  "sells",
+                  "shop",
+                  "which"
+                ],
+                "explanation": "Correct sentence order: \"Is it the shop which sells sweet pastries?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Yes, the chef who bakes them is friendly.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes the chef who bakes them is friendly",
+                "words": [
+                  "is",
+                  "them",
+                  "who",
+                  "the",
+                  "bakes",
+                  "Yes",
+                  "friendly",
+                  "chef"
+                ],
+                "explanation": "Correct sentence order: \"Yes, the chef who bakes them is friendly.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "I want to visit the new museum.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"I want to visit the new _____.\"",
+                "targetWord": "museum",
+                "explanation": "Full audio: \"I want to visit the new museum.\". The missing word is \"museum\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "It is the place that opened recently.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"It is the place that opened _____.\"",
+                "targetWord": "recently",
+                "explanation": "Full audio: \"It is the place that opened recently.\". The missing word is \"recently\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Is there a guide who knows history?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Is there a guide who knows _____?\"",
+                "targetWord": "history",
+                "explanation": "Full audio: \"Is there a guide who knows history?\". The missing word is \"history\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Yes, a historian works in that gallery.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Yes, a historian works in that _____.\"",
+                "targetWord": "gallery",
+                "explanation": "Full audio: \"Yes, a historian works in that gallery.\". The missing word is \"gallery\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "She is the person that explains ancient artifacts.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"She is the person that explains ancient _____.\"",
+                "targetWord": "artifacts",
+                "explanation": "Full audio: \"She is the person that explains ancient artifacts.\". The missing word is \"artifacts\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "They have a room where you see armor.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "They have a room where you see armor",
+                "words": [
+                  "have",
+                  "you",
+                  "a",
+                  "They",
+                  "room",
+                  "see",
+                  "where",
+                  "armor"
+                ],
+                "explanation": "Correct sentence order: \"They have a room where you see armor.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "That sounds like a place which is amazing.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds like a place which is amazing",
+                "words": [
+                  "That",
+                  "is",
+                  "a",
+                  "sounds",
+                  "which",
+                  "amazing",
+                  "like",
+                  "place"
+                ],
+                "explanation": "Correct sentence order: \"That sounds like a place which is amazing.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "After that, let us visit the old café.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "After that let us visit the old café",
+                "words": [
+                  "the",
+                  "let",
+                  "us",
+                  "café",
+                  "old",
+                  "After",
+                  "visit",
+                  "that"
+                ],
+                "explanation": "Correct sentence order: \"After that, let us visit the old café.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Is it the shop which sells sweet pastries?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Is it the shop which sells sweet pastries",
+                "words": [
+                  "sweet",
+                  "the",
+                  "pastries",
+                  "it",
+                  "Is",
+                  "sells",
+                  "shop",
+                  "which"
+                ],
+                "explanation": "Correct sentence order: \"Is it the shop which sells sweet pastries?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Yes, the chef who bakes them is friendly.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes the chef who bakes them is friendly",
+                "words": [
+                  "is",
+                  "them",
+                  "who",
+                  "the",
+                  "bakes",
+                  "Yes",
+                  "friendly",
+                  "chef"
+                ],
+                "explanation": "Correct sentence order: \"Yes, the chef who bakes them is friendly.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-3-m10-writing",
+      "moduleId": "A2.3-M10",
+      "skillType": "writing",
+      "title": "Writing Mission: Defining Relative Clauses with Who, Which, That, and Where",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-a2-3-m10-w-theory",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Learn how to connect two ideas into one clear sentence using relative pronouns like who, which, that, and where to describe people, things, and places.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Using 'Who' for People",
+                "formula": "Noun (Person) + who + verb / clause",
+                "example": "The man who lives next door is a teacher."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Using 'Which' and 'That' for Things",
+                "formula": "Noun (Thing) + which / that + verb / clause",
+                "example": "I want a computer which has a fast processor."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Using 'Where' for Places",
+                "formula": "Noun (Place) + where + subject + verb",
+                "example": "This is the park where we play football on Sundays."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Do not use commas before or after defining relative clauses.",
+                "badExample": "The woman, who works at the bank, is my aunt.",
+                "goodExample": "The woman who works at the bank is my aunt.",
+                "why": "Defining relative clauses give essential information, so commas are not needed."
+              },
+              {
+                "rule": "Use 'who' only for people, never for things or places.",
+                "badExample": "The car who is parked outside is red.",
+                "goodExample": "The car which is parked outside is red.",
+                "why": "Relative pronoun 'who' is strictly for human subjects."
+              },
+              {
+                "rule": "Ensure correct subject-verb agreement inside the relative clause.",
+                "badExample": "I like friends who is kind and helpful.",
+                "goodExample": "I like friends who are kind and helpful.",
+                "why": "The verb in the relative clause must agree with the noun it describes."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "She is the artist who painted this beautiful picture.",
+                "id": "Dia adalah seniman yang melukis gambar indah ini.",
+                "focus": "Using 'who' for people"
+              },
+              {
+                "en": "We visited a museum that had ancient Roman coins.",
+                "id": "Kami mengunjungi sebuah museum yang memiliki koin Romawi kuno.",
+                "focus": "Using 'that' for things"
+              },
+              {
+                "en": "This is the restaurant where we ate pizza last night.",
+                "id": "Ini adalah restoran tempat kami makan pizza tadi malam.",
+                "focus": "Using 'where' for places"
+              },
+              {
+                "en": "I need a jacket which keeps me warm in winter.",
+                "id": "Saya butuh jaket yang membuat saya tetap hangat di musim dingin.",
+                "focus": "Using 'which' for things"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m10-w-practice",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "the girl who live in that house are my friend",
+                "targetSentence": "The girl who lives in that house is my friend.",
+                "translation": "Gadis yang tinggal di rumah itu adalah teman saya.",
+                "keyRule": "Use 'lives' for singular third-person and capitalize the first letter.",
+                "requiredCapitals": [
+                  "The"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "i bought a laptop who has 16gb ram",
+                "targetSentence": "I bought a laptop which has 16GB RAM.",
+                "translation": "Saya membeli laptop yang memiliki RAM 16GB.",
+                "keyRule": "Use 'which' or 'that' for objects, not 'who'.",
+                "requiredCapitals": [
+                  "I"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "this is the school where i study english every tuesday",
+                "targetSentence": "This is the school where I study English every Tuesday.",
+                "translation": "Ini adalah sekolah tempat saya belajar bahasa Inggris setiap hari Selasa.",
+                "keyRule": "Capitalize proper nouns like English, Tuesday, and sentence beginnings.",
+                "requiredCapitals": [
+                  "This",
+                  "I",
+                  "English",
+                  "Tuesday"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "People",
+                "meaning": "Anak laki-laki yang memakai topi biru adalah sepupu saya.",
+                "tokens": [
+                  "The",
+                  "boy",
+                  "who",
+                  "wears",
+                  "a",
+                  "blue",
+                  "hat",
+                  "is",
+                  "my",
+                  "cousin."
+                ],
+                "fullSentence": "The boy who wears a blue hat is my cousin."
+              },
+              {
+                "id": "b-2",
+                "category": "Things",
+                "meaning": "Saya menyukai buku yang memiliki cerita menarik.",
+                "tokens": [
+                  "I",
+                  "like",
+                  "books",
+                  "that",
+                  "have",
+                  "interesting",
+                  "stories."
+                ],
+                "fullSentence": "I like books that have interesting stories."
+              },
+              {
+                "id": "b-3",
+                "category": "Places",
+                "meaning": "Itu adalah perpustakaan tempat saya membaca buku setiap hari Jumat.",
+                "tokens": [
+                  "That",
+                  "is",
+                  "the",
+                  "library",
+                  "where",
+                  "I",
+                  "read",
+                  "books",
+                  "every",
+                  "Friday."
+                ],
+                "fullSentence": "That is the library where I read books every Friday."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Describe Your Best Friend",
+                "badge": "Friendship Writer",
+                "instruction": "Write three sentences about your best friend using 'who'. Mention their name, what they look like or do, and why you like them.",
+                "example": "My best friend is Sarah who has long brown hair. She is a person who always helps me with homework. We like playing tennis together.",
+                "placeholder": "Start typing your sentences here...",
+                "minWords": 20,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Describe Your Favorite Place",
+                "badge": "Place Writer",
+                "instruction": "Write three sentences about your favorite place using 'where'. Mention the name of the place, where it is, and what you do there.",
+                "example": "Central Park is the place where I go every weekend. It is a big park where people walk their dogs. I love sitting under the trees and reading.",
+                "placeholder": "Start typing your sentences here...",
+                "minWords": 20,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m10-w-quiz",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Combination",
+                "instruction": "Combine the two sentences into one using 'who': 'A baker is a person. This person makes bread.'",
+                "promptText": "A baker is a person + [who] + makes bread.",
+                "hint": "Connect the noun and relative pronoun directly.",
+                "targetAnswers": [
+                  "A baker is a person who makes bread.",
+                  "A baker is someone who makes bread."
+                ],
+                "explanation": "Use 'who' after 'person' to describe human professions."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Combination",
+                "instruction": "Combine the two sentences using 'which': 'I bought a camera. The camera takes great photos.'",
+                "promptText": "I bought a camera + [which] + takes great photos.",
+                "hint": "Replace the second subject with 'which'.",
+                "targetAnswers": [
+                  "I bought a camera which takes great photos.",
+                  "I bought a camera that takes great photos."
+                ],
+                "explanation": "Use 'which' or 'that' for inanimate objects like cameras."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Sentence Combination",
+                "instruction": "Combine the two sentences using 'where': 'This is the cafe. We drink coffee there.'",
+                "promptText": "This is the cafe + [where] + we drink coffee.",
+                "hint": "Use 'where' to replace the location reference.",
+                "targetAnswers": [
+                  "This is the cafe where we drink coffee."
+                ],
+                "explanation": "Use 'where' to refer to a specific location or place."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Fill in the Blank",
+                "instruction": "Complete the sentence with the correct relative pronoun (who, which, or where): 'The girl ______ won the competition is my sister.'",
+                "promptText": "The girl ______ won the competition is my sister.",
+                "hint": "The antecedent is a person.",
+                "targetAnswers": [
+                  "who",
+                  "that"
+                ],
+                "explanation": "Use 'who' (or 'that' in informal contexts) for people."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Fill in the Blank",
+                "instruction": "Complete the sentence with the correct relative pronoun: 'Show me the shop ______ you bought your bicycle.'",
+                "promptText": "Show me the shop ______ you bought your bicycle.",
+                "hint": "The shop is a place.",
+                "targetAnswers": [
+                  "where"
+                ],
+                "explanation": "Use 'where' when talking about locations where actions happen."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the capitalization and punctuation error in this relative clause sentence:",
+                "promptText": "the man who repair cars is very honest",
+                "hint": "Check the first letter, verb agreement, and ending punctuation.",
+                "targetAnswers": [
+                  "The man who repairs cars is very honest."
+                ],
+                "explanation": "Capitalize the first letter, use 'repairs' for third-person singular, and add a period."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Pronoun Substitution",
+                "instruction": "Verify if this sentence is correct: 'I lost the umbrella that my mother gave me.' Type 'Yes' or rewrite correctly.",
+                "promptText": "I lost the umbrella that my mother gave me.",
+                "hint": "Is 'that' correct for an umbrella?",
+                "targetAnswers": [
+                  "Yes",
+                  "I lost the umbrella that my mother gave me."
+                ],
+                "explanation": "Umbrellas are things, so 'that' or 'which' is correct."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Sentence Building",
+                "instruction": "Write a complete sentence defining a teacher using 'who'.",
+                "promptText": "A teacher is someone who...",
+                "hint": "Complete the clause with an action teachers do.",
+                "targetAnswers": [
+                  "A teacher is someone who teaches students.",
+                  "A teacher is a person who teaches students.",
+                  "A teacher is someone who helps students learn."
+                ],
+                "explanation": "A defining relative clause with 'who' correctly identifies a person's role."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Sentence Combination",
+                "instruction": "Combine: 'She wears a jacket. The jacket has red buttons.'",
+                "promptText": "She wears a jacket + [which/that] + has red buttons.",
+                "hint": "Combine using 'which' or 'that'.",
+                "targetAnswers": [
+                  "She wears a jacket which has red buttons.",
+                  "She wears a jacket that has red buttons."
+                ],
+                "explanation": "Both 'which' and 'that' are correct for describing things."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Sentence Building",
+                "instruction": "Write a sentence defining a kitchen using 'where'.",
+                "promptText": "A kitchen is a room where...",
+                "hint": "What do people do in a kitchen?",
+                "targetAnswers": [
+                  "A kitchen is a room where people cook food.",
+                  "A kitchen is a place where people cook meals.",
+                  "A kitchen is a room where food is cooked."
+                ],
+                "explanation": "Use 'where' to describe what activity takes place in a specific room or place."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-a2-3-m10-speaking",
+      "moduleId": "A2.3-M10",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Defining Relative Clauses and Places",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-a2-3-m10-s-theory",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Learn how to speak clearly using defining relative clauses to describe people, things, and places without pausing awkwardly.",
+            "audioGuidance": "Focus on linking words together and using natural pausing before relative pronouns like who, which, that, and where.",
+            "pillars": [
+              {
+                "name": "Relative Pronunciation",
+                "target": "Unstressed relative pronouns",
+                "explanation": "Pronounce words like who, which, that, and where softly in sentences, keeping the main stress on important nouns and verbs."
+              },
+              {
+                "name": "Sentence Flow",
+                "target": "Smooth connected speech",
+                "explanation": "Avoid stopping between the main clause and the relative clause so your speech sounds natural."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-a2-3-m10-s-practice",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "AR-chi-tect",
+                "countryAudio": "architect",
+                "countrySyllables": [
+                  {
+                    "text": "AR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "chi",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tect",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ar-chi-TEC-tural",
+                "natAudio": "architectural",
+                "natSyllables": [
+                  {
+                    "text": "ar",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "chi",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TEC",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tu",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ral",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that the main stress moves to the third syllable when the word becomes an adjective."
+              },
+              {
+                "id": "pair-2",
+                "country": "SCI-en-tist",
+                "countryAudio": "scientist",
+                "countrySyllables": [
+                  {
+                    "text": "SCI",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "en",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tist",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "sci-en-TIF-ic",
+                "natAudio": "scientific",
+                "natSyllables": [
+                  {
+                    "text": "sci",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "en",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TIF",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ic",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that the stress shifts to the third syllable in the related adjective form."
+              },
+              {
+                "id": "pair-3",
+                "country": "IN-ven-tion",
+                "countryAudio": "invention",
+                "countrySyllables": [
+                  {
+                    "text": "IN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ven",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "in-VEN-tive",
+                "natAudio": "inventive",
+                "natSyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "VEN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tive",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that the stress moves to the middle syllable in the adjective form."
+              },
+              {
+                "id": "pair-4",
+                "country": "GAL-ler-y",
+                "countryAudio": "gallery",
+                "countrySyllables": [
+                  {
+                    "text": "GAL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ler",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "y",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "gal-LER-ies",
+                "natAudio": "galleries",
+                "natSyllables": [
+                  {
+                    "text": "gal",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LER",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ies",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that the main stress shifts to the second syllable in the plural form."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "An architect is someone who designs buildings.",
+                "phonetic": "/ən ˈɑːkɪtɛkt ɪz ˈsʌmwʌn huː dɪˈzaɪnz ˈbɪldɪŋz/",
+                "focus": "Using 'who' for people and clear word stress",
+                "hint": "Link 'who' smoothly to 'designs'."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "This is the museum where we saw ancient artifacts.",
+                "phonetic": "/ðɪs ɪz ðə mjuˈziəm weə wiː sɔː ˈeɪnʃənt ˈɑːtɪfækts/",
+                "focus": "Using 'where' for places",
+                "hint": "Pause slightly before 'where' for clear phrasing."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "The internet is an invention that changed the world.",
+                "phonetic": "/ði ˈɪntənet ɪz ən ɪnˈvenʃn ðæt tʃeɪndʒd ðə wɜːld/",
+                "focus": "Using 'that' for things",
+                "hint": "Pronounce 'that' softly without strong emphasis."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Marie Curie is a scientist who discovered radium.",
+                "phonetic": "/məˈriː ˈkjʊəri ɪz ə ˈsaɪəntɪst huː dɪsˈkʌvəd ˈreɪdiəm/",
+                "focus": "Proper names and relative clauses",
+                "hint": "Keep your voice steady across the relative clause."
+              }
+            ],
+            "roleplay": {
+              "context": "You are talking to a tour guide at a historic museum about famous monuments and inventors.",
+              "roles": [
+                "Tour Guide",
+                "Visitor"
+              ],
+              "turns": [
+                {
+                  "speaker": "Tour Guide",
+                  "text": "Welcome to the history museum! What would you like to see first?",
+                  "translation": "Selamat datang di museum sejarah! Apa yang ingin Anda lihat terlebih dahulu?"
+                },
+                {
+                  "speaker": "Visitor",
+                  "text": "I want to see the ancient artifacts that belong to the local king.",
+                  "translation": "Saya ingin melihat artefak kuno yang milik raja setempat."
+                },
+                {
+                  "speaker": "Tour Guide",
+                  "text": "That section is in the grand hall where kings used to hold meetings.",
+                  "translation": "Bagian itu berada di balai besar tempat para raja biasa mengadakan pertemuan."
+                },
+                {
+                  "speaker": "Visitor",
+                  "text": "Fantastic! Is there an architect who designed this amazing building?",
+                  "translation": "Luar biasa! Apakah ada arsitek yang merancang bangunan luar biasa ini?"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-a2-3-m10-s-quiz",
+          "moduleId": "A2.3-M10",
+          "subModuleId": "sub-a2-3-m10-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a famous person who you admire.",
+                "audioPrompt": "Describe a scientist or explorer who you admire and explain what they did.",
+                "storyPoints": [
+                  "Name the person and state their profession",
+                  "Explain what discovery or invention they made",
+                  "Tell why you think their work is important"
+                ],
+                "targetSentence": "Marie Curie is a scientist who discovered radium and changed modern medicine.",
+                "phonetic": "/məˈriː ˈkjʊəri ɪz ə ˈsaɪəntɪst huː dɪsˈkʌvəd ˈreɪdiəm/",
+                "expectedKeywords": [
+                  "scientist",
+                  "discovered",
+                  "invention",
+                  "important"
+                ],
+                "explanation": "Use 'who' correctly to describe a person in your story."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Place Storytelling",
+                "instruction": "Speak for at least 20 seconds about an ancient building or monument in your country.",
+                "audioPrompt": "Talk about a historic temple or monument where people like to visit.",
+                "storyPoints": [
+                  "Name the monument and its location",
+                  "Describe what people can see inside or around it",
+                  "Explain why it is a special place for history"
+                ],
+                "targetSentence": "Borobudur is a temple where tourists explore ancient stone carvings.",
+                "phonetic": "/ˌbɒrəˈbuːdʊər ɪz ə ˈtempl weə ˈtʊərɪsts ɪkˈsplɔːr/",
+                "expectedKeywords": [
+                  "temple",
+                  "where",
+                  "tourists",
+                  "ancient"
+                ],
+                "explanation": "Use 'where' correctly to describe a location in your story."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay Call",
+                "scenarioContext": "You are talking with your friend about a museum exhibition featuring ancient artifacts.",
+                "characterRole": "Museum Visitor discussing exhibits with a companion",
+                "instruction": "Respond to your friend by describing an object using 'that'.",
+                "audioPrompt": "Your friend asks: 'Did you see that strange metal object in the first room?' Respond using a defining relative clause with 'that'.",
+                "targetSentence": "Yes, that is an artifact that people made thousands of years ago.",
+                "phonetic": "/jɛs ðæt ɪz ən ˈɑːtɪfækts ðæt ˈpiːpl meɪd/",
+                "expectedKeywords": [
+                  "artifact",
+                  "that",
+                  "ago"
+                ],
+                "explanation": "Use 'that' to define things clearly in conversation."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay Call",
+                "scenarioContext": "You are speaking with a tour guide about famous inventors and scientists.",
+                "characterRole": "Curious Tourist asking about historical figures",
+                "instruction": "Ask the guide about an architect who designed old buildings.",
+                "audioPrompt": "Ask your tour guide to explain who designed the local town hall.",
+                "targetSentence": "Can you tell me who the architect was that designed this building?",
+                "phonetic": "/kæn juː tɛl miː huː ði ˈɑːkɪtɛkt wɒz ðæt dɪˈzaɪnd/",
+                "expectedKeywords": [
+                  "architect",
+                  "who",
+                  "designed"
+                ],
+                "explanation": "Use 'who' or 'that' when asking about people."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay Call",
+                "scenarioContext": "You are discussing historic places with a classmate for a school project.",
+                "characterRole": "Student working on a history assignment",
+                "instruction": "Describe a gallery where art is displayed.",
+                "audioPrompt": "Your partner asks where you want to meet to study. Suggest the art gallery using 'where'.",
+                "targetSentence": "We should meet at the gallery where local painters display their artwork.",
+                "phonetic": "/wiː ʃʊd miːt æt ðə ˈɡæləri weə ˈloʊkəl ˈpeɪntəz dɪˈspleɪ/",
+                "expectedKeywords": [
+                  "gallery",
+                  "where",
+                  "display"
+                ],
+                "explanation": "Use 'where' to refer to places in conversation."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay Call",
+                "scenarioContext": "You are talking about technology and modern inventions with a teacher.",
+                "characterRole": "Student answering a teacher's question",
+                "instruction": "Explain an invention that changed communication using 'which'.",
+                "audioPrompt": "Your teacher asks: 'What is an invention which changed how we talk to people?' Answer using 'which'.",
+                "targetSentence": "The smartphone is an invention which allows us to talk to anyone instantly.",
+                "phonetic": "/ðə ˈsmɑːtfəʊn ɪz ən ɪnˈvenʃn wɪtʃ əˈlaʊz ʌs tuː tɔːk/",
+                "expectedKeywords": [
+                  "invention",
+                  "which",
+                  "smartphone"
+                ],
+                "explanation": "Use 'which' to talk about things."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Pronunciation Drill",
+                "focus": "vocab",
+                "instruction": "Pronounce the target vocabulary word clearly with correct syllable stress.",
+                "audioPrompt": "Say the word 'explorer' and use it in a sentence with 'who'.",
+                "targetSentence": "An explorer is someone who travels to discover new places.",
+                "phonetic": "/ən ɪkˈsplɔːrər ɪz ˈsʌmwʌn huː ˈtrævəlz tuː dɪsˈkʌvər nuː pleɪsɪz/",
+                "expectedKeywords": [
+                  "explorer",
+                  "someone",
+                  "who",
+                  "travels"
+                ],
+                "explanation": "Focus on pronouncing 'explorer' with stress on the second syllable."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Sentence Drill",
+                "focus": "grammar",
+                "instruction": "Practice a defining relative clause sentence combining two ideas.",
+                "audioPrompt": "Read aloud this sentence using 'where' correctly.",
+                "targetSentence": "This is the century where technology grew very fast.",
+                "phonetic": "/ðɪs ɪz ðə ˈsentʃəri weə tɛkˈnɒlədʒi ɡruː ˈvɛri fɑːst/",
+                "expectedKeywords": [
+                  "century",
+                  "where",
+                  "technology"
+                ],
+                "explanation": "Ensure 'where' correctly connects the noun 'century' to the relative clause."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Syllable Stress Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Practice correct word stress on multi-syllable nouns.",
+                "audioPrompt": "Say the word 'monument' and read the sentence clearly.",
+                "targetSentence": "A monument is a structure which people build to remember important events.",
+                "phonetic": "/ə ˈmɒnjumənt ɪz ə ˈstrʌktʃə wɪtʃ ˈpiːpl bɪld tuː rɪˈmembər/",
+                "expectedKeywords": [
+                  "monument",
+                  "structure",
+                  "which"
+                ],
+                "explanation": "Emphasize the first syllable of 'monument'."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Pattern Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Use falling intonation at the end of a descriptive statement with a relative clause.",
+                "audioPrompt": "Read this statement with a clear falling tone at the end.",
+                "targetSentence": "Egypt is a country which has many ancient monuments.",
+                "phonetic": "/ˈiːdʒɪpt ɪz ə ˈkʌntri wɪtʃ hæz ˈmeni ˈeɪnʃənt ˈmɒnjumənts/",
+                "expectedKeywords": [
+                  "Egypt",
+                  "country",
+                  "ancient",
+                  "monuments"
+                ],
+                "explanation": "Lower your pitch at the end of the sentence to show completion."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

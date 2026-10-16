@@ -59,6 +59,7 @@ export function ModuleStageViewport({
             activeStepId={activeStepId}
             theorySec={theorySec}
             dialogueSec={dialogueSec}
+            practiceSec={practiceSec}
             quizSec={quizSec}
             tutor={tutor}
             onRewardXp={onRewardXp}

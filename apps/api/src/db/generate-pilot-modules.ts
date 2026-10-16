@@ -41,7 +41,15 @@ async function main() {
       targets.push(`${level}-M${String(u).padStart(2, "0")}`);
     }
   } else if (isAll) {
-    targets = Array.from({ length: 12 }, (_, idx) => `${level}-M${String(idx + 1).padStart(2, "0")}`);
+    if (level === "A2") {
+      targets = [
+        ...Array.from({ length: 12 }, (_, idx) => `A2.1-M${String(idx + 1).padStart(2, "0")}`),
+        ...Array.from({ length: 12 }, (_, idx) => `A2.2-M${String(idx + 1).padStart(2, "0")}`),
+        ...Array.from({ length: 12 }, (_, idx) => `A2.3-M${String(idx + 1).padStart(2, "0")}`),
+      ];
+    } else {
+      targets = Array.from({ length: 12 }, (_, idx) => `${level}-M${String(idx + 1).padStart(2, "0")}`);
+    }
   } else {
     targets = [targetModule || `${level}-M01`];
   }
