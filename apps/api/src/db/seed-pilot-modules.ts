@@ -59,7 +59,7 @@ export async function seedSingleModuleData(pilotData: any) {
         moduleId: sec.moduleId,
         subModuleId: sec.subModuleId,
         sectionType: sec.sectionType,
-        title: sec.title,
+        title: sec.title || (sec.sectionType === "quiz" ? "Assessment Quiz" : `${sec.sectionType.charAt(0).toUpperCase() + sec.sectionType.slice(1)} Section`),
         content: sec.content,
         orderIndex: sec.orderIndex,
         createdAt: new Date(),

@@ -1,0 +1,1556 @@
+{
+  "module": {
+    "id": "B2.1-M08",
+    "levelId": "B2.1",
+    "title": "Unit 8: It's a Crime: Reported Speech",
+    "cefr": "B2",
+    "group": "B2.1 - Vantage Foundations",
+    "objective": "Mampu melaporkan ucapan orang lain (reported speech), pertanyaan, permintaan, dan perintah dengan benar, serta memahami kosakata terkait kejahatan dan hukum",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 8
+  },
+  "subModules": [
+    {
+      "id": "sub-b2-1-m08-reading",
+      "moduleId": "B2.1-M08",
+      "skillType": "reading",
+      "title": "Reading Mission: Justice and Reporting",
+      "theme": "Crime and Reported Speech",
+      "grammarFocus": "Reported Speech (Statements, Questions, and Imperatives)",
+      "vocabularyFocus": "Crime Types, Legal Terms, and Consequences",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-b2-1-m08-r-theory",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to Unit 8. In this reading module, you will explore how journalists and witnesses report what people said during criminal investigations. You will learn the mechanics of shifting verb tenses, pronouns, and time expressions when changing direct speech into reported speech, and you will practice identifying key details in authentic crime reports.",
+            "linguisticTarget": {
+              "grammar": "Backshifting tenses in reported statements, questions, and commands.",
+              "vocabulary": "Specific crime vocabulary including burglars, muggers, shoplifters, and financial penalties.",
+              "readingStrategy": "Scanning for specific witness statements and skimming news reports for main ideas."
+            },
+            "learningObjectives": [
+              "Understand the main arguments and sequences of events in B2 crime reports.",
+              "Locate specific details regarding who committed a crime and what witnesses stated.",
+              "Recognize and apply correct tense transformations in reported speech structures."
+            ],
+            "contextWarmup": {
+              "prompt": "When you read a news story about an investigation, what is the most important element to look for first?",
+              "options": [
+                "The exact words and statements given by witnesses and suspects",
+                "The personal opinions of the newspaper editor",
+                "The advertisements printed next to the article"
+              ],
+              "correctIndex": 0,
+              "explanation": "Witness and suspect statements provide the core factual evidence and narrative framework of any crime report."
+            },
+            "rules": [
+              "Present Simple changes to Past Simple: She said, 'I steal cars' becomes She said she stole cars.",
+              "Present Continuous changes to Past Continuous: He said, 'I am watching' becomes He said he was watching.",
+              "Will changes to would, and can changes to could in reported statements."
+            ],
+            "commonTrap": {
+              "trapTitle": "Forgetting Question Word Order",
+              "explanation": "When reporting questions, learners often keep the auxiliary verb structure of direct questions instead of changing to statement word order.",
+              "wrong": "He asked me where did I live.",
+              "correct": "He asked me where I lived."
+            },
+            "contractionsTitle": "Natural Spoken Contractions in Reporting",
+            "contractionsSubtitle": "Observe how auxiliary verbs merge with pronouns in conversational reports:",
+            "contractions": [
+              {
+                "subject": "He",
+                "verb": "had",
+                "vowelDropped": "ha",
+                "remainder": "d",
+                "contracted": "He'd",
+                "exampleFull": "He said he had seen the burglar.",
+                "exampleContracted": "He said he'd seen the burglar."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Reported Statements",
+              "description": "Assemble sentence blocks to practice subject, reporting verb, and backshifted clause:",
+              "subjects": [
+                {
+                  "label": "The detective",
+                  "pronoun": "He",
+                  "correctToBe": "was",
+                  "role": "Investigator"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "explain",
+                  "thirdPerson": "explains",
+                  "continuous": "explaining"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "that the suspect had fled the scene",
+                  "type": "Reported Clause"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b2-1-m08-r-vocab",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "burglar",
+                "ipa": "/ˈbɜːɡlə(r)/",
+                "meaning": "pencuri yang masuk rumah",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The burglar broke into the house at night.",
+                "collocation": "The burglar broke into the house at night"
+              },
+              {
+                "word": "mugger",
+                "ipa": "/ˈmʌɡə(r)/",
+                "meaning": "perampok jalanan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The mugger attacked someone in the street.",
+                "collocation": "The mugger attacked someone in the street"
+              },
+              {
+                "word": "shoplifter",
+                "ipa": "/ˈʃɒplɪftə(r)/",
+                "meaning": "pencuri di toko",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The shoplifter was caught stealing from the store.",
+                "collocation": "The shoplifter was caught stealing from the store"
+              },
+              {
+                "word": "pickpocket",
+                "ipa": "/ˈpɪkpɒkɪt/",
+                "meaning": "pencopet",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Beware of pickpockets in crowded areas.",
+                "collocation": "Beware of pickpockets in crowded areas"
+              },
+              {
+                "word": "con man",
+                "ipa": "/ˈkɒn mæn/",
+                "meaning": "penipu",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The con man tricked people online.",
+                "collocation": "The con man tricked people online"
+              },
+              {
+                "word": "to commit a crime",
+                "ipa": "/kəˈmɪt ə kraɪm/",
+                "meaning": "melakukan kejahatan",
+                "partOfSpeech": "verb phrase",
+                "exampleSentence": "He was arrested for committing a crime.",
+                "collocation": "He was arrested for committing a crime"
+              },
+              {
+                "word": "a fine",
+                "ipa": "/ə faɪn/",
+                "meaning": "denda",
+                "partOfSpeech": "noun",
+                "exampleSentence": "He got a fine for speeding.",
+                "collocation": "He got a fine for speeding"
+              },
+              {
+                "word": "embezzlement",
+                "ipa": "/ɪmˈbezlmənt/",
+                "meaning": "penggelapan uang",
+                "partOfSpeech": "noun",
+                "exampleSentence": "He was charged with embezzlement from the company.",
+                "collocation": "He was charged with embezzlement from the company"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m08-r-guided",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "The Midnight Jewel Heist",
+            "audioUrl": "/audio/modules/b2-1-m08/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Last Tuesday evening, a daring burglary took place at the municipal museum in central London. According to police reports, a skilled burglar managed to bypass the high-security alarm system and stole several priceless historical artifacts. Chief Inspector Davies stated that they were reviewing security camera footage from neighboring streets to identify the suspect.",
+              "An eyewitness working nearby told reporters that she had seen a suspicious person lingering near the back entrance around midnight. She explained that the man was wearing a dark hooded jacket and carrying a heavy canvas bag. Police have asked anyone with additional information about the incident to contact the local station immediately."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "Last Tuesday evening, a daring burglary took place at the municipal museum in central London.",
+                "paragraphIndex": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m08-r-practice",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": []
+          }
+        },
+        {
+          "id": "sec-b2-1-m08-r-quiz",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "Where did the burglary take place?",
+                "options": [
+                  "At the municipal museum in central London",
+                  "At a downtown jewellery shop",
+                  "At a private residence in the suburbs"
+                ],
+                "answer": "At the municipal museum in central London",
+                "explanation": "The first paragraph states that the burglary took place at the municipal museum in central London."
+              },
+              {
+                "id": "q-r-2",
+                "question": "What did the criminal steal?",
+                "options": [
+                  "Modern electronic equipment",
+                  "Priceless historical artifacts",
+                  "Museum ticket money"
+                ],
+                "answer": "Priceless historical artifacts",
+                "explanation": "The text notes that the burglar stole several priceless historical artifacts."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What is Chief Inspector Davies' role in the investigation?",
+                "options": [
+                  "He is reviewing security camera footage",
+                  "He is guarding the museum entrance",
+                  "He is interviewing the museum director"
+                ],
+                "answer": "He is reviewing security camera footage",
+                "explanation": "Chief Inspector Davies stated that they were reviewing security camera footage from neighboring streets."
+              },
+              {
+                "id": "q-r-4",
+                "question": "When did the eyewitness notice the suspicious person?",
+                "options": [
+                  "Early Tuesday morning",
+                  "Around midnight on Tuesday",
+                  "During midday opening hours"
+                ],
+                "answer": "Around midnight on Tuesday",
+                "explanation": "The eyewitness stated she saw the person lingering near the back entrance around midnight."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What was the suspect wearing according to the witness?",
+                "options": [
+                  "A bright yellow raincoat",
+                  "A dark hooded jacket",
+                  "A formal business suit"
+                ],
+                "answer": "A dark hooded jacket",
+                "explanation": "The text explicitly states that the man was wearing a dark hooded jacket."
+              },
+              {
+                "id": "q-r-6",
+                "question": "What did the suspect carry with him?",
+                "options": [
+                  "A heavy canvas bag",
+                  "A metal toolbox",
+                  "A large suitcase"
+                ],
+                "answer": "A heavy canvas bag",
+                "explanation": "The eyewitness explained that the suspect was carrying a heavy canvas bag."
+              },
+              {
+                "id": "q-r-7",
+                "question": "What type of offender is described entering the museum?",
+                "options": [
+                  "A burglar",
+                  "A pickpocket",
+                  "A shoplifter"
+                ],
+                "answer": "A burglar",
+                "explanation": "The text refers to the perpetrator as a skilled burglar who bypassed alarm systems."
+              },
+              {
+                "id": "q-r-8",
+                "question": "What did the police ask the public to do?",
+                "options": [
+                  "Stay away from central London",
+                  "Contact the local station with any additional information",
+                  "Donate money to repair the museum"
+                ],
+                "answer": "Contact the local station with any additional information",
+                "explanation": "The final sentence states police asked anyone with additional information to contact the station."
+              },
+              {
+                "id": "q-r-9",
+                "question": "Which verb tense change occurs when reporting present statements into the past?",
+                "options": [
+                  "Present simple shifts to past simple",
+                  "Present simple remains unchanged",
+                  "Present simple shifts to future simple"
+                ],
+                "answer": "Present simple shifts to past simple",
+                "explanation": "Rule theory confirms present simple backshifts to past simple in reported speech."
+              },
+              {
+                "id": "q-r-10",
+                "question": "How should a direct question like 'Where are you going?' be reported?",
+                "options": [
+                  "He asked me where I was going",
+                  "He asked me where was I going",
+                  "He asked me where am I going"
+                ],
+                "answer": "He asked me where I was going",
+                "explanation": "Reported questions use statement word order and backshifted tenses without auxiliary inversion."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-1-m08-listening",
+      "moduleId": "B2.1-M08",
+      "skillType": "listening",
+      "title": "Listening Mission: The Mystery of the Returned Bicycle",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-b2-1-m08-l-theory",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Focus on listening for reported statements, time shifts, and reactions in a news interview setting. Pay attention to how speakers change direct quotes into reported speech.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken news interview about a petty crime.",
+              "Identify details such as dates, stolen items, and unexpected resolutions.",
+              "Notice how words link together in connected speech during quick radio interviews."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "go missing",
+                "meaning": "hilang dicuri atau terselip",
+                "note": "Used when an item disappears unexpectedly."
+              },
+              {
+                "phrase": "be shocked to discover",
+                "meaning": "kaget mendapati",
+                "note": "Expresses sudden surprise upon finding something out."
+              },
+              {
+                "phrase": "written apology",
+                "meaning": "surat permintaan maaf tertulis",
+                "note": "A formal or informal note expressing regret."
+              },
+              {
+                "phrase": "to my surprise",
+                "meaning": "yang mengejutkan saya",
+                "note": "Used to introduce an unexpected twist in a story."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "what happened",
+                "fast": "whathappened",
+                "slowIpa": "/wɒt ˈhæpənd/",
+                "fastIpa": "/wɒˈtæpənd/",
+                "note": "The /t/ sound in what links smoothly to the /h/ sound in happened, often dropping the /h/ entirely in fast speech."
+              },
+              {
+                "id": 2,
+                "slow": "bike was gone",
+                "fast": "bikewasgone",
+                "slowIpa": "/baɪk wɒz ɡɒn/",
+                "fastIpa": "/baɪkwəzɡɒn/",
+                "note": "Weak forms cause was to reduce to /wəz/ and blend directly into the surrounding words."
+              },
+              {
+                "id": 3,
+                "slow": "tell us",
+                "fast": "tellus",
+                "slowIpa": "/tɛl ʌs/",
+                "fastIpa": "/ˈtɛləs/",
+                "note": "The pronoun us weakens to schwa /əs/ and attaches to the preceding consonant."
+              },
+              {
+                "id": 4,
+                "slow": "note to the thief",
+                "fast": "notetothethief",
+                "slowIpa": "/noʊt tuː ðə θiːf/",
+                "fastIpa": "/ˈnoʊtəðəˈθiːf/",
+                "note": "Prepositions like to and articles like the reduce significantly in rapid spoken English."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m08-l-dialogue",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: The Bike Interview",
+          "orderIndex": 2,
+          "content": {
+            "context": "Mrs. Atkins reports to a local news reporter about her stolen bicycle and its mysterious return.",
+            "audioPrompt": "Listen to the conversation between the reporter and Mrs. Atkins.",
+            "lines": [
+              {
+                "speaker": "Reporter",
+                "text": "Mrs. Atkins, can you tell us what happened?",
+                "translation": "Bu Atkins, bisakah Anda ceritakan apa yang terjadi?",
+                "emotion": "inquisitive"
+              },
+              {
+                "speaker": "Mrs. Atkins",
+                "text": "My bicycle went missing last Friday morning.",
+                "translation": "Sepeda saya hilang Jumat pagi lalu.",
+                "emotion": "concerned"
+              },
+              {
+                "speaker": "Reporter",
+                "text": "How did you feel about that?",
+                "translation": "Bagaimana perasaan Anda tentang hal itu?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Mrs. Atkins",
+                "text": "I was shocked to discover it was gone.",
+                "translation": "Saya kaget mendapati sepeda itu sudah tidak ada.",
+                "emotion": "frustrated"
+              },
+              {
+                "speaker": "Reporter",
+                "text": "What did you do next?",
+                "translation": "Apa yang Anda lakukan selanjutnya?",
+                "emotion": "engaged"
+              },
+              {
+                "speaker": "Mrs. Atkins",
+                "text": "I wrote a note to the thief.",
+                "translation": "Saya menulis catatan untuk pencuri itu.",
+                "emotion": "determined"
+              },
+              {
+                "speaker": "Reporter",
+                "text": "Where did you leave the note?",
+                "translation": "Di mana Anda meninggalkan catatan itu?",
+                "emotion": "surprised"
+              },
+              {
+                "speaker": "Mrs. Atkins",
+                "text": "I pinned it onto a nearby tree.",
+                "translation": "Saya menyematkannya di pohon terdekat.",
+                "emotion": "confident"
+              },
+              {
+                "speaker": "Reporter",
+                "text": "Did the thief reply?",
+                "translation": "Apakah pencurinya membalas?",
+                "emotion": "amazed"
+              },
+              {
+                "speaker": "Mrs. Atkins",
+                "text": "To my surprise, they returned my bike.",
+                "translation": "Yang mengejutkan saya, mereka mengembalikan sepeda saya.",
+                "emotion": "relieved"
+              },
+              {
+                "speaker": "Reporter",
+                "text": "Did they leave anything else?",
+                "translation": "Apakah mereka meninggalkan hal lain?",
+                "emotion": "intrigued"
+              },
+              {
+                "speaker": "Mrs. Atkins",
+                "text": "They left a very nice written apology.",
+                "translation": "Mereka meninggalkan surat permintaan maaf yang sangat bagus.",
+                "emotion": "happy"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m08-l-quiz",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Mrs. Atkins, can you tell us what happened?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Reporter: \"Mrs. Atkins, can you tell us what _____?\"",
+                "targetWord": "happened",
+                "explanation": "Full audio: \"Mrs. Atkins, can you tell us what happened?\". The missing word is \"happened\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "My bicycle went missing last Friday morning.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mrs. Atkins: \"My bicycle went missing last Friday _____.\"",
+                "targetWord": "morning",
+                "explanation": "Full audio: \"My bicycle went missing last Friday morning.\". The missing word is \"morning\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "How did you feel about that?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Reporter: \"How did you feel about _____?\"",
+                "targetWord": "that",
+                "explanation": "Full audio: \"How did you feel about that?\". The missing word is \"that\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I was shocked to discover it was gone.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mrs. Atkins: \"I was shocked to discover it was _____.\"",
+                "targetWord": "gone",
+                "explanation": "Full audio: \"I was shocked to discover it was gone.\". The missing word is \"gone\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "What did you do next?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Reporter: \"What did you do _____?\"",
+                "targetWord": "next",
+                "explanation": "Full audio: \"What did you do next?\". The missing word is \"next\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "I wrote a note to the thief.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I wrote a note to the thief",
+                "words": [
+                  "the",
+                  "wrote",
+                  "note",
+                  "I",
+                  "thief",
+                  "to",
+                  "a"
+                ],
+                "explanation": "Correct sentence order: \"I wrote a note to the thief.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Where did you leave the note?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Where did you leave the note",
+                "words": [
+                  "the",
+                  "you",
+                  "note",
+                  "did",
+                  "leave",
+                  "Where"
+                ],
+                "explanation": "Correct sentence order: \"Where did you leave the note?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "I pinned it onto a nearby tree.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I pinned it onto a nearby tree",
+                "words": [
+                  "nearby",
+                  "pinned",
+                  "it",
+                  "I",
+                  "tree",
+                  "a",
+                  "onto"
+                ],
+                "explanation": "Correct sentence order: \"I pinned it onto a nearby tree.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Did the thief reply?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Did the thief reply",
+                "words": [
+                  "reply",
+                  "Did",
+                  "thief",
+                  "the"
+                ],
+                "explanation": "Correct sentence order: \"Did the thief reply?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Did they leave anything else?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Did they leave anything else",
+                "words": [
+                  "leave",
+                  "they",
+                  "anything",
+                  "Did",
+                  "else"
+                ],
+                "explanation": "Correct sentence order: \"Did they leave anything else?\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Mrs. Atkins, can you tell us what happened?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Reporter: \"Mrs. Atkins, can you tell us what _____?\"",
+                "targetWord": "happened",
+                "explanation": "Full audio: \"Mrs. Atkins, can you tell us what happened?\". The missing word is \"happened\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "My bicycle went missing last Friday morning.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mrs. Atkins: \"My bicycle went missing last Friday _____.\"",
+                "targetWord": "morning",
+                "explanation": "Full audio: \"My bicycle went missing last Friday morning.\". The missing word is \"morning\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "How did you feel about that?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Reporter: \"How did you feel about _____?\"",
+                "targetWord": "that",
+                "explanation": "Full audio: \"How did you feel about that?\". The missing word is \"that\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I was shocked to discover it was gone.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mrs. Atkins: \"I was shocked to discover it was _____.\"",
+                "targetWord": "gone",
+                "explanation": "Full audio: \"I was shocked to discover it was gone.\". The missing word is \"gone\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "What did you do next?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Reporter: \"What did you do _____?\"",
+                "targetWord": "next",
+                "explanation": "Full audio: \"What did you do next?\". The missing word is \"next\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "I wrote a note to the thief.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I wrote a note to the thief",
+                "words": [
+                  "the",
+                  "wrote",
+                  "note",
+                  "I",
+                  "thief",
+                  "to",
+                  "a"
+                ],
+                "explanation": "Correct sentence order: \"I wrote a note to the thief.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Where did you leave the note?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Where did you leave the note",
+                "words": [
+                  "the",
+                  "you",
+                  "note",
+                  "did",
+                  "leave",
+                  "Where"
+                ],
+                "explanation": "Correct sentence order: \"Where did you leave the note?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "I pinned it onto a nearby tree.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I pinned it onto a nearby tree",
+                "words": [
+                  "nearby",
+                  "pinned",
+                  "it",
+                  "I",
+                  "tree",
+                  "a",
+                  "onto"
+                ],
+                "explanation": "Correct sentence order: \"I pinned it onto a nearby tree.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Did the thief reply?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Did the thief reply",
+                "words": [
+                  "reply",
+                  "Did",
+                  "thief",
+                  "the"
+                ],
+                "explanation": "Correct sentence order: \"Did the thief reply?\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Did they leave anything else?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Did they leave anything else",
+                "words": [
+                  "leave",
+                  "they",
+                  "anything",
+                  "Did",
+                  "else"
+                ],
+                "explanation": "Correct sentence order: \"Did they leave anything else?\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-1-m08-writing",
+      "moduleId": "B2.1-M08",
+      "skillType": "writing",
+      "title": "Writing Mission: Crime Reports and Reported Statements",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-b2-1-m08-w-theory",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Master the art of writing formal crime reports and shifting direct speech into accurate reported statements, questions, and commands at the B2 level.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Backshift Tenses in Reported Statements",
+                "formula": "Reporting Verb (said/told) + (that) + Past-shifted Clause",
+                "example": "Detective Miller stated that the suspect had fled the scene."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Converting Direct Questions",
+                "formula": "Reporting Verb (asked/inquired) + Question Word / If + Subject + Verb",
+                "example": "The officer asked the witness where she had seen the vehicle."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Reporting Imperatives and Requests",
+                "formula": "Reporting Verb (ordered/told/asked) + Object + to-infinitive / not to-infinitive",
+                "example": "The judge instructed the jury not to discuss the case outside."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Omit question marks in reported questions.",
+                "badExample": "The detective asked me where I parked my car?",
+                "goodExample": "The detective asked me where I had parked my car.",
+                "why": "Reported questions are noun clauses functioning as objects, not direct interrogative sentences."
+              },
+              {
+                "rule": "Distinguish between 'say' and 'tell' in reported speech.",
+                "badExample": "The witness told that he saw the thief.",
+                "goodExample": "The witness said that he had seen the thief.",
+                "why": "'Tell' requires a direct personal object (told me, told the police), whereas 'say' does not."
+              },
+              {
+                "rule": "Capitalize legal terms and official titles correctly.",
+                "badExample": "inspector davis interviewed the suspect at Scotland Yard.",
+                "goodExample": "Inspector Davis interviewed the suspect at Scotland Yard.",
+                "why": "Titles combined with proper names and specific headquarters are proper nouns requiring capitalization."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "The investigator explained that the forensic evidence had been compromised.",
+                "id": "Penyidik menjelaskan bahwa bukti forensik telah dikompromikan.",
+                "focus": "Past Perfect backshift in reported speech"
+              },
+              {
+                "en": "She confessed to the police officer that she had stolen the jewelry.",
+                "id": "Dia mengaku kepada petugas polisi bahwa dia telah mencuri perhiasan itu.",
+                "focus": "Reporting verbs with prepositional objects"
+              },
+              {
+                "en": "The magistrate warned the defendant never to violate the restraining order again.",
+                "id": "Hakim memperingatkan terdakwa agar tidak pernah melanggar perintah penahanan itu lagi.",
+                "focus": "Negative reported command structure"
+              },
+              {
+                "en": "Journalists reported that the bank robbery had been planned for months.",
+                "id": "Jurnalis melaporkan bahwa perampokan bank tersebut telah direncanakan selama berbulan-bulan."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m08-w-practice",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "detective smith told that the burglar had escaped through the window",
+                "targetSentence": "Detective Smith said that the burglar had escaped through the window.",
+                "translation": "Detektif Smith mengatakan bahwa pencuri itu telah melarikan diri melalui jendela.",
+                "keyRule": "Use 'said' when no personal object follows, and capitalize proper names.",
+                "requiredCapitals": [
+                  "Detective",
+                  "Smith"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "the officer asked the suspect where did he hide the stolen money?",
+                "targetSentence": "The officer asked the suspect where he had hidden the stolen money.",
+                "translation": "Petugas itu menolak dan bertanya kepada tersangka di mana dia menyembunyikan uang curian itu.",
+                "keyRule": "Use standard word order (subject before verb) and omit question marks in reported questions.",
+                "requiredCapitals": [
+                  "The"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "the judge ordered the witness not speaking during the trial",
+                "targetSentence": "The judge ordered the witness not to speak during the trial.",
+                "translation": "Hakim memerintahkan saksi untuk tidak berbicara selama persidangan.",
+                "keyRule": "Use the to-infinitive (not to speak) for negative reported commands.",
+                "requiredCapitals": [
+                  "The"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Reported Statements",
+                "meaning": "Saksi menyatakan bahwa dia melihat terdakwa di dekat bank.",
+                "tokens": [
+                  "The",
+                  "witness",
+                  "stated",
+                  "that",
+                  "she",
+                  "had",
+                  "seen",
+                  "the",
+                  "defendant",
+                  "near",
+                  "the",
+                  "bank."
+                ],
+                "fullSentence": "The witness stated that she had seen the defendant near the bank."
+              },
+              {
+                "id": "b-2",
+                "category": "Reported Questions",
+                "meaning": "Polisi bertanya kepada pria itu apa yang sedang dilakukannya di daerah tersebut.",
+                "tokens": [
+                  "The",
+                  "police",
+                  "asked",
+                  "the",
+                  "man",
+                  "what",
+                  "he",
+                  "was",
+                  "doing",
+                  "in",
+                  "the",
+                  "area."
+                ],
+                "fullSentence": "The police asked the man what he was doing in the area."
+              },
+              {
+                "id": "b-3",
+                "category": "Reported Commands",
+                "meaning": "Petugas keamanan menyuruh para pencuri untuk segera menjatuhkan senjata mereka.",
+                "tokens": [
+                  "The",
+                  "security",
+                  "guard",
+                  "ordered",
+                  "the",
+                  "thieves",
+                  "to",
+                  "drop",
+                  "their",
+                  "weapons."
+                ],
+                "fullSentence": "The security guard ordered the thieves to drop their weapons."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Summarizing a Witness Statement",
+                "badge": "Crime Reporter",
+                "instruction": "Write three sentences summarizing what a witness saw during a burglary using reported speech. Mention what the suspect looked like and where they ran.",
+                "example": "The witness stated that the burglar wore a black jacket. She added that the man had carried a heavy bag. Finally, she reported that he had run toward the subway station.",
+                "placeholder": "Start typing your reported sentences here...",
+                "minWords": 25,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Police Interrogation Report",
+                "badge": "Lead Investigator",
+                "instruction": "Write three sentences detailing an interrogation. Report what the detective asked and how the suspect responded.",
+                "example": "The inspector asked the suspect where he had been at midnight. The suspect claimed that he had stayed at home. However, the detective noted that his alibi was false.",
+                "placeholder": "Write your interrogation summary here...",
+                "minWords": 25,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m08-w-quiz",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform the direct speech into reported speech using a past tense reporting verb:",
+                "promptText": "Direct speech: 'I stole the painting from the gallery,' said the thief.",
+                "hint": "Change 'stole' (Past Simple) to the Past Perfect form 'had stolen'.",
+                "targetAnswers": [
+                  "The thief said that he had stolen the painting from the gallery.",
+                  "The thief said he had stolen the painting from the gallery."
+                ],
+                "explanation": "Past simple verbs backshift to the past perfect tense in reported speech."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the direct question into a reported question:",
+                "promptText": "Direct speech: 'Where did you hide the counterfeit money?' the detective asked him.",
+                "hint": "Use 'asked him where' followed by the subject and the past perfect tense.",
+                "targetAnswers": [
+                  "The detective asked him where he had hidden the counterfeit money.",
+                  "The detective asked him where he had hid the counterfeit money."
+                ],
+                "explanation": "Reported questions use statement word order (subject + verb) and omit question marks."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Convert the direct command into a reported command:",
+                "promptText": "Direct speech: 'Don't touch the forensic evidence!' the officer told the civilian.",
+                "hint": "Use 'told the civilian not to touch' the evidence.",
+                "targetAnswers": [
+                  "The officer told the civilian not to touch the forensic evidence.",
+                  "The officer ordered the civilian not to touch the forensic evidence."
+                ],
+                "explanation": "Negative imperatives in direct speech change to 'not to' plus the base verb."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the grammar, punctuation, and capitalization in this reported statement:",
+                "promptText": "Faulty: the witness told that he saw a masked man running away.",
+                "hint": "Replace 'told that' with 'said that' or 'told the police that'.",
+                "targetAnswers": [
+                  "The witness said that he had seen a masked man running away.",
+                  "The witness stated that he had seen a masked man running away.",
+                  "The witness said that he saw a masked man running away."
+                ],
+                "explanation": "'Tell' requires a direct object, whereas 'say' does not take a direct personal object."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform the direct speech with modal verbs into reported speech:",
+                "promptText": "Direct speech: 'I can identify the suspect in the lineup,' she stated.",
+                "hint": "Change the modal 'can' to its past form 'could'.",
+                "targetAnswers": [
+                  "She stated that she could identify the suspect in the lineup.",
+                  "She stated she could identify the suspect in the lineup."
+                ],
+                "explanation": "The modal verb 'can' changes to 'could' in reported speech."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Convert this yes/no direct question into reported speech:",
+                "promptText": "Direct speech: 'Did you witness the robbery on Main Street?' the officer asked her.",
+                "hint": "Use 'if' or 'whether' after the reporting verb.",
+                "targetAnswers": [
+                  "The officer asked her if she had witnessed the robbery on Main Street.",
+                  "The officer asked her whether she had witnessed the robbery on Main Street."
+                ],
+                "explanation": "Yes/no questions in reported speech require 'if' or 'whether' followed by standard word order."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the direct speech statement into reported speech:",
+                "promptText": "Direct speech: 'We are investigating a major cybercrime syndicate,' the chief inspector announced.",
+                "hint": "Change 'are investigating' (Present Continuous) to 'were investigating'.",
+                "targetAnswers": [
+                  "The chief inspector announced that they were investigating a major cybercrime syndicate.",
+                  "The chief inspector announced that we were investigating a major cybercrime syndicate."
+                ],
+                "explanation": "Present continuous changes to past continuous in reported speech."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the punctuation and word order error in this reported question:",
+                "promptText": "Faulty: The judge inquired why did the defendant commit the fraud?",
+                "hint": "Remove the auxiliary 'did', change 'commit' to 'had committed', and remove the question mark.",
+                "targetAnswers": [
+                  "The judge inquired why the defendant had committed the fraud.",
+                  "The judge asked why the defendant had committed the fraud."
+                ],
+                "explanation": "Reported questions do not use auxiliary 'do/does/did' and end with a full stop."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform the direct speech with 'will' into reported speech:",
+                "promptText": "Direct speech: 'The jury will deliver the verdict tomorrow,' the reporter declared.",
+                "hint": "Change the modal 'will' to 'would'.",
+                "targetAnswers": [
+                  "The reporter declared that the jury would deliver the verdict the following day.",
+                  "The reporter declared that the jury would deliver the verdict tomorrow."
+                ],
+                "explanation": "The future modal 'will' changes to 'would' in reported speech."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Write a complete reported sentence based on this direct quote: 'I have never broken any laws,' insisted the suspect.",
+                "promptText": "Direct quote: 'I have never broken any laws,' insisted the suspect.",
+                "hint": "Change 'have never broken' (Present Perfect) to 'had never broken' (Past Perfect).",
+                "targetAnswers": [
+                  "The suspect insisted that he had never broken any laws.",
+                  "The suspect insisted that she had never broken any laws."
+                ],
+                "explanation": "Present perfect tenses backshift to past perfect in reported speech."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-1-m08-speaking",
+      "moduleId": "B2.1-M08",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Crime and Reported Speech",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-b2-1-m08-s-theory",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Mastering spoken reported speech requires clear tense shifting, precise reporting verbs, and natural sentence stress. When you retell what someone else said, you must balance information-carrying words with weak grammatical forms.",
+            "audioGuidance": "Focus on pausing naturally after reporting verbs such as claimed, stated, or explained. Use falling intonation for statements and rising intonation when reporting direct yes-no questions.",
+            "pillars": [
+              {
+                "name": "Reporting Verb Stress",
+                "target": "Emphasize key reporting verbs while reducing pronoun pronouns",
+                "explanation": "When saying phrases like 'he told me that', reduce the auxiliary and pronoun sounds to keep the rhythm smooth and conversational."
+              },
+              {
+                "name": "Backshifting Rhythm",
+                "target": "Maintain natural cadence during tense changes",
+                "explanation": "Practice moving past tense verbs into past perfect forms without halting your breath flow."
+              },
+              {
+                "name": "Crime Lexicon Articulation",
+                "target": "Clear consonant clusters in legal and criminal vocabulary",
+                "explanation": "Words like embezzlement and shoplifter require sharp plosives and distinct syllable boundaries for high clarity."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m08-s-practice",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "BUR-glar",
+                "countryAudio": "burglar",
+                "countrySyllables": [
+                  {
+                    "text": "BUR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "glar",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "bur-GLAR-i-o-us",
+                "natAudio": "burglarious",
+                "natSyllables": [
+                  {
+                    "text": "bur",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "GLAR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ous",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice how the primary stress shifts when changing from the noun to the adjective form."
+              },
+              {
+                "id": "pair-2",
+                "country": "MUG-ger",
+                "countryAudio": "mugger",
+                "countrySyllables": [
+                  {
+                    "text": "MUG",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ger",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "mug-GING",
+                "natAudio": "mugging",
+                "natSyllables": [
+                  {
+                    "text": "mug",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ging",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress remains on the root syllable in the gerund form."
+              },
+              {
+                "id": "pair-3",
+                "country": "SHOP-lifter",
+                "countryAudio": "shoplifter",
+                "countrySyllables": [
+                  {
+                    "text": "SHOP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "lif",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ter",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "shop-LIF-ting",
+                "natAudio": "shoplifting",
+                "natSyllables": [
+                  {
+                    "text": "shop",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LIF",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ting",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Compound nouns often stress the first element, while related verbs shift stress depending on context."
+              },
+              {
+                "id": "pair-4",
+                "country": "EM-bez-zle",
+                "countryAudio": "embezzle",
+                "countrySyllables": [
+                  {
+                    "text": "EM",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "BEZ",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "zle",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "em-BEZ-zle-ment",
+                "natAudio": "embezzlement",
+                "natSyllables": [
+                  {
+                    "text": "em",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "BEZ",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "zle",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ment",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress stays firmly on the second syllable across both the verb and noun forms."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "The detective stated that the burglar had broken into the mansion.",
+                "phonetic": "/ðə dɪˈtektɪv ˈsteɪtɪd ðæt ðə ˈbɜːɡlə(r) hæd ˈbrəʊkən ˈɪntuː ðə ˈmænʃn/",
+                "focus": "Reported speech backshift and past perfect pronunciation",
+                "hint": "Link 'stated that' cleanly without a pause."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "She asked me if I had ever witnessed a crime on the street.",
+                "phonetic": "/ʃi ɑːskt mi ɪf aɪ hæd ˈevə(r) ˈwɪsnɪst ə kraɪm ɒn ðə striːt/",
+                "focus": "Reporting yes-no questions with 'if'",
+                "hint": "Keep your voice level on 'asked me if' before rising on 'crime'."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "The witness warned the shoplifter not to run away from the store.",
+                "phonetic": "/ðə ˈwɪtnəs wɔːnd ðə ˈʃɒplɪftə(r) nɒt tuː rʌn əˈweɪ frɒm ðə stɔː(r)/",
+                "focus": "Reporting orders and negative imperatives",
+                "hint": "Emphasize 'warned' and maintain a steady rhythm through 'not to run'."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "He admitted that he had committed embezzlement at his office.",
+                "phonetic": "/hi ədˈmɪtɪd ðæt hi hæd kəˈmɪtɪd ɪmˈbezlmənt æt hɪz ˈɒfɪs/",
+                "focus": "Complex legal vocabulary and smooth backshifting",
+                "hint": "Articulate every syllable in 'embezzlement' clearly."
+              }
+            ],
+            "roleplay": {
+              "context": "You are at a local police station reporting a theft you witnessed earlier today.",
+              "roles": [
+                "Police Officer",
+                "Eyewitness"
+              ],
+              "turns": [
+                {
+                  "speaker": "Police Officer",
+                  "text": "Good afternoon. Can you tell me what you saw outside the bank?",
+                  "translation": "Selamat sore. Bisakah kamu memberitahu saya apa yang kamu lihat di luar bank?"
+                },
+                {
+                  "speaker": "Eyewitness",
+                  "text": "Yes, officer. A pickpocket snatched a tourist's wallet and ran down the alley.",
+                  "translation": "Ya, petugas. Seorang pencopet merebut dompet turis dan berlari menuruni gang."
+                },
+                {
+                  "speaker": "Police Officer",
+                  "text": "Did anyone else mention seeing which direction he escaped?",
+                  "translation": "Apakah ada orang lain yang menyebutkan melihat arah mana dia melarikan diri?"
+                },
+                {
+                  "speaker": "Eyewitness",
+                  "text": "Another witness stated that the thief had jumped onto a motorcycle.",
+                  "translation": "Saksi lain menyatakan bahwa pencuri tersebut telah melompat ke atas sepeda motor."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b2-1-m08-s-quiz",
+          "moduleId": "B2.1-M08",
+          "subModuleId": "sub-b2-1-m08-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a time you heard someone share important news using reported speech.",
+                "audioPrompt": "Tell me about a time someone told you exciting or surprising news and how you repeated it to others.",
+                "storyPoints": [
+                  "Who gave you the news and what they originally said",
+                  "How you transformed their exact words into reported speech",
+                  "The reaction of the person you shared the news with"
+                ],
+                "targetSentence": "My friend told me that she had won a national writing competition.",
+                "phonetic": "/maɪ frend təʊld mi ðæt ʃi hæd wɒn ə ˈnæʃnəl ˈraɪtɪŋ ˌkɒmpəˈtɪʃn/",
+                "expectedKeywords": [
+                  "told",
+                  "won",
+                  "competition",
+                  "reported"
+                ],
+                "explanation": "Use past reporting verbs and backshift tenses correctly in a monologue."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a crime story you heard on the news recently.",
+                "audioPrompt": "Describe a crime report you heard on television or read in the newspaper recently.",
+                "storyPoints": [
+                  "What crime was committed and where it took place",
+                  "What the police spokesperson stated during the interview",
+                  "What punishment the judge gave to the offender"
+                ],
+                "targetSentence": "The news reporter stated that the burglar had been arrested by local police.",
+                "phonetic": "/ðə njuːz rɪˈpɔːtə(r) ˈsteɪtɪd ðæt ðə ˈbɜːɡlə(r) hæd biːn əˈrestɪd baɪ ˈləʊkl pəˈliːs/",
+                "expectedKeywords": [
+                  "reporter",
+                  "burglar",
+                  "arrested",
+                  "police"
+                ],
+                "explanation": "Incorporate vocabulary related to law enforcement and reported passive structures."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are speaking with a police detective who is investigating a robbery at your neighborhood store.",
+                "characterRole": "Store Owner",
+                "instruction": "Respond to the detective's questions about what the shoplifter said before fleeing.",
+                "audioPrompt": "Detective: What did the suspect say to you when you tried to stop him?",
+                "targetSentence": "He told me that I should mind my own business before running out.",
+                "phonetic": "/hi təʊld mi ðæt aɪ ʃʊd maɪnd maɪ əʊn ˈbɪznəs bɪˈfɔː(r) ˈrʌnɪŋ aʊt/",
+                "expectedKeywords": [
+                  "told",
+                  "business",
+                  "running",
+                  "suspect"
+                ],
+                "explanation": "Practice reporting direct orders and warnings naturally in a conversation."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are talking to your neighbor who witnessed a suspicious character near your house.",
+                "characterRole": "Homeowner",
+                "instruction": "Ask your neighbor what the con man asked them when he knocked on their door.",
+                "audioPrompt": "Neighbor: I saw a strange man walking around your porch earlier.",
+                "targetSentence": "Did you ask him what he wanted or why he was lingering there?",
+                "phonetic": "/dɪd ju ɑːsk hɪm wɒt hi ˈwɒntɪd ɔː(r) waɪ hi wɒz ˈlɪŋɡərɪŋ ðeə(r)/",
+                "expectedKeywords": [
+                  "ask",
+                  "wanted",
+                  "lingering",
+                  "stranger"
+                ],
+                "explanation": "Use reported wh- questions correctly when inquiring about past interactions."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are at a corporate office discussing an ongoing financial audit with your manager.",
+                "characterRole": "Employee",
+                "instruction": "Explain to your manager what the auditor stated about company accounts.",
+                "audioPrompt": "Manager: Did the auditor find any irregularities in the financial records?",
+                "targetSentence": "The auditor explained that someone had committed embezzlement over the past year.",
+                "phonetic": "/ði ˈɔːdɪtə(r) ɪkˈspleɪnd ðæt ˈsʌmwʌn hæd kəˈmɪtɪd ɪmˈbezlmənt ˈəʊvə(r) ðə pɑːst jɪə(r)/",
+                "expectedKeywords": [
+                  "auditor",
+                  "explained",
+                  "embezzlement",
+                  "records"
+                ],
+                "explanation": "Demonstrate advanced reporting vocabulary in a formal workplace scenario."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are talking with a friend about a recent court ruling where someone received a heavy fine.",
+                "characterRole": "Concerned Citizen",
+                "instruction": "Report what the judge ordered the defendant to do during the hearing.",
+                "audioPrompt": "Friend: I heard the judge sentenced someone in court today. What was the penalty?",
+                "targetSentence": "The judge ordered the driver to pay a massive fine for reckless behavior.",
+                "phonetic": "/ðə dʒʌdʒ ˈɔːdəd ðə ˈdraɪvə(r) tuː peɪ ə ˈmæsɪv faɪn fɔː(r) ˈrekləs bɪˈheɪvjə(r)/",
+                "expectedKeywords": [
+                  "judge",
+                  "ordered",
+                  "fine",
+                  "penalty"
+                ],
+                "explanation": "Report instructions and legal commands with precise phrasing."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "focus": "vocab",
+                "instruction": "Pronounce the target sentence clearly, emphasizing the key legal and criminal vocabulary terms.",
+                "audioPrompt": "Say this sentence: The mugger attacked the tourist and stole his camera.",
+                "targetSentence": "The mugger attacked the tourist and stole his camera.",
+                "phonetic": "/ðə ˈmʌɡə(r) əˈtækt ðə ˈtʊərɪst ænd stəʊl hɪz ˈkæmrə/",
+                "expectedKeywords": [
+                  "mugger",
+                  "attacked",
+                  "tourist",
+                  "stole"
+                ],
+                "explanation": "Ensure clear consonant articulation on 'mugger' and 'attacked'."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "focus": "grammar",
+                "instruction": "Practice backshifting the verb tense accurately from direct to reported speech.",
+                "audioPrompt": "Change this to reported speech: 'I am investigating a robbery,' said the officer.",
+                "targetSentence": "The officer stated that he was investigating a robbery.",
+                "phonetic": "/ðə ˈɒfɪsə(r) ˈsteɪtɪd ðæt hi wɒz ɪnˈvestɪɡeɪtɪŋ ə ˈrɒbəri/",
+                "expectedKeywords": [
+                  "officer",
+                  "stated",
+                  "investigating",
+                  "robbery"
+                ],
+                "explanation": "Shift present continuous ('am investigating') to past continuous ('was investigating')."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress",
+                "focus": "pronunciation_stress",
+                "instruction": "Focus on correct syllable stress within multi-syllable crime and justice terminology.",
+                "audioPrompt": "Read this sentence focusing on word stress: The pickpocket was caught by authorities.",
+                "targetSentence": "The pickpocket was caught by authorities.",
+                "phonetic": "/ðə ˈpɪkpɒkɪt wɒz kɔːt baɪ ɔːˈθɒrətiz/",
+                "expectedKeywords": [
+                  "pickpocket",
+                  "caught",
+                  "authorities"
+                ],
+                "explanation": "Place primary stress on the first syllable of 'pickpocket' and the second syllable of 'authorities'."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Intonation",
+                "focus": "pronunciation_intonation",
+                "instruction": "Use appropriate rising intonation when reporting a direct question and falling intonation for the final statement.",
+                "audioPrompt": "Deliver this reported question with natural intonation: She asked me where the burglar had hidden the money.",
+                "targetSentence": "She asked me where the burglar had hidden the money.",
+                "phonetic": "/ʃi ɑːskt mi weə(r) ðə ˈbɜːɡlə(r) hæd ˈhɪdn ðə ˈmʌni/",
+                "expectedKeywords": [
+                  "asked",
+                  "burglar",
+                  "hidden",
+                  "money"
+                ],
+                "explanation": "Maintain a smooth pitch contour, avoiding question intonation at the end since it is a reported wh-clause."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

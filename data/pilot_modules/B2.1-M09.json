@@ -1,0 +1,1632 @@
+{
+  "module": {
+    "id": "B2.1-M09",
+    "levelId": "B2.1",
+    "title": "Unit 9: What Happened?: Third Conditional & Regrets",
+    "cefr": "B2",
+    "group": "B2.1 - Vantage Foundations",
+    "objective": "Mampu membuat deduksi tentang peristiwa masa lalu menggunakan modal verbs (must have, can't have, might have, should have, shouldn't have) dan memahami perbedaan antara fakta dan opini dalam konteks misteri dan peristiwa yang tidak dapat dijelaskan.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 9
+  },
+  "subModules": [
+    {
+      "id": "sub-b2-1-m09-reading",
+      "moduleId": "B2.1-M09",
+      "skillType": "reading",
+      "title": "Reading Mission: Unsolved Mysteries and Past Speculations",
+      "theme": "Mysteries and Past Events",
+      "grammarFocus": "Modals of Deduction in the Past (must have, might have, can't have, should have)",
+      "vocabularyFocus": "Mysteries, Aviation, and Evidence",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-b2-1-m09-r-theory",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to Unit 9! In this reading module, you will explore unexplained historical mysteries and learn how to use past modal verbs to make logical deductions, analyze evidence, and discuss what might have happened.",
+            "linguisticTarget": {
+              "grammar": "Past modals of deduction (must have, can't have, might have, should have + past participle).",
+              "vocabulary": "Vocabulary related to investigations, unexplained phenomena, and historical aviation mysteries.",
+              "readingStrategy": "Scanning texts for logical clues and distinguishing between established facts and author speculations."
+            },
+            "learningObjectives": [
+              "Understand the main ideas of short B2 reading texts about historical mysteries.",
+              "Locate specific details regarding timelines, clues, and investigator theories.",
+              "Recognize and practice grammar structures used to express certainty, possibility, and criticism about past events."
+            ],
+            "contextWarmup": {
+              "prompt": "When you hear about a famous historical mystery where someone vanished without a trace, what is your first reaction?",
+              "options": [
+                "I look for logical clues and scientific explanations.",
+                "I assume it was something paranormal or extraterrestrial.",
+                "I lose interest because we will never know the truth."
+              ],
+              "correctIndex": 0,
+              "explanation": "Looking for logical clues helps us analyze the historical evidence objectively, which is the main focus of reading about mysteries in this unit."
+            },
+            "rules": [
+              "Use must have + past participle when you are almost certain something happened in the past based on evidence.",
+              "Use can't have or couldn't have + past participle when you are almost certain something did not happen.",
+              "Use might have, could have, or may have + past participle to express possibility or a guess about past events.",
+              "Use should have or shouldn't have + past participle to criticize past actions or express regret."
+            ],
+            "commonTrap": {
+              "trapTitle": "Confusing Past Modals with Present Modals",
+              "explanation": "Learners often use present modals like must be or can't be when talking about past events.",
+              "wrong": "She must be landed on the island yesterday.",
+              "correct": "She must have landed on the island yesterday."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Past Modals",
+            "contractionsSubtitle": "Observe how auxiliary verbs blend smoothly in rapid speech:",
+            "contractions": [
+              {
+                "subject": "She",
+                "verb": "must have",
+                "vowelDropped": "a",
+                "remainder": "ve",
+                "contracted": "She's must've",
+                "exampleFull": "She must have run out of fuel.",
+                "exampleContracted": "She must've run out of fuel."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Past Modals of Deduction",
+              "description": "Assemble sentence blocks to construct logical deductions about the past:",
+              "subjects": [
+                {
+                  "label": "The pilot",
+                  "pronoun": "He/She",
+                  "correctToBe": "was",
+                  "role": "Subject"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "must have",
+                  "thirdPerson": "must have",
+                  "continuous": "might have"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "navigated off course during the storm",
+                  "type": "Past Action Clue"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b2-1-m09-r-vocab",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "unexplained",
+                "ipa": "/ˌʌnɪkˈspleɪnd/",
+                "meaning": "tidak dapat dijelaskan, tidak terpecahkan",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "There are many unexplained mysteries in the world.",
+                "collocation": "unexplained phenomenon / unexplained disappearance"
+              },
+              {
+                "word": "extraterrestrial",
+                "ipa": "/ˌekstrətəˈrestriəl/",
+                "meaning": "makhluk luar angkasa, berasal dari luar bumi",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "Some people think the strange signal must be extraterrestrial.",
+                "collocation": "extraterrestrial life / extraterrestrial origin"
+              },
+              {
+                "word": "phenomenon",
+                "ipa": "/fəˈnɒmɪnən/",
+                "meaning": "fenomena, kejadian yang luar biasa",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Scientists are trying to find the reason for this puzzling phenomenon.",
+                "collocation": "natural phenomenon / strange phenomenon"
+              },
+              {
+                "word": "mysterious",
+                "ipa": "/mɪˈstɪəriəs/",
+                "meaning": "misterius, penuh misteri",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "The sudden disappearance of the ship remains completely mysterious.",
+                "collocation": "mysterious circumstances / mysterious event"
+              },
+              {
+                "word": "deduction",
+                "ipa": "/dɪˈdʌkʃn/",
+                "meaning": "deduksi, kesimpulan logis",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Detectives rely on careful deduction to solve difficult cases.",
+                "collocation": "logical deduction / make a deduction"
+              },
+              {
+                "word": "evidence",
+                "ipa": "/ˈevɪdəns/",
+                "meaning": "bukti",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The old photographs could be evidence of an ancient lost civilisation.",
+                "collocation": "physical evidence / collect evidence"
+              },
+              {
+                "word": "go missing",
+                "ipa": "/ɡəʊ ˈmɪsɪŋ/",
+                "meaning": "menghilang, hilang",
+                "partOfSpeech": "verb phrase",
+                "exampleSentence": "Amelia Earhart and her navigator went missing over the Pacific Ocean.",
+                "collocation": "go missing at sea / go missing overnight"
+              },
+              {
+                "word": "aviation",
+                "ipa": "/ˌeɪviˈeɪʃn/",
+                "meaning": "penerbangan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "She broke many aviation records before her final flight.",
+                "collocation": "aviation pioneer / aviation history"
+              },
+              {
+                "word": "navigator",
+                "ipa": "/ˈnævɪɡeɪtə(r)/",
+                "meaning": "navigator, ahli navigasi",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The pilot and her navigator worked together to chart their route.",
+                "collocation": "ship navigator / flight navigator"
+              },
+              {
+                "word": "speculation",
+                "ipa": "/ˌspekjuˈleɪʃn/",
+                "meaning": "spekulasi, dugaan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "There is a lot of speculation about what happened to the aircraft.",
+                "collocation": "pure speculation / cause speculation"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m09-r-guided",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "The Vanishing Flight: What Really Happened?",
+            "audioUrl": "/audio/modules/b2-1-m09/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "In July 1937, aviation pioneer Amelia Earhart and her navigator Fred Noonan set out on an ambitious attempt to fly around the world. During the final and most challenging leg of their journey across the Pacific Ocean, their twin-engine aircraft went missing near Howland Island. Despite one of the largest air and sea searches in history, no trace of the plane was ever found. This mysterious event has sparked decades of speculation.",
+              "Investigators and historians have proposed several theories to explain the disappearance. Some experts argue that the plane must have run out of fuel because radio transmissions indicated poor visibility and low fuel reserves. Other researchers suggest that they might have landed safely on an uninhabited coral reef, where they could have survived for a short time. However, critics point out that they couldn't have lived long without fresh drinking water. Although many clues have been examined, the truth remains an unexplained historical puzzle."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "In July 1937, aviation pioneer Amelia Earhart and her navigator Fred Noonan set out on an ambitious attempt to fly around the world.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 5,
+                "end": 10.2,
+                "text": "During the final and most challenging leg of their journey across the Pacific Ocean, their twin-engine aircraft went missing near Howland Island.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 10.5,
+                "end": 15,
+                "text": "Despite one of the largest air and sea searches in history, no trace of the plane was ever found.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 15.5,
+                "end": 18,
+                "text": "This mysterious event has sparked decades of speculation.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 19,
+                "end": 24,
+                "text": "Investigators and historians have proposed several theories to explain the disappearance.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 24.5,
+                "end": 30,
+                "text": "Some experts argue that the plane must have run out of fuel because radio transmissions indicated poor visibility and low fuel reserves.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 30.5,
+                "end": 36.5,
+                "text": "Other researchers suggest that they might have landed safely on an uninhabited coral reef, where they could have survived for a short time.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 37,
+                "end": 41.5,
+                "text": "However, critics point out that they couldn't have lived long without fresh drinking water.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 42,
+                "end": 46.5,
+                "text": "Although many clues have been examined, the truth remains an unexplained historical puzzle.",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m09-r-practice",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "left": "unexplained",
+                "right": "tidak dapat dijelaskan, tidak terpecahkan"
+              },
+              {
+                "left": "extraterrestrial",
+                "right": "makhluk luar angkasa, berasal dari luar bumi"
+              },
+              {
+                "left": "phenomenon",
+                "right": "fenomena, kejadian yang luar biasa"
+              },
+              {
+                "left": "mysterious",
+                "right": "misterius, penuh misteri"
+              },
+              {
+                "left": "deduction",
+                "right": "deduksi, kesimpulan logis"
+              },
+              {
+                "left": "evidence",
+                "right": "bukti"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m09-r-quiz",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "When did Amelia Earhart and Fred Noonan embark on their round-the-world flight?",
+                "options": [
+                  "July 1937",
+                  "June 1945",
+                  "August 1930"
+                ],
+                "answer": "July 1937",
+                "explanation": "The text states that in July 1937, Amelia Earhart and her navigator Fred Noonan set out on their flight."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Where did their aircraft go missing?",
+                "options": [
+                  "Near Howland Island in the Pacific Ocean",
+                  "Over the Atlantic Ocean near Europe",
+                  "Across the Sahara Desert"
+                ],
+                "answer": "Near Howland Island in the Pacific Ocean",
+                "explanation": "The text mentions their aircraft went missing near Howland Island during their journey across the Pacific Ocean."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What was the result of the air and sea searches?",
+                "options": [
+                  "No trace of the plane was ever found",
+                  "They found the plane intact on an island",
+                  "They rescued both pilots after a week"
+                ],
+                "answer": "No trace of the plane was ever found",
+                "explanation": "The passage confirms that despite a massive search, no trace of the plane was ever found."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What do some experts argue must have happened regarding fuel?",
+                "options": [
+                  "The plane must have run out of fuel",
+                  "They had plenty of extra fuel stored",
+                  "Someone stole their fuel tanks before takeoff"
+                ],
+                "answer": "The plane must have run out of fuel",
+                "explanation": "The text explains that radio transmissions indicated low fuel reserves, so experts argue the plane must have run out of fuel."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What is an alternative theory suggested by other researchers?",
+                "options": [
+                  "They might have landed safely on an uninhabited coral reef",
+                  "They flew back to the United States secretly",
+                  "They joined an expedition in South America"
+                ],
+                "answer": "They might have landed safely on an uninhabited coral reef",
+                "explanation": "The passage states that other researchers suggest they might have landed safely on an uninhabited coral reef."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Why do critics doubt the theory of long-term survival on a reef?",
+                "options": [
+                  "They couldn't have lived long without fresh drinking water",
+                  "The weather on the reef was too cold",
+                  "There were wild animals on the island"
+                ],
+                "answer": "They couldn't have lived long without fresh drinking water",
+                "explanation": "Critics point out that they couldn't have lived long without fresh drinking water."
+              },
+              {
+                "id": "q-r-7",
+                "question": "What role did Fred Noonan have on the flight?",
+                "options": [
+                  "Navigator",
+                  "Chief Mechanic",
+                  "Financial Sponsor"
+                ],
+                "answer": "Navigator",
+                "explanation": "The first paragraph identifies Fred Noonan as her navigator."
+              },
+              {
+                "id": "q-r-8",
+                "question": "How does the author describe the overall event at the end of the text?",
+                "options": [
+                  "As an unexplained historical puzzle",
+                  "As a fully solved criminal case",
+                  "As a hoax created by newspapers"
+                ],
+                "answer": "As an unexplained historical puzzle",
+                "explanation": "The final sentence concludes that the truth remains an unexplained historical puzzle."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What grammar structure is used in the phrase 'the plane must have run out of fuel'?",
+                "options": [
+                  "Modal of deduction in the past",
+                  "First conditional",
+                  "Passive voice in the future"
+                ],
+                "answer": "Modal of deduction in the past",
+                "explanation": "'Must have + past participle' is used to express strong certainty about a past event."
+              },
+              {
+                "id": "q-r-10",
+                "question": "What type of vocabulary is prominently featured throughout the reading passage?",
+                "options": [
+                  "Aviation and mysterious disappearance terms",
+                  "Cooking and restaurant management",
+                  "Computer programming and software"
+                ],
+                "answer": "Aviation and mysterious disappearance terms",
+                "explanation": "The passage uses terms like aviation pioneer, navigator, aircraft, and disappearance."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-1-m09-listening",
+      "moduleId": "B2.1-M09",
+      "skillType": "listening",
+      "title": "Listening Mission: The Missing Chocolate Cake Mystery",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-b2-1-m09-l-theory",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Listen for specific modal verbs of deduction in spoken conversations. Focus on how speakers use must have, can't have, and might have to express certainty or impossibility about past events, particularly when solving everyday mysteries.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about a missing item and past deductions.",
+              "Identify details such as who could or could not have done something based on evidence.",
+              "Notice how words link together in connected speech during fast casual dialogues."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "it's gone",
+                "meaning": "sudah hilang / tidak ada di tempatnya",
+                "note": "Used when something has disappeared suddenly."
+              },
+              {
+                "phrase": "must have been",
+                "meaning": "pasti adalah / pasti sudah terjadi",
+                "note": "Expresses strong certainty about a past action."
+              },
+              {
+                "phrase": "can't have eaten",
+                "meaning": "tidak mungkin sudah makan",
+                "note": "Expresses strong impossibility regarding a past event."
+              },
+              {
+                "phrase": "out all morning",
+                "meaning": "keluar rumah sepanjang pagi",
+                "note": "Describes someone being away from home for the entire morning."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "must have been",
+                "fast": "must've been",
+                "slowIpa": "/mʌst hæv biːn/",
+                "fastIpa": "/mʌstəv bɪn/",
+                "note": "The auxiliary verb 'have' reduces to an unstressed schwa sound."
+              },
+              {
+                "id": 2,
+                "slow": "can not have",
+                "fast": "can't have",
+                "slowIpa": "/kæn nɒt hæv/",
+                "fastIpa": "/kɑːnt əv/",
+                "note": "The 't' in can't is often glottalized and 'have' is weakened."
+              },
+              {
+                "id": 3,
+                "slow": "What about",
+                "fast": "Whaddabout",
+                "slowIpa": "/wɒt əbaʊt/",
+                "fastIpa": "/wɒdəbaʊt/",
+                "note": "The 't' in what flaps and links smoothly into about."
+              },
+              {
+                "id": 4,
+                "slow": "taken it",
+                "fast": "takenit",
+                "slowIpa": "/teɪkən ɪt/",
+                "fastIpa": "/teɪkənɪt/",
+                "note": "The final consonant of taken links directly to the vowel in it."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m09-l-dialogue",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: The Missing Cake",
+          "orderIndex": 2,
+          "content": {
+            "context": "Oliver and Matt investigate a mysteriously missing chocolate cake in their kitchen, trying to deduce who took it.",
+            "audioPrompt": "Listen to the conversation between two friends.",
+            "lines": [
+              {
+                "speaker": "Oliver",
+                "text": "My cake is completely gone!",
+                "translation": "Kueku benar-benar hilang!",
+                "emotion": "shocked"
+              },
+              {
+                "speaker": "Matt",
+                "text": "Are you serious right now?",
+                "translation": "Apa kamu serius sekarang?",
+                "emotion": "surprised"
+              },
+              {
+                "speaker": "Oliver",
+                "text": "It was here an hour ago.",
+                "translation": "Tadi ada di sini sejam yang lalu.",
+                "emotion": "frustrated"
+              },
+              {
+                "speaker": "Matt",
+                "text": "What about Dad? He was hungry.",
+                "translation": "Bagaimana dengan Ayah? Dia tadi lapar.",
+                "emotion": "thoughtful"
+              },
+              {
+                "speaker": "Oliver",
+                "text": "He can't have eaten chocolate.",
+                "translation": "Dia tidak mungkin makan cokelat.",
+                "emotion": "certain"
+              },
+              {
+                "speaker": "Matt",
+                "text": "That is a fair point.",
+                "translation": "Itu poin yang masuk akal.",
+                "emotion": "agreeing"
+              },
+              {
+                "speaker": "Oliver",
+                "text": "Mum has been out all morning.",
+                "translation": "Ibu sudah keluar sepanjang pagi.",
+                "emotion": "deducing"
+              },
+              {
+                "speaker": "Matt",
+                "text": "Then it must be the dog.",
+                "translation": "Kalau begitu pasti anjingnya.",
+                "emotion": "realizing"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m09-l-quiz",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "My cake is completely gone!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Oliver: \"My cake is completely _____!\"",
+                "targetWord": "gone",
+                "explanation": "Full audio: \"My cake is completely gone!\". The missing word is \"gone\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Are you serious right now?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Matt: \"Are you serious right _____?\"",
+                "targetWord": "now",
+                "explanation": "Full audio: \"Are you serious right now?\". The missing word is \"now\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "It was here an hour ago.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Oliver: \"It was here an hour _____.\"",
+                "targetWord": "ago",
+                "explanation": "Full audio: \"It was here an hour ago.\". The missing word is \"ago\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "What about Dad?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Matt: \"What about _____?\"",
+                "targetWord": "Dad",
+                "explanation": "Full audio: \"What about Dad?\". The missing word is \"Dad\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "He was hungry.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Matt: \"He was _____.\"",
+                "targetWord": "hungry",
+                "explanation": "Full audio: \"He was hungry.\". The missing word is \"hungry\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "He can't have eaten chocolate.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He can't have eaten chocolate",
+                "words": [
+                  "He",
+                  "can't",
+                  "eaten",
+                  "have",
+                  "chocolate"
+                ],
+                "explanation": "Correct sentence order: \"He can't have eaten chocolate.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "That is a fair point.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That is a fair point",
+                "words": [
+                  "point",
+                  "a",
+                  "That",
+                  "fair",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"That is a fair point.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Mum has been out all morning.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Mum has been out all morning",
+                "words": [
+                  "been",
+                  "has",
+                  "morning",
+                  "all",
+                  "Mum",
+                  "out"
+                ],
+                "explanation": "Correct sentence order: \"Mum has been out all morning.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Then it must be the dog.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Then it must be the dog",
+                "words": [
+                  "it",
+                  "dog",
+                  "must",
+                  "be",
+                  "Then",
+                  "the"
+                ],
+                "explanation": "Correct sentence order: \"Then it must be the dog.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "must have been",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "must have been",
+                "words": [
+                  "been",
+                  "must",
+                  "have"
+                ],
+                "explanation": "Correct sentence order: \"must have been\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "My cake is completely gone!",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Oliver: \"My cake is completely _____!\"",
+                "targetWord": "gone",
+                "explanation": "Full audio: \"My cake is completely gone!\". The missing word is \"gone\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Are you serious right now?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Matt: \"Are you serious right _____?\"",
+                "targetWord": "now",
+                "explanation": "Full audio: \"Are you serious right now?\". The missing word is \"now\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "It was here an hour ago.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Oliver: \"It was here an hour _____.\"",
+                "targetWord": "ago",
+                "explanation": "Full audio: \"It was here an hour ago.\". The missing word is \"ago\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "What about Dad?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Matt: \"What about _____?\"",
+                "targetWord": "Dad",
+                "explanation": "Full audio: \"What about Dad?\". The missing word is \"Dad\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "He was hungry.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Matt: \"He was _____.\"",
+                "targetWord": "hungry",
+                "explanation": "Full audio: \"He was hungry.\". The missing word is \"hungry\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "He can't have eaten chocolate.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He can't have eaten chocolate",
+                "words": [
+                  "He",
+                  "can't",
+                  "eaten",
+                  "have",
+                  "chocolate"
+                ],
+                "explanation": "Correct sentence order: \"He can't have eaten chocolate.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "That is a fair point.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That is a fair point",
+                "words": [
+                  "point",
+                  "a",
+                  "That",
+                  "fair",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"That is a fair point.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Mum has been out all morning.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Mum has been out all morning",
+                "words": [
+                  "been",
+                  "has",
+                  "morning",
+                  "all",
+                  "Mum",
+                  "out"
+                ],
+                "explanation": "Correct sentence order: \"Mum has been out all morning.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Then it must be the dog.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Then it must be the dog",
+                "words": [
+                  "it",
+                  "dog",
+                  "must",
+                  "be",
+                  "Then",
+                  "the"
+                ],
+                "explanation": "Correct sentence order: \"Then it must be the dog.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "must have been",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "must have been",
+                "words": [
+                  "been",
+                  "must",
+                  "have"
+                ],
+                "explanation": "Correct sentence order: \"must have been\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-1-m09-writing",
+      "moduleId": "B2.1-M09",
+      "skillType": "writing",
+      "title": "Writing Mission: Speculating on Past Mysteries and Regrets",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-b2-1-m09-w-theory",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Master the art of writing historical deductions, expressing critical opinions on past events, and structuring coherent paragraphs about mysteries and regrets.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Certainty Deduction Formula",
+                "formula": "Subject + must have / can't have + past participle + complement",
+                "example": "Amelia must have encountered a terrible storm over the ocean."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Possibility Deduction Formula",
+                "formula": "Subject + might have / could have + past participle + complement",
+                "example": "The investigators might have missed a crucial clue at the site."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Past Criticism and Regret Formula",
+                "formula": "Subject + should have / shouldn't have + past participle + complement",
+                "example": "They should have checked the weather forecast before departure."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always follow modal verbs of deduction with 'have' and the past participle form of the main verb.",
+                "badExample": "He must has left his keys on the kitchen counter.",
+                "goodExample": "He must have left his keys on the kitchen counter.",
+                "why": "Modal verbs like must, might, and should are always followed by the bare infinitive 'have' in past modal structures, never 'has'."
+              },
+              {
+                "rule": "Distinguish clearly between factual statements and speculative claims in formal writing.",
+                "badExample": "The plane crashed because of ghosts, which is definitely true.",
+                "goodExample": "The plane likely crashed due to mechanical failure, though investigators cannot verify every detail.",
+                "why": "Academic and professional writing requires clear separation between verified evidence and logical speculation."
+              },
+              {
+                "rule": "Avoid double negatives when expressing negative certainty in the past.",
+                "badExample": "They couldn't have seen nobody in the dark forest.",
+                "goodExample": "They couldn't have seen anybody in the dark forest.",
+                "why": "Using 'couldn't' with 'nobody' creates a grammatical error. Use 'anybody' to maintain standard English syntax."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "She must have known the secret before she published the report.",
+                "id": "Dia pasti sudah tahu rahasia itu sebelum dia menerbitkan laporan tersebut.",
+                "focus": "Positive certainty deduction"
+              },
+              {
+                "en": "They couldn't have finished the investigation in just one afternoon.",
+                "id": "Mereka tidak mungkin telah menyelesaikan investigasi hanya dalam waktu satu sore.",
+                "focus": "Negative certainty deduction"
+              },
+              {
+                "en": "We might have avoided the misunderstanding if we had communicated earlier.",
+                "id": "Kita mungkin bisa menghindari kesalahpahaman tersebut jika kita berkomunikasi lebih awal.",
+                "focus": "Possibility deduction"
+              },
+              {
+                "en": "You shouldn't have ignored the warning signs on the mountain trail.",
+                "id": "Seharusnya kamu tidak mengabaikan tanda-tanda peringatan di jalur pendakian gunung.",
+                "focus": "Past criticism and regret"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m09-w-practice",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "the pilot must has landed the aircraft safely.",
+                "targetSentence": "The pilot must have landed the aircraft safely.",
+                "translation": "Pilot tersebut pasti telah mendaratkan pesawat dengan selamat.",
+                "keyRule": "Use 'have' after modal verbs of deduction, not 'has', and capitalize the first word.",
+                "requiredCapitals": [
+                  "The"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "they should not ignored the weather warnings last night",
+                "targetSentence": "They should not have ignored the weather warnings last night.",
+                "translation": "Mereka seharusnya tidak mengabaikan peringatan cuaca semalam.",
+                "keyRule": "Include 'have' between the modal and the past participle 'ignored', and end with a period.",
+                "requiredCapitals": [
+                  "They"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "she cant have left her passport at home because she used it",
+                "targetSentence": "She can't have left her passport at home because she used it.",
+                "translation": "Dia tidak mungkin meninggalkan paspornya di rumah karena dia menggunakannya.",
+                "keyRule": "Use an apostrophe in 'can't' and capitalize the beginning of the sentence.",
+                "requiredCapitals": [
+                  "She"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Deduction",
+                "meaning": "Dia pasti telah lupa membawa peta selama perjalanan.",
+                "tokens": [
+                  "She",
+                  "must",
+                  "have",
+                  "forgotten",
+                  "her",
+                  "map",
+                  "during",
+                  "the",
+                  "journey."
+                ],
+                "fullSentence": "She must have forgotten her map during the journey."
+              },
+              {
+                "id": "b-2",
+                "category": "Possibility",
+                "meaning": "Mereka mungkin telah tersesat di hutan.",
+                "tokens": [
+                  "They",
+                  "might",
+                  "have",
+                  "gotten",
+                  "lost",
+                  "in",
+                  "the",
+                  "dense",
+                  "forest."
+                ],
+                "fullSentence": "They might have gotten lost in the dense forest."
+              },
+              {
+                "id": "b-3",
+                "category": "Regret",
+                "meaning": "Kamu seharusnya meminta bantuan sebelum memulai.",
+                "tokens": [
+                  "You",
+                  "should",
+                  "have",
+                  "asked",
+                  "for",
+                  "help",
+                  "before",
+                  "starting."
+                ],
+                "fullSentence": "You should have asked for help before starting."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Speculating on a Historical Mystery",
+                "badge": "Mystery Analyst",
+                "instruction": "Write three sentences speculating about an unsolved historical event using must have, might have, and can't have.",
+                "example": "The sailors must have encountered massive waves. They might have reached a hidden island. They can't have vanished without leaving any trace.",
+                "placeholder": "Write your speculations here...",
+                "minWords": 25,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Expressing Regrets and Past Advice",
+                "badge": "Reflection Writer",
+                "instruction": "Write three sentences discussing a past mistake using should have and shouldn't have.",
+                "example": "I should have studied harder for the final exam. I shouldn't have stayed up late playing video games. I should have trusted my preparation.",
+                "placeholder": "Write your reflections here...",
+                "minWords": 25,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m09-w-quiz",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence to express positive certainty about a past action using 'must have':",
+                "promptText": "I am certain that Mark lost his keys at the station.",
+                "hint": "Use 'must have' followed by the past participle of 'lose'.",
+                "targetAnswers": [
+                  "Mark must have lost his keys at the station."
+                ],
+                "explanation": "To express firm certainty about a past event, use 'must have' + past participle ('lost')."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence to express negative certainty using 'can't have':",
+                "promptText": "It is impossible that Sarah stole the money.",
+                "hint": "Use 'can't have' followed by the past participle of 'steal'.",
+                "targetAnswers": [
+                  "Sarah can't have stolen the money.",
+                  "Sarah cannot have stolen the money."
+                ],
+                "explanation": "To express strong disbelief or impossibility regarding a past action, use 'can't have' or 'cannot have' + past participle."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence to express past possibility using 'might have':",
+                "promptText": "It is possible that the train delayed our arrival.",
+                "hint": "Use 'might have' followed by the past participle 'delayed'.",
+                "targetAnswers": [
+                  "The train might have delayed our arrival.",
+                  "The train may have delayed our arrival.",
+                  "The train could have delayed our arrival."
+                ],
+                "explanation": "To indicate a tentative possibility in the past, use 'might have', 'may have', or 'could have' + past participle."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence to express criticism or regret using 'should have':",
+                "promptText": "It was a mistake not to lock the front door.",
+                "hint": "Use 'should have' followed by the past participle of 'lock'.",
+                "targetAnswers": [
+                  "You should have locked the front door.",
+                  "We should have locked the front door.",
+                  "They should have locked the front door.",
+                  "I should have locked the front door."
+                ],
+                "explanation": "To criticize an action or express regret that something wasn't done, use 'should have' + past participle."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Conjunctions & Connectors",
+                "instruction": "Fill in the blank with the correct modal verb of deduction: 'The lights are out, so everyone ____ gone to sleep.'",
+                "promptText": "The lights are out, so everyone [blank] gone to sleep.",
+                "hint": "Use the modal verb for positive logical certainty.",
+                "targetAnswers": [
+                  "must have"
+                ],
+                "explanation": "When evidence strongly supports a conclusion, 'must have' is the appropriate modal verb."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Conjunctions & Connectors",
+                "instruction": "Fill in the blank with the correct modal verb for negative certainty: 'He ____ finished the marathon already; he only started ten minutes ago!'",
+                "promptText": "He [blank] finished the marathon already; he only started ten minutes ago!",
+                "hint": "Use 'can't have' or 'couldn't have'.",
+                "targetAnswers": [
+                  "can't have",
+                  "couldn't have",
+                  "cannot have"
+                ],
+                "explanation": "When something is logically impossible in the past, use 'can't have' or 'couldn't have'."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the grammar and mechanics in the following sentence: 'she should has told us about the delay earlier.'",
+                "promptText": "she should has told us about the delay earlier.",
+                "hint": "Check the modal verb structure and capitalization.",
+                "targetAnswers": [
+                  "She should have told us about the delay earlier."
+                ],
+                "explanation": "Modal verbs must be followed by 'have', never 'has', and the sentence must begin with a capital letter."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the grammar and mechanics in the following sentence: 'they might left their umbrella in the cafe.'",
+                "promptText": "they might left their umbrella in the cafe.",
+                "hint": "Ensure 'have' is included before the past participle.",
+                "targetAnswers": [
+                  "They might have left their umbrella in the cafe."
+                ],
+                "explanation": "Past modal structures require 'have' before the past participle ('left')."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Short Response",
+                "instruction": "Write a complete sentence expressing your regret about missing an important meeting yesterday using 'shouldn't have':",
+                "promptText": "Express regret about missing a meeting yesterday.",
+                "hint": "Use 'I shouldn't have skipped...' or similar.",
+                "targetAnswers": [
+                  "I shouldn't have missed the important meeting yesterday.",
+                  "I shouldn't have skipped the meeting yesterday."
+                ],
+                "explanation": "To express regret for an action taken in the past, use 'shouldn't have' + past participle."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Write a complete sentence speculating about why a friend is late using 'might have':",
+                "promptText": "Speculate why your friend is late.",
+                "hint": "Use 'He might have missed his bus' or similar.",
+                "targetAnswers": [
+                  "He might have missed his bus.",
+                  "She might have missed her bus.",
+                  "They might have missed the bus.",
+                  "He might have gotten stuck in traffic."
+                ],
+                "explanation": "Speculations about past possibilities require 'might have', 'may have', or 'could have' followed by a past participle."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-1-m09-speaking",
+      "moduleId": "B2.1-M09",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Unit 9: What Happened?: Third Conditional & Regrets",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-b2-1-m09-s-theory",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Mastering past modal deductions and third conditional structures requires precise sentence stress and weak forms. In spoken B2 English, modal verbs like must have, might have, and should have are frequently reduced in speech. You will learn how to connect auxiliary verbs smoothly with past participles to sound natural and articulate.",
+            "audioGuidance": "Pay close attention to weak forms. The word have in should have sounds like /həv/ or /əv/. Keep your intonation falling when making firm deductions and rising when expressing uncertainty or surprise.",
+            "pillars": [
+              {
+                "name": "Modal Reduction",
+                "target": "Reduce auxiliary verbs in past modals",
+                "explanation": "Native speakers reduce 'have' in past modal structures to sound fluid. Practice saying should have as should of or should've."
+              },
+              {
+                "name": "Third Conditional Rhythm",
+                "target": "Stress key lexical items in conditional clauses",
+                "explanation": "In third conditional sentences, stress the condition and the result verbs while keeping pronouns and auxiliary verbs unstressed."
+              },
+              {
+                "name": "Intonation for Deduction",
+                "target": "Convey certainty and speculation through voice pitch",
+                "explanation": "Use a falling tone for confident deductions with must have, and a rising tone for speculative ideas with might have or could have."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-1-m09-s-practice",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "DE-duc-tion",
+                "countryAudio": "deduction",
+                "countrySyllables": [
+                  {
+                    "text": "de",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "DUC",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "EX-tra-ter-RES-tri-al",
+                "natAudio": "extraterrestrial",
+                "natSyllables": [
+                  {
+                    "text": "ex",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tra",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ter",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "RES",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tri",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "al",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice how stress shifts and secondary stresses occur in longer academic vocabulary."
+              },
+              {
+                "id": "pair-2",
+                "country": "MY-ste-ry",
+                "countryAudio": "mystery",
+                "countrySyllables": [
+                  {
+                    "text": "MYS",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "te",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ry",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "mys-TE-ri-ous",
+                "natAudio": "mysterious",
+                "natSyllables": [
+                  {
+                    "text": "mys",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ri",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ous",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress moves from the first syllable in mystery to the second syllable in mysterious."
+              },
+              {
+                "id": "pair-3",
+                "country": "phe-NOM-e-non",
+                "countryAudio": "phenomenon",
+                "countrySyllables": [
+                  {
+                    "text": "phe",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "NOM",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "e",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "non",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "un-ex-PLAINED",
+                "natAudio": "unexplained",
+                "natSyllables": [
+                  {
+                    "text": "un",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ex",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PLAINED",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "In phenomenon, stress falls on the second syllable. In unexplained, stress falls on the final syllable."
+              },
+              {
+                "id": "pair-4",
+                "country": "A-vi-a-tion",
+                "countryAudio": "aviation",
+                "countrySyllables": [
+                  {
+                    "text": "a",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "vi",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "A",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "E-vi-dence",
+                "natAudio": "evidence",
+                "natSyllables": [
+                  {
+                    "text": "EV",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "dence",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Aviation places stress on the third syllable, whereas evidence places stress on the first syllable."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "They must have left the island before the storm started.",
+                "phonetic": "/ðeɪ mʌst həv lɛft ði ˈaɪlənd bɪˈfɔː ðə stɔːm ˈstɑːtɪd/",
+                "focus": "Past modal deduction with must have",
+                "hint": "Reduce have to a weak schwa sound."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "If she had checked the map, she would not have gone missing.",
+                "phonetic": "/ɪf ʃiː hæd tʃɛkt ðə mæp, ʃiː wʊd nɒt həv gɒn ˈmɪsɪŋ/",
+                "focus": "Third conditional structure and fluency",
+                "hint": "Link would not have smoothly together."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "It could be evidence of an unexplained phenomenon.",
+                "phonetic": "/ɪt kʊd biː ˈɛvɪdəns ɒv ən ˌʌnɪkˈspleɪnd fəˈnɒmɪnən/",
+                "focus": "Speculation and complex noun phrases",
+                "hint": "Maintain steady rhythm across multi-syllable words."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "He should have told us about the mysterious disappearance.",
+                "phonetic": "/hiː ʃʊd həv təʊld ʌs əˈbaʊt ðə mɪˈstɪəriəs dɪsəˈpɪərəns/",
+                "focus": "Regrets using should have",
+                "hint": "Emphasize told and mysterious."
+              }
+            ],
+            "roleplay": {
+              "context": "You and your colleague are discussing a famous historical disappearance and trying to make logical deductions about what happened.",
+              "roles": [
+                "Detective Sarah",
+                "Investigator Alex"
+              ],
+              "turns": [
+                {
+                  "speaker": "Detective Sarah",
+                  "text": "What do you think happened to the flight over the ocean?",
+                  "translation": "Menurutmu apa yang terjadi pada penerbangan di atas samudra itu?"
+                },
+                {
+                  "speaker": "Investigator Alex",
+                  "text": "They must have encountered a severe storm and gone missing.",
+                  "translation": "Mereka pasti mengalami badai hebat dan menghilang."
+                },
+                {
+                  "speaker": "Detective Sarah",
+                  "text": "Do you think it could be an extraterrestrial phenomenon?",
+                  "translation": "Apakah menurutmu itu bisa jadi fenomena makhluk luar angkasa?"
+                },
+                {
+                  "speaker": "Investigator Alex",
+                  "text": "That is unlikely. We should have found physical evidence if that were true.",
+                  "translation": "Itu tidak mungkin. Kita seharusnya menemukan bukti fisik jika itu benar."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b2-1-m09-s-quiz",
+          "moduleId": "B2.1-M09",
+          "subModuleId": "sub-b2-1-m09-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a past event you regret and what you should have done differently.",
+                "audioPrompt": "Tell me about a time you made a mistake and what you should have done instead.",
+                "storyPoints": [
+                  "Describe the situation and what went wrong",
+                  "Explain your regret using past modal verbs",
+                  "State what you would have done if you had known better"
+                ],
+                "targetSentence": "I should have studied harder for the exam because I failed.",
+                "phonetic": "/aɪ ʃʊd həv ˈstʌdɪd ˈhɑːdə fɔː ði ɪgˈzæm/",
+                "expectedKeywords": [
+                  "regret",
+                  "should have",
+                  "mistake",
+                  "studied"
+                ],
+                "explanation": "Use past modals to express regrets fluently."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about an unexplained event or mystery you once witnessed or read about.",
+                "audioPrompt": "Describe a mysterious phenomenon and share your deductions about it.",
+                "storyPoints": [
+                  "Describe the mysterious event clearly",
+                  "Give your deduction using must have or might have",
+                  "Explain why people find it fascinating"
+                ],
+                "targetSentence": "The lights in the sky must have been an unexplained phenomenon.",
+                "phonetic": "/ðə laɪts ɪn ðə skaɪ mʌst həv biːn ən ˌʌnɪkˈspleɪnd fəˈnɒmɪnən/",
+                "expectedKeywords": [
+                  "mysterious",
+                  "lights",
+                  "phenomenon",
+                  "deduction"
+                ],
+                "explanation": "Maintain a natural storytelling pace while using modal verbs of deduction."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Listen to the prompt and respond as the investigator discussing missing aviation records.",
+                "audioPrompt": "Why do you think the pilot went missing during the flight?",
+                "scenarioContext": "You are investigating a historical aviation mystery with your partner.",
+                "characterRole": "Lead Investigator",
+                "targetSentence": "The pilot must have lost navigation before going missing.",
+                "phonetic": "/ðə ˈpaɪlət mʌst həv lɒst ˌnævɪˈgeɪʃən/",
+                "expectedKeywords": [
+                  "pilot",
+                  "missing",
+                  "navigation",
+                  "deduction"
+                ],
+                "explanation": "Respond promptly using confident deduction structures."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Listen to the prompt and respond regarding physical evidence found at a mystery site.",
+                "audioPrompt": "Have we found any solid evidence about the lost civilisation?",
+                "scenarioContext": "Discussing archaeological discoveries with a colleague.",
+                "characterRole": "Archaeologist",
+                "targetSentence": "We might have discovered evidence of an ancient lost civilisation.",
+                "phonetic": "/wiː maɪt həv dɪsˈkʌvəd ˈɛvɪdəns ɒv ən ˈeɪnʃənt lɒst ˌsɪvɪlɪˈzeɪʃən/",
+                "expectedKeywords": [
+                  "evidence",
+                  "ancient",
+                  "civilisation",
+                  "discovered"
+                ],
+                "explanation": "Express tentative possibility using might have."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Listen to the prompt and discuss alternative theories about an unexplained event.",
+                "audioPrompt": "Could this strange event be extraterrestrial in origin?",
+                "scenarioContext": "Debating theories on a television documentary panel.",
+                "characterRole": "Science Analyst",
+                "targetSentence": "It cannot have been extraterrestrial because there is no scientific proof.",
+                "phonetic": "/ɪt ˈkænt həv biːn ˌɛksstrətəˈrɛstriəl bɪˈkɒz ðɛər ɪz nəʊ ˌsaɪənˈtɪfɪk pruːf/",
+                "expectedKeywords": [
+                  "extraterrestrial",
+                  "proof",
+                  "scientific",
+                  "cannot"
+                ],
+                "explanation": "Use can't have for negative deductions with high certainty."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Listen to the prompt and express regret about a missed opportunity in your career.",
+                "audioPrompt": "Why didn't you apply for the senior aviation post last year?",
+                "scenarioContext": "Talking to an old mentor about career choices.",
+                "characterRole": "Former Pilot",
+                "targetSentence": "If I had applied earlier, I would have secured the promotion.",
+                "phonetic": "/ɪf aɪ hæd əˈplaɪd ˈɜːliə, aɪ wʊd həv sɪˈkjʊəd ðə prəˈməʊʃən/",
+                "expectedKeywords": [
+                  "applied",
+                  "promotion",
+                  "secured",
+                  "would have"
+                ],
+                "explanation": "Demonstrate third conditional accuracy in conversation."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Pronounce the target sentence clearly, focusing on the vocabulary words unexplained and phenomenon.",
+                "audioPrompt": "Say: The strange lights in the sky remained an unexplained phenomenon.",
+                "targetSentence": "The strange lights in the sky remained an unexplained phenomenon.",
+                "phonetic": "/ðə streɪndʒ laɪts ɪn ðə skaɪ rɪˈmeɪnd ən ˌʌnɪkˈspleɪnd fəˈnɒmɪnən/",
+                "expectedKeywords": [
+                  "unexplained",
+                  "phenomenon",
+                  "lights",
+                  "remained"
+                ],
+                "explanation": "Articulate each syllable of complex vocabulary accurately."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Pronounce the third conditional sentence with correct linking and rhythm.",
+                "audioPrompt": "Say: If they had checked the weather, they wouldn't have crashed.",
+                "targetSentence": "If they had checked the weather, they wouldn't have crashed.",
+                "phonetic": "/ɪf ðeɪ hæd tʃɛkt ðə ˈwɛðə, ðeɪ ˈwʊdnt həv kræʃt/",
+                "expectedKeywords": [
+                  "checked",
+                  "weather",
+                  "wouldn't have",
+                  "crashed"
+                ],
+                "explanation": "Ensure the auxiliary verbs are blended naturally in connected speech."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress Drill",
+                "instruction": "Read the sentence focusing on syllable stress in mysterious and extraterrestrial.",
+                "audioPrompt": "Say: The mysterious object was definitely not extraterrestrial.",
+                "targetSentence": "The mysterious object was definitely not extraterrestrial.",
+                "phonetic": "/ðə mɪˈstɪəriəs ˈɒbdʒɪkt wɒz ˈdɛfɪnɪtli nɒt ˌɛkstrətəˈrɛstriəl/",
+                "expectedKeywords": [
+                  "mysterious",
+                  "object",
+                  "definitely",
+                  "extraterrestrial"
+                ],
+                "explanation": "Highlight the correct primary stress on multi-syllable adjectives."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Intonation Drill",
+                "instruction": "Read the dialogue snippet using a rising tone for the question and a falling tone for the deduction.",
+                "audioPrompt": "Say: Where did the plane go? It must have flown over the mountains.",
+                "targetSentence": "Where did the plane go? It must have flown over the mountains.",
+                "phonetic": "/wɛər dɪd ðə pleɪn gəʊ? It mʌst həv fləʊn ˈəʊvə ðə ˈmaʊntɪnz/",
+                "expectedKeywords": [
+                  "where",
+                  "plane",
+                  "must have",
+                  "mountains"
+                ],
+                "explanation": "Apply rising intonation on wh- questions and falling intonation on confident assertions."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

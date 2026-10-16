@@ -64,6 +64,7 @@ export async function generateSinglePilotModule(
   if (lQuestions && lQuestions.length > 0) {
     const lQuiz = listeningSubmodule?.sections?.find((s: any) => s.sectionType === "quiz");
     if (lQuiz) {
+      if (!lQuiz.title) lQuiz.title = "Listening Comprehension & Practicum Quiz";
       lQuiz.content = {
         passingScore: 80,
         questions: lQuestions,
