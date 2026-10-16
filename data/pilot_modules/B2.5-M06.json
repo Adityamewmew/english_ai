@@ -1,0 +1,1778 @@
+{
+  "module": {
+    "id": "B2.5-M06",
+    "levelId": "B2.5",
+    "title": "Unit 6: Cleft Sentences for Dramatic Emphasis (It is... that, What we need is...)",
+    "cefr": "B2",
+    "group": "Syntactic Emphasis",
+    "objective": "Mampu menggunakan it-cleft dan wh-cleft untuk memberikan penekanan tajam pada poin utama argumen lisan maupun tulisan.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 58
+  },
+  "subModules": [
+    {
+      "id": "sub-b2-5-m06-reading",
+      "moduleId": "B2.5-M06",
+      "skillType": "reading",
+      "title": "Reading Mission: The Clean Transit Debate",
+      "theme": "Urban Innovation and Transport Debates",
+      "grammarFocus": "Cleft Sentences for Dramatic Emphasis (It is... that, What we need is...)",
+      "vocabularyFocus": "Formal Argumentation and Evaluation Vocabulary",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-b2-5-m06-r-theory",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this mission, you will analyze an analytical opinion article discussing municipal transport reforms. You will discover how writers use cleft sentences to highlight critical arguments, isolate core problems, and contrast contrasting viewpoints effectively.",
+            "linguisticTarget": {
+              "grammar": "It-cleft sentences (It is/was... that/who) and wh-cleft sentences (What we need/observed is...)",
+              "vocabulary": "Debate and evaluation terms: underscore, pivotal, shortcoming, counterargument, breakthrough, contention, disparity, overlooked",
+              "readingStrategy": "Scanning for rhetorical markers and structural clefts to identify author emphasis and main points"
+            },
+            "learningObjectives": [
+              "Understand the main argument and supporting positions in a formal analytical article.",
+              "Locate specific details regarding public infrastructure challenges quickly.",
+              "Recognize how cleft sentences shift focus onto specific subjects, objects, or contrasting facts."
+            ],
+            "contextWarmup": {
+              "prompt": "Read the following sentence: 'What the city council overlooked was the high cost of maintenance.' What is the author emphasizing here?",
+              "options": [
+                "The specific neglected detail, which is the high cost of maintenance",
+                "The total budget spent by the city council last year",
+                "The council members who voted against the original proposal"
+              ],
+              "correctIndex": 0,
+              "explanation": "Wh-cleft structures like 'What [subject] [verb] was...' place the focused information at the end of the sentence to give it prominent weight."
+            },
+            "rules": [
+              "It + is/was + [focused element] + that/who + [rest of clause]: Places strong emphasis on a specific subject, object, or adverbial phrase.",
+              "What + [subject clause] + is/was + [focused element]: Pushes the crucial fact or conclusion to the predicate position for dramatic impact.",
+              "It + is/was + not + [Element A] + but + [Element B] + that + [verb phrase]: Highlights a sharp contrast to correct misunderstandings directly."
+            ],
+            "commonTrap": {
+              "trapTitle": "Confusing Pronoun Reference with Dummy 'It'",
+              "explanation": "In an it-cleft sentence, 'It' does not refer to a previously mentioned noun. It acts as an empty grammatical placeholder whose only job is to bring the key noun or clause into the spotlight.",
+              "wrong": "The new tram line opened yesterday. It was the tram line that reduced city traffic. (Interpreted as: The tram line itself was a person or object that did something else).",
+              "correct": "It was the opening of the new tram line, rather than fuel taxes, that reduced downtown congestion."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Cleft Openers",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in everyday English:",
+            "contractions": [
+              {
+                "subject": "What",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "What's",
+                "exampleFull": "What is needed right now is decisive action.",
+                "exampleContracted": "What's needed right now is decisive action."
+              },
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It is our team that solved the issue.",
+                "exampleContracted": "It's our team that solved the issue."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Cleft Sentences",
+              "description": "Assemble sentence blocks to practice affirmative, negative, and question forms:",
+              "subjects": [
+                {
+                  "label": "It",
+                  "pronoun": "It",
+                  "correctToBe": "was",
+                  "role": "Dummy Subject"
+                },
+                {
+                  "label": "What",
+                  "pronoun": "What we require",
+                  "correctToBe": "is",
+                  "role": "Wh-Clause Subject"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "highlight",
+                  "thirdPerson": "highlights",
+                  "continuous": "highlighting"
+                },
+                {
+                  "base": "require",
+                  "thirdPerson": "requires",
+                  "continuous": "requiring"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "the funding shortfall that caused the delay",
+                  "type": "Focused Noun Phrase"
+                },
+                {
+                  "text": "clear communication across departments",
+                  "type": "Predicative Focus"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b2-5-m06-r-vocab",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "underscore",
+                "ipa": "/ˌʌndərˈskɔːr/",
+                "meaning": "menegaskan, menonjolkan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "The latest statistics underscore the need for safer cycling corridors.",
+                "collocation": "underscore the importance / underscore a point"
+              },
+              {
+                "word": "pivotal",
+                "ipa": "/ˈpɪvətl/",
+                "meaning": "krusial, sangat penting",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "It was her pivotal contribution that secured approval for the green tram project.",
+                "collocation": "play a pivotal role / pivotal moment"
+              },
+              {
+                "word": "shortcoming",
+                "ipa": "/ˈʃɔːrtkʌmɪŋ/",
+                "meaning": "kekurangan, kelemahan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "What the independent audit identified was a major shortcoming in safety inspections.",
+                "collocation": "serious shortcoming / overcome shortcomings"
+              },
+              {
+                "word": "counterargument",
+                "ipa": "/ˈkaʊntərˌɑːrɡjumənt/",
+                "meaning": "bantahan, argumen lawan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "It is this specific counterargument that environmentalists have struggled to answer.",
+                "collocation": "present a counterargument / address a counterargument"
+              },
+              {
+                "word": "breakthrough",
+                "ipa": "/ˈbreɪkθruː/",
+                "meaning": "terobosan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "What researchers achieved this spring was a technical breakthrough in battery density.",
+                "collocation": "major breakthrough / technological breakthrough"
+              },
+              {
+                "word": "contention",
+                "ipa": "/kənˈtenʃn/",
+                "meaning": "perselisihan, poin perdebatan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "It is not the route itself but ticket pricing that remains the primary bone of contention.",
+                "collocation": "point of contention / bone of contention"
+              },
+              {
+                "word": "disparity",
+                "ipa": "/dɪˈspærəti/",
+                "meaning": "kesenjangan, perbedaan mencolok",
+                "partOfSpeech": "noun",
+                "exampleSentence": "What alarmed local residents was the widening disparity between rich and poor districts.",
+                "collocation": "growing disparity / economic disparity"
+              },
+              {
+                "word": "overlooked",
+                "ipa": "/ˌoʊvərˈlʊkt/",
+                "meaning": "terabaikan, tidak diperhatikan",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "It was an overlooked software glitch that forced the train operator to halt service.",
+                "collocation": "often overlooked / easily overlooked"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-5-m06-r-guided",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Rethinking Urban Transit: Where the Real Problem Lies",
+            "audioUrl": "/audio/modules/b2-5-m06/reading-passage.mp3",
+            "durationSeconds": 92,
+            "paragraphs": [
+              "When city planners in Oakhaven launched their electric rapid transit fleet, expectations were exceptionally high. Officials claimed the investment would quickly resolve commuter delays and clean up the air. Yet twelve months later, ridership has stalled. Critics claim the public simply prefers private cars, but that diagnosis is far too simple. What the municipal administration failed to anticipate was the severe lack of accessible feeder routes in outer suburbs.",
+              "It is not commuter reluctance but poor spatial planning that explains the empty carriages. While downtown avenues enjoy seamless transfers, outer districts lack even basic bus connections to the new terminals. Furthermore, an overlooked technical shortcoming in the electronic ticketing gates created constant queues. What commuters really want is reliability, not flashy ceremonial launches.",
+              "Last week, transport director Sarah Vance presented a pivotal report to the town hall. In her address, Vance was remarkably blunt about previous missteps. She argued that what the city council must fund immediately is suburban feeder integration rather than additional downtown stations. This proposal directly confronted the primary counterargument from fiscal conservatives, who insisted that ridership should rise before new funds are committed.",
+              "It was Vance's clear evidence on socioeconomic disparity that persuaded the committee. The data revealed that low-income workers endured the longest commutes while paying proportionally higher fares. Now, the main point of contention is whether to subsidize passes or expand weekend timetables. What remains certain is that genuine progress requires listening to daily riders rather than political slogans."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 7.5,
+                "text": "When city planners in Oakhaven launched their electric rapid transit fleet, expectations were exceptionally high.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 7.6,
+                "end": 13,
+                "text": "Officials claimed the investment would quickly resolve commuter delays and clean up the air.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 13.1,
+                "end": 17.5,
+                "text": "Yet twelve months later, ridership has stalled.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 17.6,
+                "end": 23.5,
+                "text": "Critics claim the public simply prefers private cars, but that diagnosis is far too simple.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 23.6,
+                "end": 31,
+                "text": "What the municipal administration failed to anticipate was the severe lack of accessible feeder routes in outer suburbs.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 31.1,
+                "end": 37.5,
+                "text": "It is not commuter reluctance but poor spatial planning that explains the empty carriages.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 37.6,
+                "end": 44.5,
+                "text": "While downtown avenues enjoy seamless transfers, outer districts lack even basic bus connections to the new terminals.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 44.6,
+                "end": 51.5,
+                "text": "Furthermore, an overlooked technical shortcoming in the electronic ticketing gates created constant queues.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 51.6,
+                "end": 57,
+                "text": "What commuters really want is reliability, not flashy ceremonial launches.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 57.1,
+                "end": 63.5,
+                "text": "Last week, transport director Sarah Vance presented a pivotal report to the town hall.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 63.6,
+                "end": 69,
+                "text": "In her address, Vance was remarkably blunt about previous missteps.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 69.1,
+                "end": 76.5,
+                "text": "She argued that what the city council must fund immediately is suburban feeder integration rather than additional downtown stations.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 76.6,
+                "end": 84,
+                "text": "This proposal directly confronted the primary counterargument from fiscal conservatives, who insisted that ridership should rise before new funds are committed.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 84.1,
+                "end": 88.5,
+                "text": "It was Vance's clear evidence on socioeconomic disparity that persuaded the committee.",
+                "paragraphIndex": 3
+              },
+              {
+                "start": 88.6,
+                "end": 94,
+                "text": "The data revealed that low-income workers endured the longest commutes while paying proportionally higher fares.",
+                "paragraphIndex": 3
+              },
+              {
+                "start": 94.1,
+                "end": 99.5,
+                "text": "Now, the main point of contention is whether to subsidize passes or expand weekend timetables.",
+                "paragraphIndex": 3
+              },
+              {
+                "start": 99.6,
+                "end": 106,
+                "text": "What remains certain is that genuine progress requires listening to daily riders rather than political slogans.",
+                "paragraphIndex": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-5-m06-r-practice",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-1",
+                "instruction": "Match each formal term with its precise context in argumentation:",
+                "leftItems": [
+                  {
+                    "id": "l1",
+                    "text": "underscore"
+                  },
+                  {
+                    "id": "l2",
+                    "text": "shortcoming"
+                  },
+                  {
+                    "id": "l3",
+                    "text": "pivotal"
+                  },
+                  {
+                    "id": "l4",
+                    "text": "counterargument"
+                  }
+                ],
+                "rightItems": [
+                  {
+                    "id": "r1",
+                    "text": "to highlight or emphasize an essential point"
+                  },
+                  {
+                    "id": "r2",
+                    "text": "a flaw, weakness, or failure in a system"
+                  },
+                  {
+                    "id": "r3",
+                    "text": "having vital significance for future success"
+                  },
+                  {
+                    "id": "r4",
+                    "text": "an opposing perspective presented to dispute a claim"
+                  }
+                ],
+                "correctMatches": [
+                  {
+                    "leftId": "l1",
+                    "rightId": "r1"
+                  },
+                  {
+                    "leftId": "l2",
+                    "rightId": "r2"
+                  },
+                  {
+                    "leftId": "l3",
+                    "rightId": "r3"
+                  },
+                  {
+                    "leftId": "l4",
+                    "rightId": "r4"
+                  }
+                ]
+              },
+              {
+                "id": "drill-2",
+                "instruction": "Match each formal noun or adjective with its definition:",
+                "leftItems": [
+                  {
+                    "id": "l5",
+                    "text": "contention"
+                  },
+                  {
+                    "id": "l6",
+                    "text": "disparity"
+                  },
+                  {
+                    "id": "l7",
+                    "text": "breakthrough"
+                  },
+                  {
+                    "id": "l8",
+                    "text": "overlooked"
+                  }
+                ],
+                "rightItems": [
+                  {
+                    "id": "r5",
+                    "text": "a disagreement or key issue under dispute"
+                  },
+                  {
+                    "id": "r6",
+                    "text": "a notable difference or inequality between groups"
+                  },
+                  {
+                    "id": "r7",
+                    "text": "a major advance or decisive discovery"
+                  },
+                  {
+                    "id": "r8",
+                    "text": "failed to be noticed or considered"
+                  }
+                ],
+                "correctMatches": [
+                  {
+                    "leftId": "l5",
+                    "rightId": "r5"
+                  },
+                  {
+                    "leftId": "l6",
+                    "rightId": "r6"
+                  },
+                  {
+                    "leftId": "l7",
+                    "rightId": "r7"
+                  },
+                  {
+                    "leftId": "l8",
+                    "rightId": "r8"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-5-m06-r-quiz",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What primary reason does the author give for the low ridership after the first year?",
+                "options": [
+                  "Outer suburbs lacked adequate feeder routes to connect to the network.",
+                  "Commuters decided they preferred private cars in all situations.",
+                  "Downtown bus lines were permanently shut down by the council."
+                ],
+                "answer": "Outer suburbs lacked adequate feeder routes to connect to the network.",
+                "explanation": "Paragraph 1 states: 'What the municipal administration failed to anticipate was the severe lack of accessible feeder routes in outer suburbs.'"
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which sentence structure does the writer use in paragraph 2 to dismiss the idea that commuters simply dislike public transit?",
+                "options": [
+                  "An it-cleft contrasting commuter reluctance with poor spatial planning",
+                  "A passive voice question asking why passengers stayed home",
+                  "A conditional sentence predicting higher petrol prices"
+                ],
+                "answer": "An it-cleft contrasting commuter reluctance with poor spatial planning",
+                "explanation": "The text reads: 'It is not commuter reluctance but poor spatial planning that explains the empty carriages.'"
+              },
+              {
+                "id": "q-r-3",
+                "question": "What practical equipment issue annoyed commuters at the stations?",
+                "options": [
+                  "An overlooked software defect in ticket gates that created long queues",
+                  "A total lack of ticket vending machines inside the carriages",
+                  "Broken electric charging stations for passenger bicycles"
+                ],
+                "answer": "An overlooked software defect in ticket gates that created long queues",
+                "explanation": "Paragraph 2 refers to 'an overlooked technical shortcoming in the electronic ticketing gates created constant queues.'"
+              },
+              {
+                "id": "q-r-4",
+                "question": "In paragraph 2, what do daily commuters value above all else?",
+                "options": [
+                  "Reliability in their regular transit service",
+                  "More ceremonial launches and media events",
+                  "Free coffee at the central terminal"
+                ],
+                "answer": "Reliability in their regular transit service",
+                "explanation": "Paragraph 2 concludes with: 'What commuters really want is reliability, not flashy ceremonial launches.'"
+              },
+              {
+                "id": "q-r-5",
+                "question": "What did Sarah Vance argue the city council should fund without delay?",
+                "options": [
+                  "Suburban feeder integration to link outer neighborhoods",
+                  "More decorative stations in the city center",
+                  "Advertising campaigns targeting car owners"
+                ],
+                "answer": "Suburban feeder integration to link outer neighborhoods",
+                "explanation": "Paragraph 3 notes: 'what the city council must fund immediately is suburban feeder integration rather than additional downtown stations.'"
+              },
+              {
+                "id": "q-r-6",
+                "question": "What was the counterargument raised by fiscal conservatives?",
+                "options": [
+                  "Ridership numbers should increase before allocating new financial resources.",
+                  "Electric buses should be replaced immediately with diesel vehicles.",
+                  "All transit services in outer suburbs should be permanently privatized."
+                ],
+                "answer": "Ridership numbers should increase before allocating new financial resources.",
+                "explanation": "Paragraph 3 specifies that fiscal conservatives 'insisted that ridership should rise before new funds are committed.'"
+              },
+              {
+                "id": "q-r-7",
+                "question": "Which specific finding convinced the committee to back Vance's plan?",
+                "options": [
+                  "Hard evidence demonstrating socioeconomic disparity among commuters",
+                  "A petition signed by electric bus manufacturing executives",
+                  "A reduction in electricity tariffs across the county"
+                ],
+                "answer": "Hard evidence demonstrating socioeconomic disparity among commuters",
+                "explanation": "Paragraph 4 explains: 'It was Vance's clear evidence on socioeconomic disparity that persuaded the committee.'"
+              },
+              {
+                "id": "q-r-8",
+                "question": "According to the passage, how were low-income workers unfairly impacted by the system?",
+                "options": [
+                  "They had the longest travel times while spending proportionally more on fares.",
+                  "They were prohibited from using express carriages during rush hours.",
+                  "They lived too close to downtown to qualify for student discounts."
+                ],
+                "answer": "They had the longest travel times while spending proportionally more on fares.",
+                "explanation": "Paragraph 4 states: 'The data revealed that low-income workers endured the longest commutes while paying proportionally higher fares.'"
+              },
+              {
+                "id": "q-r-9",
+                "question": "What is the primary topic of ongoing disagreement mentioned in the final paragraph?",
+                "options": [
+                  "Whether to subsidize transit passes or expand weekend schedules",
+                  "Whether to fire the transport director and hire outside consultants",
+                  "Whether to shut down outer stations during the winter months"
+                ],
+                "answer": "Whether to subsidize transit passes or expand weekend schedules",
+                "explanation": "Paragraph 4 notes: 'Now, the main point of contention is whether to subsidize passes or expand weekend timetables.'"
+              },
+              {
+                "id": "q-r-10",
+                "question": "What overall conclusion does the author emphasize with a wh-cleft sentence at the end?",
+                "options": [
+                  "Real improvement depends on listening to regular riders rather than slogans.",
+                  "Only private transit operators can solve suburban accessibility challenges.",
+                  "Building new highways remains the cheapest option for urban centers."
+                ],
+                "answer": "Real improvement depends on listening to regular riders rather than slogans.",
+                "explanation": "The passage ends with: 'What remains certain is that genuine progress requires listening to daily riders rather than political slogans.'"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-5-m06-listening",
+      "moduleId": "B2.5-M06",
+      "skillType": "listening",
+      "title": "Listening Mission: Pinpointing Strategy with Cleft Sentences",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-b2-5-m06-l-theory",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In high-stakes professional meetings, native speakers frequently use cleft sentences to redirect blame, clarify misunderstandings, or emphasize vital points. This briefing trains you to detect tonic stress on cleft focus words and navigate rapid consonant linking.",
+            "learningObjectives": [
+              "Catch the focal point in it-clefts and wh-clefts during rapid discussions.",
+              "Identify reasons, causes, and business decisions emphasized by speakers.",
+              "Notice how consonants elide and link across cleft sentence boundaries in natural speech."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "It wasn't the concept that failed",
+                "meaning": "Bukan konsepnya yang gagal",
+                "note": "Used to rule out an assumed cause and shift focus elsewhere."
+              },
+              {
+                "phrase": "What concerns me is...",
+                "meaning": "Yang mengkhawatirkan saya adalah...",
+                "note": "A wh-cleft framing phrase that flags the speaker's primary worry."
+              },
+              {
+                "phrase": "What we really need is...",
+                "meaning": "Yang sebenarnya kita butuhkan adalah...",
+                "note": "Highlights an essential requirement or decisive next step."
+              },
+              {
+                "phrase": "It is leadership that needs clarity",
+                "meaning": "Pihak manajemenlah yang butuh kejelasan",
+                "note": "An it-cleft putting strong spotlight on the specific group responsible."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "What we need is",
+                "fast": "What-we-need-is",
+                "slowIpa": "/wɒt wiː niːd ɪz/",
+                "fastIpa": "/wʌwiːˈniːdɪz/",
+                "note": "The final alveolar stop /d/ in 'need' links smoothly into the vowel /ɪ/ of 'is'."
+              },
+              {
+                "id": 2,
+                "slow": "It wasn't the",
+                "fast": "It-wasn-the",
+                "slowIpa": "/ɪt ˈwɒznt ðə/",
+                "fastIpa": "/ɪˈwɒznðə/",
+                "note": "The final /t/ of 'wasn't' drops before the dental fricative /ð/."
+              },
+              {
+                "id": 3,
+                "slow": "What went wrong",
+                "fast": "What-wen-wrong",
+                "slowIpa": "/wɒt went rɒŋ/",
+                "fastIpa": "/wɒtˈwenrɒŋ/",
+                "note": "The /t/ in 'went' is elided entirely before the postalveolar approximant /r/."
+              },
+              {
+                "id": 4,
+                "slow": "It was the",
+                "fast": "It-wuz-the",
+                "slowIpa": "/ɪt wɒz ðə/",
+                "fastIpa": "/ɪwəzðə/",
+                "note": "The initial /t/ forms a weak glottal stop while 'was' reduces to a weak schwa."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-5-m06-l-dialogue",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Post-Campaign Deconstruction",
+          "orderIndex": 2,
+          "content": {
+            "context": "Sarah and Marcus are reviewing the poor performance of their quarterly marketing campaign late in the afternoon before tomorrow's board review.",
+            "audioPrompt": "Listen to the dialogue between Sarah and Marcus as they pinpoint why their campaign underperformed.",
+            "lines": [
+              {
+                "speaker": "Sarah",
+                "text": "Tomorrow's review meeting will be brutal.",
+                "translation": "Rapat tinjauan besok akan sangat berat.",
+                "emotion": "concerned"
+              },
+              {
+                "speaker": "Marcus",
+                "text": "We must analyze our campaign failure.",
+                "translation": "Kita harus menganalisis kegagalan kampanye kita.",
+                "emotion": "serious"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Was our creative concept really bad?",
+                "translation": "Apakah konsep kreatif kita benar-benar buruk?",
+                "emotion": "doubtful"
+              },
+              {
+                "speaker": "Marcus",
+                "text": "It wasn't the concept that failed.",
+                "translation": "Bukan konsepnya yang gagal.",
+                "emotion": "assertive"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Then what went wrong exactly?",
+                "translation": "Lalu apa yang sebenarnya salah?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Marcus",
+                "text": "It was the launch timing instead.",
+                "translation": "Justru waktu peluncurannyalah penyebabnya.",
+                "emotion": "decisive"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "What concerns me is consumer feedback.",
+                "translation": "Yang mengkhawatirkan saya adalah umpan balik konsumen.",
+                "emotion": "worried"
+              },
+              {
+                "speaker": "Marcus",
+                "text": "We ignored the market research completely.",
+                "translation": "Kita mengabaikan riset pasar sepenuhnya.",
+                "emotion": "regretful"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "What we really need is data.",
+                "translation": "Yang sebenarnya kita butuhkan adalah data.",
+                "emotion": "determined"
+              },
+              {
+                "speaker": "Marcus",
+                "text": "Competitors capitalised on our delay quickly.",
+                "translation": "Pesaing memanfaatkan penundaan kita dengan cepat.",
+                "emotion": "urgent"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "It is leadership that needs clarity.",
+                "translation": "Pihak manajemenlah yang memerlukan kejelasan.",
+                "emotion": "resolute"
+              },
+              {
+                "speaker": "Marcus",
+                "text": "Let us present honest facts tomorrow.",
+                "translation": "Mari kita sampaikan fakta jujur besok.",
+                "emotion": "confident"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-5-m06-l-quiz",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Tomorrow's review meeting will be brutal.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Tomorrow's review meeting will be _____.\"",
+                "targetWord": "brutal",
+                "explanation": "Full audio: \"Tomorrow's review meeting will be brutal.\". The missing word is \"brutal\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "We must analyze our campaign failure.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Marcus: \"We must analyze our campaign _____.\"",
+                "targetWord": "failure",
+                "explanation": "Full audio: \"We must analyze our campaign failure.\". The missing word is \"failure\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Was our creative concept really bad?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Was our creative concept really _____?\"",
+                "targetWord": "bad",
+                "explanation": "Full audio: \"Was our creative concept really bad?\". The missing word is \"bad\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "It wasn't the concept that failed.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Marcus: \"It wasn't the concept that _____.\"",
+                "targetWord": "failed",
+                "explanation": "Full audio: \"It wasn't the concept that failed.\". The missing word is \"failed\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Then what went wrong exactly?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Then what went wrong _____?\"",
+                "targetWord": "exactly",
+                "explanation": "Full audio: \"Then what went wrong exactly?\". The missing word is \"exactly\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "It was the launch timing instead.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It was the launch timing instead",
+                "words": [
+                  "timing",
+                  "launch",
+                  "instead",
+                  "the",
+                  "It",
+                  "was"
+                ],
+                "explanation": "Correct sentence order: \"It was the launch timing instead.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What concerns me is consumer feedback.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What concerns me is consumer feedback",
+                "words": [
+                  "is",
+                  "What",
+                  "concerns",
+                  "feedback",
+                  "consumer",
+                  "me"
+                ],
+                "explanation": "Correct sentence order: \"What concerns me is consumer feedback.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "We ignored the market research completely.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "We ignored the market research completely",
+                "words": [
+                  "We",
+                  "completely",
+                  "the",
+                  "market",
+                  "research",
+                  "ignored"
+                ],
+                "explanation": "Correct sentence order: \"We ignored the market research completely.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "What we really need is data.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What we really need is data",
+                "words": [
+                  "data",
+                  "we",
+                  "is",
+                  "need",
+                  "really",
+                  "What"
+                ],
+                "explanation": "Correct sentence order: \"What we really need is data.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Competitors capitalised on our delay quickly.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Competitors capitalised on our delay quickly",
+                "words": [
+                  "capitalised",
+                  "on",
+                  "our",
+                  "quickly",
+                  "Competitors",
+                  "delay"
+                ],
+                "explanation": "Correct sentence order: \"Competitors capitalised on our delay quickly.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Tomorrow's review meeting will be brutal.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Tomorrow's review meeting will be _____.\"",
+                "targetWord": "brutal",
+                "explanation": "Full audio: \"Tomorrow's review meeting will be brutal.\". The missing word is \"brutal\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "We must analyze our campaign failure.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Marcus: \"We must analyze our campaign _____.\"",
+                "targetWord": "failure",
+                "explanation": "Full audio: \"We must analyze our campaign failure.\". The missing word is \"failure\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Was our creative concept really bad?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Was our creative concept really _____?\"",
+                "targetWord": "bad",
+                "explanation": "Full audio: \"Was our creative concept really bad?\". The missing word is \"bad\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "It wasn't the concept that failed.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Marcus: \"It wasn't the concept that _____.\"",
+                "targetWord": "failed",
+                "explanation": "Full audio: \"It wasn't the concept that failed.\". The missing word is \"failed\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Then what went wrong exactly?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Then what went wrong _____?\"",
+                "targetWord": "exactly",
+                "explanation": "Full audio: \"Then what went wrong exactly?\". The missing word is \"exactly\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "It was the launch timing instead.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It was the launch timing instead",
+                "words": [
+                  "timing",
+                  "launch",
+                  "instead",
+                  "the",
+                  "It",
+                  "was"
+                ],
+                "explanation": "Correct sentence order: \"It was the launch timing instead.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What concerns me is consumer feedback.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What concerns me is consumer feedback",
+                "words": [
+                  "is",
+                  "What",
+                  "concerns",
+                  "feedback",
+                  "consumer",
+                  "me"
+                ],
+                "explanation": "Correct sentence order: \"What concerns me is consumer feedback.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "We ignored the market research completely.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "We ignored the market research completely",
+                "words": [
+                  "We",
+                  "completely",
+                  "the",
+                  "market",
+                  "research",
+                  "ignored"
+                ],
+                "explanation": "Correct sentence order: \"We ignored the market research completely.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "What we really need is data.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What we really need is data",
+                "words": [
+                  "data",
+                  "we",
+                  "is",
+                  "need",
+                  "really",
+                  "What"
+                ],
+                "explanation": "Correct sentence order: \"What we really need is data.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Competitors capitalised on our delay quickly.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Competitors capitalised on our delay quickly",
+                "words": [
+                  "capitalised",
+                  "on",
+                  "our",
+                  "quickly",
+                  "Competitors",
+                  "delay"
+                ],
+                "explanation": "Correct sentence order: \"Competitors capitalised on our delay quickly.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-5-m06-writing",
+      "moduleId": "B2.5-M06",
+      "skillType": "writing",
+      "title": "Writing Mission: Mastering Cleft Sentences for Dramatic Emphasis",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-b2-5-m06-w-theory",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Cleft sentences allow writers to divide a clause into two parts to place strong emphasis on a specific piece of information. In formal writing, essays, and persuasive reports, both it-clefts and wh-clefts highlight essential facts, contrast conflicting ideas, and direct the reader's focus toward critical arguments.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Focus on Specific Elements with It-Clefts",
+                "formula": "It + is / was + [focused element: subject, object, or prepositional phrase] + that / who + [rest of clause]",
+                "example": "It was the marketing strategy that impressed the investors, not the product itself."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Highlight Core Actions or Needs with Wh-Clefts",
+                "formula": "What + [subject clause] + is / was + [focused noun phrase or infinitive clause]",
+                "example": "What we need is a more collaborative approach to problem-solving."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Establish Direct Contrast Using Negated Clefts",
+                "formula": "It + is / was + not + [Element A] + but + [Element B] + that + [verb phrase / clause]",
+                "example": "It is not the cost that concerns us, but the environmental impact."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Maintain tense consistency between the cleft copula (is/was) and the main clause predicate.",
+                "badExample": "It is yesterday that we submitted the proposal.",
+                "goodExample": "It was yesterday that we submitted the proposal.",
+                "why": "The copula verb in an it-cleft must align chronologically with past events unless describing a timeless truth."
+              },
+              {
+                "rule": "Use 'that' or 'who' in it-cleft structures rather than 'which' or 'when'.",
+                "badExample": "It was the financial crisis which caused the bank closure.",
+                "goodExample": "It was the financial crisis that caused the bank closure.",
+                "why": "Standard academic and formal English favors 'that' over 'which' in it-clefts, reserving 'who' optionally for human referents."
+              },
+              {
+                "rule": "Ensure subject-verb agreement with the singular copula 'is' or 'was' after wh-clauses acting as single units.",
+                "badExample": "What irritated the committee were the missing data tables.",
+                "goodExample": "What irritated the committee was the missing data tables.",
+                "why": "In formal style, a wh-clause subject takes a singular verb, even when the complement noun phrase is plural."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "It was the lack of clear communication that caused the misunderstanding.",
+                "id": "Kurangnya komunikasi yang jelaslah yang menyebabkan kesalahpahaman tersebut.",
+                "focus": "It-cleft focusing on a subject noun phrase"
+              },
+              {
+                "en": "What the board actually approved was a temporary budget extension.",
+                "id": "Apa yang sebenarnya disetujui dewan adalah perpanjangan anggaran sementara.",
+                "focus": "Wh-cleft focusing on an object complement"
+              },
+              {
+                "en": "It is not higher pay but flexible working hours that young professionals demand.",
+                "id": "Bukan gaji yang lebih tinggi melainkan jam kerja fleksibel yang dituntut para profesional muda.",
+                "focus": "Negated contrastive it-cleft structure"
+              },
+              {
+                "en": "What we must avoid at all costs is delaying the implementation phase.",
+                "id": "Hal yang harus kita hindari dengan segala cara adalah menunda tahap implementasi.",
+                "focus": "Wh-cleft featuring modal verb and infinitive complement"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-5-m06-w-practice",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "it was dr watson which discovered the error in the lab report on monday",
+                "targetSentence": "It was Dr Watson who discovered the error in the lab report on Monday.",
+                "translation": "Dr Watson-lah yang menemukan kesalahan dalam laporan laboratorium pada hari Senin.",
+                "keyRule": "Capitalize titles and days of the week, and use 'who' or 'that' instead of 'which' for persons.",
+                "requiredCapitals": [
+                  "It",
+                  "Dr",
+                  "Watson",
+                  "Monday"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "what the team need are better coordination before the presentation",
+                "targetSentence": "What the team needs is better coordination before the presentation.",
+                "translation": "Hal yang dibutuhkan tim adalah koordinasi yang lebih baik sebelum presentasi.",
+                "keyRule": "Treat singular collective nouns and singular wh-clauses with singular verbs ('needs' and 'is').",
+                "requiredCapitals": [
+                  "What"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "it is not the price but the delivery terms that annoys our clients in march",
+                "targetSentence": "It is not the price but the delivery terms that annoy our clients in March.",
+                "translation": "Bukan harganya melainkan syarat pengirimannya yang menjengkelkan klien kami pada bulan Maret.",
+                "keyRule": "In contrastive clefts, make the verb agree with the noun phrase directly preceding 'that' ('terms' takes 'annoy'), and capitalize months.",
+                "requiredCapitals": [
+                  "It",
+                  "March"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Emphasis on Subject",
+                "meaning": "Staf senior yang mengusulkan perubahan jadwal kerja.",
+                "tokens": [
+                  "It",
+                  "was",
+                  "the",
+                  "senior",
+                  "staff",
+                  "who",
+                  "proposed",
+                  "the",
+                  "schedule",
+                  "change."
+                ],
+                "fullSentence": "It was the senior staff who proposed the schedule change."
+              },
+              {
+                "id": "b-2",
+                "category": "Emphasis on Objective",
+                "meaning": "Hal yang paling dipedulikan klien adalah transparansi biaya.",
+                "tokens": [
+                  "What",
+                  "the",
+                  "client",
+                  "cares",
+                  "about",
+                  "most",
+                  "is",
+                  "fee",
+                  "transparency."
+                ],
+                "fullSentence": "What the client cares about most is fee transparency."
+              },
+              {
+                "id": "b-3",
+                "category": "Contrastive Emphasis",
+                "meaning": "Bukan idenya melainkan pelaksanaannya yang gagal memenuhi harapan.",
+                "tokens": [
+                  "It",
+                  "was",
+                  "not",
+                  "the",
+                  "idea",
+                  "but",
+                  "the",
+                  "execution",
+                  "that",
+                  "failed."
+                ],
+                "fullSentence": "It was not the idea but the execution that failed."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Reframe an Office Problem Using Clefts",
+                "badge": "Clarity Specialist",
+                "instruction": "Write three sentences analyzing a workplace problem. Use at least one it-cleft and one wh-cleft to emphasize the real root cause and your proposed resolution.",
+                "example": "Our recent project suffered from several missteps during product development. It was poor internal communication that caused the critical delay in our launch. What we need right now is a weekly standup meeting across all departments.",
+                "placeholder": "Start typing your sentences here...",
+                "minWords": 25,
+                "xpReward": 40
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Persuasive Essay Argument",
+                "badge": "Debate Rhetorician",
+                "instruction": "Write a short paragraph of 40 to 60 words arguing for green transportation in cities. Include a contrastive cleft sentence starting with 'It is not...' and an emphasis clause starting with 'What cities must do...'.",
+                "example": "Urban air quality continues to decline despite strict vehicle emissions targets. It is not private car ownership but the absence of reliable public transit that fuels traffic congestion. What cities must do is invest heavily in zero-emission bus fleets and dedicated cycling lanes.",
+                "placeholder": "Draft your persuasive paragraph here...",
+                "minWords": 35,
+                "xpReward": 50
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-5-m06-w-quiz",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence as an it-cleft that emphasizes the subject in italics: 'The *finance director* uncovered the accounting discrepancy.'",
+                "promptText": "The finance director uncovered the accounting discrepancy.",
+                "hint": "Start with 'It was...' and connect the remaining clause with 'who' or 'that'.",
+                "targetAnswers": [
+                  "It was the finance director who uncovered the accounting discrepancy.",
+                  "It was the finance director that uncovered the accounting discrepancy."
+                ],
+                "explanation": "To emphasize a past agent with an it-cleft, use 'It was + [noun phrase] + who/that + [predicate]'."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence as an it-cleft emphasizing the time phrase in italics: 'The team completed the software upgrade *on Thursday morning*.'",
+                "promptText": "The team completed the software upgrade on Thursday morning.",
+                "hint": "Begin with 'It was on Thursday morning...'.",
+                "targetAnswers": [
+                  "It was on Thursday morning that the team completed the software upgrade.",
+                  "It was on Thursday morning when the team completed the software upgrade."
+                ],
+                "explanation": "Adverbial phrases of time can be emphasized using 'It was + [prepositional phrase] + that...'. Formal style favors 'that'."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform the sentence into a wh-cleft emphasizing the direct object: 'We urgently need accurate regional sales data.'",
+                "promptText": "We urgently need accurate regional sales data.",
+                "hint": "Start with 'What we urgently need is...'.",
+                "targetAnswers": [
+                  "What we urgently need is accurate regional sales data.",
+                  "What we need urgently is accurate regional sales data."
+                ],
+                "explanation": "A wh-cleft highlights an object by opening with 'What + subject + verb' followed by 'is' and the focused noun phrase."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using a contrastive it-cleft ('It is not A, but B that...'): 'Customer service quality causes complaints, not our product design.'",
+                "promptText": "Customer service quality causes complaints, not our product design.",
+                "hint": "Open with 'It is not product design but...'.",
+                "targetAnswers": [
+                  "It is not product design but customer service quality that causes complaints.",
+                  "It is not our product design but customer service quality that causes complaints.",
+                  "It is not product design, but customer service quality that causes complaints.",
+                  "It is not our product design, but our customer service quality that causes complaints."
+                ],
+                "explanation": "The contrastive formula 'It is not [A] but [B] that [verb phrase]' cleanly refutes an assumption and establishes the actual cause."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct all punctuation, relative pronoun, and capitalization errors in the following sentence:",
+                "promptText": "it was the legal department which delayed the contract signing in london on tuesday",
+                "hint": "Capitalize names and days. Replace 'which' with 'that' or 'who'.",
+                "targetAnswers": [
+                  "It was the legal department that delayed the contract signing in London on Tuesday.",
+                  "It was the legal department who delayed the contract signing in London on Tuesday."
+                ],
+                "explanation": "Sentence beginnings, proper nouns like 'London', and days of the week require capital letters. In it-clefts, use 'that' or 'who', not 'which'."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Conjunctions & Structure",
+                "instruction": "Combine these two thoughts into one wh-cleft sentence with an infinitive clause: 'The company should do one thing. It should expand into sustainable packaging.'",
+                "promptText": "The company should do one thing. It should expand into sustainable packaging.",
+                "hint": "Start with 'What the company should do is...'.",
+                "targetAnswers": [
+                  "What the company should do is expand into sustainable packaging.",
+                  "What the company should do is to expand into sustainable packaging."
+                ],
+                "explanation": "When emphasizing an action, wh-clefts take 'What + subject + do-verb + is + (to) bare infinitive'."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the subject-verb agreement and tense errors in this wh-cleft:",
+                "promptText": "What disappointed the manager were the inaccurate figures in the report.",
+                "hint": "Use a singular verb after the wh-clause in formal English.",
+                "targetAnswers": [
+                  "What disappointed the manager was the inaccurate figures in the report."
+                ],
+                "explanation": "In standard formal English, a wh-clause subject behaves as a singular entity and takes the singular verb 'was'."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the statement into an all-cleft (a variant of wh-cleft) to emphasize exclusivity: 'I only asked for a brief project summary.'",
+                "promptText": "I only asked for a brief project summary.",
+                "hint": "Begin with 'All I asked for was...'.",
+                "targetAnswers": [
+                  "All I asked for was a brief project summary.",
+                  "All that I asked for was a brief project summary."
+                ],
+                "explanation": "'All (that) + subject + verb + was + complement' functions as an emphatic cleft meaning 'the only thing that'."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Conjunctions & Structure",
+                "instruction": "Complete the cleft sentence by inserting the correct conjunctions to create a contrast: 'It was ______ lack of funds ______ poor planning that derailed the initiative.'",
+                "promptText": "It was [blank1] lack of funds [blank2] poor planning that derailed the initiative.",
+                "hint": "Use correlative conjunctions 'not' and 'but'.",
+                "targetAnswers": [
+                  "It was not lack of funds but poor planning that derailed the initiative.",
+                  "It was not lack of funds, but poor planning that derailed the initiative."
+                ],
+                "explanation": "The formula 'It was not [A] but [B] that...' sets up a clear pair of contrasting elements."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Respond to the question in one complete sentence using an it-cleft: 'Did the high price discourage potential buyers?' (State that the poor warranty discouraged them instead).",
+                "promptText": "Did the high price discourage potential buyers?",
+                "hint": "Write a complete sentence starting with 'No, it was the poor warranty that...'.",
+                "targetAnswers": [
+                  "No, it was the poor warranty that discouraged potential buyers.",
+                  "No, it was the poor warranty that discouraged them.",
+                  "It was the poor warranty that discouraged potential buyers.",
+                  "It was the poor warranty that discouraged them."
+                ],
+                "explanation": "An it-cleft directly corrects misconceptions by spotlighting the true subject while preserving discourse flow."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-5-m06-speaking",
+      "moduleId": "B2.5-M06",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Delivering Dramatic Emphasis with Cleft Structures",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-b2-5-m06-s-theory",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Cleft sentences allow you to redirect acoustic energy directly onto the most critical information in your message. In spoken English, shifting from a flat sentence like 'We need more data' to 'What we need is more data' requires distinct pitch peaks and deliberate rhythm changes. By mastering the contrast between unstressed introductory clauses and heavily stressed focus words, your arguments sound authoritative and persuasive.",
+            "audioGuidance": "Wh-clefts require a slight rising intonation at the end of the wh-clause, followed by a brief micro-pause, and a firm falling intonation on the focus item. In it-clefts, place the primary nuclear stress directly on the clefted noun phrase, keeping 'It was' and 'that' completely unstressed and reduced to weak forms.",
+            "pillars": [
+              {
+                "name": "Nuclear Stress Placement",
+                "target": "Precise pitch accent on the clefted element",
+                "explanation": "In an it-cleft, the noun or phrase right after 'It is' or 'It was' receives the highest pitch and volume. Reduce 'it was' to /ɪt wəz/ and avoid stressing the relative pronoun 'that'."
+              },
+              {
+                "name": "The Wh-Clause Pitch Bridge",
+                "target": "Slight rise on the wh-clause followed by a resolve",
+                "explanation": "When using 'What we must address is...', allow your pitch to rise gradually through the wh-clause, pause momentarily at the copula verb 'is', and drop cleanly onto the complement."
+              },
+              {
+                "name": "Rhythmical Compression",
+                "target": "Weak forms in grammatical frames",
+                "explanation": "Keep functional words such as 'it is', 'that we', and 'what we' rhythmically compact. This ensures your listener's attention remains focused entirely on the content words."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-5-m06-s-practice",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "con-TEND",
+                "countryAudio": "contend",
+                "countrySyllables": [
+                  {
+                    "text": "con",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TEND",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "con-TEN-tion",
+                "natAudio": "contention",
+                "natSyllables": [
+                  {
+                    "text": "con",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TEN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The root verb and noun both retain main stress on the middle syllable, but the final syllable shortens to an unstressed /ʃən/."
+              },
+              {
+                "id": "pair-2",
+                "country": "PIV-ot",
+                "countryAudio": "pivot",
+                "countrySyllables": [
+                  {
+                    "text": "PIV",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ot",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "PIV-o-tal",
+                "natAudio": "pivotal",
+                "natSyllables": [
+                  {
+                    "text": "PIV",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "o",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tal",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Primary stress stays firmly on the first syllable in both forms, while the suffix -al takes a weak schwa."
+              },
+              {
+                "id": "pair-3",
+                "country": "BREAK through",
+                "countryAudio": "break through",
+                "countrySyllables": [
+                  {
+                    "text": "break",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "THROUGH",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "BREAK-through",
+                "natAudio": "breakthrough",
+                "natSyllables": [
+                  {
+                    "text": "BREAK",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "through",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The phrasal verb stresses the particle 'through', whereas the compound noun shifts primary stress to the first syllable 'break'."
+              },
+              {
+                "id": "pair-4",
+                "country": "SHORT-com-ing",
+                "countryAudio": "shortcoming",
+                "countrySyllables": [
+                  {
+                    "text": "SHORT",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "com",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ing",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "come SHORT",
+                "natAudio": "come short",
+                "natSyllables": [
+                  {
+                    "text": "come",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "SHORT",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "Compound nouns place stress on the initial descriptor 'short', while the idiomatic verb phrase stresses the final complement."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "It was her pivotal research that changed our direction entirely.",
+                "phonetic": "/ɪt wəz hɜː ˈpɪvətl rɪˈsɜːtʃ ðət tʃeɪndʒd ˈaʊə dəˈrekʃn ɪnˈtaɪəli/",
+                "focus": "It-cleft emphasis with adjective 'pivotal'",
+                "hint": "Drop your pitch on 'It was', strike 'pivotal research' with high pitch, and use a weak /ðət/."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "What we identified was a critical shortcoming in the original plan.",
+                "phonetic": "/wɒt wiː aɪˈdentɪfaɪd wəz ə ˈkrɪtɪkl ˈʃɔːtkʌmɪŋ ɪn ði əˈrɪdʒənl plæn/",
+                "focus": "Wh-cleft with slight rising tone before the verb 'was'",
+                "hint": "Raise pitch slightly on 'identified', pause briefly at 'was', and stress 'shortcoming'."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "What the team achieved was a major breakthrough in battery life.",
+                "phonetic": "/wɒt ðə tiːm əˈtʃiːvd wəz ə ˈmeɪdʒə ˈbreɪkθruː ɪn ˈbætəri laɪf/",
+                "focus": "Contrastive prominence on 'breakthrough'",
+                "hint": "Deliver 'What the team achieved' smoothly without pause, then land with weight on 'major breakthrough'."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "It is this specific counterargument that we must resolve today.",
+                "phonetic": "/ɪt ɪz ðɪs spəˈsɪfɪk ˈkaʊntərəːɡjumənt ðət wiː mʌst rɪˈzɒlv təˈdeɪ/",
+                "focus": "Nuclear stress on multi-syllable noun 'counterargument'",
+                "hint": "Keep 'It is this' light and quick. Put strong emphasis on the first syllable of 'counterargument'."
+              }
+            ],
+            "roleplay": {
+              "context": "You and your colleague Nadia are reviewing an upcoming project proposal before presenting it to the department director.",
+              "roles": [
+                "Nadia",
+                "Colleague"
+              ],
+              "turns": [
+                {
+                  "speaker": "Nadia",
+                  "text": "Are we sure the board will accept the timeline? It seems quite ambitious.",
+                  "translation": "Apakah kita yakin dewan akan menerima jadwal ini? Kelihatannya cukup ambisius."
+                },
+                {
+                  "speaker": "Colleague",
+                  "text": "It is not the timeline that concerns them, but the overall budget.",
+                  "translation": "Bukan jadwalnya yang mereka khawatirkan, melainkan anggaran keseluruhannya."
+                },
+                {
+                  "speaker": "Nadia",
+                  "text": "Good point. How should we phrase that in our opening statement?",
+                  "translation": "Poin bagus. Bagaimana kita harus menyatakannya dalam pernyataan pembuka kita?"
+                },
+                {
+                  "speaker": "Colleague",
+                  "text": "What we need to underscore is our plan to lower long term operational costs.",
+                  "translation": "Yang perlu kita tegaskan adalah rencana kita untuk menurunkan biaya operasional jangka panjang."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b2-5-m06-s-quiz",
+          "moduleId": "B2.5-M06",
+          "subModuleId": "sub-b2-5-m06-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 30 seconds about a decision that changed your career or studies. Use at least one it-cleft structure to emphasize the deciding factor.",
+                "audioPrompt": "Describe a major choice you had to make in your education or career. What was the exact factor that led to your success?",
+                "storyPoints": [
+                  "Set the context of the dilemma or choice you faced",
+                  "Emphasize the deciding factor using an it-cleft sentence",
+                  "Explain the positive outcome that followed your decision"
+                ],
+                "targetSentence": "It was my mentor's honest feedback that prompted me to switch my focus toward data analysis.",
+                "phonetic": "/ɪt wəz maɪ ˈmentɔːz ˈɒnɪst ˈfiːdbæk ðət ˈprɒmptɪd miː tə swɪtʃ maɪ ˈfəʊkəs təˈwɔːd ˈdeɪtə əˈnæləsɪs/",
+                "expectedKeywords": [
+                  "mentor",
+                  "feedback",
+                  "decision",
+                  "pivotal"
+                ],
+                "explanation": "Use an it-cleft such as 'It was X that made the difference' to place dramatic focus on the key influence."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Professional Storytelling",
+                "instruction": "Speak for at least 30 seconds describing a project setback and how your team resolved it. Incorporate a wh-cleft sentence to highlight the solution.",
+                "audioPrompt": "Tell a short story about an obstacle your team faced during an important task, and highlight the action that resolved it.",
+                "storyPoints": [
+                  "Describe the initial problem or shortcoming in the project",
+                  "Introduce the decisive action taken using a wh-cleft",
+                  "Share the final lesson learned by the team"
+                ],
+                "targetSentence": "What we discovered was a serious shortcoming in our code, so what we did was redesign the core module.",
+                "phonetic": "/wɒt wiː dɪˈskʌvəd wəz ə ˈsɪəriəs ˈʃɔːtkʌmɪŋ ɪn ˈaʊə kəʊd/",
+                "expectedKeywords": [
+                  "shortcoming",
+                  "redesign",
+                  "discovered",
+                  "breakthrough"
+                ],
+                "explanation": "Structure the narrative around a wh-cleft like 'What saved the project was...' to build suspense before stating the solution."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Roleplay: Strategic Alignment",
+                "instruction": "Respond to your business partner by emphasizing that customer retention, not aggressive advertising, should be the main focus.",
+                "audioPrompt": "Should we pour another twenty thousand dollars into social media advertising this quarter?",
+                "scenarioContext": "You are discussing quarterly marketing priorities with your co-founder in your company office.",
+                "characterRole": "Co-founder and Product Lead",
+                "targetSentence": "What we actually need is better customer retention, not higher marketing spend.",
+                "phonetic": "/wɒt wiː ˈæktʃuəli niːd ɪz ˈbetə ˈkʌstəmə rɪˈtenʃn nɒt ˈhaɪə ˈmɑːkɪtɪŋ spend/",
+                "expectedKeywords": [
+                  "retention",
+                  "marketing",
+                  "need",
+                  "focus"
+                ],
+                "explanation": "Use a wh-cleft to redirect attention cleanly away from advertising toward customer retention."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Roleplay: Addressing Objections",
+                "instruction": "Counter the client's concern by highlighting that safety testing caused the delay, not production errors.",
+                "audioPrompt": "Your delivery is two weeks late. Did your manufacturing team drop the ball again?",
+                "scenarioContext": "You are speaking on a video call with a demanding client who is upset about a delivery postponement.",
+                "characterRole": "Senior Account Manager",
+                "targetSentence": "It was our thorough safety testing that delayed shipment, not any defect in production.",
+                "phonetic": "/ɪt wəz ˈaʊə ˈθʌrə ˈseɪfti ˈtestɪŋ ðət dɪˈleɪd ˈʃɪpmənt/",
+                "expectedKeywords": [
+                  "safety",
+                  "testing",
+                  "delayed",
+                  "production"
+                ],
+                "explanation": "Use an it-cleft ('It was... that...') to firmly defend your team's quality control standards."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Roleplay: Debate Preparation",
+                "instruction": "Advise your debate partner on which opposing argument needs immediate refutation.",
+                "audioPrompt": "The opponents brought up three different points during the first round. Which one do we hit first?",
+                "scenarioContext": "You and your teammate have two minutes during an inter-university debate intermission to coordinate your rebuttal.",
+                "characterRole": "First Speaker in Debate Team",
+                "targetSentence": "It is their second counterargument regarding renewable tariffs that we have to dismantle.",
+                "phonetic": "/ɪt ɪz ðeə ˈsekənd ˈkaʊntərəːɡjumənt rɪˈɡɑːdɪŋ rɪˈnjuːəbl ˈtærɪfs ðət wiː hæv tə dɪsˈmæntl/",
+                "expectedKeywords": [
+                  "counterargument",
+                  "tariffs",
+                  "dismantle",
+                  "second"
+                ],
+                "explanation": "Point directly to the critical rebuttal item with an it-cleft structure to guide your partner's speech."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Roleplay: Post-Mortem Review",
+                "instruction": "Summarize the central disagreement from the recent stakeholder meeting using the word 'contention'.",
+                "audioPrompt": "Why did the committee fail to sign off on the new regional office plan yesterday?",
+                "scenarioContext": "You are briefing your department head right after an inconclusive stakeholder meeting.",
+                "characterRole": "Project Coordinator",
+                "targetSentence": "What remains our main contention is the proposed location, not the staffing numbers.",
+                "phonetic": "/wɒt rɪˈmeɪnz ˈaʊə meɪn kənˈtenʃn ɪz ðə prəˈpəʊzd ləʊˈkeɪʃn/",
+                "expectedKeywords": [
+                  "contention",
+                  "location",
+                  "remains",
+                  "staffing"
+                ],
+                "explanation": "Use a wh-cleft combined with the noun 'contention' to isolate the primary point of disagreement."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Linguistic Drill: Vocabulary Focus",
+                "instruction": "Say the sentence aloud, focusing on clear articulation of the vocabulary word 'underscore'.",
+                "audioPrompt": "Read the sentence with deliberate emphasis on the target verb.",
+                "targetSentence": "What this report underscores is the urgent need for structural reform.",
+                "phonetic": "/wɒt ðɪs rɪˈpɔːt ˌʌndəˈskɔːz ɪz ði ˈɜːdʒənt niːd fə ˈstrʌktʃərəl rɪˈfɔːm/",
+                "expectedKeywords": [
+                  "underscores",
+                  "urgent",
+                  "structural",
+                  "reform"
+                ],
+                "explanation": "Stress the final syllable of 'underscore' while maintaining a strong wh-cleft framework."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Linguistic Drill: Grammatical Transformation",
+                "instruction": "Transform the plain sentence 'Dr. Vance discovered the breakthrough' into an it-cleft starting with 'It was'.",
+                "audioPrompt": "Transform: Dr. Vance discovered the breakthrough.",
+                "targetSentence": "It was Dr. Vance who discovered the breakthrough in solar efficiency.",
+                "phonetic": "/ɪt wəz ˈdɒktə væns huː dɪˈskʌvəd ðə ˈbreɪkθruː ɪn ˈsəʊlər ɪˈfɪʃnsi/",
+                "expectedKeywords": [
+                  "Vance",
+                  "discovered",
+                  "breakthrough"
+                ],
+                "explanation": "Form the it-cleft accurately using 'It was + proper noun + who/that + verb clause'."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Linguistic Drill: Syllable Stress Placement",
+                "instruction": "Pronounce the target sentence accurately, placing primary stress on the first syllable of 'pivotal' and the first syllable of 'shortcoming'.",
+                "audioPrompt": "Read the sentence ensuring accurate word stress on both key adjectives and nouns.",
+                "targetSentence": "It was a pivotal moment when the manager acknowledged our system's shortcoming.",
+                "phonetic": "/ɪt wəz ə ˈpɪvətl ˈməʊmənt wen ðə ˈmænɪdʒər əkˈnɒlɪdʒd ˈaʊə ˈsɪstəmz ˈʃɔːtkʌmɪŋ/",
+                "expectedKeywords": [
+                  "pivotal",
+                  "moment",
+                  "acknowledged",
+                  "shortcoming"
+                ],
+                "explanation": "Check that you say PIV-o-tal and SHORT-com-ing without misplacing the stress on subsequent syllables."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Linguistic Drill: Intonation & Pitch Contours",
+                "instruction": "Pronounce the wh-cleft sentence with a clear rising tone on the wh-clause and a decisive falling tone on the final focus.",
+                "audioPrompt": "Deliver this sentence with proper contrasting pitch contours.",
+                "targetSentence": "What surprised everyone in the room was their sudden breakthrough.",
+                "phonetic": "/wɒt səˈpraɪzd ˈevriwʌn ɪn ðə ruːm wəz ðeə ˈsʌdn ˈbreɪkθruː/",
+                "expectedKeywords": [
+                  "surprised",
+                  "everyone",
+                  "sudden",
+                  "breakthrough"
+                ],
+                "explanation": "Let your pitch rise through 'What surprised everyone in the room', level out on 'was', and drop firmly on 'breakthrough'."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
