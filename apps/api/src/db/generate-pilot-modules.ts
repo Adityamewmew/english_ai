@@ -1,5 +1,7 @@
+import fs from "fs";
+import path from "path";
 import { generateSinglePilotModule } from "./generator/generate-unit";
-import { seedAllPilotModules } from "./seed-pilot-modules";
+import { seedSingleModuleData } from "./seed-pilot-modules";
 
 async function main() {
   const args = process.argv.slice(2);
@@ -41,7 +43,28 @@ async function main() {
       targets.push(`${level}-M${String(u).padStart(2, "0")}`);
     }
   } else if (isAll) {
-    if (level === "A2") {
+    if (level === "B1") {
+      targets = [
+        ...Array.from({ length: 12 }, (_, idx) => `B1.1-M${String(idx + 1).padStart(2, "0")}`),
+        ...Array.from({ length: 12 }, (_, idx) => `B1.2-M${String(idx + 1).padStart(2, "0")}`),
+        ...Array.from({ length: 12 }, (_, idx) => `B1.3-M${String(idx + 1).padStart(2, "0")}`),
+      ];
+    } else if (level === "B2") {
+      targets = [
+        ...Array.from({ length: 12 }, (_, idx) => `B2.1-M${String(idx + 1).padStart(2, "0")}`),
+        ...Array.from({ length: 12 }, (_, idx) => `B2.2-M${String(idx + 1).padStart(2, "0")}`),
+        ...Array.from({ length: 12 }, (_, idx) => `B2.3-M${String(idx + 1).padStart(2, "0")}`),
+      ];
+    } else if (level === "B" || level === "B1+B2") {
+      targets = [
+        ...Array.from({ length: 12 }, (_, idx) => `B1.1-M${String(idx + 1).padStart(2, "0")}`),
+        ...Array.from({ length: 12 }, (_, idx) => `B1.2-M${String(idx + 1).padStart(2, "0")}`),
+        ...Array.from({ length: 12 }, (_, idx) => `B1.3-M${String(idx + 1).padStart(2, "0")}`),
+        ...Array.from({ length: 12 }, (_, idx) => `B2.1-M${String(idx + 1).padStart(2, "0")}`),
+        ...Array.from({ length: 12 }, (_, idx) => `B2.2-M${String(idx + 1).padStart(2, "0")}`),
+        ...Array.from({ length: 12 }, (_, idx) => `B2.3-M${String(idx + 1).padStart(2, "0")}`),
+      ];
+    } else if (level === "A2") {
       targets = [
         ...Array.from({ length: 12 }, (_, idx) => `A2.1-M${String(idx + 1).padStart(2, "0")}`),
         ...Array.from({ length: 12 }, (_, idx) => `A2.2-M${String(idx + 1).padStart(2, "0")}`),
@@ -70,8 +93,16 @@ async function main() {
         skipExisting: !force,
         model,
       });
+      // Immediately seed this module into PostgreSQL database
+      const p = path.resolve(process.cwd(), `../../data/pilot_modules/${modId}.json`);
+      const fallbackP = path.resolve(process.cwd(), `data/pilot_modules/${modId}.json`);
+      const targetP = fs.existsSync(p) ? p : fallbackP;
+      if (fs.existsSync(targetP)) {
+        const data = JSON.parse(fs.readFileSync(targetP, "utf8"));
+        await seedSingleModuleData(data);
+      }
       const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
-      console.log(`⏱️ Completed ${modId} in ${elapsed}s\n`);
+      console.log(`⏱️ Completed and seeded ${modId} in ${elapsed}s\n`);
       successCount++;
     } catch (err: any) {
       console.error(`❌ Failed generating ${modId}:`, err.message);
@@ -85,11 +116,6 @@ async function main() {
   console.log(`✅ Success: ${successCount}`);
   console.log(`❌ Failed:  ${errorCount}`);
   console.log(`======================================================\n`);
-
-  if (successCount > 0) {
-    console.log("🌱 Auto-seeding all generated pilot modules into PostgreSQL database...");
-    await seedAllPilotModules();
-  }
 }
 
 main().catch((err) => {

@@ -18,7 +18,12 @@ export async function generateSinglePilotModule(
   const rootDir = fs.existsSync(path.resolve(process.cwd(), "data/client_curriculum"))
     ? path.resolve(process.cwd())
     : path.resolve(process.cwd(), "../..");
-  const levelDir = unitId.toLowerCase().startsWith("a2") ? "a2" : "a1";
+  const lower = unitId.toLowerCase();
+  let levelDir = "a1";
+  if (lower.startsWith("b2")) levelDir = "b2";
+  else if (lower.startsWith("b1")) levelDir = "b1";
+  else if (lower.startsWith("a2")) levelDir = "a2";
+
   const clientPath = path.join(rootDir, `data/client_curriculum/${levelDir}/${unitId}.json`);
   const outputPath = path.join(rootDir, `data/pilot_modules/${unitId}.json`);
 
@@ -39,9 +44,9 @@ export async function generateSinglePilotModule(
   console.log(`📖 Title: ${unitData.title}`);
   console.log(`======================================================`);
 
-  const client = new OmniRouteClient({
-    defaultModel: options?.model || "antigravity/claude-opus-4-6-thinking",
-  });
+  const client = new OmniRouteClient(
+    options?.model ? { defaultModel: options.model } : undefined
+  );
 
   // 1. Generate Reading Submodule
   console.log(`\n[1/4] 📚 Generating Reading Submodule...`);
@@ -82,14 +87,32 @@ export async function generateSinglePilotModule(
   const speakingQuestions = speakingSubmodule?.sections?.find((s: any) => s.sectionType === "quiz")?.content?.practicumQuestions;
   console.log(`  ✅ Speaking submodule generated with ${speakingQuestions?.length || 0} practicum questions.`);
 
-  const defaultCefr = unitId.toLowerCase().startsWith("a2") ? "A2" : "A1";
-  const defaultGroup = unitId.toLowerCase().startsWith("a2") ? `${unitData.levelId} - Elementary Progressions` : `${unitData.levelId} - Starter Foundations`;
+  let defaultCefr = "A1";
+  let defaultGroup = `${unitData.levelId || "A1.1"} - Starter Foundations`;
+  if (lower.startsWith("b2")) {
+    defaultCefr = "B2";
+    defaultGroup = `${unitData.levelId || "B2.1"} - Vantage Foundations`;
+  } else if (lower.startsWith("b1")) {
+    defaultCefr = "B1";
+    defaultGroup = `${unitData.levelId || "B1.1"} - Intermediate Foundations`;
+  } else if (lower.startsWith("a2")) {
+    defaultCefr = "A2";
+    defaultGroup = `${unitData.levelId || "A2.1"} - Elementary Progressions`;
+  }
 
   // Assemble full pilot module format
   const fullModuleData = {
     module: {
       id: unitData.id,
-      levelId: unitData.levelId || (unitId.toLowerCase().startsWith("a2") ? "A2.1" : "A1.1"),
+      levelId:
+        unitData.levelId ||
+        (lower.startsWith("b2")
+          ? "B2.1"
+          : lower.startsWith("b1")
+          ? "B1.1"
+          : lower.startsWith("a2")
+          ? "A2.1"
+          : "A1.1"),
       title: unitData.title,
       cefr: unitData.cefr || defaultCefr,
       group: unitData.group || defaultGroup,

@@ -1,0 +1,1581 @@
+{
+  "module": {
+    "id": "B1.1-M11",
+    "levelId": "B1.1",
+    "title": "Unit 11: Making the News: Passive Voice - Present & Past Simple",
+    "cefr": "B1",
+    "group": "B1.1 - Intermediate Foundations",
+    "objective": "Mampu melaporkan perkataan orang lain menggunakan reported speech, memahami perbedaan tenses dalam pelaporan, serta menggunakan verb patterns dengan object + infinitive dalam konteks berita dan jurnalistik.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 11
+  },
+  "subModules": [
+    {
+      "id": "sub-b1-1-m11-reading",
+      "moduleId": "B1.1-M11",
+      "skillType": "reading",
+      "title": "Reading Mission: Reporting the News and April Fools",
+      "theme": "Making the News and Media Stories",
+      "grammarFocus": "Reported Speech and Verb Patterns with Object + Infinitive",
+      "vocabularyFocus": "Journalism, media, news reports, and April Fools pranks",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-b1-1-m11-r-theory",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to Unit 11! In this reading module, you will explore how journalists report news stories, how people retell what others said using reported speech, and how verbs take objects followed by infinitives. You will read a fascinating text about famous media pranks and learn how to identify main ideas and specific details in news articles.",
+            "linguisticTarget": {
+              "grammar": "Reported speech tense shifts and object plus infinitive verb patterns",
+              "vocabulary": "Journalists, crops, media hoaxes, and news reporting verbs",
+              "readingStrategy": "Scanning news articles for specific facts and skimming paragraphs for reported statements"
+            },
+            "learningObjectives": [
+              "Understand the main ideas of news stories and media reports at the B1 level",
+              "Locate specific details regarding who said what in reported speech",
+              "Recognize and practice grammar patterns involving say versus tell and object plus infinitive"
+            ],
+            "contextWarmup": {
+              "prompt": "What do news agencies and journalists often publish on the first of April every year?",
+              "options": [
+                "Funny stories that are actually complete jokes or hoaxes",
+                "Very serious financial reports about global banking",
+                "Secret documents from government leaders"
+              ],
+              "correctIndex": 0,
+              "explanation": "Media organizations often publish funny fake stories on April Fools' Day to trick their readers and viewers."
+            },
+            "rules": [
+              "When shifting from direct speech to reported speech, present simple changes to past simple.",
+              "Use 'say' without a direct object pronoun, but use 'tell' with an object pronoun like me, him, or us.",
+              "Verbs such as ask, want, tell, and persuade are followed by an object and an infinitive with 'to'."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Learner Pitfall",
+              "explanation": "Students often forget to change the tense when writing reported speech, or they mix up 'say' and 'tell'.",
+              "wrong": "He said me that he was tired.",
+              "correct": "He told me that he was tired, or he said that he was tired."
+            },
+            "contractionsTitle": "Natural Spoken Contractions in News Reports",
+            "contractionsSubtitle": "Observe how auxiliary verbs and pronouns contract in spoken reports and informal interviews:",
+            "contractions": [
+              {
+                "subject": "He",
+                "verb": "has",
+                "vowelDropped": "ha",
+                "remainder": "s",
+                "contracted": "He's",
+                "exampleFull": "He has admitted the mistake.",
+                "exampleContracted": "He's admitted the mistake."
+              },
+              {
+                "subject": "They",
+                "verb": "have",
+                "vowelDropped": "ha",
+                "remainder": "ve",
+                "contracted": "They've",
+                "exampleFull": "They have invented a new story.",
+                "exampleContracted": "They've invented a new story."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Reported Speech and Object + Infinitive",
+              "description": "Examine how reporting verbs and object structures combine in everyday journalism:",
+              "subjects": [
+                {
+                  "label": "The journalist",
+                  "pronoun": "He/She",
+                  "correctToBe": "is",
+                  "role": "Subject reporting news"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "tell",
+                  "thirdPerson": "tells",
+                  "continuous": "telling"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "the readers to check the facts",
+                  "type": "Object + Infinitive"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-1-m11-r-vocab",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "journalist",
+                "ipa": "/ˈdʒɜː.nə.lɪst/",
+                "meaning": "jurnalis, wartawan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "April first seems to be very popular with journalists.",
+                "collocation": "investigative journalist / news journalist"
+              },
+              {
+                "word": "crop",
+                "ipa": "/krɒp/",
+                "meaning": "tanaman hasil panen",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Swiss farmers were enjoying a really good year for their spaghetti crop.",
+                "collocation": "spaghetti crop / harvest crop"
+              },
+              {
+                "word": "admitted",
+                "ipa": "/ədˈmɪt.ɪd/",
+                "meaning": "mengakui",
+                "partOfSpeech": "verb",
+                "exampleSentence": "The BBC later admitted they had made up the whole story.",
+                "collocation": "admitted the truth / admitted making a mistake"
+              },
+              {
+                "word": "misunderstood",
+                "ipa": "/ˌmɪs.ʌn.dəˈstʊd/",
+                "meaning": "salah paham",
+                "partOfSpeech": "verb",
+                "exampleSentence": "The athlete had misunderstood the rules of the race.",
+                "collocation": "completely misunderstood / easily misunderstood"
+              },
+              {
+                "word": "invented",
+                "ipa": "/ɪnˈvent.ɪd/",
+                "meaning": "menciptakan, menemukan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Edison had invented a food machine that would feed the human race.",
+                "collocation": "invented a story / invented a machine"
+              },
+              {
+                "word": "hilarious",
+                "ipa": "/hɪˈleə.ri.əs/",
+                "meaning": "sangat lucu",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "I love Steve because he is hilarious.",
+                "collocation": "hilarious joke / absolutely hilarious"
+              },
+              {
+                "word": "get (a joke)",
+                "ipa": "/ɡet/",
+                "meaning": "memahami (lelucon)",
+                "partOfSpeech": "verb phrase",
+                "exampleSentence": "Some viewers did not get the joke until much later.",
+                "collocation": "get the joke / don't get the joke"
+              },
+              {
+                "word": "play a joke",
+                "ipa": "/pleɪ ə dʒəʊk/",
+                "meaning": "membuat lelucon, bercanda",
+                "partOfSpeech": "verb phrase",
+                "exampleSentence": "The television show played a joke on their audience.",
+                "collocation": "play a joke on someone"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m11-r-guided",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "The Greatest April Fools in Television History",
+            "audioUrl": "/audio/modules/b1-1-m11/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "April first is a favorite day for journalists around the world. On this day, newspapers and television stations love to play a joke on the public. One of the most famous media hoaxes happened in nineteen fifty-seven. A respected BBC television program broadcast a special report about Swiss farmers who were enjoying an amazing spaghetti crop. The television cameras showed people pulling long strands of spaghetti from trees. Thousands of viewers watched the broadcast and believed every word.",
+              "After the show finished, many people called the television station because they wanted to know how to grow their own spaghetti trees in their gardens. The BBC told callers to place a piece of spaghetti in a tin of tomato sauce and hope for the best. Later, the broadcaster admitted they had made up the whole story. Although some critics thought it was silly, most people agreed that the hilarious prank was a masterpiece of broadcasting history."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "April first is a favorite day for journalists around the world.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 4.6,
+                "end": 9,
+                "text": "On this day, newspapers and television stations love to play a joke on the public.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 9.1,
+                "end": 13.5,
+                "text": "One of the most famous media hoaxes happened in nineteen fifty-seven.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 13.6,
+                "end": 18,
+                "text": "A respected BBC television program broadcast a special report about Swiss farmers who were enjoying an amazing spaghetti crop.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 18.1,
+                "end": 22.5,
+                "text": "The television cameras showed people pulling long strands of spaghetti from trees.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 22.6,
+                "end": 27,
+                "text": "Thousands of viewers watched the broadcast and believed every word.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 27.1,
+                "end": 32,
+                "text": "After the show finished, many people called the television station because they wanted to know how to grow their own spaghetti trees in their gardens.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 32.1,
+                "end": 37,
+                "text": "The BBC told callers to place a piece of spaghetti in a tin of tomato sauce and hope for the best.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 37.1,
+                "end": 42,
+                "text": "Later, the broadcaster admitted they had made up the whole story.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 42.1,
+                "end": 46.5,
+                "text": "Although some critics thought it was silly, most people agreed that the hilarious prank was a masterpiece of broadcasting history.",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m11-r-practice",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": []
+          }
+        },
+        {
+          "id": "sec-b1-1-m11-r-quiz",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What special day is mentioned as a favorite for journalists around the world?",
+                "options": [
+                  "April first",
+                  "New Year's Eve",
+                  "Christmas Day"
+                ],
+                "answer": "April first",
+                "explanation": "The text states that April first is a favorite day for journalists to play jokes on the public."
+              },
+              {
+                "id": "q-r-2",
+                "question": "What do newspapers and television stations like to do on this special day?",
+                "options": [
+                  "Report serious economic news",
+                  "Play a joke on the public",
+                  "Broadcast live sports matches"
+                ],
+                "answer": "Play a joke on the public",
+                "explanation": "The passage mentions that newspapers and television stations love to play a joke on the public."
+              },
+              {
+                "id": "q-r-3",
+                "question": "In what year did this famous media hoax take place?",
+                "options": [
+                  "1957",
+                  "1967",
+                  "1975"
+                ],
+                "answer": "1957",
+                "explanation": "The text explicitly states that the hoax happened in nineteen fifty-seven."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Which television organization broadcast the special report?",
+                "options": [
+                  "The BBC",
+                  "CNN",
+                  "ITV"
+                ],
+                "answer": "The BBC",
+                "explanation": "The passage mentions that a respected BBC television program broadcast the report."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What crop were the Swiss farmers in the report supposedly enjoying?",
+                "options": [
+                  "Spaghetti",
+                  "Tomatoes",
+                  "Potatoes"
+                ],
+                "answer": "Spaghetti",
+                "explanation": "The report described Swiss farmers enjoying an amazing spaghetti crop."
+              },
+              {
+                "id": "q-r-6",
+                "question": "What did the television cameras show people doing in the video?",
+                "options": [
+                  "Pulling long strands of spaghetti from trees",
+                  "Cooking pasta in large pots",
+                  "Harvesting wheat in fields"
+                ],
+                "answer": "Pulling long strands of spaghetti from trees",
+                "explanation": "The cameras showed people pulling long strands of spaghetti directly from trees."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Why did many people call the television station after the show finished?",
+                "options": [
+                  "To find out how to grow their own spaghetti trees",
+                  "To complain about the poor video quality",
+                  "To ask for recipes from Italian chefs"
+                ],
+                "answer": "To find out how to grow their own spaghetti trees",
+                "explanation": "People called because they wanted to know how to grow their own spaghetti trees in their gardens."
+              },
+              {
+                "id": "q-r-8",
+                "question": "What did the television station tell callers to do with a piece of spaghetti?",
+                "options": [
+                  "Place it in a tin of tomato sauce and hope for the best",
+                  "Plant it deep in rich garden soil with fertilizer",
+                  "Water it every morning with warm milk"
+                ],
+                "answer": "Place it in a tin of tomato sauce and hope for the best",
+                "explanation": "The BBC told callers to place a piece of spaghetti in a tin of tomato sauce and hope for the best."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What did the broadcaster later admit?",
+                "options": [
+                  "They had made up the whole story",
+                  "They had filmed the segment in Italy",
+                  "They were tricked by Swiss farmers"
+                ],
+                "answer": "They had made up the whole story",
+                "explanation": "The broadcaster later admitted they had made up the whole story."
+              },
+              {
+                "id": "q-r-10",
+                "question": "How did most people regard the prank in the end?",
+                "options": [
+                  "As a hilarious prank and a masterpiece of broadcasting history",
+                  "As a dangerous mistake that ruined farming",
+                  "As a boring news report with no real value"
+                ],
+                "answer": "As a hilarious prank and a masterpiece of broadcasting history",
+                "explanation": "Most people agreed that the hilarious prank was a masterpiece of broadcasting history."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-1-m11-listening",
+      "moduleId": "B1.1-M11",
+      "skillType": "listening",
+      "title": "Listening Mission: Making the News and Spotting Bias",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-b1-1-m11-l-theory",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "When listening to discussions about news and media, pay close attention to how speakers express opinions using passive voice and present simple tenses. Notice tone of voice to understand when teenagers feel unfairly judged by journalists.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about news headlines.",
+              "Identify details such as speaker opinions, names, and attitudes.",
+              "Notice how words link together in connected speech during arguments."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "Check this out",
+                "meaning": "Coba lihat ini",
+                "note": "Used to draw someone's attention to a headline, photo, or object."
+              },
+              {
+                "phrase": "What's his name",
+                "meaning": "Siapa namanya",
+                "note": "Used when you temporarily forget someone's name in conversation."
+              },
+              {
+                "phrase": "Don't get too angry",
+                "meaning": "Jangan terlalu marah",
+                "note": "Used to calm someone down during a heated discussion."
+              },
+              {
+                "phrase": "I don't agree",
+                "meaning": "Aku tidak setuju",
+                "note": "A direct way to express a different opinion politely or firmly."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "Check this out",
+                "fast": "Check_this_out",
+                "slowIpa": "/tʃek ðɪs aʊt/",
+                "fastIpa": "/tʃek.ðɪs.aʊt/",
+                "note": "The final /k/ in check links smoothly with 'this'."
+              },
+              {
+                "id": 2,
+                "slow": "What is up",
+                "fast": "What's up",
+                "slowIpa": "/wɒt ɪz ʌp/",
+                "fastIpa": "/wɒts ʌp/",
+                "note": "Contraction of what and is linked directly to up."
+              },
+              {
+                "id": 3,
+                "slow": "Let me see",
+                "fast": "Lemme see",
+                "slowIpa": "/lɛt miː siː/",
+                "fastIpa": "/lɛ.mi siː/",
+                "note": "Let and me combine into the informal spoken form 'lemme'."
+              },
+              {
+                "id": 4,
+                "slow": "Not worth it",
+                "fast": "Not_worth_it",
+                "slowIpa": "/nɒt wɜːθ ɪt/",
+                "fastIpa": "/nɒt.wɜː.θɪt/",
+                "note": "The final /t/ in worth links to the vowel in it."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m11-l-dialogue",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: The Unfair Headline",
+          "orderIndex": 2,
+          "content": {
+            "context": "Megan, a student, is upset after reading a news report about teenagers and vandalism. She discusses the biased article with her friends Luke, Ryan, and Olivia.",
+            "audioPrompt": "Listen to the conversation between the four friends.",
+            "lines": [
+              {
+                "speaker": "Luke",
+                "text": "What is up, Megan?",
+                "translation": "Ada apa, Megan?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Luke",
+                "text": "You do not look happy.",
+                "translation": "Kamu tidak terlihat senang.",
+                "emotion": "concerned"
+              },
+              {
+                "speaker": "Megan",
+                "text": "Check this out right now.",
+                "translation": "Coba lihat ini sekarang.",
+                "emotion": "annoyed"
+              },
+              {
+                "speaker": "Megan",
+                "text": "Teens vandalise the town centre.",
+                "translation": "Remaja merusak pusat kota.",
+                "emotion": "angry"
+              },
+              {
+                "speaker": "Olivia",
+                "text": "What? Let me see that.",
+                "translation": "Apa? Coba aku lihat itu.",
+                "emotion": "shocked"
+              },
+              {
+                "speaker": "Megan",
+                "text": "It happens every single day.",
+                "translation": "Itu terjadi setiap hari.",
+                "emotion": "frustrated"
+              },
+              {
+                "speaker": "Olivia",
+                "text": "Headlines like this make me mad.",
+                "translation": "Judul seperti ini membuatku marah.",
+                "emotion": "angry"
+              },
+              {
+                "speaker": "Luke",
+                "text": "Do not get too angry, guys.",
+                "translation": "Jangan terlalu marah, teman-teman.",
+                "emotion": "calming"
+              },
+              {
+                "speaker": "Ryan",
+                "text": "Sorry, Luke, I disagree completely.",
+                "translation": "Maaf, Luke, aku sangat tidak setuju.",
+                "emotion": "firm"
+              },
+              {
+                "speaker": "Ryan",
+                "text": "This journalist hates local teenagers.",
+                "translation": "Jurnalis ini membenci remaja lokal.",
+                "emotion": "serious"
+              },
+              {
+                "speaker": "Olivia",
+                "text": "My dad heard him on radio.",
+                "translation": "Ayahku mendengarnya di radio.",
+                "emotion": "supportive"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m11-l-quiz",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "What is up, Megan?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Luke: \"_____ is up, Megan?\"",
+                "targetWord": "What",
+                "explanation": "Full audio: \"What is up, Megan?\". The missing word is \"What\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "You do not look happy.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Luke: \"You do not look _____.\"",
+                "targetWord": "happy",
+                "explanation": "Full audio: \"You do not look happy.\". The missing word is \"happy\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Check this out right now.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Megan: \"Check this out right _____.\"",
+                "targetWord": "now",
+                "explanation": "Full audio: \"Check this out right now.\". The missing word is \"now\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Teens vandalise the town centre.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Megan: \"Teens vandalise the town _____.\"",
+                "targetWord": "centre",
+                "explanation": "Full audio: \"Teens vandalise the town centre.\". The missing word is \"centre\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Let me see that.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Olivia: \"Let me see _____.\"",
+                "targetWord": "that",
+                "explanation": "Full audio: \"Let me see that.\". The missing word is \"that\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "It happens every single day.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It happens every single day",
+                "words": [
+                  "every",
+                  "single",
+                  "It",
+                  "day",
+                  "happens"
+                ],
+                "explanation": "Correct sentence order: \"It happens every single day.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Headlines like this make me mad.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Headlines like this make me mad",
+                "words": [
+                  "this",
+                  "mad",
+                  "Headlines",
+                  "me",
+                  "make",
+                  "like"
+                ],
+                "explanation": "Correct sentence order: \"Headlines like this make me mad.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Do not get too angry, guys.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Do not get too angry guys",
+                "words": [
+                  "guys",
+                  "angry",
+                  "Do",
+                  "get",
+                  "not",
+                  "too"
+                ],
+                "explanation": "Correct sentence order: \"Do not get too angry, guys.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Sorry, Luke, I disagree completely.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Sorry Luke I disagree completely",
+                "words": [
+                  "completely",
+                  "Luke",
+                  "disagree",
+                  "I",
+                  "Sorry"
+                ],
+                "explanation": "Correct sentence order: \"Sorry, Luke, I disagree completely.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "This journalist hates local teenagers.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "This journalist hates local teenagers",
+                "words": [
+                  "teenagers",
+                  "hates",
+                  "This",
+                  "journalist",
+                  "local"
+                ],
+                "explanation": "Correct sentence order: \"This journalist hates local teenagers.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "What is up, Megan?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Luke: \"_____ is up, Megan?\"",
+                "targetWord": "What",
+                "explanation": "Full audio: \"What is up, Megan?\". The missing word is \"What\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "You do not look happy.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Luke: \"You do not look _____.\"",
+                "targetWord": "happy",
+                "explanation": "Full audio: \"You do not look happy.\". The missing word is \"happy\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Check this out right now.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Megan: \"Check this out right _____.\"",
+                "targetWord": "now",
+                "explanation": "Full audio: \"Check this out right now.\". The missing word is \"now\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Teens vandalise the town centre.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Megan: \"Teens vandalise the town _____.\"",
+                "targetWord": "centre",
+                "explanation": "Full audio: \"Teens vandalise the town centre.\". The missing word is \"centre\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Let me see that.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Olivia: \"Let me see _____.\"",
+                "targetWord": "that",
+                "explanation": "Full audio: \"Let me see that.\". The missing word is \"that\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "It happens every single day.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It happens every single day",
+                "words": [
+                  "every",
+                  "single",
+                  "It",
+                  "day",
+                  "happens"
+                ],
+                "explanation": "Correct sentence order: \"It happens every single day.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Headlines like this make me mad.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Headlines like this make me mad",
+                "words": [
+                  "this",
+                  "mad",
+                  "Headlines",
+                  "me",
+                  "make",
+                  "like"
+                ],
+                "explanation": "Correct sentence order: \"Headlines like this make me mad.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Do not get too angry, guys.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Do not get too angry guys",
+                "words": [
+                  "guys",
+                  "angry",
+                  "Do",
+                  "get",
+                  "not",
+                  "too"
+                ],
+                "explanation": "Correct sentence order: \"Do not get too angry, guys.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Sorry, Luke, I disagree completely.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Sorry Luke I disagree completely",
+                "words": [
+                  "completely",
+                  "Luke",
+                  "disagree",
+                  "I",
+                  "Sorry"
+                ],
+                "explanation": "Correct sentence order: \"Sorry, Luke, I disagree completely.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "This journalist hates local teenagers.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "This journalist hates local teenagers",
+                "words": [
+                  "teenagers",
+                  "hates",
+                  "This",
+                  "journalist",
+                  "local"
+                ],
+                "explanation": "Correct sentence order: \"This journalist hates local teenagers.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-1-m11-writing",
+      "moduleId": "B1.1-M11",
+      "skillType": "writing",
+      "title": "Writing Mission: Reporting the News with Passive Voice",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-b1-1-m11-w-theory",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on using the passive voice in present and past simple tenses for news reporting, reports, and formal writing in English.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Present Simple Passive Formula",
+                "formula": "Object + am/is/are + past participle (V3) (+ by agent)",
+                "example": "Newspapers are printed every morning by the local press."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Past Simple Passive Formula",
+                "formula": "Object + was/were + past participle (V3) (+ by agent)",
+                "example": "The historic building was damaged by the severe storm last night."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: News Report Structure",
+                "formula": "Headline + Lead Sentence (Active/Passive) + Supporting Details (Passive Voice)",
+                "example": "Local Museum Robbed. Valuable paintings were stolen from the downtown gallery on Tuesday."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always match the auxiliary verb (am, is, are, was, were) with the new subject in passive sentences.",
+                "badExample": "The windows was broken during the match.",
+                "goodExample": "The windows were broken during the match.",
+                "why": "Windows is plural, so it requires 'were' instead of 'was'."
+              },
+              {
+                "rule": "Use past participle forms correctly for regular and irregular verbs in passive sentences.",
+                "badExample": "A new bridge is build across the river.",
+                "goodExample": "A new bridge is built across the river.",
+                "why": "The past participle of 'build' is 'built', not 'build'."
+              },
+              {
+                "rule": "Capitalize the first letter of every sentence and all proper nouns in news headlines.",
+                "badExample": "new bridge opened in london by the mayor.",
+                "goodExample": "New bridge opened in London by the mayor.",
+                "why": "Proper nouns like London and the start of every sentence must be capitalized."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "English is spoken by millions of people around the world.",
+                "id": "Bahasa Inggris dituturkan oleh jutaan orang di seluruh dunia.",
+                "focus": "Present simple passive voice"
+              },
+              {
+                "en": "Many houses were destroyed by the heavy earthquake last week.",
+                "id": "Banyak rumah hancur akibat gempa bumi yang kuat minggu lalu.",
+                "focus": "Past simple passive voice"
+              },
+              {
+                "en": "The winning goal was scored by our captain in the final minute.",
+                "id": "Gol penentu kemenangan dicetak oleh kapten kami pada menit terakhir.",
+                "focus": "Past simple passive with agent"
+              },
+              {
+                "en": "Fresh vegetables are sold at the local market every morning.",
+                "id": "Sayuran segar dijual di pasar lokal setiap pagi.",
+                "focus": "Present simple passive routine action"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m11-w-practice",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "three cars was stolen from the parking lot yesterday",
+                "targetSentence": "Three cars were stolen from the parking lot yesterday.",
+                "translation": "Tiga mobil dicuri dari tempat parkir kemarin.",
+                "keyRule": "Use 'were' with plural subjects in past simple passive sentences and capitalize the first word.",
+                "requiredCapitals": [
+                  "Three"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "letters is delivered by the postman every morning in london",
+                "targetSentence": "Letters are delivered by the postman every morning in London.",
+                "translation": "Surat-surat diantar oleh tukang pos setiap pagi di London.",
+                "keyRule": "Use 'are' with plural subjects in present simple passive and capitalize proper nouns.",
+                "requiredCapitals": [
+                  "Letters",
+                  "London"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "the match was cancel because of heavy rain on sunday",
+                "targetSentence": "The match was cancelled because of heavy rain on Sunday.",
+                "translation": "Pertandingan dibatalkan karena hujan deras pada hari Minggu.",
+                "keyRule": "Use the correct past participle 'cancelled' and capitalize the start of the sentence and days.",
+                "requiredCapitals": [
+                  "The",
+                  "Sunday"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "News Passive",
+                "meaning": "Pencuri itu ditangkap oleh polisi tadi malam.",
+                "tokens": [
+                  "The",
+                  "thief",
+                  "was",
+                  "caught",
+                  "by",
+                  "the",
+                  "police",
+                  "last",
+                  "night."
+                ],
+                "fullSentence": "The thief was caught by the police last night."
+              },
+              {
+                "id": "b-2",
+                "category": "News Passive",
+                "meaning": "Kue-kue segar dipanggang setiap hari di toko roti ini.",
+                "tokens": [
+                  "Fresh",
+                  "cakes",
+                  "are",
+                  "baked",
+                  "every",
+                  "day",
+                  "in",
+                  "this",
+                  "bakery."
+                ],
+                "fullSentence": "Fresh cakes are baked every day in this bakery."
+              },
+              {
+                "id": "b-3",
+                "category": "News Passive",
+                "meaning": "Sebuah jembatan baru dibangun di dekat sungai itu tahun lalu.",
+                "tokens": [
+                  "A",
+                  "new",
+                  "bridge",
+                  "was",
+                  "built",
+                  "near",
+                  "the",
+                  "river",
+                  "last",
+                  "year."
+                ],
+                "fullSentence": "A new bridge was built near the river last year."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Report a Local Event",
+                "badge": "News Reporter",
+                "instruction": "Write three to four sentences about a community event or accident using past simple passive voice. Mention what happened, when it happened, and who was involved.",
+                "example": "A local art exhibition was opened by the mayor yesterday. Many paintings were displayed in the main hall. A large crowd was attended by security staff.",
+                "placeholder": "Start typing your news report here...",
+                "minWords": 15,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Describe Daily Manufacturing",
+                "badge": "Factory Journalist",
+                "instruction": "Write three to four sentences explaining how a product is made using present simple passive voice. Mention what is used, how it is processed, and where it is sold.",
+                "example": "Coffee beans are imported from South America. The beans are roasted carefully in large machines. Finally, coffee packets are sold in supermarkets across the country.",
+                "placeholder": "Start typing your process description here...",
+                "minWords": 15,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m11-w-quiz",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following active sentence into a passive sentence (Present Simple):",
+                "promptText": "The local chef bakes delicious bread every morning.",
+                "hint": "Start with 'Delicious bread...'",
+                "targetAnswers": [
+                  "Delicious bread is baked by the local chef every morning.",
+                  "Delicious bread is baked every morning by the local chef."
+                ],
+                "explanation": "In present simple passive, use 'is' plus the past participle 'baked' for singular uncountable objects like bread."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following active sentence into a passive sentence (Past Simple):",
+                "promptText": "Lightning damaged the old telephone wires during the storm.",
+                "hint": "Start with 'The old telephone wires...'",
+                "targetAnswers": [
+                  "The old telephone wires were damaged by lightning during the storm.",
+                  "The old telephone wires were damaged during the storm by lightning."
+                ],
+                "explanation": "With plural objects like 'wires', use 'were' plus the past participle 'damaged' in past simple passive."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Convert this active news sentence into the passive voice:",
+                "promptText": "Police arrested three suspects near the station.",
+                "hint": "Start with 'Three suspects...'",
+                "targetAnswers": [
+                  "Three suspects were arrested by police near the station.",
+                  "Three suspects were arrested near the station by police."
+                ],
+                "explanation": "The past simple active verb 'arrested' becomes 'were arrested' in the passive voice for plural subjects."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change this present simple active sentence into passive voice:",
+                "promptText": "People speak Spanish in many parts of the world.",
+                "hint": "Start with 'Spanish...'",
+                "targetAnswers": [
+                  "Spanish is spoken in many parts of the world.",
+                  "Spanish is spoken by people in many parts of the world."
+                ],
+                "explanation": "Spanish is singular, so use 'is' followed by the past participle 'spoken'."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this past simple active sentence into passive voice:",
+                "promptText": "Somebody stole my bicycle from the garage.",
+                "hint": "Start with 'My bicycle...'",
+                "targetAnswers": [
+                  "My bicycle was stolen from the garage.",
+                  "My bicycle was stolen from the garage by somebody."
+                ],
+                "explanation": "Singular subject 'my bicycle' takes 'was' and the past participle 'stolen'."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct all capitalization, punctuation, and grammar errors in the sentence below:",
+                "promptText": "newspapers is printed every night in london.",
+                "hint": "Check the auxiliary verb and proper noun capital letters.",
+                "targetAnswers": [
+                  "Newspapers are printed every night in London."
+                ],
+                "explanation": "Newspapers is plural, requiring 'are' instead of 'is'. London and the start of the sentence must be capitalized."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the grammar and mechanics in the following passive sentence:",
+                "promptText": "the museum windows was broken by vandals last friday.",
+                "hint": "Check subject-verb agreement for plural nouns.",
+                "targetAnswers": [
+                  "The museum windows were broken by vandals last Friday."
+                ],
+                "explanation": "Windows is plural, so use 'were'. Friday and the start of the sentence must be capitalized."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Short Response",
+                "instruction": "Write a complete passive sentence in the present simple tense using these words: [English / teach / at our school / every day]",
+                "hint": "Use 'is taught'.",
+                "targetAnswers": [
+                  "English is taught at our school every day."
+                ],
+                "explanation": "English is singular, requiring 'is' and the past participle 'taught'."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Short Response",
+                "instruction": "Write a complete passive sentence in the past simple tense using these words: [The match / cancel / due to heavy rain / yesterday]",
+                "hint": "Use 'was cancelled' or 'was canceled'.",
+                "targetAnswers": [
+                  "The match was cancelled due to heavy rain yesterday.",
+                  "The match was canceled due to heavy rain yesterday.",
+                  "The match was cancelled yesterday due to heavy rain."
+                ],
+                "explanation": "The match is singular, so use 'was' with the past participle 'cancelled'."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the following active sentence in the passive voice: 'Workers clean the offices every evening.'",
+                "hint": "Start with 'The offices...'",
+                "targetAnswers": [
+                  "The offices are cleaned every evening by workers.",
+                  "The offices are cleaned every evening."
+                ],
+                "explanation": "Plural subject 'offices' takes 'are' and the past participle 'cleaned' in present simple passive."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-1-m11-speaking",
+      "moduleId": "B1.1-M11",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Making the News and Passive Voice",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-b1-1-m11-s-theory",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This speaking module focuses on reporting news stories and using the passive voice correctly in spoken English. Clear articulation of past participles and appropriate sentence stress help listeners understand who or what received the action.",
+            "audioGuidance": "When speaking the passive voice, emphasize the main verb and the agent if it is introduced with the word by. Pause briefly after reporting verbs to make your speech sound natural and engaging.",
+            "pillars": [
+              {
+                "name": "Passive Verb Clarity",
+                "target": "Pronounce auxiliary verbs and past participles distinctly",
+                "explanation": "Do not swallow the auxiliary verb was or were. Ensure the ending of the past participle like invented or reported is clearly heard."
+              },
+              {
+                "name": "Sentence Stress in News Reports",
+                "target": "Stress key nouns and main verbs",
+                "explanation": "In news broadcasts, focus words carry the primary information. Words like journalist, crop, and admitted must stand out against grammar words."
+              },
+              {
+                "name": "Reporting Intonation",
+                "target": "Use falling intonation for completed factual reports",
+                "explanation": "When stating a news fact in the passive voice, drop your pitch at the end of the clause to signal certainty and completion."
+              },
+              {
+                "name": "Pacing and Pausing",
+                "target": "Group words into meaningful thought units",
+                "explanation": "Pause between the subject and the passive verb phrase to give your listener time to process the information."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m11-s-practice",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "IN-vent",
+                "countryAudio": "invent",
+                "countrySyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "VENT",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "in-VEN-ted",
+                "natAudio": "invented",
+                "natSyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "VEN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ted",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that the main stress shifts to the second syllable in both forms, but the past tense adds an extra syllable at the end."
+              },
+              {
+                "id": "pair-2",
+                "country": "RE-port",
+                "countryAudio": "report",
+                "countrySyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PORT",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "re-POR-ter",
+                "natAudio": "reporter",
+                "natSyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "POR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ter",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress remains on the second syllable when changing from the verb to the noun."
+              },
+              {
+                "id": "pair-3",
+                "country": "JOUR-nal",
+                "countryAudio": "journal",
+                "countrySyllables": [
+                  {
+                    "text": "JOUR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "nal",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "jour-NAL-ist",
+                "natAudio": "journalist",
+                "natSyllables": [
+                  {
+                    "text": "jour",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "NAL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ist",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress moves to the second syllable when the suffix ist is added to form the profession."
+              },
+              {
+                "id": "pair-4",
+                "country": "AD-mit",
+                "countryAudio": "admit",
+                "countrySyllables": [
+                  {
+                    "text": "ad",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "MIT",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "ad-MIT-ted",
+                "natAudio": "admitted",
+                "natSyllables": [
+                  {
+                    "text": "ad",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "MIT",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ted",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The main stress stays on the second syllable while adding the past tense ending."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "The fake news story was broadcast by the television network.",
+                "phonetic": "/ðə feɪk njuːz ˈstɔːri wɒz ˈbrɔːdkɑːst baɪ ðə ˈtelɪvɪʒn ˈnetwɜːk/",
+                "focus": "Passive voice structure with Past Simple",
+                "hint": "Pronounce 'was' softly and stress the words 'broadcast' and 'television'."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "Millions of spaghetti crops are grown in Switzerland every spring.",
+                "phonetic": "/ˈmɪljənz ɒv spəˈɡeti krɒps ɑː ɡrəʊn ɪn ˈswɪtsələnd ˈevri sprɪŋ/",
+                "focus": "Passive voice in Present Simple and plural noun agreement",
+                "hint": "Link the words 'are' and 'grown' together smoothly."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "The journalist admitted that the hilarious joke was invented.",
+                "phonetic": "/ðə ˈdʒɜːnə.lɪst ədˈmɪtɪd ðæt ðə hɪˈleə.ri.əs dʒəʊk wɒz ɪnˈventɪd/",
+                "focus": "Reporting past events and multisyllabic adjectives",
+                "hint": "Ensure the second syllable of hilarious is pronounced clearly."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Many people misunderstood the April Fools joke completely.",
+                "phonetic": "/ˈmeni ˈpiːpl ˌmɪs.ʌn.dəˈstʊd ði ˈeɪprəl fuːlz dʒəʊk kəmˈpliːtli/",
+                "focus": "Compound past verb pronunciation and adverbs",
+                "hint": "Place strong stress on the prefix misunderstood."
+              }
+            ],
+            "roleplay": {
+              "context": "You are talking to a news editor about a funny April Fools article that tricked many readers.",
+              "roles": [
+                "News Editor",
+                "Journalist"
+              ],
+              "turns": [
+                {
+                  "speaker": "News Editor",
+                  "text": "Did you see how many people believed our story about the spaghetti trees?",
+                  "translation": "Apakah kamu melihat berapa banyak orang yang percaya cerita kita tentang pohon spageti?"
+                },
+                {
+                  "speaker": "Journalist",
+                  "text": "Yes, I did! Many readers admitted they were completely tricked by it.",
+                  "translation": "Ya, saya melihatnya! Banyak pembaca mengakui bahwa mereka benar-benar tertipu oleh berita itu."
+                },
+                {
+                  "speaker": "News Editor",
+                  "text": "It was hilarious. Were any complaints received by our office today?",
+                  "translation": "Itu sangat lucu. Apakah ada keluhan yang diterima oleh kantor kita hari ini?"
+                },
+                {
+                  "speaker": "Journalist",
+                  "text": "No complaints were received at all. Everyone thought the joke was brilliant.",
+                  "translation": "Tidak ada keluhan sama sekali yang diterima. Semuanya mengira lelucon itu sangat cemerlang."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-1-m11-s-quiz",
+          "moduleId": "B1.1-M11",
+          "subModuleId": "sub-b1-1-m11-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a funny practical joke or trick you experienced or heard about.",
+                "audioPrompt": "Tell a short story about an April Fools joke or a funny misunderstanding you remember.",
+                "storyPoints": [
+                  "What the prank or joke was about",
+                  "Who was tricked by the funny story",
+                  "How people reacted when they realized the truth"
+                ],
+                "targetSentence": "A famous joke was played on television about spaghetti growing on trees.",
+                "phonetic": "/ə ˈfeɪməs dʒəʊk wɒz pleɪd ɒn ˈtelɪvɪʒn əˈbaʊt spəˈɡeti ˈɡrəʊɪŋ ɒn triːz/",
+                "expectedKeywords": [
+                  "joke",
+                  "television",
+                  "spaghetti",
+                  "tricked"
+                ],
+                "explanation": "Speak fluently in full sentences using past simple passive forms to describe the event."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a news story that surprised you recently.",
+                "audioPrompt": "Describe a surprising news item you read online or saw on TV.",
+                "storyPoints": [
+                  "What the news headline was about",
+                  "Where the event took place",
+                  "Why the story surprised many readers"
+                ],
+                "targetSentence": "The strange news story was published by a major journalist online.",
+                "phonetic": "/ðə streɪndʒ njuːz ˈstɔːri wɒz ˈpʌblɪʃt baɪ ə ˈmeɪdʒə ˈdʒɜːnə.lɪst ˈɒnlaɪn/",
+                "expectedKeywords": [
+                  "news",
+                  "published",
+                  "journalist",
+                  "surprised"
+                ],
+                "explanation": "Maintain good rhythm and use correct past passive structures in your narrative."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Listen to the prompt and respond as the journalist explaining a fake news article.",
+                "scenarioContext": "You are talking to your news editor who is asking about yesterday's funny broadcast.",
+                "characterRole": "Investigative Journalist",
+                "audioPrompt": "Editor: Why was that strange story broadcasted without being checked first?",
+                "targetSentence": "The story was approved because everyone thought it was a harmless joke.",
+                "expectedKeywords": [
+                  "approved",
+                  "joke",
+                  "harmless",
+                  "editor"
+                ],
+                "explanation": "Respond naturally in character using the passive voice where appropriate."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Listen to the prompt and respond as a reader who misunderstood an April Fools article.",
+                "scenarioContext": "You are speaking with a friend who is explaining that the news story was actually fake.",
+                "characterRole": "Surprised Reader",
+                "audioPrompt": "Friend: Did you realize the report about flying cars was just a joke?",
+                "targetSentence": "I completely misunderstood the article because it was written so seriously.",
+                "expectedKeywords": [
+                  "misunderstood",
+                  "article",
+                  "seriously",
+                  "joke"
+                ],
+                "explanation": "Express your surprise clearly with natural intonation."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Listen to the prompt and respond as a farmer talking about crop production.",
+                "scenarioContext": "A reporter is interviewing you about your farm harvest this year.",
+                "characterRole": "Swiss Farmer",
+                "audioPrompt": "Reporter: Are your spaghetti crops grown using special methods?",
+                "targetSentence": "Delicious crops are grown here every year by local farmers.",
+                "expectedKeywords": [
+                  "crops",
+                  "grown",
+                  "farmers",
+                  "year"
+                ],
+                "explanation": "Use the present simple passive to describe general facts about your farm."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Listen to the prompt and respond as a news director admitting an error.",
+                "scenarioContext": "You are talking to the head of the television network about a mistake in the news.",
+                "characterRole": "News Director",
+                "audioPrompt": "Network Head: Was an apology broadcast to our viewers today?",
+                "targetSentence": "An apology was admitted and broadcast to all our viewers this morning.",
+                "expectedKeywords": [
+                  "apology",
+                  "broadcast",
+                  "viewers",
+                  "morning"
+                ],
+                "explanation": "Speak confidently using past simple passive forms."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Read the target sentence aloud, focusing on accurate vocabulary pronunciation.",
+                "audioPrompt": "Say this sentence clearly: The journalist admitted that the spaghetti crop story was invented.",
+                "targetSentence": "The journalist admitted that the spaghetti crop story was invented.",
+                "expectedKeywords": [
+                  "journalist",
+                  "admitted",
+                  "crop",
+                  "invented"
+                ],
+                "explanation": "Pronounce each vocabulary item with correct stress and vowel sounds."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Practice the passive voice grammar pattern by reading the sentence accurately.",
+                "audioPrompt": "Say this sentence clearly: Many hilarious jokes are played by people on April first.",
+                "targetSentence": "Many hilarious jokes are played by people on April first.",
+                "expectedKeywords": [
+                  "hilarious",
+                  "jokes",
+                  "played",
+                  "April"
+                ],
+                "explanation": "Ensure the present simple passive structure are played is distinct and clear."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress Drill",
+                "instruction": "Focus on syllable stress in multisyllabic words while reading the sentence.",
+                "audioPrompt": "Say this sentence clearly: The reader misunderstood the report and thought it was real.",
+                "targetSentence": "The reader misunderstood the report and thought it was real.",
+                "expectedKeywords": [
+                  "reader",
+                  "misunderstood",
+                  "report",
+                  "real"
+                ],
+                "explanation": "Place primary stress on the third syllable of misunderstood."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Intonation Drill",
+                "instruction": "Use falling intonation at the end of the sentence to signal a complete news fact.",
+                "audioPrompt": "Say this sentence clearly with a falling pitch at the end: The entire news report was made up.",
+                "targetSentence": "The entire news report was made up.",
+                "expectedKeywords": [
+                  "entire",
+                  "news",
+                  "report",
+                  "made up"
+                ],
+                "explanation": "Lower your voice pitch on the final words to indicate a definitive statement."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

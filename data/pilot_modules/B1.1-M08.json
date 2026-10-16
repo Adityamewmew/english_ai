@@ -1,0 +1,1562 @@
+{
+  "module": {
+    "id": "B1.1-M08",
+    "levelId": "B1.1",
+    "title": "Unit 8: Science Counts: Modals of Ability & Obligation",
+    "cefr": "B1",
+    "group": "B1.1 - Intermediate Foundations",
+    "objective": "Mampu berbicara tentang kebiasaan masa lalu, menggunakan 'used to', second conditional (I wish), serta memahami perbedaan past simple vs. past continuous dalam konteks penemuan ilmiah dan kehidupan sehari-hari",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 8
+  },
+  "subModules": [
+    {
+      "id": "sub-b1-1-m08-reading",
+      "moduleId": "B1.1-M08",
+      "skillType": "reading",
+      "title": "Reading Mission: Scientific Discoveries and Past Lives",
+      "theme": "Science Counts: Modals of Ability, Obligation, and Past Habits",
+      "grammarFocus": "Used to, Past Simple vs Past Continuous, and Second Conditional",
+      "vocabularyFocus": "Scientific nouns, verbs, and laboratory terms",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-b1-1-m08-r-theory",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to Unit 8! In this reading module, you will explore how great scientists worked in the past, how they used to conduct experiments, and how different grammar structures help us talk about past habits, discoveries, and hypothetical situations.",
+            "linguisticTarget": {
+              "grammar": "Used to for past habits, Past Simple versus Past Continuous, and Second Conditional sentences.",
+              "vocabulary": "Terms related to science, inventions, laboratories, and medical research.",
+              "readingStrategy": "Skimming the text for general meaning and scanning for specific details like dates, names, and scientific methods."
+            },
+            "learningObjectives": [
+              "Understand the main ideas of short B1 informational texts about science and history.",
+              "Locate specific details regarding scientific experiments and past discoveries.",
+              "Recognize and apply grammar patterns involving past habits and imaginary scenarios."
+            ],
+            "contextWarmup": {
+              "prompt": "When you read about famous scientists from the past, what do you usually find most interesting?",
+              "options": [
+                "Learning about the difficult experiments they performed in simple laboratories",
+                "Memorizing the exact dates when every scientific book was published",
+                "Reading about modern computer games and smartphone applications"
+              ],
+              "correctIndex": 0,
+              "explanation": "Option A is correct because the module focuses on how scientists conducted experiments and made discoveries in past centuries."
+            },
+            "rules": [
+              "Use 'used to + verb' to describe habits or states in the past that are no longer true today.",
+              "Use the Past Simple for finished actions in the past, and the Past Continuous for actions that were in progress at a specific moment.",
+              "Use the Second Conditional ('if' + past simple, 'would' + verb) to talk about unreal or hypothetical situations in the present or future."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Learner Pitfall",
+              "explanation": "Students often confuse 'used to' with 'be used to'. Remember that 'used to' describes past habits, while 'be used to' means to be familiar with something.",
+              "wrong": "He is use to work in a laboratory.",
+              "correct": "He used to work in a laboratory when he was younger."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Past Modals & Verbs",
+            "contractionsSubtitle": "Observe how auxiliary verbs and subjects merge in spoken English:",
+            "contractions": [
+              {
+                "subject": "He",
+                "verb": "had",
+                "vowelDropped": "ha",
+                "remainder": "d",
+                "contracted": "He'd",
+                "exampleFull": "He had worked in the laboratory before the sun set.",
+                "exampleContracted": "He'd worked in the laboratory before the sun set."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Used To",
+              "description": "Combine subjects, modal phrases, and verbs to describe past habits:",
+              "subjects": [
+                {
+                  "label": "Scientists",
+                  "pronoun": "They",
+                  "correctToBe": "were",
+                  "role": "Plural Subject"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "work",
+                  "thirdPerson": "works",
+                  "continuous": "working"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "in dark laboratories late at night",
+                  "type": "Locational Phrase"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-1-m08-r-vocab",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "discovery",
+                "ipa": "/dɪˈskʌvəri/",
+                "meaning": "penemuan (sesuatu yang sudah ada namun baru diketahui)",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Electricity and fire are discoveries.",
+                "collocation": "make a discovery / scientific discovery"
+              },
+              {
+                "word": "invention",
+                "ipa": "/ɪnˈvenʃən/",
+                "meaning": "penemuan (sesuatu yang diciptakan/dibuat baru)",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The smartphone is an invention that changed our lives.",
+                "collocation": "brilliant invention / patent an invention"
+              },
+              {
+                "word": "scientist",
+                "ipa": "/ˈsaɪəntɪst/",
+                "meaning": "ilmuwan, orang yang bekerja di bidang sains",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Newton was a famous scientist who discovered gravity.",
+                "collocation": "research scientist / leading scientist"
+              },
+              {
+                "word": "experiment",
+                "ipa": "/ɪkˈsperɪmənt/",
+                "meaning": "percobaan, uji coba ilmiah",
+                "partOfSpeech": "noun",
+                "exampleSentence": "We did an experiment at school to test chemical reactions.",
+                "collocation": "conduct an experiment / laboratory experiment"
+              },
+              {
+                "word": "achieve",
+                "ipa": "/əˈtʃiːv/",
+                "meaning": "mencapai, meraih (prestasi/kesuksesan)",
+                "partOfSpeech": "verb",
+                "exampleSentence": "His best-known achievement was to show that the Earth moves around the sun.",
+                "collocation": "achieve a goal / achieve success"
+              },
+              {
+                "word": "laboratory",
+                "ipa": "/ləˈbɒrətəri/",
+                "meaning": "laboratorium, ruang untuk penelitian ilmiah",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Scientists work in a laboratory to do research.",
+                "collocation": "research laboratory / enter the laboratory"
+              },
+              {
+                "word": "cure",
+                "ipa": "/kjʊə(r)/",
+                "meaning": "obat, penyembuhan dari penyakit",
+                "partOfSpeech": "noun",
+                "exampleSentence": "They found a cure for malaria after years of testing.",
+                "collocation": "find a cure / cure for a disease"
+              },
+              {
+                "word": "prevent",
+                "ipa": "/prɪˈvent/",
+                "meaning": "mencegah, menghalangi terjadinya sesuatu",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Pasteur developed a way to prevent diseases from spreading.",
+                "collocation": "prevent infection / prevent accidents"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m08-r-guided",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "How Science Shaped Our World",
+            "audioUrl": "/audio/modules/b1-1-m08/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Long before modern technology existed, people used to wonder why things happened around them. Ancient scientists did not have computers or advanced laboratories, but they used their eyes and simple tools to observe nature. For example, Isaac Newton was sitting under a tree when an apple fell to the ground. While he was watching the apple, he started thinking about gravity.",
+              "In later centuries, inventors created remarkable machines that changed human life forever. Louis Pasteur worked hard in his laboratory to prevent dangerous diseases from spreading. If scientists did not conduct such important experiments every day, modern medicine would not be as advanced as it is today. Every great discovery helps humanity move forward."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "Long before modern technology existed, people used to wonder why things happened around them.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 4.6,
+                "end": 9.2,
+                "text": "Ancient scientists did not have computers or advanced laboratories, but they used their eyes and simple tools to observe nature.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 9.3,
+                "end": 14,
+                "text": "For example, Isaac Newton was sitting under a tree when an apple fell to the ground.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 14.1,
+                "end": 18.5,
+                "text": "While he was watching the apple, he started thinking about gravity.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 18.6,
+                "end": 23,
+                "text": "In later centuries, inventors created remarkable machines that changed human life forever.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 23.1,
+                "end": 27.5,
+                "text": "Louis Pasteur worked hard in his laboratory to prevent dangerous diseases from spreading.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 27.6,
+                "end": 32.5,
+                "text": "If scientists did not conduct such important experiments every day, modern medicine would not be as advanced as it is today.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 32.6,
+                "end": 36,
+                "text": "Every great discovery helps humanity move forward.",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m08-r-practice",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-1",
+                "prompt": "Match the vocabulary word with its correct definition.",
+                "leftItems": [
+                  "discovery",
+                  "invention",
+                  "scientist",
+                  "experiment",
+                  "cure"
+                ],
+                "rightItems": [
+                  "finding something that already existed",
+                  "creating something completely new",
+                  "a person who studies physics or chemistry",
+                  "a scientific test in a laboratory",
+                  "a medicine that heals an illness"
+                ],
+                "correctPairs": {
+                  "discovery": "finding something that already existed",
+                  "invention": "creating something completely new",
+                  "scientist": "a person who studies physics or chemistry",
+                  "experiment": "a scientific test in a laboratory",
+                  "cure": "a medicine that heals an illness"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m08-r-quiz",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What did people use to do long before modern technology existed?",
+                "options": [
+                  "They used to wonder why things happened around them.",
+                  "They used to build advanced smartphones.",
+                  "They used to work in computer laboratories."
+                ],
+                "answer": "They used to wonder why things happened around them.",
+                "explanation": "The text states that long before modern technology existed, people used to wonder why things happened around them."
+              },
+              {
+                "id": "q-r-2",
+                "question": "What equipment did ancient scientists lack?",
+                "options": [
+                  "Computers and advanced laboratories",
+                  "Paper and simple pens",
+                  "Trees and natural fruits"
+                ],
+                "answer": "Computers and advanced laboratories",
+                "explanation": "Paragraph 1 mentions that ancient scientists did not have computers or advanced laboratories."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What was Isaac Newton doing when an apple fell?",
+                "options": [
+                  "He was sitting under a tree.",
+                  "He was working inside a laboratory.",
+                  "He was writing a book about medicine."
+                ],
+                "answer": "He was sitting under a tree.",
+                "explanation": "The text notes that Isaac Newton was sitting under a tree when an apple fell to the ground."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What concept did Newton start thinking about after the apple fell?",
+                "options": [
+                  "Gravity",
+                  "Electricity",
+                  "Malaria cures"
+                ],
+                "answer": "Gravity",
+                "explanation": "The passage states that while he was watching the apple, he started thinking about gravity."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What did inventors create in later centuries?",
+                "options": [
+                  "Remarkable machines that changed human life forever",
+                  "Simple stone tools for hunting",
+                  "Ancient books about weather"
+                ],
+                "answer": "Remarkable machines that changed human life forever",
+                "explanation": "Paragraph 2 states that inventors created remarkable machines that changed human life forever."
+              },
+              {
+                "id": "q-r-6",
+                "question": "Where did Louis Pasteur work hard?",
+                "options": [
+                  "In his laboratory",
+                  "Under a large apple tree",
+                  "Inside a computer school"
+                ],
+                "answer": "In his laboratory",
+                "explanation": "The text mentions that Louis Pasteur worked hard in his laboratory."
+              },
+              {
+                "id": "q-r-7",
+                "question": "What was Louis Pasteur trying to prevent?",
+                "options": [
+                  "Dangerous diseases from spreading",
+                  "Apples from falling on people",
+                  "Computers from breaking down"
+                ],
+                "answer": "Dangerous diseases from spreading",
+                "explanation": "Pasteur worked hard to prevent dangerous diseases from spreading."
+              },
+              {
+                "id": "q-r-8",
+                "question": "According to the second paragraph, what would happen if scientists did not conduct experiments?",
+                "options": [
+                  "Modern medicine would not be as advanced as it is today.",
+                  "People would stop wondering about nature.",
+                  "Apples would stop falling to the ground."
+                ],
+                "answer": "Modern medicine would not be as advanced as it is today.",
+                "explanation": "The text uses a conditional sentence: if scientists did not conduct such important experiments, modern medicine would not be as advanced."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What does every great discovery help humanity do?",
+                "options": [
+                  "Move forward",
+                  "Stay in the past",
+                  "Forget history"
+                ],
+                "answer": "Move forward",
+                "explanation": "The final sentence of the passage states that every great discovery helps humanity move forward."
+              },
+              {
+                "id": "q-r-10",
+                "question": "Which grammar structure is used in the sentence: 'If scientists did not conduct experiments, modern medicine would not be advanced'?",
+                "options": [
+                  "Second Conditional",
+                  "Past Continuous",
+                  "Present Simple"
+                ],
+                "answer": "Second Conditional",
+                "explanation": "The sentence uses 'if' + past simple ('did not conduct') and 'would' + verb ('would not be'), which is the Second Conditional."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-1-m08-listening",
+      "moduleId": "B1.1-M08",
+      "skillType": "listening",
+      "title": "Listening Mission: Science Counts and Past Habits",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-b1-1-m08-l-theory",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Focus on listening for past habits using 'used to' and conditional wishes about technology and science history. Pay attention to how speakers stress auxiliary verbs and link words in casual conversation.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about past habits and technology",
+              "Identify details such as specific entertainment activities and personal wishes",
+              "Notice how words link together in connected speech during fast dialogue"
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "What did they use to do",
+                "meaning": "Apa yang biasa mereka lakukan",
+                "note": "Used to ask about past routines and habits that no longer happen."
+              },
+              {
+                "phrase": "I wish there was",
+                "meaning": "Saya berharap ada",
+                "note": "Used to express an unreal wish about the present moment."
+              },
+              {
+                "phrase": "live without the Internet",
+                "meaning": "hidup tanpa Internet",
+                "note": "Common collocation when discussing modern technology dependence."
+              },
+              {
+                "phrase": "back then",
+                "meaning": "pada waktu itu",
+                "note": "Refers to a specific period in the past."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "What did you do",
+                "fast": "What d'you do",
+                "slowIpa": "/wɒt dɪd juː duː/",
+                "fastIpa": "/wɒt jə duː/",
+                "note": "The auxiliary 'did' and pronoun 'you' merge into a single softer sound in rapid speech."
+              },
+              {
+                "id": 2,
+                "slow": "use to have",
+                "fast": "used t'have",
+                "slowIpa": "/juːz tuː hæv/",
+                "fastIpa": "/juːstə hæv/",
+                "note": "The infinitive marker 'to' reduces to a schwa sound before a consonant."
+              },
+              {
+                "id": 3,
+                "slow": "read books",
+                "fast": "rea books",
+                "slowIpa": "/riːd bʊks/",
+                "fastIpa": "/riː bʊks/",
+                "note": "The final /d/ in read drops slightly before the plosive /b/ sound."
+              },
+              {
+                "id": 4,
+                "slow": "wish there was",
+                "fast": "wish there was",
+                "slowIpa": "/wɪʃ ðeər wɒz/",
+                "fastIpa": "/wɪʃ ðeə wəz/",
+                "note": "The verb 'was' weakens to a schwa sound in casual conversational pacing."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m08-l-dialogue",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Life Before Smartphones",
+          "orderIndex": 2,
+          "content": {
+            "context": "Sarah and Tom are discussing how people lived before modern technology and smartphones were invented.",
+            "audioPrompt": "Listen to the conversation between Sarah and Tom.",
+            "lines": [
+              {
+                "speaker": "Sarah",
+                "text": "Did you know that people didn't use to have smartphones?",
+                "translation": "Tahukah kamu bahwa dulu orang tidak punya smartphone?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Really? What did they use to do for entertainment?",
+                "translation": "Benarkah? Apa yang dulu mereka lakukan untuk hiburan?",
+                "emotion": "surprised"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "They used to read books and listen to the radio.",
+                "translation": "Mereka biasa membaca buku dan mendengarkan radio.",
+                "emotion": "informative"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Did families get together and sing songs?",
+                "translation": "Apakah keluarga biasa berkumpul dan bernyanyi bersama?",
+                "emotion": "interested"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Yes, families used to spend evenings talking together.",
+                "translation": "Ya, keluarga biasa menghabiskan malam dengan mengobrol bersama.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Tom",
+                "text": "I wish there was a time machine.",
+                "translation": "Saya berharap ada mesin waktu.",
+                "emotion": "thoughtful"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Why would you want a time machine?",
+                "translation": "Mengapa kamu ingin mesin waktu?",
+                "emotion": "amused"
+              },
+              {
+                "speaker": "Tom",
+                "text": "So I could see what life was like back then.",
+                "translation": "Agar saya bisa melihat seperti apa kehidupan dulu.",
+                "emotion": "dreamy"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Me too! But I wouldn't want to live without the Internet.",
+                "translation": "Saya juga! Tapi saya tidak mau hidup tanpa Internet.",
+                "emotion": "realistic"
+              },
+              {
+                "speaker": "Tom",
+                "text": "That is a very good point.",
+                "translation": "Itu poin yang sangat bagus.",
+                "emotion": "agreement"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m08-l-quiz",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "What did they use to do for entertainment?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"What did they use to do for _____?\"",
+                "targetWord": "entertainment",
+                "explanation": "Full audio: \"What did they use to do for entertainment?\". The missing word is \"entertainment\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Did families get together and sing songs?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Did families get together and sing _____?\"",
+                "targetWord": "songs",
+                "explanation": "Full audio: \"Did families get together and sing songs?\". The missing word is \"songs\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Yes, families used to spend evenings talking together.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Yes, families used to spend evenings talking _____.\"",
+                "targetWord": "together",
+                "explanation": "Full audio: \"Yes, families used to spend evenings talking together.\". The missing word is \"together\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I wish there was a time machine.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"I wish there was a time _____.\"",
+                "targetWord": "machine",
+                "explanation": "Full audio: \"I wish there was a time machine.\". The missing word is \"machine\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Why would you want a time machine?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Why would you want a _____ machine?\"",
+                "targetWord": "time",
+                "explanation": "Full audio: \"Why would you want a time machine?\". The missing word is \"time\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "That is a very good point.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That is a very good point",
+                "words": [
+                  "That",
+                  "a",
+                  "point",
+                  "is",
+                  "good",
+                  "very"
+                ],
+                "explanation": "Correct sentence order: \"That is a very good point.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What did they use to do",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What did they use to do",
+                "words": [
+                  "they",
+                  "to",
+                  "use",
+                  "did",
+                  "What",
+                  "do"
+                ],
+                "explanation": "Correct sentence order: \"What did they use to do\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "I wish there was",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I wish there was",
+                "words": [
+                  "I",
+                  "wish",
+                  "was",
+                  "there"
+                ],
+                "explanation": "Correct sentence order: \"I wish there was\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "live without the Internet",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "live without the Internet",
+                "words": [
+                  "without",
+                  "live",
+                  "the",
+                  "Internet"
+                ],
+                "explanation": "Correct sentence order: \"live without the Internet\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "What did they use to do for entertainment?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"What did they use to do for _____?\"",
+                "targetWord": "entertainment",
+                "explanation": "Full audio: \"What did they use to do for entertainment?\". The missing word is \"entertainment\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Did families get together and sing songs?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"Did families get together and sing _____?\"",
+                "targetWord": "songs",
+                "explanation": "Full audio: \"Did families get together and sing songs?\". The missing word is \"songs\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Yes, families used to spend evenings talking together.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Yes, families used to spend evenings talking _____.\"",
+                "targetWord": "together",
+                "explanation": "Full audio: \"Yes, families used to spend evenings talking together.\". The missing word is \"together\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "I wish there was a time machine.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"I wish there was a time _____.\"",
+                "targetWord": "machine",
+                "explanation": "Full audio: \"I wish there was a time machine.\". The missing word is \"machine\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Why would you want a time machine?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Why would you want a _____ machine?\"",
+                "targetWord": "time",
+                "explanation": "Full audio: \"Why would you want a time machine?\". The missing word is \"time\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "That is a very good point.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That is a very good point",
+                "words": [
+                  "That",
+                  "a",
+                  "point",
+                  "is",
+                  "good",
+                  "very"
+                ],
+                "explanation": "Correct sentence order: \"That is a very good point.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What did they use to do",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What did they use to do",
+                "words": [
+                  "they",
+                  "to",
+                  "use",
+                  "did",
+                  "What",
+                  "do"
+                ],
+                "explanation": "Correct sentence order: \"What did they use to do\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "I wish there was",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I wish there was",
+                "words": [
+                  "I",
+                  "wish",
+                  "was",
+                  "there"
+                ],
+                "explanation": "Correct sentence order: \"I wish there was\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "live without the Internet",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "live without the Internet",
+                "words": [
+                  "without",
+                  "live",
+                  "the",
+                  "Internet"
+                ],
+                "explanation": "Correct sentence order: \"live without the Internet\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-1-m08-writing",
+      "moduleId": "B1.1-M08",
+      "skillType": "writing",
+      "title": "Writing Mission: Science Counts and Past Habits",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-b1-1-m08-w-theory",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on writing about past habits, scientific discoveries, and hypothetical situations using modals of ability and obligation.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Expressing Past Habits with Used To",
+                "formula": "Subject + used to + base verb",
+                "example": "Scientists used to believe the Earth was the center of the universe."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Combining Past Simple and Past Continuous",
+                "formula": "While + subject + past continuous, subject + past simple",
+                "example": "While Newton was sitting in his garden, an apple fell from the tree."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Writing Hypothetical Situations",
+                "formula": "If + past simple, subject + would + base verb",
+                "example": "If we had better laboratory equipment, we would finish the experiment today."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always spell 'used to' without the final 'd' in negative sentences and questions.",
+                "badExample": "Researchers didn't used to measure gravity this way.",
+                "goodExample": "Researchers didn't use to measure gravity this way.",
+                "why": "The auxiliary verb 'did' already carries the past tense marker, so the main verb takes its base form."
+              },
+              {
+                "rule": "Use a comma after dependent time clauses beginning with 'While' or 'When'.",
+                "badExample": "While Marie Curie was studying uranium she discovered polonium.",
+                "goodExample": "While Marie Curie was studying uranium, she discovered polonium.",
+                "why": "A comma separates the introductory dependent clause from the main independent clause."
+              },
+              {
+                "rule": "Capitalize scientific names of principles or laws only when they include proper nouns.",
+                "badExample": "Newton's first law of motion and ohm's law are important.",
+                "goodExample": "Newton's first law of motion and Ohm's law are important.",
+                "why": "Names derived from specific scientists are proper nouns and require capitalization."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "Ancient astronomers used to map the stars using simple wooden tools.",
+                "id": "Astronomer kuno dulu memetakan bintang-bintang menggunakan alat kayu sederhana.",
+                "focus": "Expressing past habits"
+              },
+              {
+                "en": "While the chemist was mixing the liquids, the color changed rapidly.",
+                "id": "Saat ahli kimia sedang mencampurkan cairan-cairan itu, warnanya berubah dengan cepat.",
+                "focus": "Past continuous with past simple"
+              },
+              {
+                "en": "If I were a famous inventor, I would create a clean energy source.",
+                "id": "Jika saya adalah seorang penemu terkenal, saya akan menciptakan sumber energi bersih.",
+                "focus": "Second conditional for hypothetical writing"
+              },
+              {
+                "en": "I wish we had more time to complete this science project.",
+                "id": "Saya berharap kita punya lebih banyak waktu untuk menyelesaikan proyek sains ini.",
+                "focus": "Expressing wishes for present situations"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m08-w-practice",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "scientists didnt use to have modern computers in the past",
+                "targetSentence": "Scientists didn't use to have modern computers in the past.",
+                "translation": "Para ilmuwan dulu tidak memiliki komputer modern di masa lalu.",
+                "keyRule": "Capitalize the first word of the sentence and use proper apostrophe in 'didn't'.",
+                "requiredCapitals": [
+                  "Scientists"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "while albert einstein was working at the patent office he developed new theories",
+                "targetSentence": "While Albert Einstein was working at the patent office, he developed new theories.",
+                "translation": "Saat Albert Einstein sedang bekerja di kantor paten, ia mengembangkan teori-teori baru.",
+                "keyRule": "Capitalize proper names and place a comma after the introductory dependent clause.",
+                "requiredCapitals": [
+                  "While",
+                  "Albert",
+                  "Einstein"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "if thomas edison failed he would try again",
+                "targetSentence": "If Thomas Edison failed, he would try again.",
+                "translation": "Jika Thomas Edison gagal, ia akan mencoba lagi.",
+                "keyRule": "Use a comma after the 'if' clause in second conditional sentences.",
+                "requiredCapitals": [
+                  "If",
+                  "Thomas",
+                  "Edison"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Past Habits",
+                "meaning": "Anak-anak dulu bermain di luar ruangan sebelum ada telepon genggam.",
+                "tokens": [
+                  "Children",
+                  "used",
+                  "to",
+                  "play",
+                  "outside",
+                  "before",
+                  "smartphones."
+                ],
+                "fullSentence": "Children used to play outside before smartphones."
+              },
+              {
+                "id": "b-2",
+                "category": "Scientific Discovery",
+                "meaning": "Saat Galileo mengamati bulan, dia mencatat penemuannya.",
+                "tokens": [
+                  "While",
+                  "Galileo",
+                  "was",
+                  "observing",
+                  "the",
+                  "moon,",
+                  "he",
+                  "recorded",
+                  "his",
+                  "discoveries."
+                ],
+                "fullSentence": "While Galileo was observing the moon, he recorded his discoveries."
+              },
+              {
+                "id": "b-3",
+                "category": "Hypothetical Situations",
+                "meaning": "Jika kita menemukan obat untuk penyakit ini, dunia akan menjadi tempat yang lebih baik.",
+                "tokens": [
+                  "If",
+                  "we",
+                  "found",
+                  "a",
+                  "cure",
+                  "for",
+                  "this",
+                  "disease,",
+                  "the",
+                  "world",
+                  "would",
+                  "be",
+                  "a",
+                  "better",
+                  "place."
+                ],
+                "fullSentence": "If we found a cure for this disease, the world would be a better place."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Describe Past Scientific Habits",
+                "badge": "History Writer",
+                "instruction": "Write three sentences about how students used to learn science before modern technology. Use 'used to' and 'didn't use to'.",
+                "example": "Students used to read heavy textbooks in the library. They didn't use to watch video simulations on computers. Teachers used to write notes on large blackboards.",
+                "placeholder": "Write your sentences about past learning methods here...",
+                "minWords": 20,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: A Hypothetical Scientific Discovery",
+                "badge": "Futuristic Thinker",
+                "instruction": "Write three sentences using the second conditional about what you would do if you were a famous scientist.",
+                "example": "If I were a famous scientist, I would invent a machine to clean the oceans. If everyone used clean energy, cities would have fresh air. I wish I could travel to Mars one day.",
+                "placeholder": "Write your hypothetical ideas here...",
+                "minWords": 25,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m08-w-quiz",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the affirmative sentence into the negative form using 'used to':",
+                "promptText": "People used to believe the earth was flat.",
+                "hint": "Use 'didn't use to' instead of 'used to'.",
+                "targetAnswers": [
+                  "People didn't use to believe the earth was flat.",
+                  "People did not use to believe the earth was flat."
+                ],
+                "explanation": "To make 'used to' negative in the past, use 'didn't use to' followed by the base verb."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Combine the two sentences into one using 'While':",
+                "promptText": "Alexander Fleming was examining bacteria. A mold grew in the petri dish.",
+                "hint": "Start with 'While Alexander Fleming was examining bacteria...'",
+                "targetAnswers": [
+                  "While Alexander Fleming was examining bacteria, a mold grew in the petri dish."
+                ],
+                "explanation": "Use past continuous for the longer background action and past simple for the shorter interrupting action."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix all capitalization and punctuation errors in the following sentence:",
+                "promptText": "while marie curie was working in her laboratory she discovered radium.",
+                "hint": "Check the capitalization of the name and the comma placement.",
+                "targetAnswers": [
+                  "While Marie Curie was working in her laboratory, she discovered radium."
+                ],
+                "explanation": "Proper nouns like 'Marie Curie' must be capitalized, and a comma is required after the introductory 'While' clause."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Short Response",
+                "instruction": "Complete the second conditional sentence with the correct form of the verb in parentheses:",
+                "promptText": "If we (have) microscopes in every classroom, students would learn biology faster.",
+                "hint": "The past simple form of 'have' is required in the if-clause.",
+                "targetAnswers": [
+                  "had"
+                ],
+                "explanation": "The second conditional structure uses 'If + past simple' (had) in the condition clause."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change this sentence into a question using 'used to':",
+                "promptText": "You used to study chemistry at university.",
+                "hint": "Start with 'Did you use to...?'",
+                "targetAnswers": [
+                  "Did you use to study chemistry at university?",
+                  "Did you use to study chemistry at university"
+                ],
+                "explanation": "Questions in the past with 'used to' begin with 'Did' and use 'use to' without the 'd'."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Short Response",
+                "instruction": "Complete the sentence using the correct modal verb of ability in the past:",
+                "promptText": "When Albert Einstein was young, he (be able to / can) solve complex math problems easily.",
+                "hint": "Use the past form of ability for a general skill in the past.",
+                "targetAnswers": [
+                  "was able to",
+                  "could"
+                ],
+                "explanation": "Both 'could' and 'was able to' express past ability."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Identify and correct the mistake regarding 'used to' in this sentence:",
+                "promptText": "Scientists didnt use to have digital instruments.",
+                "hint": "Look closely at the auxiliary negative form 'didnt'.",
+                "targetAnswers": [
+                  "Scientists didn't use to have digital instruments.",
+                  "Scientists did not use to have digital instruments."
+                ],
+                "explanation": "The contraction 'didn't' requires an apostrophe between the 'n' and the 't'."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using 'wish' to express a present regret or desire:",
+                "promptText": "I don't know enough about astronomy.",
+                "hint": "Use 'I wish I knew...'",
+                "targetAnswers": [
+                  "I wish I knew more about astronomy.",
+                  "I wish I knew enough about astronomy."
+                ],
+                "explanation": "After 'I wish', we use the past simple tense to talk about present wishes that are contrary to fact."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Short Response",
+                "instruction": "Complete the second conditional consequence clause:",
+                "promptText": "If Isaac Newton didn't notice the apple, he (not / formulate) the law of universal gravitation in that exact way.",
+                "hint": "Use 'wouldn't' followed by the base verb.",
+                "targetAnswers": [
+                  "wouldn't have formulated",
+                  "would not have formulated",
+                  "wouldn't formulate",
+                  "would not formulate"
+                ],
+                "explanation": "The second conditional result clause requires 'would' + base verb."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using 'used to' in the affirmative form:",
+                "promptText": "In the past, doctors prescribed different treatments for common illnesses.",
+                "hint": "Replace the time phrase with 'Doctors used to...'",
+                "targetAnswers": [
+                  "Doctors used to prescribe different treatments for common illnesses."
+                ],
+                "explanation": "'Used to' expresses repeated past actions or states that no longer happen or exist."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-1-m08-speaking",
+      "moduleId": "B1.1-M08",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Science Counts: Modals of Ability & Obligation",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-b1-1-m08-s-theory",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Master the pronunciation of key scientific terms and modals of ability and obligation in spoken English. Clear articulation helps listeners understand complex ideas during presentations and discussions.",
+            "audioGuidance": "Focus on pronouncing modal verbs with weak forms in connected speech. Words like 'can', 'must', and 'should' often lose their full vowel sound unless they are emphasized for importance.",
+            "pillars": [
+              {
+                "name": "Modal Weak Forms",
+                "target": "Pronounce unstressed modals clearly",
+                "explanation": "In fast spoken English, auxiliary and modal verbs are often reduced. For example, 'must' sounds like 'mus' before consonant sounds."
+              },
+              {
+                "name": "Scientific Vocabulary Stress",
+                "target": "Accurate syllable stress in multi-syllable nouns",
+                "explanation": "Words ending in -ion, -ist, and -y have fixed stress patterns. For example, 'experiment' stresses the second syllable, while 'laboratory' stresses the first."
+              },
+              {
+                "name": "Sentence Chunking",
+                "target": "Pause naturally at logical phrase boundaries",
+                "explanation": "Group related words together when talking about scientific experiments and obligations so your speech sounds natural and easy to follow."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m08-s-practice",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "dis-COV-ery",
+                "countryAudio": "discovery",
+                "countrySyllables": [
+                  {
+                    "text": "dis",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "COV",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ery",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "in-VEN-tion",
+                "natAudio": "invention",
+                "natSyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "VEN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Both nouns have stress on the second syllable, ending in an unstressed suffix."
+              },
+              {
+                "id": "pair-2",
+                "country": "SCI-en-tist",
+                "countryAudio": "scientist",
+                "countrySyllables": [
+                  {
+                    "text": "SCI",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "en",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tist",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "LAB-o-ra-to-ry",
+                "natAudio": "laboratory",
+                "natSyllables": [
+                  {
+                    "text": "LAB",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "o",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ra",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "to",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ry",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Both terms place the primary stress on the very first syllable."
+              },
+              {
+                "id": "pair-3",
+                "country": "ex-PER-i-ment",
+                "countryAudio": "experiment",
+                "countrySyllables": [
+                  {
+                    "text": "ex",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PER",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ment",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "a-CHIEVE",
+                "natAudio": "achieve",
+                "natSyllables": [
+                  {
+                    "text": "a",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CHIEVE",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "Notice how the stress shifts from the second syllable noun to the final syllable verb."
+              },
+              {
+                "id": "pair-4",
+                "country": "PRE-vent",
+                "countryAudio": "prevent",
+                "countrySyllables": [
+                  {
+                    "text": "PRE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "vent",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "CURE",
+                "natAudio": "cure",
+                "natSyllables": [
+                  {
+                    "text": "CURE",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "Both terms feature strong root syllables with clear vowel sounds."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "Scientists must wear safety goggles in the laboratory.",
+                "phonetic": "/ˈsaɪəntɪsts məst wɪər ˈseɪfti ˈɡɒɡəlz ɪn ðə ləˈbɒrətəri/",
+                "focus": "Modal verb of obligation 'must' and laboratory pronunciation",
+                "hint": "Keep 'must' light and pronounce 'laboratory' with five syllables."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "We can conduct a new experiment tomorrow morning.",
+                "phonetic": "/wiː kən kənˈdʌkt ə njuː ɪkˈsperɪmənt təˈmɒrəʊ ˈmɔːnɪŋ/",
+                "focus": "Weak form of 'can' and smooth linking of words",
+                "hint": "Pronounce 'can' as /kən/ unless you want to emphasize ability."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Every researcher has to record their daily observations.",
+                "phonetic": "/ˈevri rɪˈsɜːtʃə hæz tuː rɪˈkɔːd ðeɪə ˈdeɪli ˌɒbzəˈveɪʃənz/",
+                "focus": "Obligation with 'has to' and multi-syllable noun rhythm",
+                "hint": "Blend 'has to' smoothly into 'record'."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "She had to find a cure to prevent the disease from spreading.",
+                "phonetic": "/ʃiː hæd tuː faɪnd ə kjʊə tuː prɪˈvent ðə dɪˈziːz frɒm ˈspredɪŋ/",
+                "focus": "Past obligation with 'had to' and clear infinitive clauses",
+                "hint": "Pause slightly after 'cure' before saying the purpose clause."
+              }
+            ],
+            "roleplay": {
+              "context": "You are talking with your science partner about an upcoming school experiment and safety rules.",
+              "roles": [
+                "Science Partner",
+                "Student"
+              ],
+              "turns": [
+                {
+                  "speaker": "Science Partner",
+                  "text": "What do we need to bring for the chemistry experiment tomorrow?",
+                  "translation": "Apa yang perlu kita bawa untuk percobaan kimia besok?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "We have to bring our safety goggles and laboratory coats.",
+                  "translation": "Kita harus membawa kacamata pengaman dan jas laboratorium."
+                },
+                {
+                  "speaker": "Science Partner",
+                  "text": "Can we start the test without the teacher present?",
+                  "translation": "Bisakah kita memulai tes tanpa kehadiran guru?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "No, we must not touch any equipment until the teacher arrives.",
+                  "translation": "Tidak, kita tidak boleh menyentuh peralatan apa pun sampai guru tiba."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-1-m08-s-quiz",
+          "moduleId": "B1.1-M08",
+          "subModuleId": "sub-b1-1-m08-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a memorable school science experiment.",
+                "audioPrompt": "Tell me about a time you did an experiment at school and what you learned.",
+                "storyPoints": [
+                  "What subject or topic the experiment was about",
+                  "What safety rules you had to follow in the laboratory",
+                  "What scientific discovery or result you achieved"
+                ],
+                "targetSentence": "Last semester we did a chemistry experiment and we had to wear protective goggles.",
+                "phonetic": "/lɑːst sɪˈmestə wiː dɪd ə ˈkemɪstri ɪkˈsperɪmənt/",
+                "expectedKeywords": [
+                  "experiment",
+                  "laboratory",
+                  "goggles",
+                  "safety"
+                ],
+                "explanation": "Use past simple tense and talk clearly about obligations during the experiment."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a famous invention that changed your daily life.",
+                "audioPrompt": "Describe an invention you cannot live without and explain why.",
+                "storyPoints": [
+                  "Name the invention and who created it",
+                  "Explain how people used to live before this invention existed",
+                  "Describe how it helps you manage your daily obligations"
+                ],
+                "targetSentence": "The smartphone is an amazing invention that helps me organize my daily schedule.",
+                "phonetic": "/ðə ˈsmɑːtfəʊn ɪz ən əˈmeɪzɪŋ ɪnˈvenʃən/",
+                "expectedKeywords": [
+                  "invention",
+                  "smartphone",
+                  "schedule",
+                  "daily"
+                ],
+                "explanation": "Speak fluently using descriptive adjectives and present simple verbs."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to your lab partner regarding science rules and safety equipment.",
+                "audioPrompt": "Partner: Do you think we are allowed to eat snacks inside the school laboratory?",
+                "scenarioContext": "You are discussing safety regulations with your lab partner before starting a biology project.",
+                "characterRole": "Responsible Student",
+                "expectedKeywords": [
+                  "must not",
+                  "rules",
+                  "laboratory",
+                  "safety"
+                ],
+                "targetSentence": "No, we must not eat inside the laboratory because it violates safety rules.",
+                "explanation": "Use modals of obligation like 'must not' correctly in conversational dialogue."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Discuss experiment preparations with your classmate.",
+                "audioPrompt": "Partner: Can you finish writing the research report by tonight?",
+                "scenarioContext": "Your classmate is stressed about finishing a science project deadline.",
+                "characterRole": "Helpful Study Partner",
+                "expectedKeywords": [
+                  "have to",
+                  "finish",
+                  "report",
+                  "together"
+                ],
+                "targetSentence": "Yes, I have to finish the report tonight so we can submit it tomorrow.",
+                "explanation": "Respond naturally using 'have to' for external obligation."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Talk about past scientific requirements with your teacher.",
+                "audioPrompt": "Teacher: Did scientists have special equipment during early medical research?",
+                "scenarioContext": "You are chatting with your history of science teacher after class.",
+                "characterRole": "Curious Student",
+                "expectedKeywords": [
+                  "had to",
+                  "research",
+                  "scientists",
+                  "tools"
+                ],
+                "targetSentence": "Yes, early scientists had to build their own tools to make new discoveries.",
+                "explanation": "Use the past obligation form 'had to' to discuss historical scientific contexts."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Plan a science fair presentation with your partner.",
+                "audioPrompt": "Partner: Should we present our invention or our experiment results first?",
+                "scenarioContext": "You are organizing the structure of your upcoming science fair presentation.",
+                "characterRole": "Team Leader",
+                "expectedKeywords": [
+                  "should",
+                  "presentation",
+                  "experiment",
+                  "results"
+                ],
+                "targetSentence": "We should present our experiment results before showing the final invention.",
+                "explanation": "Use 'should' to offer polite advice and suggestions in collaborative planning."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Focus",
+                "instruction": "Read the target sentence aloud, focusing on accurate vocabulary pronunciation.",
+                "audioPrompt": "Say this sentence: A brilliant scientist made a remarkable discovery in the physics laboratory.",
+                "focus": "vocab",
+                "targetSentence": "A brilliant scientist made a remarkable discovery in the physics laboratory.",
+                "expectedKeywords": [
+                  "scientist",
+                  "discovery",
+                  "laboratory"
+                ],
+                "explanation": "Pronounce scientific vocabulary with correct syllable stress and clear vowel articulation."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Focus",
+                "instruction": "Read the target sentence aloud, paying attention to modal verb structures.",
+                "audioPrompt": "Say this sentence: Students must follow every safety instruction when conducting experiments.",
+                "focus": "grammar",
+                "targetSentence": "Students must follow every safety instruction when conducting experiments.",
+                "expectedKeywords": [
+                  "must",
+                  "instruction",
+                  "experiments"
+                ],
+                "explanation": "Emphasize modal verbs of obligation clearly within the sentence structure."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress Focus",
+                "instruction": "Read the sentence aloud, making sure to hit the correct syllable stress on multi-syllable scientific terms.",
+                "audioPrompt": "Say this sentence: The new medical invention will help doctors cure the dangerous disease.",
+                "focus": "pronunciation_stress",
+                "targetSentence": "The new medical invention will help doctors cure the dangerous disease.",
+                "expectedKeywords": [
+                  "invention",
+                  "medical",
+                  "disease"
+                ],
+                "explanation": "Maintain primary stress on the correct syllable of words like 'invention' and 'medical'."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Intonation Focus",
+                "instruction": "Read the question aloud using correct rising intonation for yes-no questions.",
+                "audioPrompt": "Say this question with natural rising intonation: Can we use this laboratory equipment without permission?",
+                "focus": "pronunciation_intonation",
+                "targetSentence": "Can we use this laboratory equipment without permission?",
+                "expectedKeywords": [
+                  "Can",
+                  "laboratory",
+                  "equipment"
+                ],
+                "explanation": "Use rising pitch at the end of modal questions to indicate inquiry and engagement."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

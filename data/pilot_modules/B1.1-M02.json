@@ -1,0 +1,1582 @@
+{
+  "module": {
+    "id": "B1.1-M02",
+    "levelId": "B1.1",
+    "title": "Unit 2: The Ways We Learn",
+    "cefr": "B1",
+    "group": "B1.1 - Intermediate Foundations",
+    "objective": "Mampu menggunakan present perfect dengan 'for' dan 'since' untuk menyatakan periode waktu, meminta dan memberi izin, serta membicarakan mata pelajaran sekolah dan cara belajar.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 2
+  },
+  "subModules": [
+    {
+      "id": "sub-b1-1-m02-reading",
+      "moduleId": "B1.1-M02",
+      "skillType": "reading",
+      "title": "Reading Mission: Learning in Different Ways",
+      "theme": "The Ways We Learn",
+      "grammarFocus": "Present perfect with for and since, and asking for and giving permission",
+      "vocabularyFocus": "School subjects, learning activities, and ways to describe thoughts and feelings",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-b1-1-m02-r-theory",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Read about a student who learns through school subjects, practical projects, and performing arts. You will practise finding the main idea and important details, and notice how the present perfect with for and since describes how long something has continued. You will also see polite ways to ask for permission.",
+            "linguisticTarget": {
+              "grammar": "Use have or has with a past participle and for plus a period of time, or since plus a starting point. Use Can I...? and May I...? to ask for permission.",
+              "vocabulary": "Learn words about concentrating, workshops, rehearsals, tiredness, and ways of thinking.",
+              "readingStrategy": "Skim the passage first to understand its main idea. Then scan it for names, activities, time expressions, and reasons."
+            },
+            "learningObjectives": [
+              "Understand the main idea of a text about different ways to learn.",
+              "Find details about school subjects, after-school activities, and how long they have continued.",
+              "Recognize present perfect sentences with for and since.",
+              "Identify polite questions and answers about permission."
+            ],
+            "contextWarmup": {
+              "prompt": "You want to use a school's art room after lessons. What is the best way to ask?",
+              "options": [
+                "May I use the art room after lessons?",
+                "I use the art room after lessons yesterday.",
+                "The art room is using after lessons."
+              ],
+              "correctIndex": 0,
+              "explanation": "May I...? is a polite way to ask for permission. The other sentences do not make a correct permission request."
+            },
+            "rules": [
+              "Use have or has + past participle + for + a period of time. Example: I have studied English for three years.",
+              "Use have or has + past participle + since + the time something started. Example: We have had this workshop since September.",
+              "Use for with periods such as a month, three years, or a long time. Use since with starting points such as Friday, 2014, or last summer.",
+              "Ask for permission with Can I...? or May I...? A person can give permission with Yes, you can or Of course."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Learner Pitfall",
+              "explanation": "For tells us how long something has continued. Since tells us when it began. Do not use since with a length of time.",
+              "wrong": "I have studied science since three years.",
+              "correct": "I have studied science for three years."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: School and Activities",
+            "contractionsSubtitle": "Observe how subjects and verbs smoothly merge in everyday English:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "have",
+                "vowelDropped": "ha",
+                "remainder": "ve",
+                "contracted": "I've",
+                "exampleFull": "I have studied music for two years.",
+                "exampleContracted": "I've studied music for two years."
+              },
+              {
+                "subject": "She",
+                "verb": "has",
+                "vowelDropped": "ha",
+                "remainder": "s",
+                "contracted": "She's",
+                "exampleFull": "She has been in the drama club since October.",
+                "exampleContracted": "She's been in the drama club since October."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with the Present Perfect",
+              "description": "Use have or has with a past participle. Add for and a period of time, or since and a starting point.",
+              "subjects": [
+                {
+                  "label": "I / You / We / They",
+                  "pronoun": "We",
+                  "correctToBe": "have",
+                  "role": "Plural or first person"
+                },
+                {
+                  "label": "He / She / It",
+                  "pronoun": "She",
+                  "correctToBe": "has",
+                  "role": "Third person singular"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "study",
+                  "thirdPerson": "studies",
+                  "continuous": "studying"
+                },
+                {
+                  "base": "make",
+                  "thirdPerson": "makes",
+                  "continuous": "making"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "English for three years",
+                  "type": "Activity plus duration"
+                },
+                {
+                  "text": "the school club since September",
+                  "type": "Activity plus starting point"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-1-m02-r-vocab",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "concentrate",
+                "ipa": "/ˈkɒn.sən.treɪt/",
+                "meaning": "berkonsentrasi, memusatkan perhatian",
+                "partOfSpeech": "verb",
+                "exampleSentence": "A quiet room helps me concentrate on my reading.",
+                "collocation": "concentrate better"
+              },
+              {
+                "word": "workshop",
+                "ipa": "/ˈwɜːk.ʃɒp/",
+                "meaning": "lokakarya, bengkel kerja",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Our school is holding a science workshop this Friday.",
+                "collocation": "attend a workshop"
+              },
+              {
+                "word": "rehearsal",
+                "ipa": "/rɪˈhɜː.səl/",
+                "meaning": "latihan (pertunjukan)",
+                "partOfSpeech": "noun",
+                "exampleSentence": "We have a rehearsal before the school concert.",
+                "collocation": "evening rehearsal"
+              },
+              {
+                "word": "exhausted",
+                "ipa": "/ɪɡˈzɔː.stɪd/",
+                "meaning": "sangat lelah, kelelahan",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "I felt exhausted after the long dance practice.",
+                "collocation": "feel exhausted"
+              },
+              {
+                "word": "imagine",
+                "ipa": "/ɪˈmædʒ.ɪn/",
+                "meaning": "membayangkan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Imagine building a small boat in your science lesson.",
+                "collocation": "imagine how"
+              },
+              {
+                "word": "suppose",
+                "ipa": "/səˈpəʊz/",
+                "meaning": "menduga, mengira",
+                "partOfSpeech": "verb",
+                "exampleSentence": "I suppose we can ask our teacher for help.",
+                "collocation": "I suppose"
+              },
+              {
+                "word": "realise",
+                "ipa": "/ˈrɪə.laɪz/",
+                "meaning": "menyadari",
+                "partOfSpeech": "verb",
+                "exampleSentence": "I realised that drawing diagrams helped me remember facts.",
+                "collocation": "realise that"
+              },
+              {
+                "word": "wonder",
+                "ipa": "/ˈwʌn.dər/",
+                "meaning": "bertanya-tanya, ingin tahu",
+                "partOfSpeech": "verb",
+                "exampleSentence": "I wonder if we can borrow the books for the project.",
+                "collocation": "wonder if"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m02-r-guided",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "More Than One Way to Learn",
+            "audioUrl": "/audio/modules/b1-1-m02/reading-passage.mp3",
+            "durationSeconds": 75,
+            "paragraphs": [
+              "Maya has been a student at Greenfield School since September, and she has studied English there for six months. She enjoys biology because she can learn about plants and animals. Maths is harder for her, so she asks questions when she does not understand. Her teacher says that drawing a diagram can help her concentrate and remember difficult ideas.",
+              "Maya has also attended the school's Friday workshop for three months. Students make useful things from wood and recycled materials. Last week, Maya asked, “May I use the small saw?” Her teacher replied, “Yes, you can, but please wear safety glasses.” Maya has been in the school music group since January, too. She has a rehearsal every Wednesday and sometimes feels exhausted afterwards. She has realised that practising with friends makes learning more enjoyable."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 5,
+                "text": "Maya has been a student at Greenfield School since September, and she has studied English there for six months.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 5,
+                "end": 9,
+                "text": "She enjoys biology because she can learn about plants and animals.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 9,
+                "end": 14,
+                "text": "Maths is harder for her, so she asks questions when she does not understand.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 14,
+                "end": 19,
+                "text": "Her teacher says that drawing a diagram can help her concentrate and remember difficult ideas.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 19,
+                "end": 24,
+                "text": "Maya has also attended the school's Friday workshop for three months.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 24,
+                "end": 29,
+                "text": "Students make useful things from wood and recycled materials.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 29,
+                "end": 34,
+                "text": "Last week, Maya asked, “May I use the small saw?”",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 34,
+                "end": 39,
+                "text": "Her teacher replied, “Yes, you can, but please wear safety glasses.”",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 39,
+                "end": 45,
+                "text": "Maya has been in the school music group since January, too.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 45,
+                "end": 50,
+                "text": "She has a rehearsal every Wednesday and sometimes feels exhausted afterwards.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 50,
+                "end": 56,
+                "text": "She has realised that practising with friends makes learning more enjoyable.",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m02-r-practice",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-r-1",
+                "type": "vocabulary_match",
+                "prompt": "Match each word to its meaning.",
+                "pairs": [
+                  {
+                    "word": "concentrate",
+                    "definition": "give all your attention to something"
+                  },
+                  {
+                    "word": "workshop",
+                    "definition": "a class where people learn or make things by doing them"
+                  },
+                  {
+                    "word": "rehearsal",
+                    "definition": "practice for a performance"
+                  },
+                  {
+                    "word": "exhausted",
+                    "definition": "very tired"
+                  },
+                  {
+                    "word": "realise",
+                    "definition": "understand or become aware of something"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m02-r-quiz",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What is the main idea of the passage?",
+                "options": [
+                  "Maya learns in different ways at school and in activities.",
+                  "Maya wants to leave Greenfield School.",
+                  "Maya only enjoys studying biology."
+                ],
+                "answer": "Maya learns in different ways at school and in activities.",
+                "explanation": "The passage describes Maya's lessons, workshop, and music group, and explains what helps her learn."
+              },
+              {
+                "id": "q-r-2",
+                "question": "When did Maya become a student at Greenfield School?",
+                "options": [
+                  "In January",
+                  "In September",
+                  "Last week"
+                ],
+                "answer": "In September",
+                "explanation": "The first sentence says that Maya has been a student there since September."
+              },
+              {
+                "id": "q-r-3",
+                "question": "How long has Maya studied English at the school?",
+                "options": [
+                  "For six months",
+                  "Since January",
+                  "For three years"
+                ],
+                "answer": "For six months",
+                "explanation": "The passage says she has studied English there for six months."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Why does Maya enjoy biology?",
+                "options": [
+                  "She can learn about plants and animals.",
+                  "She can use a saw.",
+                  "She has a rehearsal in the lesson."
+                ],
+                "answer": "She can learn about plants and animals.",
+                "explanation": "The passage gives learning about plants and animals as the reason she enjoys biology."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What does Maya do when she does not understand maths?",
+                "options": [
+                  "She asks questions.",
+                  "She leaves the classroom.",
+                  "She goes to music practice."
+                ],
+                "answer": "She asks questions.",
+                "explanation": "The passage says she asks questions when she does not understand."
+              },
+              {
+                "id": "q-r-6",
+                "question": "What can help Maya remember difficult ideas?",
+                "options": [
+                  "Drawing a diagram",
+                  "Making a phone call",
+                  "Listening to a rehearsal"
+                ],
+                "answer": "Drawing a diagram",
+                "explanation": "Her teacher says that drawing a diagram can help her concentrate and remember difficult ideas."
+              },
+              {
+                "id": "q-r-7",
+                "question": "How long has Maya attended the Friday workshop?",
+                "options": [
+                  "For three months",
+                  "Since September",
+                  "For six months"
+                ],
+                "answer": "For three months",
+                "explanation": "The passage says that she has attended the workshop for three months."
+              },
+              {
+                "id": "q-r-8",
+                "question": "What did Maya's teacher tell her to do when using the saw?",
+                "options": [
+                  "Wear safety glasses",
+                  "Work without help",
+                  "Take the saw home"
+                ],
+                "answer": "Wear safety glasses",
+                "explanation": "The teacher gives permission but tells Maya to wear safety glasses."
+              },
+              {
+                "id": "q-r-9",
+                "question": "Since when has Maya been in the school music group?",
+                "options": [
+                  "Since January",
+                  "Since last week",
+                  "Since September"
+                ],
+                "answer": "Since January",
+                "explanation": "The passage says she has been in the music group since January."
+              },
+              {
+                "id": "q-r-10",
+                "question": "What has Maya realised about practising with friends?",
+                "options": [
+                  "It makes learning more enjoyable.",
+                  "It makes every subject easier.",
+                  "It means she never feels tired."
+                ],
+                "answer": "It makes learning more enjoyable.",
+                "explanation": "The final sentence says Maya has realised that practising with friends makes learning more enjoyable."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-1-m02-listening",
+      "moduleId": "B1.1-M02",
+      "skillType": "listening",
+      "title": "Listening Mission: Asking and Giving Permission",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-b1-1-m02-l-theory",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Focus on listening for polite requests and permissions in spoken English. Pay attention to tone of voice and how speakers phrase questions when asking to borrow items or watch events.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about asking for permission",
+              "Identify details such as reasons for refusal or agreement",
+              "Notice how words link together in connected speech during casual requests"
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "Will you let me",
+                "meaning": "Bolehkah aku / Maukah kamu mengizinkanku",
+                "note": "Used to ask someone for permission to do something."
+              },
+              {
+                "phrase": "I'm afraid I need it",
+                "meaning": "Maaf, aku membutuhkannya",
+                "note": "A polite way to refuse a request or give bad news."
+              },
+              {
+                "phrase": "Can I ask you something",
+                "meaning": "Bolehkah aku bertanya sesuatu",
+                "note": "Used to introduce a request or a question politely."
+              },
+              {
+                "phrase": "Go ahead",
+                "meaning": "Silakan",
+                "note": "An encouraging phrase to give permission."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "Will you let me use",
+                "fast": "Will you let meuse",
+                "slowIpa": "/wɪl juː lɛt miː juːz/",
+                "fastIpa": "/wɪl jə lɛt miː juːz/",
+                "note": "The pronoun 'you' often reduces to weak /jə/ in rapid speech."
+              },
+              {
+                "id": 2,
+                "slow": "Can I watch",
+                "fast": "Can I watch",
+                "slowIpa": "/kæn aɪ wɒtʃ/",
+                "fastIpa": "/kæn aɪ wɒtʃ/",
+                "note": "The final /n/ in 'can' links smoothly to the vowel sound in 'I'."
+              },
+              {
+                "id": 3,
+                "slow": "I am afraid",
+                "fast": "I'm afraid",
+                "slowIpa": "/aɪ æm əˈfreɪd/",
+                "fastIpa": "/aɪm əˈfreɪd/",
+                "note": "Subject and auxiliary verb contract to save time in conversation."
+              },
+              {
+                "id": 4,
+                "slow": "Ask you something",
+                "fast": "Ask you something",
+                "slowIpa": "/ɑːsk juː ˈsʌmθɪŋ/",
+                "fastIpa": "/ɑːsk jə ˈsʌmθɪŋ/",
+                "note": "The consonant sound at the end of 'ask' blends with the weak form of 'you'."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m02-l-dialogue",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Borrowing Devices and Plans",
+          "orderIndex": 2,
+          "content": {
+            "context": "Nick and Annie talk to their parents at home about borrowing a laptop and watching a football match.",
+            "audioPrompt": "Listen to the conversation between the family members.",
+            "lines": [
+              {
+                "speaker": "Nick",
+                "text": "Dad?",
+                "translation": "Ayah?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Dad",
+                "text": "Yes?",
+                "translation": "Ya?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Nick",
+                "text": "Will you let me use your laptop?",
+                "translation": "Bolehkah aku pakai laptop Ayah?",
+                "emotion": "hopeful"
+              },
+              {
+                "speaker": "Dad",
+                "text": "I'm afraid I need it right now.",
+                "translation": "Maaf, Ayah membutuhkannya sekarang.",
+                "emotion": "apologetic"
+              },
+              {
+                "speaker": "Annie",
+                "text": "Can I watch the football match tonight?",
+                "translation": "Bolehkah aku menonton pertandingan sepak bola malam ini?",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Mum",
+                "text": "Yes, of course you can.",
+                "translation": "Ya, tentu saja boleh.",
+                "emotion": "warm"
+              },
+              {
+                "speaker": "Annie",
+                "text": "Can I ask you something, Mum?",
+                "translation": "Boleh aku bertanya sesuatu, Bu?",
+                "emotion": "polite"
+              },
+              {
+                "speaker": "Mum",
+                "text": "Go ahead.",
+                "translation": "Silakan.",
+                "emotion": "encouraging"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m02-l-quiz",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Will you let me use your laptop?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Nick: \"Will you let me use your _____?\"",
+                "targetWord": "laptop",
+                "explanation": "Full audio: \"Will you let me use your laptop?\". The missing word is \"laptop\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I'm afraid I need it right now.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dad: \"I'm afraid I need it right _____.\"",
+                "targetWord": "now",
+                "explanation": "Full audio: \"I'm afraid I need it right now.\". The missing word is \"now\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Can I watch the football match tonight?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Annie: \"Can I watch the football match _____?\"",
+                "targetWord": "tonight",
+                "explanation": "Full audio: \"Can I watch the football match tonight?\". The missing word is \"tonight\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Yes, of course you can.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mum: \"Yes, of course you _____.\"",
+                "targetWord": "can",
+                "explanation": "Full audio: \"Yes, of course you can.\". The missing word is \"can\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Can I ask you something, Mum?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Annie: \"Can I ask you _____, Mum?\"",
+                "targetWord": "something",
+                "explanation": "Full audio: \"Can I ask you something, Mum?\". The missing word is \"something\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Will you let me",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Will you let me",
+                "words": [
+                  "me",
+                  "Will",
+                  "let",
+                  "you"
+                ],
+                "explanation": "Correct sentence order: \"Will you let me\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "I'm afraid I need it",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I'm afraid I need it",
+                "words": [
+                  "I'm",
+                  "I",
+                  "need",
+                  "it",
+                  "afraid"
+                ],
+                "explanation": "Correct sentence order: \"I'm afraid I need it\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Can I ask you something",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Can I ask you something",
+                "words": [
+                  "ask",
+                  "something",
+                  "I",
+                  "Can",
+                  "you"
+                ],
+                "explanation": "Correct sentence order: \"Can I ask you something\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Will you let me use your laptop?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Nick: \"Will you let me use your _____?\"",
+                "targetWord": "laptop",
+                "explanation": "Full audio: \"Will you let me use your laptop?\". The missing word is \"laptop\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I'm afraid I need it right now.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dad: \"I'm afraid I need it right _____.\"",
+                "targetWord": "now",
+                "explanation": "Full audio: \"I'm afraid I need it right now.\". The missing word is \"now\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Can I watch the football match tonight?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Annie: \"Can I watch the football match _____?\"",
+                "targetWord": "tonight",
+                "explanation": "Full audio: \"Can I watch the football match tonight?\". The missing word is \"tonight\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Yes, of course you can.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Mum: \"Yes, of course you _____.\"",
+                "targetWord": "can",
+                "explanation": "Full audio: \"Yes, of course you can.\". The missing word is \"can\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Can I ask you something, Mum?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Annie: \"Can I ask you _____, Mum?\"",
+                "targetWord": "something",
+                "explanation": "Full audio: \"Can I ask you something, Mum?\". The missing word is \"something\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Will you let me",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Will you let me",
+                "words": [
+                  "me",
+                  "Will",
+                  "let",
+                  "you"
+                ],
+                "explanation": "Correct sentence order: \"Will you let me\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "I'm afraid I need it",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I'm afraid I need it",
+                "words": [
+                  "I'm",
+                  "I",
+                  "need",
+                  "it",
+                  "afraid"
+                ],
+                "explanation": "Correct sentence order: \"I'm afraid I need it\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Can I ask you something",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Can I ask you something",
+                "words": [
+                  "ask",
+                  "something",
+                  "I",
+                  "Can",
+                  "you"
+                ],
+                "explanation": "Correct sentence order: \"Can I ask you something\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-1-m02-writing",
+      "moduleId": "B1.1-M02",
+      "skillType": "writing",
+      "title": "Writing Mission: Learning Methods and Experiences",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-b1-1-m02-w-theory",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on using the present perfect tense with for and since, asking and giving permission, and describing school subjects and learning styles in clear English.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Present Perfect with For",
+                "formula": "Subject + have / has + past participle + for + time period",
+                "example": "I have studied English for three years."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Present Perfect with Since",
+                "formula": "Subject + have / has + past participle + since + specific starting point",
+                "example": "Children have made fantastic things since the school started."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Expressing Permission and Requests",
+                "formula": "Can / Could / May + subject + base verb + object?",
+                "example": "Could I ask a question about our science project?"
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Use 'for' with a duration of time and 'since' with a specific starting point.",
+                "badExample": "She has learned French since three years.",
+                "goodExample": "She has learned French for three years.",
+                "why": "Three years is a period of time, so you must use 'for' instead of 'since'."
+              },
+              {
+                "rule": "Always capitalize school subjects when they are proper nouns or part of a specific title.",
+                "badExample": "we have history and chemistry on tuesday.",
+                "goodExample": "We have History and Chemistry on Tuesday.",
+                "why": "Days of the week and specific class names are proper nouns in English."
+              },
+              {
+                "rule": "Use articles correctly with singular and plural nouns when describing learning materials.",
+                "badExample": "student needs computer to finish project.",
+                "goodExample": "A student needs a computer to finish the project.",
+                "why": "Singular countable nouns require an article like 'a' or 'the'."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "Tinkering School has been around for many years now.",
+                "id": "Tinkering School telah ada selama bertahun-tahun sekarang.",
+                "focus": "Using present perfect with for"
+              },
+              {
+                "en": "I have been at my new school since last December.",
+                "id": "Saya telah berada di sekolah baru saya sejak Desember lalu.",
+                "focus": "Using present perfect with since"
+              },
+              {
+                "en": "Can we work in pairs for this geography assignment?",
+                "id": "Bisakah kami bekerja secara berpasangan untuk tugas geografi ini?",
+                "focus": "Asking for permission"
+              },
+              {
+                "en": "The students in the workshop built a wooden bridge.",
+                "id": "Para siswa di lokakarya membangun sebuah jembatan kayu.",
+                "focus": "Specific article usage"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m02-w-practice",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "i have studied math since five years",
+                "targetSentence": "I have studied math for five years.",
+                "translation": "Saya telah belajar matematika selama lima tahun.",
+                "keyRule": "Use 'for' with time durations and capitalize the pronoun 'I' and school subjects.",
+                "requiredCapitals": [
+                  "I"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "she has worked on the project since monday",
+                "targetSentence": "She has worked on the project since Monday.",
+                "translation": "Dia telah mengerjakan proyek itu sejak hari Senin.",
+                "keyRule": "Capitalize proper days of the week and use 'since' for a specific starting point.",
+                "requiredCapitals": [
+                  "She",
+                  "Monday"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "can i leave the classroom early today",
+                "targetSentence": "Can I leave the classroom early today?",
+                "translation": "Bisakah saya meninggalkan kelas lebih awal hari ini?",
+                "keyRule": "Start sentences and use the pronoun 'I' with capital letters, and end with a question mark.",
+                "requiredCapitals": [
+                  "I"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Present Perfect",
+                "meaning": "Kami telah belajar bahasa Inggris selama dua tahun.",
+                "tokens": [
+                  "We",
+                  "have",
+                  "studied",
+                  "English",
+                  "for",
+                  "two",
+                  "years."
+                ],
+                "fullSentence": "We have studied English for two years."
+              },
+              {
+                "id": "b-2",
+                "category": "Starting Points",
+                "meaning": "Dia telah tinggal di London sejak tahun 2018.",
+                "tokens": [
+                  "She",
+                  "has",
+                  "lived",
+                  "in",
+                  "London",
+                  "since",
+                  "2018."
+                ],
+                "fullSentence": "She has lived in London since 2018."
+              },
+              {
+                "id": "b-3",
+                "category": "Permission",
+                "meaning": "Bisakah saya menggunakan komputer Anda untuk kelas sains?",
+                "tokens": [
+                  "Can",
+                  "I",
+                  "use",
+                  "your",
+                  "computer",
+                  "for",
+                  "science",
+                  "class?"
+                ],
+                "fullSentence": "Can I use your computer for science class?"
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Describe Your Learning Experience",
+                "badge": "Study Writer",
+                "instruction": "Write three to four sentences about a subject you study. Mention how long you have studied it and what activities you do in class.",
+                "example": "I have studied English for four years. We read interesting stories and practice speaking every week. It helps me communicate with people around the world.",
+                "placeholder": "Start typing your sentences here...",
+                "minWords": 15,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Asking for Permission",
+                "badge": "Polite Student",
+                "instruction": "Write a short message to your teacher asking for permission to join a study group or use equipment.",
+                "example": "Dear Teacher, could I work with my partner in the library this afternoon? We want to finish our history project before Friday.",
+                "placeholder": "Type your message here...",
+                "minWords": 15,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m02-w-quiz",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change the following sentence using 'for' instead of 'since':",
+                "promptText": "I have practiced the piano since three years.",
+                "hint": "Change 'since' to 'for' because three years is a duration.",
+                "targetAnswers": [
+                  "I have practiced the piano for three years.",
+                  "I have been practicing the piano for three years."
+                ],
+                "explanation": "Use 'for' with a duration of time like three years, not 'since'."
+              },
+              {
+                "id": "2",
+                "typeLabel": "Conjunctions and Time",
+                "instruction": "Fill in the missing word (for or since):",
+                "promptText": "They have lived in this town ________ 2015.",
+                "hint": "2015 is a specific starting point in time.",
+                "targetAnswers": [
+                  "since",
+                  "Since"
+                ],
+                "explanation": "Use 'since' when referring to a specific point when an action started."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the capitalization and punctuation in this sentence:",
+                "promptText": "we have science on monday and physics on wednesday",
+                "hint": "Capitalize the first word, school subjects if proper, and days of the week.",
+                "targetAnswers": [
+                  "We have science on Monday and physics on Wednesday.",
+                  "We have Science on Monday and Physics on Wednesday."
+                ],
+                "explanation": "Days of the week (Monday, Wednesday) must always start with a capital letter."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Short Response",
+                "instruction": "Write a sentence using the present perfect tense with 'for' about studying English:",
+                "promptText": "Write about your English study duration.",
+                "hint": "Start with 'I have studied English for...'",
+                "targetAnswers": [
+                  "I have studied English for two years.",
+                  "I have studied English for three years.",
+                  "I have studied English for a long time."
+                ],
+                "explanation": "A correct sentence uses subject + have/has + past participle + for + duration."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence into a polite request for permission:",
+                "promptText": "I want to leave the room.",
+                "hint": "Use modal verbs like 'Could I' or 'May I'.",
+                "targetAnswers": [
+                  "Could I leave the room?",
+                  "May I leave the room?",
+                  "Can I leave the room?"
+                ],
+                "explanation": "Polite requests use modal verbs such as can, could, or may at the beginning."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Conjunctions and Time",
+                "instruction": "Fill in the missing word (for or since):",
+                "promptText": "My sister has been a student at this school ________ last September.",
+                "hint": "Last September is a specific starting point.",
+                "targetAnswers": [
+                  "since",
+                  "Since"
+                ],
+                "explanation": "Use 'since' because last September is the specific moment the action began."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the grammatical error regarding articles in this sentence:",
+                "promptText": "student needs computer for online lesson.",
+                "hint": "Add necessary articles like 'a' or 'the'.",
+                "targetAnswers": [
+                  "A student needs a computer for the online lesson.",
+                  "Students need a computer for the online lesson.",
+                  "A student needs a computer for an online lesson."
+                ],
+                "explanation": "Singular countable nouns in English require determiners or articles."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Short Response",
+                "instruction": "Write a sentence using the present perfect tense with 'since':",
+                "promptText": "Write about when your school term started.",
+                "hint": "Use 'since' followed by a month or day.",
+                "targetAnswers": [
+                  "We have learned many things since Monday.",
+                  "I have been in this class since January.",
+                  "School has been open since last month."
+                ],
+                "explanation": "The present perfect with 'since' links a past starting point to the present."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Turn this instruction into a negative sentence in the present perfect:",
+                "promptText": "We have finished our geography homework.",
+                "hint": "Add 'not' after 'have'.",
+                "targetAnswers": [
+                  "We have not finished our geography homework.",
+                  "We haven't finished our geography homework."
+                ],
+                "explanation": "To make a present perfect sentence negative, place 'not' after 'have' or 'has'."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Write a polite question asking your teacher if you can work with a partner:",
+                "promptText": "Ask for permission to work in pairs.",
+                "hint": "Use 'Could we work...' or 'Can we work...'",
+                "targetAnswers": [
+                  "Could we work together on this project?",
+                  "Can we work in pairs today?",
+                  "May we work with a partner?"
+                ],
+                "explanation": "Asking for permission involves modal verbs like could, can, or may."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-1-m02-speaking",
+      "moduleId": "B1.1-M02",
+      "skillType": "speaking",
+      "title": "Speaking Lab: The Ways We Learn",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-b1-1-m02-s-theory",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This module focuses on speaking clearly when discussing school subjects, study methods, and time durations using the present perfect tense with for and since. Good spoken English at the B1 level requires accurate syllable stress, natural linking between words, and clear articulation of consonant clusters.",
+            "audioGuidance": "Listen carefully to the rhythm of sentences. Notice how weak forms are used for grammatical words like for, since, and have, while key vocabulary words receive strong stress.",
+            "pillars": [
+              {
+                "name": "Syllable Stress",
+                "target": "Correct placement of primary stress in multi-syllable study words",
+                "explanation": "Words like concentrate, workshop, and rehearsal have a specific syllable that stands out in loudness and pitch. Getting this right makes your speech instantly understandable."
+              },
+              {
+                "name": "Present Perfect Linking",
+                "target": "Linking auxiliary verbs smoothly with main verbs",
+                "explanation": "When speaking quickly, phrases like 'I have studied' sound like 'I've studied'. Pronounce the contracted form clearly to maintain a natural spoken rhythm."
+              },
+              {
+                "name": "Intonation in Requests",
+                "target": "Using rising intonation for polite permission requests",
+                "explanation": "When asking for permission to leave a study workshop or borrow a book, raise your pitch slightly at the end of the question to sound polite and engaging."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m02-s-practice",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "CON-centrate",
+                "countryAudio": "concentrate",
+                "countrySyllables": [
+                  {
+                    "text": "CON",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "cen",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "trate",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "con-cen-TRA-tion",
+                "natAudio": "concentration",
+                "natSyllables": [
+                  {
+                    "text": "con",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "cen",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TRA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice how the main stress moves when the word changes from a verb to a noun."
+              },
+              {
+                "id": "pair-2",
+                "country": "WORK-shop",
+                "countryAudio": "workshop",
+                "countrySyllables": [
+                  {
+                    "text": "WORK",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "shop",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "re-HEAR-sal",
+                "natAudio": "rehearsal",
+                "natSyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "HEAR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "sal",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Compound nouns usually place primary stress on the first part."
+              },
+              {
+                "id": "pair-3",
+                "country": "I-ma-gine",
+                "countryAudio": "imagine",
+                "countrySyllables": [
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "MA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "gine",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "i-ma-gi-NA-tion",
+                "natAudio": "imagination",
+                "natSyllables": [
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ma",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "gi",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "NA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Adding suffixes like -tion shifts the stress to the syllable immediately preceding it."
+              },
+              {
+                "id": "pair-4",
+                "country": "EX-haus-ted",
+                "countryAudio": "exhausted",
+                "countrySyllables": [
+                  {
+                    "text": "EX",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "haus",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ted",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ex-HAUS-tion",
+                "natAudio": "exhaustion",
+                "natSyllables": [
+                  {
+                    "text": "ex",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "HAUS",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress stays on the root syllable haust across different word forms."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "I have studied English for three hours every day.",
+                "phonetic": "/aɪ həv ˈstʌd.id ˈɪŋ.ɡlɪʃ fɔː θriː ˈaʊəz ˈev.ri deɪ/",
+                "focus": "Present perfect with for and sentence rhythm",
+                "hint": "Pronounce 'for' with a weak schwa sound rather than a strong vowel."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "She has worked in this school since last January.",
+                "phonetic": "/ʃiː həz wɜːkt ɪn ðɪs skuːl sɪns lɑːst ˈdʒæn.ju.əri/",
+                "focus": "Present perfect with since and consonant clusters",
+                "hint": "Link the 's' in since to the 'l' in last smoothly."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Could I ask a question about the afternoon workshop?",
+                "phonetic": "/kʊd aɪ ɑːsk ə ˈkwes.tʃən əˈbaʊt ði ˈɑːf.tə.nuːn ˈwɜːk.ʃɒp/",
+                "focus": "Polite requests and word stress",
+                "hint": "Keep your voice polite with a rising tone at the end."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "After the long rehearsal, we were completely exhausted.",
+                "phonetic": "/ˈɑːf.tə ðə lɒŋ rɪˈhɜː.səl, wiː wɜː kəmˈpliːt.li ɪɡˈzɔː.stɪd/",
+                "focus": "Descriptive adjectives and pausing at commas",
+                "hint": "Pause briefly after rehearsal to give your listener time to process."
+              }
+            ],
+            "roleplay": {
+              "context": "You are talking to your classmate about preparation for the upcoming school drama rehearsal.",
+              "roles": [
+                "Classmate",
+                "Student"
+              ],
+              "turns": [
+                {
+                  "speaker": "Classmate",
+                  "text": "Have you finished preparing your lines for the workshop yet?",
+                  "translation": "Sudahkah kamu selesai menyiapkan dialogmu untuk lokakarya itu?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Yes, I have practiced my lines every day for two weeks.",
+                  "translation": "Ya, saya telah melatih dialog saya setiap hari selama dua minggu."
+                },
+                {
+                  "speaker": "Classmate",
+                  "text": "That is amazing! Can I borrow your script after the rehearsal?",
+                  "translation": "Itu luar biasa! Bisakah saya meminjam naskahmu setelah latihan?"
+                },
+                {
+                  "speaker": "Student",
+                  "text": "Of course you can. I will leave it on my desk for you.",
+                  "translation": "Tentu saja boleh. Saya akan meninggalkannya di meja saya untukmu."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-1-m02-s-quiz",
+          "moduleId": "B1.1-M02",
+          "subModuleId": "sub-b1-1-m02-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a subject you have studied for a long time.",
+                "audioPrompt": "Tell me about a subject you have learned for years and why you like it.",
+                "storyPoints": [
+                  "Name the school subject and how long you have studied it",
+                  "Describe a specific workshop or lesson that helped you concentrate",
+                  "Explain how you feel when you finally understand a difficult topic"
+                ],
+                "targetSentence": "I have studied science for three years, and I really enjoy science workshops.",
+                "phonetic": "/aɪ həv ˈstʌd.id ˈsaɪəns fɔː θriː jɪəz/",
+                "expectedKeywords": [
+                  "subject",
+                  "studied",
+                  "workshop",
+                  "concentrate"
+                ],
+                "explanation": "Use the present perfect tense with for to talk about duration."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a tiring school day or rehearsal.",
+                "audioPrompt": "Tell me about a time when you were completely exhausted after school.",
+                "storyPoints": [
+                  "Describe the activity or rehearsal that made you tired",
+                  "Mention how long the session lasted",
+                  "Explain what you did to relax afterwards"
+                ],
+                "targetSentence": "After the dance rehearsal, I was completely exhausted and needed to rest.",
+                "phonetic": "/ˈɑːf.tə ðə dɑːns rɪˈhɜː.səl, aɪ wɒz kəmˈpliːt.li ɪɡˈzɔː.stɪd/",
+                "expectedKeywords": [
+                  "rehearsal",
+                  "exhausted",
+                  "rest",
+                  "hours"
+                ],
+                "explanation": "Describe your personal feelings and actions using past simple adjectives."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are talking to a teacher to ask for permission to leave the classroom early for a music rehearsal.",
+                "characterRole": "Student asking permission",
+                "instruction": "Listen to the teacher prompt and respond politely by asking for permission.",
+                "audioPrompt": "Teacher: Do you need anything before the bell rings?",
+                "targetSentence": "Could I please leave five minutes early for my music rehearsal?",
+                "phonetic": "/kʊd aɪ pliːz liːv faɪv ˈmɪn.ɪts ˈɜː.li fɔː maɪ ˈmjuː.zɪk rɪˈhɜː.səl/",
+                "expectedKeywords": [
+                  "Could",
+                  "leave",
+                  "rehearsal",
+                  "permission"
+                ],
+                "explanation": "Use modal verbs like could to request permission politely."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are discussing study habits with a classmate in the library.",
+                "characterRole": "Student sharing study methods",
+                "instruction": "Respond to your classmate about how you concentrate while studying.",
+                "audioPrompt": "Classmate: How do you manage to study when it is so noisy?",
+                "targetSentence": "I listen to instrumental music because it helps me concentrate better.",
+                "phonetic": "/aɪ ˈlɪs.ən tuː ˈɪn.strʊ.men.təl ˈmjuː.zɪk bɪˈkɒz ɪt helps miː ˈkɒn.sən.treɪt ˈbet.ə/",
+                "expectedKeywords": [
+                  "concentrate",
+                  "music",
+                  "study",
+                  "quiet"
+                ],
+                "explanation": "Explain your personal learning strategy clearly."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are talking to your teacher about how long you have practiced a project.",
+                "characterRole": "Student reporting progress",
+                "instruction": "Answer your teacher's question about project preparation time.",
+                "audioPrompt": "Teacher: How long have you worked on this science project?",
+                "targetSentence": "We have worked on this project since last month.",
+                "phonetic": "/wiː həv wɜːkt ɒn ðɪs ˈprɒdʒ.ekt sɪns lɑːst mʌnθ/",
+                "expectedKeywords": [
+                  "worked",
+                  "project",
+                  "since",
+                  "month"
+                ],
+                "explanation": "Use the present perfect tense with since to state a starting point."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are talking with a friend about imagining life after finishing school.",
+                "characterRole": "Student sharing imagination",
+                "instruction": "Respond to your friend about what you imagine doing in the future.",
+                "audioPrompt": "Friend: Can you imagine what university life will be like?",
+                "targetSentence": "I can imagine studying in a big library with many books.",
+                "phonetic": "/aɪ kən ɪˈmædʒ.ɪn ˈstʌd.i.ɪŋ ɪn ə bɪɡ ˈlaɪ.brər.i wɪð ˈmen.i bʊks/",
+                "expectedKeywords": [
+                  "imagine",
+                  "studying",
+                  "library",
+                  "university"
+                ],
+                "explanation": "Use verbs like imagine followed by an -ing verb form."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Focus",
+                "focus": "vocab",
+                "instruction": "Pronounce the target sentence using the vocabulary word concentrate accurately.",
+                "audioPrompt": "Say the sentence focusing on the word concentrate.",
+                "targetSentence": "Quiet rooms help students concentrate on their difficult homework.",
+                "phonetic": "/ˈkwaɪ.ət ruːmz help ˈstuː.dənts ˈkɒn.sən.treɪt ɒn ðeə ˈdɪf.ɪ.kənt ˈhəʊm.wɜːk/",
+                "expectedKeywords": [
+                  "concentrate",
+                  "students",
+                  "rooms",
+                  "homework"
+                ],
+                "explanation": "Place primary stress on the first syllable of concentrate."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Focus",
+                "focus": "grammar",
+                "instruction": "Pronounce the target sentence using the present perfect with for and since correctly.",
+                "audioPrompt": "Say the sentence using for and since in the present perfect.",
+                "targetSentence": "I have known my best friend for five years.",
+                "phonetic": "/aɪ həv nəʊn maɪ best frend fɔː faɪv jɪəz/",
+                "expectedKeywords": [
+                  "known",
+                  "friend",
+                  "years",
+                  "have"
+                ],
+                "explanation": "Ensure the auxiliary verb have is pronounced clearly or contracted naturally."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Syllable Stress Focus",
+                "focus": "pronunciation_stress",
+                "instruction": "Read the sentence paying attention to the syllable stress in rehearsal and workshop.",
+                "audioPrompt": "Say the sentence with correct syllable stress on rehearsal and workshop.",
+                "targetSentence": "The drama rehearsal takes place after the morning workshop.",
+                "phonetic": "/ðə ˈdrɑː.mə rɪˈhɜː.səl teɪks pleɪs ˈɑːf.tə ðə ˈmɔː.nɪŋ ˈwɜːk.ʃɒp/",
+                "expectedKeywords": [
+                  "rehearsal",
+                  "workshop",
+                  "drama",
+                  "morning"
+                ],
+                "explanation": "Stress the second syllable in rehearsal and the first syllable in workshop."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Focus",
+                "focus": "pronunciation_intonation",
+                "instruction": "Read the question using rising intonation to show politeness.",
+                "audioPrompt": "Say this question with a rising intonation pattern at the end.",
+                "targetSentence": "May I ask a question about today's lesson?",
+                "phonetic": "/meɪ aɪ ɑːsk ə ˈkwes.tʃən əˈbaʊt təˈdeɪz ˈles.ən/",
+                "expectedKeywords": [
+                  "question",
+                  "lesson",
+                  "today",
+                  "ask"
+                ],
+                "explanation": "Lift your pitch at the end of the sentence when asking for permission."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

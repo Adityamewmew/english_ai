@@ -1,0 +1,1640 @@
+{
+  "module": {
+    "id": "B1.1-M06",
+    "levelId": "B1.1",
+    "title": "Unit 6: Making a Difference: Future Forms - Will, Going to, Present Continuous",
+    "cefr": "B1",
+    "group": "B1.1 - Intermediate Foundations",
+    "objective": "Mampu menggunakan will (not), may (not), dan might (not) untuk prediksi; menggunakan first conditional dan unless dalam kalimat kondisional pertama; serta memahami kosakata lingkungan dan energi",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 6
+  },
+  "subModules": [
+    {
+      "id": "sub-b1-1-m06-reading",
+      "moduleId": "B1.1-M06",
+      "skillType": "reading",
+      "title": "Reading Mission: Protecting Our Planet",
+      "theme": "Environmental Conservation",
+      "grammarFocus": "Future Predictions and First Conditional",
+      "vocabularyFocus": "Environmental issues and nature",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-b1-1-m06-r-theory",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this reading mission, you will explore texts about environmental challenges and future predictions. You will learn how to use future forms like will, may, and might, as well as the first conditional with unless to discuss protecting our natural world.",
+            "linguisticTarget": {
+              "grammar": "Future predictions using will, won't, may, and might, alongside first conditional sentences with if and unless.",
+              "vocabulary": "Key environmental terms including endangered species, deforestation, pollution, and recycling.",
+              "readingStrategy": "Scanning texts for specific data and skimming paragraphs to identify main environmental themes."
+            },
+            "learningObjectives": [
+              "Understand the main ideas of short texts about environmental conservation.",
+              "Locate specific details regarding endangered animals and climate change.",
+              "Recognize and apply future modals and first conditional structures correctly."
+            ],
+            "contextWarmup": {
+              "prompt": "What is one major problem affecting wildlife habitats around the world today?",
+              "options": [
+                "Loss of natural forests due to human activity and agriculture",
+                "Too many trees growing in city parks and residential areas",
+                "An increase in clean energy projects in rural communities"
+              ],
+              "correctIndex": 0,
+              "explanation": "Human activities like deforestation and agriculture destroy natural habitats, making many animal species endangered."
+            },
+            "rules": [
+              "Use will and won't to make confident predictions about future events based on present facts.",
+              "Use may, may not, might, and might not to express uncertainty about future possibilities.",
+              "Use the first conditional with if plus present simple in the condition clause and will in the result clause.",
+              "Use unless to mean if not when stating an alternative condition."
+            ],
+            "commonTrap": {
+              "trapTitle": "Confusing Will with May and Might",
+              "explanation": "Learners often use will when they are not certain about a future event. Use may or might when you are guessing.",
+              "wrong": "If we clean the beach, we will save all turtles for sure, but I am not certain.",
+              "correct": "If we clean the beach, we might save many turtles, but we cannot be entirely certain."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Future Forms",
+            "contractionsSubtitle": "Observe how subjects and future verbs smoothly merge in everyday conversation:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "will",
+                "vowelDropped": "wi",
+                "remainder": "ll",
+                "contracted": "I'll",
+                "exampleFull": "I will recycle all these plastic bottles.",
+                "exampleContracted": "I'll recycle all these plastic bottles."
+              },
+              {
+                "subject": "She",
+                "verb": "will",
+                "vowelDropped": "wi",
+                "remainder": "ll",
+                "contracted": "She'll",
+                "exampleFull": "She will plant trees in the garden tomorrow.",
+                "exampleContracted": "She'll plant trees in the garden tomorrow."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with First Conditional",
+              "description": "Combine clauses to form conditional sentences about the environment:",
+              "subjects": [
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "First Person Plural"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "protect",
+                  "thirdPerson": "protects",
+                  "continuous": "protecting"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "the forests if we stop cutting down trees",
+                  "type": "Conditional Clause"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-1-m06-r-vocab",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "endangered",
+                "ipa": "/ɪnˈdeɪndʒəd/",
+                "meaning": "terancam punah",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "Black rhinos are far more endangered than tigers.",
+                "collocation": "endangered species / critically endangered"
+              },
+              {
+                "word": "extinct",
+                "ipa": "/ɪkˈstɪŋkt/",
+                "meaning": "punah (tidak ada lagi)",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "The black rhino in Africa is in serious danger of becoming extinct.",
+                "collocation": "become extinct / face extinction"
+              },
+              {
+                "word": "deforestation",
+                "ipa": "/diːˌfɒrɪˈsteɪʃən/",
+                "meaning": "penggundulan hutan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The biggest threat to wildlife in the region is deforestation.",
+                "collocation": "widespread deforestation / stop deforestation"
+              },
+              {
+                "word": "pollution",
+                "ipa": "/pəˈluːʃən/",
+                "meaning": "polusi, pencemaran",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Some rivers are badly affected by industrial pollution from nearby factories.",
+                "collocation": "air pollution / plastic pollution"
+              },
+              {
+                "word": "waste",
+                "ipa": "/weɪst/",
+                "meaning": "limbah, sampah",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Plastic waste is a major danger for marine life in the oceans.",
+                "collocation": "plastic waste / household waste"
+              },
+              {
+                "word": "recycle",
+                "ipa": "/ˌriːˈsaɪkəl/",
+                "meaning": "mendaur ulang",
+                "partOfSpeech": "verb",
+                "exampleSentence": "What things do you and your family recycle at home every week?",
+                "collocation": "recycle paper / recycle glass"
+              },
+              {
+                "word": "melt",
+                "ipa": "/melt/",
+                "meaning": "mencair",
+                "partOfSpeech": "verb",
+                "exampleSentence": "The ice caps around the poles have started to melt due to rising temperatures.",
+                "collocation": "ice melts / glaciers melt"
+              },
+              {
+                "word": "fragile",
+                "ipa": "/ˈfrædʒaɪl/",
+                "meaning": "rapuh, mudah rusak",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "The ecosystem of the Galapagos Islands is very fragile and needs protection.",
+                "collocation": "fragile ecosystem / fragile environment"
+              },
+              {
+                "word": "conservation",
+                "ipa": "/ˌkɒnsəˈveɪʃən/",
+                "meaning": "konservasi, pelestarian",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Local groups organized a major conservation project to save the river birds.",
+                "collocation": "nature conservation / conservation project"
+              },
+              {
+                "word": "renewable",
+                "ipa": "/rɪˈnjuːəbəl/",
+                "meaning": "terbarukan",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "Many cities are switching to renewable energy sources like wind and solar power.",
+                "collocation": "renewable energy / renewable resources"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m06-r-guided",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Our Planet in Danger: What Does the Future Hold?",
+            "audioUrl": "/audio/modules/b1-1-m06/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Our planet is facing serious environmental challenges today. In many parts of the world, widespread deforestation destroys the natural habitats of thousands of animals. Because of this, many species are now endangered, and some might even become extinct in the next few decades if we do not take action. Furthermore, plastic waste in our oceans and rivers causes severe pollution, harming marine animals and fragile ecosystems.",
+              "However, there is still hope for the future. If communities work together, we will see significant improvements. Many towns are starting to recycle more household waste and use renewable energy sources like solar power. Unless people change their daily habits, temperatures will continue to rise and polar ice caps will melt faster. Every single person can make a positive difference by taking small steps today."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "Our planet is facing serious environmental challenges today.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 4.6,
+                "end": 9.5,
+                "text": "In many parts of the world, widespread deforestation destroys the natural habitats of thousands of animals.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 9.6,
+                "end": 15,
+                "text": "Because of this, many species are now endangered, and some might even become extinct in the next few decades if we do not take action.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 15.1,
+                "end": 21,
+                "text": "Furthermore, plastic waste in our oceans and rivers causes severe pollution, harming marine animals and fragile ecosystems.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 21.1,
+                "end": 26,
+                "text": "However, there is still hope for the future.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 26.1,
+                "end": 30.5,
+                "text": "If communities work together, we will see significant improvements.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 30.6,
+                "end": 35.5,
+                "text": "Many towns are starting to recycle more household waste and use renewable energy sources like solar power.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 35.6,
+                "end": 42,
+                "text": "Unless people change their daily habits, temperatures will continue to rise and polar ice caps will melt faster.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 42.1,
+                "end": 47,
+                "text": "Every single person can make a positive difference by taking small steps today.",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m06-r-practice",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-1",
+                "prompt": "Match the environmental word with its correct definition.",
+                "leftItems": [
+                  "endangered",
+                  "deforestation",
+                  "recycle",
+                  "renewable"
+                ],
+                "rightItems": [
+                  "at risk of disappearing completely from the earth",
+                  "cutting down trees across a large area",
+                  "treating used objects so they can be used again",
+                  "energy sources like wind and solar that do not run out"
+                ],
+                "pairs": [
+                  {
+                    "left": "endangered",
+                    "right": "at risk of disappearing completely from the earth"
+                  },
+                  {
+                    "left": "deforestation",
+                    "right": "cutting down trees across a large area"
+                  },
+                  {
+                    "left": "recycle",
+                    "right": "treating used objects so they can be used again"
+                  },
+                  {
+                    "left": "renewable",
+                    "right": "energy sources like wind and solar that do not run out"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m06-r-quiz",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What is the main problem affecting animal habitats according to the first paragraph?",
+                "options": [
+                  "Widespread deforestation",
+                  "Too many renewable energy plants",
+                  "Heavy snowstorms in winter"
+                ],
+                "answer": "Widespread deforestation",
+                "explanation": "The text states that widespread deforestation destroys the natural habitats of thousands of animals."
+              },
+              {
+                "id": "q-r-2",
+                "question": "What could happen to some animal species if people do not take action?",
+                "options": [
+                  "They might become extinct",
+                  "They will move into modern cities",
+                  "They will grow much larger"
+                ],
+                "answer": "They might become extinct",
+                "explanation": "The passage notes that some species might even become extinct in the next few decades if we do not take action."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What causes severe pollution in oceans and rivers?",
+                "options": [
+                  "Plastic waste",
+                  "Solar energy panels",
+                  "Planted trees"
+                ],
+                "answer": "Plastic waste",
+                "explanation": "The text explicitly mentions that plastic waste in our oceans and rivers causes severe pollution."
+              },
+              {
+                "id": "q-r-4",
+                "question": "What will happen if communities work together?",
+                "options": [
+                  "We will see significant improvements",
+                  "Temperatures will increase instantly",
+                  "Animals will leave the forests"
+                ],
+                "answer": "We will see significant improvements",
+                "explanation": "The second paragraph states that if communities work together, we will see significant improvements."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What kind of energy sources are mentioned in the passage?",
+                "options": [
+                  "Renewable energy sources like solar power",
+                  "Nuclear energy from power plants",
+                  "Coal and oil energy"
+                ],
+                "answer": "Renewable energy sources like solar power",
+                "explanation": "The text mentions towns starting to use renewable energy sources like solar power."
+              },
+              {
+                "id": "q-r-6",
+                "question": "What does the word 'unless' mean in the sentence about daily habits?",
+                "options": [
+                  "If not",
+                  "Even if",
+                  "As soon as"
+                ],
+                "answer": "If not",
+                "explanation": "Unless means if not, meaning that if people do not change their habits, temperatures will continue to rise."
+              },
+              {
+                "id": "q-r-7",
+                "question": "What will happen to polar ice caps if people do not change their habits?",
+                "options": [
+                  "They will melt faster",
+                  "They will become thicker",
+                  "They will disappear completely tomorrow"
+                ],
+                "answer": "They will melt faster",
+                "explanation": "The passage states that unless people change their daily habits, temperatures will continue to rise and polar ice caps will melt faster."
+              },
+              {
+                "id": "q-r-8",
+                "question": "How can every single person make a positive difference?",
+                "options": [
+                  "By taking small steps today",
+                  "By building large factories",
+                  "By ignoring environmental issues"
+                ],
+                "answer": "By taking small steps today",
+                "explanation": "The concluding sentence states that every single person can make a positive difference by taking small steps today."
+              },
+              {
+                "id": "q-r-9",
+                "question": "Which word in the text describes ecosystems that are delicate and easily damaged?",
+                "options": [
+                  "Fragile",
+                  "Endangered",
+                  "Renewable"
+                ],
+                "answer": "Fragile",
+                "explanation": "The text refers to fragile ecosystems affected by pollution."
+              },
+              {
+                "id": "q-r-10",
+                "question": "What is the overall tone of the second paragraph?",
+                "options": [
+                  "Hopeful",
+                  "Angry",
+                  "Confused"
+                ],
+                "answer": "Hopeful",
+                "explanation": "The second paragraph starts by stating there is still hope for the future and that communities can make improvements."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-1-m06-listening",
+      "moduleId": "B1.1-M06",
+      "skillType": "listening",
+      "title": "Listening Mission: Planning a Community Film Project",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-b1-1-m06-l-theory",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This briefing focuses on listening for specific future plans using 'going to', the present continuous, and predictions with 'will' or 'might' in fast, casual conversations between teenage friends.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about future projects and travel.",
+              "Identify specific details such as dates, locations, and personal intentions.",
+              "Notice how words link together in connected speech during fast dialogue."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "make a difference",
+                "meaning": "membuat perubahan positif",
+                "note": "Used when talking about social action or community projects."
+              },
+              {
+                "phrase": "sort out",
+                "meaning": "membereskan atau mengatur sesuatu",
+                "note": "Common phrasal verb when organizing plans or details."
+              },
+              {
+                "phrase": "keep in touch",
+                "meaning": "tetap berhubungan",
+                "note": "Used before someone travels or leaves for a while."
+              },
+              {
+                "phrase": "count me in",
+                "meaning": "saya ikut",
+                "note": "An enthusiastic way to join a plan or activity."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "going to California",
+                "fast": "gonna California",
+                "slowIpa": "/ˈɡoʊɪŋ tu ˌkælɪˈfɔːrnjə/",
+                "fastIpa": "/ˈɡʌnə ˌkælɪˈfɔːrnjə/",
+                "note": "Native speakers reduce 'going to' to 'gonna' in fast speech."
+              },
+              {
+                "id": 2,
+                "slow": "what are you",
+                "fast": "whatcha",
+                "slowIpa": "/wʌt ɑːr ju/",
+                "fastIpa": "/ˈwʌtʃə/",
+                "note": "Auxiliary verbs blur together when asking questions quickly."
+              },
+              {
+                "id": 3,
+                "slow": "meet them",
+                "fast": "meet 'em",
+                "slowIpa": "/miːt ðem/",
+                "fastIpa": "/ˈmiːt əm/",
+                "note": "The pronoun 'them' loses the 'th' sound in casual conversation."
+              },
+              {
+                "id": 4,
+                "slow": "lot of",
+                "fast": "lotta",
+                "slowIpa": "/lɒt ɒv/",
+                "fastIpa": "/ˈlɒtə/",
+                "note": "Consonant endings link smoothly into the preposition 'of'."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m06-l-dialogue",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Discussing the Film Project",
+          "orderIndex": 2,
+          "content": {
+            "context": "Leo and Maya are talking after school about an exciting local film project and upcoming travel plans.",
+            "audioPrompt": "Listen to the conversation between Leo and Maya.",
+            "lines": [
+              {
+                "speaker": "Leo",
+                "text": "He has offered me a role in his next film.",
+                "translation": "Dia menawarkan saya peran di film berikutnya.",
+                "emotion": "excited"
+              },
+              {
+                "speaker": "Maya",
+                "text": "He's only going to meet Steven Spielberg.",
+                "translation": "Dia hanya akan bertemu Steven Spielberg.",
+                "emotion": "surprised"
+              },
+              {
+                "speaker": "Leo",
+                "text": "I'm going to California this summer.",
+                "translation": "Saya akan pergi ke California musim panas ini.",
+                "emotion": "happy"
+              },
+              {
+                "speaker": "Maya",
+                "text": "How long are you going to stay there?",
+                "translation": "Berapa lama kamu akan tinggal di sana?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Leo",
+                "text": "Only three weeks.",
+                "translation": "Hanya tiga minggu.",
+                "emotion": "casual"
+              },
+              {
+                "speaker": "Maya",
+                "text": "Oh, really? Why is that?",
+                "translation": "Oh, benarkah? Kenapa begitu?",
+                "emotion": "surprised"
+              },
+              {
+                "speaker": "Leo",
+                "text": "We start filming in August.",
+                "translation": "Kami mulai syuting pada bulan Agustus.",
+                "emotion": "serious"
+              },
+              {
+                "speaker": "Maya",
+                "text": "How exciting! What are you going to talk about?",
+                "translation": "Menarik sekali! Apa yang akan kamu bicarakan?",
+                "emotion": "enthusiastic"
+              },
+              {
+                "speaker": "Leo",
+                "text": "We are making a documentary on clean energy.",
+                "translation": "Kami sedang membuat film dokumenter tentang energi bersih.",
+                "emotion": "proud"
+              },
+              {
+                "speaker": "Maya",
+                "text": "That sounds amazing.",
+                "translation": "Itu terdengar luar biasa.",
+                "emotion": "impressed"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m06-l-quiz",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "He's only going to meet Steven Spielberg.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Maya: \"He's only going to meet Steven _____.\"",
+                "targetWord": "Spielberg",
+                "explanation": "Full audio: \"He's only going to meet Steven Spielberg.\". The missing word is \"Spielberg\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I'm going to California this summer.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"I'm going to California this _____.\"",
+                "targetWord": "summer",
+                "explanation": "Full audio: \"I'm going to California this summer.\". The missing word is \"summer\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "How long are you going to stay there?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Maya: \"How long are you going to stay _____?\"",
+                "targetWord": "there",
+                "explanation": "Full audio: \"How long are you going to stay there?\". The missing word is \"there\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Only three weeks.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Only three _____.\"",
+                "targetWord": "weeks",
+                "explanation": "Full audio: \"Only three weeks.\". The missing word is \"weeks\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Why is that?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Maya: \"Why is _____?\"",
+                "targetWord": "that",
+                "explanation": "Full audio: \"Why is that?\". The missing word is \"that\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "We start filming in August.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "We start filming in August",
+                "words": [
+                  "filming",
+                  "August",
+                  "in",
+                  "We",
+                  "start"
+                ],
+                "explanation": "Correct sentence order: \"We start filming in August.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What are you going to talk about?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What are you going to talk about",
+                "words": [
+                  "talk",
+                  "to",
+                  "What",
+                  "are",
+                  "you",
+                  "going",
+                  "about"
+                ],
+                "explanation": "Correct sentence order: \"What are you going to talk about?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "We are making a documentary on clean energy.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "We are making a documentary on clean energy",
+                "words": [
+                  "We",
+                  "a",
+                  "energy",
+                  "clean",
+                  "documentary",
+                  "making",
+                  "are",
+                  "on"
+                ],
+                "explanation": "Correct sentence order: \"We are making a documentary on clean energy.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "That sounds amazing.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds amazing",
+                "words": [
+                  "That",
+                  "amazing",
+                  "sounds"
+                ],
+                "explanation": "Correct sentence order: \"That sounds amazing.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "make a difference",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "make a difference",
+                "words": [
+                  "make",
+                  "difference",
+                  "a"
+                ],
+                "explanation": "Correct sentence order: \"make a difference\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "He's only going to meet Steven Spielberg.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Maya: \"He's only going to meet Steven _____.\"",
+                "targetWord": "Spielberg",
+                "explanation": "Full audio: \"He's only going to meet Steven Spielberg.\". The missing word is \"Spielberg\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "I'm going to California this summer.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"I'm going to California this _____.\"",
+                "targetWord": "summer",
+                "explanation": "Full audio: \"I'm going to California this summer.\". The missing word is \"summer\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "How long are you going to stay there?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Maya: \"How long are you going to stay _____?\"",
+                "targetWord": "there",
+                "explanation": "Full audio: \"How long are you going to stay there?\". The missing word is \"there\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Only three weeks.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Leo: \"Only three _____.\"",
+                "targetWord": "weeks",
+                "explanation": "Full audio: \"Only three weeks.\". The missing word is \"weeks\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Why is that?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Maya: \"Why is _____?\"",
+                "targetWord": "that",
+                "explanation": "Full audio: \"Why is that?\". The missing word is \"that\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "We start filming in August.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "We start filming in August",
+                "words": [
+                  "filming",
+                  "August",
+                  "in",
+                  "We",
+                  "start"
+                ],
+                "explanation": "Correct sentence order: \"We start filming in August.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "What are you going to talk about?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What are you going to talk about",
+                "words": [
+                  "talk",
+                  "to",
+                  "What",
+                  "are",
+                  "you",
+                  "going",
+                  "about"
+                ],
+                "explanation": "Correct sentence order: \"What are you going to talk about?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "We are making a documentary on clean energy.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "We are making a documentary on clean energy",
+                "words": [
+                  "We",
+                  "a",
+                  "energy",
+                  "clean",
+                  "documentary",
+                  "making",
+                  "are",
+                  "on"
+                ],
+                "explanation": "Correct sentence order: \"We are making a documentary on clean energy.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "That sounds amazing.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds amazing",
+                "words": [
+                  "That",
+                  "amazing",
+                  "sounds"
+                ],
+                "explanation": "Correct sentence order: \"That sounds amazing.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "make a difference",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "make a difference",
+                "words": [
+                  "make",
+                  "difference",
+                  "a"
+                ],
+                "explanation": "Correct sentence order: \"make a difference\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-1-m06-writing",
+      "moduleId": "B1.1-M06",
+      "skillType": "writing",
+      "title": "Writing Mission: Future Predictions and Conditional Actions",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-b1-1-m06-w-theory",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on writing future predictions, possibilities, and first conditional sentences about environmental issues in English.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Making Certain Predictions with Will",
+                "formula": "Subject + will / won't + base verb + time expression",
+                "example": "In ten years, cities will use more renewable energy."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Expressing Possibility with May and Might",
+                "formula": "Subject + may / might (not) + base verb",
+                "example": "Temperatures may rise further if carbon emissions continue."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Building First Conditional Sentences",
+                "formula": "If + present simple, subject + will / won't + base verb",
+                "example": "If we protect local forests, wildlife will survive."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Do not put a comma before the main clause when the 'if' clause comes second.",
+                "badExample": "We will save energy, if we turn off lights.",
+                "goodExample": "We will save energy if we turn off lights.",
+                "why": "Commas are only needed after introductory subordinate clauses, not when the condition follows the main clause."
+              },
+              {
+                "rule": "Use present simple tense in the condition clause, not future tense.",
+                "badExample": "If governments will act now, pollution will decrease.",
+                "goodExample": "If governments act now, pollution will decrease.",
+                "why": "In first conditional sentences, the if-clause takes the present simple form while the main clause takes will."
+              },
+              {
+                "rule": "Capitalize the first word of every sentence and major environmental nouns when used as proper titles.",
+                "badExample": "unless we protect the amazon rainforest, nature will suffer.",
+                "goodExample": "Unless we protect the Amazon Rainforest, nature will suffer.",
+                "why": "Sentence starts and proper geographical locations require standard English capitalization."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "If people stop using single-use plastic, oceans will become cleaner.",
+                "id": "Jika orang-orang berhenti menggunakan plastik sekali pakai, lautan akan menjadi lebih bersih.",
+                "focus": "First conditional structure for environmental protection"
+              },
+              {
+                "en": "Some endangered animals may disappear completely within the next decade.",
+                "id": "Beberapa hewan terancam punah mungkin akan hilang sepenuhnya dalam dekade berikutnya.",
+                "focus": "May for future possibility"
+              },
+              {
+                "en": "Unless we invest in solar power, carbon emissions will remain high.",
+                "id": "Kecuali kita berinvestasi pada tenaga surya, emisi karbon akan tetap tinggi.",
+                "focus": "Unless meaning if not in conditional sentences"
+              },
+              {
+                "en": "Scientists believe that sea levels will rise significantly by 2050.",
+                "id": "Para ilmuwan percaya bahwa permukaan laut akan naik secara signifikan pada tahun 2050.",
+                "focus": "Will for future certainty based on facts"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m06-w-practice",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "if we will waste water, rivers will dry up.",
+                "targetSentence": "If we waste water, rivers will dry up.",
+                "translation": "Jika kita membuang-buang air, sungai-sungai akan mengering.",
+                "keyRule": "Use present simple tense in the condition clause after 'if'.",
+                "requiredCapitals": [
+                  "If"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "unless governments take action, global warming wont stop.",
+                "targetSentence": "Unless governments take action, global warming won't stop.",
+                "translation": "Kecuali pemerintah mengambil tindakan, pemanasan global tidak akan berhenti.",
+                "keyRule": "Use an apostrophe in 'won't' and capitalize the start of the sentence.",
+                "requiredCapitals": [
+                  "Unless"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "animals might lose their habitats when people cut down trees in the amazon.",
+                "targetSentence": "Animals might lose their habitats when people cut down trees in the Amazon.",
+                "translation": "Hewan-hewan mungkin kehilangan habitat mereka ketika orang-orang menebang pohon di Amazon.",
+                "keyRule": "Capitalize the first letter of the sentence and the proper noun Amazon.",
+                "requiredCapitals": [
+                  "Animals",
+                  "Amazon"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Environmental Action",
+                "meaning": "Jika kita mendaur ulang kertas, kita akan menyelamatkan banyak pohon.",
+                "tokens": [
+                  "If",
+                  "we",
+                  "recycle",
+                  "paper,",
+                  "we",
+                  "will",
+                  "save",
+                  "many",
+                  "trees."
+                ],
+                "fullSentence": "If we recycle paper, we will save many trees."
+              },
+              {
+                "id": "b-2",
+                "category": "Future Predictions",
+                "meaning": "Suhu global mungkin naik dalam beberapa tahun mendatang.",
+                "tokens": [
+                  "Global",
+                  "temperatures",
+                  "may",
+                  "rise",
+                  "in",
+                  "the",
+                  "coming",
+                  "years."
+                ],
+                "fullSentence": "Global temperatures may rise in the coming years."
+              },
+              {
+                "id": "b-3",
+                "category": "Conditional Warning",
+                "meaning": "Kecuali kita bertindak sekarang, lingkungan akan menderita.",
+                "tokens": [
+                  "Unless",
+                  "we",
+                  "act",
+                  "now,",
+                  "the",
+                  "environment",
+                  "will",
+                  "suffer."
+                ],
+                "fullSentence": "Unless we act now, the environment will suffer."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Environmental Predictions",
+                "badge": "Future Visionary",
+                "instruction": "Write three sentences predicting what will happen to our environment in the future using will, won't, or may.",
+                "example": "In thirty years, cities will rely entirely on solar energy. Forests may shrink if we do not plant more trees. Clean water will become more valuable.",
+                "placeholder": "Write your environmental predictions here...",
+                "minWords": 20,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Conditional Actions",
+                "badge": "Eco Defender",
+                "instruction": "Write three first conditional sentences explaining how human actions affect nature. Use 'if' and 'unless'.",
+                "example": "If people recycle plastic bottles, pollution will decrease. Unless factories reduce carbon emissions, global warming will worsen. If we protect wildlife, endangered species will survive.",
+                "placeholder": "Write your conditional sentences here...",
+                "minWords": 25,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m06-w-quiz",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using 'will' to make a firm future prediction:",
+                "promptText": "It is certain that temperatures will increase next year.",
+                "hint": "Use 'will increase' directly with the subject.",
+                "targetAnswers": [
+                  "Temperatures will increase next year."
+                ],
+                "explanation": "To express future certainty, use 'will' followed by the base verb 'increase'."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Grammar Correction",
+                "instruction": "Fix the grammatical error in the following first conditional sentence:",
+                "promptText": "If we will plant more trees, air quality will improve.",
+                "hint": "Remove the word 'will' from the if-clause.",
+                "targetAnswers": [
+                  "If we plant more trees, air quality will improve."
+                ],
+                "explanation": "In first conditional sentences, the condition clause requires the present simple tense (plant), not future tense (will plant)."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Conjunction Substitution",
+                "instruction": "Rewrite the sentence using 'unless' instead of 'if not':",
+                "promptText": "If people do not stop wasting energy, bills will rise.",
+                "hint": "Replace 'If people do not' with 'Unless people'.",
+                "targetAnswers": [
+                  "Unless people stop wasting energy, bills will rise."
+                ],
+                "explanation": "'Unless' means 'if not', so it replaces negative conditional clauses directly."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Possibility Expression",
+                "instruction": "Rewrite the sentence to show uncertainty using 'might':",
+                "promptText": "It is possible that pandas will become extinct.",
+                "hint": "Use 'might become' for weak possibility.",
+                "targetAnswers": [
+                  "Pandas might become extinct.",
+                  "Panda bears might become extinct."
+                ],
+                "explanation": "'Might' expresses possibility in the present or future, replacing phrases like 'it is possible that'."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Change this affirmative prediction into a negative prediction using 'won't':",
+                "promptText": "Fossil fuels will last forever.",
+                "hint": "Change 'will' to 'won't' or 'will not'.",
+                "targetAnswers": [
+                  "Fossil fuels won't last forever.",
+                  "Fossil fuels will not last forever."
+                ],
+                "explanation": "'Won't' is the contracted negative form of 'will' used for future predictions."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the capitalization and punctuation in this sentence:",
+                "promptText": "if we protect the arctic, polar bears will survive.",
+                "hint": "Capitalize the first word and the proper noun Arctic.",
+                "targetAnswers": [
+                  "If we protect the Arctic, polar bears will survive."
+                ],
+                "explanation": "Sentences must start with capital letters, and proper regions like the Arctic require capitalization."
+              },
+              {
+                "id": 7,
+                "typeLabel": "First Conditional Completion",
+                "instruction": "Complete the first conditional sentence with the correct form of the verb in brackets:",
+                "promptText": "If governments (invest) in renewable energy, pollution will decrease.",
+                "hint": "Use the present simple form for 'governments'.",
+                "targetAnswers": [
+                  "If governments invest in renewable energy, pollution will decrease."
+                ],
+                "explanation": "Plural subjects like 'governments' take the base form 'invest' in present simple conditional clauses."
+              },
+              {
+                "id": 8,
+                "typeLabel": "May vs Will Transformation",
+                "instruction": "Change the certainty to a possibility using 'may not':",
+                "promptText": "Some animal species will definitely survive the climate crisis.",
+                "hint": "Replace 'will definitely' with 'may not' or adjust to uncertainty.",
+                "targetAnswers": [
+                  "Some animal species may not survive the climate crisis."
+                ],
+                "explanation": "'May not' indicates a moderate possibility that something will fail to happen."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Sentence Reordering",
+                "instruction": "Put the first conditional clauses in the correct order without changing meaning when 'if' is placed second:",
+                "promptText": "We will save water / if we fix leaking pipes",
+                "hint": "Start with 'We will save water' followed by 'if we fix leaking pipes'.",
+                "targetAnswers": [
+                  "We will save water if we fix leaking pipes."
+                ],
+                "explanation": "When the 'if' clause comes second, no comma is needed between the main clause and the conditional clause."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response Writing",
+                "instruction": "Write a complete first conditional sentence (at least 8 words) about reducing plastic waste:",
+                "promptText": "Write a sentence starting with: 'If everyone uses reusable bags...'",
+                "hint": "Complete the thought with a result using 'will'.",
+                "targetAnswers": [
+                  "If everyone uses reusable bags, plastic waste will decrease significantly.",
+                  "If everyone uses reusable bags, ocean pollution will drop.",
+                  "If everyone uses reusable bags, we will protect marine life."
+                ],
+                "explanation": "A complete first conditional sentence pairs a present simple condition with a future 'will' result."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-1-m06-speaking",
+      "moduleId": "B1.1-M06",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Making a Difference and Future Forms",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-b1-1-m06-s-theory",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This module focuses on speaking clearly about environmental issues and future predictions using will, going to, and the present continuous. You will practice connecting words smoothly and using correct sentence stress to sound natural.",
+            "audioGuidance": "Pay close attention to weak forms in auxiliary verbs like will and going to. When speaking fast, 'going to' often sounds like 'gonna', but in formal B1 speaking tasks, you should articulate clearly.",
+            "pillars": [
+              {
+                "name": "Sentence Stress",
+                "target": "Stress content words and weaken grammar words",
+                "explanation": "In sentences like 'We will protect the forest', the key words are 'protect' and 'forest'. Say them with more volume and pitch change."
+              },
+              {
+                "name": "Intonation in Predictions",
+                "target": "Use rising and falling tones appropriately",
+                "explanation": "Use a falling tone when stating firm predictions with will or going to, and a rising tone when introducing conditional clauses."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-1-m06-s-practice",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "POLLU-tion",
+                "countryAudio": "pollution",
+                "countrySyllables": [
+                  {
+                    "text": "pol",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LU",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "POLLU-ted",
+                "natAudio": "polluted",
+                "natSyllables": [
+                  {
+                    "text": "pol",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LU",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ted",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice that the primary stress remains on the second syllable for both words."
+              },
+              {
+                "id": "pair-2",
+                "country": "RE-cycle",
+                "countryAudio": "recycle",
+                "countrySyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CY",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "cle",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "RE-cy-cling",
+                "natAudio": "recycling",
+                "natSyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CY",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "cling",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress stays on the second syllable when adding suffixes."
+              },
+              {
+                "id": "pair-3",
+                "country": "FRA-gile",
+                "countryAudio": "fragile",
+                "countrySyllables": [
+                  {
+                    "text": "FRA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "gile",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "FRA-gil-i-ty",
+                "natAudio": "fragility",
+                "natSyllables": [
+                  {
+                    "text": "fra",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "GI",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "li",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ty",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice how the stress shifts to the third syllable from the end when forming the noun."
+              },
+              {
+                "id": "pair-4",
+                "country": "DE-forest",
+                "countryAudio": "deforest",
+                "countrySyllables": [
+                  {
+                    "text": "de",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "FO",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "rest",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "DE-for-ES-ta-tion",
+                "natAudio": "deforestation",
+                "natSyllables": [
+                  {
+                    "text": "de",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "for",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "es",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "shon",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Longer words ending in -tion always shift the primary stress to the syllable immediately preceding the suffix."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "If we do not stop pollution, animals will become extinct.",
+                "phonetic": "/ɪf wi duː nɒt stɒp pəˈluːʃən ˈænɪməlz wɪl bɪˈkʌm ɪkˈstɪŋkt/",
+                "focus": "First conditional structure and linking sounds",
+                "hint": "Pause slightly after the comma to let your listener digest the condition."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "The polar ice caps are melting because of climate change.",
+                "phonetic": "/ðə ˈpəʊlə aɪs kæps ɑː ˈmɛltɪŋ bɪˈkɒz ɒv ˈklaɪmət tʃeɪndʒ/",
+                "focus": "Present continuous tense and vowel clarity",
+                "hint": "Pronounce 'melting' clearly with a strong nasal 'ng' sound at the end."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "We are going to plant more trees in the community park.",
+                "phonetic": "/wi ɑː ˈɡəʊɪŋ tuː plɑːnt mɔː triːz ɪn ðə kəˈmjuːnɪti pɑːk/",
+                "focus": "Future intentions with going to",
+                "hint": "Blend 'going to' smoothly without dropping the t sound entirely."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Unless we recycle plastic waste, our oceans will remain dirty.",
+                "phonetic": "/ʌnˈlɛs wi ˌriːˈsaɪkəl ˈplæstɪk weɪst ˈaʊə ˈəʊʃənz wɪl rɪˈmeɪn ˈdɜːti/",
+                "focus": "Conditional conjunction 'unless' and sentence rhythm",
+                "hint": "Emphasize 'unless' to highlight the warning condition."
+              }
+            ],
+            "roleplay": {
+              "context": "You are talking to an environmental club leader about a new community recycling project.",
+              "roles": [
+                "Club Leader",
+                "Student Volunteer"
+              ],
+              "turns": [
+                {
+                  "speaker": "Club Leader",
+                  "text": "Hi! What are your plans for helping the local environment this weekend?",
+                  "translation": "Hai! Apa rencana kamu untuk membantu lingkungan sekitar akhir pekan ini?"
+                },
+                {
+                  "speaker": "Student Volunteer",
+                  "text": "I am going to join the beach cleanup and help sort plastic waste.",
+                  "translation": "Saya akan ikut kegiatan bersih pantai dan membantu memilah sampah plastik."
+                },
+                {
+                  "speaker": "Club Leader",
+                  "text": "That sounds wonderful. What do you think will happen if more people join us?",
+                  "translation": "Itu terdengar luar biasa. Menurut kamu apa yang akan terjadi jika lebih banyak orang bergabung dengan kita?"
+                },
+                {
+                  "speaker": "Student Volunteer",
+                  "text": "If more people join, we will clean the entire coastline in just one morning.",
+                  "translation": "Jika lebih banyak orang bergabung, kita akan membersihkan seluruh garis pantai hanya dalam satu pagi."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-1-m06-s-quiz",
+          "moduleId": "B1.1-M06",
+          "subModuleId": "sub-b1-1-m06-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about an environmental issue you care about.",
+                "audioPrompt": "Tell me about an environmental problem in your area and what you plan to do about it.",
+                "storyPoints": [
+                  "Name the specific problem such as plastic waste or air pollution",
+                  "Explain why this issue is harmful to local wildlife or people",
+                  "Describe your personal plan using going to to help fix it"
+                ],
+                "targetSentence": "Plastic waste is a big problem here, so I am going to organize a cleanup next week.",
+                "phonetic": "/ˈplæstɪk weɪst ɪz ə bɪg ˈprɒbləm hɪə, səʊ aɪ æm ˈgəʊɪŋ tuː ˈɔːgənaɪz ə ˈkliːnʌp nɛkst wiːk/",
+                "expectedKeywords": [
+                  "plastic waste",
+                  "problem",
+                  "cleanup",
+                  "week"
+                ],
+                "explanation": "Speak fluently in full sentences using the present continuous or going to."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a future prediction for your city.",
+                "audioPrompt": "Describe how your town might change in the next ten years regarding green spaces.",
+                "storyPoints": [
+                  "State whether you think your town will become greener or more polluted",
+                  "Give a reason involving trees, traffic, or factories",
+                  "Use modals like might or will to express certainty or possibility"
+                ],
+                "targetSentence": "Our town might plant more trees, and pollution will decrease significantly.",
+                "phonetic": "/ˈaʊə taʊn maɪt plɑːnt mɔː triːz, ænd pəˈluːʃən wɪl dɪˈkriːs sɪgˈnɪfɪkəntli/",
+                "expectedKeywords": [
+                  "town",
+                  "trees",
+                  "pollution",
+                  "decrease"
+                ],
+                "explanation": "Maintain good rhythm and use modal verbs correctly for predictions."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are talking to a classmate about saving endangered animals. Respond to their prompt.",
+                "characterRole": "Classmate 1",
+                "instruction": "Respond to the classmate asking how we can protect fragile species from becoming extinct.",
+                "audioPrompt": "If we stop destroying their natural habitats, endangered animals will survive.",
+                "expectedKeywords": [
+                  "habitats",
+                  "animals",
+                  "survive",
+                  "protect"
+                ],
+                "targetSentence": "If we stop destroying their natural habitats, endangered animals will survive.",
+                "phonetic": "/ɪf wi stɒp dɪˈstrɔɪɪŋ ðeə ˈnætʃərəl ˈhæbɪtæts, ɪnˈdeɪndʒəd ˈænɪməlz wɪl səˈvaɪv/",
+                "explanation": "Use a clear first conditional structure with correct intonation."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are discussing energy saving with your neighbor. Respond to their question about recycling.",
+                "characterRole": "Neighbor",
+                "instruction": "Explain what you recycle at home and why it matters.",
+                "audioPrompt": "What kind of waste do you recycle at your house every week?",
+                "expectedKeywords": [
+                  "recycle",
+                  "plastic",
+                  "paper",
+                  "week"
+                ],
+                "targetSentence": "We recycle plastic bottles and paper waste every single week.",
+                "phonetic": "/wi ˌriːˈsaɪkəl ˈplæstɪk ˈbɒtəlz ænd ˈpeɪpə weɪst ˈɛvri ˈsɪŋgl wiːk/",
+                "explanation": "Answer directly using correct vocabulary for waste and recycling."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are talking to a park ranger about deforestation.",
+                "characterRole": "Park Ranger",
+                "instruction": "Express concern about melting ice caps and deforestation.",
+                "audioPrompt": "Why are you so worried about deforestation and climate change?",
+                "expectedKeywords": [
+                  "deforestation",
+                  "melt",
+                  "forest",
+                  "danger"
+                ],
+                "targetSentence": "Deforestation destroys the forest, and melting ice puts polar bears in danger.",
+                "phonetic": "/ˌdiːˈfɒrɪˈsteɪʃən dɪˈstrɔɪz ðə ˈfɒrɪst, ænd ˈmɛltɪŋ aɪs pʊts ˈpəʊlə beəz ɪn ˈdeɪndʒə/",
+                "explanation": "Pronounce scientific vocabulary clearly with proper syllable stress."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "scenarioContext": "You are proposing a green initiative to your school principal.",
+                "characterRole": "School Principal",
+                "instruction": "Convince the principal to support a new school recycling program.",
+                "audioPrompt": "How will this new recycling program help our school community?",
+                "expectedKeywords": [
+                  "school",
+                  "reduce",
+                  "waste",
+                  "students"
+                ],
+                "targetSentence": "This program will reduce plastic waste and teach students how to be eco-friendly.",
+                "phonetic": "/ðɪs ˈprəʊɡræm wɪl rɪˈdjuːs ˈplæstɪk weɪst ænd tiːtʃ ˈstjuːdənts haʊ tuː biː ˈiːkəʊ ˈfrɛndli/",
+                "explanation": "Speak persuasively with confident intonation and clear articulation."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Vocabulary Drill",
+                "instruction": "Pronounce the target sentence containing key vocabulary words correctly.",
+                "audioPrompt": "Say this sentence: The black rhino is an endangered species facing extinction.",
+                "targetSentence": "The black rhino is an endangered species facing extinction.",
+                "phonetic": "/ðə blæk ˈraɪnəʊ ɪz ən ɪnˈdeɪndʒəd ˈspiːʃiːz ˈfeɪsɪŋ ɪkˈstɪŋkʃən/",
+                "expectedKeywords": [
+                  "rhino",
+                  "endangered",
+                  "species",
+                  "extinction"
+                ],
+                "explanation": "Ensure words like endangered and extinction are pronounced with correct syllable emphasis."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Grammar Drill",
+                "instruction": "Practice the first conditional with 'unless' in a spoken sentence.",
+                "audioPrompt": "Say this sentence: Unless we plant more trees, air pollution will get worse.",
+                "targetSentence": "Unless we plant more trees, air pollution will get worse.",
+                "phonetic": "/ʌnˈlɛs wi plɑːnt mɔː triːz, eə pəˈluːʃən wɪl gɛt wɜːs/",
+                "expectedKeywords": [
+                  "Unless",
+                  "trees",
+                  "pollution",
+                  "worse"
+                ],
+                "explanation": "Emphasize 'Unless' and maintain a smooth transition into the main clause."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Syllable Stress Drill",
+                "instruction": "Demonstrate correct word stress on environmental vocabulary.",
+                "audioPrompt": "Read this phrase with accurate stress: De-for-es-TA-tion causes severe po-LLU-tion.",
+                "targetSentence": "Deforestation causes severe pollution.",
+                "phonetic": "/ˌdiːfɒrɪˈsteɪʃən ˈkɔːzɪz sɪˈvɪə pəˈluːʃən/",
+                "expectedKeywords": [
+                  "Deforestation",
+                  "causes",
+                  "severe",
+                  "pollution"
+                ],
+                "explanation": "Hit the primary stress on the -ta and -lu syllables clearly."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Intonation Drill",
+                "instruction": "Use a rising intonation for the condition and a falling intonation for the result.",
+                "audioPrompt": "Read this conditional sentence with proper rising and falling intonation: If the ice caps melt, sea levels will rise.",
+                "targetSentence": "If the ice caps melt, sea levels will rise.",
+                "phonetic": "/ɪf ði aɪs kæps mɛlt, siː ˈlɛvəlz wɪl raɪz/",
+                "expectedKeywords": [
+                  "ice caps",
+                  "melt",
+                  "sea levels",
+                  "rise"
+                ],
+                "explanation": "Let your voice rise slightly on 'melt' and drop decisively on 'rise'."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
