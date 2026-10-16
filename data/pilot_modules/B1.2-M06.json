@@ -1,0 +1,1586 @@
+{
+  "module": {
+    "id": "B1.2-M06",
+    "levelId": "B1.2",
+    "title": "Passive Voice in Ongoing Operations: Present Continuous & Present Perfect Passives",
+    "cefr": "B1",
+    "group": "B1.2 - Intermediate Fluency & Global Work",
+    "objective": "Menjelaskan proses manufaktur, renovasi, dan status sistem menggunakan kalimat pasif bentuk continuous dan perfect.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 6
+  },
+  "subModules": [
+    {
+      "id": "sub-b1-2-m06-reading",
+      "moduleId": "B1.2-M06",
+      "skillType": "reading",
+      "title": "Reading Mission: Ongoing Operations and System Updates",
+      "theme": "Factory Renovations and Technology Upgrades",
+      "grammarFocus": "Present Continuous and Present Perfect Passives",
+      "vocabularyFocus": "Manufacturing, Office Renovations, and System Maintenance",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-b1-2-m06-r-theory",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Welcome to your reading mission. Today, you will explore how factories, offices, and computer systems are managed, renovated, and upgraded. You will learn to recognize the passive voice when focusing on actions that are happening right now or actions that have just been completed. By reading authentic descriptions of workplace operations, you will strengthen your ability to understand formal reports and status updates.",
+            "linguisticTarget": {
+              "grammar": "Present Continuous Passive (is/are being + V3) and Present Perfect Passive (has/have been + V3)",
+              "vocabulary": "Verbs related to manufacturing, construction, inspection, and system updates",
+              "readingStrategy": "Skimming texts for general workflow updates and scanning for specific operational status details"
+            },
+            "learningObjectives": [
+              "Understand the main idea of short B1 texts about factory and office updates.",
+              "Locate specific details regarding ongoing operations and completed tasks.",
+              "Recognize and interpret passive structures in Present Continuous and Present Perfect tenses."
+            ],
+            "contextWarmup": {
+              "prompt": "When an office building is undergoing repairs, what is the most important message for employees to receive?",
+              "options": [
+                "Details about which areas are being renovated and when the work will finish",
+                "A history of architecture in the local city",
+                "Instructions on how to bake a cake in the breakroom"
+              ],
+              "correctIndex": 0,
+              "explanation": "In workplace updates, employees need practical information about ongoing renovations and timelines so they can plan their workday safely."
+            },
+            "rules": [
+              "Present Continuous Passive: is/are being + past participle (V3). Example: The factory is being renovated.",
+              "Present Perfect Passive: has/have been + past participle (V3). Example: New security cameras have been installed.",
+              "Use Present Continuous Passive for actions happening right now, and Present Perfect Passive for actions completed with current relevance."
+            ],
+            "commonTrap": {
+              "trapTitle": "Confusing Active and Passive Meanings",
+              "explanation": "Learners sometimes see 'is being' or 'has been' and forget that the subject receives the action rather than performs it.",
+              "wrong": "The computers are being upgraded the IT team. (Incorrect agent preposition)",
+              "correct": "The computers are being upgraded by the IT team."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Passive Auxiliaries",
+            "contractionsSubtitle": "Observe how auxiliary verbs merge with pronouns in conversational English:",
+            "contractions": [
+              {
+                "subject": "It",
+                "verb": "has",
+                "vowelDropped": "ha",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It has been inspected.",
+                "exampleContracted": "It's been inspected."
+              },
+              {
+                "subject": "They",
+                "verb": "have",
+                "vowelDropped": "ha",
+                "remainder": "ve",
+                "contracted": "They've",
+                "exampleFull": "They have been notified.",
+                "exampleContracted": "They've been notified."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Passive Voice",
+              "description": "Assemble sentence blocks to practice continuous and perfect passive forms:",
+              "subjects": [
+                {
+                  "label": "The office",
+                  "pronoun": "It",
+                  "correctToBe": "is",
+                  "role": "Singular Object"
+                },
+                {
+                  "label": "All computers",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Plural Object"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "renovate",
+                  "thirdPerson": "renovates",
+                  "continuous": "is being renovated"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "to create more workspaces this month",
+                  "type": "Time and Purpose"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-2-m06-r-vocab",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "renovate",
+                "ipa": "/ˈren.ə.veɪt/",
+                "meaning": "merenovasi, memperbaharui",
+                "partOfSpeech": "verb",
+                "exampleSentence": "The office building is being renovated to create more workspaces.",
+                "collocation": "renovate an office / renovate a building"
+              },
+              {
+                "word": "manufacture",
+                "ipa": "/ˌmæn.jəˈfæk.tʃər/",
+                "meaning": "memproduksi, membuat secara massal",
+                "partOfSpeech": "verb",
+                "exampleSentence": "These smartphones are being manufactured in our new factory.",
+                "collocation": "manufacture goods / manufacture products"
+              },
+              {
+                "word": "install",
+                "ipa": "/ɪnˈstɔːl/",
+                "meaning": "memasang, menginstal",
+                "partOfSpeech": "verb",
+                "exampleSentence": "New security cameras have been installed throughout the building.",
+                "collocation": "install software / install equipment"
+              },
+              {
+                "word": "inspect",
+                "ipa": "/ɪnˈspekt/",
+                "meaning": "memeriksa, menginspeksi",
+                "partOfSpeech": "verb",
+                "exampleSentence": "All equipment is being inspected before the production starts.",
+                "collocation": "inspect machinery / inspect quality"
+              },
+              {
+                "word": "upgrade",
+                "ipa": "/ˈʌp.ɡreɪd/",
+                "meaning": "meningkatkan, memperbarui",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Our computer systems have been upgraded to the latest version.",
+                "collocation": "upgrade software / upgrade hardware"
+              },
+              {
+                "word": "notify",
+                "ipa": "/ˈnəʊ.tɪ.faɪ/",
+                "meaning": "memberitahu, mengumumkan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "All staff members have been notified about the schedule change.",
+                "collocation": "notify customers / notify employees"
+              },
+              {
+                "word": "assemble",
+                "ipa": "/əˈsem.bəl/",
+                "meaning": "merakit, menyusun",
+                "partOfSpeech": "verb",
+                "exampleSentence": "The new products are being assembled by our skilled workers.",
+                "collocation": "assemble furniture / assemble parts"
+              },
+              {
+                "word": "dispatch",
+                "ipa": "/dɪˈspætʃ/",
+                "meaning": "mengirim, mendistribusikan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Your order has been dispatched and will arrive tomorrow.",
+                "collocation": "dispatch orders / dispatch shipments"
+              },
+              {
+                "word": "implement",
+                "ipa": "/ˈɪm.plɪ.ment/",
+                "meaning": "menerapkan, melaksanakan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "New safety procedures are being implemented across all departments.",
+                "collocation": "implement a policy / implement changes"
+              },
+              {
+                "word": "authorize",
+                "ipa": "/ˈɔː.θər.aɪz/",
+                "meaning": "mengotorisasi, memberi wewenang",
+                "partOfSpeech": "verb",
+                "exampleSentence": "The budget increase has been authorized by the management.",
+                "collocation": "authorize a budget / authorize payment"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-2-m06-r-guided",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Behind the Scenes at Apex Global Operations",
+            "audioUrl": "/audio/modules/b1-2-m06/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "Welcome to Apex Global Operations, where exciting changes are happening every single day. Right now, the main headquarters building is being renovated to provide better spaces for our growing teams. On the third floor, new meeting rooms are being constructed, and modern glass walls are being fitted by our contractors. At the same time, safety procedures are being implemented across all departments to ensure everyone works in a secure environment. Every piece of heavy machinery is being inspected thoroughly before morning shifts begin.",
+              "In addition to physical renovations, our technology infrastructure has undergone major improvements this quarter. All computer systems have been upgraded to the latest operating software, and fast security firewalls have been installed by the IT department. Furthermore, all staff members have been notified about the new digital workflows via email. Customer orders are being processed rapidly, and thousands of finished goods have been dispatched to international clients this week. Management has authorized these updates to keep Apex Global at the forefront of the industry."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 6.5,
+                "text": "Welcome to Apex Global Operations, where exciting changes are happening every single day.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 6.6,
+                "end": 14,
+                "text": "Right now, the main headquarters building is being renovated to provide better spaces for our growing teams.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 14.1,
+                "end": 22.5,
+                "text": "On the third floor, new meeting rooms are being constructed, and modern glass walls are being fitted by our contractors.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 22.6,
+                "end": 30,
+                "text": "At the same time, safety procedures are being implemented across all departments to ensure everyone works in a secure environment.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 30.1,
+                "end": 36,
+                "text": "In addition to physical renovations, our technology infrastructure has undergone major improvements this quarter.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 36.1,
+                "end": 43,
+                "text": "All computer systems have been upgraded to the latest operating software, and fast security firewalls have been installed.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 43.1,
+                "end": 50,
+                "text": "Furthermore, all staff members have been notified about the new digital workflows via email.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 50.1,
+                "end": 60,
+                "text": "Customer orders are being processed rapidly, and thousands of finished goods have been dispatched this week.",
+                "paragraphIndex": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-2-m06-r-practice",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-1",
+                "prompt": "Match the verb to its correct workplace meaning.",
+                "pairs": [
+                  {
+                    "left": "renovate",
+                    "right": "to improve or repair a building"
+                  },
+                  {
+                    "left": "install",
+                    "right": "to put equipment in position and make it ready for use"
+                  },
+                  {
+                    "left": "inspect",
+                    "right": "to examine something carefully for flaws"
+                  },
+                  {
+                    "left": "dispatch",
+                    "right": "to send goods off to a destination"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-2-m06-r-quiz",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What is happening to the main headquarters building right now according to the passage?",
+                "options": [
+                  "It is being demolished completely.",
+                  "It is being renovated to provide better spaces.",
+                  "It is being sold to an international client."
+                ],
+                "answer": "It is being renovated to provide better spaces.",
+                "explanation": "The text states that the main headquarters building is being renovated to provide better spaces for growing teams."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Which activity is taking place on the third floor?",
+                "options": [
+                  "New meeting rooms are being constructed.",
+                  "Old computers are being sold.",
+                  "Staff members are having a party."
+                ],
+                "answer": "New meeting rooms are being constructed.",
+                "explanation": "Paragraph one mentions that on the third floor, new meeting rooms are being constructed and glass walls are being fitted."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What is being implemented across all departments to ensure security?",
+                "options": [
+                  "New safety procedures",
+                  "New coffee machines",
+                  "New parking rules"
+                ],
+                "answer": "New safety procedures",
+                "explanation": "The text notes that safety procedures are being implemented across all departments to secure the working environment."
+              },
+              {
+                "id": "q-r-4",
+                "question": "When is heavy machinery inspected?",
+                "options": [
+                  "After closing time every evening",
+                  "Before morning shifts begin",
+                  "Once every year"
+                ],
+                "answer": "Before morning shifts begin",
+                "explanation": "Paragraph one specifies that every piece of heavy machinery is being inspected thoroughly before morning shifts begin."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What kind of improvements have happened to the technology infrastructure?",
+                "options": [
+                  "It has been completely removed.",
+                  "It has undergone major improvements this quarter.",
+                  "It has been replaced by typewriters."
+                ],
+                "answer": "It has undergone major improvements this quarter.",
+                "explanation": "The second paragraph states that technology infrastructure has undergone major improvements this quarter."
+              },
+              {
+                "id": "q-r-6",
+                "question": "What has been installed by the IT department?",
+                "options": [
+                  "Fast security firewalls",
+                  "Air conditioning units",
+                  "Vending machines"
+                ],
+                "answer": "Fast security firewalls",
+                "explanation": "The passage confirms that fast security firewalls have been installed by the IT department."
+              },
+              {
+                "id": "q-r-7",
+                "question": "How have staff members been notified about new digital workflows?",
+                "options": [
+                  "Via postal letters",
+                  "Via email",
+                  "During a live concert"
+                ],
+                "answer": "Via email",
+                "explanation": "Paragraph two explains that all staff members have been notified about the new digital workflows via email."
+              },
+              {
+                "id": "q-r-8",
+                "question": "What is happening to customer orders at the moment?",
+                "options": [
+                  "They are being delayed indefinitely.",
+                  "They are being processed rapidly.",
+                  "They are being ignored."
+                ],
+                "answer": "They are being processed rapidly.",
+                "explanation": "The text states that customer orders are being processed rapidly."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What has happened to thousands of finished goods this week?",
+                "options": [
+                  "They have been dispatched to international clients.",
+                  "They have been stored in the basement forever.",
+                  "They have been damaged by water."
+                ],
+                "answer": "They have been dispatched to international clients.",
+                "explanation": "Paragraph two notes that thousands of finished goods have been dispatched to international clients this week."
+              },
+              {
+                "id": "q-r-10",
+                "question": "Who has authorized these updates?",
+                "options": [
+                  "Management",
+                  "The local government",
+                  "The security guards"
+                ],
+                "answer": "Management",
+                "explanation": "The final sentence of the passage states that management has authorized these updates to keep Apex Global at the forefront."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-2-m06-listening",
+      "moduleId": "B1.2-M06",
+      "skillType": "listening",
+      "title": "Listening Mission: Office Renovations and System Updates",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-b1-2-m06-l-theory",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This briefing covers how to listen for ongoing and completed actions using present continuous and present perfect passive structures. Pay attention to how speakers emphasize actions happening right now versus actions that were recently finished.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken conversation about office changes and renovations.",
+              "Identify details such as delivery statuses and work progress.",
+              "Notice how words link together in connected speech during natural conversations."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "being renovated",
+                "meaning": "sedang direnovasi",
+                "note": "Used to describe an action happening right now to a building or room."
+              },
+              {
+                "phrase": "have been delivered",
+                "meaning": "sudah dikirimkan",
+                "note": "Used when an action is completed before the present moment with a focus on the result."
+              },
+              {
+                "phrase": "still being set up",
+                "meaning": "masih sedang diatur",
+                "note": "Shows that an installation process is currently in progress."
+              },
+              {
+                "phrase": "successfully completed",
+                "meaning": "diselesaikan dengan sukses",
+                "note": "Highlights the successful finish of a task or project."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "are being renovated",
+                "fast": "ar-being-renovated",
+                "slowIpa": "/ɑːr ˈbiːɪŋ ˈrenəveɪtɪd/",
+                "fastIpa": "/ɑːrˈbiːɪŋˈrenəveɪtɪd/",
+                "note": "The consonant sound at the end of are links smoothly into being."
+              },
+              {
+                "id": 2,
+                "slow": "have been delivered",
+                "fast": "have-been-delivered",
+                "slowIpa": "/hæv biːn dɪˈlɪvərd/",
+                "fastIpa": "/hæv.biːn.dɪˈlɪvərd/",
+                "note": "The auxiliary verb have is often unstressed in fast spoken English."
+              },
+              {
+                "id": 3,
+                "slow": "all staff",
+                "fast": "all-staff",
+                "slowIpa": "/ɔːl stæf/",
+                "fastIpa": "/ɔːl.stæf/",
+                "note": "The double l sound merges into the s of staff."
+              },
+              {
+                "id": 4,
+                "slow": "files being",
+                "fast": "files-being",
+                "slowIpa": "/faɪlz ˈbiːɪŋ/",
+                "fastIpa": "/faɪlzˈbiːɪŋ/",
+                "note": "The plural z sound connects directly to the b of being."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-2-m06-l-dialogue",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Discussing Office Progress",
+          "orderIndex": 2,
+          "content": {
+            "context": "Sarah and Tom discuss the office renovation progress and company IT system updates in the hallway.",
+            "audioPrompt": "Listen to the conversation between Sarah and Tom.",
+            "lines": [
+              {
+                "speaker": "Sarah",
+                "text": "Have you seen the third floor?",
+                "translation": "Sudahkah kamu melihat lantai tiga?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Tom",
+                "text": "The meeting rooms are being renovated.",
+                "translation": "Ruang rapat sedang direnovasi.",
+                "emotion": "informative"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Have new computers been delivered yet?",
+                "translation": "Apakah komputer baru sudah dikirim?",
+                "emotion": "interested"
+              },
+              {
+                "speaker": "Tom",
+                "text": "They are still being set up.",
+                "translation": "Mereka masih sedang diatur.",
+                "emotion": "helpful"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Has staff training been scheduled?",
+                "translation": "Apakah pelatihan staf sudah dijadwalkan?",
+                "emotion": "questioning"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Materials are being prepared now.",
+                "translation": "Materi sedang disiapkan sekarang.",
+                "emotion": "confident"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Are old files being transferred?",
+                "translation": "Apakah file lama sedang dipindahkan?",
+                "emotion": "concerned"
+              },
+              {
+                "speaker": "Tom",
+                "text": "Everything is being moved today.",
+                "translation": "Semuanya sedang dipindahkan hari ini.",
+                "emotion": "reassuring"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-2-m06-l-quiz",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Have you seen the third floor?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Have you seen the third _____?\"",
+                "targetWord": "floor",
+                "explanation": "Full audio: \"Have you seen the third floor?\". The missing word is \"floor\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "The meeting rooms are being renovated.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"The meeting rooms are being _____.\"",
+                "targetWord": "renovated",
+                "explanation": "Full audio: \"The meeting rooms are being renovated.\". The missing word is \"renovated\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Have new computers been delivered yet?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Have new computers been delivered _____?\"",
+                "targetWord": "yet",
+                "explanation": "Full audio: \"Have new computers been delivered yet?\". The missing word is \"yet\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "They are still being set up.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"They are still being _____ up.\"",
+                "targetWord": "set",
+                "explanation": "Full audio: \"They are still being set up.\". The missing word is \"set\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Has staff training been scheduled?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Has staff training been _____?\"",
+                "targetWord": "scheduled",
+                "explanation": "Full audio: \"Has staff training been scheduled?\". The missing word is \"scheduled\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Materials are being prepared now.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Materials are being prepared now",
+                "words": [
+                  "are",
+                  "prepared",
+                  "Materials",
+                  "now",
+                  "being"
+                ],
+                "explanation": "Correct sentence order: \"Materials are being prepared now.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Are old files being transferred?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Are old files being transferred",
+                "words": [
+                  "old",
+                  "files",
+                  "transferred",
+                  "being",
+                  "Are"
+                ],
+                "explanation": "Correct sentence order: \"Are old files being transferred?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Everything is being moved today.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Everything is being moved today",
+                "words": [
+                  "today",
+                  "being",
+                  "is",
+                  "moved",
+                  "Everything"
+                ],
+                "explanation": "Correct sentence order: \"Everything is being moved today.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "have been delivered",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "have been delivered",
+                "words": [
+                  "been",
+                  "have",
+                  "delivered"
+                ],
+                "explanation": "Correct sentence order: \"have been delivered\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "still being set up",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "still being set up",
+                "words": [
+                  "still",
+                  "up",
+                  "being",
+                  "set"
+                ],
+                "explanation": "Correct sentence order: \"still being set up\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Have you seen the third floor?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Have you seen the third _____?\"",
+                "targetWord": "floor",
+                "explanation": "Full audio: \"Have you seen the third floor?\". The missing word is \"floor\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "The meeting rooms are being renovated.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"The meeting rooms are being _____.\"",
+                "targetWord": "renovated",
+                "explanation": "Full audio: \"The meeting rooms are being renovated.\". The missing word is \"renovated\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Have new computers been delivered yet?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Have new computers been delivered _____?\"",
+                "targetWord": "yet",
+                "explanation": "Full audio: \"Have new computers been delivered yet?\". The missing word is \"yet\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "They are still being set up.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"They are still being _____ up.\"",
+                "targetWord": "set",
+                "explanation": "Full audio: \"They are still being set up.\". The missing word is \"set\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Has staff training been scheduled?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Has staff training been _____?\"",
+                "targetWord": "scheduled",
+                "explanation": "Full audio: \"Has staff training been scheduled?\". The missing word is \"scheduled\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Materials are being prepared now.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Materials are being prepared now",
+                "words": [
+                  "are",
+                  "prepared",
+                  "Materials",
+                  "now",
+                  "being"
+                ],
+                "explanation": "Correct sentence order: \"Materials are being prepared now.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Are old files being transferred?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Are old files being transferred",
+                "words": [
+                  "old",
+                  "files",
+                  "transferred",
+                  "being",
+                  "Are"
+                ],
+                "explanation": "Correct sentence order: \"Are old files being transferred?\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Everything is being moved today.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Everything is being moved today",
+                "words": [
+                  "today",
+                  "being",
+                  "is",
+                  "moved",
+                  "Everything"
+                ],
+                "explanation": "Correct sentence order: \"Everything is being moved today.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "have been delivered",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "have been delivered",
+                "words": [
+                  "been",
+                  "have",
+                  "delivered"
+                ],
+                "explanation": "Correct sentence order: \"have been delivered\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "still being set up",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "still being set up",
+                "words": [
+                  "still",
+                  "up",
+                  "being",
+                  "set"
+                ],
+                "explanation": "Correct sentence order: \"still being set up\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-2-m06-writing",
+      "moduleId": "B1.2-M06",
+      "skillType": "writing",
+      "title": "Writing Mission: Passive Voice in Ongoing Operations",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-b1-2-m06-w-theory",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practical guide on using Present Continuous Passive and Present Perfect Passive to describe ongoing manufacturing processes, system updates, and completed actions in professional writing.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Present Continuous Passive Formula",
+                "formula": "Object + is / are + being + past participle (V3) (+ by agent)",
+                "example": "The factory is being renovated this month."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Present Perfect Passive Formula",
+                "formula": "Object + has / have + been + past participle (V3) (+ by agent)",
+                "example": "All safety reports have been submitted to the manager."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Choosing the Correct Aspect for Operations",
+                "formula": "Use Continuous for current actions and Perfect for recently finished tasks with current results.",
+                "example": "The software is being updated now, and new security patches have been installed."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Always include 'being' between the verb 'to be' and the past participle in Present Continuous Passive.",
+                "badExample": "The new cars are built in the factory right now.",
+                "goodExample": "The new cars are being built in the factory right now.",
+                "why": "The word 'being' shows that the action is happening at the present moment."
+              },
+              {
+                "rule": "Use 'has been' for singular objects and 'have been' for plural objects in Present Perfect Passive.",
+                "badExample": "The documents has been signed by the director.",
+                "goodExample": "The documents have been signed by the director.",
+                "why": "Plural nouns require the plural auxiliary verb 'have'."
+              },
+              {
+                "rule": "Capitalize the first letter of every sentence and keep professional terminology consistent.",
+                "badExample": "the shipment is being prepared for delivery.",
+                "goodExample": "The shipment is being prepared for delivery.",
+                "why": "Standard English punctuation requires starting every sentence with a capital letter."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "The damaged bridge is being repaired by the construction team.",
+                "id": "Jembatan yang rusak sedang diperbaiki oleh tim konstruksi.",
+                "focus": "Present Continuous Passive for ongoing repair work"
+              },
+              {
+                "en": "New safety regulations have been implemented across all departments.",
+                "id": "Peraturan keselamatan baru telah diterapkan di semua departemen.",
+                "focus": "Present Perfect Passive for completed actions with current relevance"
+              },
+              {
+                "en": "Customer complaints are being handled by the support department.",
+                "id": "Keluhan pelanggan sedang ditangani oleh departemen dukungan.",
+                "focus": "Present Continuous Passive for ongoing business operations"
+              },
+              {
+                "en": "The monthly financial report has been approved by the board.",
+                "id": "Laporan keuangan bulanan telah disetujui oleh dewan direksi.",
+                "focus": "Present Perfect Passive for finalized business documents"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-2-m06-w-practice",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "the office building are being cleaned this morning",
+                "targetSentence": "The office building is being cleaned this morning.",
+                "translation": "Gedung kantor sedang dibersihkan pagi ini.",
+                "keyRule": "Use 'is being' for singular subjects in Present Continuous Passive and capitalize the beginning.",
+                "requiredCapitals": [
+                  "The"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "all orders has been shipped to the customers",
+                "targetSentence": "All orders have been shipped to the customers.",
+                "translation": "Semua pesanan telah dikirimkan kepada para pelanggan.",
+                "keyRule": "Use 'have been' with plural subjects like 'All orders' in Present Perfect Passive.",
+                "requiredCapitals": [
+                  "All"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "new software is being install on all computers",
+                "targetSentence": "New software is being installed on all computers.",
+                "translation": "Perangkat lunak baru sedang dipasang di semua komputer.",
+                "keyRule": "Use the past participle form (installed) after 'is being'.",
+                "requiredCapitals": [
+                  "New"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Manufacturing Process",
+                "meaning": "Mobil-mobil baru sedang dirakit di pabrik utama.",
+                "tokens": [
+                  "The",
+                  "new",
+                  "cars",
+                  "are",
+                  "being",
+                  "assembled",
+                  "in",
+                  "the",
+                  "main",
+                  "factory."
+                ],
+                "fullSentence": "The new cars are being assembled in the main factory."
+              },
+              {
+                "id": "b-2",
+                "category": "Office Operations",
+                "meaning": "Kontrak tersebut telah ditandatangani oleh direktur.",
+                "tokens": [
+                  "The",
+                  "contract",
+                  "has",
+                  "been",
+                  "signed",
+                  "by",
+                  "the",
+                  "director."
+                ],
+                "fullSentence": "The contract has been signed by the director."
+              },
+              {
+                "id": "b-3",
+                "category": "System Maintenance",
+                "meaning": "Situs web tersebut sedang diperbarui sekarang.",
+                "tokens": [
+                  "The",
+                  "website",
+                  "is",
+                  "being",
+                  "updated",
+                  "right",
+                  "now."
+                ],
+                "fullSentence": "The website is being updated right now."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Describe Ongoing Factory Operations",
+                "badge": "Operations Writer",
+                "instruction": "Write three sentences describing ongoing work in a manufacturing plant using Present Continuous Passive.",
+                "example": "The machinery is being checked by technicians. Raw materials are being delivered to the warehouse. Defective items are being removed from the production line.",
+                "placeholder": "Type your sentences about ongoing factory work here...",
+                "minWords": 20,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Report Completed Tasks",
+                "badge": "Project Reporter",
+                "instruction": "Write three sentences about completed tasks in an office using Present Perfect Passive.",
+                "example": "The budget report has been reviewed by the manager. Employee salaries have been processed. New computers have been installed in the IT department.",
+                "placeholder": "Type your sentences about completed tasks here...",
+                "minWords": 20,
+                "xpReward": 35
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-2-m06-w-quiz",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this active sentence into a Present Continuous Passive sentence:",
+                "promptText": "Workers are painting the office walls today.",
+                "hint": "Use 'are being painted'.",
+                "targetAnswers": [
+                  "The office walls are being painted today."
+                ],
+                "explanation": "In Present Continuous Passive, the object (the office walls) becomes the subject, followed by 'are being' and the past participle 'painted'."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this active sentence into a Present Perfect Passive sentence:",
+                "promptText": "The supervisor has approved all vacation requests.",
+                "hint": "Use 'have been approved'.",
+                "targetAnswers": [
+                  "All vacation requests have been approved."
+                ],
+                "explanation": "The plural object 'all vacation requests' requires 'have been' followed by the past participle 'approved'."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Grammar Correction",
+                "instruction": "Correct the error in this Present Continuous Passive sentence:",
+                "promptText": "The report is write by the team right now.",
+                "hint": "Change 'write' to the past participle form.",
+                "targetAnswers": [
+                  "The report is being written by the team right now."
+                ],
+                "explanation": "Present Continuous Passive requires 'is/are being' plus the past participle (written), not the base verb."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Grammar Correction",
+                "instruction": "Correct the error in this Present Perfect Passive sentence:",
+                "promptText": "The new software have been installed on every computer.",
+                "hint": "Check the agreement between the singular subject and the auxiliary verb.",
+                "targetAnswers": [
+                  "The new software has been installed on every computer."
+                ],
+                "explanation": "The noun 'software' is singular in English, so it requires 'has been' instead of 'have been'."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Fill in the Blank",
+                "instruction": "Complete the sentence with the correct Present Continuous Passive form:",
+                "promptText": "Look! The damaged bridge ______ (repair) by the workers.",
+                "hint": "Use 'is being repaired'.",
+                "targetAnswers": [
+                  "is being repaired"
+                ],
+                "explanation": "Because the subject 'The damaged bridge' is singular and the action is happening now, use 'is being repaired'."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Fill in the Blank",
+                "instruction": "Complete the sentence with the correct Present Perfect Passive form:",
+                "promptText": "All safety guidelines ______ (update) for the new year.",
+                "hint": "Use 'have been updated'.",
+                "targetAnswers": [
+                  "have been updated"
+                ],
+                "explanation": "The plural subject 'All safety guidelines' combined with a completed action requires 'have been updated'."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Sentence Construction",
+                "instruction": "Rearrange these words into a correct Present Continuous Passive sentence:",
+                "promptText": "building / new / the / is / constructed / being",
+                "hint": "Start with 'The new building'.",
+                "targetAnswers": [
+                  "The new building is being constructed."
+                ],
+                "explanation": "The correct order is Subject (The new building) + auxiliary (is) + being + past participle (constructed)."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Sentence Construction",
+                "instruction": "Rearrange these words into a correct Present Perfect Passive sentence:",
+                "promptText": "been / documents / signed / have / the",
+                "hint": "Start with 'The documents'.",
+                "targetAnswers": [
+                  "The documents have been signed."
+                ],
+                "explanation": "The correct order is Subject (The documents) + auxiliary (have been) + past participle (signed)."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Short Response",
+                "instruction": "Write a Present Continuous Passive sentence describing what is happening to your car at the garage:",
+                "promptText": "Car status: Repair in progress at the garage.",
+                "hint": "My car is being...",
+                "targetAnswers": [
+                  "My car is being repaired at the garage.",
+                  "The car is being repaired at the garage."
+                ],
+                "explanation": "To describe an ongoing action on an object, use the Present Continuous Passive structure (is being repaired)."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Write a Present Perfect Passive sentence stating that the weekly newsletter has been sent out:",
+                "promptText": "Newsletter status: Sent to subscribers.",
+                "hint": "The newsletter has been...",
+                "targetAnswers": [
+                  "The newsletter has been sent to subscribers.",
+                  "Weekly newsletter has been sent to subscribers."
+                ],
+                "explanation": "To describe a completed task with current results, use the Present Perfect Passive structure (has been sent)."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-2-m06-speaking",
+      "moduleId": "B1.2-M06",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Passive Voice in Ongoing Operations",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-b1-2-m06-s-theory",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Master speaking about active operations and system updates using Present Continuous and Present Perfect passive structures. Focus on linking auxiliary verbs like is being, are being, has been, and have been smoothly with main past participles to sound professional.",
+            "audioGuidance": "Pay close attention to weak forms of auxiliary verbs. In spoken English, words like 'been' and 'being' are often pronounced with reduced vowel sounds unless you need to emphasize completion or ongoing status.",
+            "pillars": [
+              {
+                "name": "Auxiliary Reduction",
+                "target": "Smooth pronunciation of passive auxiliaries",
+                "explanation": "Reduce 'been' to /bɪn/ and blend it naturally into the past participle."
+              },
+              {
+                "name": "Stress on Action Verbs",
+                "target": "Clear syllable stress on main content verbs",
+                "explanation": "Place primary stress on the past participle such as in-STALLED, re-NO-va-ted, or man-u-FAC-tured."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-2-m06-s-practice",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "RE-no-vate",
+                "countryAudio": "renovate",
+                "countrySyllables": [
+                  {
+                    "text": "RE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "no",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "vate",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "re-no-VA-tion",
+                "natAudio": "renovation",
+                "natSyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "no",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "VA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Notice how the main stress shifts to the third syllable when changing from the verb to the noun form."
+              },
+              {
+                "id": "pair-2",
+                "country": "IN-stall",
+                "countryAudio": "install",
+                "countrySyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "STALL",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "in-stal-LA-tion",
+                "natAudio": "installation",
+                "natSyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "stal",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Stress moves to the third syllable in the longer noun form."
+              },
+              {
+                "id": "pair-3",
+                "country": "IN-spect",
+                "countryAudio": "inspect",
+                "countrySyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "SPECT",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "in-SPEC-tion",
+                "natAudio": "inspection",
+                "natSyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "SPEC",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress stays on the second syllable for both verb and noun."
+              },
+              {
+                "id": "pair-4",
+                "country": "UP-grade",
+                "countryAudio": "upgrade",
+                "countrySyllables": [
+                  {
+                    "text": "UP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "grade",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "UP-gra-ded",
+                "natAudio": "upgraded",
+                "natSyllables": [
+                  {
+                    "text": "UP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "gra",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ded",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The primary stress remains on the first syllable in both the base verb and the past participle."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "The office building is being renovated this month.",
+                "phonetic": "/ðə ˈɒfɪs ˈbɪldɪŋ ɪz ˈbiːɪŋ ˈrenəveɪtɪd ðɪs mʌnθ/",
+                "focus": "Present continuous passive structure",
+                "hint": "Link 'is being' smoothly together without pausing."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "New security cameras have been installed throughout the facility.",
+                "phonetic": "/nuː sɪˈkjʊərɪti ˈkæmrəz hæv biːn ɪnˈstɔːld θruːˈaʊt ðə fəˈsɪləti/",
+                "focus": "Present perfect passive structure",
+                "hint": "Pronounce 'have been' with a weak vowel sound /həv bɪn/."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "All equipment is being inspected before production starts.",
+                "phonetic": "/ɔːl ɪˈkwɪpmənt ɪz ˈbiːɪŋ ɪnˈspektɪd bɪˈfɔː prəˈdʌkʃən stɑːts/",
+                "focus": "Ongoing passive operations",
+                "hint": "Emphasize the past participle 'inspected'."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "The software has been upgraded to the latest version.",
+                "phonetic": "/ðə ˈsɒftweə hæz biːn ˈʌpɡreɪdɪd tuː ðə ˈleɪtɪst ˈvɜːʃən/",
+                "focus": "Completed actions with present results",
+                "hint": "Pronounce 'has been' clearly before 'upgraded'."
+              }
+            ],
+            "roleplay": {
+              "context": "You are discussing ongoing factory updates with your project manager.",
+              "roles": [
+                "Project Manager",
+                "Operations Staff"
+              ],
+              "turns": [
+                {
+                  "speaker": "Project Manager",
+                  "text": "Could you tell me the current status of the assembly line?",
+                  "translation": "Bisakah kamu memberitahu status saat ini dari jalur perakitan?"
+                },
+                {
+                  "speaker": "Operations Staff",
+                  "text": "Yes, the new machinery is being installed right now.",
+                  "translation": "Ya, mesin baru sedang dipasang sekarang."
+                },
+                {
+                  "speaker": "Project Manager",
+                  "text": "Great. Have the safety checks been completed yet?",
+                  "translation": "Bagus. Apakah pemeriksaan keselamatan sudah selesai?"
+                },
+                {
+                  "speaker": "Operations Staff",
+                  "text": "All equipment has been inspected by the safety team this morning.",
+                  "translation": "Semua peralatan telah diperiksa oleh tim keselamatan pagi ini."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-2-m06-s-quiz",
+          "moduleId": "B1.2-M06",
+          "subModuleId": "sub-b1-2-m06-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a recent workplace or school renovation you observed.",
+                "audioPrompt": "Describe a place that was recently renovated and explain what changes were made.",
+                "storyPoints": [
+                  "Name the building or room that was renovated",
+                  "Mention what equipment or furniture was being installed",
+                  "Describe how the space looks now that the work has been completed"
+                ],
+                "targetSentence": "The main office was renovated last month, and new computers have been installed.",
+                "phonetic": "/ðə meɪn ˈɒfɪs wɒz ˈrenəveɪtɪd lɑːst mʌnθ ænd nuː kəmˈpjuːtəz hæv biːn ɪnˈstɔːld/",
+                "expectedKeywords": [
+                  "renovated",
+                  "office",
+                  "computers",
+                  "installed"
+                ],
+                "explanation": "Tell a short story using passive forms to describe changes."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a product you use and how it is manufactured.",
+                "audioPrompt": "Describe how your favorite electronic device is manufactured and assembled.",
+                "storyPoints": [
+                  "Name the electronic device you use every day",
+                  "Explain where the parts are being manufactured",
+                  "Describe how the final product has been packaged and dispatched"
+                ],
+                "targetSentence": "Smartphones are manufactured in large factories and have been dispatched worldwide.",
+                "phonetic": "/ˈsmɑːnfəʊnz ɑː ˈmænfəktʃərd ɪn lɑːʤ ˈfæktəriz ænd hæv biːn dɪˈspætʃt wɜːldˈwaɪd/",
+                "expectedKeywords": [
+                  "smartphones",
+                  "manufactured",
+                  "factories",
+                  "dispatched"
+                ],
+                "explanation": "Describe a manufacturing process using passive voice."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to the manager asking about the factory equipment status.",
+                "audioPrompt": "Manager: Are all the production machines working properly today?",
+                "scenarioContext": "A production supervisor talking to a plant manager about ongoing repairs.",
+                "characterRole": "Production Supervisor",
+                "targetSentence": "Some machines are being repaired right now, but the main line has been fixed.",
+                "phonetic": "/sʌm məˈʃiːnz ɑː ˈbiːɪŋ rɪˈpeəd raɪt naʊ bʌt ðə meɪn laɪn hæz biːn fɪkst/",
+                "expectedKeywords": [
+                  "machines",
+                  "repaired",
+                  "line",
+                  "fixed"
+                ],
+                "explanation": "Use present continuous passive for ongoing repairs and present perfect passive for completed fixes."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to the inquiry regarding office security updates.",
+                "audioPrompt": "Colleague: Have the new security cameras been put in place yet?",
+                "scenarioContext": "Discussing office building security upgrades with a colleague.",
+                "characterRole": "Facilities Coordinator",
+                "targetSentence": "Yes, new security cameras have been installed throughout the building this week.",
+                "phonetic": "/jes nuː sɪˈkjʊərɪti ˈkæmrəz hæv biːn ɪnˈstɔːld θruːˈaʊt ðə ˈbɪldɪŋ ðɪs wiːk/",
+                "expectedKeywords": [
+                  "security",
+                  "cameras",
+                  "installed",
+                  "building"
+                ],
+                "explanation": "Answer using the present perfect passive to confirm completed installations."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to the supervisor asking about system maintenance.",
+                "audioPrompt": "Supervisor: What is happening with our computer network at the moment?",
+                "scenarioContext": "An IT staff member reporting on network upgrades to a supervisor.",
+                "characterRole": "IT Specialist",
+                "targetSentence": "Our computer systems are being upgraded to the latest version right now.",
+                "phonetic": "/ˈaʊə kəmˈpjuːtə ˈsɪstɪmz ɑː ˈbiːɪŋ ˈʌpɡreɪdɪd tuː ðə ˈleɪtɪst ˈvɜːʃən raɪt naʊ/",
+                "expectedKeywords": [
+                  "systems",
+                  "upgraded",
+                  "version",
+                  "now"
+                ],
+                "explanation": "Use the present continuous passive to describe ongoing system operations."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to the manager about staff notifications regarding schedule changes.",
+                "audioPrompt": "Manager: Did everyone receive the update about the new schedule?",
+                "scenarioContext": "An administrative assistant updating a department head.",
+                "characterRole": "Administrative Assistant",
+                "targetSentence": "All staff members have been notified about the schedule change this morning.",
+                "phonetic": "/ɔːl stɑːf ˈmembəz hæv biːn ˈnəʊtɪfaɪd əˈbaʊt ðə ˈʃedjuːl țeɪnʤ ðɪs ˈmɔːnɪŋ/",
+                "expectedKeywords": [
+                  "staff",
+                  "notified",
+                  "schedule",
+                  "morning"
+                ],
+                "explanation": "Confirm completed communication using the present perfect passive."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Focus",
+                "instruction": "Read the sentence aloud focusing on the target vocabulary word 'authorize'.",
+                "audioPrompt": "Say this sentence clearly: The budget increase has been authorized by the management.",
+                "targetSentence": "The budget increase has been authorized by the management.",
+                "phonetic": "/ðə ˈbʌʤɪt ˈɪŋkriːs hæz biːn ˈɔːθəraɪzd baɪ ðə ˈmænɪʤmənt/",
+                "expectedKeywords": [
+                  "budget",
+                  "authorized",
+                  "management"
+                ],
+                "explanation": "Pronounce 'authorized' clearly with correct syllable stress."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Focus",
+                "instruction": "Read the sentence aloud focusing on the present continuous passive structure.",
+                "audioPrompt": "Say this sentence clearly: New safety procedures are being implemented across all departments.",
+                "targetSentence": "New safety procedures are being implemented across all departments.",
+                "phonetic": "/nuː ˈseɪfti prəˈsiːʤəz ɑː ˈbiːɪŋ ˈɪmplɪmentɪd əˈkrɒs ɔːl dɪˈpɑːtmənts/",
+                "expectedKeywords": [
+                  "safety",
+                  "procedures",
+                  "implemented",
+                  "departments"
+                ],
+                "explanation": "Ensure 'are being implemented' flows naturally without hesitation."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress",
+                "instruction": "Read the sentence aloud paying attention to the main stress on 'manufactured'.",
+                "audioPrompt": "Say this sentence clearly: These smartphones are being manufactured in our new factory.",
+                "targetSentence": "These smartphones are being manufactured in our new factory.",
+                "phonetic": "/ðiːz ˈsmɑːnfəʊnz ɑː ˈbiːɪŋ ˈmænfəktʃərd ɪn ˈaʊə nuː ˈfæktəri/",
+                "expectedKeywords": [
+                  "smartphones",
+                  "manufactured",
+                  "factory"
+                ],
+                "explanation": "Place primary stress on the second syllable of 'manufactured'."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Intonation",
+                "instruction": "Read the sentence aloud using a rising intonation on the question part, if applicable, or falling intonation for a clear statement of completion.",
+                "audioPrompt": "Say this sentence clearly: Your order has been dispatched and will arrive tomorrow.",
+                "targetSentence": "Your order has been dispatched and will arrive tomorrow.",
+                "phonetic": "/jɔːr ˈɔːdə hæz biːn dɪˈspætʃt ænd wɪl əˈraɪv təˈmɒrəʊ/",
+                "expectedKeywords": [
+                  "order",
+                  "dispatched",
+                  "arrive",
+                  "tomorrow"
+                ],
+                "explanation": "Use falling intonation at the end of the sentence to show a complete, confident statement."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
