@@ -3,7 +3,9 @@ import type { App } from "api";
 
 export const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || "").replace(/\/+$/, "");
 
-const apiUrl = API_BASE_URL || "http://localhost:3003";
+const apiUrl =
+  API_BASE_URL ||
+  (typeof window !== "undefined" ? window.location.origin : "http://localhost:3003");
 
 export const apiClient = treaty<App>(apiUrl, {
   fetch: { credentials: "include" },
