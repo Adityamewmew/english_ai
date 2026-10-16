@@ -1,0 +1,1726 @@
+{
+  "module": {
+    "id": "B1.5-M08",
+    "levelId": "B1.5",
+    "title": "Unit 8: Urban Mobility: Public Transport vs. Electric Vehicles",
+    "cefr": "B1",
+    "group": "Transportation & Cities",
+    "objective": "Mampu mendebat kebijakan tata kota dan transportasi berkelanjutan dengan conditional sentences yang lebih kompleks.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 60
+  },
+  "subModules": [
+    {
+      "id": "sub-b1-5-m08-reading",
+      "moduleId": "B1.5-M08",
+      "skillType": "reading",
+      "title": "Reading Mission: Moving Around the City",
+      "theme": "Urban Mobility and Sustainable Transport",
+      "grammarFocus": "Third, mixed, and second conditional sentences",
+      "vocabularyFocus": "Public transport, electric vehicles, and city planning",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-b1-5-m08-r-theory",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Read a city council discussion about public transport, electric vehicles, and traffic. You will identify the main arguments, find supporting details, and notice how conditional sentences help people discuss past decisions and possible changes.",
+            "linguisticTarget": {
+              "grammar": "Review second conditional sentences and practise third and mixed conditionals for discussing past choices and their results.",
+              "vocabulary": "Learn words about urban mobility, carbon emissions, transport costs, and city infrastructure.",
+              "readingStrategy": "Skim each paragraph to find its main idea, then scan for names, numbers, and reasons that support each argument."
+            },
+            "learningObjectives": [
+              "Understand the main ideas in a text about city transport policy.",
+              "Find details about public transport, electric vehicles, and traffic.",
+              "Recognise conditional sentences about past decisions and possible present or future results."
+            ],
+            "contextWarmup": {
+              "prompt": "A city has limited money for transport. Which change would you support first?",
+              "options": [
+                "More frequent buses and trains",
+                "More public electric-car chargers",
+                "A larger road for private cars"
+              ],
+              "correctIndex": 0,
+              "explanation": "There is no single correct policy for every city. More frequent public transport can help many people travel without using a private car, so it is a strong option to discuss."
+            },
+            "rules": [
+              "Use if + past perfect and would have + past participle to imagine a different past and its past result.",
+              "Use if + past perfect and would + base verb to connect a different past with a result in the present.",
+              "Use if + past simple and would + base verb to suggest a possible change in the present or future."
+            ],
+            "commonTrap": {
+              "trapTitle": "Common Learner Pitfall",
+              "explanation": "Do not use would in the if-clause in these conditional patterns. Put would in the result clause.",
+              "wrong": "If the city would build more bus lanes, traffic would improve.",
+              "correct": "If the city built more bus lanes, traffic would improve."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Transport Discussions",
+            "contractionsSubtitle": "These common forms can appear in spoken comments about city transport:",
+            "contractions": [
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It is cheaper to take the bus.",
+                "exampleContracted": "It's cheaper to take the bus."
+              },
+              {
+                "subject": "We",
+                "verb": "would",
+                "vowelDropped": "woul",
+                "remainder": "d",
+                "contracted": "We'd",
+                "exampleFull": "We would use the train more often.",
+                "exampleContracted": "We'd use the train more often."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Conditionals",
+              "description": "Compare a past alternative, a present result, and a possible policy change:",
+              "subjects": [
+                {
+                  "label": "The city",
+                  "pronoun": "the city",
+                  "correctToBe": "would",
+                  "role": "Policy decision maker"
+                },
+                {
+                  "label": "Residents",
+                  "pronoun": "residents",
+                  "correctToBe": "would have",
+                  "role": "People affected by policy"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "invest",
+                  "thirdPerson": "invests",
+                  "continuous": "investing"
+                },
+                {
+                  "base": "reduce",
+                  "thirdPerson": "reduces",
+                  "continuous": "reducing"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "in bus and train services",
+                  "type": "Transport investment"
+                },
+                {
+                  "text": "carbon emissions",
+                  "type": "Environmental result"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-5-m08-r-vocab",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "urban mobility",
+                "ipa": "/ˈɜːbən məʊˈbɪləti/",
+                "meaning": "mobilitas perkotaan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Better buses can improve urban mobility.",
+                "collocation": "improve urban mobility"
+              },
+              {
+                "word": "carbon emissions",
+                "ipa": "/ˈkɑːbən ɪˈmɪʃənz/",
+                "meaning": "emisi karbon",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Traffic creates carbon emissions.",
+                "collocation": "reduce carbon emissions"
+              },
+              {
+                "word": "subsidise",
+                "ipa": "/ˈsʌbsɪdaɪz/",
+                "meaning": "mensubsidi",
+                "partOfSpeech": "verb",
+                "exampleSentence": "The council could subsidise bus tickets.",
+                "collocation": "subsidise public transport"
+              },
+              {
+                "word": "congestion",
+                "ipa": "/kənˈdʒestʃən/",
+                "meaning": "kemacetan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "More buses may reduce congestion.",
+                "collocation": "reduce traffic congestion"
+              },
+              {
+                "word": "sustainable",
+                "ipa": "/səˈsteɪnəbəl/",
+                "meaning": "berkelanjutan",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "Walking is a sustainable way to travel short distances.",
+                "collocation": "sustainable transport"
+              },
+              {
+                "word": "infrastructure",
+                "ipa": "/ˈɪnfrəstrʌktʃə/",
+                "meaning": "infrastruktur",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The city needs better charging infrastructure.",
+                "collocation": "transport infrastructure"
+              },
+              {
+                "word": "commuter",
+                "ipa": "/kəˈmjuːtə/",
+                "meaning": "orang yang bepergian rutin ke tempat kerja",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Many commuters travel by train.",
+                "collocation": "daily commuter"
+              },
+              {
+                "word": "charging point",
+                "ipa": "/ˈtʃɑːdʒɪŋ pɔɪnt/",
+                "meaning": "titik pengisian daya",
+                "partOfSpeech": "noun",
+                "exampleSentence": "There is a new charging point near the library.",
+                "collocation": "install charging points"
+              },
+              {
+                "word": "fare",
+                "ipa": "/feə/",
+                "meaning": "ongkos transportasi",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The bus fare is lower than the parking cost.",
+                "collocation": "bus fare"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m08-r-guided",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Two Ways to Make City Travel Better",
+            "audioUrl": "/audio/modules/b1-5-m08/reading-passage.mp3",
+            "durationSeconds": 105,
+            "paragraphs": [
+              "At a recent meeting, Brookford City Council discussed how to improve urban mobility. Traffic is slow in the centre, and many residents drive to work because buses are crowded. The council has money for one major transport project this year. Some members want to improve public transport, while others support electric vehicles.",
+              "Councillor Maya Reed argued for more frequent buses and lower fares. She said that if the council subsidised tickets, more commuters would leave their cars at home. A transport report also showed that bus use had fallen because services stopped early in the evening. If the city had kept buses running later, more residents would use them today.",
+              "Councillor Ben Hall supported electric vehicles. They do not produce direct carbon emissions while driving, but they are not a complete answer to congestion. Many people cannot afford an electric car, and the city has too few charging points. Hall said that if the council had built more charging infrastructure earlier, more drivers would own electric vehicles now.",
+              "Residents asked the council to consider both plans. The report recommended reliable public transport first, together with new charging points over time. It explained that electric cars can reduce pollution, but they still use road space. If Brookford improved buses and trains, fewer people might need a car for every trip. The council will compare the costs before making its decision."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 13,
+                "text": "At a recent meeting, Brookford City Council discussed how to improve urban mobility.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 13,
+                "end": 28,
+                "text": "Traffic is slow in the centre, and many residents drive to work because buses are crowded.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 28,
+                "end": 42,
+                "text": "The council has money for one major transport project this year.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 42,
+                "end": 55,
+                "text": "Some members want to improve public transport, while others support electric vehicles.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 55,
+                "end": 69,
+                "text": "Councillor Maya Reed argued for more frequent buses and lower fares.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 69,
+                "end": 83,
+                "text": "She said that if the council subsidised tickets, more commuters would leave their cars at home.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 83,
+                "end": 97,
+                "text": "A transport report also showed that bus use had fallen because services stopped early in the evening.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 97,
+                "end": 111,
+                "text": "If the city had kept buses running later, more residents would use them today.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 111,
+                "end": 124,
+                "text": "Councillor Ben Hall supported electric vehicles.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 124,
+                "end": 139,
+                "text": "They do not produce direct carbon emissions while driving, but they are not a complete answer to congestion.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 139,
+                "end": 153,
+                "text": "Many people cannot afford an electric car, and the city has too few charging points.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 153,
+                "end": 168,
+                "text": "Hall said that if the council had built more charging infrastructure earlier, more drivers would own electric vehicles now.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 168,
+                "end": 181,
+                "text": "Residents asked the council to consider both plans.",
+                "paragraphIndex": 3
+              },
+              {
+                "start": 181,
+                "end": 195,
+                "text": "The report recommended reliable public transport first, together with new charging points over time.",
+                "paragraphIndex": 3
+              },
+              {
+                "start": 195,
+                "end": 210,
+                "text": "It explained that electric cars can reduce pollution, but they still use road space.",
+                "paragraphIndex": 3
+              },
+              {
+                "start": 210,
+                "end": 225,
+                "text": "If Brookford improved buses and trains, fewer people might need a car for every trip.",
+                "paragraphIndex": 3
+              },
+              {
+                "start": 225,
+                "end": 238,
+                "text": "The council will compare the costs before making its decision.",
+                "paragraphIndex": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m08-r-practice",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": []
+          }
+        },
+        {
+          "id": "sec-b1-5-m08-r-quiz",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What problem did the council discuss?",
+                "options": [
+                  "Slow traffic and crowded buses",
+                  "A shortage of schools",
+                  "Too many railway stations"
+                ],
+                "answer": "Slow traffic and crowded buses",
+                "explanation": "The first paragraph says traffic is slow and buses are crowded."
+              },
+              {
+                "id": "q-r-2",
+                "question": "How many major transport projects can the council fund this year?",
+                "options": [
+                  "One",
+                  "Two",
+                  "Three"
+                ],
+                "answer": "One",
+                "explanation": "The passage says the council has money for one major project this year."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What did Maya Reed want the council to do?",
+                "options": [
+                  "Run more frequent buses and lower fares",
+                  "Build a larger road",
+                  "Close the city centre to buses"
+                ],
+                "answer": "Run more frequent buses and lower fares",
+                "explanation": "Maya Reed argued for more frequent buses and lower fares."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Why had bus use fallen, according to the report?",
+                "options": [
+                  "Services stopped early in the evening",
+                  "Bus tickets were free",
+                  "There were too many charging points"
+                ],
+                "answer": "Services stopped early in the evening",
+                "explanation": "The report linked falling bus use to services stopping early."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What does the sentence about keeping buses running later show?",
+                "options": [
+                  "A past choice could affect how many people use buses today",
+                  "Buses will definitely stop running tomorrow",
+                  "The city has already made its final decision"
+                ],
+                "answer": "A past choice could affect how many people use buses today",
+                "explanation": "The sentence uses a past condition and a present result."
+              },
+              {
+                "id": "q-r-6",
+                "question": "What is one limit of electric vehicles mentioned in the passage?",
+                "options": [
+                  "The city has too few charging points",
+                  "They cannot travel on city roads",
+                  "They always create more direct emissions than petrol cars"
+                ],
+                "answer": "The city has too few charging points",
+                "explanation": "The passage says Brookford has too few charging points and many people cannot afford an electric car."
+              },
+              {
+                "id": "q-r-7",
+                "question": "What did Ben Hall say about earlier investment in charging infrastructure?",
+                "options": [
+                  "More drivers would own electric vehicles now",
+                  "Bus fares would have become higher",
+                  "The city would have fewer residents"
+                ],
+                "answer": "More drivers would own electric vehicles now",
+                "explanation": "Hall connected earlier infrastructure with more electric vehicle owners today."
+              },
+              {
+                "id": "q-r-8",
+                "question": "Why are electric cars not a complete answer to congestion?",
+                "options": [
+                  "They still use road space",
+                  "They cannot reduce pollution",
+                  "They make buses run later"
+                ],
+                "answer": "They still use road space",
+                "explanation": "The report says electric cars can reduce pollution but still use road space."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What did the report recommend?",
+                "options": [
+                  "Reliable public transport first and more charging points over time",
+                  "Only electric cars, with no public transport",
+                  "More roads and fewer buses"
+                ],
+                "answer": "Reliable public transport first and more charging points over time",
+                "explanation": "The final paragraph gives this as the report's recommendation."
+              },
+              {
+                "id": "q-r-10",
+                "question": "What will the council do before making its decision?",
+                "options": [
+                  "Compare the costs",
+                  "Close all bus routes",
+                  "Ask residents to buy electric cars"
+                ],
+                "answer": "Compare the costs",
+                "explanation": "The final sentence says the council will compare the costs before deciding."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-5-m08-listening",
+      "moduleId": "B1.5-M08",
+      "skillType": "listening",
+      "title": "Listening Mission: Commuter Debates on Clean Transport",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-b1-5-m08-l-theory",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Learn to catch differing opinions and fast linking sounds when speakers argue about city transit problems and electric vehicles.",
+            "learningObjectives": [
+              "Catch the main points of disagreement in an urban mobility debate.",
+              "Identify specific solutions offered for traffic jams and pollution.",
+              "Recognize linking consonants and weakened vowels in natural conversations."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "an absolute nightmare",
+                "meaning": "situasi yang sangat buruk atau kacau",
+                "note": "Commonly used in informal spoken English to exaggerate an annoying delay or difficult experience."
+              },
+              {
+                "phrase": "cause huge jams",
+                "meaning": "menyebabkan kemacetan lalu lintas yang parah",
+                "note": "A natural everyday collocation replacing the formal phrase create traffic congestion."
+              },
+              {
+                "phrase": "clear the roads",
+                "meaning": "membuat jalanan lancar dan bebas hambatan",
+                "note": "Used to describe measures that remove traffic volume so vehicles move freely."
+              },
+              {
+                "phrase": "work together",
+                "meaning": "berjalan selaras atau saling melengkapi",
+                "note": "Refers here to two policies or systems functioning well in combination."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "Traffic today was an absolute nightmare.",
+                "fast": "Traffic today wəzən absolute nightmare.",
+                "slowIpa": "/ˈtræfɪk təˈdeɪ wɒz æn ˈæbsəluːt ˈnaɪtmeə/",
+                "fastIpa": "/ˈtræfɪk təˈdeɪ wəzən ˈæbsəluːt ˈnaɪtmeə/",
+                "note": "The word was weakens to /wəz/ and its final consonant links directly to an."
+              },
+              {
+                "id": 2,
+                "slow": "it barely moved at all",
+                "fast": "it barely move-də-tall",
+                "slowIpa": "/ɪt ˈbeəli muːvd æt ɔːl/",
+                "fastIpa": "/ɪt ˈbeəli muːvdətɔːl/",
+                "note": "The past tense /d/ links to at, and the /t/ in at links smoothly into all."
+              },
+              {
+                "id": 3,
+                "slow": "takes too long",
+                "fast": "take-stoo long",
+                "slowIpa": "/teɪks tuː lɒŋ/",
+                "fastIpa": "/teɪkstuː lɒŋ/",
+                "note": "The /s/ blends quickly into the initial /t/ sound of too without a break."
+              },
+              {
+                "id": 4,
+                "slow": "agree with that plan",
+                "fast": "agree wi-that plan",
+                "slowIpa": "/əˈɡriː wɪð ðæt plæn/",
+                "fastIpa": "/əˈɡriː wɪðæt plæn/",
+                "note": "The two voiced th sounds merge so you hear only one smooth dental friction sound."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m08-l-dialogue",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Discussing City Gridlock",
+          "orderIndex": 2,
+          "content": {
+            "context": "Alex and Morgan are talking near campus after experiencing another morning delay in city traffic.",
+            "audioPrompt": "Listen to the conversation between Alex and Morgan about city travel.",
+            "lines": [
+              {
+                "speaker": "Alex",
+                "text": "Traffic today was an absolute nightmare.",
+                "translation": "Lalu lintas hari ini sungguh mimpi buruk.",
+                "emotion": "annoyed"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "Did you take the morning bus?",
+                "translation": "Apakah kamu naik bus pagi?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Yes, and it barely moved at all.",
+                "translation": "Ya, dan busnya hampir tidak bergerak sama sekali.",
+                "emotion": "frustrated"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "Electric cars could solve this soon.",
+                "translation": "Mobil listrik bisa segera mengatasi ini.",
+                "emotion": "optimistic"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Electric cars still cause huge jams.",
+                "translation": "Mobil listrik tetap menyebabkan kemacetan besar.",
+                "emotion": "serious"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "Subsidies would help people buy them.",
+                "translation": "Subsidi akan membantu orang membelinya.",
+                "emotion": "thoughtful"
+              },
+              {
+                "speaker": "Alex",
+                "text": "We need more underground train lines.",
+                "translation": "Kita butuh lebih banyak jalur kereta bawah tanah.",
+                "emotion": "confident"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "Building metro lines takes too long.",
+                "translation": "Membangun jalur metro memakan waktu terlalu lama.",
+                "emotion": "skeptical"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Buses need their own separate lanes.",
+                "translation": "Bus butuh jalur terpisah tersendiri.",
+                "emotion": "enthusiastic"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "That might actually clear the roads.",
+                "translation": "Itu mungkin benar-benar melancarkan jalanan.",
+                "emotion": "impressed"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Both options could work together nicely.",
+                "translation": "Kedua pilihan bisa saling melengkapi dengan baik.",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "I totally agree with that plan.",
+                "translation": "Aku sangat setuju dengan rencana itu.",
+                "emotion": "supportive"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m08-l-quiz",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Traffic today was an absolute nightmare.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Traffic today was an absolute _____.\"",
+                "targetWord": "nightmare",
+                "explanation": "Full audio: \"Traffic today was an absolute nightmare.\". The missing word is \"nightmare\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Did you take the morning bus?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"Did you take the morning _____?\"",
+                "targetWord": "bus",
+                "explanation": "Full audio: \"Did you take the morning bus?\". The missing word is \"bus\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Yes, and it barely moved at all.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Yes, and it barely moved at _____.\"",
+                "targetWord": "all",
+                "explanation": "Full audio: \"Yes, and it barely moved at all.\". The missing word is \"all\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Electric cars could solve this soon.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"Electric cars could solve this _____.\"",
+                "targetWord": "soon",
+                "explanation": "Full audio: \"Electric cars could solve this soon.\". The missing word is \"soon\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Electric cars still cause huge jams.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Electric cars still cause huge _____.\"",
+                "targetWord": "jams",
+                "explanation": "Full audio: \"Electric cars still cause huge jams.\". The missing word is \"jams\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Subsidies would help people buy them.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Subsidies would help people buy them",
+                "words": [
+                  "buy",
+                  "them",
+                  "people",
+                  "Subsidies",
+                  "help",
+                  "would"
+                ],
+                "explanation": "Correct sentence order: \"Subsidies would help people buy them.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "We need more underground train lines.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "We need more underground train lines",
+                "words": [
+                  "train",
+                  "lines",
+                  "underground",
+                  "need",
+                  "more",
+                  "We"
+                ],
+                "explanation": "Correct sentence order: \"We need more underground train lines.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Building metro lines takes too long.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Building metro lines takes too long",
+                "words": [
+                  "lines",
+                  "too",
+                  "takes",
+                  "long",
+                  "metro",
+                  "Building"
+                ],
+                "explanation": "Correct sentence order: \"Building metro lines takes too long.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Buses need their own separate lanes.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Buses need their own separate lanes",
+                "words": [
+                  "separate",
+                  "their",
+                  "need",
+                  "lanes",
+                  "Buses",
+                  "own"
+                ],
+                "explanation": "Correct sentence order: \"Buses need their own separate lanes.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "That might actually clear the roads.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That might actually clear the roads",
+                "words": [
+                  "the",
+                  "might",
+                  "actually",
+                  "clear",
+                  "That",
+                  "roads"
+                ],
+                "explanation": "Correct sentence order: \"That might actually clear the roads.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Traffic today was an absolute nightmare.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Traffic today was an absolute _____.\"",
+                "targetWord": "nightmare",
+                "explanation": "Full audio: \"Traffic today was an absolute nightmare.\". The missing word is \"nightmare\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Did you take the morning bus?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"Did you take the morning _____?\"",
+                "targetWord": "bus",
+                "explanation": "Full audio: \"Did you take the morning bus?\". The missing word is \"bus\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Yes, and it barely moved at all.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Yes, and it barely moved at _____.\"",
+                "targetWord": "all",
+                "explanation": "Full audio: \"Yes, and it barely moved at all.\". The missing word is \"all\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Electric cars could solve this soon.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"Electric cars could solve this _____.\"",
+                "targetWord": "soon",
+                "explanation": "Full audio: \"Electric cars could solve this soon.\". The missing word is \"soon\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Electric cars still cause huge jams.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Electric cars still cause huge _____.\"",
+                "targetWord": "jams",
+                "explanation": "Full audio: \"Electric cars still cause huge jams.\". The missing word is \"jams\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Subsidies would help people buy them.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Subsidies would help people buy them",
+                "words": [
+                  "buy",
+                  "them",
+                  "people",
+                  "Subsidies",
+                  "help",
+                  "would"
+                ],
+                "explanation": "Correct sentence order: \"Subsidies would help people buy them.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "We need more underground train lines.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "We need more underground train lines",
+                "words": [
+                  "train",
+                  "lines",
+                  "underground",
+                  "need",
+                  "more",
+                  "We"
+                ],
+                "explanation": "Correct sentence order: \"We need more underground train lines.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Building metro lines takes too long.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Building metro lines takes too long",
+                "words": [
+                  "lines",
+                  "too",
+                  "takes",
+                  "long",
+                  "metro",
+                  "Building"
+                ],
+                "explanation": "Correct sentence order: \"Building metro lines takes too long.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Buses need their own separate lanes.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Buses need their own separate lanes",
+                "words": [
+                  "separate",
+                  "their",
+                  "need",
+                  "lanes",
+                  "Buses",
+                  "own"
+                ],
+                "explanation": "Correct sentence order: \"Buses need their own separate lanes.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "That might actually clear the roads.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That might actually clear the roads",
+                "words": [
+                  "the",
+                  "might",
+                  "actually",
+                  "clear",
+                  "That",
+                  "roads"
+                ],
+                "explanation": "Correct sentence order: \"That might actually clear the roads.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-5-m08-writing",
+      "moduleId": "B1.5-M08",
+      "skillType": "writing",
+      "title": "Writing Mission: Debating Urban Transport Policies",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-b1-5-m08-w-theory",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Learn how to construct formal arguments about urban mobility using advanced conditional structures. Master the Third Conditional to critique past planning decisions, the Mixed Conditional to link past policies to present conditions, and the Second Conditional to suggest realistic alternatives.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Third Conditional: Critiquing Past Decisions",
+                "formula": "If + Past Perfect (had + V3), Subject + would have + Past Participle (V3)",
+                "example": "If the city council had funded the tram network in 2012, traffic congestion would have decreased much earlier."
+              },
+              {
+                "step": 2,
+                "title": "Mixed Conditional: Past Choice with Present Impact",
+                "formula": "If + Past Perfect (had + V3), Subject + would + Base Verb",
+                "example": "If urban planners had prioritized bicycle lanes ten years ago, our streets would be safer today."
+              },
+              {
+                "step": 3,
+                "title": "Second Conditional: Hypothetical Policy Alternatives",
+                "formula": "If + Past Simple, Subject + would + Base Verb",
+                "example": "If the government subsidized electric buses, commuters would choose public transit more often."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Place a comma after the conditional clause when it begins the sentence. Do not use a comma if the main clause comes first.",
+                "badExample": "If electric cars were cheaper more families would buy them.",
+                "goodExample": "If electric cars were cheaper, more families would buy them.",
+                "why": "The comma signals to the reader that the introductory condition has finished and the main consequence is starting."
+              },
+              {
+                "rule": "Never write 'would of' instead of 'would have'. In formal writing, avoid contractions like 'would've' and 'hadn't'.",
+                "badExample": "The city would of reduced air pollution if it hadn't cancelled the metro project.",
+                "goodExample": "The city would have reduced air pollution if it had not cancelled the metro project.",
+                "why": "Using 'would of' is a grammatical error caused by how spoken English sounds. Full modal forms are expected in formal policy essays."
+              },
+              {
+                "rule": "Capitalize official public transport authorities and government bodies, but keep general transport terms in lowercase.",
+                "badExample": "The ministry of transport should expand the Electric Bus network in Jakarta.",
+                "goodExample": "The Ministry of Transport should expand the electric bus network in Jakarta.",
+                "why": "Specific administrative institutions are proper nouns, whereas generic vehicle types and transit modes are common nouns."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "If urban planners had built dedicated bus lanes in 2015, commuters would not face severe traffic delays today.",
+                "id": "Jika perencana kota telah membangun jalur khusus bus pada tahun 2015, para komuter tidak akan menghadapi kemacetan parah hari ini.",
+                "focus": "Mixed conditional connecting a past policy to a present consequence"
+              },
+              {
+                "en": "If local authorities had purchased electric vehicles instead of diesel buses, downtown air quality would have improved immediately.",
+                "id": "Jika otoritas lokal telah membeli kendaraan listrik alih-alih bus diesel, kualitas udara pusat kota akan membaik dengan segera.",
+                "focus": "Third conditional evaluating a past historical alternative"
+              },
+              {
+                "en": "If public transit were completely free, fewer drivers would use private cars for daily commutes.",
+                "id": "Jika angkutan umum sepenuhnya gratis, lebih sedikit pengemudi yang akan menggunakan mobil pribadi untuk perjalanan harian.",
+                "focus": "Second conditional exploring a hypothetical present scenario"
+              },
+              {
+                "en": "The city would have lower carbon levels today if it had restricted petrol cars five years ago.",
+                "id": "Kota ini akan memiliki tingkat karbon yang lebih rendah hari ini jika kota tersebut telah membatasi mobil bensin lima tahun lalu.",
+                "focus": "Mixed conditional with main clause placed first and no comma"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m08-w-practice",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "if the city council had expanded tram routes in 2018 the city center would be quieter today",
+                "targetSentence": "If the City Council had expanded tram routes in 2018, the city center would be quieter today.",
+                "translation": "Jika Dewan Kota telah memperluas rute trem pada tahun 2018, pusat kota akan lebih tenang hari ini.",
+                "keyRule": "Capitalize official institutions like 'City Council' and add a comma after the introductory conditional clause.",
+                "requiredCapitals": [
+                  "If",
+                  "City",
+                  "Council"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "commuters would of used electric buses if ticket prices hadnt increased last march",
+                "targetSentence": "Commuters would have used electric buses if ticket prices had not increased last March.",
+                "translation": "Para komuter akan telah menggunakan bus listrik jika harga tiket tidak naik pada Maret lalu.",
+                "keyRule": "Replace 'would of' with 'would have', expand 'hadnt' into 'had not', and capitalize the month 'March'.",
+                "requiredCapitals": [
+                  "Commuters",
+                  "March"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "if the department of transportation invested in charging stations drivers would switch to evs",
+                "targetSentence": "If the Department of Transportation invested in charging stations, drivers would switch to EVs.",
+                "translation": "Jika Departemen Perhubungan berinvestasi pada stasiun pengisian daya, para pengemudi akan beralih ke EV.",
+                "keyRule": "Capitalize the name of the government department, add an separating comma, and capitalize the acronym 'EVs'.",
+                "requiredCapitals": [
+                  "If",
+                  "Department",
+                  "Transportation",
+                  "EVs"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Mixed Conditional Policy Analysis",
+                "meaning": "Jika para perencana telah merancang jalur sepeda yang lebih aman, lebih banyak orang akan bersepeda hari ini.",
+                "tokens": [
+                  "If",
+                  "planners",
+                  "had",
+                  "designed",
+                  "safer",
+                  "bike",
+                  "lanes,",
+                  "more",
+                  "people",
+                  "would",
+                  "cycle",
+                  "today."
+                ],
+                "fullSentence": "If planners had designed safer bike lanes, more people would cycle today."
+              },
+              {
+                "id": "b-2",
+                "category": "Third Conditional Critique",
+                "meaning": "Jika walikota telah memesan bus listrik, polusi udara akan telah menurun tahun lalu.",
+                "tokens": [
+                  "If",
+                  "the",
+                  "mayor",
+                  "had",
+                  "ordered",
+                  "electric",
+                  "buses,",
+                  "air",
+                  "pollution",
+                  "would",
+                  "have",
+                  "dropped",
+                  "last",
+                  "year."
+                ],
+                "fullSentence": "If the mayor had ordered electric buses, air pollution would have dropped last year."
+              },
+              {
+                "id": "b-3",
+                "category": "Second Conditional Proposal",
+                "meaning": "Jika pemerintah kota melarang mobil berbahan bakar bensin, warga akan lebih mengandalkan metro.",
+                "tokens": [
+                  "If",
+                  "the",
+                  "city",
+                  "banned",
+                  "petrol",
+                  "cars,",
+                  "citizens",
+                  "would",
+                  "rely",
+                  "on",
+                  "the",
+                  "metro."
+                ],
+                "fullSentence": "If the city banned petrol cars, citizens would rely on the metro."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Criticizing Past Urban Policy",
+                "badge": "Urban Policy Critic",
+                "instruction": "Write three sentences evaluating a past transport decision in your area. Use at least one Third Conditional sentence (had + V3 ... would have + V3) to explain what should have happened differently.",
+                "example": "Ten years ago, local authorities ignored public rail transport. If they had built a light rail system back then, thousands of commuters would have saved travel time every day. Private car ownership created severe pollution instead.",
+                "placeholder": "Begin by mentioning a past transport decision and apply a third conditional...",
+                "minWords": 25,
+                "xpReward": 40
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Connecting Past Actions to Present Problems",
+                "badge": "Mobility Strategist",
+                "instruction": "Write three sentences comparing electric cars and public transit. Include one Mixed Conditional sentence (had + V3 ... would + base verb) to link past investments with the present situation.",
+                "example": "Electric cars produce lower emissions, but public buses transport far more people efficiently. If city leaders had invested in electric bus corridors five years ago, our roads would be much clearer today. We still need stronger public transit.",
+                "placeholder": "Compare electric vehicles to public transit using a mixed conditional...",
+                "minWords": 25,
+                "xpReward": 45
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m08-w-quiz",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this real situation into a Second Conditional sentence starting with 'If':",
+                "promptText": "Electric cars are expensive, so many commuters do not buy them.",
+                "hint": "Use 'If electric cars were...' or 'If electric cars were not...'",
+                "targetAnswers": [
+                  "If electric cars were cheaper, many commuters would buy them.",
+                  "If electric cars were not so expensive, many commuters would buy them.",
+                  "If electric cars were less expensive, many commuters would buy them."
+                ],
+                "explanation": "To imagine a hypothetical change in the present, use the Second Conditional: 'If + Past Simple, would + base verb'."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this past failure into a Third Conditional critique:",
+                "promptText": "The government did not invest in electric buses in 2019, so emissions did not fall.",
+                "hint": "Start with 'If the government had invested...'",
+                "targetAnswers": [
+                  "If the government had invested in electric buses in 2019, emissions would have fallen.",
+                  "If the government had invested in electric buses in 2019, emissions would have dropped."
+                ],
+                "explanation": "A Third Conditional reflects on a past event: 'If + had + V3, would have + V3'."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Mixed Conditional Synthesis",
+                "instruction": "Combine the past action and present result into one Mixed Conditional sentence:",
+                "promptText": "The city built a modern metro network in 2015. As a result, traffic congestion is not terrible today.",
+                "hint": "Start your sentence with 'If the city had not built...'",
+                "targetAnswers": [
+                  "If the city had not built a modern metro network in 2015, traffic congestion would be terrible today.",
+                  "If the city had not built a modern metro network in 2015, traffic congestion would be much worse today."
+                ],
+                "explanation": "Use a Mixed Conditional (Past Perfect in the if-clause, would + base verb in the main clause) to show how a past action affects the present."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Mechanics & Clause Order",
+                "instruction": "Rewrite the sentence by placing the 'if' clause at the end. Remove unnecessary punctuation:",
+                "promptText": "If planners installed rapid charging points downtown, more taxi drivers would adopt electric cars.",
+                "hint": "Place 'More taxi drivers would adopt...' at the beginning without a comma.",
+                "targetAnswers": [
+                  "More taxi drivers would adopt electric cars if planners installed rapid charging points downtown."
+                ],
+                "explanation": "When the main clause comes first and the 'if' clause follows, do not use a comma between them."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the two grammatical mistakes (informal phrasing error and punctuation) in this sentence:",
+                "promptText": "The mayor would of reduced road congestion if he had supported public transit.",
+                "hint": "Change 'would of' to the correct modal form and ensure proper phrasing.",
+                "targetAnswers": [
+                  "The mayor would have reduced road congestion if he had supported public transit."
+                ],
+                "explanation": "'Would of' is incorrect; the correct construction is 'would have'. No comma is needed before 'if'."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Complete the negative Third Conditional sentence based on the prompt:",
+                "promptText": "Because transport fares rose sharply, passengers stopped using the subway.",
+                "hint": "Write: 'Passengers would not have stopped using the subway if transport fares...'",
+                "targetAnswers": [
+                  "Passengers would not have stopped using the subway if transport fares had not risen sharply.",
+                  "Passengers would not have stopped using the subway if transport fares had not increased sharply."
+                ],
+                "explanation": "Use negative past perfect 'had not risen' in the condition and negative modal perfect 'would not have stopped' in the main clause."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using a Mixed Conditional to describe the present consequence of this past mistake:",
+                "promptText": "The regional council canceled the suburban rail project five years ago. Now, thousands of commuters are stuck in traffic.",
+                "hint": "Start with: 'If the regional council had not canceled...'",
+                "targetAnswers": [
+                  "If the regional council had not canceled the suburban rail project five years ago, thousands of commuters would not be stuck in traffic now.",
+                  "If the regional council had not cancelled the suburban rail project five years ago, thousands of commuters would not be stuck in traffic now."
+                ],
+                "explanation": "The past condition takes 'had not canceled/cancelled', and the present outcome takes 'would not be stuck'."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the capitalization and comma errors in this policy sentence:",
+                "promptText": "if the ministry of transport subsidised battery charging stations more drivers would choose evs.",
+                "hint": "Capitalize the government ministry, the start of the sentence, the acronym, and insert a comma.",
+                "targetAnswers": [
+                  "If the Ministry of Transport subsidised battery charging stations, more drivers would choose EVs.",
+                  "If the Ministry of Transport subsidized battery charging stations, more drivers would choose EVs."
+                ],
+                "explanation": "Capitalize 'If', 'Ministry of Transport', and 'EVs'. Add a comma after the conditional clause."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Conjunction Transformation",
+                "instruction": "Rewrite the sentence using 'Unless' instead of 'If':",
+                "promptText": "If the city does not modernize bus routes, air pollution will continue to rise.",
+                "hint": "'Unless' replaces 'If ... not'. Remember that the verb becomes affirmative: 'Unless the city modernizes...'",
+                "targetAnswers": [
+                  "Unless the city modernizes bus routes, air pollution will continue to rise.",
+                  "Air pollution will continue to rise unless the city modernizes bus routes."
+                ],
+                "explanation": "'Unless' means 'if not'. It is followed by an affirmative verb: 'Unless the city modernizes bus routes...'."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Combine the policy facts into a single Second Conditional recommendation sentence starting with 'If':",
+                "promptText": "City councils rarely allocate special lanes for electric buses. Therefore, commuters do not travel fast.",
+                "hint": "Use 'If city councils allocated... commuters would...'",
+                "targetAnswers": [
+                  "If city councils allocated special lanes for electric buses, commuters would travel faster.",
+                  "If city councils allocated special lanes for electric buses, commuters would travel fast.",
+                  "If city councils provided special lanes for electric buses, commuters would travel faster."
+                ],
+                "explanation": "Second Conditional presents a clear policy recommendation: 'If + Past Simple (allocated), Subject + would + base verb (would travel)'."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-5-m08-speaking",
+      "moduleId": "B1.5-M08",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Better Ways to Move Around the City",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-b1-5-m08-s-theory",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practise discussing public transport and electric vehicles. Give reasons for your opinions, compare possible solutions, and use conditional sentences to explain what might happen if a city changes its transport policies.",
+            "audioGuidance": "Speak clearly and divide longer ideas into short phrases. Stress important words such as transport, emissions, and congestion. Use a falling tone when you finish a statement. Use a rising tone when you ask a yes-or-no question, and keep your voice calm when you disagree.",
+            "pillars": [
+              {
+                "name": "Vowel Clarity",
+                "target": "Clear short and long vowels",
+                "explanation": "Make the vowel sounds clear in words such as bus, charge, and train. Do not rush the vowel in longer words such as sustainable."
+              },
+              {
+                "name": "Word Stress",
+                "target": "Stress the correct syllable",
+                "explanation": "Say transPORT and susTAINable with a clear main stress. This helps listeners understand longer transport words."
+              },
+              {
+                "name": "Sentence Stress",
+                "target": "Emphasise key information",
+                "explanation": "Give more stress to important words: If the city subsidised buses, fewer people would drive. Keep smaller grammar words lighter."
+              },
+              {
+                "name": "Intonation and Debate",
+                "target": "Use a clear tone to express your view",
+                "explanation": "Let your voice fall at the end of a firm opinion. Use a rising tone for a simple yes-or-no question, and signal a different view with phrases such as I see your point, but..."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m08-s-practice",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "trans-PORT",
+                "countryAudio": "transport",
+                "countrySyllables": [
+                  {
+                    "text": "trans",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PORT",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "trans-por-TA-tion",
+                "natAudio": "transportation",
+                "natSyllables": [
+                  {
+                    "text": "trans",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "por",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The main stress changes in transportation. Stress PORT in transport, but stress TA in transportation."
+              },
+              {
+                "id": "pair-2",
+                "country": "E-ner-gy",
+                "countryAudio": "energy",
+                "countrySyllables": [
+                  {
+                    "text": "E",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ner",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "gy",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "e-ner-GE-tic",
+                "natAudio": "energetic",
+                "natSyllables": [
+                  {
+                    "text": "e",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ner",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "GE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tic",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The main stress moves from the first syllable in energy to the third syllable in energetic."
+              },
+              {
+                "id": "pair-3",
+                "country": "CON-ges-tion",
+                "countryAudio": "congestion",
+                "countrySyllables": [
+                  {
+                    "text": "CON",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ges",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "con-GEST-ed",
+                "natAudio": "congested",
+                "natSyllables": [
+                  {
+                    "text": "con",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "GEST",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ed",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress moves from CON in congestion to GEST in congested."
+              },
+              {
+                "id": "pair-4",
+                "country": "IN-fra-struc-ture",
+                "countryAudio": "infrastructure",
+                "countrySyllables": [
+                  {
+                    "text": "IN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "fra",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "struc",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ture",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "in-fra-STRUC-tur-al",
+                "natAudio": "infrastructural",
+                "natSyllables": [
+                  {
+                    "text": "in",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "fra",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "STRUC",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tur",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "al",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The main stress changes from IN in infrastructure to STRUC in infrastructural."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "If the city subsidised bus tickets, more people would use public transport.",
+                "phonetic": "/ɪf ðə ˈsɪti ˈsʌbsɪdaɪzd bʌs ˈtɪkɪts, mɔː ˈpiːpəl wʊd juːz ˈpʌblɪk ˈtrænspɔːt/",
+                "focus": "Second conditional sentence stress",
+                "hint": "Make subsidised and would use clear, and pause briefly after tickets."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "Electric vehicles produce fewer direct carbon emissions.",
+                "phonetic": "/ɪˈlektrɪk ˈvɪəkəlz prəˈdjuːs ˈfjuːə daɪˈrekt ˈkɑːbən ɪˈmɪʃənz/",
+                "focus": "Word stress in transport and environment vocabulary",
+                "hint": "Say e-LEC-tric, ve-hi-cles, and e-MIS-sions clearly."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "If more people drove electric cars, air quality might improve.",
+                "phonetic": "/ɪf mɔː ˈpiːpəl drəʊ ɪˈlektrɪk kɑːz, eə ˈkwɒləti maɪt ɪmˈpruːv/",
+                "focus": "Linking words smoothly in a conditional sentence",
+                "hint": "Keep the phrase more people flowing, then pause briefly before air quality might improve."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Would you choose a faster train or a cheaper electric car?",
+                "phonetic": "/wʊd juː tʃuːz ə ˈfɑːstə treɪn ɔː ə ˈtʃiːpə ɪˈlektrɪk kɑː/",
+                "focus": "Rising intonation in a choice question",
+                "hint": "Keep your voice level through the choices and let it rise slightly at the end."
+              }
+            ],
+            "roleplay": {
+              "context": "You are taking part in a town meeting about reducing traffic and carbon emissions. Discuss whether the city should spend more money on public transport or electric vehicle charging points.",
+              "roles": [
+                "City Councillor",
+                "Resident"
+              ],
+              "turns": [
+                {
+                  "speaker": "City Councillor",
+                  "text": "What should our city fund first, cheaper bus tickets or more electric vehicle charging points?",
+                  "translation": "Apa yang sebaiknya didanai kota kita terlebih dahulu, tiket bus yang lebih murah atau lebih banyak tempat pengisian daya kendaraan listrik?"
+                },
+                {
+                  "speaker": "Resident",
+                  "text": "I would subsidise bus tickets first because more people could use them every day.",
+                  "translation": "Saya akan mensubsidi tiket bus terlebih dahulu karena lebih banyak orang bisa menggunakannya setiap hari."
+                },
+                {
+                  "speaker": "City Councillor",
+                  "text": "That could reduce congestion. What would you say to drivers who need a car for work?",
+                  "translation": "Itu bisa mengurangi kemacetan. Apa yang akan Anda katakan kepada pengemudi yang membutuhkan mobil untuk bekerja?"
+                },
+                {
+                  "speaker": "Resident",
+                  "text": "If the city improved its charging infrastructure too, drivers could choose electric cars when they are ready to change.",
+                  "translation": "Jika kota juga memperbaiki infrastruktur pengisian dayanya, pengemudi bisa memilih mobil listrik saat mereka siap untuk berganti."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-5-m08-s-quiz",
+          "moduleId": "B1.5-M08",
+          "subModuleId": "sub-b1-5-m08-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds. Tell a short story about travelling around a city.",
+                "audioPrompt": "Describe a time when you used public transport or travelled by car in a busy city.",
+                "storyPoints": [
+                  "Where you were going and which form of transport you chose",
+                  "What happened during the journey, such as a delay or traffic",
+                  "What you would choose next time and why"
+                ],
+                "targetSentence": "I took the bus to the city centre, but it was delayed by traffic. If I went again, I would leave earlier.",
+                "phonetic": "/aɪ tʊk ðə bʌs tə ðə ˈsɪti ˈsentə, bət ɪt wəz dɪˈleɪd baɪ ˈtræfɪk/",
+                "expectedKeywords": [
+                  "bus",
+                  "traffic",
+                  "journey",
+                  "would"
+                ],
+                "explanation": "Tell events in order and use a conditional sentence to explain what you might do differently."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Opinion Storytelling",
+                "instruction": "Speak for at least 20 seconds. Explain how your town could make daily travel more sustainable.",
+                "audioPrompt": "Tell a short story about a change that would make it easier for people in your town to travel without a petrol car.",
+                "storyPoints": [
+                  "Describe a travel problem people in your town face",
+                  "Suggest one change to public transport, walking, or cycling",
+                  "Explain what might happen if the city made that change"
+                ],
+                "targetSentence": "If the city added more frequent buses, fewer people might drive to work and congestion could fall.",
+                "phonetic": "/ɪf ðə ˈsɪti ˈædɪd mɔː ˈfriːkwənt ˈbʌsɪz, ˈfjuːə ˈpiːpəl maɪt draɪv tə wɜːk/",
+                "expectedKeywords": [
+                  "city",
+                  "buses",
+                  "drive",
+                  "congestion",
+                  "if"
+                ],
+                "explanation": "Describe the problem, suggest a practical change, and use a conditional sentence to explain its possible result."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Town Meeting Roleplay",
+                "instruction": "Take part in a live roleplay call. Give your view and support it with a reason.",
+                "audioPrompt": "A town councillor asks whether the city should subsidise public transport tickets.",
+                "scenarioContext": "At a town meeting, residents are discussing whether cheaper bus and train tickets would help reduce congestion.",
+                "characterRole": "You are a resident who supports subsidies. Explain who might benefit and what could happen if tickets became cheaper.",
+                "targetSentence": "If bus tickets were cheaper, more people might leave their cars at home.",
+                "phonetic": "/ɪf bʌs ˈtɪkɪts wə ˈtʃiːpə, mɔː ˈpiːpəl maɪt liːv ðeə kɑːz ət həʊm/",
+                "expectedKeywords": [
+                  "subsidise",
+                  "cheaper",
+                  "bus",
+                  "cars",
+                  "if"
+                ],
+                "explanation": "Answer the councillor directly and use the second conditional to explain a possible result."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Transport Debate Roleplay",
+                "instruction": "Take part in a live roleplay call. Compare two transport options and explain your preference.",
+                "audioPrompt": "Your debate partner says that electric vehicles are the best solution to city traffic.",
+                "scenarioContext": "You are debating whether a city should focus more on electric vehicles or reliable public transport.",
+                "characterRole": "You support improving public transport first. Respond politely, give a reason, and mention a possible benefit of electric vehicles.",
+                "targetSentence": "Electric vehicles could reduce direct emissions, but better public transport might help more people travel.",
+                "phonetic": "/ɪˈlektrɪk ˈvɪəkəlz kʊd rɪˈdjuːs dəˈrekt ɪˈmɪʃənz, bət ˈbetə ˈpʌblɪk ˈtrænspɔːt maɪt help mɔː ˈpiːpəl ˈtrævəl/",
+                "expectedKeywords": [
+                  "electric vehicles",
+                  "emissions",
+                  "public transport",
+                  "people"
+                ],
+                "explanation": "Acknowledge the other view, then state your preference and support it with a clear reason."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "City Planning Roleplay",
+                "instruction": "Take part in a live roleplay call. Respond to a planning question using a conditional sentence.",
+                "audioPrompt": "A city planner asks how the council should use its transport budget.",
+                "scenarioContext": "A city planning meeting is choosing between adding charging points and improving bus and train services.",
+                "characterRole": "You are a transport adviser. Recommend one investment and explain what might happen if the city made it.",
+                "targetSentence": "If we improved the train service, more commuters might choose it instead of driving.",
+                "phonetic": "/ɪf wi ɪmˈpruːvd ðə treɪn ˈsɜːvɪs, mɔː kəˈmjuːtəz maɪt tʃuːz ɪt ɪnˈsted əv ˈdraɪvɪŋ/",
+                "expectedKeywords": [
+                  "budget",
+                  "train",
+                  "commuters",
+                  "if",
+                  "driving"
+                ],
+                "explanation": "Make a recommendation and use a conditional sentence to describe its likely effect."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Community Discussion Roleplay",
+                "instruction": "Take part in a live roleplay call. Respond to a concern and suggest a balanced solution.",
+                "audioPrompt": "A local shop owner says that a congestion charge could make it harder for customers to visit.",
+                "scenarioContext": "A community meeting is discussing a proposed congestion charge for the city centre.",
+                "characterRole": "You are a resident who wants cleaner air but understands the shop owner's concern. Suggest a fair way to use the money.",
+                "targetSentence": "If the city used the money to improve buses, customers could still reach the shops more easily.",
+                "phonetic": "/ɪf ðə ˈsɪti juːzd ðə ˈmʌni tə ɪmˈpruːv ˈbʌsɪz, ˈkʌstəməz kʊd stɪl riːtʃ ðə ʃɒps mɔː ˈiːzɪli/",
+                "expectedKeywords": [
+                  "congestion charge",
+                  "money",
+                  "buses",
+                  "shops",
+                  "if"
+                ],
+                "explanation": "Show that you understand the concern, then offer a practical solution and explain its possible benefit."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "focus": "vocab",
+                "instruction": "Use the words urban mobility, carbon emissions, and infrastructure in a short spoken answer.",
+                "audioPrompt": "What could your city do to improve urban mobility and lower carbon emissions?",
+                "targetSentence": "Better public transport infrastructure could improve urban mobility and lower carbon emissions.",
+                "phonetic": "/ˈbetə ˈpʌblɪk ˈtrænspɔːt ˈɪnfrəstrʌktʃə kʊd ɪmˈpruːv ˈɜːbən məʊˈbɪləti/",
+                "expectedKeywords": [
+                  "urban mobility",
+                  "carbon emissions",
+                  "infrastructure"
+                ],
+                "explanation": "Use the target vocabulary accurately and connect the ideas in a complete sentence."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Conditional Grammar Drill",
+                "focus": "grammar",
+                "instruction": "Complete the idea aloud using the second conditional: If the city improved its bus service, ...",
+                "audioPrompt": "Imagine the city offered more frequent buses. Say what might happen and give a reason.",
+                "targetSentence": "If the city improved its bus service, fewer people would drive because travelling by bus would be more convenient.",
+                "phonetic": "/ɪf ðə ˈsɪti ɪmˈpruːvd ɪts bʌs ˈsɜːvɪs, ˈfjuːə ˈpiːpəl wʊd draɪv/",
+                "expectedKeywords": [
+                  "if",
+                  "improved",
+                  "would",
+                  "fewer people",
+                  "because"
+                ],
+                "explanation": "Use the past simple after if and would plus the base verb for the imagined result."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Syllable Stress Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Say each target word clearly, then use one of them in a sentence.",
+                "audioPrompt": "Practise the main stress in sustainable, infrastructure, and congestion.",
+                "targetSentence": "A sustainable transport plan could reduce congestion.",
+                "phonetic": "/ə səˈsteɪnəbəl ˈtrænspɔːt plæn kʊd rɪˈdjuːs kənˈdʒestʃən/",
+                "expectedKeywords": [
+                  "sustainable",
+                  "infrastructure",
+                  "congestion"
+                ],
+                "explanation": "Put the main stress in the correct place: sus-TAIN-able, IN-fra-struc-ture, and con-GES-tion."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Say the statement with a falling tone, then ask the question with a rising tone.",
+                "audioPrompt": "Practise the difference between a clear opinion and a yes-or-no question.",
+                "targetSentence": "Public transport should be cheaper. Should the city subsidise bus tickets?",
+                "phonetic": "/ˈpʌblɪk ˈtrænspɔːt ʃʊd bi ˈtʃiːpə. ʃʊd ðə ˈsɪti ˈsʌbsɪdaɪz bʌs ˈtɪkɪts/",
+                "expectedKeywords": [
+                  "public transport",
+                  "cheaper",
+                  "subsidise",
+                  "bus tickets"
+                ],
+                "explanation": "Let your voice fall at the end of the statement. Let it rise slightly at the end of the yes-or-no question."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

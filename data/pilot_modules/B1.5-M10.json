@@ -1,0 +1,1755 @@
+{
+  "module": {
+    "id": "B1.5-M10",
+    "levelId": "B1.5",
+    "title": "Unit 10: Digital Privacy, Cybersecurity & Personal Data",
+    "cefr": "B1",
+    "group": "Cyber Society",
+    "objective": "Mampu membahas isu keamanan data dan hak privasi digital dengan tata bahasa passive reporting (is said to be, is believed that).",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 62
+  },
+  "subModules": [
+    {
+      "id": "sub-b1-5-m10-reading",
+      "moduleId": "B1.5-M10",
+      "skillType": "reading",
+      "title": "Reading Mission: Staying Safe in the Digital World",
+      "theme": "Digital Privacy, Cybersecurity & Personal Data",
+      "grammarFocus": "Passive Reporting Verbs (is said that, is believed to be, is reported to have)",
+      "vocabularyFocus": "Cybersecurity, Online Safety & Personal Data",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-b1-5-m10-r-theory",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this mission, you will read an online report about modern cybersecurity risks and data protection. You will learn how to identify passive reporting structures used by journalists when facts are still being investigated.",
+            "linguisticTarget": {
+              "grammar": "Passive reporting verbs with impersonal 'it' and personal subject patterns (is said to, is reported to have)",
+              "vocabulary": "Key terms related to cybersecurity, online fraud, and personal data safety",
+              "readingStrategy": "Scanning for reported claims versus confirmed facts, and identifying evidence in text"
+            },
+            "learningObjectives": [
+              "Understand the main idea and supporting details of a news article about cybersecurity threats.",
+              "Distinguish between confirmed facts and reported claims using passive reporting structures.",
+              "Infer the meaning of security vocabulary from sentence context."
+            ],
+            "contextWarmup": {
+              "prompt": "You receive an email from your bank asking you to click an urgent link and verify your password. What is the safest response?",
+              "options": [
+                "Click the link immediately to prevent your account from being locked.",
+                "Delete the message and contact your bank directly through their official website or phone number.",
+                "Reply to the email with your username to confirm if it is authentic."
+              ],
+              "correctIndex": 1,
+              "explanation": "Banks never ask for sensitive passwords by email. Clicking unknown links can expose your device to phishing scams."
+            },
+            "rules": [
+              "Rule 1: Use 'It + is/was + said/reported/believed + that + clause' to report general claims without naming the specific source (e.g., 'It is reported that thousands of accounts were affected.').",
+              "Rule 2: Use 'Subject + is/are + said/believed/thought + to + base verb' to describe an ongoing belief about someone or something (e.g., 'The company is said to handle user data carefully.').",
+              "Rule 3: Use 'Subject + is/are + reported/believed + to have + past participle' when the reported action happened in the past (e.g., 'The attacker is believed to have accessed private files.')."
+            ],
+            "commonTrap": {
+              "trapTitle": "Confusing Personal and Impersonal Reporting Patterns",
+              "explanation": "Learners often mix up the two patterns by placing a specific subject before 'is said that'. When starting with a person or company, use 'to' with an infinitive, not 'that'.",
+              "wrong": "The hacker is said that he stole the private files.",
+              "correct": "The hacker is said to have stolen the private files, or: It is said that the hacker stole the private files."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Passive Statements",
+            "contractionsSubtitle": "Notice how helping verbs contract in informal speech and discussions:",
+            "contractions": [
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It is believed that the server is secure.",
+                "exampleContracted": "It's believed that the server is secure."
+              },
+              {
+                "subject": "There",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "There's",
+                "exampleFull": "There is said to be a problem with the network.",
+                "exampleContracted": "There's said to be a problem with the network."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Passive Reporting",
+              "description": "Examine how subjects and passive verb forms combine to express unconfirmed reports:",
+              "subjects": [
+                {
+                  "label": "The service",
+                  "pronoun": "It",
+                  "correctToBe": "is",
+                  "role": "Third Person Singular"
+                },
+                {
+                  "label": "The passwords",
+                  "pronoun": "They",
+                  "correctToBe": "are",
+                  "role": "Third Person Plural"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "believe",
+                  "thirdPerson": "believes",
+                  "continuous": "believing"
+                },
+                {
+                  "base": "report",
+                  "thirdPerson": "reports",
+                  "continuous": "reporting"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "to be safe from external attacks",
+                  "type": "Present State"
+                },
+                {
+                  "text": "to have leaked during the security incident",
+                  "type": "Past Action"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-5-m10-r-vocab",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "data breach",
+                "ipa": "/ˈdeɪ.tə briːtʃ/",
+                "meaning": "kebocoran data",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The recent data breach exposed personal phone numbers to online criminals.",
+                "collocation": "suffer a data breach / prevent a data breach"
+              },
+              {
+                "word": "cybersecurity",
+                "ipa": "/ˌsaɪ.bə.sɪˈkjʊə.rə.ti/",
+                "meaning": "keamanan siber",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Every technology business needs a team dedicated to cybersecurity.",
+                "collocation": "cybersecurity measures / cybersecurity expert"
+              },
+              {
+                "word": "digital privacy",
+                "ipa": "/ˈdɪdʒ.ɪ.təl ˈprɪv.ə.si/",
+                "meaning": "privasi digital",
+                "partOfSpeech": "noun",
+                "exampleSentence": "People care more about digital privacy now because apps track their daily routines.",
+                "collocation": "protect digital privacy / respect digital privacy"
+              },
+              {
+                "word": "phishing",
+                "ipa": "/ˈfɪʃ.ɪŋ/",
+                "meaning": "penipuan daring / phishing",
+                "partOfSpeech": "noun",
+                "exampleSentence": "She received a phishing message asking for her credit card security code.",
+                "collocation": "phishing scam / phishing email"
+              },
+              {
+                "word": "encryption",
+                "ipa": "/ɪnˈkrɪp.ʃən/",
+                "meaning": "enkripsi",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Messaging apps use encryption so that nobody else can view private conversations.",
+                "collocation": "strong encryption / end-to-end encryption"
+              },
+              {
+                "word": "personal data",
+                "ipa": "/ˈpɜː.sən.əl ˈdeɪ.tə/",
+                "meaning": "data pribadi",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Companies must ask for clear permission before collecting personal data.",
+                "collocation": "collect personal data / store personal data"
+              },
+              {
+                "word": "identity theft",
+                "ipa": "/aɪˈden.tɪ.ti θeft/",
+                "meaning": "pencurian identitas",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Criminals committed identity theft by applying for loans using someone else's name.",
+                "collocation": "victim of identity theft / risk of identity theft"
+              },
+              {
+                "word": "malware",
+                "ipa": "/ˈmæl.weər/",
+                "meaning": "perangkat perusak / malware",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Downloading files from untrusted websites can infect your laptop with malware.",
+                "collocation": "malware attack / detect malware"
+              },
+              {
+                "word": "password manager",
+                "ipa": "/ˈpɑːs.wɜːd ˌmæn.ɪ.dʒər/",
+                "meaning": "pengelola kata sandi",
+                "partOfSpeech": "noun",
+                "exampleSentence": "A password manager creates unique passwords for every site you visit.",
+                "collocation": "install a password manager / secure password manager"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m10-r-guided",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Behind the Screen: How Our Data Travels",
+            "audioUrl": "/audio/modules/b1-5-m10/reading-passage.mp3",
+            "durationSeconds": 68,
+            "paragraphs": [
+              "Every minute, millions of internet users send messages, buy clothes, and stream videos. However, this convenient lifestyle comes with risks. It is reported that over four billion records of personal data were exposed globally last year. Much of this information is believed to be traded on illegal online forums. As a result, questions about digital privacy have become a major concern for regular consumers.",
+              "Cybersecurity experts explain that human error is usually the weakest link. For example, phishing scams often trick people into revealing secret codes. Criminals send convincing emails that look like genuine warnings from popular banks. In one famous case, a financial company is said to have lost millions of dollars because an employee opened a dangerous attachment containing hidden malware.",
+              "Fortunately, users can take simple steps to defend themselves. Modern messaging platforms are claimed to use strong encryption, which protects messages during transfer. Security advisors also suggest using a password manager instead of writing passwords in notebooks. By staying alert and questioning suspicious links, we can stop identity theft before it happens."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "Every minute, millions of internet users send messages, buy clothes, and stream videos.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 4.6,
+                "end": 7.8,
+                "text": "However, this convenient lifestyle comes with risks.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 7.9,
+                "end": 14.1,
+                "text": "It is reported that over four billion records of personal data were exposed globally last year.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 14.2,
+                "end": 19.5,
+                "text": "Much of this information is believed to be traded on illegal online forums.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 19.6,
+                "end": 25.8,
+                "text": "As a result, questions about digital privacy have become a major concern for regular consumers.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 25.9,
+                "end": 31,
+                "text": "Cybersecurity experts explain that human error is usually the weakest link.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 31.1,
+                "end": 35.8,
+                "text": "For example, phishing scams often trick people into revealing secret codes.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 35.9,
+                "end": 41.2,
+                "text": "Criminals send convincing emails that look like genuine warnings from popular banks.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 41.3,
+                "end": 48.9,
+                "text": "In one famous case, a financial company is said to have lost millions of dollars because an employee opened a dangerous attachment containing hidden malware.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 49,
+                "end": 53.6,
+                "text": "Fortunately, users can take simple steps to defend themselves.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 53.7,
+                "end": 59.8,
+                "text": "Modern messaging platforms are claimed to use strong encryption, which protects messages during transfer.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 59.9,
+                "end": 64.7,
+                "text": "Security advisors also suggest using a password manager instead of writing passwords in notebooks.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 64.8,
+                "end": 68,
+                "text": "By staying alert and questioning suspicious links, we can stop identity theft before it happens.",
+                "paragraphIndex": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m10-r-practice",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-1",
+                "instruction": "Match each cybersecurity term on the left with its correct definition on the right.",
+                "pairs": [
+                  {
+                    "left": "Data breach",
+                    "right": "An incident where confidential records are viewed or stolen illegally"
+                  },
+                  {
+                    "left": "Phishing",
+                    "right": "Deceptive messages designed to trick people into giving private details"
+                  },
+                  {
+                    "left": "Encryption",
+                    "right": "A method of converting information into secret code to prevent spying"
+                  },
+                  {
+                    "left": "Password manager",
+                    "right": "A software tool that securely stores and creates complex login codes"
+                  }
+                ]
+              },
+              {
+                "id": "drill-2",
+                "instruction": "Match each passive reporting sentence beginning with its logical conclusion.",
+                "pairs": [
+                  {
+                    "left": "It is reported that",
+                    "right": "millions of user accounts were exposed online."
+                  },
+                  {
+                    "left": "The criminal is believed",
+                    "right": "to have operated from another country."
+                  },
+                  {
+                    "left": "Messaging apps are claimed",
+                    "right": "to offer complete protection through encryption."
+                  },
+                  {
+                    "left": "Personal data is said",
+                    "right": "to be valuable to advertisers and fraudsters alike."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m10-r-quiz",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What is the main topic of the reading passage?",
+                "options": [
+                  "How to build high-speed internet cables across the ocean",
+                  "The risks to online privacy and how people can protect personal data",
+                  "Why financial banks do not use digital technology"
+                ],
+                "answer": "The risks to online privacy and how people can protect personal data",
+                "explanation": "The text discusses threats like phishing and data leaks, along with practical tips to stay secure online."
+              },
+              {
+                "id": "q-r-2",
+                "question": "According to the first paragraph, what happened last year?",
+                "options": [
+                  "Over four billion records of personal data were exposed worldwide.",
+                  "Banks stopped sending all electronic messages to consumers.",
+                  "All illegal online forums were shut down permanently."
+                ],
+                "answer": "Over four billion records of personal data were exposed worldwide.",
+                "explanation": "Paragraph 1 states: 'It is reported that over four billion records of personal data were exposed globally last year.'"
+              },
+              {
+                "id": "q-r-3",
+                "question": "What does the phrase 'the weakest link' refer to in paragraph 2?",
+                "options": [
+                  "Old computers with slow internet connections",
+                  "Human error that leads people to make security mistakes",
+                  "Poorly built cables that break easily"
+                ],
+                "answer": "Human error that leads people to make security mistakes",
+                "explanation": "Paragraph 2 directly explains that 'human error is usually the weakest link' because people can be tricked by phishing."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Why did the financial company in the example lose millions of dollars?",
+                "options": [
+                  "A customer forgot their account number.",
+                  "An employee opened an email attachment that carried malware.",
+                  "The company bought broken computer hardware."
+                ],
+                "answer": "An employee opened an email attachment that carried malware.",
+                "explanation": "Paragraph 2 notes that the company lost money because an employee opened a dangerous attachment containing hidden malware."
+              },
+              {
+                "id": "q-r-5",
+                "question": "Which sentence from the text uses the pattern 'Subject + is said + to have + past participle'?",
+                "options": [
+                  "It is reported that over four billion records were exposed.",
+                  "A financial company is said to have lost millions of dollars.",
+                  "Modern messaging platforms are claimed to use strong encryption."
+                ],
+                "answer": "A financial company is said to have lost millions of dollars.",
+                "explanation": "'Is said to have lost' matches the structure for reporting a completed past event."
+              },
+              {
+                "id": "q-r-6",
+                "question": "How does encryption protect messages according to paragraph 3?",
+                "options": [
+                  "It blocks internet connections completely.",
+                  "It changes information into code while messages travel between devices.",
+                  "It deletes emails as soon as they are opened."
+                ],
+                "answer": "It changes information into code while messages travel between devices.",
+                "explanation": "Paragraph 3 explains that encryption protects messages during transfer, keeping them unreadable to unauthorized parties."
+              },
+              {
+                "id": "q-r-7",
+                "question": "What advice do security experts give about managing passwords?",
+                "options": [
+                  "Use a password manager rather than writing them down in notebooks.",
+                  "Use the same simple password for all online accounts.",
+                  "Share passwords with coworkers so they are not forgotten."
+                ],
+                "answer": "Use a password manager rather than writing them down in notebooks.",
+                "explanation": "Paragraph 3 states that security advisors recommend using a password manager instead of writing passwords in notebooks."
+              },
+              {
+                "id": "q-r-8",
+                "question": "In the sentence 'Much of this information is believed to be traded on illegal online forums', what does 'is believed to be traded' show?",
+                "options": [
+                  "It is a proven fact confirmed by every court.",
+                  "It is a widely held belief or reported claim, not necessarily direct proof.",
+                  "Nobody actually thinks this is happening."
+                ],
+                "answer": "It is a widely held belief or reported claim, not necessarily direct proof.",
+                "explanation": "Passive reporting verbs like 'is believed to be' indicate that experts or investigators suspect this, without stating who first discovered it."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What is the primary goal of phishing emails described in the passage?",
+                "options": [
+                  "To invite people to join social gatherings",
+                  "To trick recipients into sharing sensitive information like passwords",
+                  "To improve the speed of home broadband connections"
+                ],
+                "answer": "To trick recipients into sharing sensitive information like passwords",
+                "explanation": "Paragraph 2 mentions that phishing scams trick people into revealing secret codes by copying genuine warnings from banks."
+              },
+              {
+                "id": "q-r-10",
+                "question": "What is the general conclusion of the passage?",
+                "options": [
+                  "People should stop using the internet completely to avoid all danger.",
+                  "Cybersecurity is only the responsibility of big banks and tech companies.",
+                  "Users can avoid common threats like identity theft by remaining cautious and using safety tools."
+                ],
+                "answer": "Users can avoid common threats like identity theft by remaining cautious and using safety tools.",
+                "explanation": "The final paragraph encourages readers to stay alert, check suspicious links, and use tools to protect themselves."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-5-m10-listening",
+      "moduleId": "B1.5-M10",
+      "skillType": "listening",
+      "title": "Listening Mission: Campus Data Breach Alert",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-b1-5-m10-l-theory",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Learn how English speakers report news and rumors using passive reporting verbs such as said, reported, and believed. Notice how speakers link sounds in quick, casual warnings.",
+            "learningObjectives": [
+              "Catch the main topic of a spoken discussion about cybersecurity.",
+              "Identify specific details including passive reporting structures and safety tips.",
+              "Notice how consonants link to vowels and how sounds blend in connected speech."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "is said to be",
+                "meaning": "dikatakan bahwa / konon kabarnya",
+                "note": "Used to share reported news or claims without mentioning the exact source."
+              },
+              {
+                "phrase": "is believed that",
+                "meaning": "diyakini bahwa / dipercaya bahwa",
+                "note": "Introduces general beliefs or strong suspicions about an event."
+              },
+              {
+                "phrase": "data breach",
+                "meaning": "kebocoran data",
+                "note": "Refers to a security failure where private records get stolen."
+              },
+              {
+                "phrase": "two-factor login",
+                "meaning": "autentikasi dua faktor",
+                "note": "A security setup that requires two confirmation steps to log in."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "did you see",
+                "fast": "did-ya see",
+                "slowIpa": "/dɪd juː siː/",
+                "fastIpa": "/dɪdʒə siː/",
+                "note": "The ending /d/ sound links with the /j/ sound to produce /dʒ/."
+              },
+              {
+                "id": 2,
+                "slow": "is said to be",
+                "fast": "is-said-t'-be",
+                "slowIpa": "/ɪz sɛd tuː biː/",
+                "fastIpa": "/ɪz sɛt tə bi/",
+                "note": "The word 'to' reduces to a short schwa vowel /tə/."
+              },
+              {
+                "id": 3,
+                "slow": "turn on",
+                "fast": "tur-non",
+                "slowIpa": "/tɜːrn ɒn/",
+                "fastIpa": "/tɜːr.nɒn/",
+                "note": "The final consonant /n/ connects smoothly to the vowel /ɒ/."
+              },
+              {
+                "id": 4,
+                "slow": "do it",
+                "fast": "do-wit",
+                "slowIpa": "/duː ɪt/",
+                "fastIpa": "/ˈduːwɪt/",
+                "note": "A subtle /w/ glide joins the two vowels together."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m10-l-dialogue",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Breaking App News",
+          "orderIndex": 2,
+          "content": {
+            "context": "Alex and Morgan are sitting together at a campus café, checking their phones over coffee.",
+            "audioPrompt": "Listen to the conversation between two friends talking about a tech alert.",
+            "lines": [
+              {
+                "speaker": "Alex",
+                "text": "Did you see the big news?",
+                "translation": "Kamu sudah lihat berita besar itu?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "No, what happened today?",
+                "translation": "Belum, apa yang terjadi hari ini?",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Our favorite app was hacked.",
+                "translation": "Aplikasi favorit kita diretas.",
+                "emotion": "serious"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "Wait, are you serious?",
+                "translation": "Tunggu, kamu serius?",
+                "emotion": "surprised"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Millions of accounts were leaked.",
+                "translation": "Jutaan akun telah dibocorkan.",
+                "emotion": "worried"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "That sounds really bad.",
+                "translation": "Itu kedengarannya buruk sekali.",
+                "emotion": "concerned"
+              },
+              {
+                "speaker": "Alex",
+                "text": "It is said to be huge.",
+                "translation": "Konon skalanya sangat besar.",
+                "emotion": "serious"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "The company is blamed for silence.",
+                "translation": "Perusahaan itu disalahkan karena bungkam.",
+                "emotion": "annoyed"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Hackers are believed to know passwords.",
+                "translation": "Para peretas diyakini mengetahui kata sandi.",
+                "emotion": "worried"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "I should change my password now.",
+                "translation": "Aku harus mengganti kata sandiku sekarang.",
+                "emotion": "determined"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Turn on two-factor login too.",
+                "translation": "Nyalakan juga autentikasi dua faktor.",
+                "emotion": "helpful"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "Good idea, let us do it.",
+                "translation": "Ide bagus, ayo kita lakukan.",
+                "emotion": "friendly"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m10-l-quiz",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Did you see the big news?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Did you see the big _____?\"",
+                "targetWord": "news",
+                "explanation": "Full audio: \"Did you see the big news?\". The missing word is \"news\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "No, what happened today?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"No, what happened _____?\"",
+                "targetWord": "today",
+                "explanation": "Full audio: \"No, what happened today?\". The missing word is \"today\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Our favorite app was hacked.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Our favorite app was _____.\"",
+                "targetWord": "hacked",
+                "explanation": "Full audio: \"Our favorite app was hacked.\". The missing word is \"hacked\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Wait, are you serious?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"Wait, are you _____?\"",
+                "targetWord": "serious",
+                "explanation": "Full audio: \"Wait, are you serious?\". The missing word is \"serious\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Millions of accounts were leaked.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Millions of accounts were _____.\"",
+                "targetWord": "leaked",
+                "explanation": "Full audio: \"Millions of accounts were leaked.\". The missing word is \"leaked\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "That sounds really bad.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds really bad",
+                "words": [
+                  "bad",
+                  "sounds",
+                  "really",
+                  "That"
+                ],
+                "explanation": "Correct sentence order: \"That sounds really bad.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "It is said to be huge.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It is said to be huge",
+                "words": [
+                  "huge",
+                  "is",
+                  "to",
+                  "said",
+                  "be",
+                  "It"
+                ],
+                "explanation": "Correct sentence order: \"It is said to be huge.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "The company is blamed for silence.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "The company is blamed for silence",
+                "words": [
+                  "blamed",
+                  "for",
+                  "is",
+                  "company",
+                  "The",
+                  "silence"
+                ],
+                "explanation": "Correct sentence order: \"The company is blamed for silence.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Hackers are believed to know passwords.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Hackers are believed to know passwords",
+                "words": [
+                  "know",
+                  "believed",
+                  "Hackers",
+                  "are",
+                  "to",
+                  "passwords"
+                ],
+                "explanation": "Correct sentence order: \"Hackers are believed to know passwords.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "I should change my password now.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I should change my password now",
+                "words": [
+                  "I",
+                  "my",
+                  "password",
+                  "should",
+                  "now",
+                  "change"
+                ],
+                "explanation": "Correct sentence order: \"I should change my password now.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Did you see the big news?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Did you see the big _____?\"",
+                "targetWord": "news",
+                "explanation": "Full audio: \"Did you see the big news?\". The missing word is \"news\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "No, what happened today?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"No, what happened _____?\"",
+                "targetWord": "today",
+                "explanation": "Full audio: \"No, what happened today?\". The missing word is \"today\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Our favorite app was hacked.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Our favorite app was _____.\"",
+                "targetWord": "hacked",
+                "explanation": "Full audio: \"Our favorite app was hacked.\". The missing word is \"hacked\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Wait, are you serious?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"Wait, are you _____?\"",
+                "targetWord": "serious",
+                "explanation": "Full audio: \"Wait, are you serious?\". The missing word is \"serious\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "Millions of accounts were leaked.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Millions of accounts were _____.\"",
+                "targetWord": "leaked",
+                "explanation": "Full audio: \"Millions of accounts were leaked.\". The missing word is \"leaked\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "That sounds really bad.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "That sounds really bad",
+                "words": [
+                  "bad",
+                  "sounds",
+                  "really",
+                  "That"
+                ],
+                "explanation": "Correct sentence order: \"That sounds really bad.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "It is said to be huge.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It is said to be huge",
+                "words": [
+                  "huge",
+                  "is",
+                  "to",
+                  "said",
+                  "be",
+                  "It"
+                ],
+                "explanation": "Correct sentence order: \"It is said to be huge.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "The company is blamed for silence.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "The company is blamed for silence",
+                "words": [
+                  "blamed",
+                  "for",
+                  "is",
+                  "company",
+                  "The",
+                  "silence"
+                ],
+                "explanation": "Correct sentence order: \"The company is blamed for silence.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Hackers are believed to know passwords.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Hackers are believed to know passwords",
+                "words": [
+                  "know",
+                  "believed",
+                  "Hackers",
+                  "are",
+                  "to",
+                  "passwords"
+                ],
+                "explanation": "Correct sentence order: \"Hackers are believed to know passwords.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "I should change my password now.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I should change my password now",
+                "words": [
+                  "I",
+                  "my",
+                  "password",
+                  "should",
+                  "now",
+                  "change"
+                ],
+                "explanation": "Correct sentence order: \"I should change my password now.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-5-m10-writing",
+      "moduleId": "B1.5-M10",
+      "skillType": "writing",
+      "title": "Writing Mission: Reporting on Digital Privacy and Cybersecurity",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-b1-5-m10-w-theory",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Learn how to write formal reports and articles about cybersecurity and personal data using passive reporting structures.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Impersonal Passive Reporting with 'It'",
+                "formula": "It + is/was + reported/said/believed/thought/claimed + that + Subject + Verb",
+                "example": "It is reported that millions of user accounts were compromised in the data breach."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Subject-Focused Passive Reporting with Present Infinitive",
+                "formula": "Subject + is/are + said/believed/thought/reported/claimed + to + base verb / to be + adjective",
+                "example": "Personal data collected by social media platforms is believed to be sold to advertisers."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Passive Reporting with Perfect Infinitive for Past Actions",
+                "formula": "Subject + is/are + said/believed/thought/reported/claimed + to have + past participle",
+                "example": "The cybercriminal is said to have stolen thousands of passwords before the system was secured."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Do not put a comma before the connecting word 'that' in reporting clauses.",
+                "badExample": "It is believed, that online tracking violates our privacy.",
+                "goodExample": "It is believed that online tracking violates our privacy.",
+                "why": "The clause beginning with 'that' is an essential complement to the passive reporting verb, so a comma is incorrect."
+              },
+              {
+                "rule": "Capitalize specific company names, technological acronyms, and privacy regulations.",
+                "badExample": "many tech firms in europe follow gdpr rules on public wi-fi.",
+                "goodExample": "Many tech firms in Europe follow GDPR rules on public Wi-Fi.",
+                "why": "Acronyms like GDPR and standard abbreviations like Wi-Fi are proper nouns and technical terms that require capitalization."
+              },
+              {
+                "rule": "Ensure the reporting verb agrees with the subject when using the personal reporting pattern.",
+                "badExample": "Cybersecurity experts is believed to test the system weekly.",
+                "goodExample": "Cybersecurity experts are believed to test the system weekly.",
+                "why": "The passive auxiliary verb must match the number of the main grammatical subject."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "It is believed that public Wi-Fi networks are unsafe for banking.",
+                "id": "Dipercaya bahwa jaringan Wi-Fi publik tidak aman untuk perbankan.",
+                "focus": "Impersonal passive with 'It is believed that'"
+              },
+              {
+                "en": "Many popular mobile applications are thought to collect private location history.",
+                "id": "Banyak aplikasi seluler populer diduga mengumpulkan riwayat lokasi pribadi.",
+                "focus": "Plural subject with 'are thought to + base verb'"
+              },
+              {
+                "en": "The tech company is claimed to have leaked customer records last year.",
+                "id": "Perusahaan teknologi tersebut diklaim telah membocorkan data pelanggan tahun lalu.",
+                "focus": "Past action reporting with 'to have + past participle'"
+              },
+              {
+                "en": "It was reported that government officials updated national privacy laws.",
+                "id": "Dilaporkan bahwa pejabat pemerintah memperbarui undang-undang privasi nasional.",
+                "focus": "Past passive reporting with 'It was reported that'"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m10-w-practice",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "it is reported that the company lost customer data on friday",
+                "targetSentence": "It is reported that the company lost customer data on Friday.",
+                "translation": "Dilaporkan bahwa perusahaan tersebut kehilangan data pelanggan pada hari Jumat.",
+                "keyRule": "Capitalize the first word of the sentence and names of days, and end with a full stop.",
+                "requiredCapitals": [
+                  "It",
+                  "Friday"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "cybersecurity researchers is believed to protect private networks across europe",
+                "targetSentence": "Cybersecurity researchers are believed to protect private networks across Europe.",
+                "translation": "Para peneliti keamanan siber dipercaya melindungi jaringan privat di seluruh Eropa.",
+                "keyRule": "Use 'are' with plural subjects and capitalize proper geographic names.",
+                "requiredCapitals": [
+                  "Cybersecurity",
+                  "Europe"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "the hacker are said to have breached five databases in london",
+                "targetSentence": "The hacker is said to have breached five databases in London.",
+                "translation": "Peretas tersebut dikatakan telah membobol lima basis data di London.",
+                "keyRule": "Use singular 'is' with 'The hacker' and capitalize proper city names.",
+                "requiredCapitals": [
+                  "The",
+                  "London"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Passive Reporting with That",
+                "meaning": "Dipercaya bahwa kata sandi yang kuat melindungi akun kita.",
+                "tokens": [
+                  "It",
+                  "is",
+                  "believed",
+                  "that",
+                  "strong",
+                  "passwords",
+                  "protect",
+                  "our",
+                  "accounts."
+                ],
+                "fullSentence": "It is believed that strong passwords protect our accounts."
+              },
+              {
+                "id": "b-2",
+                "category": "Passive Reporting with Infinitive",
+                "meaning": "Data pengguna dilaporkan dijual kepada perusahaan pengiklan.",
+                "tokens": [
+                  "User",
+                  "data",
+                  "is",
+                  "reported",
+                  "to",
+                  "be",
+                  "sold",
+                  "to",
+                  "advertising",
+                  "companies."
+                ],
+                "fullSentence": "User data is reported to be sold to advertising companies."
+              },
+              {
+                "id": "b-3",
+                "category": "Passive Reporting with Perfect Infinitive",
+                "meaning": "Peretas tersebut dikatakan telah mencuri data rahasia minggu lalu.",
+                "tokens": [
+                  "The",
+                  "hacker",
+                  "is",
+                  "said",
+                  "to",
+                  "have",
+                  "stolen",
+                  "secret",
+                  "data",
+                  "last",
+                  "week."
+                ],
+                "fullSentence": "The hacker is said to have stolen secret data last week."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Report a Data Incident",
+                "badge": "Privacy Reporter",
+                "instruction": "Write three to four sentences reporting an online data incident. Use at least one passive reporting pattern, such as 'It is reported that...' or 'The company is said to have...'. Mention what data was involved and how users reacted.",
+                "example": "It is reported that an online retail store suffered a major security breach. Customer email addresses and passwords are said to have leaked onto the dark web. Many users are now updating their security settings to stay safe.",
+                "placeholder": "Start reporting the security incident here...",
+                "minWords": 25,
+                "xpReward": 40
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Advise on Personal Data Protection",
+                "badge": "Cybersecurity Advisor",
+                "instruction": "Write three to four sentences explaining how people can protect their digital privacy. Use passive reporting phrases like 'Two-factor authentication is believed to...' or 'Public networks are thought to be...'.",
+                "example": "Public Wi-Fi networks are thought to be risky for online shopping. For this reason, users are advised to turn on a virtual private network. Two-factor authentication is believed to stop most unauthorized logins effectively.",
+                "placeholder": "Write your security advice here...",
+                "minWords": 25,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m10-w-quiz",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence into an impersonal passive reporting structure beginning with 'It is believed that':",
+                "promptText": "People believe that social media platforms collect our private information.",
+                "hint": "Start with 'It is believed that' and keep the rest of the clause unchanged.",
+                "targetAnswers": [
+                  "It is believed that social media platforms collect our private information."
+                ],
+                "explanation": "Use 'It is believed that' followed by the original subject and verb clause."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite this impersonal report into a personal passive reporting sentence starting with 'The software company':",
+                "promptText": "It is reported that the software company sells user browsing histories.",
+                "hint": "Use 'The software company is reported to sell...'",
+                "targetAnswers": [
+                  "The software company is reported to sell user browsing histories."
+                ],
+                "explanation": "Move 'The software company' to the subject position, followed by 'is reported to' and the base verb 'sell'."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence to show a completed past action using 'to have':",
+                "promptText": "People think that the criminal accessed confidential files yesterday.",
+                "hint": "Begin with 'The criminal is thought to have...'",
+                "targetAnswers": [
+                  "The criminal is thought to have accessed confidential files yesterday."
+                ],
+                "explanation": "Because the action occurred in the past relative to the reporting verb, use 'to have + past participle' (to have accessed)."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the capitalization and comma errors in this sentence:",
+                "promptText": "it is claimed, that google updated its privacy policy on tuesday.",
+                "hint": "Capitalize the first word, remove unnecessary commas before 'that', and capitalize proper names.",
+                "targetAnswers": [
+                  "It is claimed that Google updated its privacy policy on Tuesday."
+                ],
+                "explanation": "Capitalize 'It', 'Google', and 'Tuesday'. Do not put a comma before the connecting word 'that'."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Conjunction Integration",
+                "instruction": "Combine the two sentences into one using 'because' and passive reporting:",
+                "promptText": "Many people use a VPN. It is believed that a VPN protects personal data.",
+                "hint": "Connect the ideas with 'because': 'Many people use a VPN because it is believed to...'",
+                "targetAnswers": [
+                  "Many people use a VPN because it is believed to protect personal data.",
+                  "Many people use a VPN because it is believed that it protects personal data."
+                ],
+                "explanation": "Use 'because' to introduce the reason with the passive reporting phrase."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the active claim using passive reporting with 'is claimed to':",
+                "promptText": "Experts claim that the new antivirus tool blocks all spyware.",
+                "hint": "Start with 'The new antivirus tool is claimed to...'",
+                "targetAnswers": [
+                  "The new antivirus tool is claimed to block all spyware."
+                ],
+                "explanation": "The subject 'The new antivirus tool' takes the passive form 'is claimed to' followed by base verb 'block'."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Error Correction",
+                "instruction": "Fix the verb form error in this passive reporting sentence:",
+                "promptText": "The security breach is believe to have affected thousands of customers.",
+                "hint": "The passive form requires a past participle verb after 'is'.",
+                "targetAnswers": [
+                  "The security breach is believed to have affected thousands of customers."
+                ],
+                "explanation": "The correct passive construction requires the past participle 'believed', not the base form 'believe'."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence into a past impersonal passive report starting with 'It was reported that':",
+                "promptText": "Journalists reported that the company failed to notify users about the leak.",
+                "hint": "Begin with 'It was reported that' and keep the rest of the clause.",
+                "targetAnswers": [
+                  "It was reported that the company failed to notify users about the leak."
+                ],
+                "explanation": "When the reporting happened in the past, use 'It was reported that' followed by the clause."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using 'is said to be':",
+                "promptText": "People say that two-factor authentication is the most reliable security step.",
+                "hint": "Start with 'Two-factor authentication is said to be...'",
+                "targetAnswers": [
+                  "Two-factor authentication is said to be the most reliable security step."
+                ],
+                "explanation": "Convert 'People say that X is...' into 'X is said to be...'."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Answer the question in one complete sentence using 'It is said that' or 'They are believed to':",
+                "promptText": "Why do privacy advocates warn against sharing phone numbers online?",
+                "hint": "State that phone numbers are believed to be used for tracking or marketing.",
+                "targetAnswers": [
+                  "They are believed to be used by marketing companies to track users.",
+                  "It is said that phone numbers can be used to track personal accounts.",
+                  "Phone numbers are believed to be vulnerable to spam and phishing attacks."
+                ],
+                "explanation": "Use a passive reporting construction such as 'They are believed to be...' or 'It is said that...' to form a complete answer."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-5-m10-speaking",
+      "moduleId": "B1.5-M10",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Protecting Personal Data",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-b1-5-m10-s-theory",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Speak clearly about digital privacy, cybersecurity, and personal data. Explain what is reported or believed using forms such as “The company is said to be improving its security” and “It is believed that the email was a phishing attempt.” Give reasons and examples to support your ideas.",
+            "audioGuidance": "Speak at a steady pace and pause briefly between ideas. Stress the key information in each sentence. Use a falling tone for statements and a rising tone for questions. Practise difficult words slowly before saying them in a full sentence.",
+            "pillars": [
+              {
+                "name": "Vowel Clarity",
+                "target": "Clear vowel sounds in privacy, data, and breach",
+                "explanation": "Say each word carefully. Keep the vowel sounds clear, especially in “data” and “privacy,” so listeners can understand the topic."
+              },
+              {
+                "name": "Word Stress",
+                "target": "Stress the correct syllable",
+                "explanation": "Use the main stress in words such as CY-ber-se-cu-ri-ty and en-CRYP-tion. Practise the words before using them in longer sentences."
+              },
+              {
+                "name": "Sentence Stress",
+                "target": "Emphasise important information",
+                "explanation": "Stress the main ideas, such as “personal data” and “phishing email.” Make less important words shorter and quieter."
+              },
+              {
+                "name": "Intonation",
+                "target": "Use a clear tone for statements and questions",
+                "explanation": "Let your voice fall at the end of a statement. Let it rise at the end of a yes-or-no question, such as “Is my data encrypted?”"
+              },
+              {
+                "name": "Passive Reporting",
+                "target": "Report information without naming the source",
+                "explanation": "Use “is said to be” before an adjective or infinitive. Use “It is believed that” before a full clause, for example, “It is believed that the company lost some user data.”"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-5-m10-s-practice",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "CY-ber-se-cu-ri-ty",
+                "countryAudio": "cybersecurity",
+                "countrySyllables": [
+                  {
+                    "text": "cy",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ber",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "se",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "cu",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ri",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ty",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "CY-ber-se-cu-ri-ty",
+                "natAudio": "cybersecurity",
+                "natSyllables": [
+                  {
+                    "text": "CY",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ber",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "se",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "cu",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ri",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ty",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Keep the main stress on the first syllable: CY-bersecurity."
+              },
+              {
+                "id": "pair-2",
+                "country": "en-CRYP-tion",
+                "countryAudio": "encryption",
+                "countrySyllables": [
+                  {
+                    "text": "en",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CRYP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "en-CRYP-ted",
+                "natAudio": "encrypted",
+                "natSyllables": [
+                  {
+                    "text": "en",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CRYP",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ted",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The main stress stays on the second syllable in both words."
+              },
+              {
+                "id": "pair-3",
+                "country": "PHISH-ing",
+                "countryAudio": "phishing",
+                "countrySyllables": [
+                  {
+                    "text": "PHISH",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ing",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "PHISH-ing",
+                "natAudio": "phishing",
+                "natSyllables": [
+                  {
+                    "text": "PHISH",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ing",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Stress the first syllable and keep the ending short."
+              },
+              {
+                "id": "pair-4",
+                "country": "PER-son-al DA-ta",
+                "countryAudio": "personal data",
+                "countrySyllables": [
+                  {
+                    "text": "PER",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "son",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "al",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "DA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ta",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "DI-gi-tal PRI-va-cy",
+                "natAudio": "digital privacy",
+                "natSyllables": [
+                  {
+                    "text": "DI",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "gi",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "tal",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PRI",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "va",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "cy",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Stress the first syllable of “personal” and “digital,” and the first syllable of “privacy.”"
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "The company is said to be improving its cybersecurity.",
+                "phonetic": "/ðə ˈkʌmpəni ɪz sed tə bi ɪmˈpruːvɪŋ ɪts ˌsaɪbəsɪˈkjʊərəti/",
+                "focus": "Word stress and the reporting form “is said to be”",
+                "hint": "Stress “company,” “improving,” and “cybersecurity.” Keep the smaller words short."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "It is believed that the email was a phishing attempt.",
+                "phonetic": "/ɪt ɪz bɪˈliːvd ðət ði ˈiːmeɪl wəz ə ˈfɪʃɪŋ əˈtempt/",
+                "focus": "Clear consonants and passive reporting",
+                "hint": "Link “believed that” smoothly, but make both words easy to hear."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Encryption can help protect your personal data.",
+                "phonetic": "/ɪnˈkrɪpʃən kən help prəˈtekt jɔː ˈpɜːsənəl ˈdeɪtə/",
+                "focus": "Syllable stress in “encryption” and “personal data”",
+                "hint": "Stress the second syllable of “encryption” and the first syllable of “personal.”"
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Is my personal data safe on this website?",
+                "phonetic": "/ɪz maɪ ˈpɜːsənəl ˈdeɪtə seɪf ɒn ðɪs ˈwebsaɪt/",
+                "focus": "Rising intonation in a yes-or-no question",
+                "hint": "Let your voice rise slightly on “website.”"
+              }
+            ],
+            "roleplay": {
+              "context": "You are speaking on a live call with a customer support worker after receiving a suspicious message that may be connected to a data breach. Ask how to protect your account and discuss whether your personal data may be at risk.",
+              "roles": [
+                "Customer Support Worker",
+                "Customer"
+              ],
+              "turns": [
+                {
+                  "speaker": "Customer Support Worker",
+                  "text": "Hello. What happened when you received the message?",
+                  "translation": "Halo. Apa yang terjadi saat Anda menerima pesan itu?"
+                },
+                {
+                  "speaker": "Customer",
+                  "text": "It looked like an email from my bank, but it asked me to confirm my password.",
+                  "translation": "Pesan itu terlihat seperti email dari bank saya, tetapi meminta saya untuk mengonfirmasi kata sandi."
+                },
+                {
+                  "speaker": "Customer Support Worker",
+                  "text": "It may have been a phishing attempt. Have you clicked the link or shared any personal data?",
+                  "translation": "Pesan itu mungkin merupakan upaya phishing. Apakah Anda mengeklik tautannya atau membagikan data pribadi?"
+                },
+                {
+                  "speaker": "Customer",
+                  "text": "I did not share anything. Is the company said to be affected by a data breach?",
+                  "translation": "Saya tidak membagikan apa pun. Apakah perusahaan itu dikabarkan terkena kebocoran data?"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-5-m10-s-quiz",
+          "moduleId": "B1.5-M10",
+          "subModuleId": "sub-b1-5-m10-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds. Tell a short story about a suspicious message or website you have seen, or describe what you would do if you received one.",
+                "audioPrompt": "Describe the message or website, explain why it seemed suspicious, and say what you did or would do next.",
+                "storyPoints": [
+                  "Where you saw the message or website and what it said",
+                  "Why you thought it might be a phishing attempt",
+                  "What action you took or would take to protect your personal data"
+                ],
+                "targetSentence": "I would not click the link because it might be a phishing attempt, and I would contact the company directly.",
+                "phonetic": "/aɪ wʊd nɒt klɪk ðə lɪŋk bɪˈkɒz ɪt maɪt bi ə ˈfɪʃɪŋ əˈtempt/",
+                "expectedKeywords": [
+                  "message",
+                  "phishing",
+                  "link",
+                  "personal data",
+                  "protect"
+                ],
+                "explanation": "Use full sentences to describe the event and explain your response."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a time you changed a digital habit to improve your privacy, or explain a change you would make.",
+                "audioPrompt": "Tell me how you protect your digital privacy and why the habit is useful.",
+                "storyPoints": [
+                  "Which digital habit you changed or would change",
+                  "How the change can protect your personal data",
+                  "What you would tell a friend who uses weak passwords or shares too much online"
+                ],
+                "targetSentence": "I use different passwords for important accounts because one stolen password could put more of my data at risk.",
+                "phonetic": "/aɪ juːz ˈdɪfrənt ˈpɑːswɜːdz fə ɪmˈpɔːtənt əˈkaʊnts bɪˈkɒz wʌn ˈstəʊlən ˈpɑːswɜːd kʊd pʊt mɔːr əv maɪ ˈdeɪtə ət rɪsk/",
+                "expectedKeywords": [
+                  "privacy",
+                  "password",
+                  "personal data",
+                  "protect",
+                  "account"
+                ],
+                "explanation": "Organise your story clearly and give a reason for your advice."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Live Call Roleplay",
+                "instruction": "Take the customer’s part in a live call. Explain that you received a suspicious email and ask how to check it safely.",
+                "scenarioContext": "You have received an email asking you to confirm your bank details. You call the bank’s support team to check whether the email is genuine.",
+                "characterRole": "You are a customer. Explain what the email asked you to do, ask whether it could be phishing, and ask what steps to take.",
+                "audioPrompt": "The support worker asks what the email said. Respond and ask how you can check it safely.",
+                "targetSentence": "The email asked for my bank details. Could you tell me how to check whether it is genuine?",
+                "phonetic": "/ði ˈiːmeɪl ɑːskt fə maɪ bæŋk ˈdiːteɪlz kʊd juː tel mi haʊ tə tʃek ˈweðər ɪt ɪz ˈdʒenjuɪn/",
+                "expectedKeywords": [
+                  "email",
+                  "bank details",
+                  "check",
+                  "genuine",
+                  "phishing"
+                ],
+                "explanation": "Respond naturally, give the important details, and ask a clear question."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Live Call Roleplay",
+                "instruction": "Take the customer’s part in a live call after hearing about a possible data breach.",
+                "scenarioContext": "A customer support worker is answering questions about a company announcement that some user information may have been exposed.",
+                "characterRole": "You are a customer. Ask what information may have been exposed, whether your account is affected, and what you should do.",
+                "audioPrompt": "The support worker says the company is investigating a data breach. Ask about your personal data and next steps.",
+                "targetSentence": "It is believed that some user data was exposed. Could you tell me whether my account is affected?",
+                "phonetic": "/ɪt ɪz bɪˈliːvd ðət sʌm ˈjuːzə ˈdeɪtə wəz ɪkˈspəʊzd kʊd juː tel mi ˈweðər maɪ əˈkaʊnt ɪz əˈfektɪd/",
+                "expectedKeywords": [
+                  "data breach",
+                  "personal data",
+                  "account",
+                  "affected",
+                  "steps"
+                ],
+                "explanation": "Ask for specific information and use “It is believed that” to report what you have heard."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Live Call Roleplay",
+                "instruction": "Take the customer’s part in a live call and ask about protecting messages.",
+                "scenarioContext": "You are speaking with a messaging app support worker. You want to know whether other people can read your private messages.",
+                "characterRole": "You are a customer. Ask whether messages use encryption and request a simple explanation.",
+                "audioPrompt": "The support worker says the app uses encryption. Ask who can read your messages.",
+                "targetSentence": "Is end-to-end encryption used, and can anyone apart from the sender and receiver read my messages?",
+                "phonetic": "/ɪz ˌend tə end ɪnˈkrɪpʃən juːzd ænd kən ˈeniwʌn əˈpɑːt frəm ðə ˈsendər ænd rɪˈsiːvə riːd maɪ ˈmesɪdʒɪz/",
+                "expectedKeywords": [
+                  "encryption",
+                  "messages",
+                  "sender",
+                  "receiver",
+                  "read"
+                ],
+                "explanation": "Use a clear yes-or-no question and ask for information you can understand."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Live Call Roleplay",
+                "instruction": "Take the customer’s part in a live call and ask how a company uses your information.",
+                "scenarioContext": "You are speaking to a website privacy representative before creating an account. You want to understand what personal data the website collects.",
+                "characterRole": "You are a customer. Ask what data the website collects, why it needs it, and whether you can agree before it is collected.",
+                "audioPrompt": "The representative says the website collects information to provide its service. Ask for details and mention consent.",
+                "targetSentence": "What personal data do you collect, and do I need to give consent before you use it?",
+                "phonetic": "/wɒt ˈpɜːsənəl ˈdeɪtə də juː kəˈlekt ænd də aɪ niːd tə ɡɪv kənˈsent bɪˈfɔː juː juːz ɪt/",
+                "expectedKeywords": [
+                  "personal data",
+                  "collect",
+                  "consent",
+                  "use",
+                  "privacy"
+                ],
+                "explanation": "Ask direct questions and explain what you want to know before agreeing."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "focus": "vocab",
+                "instruction": "Use all six words in separate sentences: data breach, cybersecurity, digital privacy, phishing, encryption, and personal data.",
+                "audioPrompt": "Make one clear sentence with each of these words: data breach, cybersecurity, digital privacy, phishing, encryption, and personal data.",
+                "targetSentence": "Encryption can help protect personal data during a data breach.",
+                "phonetic": "/ɪnˈkrɪpʃən kən help prəˈtekt ˈpɜːsənəl ˈdeɪtə ˈdjʊərɪŋ ə ˈdeɪtə briːtʃ/",
+                "expectedKeywords": [
+                  "data breach",
+                  "cybersecurity",
+                  "digital privacy",
+                  "phishing",
+                  "encryption",
+                  "personal data"
+                ],
+                "explanation": "Use each word in a sentence that shows you understand its meaning."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "focus": "grammar",
+                "instruction": "Make two passive reporting sentences. Use “is said to be” in one sentence and “It is believed that” in the other.",
+                "audioPrompt": "Report what people say about a company’s security and what they believe about a recent data breach.",
+                "targetSentence": "The company is said to be improving its cybersecurity. It is believed that some personal data was exposed.",
+                "phonetic": "/ðə ˈkʌmpəni ɪz sed tə bi ɪmˈpruːvɪŋ ɪts ˌsaɪbəsɪˈkjʊərəti ɪt ɪz bɪˈliːvd ðət sʌm ˈpɜːsənəl ˈdeɪtə wəz ɪkˈspəʊzd/",
+                "expectedKeywords": [
+                  "is said to be",
+                  "It is believed that",
+                  "cybersecurity",
+                  "personal data",
+                  "exposed"
+                ],
+                "explanation": "Use “is said to be” before an adjective or an infinitive, and “It is believed that” before a full clause."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Say “cybersecurity,” “encryption,” “phishing,” and “personal data.” Make the stressed syllables clear.",
+                "audioPrompt": "Listen to the words and repeat them, keeping the main word stress clear.",
+                "targetSentence": "Cybersecurity includes encryption to help protect personal data from phishing.",
+                "phonetic": "/ˌsaɪbəsɪˈkjʊərəti ɪnˈkluːdz ɪnˈkrɪpʃən tə help prəˈtekt ˈpɜːsənəl ˈdeɪtə frəm ˈfɪʃɪŋ/",
+                "expectedKeywords": [
+                  "cybersecurity",
+                  "encryption",
+                  "phishing",
+                  "personal data"
+                ],
+                "explanation": "Stress the first syllable in “cybersecurity” and “phishing,” and the second syllable in “encryption.”"
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Say the statement with falling intonation, then say the yes-or-no question with rising intonation.",
+                "audioPrompt": "Read both sentences aloud: “My personal data is encrypted.” “Is my personal data encrypted?”",
+                "targetSentence": "My personal data is encrypted. Is my personal data encrypted?",
+                "phonetic": "/maɪ ˈpɜːsənəl ˈdeɪtə ɪz ɪnˈkrɪptɪd ɪz maɪ ˈpɜːsənəl ˈdeɪtə ɪz ɪnˈkrɪptɪd/",
+                "expectedKeywords": [
+                  "personal data",
+                  "encrypted",
+                  "statement",
+                  "question"
+                ],
+                "explanation": "Let your voice fall at the end of the statement and rise at the end of the yes-or-no question."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
