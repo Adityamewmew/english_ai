@@ -1,0 +1,1701 @@
+{
+  "module": {
+    "id": "B2.3-M02",
+    "levelId": "B2.3",
+    "title": "Cleft Sentences for Rhetorical Precision & Thematic Highlighting",
+    "cefr": "B2",
+    "group": "B2.3 - Strategic Debate & Bridge to C1",
+    "objective": "Menggunakan cleft sentences (It is... that, What we need is..., All they wanted was...) untuk penekanan retoris.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 2
+  },
+  "subModules": [
+    {
+      "id": "sub-b2-3-m02-reading",
+      "moduleId": "B2.3-M02",
+      "skillType": "reading",
+      "title": "Reading Mission: Rhetorical Precision and Strategic Leadership",
+      "theme": "Corporate Communication and Strategic Leadership",
+      "grammarFocus": "Cleft Sentences (It-clefts, Wh-clefts, Reversed Pseudo-clefts)",
+      "vocabularyFocus": "Strategic Communication and Organizational Accountability",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-b2-3-m02-r-theory",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this mission, you will explore an analytical business report about corporate governance and public trust. You will learn how professional writers use cleft structures to direct reader attention, highlight crucial arguments, and create persuasive emphasis.",
+            "linguisticTarget": {
+              "grammar": "It-clefts (It is/was... that/who), wh-clefts (What we need is...), and reversed pseudo-clefts (... is what matters)",
+              "vocabulary": "Accountability, transparency, pivotal, undermine, integrity, emphasis, stakeholder, compelling",
+              "readingStrategy": "Scanning for rhetorical focus points and analyzing how cleft sentences highlight core arguments"
+            },
+            "learningObjectives": [
+              "Understand the main arguments in a B2-level analytical text about corporate leadership and transparency.",
+              "Identify how cleft sentences separate given information from new, emphasized points.",
+              "Recognize vocabulary related to corporate responsibility, stakeholder engagement, and clear communication."
+            ],
+            "contextWarmup": {
+              "prompt": "Read the two sentences below. Which sentence places the strongest rhetorical focus on the final decision maker rather than the action itself?",
+              "options": [
+                "It was the board of directors that approved the revised ethics policy, not the interim manager.",
+                "The board of directors approved the revised ethics policy after discussing it with the interim manager.",
+                "The interim manager consulted the board of directors before approving the ethics policy."
+              ],
+              "correctIndex": 0,
+              "explanation": "Option 1 uses an it-cleft structure ('It was the board of directors that...') to isolate and emphasize the exact entity responsible for the decision."
+            },
+            "rules": [
+              "It-cleft pattern: Use 'It + be + emphasized element + that/who + remainder of the sentence'. This construction divides a standard clause into two parts to single out a specific subject, object, or adverbial phrase.",
+              "Wh-cleft pattern: Use 'What/All + clause + be + emphasized element'. This structure introduces familiar context first and saves the most important noun or action for the end of the sentence to maximize impact.",
+              "Reversed pseudo-cleft pattern: Place the emphasized noun phrase first, followed by 'be + what + clause'. For example, 'Complete transparency is what every stakeholder expects.' This creates immediate prominence in formal writing."
+            ],
+            "commonTrap": {
+              "trapTitle": "Confusing Dummy 'It' with Cleft 'It'",
+              "explanation": "Learners often confuse cleft sentences with impersonal constructions like 'It is necessary to...' or 'It is clear that...'. In a true it-cleft, the highlighted element can be moved back into a simple, single-clause sentence without altering the core meaning.",
+              "wrong": "It is obvious that the management team acted quickly to resolve the dispute.",
+              "correct": "It was the management team that acted quickly to resolve the dispute."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Cleft Markers in Spoken Debates",
+            "contractionsSubtitle": "Observe how auxiliary verbs merge with question words and pronouns in professional discussions:",
+            "contractions": [
+              {
+                "subject": "What",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "What's",
+                "exampleFull": "What is essential here is clear accountability.",
+                "exampleContracted": "What's essential here is clear accountability."
+              },
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It is our reputation that matters most.",
+                "exampleContracted": "It's our reputation that matters most."
+              },
+              {
+                "subject": "That",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "That's",
+                "exampleFull": "That is precisely what we discussed yesterday.",
+                "exampleContracted": "That's precisely what we discussed yesterday."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Cleft Constructions",
+              "description": "Examine how components arrange to deliver rhetorical emphasis across different cleft types:",
+              "subjects": [
+                {
+                  "label": "It",
+                  "pronoun": "It",
+                  "correctToBe": "was",
+                  "role": "Introductory Cleft Pronoun"
+                },
+                {
+                  "label": "What",
+                  "pronoun": "What we demand",
+                  "correctToBe": "is",
+                  "role": "Wh-Clause Subject"
+                },
+                {
+                  "label": "Integrity",
+                  "pronoun": "Integrity",
+                  "correctToBe": "is",
+                  "role": "Fronted Emphasized Element"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "highlight",
+                  "thirdPerson": "highlights",
+                  "continuous": "highlighting"
+                },
+                {
+                  "base": "require",
+                  "thirdPerson": "requires",
+                  "continuous": "requiring"
+                },
+                {
+                  "base": "demand",
+                  "thirdPerson": "demands",
+                  "continuous": "demanding"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "total financial honesty from the management board",
+                  "type": "Emphasized Object"
+                },
+                {
+                  "text": "the exact factor that preserved shareholder confidence",
+                  "type": "Predicate Focus"
+                },
+                {
+                  "text": "what separates great institutions from mediocre ones",
+                  "type": "Subordinate Clause Focus"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b2-3-m02-r-vocab",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "emphasis",
+                "ipa": "/ˈem.fə.sɪs/",
+                "meaning": "penekanan, tekanan pada bagian penting",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The annual report places great emphasis on sustainable governance and ethical supply chains.",
+                "collocation": "place emphasis on / rhetorical emphasis"
+              },
+              {
+                "word": "rhetorical",
+                "ipa": "/rɪˈtɒr.ɪ.kəl/",
+                "meaning": "retoris, berkaitan dengan seni persuasi dalam berbicara atau menulis",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "Her rhetorical skills made the keynote address both compelling and persuasive.",
+                "collocation": "rhetorical device / rhetorical precision"
+              },
+              {
+                "word": "transparency",
+                "ipa": "/trænˈspær.ən.si/",
+                "meaning": "transparansi, keterbukaan informasi",
+                "partOfSpeech": "noun",
+                "exampleSentence": "What the independent auditors demand is complete transparency in all financial disclosures.",
+                "collocation": "complete transparency / foster transparency"
+              },
+              {
+                "word": "pivotal",
+                "ipa": "/ˈpɪv.ə.təl/",
+                "meaning": "sangat penting, krusial, menentukan",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "It was the committee's pivotal decision that prevented the company from facing severe regulatory penalties.",
+                "collocation": "pivotal role / pivotal moment"
+              },
+              {
+                "word": "stakeholder",
+                "ipa": "/ˈsteɪkˌhoʊl.dər/",
+                "meaning": "pemangku kepentingan, pihak yang berkepentingan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "What every stakeholder expects is prompt communication during a corporate restructuring.",
+                "collocation": "key stakeholder / stakeholder engagement"
+              },
+              {
+                "word": "accountability",
+                "ipa": "/əˌkaʊn.təˈbɪl.ə.ti/",
+                "meaning": "akuntabilitas, pertanggungjawaban",
+                "partOfSpeech": "noun",
+                "exampleSentence": "All the investors asked for was greater accountability from senior executives.",
+                "collocation": "demand accountability / corporate accountability"
+              },
+              {
+                "word": "compelling",
+                "ipa": "/kəmˈpel.ɪŋ/",
+                "meaning": "menarik perhatian, meyakinkan, kuat (argumen)",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "It was her compelling evidence that convinced regulators to approve the revised merger proposal.",
+                "collocation": "compelling evidence / compelling argument"
+              },
+              {
+                "word": "precisely",
+                "ipa": "/prɪˈsaɪs.li/",
+                "meaning": "secara tepat, persis",
+                "partOfSpeech": "adverb",
+                "exampleSentence": "Rebuilding public trust is precisely what the communications department aims to accomplish this quarter.",
+                "collocation": "precisely because / precisely what"
+              },
+              {
+                "word": "undermine",
+                "ipa": "/ˌʌn.dəˈmaɪn/",
+                "meaning": "merusak, melemahkan secara bertahap",
+                "partOfSpeech": "verb",
+                "exampleSentence": "What undermines client trust most is persistent inconsistency between formal statements and actual conduct.",
+                "collocation": "undermine confidence / undermine credibility"
+              },
+              {
+                "word": "integrity",
+                "ipa": "/ɪnˈteɡ.rə.ti/",
+                "meaning": "integritas, kejujuran dan prinsip moral yang kuat",
+                "partOfSpeech": "noun",
+                "exampleSentence": "It is uncompromised integrity that distinguishes genuine industry leaders from superficial performers.",
+                "collocation": "professional integrity / moral integrity"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-3-m02-r-guided",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Restoring Corporate Trust Through Rhetorical Precision",
+            "audioUrl": "/audio/modules/b2-3-m02/reading-passage.mp3",
+            "durationSeconds": 75,
+            "paragraphs": [
+              "When modern corporations face sudden scrutiny, generic apologies rarely satisfy the public. It was the recent audit scandal at Henderson Logistics that exposed how vague corporate statements damage public faith. Instead of addressing discrepancies directly, initial press briefings relied on convoluted corporate vocabulary, leaving investors confused and anxious.",
+              "What stakeholders expect during crisis situations is total transparency, backed by verifiable documentation. Henderson Logistics soon discovered that ambiguous statements can severely undermine credibility. It was their failure to assign direct accountability that provoked harsh backlash from consumer advocacy groups and institutional investors alike.",
+              "In response, the newly appointed chief executive altered the communication framework entirely. Rather than issuing passive statements, she used direct cleft constructions to focus on responsibility. She declared that it was senior leadership that bore full responsibility for the compliance failures, not regional field personnel.",
+              "Clear communication is what rebuilt investor confidence over the subsequent months. All the leadership team needed to do was present the unvarnished facts alongside concrete corrective milestones. Through disciplined rhetorical precision and unyielding integrity, the organization gradually restored its tarnished standing in the international marketplace."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 5.2,
+                "text": "When modern corporations face sudden scrutiny, generic apologies rarely satisfy the public.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 5.3,
+                "end": 12,
+                "text": "It was the recent audit scandal at Henderson Logistics that exposed how vague corporate statements damage public faith.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 12.1,
+                "end": 19.5,
+                "text": "Instead of addressing discrepancies directly, initial press briefings relied on convoluted corporate vocabulary, leaving investors confused and anxious.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 19.6,
+                "end": 26,
+                "text": "What stakeholders expect during crisis situations is total transparency, backed by verifiable documentation.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 26.1,
+                "end": 31.8,
+                "text": "Henderson Logistics soon discovered that ambiguous statements can severely undermine credibility.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 31.9,
+                "end": 39.5,
+                "text": "It was their failure to assign direct accountability that provoked harsh backlash from consumer advocacy groups and institutional investors alike.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 39.6,
+                "end": 44.8,
+                "text": "In response, the newly appointed chief executive altered the communication framework entirely.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 44.9,
+                "end": 51.5,
+                "text": "Rather than issuing passive statements, she used direct cleft constructions to focus on responsibility.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 51.6,
+                "end": 58.2,
+                "text": "She declared that it was senior leadership that bore full responsibility for the compliance failures, not regional field personnel.",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 58.3,
+                "end": 63.8,
+                "text": "Clear communication is what rebuilt investor confidence over the subsequent months.",
+                "paragraphIndex": 3
+              },
+              {
+                "start": 63.9,
+                "end": 69.2,
+                "text": "All the leadership team needed to do was present the unvarnished facts alongside concrete corrective milestones.",
+                "paragraphIndex": 3
+              },
+              {
+                "start": 69.3,
+                "end": 75,
+                "text": "Through disciplined rhetorical precision and unyielding integrity, the organization gradually restored its tarnished standing in the international marketplace.",
+                "paragraphIndex": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-3-m02-r-practice",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": []
+          }
+        },
+        {
+          "id": "sec-b2-3-m02-r-quiz",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "According to the first paragraph, what primary mistake did Henderson Logistics make in its initial press briefings?",
+                "options": [
+                  "They used complicated language instead of addressing discrepancies directly.",
+                  "They refused to hold any press conferences for several weeks.",
+                  "They blamed local competitors for leaked financial documents."
+                ],
+                "answer": "They used complicated language instead of addressing discrepancies directly.",
+                "explanation": "The text states that the initial press briefings relied on convoluted corporate vocabulary instead of addressing discrepancies directly, leaving investors confused and anxious."
+              },
+              {
+                "id": "q-r-2",
+                "question": "In paragraph 1, how does the author emphasize the specific trigger that revealed the dangers of vague language?",
+                "options": [
+                  "By using an it-cleft structure: 'It was the recent audit scandal... that exposed...'",
+                  "By placing an adverbial time phrase at the very end of the paragraph.",
+                  "By asking a rhetorical question to provoke critical thinking."
+                ],
+                "answer": "By using an it-cleft structure: 'It was the recent audit scandal... that exposed...'",
+                "explanation": "The sentence 'It was the recent audit scandal at Henderson Logistics that exposed how vague corporate statements damage public faith' uses an it-cleft to highlight the specific incident."
+              },
+              {
+                "id": "q-r-3",
+                "question": "What do stakeholders specifically look for during a corporate crisis, as noted in paragraph 2?",
+                "options": [
+                  "Immediate legal settlements with outside regulators.",
+                  "Complete transparency backed by verifiable documentation.",
+                  "Confidential internal audits kept away from media scrutiny."
+                ],
+                "answer": "Complete transparency backed by verifiable documentation.",
+                "explanation": "Paragraph 2 explicitly states: 'What stakeholders expect during crisis situations is total transparency, backed by verifiable documentation.'"
+              },
+              {
+                "id": "q-r-4",
+                "question": "Which factor caused intense backlash from advocacy groups and investors in paragraph 2?",
+                "options": [
+                  "The high fees charged by the external auditing firm.",
+                  "The immediate resignation of all regional directors.",
+                  "The failure to establish direct accountability."
+                ],
+                "answer": "The failure to establish direct accountability.",
+                "explanation": "Paragraph 2 highlights that 'It was their failure to assign direct accountability that provoked harsh backlash from consumer advocacy groups and institutional investors alike.'"
+              },
+              {
+                "id": "q-r-5",
+                "question": "The word 'undermine' in paragraph 2 is closest in meaning to:",
+                "options": [
+                  "weaken or erode gradually",
+                  "strengthen significantly",
+                  "document systematically"
+                ],
+                "answer": "weaken or erode gradually",
+                "explanation": "In this context, 'undermine' means to gradually weaken credibility and public confidence."
+              },
+              {
+                "id": "q-r-6",
+                "question": "How did the newly appointed chief executive shift the communication strategy in paragraph 3?",
+                "options": [
+                  "She delegated all future public announcements to local branch supervisors.",
+                  "She adopted direct cleft sentences to accept responsibility openly.",
+                  "She stopped giving interviews until independent inquiries concluded."
+                ],
+                "answer": "She adopted direct cleft sentences to accept responsibility openly.",
+                "explanation": "Paragraph 3 explains that rather than issuing passive statements, she used direct cleft constructions to focus on responsibility."
+              },
+              {
+                "id": "q-r-7",
+                "question": "Whom did the chief executive hold responsible for the compliance problems?",
+                "options": [
+                  "Regional field personnel in provincial branches.",
+                  "Third-party accounting contractors.",
+                  "Senior corporate leadership."
+                ],
+                "answer": "Senior corporate leadership.",
+                "explanation": "The passage states that 'it was senior leadership that bore full responsibility for the compliance failures, not regional field personnel.'"
+              },
+              {
+                "id": "q-r-8",
+                "question": "Which sentence from the text provides an example of a reversed pseudo-cleft construction?",
+                "options": [
+                  "Clear communication is what rebuilt investor confidence over the subsequent months.",
+                  "All the leadership team needed to do was present the unvarnished facts.",
+                  "When modern corporations face sudden scrutiny, generic apologies rarely satisfy the public."
+                ],
+                "answer": "Clear communication is what rebuilt investor confidence over the subsequent months.",
+                "explanation": "This sentence puts the emphasized element ('Clear communication') first, followed by 'is what rebuilt investor confidence...', which represents a classic reversed pseudo-cleft."
+              },
+              {
+                "id": "q-r-9",
+                "question": "According to paragraph 4, what action was required from the leadership team to move forward?",
+                "options": [
+                  "Presenting unvarnished facts alongside corrective milestones.",
+                  "Replacing all communication staff with independent spokespersons.",
+                  "Selling non-core business assets to pay regulatory penalties."
+                ],
+                "answer": "Presenting unvarnished facts alongside corrective milestones.",
+                "explanation": "Paragraph 4 states: 'All the leadership team needed to do was present the unvarnished facts alongside concrete corrective milestones.'"
+              },
+              {
+                "id": "q-r-10",
+                "question": "What overarching conclusion does the passage draw regarding corporate recovery?",
+                "options": [
+                  "Careful rhetorical precision combined with moral integrity restores damaged credibility.",
+                  "Aggressive advertising campaigns are sufficient to overcome ethical violations.",
+                  "Appointing external public relations firms is the only way to avoid bankruptcy."
+                ],
+                "answer": "Careful rhetorical precision combined with moral integrity restores damaged credibility.",
+                "explanation": "The final sentence concludes that through disciplined rhetorical precision and unyielding integrity, the company restored its standing."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-3-m02-listening",
+      "moduleId": "B2.3-M02",
+      "skillType": "listening",
+      "title": "Listening Mission: Dissecting TechVision's Success",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-b2-3-m02-l-theory",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Learn how speakers use cleft structures to place rhetorical emphasis on specific business drivers during analytical discussions.",
+            "learningObjectives": [
+              "Catch the focal point in wh-cleft and it-cleft spoken sentences.",
+              "Identify key operational metrics and decisions mentioned by speakers.",
+              "Notice word linking and consonant softening in fast rhetorical structures."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "What stands out is...",
+                "meaning": "Yang menonjol adalah...",
+                "note": "Used to introduce the primary point of observation."
+              },
+              {
+                "phrase": "It was B2B that saved...",
+                "meaning": "Layanan B2B-lah yang menyelamatkan...",
+                "note": "Used to isolate the exact cause of a major turnaround."
+              },
+              {
+                "phrase": "All they needed was...",
+                "meaning": "Yang mereka butuhkan hanyalah...",
+                "note": "Used to minimize complexity and emphasize the singular requirement."
+              },
+              {
+                "phrase": "What remains uncertain is...",
+                "meaning": "Yang masih belum pasti adalah...",
+                "note": "Used to direct the listener's focus toward an unresolved issue."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "What stands out is",
+                "fast": "What stands out-is",
+                "slowIpa": "/wɒt stændz aʊt ɪz/",
+                "fastIpa": "/wʌt stænd-zaʊ-tɪz/",
+                "note": "The final consonant /t/ of out links smoothly with the vowel /ɪ/ of is."
+              },
+              {
+                "id": 2,
+                "slow": "It was their pivot that",
+                "fast": "It was their pivot that",
+                "slowIpa": "/ɪt wəz ðeə ˈpɪvət ðæt/",
+                "fastIpa": "/ɪwəz ðeə ˈpɪvə ðət/",
+                "note": "The /t/ sounds at the end of it and pivot undergo glottalization or elision."
+              },
+              {
+                "id": 3,
+                "slow": "All they needed was",
+                "fast": "All they needed was",
+                "slowIpa": "/ɔːl ðeɪ ˈniːdɪd wɒz/",
+                "fastIpa": "/ɔːl ðeɪ ˈniːdəd wəz/",
+                "note": "The unstressed auxiliary verb was weakens to a schwa vowel."
+              },
+              {
+                "id": 4,
+                "slow": "What we see is",
+                "fast": "What we see is",
+                "slowIpa": "/wɒt wiː siː ɪz/",
+                "fastIpa": "/wʌt wi ˈsiːjɪz/",
+                "note": "A slight glide consonant /j/ links see and is."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-3-m02-l-dialogue",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Analyzing the Turnaround",
+          "orderIndex": 2,
+          "content": {
+            "context": "Two business analysts, Rachel and David, evaluate the factors behind TechVision's market performance.",
+            "audioPrompt": "Listen to Rachel and David discuss TechVision's growth strategy.",
+            "lines": [
+              {
+                "speaker": "Rachel",
+                "text": "I examined TechVision's recent growth figures.",
+                "translation": "Saya memeriksa angka pertumbuhan TechVision baru-baru ini.",
+                "emotion": "thoughtful"
+              },
+              {
+                "speaker": "Rachel",
+                "text": "What stands out is customer retention.",
+                "translation": "Yang paling menonjol adalah retensi pelanggan.",
+                "emotion": "analytical"
+              },
+              {
+                "speaker": "David",
+                "text": "True, but their quick pivot mattered.",
+                "translation": "Benar, tapi pergeseran strategi cepat mereka berpengaruh.",
+                "emotion": "engaged"
+              },
+              {
+                "speaker": "David",
+                "text": "It was B2B that saved them.",
+                "translation": "Layanan B2B-lah yang menyelamatkan mereka.",
+                "emotion": "confident"
+              },
+              {
+                "speaker": "Rachel",
+                "text": "What investors liked was their transparency.",
+                "translation": "Yang disukai investor adalah keterbukaan mereka.",
+                "emotion": "agreeable"
+              },
+              {
+                "speaker": "David",
+                "text": "It was not just profit figures.",
+                "translation": "Itu bukan sekadar angka keuntungan.",
+                "emotion": "serious"
+              },
+              {
+                "speaker": "David",
+                "text": "It was leadership honesty that counted.",
+                "translation": "Kejujuran pimpinanlah yang diperhitungkan.",
+                "emotion": "emphatic"
+              },
+              {
+                "speaker": "Rachel",
+                "text": "All they needed was clear direction.",
+                "translation": "Yang mereka butuhkan hanyalah arahan yang jelas.",
+                "emotion": "reflective"
+              },
+              {
+                "speaker": "David",
+                "text": "What we see is patient strategy.",
+                "translation": "Yang kita lihat adalah strategi yang sabar.",
+                "emotion": "approving"
+              },
+              {
+                "speaker": "Rachel",
+                "text": "It is this focus that succeeds.",
+                "translation": "Fokus inilah yang membuahkan keberhasilan.",
+                "emotion": "convinced"
+              },
+              {
+                "speaker": "David",
+                "text": "What remains uncertain is future momentum.",
+                "translation": "Yang masih belum pasti adalah momentum masa depan.",
+                "emotion": "cautious"
+              },
+              {
+                "speaker": "Rachel",
+                "text": "Next quarter will test their resolve.",
+                "translation": "Kuartal berikutnya akan menguji tekad mereka.",
+                "emotion": "concluding"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-3-m02-l-quiz",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "I examined TechVision's recent growth figures.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Rachel: \"I examined TechVision's recent growth _____.\"",
+                "targetWord": "figures",
+                "explanation": "Full audio: \"I examined TechVision's recent growth figures.\". The missing word is \"figures\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "What stands out is customer retention.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Rachel: \"What stands out is customer _____.\"",
+                "targetWord": "retention",
+                "explanation": "Full audio: \"What stands out is customer retention.\". The missing word is \"retention\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "True, but their quick pivot mattered.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "David: \"True, but their quick pivot _____.\"",
+                "targetWord": "mattered",
+                "explanation": "Full audio: \"True, but their quick pivot mattered.\". The missing word is \"mattered\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "It was B2B that saved them.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "David: \"It was B2B that _____ them.\"",
+                "targetWord": "saved",
+                "explanation": "Full audio: \"It was B2B that saved them.\". The missing word is \"saved\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "What investors liked was their transparency.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Rachel: \"What investors liked was their _____.\"",
+                "targetWord": "transparency",
+                "explanation": "Full audio: \"What investors liked was their transparency.\". The missing word is \"transparency\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "It was not just profit figures.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It was not just profit figures",
+                "words": [
+                  "not",
+                  "profit",
+                  "just",
+                  "was",
+                  "figures",
+                  "It"
+                ],
+                "explanation": "Correct sentence order: \"It was not just profit figures.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "It was leadership honesty that counted.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It was leadership honesty that counted",
+                "words": [
+                  "It",
+                  "that",
+                  "leadership",
+                  "counted",
+                  "honesty",
+                  "was"
+                ],
+                "explanation": "Correct sentence order: \"It was leadership honesty that counted.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "All they needed was clear direction.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "All they needed was clear direction",
+                "words": [
+                  "All",
+                  "clear",
+                  "direction",
+                  "needed",
+                  "was",
+                  "they"
+                ],
+                "explanation": "Correct sentence order: \"All they needed was clear direction.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "What we see is patient strategy.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What we see is patient strategy",
+                "words": [
+                  "strategy",
+                  "is",
+                  "see",
+                  "patient",
+                  "we",
+                  "What"
+                ],
+                "explanation": "Correct sentence order: \"What we see is patient strategy.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "It is this focus that succeeds.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It is this focus that succeeds",
+                "words": [
+                  "succeeds",
+                  "focus",
+                  "that",
+                  "is",
+                  "this",
+                  "It"
+                ],
+                "explanation": "Correct sentence order: \"It is this focus that succeeds.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "I examined TechVision's recent growth figures.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Rachel: \"I examined TechVision's recent growth _____.\"",
+                "targetWord": "figures",
+                "explanation": "Full audio: \"I examined TechVision's recent growth figures.\". The missing word is \"figures\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "What stands out is customer retention.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Rachel: \"What stands out is customer _____.\"",
+                "targetWord": "retention",
+                "explanation": "Full audio: \"What stands out is customer retention.\". The missing word is \"retention\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "True, but their quick pivot mattered.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "David: \"True, but their quick pivot _____.\"",
+                "targetWord": "mattered",
+                "explanation": "Full audio: \"True, but their quick pivot mattered.\". The missing word is \"mattered\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "It was B2B that saved them.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "David: \"It was B2B that _____ them.\"",
+                "targetWord": "saved",
+                "explanation": "Full audio: \"It was B2B that saved them.\". The missing word is \"saved\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "What investors liked was their transparency.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Rachel: \"What investors liked was their _____.\"",
+                "targetWord": "transparency",
+                "explanation": "Full audio: \"What investors liked was their transparency.\". The missing word is \"transparency\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "It was not just profit figures.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It was not just profit figures",
+                "words": [
+                  "not",
+                  "profit",
+                  "just",
+                  "was",
+                  "figures",
+                  "It"
+                ],
+                "explanation": "Correct sentence order: \"It was not just profit figures.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "It was leadership honesty that counted.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It was leadership honesty that counted",
+                "words": [
+                  "It",
+                  "that",
+                  "leadership",
+                  "counted",
+                  "honesty",
+                  "was"
+                ],
+                "explanation": "Correct sentence order: \"It was leadership honesty that counted.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "All they needed was clear direction.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "All they needed was clear direction",
+                "words": [
+                  "All",
+                  "clear",
+                  "direction",
+                  "needed",
+                  "was",
+                  "they"
+                ],
+                "explanation": "Correct sentence order: \"All they needed was clear direction.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "What we see is patient strategy.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "What we see is patient strategy",
+                "words": [
+                  "strategy",
+                  "is",
+                  "see",
+                  "patient",
+                  "we",
+                  "What"
+                ],
+                "explanation": "Correct sentence order: \"What we see is patient strategy.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "It is this focus that succeeds.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "It is this focus that succeeds",
+                "words": [
+                  "succeeds",
+                  "focus",
+                  "that",
+                  "is",
+                  "this",
+                  "It"
+                ],
+                "explanation": "Correct sentence order: \"It is this focus that succeeds.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-3-m02-writing",
+      "moduleId": "B2.3-M02",
+      "skillType": "writing",
+      "title": "Writing Mission: Master Cleft Sentences for Rhetorical Emphasis",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-b2-3-m02-w-theory",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Cleft sentences allow writers to divide a simple clause into two parts to highlight specific information. In formal essays, reports, and persuasive writing at B2 level, cleft structures give your statements precision, clarity, and rhetorical weight.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: The It-Cleft for Precise Focus",
+                "formula": "It + be (conjugated) + Emphasized Element + that / who + Remaining Clause",
+                "example": "It was the marketing director who proposed the digital campaign."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: The Wh-Cleft (Pseudo-Cleft) for Climax",
+                "formula": "What / All + Subject + Verb + be (conjugated) + Emphasized Information",
+                "example": "What the committee requires is clear evidence of community support."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: The Reversed Pseudo-Cleft for Direct Thematic Punch",
+                "formula": "Emphasized Element + be (conjugated) + what / who / where + Clause",
+                "example": "Financial stability is what young entrepreneurs seek most."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Maintain tense consistency between the cleft verb 'be' and the main relative clause.",
+                "badExample": "It is the finance team that submitted the annual budget yesterday.",
+                "goodExample": "It was the finance team that submitted the annual budget yesterday.",
+                "why": "Because the event occurred in the past (yesterday), the introductory cleft verb must use the past tense 'was'."
+              },
+              {
+                "rule": "Avoid using 'which' in standard it-clefts; use 'that' for things and 'that' or 'who' for people.",
+                "badExample": "It was the sudden price increase which triggered customer complaints.",
+                "goodExample": "It was the sudden price increase that triggered customer complaints.",
+                "why": "In formal it-cleft patterns, 'that' functions as the standard relative connector regardless of gender or animacy."
+              },
+              {
+                "rule": "Ensure subject-verb agreement with wh-cleft clauses introducing plural noun complements.",
+                "badExample": "What we noticed was several grammatical errors in the final report.",
+                "goodExample": "What we noticed were several grammatical errors in the final report.",
+                "why": "When the complement following 'be' is explicitly plural, formal writing generally prefers the plural verb 'were'."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "It was the unexpected delay in transport that caused the cancellation.",
+                "id": "Keterlambatan transportasi yang tak terduga itulah yang menyebabkan pembatalan tersebut.",
+                "focus": "It-cleft highlighting a cause"
+              },
+              {
+                "en": "What disappointed the investors was the sudden drop in quarterly revenue.",
+                "id": "Hal yang mengecewakan para investor adalah penurunan mendadak pada pendapatan kuartalan.",
+                "focus": "Wh-cleft creating anticipation"
+              },
+              {
+                "en": "All the participants wanted was an opportunity to voice their concerns.",
+                "id": "Semua yang diinginkan oleh para peserta hanyalah kesempatan untuk menyuarakan kekhawatiran mereka.",
+                "focus": "All-cleft limiting focus to a single wish"
+              },
+              {
+                "en": "A lack of proper communication is what led to the dispute.",
+                "id": "Kurangnya komunikasi yang tepat adalah hal yang memicu perselisihan itu.",
+                "focus": "Reversed pseudo-cleft fronting the key noun phrase"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-3-m02-w-practice",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "it were the lead engineer who noticed the structural crack on monday",
+                "targetSentence": "It was the lead engineer who noticed the structural crack on Monday.",
+                "translation": "Insinyur utama itulah yang menyadari retakan struktural tersebut pada hari Senin.",
+                "keyRule": "Use 'was' with singular pronouns and capitalize proper days of the week.",
+                "requiredCapitals": [
+                  "It",
+                  "Monday"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "what the team needs are urgent funding from the council",
+                "targetSentence": "What the team needs is urgent funding from the council.",
+                "translation": "Apa yang dibutuhkan tim tersebut adalah pendanaan mendesak dari dewan.",
+                "keyRule": "Uncountable nouns such as 'funding' take the singular verb 'is' in wh-cleft sentences.",
+                "requiredCapitals": [
+                  "What"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "all she requested were five minutes to prepare her presentation in london",
+                "targetSentence": "All she requested was five minutes to prepare her presentation in London.",
+                "translation": "Semua yang dia minta hanyalah lima menit untuk mempersiapkan presentasinya di London.",
+                "keyRule": "Periods of time like 'five minutes' take a singular verb when considered as a single amount, and London must be capitalized.",
+                "requiredCapitals": [
+                  "All",
+                  "London"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Emphasis on Subject",
+                "meaning": "Pemerintah daerahlah yang mendanai renovasi perpustakaan tersebut.",
+                "tokens": [
+                  "It",
+                  "was",
+                  "the",
+                  "local",
+                  "council",
+                  "that",
+                  "funded",
+                  "the",
+                  "library",
+                  "renovation."
+                ],
+                "fullSentence": "It was the local council that funded the library renovation."
+              },
+              {
+                "id": "b-2",
+                "category": "Wh-Cleft Clause",
+                "meaning": "Apa yang paling dikagumi para siswa adalah dedikasi guru mereka.",
+                "tokens": [
+                  "What",
+                  "the",
+                  "students",
+                  "admired",
+                  "most",
+                  "was",
+                  "the",
+                  "dedication",
+                  "of",
+                  "their",
+                  "teacher."
+                ],
+                "fullSentence": "What the students admired most was the dedication of their teacher."
+              },
+              {
+                "id": "b-3",
+                "category": "Reversed Pseudo-Cleft",
+                "meaning": "Inovasi berkelanjutan adalah apa yang dicari oleh dewan direksi.",
+                "tokens": [
+                  "Continuous",
+                  "innovation",
+                  "is",
+                  "what",
+                  "the",
+                  "board",
+                  "of",
+                  "directors",
+                  "seeks."
+                ],
+                "fullSentence": "Continuous innovation is what the board of directors seeks."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Highlight the Real Culprit in a Report",
+                "badge": "Clarity Specialist",
+                "instruction": "Write three to four sentences analyzing a technical problem in a project. Use at least one it-cleft sentence starting with 'It was...' to pinpoint the exact factor responsible, and explain the consequences.",
+                "example": "The software update experienced several glitches after launch. It was the faulty server configuration that triggered the database crash. The technical team repaired the settings within two hours.",
+                "placeholder": "Begin with the general context, then introduce your it-cleft sentence...",
+                "minWords": 25,
+                "xpReward": 40
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: State Your Core Demand Persuasively",
+                "badge": "Rhetorical Advocate",
+                "instruction": "Write three to four sentences about an improvement your school or workplace needs. Use at least one wh-cleft sentence starting with 'What we need is...' or 'What I propose is...' to state your primary demand emphatically.",
+                "example": "Our office has experienced severe communication breakdowns across departments. What we need is a weekly interdepartmental coordination meeting. This routine will ensure every staff member remains informed.",
+                "placeholder": "Explain the existing problem, then state your solution using a wh-cleft...",
+                "minWords": 25,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-3-m02-w-quiz",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the following sentence into an it-cleft structure that emphasizes the subject:",
+                "promptText": "Professor Miller designed the online curriculum.",
+                "hint": "Start with 'It was Professor Miller...'",
+                "targetAnswers": [
+                  "It was Professor Miller who designed the online curriculum.",
+                  "It was Professor Miller that designed the online curriculum."
+                ],
+                "explanation": "To emphasize the subject using an it-cleft, use 'It was + [subject] + who/that + [rest of clause]'."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence into an it-cleft that highlights the time phrase:",
+                "promptText": "The factory introduced the safety guidelines last October.",
+                "hint": "Start with 'It was last October...'",
+                "targetAnswers": [
+                  "It was last October that the factory introduced the safety guidelines.",
+                  "It was in last October that the factory introduced the safety guidelines."
+                ],
+                "explanation": "Highlighting an adverbial of time requires 'It was + [time phrase] + that + [main clause]'."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform the sentence into a wh-cleft emphasizing the object:",
+                "promptText": "We need additional staff for the weekend shifts.",
+                "hint": "Start with 'What we need...'",
+                "targetAnswers": [
+                  "What we need is additional staff for the weekend shifts.",
+                  "What we need are additional staff for the weekend shifts."
+                ],
+                "explanation": "A wh-cleft structures the clause as 'What we need + is/are + [emphasized object]'."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform the statement into a reversed pseudo-cleft emphasizing the underlined noun phrase:",
+                "promptText": "They urgently require clear guidance from the supervisor.",
+                "hint": "Begin your sentence with 'Clear guidance from the supervisor...'",
+                "targetAnswers": [
+                  "Clear guidance from the supervisor is what they urgently require."
+                ],
+                "explanation": "The reversed pseudo-cleft places the focused element at the beginning: [Focus] + is + what + [clause]."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Conjunctions & Connectors",
+                "instruction": "Combine the two clauses into a single it-cleft sentence with contrast using 'not... but':",
+                "promptText": "Poor planning caused the failure. Lack of funding did not cause it.",
+                "hint": "Start with 'It was not lack of funding...'",
+                "targetAnswers": [
+                  "It was not lack of funding but poor planning that caused the failure.",
+                  "It was poor planning, not lack of funding, that caused the failure."
+                ],
+                "explanation": "A contrastive it-cleft pairs 'not X but Y' immediately after 'It was' before the relative connector 'that'."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using an all-cleft structure to emphasize limitation:",
+                "promptText": "The research team only asked for three extra days.",
+                "hint": "Begin with 'All the research team asked for...'",
+                "targetAnswers": [
+                  "All the research team asked for was three extra days.",
+                  "All that the research team asked for was three extra days."
+                ],
+                "explanation": "When emphasizing 'only', an all-cleft is formed as 'All (that) + subject + verb + was + [complement]'."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct all punctuation and capitalization errors in the following sentence:",
+                "promptText": "it is the head of department, that approved dr evans research grant",
+                "hint": "Remove unnecessary commas, fix capital letters, and add the possessive apostrophe for Dr Evans's grant.",
+                "targetAnswers": [
+                  "It is the head of department that approved Dr. Evans's research grant.",
+                  "It is the head of department that approved Dr Evans's research grant.",
+                  "It was the head of department that approved Dr Evans's research grant.",
+                  "It was the head of department that approved Dr. Evans's research grant."
+                ],
+                "explanation": "Do not place a comma between the cleft focus and the relative clause 'that'. Capitalize titles and names correctly."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Identify and correct the grammatical agreement error in this wh-cleft sentence:",
+                "promptText": "What irritated the manager were his constant delay in replying to emails.",
+                "hint": "The complement 'his constant delay' is singular, so check the verb.",
+                "targetAnswers": [
+                  "What irritated the manager was his constant delay in replying to emails."
+                ],
+                "explanation": "Because 'delay' is a singular noun phrase, the linking verb following the wh-clause must be 'was', not 'were'."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Short Response",
+                "instruction": "Reply to the question in one complete it-cleft sentence that emphasizes the date:",
+                "promptText": "Did the company sign the agreement in May or in June? (Answer: June 15th)",
+                "hint": "Start with 'It was on June 15th...'",
+                "targetAnswers": [
+                  "It was on June 15th that the company signed the agreement.",
+                  "It was on 15 June that the company signed the agreement.",
+                  "It was on June 15 that the company signed the agreement."
+                ],
+                "explanation": "Form an it-cleft with the prepositional phrase of time: 'It was on [date] that + [clause]'."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Respond to the prompt by writing one complete wh-cleft sentence stating that the team needs better organization:",
+                "promptText": "What does the project team need most right now?",
+                "hint": "Use 'What the project team needs most right now is...'",
+                "targetAnswers": [
+                  "What the project team needs most right now is better organization.",
+                  "What the team needs most right now is better organization."
+                ],
+                "explanation": "Answer directly using 'What the project team needs most right now is' followed by the focused noun phrase."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-3-m02-speaking",
+      "moduleId": "B2.3-M02",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Delivering Rhetorical Emphasis with Cleft Structures",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-b2-3-m02-s-theory",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In high-stakes professional speaking, cleft sentences allow you to redirect the listener's focus with precision. Delivering them convincingly depends on prosody: placing tonic stress on the highlighted item and pausing naturally before or after the cleft boundary.",
+            "audioGuidance": "When delivering wh-clefts such as 'What we need is...', sustain a slight rise or level tone on the wh-clause, pause micro-seconds, and produce a decisive falling tone on the emphasized noun phrase. In 'It is... that' structures, hit the focal noun with immediate primary stress.",
+            "pillars": [
+              {
+                "name": "Tonic Stress on Cleft Focus",
+                "target": "Accentuate the extracted element rather than the cleft dummy pronoun",
+                "explanation": "In 'It was her integrity that saved the firm', avoid stressing 'It was'. Place the peak pitch and greater vocal energy directly onto 'integrity'."
+              },
+              {
+                "name": "Prosodic Boundary Pausing",
+                "target": "Micro-pause between the introductory clause and the main focus",
+                "explanation": "Use a subtle breath pause after 'What the stakeholders expect' before resolving the sentence with 'is complete transparency'."
+              },
+              {
+                "name": "Contrastive Intonation Contours",
+                "target": "Fall-rise tone on the theme, firm fall on the rheme",
+                "explanation": "A fall-rise intonation contour across the initial cleft clause builds listener anticipation, followed by a crisp downward contour on the core resolution."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-3-m02-s-practice",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "EM-pha-sis",
+                "countryAudio": "emphasis",
+                "countrySyllables": [
+                  {
+                    "text": "EM",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "pha",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "sis",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "em-PHA-tic",
+                "natAudio": "emphatic",
+                "natSyllables": [
+                  {
+                    "text": "em",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PHA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tic",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress moves from the initial syllable in the noun 'emphasis' to the second syllable in the adjective 'emphatic'."
+              },
+              {
+                "id": "pair-2",
+                "country": "RHET-o-ric",
+                "countryAudio": "rhetoric",
+                "countrySyllables": [
+                  {
+                    "text": "RHET",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "o",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ric",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "rhe-TOR-i-cal",
+                "natAudio": "rhetorical",
+                "natSyllables": [
+                  {
+                    "text": "rhe",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TOR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "cal",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Primary stress shifts from the first syllable in 'rhetoric' to the second syllable in 'rhetorical'."
+              },
+              {
+                "id": "pair-3",
+                "country": "ac-COUNT-a-ble",
+                "countryAudio": "accountable",
+                "countrySyllables": [
+                  {
+                    "text": "ac",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "COUNT",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "a",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ble",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "ac-count-a-BIL-i-ty",
+                "natAudio": "accountability",
+                "natSyllables": [
+                  {
+                    "text": "ac",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "count",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "a",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "BIL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ty",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The suffix '-ity' pulls the main stress forward onto the fourth syllable 'BIL'."
+              },
+              {
+                "id": "pair-4",
+                "country": "pre-CISE",
+                "countryAudio": "precise",
+                "countrySyllables": [
+                  {
+                    "text": "pre",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CISE",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "pre-CISE-ly",
+                "natAudio": "precisely",
+                "natSyllables": [
+                  {
+                    "text": "pre",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CISE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ly",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The primary stress remains fixed on the second syllable when the adverb suffix '-ly' is added."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "What the shareholders demand is complete transparency in financial reporting.",
+                "phonetic": "/wɒt ðə ˈʃeəˌhəʊldəz dɪˈmɑːnd ɪz kəmˈpliːt trænˈspærənsi ɪn faɪˈnænʃəl rɪˈpɔːtɪŋ/",
+                "focus": "Wh-cleft phrasing and contrastive emphasis on 'transparency'",
+                "hint": "Pause slightly after 'demand' and pronounce 'transparency' with high pitch prominence."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "It was the CEO's pivotal decision that saved the company from bankruptcy.",
+                "phonetic": "/ɪt wəz ðə ˌsiː.iːˈəʊz ˈpɪvətl dɪˈsɪʒən ðət seɪvd ðə ˈkʌmpəni frəm ˈbæŋkrəptsi/",
+                "focus": "It-cleft stress on modifier 'pivotal' and weak form of 'that'",
+                "hint": "Keep 'It was the' light and fast. Hit 'pivotal decision' with strong volume and clarity."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "All they asked for was greater accountability from the leadership team.",
+                "phonetic": "/ɔːl ðeɪ ɑːskt fɔː wəz ˈɡreɪtər əˌkaʊntəˈbɪlɪti frəm ðə ˈliːdəʃɪp tiːm/",
+                "focus": "All-cleft focus and multi-syllabic stress rhythm in 'accountability'",
+                "hint": "Connect 'asked for was' without harsh stops, then emphasize 'greater accountability'."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "What undermines trust most is inconsistency between words and actions.",
+                "phonetic": "/wɒt ˌʌndəˈmaɪnz trʌst məʊst ɪz ˌɪnkənˈsɪstənsi bɪˈtwiːn wɜːdz ənd ˈækʃənz/",
+                "focus": "Compound cleft rhythm and pitch drop on final elements",
+                "hint": "Slight rising tone on 'most', followed by an assertive fall on 'inconsistency'."
+              }
+            ],
+            "roleplay": {
+              "context": "Elena and Marcus, two senior project leads, review strategic feedback after a difficult stakeholder debrief.",
+              "roles": [
+                "Marcus",
+                "Elena"
+              ],
+              "turns": [
+                {
+                  "speaker": "Marcus",
+                  "text": "The committee felt our strategy lacked focus. Should we revise the entire proposal?",
+                  "translation": "Komite merasa strategi kita kurang terfokus. Haruskah kita merevisi seluruh proposal?"
+                },
+                {
+                  "speaker": "Elena",
+                  "text": "Not at all. What they really questioned was our timeline, not our core methodology.",
+                  "translation": "Sama sekali tidak. Yang sebenarnya mereka pertanyakan adalah lini masa kita, bukan metodologi inti kita."
+                },
+                {
+                  "speaker": "Marcus",
+                  "text": "That makes sense. So how should we address their concerns during tomorrow's follow-up call?",
+                  "translation": "Itu masuk akal. Jadi bagaimana sebaiknya kita mengatasi kekhawatiran mereka dalam panggilan lanjutan besok?"
+                },
+                {
+                  "speaker": "Elena",
+                  "text": "It is greater transparency around milestones that will restore their confidence.",
+                  "translation": "Transparansi yang lebih besarlah seputar tonggak capaian yang akan memulihkan kepercayaan mereka."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b2-3-m02-s-quiz",
+          "moduleId": "B2.3-M02",
+          "subModuleId": "sub-b2-3-m02-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Strategic Narrative",
+                "instruction": "Speak for at least 25 seconds about a major challenge in a past project. Use an it-cleft sentence to isolate the single factor that secured success.",
+                "audioPrompt": "Describe a difficult situation you resolved at work or school. Emphasize the crucial factor that made the difference.",
+                "storyPoints": [
+                  "Outline the original obstacle and the pressure your team faced",
+                  "Explain the specific corrective action that was initiated",
+                  "Use an it-cleft structure with 'pivotal' or 'compelling' to explain what saved the outcome"
+                ],
+                "targetSentence": "It was our pivotal decision to consult stakeholders early that prevented severe project delays.",
+                "phonetic": "/ɪt wəz ˈaʊə ˈpɪvətl dɪˈsɪʒən tə kənˈsʌlt ˈsteɪkˌhəʊldəz ˈɜːli ðət prɪˈventɪd sɪˈvɪə ˈprɒʤekt dɪˈleɪz/",
+                "expectedKeywords": [
+                  "pivotal",
+                  "decision",
+                  "stakeholders",
+                  "prevented"
+                ],
+                "explanation": "Ensure the it-cleft features peak emphasis on 'pivotal decision' rather than on introductory auxiliary words."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Leadership Experience Narrative",
+                "instruction": "Speak for at least 25 seconds about resolving a team miscommunication. Use a wh-cleft sentence to highlight the missing element.",
+                "audioPrompt": "Reflect on a project where communication broke down. What was the central issue that needed fixing?",
+                "storyPoints": [
+                  "Recall how the initial miscommunication affected the team environment",
+                  "Describe how leadership stepped in to re-evaluate priorities",
+                  "Formulate a wh-cleft using 'transparency' or 'accountability' as the main focal point"
+                ],
+                "targetSentence": "What the team required most was clear accountability and transparent leadership.",
+                "phonetic": "/wɒt ðə tiːm rɪˈkwaɪəd məʊst wəz klɪər əˌkaʊntəˈbɪlɪti ənd trænsˈpærənt ˈliːdəʃɪp/",
+                "expectedKeywords": [
+                  "required",
+                  "accountability",
+                  "transparent",
+                  "leadership"
+                ],
+                "explanation": "Deliver 'What the team required most' with rising intonation, followed by a slight pause and decisive fall on 'accountability'."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Stakeholder Dialogue",
+                "scenarioContext": "You are leading a project presentation. A community representative expresses concern about how environmental data was handled.",
+                "characterRole": "Community Representative: 'We feel our concerns were dismissed in the latest environmental assessment.'",
+                "audioPrompt": "Respond directly to the community representative. Use a wh-cleft starting with 'What we prioritize...' to reassure them about transparency.",
+                "targetSentence": "What we prioritize above all is complete transparency with every community stakeholder.",
+                "phonetic": "/wɒt wi praɪˈɒrɪtaɪz əˈbʌv ɔːl ɪz kəmˈpliːt trænˈspærənsi wɪð ˈevri kəˈmjuːnɪti ˈsteɪkˌhəʊldə/",
+                "expectedKeywords": [
+                  "prioritize",
+                  "transparency",
+                  "community",
+                  "stakeholder"
+                ],
+                "explanation": "Respond professionally without defensive inflection. Place primary rhetorical weight on 'transparency'."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Board Meeting",
+                "scenarioContext": "You are presenting an annual financial review to an executive board member who is sceptical about department costs.",
+                "characterRole": "Executive Director: 'Your departmental expenditures rose substantially this quarter. Why shouldn't we cut your budget?'",
+                "audioPrompt": "Defend your division's value. Use an it-cleft structure starting with 'It was our...' to highlight the revenue impact of your work.",
+                "targetSentence": "It was our targeted client engagement that generated thirty percent higher revenue this quarter.",
+                "phonetic": "/ɪt wəz ˈaʊə ˈtɑːɡɪtɪd ˈklaɪənt ɪnˈɡeɪʤmənt ðət ˈʤenəreɪtɪd ˈθɜːti pəˈsent ˈhaɪə ˈrevənjuː ðɪs ˈkwɔːtə/",
+                "expectedKeywords": [
+                  "targeted",
+                  "engagement",
+                  "generated",
+                  "revenue"
+                ],
+                "explanation": "Highlight the extracted noun phrase 'targeted client engagement' with high pitch prominence to create a persuasive contrast."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Crisis Management Call",
+                "scenarioContext": "A critical software outage has occurred. Your operational director wants to conceal the technical cause from clients until Monday.",
+                "characterRole": "Operations Director: 'If we admit this glitch now, clients will lose faith in our reliability. Let us wait.'",
+                "audioPrompt": "Reject the proposal firmly. Use a wh-cleft sentence with 'What undermines...' to explain why dishonesty will backfire.",
+                "targetSentence": "What undermines client trust most is attempting to conceal operational errors.",
+                "phonetic": "/wɒt ˌʌndəˈmaɪnz ˈklaɪənt trʌst məʊst ɪz əˈtemptɪŋ tə kənˈsiːl ˌɒpəˈreɪʃənl ˈerəz/",
+                "expectedKeywords": [
+                  "undermines",
+                  "trust",
+                  "conceal",
+                  "errors"
+                ],
+                "explanation": "Use an authoritative, measured cadence. Ensure 'undermines' has secondary stress and 'conceal' carries sharp focus."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Negotiation Realignment",
+                "scenarioContext": "During contract negotiations, the opposing commercial negotiator accuses your firm of demanding excessive terms.",
+                "characterRole": "Lead Negotiator: 'Your contract terms are far too demanding for a standard partnership.'",
+                "audioPrompt": "Clarify your baseline position calmly using an all-cleft structure starting with 'All we are seeking...'.",
+                "targetSentence": "All we are seeking is mutual accountability and respect for contractual integrity.",
+                "phonetic": "/ɔːl wi ə ˈsiːkɪŋ ɪz ˈmjuːtʃuəl əˌkaʊntəˈbɪlɪti ənd rɪˈspekt fə kənˈtræktʃuəl ɪnˈteɡrəti/",
+                "expectedKeywords": [
+                  "seeking",
+                  "accountability",
+                  "contractual",
+                  "integrity"
+                ],
+                "explanation": "Deliver 'All we are seeking' smoothly without harsh glottal stops, resolving into strong stress on 'integrity'."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Target Lexis Pronunciation",
+                "instruction": "Pronounce the vocabulary target within a natural cleft sentence, ensuring clean vowel articulation in 'integrity'.",
+                "audioPrompt": "Read the sentence clearly: 'It is professional integrity that protects our corporate reputation.'",
+                "targetSentence": "It is professional integrity that protects our corporate reputation.",
+                "phonetic": "/ɪt ɪz prəˈfeʃənl ɪnˈteɡrəti ðət prəˈtekts ˈaʊə ˈkɔːpərət ˌrepjʊˈteɪʃən/",
+                "expectedKeywords": [
+                  "professional",
+                  "integrity",
+                  "protects",
+                  "reputation"
+                ],
+                "explanation": "Focus on the short /e/ in 'integrity' (/ɪnˈteɡrəti/) and maintain proper weak forms on 'that' (/ðət/)."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammatical Structure Drill",
+                "instruction": "Transform this standard statement into a wh-cleft sentence: 'We desperately need greater transparency from senior executives.'",
+                "audioPrompt": "Convert the statement into a wh-cleft beginning with 'What we desperately need...'.",
+                "targetSentence": "What we desperately need is greater transparency from senior executives.",
+                "phonetic": "/wɒt wi ˈdespərətli niːd ɪz ˈɡreɪtə trænˈspærənsi frəm ˈsiːniər ɪɡˈzekjətɪvz/",
+                "expectedKeywords": [
+                  "desperately",
+                  "need",
+                  "transparency",
+                  "executives"
+                ],
+                "explanation": "Ensure the copular verb 'is' correctly links the wh-clause to the noun phrase focus."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Syllable Stress Accuracy",
+                "instruction": "Pronounce the sentence with correct primary stress placement on 'precisely' and 'rhetorical'.",
+                "audioPrompt": "Speak this sentence with careful attention to syllable weight: 'That is precisely the rhetorical emphasis we wanted.'",
+                "targetSentence": "That is precisely the rhetorical emphasis we wanted.",
+                "phonetic": "/ðæt ɪz prɪˈsaɪsli ðə rɪˈtɒrɪkəl ˈemfəsɪs wi ˈwɒntɪd/",
+                "expectedKeywords": [
+                  "precisely",
+                  "rhetorical",
+                  "emphasis",
+                  "wanted"
+                ],
+                "explanation": "Place primary stress on the second syllable of 'precisely' (/prɪˈsaɪsli/) and 'rhetorical' (/rɪˈtɒrɪkəl/), but on the first syllable of 'emphasis' (/ˈemfəsɪs/)."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Contour Drill",
+                "instruction": "Deliver this cleft sentence using an anticipatory rise on 'persuaded the board' followed by a definitive falling pitch on 'compelling argument'.",
+                "audioPrompt": "Practice the contrastive intonation contour: 'What persuaded the board was her compelling argument.'",
+                "targetSentence": "What persuaded the board was her compelling argument.",
+                "phonetic": "/wɒt pəˈsweɪdɪd ðə bɔːd wəz hɜː kəmˈpelɪŋ ˈɑːɡjʊmənt/",
+                "expectedKeywords": [
+                  "persuaded",
+                  "board",
+                  "compelling",
+                  "argument"
+                ],
+                "explanation": "Use a subtle fall-rise contour on 'board' to indicate non-finality, then resolve with a firm downward pitch contour on 'argument'."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
