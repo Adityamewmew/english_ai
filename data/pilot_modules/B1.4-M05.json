@@ -1,0 +1,1705 @@
+{
+  "module": {
+    "id": "B1.4-M05",
+    "levelId": "B1.4",
+    "title": "Unit 5: Business Travel, Hotel Bookings & Airport Logistics",
+    "cefr": "B1",
+    "group": "Travel & Hospitality",
+    "objective": "Mampu melakukan koordinasi perjalanan dinas, check-in, dan penanganan keterlambatan transportasi secara percaya diri.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 44
+  },
+  "subModules": [
+    {
+      "id": "sub-b1-4-m05-reading",
+      "moduleId": "B1.4-M05",
+      "skillType": "reading",
+      "title": "Reading Mission: Business Travel, Hotel Bookings and Airport Logistics",
+      "theme": "Business Travel and Hotel Logistics",
+      "grammarFocus": "Polite Requests with 'Would like to' and 'Could you', Managing Delays with 'I am afraid'",
+      "vocabularyFocus": "Airport procedures, hotel amenities, travel schedules, and business itineraries",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-b1-4-m05-r-theory",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "In this reading mission, you will read an authentic business travel update and an email exchange between a travelling manager and a hotel receptionist. You will learn how to scan flight schedules, understand polite check-in conversations, and respond to sudden flight delays.",
+            "linguisticTarget": {
+              "grammar": "Polite requests with 'would like to', polite questions with 'Could you' or 'Would it be possible to', and bad-news markers with 'I am afraid' or 'Unfortunately'.",
+              "vocabulary": "reservation, boarding pass, layover, complimentary, itinerary, delayed, connecting flight, shuttle service, late check-out.",
+              "readingStrategy": "Scanning for times, flight codes, and hotel conditions, and identifying tone and polite formulas in business correspondence."
+            },
+            "learningObjectives": [
+              "Understand the main idea of a business travel itinerary and an urgent hotel communication.",
+              "Locate specific details such as flight arrival times, transfer options, and check-in policies.",
+              "Recognize and practice grammar patterns with polite requests and diplomatic notifications."
+            ],
+            "contextWarmup": {
+              "prompt": "You arrive at your hotel at 11:00 PM because your flight was delayed. What is the most polite way to request your room key?",
+              "options": [
+                "Good evening. I'd like to check in, please. I have a reservation under the name Hartono.",
+                "Give me my room key right now because my flight was late.",
+                "I want a room immediately, my name is Hartono."
+              ],
+              "correctIndex": 0,
+              "explanation": "Using 'I'd like to check in, please' is polite, professional, and standard when speaking with hotel staff."
+            },
+            "rules": [
+              "Use 'Subject + would like to + base verb' (or the contraction 'I'd like to') to express polite requests instead of using blunt phrases like 'I want'.",
+              "Use 'Could you + base verb...?' or 'Would it be possible to + base verb...?' when asking airline or hotel staff for assistance or special arrangements.",
+              "Use 'I'm afraid + clause' or 'Unfortunately + clause' to deliver unpleasant news gently, often followed by a recommendation with 'should' or 'had better'."
+            ],
+            "commonTrap": {
+              "trapTitle": "Direct Demands vs. Polite B1 Business Formulas",
+              "explanation": "Learners often translate directly from casual language by saying 'I want to check out late' or 'You must change my ticket'. In international business travel, this sounds impolite. Use modal expressions like 'Could you' or 'Would it be possible to'.",
+              "wrong": "I want a late check-out because my flight is delayed.",
+              "correct": "Would it be possible to arrange a late check-out? My flight has been delayed."
+            },
+            "contractionsTitle": "Natural Spoken Contractions: Business Travel Enquiries",
+            "contractionsSubtitle": "Notice how auxiliary verbs merge with subjects during formal and semi-formal conversations:",
+            "contractions": [
+              {
+                "subject": "I",
+                "verb": "would",
+                "vowelDropped": "woul",
+                "remainder": "d",
+                "contracted": "I'd",
+                "exampleFull": "I would like to confirm my room reservation.",
+                "exampleContracted": "I'd like to confirm my room reservation."
+              },
+              {
+                "subject": "You",
+                "verb": "had",
+                "vowelDropped": "ha",
+                "remainder": "d",
+                "contracted": "You'd",
+                "exampleFull": "You had better inform the hotel about the delay.",
+                "exampleContracted": "You'd better inform the hotel about the delay."
+              },
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It's",
+                "exampleFull": "It is a complimentary service for hotel guests.",
+                "exampleContracted": "It's a complimentary service for hotel guests."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns for Polite Travel Requests",
+              "description": "Combine the blocks below to build polite requests and schedule updates:",
+              "subjects": [
+                {
+                  "label": "I",
+                  "pronoun": "I",
+                  "correctToBe": "am",
+                  "role": "First Person Traveler"
+                },
+                {
+                  "label": "We",
+                  "pronoun": "We",
+                  "correctToBe": "are",
+                  "role": "Company Delegation"
+                },
+                {
+                  "label": "Could you",
+                  "pronoun": "You",
+                  "correctToBe": "are",
+                  "role": "Hotel or Airport Staff"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "like to check in",
+                  "thirdPerson": "likes to check in",
+                  "continuous": "checking in"
+                },
+                {
+                  "base": "arrange",
+                  "thirdPerson": "arranges",
+                  "continuous": "arranging"
+                },
+                {
+                  "base": "confirm",
+                  "thirdPerson": "confirms",
+                  "continuous": "confirming"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "under the name Hartono",
+                  "type": "Reservation Detail"
+                },
+                {
+                  "text": "an airport shuttle for tomorrow morning",
+                  "type": "Transport Request"
+                },
+                {
+                  "text": "a late check-out due to flight delay",
+                  "type": "Special Request"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-4-m05-r-vocab",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "reservation",
+                "ipa": "/ˌrez.əˈveɪ.ʃən/",
+                "meaning": "reservasi, pemesanan kamar atau tiket",
+                "partOfSpeech": "noun",
+                "exampleSentence": "I have a reservation for three nights under the name Widodo.",
+                "collocation": "make a reservation / confirm a reservation"
+              },
+              {
+                "word": "boarding pass",
+                "ipa": "/ˈbɔː.dɪŋ ˌpɑːs/",
+                "meaning": "kartu naik pesawat",
+                "partOfSpeech": "noun",
+                "exampleSentence": "Please have your boarding pass and passport ready before approaching the gate.",
+                "collocation": "show a boarding pass / print a boarding pass"
+              },
+              {
+                "word": "layover",
+                "ipa": "/ˈleɪˌoʊ.vər/",
+                "meaning": "persinggahan sementara, transit di bandara",
+                "partOfSpeech": "noun",
+                "exampleSentence": "We have a four-hour layover in Singapore before our connecting flight to London.",
+                "collocation": "four-hour layover / long layover"
+              },
+              {
+                "word": "complimentary",
+                "ipa": "/ˌkɒm.plɪˈmen.tər.i/",
+                "meaning": "gratis sebagai fasilitas tambahan",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "The hotel offers complimentary breakfast and airport shuttle service for business guests.",
+                "collocation": "complimentary breakfast / complimentary shuttle"
+              },
+              {
+                "word": "itinerary",
+                "ipa": "/aɪˈtɪn.ər.ər.i/",
+                "meaning": "jadwal atau rencana perjalanan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "I will email you the full itinerary, including flight times and hotel details.",
+                "collocation": "travel itinerary / detailed itinerary"
+              },
+              {
+                "word": "delayed",
+                "ipa": "/dɪˈleɪd/",
+                "meaning": "tertunda, mengalami keterlambatan",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "Flight GA 714 to Jakarta has been delayed due to severe weather conditions.",
+                "collocation": "heavily delayed / flight delayed"
+              },
+              {
+                "word": "connecting flight",
+                "ipa": "/kəˈnek.tɪŋ flaɪt/",
+                "meaning": "penerbangan lanjutan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "If this flight lands late, we might miss our connecting flight to Frankfurt.",
+                "collocation": "catch a connecting flight / miss a connecting flight"
+              },
+              {
+                "word": "shuttle service",
+                "ipa": "/ˈʃʌt.əl ˈsɜː.vɪs/",
+                "meaning": "layanan bus antar-jemput",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The hotel provides a complimentary shuttle service directly to Terminal 2 every thirty minutes.",
+                "collocation": "airport shuttle service / book a shuttle service"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-4-m05-r-guided",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Business Trip Disruption: Managing Flights and Hotel Check-in",
+            "audioUrl": "/audio/modules/b1-4-m05/reading-passage.mp3",
+            "durationSeconds": 65,
+            "paragraphs": [
+              "David Hartono is a regional sales director travelling from Jakarta to Munich for an international trade exhibition. According to his original travel itinerary, he had an easy departure from Soekarno-Hatta International Airport, followed by a three-hour layover at Changi Airport in Singapore. From there, he planned to board his long-haul connecting flight to Germany and arrive at his hotel before noon.",
+              "However, unpredictable tropical storms disrupted schedules across Southeast Asia. At the departure gate in Jakarta, the airline announced that his initial flight was delayed by two and a half hours. David realized immediately that his connection in Singapore was at risk. He opened his smartphone to review his boarding pass and contact the Grand Central Hotel in Munich, where he had reserved a deluxe room for four nights.",
+              "David wrote a polite email to the hotel reception: 'Dear Front Desk Team, I have a reservation under the name David Hartono, booking reference GH-4092. I'd like to inform you that my flight from Jakarta has been delayed, so I will miss my original connecting flight. Could you please hold my room for a late check-in? I expect to reach the hotel around 9:00 PM instead of 11:30 AM.'",
+              "Within twenty minutes, the hotel manager sent a reassuring reply: 'Dear Mr Hartono, thank you for contacting us. We have updated your reservation notes. Your room is secured, and we also offer a complimentary airport shuttle service from Munich Airport every half hour. Please proceed to the shuttle station outside Terminal 1 upon arrival. Have a safe flight.'"
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 16.5,
+                "text": "David Hartono is a regional sales director travelling from Jakarta to Munich for an international trade exhibition. According to his original travel itinerary, he had an easy departure from Soekarno-Hatta International Airport, followed by a three-hour layover at Changi Airport in Singapore. From there, he planned to board his long-haul connecting flight to Germany and arrive at his hotel before noon.",
+                "paragraphIndex": 0
+              },
+              {
+                "start": 16.6,
+                "end": 33.2,
+                "text": "However, unpredictable tropical storms disrupted schedules across Southeast Asia. At the departure gate in Jakarta, the airline announced that his initial flight was delayed by two and a half hours. David realized immediately that his connection in Singapore was at risk. He opened his smartphone to review his boarding pass and contact the Grand Central Hotel in Munich, where he had reserved a deluxe room for four nights.",
+                "paragraphIndex": 1
+              },
+              {
+                "start": 33.3,
+                "end": 48.8,
+                "text": "David wrote a polite email to the hotel reception: 'Dear Front Desk Team, I have a reservation under the name David Hartono, booking reference GH-4092. I'd like to inform you that my flight from Jakarta has been delayed, so I will miss my original connecting flight. Could you please hold my room for a late check-in? I expect to reach the hotel around 9:00 PM instead of 11:30 AM.'",
+                "paragraphIndex": 2
+              },
+              {
+                "start": 48.9,
+                "end": 65,
+                "text": "Within twenty minutes, the hotel manager sent a reassuring reply: 'Dear Mr Hartono, thank you for contacting us. We have updated your reservation notes. Your room is secured, and we also offer a complimentary airport shuttle service from Munich Airport every half hour. Please proceed to the shuttle station outside Terminal 1 upon arrival. Have a safe flight.'",
+                "paragraphIndex": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-4-m05-r-practice",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": [
+              {
+                "id": "drill-1",
+                "instruction": "Match each business travel term with its correct definition or usage context.",
+                "pairs": [
+                  {
+                    "left": "Reservation",
+                    "right": "An arrangement to keep a hotel room or seat for someone"
+                  },
+                  {
+                    "left": "Boarding pass",
+                    "right": "A document giving permission to get on an airplane"
+                  },
+                  {
+                    "left": "Layover",
+                    "right": "A short period of waiting between two parts of a journey"
+                  },
+                  {
+                    "left": "Complimentary",
+                    "right": "Provided free of charge by a business or hotel"
+                  }
+                ]
+              },
+              {
+                "id": "drill-2",
+                "instruction": "Match each phrase to the appropriate logistical situation.",
+                "pairs": [
+                  {
+                    "left": "Itinerary",
+                    "right": "A detailed schedule listing travel dates, flights, and accommodations"
+                  },
+                  {
+                    "left": "Delayed",
+                    "right": "Operating behind the planned schedule due to weather or technical issues"
+                  },
+                  {
+                    "left": "Connecting flight",
+                    "right": "The next leg of an air journey taken after transit"
+                  },
+                  {
+                    "left": "Shuttle service",
+                    "right": "Regular transport that travels back and forth between two points"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-4-m05-r-quiz",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What is David Hartono's primary reason for travelling to Munich?",
+                "options": [
+                  "To attend an international trade exhibition",
+                  "To start a new job at Changi Airport",
+                  "To spend a relaxing holiday with his family"
+                ],
+                "answer": "To attend an international trade exhibition",
+                "explanation": "Paragraph 1 clearly states that David is a regional sales director travelling from Jakarta to Munich for an international trade exhibition."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Where was David's scheduled layover before heading to Germany?",
+                "options": [
+                  "Frankfurt International Airport",
+                  "Changi Airport in Singapore",
+                  "Soekarno-Hatta Airport in Jakarta"
+                ],
+                "answer": "Changi Airport in Singapore",
+                "explanation": "According to the first paragraph, his original itinerary included a three-hour layover at Changi Airport in Singapore."
+              },
+              {
+                "id": "q-r-3",
+                "question": "Why was David's first flight delayed?",
+                "options": [
+                  "Mechanical engine trouble on the airplane",
+                  "An error printed on his boarding pass",
+                  "Unpredictable tropical storms in the region"
+                ],
+                "answer": "Unpredictable tropical storms in the region",
+                "explanation": "Paragraph 2 states that unpredictable tropical storms disrupted schedules across Southeast Asia."
+              },
+              {
+                "id": "q-r-4",
+                "question": "By how much time was the departure from Jakarta delayed?",
+                "options": [
+                  "Two and a half hours",
+                  "Exactly four hours",
+                  "Thirty minutes"
+                ],
+                "answer": "Two and a half hours",
+                "explanation": "Paragraph 2 mentions that the airline announced his initial flight was delayed by two and a half hours."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What main consequence did the flight delay create for David?",
+                "options": [
+                  "He lost his passport at the boarding gate",
+                  "He was at serious risk of missing his connecting flight in Singapore",
+                  "His hotel booking in Munich was cancelled immediately"
+                ],
+                "answer": "He was at serious risk of missing his connecting flight in Singapore",
+                "explanation": "Because his Jakarta flight was delayed by two and a half hours and his layover was only three hours, he risked missing his connection."
+              },
+              {
+                "id": "q-r-6",
+                "question": "How did David politely contact the hotel about his late arrival?",
+                "options": [
+                  "He demanded a refund by calling customer service",
+                  "He sent an email using polite phrases like 'I'd like to' and 'Could you please'",
+                  "He asked his company to book another hotel"
+                ],
+                "answer": "He sent an email using polite phrases like 'I'd like to' and 'Could you please'",
+                "explanation": "Paragraph 3 shows his email: 'I'd like to inform you...' and 'Could you please hold my room for a late check-in?'"
+              },
+              {
+                "id": "q-r-7",
+                "question": "At what time did David initially expect to reach the Grand Central Hotel?",
+                "options": [
+                  "At 9:00 PM",
+                  "At 11:30 AM",
+                  "At 6:00 AM"
+                ],
+                "answer": "At 11:30 AM",
+                "explanation": "In his email in paragraph 3, David mentions: 'I expect to reach the hotel around 9:00 PM instead of 11:30 AM.'"
+              },
+              {
+                "id": "q-r-8",
+                "question": "How did the hotel manager respond to David's email?",
+                "options": [
+                  "He refused to keep the room without an additional payment",
+                  "He confirmed that the room was secured and explained transport options",
+                  "He instructed David to find another hotel near Munich Airport"
+                ],
+                "answer": "He confirmed that the room was secured and explained transport options",
+                "explanation": "Paragraph 4 explains that the hotel manager replied that his room was secured and highlighted their shuttle service."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What complimentary service does the Grand Central Hotel provide for its guests?",
+                "options": [
+                  "A free flight upgrade to business class",
+                  "An airport shuttle service every thirty minutes",
+                  "Free luggage storage for two weeks"
+                ],
+                "answer": "An airport shuttle service every thirty minutes",
+                "explanation": "The hotel manager's reply in paragraph 4 says: 'we also offer a complimentary airport shuttle service from Munich Airport every half hour.'"
+              },
+              {
+                "id": "q-r-10",
+                "question": "Where should David go to catch the hotel bus upon his arrival in Munich?",
+                "options": [
+                  "To the shuttle station situated outside Terminal 1",
+                  "To the departures hall in Terminal 2",
+                  "To the central train station in downtown Munich"
+                ],
+                "answer": "To the shuttle station situated outside Terminal 1",
+                "explanation": "The hotel manager specifically directs him: 'Please proceed to the shuttle station outside Terminal 1 upon arrival.'"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-4-m05-listening",
+      "moduleId": "B1.4-M05",
+      "skillType": "listening",
+      "title": "Listening Mission: Hotel Check-in and Late Arrival",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-b1-4-m05-l-theory",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Learn how to listen for key details during hotel phone calls, handle delayed arrival updates, and catch connected speech patterns when booking travel services.",
+            "learningObjectives": [
+              "Catch the main topic of a business phone call regarding late check-in.",
+              "Identify specific details such as room types, times, and special guest requests.",
+              "Notice how words link together when speakers make polite requests."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "check in",
+                "meaning": "mendaftar masuk (hotel atau bandara)",
+                "note": "Used when arriving at a hotel to register and collect the room key."
+              },
+              {
+                "phrase": "wake-up call",
+                "meaning": "panggilan telepon untuk membangunkan tamu",
+                "note": "A telephone call arranged with the front desk to wake someone up at a specific hour."
+              },
+              {
+                "phrase": "flight was delayed",
+                "meaning": "penerbangan tertunda",
+                "note": "Common travel phrase used to explain an unexpected late arrival."
+              },
+              {
+                "phrase": "under the name",
+                "meaning": "atas nama",
+                "note": "Used to identify which person a booking or reservation belongs to."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "check in",
+                "fast": "che-kin",
+                "slowIpa": "/tʃek ɪn/",
+                "fastIpa": "/ˈtʃekɪn/",
+                "note": "The final consonant /k/ links directly into the following vowel sound /ɪ/."
+              },
+              {
+                "id": 2,
+                "slow": "could you",
+                "fast": "cood-joo",
+                "slowIpa": "/kʊd juː/",
+                "fastIpa": "/ˈkʊdʒu/",
+                "note": "The /d/ sound merges with the /j/ sound to produce a soft /dʒ/."
+              },
+              {
+                "id": 3,
+                "slow": "was delayed",
+                "fast": "wuz-delayed",
+                "slowIpa": "/wɒz dɪˈleɪd/",
+                "fastIpa": "/wəzdɪˈleɪd/",
+                "note": "The vowel in 'was' reduces to a weak schwa /ə/ before the hard consonant."
+              },
+              {
+                "id": 4,
+                "slow": "leave coffee in",
+                "fast": "leave-coffee-yin",
+                "slowIpa": "/liːv ˈkɒfi ɪn/",
+                "fastIpa": "/liːv ˈkɒfijɪn/",
+                "note": "A natural glide /j/ bridges the two vowel sounds between 'coffee' and 'in'."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-4-m05-l-dialogue",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Late Arrival at Grand Meridian",
+          "orderIndex": 2,
+          "content": {
+            "context": "Alex calls the Grand Meridian Hotel from the airport after experiencing a flight delay.",
+            "audioPrompt": "Listen to the phone call between Alex and Morgan.",
+            "lines": [
+              {
+                "speaker": "Morgan",
+                "text": "Grand Meridian Hotel, how can I help?",
+                "translation": "Hotel Grand Meridian, ada yang bisa saya bantu?",
+                "emotion": "polite"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Hi Morgan, my flight was delayed.",
+                "translation": "Hai Morgan, penerbangan saya tertunda.",
+                "emotion": "tired"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "No worries, what is your name?",
+                "translation": "Tidak masalah, siapa nama Anda?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Alex Hartono, checking in tonight.",
+                "translation": "Alex Hartono, check-in malam ini.",
+                "emotion": "neutral"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "I found your deluxe room reservation.",
+                "translation": "Saya menemukan reservasi kamar deluxe Anda.",
+                "emotion": "helpful"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Great, I will arrive around midnight.",
+                "translation": "Bagus, saya akan tiba sekitar tengah malam.",
+                "emotion": "relieved"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "Our front desk is open all night.",
+                "translation": "Meja depan kami buka sepanjang malam.",
+                "emotion": "reassuring"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Could you leave coffee in my room?",
+                "translation": "Bisakah Anda meninggalkan kopi di kamar saya?",
+                "emotion": "polite"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "Sure, and a light meal too.",
+                "translation": "Tentu, dan makanan ringan juga.",
+                "emotion": "warm"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Please set a six-thirty wake-up call.",
+                "translation": "Tolong atur panggilan bangun jam enam tiga puluh.",
+                "emotion": "calm"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "Done. Any other requests tonight, Alex?",
+                "translation": "Selesai. Ada permintaan lain malam ini, Alex?",
+                "emotion": "friendly"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Did my colleague Priya Santoso book tomorrow?",
+                "translation": "Apakah rekan saya Priya Santoso memesan untuk besok?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Morgan",
+                "text": "Yes, her booking is confirmed for tomorrow.",
+                "translation": "Ya, reservasinya sudah dikonfirmasi untuk besok.",
+                "emotion": "helpful"
+              },
+              {
+                "speaker": "Alex",
+                "text": "Perfect, thanks for your help, Morgan!",
+                "translation": "Sempurna, terima kasih atas bantuanmu, Morgan!",
+                "emotion": "cheerful"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-4-m05-l-quiz",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Grand Meridian Hotel, how can I help?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"Grand Meridian Hotel, how can I _____?\"",
+                "targetWord": "help",
+                "explanation": "Full audio: \"Grand Meridian Hotel, how can I help?\". The missing word is \"help\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Hi Morgan, my flight was delayed.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Hi Morgan, my flight was _____.\"",
+                "targetWord": "delayed",
+                "explanation": "Full audio: \"Hi Morgan, my flight was delayed.\". The missing word is \"delayed\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "No worries, what is your name?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"No worries, what is your _____?\"",
+                "targetWord": "name",
+                "explanation": "Full audio: \"No worries, what is your name?\". The missing word is \"name\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Alex Hartono, checking in tonight.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Alex Hartono, checking in _____.\"",
+                "targetWord": "tonight",
+                "explanation": "Full audio: \"Alex Hartono, checking in tonight.\". The missing word is \"tonight\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "I found your deluxe room reservation.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"I found your deluxe room _____.\"",
+                "targetWord": "reservation",
+                "explanation": "Full audio: \"I found your deluxe room reservation.\". The missing word is \"reservation\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Great, I will arrive around midnight.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Great I will arrive around midnight",
+                "words": [
+                  "around",
+                  "will",
+                  "I",
+                  "arrive",
+                  "midnight",
+                  "Great"
+                ],
+                "explanation": "Correct sentence order: \"Great, I will arrive around midnight.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Our front desk is open all night.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Our front desk is open all night",
+                "words": [
+                  "all",
+                  "is",
+                  "front",
+                  "night",
+                  "open",
+                  "desk",
+                  "Our"
+                ],
+                "explanation": "Correct sentence order: \"Our front desk is open all night.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Could you leave coffee in my room?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Could you leave coffee in my room",
+                "words": [
+                  "my",
+                  "leave",
+                  "Could",
+                  "room",
+                  "you",
+                  "coffee",
+                  "in"
+                ],
+                "explanation": "Correct sentence order: \"Could you leave coffee in my room?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Sure, and a light meal too.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Sure and a light meal too",
+                "words": [
+                  "too",
+                  "light",
+                  "Sure",
+                  "meal",
+                  "a",
+                  "and"
+                ],
+                "explanation": "Correct sentence order: \"Sure, and a light meal too.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Please set a six-thirty wake-up call.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Please set a six-thirty wake-up call",
+                "words": [
+                  "wake-up",
+                  "set",
+                  "a",
+                  "Please",
+                  "call",
+                  "six-thirty"
+                ],
+                "explanation": "Correct sentence order: \"Please set a six-thirty wake-up call.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Grand Meridian Hotel, how can I help?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"Grand Meridian Hotel, how can I _____?\"",
+                "targetWord": "help",
+                "explanation": "Full audio: \"Grand Meridian Hotel, how can I help?\". The missing word is \"help\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "Hi Morgan, my flight was delayed.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Hi Morgan, my flight was _____.\"",
+                "targetWord": "delayed",
+                "explanation": "Full audio: \"Hi Morgan, my flight was delayed.\". The missing word is \"delayed\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "No worries, what is your name?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"No worries, what is your _____?\"",
+                "targetWord": "name",
+                "explanation": "Full audio: \"No worries, what is your name?\". The missing word is \"name\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Alex Hartono, checking in tonight.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Alex Hartono, checking in _____.\"",
+                "targetWord": "tonight",
+                "explanation": "Full audio: \"Alex Hartono, checking in tonight.\". The missing word is \"tonight\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "I found your deluxe room reservation.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"I found your deluxe room _____.\"",
+                "targetWord": "reservation",
+                "explanation": "Full audio: \"I found your deluxe room reservation.\". The missing word is \"reservation\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Great, I will arrive around midnight.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Great I will arrive around midnight",
+                "words": [
+                  "around",
+                  "will",
+                  "I",
+                  "arrive",
+                  "midnight",
+                  "Great"
+                ],
+                "explanation": "Correct sentence order: \"Great, I will arrive around midnight.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "Our front desk is open all night.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Our front desk is open all night",
+                "words": [
+                  "all",
+                  "is",
+                  "front",
+                  "night",
+                  "open",
+                  "desk",
+                  "Our"
+                ],
+                "explanation": "Correct sentence order: \"Our front desk is open all night.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Could you leave coffee in my room?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Could you leave coffee in my room",
+                "words": [
+                  "my",
+                  "leave",
+                  "Could",
+                  "room",
+                  "you",
+                  "coffee",
+                  "in"
+                ],
+                "explanation": "Correct sentence order: \"Could you leave coffee in my room?\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "Sure, and a light meal too.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Sure and a light meal too",
+                "words": [
+                  "too",
+                  "light",
+                  "Sure",
+                  "meal",
+                  "a",
+                  "and"
+                ],
+                "explanation": "Correct sentence order: \"Sure, and a light meal too.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Please set a six-thirty wake-up call.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Please set a six-thirty wake-up call",
+                "words": [
+                  "wake-up",
+                  "set",
+                  "a",
+                  "Please",
+                  "call",
+                  "six-thirty"
+                ],
+                "explanation": "Correct sentence order: \"Please set a six-thirty wake-up call.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-4-m05-writing",
+      "moduleId": "B1.4-M05",
+      "skillType": "writing",
+      "title": "Writing Mission: Business Travel, Hotel Bookings & Airport Logistics",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-b1-4-m05-w-theory",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This writing guide covers standard formulas for business travel correspondence, hotel arrangements, and transport delay notifications. You will learn how to state your requests politely, make formal inquiries, and communicate unexpected schedule changes with clear recommendations.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Polite Travel Requests with Would Like To",
+                "formula": "Subject + would like to + base verb (+ complement)",
+                "example": "I would like to confirm our company booking for three single rooms from May 12th to May 15th."
+              },
+              {
+                "step": 2,
+                "title": "Formal Requests for Assistance",
+                "formula": "Could you + base verb ...? / Would it be possible to + base verb ...?",
+                "example": "Would it be possible to arrange an airport shuttle service for our arrival at Terminal 2?"
+              },
+              {
+                "step": 3,
+                "title": "Reporting Delays and Recommending Solutions",
+                "formula": "Unfortunately / I am afraid + [delay clause] + Subject + should / had better + base verb",
+                "example": "I am afraid our flight has been delayed by two hours, so we had better notify the client immediately."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Capitalize flight codes, airline names, and airport terminal designations properly.",
+                "badExample": "our flight ga402 lands at changi airport terminal 3 on wednesday.",
+                "goodExample": "Our flight GA402 lands at Changi Airport Terminal 3 on Wednesday.",
+                "why": "Airlines, flight numbers, airport terminals, and days are proper nouns and official codes."
+              },
+              {
+                "rule": "Use a comma after introductory discourse markers such as 'Unfortunately' or 'In addition' at the beginning of a sentence.",
+                "badExample": "Unfortunately our connection in Frankfurt was cancelled.",
+                "goodExample": "Unfortunately, our connection in Frankfurt was cancelled.",
+                "why": "Introductory transitional adverbs require a comma to separate them from the main clause."
+              },
+              {
+                "rule": "Use the bare infinitive after 'had better', not a full infinitive with 'to'.",
+                "badExample": "You had better to take an earlier train to avoid airport traffic.",
+                "goodExample": "You had better take an earlier train to avoid airport traffic.",
+                "why": "'Had better' functions like a modal auxiliary verb and must be followed directly by a base verb without 'to'."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "I would like to check in, please; I have a booking under the name Hartono.",
+                "id": "Saya ingin check-in, tolong; saya memiliki reservasi atas nama Hartono.",
+                "focus": "Polite booking check-in expression"
+              },
+              {
+                "en": "Could you arrange a late check-out for me because my flight does not depart until 9:00 p.m.?",
+                "id": "Bisakah Anda mengatur waktu check-out lebih lambat untuk saya karena penerbangan saya baru berangkat pukul 21.00?",
+                "focus": "Polite inquiry with reason"
+              },
+              {
+                "en": "I am afraid our flight has been delayed by three hours, so we should inform the hotel.",
+                "id": "Saya khawatir penerbangan kita telah tertunda selama tiga jam, jadi kita sebaiknya memberi tahu pihak hotel.",
+                "focus": "Reporting bad news and providing advice"
+              },
+              {
+                "en": "Would it be possible to hold our meeting room reservation until 4:00 p.m. due to traffic?",
+                "id": "Mungkinkah untuk menahan reservasi ruang rapat kami hingga pukul 16.00 karena kemacetan lalu lintas?",
+                "focus": "Formal conditional request"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-4-m05-w-practice",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "unfortunately flight ga210 to singapore is delayed and we had better to call the hotel",
+                "targetSentence": "Unfortunately, flight GA210 to Singapore is delayed, and we had better call the hotel.",
+                "translation": "Sayangnya, penerbangan GA210 ke Singapura ditunda, dan kita sebaiknya menelepon pihak hotel.",
+                "keyRule": "Place a comma after 'Unfortunately', capitalize flight codes and city names, and avoid using 'to' after 'had better'.",
+                "requiredCapitals": [
+                  "Unfortunately",
+                  "GA210",
+                  "Singapore"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "would it be possible to arrange an airport shuttle from heathrow airport on tuesday morning.",
+                "targetSentence": "Would it be possible to arrange an airport shuttle from Heathrow Airport on Tuesday morning?",
+                "translation": "Mungkinkah mengatur antar-jemput bandara dari Bandara Heathrow pada Selasa pagi?",
+                "keyRule": "Start questions with a capital letter, capitalize proper names and days, and end with a question mark.",
+                "requiredCapitals": [
+                  "Would",
+                  "Heathrow",
+                  "Airport",
+                  "Tuesday"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "mr pratama would likes to request a quiet room on the upper floor",
+                "targetSentence": "Mr. Pratama would like to request a quiet room on the upper floor.",
+                "translation": "Pak Pratama ingin meminta kamar yang tenang di lantai atas.",
+                "keyRule": "Use 'would like' without adding an 's' to 'like', and capitalize titles and surnames.",
+                "requiredCapitals": [
+                  "Mr.",
+                  "Pratama"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Hotel Booking Requests",
+                "meaning": "Saya ingin meminta check-out lebih lambat untuk besok siang.",
+                "tokens": [
+                  "I",
+                  "would",
+                  "like",
+                  "to",
+                  "request",
+                  "a",
+                  "late",
+                  "check-out",
+                  "for",
+                  "tomorrow",
+                  "afternoon."
+                ],
+                "fullSentence": "I would like to request a late check-out for tomorrow afternoon."
+              },
+              {
+                "id": "b-2",
+                "category": "Airport Logistics",
+                "meaning": "Bisakah Anda memesankan taksi ke Bandara Narita pada pukul tujuh pagi?",
+                "tokens": [
+                  "Could",
+                  "you",
+                  "book",
+                  "a",
+                  "taxi",
+                  "to",
+                  "Narita",
+                  "Airport",
+                  "at",
+                  "seven",
+                  "in",
+                  "the",
+                  "morning?"
+                ],
+                "fullSentence": "Could you book a taxi to Narita Airport at seven in the morning?"
+              },
+              {
+                "id": "b-3",
+                "category": "Delay Notification",
+                "meaning": "Saya khawatir kereta kami tertunda, jadi kita sebaiknya memberi tahu kantor.",
+                "tokens": [
+                  "I",
+                  "am",
+                  "afraid",
+                  "our",
+                  "train",
+                  "is",
+                  "delayed,",
+                  "so",
+                  "we",
+                  "had",
+                  "better",
+                  "notify",
+                  "the",
+                  "office."
+                ],
+                "fullSentence": "I am afraid our train is delayed, so we had better notify the office."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Email for Late Hotel Check-In",
+                "badge": "Front Desk Diplomat",
+                "instruction": "Write three to four sentences to a hotel front desk. State your booking name, explain that your flight has been delayed, give your new expected arrival time, and ask politely if they can hold your room.",
+                "example": "Dear Hotel Reception, I have a reservation under the name Maya Salim for tonight. Unfortunately, my flight has been delayed by two hours, so I expect to arrive at 11:30 p.m. Could you please hold my room until I arrive? Thank you for your assistance.",
+                "placeholder": "Dear Reception, I have a booking under...",
+                "minWords": 35,
+                "xpReward": 40
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Travel Delay Update to a Business Partner",
+                "badge": "Logistics Coordinator",
+                "instruction": "Write three to four sentences to your client or business host. Explain that you experienced airport transit delays, state your updated schedule, and suggest rescheduling your afternoon meeting.",
+                "example": "Dear Mr. Davis, I am afraid our morning connection in Frankfurt was cancelled due to bad weather. We have been rebooked on an afternoon flight, so we had better postpone our 2:00 p.m. meeting until tomorrow morning. Would 9:30 a.m. tomorrow work for you?",
+                "placeholder": "Dear Mr. Davis, I am writing to inform you that...",
+                "minWords": 35,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-4-m05-w-quiz",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the direct request into a formal request using 'I would like to':",
+                "promptText": "I want to reserve a conference room for tomorrow morning.",
+                "hint": "Replace 'I want to' with 'I would like to'.",
+                "targetAnswers": [
+                  "I would like to reserve a conference room for tomorrow morning.",
+                  "I'd like to reserve a conference room for tomorrow morning."
+                ],
+                "explanation": "In business correspondence, 'would like to' replaces 'want to' to sound polite and professional."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this direct question into a polite request starting with 'Could you':",
+                "promptText": "Send me the updated flight itinerary.",
+                "hint": "Begin with 'Could you' and end with a question mark.",
+                "targetAnswers": [
+                  "Could you send me the updated flight itinerary?",
+                  "Could you please send me the updated flight itinerary?"
+                ],
+                "explanation": "Starting a request with 'Could you' softens an imperative command into a standard business request."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Conjunctions & Connectors",
+                "instruction": "Combine the two sentences using 'because' to explain the reason for rescheduling:",
+                "promptText": "We must reschedule our hotel check-in. Our flight from Jakarta has been delayed.",
+                "hint": "Join the clauses with 'because' without using a comma.",
+                "targetAnswers": [
+                  "We must reschedule our hotel check-in because our flight from Jakarta has been delayed.",
+                  "We have to reschedule our hotel check-in because our flight from Jakarta has been delayed."
+                ],
+                "explanation": "The conjunction 'because' introduces the cause of the rescheduling directly after the main clause."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence into a formal inquiry starting with 'Would it be possible to':",
+                "promptText": "Can we check in early at 11:00 a.m.?",
+                "hint": "Use 'Would it be possible to check in early at 11:00 a.m.?'",
+                "targetAnswers": [
+                  "Would it be possible to check in early at 11:00 a.m.?",
+                  "Would it be possible to check in early at 11:00 am?"
+                ],
+                "explanation": "'Would it be possible to + base verb' is a formal construction used for asking special permissions or services."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the punctuation, grammar, and capitalization mistakes in this sentence:",
+                "promptText": "unfortunately flight sq951 is cancelled so you had better to contact singapore airlines immediately",
+                "hint": "Add a comma after 'Unfortunately', capitalize flight codes and airline names, and omit 'to' after 'had better'.",
+                "targetAnswers": [
+                  "Unfortunately, flight SQ951 is cancelled, so you had better contact Singapore Airlines immediately.",
+                  "Unfortunately, flight SQ951 is cancelled so you had better contact Singapore Airlines immediately."
+                ],
+                "explanation": "'Unfortunately' needs a following comma, proper nouns must be capitalized, and 'had better' is followed by a base verb without 'to'."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Deliver this bad news professionally starting with 'I am afraid':",
+                "promptText": "The airport shuttle is no longer running tonight.",
+                "hint": "Introduce the clause with 'I am afraid that' or 'I am afraid'.",
+                "targetAnswers": [
+                  "I am afraid that the airport shuttle is no longer running tonight.",
+                  "I am afraid the airport shuttle is no longer running tonight.",
+                  "I'm afraid that the airport shuttle is no longer running tonight.",
+                  "I'm afraid the airport shuttle is no longer running tonight."
+                ],
+                "explanation": "'I am afraid (that)' softens negative announcements in business travel contexts."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Conjunctions & Connectors",
+                "instruction": "Combine these two sentences into one sentence using 'so':",
+                "promptText": "Our baggage was delayed in Tokyo. We had better buy basic toiletries for tonight.",
+                "hint": "Connect the result clause with ', so'.",
+                "targetAnswers": [
+                  "Our baggage was delayed in Tokyo, so we had better buy basic toiletries for tonight.",
+                  "Our baggage was delayed in Tokyo so we had better buy basic toiletries for tonight."
+                ],
+                "explanation": "The conjunction 'so' shows the logical consequence of the delayed baggage."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the capitalization and punctuation errors in this hotel inquiry:",
+                "promptText": "could you confirm if breakfast is included in room 402 at grand hyatt hotel",
+                "hint": "Capitalize the first word, the hotel name, and finish with a question mark.",
+                "targetAnswers": [
+                  "Could you confirm if breakfast is included in room 402 at Grand Hyatt Hotel?",
+                  "Could you confirm if breakfast is included in Room 402 at Grand Hyatt Hotel?"
+                ],
+                "explanation": "Sentences must start with a capital letter, hotel names are proper nouns requiring capitalization, and inquiries end with a question mark."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Short Response",
+                "instruction": "Write a complete sentence advising your colleague to take the express train instead of a taxi, using 'had better':",
+                "promptText": "Advise your colleague: take the express train instead of a taxi to avoid missing the flight.",
+                "hint": "Start with 'You had better take...'",
+                "targetAnswers": [
+                  "You had better take the express train instead of a taxi to avoid missing the flight.",
+                  "We had better take the express train instead of a taxi to avoid missing the flight."
+                ],
+                "explanation": "'Had better + base verb' gives strong advice to prevent a negative outcome like missing a flight."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Short Response",
+                "instruction": "Write a polite one-sentence request asking the hotel staff if they can store your luggage after check-out:",
+                "promptText": "Ask the receptionist politely to store your luggage after check-out.",
+                "hint": "Use 'Could you please store...' or 'Would it be possible to store...'",
+                "targetAnswers": [
+                  "Could you please store our luggage after check-out?",
+                  "Could you please store my luggage after check-out?",
+                  "Would it be possible to store our luggage after check-out?",
+                  "Would it be possible to store my luggage after check-out?"
+                ],
+                "explanation": "Using 'Could you please...' or 'Would it be possible to...' forms a courteous request suitable for hotel staff."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b1-4-m05-speaking",
+      "moduleId": "B1.4-M05",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Business Travel and Airport Communication",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-b1-4-m05-s-theory",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Practise clear, polite English for business travel. Give important details slowly, such as your name, booking reference, flight number, and travel times. Use complete sentences when asking for help or explaining a problem.",
+            "audioGuidance": "Use a calm pace at the hotel desk and airport. Stress key information words, such as the date, destination, and flight number. Let your voice rise for polite yes-or-no questions, and fall at the end of statements and information questions.",
+            "pillars": [
+              {
+                "name": "Vowel Clarity",
+                "target": "Clear short and long vowels",
+                "explanation": "Say the vowel sounds in words such as 'ship' and 'sheep' clearly. This helps listeners understand important travel details."
+              },
+              {
+                "name": "Word Stress",
+                "target": "Stress the correct syllable",
+                "explanation": "Give the stressed syllable more energy in words such as 'reservation' and 'itinerary'. Practise each word slowly before using it in a sentence."
+              },
+              {
+                "name": "Polite Questions",
+                "target": "Use a friendly, clear tone",
+                "explanation": "Ask for help with phrases such as 'Could you check my booking, please?' Keep your tone polite and make the request easy to understand."
+              },
+              {
+                "name": "Natural Rhythm",
+                "target": "Group words into short phrases",
+                "explanation": "Pause briefly between pieces of information. For example, say the flight number first, then explain the problem."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-4-m05-s-practice",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "re-serve",
+                "countryAudio": "reserve",
+                "countrySyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "SERVE",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "re-ser-va-tion",
+                "natAudio": "reservation",
+                "natSyllables": [
+                  {
+                    "text": "re",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ser",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "VA",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress changes from the second syllable in 'reserve' to the third syllable in 'reservation'."
+              },
+              {
+                "id": "pair-2",
+                "country": "i-tin-er-ar-y",
+                "countryAudio": "itinerary",
+                "countrySyllables": [
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "TIN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "er",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ar",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "y",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "travel",
+                "natAudio": "travel",
+                "natSyllables": [
+                  {
+                    "text": "TRAV",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "el",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Stress the second syllable in 'itinerary' and the first syllable in 'travel'."
+              },
+              {
+                "id": "pair-3",
+                "country": "com-pli-men-ta-ry",
+                "countryAudio": "complimentary",
+                "countrySyllables": [
+                  {
+                    "text": "com",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "pli",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "MEN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ta",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ry",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "com-pli-ment",
+                "natAudio": "compliment",
+                "natSyllables": [
+                  {
+                    "text": "COM",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "pli",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ment",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "The stress is on 'men' in 'complimentary' but on 'com' in 'compliment'."
+              },
+              {
+                "id": "pair-4",
+                "country": "de-lay",
+                "countryAudio": "delay",
+                "countrySyllables": [
+                  {
+                    "text": "de",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LAY",
+                    "isStressed": true
+                  }
+                ],
+                "nationality": "de-layed",
+                "natAudio": "delayed",
+                "natSyllables": [
+                  {
+                    "text": "de",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "LAYED",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "The main stress stays on the second syllable when '-ed' is added."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "I have a reservation for three nights under the name Widodo.",
+                "phonetic": "/aɪ hæv ə ˌrezəˈveɪʃən fə θriː naɪts ˈʌndə ðə neɪm wɪˈdoʊdoʊ/",
+                "focus": "Stress in 'reservation' and clear delivery of a guest name",
+                "hint": "Say the name clearly, and stress the third syllable of 'reservation'."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "Please have your boarding pass and passport ready.",
+                "phonetic": "/pliːz hæv jə ˈbɔːdɪŋ pɑːs ən ˈpɑːspɔːt ˈredi/",
+                "focus": "Clear consonants and natural rhythm",
+                "hint": "Pause briefly after 'boarding pass' so both documents are clear."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Our flight is delayed, so I may miss my connection.",
+                "phonetic": "/aʊə flaɪt ɪz dɪˈleɪd səʊ aɪ meɪ mɪs maɪ kəˈnekʃən/",
+                "focus": "Word stress and explaining a travel problem",
+                "hint": "Stress 'delayed' and 'miss' to make the problem clear."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "Could you email me the updated itinerary, please?",
+                "phonetic": "/kʊd juː ˈiːmeɪl miː ði ʌpˈdeɪtɪd aɪˈtɪnərəri pliːz/",
+                "focus": "Polite request and syllable stress",
+                "hint": "Use a friendly tone, and stress 'email' and the second syllable of 'itinerary'."
+              }
+            ],
+            "roleplay": {
+              "context": "You are checking in at a hotel during a business trip. Confirm your reservation and ask about breakfast and the airport shuttle.",
+              "roles": [
+                "Hotel Receptionist",
+                "Business Traveller"
+              ],
+              "turns": [
+                {
+                  "speaker": "Hotel Receptionist",
+                  "text": "Good evening. Do you have a reservation with us?",
+                  "translation": "Selamat malam. Apakah Anda memiliki reservasi di tempat kami?"
+                },
+                {
+                  "speaker": "Business Traveller",
+                  "text": "Yes, I have a reservation for three nights under the name Widodo.",
+                  "translation": "Ya, saya memiliki reservasi untuk tiga malam atas nama Widodo."
+                },
+                {
+                  "speaker": "Hotel Receptionist",
+                  "text": "Thank you. Breakfast is complimentary, and the airport shuttle leaves at six thirty.",
+                  "translation": "Terima kasih. Sarapan gratis, dan shuttle bandara berangkat pukul enam tiga puluh."
+                },
+                {
+                  "speaker": "Business Traveller",
+                  "text": "That is helpful. Could you confirm my check-out time, please?",
+                  "translation": "Informasi itu sangat membantu. Bisakah Anda memastikan waktu check-out saya?"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b1-4-m05-s-quiz",
+          "moduleId": "B1.4-M05",
+          "subModuleId": "sub-b1-4-m05-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Business Travel Story",
+                "instruction": "Speak for at least 30 seconds about a business trip you have taken or would like to take.",
+                "audioPrompt": "Describe a business trip and explain how you would organise the main parts of your travel.",
+                "storyPoints": [
+                  "Say where you would travel and why the trip is important.",
+                  "Describe your flight and hotel arrangements.",
+                  "Explain what you would include in your itinerary."
+                ],
+                "targetSentence": "I would book my flight and hotel early, then email my itinerary to my colleagues.",
+                "phonetic": "/aɪ wʊd bʊk maɪ flaɪt ən həʊˈtel ˈɜːli ðen ˈiːmeɪl maɪ aɪˈtɪnərəri tə maɪ ˈkɒliːɡz/",
+                "expectedKeywords": [
+                  "business trip",
+                  "flight",
+                  "hotel",
+                  "itinerary"
+                ],
+                "explanation": "Use complete sentences and give the details in a clear order."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Travel Problem Story",
+                "instruction": "Speak for at least 30 seconds about a delay or travel problem and how you would respond.",
+                "audioPrompt": "Imagine your flight is delayed and you may miss a connecting flight. Tell the story of what you would do.",
+                "storyPoints": [
+                  "Explain which flight is delayed and where you are going.",
+                  "Say who you would contact and what information you would ask for.",
+                  "Describe how you would update your hotel or colleagues."
+                ],
+                "targetSentence": "If my flight were delayed, I would contact the airline and update my colleagues.",
+                "phonetic": "/ɪf maɪ flaɪt wə dɪˈleɪd aɪ wʊd ˈkɒntækt ði ˈeəlaɪn ən ʌpˈdeɪt maɪ ˈkɒliːɡz/",
+                "expectedKeywords": [
+                  "delayed",
+                  "airline",
+                  "colleagues",
+                  "update"
+                ],
+                "explanation": "Explain the problem and your next steps using a calm, clear voice."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Hotel Check-in Roleplay",
+                "instruction": "Take part in a live roleplay. Confirm your booking and ask a follow-up question.",
+                "audioPrompt": "You are at a hotel reception desk. Speak to the receptionist and check in for your stay.",
+                "scenarioContext": "You arrive at a hotel for a work trip. You have a reservation for three nights under your name, and you want to confirm whether breakfast is included.",
+                "characterRole": "You are a business traveller. Give your name, confirm the reservation, and politely ask about breakfast.",
+                "expectedKeywords": [
+                  "reservation",
+                  "three nights",
+                  "name",
+                  "breakfast"
+                ],
+                "explanation": "Give your booking details clearly and ask a polite question."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Airport Information Roleplay",
+                "instruction": "Take part in a live roleplay. Ask for help finding your gate.",
+                "audioPrompt": "Speak to an airport staff member after passing security.",
+                "scenarioContext": "You are at the airport and cannot find the gate for your flight. You have your boarding pass and need clear directions.",
+                "characterRole": "You are a passenger. Tell the staff member your flight number and ask where the gate is.",
+                "expectedKeywords": [
+                  "boarding pass",
+                  "flight number",
+                  "gate",
+                  "please"
+                ],
+                "explanation": "State your flight details and make a clear, polite request."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Flight Delay Roleplay",
+                "instruction": "Take part in a live roleplay. Explain the delay and ask about your options.",
+                "audioPrompt": "Call the airline help desk because your flight has been delayed.",
+                "scenarioContext": "Your flight has been delayed and you have a connecting flight later that day. You need to know whether you can still make the connection.",
+                "characterRole": "You are a traveller speaking to an airline representative. Give your flight details and ask what you should do next.",
+                "expectedKeywords": [
+                  "delayed",
+                  "connecting flight",
+                  "flight details",
+                  "next"
+                ],
+                "explanation": "Explain the situation briefly, then ask a direct question about your options."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Business Travel Coordination Roleplay",
+                "instruction": "Take part in a live roleplay call. Update a colleague and confirm the travel plan.",
+                "audioPrompt": "Call a colleague to discuss your hotel, airport transfer, and travel schedule.",
+                "scenarioContext": "You are coordinating a business trip with a colleague. Your hotel offers a complimentary airport shuttle, and you need to confirm the arrival time and itinerary.",
+                "characterRole": "You are the traveller. Explain the shuttle plan, confirm the arrival time, and ask your colleague to check the itinerary.",
+                "expectedKeywords": [
+                  "complimentary",
+                  "shuttle",
+                  "arrival time",
+                  "itinerary"
+                ],
+                "explanation": "Share key information in a sensible order and check that the plan is understood."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Drill",
+                "focus": "vocab",
+                "instruction": "Say one clear sentence for each word: reservation, boarding pass, layover, complimentary, itinerary, and delayed.",
+                "audioPrompt": "Use these travel words in complete sentences: reservation, boarding pass, layover, complimentary, itinerary, and delayed.",
+                "targetSentence": "My itinerary shows a two-hour layover, and my flight is not delayed.",
+                "expectedKeywords": [
+                  "reservation",
+                  "boarding pass",
+                  "layover",
+                  "complimentary",
+                  "itinerary",
+                  "delayed"
+                ],
+                "explanation": "Use each word in a sentence that shows its meaning."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Drill",
+                "focus": "grammar",
+                "instruction": "Make polite requests using 'Could you...?' and 'Would you...?' in a hotel or airport situation.",
+                "audioPrompt": "Ask someone to confirm your reservation, check your flight, and explain the shuttle schedule.",
+                "targetSentence": "Could you confirm my reservation, please?",
+                "expectedKeywords": [
+                  "Could you",
+                  "Would you",
+                  "please",
+                  "confirm"
+                ],
+                "explanation": "Use a question form and a polite word such as 'please' when asking for help."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Syllable Stress Drill",
+                "focus": "pronunciation_stress",
+                "instruction": "Say 'reservation', 'itinerary', 'complimentary', and 'delayed'. Give extra stress to the correct syllable in each word.",
+                "audioPrompt": "Repeat these words clearly: reservation, itinerary, complimentary, delayed.",
+                "targetSentence": "My reservation and itinerary are ready, but my flight is delayed.",
+                "phonetic": "/ˌrezəˈveɪʃən ən aɪˈtɪnərəri ɑː ˈredi bət maɪ flaɪt ɪz dɪˈleɪd/",
+                "expectedKeywords": [
+                  "reservation",
+                  "itinerary",
+                  "complimentary",
+                  "delayed"
+                ],
+                "explanation": "Listen for the stressed syllable in each word and keep the other syllables lighter."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Rising and Falling Intonation Drill",
+                "focus": "pronunciation_intonation",
+                "instruction": "Say one polite yes-or-no question with rising intonation and one information question with falling intonation.",
+                "audioPrompt": "Practise the difference between a rising yes-or-no question and a falling information question.",
+                "targetSentence": "Is breakfast complimentary? Where does the airport shuttle leave from?",
+                "expectedKeywords": [
+                  "complimentary",
+                  "shuttle",
+                  "rising intonation",
+                  "falling intonation"
+                ],
+                "explanation": "Let your voice rise at the end of the yes-or-no question and fall at the end of the information question."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
