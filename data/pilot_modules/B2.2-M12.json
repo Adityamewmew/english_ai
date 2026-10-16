@@ -1,0 +1,1592 @@
+{
+  "module": {
+    "id": "B2.2-M12",
+    "levelId": "B2.2",
+    "title": "Academic Paper Deconstruction: Abstract Writing, Literature Review & Citation Registers",
+    "cefr": "B2",
+    "group": "B2.2 - Advanced Professional & Academic Fluency",
+    "objective": "Menyusun ringkasan penelitian akademik, meninjau literatur, dan mengutip bukti secara ilmiah.",
+    "complexity": "easy",
+    "estimatedMinutes": 25,
+    "isExam": false,
+    "passingScore": 70,
+    "orderIndex": 12
+  },
+  "subModules": [
+    {
+      "id": "sub-b2-2-m12-reading",
+      "moduleId": "B2.2-M12",
+      "skillType": "reading",
+      "title": "Reading Mission: Academic Paper Deconstruction",
+      "theme": "Academic Writing and Research Analysis",
+      "grammarFocus": "Hedging expressions, reporting verbs, and nominalization",
+      "vocabularyFocus": "Research methodology and academic discourse",
+      "orderIndex": 1,
+      "sections": [
+        {
+          "id": "sec-b2-2-m12-r-theory",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-reading",
+          "sectionType": "theory",
+          "title": "Learning Objectives & Warm-up",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This module helps students deconstruct academic texts, master abstract writing structures, and navigate citation registers with confidence. You will explore how researchers frame arguments and evaluate empirical evidence.",
+            "linguisticTarget": {
+              "grammar": "Using hedging verbs and reporting structures effectively in academic reading and writing.",
+              "vocabulary": "Advanced research terms related to methodology, data analysis, and literature synthesis.",
+              "readingStrategy": "Scanning academic abstracts for core research aims, methodologies, and key implications."
+            },
+            "learningObjectives": [
+              "Understand the structural components of an academic abstract.",
+              "Identify hedging language and evaluate the strength of author claims.",
+              "Recognize formal nominalization patterns in scholarly texts."
+            ],
+            "contextWarmup": {
+              "prompt": "When reading an academic research paper, which section should you examine first to grasp the entire study quickly?",
+              "options": [
+                "The Abstract, because it summarizes the background, methods, results, and conclusion.",
+                "The References, because they list all previous studies cited by the authors.",
+                "The Acknowledgements, because they mention funding sources and institutional support."
+              ],
+              "correctIndex": 0,
+              "explanation": "The abstract serves as a concise summary of the entire paper, allowing readers to determine its relevance before reading further."
+            },
+            "rules": [
+              "Hedging verbs: Use verbs like suggest, indicate, appear to, seem to, or tend to when discussing findings rather than absolute words like prove.",
+              "Reporting verbs: Choose verbs that match the author's stance, such as argue or assert for strong claims, and propose or suggest for tentative claims.",
+              "Abstract structure: Follow the standard sequence of background, aim, method, results, and conclusion."
+            ],
+            "commonTrap": {
+              "trapTitle": "Treating Tentative Findings as Absolute Truths",
+              "explanation": "Learners often misinterpret hedging language, assuming that words like suggest mean absolute certainty.",
+              "wrong": "The data proves that students learn better online.",
+              "correct": "The data suggests a positive correlation between online tools and student engagement."
+            },
+            "contractionsTitle": "Formal Academic Register",
+            "contractionsSubtitle": "Observe how academic writing avoids contractions for maximum formality:",
+            "contractions": [
+              {
+                "subject": "It",
+                "verb": "is",
+                "vowelDropped": "i",
+                "remainder": "s",
+                "contracted": "It is",
+                "exampleFull": "It is important to note the limitations.",
+                "exampleContracted": "It is important to note the limitations."
+              }
+            ],
+            "grammarFormulas": {
+              "title": "Sentence Patterns with Hedging Verbs",
+              "description": "Assemble academic sentence blocks to express cautious claims:",
+              "subjects": [
+                {
+                  "label": "The data",
+                  "pronoun": "It",
+                  "correctToBe": "is",
+                  "role": "Subject"
+                }
+              ],
+              "verbs": [
+                {
+                  "base": "suggest",
+                  "thirdPerson": "suggests",
+                  "continuous": "suggesting"
+                }
+              ],
+              "complements": [
+                {
+                  "text": "a strong correlation between variables",
+                  "type": "Object Complement"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b2-2-m12-r-vocab",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-reading",
+          "sectionType": "vocab",
+          "title": "Key Vocabulary Bank",
+          "orderIndex": 2,
+          "content": {
+            "items": [
+              {
+                "word": "empirical",
+                "ipa": "/ɪmˈpɪrɪkəl/",
+                "meaning": "berdasarkan observasi atau pengalaman, bukan teori",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "The study provides empirical evidence supporting the hypothesis about language acquisition.",
+                "collocation": "empirical evidence / empirical data"
+              },
+              {
+                "word": "methodology",
+                "ipa": "/ˌmeθəˈdɒlədʒi/",
+                "meaning": "sistem metode yang digunakan dalam penelitian",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The methodology section describes the qualitative and quantitative approaches employed.",
+                "collocation": "research methodology / qualitative methodology"
+              },
+              {
+                "word": "synthesize",
+                "ipa": "/ˈsɪnθəsaɪz/",
+                "meaning": "menggabungkan elemen berbeda menjadi satu kesatuan",
+                "partOfSpeech": "verb",
+                "exampleSentence": "The literature review synthesizes findings from 47 studies conducted between 2020 and 2025.",
+                "collocation": "synthesize findings / synthesize research"
+              },
+              {
+                "word": "substantiate",
+                "ipa": "/səbˈstænʃieɪt/",
+                "meaning": "memberikan bukti untuk mendukung klaim",
+                "partOfSpeech": "verb",
+                "exampleSentence": "Additional data is needed to substantiate the claim that remote work increases productivity.",
+                "collocation": "substantiate a claim / substantiate an argument"
+              },
+              {
+                "word": "correlation",
+                "ipa": "/ˌkɒrəˈleɪʃən/",
+                "meaning": "hubungan timbal balik antara dua variabel",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The analysis revealed a strong positive correlation between study time and exam performance.",
+                "collocation": "strong correlation / positive correlation"
+              },
+              {
+                "word": "implication",
+                "ipa": "/ˌɪmplɪˈkeɪʃən/",
+                "meaning": "konsekuensi atau makna yang tersirat dari temuan",
+                "partOfSpeech": "noun",
+                "exampleSentence": "These findings have important implications for educational policy and classroom practice.",
+                "collocation": "important implications / policy implications"
+              },
+              {
+                "word": "rigorous",
+                "ipa": "/ˈrɪɡərəs/",
+                "meaning": "sangat teliti dan akurat",
+                "partOfSpeech": "adjective",
+                "exampleSentence": "The research design underwent rigorous peer review before data collection commenced.",
+                "collocation": "rigorous review / rigorous analysis"
+              },
+              {
+                "word": "elucidate",
+                "ipa": "/ɪˈluːsɪdeɪt/",
+                "meaning": "menjelaskan atau memperjelas sesuatu",
+                "partOfSpeech": "verb",
+                "exampleSentence": "This section aims to elucidate the theoretical framework underpinning the investigation.",
+                "collocation": "elucidate the mechanism / elucidate the relationship"
+              },
+              {
+                "word": "cohort",
+                "ipa": "/ˈkəʊhɔːt/",
+                "meaning": "kelompok subjek penelitian dengan karakteristik sama",
+                "partOfSpeech": "noun",
+                "exampleSentence": "The study tracked a cohort of 500 participants over a five-year period.",
+                "collocation": "study cohort / participant cohort"
+              },
+              {
+                "word": "extrapolate",
+                "ipa": "/ɪkˈstræpəleɪt/",
+                "meaning": "memperluas kesimpulan ke situasi yang lebih luas",
+                "partOfSpeech": "verb",
+                "exampleSentence": "We cannot extrapolate these findings to other demographic groups without further research.",
+                "collocation": "extrapolate from data / extrapolate findings"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-2-m12-r-guided",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-reading",
+          "sectionType": "dialogue",
+          "title": "Guided Reading Passage",
+          "orderIndex": 3,
+          "content": {
+            "passageTitle": "Deconstructing the Modern Academic Abstract",
+            "audioUrl": "/audio/modules/b2-2-m12/reading-passage.mp3",
+            "durationSeconds": 60,
+            "paragraphs": [
+              "An academic abstract serves as the gateway to any scholarly paper. It provides readers with a concise summary of the entire investigation, typically covering the research background, the primary aim, the methodology, the main results, and the broader conclusions. Writers must pack immense clarity into a very limited word count, usually between one hundred and two hundred and fifty words.",
+              "When analyzing research abstracts, students should pay close attention to hedging language and reporting verbs. Rather than claiming absolute certainty, cautious writers use verbs like suggest or indicate to characterize their empirical findings. Furthermore, synthesizing existing literature in the introduction requires robust citation registers, ensuring that previous scholars receive proper acknowledgment for their theoretical frameworks."
+            ],
+            "timestamps": [
+              {
+                "start": 0,
+                "end": 4.5,
+                "text": "An academic abstract serves as the gateway to any scholarly paper.",
+                "paragraphIndex": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-2-m12-r-practice",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-reading",
+          "sectionType": "practice",
+          "title": "Interactive Cable Connection (Vocab Match)",
+          "orderIndex": 4,
+          "content": {
+            "drills": []
+          }
+        },
+        {
+          "id": "sec-b2-2-m12-r-quiz",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-reading",
+          "sectionType": "quiz",
+          "title": "Reading Comprehension Checkpoint",
+          "orderIndex": 5,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": "q-r-1",
+                "question": "What is the primary function of an academic abstract according to the passage?",
+                "options": [
+                  "It serves as a gateway providing a concise summary of the entire investigation.",
+                  "It lists all the references and books cited by the researchers.",
+                  "It provides detailed biographical information about the authors."
+                ],
+                "answer": "It serves as a gateway providing a concise summary of the entire investigation.",
+                "explanation": "The passage states that an abstract provides readers with a concise summary of the entire investigation."
+              },
+              {
+                "id": "q-r-2",
+                "question": "Typically, how many words does an academic abstract contain?",
+                "options": [
+                  "Between fifty and one hundred words.",
+                  "Between one hundred and two hundred and fifty words.",
+                  "Exactly five hundred words."
+                ],
+                "answer": "Between one hundred and two hundred and fifty words.",
+                "explanation": "The text specifies that abstracts are usually between one hundred and two hundred and fifty words."
+              },
+              {
+                "id": "q-r-3",
+                "question": "Which elements are typically covered in a standard abstract?",
+                "options": [
+                  "Background, aim, methodology, results, and conclusion.",
+                  "Funding sources, author biographies, and acknowledgements.",
+                  "Full data tables, raw interview transcripts, and appendices."
+                ],
+                "answer": "Background, aim, methodology, results, and conclusion.",
+                "explanation": "The first paragraph lists background, primary aim, methodology, main results, and broader conclusions as standard abstract components."
+              },
+              {
+                "id": "q-r-4",
+                "question": "Why do cautious writers use words like suggest or indicate in their papers?",
+                "options": [
+                  "To make their writing sound more confusing and technical.",
+                  "To avoid claiming absolute certainty about their empirical findings.",
+                  "To satisfy formatting requirements set by university libraries."
+                ],
+                "answer": "To avoid claiming absolute certainty about their empirical findings.",
+                "explanation": "The text notes that rather than claiming absolute certainty, cautious writers use hedging verbs to characterize findings."
+              },
+              {
+                "id": "q-r-5",
+                "question": "What does synthesizing existing literature require, according to the passage?",
+                "options": [
+                  "Robust citation registers to acknowledge previous scholars.",
+                  "Eliminating all previous research from the bibliography.",
+                  "Conducting interviews with every past author."
+                ],
+                "answer": "Robust citation registers to acknowledge previous scholars.",
+                "explanation": "The passage mentions that synthesizing literature requires robust citation registers to ensure previous scholars receive proper acknowledgment."
+              },
+              {
+                "id": "q-r-6",
+                "question": "What term describes words like suggest, indicate, appear to, and seem to?",
+                "options": [
+                  "Nominalization",
+                  "Hedging language",
+                  "Collocation"
+                ],
+                "answer": "Hedging language",
+                "explanation": "Theory rules and passage context highlight these verbs as examples of hedging language used to soften claims."
+              },
+              {
+                "id": "q-r-7",
+                "question": "According to vocabulary rules, what is the meaning of empirical?",
+                "options": [
+                  "Based on observation or experience rather than theory",
+                  "Related to government policies and political systems",
+                  "Completely theoretical and unproven"
+                ],
+                "answer": "Based on observation or experience rather than theory",
+                "explanation": "The vocabulary bank defines empirical as based on observation or experience."
+              },
+              {
+                "id": "q-r-8",
+                "question": "What is the function of a reporting verb like argue or assert in academic texts?",
+                "options": [
+                  "To make strong claims regarding an author's stance",
+                  "To describe physical movements in a laboratory",
+                  "To replace punctuation marks in long sentences"
+                ],
+                "answer": "To make strong claims regarding an author's stance",
+                "explanation": "Theory rules categorize argue and assert as strong reporting verbs used to convey author positions."
+              },
+              {
+                "id": "q-r-9",
+                "question": "What does the verb elucidate mean in an academic context?",
+                "options": [
+                  "To hide or obscure a complex argument",
+                  "To explain or make something clear",
+                  "To delete unnecessary paragraphs"
+                ],
+                "answer": "To explain or make something clear",
+                "explanation": "The vocabulary item defines elucidate as explaining or clarifying something."
+              },
+              {
+                "id": "q-r-10",
+                "question": "Why is nominalization often used in formal academic writing?",
+                "options": [
+                  "To increase formality by turning verbs or adjectives into nouns",
+                  "To make sentences sound like everyday spoken conversation",
+                  "To reduce the overall length of the bibliography"
+                ],
+                "answer": "To increase formality by turning verbs or adjectives into nouns",
+                "explanation": "Theory rules explain nominalization as a device for achieving formal academic register."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-2-m12-listening",
+      "moduleId": "B2.2-M12",
+      "skillType": "listening",
+      "title": "Listening Mission: Academic Paper Deconstruction",
+      "orderIndex": 2,
+      "sections": [
+        {
+          "id": "sec-b2-2-m12-l-theory",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-listening",
+          "sectionType": "theory",
+          "title": "Audio Briefing & Strategy",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This audio session focuses on academic writing conventions, specifically the use of hedging language to soften claims, thematic synthesis in literature reviews, and precise citation registers for international conference submissions at the B2 level.",
+            "learningObjectives": [
+              "Catch the main topic of an academic supervision meeting about abstract writing.",
+              "Identify specific suggestions regarding hedging language and citation formats.",
+              "Notice how academic vocabulary links together in fast spoken English."
+            ],
+            "keyPhrases": [
+              {
+                "phrase": "Hedging language",
+                "meaning": "Bahasa pembatas atau kehati-hatian",
+                "note": "Used in academic writing to express caution or probability rather than absolute certainty."
+              },
+              {
+                "phrase": "Thematic synthesis",
+                "meaning": "Sintesis tematik",
+                "note": "Combining multiple research sources around common themes rather than listing them one by one."
+              },
+              {
+                "phrase": "Citation format",
+                "meaning": "Format pengutipan",
+                "note": "Standardized rules for acknowledging academic sources, such as APA or Harvard."
+              },
+              {
+                "phrase": "Current sources",
+                "meaning": "Sumber-sumber mutakhir",
+                "note": "Recent academic literature published within the last few years."
+              }
+            ],
+            "connectedSpeech": [
+              {
+                "id": 1,
+                "slow": "Review your abstract",
+                "fast": "Reviewyer abstract",
+                "slowIpa": "/rɪˈvjuː jɔːr ˈæbstrækt/",
+                "fastIpa": "/rɪˈvjuːjər ˈæbstrækt/",
+                "note": "Linking the vowel sound at the end of review with your."
+              },
+              {
+                "id": 2,
+                "slow": "Instead of",
+                "fast": "Insteadoff",
+                "slowIpa": "/ɪnˈsted ɒv/",
+                "fastIpa": "/ɪnˈstedɒv/",
+                "note": "The preposition of links to the preceding consonant sound."
+              },
+              {
+                "id": 3,
+                "slow": "Check your citations",
+                "fast": "Checkchur citations",
+                "slowIpa": "/tʃek jɔːr saɪˈteɪʃnz/",
+                "fastIpa": "/tʃektʃʊr saɪˈteɪʃnz/",
+                "note": "The sound k merges with y to create a ch sound."
+              },
+              {
+                "id": 4,
+                "slow": "More recent sources",
+                "fast": "More recent sources",
+                "slowIpa": "/mɔːr ˈriːsnt ˈsɔːrsɪz/",
+                "fastIpa": "/mɔːrˈriːsnt ˈsɔːrsɪz/",
+                "note": "Elision of the t sound in recent when followed by sources."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-2-m12-l-dialogue",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-listening",
+          "sectionType": "dialogue",
+          "title": "Audio Dialogue: Abstract Review Session",
+          "orderIndex": 2,
+          "content": {
+            "context": "Dr. Martinez and a PhD student, Sarah, discuss the draft abstract for Sarah's upcoming conference paper.",
+            "audioPrompt": "Listen to the conversation between the professor and the student.",
+            "lines": [
+              {
+                "speaker": "Dr. Martinez",
+                "text": "Your abstract structure is solid.",
+                "translation": "Struktur abstract kamu sudah kokoh.",
+                "emotion": "encouraging"
+              },
+              {
+                "speaker": "Dr. Martinez",
+                "text": "The language is too definitive.",
+                "translation": "Bahasanya terlalu pasti.",
+                "emotion": "critical"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "Should I use hedging language?",
+                "translation": "Haruskah saya menggunakan bahasa hedging?",
+                "emotion": "curious"
+              },
+              {
+                "speaker": "Dr. Martinez",
+                "text": "Yes, soften your claims.",
+                "translation": "Ya, perlunakkan klaim kamu.",
+                "emotion": "instructional"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "I will change those sentences.",
+                "translation": "Saya akan mengubah kalimat-kalimat itu.",
+                "emotion": "resolute"
+              },
+              {
+                "speaker": "Dr. Martinez",
+                "text": "Connect the studies thematically now.",
+                "translation": "Hubungkan studi-studi tersebut secara tematik sekarang.",
+                "emotion": "professional"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "I will avoid listing authors separately.",
+                "translation": "Saya akan menghindari mendaftar penulis secara terpisah.",
+                "emotion": "understanding"
+              },
+              {
+                "speaker": "Dr. Martinez",
+                "text": "Check your citation format carefully.",
+                "translation": "Periksa format kutipan kamu dengan hati-hati.",
+                "emotion": "attentive"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "I mixed APA and Harvard.",
+                "translation": "Saya mencampur APA dan Harvard.",
+                "emotion": "realizing"
+              },
+              {
+                "speaker": "Dr. Martinez",
+                "text": "Standardize everything to APA seventh.",
+                "translation": "Standardisasi semuanya ke APA edisi ketujuh.",
+                "emotion": "direct"
+              },
+              {
+                "speaker": "Sarah",
+                "text": "I will update recent references too.",
+                "translation": "Saya akan memperbarui referensi terbaru juga.",
+                "emotion": "confident"
+              },
+              {
+                "speaker": "Dr. Martinez",
+                "text": "That makes your research current.",
+                "translation": "Itu membuat riset kamu mutakhir.",
+                "emotion": "satisfied"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-2-m12-l-quiz",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-listening",
+          "sectionType": "quiz",
+          "title": "Audio Listening Practicum (10 Interactive Tasks)",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 80,
+            "questions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Your abstract structure is solid.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dr. Martinez: \"Your abstract structure is _____.\"",
+                "targetWord": "solid",
+                "explanation": "Full audio: \"Your abstract structure is solid.\". The missing word is \"solid\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "The language is too definitive.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dr. Martinez: \"The language is too _____.\"",
+                "targetWord": "definitive",
+                "explanation": "Full audio: \"The language is too definitive.\". The missing word is \"definitive\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Should I use hedging language?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Should I use hedging _____?\"",
+                "targetWord": "language",
+                "explanation": "Full audio: \"Should I use hedging language?\". The missing word is \"language\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Yes, soften your claims.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dr. Martinez: \"Yes, soften your _____.\"",
+                "targetWord": "claims",
+                "explanation": "Full audio: \"Yes, soften your claims.\". The missing word is \"claims\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "I will change those sentences.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"I will change those _____.\"",
+                "targetWord": "sentences",
+                "explanation": "Full audio: \"I will change those sentences.\". The missing word is \"sentences\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Connect the studies thematically now.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Connect the studies thematically now",
+                "words": [
+                  "Connect",
+                  "the",
+                  "thematically",
+                  "studies",
+                  "now"
+                ],
+                "explanation": "Correct sentence order: \"Connect the studies thematically now.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "I will avoid listing authors separately.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I will avoid listing authors separately",
+                "words": [
+                  "avoid",
+                  "separately",
+                  "I",
+                  "will",
+                  "authors",
+                  "listing"
+                ],
+                "explanation": "Correct sentence order: \"I will avoid listing authors separately.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Check your citation format carefully.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Check your citation format carefully",
+                "words": [
+                  "Check",
+                  "your",
+                  "format",
+                  "carefully",
+                  "citation"
+                ],
+                "explanation": "Correct sentence order: \"Check your citation format carefully.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "I mixed APA and Harvard.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I mixed APA and Harvard",
+                "words": [
+                  "and",
+                  "mixed",
+                  "APA",
+                  "I",
+                  "Harvard"
+                ],
+                "explanation": "Correct sentence order: \"I mixed APA and Harvard.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Standardize everything to APA seventh.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Standardize everything to APA seventh",
+                "words": [
+                  "Standardize",
+                  "to",
+                  "seventh",
+                  "everything",
+                  "APA"
+                ],
+                "explanation": "Correct sentence order: \"Standardize everything to APA seventh.\"."
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "type": "dictation",
+                "audioText": "Your abstract structure is solid.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dr. Martinez: \"Your abstract structure is _____.\"",
+                "targetWord": "solid",
+                "explanation": "Full audio: \"Your abstract structure is solid.\". The missing word is \"solid\"."
+              },
+              {
+                "id": 2,
+                "type": "dictation",
+                "audioText": "The language is too definitive.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dr. Martinez: \"The language is too _____.\"",
+                "targetWord": "definitive",
+                "explanation": "Full audio: \"The language is too definitive.\". The missing word is \"definitive\"."
+              },
+              {
+                "id": 3,
+                "type": "dictation",
+                "audioText": "Should I use hedging language?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Should I use hedging _____?\"",
+                "targetWord": "language",
+                "explanation": "Full audio: \"Should I use hedging language?\". The missing word is \"language\"."
+              },
+              {
+                "id": 4,
+                "type": "dictation",
+                "audioText": "Yes, soften your claims.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dr. Martinez: \"Yes, soften your _____.\"",
+                "targetWord": "claims",
+                "explanation": "Full audio: \"Yes, soften your claims.\". The missing word is \"claims\"."
+              },
+              {
+                "id": 5,
+                "type": "dictation",
+                "audioText": "I will change those sentences.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"I will change those _____.\"",
+                "targetWord": "sentences",
+                "explanation": "Full audio: \"I will change those sentences.\". The missing word is \"sentences\"."
+              },
+              {
+                "id": 6,
+                "type": "arrange",
+                "audioText": "Connect the studies thematically now.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Connect the studies thematically now",
+                "words": [
+                  "Connect",
+                  "the",
+                  "thematically",
+                  "studies",
+                  "now"
+                ],
+                "explanation": "Correct sentence order: \"Connect the studies thematically now.\"."
+              },
+              {
+                "id": 7,
+                "type": "arrange",
+                "audioText": "I will avoid listing authors separately.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I will avoid listing authors separately",
+                "words": [
+                  "avoid",
+                  "separately",
+                  "I",
+                  "will",
+                  "authors",
+                  "listing"
+                ],
+                "explanation": "Correct sentence order: \"I will avoid listing authors separately.\"."
+              },
+              {
+                "id": 8,
+                "type": "arrange",
+                "audioText": "Check your citation format carefully.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Check your citation format carefully",
+                "words": [
+                  "Check",
+                  "your",
+                  "format",
+                  "carefully",
+                  "citation"
+                ],
+                "explanation": "Correct sentence order: \"Check your citation format carefully.\"."
+              },
+              {
+                "id": 9,
+                "type": "arrange",
+                "audioText": "I mixed APA and Harvard.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I mixed APA and Harvard",
+                "words": [
+                  "and",
+                  "mixed",
+                  "APA",
+                  "I",
+                  "Harvard"
+                ],
+                "explanation": "Correct sentence order: \"I mixed APA and Harvard.\"."
+              },
+              {
+                "id": 10,
+                "type": "arrange",
+                "audioText": "Standardize everything to APA seventh.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Standardize everything to APA seventh",
+                "words": [
+                  "Standardize",
+                  "to",
+                  "seventh",
+                  "everything",
+                  "APA"
+                ],
+                "explanation": "Correct sentence order: \"Standardize everything to APA seventh.\"."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-2-m12-writing",
+      "moduleId": "B2.2-M12",
+      "skillType": "writing",
+      "title": "Writing Mission: Academic Paper Deconstruction, Abstract Writing, Literature Review and Citation Registers",
+      "orderIndex": 3,
+      "sections": [
+        {
+          "id": "sec-b2-2-m12-w-theory",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-writing",
+          "sectionType": "theory",
+          "title": "Writing Blueprint & Mechanics",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Master the structural framework of academic abstracts, nuanced reporting verbs, hedging strategies, and formal nominalisation for B2-level research writing.",
+            "blueprintItems": [
+              {
+                "step": 1,
+                "title": "Step 1: Abstract Architecture",
+                "formula": "Background Context + Core Aim + Methodology + Key Results + Conclusion",
+                "example": "This study investigates the impact of remote learning on student engagement. Using a mixed-method approach, data were collected from five universities. The results indicate significant variations in participation rates. These findings suggest that structured online forums improve retention."
+              },
+              {
+                "step": 2,
+                "title": "Step 2: Nuanced Reporting Verbs",
+                "formula": "Author (Year) + [Strong/Weak Reporting Verb] + that-clause",
+                "example": "Smith (2024) argues that digital transformation accelerates workflow efficiency, while Jones (2025) suggests that initial training periods remain critical."
+              },
+              {
+                "step": 3,
+                "title": "Step 3: Formal Nominalisation",
+                "formula": "Action Verb Clause -> Abstract Noun Phrase (e.g., 'We analyzed the data' -> 'The analysis of the data')",
+                "example": "The implementation of the new policy resulted in a thirty percent reduction in administrative delays."
+              }
+            ],
+            "mechanicsRules": [
+              {
+                "rule": "Apply appropriate hedging language instead of absolute claims.",
+                "badExample": "The research proves that social media causes depression.",
+                "goodExample": "The research suggests a strong correlation between social media use and reported depressive symptoms.",
+                "why": "Academic writing requires cautious interpretation of empirical data rather than absolute statements."
+              },
+              {
+                "rule": "Distinguish between strong and weak reporting verbs based on evidence strength.",
+                "badExample": "Johnson (2023) hints that the economy collapsed due to inflation.",
+                "goodExample": "Johnson (2023) argues that the economic contraction stemmed primarily from rising inflation rates.",
+                "why": "Strong claims require strong verbs like argue, claim, or assert, whereas tentative observations use suggest, propose, or imply."
+              },
+              {
+                "rule": "Format in-text citations correctly according to standard academic conventions.",
+                "badExample": "According to recent studies in 2024, remote work increases productivity.",
+                "goodExample": "Recent research (Miller, 2024) indicates that remote work increases productivity.",
+                "why": "Clear author-date attribution maintains academic credibility and allows readers to trace sources."
+              }
+            ],
+            "sampleSentences": [
+              {
+                "en": "This paper examines the influence of artificial intelligence on modern pedagogical methods.",
+                "id": "Makalah ini meneliti pengaruh kecerdasan buatan terhadap metode pedagogi modern.",
+                "focus": "Abstract aim statement"
+              },
+              {
+                "en": "The data tend to support the hypothesis that urban density correlates with higher energy consumption.",
+                "id": "Data tersebut cenderung mendukung hipotesis bahwa kepadatan perkotaan berkorelasi dengan konsumsi energi yang lebih tinggi.",
+                "focus": "Hedging verb usage"
+              },
+              {
+                "en": "Brown (2022) asserts that curriculum reform must prioritize critical thinking skills.",
+                "id": "Brown (2022) menegaskan bahwa reformasi kurikulum harus memprioritaskan keterampilan berpikir kritis.",
+                "focus": "Strong reporting verb"
+              },
+              {
+                "en": "An evaluation of the survey responses reveals a growing demand for flexible working hours.",
+                "id": "Evaluasi terhadap tanggapan survei mengungkapkan meningkatnya permintaan akan jam kerja yang fleksibel.",
+                "focus": "Nominalisation for formality"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-2-m12-w-practice",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-writing",
+          "sectionType": "practice",
+          "title": "Interactive Writing Labs",
+          "orderIndex": 2,
+          "content": {
+            "mechanicsChallenges": [
+              {
+                "id": "sent-1",
+                "faultySentence": "we proved that the intervention strategy reduce carbon emissions significantly",
+                "targetSentence": "The findings suggest that the intervention strategy reduces carbon emissions significantly.",
+                "translation": "Temuan tersebut menunjukkan bahwa strategi intervensi tersebut mengurangi emisi karbon secara signifikan.",
+                "keyRule": "Use hedging verbs instead of absolute claims and maintain third-person academic register.",
+                "requiredCapitals": [
+                  "The"
+                ]
+              },
+              {
+                "id": "sent-2",
+                "faultySentence": "smith 2023 state that global warming accelerate glacial melting",
+                "targetSentence": "Smith (2023) states that global warming accelerates glacial melting.",
+                "translation": "Smith (2023) menyatakan bahwa pemanasan global mempercepat pencairan gletser.",
+                "keyRule": "Format in-text citations with parentheses around the year and ensure subject-verb agreement.",
+                "requiredCapitals": [
+                  "Smith"
+                ]
+              },
+              {
+                "id": "sent-3",
+                "faultySentence": "when we analyze the financial records we found major discrepancies",
+                "targetSentence": "The analysis of the financial records revealed major discrepancies.",
+                "translation": "Analisis catatan keuangan tersebut mengungkapkan perbedaan besar.",
+                "keyRule": "Apply nominalisation to replace personal pronouns with formal noun phrases.",
+                "requiredCapitals": [
+                  "The"
+                ]
+              }
+            ],
+            "sentenceBuilderTargets": [
+              {
+                "id": "b-1",
+                "category": "Abstract Writing",
+                "meaning": "Penelitian ini menyelidiki dampak media sosial terhadap rentang perhatian remaja.",
+                "tokens": [
+                  "This",
+                  "study",
+                  "investigates",
+                  "the",
+                  "impact",
+                  "of",
+                  "social",
+                  "media",
+                  "on",
+                  "adolescent",
+                  "attention",
+                  "spans."
+                ],
+                "fullSentence": "This study investigates the impact of social media on adolescent attention spans."
+              },
+              {
+                "id": "b-2",
+                "category": "Literature Review",
+                "meaning": "Penulis sebelumnya berargumen bahwa pertumbuhan ekonomi mengurangi kemiskinan.",
+                "tokens": [
+                  "Previous",
+                  "scholars",
+                  "have",
+                  "argued",
+                  "that",
+                  "economic",
+                  "growth",
+                  "reduces",
+                  "poverty."
+                ],
+                "fullSentence": "Previous scholars have argued that economic growth reduces poverty."
+              },
+              {
+                "id": "b-3",
+                "category": "Hedging Language",
+                "meaning": "Hasil tersebut tampaknya menunjukkan korelasi positif antara stres dan kelelahan kerja.",
+                "tokens": [
+                  "The",
+                  "results",
+                  "appear",
+                  "to",
+                  "indicate",
+                  "a",
+                  "positive",
+                  "correlation",
+                  "between",
+                  "stress",
+                  "and",
+                  "burnout."
+                ],
+                "fullSentence": "The results appear to indicate a positive correlation between stress and burnout."
+              }
+            ],
+            "guidedLabChallenges": [
+              {
+                "id": "ch-1",
+                "title": "Challenge 1: Draft an Academic Abstract",
+                "badge": "Abstract Architect",
+                "instruction": "Write a four-sentence academic abstract covering the background, aim, methodology, and results of a fictional study on remote work productivity.",
+                "example": "Remote work has expanded rapidly across global industries. This study investigates how flexible schedules influence daily employee output. Using quantitative surveys across three tech firms, data were gathered from five hundred workers. The results indicate a fifteen percent increase in task completion rates among remote staff.",
+                "placeholder": "Draft your abstract here...",
+                "minWords": 40,
+                "xpReward": 35
+              },
+              {
+                "id": "ch-2",
+                "title": "Challenge 2: Literature Review Synthesis",
+                "badge": "Literature Reviewer",
+                "instruction": "Write three sentences synthesizing prior research on renewable energy adoption, incorporating appropriate reporting verbs and in-text citations.",
+                "example": "Early research (Davis, 2021) asserts that financial subsidies are essential for solar panel adoption. Conversely, Martinez (2023) proposes that consumer awareness plays a more critical role than government funding. Building on these perspectives, recent analyses suggest a combination of both factors drives success.",
+                "placeholder": "Write your literature synthesis here...",
+                "minWords": 35,
+                "xpReward": 40
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-2-m12-w-quiz",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-writing",
+          "sectionType": "quiz",
+          "title": "Writing Mastery Practicum",
+          "orderIndex": 3,
+          "content": {
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform the active sentence into a formal nominalised sentence:",
+                "promptText": "The committee evaluated the proposal thoroughly before making a decision.",
+                "hint": "Use 'evaluation' as the subject noun phrase.",
+                "targetAnswers": [
+                  "The thorough evaluation of the proposal preceded the decision.",
+                  "A thorough evaluation of the proposal was conducted before the decision."
+                ],
+                "explanation": "Nominalisation converts verbs like 'evaluated' into abstract nouns like 'evaluation' to elevate academic formality."
+              },
+              {
+                "id": 2,
+                "typeLabel": "Hedging Correction",
+                "instruction": "Rewrite the absolute statement using appropriate academic hedging verbs:",
+                "promptText": "Poor sleep causes failing grades in university students.",
+                "hint": "Use hedging verbs such as 'tend to' or 'suggest'.",
+                "targetAnswers": [
+                  "Poor sleep tends to contribute to lower academic grades in university students.",
+                  "Poor sleep appears to correlate with lower grades in university students."
+                ],
+                "explanation": "Academic register avoids absolute causal claims unless definitive experimental proof is established, favoring verbs like 'tend to' or 'appear to'."
+              },
+              {
+                "id": 3,
+                "typeLabel": "Citation Formatting",
+                "instruction": "Correct the in-text citation format in the following sentence:",
+                "promptText": "According to research by Williams in 2024 digital literacy improves employability.",
+                "hint": "Place the year in parentheses directly after the author's surname.",
+                "targetAnswers": [
+                  "According to Williams (2024), digital literacy improves employability.",
+                  "Digital literacy improves employability (Williams, 2024)."
+                ],
+                "explanation": "Standard parenthetical author-date formatting requires the year to be enclosed in parentheses."
+              },
+              {
+                "id": 4,
+                "typeLabel": "Reporting Verb Selection",
+                "instruction": "Choose the appropriate strong reporting verb to complete the sentence for an author making a firm assertion:",
+                "promptText": "Taylor (2023) ______ that economic inequality undermines social stability.",
+                "hint": "Use a strong reporting verb meaning to state firmly (e.g., argues, asserts).",
+                "targetAnswers": [
+                  "Taylor (2023) argues that economic inequality undermines social stability.",
+                  "Taylor (2023) asserts that economic inequality undermines social stability.",
+                  "Taylor (2023) claims that economic inequality undermines social stability."
+                ],
+                "explanation": "Strong verbs such as 'argues', 'asserts', or 'claims' are ideal when presenting a strong authorial stance."
+              },
+              {
+                "id": 5,
+                "typeLabel": "Abstract Structure",
+                "instruction": "Identify the missing abstract component in the sequence: Background -> Aim -> Methodology -> ______ -> Conclusion.",
+                "promptText": "What essential abstract component fills the blank?",
+                "hint": "Think about what comes after gathering data and conducting analysis in empirical papers.",
+                "targetAnswers": [
+                  "Results",
+                  "Key Results",
+                  "Findings"
+                ],
+                "explanation": "An empirical abstract follows a strict sequence: Background, Aim, Methodology, Results, and Conclusion."
+              },
+              {
+                "id": 6,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the informal sentence into formal academic register:",
+                "promptText": "We looked at how temperature affects plant growth in our lab.",
+                "hint": "Replace 'We looked at' with a nominalised phrase like 'An examination of'.",
+                "targetAnswers": [
+                  "An examination of the effect of temperature on plant growth was conducted.",
+                  "The study examined the effect of temperature on plant growth."
+                ],
+                "explanation": "Avoid first-person pronouns ('we looked at') in standard empirical reports, using passive voice or objective subject nouns."
+              },
+              {
+                "id": 7,
+                "typeLabel": "Literature Synthesis",
+                "instruction": "Combine the two ideas into a single synthesized literature review sentence using a weak reporting verb:",
+                "promptText": "Author A found a link between reading and vocabulary size. Author B proposed a similar connection.",
+                "hint": "Use 'suggest' or 'indicate' to link the shared finding.",
+                "targetAnswers": [
+                  "Studies suggest a link between extensive reading and expanded vocabulary size (Author A; Author B).",
+                  "Research indicates that reading correlates with vocabulary size."
+                ],
+                "explanation": "Synthesizing literature involves grouping similar findings under tentative reporting verbs like 'suggest' or 'indicate'."
+              },
+              {
+                "id": 8,
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the punctuation and citation error in the sentence:",
+                "promptText": "Recent data smith 2022 highlights a rise in urban migration.",
+                "hint": "Capitalize the author's name and enclose the year in parentheses.",
+                "targetAnswers": [
+                  "Recent data from Smith (2022) highlights a rise in urban migration.",
+                  "Recent data (Smith, 2022) highlights a rise in urban migration."
+                ],
+                "explanation": "Proper nouns must be capitalized and citation years must be enclosed in parentheses."
+              },
+              {
+                "id": 9,
+                "typeLabel": "Short Response",
+                "instruction": "What is the primary rhetorical function of a hedging verb in academic writing?",
+                "promptText": "Briefly explain why writers use words like 'suggest', 'seem', or 'tend to'.",
+                "hint": "It relates to avoiding absolute claims and acknowledging limitations.",
+                "targetAnswers": [
+                  "To avoid making absolute claims and to express caution.",
+                  "To express caution and avoid absolute statements.",
+                  "To soften claims and account for limitations."
+                ],
+                "explanation": "Hedging allows researchers to present findings without overstating their generalisability or certainty."
+              },
+              {
+                "id": 10,
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform the clause into a formal subject using nominalisation:",
+                "promptText": "Researchers expanded the urban park network, which successfully reduced local temperatures.",
+                "hint": "Start with 'The expansion of...'.",
+                "targetAnswers": [
+                  "The expansion of the urban park network successfully reduced local temperatures.",
+                  "The expansion of the urban park network resulted in a reduction of local temperatures."
+                ],
+                "explanation": "Nominalising 'expanded' into 'The expansion of' creates a concise, formal subject for the academic sentence."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sub-b2-2-m12-speaking",
+      "moduleId": "B2.2-M12",
+      "skillType": "speaking",
+      "title": "Speaking Lab: Academic Paper Deconstruction: Abstract Writing, Literature Review & Citation Registers",
+      "orderIndex": 4,
+      "sections": [
+        {
+          "id": "sec-b2-2-m12-s-theory",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-speaking",
+          "sectionType": "theory",
+          "title": "Pronunciation & Delivery Guide",
+          "orderIndex": 1,
+          "content": {
+            "summary": "This module trains you to present academic research clearly and persuasively. You will learn how to emphasize key nouns and verbs in abstracts, modulate your pitch when introducing literature reviews, and maintain an authoritative tone during academic presentations.",
+            "audioGuidance": "Focus on precise articulation of multisyllabic academic terms. Ensure unstressed syllables are reduced properly, and pause slightly after transition markers to give listeners time to process complex conceptual frameworks.",
+            "pillars": [
+              {
+                "name": "Lexical Stress",
+                "target": "Correct placement of primary stress on academic words",
+                "explanation": "Longer words like methodology and implication require exact stress patterns to be understood instantly by professional audiences."
+              },
+              {
+                "name": "Chunking and Pausing",
+                "target": "Grouping words into meaningful syntactic units",
+                "explanation": "Breaking long methodological descriptions into digestible speech chunks prevents breathlessness and enhances spoken clarity."
+              },
+              {
+                "name": "Citation Intonation",
+                "target": "Falling pitch on authoritative sources",
+                "explanation": "When referencing established scholars or empirical datasets, use a steady, falling intonation to signal confidence and factual backing."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-2-m12-s-practice",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-speaking",
+          "sectionType": "practice",
+          "title": "Pronunciation Drills & Roleplay",
+          "orderIndex": 2,
+          "content": {
+            "stressPairs": [
+              {
+                "id": "pair-1",
+                "country": "em-PIR-i-cal",
+                "countryAudio": "empirical",
+                "countrySyllables": [
+                  {
+                    "text": "em",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "PIR",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "cal",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "em-pir-i-CISM",
+                "natAudio": "empiricism",
+                "natSyllables": [
+                  {
+                    "text": "em",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "pir",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "i",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "CISM",
+                    "isStressed": true
+                  }
+                ],
+                "shiftExplanation": "The stress shifts from the second syllable in the adjective to the third syllable in the noun form."
+              },
+              {
+                "id": "pair-2",
+                "country": "meth-od-OL-o-gy",
+                "countryAudio": "methodology",
+                "countrySyllables": [
+                  {
+                    "text": "meth",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "od",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "OL",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "o",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "gy",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "METH-od",
+                "natAudio": "method",
+                "natSyllables": [
+                  {
+                    "text": "METH",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "od",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Base nouns often have stress on the first syllable, whereas derived academic nouns shift stress inward."
+              },
+              {
+                "id": "pair-3",
+                "country": "SYN-the-size",
+                "countryAudio": "synthesize",
+                "countrySyllables": [
+                  {
+                    "text": "SYN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "the",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "size",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "syn-THEF-i-sis",
+                "natAudio": "synthesis",
+                "natSyllables": [
+                  {
+                    "text": "syn",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "THE",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "sis",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Verb forms carry stress on the initial root syllable, while noun forms place stress on the second syllable."
+              },
+              {
+                "id": "pair-4",
+                "country": "sub-STAN-ti-ate",
+                "countryAudio": "substantiate",
+                "countrySyllables": [
+                  {
+                    "text": "sub",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "STAN",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "ti",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ate",
+                    "isStressed": false
+                  }
+                ],
+                "nationality": "sub-stan-ti-A-tion",
+                "natAudio": "substantiation",
+                "natSyllables": [
+                  {
+                    "text": "sub",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "stan",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "ti",
+                    "isStressed": false
+                  },
+                  {
+                    "text": "A",
+                    "isStressed": true
+                  },
+                  {
+                    "text": "tion",
+                    "isStressed": false
+                  }
+                ],
+                "shiftExplanation": "Adding the noun suffix moves the primary stress to the penultimate syllable."
+              }
+            ],
+            "drills": [
+              {
+                "id": "spk-d-1",
+                "targetText": "The study provides empirical evidence supporting the hypothesis.",
+                "phonetic": "/ðə ˈstʌdi prəˈvaɪdz ɪmˈpɪrɪkəl ˈevɪdəns səˈpɔːtɪŋ ðə haɪˈpɒθəsɪs/",
+                "focus": "Academic phrase linking and primary noun stress",
+                "hint": "Emphasize 'empirical' and 'evidence' with clear vowel projection."
+              },
+              {
+                "id": "spk-d-2",
+                "targetText": "This literature review synthesizes findings from forty-seven studies.",
+                "phonetic": "/ðɪs ˈlɪtrətʃə rɪˈvjuː ˈsɪnθəsaɪzɪz ˈfaɪndɪŋz frɒm ˈfɔːti ˈsevən ˈstʌdiz/",
+                "focus": "Controlled pacing for synthesizing complex claims",
+                "hint": "Pause briefly after review before stating the main verb."
+              },
+              {
+                "id": "spk-d-3",
+                "targetText": "Additional data is needed to substantiate the primary claim.",
+                "phonetic": "/əˈdɪʃənl ˈdeɪtə ɪz ˈniːdɪd tuː səbˈstænʃieɪt ðə ˈpraɪməri kleɪm/",
+                "focus": "Scholarly modal delivery and assertion",
+                "hint": "Keep your voice steady and lower your pitch at the end of the sentence."
+              },
+              {
+                "id": "spk-d-4",
+                "targetText": "These findings have important implications for educational policy.",
+                "phonetic": "/ðiːz ˈfaɪndɪŋz hæv ɪmˈpɔːtənt ˌɪmplɪˈkeɪʃənz fɔːr ˌedʒuˈkeɪʃənl ˈpɒləsi/",
+                "focus": "Polysyllabic word stress management",
+                "hint": "Ensure all syllables in implications are articulated without slurring."
+              }
+            ],
+            "roleplay": {
+              "context": "You are defending your literature review methodology during a research seminar with your thesis advisor, Dr. Henderson.",
+              "roles": [
+                "Dr. Henderson",
+                "Student Researcher"
+              ],
+              "turns": [
+                {
+                  "speaker": "Dr. Henderson",
+                  "text": "Could you explain how you selected this particular cohort for your empirical study?",
+                  "translation": "Bisakah kamu menjelaskan bagaimana kamu memilih kohort tertentu ini untuk penelitian empirismu?"
+                },
+                {
+                  "speaker": "Student Researcher",
+                  "text": "Certainly. We tracked a cohort of five hundred participants to substantiate our correlation analysis.",
+                  "translation": "Tentu. Kami melacak kohort yang terdiri dari lima ratus peserta untuk mendukung analisis korelasi kami."
+                },
+                {
+                  "speaker": "Dr. Henderson",
+                  "text": "And how do these results synthesize with previous research in the literature review?",
+                  "translation": "Dan bagaimana hasil ini bersintesis dengan penelitian sebelumnya dalam tinjauan pustaka?"
+                },
+                {
+                  "speaker": "Student Researcher",
+                  "text": "The findings elucidate existing gaps and provide rigorous implications for future policy.",
+                  "translation": "Temuan tersebut memperjelas kesenjangan yang ada dan memberikan implikasi yang ketat untuk kebijakan masa depan."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "sec-b2-2-m12-s-quiz",
+          "moduleId": "B2.2-M12",
+          "subModuleId": "sub-b2-2-m12-speaking",
+          "sectionType": "quiz",
+          "title": "Speaking Practicum & AI Voice Evaluation",
+          "orderIndex": 3,
+          "content": {
+            "passingScore": 70,
+            "practicumQuestions": [
+              {
+                "id": 1,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about your experience writing a research abstract.",
+                "audioPrompt": "Describe a time when you had to summarize a long academic paper into a short abstract.",
+                "storyPoints": [
+                  "The main topic of the paper you summarized",
+                  "The biggest challenge you faced when cutting unnecessary details",
+                  "How you felt when the abstract was finally accepted"
+                ],
+                "targetSentence": "Summarizing the paper required careful editing to capture the core methodology and findings.",
+                "phonetic": "/ˈsʌməraɪzɪŋ ðə ˈpeɪpə rɪˈkwaɪəd ˈkeəfəl ˈedɪtɪŋ tuː ˈkæptʃə ðə kɔːr ˌmeθəˈdɒlədʒi/",
+                "expectedKeywords": [
+                  "summarizing",
+                  "methodology",
+                  "findings",
+                  "abstract"
+                ],
+                "explanation": "Use past tense narrative structures combined with academic vocabulary."
+              },
+              {
+                "id": 2,
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about conducting a literature review for a project.",
+                "audioPrompt": "Tell a story about how you searched for academic sources and synthesized them.",
+                "storyPoints": [
+                  "Where you searched for academic journals and databases",
+                  "How you organized the different studies into thematic groups",
+                  "What you learned from synthesizing contrasting viewpoints"
+                ],
+                "targetSentence": "I searched academic databases and synthesized forty articles to build a rigorous review.",
+                "phonetic": "/aɪ sɜːtʃt ˌækəˈdemɪk ˈdeɪtəbeɪsɪz ænd ˈsɪnθəsaɪzd ˈfɔːti ˈɑːtɪklz tuː bɪld aɪ/",
+                "expectedKeywords": [
+                  "database",
+                  "synthesized",
+                  "articles",
+                  "rigorous"
+                ],
+                "explanation": "Maintain fluent pacing and connect your ideas using sequential academic markers."
+              },
+              {
+                "id": 3,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to your professor asking about your research methodology.",
+                "scenarioContext": "Your professor asks why you chose a specific empirical approach for your paper.",
+                "characterRole": "Thesis Student",
+                "audioPrompt": "Professor: Why did you decide to use this specific empirical methodology? Your response:",
+                "targetSentence": "We chose this methodology because it allows us to substantiate our primary hypothesis.",
+                "phonetic": "/wiː tʃəʊz ðɪs ˌmeθəˈdɒlədʒi bɪˈkɒz ɪt əˈlaʊz ʌs tuː səbˈstænʃieɪt ˈpraɪməri haɪˈpɒθəsɪs/",
+                "expectedKeywords": [
+                  "methodology",
+                  "empirical",
+                  "substantiate",
+                  "hypothesis"
+                ],
+                "explanation": "Respond professionally and defend your research design with confidence."
+              },
+              {
+                "id": 4,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to a peer reviewer asking about your literature review sources.",
+                "scenarioContext": "A peer reviewer questions whether your literature review covers enough recent studies.",
+                "characterRole": "Lead Author",
+                "audioPrompt": "Reviewer: Are your literature sources representative of recent developments? Your response:",
+                "targetSentence": "Our literature review synthesizes over fifty recent papers published between 2020 and 2025.",
+                "phonetic": "/ˈaʊə ˈlɪtrətʃə rɪˈvjuː ˈsɪnθəsaɪzɪz ˈəʊvə ˈfɪfti ˈriːsnt ˈpeɪpəz ˈpʌblɪʃt bɪˈtwiːn/",
+                "expectedKeywords": [
+                  "literature",
+                  "synthesizes",
+                  "recent",
+                  "published"
+                ],
+                "explanation": "Address constructive feedback respectfully while highlighting your thorough search."
+              },
+              {
+                "id": 5,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Explain the practical implications of your findings to a department head.",
+                "scenarioContext": "The department head wants to know how your research impacts educational policy.",
+                "characterRole": "Researcher",
+                "audioPrompt": "Department Head: What are the broader implications of your study for classroom practice? Your response:",
+                "targetSentence": "These findings provide crucial implications for improving curriculum design and teacher training.",
+                "phonetic": "/ðiːz ˈfaɪndɪŋz prəˈvaɪd ˈkruːʃəl ˌɪmplɪˈkeɪʃənz fɔːr ɪmˈpruːvɪŋ kəˈrɪkjʊləm dɪˈzaɪn/",
+                "expectedKeywords": [
+                  "findings",
+                  "implications",
+                  "curriculum",
+                  "training"
+                ],
+                "explanation": "Articulate the real-world consequences of your academic work clearly."
+              },
+              {
+                "id": 6,
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Defend your citation register choices during an editorial board meeting.",
+                "scenarioContext": "An editor questions why you used specific citation registers in your manuscript.",
+                "characterRole": "Contributing Author",
+                "audioPrompt": "Editor: Could you clarify why you adopted this specific citation register? Your response:",
+                "targetSentence": "We adopted a consistent citation register to properly substantiate all theoretical claims.",
+                "phonetic": "/wiː əˈdɒptɪd ə kənˈsɪstənt saɪˈteɪʃən ˈredʒɪstə tuː ˈprɒpəli səbˈstænʃieɪt ˈkleɪmz/",
+                "expectedKeywords": [
+                  "consistent",
+                  "citation",
+                  "register",
+                  "substantiate"
+                ],
+                "explanation": "Explain your academic formatting and citation choices with professional poise."
+              },
+              {
+                "id": 7,
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Focus",
+                "instruction": "Demonstrate mastery of academic vocabulary by using 'elucidate' in a sentence.",
+                "audioPrompt": "Create a spoken sentence using the word 'elucidate' correctly in an academic context.",
+                "targetSentence": "This section aims to elucidate the complex relationship between variables.",
+                "phonetic": "/ðɪs ˈsekʃən eɪmz tuː ɪˈluːsɪdeɪt ðə ˈkɒmpleks rɪˈleɪʃənʃɪp bɪˈtwiːn ˈveəriəblz/",
+                "expectedKeywords": [
+                  "section",
+                  "elucidate",
+                  "complex",
+                  "variables"
+                ],
+                "explanation": "Integrate target vocabulary naturally into a standard academic sentence structure."
+              },
+              {
+                "id": 8,
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Focus",
+                "instruction": "Use a complex passive voice structure typical of academic abstracts.",
+                "audioPrompt": "Speak a sentence using passive voice to describe data collection methods.",
+                "targetSentence": "Data was collected from a cohort of five hundred participants over five years.",
+                "phonetic": "/ˈdeɪtə wɒz kəˈlektɪd frɒm ə ˈkəʊhɔːt ɒv faɪv ˈhʌndrəd pɑːˈtɪsɪpənts ˈəʊvə faɪv jɪəz/",
+                "expectedKeywords": [
+                  "collected",
+                  "cohort",
+                  "participants",
+                  "years"
+                ],
+                "explanation": "Practice the passive construction frequently required in formal scientific writing."
+              },
+              {
+                "id": 9,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress",
+                "instruction": "Pronounce the multisyllabic academic term 'methodology' with correct syllable stress.",
+                "audioPrompt": "Say the word 'methodology' and use it in a short sentence.",
+                "targetSentence": "Our research methodology underwent rigorous peer review.",
+                "phonetic": "/ˈaʊə rɪˈsɜːtʃ ˌmeθəˈdɒlədʒi ˈʌndəwʊnt ˈrɪɡərəs pɪə rɪˈvjuː/",
+                "expectedKeywords": [
+                  "research",
+                  "methodology",
+                  "rigorous",
+                  "review"
+                ],
+                "explanation": "Place primary stress on the third syllable (OL) of methodology."
+              },
+              {
+                "id": 10,
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Intonation",
+                "instruction": "Demonstrate falling intonation when presenting definitive research conclusions.",
+                "audioPrompt": "Read the following sentence with a falling pitch at the end to show certainty.",
+                "targetSentence": "The correlation between variables is statistically significant.",
+                "phonetic": "/ðə ˌkɒrəˈleɪʃən bɪˈtwiːn ˈveəriəblz ɪz stəˈtɪstɪkli sɪɡˈnɪfɪkənt/",
+                "expectedKeywords": [
+                  "correlation",
+                  "variables",
+                  "statistically",
+                  "significant"
+                ],
+                "explanation": "Lower your vocal pitch on the final word to signal definitive academic conclusions."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
