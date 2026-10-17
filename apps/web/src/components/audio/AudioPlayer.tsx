@@ -24,24 +24,126 @@ export function AudioPlayer({
   const [duration, setDuration] = useState(0);
   const [playbackRate, setPlaybackRate] = useState(1);
   const [audioError, setAudioError] = useState(false);
+  const [usingSpeechSynthesis, setUsingSpeechSynthesis] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const speechTimerRef = useRef<any>(null);
+  const isSpeechPausedRef = useRef(false);
 
-  const cleanScript = audioScript ? audioScript.replace(/[A-Za-z]+:\s*/g, "").trim() : "";
-  const resolvedAudioUrl = audioUrl || (cleanScript ? getApiUrl(`/api/voice/tts?text=${encodeURIComponent(cleanScript)}`) : "");
+  const cleanScript = audioScript
+    ? audioScript.replace(/(?:Speaker\s+[A-Za-z0-9]|[A-Za-z]+):\s*/gi, "").trim()
+    : "";
+  const resolvedAudioUrl =
+    audioUrl || (cleanScript ? getApiUrl(`/api/voice/tts?text=${encodeURIComponent(cleanScript)}`) : "");
+
+  const wordsCount = cleanScript ? cleanScript.split(/\s+/).filter(Boolean).length : 0;
+  const estimatedSpeechDuration = Math.max(5, Math.round(wordsCount / 2.2));
 
   useEffect(() => {
-    // Reset saat audio URL berubah
     setIsPlaying(false);
     setCurrentTime(0);
     setAudioError(false);
+    setUsingSpeechSynthesis(false);
+    isSpeechPausedRef.current = false;
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
-  }, [resolvedAudioUrl]);
+    if (typeof window !== "undefined" && window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+    }
+    if (speechTimerRef.current) clearInterval(speechTimerRef.current);
+  }, [resolvedAudioUrl, cleanScript]);
+
+  useEffect(() => {
+    return () => {
+      if (typeof window !== "undefined" && window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+      }
+      if (speechTimerRef.current) clearInterval(speechTimerRef.current);
+    };
+  }, []);
+
+  const startSpeechTimer = (totalDur: number) => {
+    if (speechTimerRef.current) clearInterval(speechTimerRef.current);
+    speechTimerRef.current = setInterval(() => {
+      setCurrentTime((prev) => {
+        if (prev >= totalDur) {
+          clearInterval(speechTimerRef.current);
+          return totalDur;
+        }
+        return Math.round((prev + 0.25) * 100) / 100;
+      });
+    }, 250);
+  };
+
+  const startSpeechSynthesis = (fromStart = false) => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window) || !cleanScript) {
+      setAudioError(true);
+      return;
+    }
+
+    if (isSpeechPausedRef.current && !fromStart) {
+      window.speechSynthesis.resume();
+      isSpeechPausedRef.current = false;
+      setIsPlaying(true);
+      startSpeechTimer(estimatedSpeechDuration / playbackRate);
+      return;
+    }
+
+    window.speechSynthesis.cancel();
+    if (speechTimerRef.current) clearInterval(speechTimerRef.current);
+
+    const utter = new SpeechSynthesisUtterance(cleanScript);
+    utter.lang = "en-US";
+    utter.rate = playbackRate;
+
+    const voices = window.speechSynthesis.getVoices();
+    const enVoice =
+      voices.find((v) => v.lang.startsWith("en-US") && !v.localService) ||
+      voices.find((v) => v.lang.startsWith("en-US")) ||
+      voices.find((v) => v.lang.startsWith("en"));
+    if (enVoice) utter.voice = enVoice;
+
+    const totalDur = Math.round((estimatedSpeechDuration / playbackRate) * 10) / 10;
+    setDuration(totalDur);
+    if (fromStart) setCurrentTime(0);
+
+    utter.onend = () => {
+      setIsPlaying(false);
+      isSpeechPausedRef.current = false;
+      if (speechTimerRef.current) clearInterval(speechTimerRef.current);
+      setCurrentTime(0);
+    };
+
+    utter.onerror = (e: any) => {
+      if (e.error === "canceled" || e.error === "interrupted") return;
+      console.warn("SpeechSynthesis error:", e);
+      setIsPlaying(false);
+      if (speechTimerRef.current) clearInterval(speechTimerRef.current);
+    };
+
+    window.speechSynthesis.speak(utter);
+    setIsPlaying(true);
+    isSpeechPausedRef.current = false;
+    startSpeechTimer(totalDur);
+  };
 
   const togglePlay = () => {
+    if (usingSpeechSynthesis || !resolvedAudioUrl) {
+      if (isPlaying) {
+        if (typeof window !== "undefined" && window.speechSynthesis) {
+          window.speechSynthesis.pause();
+          isSpeechPausedRef.current = true;
+        }
+        if (speechTimerRef.current) clearInterval(speechTimerRef.current);
+        setIsPlaying(false);
+      } else {
+        startSpeechSynthesis();
+      }
+      return;
+    }
+
     if (!audioRef.current) return;
 
     if (isPlaying) {
@@ -52,37 +154,47 @@ export function AudioPlayer({
         .play()
         .then(() => setIsPlaying(true))
         .catch((err) => {
-          console.warn("Audio playback error:", err);
-          setAudioError(true);
-          setIsPlaying(false);
+          console.warn("Audio playback error, falling back to Web Speech:", err);
+          setUsingSpeechSynthesis(true);
+          startSpeechSynthesis(true);
         });
     }
   };
 
   const handleTimeUpdate = () => {
-    if (audioRef.current) {
+    if (audioRef.current && !usingSpeechSynthesis) {
       setCurrentTime(audioRef.current.currentTime);
     }
   };
 
   const handleLoadedMetadata = () => {
-    if (audioRef.current) {
+    if (audioRef.current && !usingSpeechSynthesis) {
       setDuration(audioRef.current.duration);
     }
   };
 
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
     const time = Number(e.target.value);
-    if (audioRef.current) {
+    if (!usingSpeechSynthesis && audioRef.current) {
       audioRef.current.currentTime = time;
       setCurrentTime(time);
     }
   };
 
   const handleRestart = () => {
+    if (usingSpeechSynthesis || !resolvedAudioUrl) {
+      startSpeechSynthesis(true);
+      return;
+    }
     if (audioRef.current) {
       audioRef.current.currentTime = 0;
-      audioRef.current.play().then(() => setIsPlaying(true)).catch(() => {});
+      audioRef.current
+        .play()
+        .then(() => setIsPlaying(true))
+        .catch(() => {
+          setUsingSpeechSynthesis(true);
+          startSpeechSynthesis(true);
+        });
     }
   };
 
@@ -91,6 +203,9 @@ export function AudioPlayer({
     setPlaybackRate(nextRate);
     if (audioRef.current) {
       audioRef.current.playbackRate = nextRate;
+    }
+    if (usingSpeechSynthesis && isPlaying) {
+      startSpeechSynthesis(false);
     }
   };
 
@@ -103,7 +218,7 @@ export function AudioPlayer({
   return (
     <div className="p-4 sm:p-5 rounded-2xl bg-[#0D2238] border border-[#1b3d60] border-b-4 border-b-[#071320] text-white shadow-md space-y-3.5">
       {/* Audio element asli / ElevenLabs TTS */}
-      {resolvedAudioUrl && (
+      {resolvedAudioUrl && !usingSpeechSynthesis && (
         <audio
           ref={audioRef}
           src={resolvedAudioUrl}
@@ -111,8 +226,13 @@ export function AudioPlayer({
           onLoadedMetadata={handleLoadedMetadata}
           onEnded={() => setIsPlaying(false)}
           onError={() => {
-            setAudioError(true);
-            setIsPlaying(false);
+            if (cleanScript && typeof window !== "undefined" && "speechSynthesis" in window) {
+              setUsingSpeechSynthesis(true);
+              setAudioError(false);
+            } else {
+              setAudioError(true);
+              setIsPlaying(false);
+            }
           }}
         />
       )}
