@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AudioPlayer } from "@/components/audio/AudioPlayer";
 import { SpeakingRecorder } from "@/components/audio/SpeakingRecorder";
 import {
@@ -15,6 +17,8 @@ import {
   MessageSquare,
   Sparkles,
   Loader2,
+  Check,
+  AlertCircle,
 } from "lucide-react";
 import { usePlacementSession, useSubmitPlacement } from "../hooks/use-placement";
 
@@ -33,6 +37,21 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
 
   const [result, setResult] = useState<any>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
+  const mcqs = (testData as any)?.mcqs || [];
+  const listening = (testData as any)?.listening || [];
+  const writing = (testData as any)?.writing || [];
+  const speaking = (testData as any)?.speaking || [];
+  const totalQuestions = mcqs.length + listening.length + writing.length + speaking.length || 22;
+
+  // Track completion count
+  const answeredCount =
+    Object.keys(mcqAnswers).length +
+    Object.keys(listeningAnswers).length +
+    Object.values(writingAnswers).filter((t) => t.trim().length > 3).length +
+    Object.values(speakingAnswers).filter((t) => t.trim().length > 2).length;
+
+  const progressPercent = Math.min(100, Math.round((answeredCount / totalQuestions) * 100));
 
   const handleSelectOption = (
     type: "mcq" | "listening",
@@ -75,10 +94,19 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-4">
-        <div className="text-center">
-          <Loader2 className="w-10 h-10 text-primary animate-spin mx-auto mb-3" />
-          <p className="text-sm font-semibold text-primary">Menyiapkan paket tes penempatan unikmu...</p>
+      <div className="min-h-[70vh] flex items-center justify-center p-4">
+        <div className="text-center space-y-3">
+          <div className="w-12 h-12 rounded-2xl bg-surface border border-slate-200 flex items-center justify-center mx-auto text-primary">
+            <Loader2 className="w-6 h-6 animate-spin text-primary" />
+          </div>
+          <div>
+            <p className="font-heading text-base font-bold text-primary">
+              Menyiapkan Tes Penempatan Unikmu...
+            </p>
+            <p className="text-xs text-slate-500 mt-0.5">
+              Mengacak 22 soal diagnostik dari bank soal resmi.
+            </p>
+          </div>
         </div>
       </div>
     );
@@ -86,14 +114,28 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
 
   if (loadError) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-4">
-        <div className="text-center text-red-600 bg-red-50 p-6 rounded-2xl border border-red-200 max-w-md">
-          <p className="font-bold text-base mb-1">Gagal memuat tes penempatan</p>
-          <p className="text-xs text-slate-600 mb-4">{String(loadError?.message || loadError)}</p>
-          <Button variant="outline" size="sm" onClick={() => refetch()}>
-            Coba Muat Ulang
+      <div className="min-h-[70vh] flex items-center justify-center p-4">
+        <Card className="max-w-md w-full border-rose-200 bg-rose-50/50 text-center p-6 rounded-2xl space-y-4">
+          <div className="w-12 h-12 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center mx-auto">
+            <AlertCircle className="w-6 h-6" />
+          </div>
+          <div>
+            <h3 className="font-heading font-bold text-base text-rose-950">
+              Gagal Memuat Tes Penempatan
+            </h3>
+            <p className="text-xs text-rose-700 mt-1">
+              {String(loadError?.message || loadError)}
+            </p>
+          </div>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => refetch()}
+            className="border-rose-300 text-rose-800 hover:bg-rose-100"
+          >
+            Muat Ulang Halaman
           </Button>
-        </div>
+        </Card>
       </div>
     );
   }
@@ -102,326 +144,398 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
   if (result) {
     const skills = result.skills || {};
     return (
-      <div className="min-h-screen flex items-center justify-center p-4 bg-surface py-12">
-        <div className="w-full max-w-2xl bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-800 text-center space-y-6">
-          <div className="w-16 h-16 rounded-3xl bg-secondary/15 text-secondary flex items-center justify-center mx-auto">
-            <Award className="w-9 h-9" />
+      <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-surface">
+        <Card className="w-full max-w-2xl bg-white dark:bg-slate-900 rounded-3xl border border-[#E5E9F5] shadow-xs text-center p-6 sm:p-10 space-y-6">
+          <div className="w-16 h-16 rounded-2xl bg-amber-50 border border-amber-200 text-secondary flex items-center justify-center mx-auto shadow-xs">
+            <Award className="w-9 h-9 text-secondary" />
           </div>
 
-          <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-secondary">
+          <div className="space-y-1">
+            <Badge variant="accent" className="text-xs px-3 py-1 uppercase tracking-wider">
               Hasil Tes Penempatan CEFR
-            </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mt-1">
-              Level Kamu: <span className="text-secondary">{result.overallCefr}</span>
+            </Badge>
+            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-primary pt-2">
+              Tingkat Kemampuan: <span className="text-secondary">{result.overallCefr}</span>
             </h2>
-            <p className="text-xs text-slate-500 mt-1">
-              Skor Komposit: {result.scorePercent}%
+            <p className="text-xs text-slate-500">
+              Skor Komposit Keseluruhan: <span className="font-bold text-primary">{result.scorePercent}%</span>
             </p>
           </div>
 
           {/* 4 Skill Cards Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
-            <div className="bg-surface p-3.5 rounded-2xl border border-slate-100 dark:border-slate-800">
-              <span className="text-[11px] font-semibold text-slate-500 flex items-center gap-1">
-                <CheckCircle2 className="w-3.5 h-3.5 text-blue-500" />
+            <div className="bg-surface p-4 rounded-xl border border-slate-100 dark:border-slate-800">
+              <span className="text-[11px] font-semibold text-slate-500 flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" />
                 MCQ (30%)
               </span>
-              <p className="text-lg font-bold text-primary mt-1">
+              <p className="font-heading text-xl font-extrabold text-primary mt-1">
                 {skills.mcqScore ?? result.mcqScore ?? 0}%
               </p>
             </div>
 
-            <div className="bg-surface p-3.5 rounded-2xl border border-slate-100 dark:border-slate-800">
-              <span className="text-[11px] font-semibold text-slate-500 flex items-center gap-1">
-                <Headphones className="w-3.5 h-3.5 text-purple-500" />
+            <div className="bg-surface p-4 rounded-xl border border-slate-100 dark:border-slate-800">
+              <span className="text-[11px] font-semibold text-slate-500 flex items-center gap-1.5">
+                <Headphones className="w-3.5 h-3.5 text-purple-600" />
                 Listening (25%)
               </span>
-              <p className="text-lg font-bold text-primary mt-1">
+              <p className="font-heading text-xl font-extrabold text-primary mt-1">
                 {skills.listeningScore ?? 0}%
               </p>
             </div>
 
-            <div className="bg-surface p-3.5 rounded-2xl border border-slate-100 dark:border-slate-800">
-              <span className="text-[11px] font-semibold text-slate-500 flex items-center gap-1">
-                <PenTool className="w-3.5 h-3.5 text-emerald-500" />
+            <div className="bg-surface p-4 rounded-xl border border-slate-100 dark:border-slate-800">
+              <span className="text-[11px] font-semibold text-slate-500 flex items-center gap-1.5">
+                <PenTool className="w-3.5 h-3.5 text-emerald-600" />
                 Writing (25%)
               </span>
-              <p className="text-lg font-bold text-primary mt-1">
+              <p className="font-heading text-xl font-extrabold text-primary mt-1">
                 {skills.writingScore ?? result.writingScore ?? 0}%
               </p>
             </div>
 
-            <div className="bg-surface p-3.5 rounded-2xl border border-slate-100 dark:border-slate-800">
-              <span className="text-[11px] font-semibold text-slate-500 flex items-center gap-1">
-                <Mic className="w-3.5 h-3.5 text-amber-500" />
+            <div className="bg-surface p-4 rounded-xl border border-slate-100 dark:border-slate-800">
+              <span className="text-[11px] font-semibold text-slate-500 flex items-center gap-1.5">
+                <Mic className="w-3.5 h-3.5 text-secondary" />
                 Speaking (20%)
               </span>
-              <p className="text-lg font-bold text-primary mt-1">
+              <p className="font-heading text-xl font-extrabold text-primary mt-1">
                 {skills.speakingScore ?? result.speakingScore ?? 0}%
               </p>
             </div>
           </div>
 
-          {/* Mr. Khoirul AI Notes */}
+          {/* Mr. Khoirul AI Feedback Notes */}
           {(result.writingEvaluation?.feedback_id || result.speakingEvaluation?.feedback_id) && (
-            <div className="text-left p-4 rounded-2xl bg-secondary/5 border border-secondary/20 space-y-2">
+            <div className="text-left p-4 rounded-2xl bg-surface border border-slate-200/70 space-y-2">
               <p className="text-xs font-bold text-primary flex items-center gap-1.5">
                 <MessageSquare className="w-4 h-4 text-secondary" />
-                Catatan Evaluasi Mr. Khoirul:
+                Catatan Tutor AI Mr. Khoirul:
               </p>
               {result.writingEvaluation?.feedback_id && (
-                <p className="text-xs text-slate-700 dark:text-slate-300">
-                  <strong>Writing:</strong> {result.writingEvaluation.feedback_id}
+                <p className="text-xs text-slate-700 leading-relaxed">
+                  <strong className="text-primary font-semibold">Writing:</strong> {result.writingEvaluation.feedback_id}
                 </p>
               )}
               {result.speakingEvaluation?.feedback_id && (
-                <p className="text-xs text-slate-700 dark:text-slate-300">
-                  <strong>Speaking:</strong> {result.speakingEvaluation.feedback_id}
+                <p className="text-xs text-slate-700 leading-relaxed">
+                  <strong className="text-primary font-semibold">Speaking:</strong> {result.speakingEvaluation.feedback_id}
                 </p>
               )}
             </div>
           )}
 
-          <p className="text-xs md:text-sm text-slate-600 dark:text-slate-400">
-            Kurikulum materi dan modul belajar kamu otomatis disesuaikan dengan tingkat <strong>{result.overallCefr}</strong>.
+          <p className="text-xs sm:text-sm text-slate-600">
+            Kurikulum dan silabus materi belajar kamu telah otomatis disinkronkan dengan tingkat kemampuan <strong>{result.overallCefr}</strong>.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 pt-2">
             <Link href="/curriculum" className="flex-1">
-              <Button variant="primary" size="lg" className="w-full font-bold">
+              <Button
+                variant="primary"
+                size="lg"
+                className="w-full bg-primary hover:bg-[#0c2b48] text-white rounded-xl font-bold"
+              >
                 Mulai Belajar Kurikulum {result.overallCefr}
-                <ArrowRight className="w-4 h-4 ml-1" />
+                <ArrowRight className="w-4 h-4 ml-1.5" />
               </Button>
             </Link>
             <Link href="/dashboard" className="flex-1">
-              <Button variant="outline" size="lg" className="w-full font-semibold">
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full rounded-xl border-slate-200 text-primary font-semibold"
+              >
                 Buka Dashboard
               </Button>
             </Link>
           </div>
-        </div>
+        </Card>
       </div>
     );
   }
 
-  const mcqs = (testData as any)?.mcqs || [];
-  const listening = (testData as any)?.listening || [];
-  const writing = (testData as any)?.writing || [];
-  const speaking = (testData as any)?.speaking || [];
-
   return (
-    <div className="max-w-3xl mx-auto px-4 py-12">
-      {/* Header */}
-      <div className="mb-8">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-semibold mb-2">
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>Tes Penempatan Komprehensif CEFR</span>
+    <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12">
+      {/* Top Banner */}
+      <div className="mb-8 space-y-2">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-secondary border border-amber-200 text-xs font-bold">
+          <Sparkles className="w-3.5 h-3.5 text-secondary" />
+          <span>Tes Penempatan Adaptif CEFR</span>
         </div>
-        <h1 className="text-2xl md:text-3xl font-extrabold text-primary">
+        <h1 className="font-heading text-2xl sm:text-3xl font-extrabold text-primary">
           Ukur Kemampuan Bahasa Inggrismu
         </h1>
-        <p className="text-xs md:text-sm text-slate-600 dark:text-slate-400 mt-1">
-          Total 22 soal mencakup 4 keahlian: 10 Tata Bahasa &amp; Kosakata, 5 Listening, 5 Writing, dan 2 Speaking. Jawab sebaik mungkin tanpa terburu-buru.
+        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Paket tes ini dirancang untuk mendeteksi kemampuan awalmu secara menyeluruh: 10 soal Tata Bahasa &amp; Kosakata, 5 soal Listening, 5 soal Writing, dan 2 soal Speaking. Jawab senatural mungkin.
         </p>
+
+        {/* Live Progress Bar */}
+        <div className="pt-3">
+          <div className="flex justify-between items-center text-xs font-semibold text-slate-600 mb-1.5">
+            <span>Kemajuan Pengerjaan:</span>
+            <span className="text-primary font-bold">
+              {answeredCount} dari {totalQuestions} soal terjawab ({progressPercent}%)
+            </span>
+          </div>
+          <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-secondary transition-all duration-300 rounded-full"
+              style={{ width: `${progressPercent}%` }}
+            />
+          </div>
+        </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-8">
         {/* Section 1: 10 MCQ */}
         {mcqs.length > 0 && (
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm space-y-6">
-            <div className="border-b pb-3">
-              <h2 className="text-base font-bold text-primary flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-secondary" />
-                Bagian 1: Tata Bahasa &amp; Kosakata (10 Soal)
-              </h2>
-            </div>
-
-            {mcqs.map((q: any, idx: number) => (
-              <div key={q.id} className="space-y-3 pt-2">
-                <div className="flex items-start gap-2">
-                  <span className="text-xs font-bold text-slate-400 mt-0.5">{idx + 1}.</span>
-                  <p className="text-sm font-medium text-slate-800 dark:text-slate-200">{q.question}</p>
+          <Card className="rounded-2xl border border-[#E5E9F5] bg-white shadow-xs">
+            <CardHeader className="border-b border-slate-100 pb-4">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+                  <CheckCircle2 className="w-4 h-4" />
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-5">
-                  {(q.options || []).map((opt: string) => {
-                    const isSelected = mcqAnswers[q.id] === opt;
-                    return (
-                      <button
-                        type="button"
-                        key={opt}
-                        onClick={() => handleSelectOption("mcq", q.id, opt)}
-                        className={`text-left px-4 py-3 rounded-xl text-xs sm:text-sm font-medium border transition-all min-h-[44px] touch-manipulation flex items-center justify-between ${
-                          isSelected
-                            ? "bg-primary text-white border-primary shadow-sm font-bold"
-                            : "bg-surface hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700"
-                        }`}
-                      >
-                        <span>{opt}</span>
-                      </button>
-                    );
-                  })}
+                <div>
+                  <CardTitle className="font-heading text-base font-bold text-primary">
+                    Bagian 1: Tata Bahasa &amp; Kosakata (10 Soal)
+                  </CardTitle>
+                  <CardDescription className="text-xs text-slate-500">
+                    Pilih satu opsi kata yang paling tepat melengkapi kalimat.
+                  </CardDescription>
                 </div>
               </div>
-            ))}
-          </div>
+            </CardHeader>
+
+            <CardContent className="p-6 space-y-6">
+              {mcqs.map((q: any, idx: number) => (
+                <div key={q.id} className="space-y-3 pt-2">
+                  <div className="flex items-start gap-2">
+                    <span className="text-xs font-bold text-slate-400 mt-0.5">{idx + 1}.</span>
+                    <p className="text-sm font-medium text-slate-800 leading-relaxed">
+                      {q.question}
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-5">
+                    {(q.options || []).map((opt: string) => {
+                      const isSelected = mcqAnswers[q.id] === opt;
+                      return (
+                        <button
+                          type="button"
+                          key={opt}
+                          onClick={() => handleSelectOption("mcq", q.id, opt)}
+                          className={`text-left px-4 py-3 rounded-xl text-xs sm:text-sm font-medium border transition-all min-h-[44px] touch-manipulation flex items-center justify-between ${
+                            isSelected
+                              ? "bg-primary text-white border-primary shadow-xs font-bold"
+                              : "bg-surface hover:bg-slate-100 text-slate-700 border-slate-200"
+                          }`}
+                        >
+                          <span>{opt}</span>
+                          {isSelected && <Check className="w-4 h-4 ml-2 shrink-0 text-white" />}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
         )}
 
         {/* Section 2: 5 Listening */}
         {listening.length > 0 && (
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm space-y-6">
-            <div className="border-b pb-3">
-              <h2 className="text-base font-bold text-primary flex items-center gap-2">
-                <Headphones className="w-4 h-4 text-purple-600" />
-                Bagian 2: Pemahaman Mendengarkan / Listening (5 Soal)
-              </h2>
-              <p className="text-xs text-slate-500 mt-0.5">
-                Dengarkan klip audio lalu pilih jawaban yang paling tepat.
-              </p>
-            </div>
-
-            {listening.map((l: any, idx: number) => (
-              <div key={l.id} className="space-y-3 pt-3 border-t first:border-t-0">
-                <div className="flex items-start gap-2">
-                  <span className="text-xs font-bold text-purple-600 mt-0.5">{idx + 1}.</span>
-                  <p className="text-sm font-medium text-slate-800 dark:text-slate-200">{l.question}</p>
+          <Card className="rounded-2xl border border-[#E5E9F5] bg-white shadow-xs">
+            <CardHeader className="border-b border-slate-100 pb-4">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center font-bold">
+                  <Headphones className="w-4 h-4" />
                 </div>
-
-                <div className="pl-5">
-                  <AudioPlayer
-                    audioUrl={l.audioUrl}
-                    audioScript={l.audioScript}
-                    title={`Audio Klip Soal ${idx + 1}`}
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-5 pt-2">
-                  {(l.options || []).map((opt: string) => {
-                    const isSelected = listeningAnswers[l.id] === opt;
-                    return (
-                      <button
-                        type="button"
-                        key={opt}
-                        onClick={() => handleSelectOption("listening", l.id, opt)}
-                        className={`text-left px-4 py-3 rounded-xl text-xs sm:text-sm font-medium border transition-all min-h-[44px] touch-manipulation flex items-center justify-between ${
-                          isSelected
-                            ? "bg-purple-600 text-white border-purple-600 shadow-sm font-bold"
-                            : "bg-surface hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700"
-                        }`}
-                      >
-                        <span>{opt}</span>
-                      </button>
-                    );
-                  })}
+                <div>
+                  <CardTitle className="font-heading text-base font-bold text-primary">
+                    Bagian 2: Pemahaman Mendengarkan / Listening (5 Soal)
+                  </CardTitle>
+                  <CardDescription className="text-xs text-slate-500">
+                    Dengarkan audio percakapan, lalu pilih opsi jawaban yang tepat.
+                  </CardDescription>
                 </div>
               </div>
-            ))}
-          </div>
+            </CardHeader>
+
+            <CardContent className="p-6 space-y-8">
+              {listening.map((l: any, idx: number) => (
+                <div key={l.id} className="space-y-3 pt-3 border-t first:border-t-0 first:pt-0">
+                  <div className="flex items-start gap-2">
+                    <span className="text-xs font-bold text-purple-600 mt-0.5">{idx + 1}.</span>
+                    <p className="text-sm font-medium text-slate-800 leading-relaxed">
+                      {l.question}
+                    </p>
+                  </div>
+
+                  <div className="pl-5">
+                    <AudioPlayer
+                      audioUrl={l.audioUrl}
+                      audioScript={l.audioScript}
+                      title={`Audio Klip Soal ${idx + 1}`}
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-5 pt-2">
+                    {(l.options || []).map((opt: string) => {
+                      const isSelected = listeningAnswers[l.id] === opt;
+                      return (
+                        <button
+                          type="button"
+                          key={opt}
+                          onClick={() => handleSelectOption("listening", l.id, opt)}
+                          className={`text-left px-4 py-3 rounded-xl text-xs sm:text-sm font-medium border transition-all min-h-[44px] touch-manipulation flex items-center justify-between ${
+                            isSelected
+                              ? "bg-purple-600 text-white border-purple-600 shadow-xs font-bold"
+                              : "bg-surface hover:bg-slate-100 text-slate-700 border-slate-200"
+                          }`}
+                        >
+                          <span>{opt}</span>
+                          {isSelected && <Check className="w-4 h-4 ml-2 shrink-0 text-white" />}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
         )}
 
         {/* Section 3: 5 Writing */}
         {writing.length > 0 && (
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm space-y-6">
-            <div className="border-b pb-3">
-              <h2 className="text-base font-bold text-primary flex items-center gap-2">
-                <PenTool className="w-4 h-4 text-emerald-600" />
-                Bagian 3: Keterampilan Menulis / Writing (5 Soal)
-              </h2>
-              <p className="text-xs text-slate-500 mt-0.5">
-                Tuliskan tanggapan singkat dalam Bahasa Inggris sesuai instruksi setiap soal.
-              </p>
-            </div>
-
-            {writing.map((w: any, idx: number) => (
-              <div key={w.id} className="space-y-2 pt-2">
-                <div className="flex items-start gap-2">
-                  <span className="text-xs font-bold text-emerald-600 mt-0.5">{idx + 1}.</span>
-                  <p className="text-sm font-medium text-slate-800 dark:text-slate-200">{w.question}</p>
+          <Card className="rounded-2xl border border-[#E5E9F5] bg-white shadow-xs">
+            <CardHeader className="border-b border-slate-100 pb-4">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold">
+                  <PenTool className="w-4 h-4" />
                 </div>
-
-                <div className="pl-5">
-                  <textarea
-                    rows={3}
-                    value={writingAnswers[w.id] || ""}
-                    onChange={(e) => handleWritingChange(w.id, e.target.value)}
-                    placeholder="Ketik jawabanmu di sini dalam Bahasa Inggris..."
-                    className="w-full p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 dark:bg-slate-950 text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 transition-all font-normal"
-                  />
-                  <div className="flex justify-between items-center text-[10px] text-slate-400 mt-1">
-                    <span>Target: 2 - 5 kalimat</span>
-                    <span>{(writingAnswers[w.id] || "").split(/\s+/).filter(Boolean).length} kata</span>
-                  </div>
+                <div>
+                  <CardTitle className="font-heading text-base font-bold text-primary">
+                    Bagian 3: Keterampilan Menulis / Writing (5 Soal)
+                  </CardTitle>
+                  <CardDescription className="text-xs text-slate-500">
+                    Tuliskan tanggapan singkat dalam Bahasa Inggris sesuai konteks.
+                  </CardDescription>
                 </div>
               </div>
-            ))}
-          </div>
+            </CardHeader>
+
+            <CardContent className="p-6 space-y-6">
+              {writing.map((w: any, idx: number) => {
+                const words = (writingAnswers[w.id] || "").split(/\s+/).filter(Boolean).length;
+                return (
+                  <div key={w.id} className="space-y-2 pt-2">
+                    <div className="flex items-start gap-2">
+                      <span className="text-xs font-bold text-emerald-600 mt-0.5">{idx + 1}.</span>
+                      <p className="text-sm font-medium text-slate-800 leading-relaxed">
+                        {w.question}
+                      </p>
+                    </div>
+
+                    <div className="pl-5">
+                      <textarea
+                        rows={3}
+                        value={writingAnswers[w.id] || ""}
+                        onChange={(e) => handleWritingChange(w.id, e.target.value)}
+                        placeholder="Ketik jawaban dalam Bahasa Inggris di sini..."
+                        className="w-full p-3.5 rounded-[10px] border border-slate-200 bg-surface focus:bg-white text-xs text-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 transition-all font-normal"
+                      />
+                      <div className="flex justify-between items-center text-[10px] text-slate-400 mt-1">
+                        <span>Panjang disarankan: 2 - 5 kalimat</span>
+                        <span className={words >= 5 ? "text-emerald-600 font-bold" : ""}>
+                          {words} kata
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </CardContent>
+          </Card>
         )}
 
         {/* Section 4: 2 Speaking */}
         {speaking.length > 0 && (
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm space-y-6">
-            <div className="border-b pb-3">
-              <h2 className="text-base font-bold text-primary flex items-center gap-2">
-                <Mic className="w-4 h-4 text-amber-500" />
-                Bagian 4: Keterampilan Berbicara / Speaking (2 Soal)
-              </h2>
-              <p className="text-xs text-slate-500 mt-0.5">
-                Klik tombol rekam, ucapkan jawabanmu dengan suara jelas, lalu klik selesai rekam.
-              </p>
-            </div>
-
-            {speaking.map((s: any, idx: number) => (
-              <div key={s.id} className="space-y-3 pt-2">
-                <div className="flex items-start gap-2">
-                  <span className="text-xs font-bold text-amber-600 mt-0.5">{idx + 1}.</span>
-                  <p className="text-sm font-medium text-slate-800 dark:text-slate-200">{s.question}</p>
+          <Card className="rounded-2xl border border-[#E5E9F5] bg-white shadow-xs">
+            <CardHeader className="border-b border-slate-100 pb-4">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-amber-50 text-secondary flex items-center justify-center font-bold">
+                  <Mic className="w-4 h-4" />
                 </div>
-
-                <div className="pl-5">
-                  <SpeakingRecorder
-                    onTranscriptChange={(transcript) => handleSpeakingTranscript(s.id, transcript)}
-                  />
-                  {speakingAnswers[s.id] && (
-                    <div className="mt-2 p-2.5 bg-amber-50/60 dark:bg-amber-950/20 rounded-xl border border-amber-200 dark:border-amber-900/40 text-xs">
-                      <span className="text-[11px] font-bold text-amber-800 dark:text-amber-400 block mb-0.5">
-                        Transkrip Rekaman:
-                      </span>
-                      <p className="italic text-slate-700 dark:text-slate-300 text-xs">
-                        &quot;{speakingAnswers[s.id]}&quot;
-                      </p>
-                    </div>
-                  )}
+                <div>
+                  <CardTitle className="font-heading text-base font-bold text-primary">
+                    Bagian 4: Keterampilan Berbicara / Speaking (2 Soal)
+                  </CardTitle>
+                  <CardDescription className="text-xs text-slate-500">
+                    Klik rekam, bicaralah dengan jelas dalam Bahasa Inggris, lalu klik selesai.
+                  </CardDescription>
                 </div>
               </div>
-            ))}
-          </div>
+            </CardHeader>
+
+            <CardContent className="p-6 space-y-6">
+              {speaking.map((s: any, idx: number) => (
+                <div key={s.id} className="space-y-3 pt-2">
+                  <div className="flex items-start gap-2">
+                    <span className="text-xs font-bold text-secondary mt-0.5">{idx + 1}.</span>
+                    <p className="text-sm font-medium text-slate-800 leading-relaxed">
+                      {s.question}
+                    </p>
+                  </div>
+
+                  <div className="pl-5 space-y-2">
+                    <SpeakingRecorder
+                      onTranscriptChange={(transcript) => handleSpeakingTranscript(s.id, transcript)}
+                    />
+                    {speakingAnswers[s.id] && (
+                      <div className="p-3 bg-surface rounded-xl border border-slate-200 text-xs">
+                        <span className="text-[11px] font-bold text-primary block mb-0.5">
+                          Transkrip Suara Terdeteksi:
+                        </span>
+                        <p className="italic text-slate-700 text-xs">
+                          &quot;{speakingAnswers[s.id]}&quot;
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
         )}
 
-        {/* Submit Button */}
-        <div className="text-center pt-4 space-y-3">
+        {/* Submit Bottom Section */}
+        <div className="text-center pt-2 pb-6 space-y-3">
           {errorMsg && (
-            <div className="p-3 bg-red-50 border border-red-200 text-red-600 rounded-xl text-xs font-semibold max-w-md mx-auto">
+            <div className="p-3.5 bg-rose-50 border border-rose-200 text-rose-700 rounded-xl text-xs font-semibold max-w-md mx-auto">
               {errorMsg}
             </div>
           )}
 
           <Button
             type="submit"
-            variant="secondary"
             size="lg"
             disabled={submitMutation.isPending}
-            className="w-full md:w-auto min-w-[260px] min-h-[50px] touch-manipulation text-sm font-bold shadow-md"
+            className="w-full sm:w-auto min-w-[280px] min-h-[50px] bg-secondary hover:bg-[#d4720e] text-white rounded-xl text-sm font-bold shadow-xs transition-all active:scale-[0.98]"
           >
             {submitMutation.isPending ? (
               <span className="flex items-center gap-2">
-                <Loader2 className="w-4 h-4 animate-spin" />
+                <Loader2 className="w-4 h-4 animate-spin text-white" />
                 Menganalisis Jawaban &amp; CEFR...
               </span>
             ) : (
-              "Kirim & Dapatkan Hasil Level CEFR"
+              "Kirim Jawaban & Dapatkan Level CEFR"
             )}
           </Button>
+
+          <p className="text-[11px] text-slate-400">
+            Hasil evaluasi akan otomatis menentukan kurikulum belajar yang paling cocok untukmu.
+          </p>
         </div>
       </form>
     </div>
