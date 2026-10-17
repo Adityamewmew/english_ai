@@ -2,7 +2,11 @@ import { t } from "elysia";
 
 export const PlacementSubmitBody = t.Object({
   userId: t.Optional(t.String()),
-  answers: t.Record(t.String(), t.String()),
+  answers: t.Optional(t.Record(t.String(), t.String())),
+  mcqAnswers: t.Optional(t.Record(t.String(), t.String())),
+  listeningAnswers: t.Optional(t.Record(t.String(), t.String())),
+  writingAnswers: t.Optional(t.Record(t.String(), t.String())),
+  speakingAnswers: t.Optional(t.Record(t.String(), t.String())),
   writingText: t.Optional(t.String()),
   writingEvaluation: t.Optional(t.Any()),
   speakingAudioBase64: t.Optional(t.String()),

@@ -1,42 +1,60 @@
-import { placementRepository } from "../../repository/placement_repository";
+import { db } from "../../../db";
+import { itemBank, placementResults } from "../../../db/schema";
+import { inArray } from "drizzle-orm";
 import { userRepository } from "../../repository/user_repository";
-import fs from "fs";
-import path from "path";
-
-function getAnswerKeyMap(): Record<string, { answer: string; level: string }> {
-  const candidatePaths = [
-    path.resolve(process.cwd(), "placement_test.json"),
-    path.resolve(process.cwd(), "apps/api/placement_test.json"),
-  ];
-
-  for (const p of candidatePaths) {
-    if (fs.existsSync(p)) {
-      const bank = JSON.parse(fs.readFileSync(p, "utf8"));
-      const map: Record<string, { answer: string; level: string }> = {};
-      for (const q of bank.sections.grammar_vocab) {
-        map[q.id] = { answer: q.answer, level: q.level };
-      }
-      return map;
-    }
-  }
-  return {};
-}
+import { OmniRouteClient } from "../../../db/generator/omniroute-client";
+import crypto from "crypto";
 
 export async function submitPlacementUsecase(body: {
   userId?: string;
-  answers: Record<string, string>;
+  answers?: Record<string, string>;
+  mcqAnswers?: Record<string, string>;
+  listeningAnswers?: Record<string, string>;
+  writingAnswers?: Record<string, string>;
+  speakingAnswers?: Record<string, string>;
   writingText?: string;
-  writingEvaluation?: any;
-  speakingAudioBase64?: string;
   speakingTranscript?: string;
+  writingEvaluation?: any;
   speakingEvaluation?: any;
 }) {
   const userId = body.userId || "anonymous";
-  const answerKeyMap = getAnswerKeyMap();
 
-  let correctCount = 0;
-  let totalMCQ = 0;
-  const levelScores: Record<string, { correct: number; total: number }> = {
+  const mcqAnswers = { ...(body.mcqAnswers || {}), ...(body.answers || {}) };
+  const listeningAnswers = { ...(body.listeningAnswers || {}) };
+  const writingAnswers = { ...(body.writingAnswers || {}) };
+  const speakingAnswers = { ...(body.speakingAnswers || {}) };
+
+  // Support single text fallback from older frontend formats
+  if (body.writingText && Object.keys(writingAnswers).length === 0) {
+    writingAnswers["writing-legacy"] = body.writingText;
+  }
+  if (body.speakingTranscript && Object.keys(speakingAnswers).length === 0) {
+    speakingAnswers["speaking-legacy"] = body.speakingTranscript;
+  }
+
+  // 1. Fetch all answered question items from database
+  const allQuestionIds = [
+    ...Object.keys(mcqAnswers),
+    ...Object.keys(listeningAnswers),
+    ...Object.keys(writingAnswers),
+    ...Object.keys(speakingAnswers),
+  ].filter((id) => id && !id.includes("legacy"));
+
+  let itemsMap: Record<string, any> = {};
+  if (allQuestionIds.length > 0) {
+    const dbItems = await db
+      .select()
+      .from(itemBank)
+      .where(inArray(itemBank.id, allQuestionIds));
+    for (const it of dbItems) {
+      itemsMap[it.id] = it;
+    }
+  }
+
+  // 2. Score MCQ (30% weight)
+  let mcqCorrect = 0;
+  let mcqTotal = 0;
+  const levelBreakdown: Record<string, { correct: number; total: number }> = {
     A1: { correct: 0, total: 0 },
     A2: { correct: 0, total: 0 },
     B1: { correct: 0, total: 0 },
@@ -45,59 +63,182 @@ export async function submitPlacementUsecase(body: {
     C2: { correct: 0, total: 0 },
   };
 
-  for (const [qId, userAns] of Object.entries(body.answers)) {
-    const key = answerKeyMap[qId];
-    if (key) {
-      totalMCQ++;
-      if (levelScores[key.level]) levelScores[key.level]!.total++;
-      if (userAns.trim().toLowerCase() === key.answer.trim().toLowerCase()) {
-        correctCount++;
-        if (levelScores[key.level]) levelScores[key.level]!.correct++;
+  for (const [qId, userAns] of Object.entries(mcqAnswers)) {
+    const item = itemsMap[qId];
+    if (item && userAns) {
+      mcqTotal++;
+      const lvl = item.cefr || "A1";
+      if (!levelBreakdown[lvl]) levelBreakdown[lvl] = { correct: 0, total: 0 };
+      levelBreakdown[lvl].total++;
+
+      if (userAns.trim().toLowerCase() === item.answer.trim().toLowerCase()) {
+        mcqCorrect++;
+        levelBreakdown[lvl].correct++;
       }
     }
   }
+  const mcqScore = mcqTotal > 0 ? Math.round((mcqCorrect / mcqTotal) * 100) : 50;
 
-  const mcqScore = totalMCQ > 0 ? Math.round((correctCount / totalMCQ) * 100) : 0;
+  // 3. Score Listening (25% weight)
+  let lisCorrect = 0;
+  let lisTotal = 0;
+  for (const [qId, userAns] of Object.entries(listeningAnswers)) {
+    const item = itemsMap[qId];
+    if (item && userAns) {
+      lisTotal++;
+      const lvl = item.cefr || "A1";
+      if (!levelBreakdown[lvl]) levelBreakdown[lvl] = { correct: 0, total: 0 };
+      levelBreakdown[lvl].total++;
 
-  // Determine tentative CEFR from MCQ
-  let tentativeCefr = "A1";
-  const levels = ["A1", "A2", "B1", "B2", "C1", "C2"];
-  for (const lvl of levels) {
-    const sc = levelScores[lvl];
-    if (sc && sc.total > 0 && sc.correct / sc.total >= 0.5) {
-      tentativeCefr = lvl;
+      if (userAns.trim().toLowerCase() === item.answer.trim().toLowerCase()) {
+        lisCorrect++;
+        levelBreakdown[lvl].correct++;
+      }
+    }
+  }
+  const listeningScore = lisTotal > 0 ? Math.round((lisCorrect / lisTotal) * 100) : mcqScore;
+
+  // 4. Score Writing with AI evaluation (25% weight)
+  let writingScore = body.writingEvaluation?.overall_score || 0;
+  let writingEval = body.writingEvaluation || null;
+  const writingEntries = Object.entries(writingAnswers).filter(([_, text]) => text && text.trim().length > 5);
+
+  if (!writingEval && writingEntries.length > 0) {
+    try {
+      const client = new OmniRouteClient();
+      const writingPrompts = writingEntries
+        .map(([id, text], idx) => `Task ${idx + 1} (${itemsMap[id]?.question || "Prompt"}):\nStudent: "${text}"`)
+        .join("\n\n");
+
+      const sys = `You are a certified Cambridge English CEFR examiner.
+Evaluate the student's writing samples.
+Analyze grammar accuracy, vocabulary range, and task achievement across CEFR A1-C2.
+Return valid JSON only:
+{
+  "overall_score": 0-100,
+  "cefr": "A1"|"A2"|"B1"|"B2"|"C1"|"C2",
+  "feedback_id": "Catatan singkat penyemangat dan area evaluasi tata bahasa dalam Bahasa Indonesia (2-3 kalimat)",
+  "strengths": ["string"],
+  "improvements": ["string"]
+}`;
+      const evalRes = await client.generateJson<any>(sys, `Evaluate these student writing submissions:\n\n${writingPrompts}`);
+      if (evalRes && typeof evalRes.overall_score === "number") {
+        writingScore = evalRes.overall_score;
+        writingEval = evalRes;
+      }
+    } catch (err) {
+      console.warn("Writing AI evaluation fallback:", err);
+      writingScore = Math.max(40, mcqScore);
+    }
+  } else if (!writingEval) {
+    writingScore = Math.max(40, mcqScore);
+  }
+
+  // 5. Score Speaking with AI evaluation (20% weight)
+  let speakingScore = body.speakingEvaluation?.overall_score || 0;
+  let speakingEval = body.speakingEvaluation || null;
+  const speakingEntries = Object.entries(speakingAnswers).filter(([_, text]) => text && text.trim().length > 3);
+
+  if (!speakingEval && speakingEntries.length > 0) {
+    try {
+      const client = new OmniRouteClient();
+      const speakingTranscripts = speakingEntries
+        .map(([id, transcript], idx) => `Task ${idx + 1} (${itemsMap[id]?.question || "Prompt"}):\nSpoken Transcript: "${transcript}"`)
+        .join("\n\n");
+
+      const sys = `You are an IELTS and CEFR Speaking examiner.
+Evaluate the spoken transcript responses for fluency, grammar, lexical resource, and coherence.
+Return valid JSON only:
+{
+  "overall_score": 0-100,
+  "cefr": "A1"|"A2"|"B1"|"B2"|"C1"|"C2",
+  "feedback_id": "Ulasan ramah mengenai kelancaran dan pengucapan dalam Bahasa Indonesia (2-3 kalimat)",
+  "strengths": ["string"],
+  "improvements": ["string"]
+}`;
+      const evalRes = await client.generateJson<any>(sys, `Evaluate these spoken transcripts:\n\n${speakingTranscripts}`);
+      if (evalRes && typeof evalRes.overall_score === "number") {
+        speakingScore = evalRes.overall_score;
+        speakingEval = evalRes;
+      }
+    } catch (err) {
+      console.warn("Speaking AI evaluation fallback:", err);
+      speakingScore = Math.max(40, mcqScore);
+    }
+  } else if (!speakingEval) {
+    speakingScore = Math.max(40, mcqScore);
+  }
+
+  // 6. Calculate Weighted Composite Score (MCQ 30%, Listening 25%, Writing 25%, Speaking 20%)
+  const scorePercent = Math.min(
+    100,
+    Math.max(
+      10,
+      Math.round(
+        mcqScore * 0.3 +
+        listeningScore * 0.25 +
+        writingScore * 0.25 +
+        speakingScore * 0.2
+      )
+    )
+  );
+
+  // 7. Map to Final CEFR Category (0-35: A1, 36-50: A2, 51-65: B1, 66-79: B2, 80-89: C1, 90-100: C2)
+  let overallCefr = "A1";
+  if (scorePercent >= 90) overallCefr = "C2";
+  else if (scorePercent >= 80) overallCefr = "C1";
+  else if (scorePercent >= 66) overallCefr = "B2";
+  else if (scorePercent >= 51) overallCefr = "B1";
+  else if (scorePercent >= 36) overallCefr = "A2";
+  else overallCefr = "A1";
+
+  // 8. Persist to database
+  const resultId = crypto.randomUUID();
+  const [dbResult] = await db
+    .insert(placementResults)
+    .values({
+      id: resultId,
+      userId,
+      overallCefr,
+      mcqScore,
+      writingScore,
+      speakingScore,
+      scorePercent,
+      details: {
+        skills: {
+          mcq: { score: mcqScore, correct: mcqCorrect, total: mcqTotal },
+          listening: { score: listeningScore, correct: lisCorrect, total: lisTotal },
+          writing: { score: writingScore, evaluation: writingEval },
+          speaking: { score: speakingScore, evaluation: speakingEval },
+        },
+        levelBreakdown,
+      },
+      createdAt: new Date(),
+    })
+    .returning();
+
+  // 9. Update user's currentCefr in users table
+  if (userId && userId !== "anonymous") {
+    try {
+      await userRepository.update(userId, { currentCefr: overallCefr });
+    } catch (e) {
+      console.warn("Could not update user currentCefr:", e);
     }
   }
 
-  let finalCefr = tentativeCefr;
-  let writingScore = body.writingEvaluation?.overall_score || 0;
-  let speakingScore = body.speakingEvaluation?.overall_score || 0;
-
-  const scorePercent = Math.round(
-    mcqScore * 0.4 + (writingScore || mcqScore) * 0.3 + (speakingScore || mcqScore) * 0.3
-  );
-
-  const result = await placementRepository.createResult({
-    userId,
-    overallCefr: finalCefr,
-    mcqScore,
-    writingScore: writingScore || undefined,
-    speakingScore: speakingScore || undefined,
-    scorePercent,
-    details: {
-      levelScores,
-      writingEvaluation: body.writingEvaluation,
-      speakingEvaluation: body.speakingEvaluation,
-      speakingTranscript: body.speakingTranscript,
-    },
-  });
-
-  if (userId && userId !== "anonymous") {
-    await userRepository.update(userId, { currentCefr: finalCefr });
-  }
-
   return {
-    ...result,
-    recommendedLevel: finalCefr,
+    ...dbResult,
+    correctCount: mcqCorrect + lisCorrect,
+    totalQuestions: mcqTotal + lisTotal + writingEntries.length + speakingEntries.length,
+    overallCefr,
+    scorePercent,
+    skills: {
+      mcqScore,
+      listeningScore,
+      writingScore,
+      speakingScore,
+    },
+    writingEvaluation: writingEval,
+    speakingEvaluation: speakingEval,
   };
 }

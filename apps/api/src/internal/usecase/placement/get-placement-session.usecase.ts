@@ -1,60 +1,64 @@
-import fs from "fs";
-import path from "path";
-import { NotFoundError } from "../../../common/errors/app-error";
-
-function getTestBank() {
-  const candidatePaths = [
-    path.resolve(process.cwd(), "placement_test.json"),
-    path.resolve(process.cwd(), "apps/api/placement_test.json"),
-    path.resolve(process.cwd(), "../placement_test.json"),
-    path.resolve(process.cwd(), "../../placement_test.json"),
-  ];
-
-  for (const p of candidatePaths) {
-    if (fs.existsSync(p)) {
-      return JSON.parse(fs.readFileSync(p, "utf8"));
-    }
-  }
-  return null;
-}
-
-function shuffle<T>(items: T[]): T[] {
-  const result = [...items];
-  for (let i = result.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = result[i]!;
-    result[i] = result[j]!;
-    result[j] = temp;
-  }
-  return result;
-}
+import { db } from "../../../db";
+import { itemBank } from "../../../db/schema/placement";
+import { and, eq, isNull, sql } from "drizzle-orm";
 
 export async function getPlacementSessionUsecase() {
-  const bank = getTestBank();
-  if (!bank) throw new NotFoundError("Bank soal penempatan tidak ditemukan.");
+  // 1. 10 Random Multiple Choice questions (Grammar, Vocab, Reading)
+  const mcqRows = await db
+    .select({
+      id: itemBank.id,
+      question: itemBank.question,
+      options: itemBank.options,
+    })
+    .from(itemBank)
+    .where(and(eq(itemBank.skill, "mcq"), isNull(itemBank.deletedAt)))
+    .orderBy(sql`RANDOM()`)
+    .limit(10);
 
-  const levels = ["A1", "A2", "B1", "B2", "C1", "C2"];
-  const sampledMCQs: any[] = [];
+  // 2. 5 Random Listening comprehension questions
+  const listeningRows = await db
+    .select({
+      id: itemBank.id,
+      question: itemBank.question,
+      options: itemBank.options,
+      audioScript: itemBank.audioScript,
+      audioUrl: itemBank.audioUrl,
+    })
+    .from(itemBank)
+    .where(and(eq(itemBank.skill, "listening"), isNull(itemBank.deletedAt)))
+    .orderBy(sql`RANDOM()`)
+    .limit(5);
 
-  for (const lvl of levels) {
-    const questionsAtLvl = bank.sections.grammar_vocab.filter((q: any) => q.level === lvl);
-    const shuffled = shuffle(questionsAtLvl);
-    const selected = shuffled.slice(0, 2).map(({ answer, options, ...rest }: any) => ({
-      ...rest,
-      options: shuffle(options),
-    }));
-    sampledMCQs.push(...selected);
-  }
+  // 3. 5 Random Writing prompts
+  const writingRows = await db
+    .select({
+      id: itemBank.id,
+      question: itemBank.question,
+    })
+    .from(itemBank)
+    .where(and(eq(itemBank.skill, "writing"), isNull(itemBank.deletedAt)))
+    .orderBy(sql`RANDOM()`)
+    .limit(5);
 
-  const writingPrompt = shuffle(bank.sections.writing.prompts)[0];
-  const speakingPrompt = shuffle(bank.sections.speaking.prompts)[0];
+  // 4. 2 Random Speaking prompts
+  const speakingRows = await db
+    .select({
+      id: itemBank.id,
+      question: itemBank.question,
+    })
+    .from(itemBank)
+    .where(and(eq(itemBank.skill, "speaking"), isNull(itemBank.deletedAt)))
+    .orderBy(sql`RANDOM()`)
+    .limit(2);
 
   return {
     sessionId: `PT-${Date.now()}`,
-    mcqs: sampledMCQs,
-    writingPrompt,
-    speakingPrompt,
-    totalMCQ: sampledMCQs.length,
-    estimatedMinutes: 20,
+    mcqs: mcqRows,
+    listening: listeningRows,
+    writing: writingRows,
+    speaking: speakingRows,
+    totalQuestions:
+      mcqRows.length + listeningRows.length + writingRows.length + speakingRows.length,
+    estimatedMinutes: 25,
   };
 }

@@ -6,6 +6,9 @@ export function usePlacementSession() {
   return useQuery({
     queryKey: placementKeys.session(),
     queryFn: placementApi.getSession,
+    staleTime: 0,
+    refetchOnMount: "always",
+    refetchOnWindowFocus: false,
   });
 }
 
