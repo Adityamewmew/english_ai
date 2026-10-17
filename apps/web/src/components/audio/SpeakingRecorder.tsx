@@ -122,14 +122,14 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
                 } else {
                   setIsAligned(false);
                   setTranscriptionError(
-                    "Suaramu tersimpan! Karena browser ini tidak mengaktifkan transkripsi otomatis, kamu bisa mengetikkan kalimat perkenalanmu langsung di bawah."
+                    "Audio tersimpan. Silakan periksa atau ketik teks jawabanmu langsung di bawah."
                   );
                 }
               } catch (err) {
                 console.warn("AI transcription error:", err);
                 setIsAligned(false);
                 setTranscriptionError(
-                  "Rekaman suaramu tetap tersimpan di atas dan kamu bisa mengetikkan kalimatmu langsung."
+                  "Audio tersimpan. Silakan periksa atau ketik teks jawabanmu langsung di bawah."
                 );
               } finally {
                 setIsTranscribing(false);
@@ -210,63 +210,54 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
   };
 
   return (
-    <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4">
-      {/* Petunjuk Soal */}
-      <div className="space-y-1.5 border-b pb-3">
-        <div className="flex items-center gap-2">
-          <span className="w-8 h-8 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center font-bold">
-            <Mic className="w-4 h-4" />
-          </span>
-          <div>
-            <h3 className="text-sm font-bold text-primary">Tes Berbicara: Perkenalan Diri (Self-Introduction)</h3>
-            <p className="text-xs text-slate-500">
-              Bicaralah dalam Bahasa Inggris selama 30 - 60 detik.
-            </p>
+    <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 border-b-4 border-b-slate-300 shadow-sm space-y-4">
+      {/* Hardware Recorder Deck */}
+      <div className="p-3 sm:p-4 rounded-xl bg-[#0B1523] border border-slate-800 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] space-y-3">
+        {/* LCD Status Screen */}
+        <div className="flex items-center justify-between text-xs font-mono text-slate-200 px-1">
+          <div className="flex items-center gap-2">
+            <span
+              className={`w-2.5 h-2.5 rounded-full ${
+                isRecording
+                  ? "bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.9)] animate-pulse"
+                  : "bg-slate-600"
+              }`}
+            />
+            <span className="text-[11px] font-bold tracking-wider text-amber-300">
+              {isRecording
+                ? "RECORDING"
+                : isTranscribing
+                ? "TRANSCRIBING"
+                : hasRecorded
+                ? "AUDIO READY"
+                : "STANDBY"}
+            </span>
           </div>
-        </div>
 
-        <div className="mt-2 p-3 bg-surface rounded-xl border border-slate-100 text-xs text-slate-700 space-y-1">
-          <p className="font-semibold text-primary">Poin yang bisa kamu sampaikan:</p>
-          <ul className="list-disc pl-4 space-y-0.5 text-slate-600">
-            <li>Nama lengkap dan kota tempat tinggalmu (Name &amp; Location)</li>
-            <li>Pekerjaan, sekolah, atau kegiatan harianmu (Occupation or Studies)</li>
-            <li>Hobi favorit yang kamu sukai (Hobbies &amp; Interests)</li>
-            <li>Alasan kamu ingin belajar Bahasa Inggris (Goal &amp; Motivation)</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Area Rekam */}
-      <div className="flex flex-col items-center justify-center py-4 space-y-3 bg-surface rounded-xl border border-slate-100">
-        <div className="flex items-center gap-2">
-          <span
-            className={`w-3 h-3 rounded-full ${
-              isRecording ? "bg-red-500 animate-ping" : "bg-slate-300"
-            }`}
-          />
-          <span className="text-sm font-mono font-bold text-primary">
+          <span className="text-[11px] tracking-wider text-slate-300 font-semibold">
             {formatTime(seconds)} / 01:00
           </span>
         </div>
 
-        <div className="flex items-center gap-3">
+        {/* Hardware Controls */}
+        <div className="flex flex-wrap items-center gap-2.5 pt-1">
           {!isRecording ? (
             <button
               type="button"
               onClick={startRecording}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-secondary hover:bg-secondary/90 text-white text-xs font-bold shadow-md transition-all active:scale-95"
+              className="px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-extrabold border-b-3 border-b-rose-900 active:border-b-0 active:translate-y-0.5 shadow-sm transition-all flex items-center gap-2"
             >
               <Mic className="w-4 h-4" />
-              {hasRecorded ? "Rekam Ulang Suara" : "Mulai Rekam Suara (Mic)"}
+              <span>{hasRecorded ? "Rekam Ulang" : "Mulai Rekam (Mic)"}</span>
             </button>
           ) : (
             <button
               type="button"
               onClick={stopRecording}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold shadow-md animate-pulse transition-all"
+              className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-900 text-rose-400 text-xs font-extrabold border-2 border-rose-500 border-b-3 border-b-rose-700 active:border-b-0 active:translate-y-0.5 shadow-inner transition-all flex items-center gap-2 animate-pulse"
             >
               <Square className="w-4 h-4 fill-current" />
-              Selesai Bicara
+              <span>Selesai Rekam</span>
             </button>
           )}
 
@@ -274,115 +265,83 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
             <button
               type="button"
               onClick={handleReset}
-              className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition-all text-xs"
+              className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs border border-slate-700 border-b-2 border-b-slate-900 active:border-b-0 active:translate-y-0.5 transition-all"
               title="Reset Rekaman"
             >
               <RotateCcw className="w-4 h-4" />
             </button>
           )}
-        </div>
 
-        {isRecording && (
-          <div className="flex flex-col items-center gap-2">
-            <div className="flex items-center gap-1 h-5">
-              <span className="w-1 bg-secondary rounded-full animate-bounce h-3" style={{ animationDelay: "0ms" }} />
-              <span className="w-1 bg-secondary rounded-full animate-bounce h-5" style={{ animationDelay: "150ms" }} />
-              <span className="w-1 bg-secondary rounded-full animate-bounce h-4" style={{ animationDelay: "300ms" }} />
-              <span className="w-1 bg-secondary rounded-full animate-bounce h-6" style={{ animationDelay: "75ms" }} />
-              <span className="w-1 bg-secondary rounded-full animate-bounce h-3" style={{ animationDelay: "225ms" }} />
-            </div>
-            <p className="text-[11px] text-secondary font-semibold">
-              Mikrofon mendengarkan... Bicaralah dalam Bahasa Inggris dengan santai.
-            </p>
-          </div>
-        )}
+          {isTranscribing && (
+            <span className="text-[11px] text-amber-300 flex items-center gap-1.5 font-mono ml-auto">
+              <Loader2 className="w-3.5 h-3.5 animate-spin" />
+              Menyelaraskan transkrip...
+            </span>
+          )}
+        </div>
       </div>
 
-      {/* Hasil Transkrip Suara (Bisa Diperiksa & Diperbaiki) */}
+      {/* Audio Playback Deck */}
+      {audioUrl && (
+        <div className="p-3 bg-[#F8FAFC] rounded-xl border border-slate-200 border-b-2 border-b-slate-300 space-y-1.5">
+          <div className="flex items-center justify-between text-[11px] font-semibold text-slate-700">
+            <span className="flex items-center gap-1.5">
+              <Volume2 className="w-3.5 h-3.5 text-secondary" />
+              Rekaman Suaramu:
+            </span>
+            <span className="text-[10px] text-slate-500">Tersimpan</span>
+          </div>
+          <audio controls src={audioUrl} className="w-full h-8 rounded-lg" />
+        </div>
+      )}
+
+      {/* Recessed Transcript Pad */}
       <div className="space-y-1.5">
         <div className="flex items-center justify-between text-xs">
-          <label className="font-semibold text-slate-700 flex items-center gap-1.5">
+          <label className="font-bold text-slate-700 flex items-center gap-1.5">
             <FileText className="w-3.5 h-3.5 text-secondary" />
-            Teks yang Terekam dari Suaramu:
+            Transkrip Jawaban:
           </label>
           <div className="flex items-center gap-2">
-            <span className="text-[11px] text-slate-600 dark:text-slate-400">
-              (Bisa diedit atau diketik langsung)
+            <span className="text-[10px] text-slate-400">
+              (Dapat diedit atau diketik langsung)
             </span>
             {transcript && (
               <button
                 type="button"
                 onClick={() => setTranscript("")}
-                className="text-[11px] text-red-500 hover:text-red-700 font-medium transition-all"
+                className="text-[11px] text-rose-600 hover:text-rose-800 font-semibold transition-all"
               >
-                Hapus Teks
+                Hapus
               </button>
             )}
           </div>
         </div>
-
-        {isTranscribing && (
-          <div className="flex items-center gap-2 p-2.5 bg-secondary/10 border border-secondary/20 rounded-xl text-xs text-secondary font-medium">
-            <Loader2 className="w-4 h-4 animate-spin text-secondary" />
-            <span>Sistem sedang mentranskrip dan menganalisis audio...</span>
-          </div>
-        )}
-
-        {audioUrl && (
-          <div className="p-3 bg-surface rounded-xl border border-slate-200 dark:border-slate-800 space-y-1.5">
-            <div className="flex items-center justify-between text-[11px] font-semibold text-slate-700 dark:text-slate-200">
-              <span className="flex items-center gap-1.5">
-                <Volume2 className="w-3.5 h-3.5 text-secondary" />
-                Dengarkan Ulang Rekaman Suaramu:
-              </span>
-              <span className="text-[10px] text-slate-500">Tersimpan</span>
-            </div>
-            <audio controls src={audioUrl} className="w-full h-8 rounded-lg" />
-          </div>
-        )}
 
         <textarea
           rows={3}
           value={transcript}
           disabled={isRecording || isTranscribing}
           onChange={(e) => setTranscript(e.target.value)}
-          placeholder={
-            isRecording
-              ? "Sedang merekam suara... Bicaralah perkenalan dirimu dengan santai. Klik 'Selesai Bicara' jika sudah selesai."
-              : isTranscribing
-              ? "AI Mr. Khoirul sedang mendengarkan rekaman dan menyelaraskan kalimatmu..."
-              : "Klik tombol 'Mulai Rekam Suara' di atas dan ceritakan perkenalan dirimu. Kalimatmu akan otomatis diselaraskan oleh AI dan muncul di sini."
-          }
-          className={`w-full p-3 rounded-xl border text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:border-blue-600 font-sans transition-all ${
-            isRecording || isTranscribing
-              ? "bg-slate-50 dark:bg-slate-900 text-slate-500 border-slate-200 dark:border-slate-800 cursor-wait"
-              : "bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 border-slate-200 dark:border-slate-800"
-          }`}
+          placeholder="Ucapanmu akan otomatis ditranskripsikan ke sini. Kamu juga dapat mengetik atau mengedit langsung..."
+          className="w-full p-3.5 rounded-xl border border-slate-200 border-b-2 border-b-slate-300 bg-[#FBFBFE] focus:bg-white text-xs text-slate-800 focus:outline-none focus:border-secondary transition-all font-normal shadow-inner disabled:bg-slate-50 disabled:text-slate-500"
         />
 
         {isAligned && transcript ? (
           <p className="text-[11px] text-emerald-600 flex items-center gap-1 font-medium">
             <CheckCircle className="w-3.5 h-3.5" />
-            Kalimat berhasil diselaraskan oleh AI ({transcript.split(/\s+/).filter(Boolean).length} kata). Kamu bisa mendengarkan audionya dan mengedit teks di atas jika ingin disesuaikan.
+            Transkrip berhasil diselaraskan ({transcript.split(/\s+/).filter(Boolean).length} kata).
           </p>
         ) : transcriptionError ? (
-          <div className="flex items-start gap-2 p-2.5 bg-amber-50 rounded-xl border border-amber-200 text-[11px] text-amber-800">
-            <Info className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
+          <div className="flex items-start gap-1.5 p-2 bg-amber-50 rounded-lg border border-amber-200 text-[11px] text-amber-800">
+            <Info className="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0" />
             <p>{transcriptionError}</p>
           </div>
         ) : transcript ? (
-          <p className="text-[11px] text-slate-500 font-medium">
-            {transcript.split(/\s+/).filter(Boolean).length} kata terisi.
+          <p className="text-[10px] text-slate-400 text-right">
+            {transcript.split(/\s+/).filter(Boolean).length} kata terisi
           </p>
         ) : null}
-
-        {/* Info Ramah Mengenai Nama & Daerah Lokal */}
-        <div className="flex items-start gap-1.5 p-2.5 bg-amber-50/80 rounded-xl border border-amber-200/80 text-[11px] text-amber-800">
-          <Info className="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0" />
-          <p>
-            <strong>Info:</strong> Ejaan nama orang atau nama kota di Indonesia (misal Padang, Banyuwangi, Surabaya) bisa kamu edit jika mikrofon salah dengar. Jangan khawatir, AI Mr. Khoirul tidak akan mengurangi skor tata bahasa (grammar) pada nama orang atau daerah.
-          </p>
-        </div>
       </div>
     </div>
   );

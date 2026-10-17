@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { Play, Pause, RotateCcw, Volume2, Eye, EyeOff } from "lucide-react";
+import { Play, Pause, RotateCcw, Volume2 } from "lucide-react";
 import { getApiUrl } from "@/lib/api-client";
 
 interface AudioPlayerProps {
@@ -9,14 +9,20 @@ interface AudioPlayerProps {
   audioScript?: string;
   title?: string;
   targetLevel?: string;
+  hideTranscript?: boolean;
 }
 
-export function AudioPlayer({ audioUrl, audioScript, title, targetLevel }: AudioPlayerProps) {
+export function AudioPlayer({
+  audioUrl,
+  audioScript,
+  title,
+  targetLevel,
+  hideTranscript = false,
+}: AudioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [playbackRate, setPlaybackRate] = useState(1);
-  const [showTranscript, setShowTranscript] = useState(false);
   const [audioError, setAudioError] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -29,7 +35,6 @@ export function AudioPlayer({ audioUrl, audioScript, title, targetLevel }: Audio
     setIsPlaying(false);
     setCurrentTime(0);
     setAudioError(false);
-    setShowTranscript(false);
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
@@ -96,7 +101,7 @@ export function AudioPlayer({ audioUrl, audioScript, title, targetLevel }: Audio
   };
 
   return (
-    <div className="p-5 rounded-2xl bg-gradient-to-r from-slate-900 to-primary text-white shadow-md space-y-4">
+    <div className="p-4 sm:p-5 rounded-2xl bg-[#0D2238] border border-[#1b3d60] border-b-4 border-b-[#071320] text-white shadow-md space-y-3.5">
       {/* Audio element asli / ElevenLabs TTS */}
       {resolvedAudioUrl && (
         <audio
@@ -112,44 +117,55 @@ export function AudioPlayer({ audioUrl, audioScript, title, targetLevel }: Audio
         />
       )}
 
-      {/* Header Info */}
+      {/* Hardware Top Bar */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="w-8 h-8 rounded-xl bg-secondary/20 text-secondary flex items-center justify-center">
-            <Volume2 className="w-4 h-4" />
+          <span className="w-7 h-7 rounded-lg bg-secondary/20 text-secondary border border-secondary/30 flex items-center justify-center shadow-xs">
+            <Volume2 className="w-3.5 h-3.5" />
           </span>
-          <div>
-            <h4 className="text-sm font-bold tracking-tight">{title || "Audio Listening"}</h4>
-            <p className="text-[11px] text-slate-300">
-              Dengarkan baik-baik sebelum menjawab pertanyaan di bawah.
-            </p>
-          </div>
+          <span className="text-xs font-bold tracking-tight text-slate-100">
+            {title || "Audio Listening"}
+          </span>
         </div>
 
         {targetLevel && (
-          <span className="text-[11px] font-bold px-2 py-0.5 rounded-md bg-white/10 text-accent border border-white/10">
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-white/10 text-amber-300 border border-white/15">
             Level {targetLevel}
           </span>
         )}
       </div>
 
-      {/* Waveform Animation & Progress Slider */}
-      <div className="space-y-1.5 pt-1">
-        <div className="flex items-center justify-between text-[11px] font-mono text-slate-300">
-          <span>{formatTime(currentTime)}</span>
-          {/* Animated sound wave bars saat playing */}
-          <div className="flex items-center gap-0.5 h-3">
-            {[40, 75, 100, 60, 90, 45, 80, 50, 95, 65, 30].map((height, i) => (
-              <span
-                key={i}
-                style={{ height: isPlaying ? `${height}%` : "20%" }}
-                className="w-1 bg-secondary rounded-full transition-all duration-300"
-              />
-            ))}
-          </div>
-          <span>{formatTime(duration || 30)}</span>
+      {/* Tactile LCD Screen Display */}
+      <div className="p-2.5 rounded-xl bg-[#06111D] border border-slate-700/60 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] flex items-center justify-between text-xs font-mono">
+        <div className="flex items-center gap-2">
+          <span
+            className={`w-2 h-2 rounded-full ${
+              isPlaying ? "bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)]" : "bg-slate-600"
+            }`}
+          />
+          <span className="text-[11px] text-[#F3C623] tracking-wider font-semibold">
+            {isPlaying ? "PLAYING" : "PAUSED"}
+          </span>
         </div>
 
+        {/* Animated Audio Meter */}
+        <div className="flex items-center gap-1 h-3 px-2">
+          {[35, 70, 95, 50, 85, 40, 75, 45, 90, 60].map((h, i) => (
+            <span
+              key={i}
+              style={{ height: isPlaying ? `${h}%` : "20%" }}
+              className="w-1 bg-secondary rounded-full transition-all duration-200"
+            />
+          ))}
+        </div>
+
+        <span className="text-[11px] text-slate-300 tracking-wider">
+          {formatTime(currentTime)} / {formatTime(duration || 30)}
+        </span>
+      </div>
+
+      {/* Recessed Groove Slider */}
+      <div className="px-1">
         <input
           type="range"
           min={0}
@@ -157,63 +173,62 @@ export function AudioPlayer({ audioUrl, audioScript, title, targetLevel }: Audio
           step={0.1}
           value={currentTime}
           onChange={handleSeek}
-          className="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-secondary"
+          className="w-full h-2 bg-slate-800 rounded-full appearance-none cursor-pointer accent-secondary shadow-[inset_0_1px_3px_rgba(0,0,0,0.6)] border border-slate-700/50"
         />
       </div>
 
-      {/* Controls Bar */}
-      <div className="flex items-center justify-between pt-1">
+      {/* Tactile Hardware Buttons */}
+      <div className="flex items-center justify-between pt-0.5">
         <div className="flex items-center gap-2">
           <button
             type="button"
             onClick={togglePlay}
-            className="w-11 h-11 rounded-2xl bg-secondary hover:bg-secondary/90 text-white flex items-center justify-center shadow-lg transition-all active:scale-95"
-            title={isPlaying ? "Pause" : "Play"}
+            className={`min-h-[40px] px-4 rounded-xl text-xs font-extrabold flex items-center gap-1.5 transition-all shadow-sm ${
+              isPlaying
+                ? "bg-[#c76e0f] text-white border-b-2 border-b-[#7a4105] translate-y-0.5 shadow-inner"
+                : "bg-secondary hover:bg-[#d4720e] text-white border-b-3 border-b-[#9e5207] active:border-b-0 active:translate-y-1"
+            }`}
+            title={isPlaying ? "Jeda Audio" : "Putar Audio"}
           >
-            {isPlaying ? <Pause className="w-5 h-5 fill-current" /> : <Play className="w-5 h-5 fill-current ml-0.5" />}
+            {isPlaying ? (
+              <>
+                <Pause className="w-3.5 h-3.5 fill-current" />
+                <span>Jeda</span>
+              </>
+            ) : (
+              <>
+                <Play className="w-3.5 h-3.5 fill-current" />
+                <span>Putar</span>
+              </>
+            )}
           </button>
 
           <button
             type="button"
             onClick={handleRestart}
-            className="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all"
-            title="Putar Ulang dari Awal"
+            className="h-10 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 border-b-3 border-b-slate-900 active:border-b-0 active:translate-y-0.5 flex items-center gap-1.5 transition-all"
+            title="Ulangi dari Awal"
           >
-            <RotateCcw className="w-4 h-4" />
+            <RotateCcw className="w-3.5 h-3.5" />
+            <span>Ulangi</span>
           </button>
 
           <button
             type="button"
             onClick={toggleSpeed}
-            className="px-2.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-mono text-slate-200 transition-all"
-            title="Ubah Kecepatan Suara"
+            className="h-10 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono font-semibold border border-slate-700 border-b-3 border-b-slate-900 active:border-b-0 active:translate-y-0.5 transition-all"
+            title="Ubah Kecepatan Putar"
           >
             {playbackRate}x
           </button>
         </div>
 
-        {/* Spoiler Toggle: Lihat Transkrip */}
-        {audioScript && (
-          <button
-            type="button"
-            onClick={() => setShowTranscript(!showTranscript)}
-            className="flex items-center gap-1.5 text-xs text-slate-300 hover:text-white px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 transition-all border border-white/10"
-          >
-            {showTranscript ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-            <span>{showTranscript ? "Sembunyikan Naskah" : "Lihat Naskah"}</span>
-          </button>
+        {audioError && (
+          <span className="text-[11px] text-rose-300">
+            Audio tidak tersedia.
+          </span>
         )}
       </div>
-
-      {/* Naskah Teks (HANYA MUNCUL JIKA USER KLIK LIHAT NASKAH) */}
-      {showTranscript && audioScript && (
-        <div className="mt-3 p-3.5 rounded-xl bg-black/40 border border-white/10 text-xs text-slate-200 font-mono whitespace-pre-line leading-relaxed animate-fadeIn">
-          <span className="text-[10px] text-accent uppercase font-bold tracking-wider block mb-1">
-            Naskah Percakapan (Transcript):
-          </span>
-          {audioScript}
-        </div>
-      )}
     </div>
   );
 }
