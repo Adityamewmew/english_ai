@@ -34,9 +34,14 @@ function playBrowserSpeechSynthesis(text: string, onEnd: () => void) {
     if (enVoice) utterance.voice = enVoice;
 
     let hasEnded = false;
+    const fallbackTimer = setTimeout(() => {
+      finish();
+    }, 4500);
+
     const finish = () => {
       if (!hasEnded) {
         hasEnded = true;
+        clearTimeout(fallbackTimer);
         onEnd();
       }
     };

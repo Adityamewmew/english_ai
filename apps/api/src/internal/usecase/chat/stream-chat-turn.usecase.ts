@@ -69,7 +69,7 @@ ${ragContext ? `\n[PEDAGOGICAL & STUDENT CONTEXT]:\n${ragContext}` : ""}`;
   let fullAccumulator = "";
 
   try {
-    for await (const token of GeminiChatService.callAIStream(systemPrompt, userPrompt, signal)) {
+    for await (const token of GeminiChatService.callAIStream(systemPrompt, userPrompt, signal, { maxTokens: 1500 })) {
       if (signal?.aborted) break;
       fullAccumulator += token;
       yield token;

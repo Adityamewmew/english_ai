@@ -102,25 +102,27 @@ export const chatApi = {
         if (done) break;
 
         buffer += decoder.decode(value, { stream: true });
-        const lines = buffer.split("\n\n");
-        buffer = lines.pop() || "";
+        const blocks = buffer.split(/\r?\n\r?\n/);
+        buffer = blocks.pop() || "";
 
-        for (const block of lines) {
-          const trimmed = block.trim();
-          if (!trimmed.startsWith("data:")) continue;
-          const jsonStr = trimmed.replace(/^data:\s*/, "");
-          try {
-            const parsed = JSON.parse(jsonStr);
-            if (parsed.type === "token" && parsed.text) {
-              onToken(parsed.text);
-            } else if (parsed.type === "done") {
-              onDone();
-            } else if (parsed.type === "error") {
-              onError(new Error(parsed.error || "Streaming error"));
+        for (const block of blocks) {
+          const lines = block.split(/\r?\n/);
+          for (const line of lines) {
+            const trimmed = line.trim();
+            if (!trimmed.startsWith("data:")) continue;
+            const jsonStr = trimmed.replace(/^data:\s*/, "");
+            try {
+              const parsed = JSON.parse(jsonStr);
+              if (parsed.type === "token" && typeof parsed.text === "string") {
+                onToken(parsed.text);
+              } else if (parsed.type === "done") {
+                onDone();
+              } else if (parsed.type === "error") {
+                onError(new Error(parsed.error || parsed.message || "Streaming error"));
+              }
+            } catch {
+              if (jsonStr) onToken(jsonStr);
             }
-          } catch {
-            // Raw text fallback
-            if (jsonStr) onToken(jsonStr);
           }
         }
       }

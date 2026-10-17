@@ -87,6 +87,24 @@ export function VoiceCallView({
     },
   });
 
+  // Safety watchdog: if speaking state hangs without audio, transition to listening so user can speak
+  useEffect(() => {
+    let timeout: any;
+    if (callStatus === "active" && aiSpeechState === "speaking") {
+      timeout = setTimeout(() => {
+        if (!audioQueue.isPlaying) {
+          isSendingRef.current = false;
+          if (callStatusRef.current === "active" && !isMuted) {
+            setAiSpeechState("listening");
+          }
+        }
+      }, 7000);
+    }
+    return () => {
+      if (timeout) clearTimeout(timeout);
+    };
+  }, [callStatus, aiSpeechState, isMuted, audioQueue.isPlaying]);
+
   // Half-duplex auto-gating: mic is ONLY open when student's turn to speak
   const canListen =
     callStatus === "active" &&

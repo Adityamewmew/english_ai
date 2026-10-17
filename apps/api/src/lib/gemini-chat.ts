@@ -31,7 +31,11 @@ export class GeminiChatService {
   /**
    * Universal AI caller: prioritizes fast proxy models
    */
-  static async callAI(systemPrompt: string, userPrompt: string): Promise<string> {
+  static async callAI(
+    systemPrompt: string,
+    userPrompt: string,
+    options?: { maxTokens?: number }
+  ): Promise<string> {
     const baseUrl = process.env.AI_BASE_URL;
     const apiKey = process.env.AI_API_KEY || process.env.GEMINI_API_KEY || "";
     const primaryModel =
@@ -61,7 +65,7 @@ export class GeminiChatService {
             body: JSON.stringify({
               model: m,
               stream: false,
-              max_tokens: 350,
+              max_tokens: options?.maxTokens || 350,
               temperature: 0.6,
               frequency_penalty: 0.3,
               presence_penalty: 0.2,
@@ -124,7 +128,8 @@ export class GeminiChatService {
   static async *callAIStream(
     systemPrompt: string,
     userPrompt: string,
-    signal?: AbortSignal
+    signal?: AbortSignal,
+    options?: { maxTokens?: number }
   ): AsyncGenerator<string, void, unknown> {
     const baseUrl = process.env.AI_BASE_URL;
     const apiKey = process.env.AI_API_KEY || process.env.GEMINI_API_KEY || "";
@@ -167,7 +172,7 @@ export class GeminiChatService {
             body: JSON.stringify({
               model: m,
               stream: true,
-              max_tokens: 350,
+              max_tokens: options?.maxTokens || 350,
               temperature: 0.5,
               frequency_penalty: 0.3,
               presence_penalty: 0.2,
