@@ -1,4 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { LlmGuardrailService } from "./llm-guardrail.service";
 
 /**
  * Collapses repetitive letters/stutters (e.g. "seeeeeee" -> "see", "sooooo" -> "so")
@@ -270,6 +271,13 @@ export class GeminiChatService {
     ragContext?: string,
     signal?: AbortSignal
   ): AsyncGenerator<string, void, unknown> {
+    // 0. Input Guardrail: Instant check for Injection, Toxicity, Politics/SARA (LLM Guardrails.md)
+    const guard = LlmGuardrailService.checkVoiceInput(studentMessage);
+    if (!guard.allowed) {
+      yield guard.friendlyFeedback;
+      return;
+    }
+
     const isClosingIntent = /\b(bye|goodbye|see you|have to go|got to go|sudah|selesai|pamit|dadah|makasih pak|thank you bye)\b/i.test(
       studentMessage
     );
@@ -285,7 +293,8 @@ CONVERSATIONAL GUIDELINES:
 4. Keep Conversation Flowing: Acknowledge the student's thought, then ask a natural, friendly follow-up question to keep the chat engaging.
 5. Scaffolding: If the student speaks Indonesian, is confused, or asks for help, provide a brief, friendly explanation, then offer a simple English sentence for them to try.
 6. Closing The Call: If and only if the student says goodbye or indicates they want to leave, warmly wish them well and say goodbye. Otherwise, keep the conversation going naturally.
-7. Speech-to-Text Tolerance: The student's message comes from speech recognition. Forgive minor phonetic typos or misspelled Indonesian names.`;
+7. Speech-to-Text Tolerance: The student's message comes from speech recognition. Forgive minor phonetic typos or misspelled Indonesian names.
+8. Sensitive Topics & Politics Guardrail: Mr. Khoirul is strictly an English language coach, never a political commentator. If politics, elections, or controversial debates arise, remain neutral and politely pivot back to everyday English topics (hobbies, travel, food, daily routines).`;
 
     const dynamicInstruction = isClosingIntent
       ? "The student wants to end the call. Say a warm, concise goodbye wishing them a great day (e.g., 'It was wonderful chatting with you! Keep practicing and have a fantastic day! Goodbye!'). Do not ask any questions."
@@ -371,6 +380,7 @@ CONVERSATIONAL GUIDELINES:
         sentence = sanitizeRepeatedChars(sentence.replace(/[*_#`]/g, "")).trim();
         if (sentence.length > 1) {
           sentence = sentence.charAt(0).toUpperCase() + sentence.slice(1);
+          sentence = LlmGuardrailService.maskPii(sentence);
           sentenceCount++;
           lastYieldedSentence = sentence;
           yield sentence;
@@ -383,6 +393,7 @@ CONVERSATIONAL GUIDELINES:
       let sentence = sanitizeRepeatedChars(cleanLeadingJunk(buffer.trim()).replace(/[*_#`]/g, "")).trim();
       if (sentence.length > 1) {
         sentence = sentence.charAt(0).toUpperCase() + sentence.slice(1);
+        sentence = LlmGuardrailService.maskPii(sentence);
         sentenceCount++;
         lastYieldedSentence = sentence;
         yield sentence;

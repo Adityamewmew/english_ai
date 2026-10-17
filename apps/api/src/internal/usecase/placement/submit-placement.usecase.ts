@@ -3,6 +3,7 @@ import { itemBank, placementResults } from "../../../db/schema";
 import { inArray } from "drizzle-orm";
 import { userRepository } from "../../repository/user_repository";
 import { OmniRouteClient } from "../../../db/generator/omniroute-client";
+import { LlmGuardrailService } from "../../../lib/llm-guardrail.service";
 import crypto from "crypto";
 
 export async function submitPlacementUsecase(body: {
@@ -104,13 +105,24 @@ export async function submitPlacementUsecase(body: {
   const writingEntries = Object.entries(writingAnswers).filter(([_, text]) => text && text.trim().length > 5);
 
   if (!writingEval && writingEntries.length > 0) {
-    try {
-      const client = new OmniRouteClient();
-      const writingPrompts = writingEntries
-        .map(([id, text], idx) => `Task ${idx + 1} (${itemsMap[id]?.question || "Prompt"}):\nStudent: "${text}"`)
-        .join("\n\n");
+    const hasWritingViolation = writingEntries.some(([_, text]) => !LlmGuardrailService.checkGeneralInput(text).allowed);
+    if (hasWritingViolation) {
+      writingScore = 20;
+      writingEval = {
+        overall_score: 20,
+        cefr: "A1",
+        feedback_id: "Jawaban terdeteksi tidak mematuhi panduan akademik tes. Silakan jawab pertanyaan sesuai topik yang diminta.",
+        strengths: ["Mengikuti tes"],
+        improvements: ["Fokus pada penulisan bahasa Inggris yang relevan"],
+      };
+    } else {
+      try {
+        const client = new OmniRouteClient();
+        const writingPrompts = writingEntries
+          .map(([id, text], idx) => `Task ${idx + 1} (${itemsMap[id]?.question || "Prompt"}):\nStudent: "${text}"`)
+          .join("\n\n");
 
-      const sys = `You are a certified Cambridge English CEFR examiner.
+        const sys = `You are a certified Cambridge English CEFR examiner.
 Evaluate the student's writing samples.
 Analyze grammar accuracy, vocabulary range, and task achievement across CEFR A1-C2.
 Return valid JSON only:
@@ -121,14 +133,15 @@ Return valid JSON only:
   "strengths": ["string"],
   "improvements": ["string"]
 }`;
-      const evalRes = await client.generateJson<any>(sys, `Evaluate these student writing submissions:\n\n${writingPrompts}`);
-      if (evalRes && typeof evalRes.overall_score === "number") {
-        writingScore = evalRes.overall_score;
-        writingEval = evalRes;
+        const evalRes = await client.generateJson<any>(sys, `Evaluate these student writing submissions:\n\n${writingPrompts}`);
+        if (evalRes && typeof evalRes.overall_score === "number") {
+          writingScore = evalRes.overall_score;
+          writingEval = evalRes;
+        }
+      } catch (err) {
+        console.warn("Writing AI evaluation fallback:", err);
+        writingScore = Math.max(40, mcqScore);
       }
-    } catch (err) {
-      console.warn("Writing AI evaluation fallback:", err);
-      writingScore = Math.max(40, mcqScore);
     }
   } else if (!writingEval) {
     writingScore = Math.max(40, mcqScore);
@@ -140,13 +153,24 @@ Return valid JSON only:
   const speakingEntries = Object.entries(speakingAnswers).filter(([_, text]) => text && text.trim().length > 3);
 
   if (!speakingEval && speakingEntries.length > 0) {
-    try {
-      const client = new OmniRouteClient();
-      const speakingTranscripts = speakingEntries
-        .map(([id, transcript], idx) => `Task ${idx + 1} (${itemsMap[id]?.question || "Prompt"}):\nSpoken Transcript: "${transcript}"`)
-        .join("\n\n");
+    const hasSpeakingViolation = speakingEntries.some(([_, text]) => !LlmGuardrailService.checkGeneralInput(text).allowed);
+    if (hasSpeakingViolation) {
+      speakingScore = 20;
+      speakingEval = {
+        overall_score: 20,
+        cefr: "A1",
+        feedback_id: "Jawaban terdeteksi tidak sesuai topik tes. Silakan ikuti instruksi berbicara pada tes selanjutnya.",
+        strengths: ["Mengikuti tes"],
+        improvements: ["Bicara sesuai topik tugas speaking"],
+      };
+    } else {
+      try {
+        const client = new OmniRouteClient();
+        const speakingTranscripts = speakingEntries
+          .map(([id, transcript], idx) => `Task ${idx + 1} (${itemsMap[id]?.question || "Prompt"}):\nSpoken Transcript: "${transcript}"`)
+          .join("\n\n");
 
-      const sys = `You are an IELTS and CEFR Speaking examiner.
+        const sys = `You are an IELTS and CEFR Speaking examiner.
 Evaluate the spoken transcript responses for fluency, grammar, lexical resource, and coherence.
 Return valid JSON only:
 {
@@ -156,14 +180,15 @@ Return valid JSON only:
   "strengths": ["string"],
   "improvements": ["string"]
 }`;
-      const evalRes = await client.generateJson<any>(sys, `Evaluate these spoken transcripts:\n\n${speakingTranscripts}`);
-      if (evalRes && typeof evalRes.overall_score === "number") {
-        speakingScore = evalRes.overall_score;
-        speakingEval = evalRes;
+        const evalRes = await client.generateJson<any>(sys, `Evaluate these spoken transcripts:\n\n${speakingTranscripts}`);
+        if (evalRes && typeof evalRes.overall_score === "number") {
+          speakingScore = evalRes.overall_score;
+          speakingEval = evalRes;
+        }
+      } catch (err) {
+        console.warn("Speaking AI evaluation fallback:", err);
+        speakingScore = Math.max(40, mcqScore);
       }
-    } catch (err) {
-      console.warn("Speaking AI evaluation fallback:", err);
-      speakingScore = Math.max(40, mcqScore);
     }
   } else if (!speakingEval) {
     speakingScore = Math.max(40, mcqScore);

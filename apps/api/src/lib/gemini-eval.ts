@@ -2,6 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import fs from "fs";
 import path from "path";
 import { GeminiChatService } from "./gemini-chat";
+import { LlmGuardrailService } from "./llm-guardrail.service";
 
 /**
  * Gemini Assessment & Evaluation Service
@@ -56,8 +57,9 @@ ${ragContext ? `${ragContext}\n\n` : ""}Analyze the conversation session and ret
 
     const prompt = `Topic: "${topic}"\nDuration: ${durationSeconds} seconds\nTranscript/Notes:\n"${transcript}"\n\nProvide the assessment now in valid JSON only.`;
     const responseText = await GeminiChatService.callAI(systemPrompt, prompt);
-    const cleanJson = responseText.replace(/```json\n?|\n?```/g, "").trim();
-    return JSON.parse(cleanJson);
+    const validated = LlmGuardrailService.validateJson<any>(responseText, ["overallBand", "cefr"]);
+    if (validated) return validated;
+    throw new Error("Invalid evaluation JSON schema returned by model");
   }
 
   static async transcribeAudioSelfIntro(base64Audio: string, mimeType: string = "audio/webm"): Promise<string> {
