@@ -6,11 +6,15 @@ import { Info, Send } from "lucide-react";
 import { KhoirulScreen } from "./khoirul-screen";
 import { CallHeader } from "@/components/call/CallHeader";
 import { CallFooter } from "@/components/call/CallFooter";
-import { CallTranscriptDrawer, ChatMessage } from "@/components/call/CallTranscriptDrawer";
 import { useSpeechRecognition } from "@/hooks/use-speech-recognition";
 import { useAudioQueue } from "@/hooks/use-audio-queue";
 import { getApiUrl } from "@/lib/api-client";
 import { voiceApi } from "../api/voice.api";
+
+export interface ChatMessage {
+  role: "assistant" | "user";
+  content: string;
+}
 
 export interface VoiceCallViewProps {
   initialTopic?: string;
@@ -36,9 +40,7 @@ export function VoiceCallView({
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const [conversationHistory, setConversationHistory] = useState<ChatMessage[]>([]);
-  const [showSubtitles, setShowSubtitles] = useState<boolean>(true);
   const [callLang, setCallLang] = useState<"en-US" | "id-ID">("en-US");
-  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const [studentName, setStudentName] = useState<string>(propStudentName);
   const [textInput, setTextInput] = useState<string>("");
 
@@ -354,8 +356,8 @@ export function VoiceCallView({
     router.push("/dashboard");
   };
 
-  // Screen click handler
-  const handleScreenClick = () => {
+  // Character click handler
+  const handleCharacterClick = () => {
     if (callStatus === "idle") {
       audioQueue.unlockAudio();
       handleStartCall();
@@ -387,92 +389,51 @@ export function VoiceCallView({
   };
 
   return (
-    <div
-      className="min-h-[100dvh] h-[100dvh] text-white flex flex-col justify-between overflow-hidden relative select-none"
-      style={{
-        background: "radial-gradient(ellipse at 50% 10%, #163E63 0%, #0D3B66 45%, #082542 100%)",
-      }}
-    >
-      {/* Organic Brand Wave Highlights */}
-      <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-[#F4B41A]/15 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-[#9E1B1B]/20 blur-3xl pointer-events-none" />
-
-      {/* Tactile Header Bar */}
+    <div className="min-h-[100dvh] h-[100dvh] bg-white text-slate-900 flex flex-col justify-between overflow-hidden relative select-none">
+      {/* Clean Header Bar */}
       <CallHeader
         callStatus={callStatus}
         duration={duration}
-        showSubtitles={showSubtitles}
         lang={callLang}
-        onOpenDrawer={() => setIsDrawerOpen(true)}
-        onToggleSubtitles={() => setShowSubtitles((prev) => !prev)}
         onToggleLang={() => setCallLang((prev) => (prev === "en-US" ? "id-ID" : "en-US"))}
         onExit={handleEndCall}
       />
 
-      {/* Main Video Call Screen Area */}
-      <main className="flex-1 flex flex-col items-center justify-center relative px-4 sm:px-6 z-10 w-full max-w-2xl mx-auto">
+      {/* Main Screen Area with Pure Mr. Khoirul Character */}
+      <main className="flex-1 flex flex-col items-center justify-center relative px-4 z-10 w-full max-w-xl mx-auto">
         {errorMsg && (
-          <div className="absolute top-2 max-w-sm w-full p-3 bg-red-950/90 border border-red-500/40 rounded-2xl text-xs text-red-200 flex items-center gap-2 justify-center animate-fadeIn z-30 shadow-lg">
-            <Info className="w-4 h-4 text-red-400 shrink-0" />
+          <div className="absolute top-2 max-w-sm w-full p-3 bg-red-50 border border-red-200 rounded-2xl text-xs text-red-700 flex items-center gap-2 justify-center animate-fadeIn z-30 shadow-sm">
+            <Info className="w-4 h-4 text-red-500 shrink-0" />
             <span>{errorMsg}</span>
           </div>
         )}
 
-        <div className="w-full flex flex-col items-center justify-center space-y-4 sm:space-y-5">
-          {/* Mr. Khoirul Tactile Video Device (replaces VoiceOrb) */}
+        <div className="w-full flex flex-col items-center justify-center">
+          {/* Mr. Khoirul Pure Character & Floating Info Text */}
           <KhoirulScreen
             callStatus={callStatus}
             aiSpeechState={aiSpeechState}
             isMuted={isMuted}
-            onScreenClick={handleScreenClick}
+            onScreenClick={handleCharacterClick}
           />
 
-          {/* Subtitles & Live Feedback Box */}
-          {callStatus === "active" && showSubtitles && (
-            <div className="w-full max-w-[340px] sm:max-w-[400px] min-h-[58px] p-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 shadow-inner flex flex-col items-center justify-center text-center">
-              {aiSpeechState === "speaking" && audioQueue.currentSubtitle && (
-                <p className="text-xs sm:text-sm text-slate-100 font-medium leading-relaxed animate-fadeIn line-clamp-3">
-                  &ldquo;{audioQueue.currentSubtitle}&rdquo;
-                </p>
-              )}
-
-              {aiSpeechState === "listening" && (
-                liveTranscript ? (
-                  <p className="text-xs sm:text-sm text-emerald-300 font-semibold leading-relaxed animate-fadeIn">
-                    {liveTranscript}
-                  </p>
-                ) : (
-                  <p className="text-xs text-slate-300/80 font-medium animate-pulse">
-                    Mendengarkan suaramu... Bicara kapan saja!
-                  </p>
-                )
-              )}
-
-              {aiSpeechState === "thinking" && (
-                <p className="text-xs text-[#F4B41A] font-bold animate-pulse">
-                  Mr. Khoirul sedang merespons...
-                </p>
-              )}
-            </div>
-          )}
-
-          {/* Text input fallback for noisy environments */}
+          {/* Text input fallback for noisy environments (clean white style) */}
           {callStatus === "active" && (
             <form
               onSubmit={handleSendText}
-              className="w-full max-w-[340px] sm:max-w-[400px] flex items-center gap-2 animate-fadeIn"
+              className="w-full max-w-xs sm:max-w-sm flex items-center gap-2 mt-4 animate-fadeIn"
             >
               <input
                 type="text"
                 value={textInput}
                 onChange={(e) => setTextInput(e.target.value)}
                 placeholder="Ketik balasan jika mic bising..."
-                className="flex-1 bg-[#061e36]/90 border border-white/10 focus:border-[#F4B41A] rounded-full px-4 py-2 text-xs text-slate-100 placeholder:text-slate-400 outline-none transition-all shadow-inner"
+                className="flex-1 bg-slate-50 border border-slate-200 focus:border-[#0D3B66] focus:bg-white rounded-full px-4 py-2 text-xs text-slate-800 placeholder:text-slate-400 outline-none transition-all shadow-inner"
               />
               <button
                 type="submit"
                 disabled={!textInput.trim() || isSendingRef.current}
-                className="px-4 py-2 btn-skeuo-yellow disabled:opacity-40 text-slate-950 rounded-full text-xs font-bold transition-all active:scale-95 flex items-center gap-1 shadow-md"
+                className="px-4 py-2 btn-skeuo-yellow disabled:opacity-40 text-slate-950 rounded-full text-xs font-bold transition-all active:scale-95 flex items-center gap-1 shadow-sm"
               >
                 <span>Kirim</span>
                 <Send className="w-3 h-3 ml-0.5" />
@@ -488,17 +449,6 @@ export function VoiceCallView({
         isMuted={isMuted}
         onToggleMute={() => setIsMuted((prev) => !prev)}
         onStartCall={handleStartCall}
-        onEndCall={handleEndCall}
-      />
-
-      {/* Slide-out Transcript Drawer */}
-      <CallTranscriptDrawer
-        isOpen={isDrawerOpen}
-        onClose={() => setIsDrawerOpen(false)}
-        showSubtitles={showSubtitles}
-        onToggleSubtitles={() => setShowSubtitles((prev) => !prev)}
-        conversationHistory={conversationHistory}
-        callStatus={callStatus}
         onEndCall={handleEndCall}
       />
     </div>
