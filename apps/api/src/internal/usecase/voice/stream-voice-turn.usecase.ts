@@ -27,6 +27,11 @@ export async function* streamVoiceTurnUsecase(payload: {
     }
   } catch (e) {
     console.error("streamVoiceTurnUsecase error:", e);
-    yield "That sounds wonderful! What do you enjoy most about that?";
+    const msg = (payload.studentMessage || "").toLowerCase();
+    if (/\b(bye|goodbye|see you|pamit|dadah)\b/.test(msg)) {
+      yield "It was great talking with you! Have a wonderful day!";
+    } else {
+      yield "I understand! Could you tell me a little bit more about that?";
+    }
   }
 }

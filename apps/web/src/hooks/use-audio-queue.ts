@@ -25,8 +25,24 @@ function playBrowserSpeechSynthesis(text: string, onEnd: () => void) {
     utterance.lang = "en-US";
     utterance.rate = 1.0;
     utterance.pitch = 1.0;
-    utterance.onend = () => onEnd();
-    utterance.onerror = () => onEnd();
+
+    const voices = window.speechSynthesis.getVoices();
+    const enVoice =
+      voices.find((v) => v.lang.startsWith("en-US") && !v.localService) ||
+      voices.find((v) => v.lang.startsWith("en-US")) ||
+      voices.find((v) => v.lang.startsWith("en"));
+    if (enVoice) utterance.voice = enVoice;
+
+    let hasEnded = false;
+    const finish = () => {
+      if (!hasEnded) {
+        hasEnded = true;
+        onEnd();
+      }
+    };
+
+    utterance.onend = finish;
+    utterance.onerror = finish;
     window.speechSynthesis.speak(utterance);
   } catch {
     onEnd();
@@ -43,6 +59,7 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
   const currentAudioRef = useRef<HTMLAudioElement | null>(null);
   const ttsWatchdogRef = useRef<any>(null);
   const isHaltedRef = useRef<boolean>(false);
+  const ttsFailedRef = useRef<boolean>(false);
 
   const onSentenceStartRef = useRef(onSentenceStart);
   const onAllEndedRef = useRef(onAllEnded);
@@ -140,6 +157,14 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     setCurrentSubtitle(nextItem.text);
     onSentenceStartRef.current?.(nextItem.text);
 
+    // If backend TTS already failed, immediately stream via browser SpeechSynthesis without waiting
+    if (ttsFailedRef.current) {
+      playBrowserSpeechSynthesis(nextItem.text, () => {
+        if (!isHaltedRef.current) playNextInQueue();
+      });
+      return;
+    }
+
     // Watchdog per sentence chunk (max 12s, min 4s)
     if (ttsWatchdogRef.current) clearTimeout(ttsWatchdogRef.current);
     const wordCount = nextItem.text.split(/\s+/).filter(Boolean).length;
@@ -165,6 +190,7 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
 
     nextItem.audio.onerror = (e) => {
       console.warn("Audio queue chunk playback error, falling back to browser SpeechSynthesis:", e);
+      ttsFailedRef.current = true;
       if (isHaltedRef.current) return;
       playBrowserSpeechSynthesis(nextItem.text, () => {
         if (!isHaltedRef.current) playNextInQueue();
@@ -174,6 +200,7 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     nextItem.audio.play().catch((err) => {
       if (err.name === "AbortError" || isHaltedRef.current) return;
       console.warn("Audio play() interrupted or rejected, falling back to browser SpeechSynthesis:", err);
+      ttsFailedRef.current = true;
       playBrowserSpeechSynthesis(nextItem.text, () => {
         if (!isHaltedRef.current) playNextInQueue();
       });

@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { Info } from "lucide-react";
-import { VoiceOrb } from "@/components/call/VoiceOrb";
+import { useRouter } from "next/navigation";
+import { Info, Send } from "lucide-react";
+import { KhoirulScreen } from "./khoirul-screen";
 import { CallHeader } from "@/components/call/CallHeader";
 import { CallFooter } from "@/components/call/CallFooter";
 import { CallTranscriptDrawer, ChatMessage } from "@/components/call/CallTranscriptDrawer";
@@ -22,6 +23,8 @@ export function VoiceCallView({
   userId,
   studentName: propStudentName = "",
 }: VoiceCallViewProps) {
+  const router = useRouter();
+
   const [callStatus, setCallStatus] = useState<
     "idle" | "connecting" | "active" | "evaluating" | "ended"
   >("idle");
@@ -103,7 +106,7 @@ export function VoiceCallView({
       }
 
       isSendingRef.current = true;
-      abortSpeechRef.current(); // Immediately kill microphone to prevent echo and duplicate triggers
+      abortSpeechRef.current(); // Kill mic to prevent echo
 
       const currentTurnId = ++speechTurnIdRef.current;
 
@@ -128,7 +131,7 @@ export function VoiceCallView({
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             topic: defaultTopic,
-            history: updatedHistory.slice(-4),
+            history: updatedHistory.slice(-6),
             studentMessage: cleanText,
             userId,
           }),
@@ -188,7 +191,7 @@ export function VoiceCallView({
 
         const finalReply =
           fullReplyAccumulatorRef.current ||
-          "That sounds wonderful! What do you enjoy most about that?";
+          "I hear you! What would you like to explore next?";
 
         if (!receivedAnySentence) {
           audioQueue.speakText(finalReply);
@@ -205,8 +208,12 @@ export function VoiceCallView({
         isSendingRef.current = false;
 
         if (!fullReplyAccumulatorRef.current) {
-          const fallback = "That sounds wonderful! Could you tell me a little bit more about that?";
-          setConversationHistory([...updatedHistory, { role: "assistant", content: fallback }]);
+          const fallback =
+            "I'm listening closely! Could you elaborate a bit more on that?";
+          setConversationHistory([
+            ...updatedHistory,
+            { role: "assistant", content: fallback },
+          ]);
           audioQueue.speakText(fallback);
         } else {
           setConversationHistory([
@@ -216,11 +223,16 @@ export function VoiceCallView({
         }
       }
     },
-    [audioQueue, defaultTopic]
+    [audioQueue, defaultTopic, userId]
   );
 
   // Speech recognition hook
-  const { liveTranscript, setLiveTranscript, errorMsg: micError, abort: abortSpeech } = useSpeechRecognition({
+  const {
+    liveTranscript,
+    setLiveTranscript,
+    errorMsg: micError,
+    abort: abortSpeech,
+  } = useSpeechRecognition({
     canListen,
     studentName,
     lang: callLang,
@@ -276,8 +288,8 @@ export function VoiceCallView({
       const initialGreeting =
         res?.greeting ||
         (callCount > 0
-          ? "Hey, welcome back! Good to hear from you again. How are things with you today?"
-          : "Hey there! Good to hear your voice again. Ready to practice some English today?");
+          ? "Hey, welcome back! Good to hear from you again. What are you up to today?"
+          : "Hey there! Great to meet you. What would you like to talk about today?");
 
       if (typeof window !== "undefined") {
         localStorage.setItem("mr_khoirul_call_count", (callCount + 1).toString());
@@ -290,8 +302,8 @@ export function VoiceCallView({
     } catch {
       const fallbackGreeting =
         callCount > 0
-          ? "Hey, welcome back! Good to hear from you again. How are things with you today?"
-          : "Hey there! Good to hear your voice again. Ready to practice some English today?";
+          ? "Hey, welcome back! Good to hear from you again. What are you up to today?"
+          : "Hey there! Great to meet you. What would you like to talk about today?";
 
       if (typeof window !== "undefined") {
         localStorage.setItem("mr_khoirul_call_count", (callCount + 1).toString());
@@ -304,7 +316,7 @@ export function VoiceCallView({
     }
   };
 
-  // End call handler
+  // End call handler: cleanly shutdown and redirect to /dashboard
   const handleEndCall = async () => {
     abortSpeech();
     audioQueue.halt();
@@ -320,25 +332,30 @@ export function VoiceCallView({
       .map((m) => `${m.role === "assistant" ? "Mr. Khoirul" : "Student"}: ${m.content}`)
       .join("\n");
 
-    setCallStatus("idle");
+    setCallStatus("ended");
     setDuration(0);
     setConversationHistory([]);
     setLiveTranscript("");
     setAiSpeechState("idle");
 
-    try {
-      await voiceApi.evaluateSession({
-        userId,
-        topic: defaultTopic,
-        durationSeconds: duration,
-        transcript: fullTranscript,
-      });
-    } catch (e) {
-      console.warn("Call save error:", e);
+    // Save session in background without blocking navigation
+    if (currentHistory.length > 1) {
+      voiceApi
+        .evaluateSession({
+          userId,
+          topic: defaultTopic,
+          durationSeconds: duration,
+          transcript: fullTranscript,
+        })
+        .catch((e) => console.warn("Call save error:", e));
     }
+
+    // Direct redirect back to student dashboard as confirmed
+    router.push("/dashboard");
   };
 
-  const handleOrbClick = () => {
+  // Screen click handler
+  const handleScreenClick = () => {
     if (callStatus === "idle") {
       audioQueue.unlockAudio();
       handleStartCall();
@@ -348,7 +365,6 @@ export function VoiceCallView({
       } else if (isMuted) {
         setIsMuted(false);
       } else if (liveTranscript && liveTranscript.trim().length > 1) {
-        // Force send spoken transcript immediately without waiting for silence
         abortSpeechRef.current();
         const spoken = liveTranscript.trim();
         setLiveTranscript("");
@@ -371,7 +387,17 @@ export function VoiceCallView({
   };
 
   return (
-    <div className="min-h-[100dvh] h-[100dvh] bg-black text-white flex flex-col justify-between overflow-hidden relative select-none">
+    <div
+      className="min-h-[100dvh] h-[100dvh] text-white flex flex-col justify-between overflow-hidden relative select-none"
+      style={{
+        background: "radial-gradient(ellipse at 50% 10%, #163E63 0%, #0D3B66 45%, #082542 100%)",
+      }}
+    >
+      {/* Organic Brand Wave Highlights */}
+      <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-[#F4B41A]/15 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-[#9E1B1B]/20 blur-3xl pointer-events-none" />
+
+      {/* Tactile Header Bar */}
       <CallHeader
         callStatus={callStatus}
         duration={duration}
@@ -380,99 +406,92 @@ export function VoiceCallView({
         onOpenDrawer={() => setIsDrawerOpen(true)}
         onToggleSubtitles={() => setShowSubtitles((prev) => !prev)}
         onToggleLang={() => setCallLang((prev) => (prev === "en-US" ? "id-ID" : "en-US"))}
+        onExit={handleEndCall}
       />
 
-      <main className="flex-1 flex flex-col items-center justify-center relative px-6 z-10">
+      {/* Main Video Call Screen Area */}
+      <main className="flex-1 flex flex-col items-center justify-center relative px-4 sm:px-6 z-10 w-full max-w-2xl mx-auto">
         {errorMsg && (
-          <div className="absolute top-2 max-w-sm w-full p-3 bg-red-950/80 border border-red-500/40 rounded-2xl text-xs text-red-200 flex items-center gap-2 justify-center animate-fadeIn z-30">
+          <div className="absolute top-2 max-w-sm w-full p-3 bg-red-950/90 border border-red-500/40 rounded-2xl text-xs text-red-200 flex items-center gap-2 justify-center animate-fadeIn z-30 shadow-lg">
             <Info className="w-4 h-4 text-red-400 shrink-0" />
             <span>{errorMsg}</span>
           </div>
         )}
 
-        <div className="flex flex-col items-center justify-center space-y-6">
-            <VoiceOrb
-              state={
-                callStatus === "idle"
-                  ? "idle"
-                  : callStatus === "connecting"
-                  ? "connecting"
-                  : aiSpeechState
-              }
-              onClick={handleOrbClick}
-              isMuted={isMuted}
-            />
+        <div className="w-full flex flex-col items-center justify-center space-y-4 sm:space-y-5">
+          {/* Mr. Khoirul Tactile Video Device (replaces VoiceOrb) */}
+          <KhoirulScreen
+            callStatus={callStatus}
+            aiSpeechState={aiSpeechState}
+            isMuted={isMuted}
+            onScreenClick={handleScreenClick}
+          />
 
-            {callStatus === "idle" && (
-              <p className="text-xs text-zinc-500 tracking-wide font-normal animate-pulse text-center">
-                Ketuk bundaran untuk mulai berbicara
-              </p>
-            )}
+          {/* Subtitles & Live Feedback Box */}
+          {callStatus === "active" && showSubtitles && (
+            <div className="w-full max-w-[340px] sm:max-w-[400px] min-h-[58px] p-3 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 shadow-inner flex flex-col items-center justify-center text-center">
+              {aiSpeechState === "speaking" && audioQueue.currentSubtitle && (
+                <p className="text-xs sm:text-sm text-slate-100 font-medium leading-relaxed animate-fadeIn line-clamp-3">
+                  &ldquo;{audioQueue.currentSubtitle}&rdquo;
+                </p>
+              )}
 
-            {callStatus === "connecting" && (
-              <p className="text-xs text-zinc-400 tracking-wide font-normal animate-pulse text-center">
-                Menghubungkan ke Mr. Khoirul...
-              </p>
-            )}
-
-            {callStatus === "active" && showSubtitles && (
-              <div className="min-h-[56px] max-w-sm px-4 flex flex-col items-center justify-center text-center">
-                {aiSpeechState === "speaking" && audioQueue.currentSubtitle && (
-                  <p className="text-sm text-zinc-200 font-normal leading-relaxed animate-fadeIn line-clamp-3">
-                    &ldquo;{audioQueue.currentSubtitle}&rdquo;
+              {aiSpeechState === "listening" && (
+                liveTranscript ? (
+                  <p className="text-xs sm:text-sm text-emerald-300 font-semibold leading-relaxed animate-fadeIn">
+                    {liveTranscript}
                   </p>
-                )}
-
-                {aiSpeechState === "listening" && (
-                  liveTranscript ? (
-                    <p className="text-xs sm:text-sm text-sky-300 font-medium leading-relaxed animate-fadeIn">
-                      {liveTranscript}
-                    </p>
-                  ) : (
-                    <p className="text-xs text-zinc-500 font-normal animate-pulse">
-                      Mendengarkan suaramu... (Ketuk bundaran jika ingin memotong)
-                    </p>
-                  )
-                )}
-
-                {aiSpeechState === "thinking" && (
-                  <p className="text-xs text-[#F4B41A] font-normal animate-pulse">
-                    Mr. Khoirul sedang merespons...
+                ) : (
+                  <p className="text-xs text-slate-300/80 font-medium animate-pulse">
+                    Mendengarkan suaramu... Bicara kapan saja!
                   </p>
-                )}
-              </div>
-            )}
+                )
+              )}
 
-            {callStatus === "active" && (
-              <form
-                onSubmit={handleSendText}
-                className="w-full max-w-xs flex items-center gap-2 pt-2 animate-fadeIn"
+              {aiSpeechState === "thinking" && (
+                <p className="text-xs text-[#F4B41A] font-bold animate-pulse">
+                  Mr. Khoirul sedang merespons...
+                </p>
+              )}
+            </div>
+          )}
+
+          {/* Text input fallback for noisy environments */}
+          {callStatus === "active" && (
+            <form
+              onSubmit={handleSendText}
+              className="w-full max-w-[340px] sm:max-w-[400px] flex items-center gap-2 animate-fadeIn"
+            >
+              <input
+                type="text"
+                value={textInput}
+                onChange={(e) => setTextInput(e.target.value)}
+                placeholder="Ketik balasan jika mic bising..."
+                className="flex-1 bg-[#061e36]/90 border border-white/10 focus:border-[#F4B41A] rounded-full px-4 py-2 text-xs text-slate-100 placeholder:text-slate-400 outline-none transition-all shadow-inner"
+              />
+              <button
+                type="submit"
+                disabled={!textInput.trim() || isSendingRef.current}
+                className="px-4 py-2 btn-skeuo-yellow disabled:opacity-40 text-slate-950 rounded-full text-xs font-bold transition-all active:scale-95 flex items-center gap-1 shadow-md"
               >
-                <input
-                  type="text"
-                  value={textInput}
-                  onChange={(e) => setTextInput(e.target.value)}
-                  placeholder="Ketik jika mic tidak aktif..."
-                  className="flex-1 bg-zinc-900/90 border border-zinc-800 focus:border-zinc-700 rounded-full px-4 py-2 text-xs text-zinc-200 placeholder:text-zinc-600 outline-none transition-all shadow-inner"
-                />
-                <button
-                  type="submit"
-                  disabled={!textInput.trim() || isSendingRef.current}
-                  className="px-3 py-2 bg-zinc-800 hover:bg-zinc-700 disabled:opacity-40 text-zinc-200 rounded-full text-xs font-semibold transition-all active:scale-95 border border-zinc-700/60"
-                >
-                  Kirim
-                </button>
-              </form>
-            )}
-          </div>
+                <span>Kirim</span>
+                <Send className="w-3 h-3 ml-0.5" />
+              </button>
+            </form>
+          )}
+        </div>
       </main>
 
+      {/* Tactile Call Control Footer */}
       <CallFooter
         callStatus={callStatus}
+        isMuted={isMuted}
+        onToggleMute={() => setIsMuted((prev) => !prev)}
         onStartCall={handleStartCall}
         onEndCall={handleEndCall}
       />
 
+      {/* Slide-out Transcript Drawer */}
       <CallTranscriptDrawer
         isOpen={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}

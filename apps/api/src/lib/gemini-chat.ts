@@ -270,46 +270,37 @@ export class GeminiChatService {
     ragContext?: string,
     signal?: AbortSignal
   ): AsyncGenerator<string, void, unknown> {
-    // Static persona prefix (invariant across turns to hit KV / prompt cache)
-    const STATIC_PREFIX = `You are Mr. Khoirul: a friendly, humble, and relaxed English conversational tutor talking live on the phone with an Indonesian learner.
-CRITICAL RULES:
-1. ONLY Speak as Mr. Khoirul for this single turn. NEVER write 'Student:' or simulate student dialogue.
-2. Short & Simple for CEFR A1: Maximum 1-2 short sentences (8-12 words total). Do NOT give long lectures, complex campus stories, or unrelated topics.
-3. Relevant to Topic: Stick strictly to the topic (e.g. Unit 1: Self Introduction and Country of Origin).
-4. Speech Recognition Typos: Student's message is from automatic speech-to-text. Indonesian names or slight mispronunciations might be transcribed phonetically. Be forgiving and understand the intended meaning.
-5. Output: Spoken words directly. Never stretch letters (no 'soooo', 'ummm'). Proper dictionary spelling only.`;
+    const isClosingIntent = /\b(bye|goodbye|see you|have to go|got to go|sudah|selesai|pamit|dadah|makasih pak|thank you bye)\b/i.test(
+      studentMessage
+    );
 
-    // Dynamic context placed after static prefix to preserve prompt cache hits
-    const userMessageCount = history.filter((m) => m.role === "user").length;
-    const isClosing = userMessageCount >= 2;
+    const isFirstUserTurn = history.filter((m) => m.role === "user").length === 0;
 
-    const roleplayInstruction = isClosing
-      ? "FINAL CLOSING TURN: The conversation is finished. Say a short, warm goodbye (e.g., 'Nice meeting you! You did great today, have a wonderful day!'). DO NOT ask any question."
-      : userMessageCount === 1
-      ? "TURN 2: Acknowledge the student's name warmly, then ask where they are from (e.g., 'Nice to meet you! Where are you from?'). Do not ask about sports, universities, or other topics."
-      : "TURN 1: Greet the student warmly and ask their name (e.g., 'Hello! Welcome to our English class. What is your name?').";
+    const STATIC_PREFIX = `You are Mr. Khoirul: a warm, genuine, humble, and friendly English conversational tutor talking live on the phone with an Indonesian learner.
+CONVERSATIONAL GUIDELINES:
+1. Natural Persona: Speak ONLY as Mr. Khoirul for this turn. Never write "Student:" or simulate the student.
+2. Spoken Cadence: Speak 1 to 2 natural, warm sentences (around 15-25 words total). Never deliver long lectures or monologues.
+3. Active Listening & Recasting: Truly react to what the student said. If the student makes a grammatical error or phrasing mistake, use RECASTING: naturally mirror the correct phrasing in your conversational reply without lecturing or calling out mistakes.
+   - Example Student: "Yesterday I go to market buy fruit." -> Mr. Khoirul: "Oh, you went to the market yesterday! What kind of fruits did you buy?"
+4. Keep Conversation Flowing: Acknowledge the student's thought, then ask a natural, friendly follow-up question to keep the chat engaging.
+5. Scaffolding: If the student speaks Indonesian, is confused, or asks for help, provide a brief, friendly explanation, then offer a simple English sentence for them to try.
+6. Closing The Call: If and only if the student says goodbye or indicates they want to leave, warmly wish them well and say goodbye. Otherwise, keep the conversation going naturally.
+7. Speech-to-Text Tolerance: The student's message comes from speech recognition. Forgive minor phonetic typos or misspelled Indonesian names.`;
 
-    const dynamicContext = `TOPIC: "${topic}"\nINSTRUCTION: ${roleplayInstruction}${ragContext ? `\n${ragContext}` : ""}`;
-    const systemPrompt = `${STATIC_PREFIX}\n\n${dynamicContext}`;
+    const dynamicInstruction = isClosingIntent
+      ? "The student wants to end the call. Say a warm, concise goodbye wishing them a great day (e.g., 'It was wonderful chatting with you! Keep practicing and have a fantastic day! Goodbye!'). Do not ask any questions."
+      : isFirstUserTurn
+      ? `Warmly greet the student, react to their first message, and naturally invite them to chat about what they did today or anything on their mind.`
+      : `Respond naturally to the student's message with genuine interest, model correct English if needed, and ask an engaging follow-up question.`;
 
-    let historyPrefix = "";
-    if (history.length > 4) {
-      const olderTurns = history.slice(0, -4);
-      const studentRecap = olderTurns
-        .filter((m) => m.role === "user")
-        .map((m) => m.content.slice(0, 40))
-        .join(" | ");
-      if (studentRecap) {
-        historyPrefix = `[Prior topics discussed: ${studentRecap}]\n`;
-      }
-    }
+    const systemPrompt = `${STATIC_PREFIX}\n\nTOPIC: "${topic || "Casual Daily English Chat"}"\nTURN GOAL: ${dynamicInstruction}${ragContext ? `\n\nCURRICULUM CONTEXT:\n${ragContext}` : ""}`;
 
     const recentHistory = history
-      .slice(-4)
+      .slice(-6)
       .map((m) => `${m.role === "assistant" ? "Mr. Khoirul" : "Student"}: ${m.content}`)
       .join("\n");
 
-    const prompt = `${historyPrefix}${recentHistory ? recentHistory + "\n" : ""}Student: ${studentMessage}\nMr. Khoirul:`;
+    const prompt = `${recentHistory ? recentHistory + "\n" : ""}Student: ${studentMessage}\nMr. Khoirul:`;
 
     let buffer = "";
     let isFirstChunk = true;
@@ -399,10 +390,20 @@ CRITICAL RULES:
     }
 
     if (sentenceCount === 0) {
-      yield "That sounds wonderful! What do you enjoy most about that?";
+      if (isClosingIntent) {
+        yield "It was wonderful talking with you today! Have a great day and see you next time!";
+      } else if (/\b(name|nama|who are you)\b/i.test(studentMessage)) {
+        yield "I am Mr. Khoirul, your English practice partner! How are you feeling today?";
+      } else if (/\b(how are you|apa kabar)\b/i.test(studentMessage)) {
+        yield "I am doing great, thank you for asking! What are you up to today?";
+      } else if (/\b(hobby|hobi|like|love|suka)\b/i.test(studentMessage)) {
+        yield "That sounds really interesting! What do you enjoy most about that?";
+      } else {
+        yield "I see! Could you tell me a little bit more about that?";
+      }
     } else if (
       sentenceCount === 1 &&
-      lastYieldedSentence.split(/\s+/).filter(Boolean).length < 4 &&
+      lastYieldedSentence.split(/\s+/).filter(Boolean).length < 5 &&
       !lastYieldedSentence.includes("?")
     ) {
       yield "Could you tell me a little bit more about that?";

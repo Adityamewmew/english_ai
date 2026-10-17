@@ -78,7 +78,10 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
             controller.enqueue(encoder.encode(`data: ${doneData}\n\n`));
           } catch (err: any) {
             console.error("Voice turn-stream error:", err);
-            const fallback = "That sounds wonderful! What do you enjoy most about that?";
+            const msg = (studentMessage || "").toLowerCase();
+            const fallback = /\b(bye|goodbye|see you|pamit|dadah)\b/.test(msg)
+              ? "It was wonderful speaking with you today! Have a great day ahead!"
+              : "I see! Could you tell me a little bit more about that?";
             controller.enqueue(
               encoder.encode(
                 `data: ${JSON.stringify({ type: "sentence", index: sentenceIndex, text: fallback })}\n\n`
