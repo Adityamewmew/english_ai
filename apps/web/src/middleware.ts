@@ -9,9 +9,7 @@ export function middleware(req: NextRequest) {
     pathname.startsWith("/dashboard") ||
     pathname.startsWith("/modules") ||
     pathname.startsWith("/call") ||
-    pathname.startsWith("/placement") ||
-    pathname.startsWith("/admin") ||
-    pathname.startsWith("/users");
+    pathname.startsWith("/placement");
 
   if (!sessionCookie && isProtectedRoute) {
     const loginUrl = new URL("/login", req.url);
@@ -32,8 +30,6 @@ export const config = {
     "/modules/:path*",
     "/call/:path*",
     "/placement/:path*",
-    "/admin/:path*",
-    "/users/:path*",
     "/login",
     "/register",
   ],
