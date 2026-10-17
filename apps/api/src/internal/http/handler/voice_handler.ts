@@ -6,7 +6,6 @@ import {
   VoiceEvaluateBody,
 } from "../../entity/voice_entity";
 import { getTtsAudioUsecase } from "../../usecase/voice/get-tts-audio.usecase";
-import { getVoiceTokenUsecase } from "../../usecase/voice/get-voice-token.usecase";
 import { getVoiceGreetingUsecase } from "../../usecase/voice/get-voice-greeting.usecase";
 import { streamVoiceTurnUsecase } from "../../usecase/voice/stream-voice-turn.usecase";
 import { evaluateVoiceSessionUsecase } from "../../usecase/voice/evaluate-voice-session.usecase";
@@ -39,13 +38,10 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
     },
     { query: VoiceTtsQuery }
   )
-  .get("/token", async () => {
-    return getVoiceTokenUsecase();
-  })
   .post(
     "/turn-stream",
     async ({ body, headers }) => {
-      const { topic, history, studentMessage, userId, studentCefr } = body;
+      const { topic, history, studentMessage, userId } = body;
       const resolvedUserId = userId || headers["x-user-id"];
       const encoder = new TextEncoder();
       let sentenceIndex = 0;
@@ -59,7 +55,6 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
               history: history as any,
               studentMessage,
               userId: resolvedUserId,
-              studentCefr,
             })) {
               accumulatedSentences.push(sentence);
               const data = JSON.stringify({
@@ -134,24 +129,6 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
         set,
         statusCode: 200,
         message: "Session evaluated successfully",
-        data,
-      });
-    },
-    { body: VoiceEvaluateBody }
-  )
-  .post(
-    "/session",
-    async ({ body, set }) => {
-      const data = await evaluateVoiceSessionUsecase({
-        userId: body.userId || "anonymous",
-        topic: body.topic,
-        durationSeconds: body.durationSeconds,
-        transcript: body.transcript,
-      });
-      return jsonResponse({
-        set,
-        statusCode: 200,
-        message: "Session saved successfully",
         data,
       });
     },

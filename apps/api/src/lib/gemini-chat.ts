@@ -60,7 +60,7 @@ export class GeminiChatService {
             body: JSON.stringify({
               model: m,
               stream: false,
-              max_tokens: 180,
+              max_tokens: 350,
               temperature: 0.6,
               frequency_penalty: 0.3,
               presence_penalty: 0.2,
@@ -150,7 +150,7 @@ export class GeminiChatService {
           const connectAbort = new AbortController();
           timer = setTimeout(() => {
             connectAbort.abort(new Error("TTFT connection timeout"));
-          }, 8000);
+          }, 12000);
 
           const activeSignal = signal
             ? AbortSignal.any([signal, connectAbort.signal])
@@ -166,7 +166,7 @@ export class GeminiChatService {
             body: JSON.stringify({
               model: m,
               stream: true,
-              max_tokens: 100,
+              max_tokens: 350,
               temperature: 0.5,
               frequency_penalty: 0.3,
               presence_penalty: 0.2,
