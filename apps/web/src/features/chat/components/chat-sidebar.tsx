@@ -36,14 +36,14 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
           onKeyDown={(e) => {
             if (e.key === "Escape") onClose();
           }}
-          className="fixed inset-0 bg-slate-950/40 backdrop-blur-xs z-40 md:hidden cursor-pointer"
+          className="fixed inset-0 bg-slate-950/40 backdrop-blur-xs z-40 lg:hidden cursor-pointer"
         />
       )}
 
       {/* Sidebar Container */}
       <aside
-        className={`fixed md:static inset-y-0 left-0 z-50 w-72 bg-white border-r border-slate-200/90 flex flex-col justify-between shrink-0 shadow-xl md:shadow-none transition-transform duration-200 ease-in-out ${
-          isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+        className={`fixed lg:static inset-y-0 left-0 z-50 w-72 bg-white border-r border-slate-200/90 flex flex-col justify-between shrink-0 shadow-xl lg:shadow-none transition-transform duration-200 ease-in-out ${
+          isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         }`}
       >
         {/* Top Header */}
@@ -58,7 +58,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
             </Link>
             <button
               onClick={onClose}
-              className="md:hidden p-1 text-slate-400 hover:text-slate-600 rounded-md cursor-pointer"
+              className="lg:hidden p-1 text-slate-400 hover:text-slate-600 rounded-md cursor-pointer"
               aria-label="Tutup sidebar"
             >
               <X className="w-4 h-4" />
@@ -70,7 +70,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
             type="button"
             onClick={() => {
               onNewChat();
-              if (window.innerWidth < 768) onClose();
+              if (window.innerWidth < 1024) onClose();
             }}
             className="w-full btn-skeuo-yellow px-4 py-2.5 rounded-xl flex items-center justify-center gap-2 text-sm font-bold shadow-xs cursor-pointer"
           >
@@ -97,7 +97,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
                   key={s.id}
                   onClick={() => {
                     onSelectSession(s.id);
-                    if (window.innerWidth < 768) onClose();
+                    if (window.innerWidth < 1024) onClose();
                   }}
                   className={`group flex items-center justify-between gap-2 px-3 py-2.5 rounded-xl cursor-pointer text-sm transition-all select-none ${
                     isActive
@@ -145,7 +145,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
                 Mr. Khoirul
               </span>
               <span className="block text-[10px] text-slate-400 truncate">
-                Study Companion v2.0
+                AI English Tutor
               </span>
             </div>
           </div>

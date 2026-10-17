@@ -2,7 +2,8 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { PanelLeft, Plus, ShieldCheck, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { PanelLeft, Plus, ArrowLeft } from "lucide-react";
 import { useChat } from "../hooks/use-chat";
 import { ChatSidebar } from "./chat-sidebar";
 import { ChatMessageBubble } from "./chat-message-item";
@@ -13,8 +14,14 @@ interface ChatViewProps {
 }
 
 export const ChatView: React.FC<ChatViewProps> = ({ userId }) => {
-  const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
+  const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.innerWidth >= 1024) {
+      setSidebarOpen(true);
+    }
+  }, []);
 
   const {
     sessions,
@@ -55,12 +62,22 @@ export const ChatView: React.FC<ChatViewProps> = ({ userId }) => {
       {/* Main Chat Workspace */}
       <div className="flex-1 flex flex-col h-full overflow-hidden relative">
         {/* Top Navbar (Skeuomorphic Touch) */}
-        <header className="h-14 bg-white/90 backdrop-blur-md border-b border-slate-200/80 px-4 flex items-center justify-between shrink-0 shadow-xs z-10">
-          <div className="flex items-center gap-3">
+        <header className="h-14 bg-white/90 backdrop-blur-md border-b border-slate-200/80 px-3 sm:px-4 flex items-center justify-between shrink-0 shadow-xs z-10">
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Back to Portal (Prominent on Mobile) */}
+            <Link
+              href="/dashboard"
+              className="p-2 text-slate-500 hover:text-[#0D3B66] hover:bg-slate-100 rounded-lg cursor-pointer transition-colors"
+              title="Kembali ke Dashboard"
+            >
+              <ArrowLeft className="w-5 h-5" />
+            </Link>
+
+            {/* Toggle History Sidebar */}
             <button
               type="button"
               onClick={() => setSidebarOpen((prev) => !prev)}
-              title="Toggle Sidebar"
+              title="Riwayat Chat"
               className="p-2 text-slate-600 hover:text-[#0D3B66] hover:bg-slate-100 rounded-lg cursor-pointer transition-colors"
             >
               <PanelLeft className="w-5 h-5" />
@@ -68,7 +85,7 @@ export const ChatView: React.FC<ChatViewProps> = ({ userId }) => {
 
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="text-sm sm:text-base font-extrabold text-[#0D3B66] tracking-tight truncate max-w-[200px] sm:max-w-md">
+                <h1 className="text-sm sm:text-base font-extrabold text-[#0D3B66] tracking-tight truncate max-w-[150px] sm:max-w-md">
                   {activeSession ? activeSession.title : "Percakapan Baru"}
                 </h1>
                 <span className="flex h-2 w-2 relative">
@@ -76,10 +93,8 @@ export const ChatView: React.FC<ChatViewProps> = ({ userId }) => {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                 </span>
               </div>
-              <p className="text-[10px] text-slate-400 flex items-center gap-1 font-medium">
-                <span>Mr. Khoirul AI Study Companion</span>
-                <span>•</span>
-                <span className="text-emerald-700 font-semibold">Guardrails Active</span>
+              <p className="text-[11px] text-slate-400 font-medium">
+                Mr. Khoirul • Online
               </p>
             </div>
           </div>
@@ -120,15 +135,9 @@ export const ChatView: React.FC<ChatViewProps> = ({ userId }) => {
                 <h2 className="text-xl sm:text-2xl font-black text-[#0D3B66] tracking-tight">
                   Halo! Saya Mr. Khoirul.
                 </h2>
-                <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed">
-                  Teman belajar bahasa Inggris interaktifmu. Tanyakan penjelasan grammar, minta koreksi tulisan esai, atau latihan kosakata sehari-hari.
+                <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed max-w-sm">
+                  Ada materi atau pertanyaan bahasa Inggris yang ingin kamu diskusikan hari ini?
                 </p>
-
-                {/* Guardrail & RAG Security Pill */}
-                <div className="mt-5 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700 shadow-2xs">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                  <span>Sistem dilengkapi RAG Kurikulum &amp; LLM Guardrail</span>
-                </div>
               </div>
             ) : (
               /* Conversation Messages */

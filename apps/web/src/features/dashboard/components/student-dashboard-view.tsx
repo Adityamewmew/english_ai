@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { StudentSidebarRail } from "./student-sidebar-rail";
-import { StudentTopbar } from "./student-topbar";
+import { StudentShell } from "./student-shell";
 import { StudentHeroBanner } from "./student-hero-banner";
 import { StudentProgressCards } from "./student-progress-cards";
 import { StudentArticlesSection } from "./student-articles-section";
@@ -25,14 +24,6 @@ interface StudentDashboardViewProps {
 }
 
 export function StudentDashboardView({ session }: StudentDashboardViewProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.innerWidth >= 1024) {
-      setIsSidebarOpen(true);
-    }
-  }, []);
-
   const { data: levelsData } = useCurriculumLevels(session.userId);
   const { data: userProfile } = useUserProfile(session.userId);
   const { data: latestTest } = useLatestPlacement(session.userId);
@@ -69,52 +60,33 @@ export function StudentDashboardView({ session }: StudentDashboardViewProps) {
   );
 
   return (
-    <div className="min-h-screen w-full bg-slate-50/50 dark:bg-slate-950 flex flex-row overflow-x-hidden">
-      {/* 1. Collapsible Sidebar Rail */}
-      <StudentSidebarRail
-        isOpen={isSidebarOpen}
-        onToggle={() => setIsSidebarOpen(false)}
-      />
+    <StudentShell studentName={studentName} currentCefr={currentCefr}>
+      <div className="p-4 sm:p-6 lg:p-8 w-full max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+        {/* Left Column: Hero Banner + Your Progress + Articles */}
+        <div className="w-full lg:flex-1 space-y-6 lg:space-y-8 min-w-0">
+          <StudentHeroBanner
+            activeModuleCode={activeModule.id}
+            activeModuleTitle={activeModule.title}
+            currentCefr={currentCefr}
+          />
 
-      {/* 2. Main Edge-to-Edge Application Area */}
-      <div className="flex-1 flex flex-col min-w-0 min-h-screen bg-white dark:bg-slate-900 transition-all duration-300">
-        {/* Top Bar with Sidebar Toggle */}
-        <StudentTopbar
-          studentName={studentName}
-          currentCefr={currentCefr}
-          isSidebarOpen={isSidebarOpen}
-          onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
-        />
+          <StudentProgressCards
+            currentCefr={currentCefr}
+            totalCompletedModules={totalCompletedModules}
+            totalModules={totalModules}
+            placementScore={latestTest?.scorePercent}
+            placementCefr={latestTest?.overallCefr}
+          />
 
-        {/* Full-Bleed Bento Dashboard Grid */}
-        <main className="flex-1 p-4 sm:p-6 lg:p-8 pb-32 sm:pb-36 w-full max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-8 items-start">
-          {/* Left Column (Wide, takes remaining space): Hero Banner + Your Progress + Articles */}
-          <div className="w-full lg:flex-1 space-y-8 min-w-0">
-            <StudentHeroBanner
-              activeModuleCode={activeModule.id}
-              activeModuleTitle={activeModule.title}
-              currentCefr={currentCefr}
-            />
+          <StudentArticlesSection />
+        </div>
 
-            <StudentProgressCards
-              currentCefr={currentCefr}
-              totalCompletedModules={totalCompletedModules}
-              totalModules={totalModules}
-              placementScore={latestTest?.scorePercent}
-              placementCefr={latestTest?.overallCefr}
-            />
-
-            <StudentArticlesSection />
-          </div>
-
-          {/* Right Column (Fixed ~370px on desktop): Calendar Strip + Upcoming Milestones */}
-          <div className="w-full lg:w-[360px] xl:w-[390px] space-y-8 shrink-0">
-            <StudentCalendarStrip />
-
-            <StudentUpcomingMilestones modules={upcomingModules} />
-          </div>
-        </main>
+        {/* Right Column: Calendar Strip + Upcoming Milestones */}
+        <div className="w-full lg:w-[360px] xl:w-[390px] space-y-6 lg:space-y-8 shrink-0">
+          <StudentCalendarStrip />
+          <StudentUpcomingMilestones modules={upcomingModules} />
+        </div>
       </div>
-    </div>
+    </StudentShell>
   );
 }

@@ -19,6 +19,7 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { usePlacementSession, useSubmitPlacement } from "../hooks/use-placement";
+import { StudentShell } from "@/features/dashboard";
 
 interface PlacementTestViewProps {
   userId?: string;
@@ -242,7 +243,8 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
   }
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12">
+    <StudentShell>
+      <div className="max-w-3xl mx-auto px-4 py-6 sm:py-10">
       {/* Test Paper Header */}
       <div className="mb-6 space-y-1.5">
         <h1 className="font-heading text-2xl sm:text-3xl font-extrabold text-primary">
@@ -484,5 +486,6 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
         </div>
       </form>
     </div>
+    </StudentShell>
   );
 }

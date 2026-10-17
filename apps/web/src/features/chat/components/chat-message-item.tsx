@@ -55,16 +55,11 @@ export const ChatMessageBubble: React.FC<ChatMessageBubbleProps> = ({
             </span>
           </div>
 
-          {/* Guardrail Status Badge */}
-          {isGuardrailBlocked ? (
-            <div className="flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-red-50 text-red-700 border border-red-200">
-              <ShieldAlert className="w-3 h-3 text-red-600" />
-              <span>Guardrail Shield</span>
-            </div>
-          ) : (
-            <div className="flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-50 text-emerald-800 border border-emerald-200">
-              <ShieldCheck className="w-3 h-3 text-emerald-600" />
-              <span>RAG & Guardrail Active</span>
+          {/* Optional notice only when topic was shielded */}
+          {isGuardrailBlocked && (
+            <div className="flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200">
+              <ShieldAlert className="w-3 h-3 text-amber-600" />
+              <span>Pengingat Topik</span>
             </div>
           )}
         </div>

@@ -2,8 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
-import { StudentSidebarRail } from "@/features/dashboard/components/student-sidebar-rail";
-import { StudentTopbar } from "@/features/dashboard/components/student-topbar";
+import { StudentShell } from "@/features/dashboard";
 import { ModulesAnalyticsBento } from "./modules-analytics-bento";
 import { ModulesFilterBar } from "./modules-filter-bar";
 import { ModuleGridCard, CurriculumModuleItem } from "./module-grid-card";
@@ -232,23 +231,8 @@ export function ModulesCatalogView({
     currentCefr.toUpperCase().startsWith(activeSubLevelItem.id.toUpperCase());
 
   return (
-    <div className="min-h-screen w-full bg-slate-50/50 dark:bg-slate-950 flex flex-row overflow-x-hidden">
-      {/* 1. Sidebar Rail */}
-      <StudentSidebarRail
-        isOpen={isSidebarOpen}
-        onToggle={() => setIsSidebarOpen(false)}
-      />
-
-      {/* 2. Main Content Area */}
-      <div className="flex-1 flex flex-col min-w-0 min-h-screen bg-white dark:bg-slate-900 transition-all duration-300">
-        <StudentTopbar
-          studentName={studentName}
-          currentCefr={currentCefr}
-          isSidebarOpen={isSidebarOpen}
-          onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
-        />
-
-        <main className="flex-1 p-4 sm:p-6 lg:p-8 w-full max-w-[1600px] mx-auto space-y-8">
+    <StudentShell studentName={studentName} currentCefr={currentCefr}>
+      <div className="p-4 sm:p-6 lg:p-8 w-full max-w-[1600px] mx-auto space-y-6 sm:space-y-8">
           {/* Breadcrumb & Header */}
           <div className="space-y-1">
             <div className="flex items-center gap-2 text-xs font-bold text-slate-400">
@@ -368,9 +352,8 @@ export function ModulesCatalogView({
                 ))}
               </div>
             )}
-          </div>
-        </main>
+        </div>
       </div>
-    </div>
+    </StudentShell>
   );
 }

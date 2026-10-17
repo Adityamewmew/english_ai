@@ -49,10 +49,10 @@ export const ChatInputDock: React.FC<ChatInputDockProps> = ({
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Ketik pertanyaan grammar, minta koreksi tulisan, atau ajak Mr. Khoirul berdiskusi..."
+            placeholder="Tulis pesan atau pertanyaan..."
             rows={1}
             disabled={disabled}
-            className="flex-1 max-h-44 resize-none bg-transparent px-3 py-2 text-sm sm:text-base text-slate-800 placeholder-slate-400 focus:outline-hidden leading-relaxed custom-scrollbar"
+            className="flex-1 max-h-40 resize-none bg-transparent px-3 py-2 text-sm sm:text-base text-slate-800 placeholder-slate-400 focus:outline-hidden leading-relaxed custom-scrollbar"
           />
 
           {/* Action Button: Stop or Send */}
@@ -82,17 +82,6 @@ export const ChatInputDock: React.FC<ChatInputDockProps> = ({
               <span className="hidden sm:inline">Kirim</span>
             </button>
           )}
-        </div>
-
-        {/* Security & RAG microcopy */}
-        <div className="flex items-center justify-between gap-2 mt-2 pt-2 border-t border-slate-100 text-[11px] text-slate-400 px-1">
-          <div className="flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-[#F4B41A]" />
-            <span className="truncate">
-              Mr. Khoirul AI didukung RAG Kurikulum &amp; LLM Guardrails (Anti-Injection &amp; PII Safe).
-            </span>
-          </div>
-          <span className="hidden sm:inline shrink-0 font-medium">Shift + Enter untuk baris baru</span>
         </div>
       </div>
     </div>

@@ -2,8 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
-import { StudentSidebarRail } from "@/features/dashboard/components/student-sidebar-rail";
-import { StudentTopbar } from "@/features/dashboard/components/student-topbar";
+import { StudentShell } from "@/features/dashboard";
 import { ModuleStagePlaylist, PlaylistStepItem } from "./module-stage-playlist";
 import { SidebarArcadeCompanion } from "./companion/sidebar-arcade-companion";
 import { ModuleStageViewport } from "./module-stage-viewport";
@@ -168,25 +167,11 @@ export function ModuleStudyView({
   };
 
   return (
-    <div className="min-h-screen w-full bg-slate-50/50 dark:bg-slate-950 flex flex-row">
-      {/* 1. Collapsible Sidebar Rail (Shared with Dashboard) */}
-      <StudentSidebarRail
-        isOpen={isSidebarOpen}
-        onToggle={() => setIsSidebarOpen(false)}
-      />
-
-      {/* 2. Main Full-Bleed Content Area */}
-      <div className="flex-1 flex flex-col min-w-0 min-h-screen bg-white dark:bg-slate-900 transition-all duration-300">
-        {/* Top Bar with Sidebar Toggle */}
-        <StudentTopbar
-          studentName={studentName}
-          currentCefr={moduleData?.cefr || "A1.1"}
-          isSidebarOpen={isSidebarOpen}
-          onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
-        />
-
-        {/* Learning Workspace */}
-        <main className="flex-1 px-3 py-2.5 sm:px-6 sm:py-3.5 w-full max-w-[1520px] mx-auto space-y-3.5">
+    <StudentShell
+      studentName={studentName}
+      currentCefr={moduleData?.cefr || "A1.1"}
+    >
+      <div className="px-3 py-2.5 sm:px-6 sm:py-3.5 w-full max-w-[1520px] mx-auto space-y-3.5">
           {/* VIEW A: Floating Skill Cards Hub (Before Entering Sub-Module) */}
           {!activeMissionId ? (
             <ModuleMissionsHub
@@ -334,8 +319,7 @@ export function ModuleStudyView({
               </div>
             </div>
           )}
-        </main>
-      </div>
-    </div>
+        </div>
+    </StudentShell>
   );
 }
