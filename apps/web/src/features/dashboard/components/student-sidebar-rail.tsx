@@ -7,6 +7,7 @@ import {
   LayoutGrid,
   BookOpen,
   PhoneCall,
+  MessageSquare,
   Award,
   LogOut,
   PanelLeftClose,
@@ -37,6 +38,7 @@ export function StudentSidebarRail({ isOpen, onToggle }: StudentSidebarRailProps
 
   const navItems = [
     { href: "/dashboard", icon: LayoutGrid, label: "Dashboard" },
+    { href: "/chat", icon: MessageSquare, label: "AI Study Chat" },
     { href: "/modules", icon: BookOpen, label: "Curriculum Modules" },
     { href: "/call", icon: PhoneCall, label: "AI Voice Call" },
     { href: "/placement", icon: Award, label: "CEFR Placement Test" },

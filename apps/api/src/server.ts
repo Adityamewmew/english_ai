@@ -7,6 +7,7 @@ import { userHandler } from "./internal/http/handler/user_handler";
 import { placementHandler } from "./internal/http/handler/placement_handler";
 import { voiceHandler } from "./internal/http/handler/voice_handler";
 import { adminHandler } from "./internal/http/handler/admin_handler";
+import { chatHandler } from "./internal/http/handler/chat_handler";
 
 export const app = new Elysia()
   .use(corsPlugin)
@@ -25,6 +26,7 @@ export const app = new Elysia()
           { name: "Users", description: "User and auth endpoints" },
           { name: "Placement", description: "CEFR placement test endpoints" },
           { name: "Voice", description: "Voice conversation and TTS endpoints" },
+          { name: "Chat", description: "Chatbot and study companion endpoints" },
           { name: "Admin", description: "Admin dashboard endpoints" },
         ],
       },
@@ -41,6 +43,7 @@ export const app = new Elysia()
   .use(userHandler)
   .use(placementHandler)
   .use(voiceHandler)
-  .use(adminHandler);
+  .use(adminHandler)
+  .use(chatHandler);
 
 export type App = typeof app;
