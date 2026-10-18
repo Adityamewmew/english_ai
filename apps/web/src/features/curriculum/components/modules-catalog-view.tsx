@@ -233,8 +233,23 @@ export function ModulesCatalogView({
   return (
     <StudentShell studentName={studentName} currentCefr={currentCefr}>
       <div className="p-4 sm:p-6 lg:p-8 w-full max-w-[1600px] mx-auto space-y-6 sm:space-y-8">
-          {/* Breadcrumb & Header */}
-          <div className="space-y-1">
+          {/* Mobile Header (<sm) */}
+          <div className="sm:hidden space-y-1">
+            <div className="flex items-center justify-between">
+              <h1 className="text-xl font-extrabold text-[#0D3B66] dark:text-white tracking-tight">
+                Katalog Modul
+              </h1>
+              <span className="text-xs font-bold text-slate-500 font-mono">
+                {completedInSubLevel}/{totalInSubLevel} Selesai
+              </span>
+            </div>
+            <p className="text-xs text-slate-500">
+              Kurikulum CEFR berjenjang A1–C2 untuk membangun refleks bicara.
+            </p>
+          </div>
+
+          {/* Desktop Breadcrumb & Header (sm+) */}
+          <div className="hidden sm:block space-y-1">
             <div className="flex items-center gap-2 text-xs font-bold text-slate-400">
               <Link
                 href="/dashboard"
@@ -244,15 +259,14 @@ export function ModulesCatalogView({
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
               <span className="text-[#0D3B66] dark:text-[#F4B41A]">
-                Curriculum Modules
+                Katalog Modul
               </span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-black text-[#0D3B66] dark:text-white tracking-tight uppercase">
-              Curriculum Courses &amp; Modules
+              Kurikulum &amp; Modul Pembelajaran
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
-              Structured CEFR standard curriculum from A1 to C2 with interactive
-              practice and AI voice tutor.
+              Kurikulum standar CEFR A1 hingga C2 dengan latihan interaktif dan AI voice tutor.
             </p>
           </div>
 
@@ -282,24 +296,24 @@ export function ModulesCatalogView({
           />
 
           {/* Sub-Level Title & Stats Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1 border-b border-slate-200/80 dark:border-slate-800 pb-3">
+          <div className="flex items-center justify-between gap-3 pt-1 border-b border-slate-200/80 dark:border-slate-800 pb-2.5">
             <div className="space-y-0.5">
               <div className="flex items-center gap-2">
                 <span className="px-2 py-0.5 rounded-md text-xs font-black font-mono tracking-tight text-white bg-[#0D3B66] dark:bg-[#1B4965]">
                   {activeSubLevelItem.id}
                 </span>
-                <h2 className="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">
+                <h2 className="text-sm sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">
                   {activeSubLevelItem.title}
                 </h2>
                 {isCurrentTrack && (
-                  <span className="px-2 py-0.5 rounded-full bg-[#F4B41A]/20 text-[#B8860B] dark:text-[#F4B41A] text-[10px] font-black tracking-tight uppercase flex items-center gap-1">
+                  <span className="hidden sm:inline-flex px-2 py-0.5 rounded-full bg-[#F4B41A]/20 text-[#B8860B] dark:text-[#F4B41A] text-[10px] font-black tracking-tight uppercase items-center gap-1">
                     <Sparkles className="w-2.5 h-2.5" />
-                    <span>Current Track</span>
+                    <span>Track Aktif</span>
                   </span>
                 )}
               </div>
               {activeSubLevelItem.description && (
-                <p className="text-xs text-slate-500 dark:text-slate-400">
+                <p className="hidden sm:block text-xs text-slate-500 dark:text-slate-400">
                   {activeSubLevelItem.description}
                 </p>
               )}
@@ -307,11 +321,11 @@ export function ModulesCatalogView({
 
             <div className="flex items-center gap-2 text-xs font-bold text-slate-500 shrink-0">
               <span className="font-mono text-slate-700 dark:text-slate-300">
-                {completedInSubLevel} of {totalInSubLevel} Completed
+                {completedInSubLevel}/{totalInSubLevel} Selesai
               </span>
               <span className="text-slate-300 dark:text-slate-700">·</span>
               <span className="font-mono text-[11px] text-[#0D3B66] dark:text-[#F4B41A]">
-                Showing {filteredModules.length} Modules
+                {filteredModules.length} Modul
               </span>
             </div>
           </div>
