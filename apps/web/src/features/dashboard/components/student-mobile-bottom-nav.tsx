@@ -15,10 +15,10 @@ export function StudentMobileBottomNav() {
   const pathname = usePathname();
 
   const navItems = [
-    { href: "/dashboard", icon: LayoutGrid, label: "Home" },
+    { href: "/dashboard", icon: LayoutGrid, label: "Beranda" },
     { href: "/modules", icon: BookOpen, label: "Modul" },
-    { href: "/chat", icon: MessageSquare, label: "AI Chat" },
-    { href: "/call", icon: PhoneCall, label: "Voice Call" },
+    { href: "/chat", icon: MessageSquare, label: "Chat" },
+    { href: "/call", icon: PhoneCall, label: "Telepon" },
     { href: "/placement", icon: Award, label: "Tes CEFR" },
   ];
 
