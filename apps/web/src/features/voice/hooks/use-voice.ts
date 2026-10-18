@@ -14,3 +14,11 @@ export function useEvaluateSession() {
     mutationFn: voiceApi.evaluateSession,
   });
 }
+
+export function useVoiceSessions(userId?: string) {
+  return useQuery({
+    queryKey: voiceKeys.sessions(userId),
+    queryFn: () => voiceApi.getSessions(userId),
+    enabled: !!userId,
+  });
+}

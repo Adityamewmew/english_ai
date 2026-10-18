@@ -19,4 +19,13 @@ export const voiceApi = {
     if (error) throw new Error(String(error.value));
     return data;
   },
+
+  getSessions: async (userId?: string) => {
+    if (!userId) return [];
+    const { data, error } = await apiClient.api.voice.sessions.get({
+      query: { userId },
+    });
+    if (error) throw new Error(String(error.value));
+    return (data as any)?.data || [];
+  },
 };

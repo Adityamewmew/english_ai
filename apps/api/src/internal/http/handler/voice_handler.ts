@@ -9,6 +9,7 @@ import { getTtsAudioUsecase } from "../../usecase/voice/get-tts-audio.usecase";
 import { getVoiceGreetingUsecase } from "../../usecase/voice/get-voice-greeting.usecase";
 import { streamVoiceTurnUsecase } from "../../usecase/voice/stream-voice-turn.usecase";
 import { evaluateVoiceSessionUsecase } from "../../usecase/voice/evaluate-voice-session.usecase";
+import { voiceRepository } from "../../repository/voice_repository";
 import { jsonResponse } from "../../presenter/json";
 
 export const voiceHandler = new Elysia({ prefix: "/api/voice" })
@@ -133,4 +134,22 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
       });
     },
     { body: VoiceEvaluateBody }
-  );
+  )
+  .get("/sessions", async ({ query, headers, set }) => {
+    const resolvedUserId = (query as any)?.userId || headers["x-user-id"];
+    if (!resolvedUserId) {
+      return jsonResponse({
+        set,
+        statusCode: 200,
+        message: "No user specified",
+        data: [],
+      });
+    }
+    const data = await voiceRepository.findByUserId(resolvedUserId, 10);
+    return jsonResponse({
+      set,
+      statusCode: 200,
+      message: "Voice call sessions retrieved",
+      data,
+    });
+  });

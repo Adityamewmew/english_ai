@@ -11,14 +11,18 @@ interface StudentProgressCardsProps {
   totalModules: number;
   placementScore?: number;
   placementCefr?: string;
+  voiceCallsCount?: number;
+  voiceTotalMinutes?: number;
 }
 
 export function StudentProgressCards({
   currentCefr = "A1.1",
   totalCompletedModules = 0,
-  totalModules = 10,
+  totalModules = 0,
   placementScore,
   placementCefr,
+  voiceCallsCount = 0,
+  voiceTotalMinutes = 0,
 }: StudentProgressCardsProps) {
   const moduleProgressPercent =
     totalModules > 0
@@ -48,8 +52,11 @@ export function StudentProgressCards({
       progressBar: "#F4B41A",
       icon: PhoneCall,
       title: "AI Speaking Reflexes",
-      subtitle: "Live Voice Call with Mr. Khoirul",
-      progress: Math.max(15, Math.min(100, (placementScore || 40) - 10)),
+      subtitle:
+        voiceCallsCount > 0
+          ? `${voiceCallsCount} Sesi Selesai • ${voiceTotalMinutes}m Latihan`
+          : "Belum Ada Sesi • Coba Sekarang",
+      progress: voiceCallsCount > 0 ? Math.min(100, voiceCallsCount * 25) : 0,
       href: "/call",
     },
     {
@@ -61,7 +68,7 @@ export function StudentProgressCards({
       progressBar: "#9E1B1B",
       icon: Award,
       title: "Placement Assessment",
-      subtitle: placementCefr ? `Assessed Level: ${placementCefr}` : "CEFR Diagnostic Test",
+      subtitle: placementCefr ? `Level Teruji: CEFR ${placementCefr}` : "Belum Mengikuti Tes Diagnostik",
       progress: placementScore ?? 0,
       href: "/placement",
     },
