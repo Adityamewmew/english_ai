@@ -258,11 +258,15 @@ export function ListeningPracticumStage({
       {/* 1. Header & Progress Bar */}
       <div className="space-y-3 pb-3 border-b border-slate-100 dark:border-slate-800">
         <div className="flex items-center justify-between text-xs font-bold">
-          <span className="text-indigo-600 dark:text-indigo-400 font-mono uppercase tracking-wider">
-            Question {currentIdx + 1} of {questions.length}
+          <span className="text-[#0D3B66] dark:text-[#F4B41A] font-mono uppercase tracking-wider">
+            Soal {currentIdx + 1} dari {questions.length}
           </span>
           <span className="text-slate-500 dark:text-slate-400 font-semibold">
-            {typeLabels[currentQ.type as keyof typeof typeLabels] || "Listening Practicum"}
+            {currentQ.type === "arrange"
+              ? "Susun Kalimat"
+              : currentQ.type === "dictation"
+              ? "Dikte Kosakata"
+              : "Latihan Menyimak"}
           </span>
         </div>
 
@@ -286,10 +290,10 @@ export function ListeningPracticumStage({
       </div>
 
       {/* 2. Question Prompt & Audio Player Card with 3-Play Limiter */}
-      <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/90 dark:border-slate-800 space-y-4">
+      <div className="p-4 sm:p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/90 dark:border-slate-800 space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">
-            {currentQ.instruction}
+          <p className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-relaxed">
+            {currentQ.instruction || "Dengarkan audio dan lengkapi latihan di bawah ini:"}
           </p>
 
           {/* Audio Button with Visual Replay Limit Counter (Max 3) */}
@@ -297,16 +301,16 @@ export function ListeningPracticumStage({
             type="button"
             disabled={playsRemaining === 0}
             onClick={handlePlayAudio}
-            className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs shadow-xs transition-all shrink-0 cursor-pointer ${
+            className={`inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl font-bold text-xs shadow-xs transition-all shrink-0 cursor-pointer min-h-[46px] select-none ${
               playsRemaining === 0
                 ? "bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-500 cursor-not-allowed opacity-75"
-                : "bg-[#0D3B66] hover:bg-[#1B4965] text-white active:scale-95"
+                : "bg-[#0D3B66] hover:bg-[#1B4965] text-white active:scale-95 border-b-3 border-b-[#082542]"
             }`}
           >
             <Volume2
               className={`w-4 h-4 ${playsRemaining === 0 ? "text-slate-400" : "text-[#F4B41A]"}`}
             />
-            <span>{playsRemaining === 0 ? "No Plays Left" : "Play Question Audio"}</span>
+            <span>{playsRemaining === 0 ? "Batas Putar Habis" : "Putar Audio Soal"}</span>
             <span
               className={`ml-1 px-2 py-0.5 rounded-full text-[10px] font-mono tracking-tight font-black ${
                 playsRemaining === 0
@@ -316,7 +320,7 @@ export function ListeningPracticumStage({
                   : "bg-white/20 text-white"
               }`}
             >
-              {playsRemaining}/3 left
+              Sisa {playsRemaining}/3
             </span>
           </button>
         </div>
@@ -325,12 +329,12 @@ export function ListeningPracticumStage({
         <div className="pt-2">
           {/* TYPE A: Tap & Arrange */}
           {currentQ.type === "arrange" && (
-            <div className="space-y-4">
+            <div className="space-y-3.5">
               {/* Assembled Word Slot */}
-              <div className="p-4 rounded-xl min-h-[56px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex flex-wrap items-center gap-2">
+              <div className="p-3.5 sm:p-4 rounded-2xl min-h-[58px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex flex-wrap items-center gap-2 shadow-inner">
                 {assembledWords.length === 0 ? (
                   <span className="text-xs text-slate-400 italic">
-                    Tap the words below to assemble the sentence...
+                    Ketuk kata-kata di bank kata bawah untuk menyusun kalimat...
                   </span>
                 ) : (
                   assembledWords.map((w, wIdx) => (
@@ -339,23 +343,25 @@ export function ListeningPracticumStage({
                       type="button"
                       disabled={isChecked}
                       onClick={() => handleRemoveWord(wIdx)}
-                      className="px-3 py-1.5 rounded-lg bg-[#0D3B66] text-white text-xs font-bold transition-all hover:bg-rose-600 cursor-pointer"
+                      className="px-3.5 py-2 rounded-xl bg-[#0D3B66] text-white text-xs font-bold transition-all hover:bg-rose-600 cursor-pointer border-b-2 border-b-[#082542] active:scale-95 select-none min-h-[38px] flex items-center gap-1"
+                      title="Ketuk untuk membatalkan kata"
                     >
-                      {w}
+                      <span>{w}</span>
+                      <span className="text-[10px] opacity-70 ml-0.5">✕</span>
                     </button>
                   ))
                 )}
               </div>
 
-              {/* Available Word Bank */}
-              <div className="flex flex-wrap items-center gap-2">
+              {/* Available Word Bank (Tactile >=44px touch targets on mobile) */}
+              <div className="flex flex-wrap items-center gap-2 pt-1">
                 {availableWords.map((w: string, wIdx: number) => (
                   <button
                     key={wIdx}
                     type="button"
                     disabled={isChecked}
                     onClick={() => handleTapWord(w)}
-                    className="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-800 dark:text-slate-100 hover:border-indigo-500 transition-all cursor-pointer shadow-2xs"
+                    className="px-4 py-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 border-b-3 border-b-slate-300 dark:border-b-slate-700 text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-100 hover:border-[#0D3B66] transition-all cursor-pointer shadow-2xs active:border-b active:translate-y-0.5 min-h-[44px] select-none"
                   >
                     {w}
                   </button>
@@ -367,7 +373,7 @@ export function ListeningPracticumStage({
           {/* TYPE B: Dictation */}
           {currentQ.type === "dictation" && (
             <div className="space-y-3">
-              <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-900 dark:text-white">
+              <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-900 dark:text-white leading-relaxed">
                 {renderedPrompt}
               </div>
 
@@ -381,8 +387,8 @@ export function ListeningPracticumStage({
                     handleCheckAnswer();
                   }
                 }}
-                placeholder="Type the missing word here..."
-                className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66]"
+                placeholder="Ketik kata yang hilang di sini..."
+                className="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66] min-h-[48px]"
               />
             </div>
           )}
@@ -391,7 +397,7 @@ export function ListeningPracticumStage({
         {/* 4. Feedback & Explanation Box */}
         {isChecked && (
           <div
-            className={`p-4 rounded-xl border text-xs leading-relaxed space-y-1 animate-in fade-in duration-200 ${
+            className={`p-4 rounded-2xl border text-xs leading-relaxed space-y-1 animate-in fade-in duration-200 ${
               isCorrect
                 ? "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200"
                 : "bg-amber-50 dark:bg-amber-950/40 border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200"
@@ -401,12 +407,12 @@ export function ListeningPracticumStage({
               {isCorrect ? (
                 <>
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <span>Correct Answer! (+15 XP)</span>
+                  <span>Jawaban Tepat! (+15 XP)</span>
                 </>
               ) : (
                 <>
                   <HelpCircle className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  <span>Incorrect</span>
+                  <span>Kurang Tepat</span>
                 </>
               )}
             </div>
@@ -424,20 +430,20 @@ export function ListeningPracticumStage({
                 (currentQ.type === "arrange" && assembledWords.length === 0) ||
                 (currentQ.type === "dictation" && !dictationInput.trim())
               }
-              className="px-6 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold text-xs sm:text-sm transition-all cursor-pointer shadow-xs"
+              className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-[#0D3B66] hover:bg-[#1B4965] border-b-3 border-b-[#082542] active:border-b-0 active:translate-y-0.5 disabled:opacity-50 disabled:pointer-events-none text-white font-bold text-xs sm:text-sm transition-all cursor-pointer shadow-xs min-h-[46px]"
             >
-              Check Answer
+              Periksa Jawaban
             </button>
           ) : (
             <button
               type="button"
               onClick={handleNextQuestion}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs sm:text-sm transition-all cursor-pointer shadow-xs ml-auto"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl btn-skeuo-yellow text-slate-950 font-bold text-xs sm:text-sm transition-all cursor-pointer shadow-xs ml-auto min-h-[46px]"
             >
               <span>
-                {currentIdx < questions.length - 1 ? "Next Question" : "View Practicum Results"}
+                {currentIdx < questions.length - 1 ? "Soal Berikutnya" : "Lihat Hasil Latihan"}
               </span>
-              <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
+              <ArrowRight className="w-4 h-4" />
             </button>
           )}
         </div>

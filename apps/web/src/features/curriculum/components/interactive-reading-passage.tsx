@@ -225,23 +225,40 @@ export function InteractiveReadingPassage({
         </div>
       </div>
 
-      {/* Floating active token hint: Floats above mobile bottom navbar (bottom-24) on mobile, static card on desktop */}
+      {/* Floating active token hint: Tactile bottom card on mobile, static on desktop */}
       {activeTokenHint && (
-        <div className="fixed bottom-24 sm:bottom-auto left-3 right-3 sm:static z-50 p-3.5 sm:p-4 rounded-2xl bg-[#0D3B66] text-white flex items-center justify-between gap-3 shadow-xl sm:shadow-xs border border-white/20 sm:border-transparent animate-in slide-in-from-bottom-2 sm:fade-in duration-200">
-          <div className="flex items-center gap-2.5 min-w-0">
-            <Info className="w-4 h-4 text-[#F4B41A] shrink-0" />
-            <div className="text-xs min-w-0">
-              <span className="font-bold text-[#F4B41A] mr-1.5">
-                [{activeTokenHint.label}]
-              </span>
-              <span className="font-semibold text-white">"{activeTokenHint.word}"</span>:{" "}
-              <span className="text-white/90">{activeTokenHint.desc}</span>
+        <div className="fixed bottom-24 sm:bottom-auto inset-x-3 sm:inset-x-auto sm:static z-50 p-3.5 sm:p-4 rounded-2xl bg-[#0D3B66] text-white flex items-center justify-between gap-3 shadow-2xl sm:shadow-xs border border-white/20 sm:border-[#082542] animate-in slide-in-from-bottom-3 sm:fade-in duration-200">
+          <div className="flex items-center gap-3 min-w-0">
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                animeButtonPop(e.currentTarget);
+                onPlayAudio?.(activeTokenHint.word);
+              }}
+              className="w-10 h-10 rounded-xl bg-white/15 hover:bg-white/25 text-[#F4B41A] flex items-center justify-center shrink-0 cursor-pointer transition-all active:scale-95 border border-white/10"
+              title={`Dengarkan pengucapan "${activeTokenHint.word}"`}
+            >
+              <Volume2 className="w-5 h-5" />
+            </button>
+            <div className="text-xs min-w-0 space-y-0.5">
+              <div className="flex items-center gap-1.5 flex-wrap">
+                <span className="font-mono text-[10px] font-black uppercase px-2 py-0.5 rounded-md bg-[#F4B41A] text-slate-950">
+                  {activeTokenHint.label}
+                </span>
+                <span className="font-bold text-sm text-white">
+                  &ldquo;{activeTokenHint.word}&rdquo;
+                </span>
+              </div>
+              <p className="text-slate-200 text-xs leading-relaxed">
+                {activeTokenHint.desc}
+              </p>
             </div>
           </div>
           <button
             type="button"
             onClick={() => setActiveTokenHint(null)}
-            className="text-xs px-2.5 py-1.5 rounded-lg bg-white/15 hover:bg-white/25 text-white cursor-pointer font-medium shrink-0 transition-colors touch-manipulation"
+            className="text-xs px-3 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold cursor-pointer shrink-0 transition-colors touch-manipulation active:scale-95"
           >
             Tutup
           </button>
