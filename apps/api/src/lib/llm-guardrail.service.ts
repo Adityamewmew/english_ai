@@ -4,9 +4,11 @@
  * (Input rails, Injection Shield, Sensitive Content / Politics, PII Masking, Schema Validation)
  */
 
+import { OodDetectorService } from "./ood-detector.service";
+
 export interface GuardrailCheckResult {
   allowed: boolean;
-  violationType?: "injection" | "offensive" | "politics_sara" | "length_exceeded";
+  violationType?: "injection" | "offensive" | "politics_sara" | "length_exceeded" | "out_of_distribution";
   friendlyFeedback: string;
 }
 
@@ -101,6 +103,17 @@ export class LlmGuardrailService {
       }
     }
 
+    // Check Out-of-Distribution (OOD) / Anomaly Detection (One-Class Classification)
+    const oodResult = OodDetectorService.evaluate(trimmed);
+    if (oodResult.isAnomaly) {
+      return {
+        allowed: false,
+        violationType: "out_of_distribution",
+        friendlyFeedback:
+          "I specialize exclusively in English speaking & vocabulary practice! Let's talk about everyday topics like travel, hobbies, family, or work. What would you like to explore?",
+      };
+    }
+
     return { allowed: true, friendlyFeedback: "" };
   }
 
@@ -123,6 +136,14 @@ export class LlmGuardrailService {
       if (pattern.test(trimmed)) {
         return { allowed: false, reason: "Content violation: inappropriate or offensive language." };
       }
+    }
+
+    const oodResult = OodDetectorService.evaluate(trimmed);
+    if (oodResult.isAnomaly) {
+      return {
+        allowed: false,
+        reason: `Anomaly detected: Out-of-Distribution payload (${oodResult.reasons.join(", ")})`,
+      };
     }
 
     return { allowed: true };
