@@ -289,7 +289,10 @@ export function ModuleStudyView({
                         {playlistSteps.find((s) => s.id === activeStepId)?.title.replace(/^\d+\.\s*/, "")}
                       </span>
                     </div>
-                    <div className="grid grid-cols-5 gap-1.5">
+                    <div
+                      className="grid gap-1.5"
+                      style={{ gridTemplateColumns: `repeat(${playlistSteps.length}, minmax(0, 1fr))` }}
+                    >
                       {playlistSteps.map((s) => {
                         const isActive = s.id === activeStepId;
                         const isDone = completedSteps.includes(s.id);
@@ -298,9 +301,9 @@ export function ModuleStudyView({
                             key={s.id}
                             type="button"
                             onClick={() => setActiveStepId(s.id)}
-                            className={`py-2 px-1 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1 min-h-[40px] touch-manipulation active:scale-95 ${
+                            className={`py-2 px-1 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1 min-h-[42px] touch-manipulation active:scale-95 ${
                               isActive
-                                ? "bg-[#0D3B66] text-white shadow-xs font-black"
+                                ? "bg-[#0D3B66] text-white shadow-xs font-black ring-2 ring-[#0D3B66]/30 dark:ring-[#F4B41A]/50"
                                 : isDone
                                 ? "bg-emerald-50 text-emerald-800 border border-emerald-200"
                                 : "bg-slate-100 text-slate-600 hover:bg-slate-200"

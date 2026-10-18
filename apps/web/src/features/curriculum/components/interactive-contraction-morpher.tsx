@@ -91,9 +91,9 @@ export function InteractiveContractionMorpher({
       }
     >
       {/* 1. Word Pair Selector Chips */}
-      <div className="flex items-center gap-2 flex-wrap">
-        <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 mr-1">
-          Select Pattern:
+      <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+        <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 mr-1 block sm:inline w-full sm:w-auto">
+          Pilih Pola:
         </span>
         {pairs.map((item, idx) => {
           const isSelected = currentIndex === idx;
@@ -102,7 +102,7 @@ export function InteractiveContractionMorpher({
               key={idx}
               type="button"
               onClick={(e) => handleSelectWord(idx, e)}
-              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all border cursor-pointer select-none ${
+              className={`px-3 py-2 rounded-xl text-xs font-bold transition-all border cursor-pointer select-none min-h-[38px] touch-manipulation active:scale-95 ${
                 isSelected
                   ? "bg-indigo-600 text-white border-indigo-600 shadow-xs dark:bg-indigo-500 dark:border-indigo-500"
                   : "bg-white dark:bg-slate-800/80 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-600"
@@ -124,19 +124,19 @@ export function InteractiveContractionMorpher({
       </div>
 
       {/* 2. Visual Squash Stage */}
-      <div className="p-6 sm:p-8 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/80 space-y-5">
+      <div className="p-4 sm:p-8 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/80 space-y-4 sm:space-y-5">
         {/* Stage Status */}
         <div className="flex items-center justify-between text-xs">
           <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-            {isContracted ? "Contracted Form (Informal / Spoken)" : "Full Form (Formal / Written)"}
+            {isContracted ? "Bentuk Singkat (Percakapan)" : "Bentuk Lengkap (Tulisan Resmi)"}
           </span>
           <span className="text-xs font-medium text-slate-400">
-            {isContracted ? "Status: Contracted" : "Status: Separate"}
+            {isContracted ? "Status: Melebur" : "Status: Terpisah"}
           </span>
         </div>
 
         {/* Morphing Word Box */}
-        <div className="relative py-10 px-6 flex flex-col items-center justify-center min-h-[150px] bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs overflow-hidden">
+        <div className="relative py-8 sm:py-10 px-4 sm:px-6 flex flex-col items-center justify-center min-h-[140px] bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs overflow-hidden">
           <div className="flex items-center text-4xl sm:text-5xl md:text-6xl font-black font-mono tracking-tight select-none">
             {/* Subject Pronoun */}
             <span
@@ -177,8 +177,8 @@ export function InteractiveContractionMorpher({
 
           <p className="mt-4 text-xs text-slate-500 dark:text-slate-400 text-center max-w-md">
             {isContracted
-              ? `The vowel '${current.vowelDropped}' is dropped and replaced with an apostrophe (') for faster natural speech.`
-              : `Click the squash button to merge '${current.subject} ${current.verb}' into its contracted form.`}
+              ? `Huruf vokal '${current.vowelDropped}' dihilangkan dan diganti apostrof (') agar ritme bicara lebih natural.`
+              : `Tekan tombol di bawah untuk menggabungkan '${current.subject} ${current.verb}' menjadi bentuk singkatan.`}
           </p>
         </div>
 
@@ -187,7 +187,7 @@ export function InteractiveContractionMorpher({
           <button
             type="button"
             onClick={handleToggleSquash}
-            className={`px-7 py-3 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2.5 cursor-pointer shadow-xs active:scale-95 ${
+            className={`w-full sm:w-auto px-7 py-3 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2.5 cursor-pointer shadow-xs active:scale-95 min-h-[44px] touch-manipulation ${
               isContracted
                 ? "bg-slate-200 hover:bg-slate-300 text-slate-800 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-white"
                 : "bg-indigo-600 hover:bg-indigo-700 text-white dark:bg-indigo-500 dark:hover:bg-indigo-600"
@@ -196,12 +196,12 @@ export function InteractiveContractionMorpher({
             {isContracted ? (
               <>
                 <Maximize2 className="w-4 h-4 text-slate-600 dark:text-slate-300" />
-                <span>Restore to Full Form</span>
+                <span>Kembalikan ke Bentuk Panjang</span>
               </>
             ) : (
               <>
                 <Minimize2 className="w-4 h-4 text-amber-300" />
-                <span>Squash Words</span>
+                <span>Leburkan Kata (Kontraksi)</span>
               </>
             )}
           </button>

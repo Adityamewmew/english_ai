@@ -242,20 +242,22 @@ export function GamifiedMatchPairs({
         id={`${isLeft ? "word" : "meaning"}-card-${item.id}`}
         {...(isLeft ? { "data-word-id": item.id } : { "data-meaning-id": item.id })}
         onClick={() => (isLeft ? handleWordClick(item.id) : handleMeaningClick(item.id))}
-        className={`relative w-full text-left px-3.5 sm:px-4 py-3 sm:py-3.5 rounded-2xl font-bold text-xs sm:text-sm transition-all duration-200 flex items-center justify-between cursor-pointer border select-none min-h-[44px] min-w-0 touch-manipulation ${
+        className={`relative w-full text-left px-3 sm:px-4 py-2.5 sm:py-3.5 rounded-2xl font-bold text-xs sm:text-sm transition-all duration-200 flex items-center justify-between cursor-pointer border select-none min-h-[48px] min-w-0 touch-manipulation ${
           isMatched
-            ? "bg-[#0D3B66]/5 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 cursor-default"
+            ? "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-300 dark:border-emerald-700 text-emerald-800 dark:text-emerald-300 cursor-default"
             : isError
             ? "bg-[#9E1B1B]/10 border-[#9E1B1B] text-[#9E1B1B] border-b-2 ring-2 ring-[#9E1B1B]/30"
             : isSelected
-            ? "btn-skeuo-navy scale-[1.02] shadow-md"
+            ? "btn-skeuo-navy scale-[1.02] shadow-md ring-2 ring-[#0D3B66]/30 dark:ring-[#F4B41A]/50"
             : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-100 border-b-2 border-b-slate-300 dark:border-b-slate-700 hover:border-[#0D3B66]/40 active:translate-y-[1px]"
         }`}
       >
-        <span className={`truncate ${isLeft ? "pr-4" : "pl-3"}`}>{item.text}</span>
-        {isMatched && <Check className="w-4 h-4 shrink-0" style={{ color: ropeColor }} />}
+        <span className={`line-clamp-2 leading-tight ${isLeft ? "sm:pr-4" : "sm:pl-3"}`}>{item.text}</span>
+        {isMatched && (
+          <Check className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
+        )}
 
-        {/* Cable Connector Pin */}
+        {/* Cable Connector Pin (Visible on desktop for dragging, hidden on mobile for clean tap-to-match) */}
         <div
           id={`${side}-pin-${item.id}`}
           data-pin-id={item.id}
@@ -264,7 +266,7 @@ export function GamifiedMatchPairs({
             e.stopPropagation();
             startDrag(item.id, side, e);
           }}
-          className={`absolute ${isLeft ? "-right-3" : "-left-3"} top-1/2 -translate-y-1/2 w-6 h-6 rounded-full border-2 transition-all flex items-center justify-center shadow-xs z-30 cursor-grab active:cursor-grabbing ${
+          className={`absolute ${isLeft ? "-right-3" : "-left-3"} top-1/2 -translate-y-1/2 w-6 h-6 rounded-full border-2 transition-all items-center justify-center shadow-xs z-30 cursor-grab active:cursor-grabbing hidden sm:flex ${
             isMatched
               ? "bg-white dark:bg-slate-900"
               : isSelected
@@ -293,20 +295,24 @@ export function GamifiedMatchPairs({
       }
     >
       {/* 1. Header Toolbar with Generous Whitespace */}
-      <div className="flex items-center justify-between gap-4 flex-wrap pb-1">
-        <div className="flex items-center gap-2.5">
-          <div className="px-3 py-1.5 rounded-full bg-[#0D3B66]/10 dark:bg-[#0D3B66]/30 text-[#0D3B66] dark:text-[#F4B41A] border border-[#0D3B66]/20 font-bold text-xs flex items-center gap-2 font-mono">
+      <div className="flex items-center justify-between gap-3 flex-wrap pb-1">
+        <div className="flex items-center gap-2">
+          <div className="px-3 py-1.5 rounded-full bg-[#0D3B66]/10 dark:bg-[#0D3B66]/30 text-[#0D3B66] dark:text-[#F4B41A] border border-[#0D3B66]/20 font-bold text-xs flex items-center gap-1.5 font-mono">
             <Cable className="w-3.5 h-3.5 text-[#F4B41A]" />
-            <span>Cable Match Wiring</span>
+            <span className="hidden sm:inline">Cable Match Wiring</span>
+            <span className="sm:hidden inline">Tap to Match</span>
           </div>
           <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">
             Drag or click pins to connect English words with their Indonesian meanings
           </span>
+          <span className="text-xs text-slate-500 dark:text-slate-400 sm:hidden inline">
+            Sentuh kata kiri lalu artinya di kanan
+          </span>
         </div>
 
-        <div className="flex items-center gap-2.5">
-          <span className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 border-b-2 border-b-slate-300 dark:border-b-slate-700 shadow-2xs font-mono">
-            {matchedIds.size} / {shuffledWords.length} Connected
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-bold px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 border-b-2 border-b-slate-300 dark:border-b-slate-700 shadow-2xs font-mono">
+            {matchedIds.size} / {shuffledWords.length} Cocok
           </span>
           <button
             type="button"
@@ -336,8 +342,8 @@ export function GamifiedMatchPairs({
         onPointerUp={handleBoardPointerUp}
         className="relative pt-2 pb-4 select-none touch-none"
       >
-        {/* SVG Cable Connection Overlay */}
-        <svg className="absolute inset-0 w-full h-full pointer-events-none z-20 overflow-visible">
+        {/* SVG Cable Connection Overlay (Visible on desktop for drag-and-drop cable wiring) */}
+        <svg className="hidden sm:block absolute inset-0 w-full h-full pointer-events-none z-20 overflow-visible">
           {/* A. Permanently Matched Ropes */}
           {Array.from(matchedIds).map((id) => {
             const p1 = getPinPos(id, "left");
@@ -386,8 +392,8 @@ export function GamifiedMatchPairs({
           )}
         </svg>
 
-        {/* Two-Column Grid with generous center channel */}
-        <div className="grid grid-cols-2 gap-5 sm:gap-14 md:gap-20 relative">
+        {/* Two-Column Grid with responsive gap */}
+        <div className="grid grid-cols-2 gap-2.5 sm:gap-14 md:gap-20 relative">
           <div className="space-y-3">
             <div className="text-[11px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider px-1">
               English Words

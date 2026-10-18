@@ -3,6 +3,7 @@
 import { GamifiedMatchPairs } from "./gamified-match-pairs";
 import { InteractiveContractionMorpher } from "./interactive-contraction-morpher";
 import { InteractiveVocabCard } from "./interactive-vocab-card";
+import { InteractiveVocabDeckMobile } from "./interactive-vocab-deck-mobile";
 import { InteractiveReadingPassage } from "./interactive-reading-passage";
 import { InteractiveGrammarCard } from "./interactive-grammar-card";
 import { ConceptChecksCard } from "./concept-checks-card";
@@ -84,7 +85,14 @@ export function StageReadingView({
               Tap each card to flip for Indonesian meaning and listen to native English pronunciation:
             </p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+          {/* Mobile 1-by-1 Deck View (<sm): Zero vertical scroll, thumb-friendly navigation */}
+          <div className="sm:hidden">
+            <InteractiveVocabDeckMobile items={vocabItems} onPlayAudio={tutor.playTutorAudio} />
+          </div>
+
+          {/* Desktop Multi-Card Grid (>=sm) */}
+          <div className="hidden sm:grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {vocabItems.map((item: any, idx: number) => (
               <InteractiveVocabCard key={idx} item={item} onPlayAudio={tutor.playTutorAudio} />
             ))}
