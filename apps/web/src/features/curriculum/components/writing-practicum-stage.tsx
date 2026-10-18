@@ -110,6 +110,7 @@ export function WritingPracticumStage({
     } else {
       playFanfareSound();
       setIsCompletedAll(true);
+      onFinish?.();
     }
   };
 

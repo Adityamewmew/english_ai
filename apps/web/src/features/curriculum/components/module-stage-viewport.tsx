@@ -6,6 +6,7 @@ import {
   ChevronRight,
   CheckCircle2,
   Loader2,
+  Lock,
 } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 import { StageReadingView } from "./stage-reading-view";
@@ -19,6 +20,8 @@ interface ModuleStageViewportProps {
   totalSteps: number;
   onPrevStep: () => void;
   onNextStep: () => void;
+  onStepComplete?: () => void;
+  canProceed?: boolean;
   onRewardXp: (amount: number) => void;
   onIncrementCombo: () => void;
   onResetCombo: () => void;
@@ -38,6 +41,8 @@ export function ModuleStageViewport({
   totalSteps,
   onPrevStep,
   onNextStep,
+  onStepComplete,
+  canProceed = true,
   onRewardXp,
   onIncrementCombo,
   onResetCombo,
@@ -64,6 +69,7 @@ export function ModuleStageViewport({
             tutor={tutor}
             onRewardXp={onRewardXp}
             onNextStep={onNextStep}
+            onStepComplete={onStepComplete}
             cefr={cefr}
           />
         ) : skillType === "writing" ? (
@@ -75,6 +81,7 @@ export function ModuleStageViewport({
             tutor={tutor}
             onRewardXp={onRewardXp}
             onNextStep={onNextStep}
+            onStepComplete={onStepComplete}
             cefr={cefr}
           />
         ) : skillType === "speaking" ? (
@@ -86,6 +93,7 @@ export function ModuleStageViewport({
             tutor={tutor}
             onRewardXp={onRewardXp}
             onNextStep={onNextStep}
+            onStepComplete={onStepComplete}
             cefr={cefr}
           />
         ) : (
@@ -102,6 +110,7 @@ export function ModuleStageViewport({
             onResetCombo={onResetCombo}
             cefr={cefr}
             onNextStep={onNextStep}
+            onStepComplete={onStepComplete}
           />
         )}
       </div>
@@ -157,14 +166,17 @@ export function ModuleStageViewport({
 
           <button
             type="button"
-            disabled={isFinishing}
+            disabled={!canProceed || isFinishing}
             onClick={(e) => {
+              if (!canProceed || isFinishing) return;
               animeButtonPop(e.currentTarget);
               onNextStep();
             }}
             className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-6 py-2.5 rounded-xl font-bold text-xs shadow-sm transition-all active:scale-95 cursor-pointer min-h-[44px] touch-manipulation ${
               isFinishing
                 ? "bg-slate-400 text-white cursor-wait"
+                : !canProceed
+                ? "opacity-50 cursor-not-allowed bg-slate-200 dark:bg-slate-800 text-slate-400 border border-slate-300 dark:border-slate-700"
                 : activeStepId === totalSteps
                 ? "btn-skeuo-yellow text-[#0F172A]"
                 : "btn-skeuo-navy text-white"
@@ -174,6 +186,11 @@ export function ModuleStageViewport({
               <>
                 <Loader2 className="w-4 h-4 animate-spin" />
                 <span>Menyimpan...</span>
+              </>
+            ) : !canProceed ? (
+              <>
+                <Lock className="w-3.5 h-3.5 text-slate-400" />
+                <span>Selesaikan Aktivitas</span>
               </>
             ) : activeStepId === totalSteps ? (
               <>

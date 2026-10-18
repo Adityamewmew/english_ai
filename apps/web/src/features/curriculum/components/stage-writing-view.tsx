@@ -15,6 +15,7 @@ interface StageWritingViewProps {
   tutor: any;
   onRewardXp: (amount: number) => void;
   onNextStep?: () => void;
+  onStepComplete?: () => void;
   cefr?: string;
 }
 
@@ -26,6 +27,7 @@ export function StageWritingView({
   tutor,
   onRewardXp,
   onNextStep,
+  onStepComplete,
 }: StageWritingViewProps) {
   return (
     <div className="space-y-6">
@@ -34,37 +36,55 @@ export function StageWritingView({
         <WritingOverviewStage
           theorySec={theorySec}
           tutor={tutor}
-          onGoToNext={() => onNextStep?.()}
+          onGoToNext={() => {
+            onStepComplete?.();
+            onNextStep?.();
+          }}
         />
       )}
 
       {/* STEP 2: Spot & Fix Mechanics (Real typing sentence rewrite) */}
       {activeStepId === 2 && (
-        <WritingMechanicsStage
-          practiceSec={practiceSec}
-          onRewardXp={onRewardXp}
-          tutor={tutor}
-          onGoToNext={() => onNextStep?.()}
-        />
+        <div onClick={() => onStepComplete?.()}>
+          <WritingMechanicsStage
+            practiceSec={practiceSec}
+            onRewardXp={onRewardXp}
+            tutor={tutor}
+            onGoToNext={() => {
+              onStepComplete?.();
+              onNextStep?.();
+            }}
+          />
+        </div>
       )}
 
       {/* STEP 3: Word Chip Sentence Builder (Sentence building from database/json) */}
       {activeStepId === 3 && (
-        <WritingSentenceBuilder
-          practiceSec={practiceSec}
-          onRewardXp={onRewardXp}
-          tutor={tutor}
-          onGoToNext={() => onNextStep?.()}
-        />
+        <div onClick={() => onStepComplete?.()}>
+          <WritingSentenceBuilder
+            practiceSec={practiceSec}
+            onRewardXp={onRewardXp}
+            tutor={tutor}
+            onGoToNext={() => {
+              onStepComplete?.();
+              onNextStep?.();
+            }}
+          />
+        </div>
       )}
 
       {/* STEP 4: Guided Profile Writing Lab (Progressive writing lab from database/json) */}
       {activeStepId === 4 && (
-        <WritingGuidedLab
-          practiceSec={practiceSec}
-          onRewardXp={onRewardXp}
-          onGoToNext={() => onNextStep?.()}
-        />
+        <div onClick={() => onStepComplete?.()}>
+          <WritingGuidedLab
+            practiceSec={practiceSec}
+            onRewardXp={onRewardXp}
+            onGoToNext={() => {
+              onStepComplete?.();
+              onNextStep?.();
+            }}
+          />
+        </div>
       )}
 
       {/* STEP 5: Writing Mastery Practicum (10 authentic typing questions from database/json) */}
@@ -73,7 +93,10 @@ export function StageWritingView({
           quizSec={quizSec}
           onRewardXp={onRewardXp}
           tutor={tutor}
-          onFinish={() => onNextStep?.()}
+          onFinish={() => {
+            onStepComplete?.();
+            onNextStep?.();
+          }}
         />
       )}
     </div>

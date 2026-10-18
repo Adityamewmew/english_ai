@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { CheckCircle2, Circle } from "lucide-react";
+import { CheckCircle2, Circle, Lock } from "lucide-react";
 
 export interface PlaylistStepItem {
   id: number;
@@ -18,6 +18,7 @@ interface ModuleStagePlaylistProps {
   xpPoints: number;
   completedCount: number;
   totalCount: number;
+  maxAccessibleStepId?: number;
   children?: React.ReactNode;
 }
 
@@ -27,6 +28,7 @@ export function ModuleStagePlaylist({
   onSelectStep,
   completedCount,
   totalCount,
+  maxAccessibleStepId,
   children,
 }: ModuleStagePlaylistProps) {
   const progressPercent = Math.min(100, Math.round((completedCount / Math.max(1, totalCount)) * 100));
@@ -81,18 +83,22 @@ export function ModuleStagePlaylist({
         {steps.map((s, idx) => {
           const isActive = s.id === activeStepId;
           const isDone = s.isCompleted;
+          const isLocked = maxAccessibleStepId ? s.id > maxAccessibleStepId && !isDone : false;
 
           return (
             <button
               key={s.id}
               type="button"
+              disabled={isLocked}
               onClick={() => onSelectStep(s.id)}
-              className={`w-full text-left p-2.5 sm:p-3 rounded-xl transition-all duration-150 flex items-center justify-between gap-2.5 cursor-pointer border min-h-[44px] touch-manipulation ${
-                isActive
-                  ? "bg-[#0D3B66] text-white border-[#0D3B66] shadow-sm"
+              className={`w-full text-left p-2.5 sm:p-3 rounded-xl transition-all duration-150 flex items-center justify-between gap-2.5 border min-h-[44px] touch-manipulation ${
+                isLocked
+                  ? "opacity-50 cursor-not-allowed bg-slate-50/50 dark:bg-slate-900/40 border-slate-200/40 dark:border-slate-800/40 text-slate-400"
+                  : isActive
+                  ? "bg-[#0D3B66] text-white border-[#0D3B66] shadow-sm cursor-pointer"
                   : isDone
-                  ? "bg-slate-50/80 dark:bg-slate-800/50 border-slate-200/80 dark:border-slate-800 text-slate-800 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-700"
-                  : "bg-white dark:bg-slate-900 border-slate-200/60 dark:border-slate-800/80 hover:border-slate-300 text-slate-700 dark:text-slate-300"
+                  ? "bg-slate-50/80 dark:bg-slate-800/50 border-slate-200/80 dark:border-slate-800 text-slate-800 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-700 cursor-pointer"
+                  : "bg-white dark:bg-slate-900 border-slate-200/60 dark:border-slate-800/80 hover:border-slate-300 text-slate-700 dark:text-slate-300 cursor-pointer"
               }`}
             >
               <div className="flex items-center gap-2.5 min-w-0">
@@ -142,6 +148,8 @@ export function ModuleStagePlaylist({
                   <span className="px-2 py-0.5 rounded-full text-[9px] font-bold font-mono bg-white/25 text-white">
                     Aktif
                   </span>
+                ) : isLocked ? (
+                  <Lock className="w-3.5 h-3.5 text-slate-300 dark:text-slate-600" />
                 ) : (
                   <Circle className="w-3.5 h-3.5 text-slate-300 dark:text-slate-600" />
                 )}

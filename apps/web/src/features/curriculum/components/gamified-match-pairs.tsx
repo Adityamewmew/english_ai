@@ -31,6 +31,7 @@ interface GamifiedMatchPairsProps {
   onIncrementCombo: () => void;
   onResetCombo: () => void;
   embedded?: boolean;
+  onCompleted?: () => void;
 }
 
 export function GamifiedMatchPairs({
@@ -39,6 +40,7 @@ export function GamifiedMatchPairs({
   onIncrementCombo,
   onResetCombo,
   embedded = false,
+  onCompleted,
 }: GamifiedMatchPairsProps) {
   const [shuffledWords, setShuffledWords] = useState<Array<{ id: string; text: string }>>([]);
   const [shuffledMeanings, setShuffledMeanings] = useState<Array<{ id: string; text: string }>>([]);
@@ -134,6 +136,7 @@ export function GamifiedMatchPairs({
         setIsCompleted(true);
         playFanfareSound();
         onRewardXp(30);
+        onCompleted?.();
       }
     } else {
       playErrorSound();

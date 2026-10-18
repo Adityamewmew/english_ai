@@ -22,6 +22,7 @@ interface StageReadingViewProps {
   onResetCombo: () => void;
   cefr?: string;
   onNextStep?: () => void;
+  onStepComplete?: () => void;
 }
 
 export function StageReadingView({
@@ -37,6 +38,7 @@ export function StageReadingView({
   onResetCombo,
   cefr = "A1.1",
   onNextStep,
+  onStepComplete,
 }: StageReadingViewProps) {
   const vocabItems = vocabSec?.content?.items || theorySec?.content?.items || [];
   const readingPassage = dialogueSec?.content || theorySec?.content?.readingPassage || theorySec?.content;
@@ -87,14 +89,14 @@ export function StageReadingView({
           </div>
 
           {/* Mobile 1-by-1 Deck View (<sm): Zero vertical scroll, thumb-friendly navigation */}
-          <div className="sm:hidden">
-            <InteractiveVocabDeckMobile items={vocabItems} onPlayAudio={tutor.playTutorAudio} />
+          <div className="sm:hidden" onClick={() => onStepComplete?.()}>
+            <InteractiveVocabDeckMobile items={vocabItems} onPlayAudio={(t) => { tutor.playTutorAudio(t); onStepComplete?.(); }} />
           </div>
 
           {/* Desktop Multi-Card Grid (>=sm) */}
-          <div className="hidden sm:grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="hidden sm:grid gap-4 sm:grid-cols-2 lg:grid-cols-3" onClick={() => onStepComplete?.()}>
             {vocabItems.map((item: any, idx: number) => (
-              <InteractiveVocabCard key={idx} item={item} onPlayAudio={tutor.playTutorAudio} />
+              <InteractiveVocabCard key={idx} item={item} onPlayAudio={(t) => { tutor.playTutorAudio(t); onStepComplete?.(); }} />
             ))}
           </div>
         </div>
@@ -102,7 +104,7 @@ export function StageReadingView({
 
       {/* Step 3: Guided Karaoke Reading */}
       {activeStepId === 3 && (
-        <div className="space-y-4 animate-in fade-in duration-300">
+        <div className="space-y-4 animate-in fade-in duration-300" onClick={() => onStepComplete?.()}>
           <div className="space-y-1">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
               Step 3 · Guided Reading Passage
@@ -118,7 +120,7 @@ export function StageReadingView({
             <InteractiveReadingPassage
               passage={readingPassage}
               linguisticTarget={theorySec?.content?.linguisticTarget}
-              onPlayAudio={tutor.playTutorAudio}
+              onPlayAudio={(t) => { tutor.playTutorAudio(t); onStepComplete?.(); }}
               embedded={true}
             />
           )}
@@ -144,6 +146,7 @@ export function StageReadingView({
             onRewardXp={onRewardXp}
             onIncrementCombo={onIncrementCombo}
             onResetCombo={onResetCombo}
+            onCompleted={onStepComplete}
             embedded={true}
           />
         </div>
@@ -151,7 +154,7 @@ export function StageReadingView({
 
       {/* Step 5: Contraction Morpher Machine */}
       {activeStepId === 5 && (
-        <div className="space-y-6 animate-in fade-in duration-300">
+        <div className="space-y-6 animate-in fade-in duration-300" onClick={() => onStepComplete?.()}>
           <div className="space-y-1.5 pb-3 border-b border-slate-100 dark:border-slate-800">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
               Step 5 · {theorySec?.content?.contractionsLabel || "Contraction Morpher"}
@@ -169,7 +172,7 @@ export function StageReadingView({
 
       {/* Step 6: Interactive Grammar Sentence Builder */}
       {activeStepId === 6 && (
-        <div className="space-y-6 animate-in fade-in duration-300">
+        <div className="space-y-6 animate-in fade-in duration-300" onClick={() => onStepComplete?.()}>
           <div className="space-y-1.5 pb-3 border-b border-slate-100 dark:border-slate-800">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
               Step 6 · {grammarFormulas?.label || "Sentence Patterns"}
@@ -181,7 +184,12 @@ export function StageReadingView({
               {grammarFormulas?.description || "Assemble sentence blocks to explore affirmative, negative, and question patterns:"}
             </p>
           </div>
-          <InteractiveGrammarCard rules={rules} formulas={grammarFormulas} onPlayAudio={tutor.playTutorAudio} embedded={true} />
+          <InteractiveGrammarCard
+            rules={rules}
+            formulas={grammarFormulas}
+            onPlayAudio={(t) => { tutor.playTutorAudio(t); onStepComplete?.(); }}
+            embedded={true}
+          />
         </div>
       )}
 
@@ -199,7 +207,12 @@ export function StageReadingView({
               Answer the following comprehension questions to complete your reading mission:
             </p>
           </div>
-          <ConceptChecksCard conceptChecks={postTestQuestions} accentColor="blue" embedded={true} />
+          <ConceptChecksCard
+            conceptChecks={postTestQuestions}
+            accentColor="blue"
+            embedded={true}
+            onCompleted={onStepComplete}
+          />
         </div>
       )}
     </div>

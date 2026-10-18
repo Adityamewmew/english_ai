@@ -15,12 +15,14 @@ interface ConceptChecksCardProps {
   conceptChecks: ConceptCheckQuestion[];
   accentColor?: "blue" | "purple" | "amber" | "rose" | "emerald";
   embedded?: boolean;
+  onCompleted?: () => void;
 }
 
 export function ConceptChecksCard({
   conceptChecks,
   accentColor = "blue",
   embedded = false,
+  onCompleted,
 }: ConceptChecksCardProps) {
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
   const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>({});
@@ -56,8 +58,13 @@ export function ConceptChecksCard({
   }[accentColor];
 
   const handleSelect = (qIdx: number, option: string, targetEl?: HTMLElement) => {
-    setSelectedAnswers((prev) => ({ ...prev, [qIdx]: option }));
+    const updated = { ...selectedAnswers, [qIdx]: option };
+    setSelectedAnswers(updated);
     setShowFeedback((prev) => ({ ...prev, [qIdx]: true }));
+
+    if (Object.keys(updated).length >= conceptChecks.length) {
+      onCompleted?.();
+    }
 
     const isCorrect = option.trim().toLowerCase() === conceptChecks[qIdx]?.answer?.trim().toLowerCase();
     if (targetEl) {

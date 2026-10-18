@@ -147,6 +147,7 @@ export function ListeningPracticumStage({
       setIsCompletedAll(true);
       playMatchSuccessSound();
       onRewardXp(50);
+      onFinish?.();
     }
   };
 

@@ -16,6 +16,7 @@ import {
   ChevronRight,
   ArrowLeft,
   CheckCircle2,
+  Lock,
 } from "lucide-react";
 import { submitSubModuleAction } from "@/app/(student)/modules/modules.actions";
 import { playFanfareSound } from "@/lib/sound-fx";
@@ -70,6 +71,7 @@ export function ModuleStudyView({
   });
   const [activeStepId, setActiveStepId] = useState(1);
   const [completedSteps, setCompletedSteps] = useState<number[]>([1]);
+  const [isCurrentStepComplete, setIsCurrentStepComplete] = useState(false);
   const [isOnboardingBriefing, setIsOnboardingBriefing] = useState(false);
   const [xpPoints, setXpPoints] = useState(35);
   const [combo, setCombo] = useState(1);
@@ -133,15 +135,37 @@ export function ModuleStudyView({
     ];
   }, [skillType, completedSteps]);
 
+  const canProceed = isCurrentStepComplete || completedSteps.includes(activeStepId) || activeStepId === 1;
+
+  const handleStepComplete = () => {
+    setIsCurrentStepComplete(true);
+    setCompletedSteps((prev) => Array.from(new Set([...prev, activeStepId])));
+  };
+
+  const maxCompletedStep = completedSteps.length > 0 ? Math.max(...completedSteps) : 1;
+
+  const handleSelectStep = (stepId: number) => {
+    if (stepId > maxCompletedStep + 1 && !completedSteps.includes(stepId)) {
+      return;
+    }
+    setActiveStepId(stepId);
+    setIsCurrentStepComplete(completedSteps.includes(stepId) || stepId === 1);
+    window.scrollTo({ top: 120, behavior: "smooth" });
+  };
+
   const handleNextStep = async () => {
+    if (!canProceed) return;
+
     setCompletedSteps((prev) => Array.from(new Set([...prev, activeStepId])));
     setXpPoints((prev) => prev + 15);
 
     if (activeStepId < playlistSteps.length) {
-      setActiveStepId((prev) => prev + 1);
+      const nextId = activeStepId + 1;
+      setActiveStepId(nextId);
+      setIsCurrentStepComplete(completedSteps.includes(nextId));
       window.scrollTo({ top: 120, behavior: "smooth" });
     } else {
-      // Step 8 completed -> Finish mission, mark completed, & return to Floating Cards Hub!
+      // Step completed -> Finish mission, mark completed, & return to Floating Cards Hub!
       try {
         setIsFinishing(true);
         if (currentSub?.id) {
@@ -161,7 +185,9 @@ export function ModuleStudyView({
 
   const handlePrevStep = () => {
     if (activeStepId > 1) {
-      setActiveStepId((prev) => prev - 1);
+      const prevId = activeStepId - 1;
+      setActiveStepId(prevId);
+      setIsCurrentStepComplete(completedSteps.includes(prevId) || prevId === 1);
       window.scrollTo({ top: 120, behavior: "smooth" });
     }
   };
@@ -183,6 +209,7 @@ export function ModuleStudyView({
                 setIsOnboardingBriefing(true);
                 setActiveStepId(1);
                 setCompletedSteps([1]);
+                setIsCurrentStepComplete(false);
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             />
@@ -296,22 +323,29 @@ export function ModuleStudyView({
                       {playlistSteps.map((s) => {
                         const isActive = s.id === activeStepId;
                         const isDone = completedSteps.includes(s.id);
+                        const isAccessible = s.id <= maxCompletedStep + 1 || isDone;
+
                         return (
                           <button
                             key={s.id}
                             type="button"
-                            onClick={() => setActiveStepId(s.id)}
+                            disabled={!isAccessible}
+                            onClick={() => handleSelectStep(s.id)}
                             className={`py-2 px-1 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1 min-h-[42px] touch-manipulation active:scale-95 ${
                               isActive
                                 ? "bg-[#0D3B66] text-white shadow-xs font-black ring-2 ring-[#0D3B66]/30 dark:ring-[#F4B41A]/50"
                                 : isDone
-                                ? "bg-emerald-50 text-emerald-800 border border-emerald-200"
-                                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                                ? "bg-emerald-50 text-emerald-800 border border-emerald-200 cursor-pointer"
+                                : isAccessible
+                                ? "bg-slate-100 text-slate-600 hover:bg-slate-200 cursor-pointer"
+                                : "bg-slate-50 text-slate-300 border border-slate-100 cursor-not-allowed opacity-40"
                             }`}
                           >
-                            {isDone && !isActive && (
+                            {isDone && !isActive ? (
                               <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
-                            )}
+                            ) : !isAccessible ? (
+                              <Lock className="w-2.5 h-2.5 text-slate-300 shrink-0" />
+                            ) : null}
                             <span className="font-mono text-xs">{s.id}</span>
                           </button>
                         );
@@ -326,6 +360,8 @@ export function ModuleStudyView({
                     totalSteps={playlistSteps.length}
                     onPrevStep={handlePrevStep}
                     onNextStep={handleNextStep}
+                    canProceed={canProceed}
+                    onStepComplete={handleStepComplete}
                     onRewardXp={(amt) => setXpPoints((p) => p + amt)}
                     onIncrementCombo={() => setCombo((c) => c + 1)}
                     onResetCombo={() => setCombo(1)}
@@ -345,7 +381,8 @@ export function ModuleStudyView({
                   <ModuleStagePlaylist
                     steps={playlistSteps}
                     activeStepId={activeStepId}
-                    onSelectStep={(id) => setActiveStepId(id)}
+                    onSelectStep={handleSelectStep}
+                    maxAccessibleStepId={maxCompletedStep + 1}
                     xpPoints={xpPoints}
                     completedCount={completedSteps.length}
                     totalCount={playlistSteps.length}

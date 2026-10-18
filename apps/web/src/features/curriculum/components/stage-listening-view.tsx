@@ -16,6 +16,7 @@ interface StageListeningViewProps {
   tutor: any;
   onRewardXp: (amount: number) => void;
   onNextStep?: () => void;
+  onStepComplete?: () => void;
   cefr?: string;
 }
 
@@ -28,6 +29,7 @@ export function StageListeningView({
   tutor,
   onRewardXp,
   onNextStep,
+  onStepComplete,
 }: StageListeningViewProps) {
   const dialogueLines = dialogueSec?.content?.lines || [];
 
@@ -85,7 +87,9 @@ export function StageListeningView({
 
       {/* LANGKAH 2: Percakapan Multi-Speaker (Speaker 1 Kiri, Speaker 2 Kanan) */}
       {activeStepId === 2 && (
-        <ListeningDialogueChat dialogueLines={dialogueLines} tutor={tutor} />
+        <div onClick={() => onStepComplete?.()}>
+          <ListeningDialogueChat dialogueLines={dialogueLines} tutor={tutor} />
+        </div>
       )}
 
       {/* LANGKAH 3: Spoken Contractions Ear Trainer */}
@@ -120,6 +124,7 @@ export function StageListeningView({
                       type="button"
                       onClick={() => {
                         playPopSound();
+                        onStepComplete?.();
                         setContractionMode((prev) => ({
                           ...prev,
                           [item.id]: !isContracted,
@@ -255,6 +260,7 @@ export function StageListeningView({
                       onClick={() => {
                         setDictationChecked((prev) => ({ ...prev, [drill.id]: true }));
                         if (isCorrect) onRewardXp(15);
+                        onStepComplete?.();
                       }}
                       className="px-6 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white text-xs font-bold cursor-pointer min-h-[44px] touch-manipulation flex items-center justify-center w-full sm:w-auto"
                     >
@@ -296,7 +302,10 @@ export function StageListeningView({
           practiceSec={practiceSec}
           tutor={tutor}
           onRewardXp={onRewardXp}
-          onFinish={() => onNextStep?.()}
+          onFinish={() => {
+            onStepComplete?.();
+            onNextStep?.();
+          }}
         />
       )}
     </div>

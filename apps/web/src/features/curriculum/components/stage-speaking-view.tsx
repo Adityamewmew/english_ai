@@ -15,6 +15,7 @@ interface StageSpeakingViewProps {
   tutor: any;
   onRewardXp: (amount: number) => void;
   onNextStep?: () => void;
+  onStepComplete?: () => void;
   cefr?: string;
 }
 
@@ -26,6 +27,7 @@ export function StageSpeakingView({
   tutor,
   onRewardXp,
   onNextStep,
+  onStepComplete,
   cefr = "A1.1",
 }: StageSpeakingViewProps) {
   return (
@@ -36,26 +38,33 @@ export function StageSpeakingView({
           theorySec={theorySec}
           tutor={tutor}
           onRewardXp={onRewardXp}
-          onNextStep={onNextStep}
+          onNextStep={() => {
+            onStepComplete?.();
+            onNextStep?.();
+          }}
         />
       )}
 
       {/* STEP 2: Syllable Stress Shift Drills (Backend TTS & 6 Pairs) */}
       {activeStepId === 2 && (
-        <SpeakingSyllableStage
-          practiceSec={practiceSec}
-          tutor={tutor}
-          onRewardXp={onRewardXp}
-        />
+        <div onClick={() => onStepComplete?.()}>
+          <SpeakingSyllableStage
+            practiceSec={practiceSec}
+            tutor={tutor}
+            onRewardXp={onRewardXp}
+          />
+        </div>
       )}
 
       {/* STEP 3: Oral Reflex Drills (Listen, Repeat & Compare Audio) */}
       {activeStepId === 3 && (
-        <SpeakingReflexDrills
-          practiceSec={practiceSec}
-          tutor={tutor}
-          onRewardXp={onRewardXp}
-        />
+        <div onClick={() => onStepComplete?.()}>
+          <SpeakingReflexDrills
+            practiceSec={practiceSec}
+            tutor={tutor}
+            onRewardXp={onRewardXp}
+          />
+        </div>
       )}
 
       {/* STEP 4: Live AI Roleplay Call with Mr. Khoirul */}
@@ -64,7 +73,10 @@ export function StageSpeakingView({
           practiceSec={practiceSec}
           tutor={tutor}
           onRewardXp={onRewardXp}
-          onNextStep={onNextStep}
+          onNextStep={() => {
+            onStepComplete?.();
+            onNextStep?.();
+          }}
         />
       )}
 
@@ -74,7 +86,10 @@ export function StageSpeakingView({
           quizSec={quizSec}
           tutor={tutor}
           onRewardXp={onRewardXp}
-          onNextStep={onNextStep}
+          onNextStep={() => {
+            onStepComplete?.();
+            onNextStep?.();
+          }}
         />
       )}
     </div>
