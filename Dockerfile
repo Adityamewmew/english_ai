@@ -1,4 +1,4 @@
-FROM oven/bun:1.2-alpine AS builder
+FROM oven/bun:1-alpine AS builder
 
 # Install Node.js for Next.js build (avoids Bun CJS page data collection bug)
 RUN apk add --no-cache libc6-compat nodejs npm
@@ -20,8 +20,8 @@ COPY apps/api ./apps/api
 COPY apps/web ./apps/web
 COPY data ./data
 
-# Install all workspace dependencies
-RUN bun install
+# Install all workspace dependencies (with --no-verify to prevent tarball checksum streaming errors in containers)
+RUN bun install --no-verify
 
 # Build Next.js with standalone output using Node.js
 WORKDIR /app/apps/web
@@ -32,7 +32,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN npx next build
 
 # Runner stage
-FROM oven/bun:1.2-alpine AS runner
+FROM oven/bun:1-alpine AS runner
 RUN apk add --no-cache nodejs
 WORKDIR /app
 
