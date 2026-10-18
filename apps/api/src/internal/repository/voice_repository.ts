@@ -88,7 +88,7 @@ export const voiceRepository = {
         .where(and(isNull(curriculumModules.deletedAt), or(...orConditions)))
         .limit(1);
 
-      if (matched) return matched;
+      return matched || null;
     }
 
     const [byLevel] = await db

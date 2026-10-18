@@ -68,6 +68,16 @@ export const chatRepository = {
       .limit(limit);
   },
 
+  getRecentMessages: async (sessionId: string, limit = 10) => {
+    const rows = await db
+      .select()
+      .from(chatMessages)
+      .where(eq(chatMessages.sessionId, sessionId))
+      .orderBy(desc(chatMessages.createdAt))
+      .limit(limit);
+    return rows.reverse();
+  },
+
   addMessage: async (
     sessionId: string,
     role: "user" | "assistant",
