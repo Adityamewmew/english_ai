@@ -35,57 +35,76 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
 
   return (
     <>
-      {/* 1. Mobile Compact List Card (<sm) */}
+      {/* 1. Mobile Card (<sm) */}
       <div
-        className={`sm:hidden bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl p-3 shadow-2xs flex items-center justify-between gap-3 active:scale-98 transition-all min-h-[64px] ${
-          isLocked ? "opacity-60" : ""
+        className={`sm:hidden bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl p-4 shadow-2xs space-y-3 transition-all ${
+          isLocked ? "opacity-65" : "hover:shadow-xs"
         }`}
       >
-        <div className="flex items-center gap-2.5 min-w-0">
-          <div
-            style={{ backgroundColor: style.bg }}
-            className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border border-black/5"
-          >
-            {isCompleted ? (
-              <CheckCircle2 className="w-5 h-5 text-emerald-600" />
-            ) : isLocked ? (
-              <Lock className="w-4 h-4 text-slate-400" />
-            ) : (
-              <BookOpen className="w-5 h-5 text-[#0D3B66]" />
-            )}
+        {/* Card Header: Level Pill & Status */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-[#0D3B66] text-white">
+              CEFR {module.cefr}
+            </span>
+            <span className="text-[10px] font-mono font-bold text-slate-400">
+              {module.id}
+            </span>
           </div>
-          <div className="min-w-0">
-            <div className="flex items-center gap-1.5">
-              <span className="text-[10px] font-mono font-bold text-[#0D3B66] dark:text-[#F4B41A]">
-                {module.id}
+
+          <div>
+            {isCompleted ? (
+              <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200">
+                <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                <span>Selesai</span>
               </span>
-              <span className="text-[10px] font-medium text-slate-400">
-                · 10 Latihan
+            ) : isLocked ? (
+              <span className="inline-flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-md bg-slate-100 text-slate-500">
+                <Lock className="w-3 h-3" />
+                <span>Terkunci</span>
               </span>
-            </div>
-            <h4 className="font-extrabold text-xs text-slate-900 dark:text-white truncate">
-              {module.title}
-            </h4>
+            ) : (
+              <span className="text-[10px] font-bold text-[#0D3B66] dark:text-[#F4B41A]">
+                10 Latihan
+              </span>
+            )}
           </div>
         </div>
 
-        <div className="shrink-0">
+        {/* Card Content: Title & Objective */}
+        <div className="space-y-1">
+          <h4 className="font-extrabold text-sm text-slate-900 dark:text-white leading-snug line-clamp-2">
+            {module.title}
+          </h4>
+          {module.description && (
+            <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed font-medium">
+              {module.description}
+            </p>
+          )}
+        </div>
+
+        {/* Card Action Button */}
+        <div>
           {isLocked ? (
-            <span className="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 font-bold text-[11px] flex items-center gap-1 border border-slate-200">
-              <Lock className="w-3 h-3" />
-              <span>Terkunci</span>
-            </span>
+            <button
+              type="button"
+              disabled
+              className="w-full py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-400 font-bold text-xs flex items-center justify-center gap-1.5 cursor-not-allowed border border-slate-200"
+            >
+              <Lock className="w-3.5 h-3.5" />
+              <span>Materi Terkunci</span>
+            </button>
           ) : (
             <Link
               href={`/modules/${module.id}`}
               onClick={(e) => animeButtonPop(e.currentTarget)}
-              className={`px-3.5 py-1.5 rounded-xl font-bold text-xs flex items-center gap-1 min-h-[38px] active:scale-95 transition-all shadow-xs ${
+              className={`w-full py-2.5 px-4 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 min-h-[44px] active:scale-95 transition-all shadow-xs ${
                 isCompleted
                   ? "btn-skeuo-yellow text-[#0F172A]"
                   : "btn-skeuo-navy"
               }`}
             >
-              <span>{isCompleted ? "Ulas" : "Mulai"}</span>
+              <span>{isCompleted ? "Ulas Materi" : "Mulai Belajar"}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           )}
