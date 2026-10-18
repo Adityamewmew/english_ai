@@ -219,7 +219,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
           )}
 
           <div className="flex flex-col sm:flex-row gap-3 pt-2">
-            <Link href="/curriculum" className="flex-1">
+            <Link href="/modules" className="flex-1">
               <button
                 type="button"
                 className="w-full py-3.5 px-6 rounded-2xl bg-primary hover:bg-[#0c2b48] text-white font-bold text-sm border-b-4 border-b-[#07192b] active:border-b-0 active:translate-y-1 shadow-sm transition-all flex items-center justify-center gap-1.5"

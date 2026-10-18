@@ -37,9 +37,37 @@ export function ModulesAnalyticsBento({
   const strokeDashoffset = 88 - (88 * percentCompleted) / 100;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4">
-      {/* 1. Sub-level Progress & Overview (lg:col-span-4) */}
-      <div className="lg:col-span-4 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 border-b-2 rounded-2xl p-4 sm:p-4.5 shadow-2xs flex flex-col justify-between gap-3">
+    <>
+      {/* 1. Mobile-Dedicated Compact Strip (<sm) */}
+      <div className="sm:hidden bg-[#0D3B66] text-white p-3.5 rounded-2xl flex items-center justify-between gap-3 shadow-2xs border border-[#082542] relative overflow-hidden">
+        <div className="absolute -top-6 -right-6 w-20 h-20 rounded-full bg-[#F4B41A]/15 blur-lg pointer-events-none" />
+        <div className="min-w-0 relative z-10 space-y-1">
+          <div className="flex items-center gap-1.5">
+            <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-white/20 text-[#F4B41A] font-mono">
+              {subLevelId}
+            </span>
+            <span className="text-xs font-bold text-white truncate">
+              {completedInSubLevel}/{totalInSubLevel} Selesai ({percentCompleted}%)
+            </span>
+          </div>
+          <p className="text-[11px] text-slate-200 truncate font-medium">
+            {activeModule.title}
+          </p>
+        </div>
+        <Link
+          href={`/modules/${activeModule.id}`}
+          onClick={(e) => animeButtonPop(e.currentTarget)}
+          className="px-3.5 py-2 rounded-xl btn-skeuo-yellow text-xs font-bold shrink-0 min-h-[40px] flex items-center gap-1 shadow-2xs active:scale-95 transition-all relative z-10"
+        >
+          <span>Lanjut</span>
+          <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+
+      {/* 2. Desktop & Tablet 3-Card Bento Grid (sm+) */}
+      <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4">
+        {/* 1. Sub-level Progress & Overview (lg:col-span-4) */}
+        <div className="lg:col-span-4 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 border-b-2 rounded-2xl p-4 sm:p-4.5 shadow-2xs flex flex-col justify-between gap-3">
         <div className="flex items-center justify-between">
           <h4 className="font-black text-xs sm:text-sm text-[#0D3B66] dark:text-white flex items-center gap-1.5 uppercase tracking-tight">
             <PieChart className="w-3.5 h-3.5 text-[#0D3B66] dark:text-[#F4B41A]" />
@@ -180,5 +208,6 @@ export function ModulesAnalyticsBento({
         </div>
       </div>
     </div>
-  );
+  </>
+);
 }

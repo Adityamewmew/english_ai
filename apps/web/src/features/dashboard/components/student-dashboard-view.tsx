@@ -7,6 +7,7 @@ import { StudentProgressCards } from "./student-progress-cards";
 import { StudentRecentActivitySection } from "./student-recent-activity";
 import { StudentCalendarStrip } from "./student-calendar-strip";
 import { StudentLevelMasteryCard } from "./student-level-mastery";
+import { StudentDashboardMobile } from "./student-dashboard-mobile";
 import { useCurriculumLevels } from "@/features/curriculum/hooks/use-curriculum";
 import { useUserProfile } from "@/features/users/hooks/use-user";
 import { useLatestPlacement } from "@/features/placement/hooks/use-placement";
@@ -91,9 +92,29 @@ export function StudentDashboardView({ session }: StudentDashboardViewProps) {
 
   return (
     <StudentShell studentName={studentName} currentCefr={currentCefr}>
-      <div className="p-4 sm:p-6 lg:p-8 w-full max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+      {/* Dedicated Mobile-Only Viewport (<lg) */}
+      <div className="block lg:hidden">
+        <StudentDashboardMobile
+          studentName={studentName}
+          currentCefr={currentCefr}
+          activeModule={activeModule}
+          levelModules={levelModules}
+          totalCompletedModules={totalCompletedModules}
+          totalModules={totalModules}
+          placementScore={latestTest?.scorePercent}
+          placementCefr={latestTest?.overallCefr}
+          voiceCallsCount={voiceCallsCount}
+          voiceTotalMinutes={voiceTotalMinutes}
+          voiceSessions={voiceSessions}
+          chatSessions={chatSessions}
+          completedModules={completedModules}
+        />
+      </div>
+
+      {/* Dedicated Desktop-Only Viewport (lg+) */}
+      <div className="hidden lg:flex p-6 lg:p-8 w-full max-w-[1600px] mx-auto flex-row gap-8 items-start">
         {/* Left Column: Welcome Hero Banner + Your Progress + Recent Activity */}
-        <div className="w-full lg:flex-1 space-y-6 lg:space-y-8 min-w-0">
+        <div className="flex-1 space-y-8 min-w-0">
           <StudentHeroBanner
             studentName={studentName}
             currentCefr={currentCefr}
@@ -118,7 +139,7 @@ export function StudentDashboardView({ session }: StudentDashboardViewProps) {
         </div>
 
         {/* Right Column: Calendar Strip + CEFR Level Mastery */}
-        <div className="w-full lg:w-[360px] xl:w-[390px] space-y-6 lg:space-y-8 shrink-0">
+        <div className="w-[360px] xl:w-[390px] space-y-8 shrink-0">
           <StudentCalendarStrip />
           <StudentLevelMasteryCard
             currentCefr={currentCefr}
