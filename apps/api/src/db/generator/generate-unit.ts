@@ -7,7 +7,7 @@ import {
   buildListeningPrompt,
   buildWritingPrompt,
   buildSpeakingPrompt,
-} from "./submodule-prompts";
+} from "./prompts";
 import { generateListeningQuestionsForModule } from "./generate-listening-questions";
 import { ENGLISH_OBJECTIVES } from "./objectives";
 
