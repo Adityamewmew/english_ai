@@ -280,7 +280,42 @@ export function ModuleStudyView({
               {/* 2-Column Side-by-Side Learning Layout */}
               <div className="flex flex-col lg:flex-row gap-6 xl:gap-8 items-start">
                 {/* Left Column (Wide): Primary Interactive Learning Stage */}
-                <div className="w-full lg:flex-1 space-y-6 min-w-0">
+                <div className="w-full lg:flex-1 space-y-4 sm:space-y-6 min-w-0">
+                  {/* Mobile-Only Horizontal Step Stepper (<lg) */}
+                  <div className="lg:hidden p-2.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs space-y-1.5">
+                    <div className="flex items-center justify-between px-1 text-[11px] font-bold text-slate-500">
+                      <span>Langkah {activeStepId} dari {playlistSteps.length}</span>
+                      <span className="text-[#0D3B66] font-mono truncate max-w-[200px]">
+                        {playlistSteps.find((s) => s.id === activeStepId)?.title.replace(/^\d+\.\s*/, "")}
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-5 gap-1.5">
+                      {playlistSteps.map((s) => {
+                        const isActive = s.id === activeStepId;
+                        const isDone = completedSteps.includes(s.id);
+                        return (
+                          <button
+                            key={s.id}
+                            type="button"
+                            onClick={() => setActiveStepId(s.id)}
+                            className={`py-2 px-1 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1 min-h-[40px] touch-manipulation active:scale-95 ${
+                              isActive
+                                ? "bg-[#0D3B66] text-white shadow-xs font-black"
+                                : isDone
+                                ? "bg-emerald-50 text-emerald-800 border border-emerald-200"
+                                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                            }`}
+                          >
+                            {isDone && !isActive && (
+                              <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
+                            )}
+                            <span className="font-mono text-xs">{s.id}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
                   {/* Primary Learning Stage Window */}
                   <ModuleStageViewport
                     skillType={skillType}
@@ -302,8 +337,8 @@ export function ModuleStudyView({
                   />
                 </div>
 
-                {/* Right Column: Clean Sticky Playlist Sidebar */}
-                <aside className="w-full lg:w-[280px] xl:w-[300px] shrink-0 lg:sticky lg:top-3 lg:self-start space-y-2">
+                {/* Right Column: Clean Sticky Playlist Sidebar (Hidden on Mobile, Sticky on Desktop) */}
+                <aside className="hidden lg:block w-[280px] xl:w-[300px] shrink-0 lg:sticky lg:top-3 lg:self-start space-y-2">
                   <ModuleStagePlaylist
                     steps={playlistSteps}
                     activeStepId={activeStepId}

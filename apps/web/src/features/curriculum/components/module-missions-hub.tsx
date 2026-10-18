@@ -107,75 +107,182 @@ export function ModuleMissionsHub({
 
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
-      {/* 1. Breadcrumbs */}
-      <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
-        <Link href="/dashboard" className="hover:text-[#0D3B66] dark:hover:text-white transition-colors">
-          Dashboard
-        </Link>
-        <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-        <Link href="/modules" className="hover:text-[#0D3B66] dark:hover:text-white transition-colors">
-          Courses
-        </Link>
-        <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-        <span className="text-[#0D3B66] dark:text-[#F4B41A] font-bold">
-          {moduleData?.id || "A1.1-M01"}
-        </span>
-      </div>
+      {/* 1. Mobile-Specific Hub (<sm) */}
+      <div className="sm:hidden space-y-3.5">
+        {/* Mobile Breadcrumb */}
+        <div className="flex items-center gap-1.5 text-[11px] font-medium text-slate-500">
+          <Link href="/dashboard" className="hover:text-[#0D3B66]">
+            Beranda
+          </Link>
+          <ChevronRight className="w-3 h-3 text-slate-400" />
+          <Link href="/modules" className="hover:text-[#0D3B66]">
+            Modul
+          </Link>
+          <ChevronRight className="w-3 h-3 text-slate-400" />
+          <span className="text-[#0D3B66] font-mono font-bold">
+            {moduleData?.id || "A1.1-M01"}
+          </span>
+        </div>
 
-      {/* 2. Top Hero Banner (Signature EDDY'S English Deep Navy + Golden Yellow / Red organic waves) */}
-      <div
-        style={{ backgroundColor: "#0D3B66" }}
-        className="relative overflow-hidden rounded-[28px] p-5 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-6 shadow-md border border-[#082542]"
-      >
-        <div className="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-[#F4B41A]/20 blur-2xl pointer-events-none" />
-        <div className="absolute -bottom-10 -right-10 w-52 h-52 rounded-full bg-[#9E1B1B]/30 blur-3xl pointer-events-none" />
-
-        <div className="relative z-10 max-w-xl space-y-3.5 text-center md:text-left w-full">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-[#F4B41A] text-xs font-black uppercase tracking-wider shadow-2xs backdrop-blur-xs border border-white/10">
-            <GraduationCap className="w-3.5 h-3.5 text-[#F4B41A]" />
-            <span>CEFR {moduleData?.cefr || "A1.1"} · Active Course</span>
+        {/* Mobile Header Card */}
+        <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-2xs space-y-2.5">
+          <div className="flex items-center justify-between">
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-[#0D3B66] text-white">
+              CEFR {moduleData?.cefr || "A1.1"}
+            </span>
+            <span className="text-[11px] font-semibold text-slate-500">
+              {completedCount} dari {subModules.length || 4} Selesai
+            </span>
           </div>
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-white leading-tight">
-            {moduleData?.title || "Unit 1: One World: Countries, Nationalities & To Be"}
-          </h2>
+          <div>
+            <h2 className="text-base font-extrabold text-slate-900 leading-snug">
+              {moduleData?.title || "Unit Pembelajaran"}
+            </h2>
+          </div>
 
-          <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
-            Think English, Think EDDY&apos;s. Master 4 distinct skills: Reading comprehension, Audio listening drills, Sentence writing, and Voice speaking practice.
-          </p>
-
-          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center md:justify-start gap-2.5 sm:gap-3">
-            {firstActiveSub && (
-              <button
-                type="button"
-                onClick={() => onSelectMission(firstActiveSub.id)}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full btn-skeuo-yellow text-xs sm:text-sm shadow-md transition-all active:scale-95 cursor-pointer min-h-[44px] touch-manipulation w-full sm:w-auto font-bold"
-              >
-                <span>{completedCount > 0 ? "Continue Course" : "Start Course"}</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            )}
-
+          {firstActiveSub && (
             <button
               type="button"
-              onClick={tutor.handleToggleCall}
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm border border-white/20 shadow-xs transition-all active:scale-95 cursor-pointer min-h-[44px] touch-manipulation w-full sm:w-auto"
+              onClick={() => onSelectMission(firstActiveSub.id)}
+              className="w-full py-2.5 px-4 rounded-xl btn-skeuo-navy text-xs font-bold shadow-xs cursor-pointer flex items-center justify-center gap-2 min-h-[44px] touch-manipulation active:scale-95 transition-all"
             >
-              <PhoneCall className="w-4 h-4 text-[#F4B41A]" />
-              <span>Voice Practice Call</span>
+              <span>{completedCount > 0 ? "Lanjut Belajar" : "Mulai Belajar"}</span>
+              <ArrowRight className="w-4 h-4" />
             </button>
-          </div>
+          )}
         </div>
 
-        {/* Hero Vector Illustration matching design.md */}
-        <div className="relative z-10 shrink-0 w-36 sm:w-48 md:w-64 h-32 sm:h-40 md:h-52 flex items-center justify-center">
-          <img
-            src="/illustrations/hero-learning.svg"
-            alt="Learning Illustration"
-            className="w-full h-full object-contain drop-shadow-xs"
-          />
+        {/* Mobile Submodules Dense List */}
+        <div className="space-y-2">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-600 px-1">
+            Daftar Materi
+          </h3>
+          <div className="space-y-2">
+            {subModules.map((sub, index) => {
+              const skill = sub.skillType.toLowerCase();
+              const theme = SKILL_THEMES[skill] || SKILL_THEMES.reading;
+              const Icon = theme.icon;
+              const isCompleted = sub.userProgress?.status === "completed";
+              const isLocked = sub.userProgress?.status === "locked" && index > completedCount;
+
+              return (
+                <div
+                  key={sub.id}
+                  onClick={(e) => handleCardClick(sub, isLocked, e)}
+                  className={`p-3 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex items-center justify-between gap-3 active:scale-98 transition-all min-h-[58px] cursor-pointer touch-manipulation ${
+                    isLocked ? "opacity-60 cursor-not-allowed" : ""
+                  }`}
+                >
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className={`w-9 h-9 rounded-xl ${theme.iconBg} flex items-center justify-center shrink-0 shadow-2xs`}>
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="font-extrabold text-xs text-slate-900 truncate">
+                        {theme.shortTitle}
+                      </p>
+                      <p className="text-[11px] text-slate-500 font-medium truncate">
+                        {sub.title}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="shrink-0">
+                    {isCompleted ? (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200">
+                        <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                        <span>Selesai</span>
+                      </span>
+                    ) : isLocked ? (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 text-slate-500">
+                        <Lock className="w-3 h-3" />
+                        <span>Terkunci</span>
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#0D3B66]">
+                        <span>Buka</span>
+                        <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+                      </span>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
+
+      {/* 2. Desktop-Specific Hub (sm+) */}
+      <div className="hidden sm:block space-y-6">
+        {/* Desktop Breadcrumbs */}
+        <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
+          <Link href="/dashboard" className="hover:text-[#0D3B66] dark:hover:text-white transition-colors">
+            Dashboard
+          </Link>
+          <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+          <Link href="/modules" className="hover:text-[#0D3B66] dark:hover:text-white transition-colors">
+            Courses
+          </Link>
+          <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+          <span className="text-[#0D3B66] dark:text-[#F4B41A] font-bold">
+            {moduleData?.id || "A1.1-M01"}
+          </span>
+        </div>
+
+        {/* Desktop Hero Banner */}
+        <div
+          style={{ backgroundColor: "#0D3B66" }}
+          className="relative overflow-hidden rounded-[28px] p-5 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-6 shadow-md border border-[#082542]"
+        >
+          <div className="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-[#F4B41A]/20 blur-2xl pointer-events-none" />
+          <div className="absolute -bottom-10 -right-10 w-52 h-52 rounded-full bg-[#9E1B1B]/30 blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 max-w-xl space-y-3.5 text-center md:text-left w-full">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-[#F4B41A] text-xs font-black uppercase tracking-wider shadow-2xs backdrop-blur-xs border border-white/10">
+              <GraduationCap className="w-3.5 h-3.5 text-[#F4B41A]" />
+              <span>CEFR {moduleData?.cefr || "A1.1"} · Active Course</span>
+            </div>
+
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-white leading-tight">
+              {moduleData?.title || "Unit 1: One World: Countries, Nationalities & To Be"}
+            </h2>
+
+            <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
+              Think English, Think EDDY&apos;s. Master 4 distinct skills: Reading comprehension, Audio listening drills, Sentence writing, and Voice speaking practice.
+            </p>
+
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center md:justify-start gap-2.5 sm:gap-3">
+              {firstActiveSub && (
+                <button
+                  type="button"
+                  onClick={() => onSelectMission(firstActiveSub.id)}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full btn-skeuo-yellow text-xs sm:text-sm shadow-md transition-all active:scale-95 cursor-pointer min-h-[44px] touch-manipulation w-full sm:w-auto font-bold"
+                >
+                  <span>{completedCount > 0 ? "Continue Course" : "Start Course"}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              )}
+
+              <button
+                type="button"
+                onClick={tutor.handleToggleCall}
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm border border-white/20 shadow-xs transition-all active:scale-95 cursor-pointer min-h-[44px] touch-manipulation w-full sm:w-auto"
+              >
+                <PhoneCall className="w-4 h-4 text-[#F4B41A]" />
+                <span>Voice Practice Call</span>
+              </button>
+            </div>
+          </div>
+
+          <div className="relative z-10 shrink-0 w-36 sm:w-48 md:w-64 h-32 sm:h-40 md:h-52 flex items-center justify-center">
+            <img
+              src="/illustrations/hero-learning.svg"
+              alt="Learning Illustration"
+              className="w-full h-full object-contain drop-shadow-xs"
+            />
+          </div>
+        </div>
 
       {/* 3. Sub Modules Section (2 Cards per Row) */}
       <div className="space-y-4">
@@ -270,5 +377,6 @@ export function ModuleMissionsHub({
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 }
