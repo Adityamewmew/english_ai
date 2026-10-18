@@ -50,8 +50,8 @@ export function StudentShell({
           />
         </div>
 
-        {/* Page Main Content (With bottom padding on mobile to clear bottom nav) */}
-        <main className="flex-1 pb-24 lg:pb-8">
+        {/* Page Main Content: Generous bottom padding on mobile (pb-40 / 160px) so content and bottom buttons are never covered by fixed bottom nav + browser chrome */}
+        <main className="flex-1 pb-40 sm:pb-32 lg:pb-8">
           {children}
         </main>
 

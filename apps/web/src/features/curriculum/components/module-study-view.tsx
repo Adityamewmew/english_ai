@@ -171,7 +171,7 @@ export function ModuleStudyView({
       studentName={studentName}
       currentCefr={moduleData?.cefr || "A1.1"}
     >
-      <div className="px-3 py-2.5 sm:px-6 sm:py-3.5 w-full max-w-[1520px] mx-auto space-y-3.5">
+      <div className="px-3 py-2.5 sm:px-6 sm:py-3.5 w-full max-w-[1520px] mx-auto space-y-3.5 pb-8 sm:pb-0">
           {/* VIEW A: Floating Skill Cards Hub (Before Entering Sub-Module) */}
           {!activeMissionId ? (
             <ModuleMissionsHub

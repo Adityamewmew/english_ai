@@ -225,9 +225,9 @@ export function InteractiveReadingPassage({
         </div>
       </div>
 
-      {/* Floating active token hint: Fixed bottom toast on mobile, static card on desktop */}
+      {/* Floating active token hint: Floats above mobile bottom navbar (bottom-24) on mobile, static card on desktop */}
       {activeTokenHint && (
-        <div className="fixed bottom-4 left-3 right-3 sm:static z-50 p-3.5 sm:p-4 rounded-2xl bg-[#0D3B66] text-white flex items-center justify-between gap-3 shadow-xl sm:shadow-xs border border-white/20 sm:border-transparent animate-in slide-in-from-bottom-2 sm:fade-in duration-200">
+        <div className="fixed bottom-24 sm:bottom-auto left-3 right-3 sm:static z-50 p-3.5 sm:p-4 rounded-2xl bg-[#0D3B66] text-white flex items-center justify-between gap-3 shadow-xl sm:shadow-xs border border-white/20 sm:border-transparent animate-in slide-in-from-bottom-2 sm:fade-in duration-200">
           <div className="flex items-center gap-2.5 min-w-0">
             <Info className="w-4 h-4 text-[#F4B41A] shrink-0" />
             <div className="text-xs min-w-0">
