@@ -141,6 +141,15 @@ export function StageGraduationExamView({
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             {moduleData?.title || "Comprehensive Sub-Level Graduation Exam"}
           </h2>
+          <div className="flex items-center justify-center gap-2">
+            <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-800">
+              {theorySec?.content?.difficultyTier === "hard"
+                ? "Tingkat Kesulitan: Hard (C1-C2)"
+                : theorySec?.content?.difficultyTier === "medium"
+                ? "Tingkat Kesulitan: Medium (B1-B2)"
+                : "Tingkat Kesulitan: Easy (A1-A2)"}
+            </span>
+          </div>
           <p className="text-sm text-slate-700 dark:text-slate-300 max-w-xl mx-auto leading-relaxed">
             {theorySec?.content?.summary ||
               "Ujian resmi evaluasi komprehensif 4 keterampilan terpadu. Tuntaskan 55 evaluasi untuk meraih nilai kelulusan dan menerbitkan sertifikat resmi."}

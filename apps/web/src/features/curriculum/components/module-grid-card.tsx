@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Lock, ArrowRight, CheckCircle2, BookOpen } from "lucide-react";
+import { Lock, ArrowRight, CheckCircle2, BookOpen, GraduationCap } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 
 export interface CurriculumModuleItem {
@@ -14,6 +14,7 @@ export interface CurriculumModuleItem {
   score?: number | null;
   skillFocus?: string;
   orderIndex?: number;
+  isExam?: boolean;
 }
 
 interface ModuleGridCardProps {
@@ -31,6 +32,7 @@ const THUMBNAIL_STYLES = [
 export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
   const isLocked = module.status === "locked";
   const isCompleted = module.status === "completed";
+  const isExam = module.id.includes("M13") || Boolean(module.isExam);
   const style = THUMBNAIL_STYLES[index % THUMBNAIL_STYLES.length];
 
   return (
@@ -64,8 +66,8 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
                 <span>Terkunci</span>
               </span>
             ) : (
-              <span className="text-[10px] font-bold text-[#0D3B66] dark:text-[#F4B41A]">
-                10 Latihan
+              <span className={`text-[10px] font-bold ${isExam ? "text-amber-600 dark:text-amber-400" : "text-[#0D3B66] dark:text-[#F4B41A]"}`}>
+                {isExam ? "55 Soal Ujian" : "10 Latihan"}
               </span>
             )}
           </div>
@@ -101,10 +103,12 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
               className={`w-full py-2.5 px-4 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 min-h-[44px] active:scale-95 transition-all shadow-xs ${
                 isCompleted
                   ? "btn-skeuo-yellow text-[#0F172A]"
+                  : isExam
+                  ? "bg-amber-600 hover:bg-amber-700 text-white font-bold"
                   : "btn-skeuo-navy"
               }`}
             >
-              <span>{isCompleted ? "Ulas Materi" : "Mulai Belajar"}</span>
+              <span>{isCompleted ? (isExam ? "Ulas Ujian" : "Ulas Materi") : (isExam ? "Mulai Ujian" : "Mulai Belajar")}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           )}
@@ -161,9 +165,18 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
               <span className="uppercase tracking-wider font-mono text-[#0D3B66] dark:text-[#F4B41A]">
                 {module.id}
               </span>
-              <span className="flex items-center gap-1 font-semibold">
-                <BookOpen className="w-3 h-3 text-[#0D3B66]" />
-                <span>10 Latihan</span>
+              <span className={`flex items-center gap-1 font-semibold ${isExam ? "text-amber-600 dark:text-amber-400" : ""}`}>
+                {isExam ? (
+                  <>
+                    <GraduationCap className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
+                    <span>55 Soal Ujian</span>
+                  </>
+                ) : (
+                  <>
+                    <BookOpen className="w-3 h-3 text-[#0D3B66]" />
+                    <span>10 Latihan</span>
+                  </>
+                )}
               </span>
             </div>
 
@@ -199,10 +212,12 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
                 className={`px-4 py-2 sm:py-1.5 rounded-full font-bold text-xs transition-all active:scale-95 cursor-pointer flex items-center gap-1 min-h-[40px] sm:min-h-[36px] touch-manipulation ${
                   isCompleted
                     ? "btn-skeuo-yellow text-[#0F172A]"
+                    : isExam
+                    ? "bg-amber-600 hover:bg-amber-700 text-white font-bold"
                     : "btn-skeuo-navy"
                 }`}
               >
-                <span>{isCompleted ? "Ulas" : "Mulai"}</span>
+                <span>{isCompleted ? (isExam ? "Ulas Ujian" : "Ulas") : (isExam ? "Ikuti Ujian" : "Mulai")}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             )}
