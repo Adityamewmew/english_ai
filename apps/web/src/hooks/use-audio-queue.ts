@@ -6,52 +6,12 @@ import { getApiUrl } from "@/lib/api-client";
 export interface QueuedSentence {
   index: number;
   text: string;
-  audio: HTMLAudioElement;
+  audioPromise: Promise<HTMLAudioElement | null>;
 }
 
 interface UseAudioQueueProps {
   onSentenceStart?: (text: string) => void;
   onAllEnded?: () => void;
-}
-
-function playBrowserSpeechSynthesis(text: string, onEnd: () => void) {
-  if (typeof window === "undefined" || !("speechSynthesis" in window)) {
-    onEnd();
-    return;
-  }
-  try {
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "en-US";
-    utterance.rate = 1.0;
-    utterance.pitch = 1.0;
-
-    const voices = window.speechSynthesis.getVoices();
-    const enVoice =
-      voices.find((v) => v.lang.startsWith("en-US") && !v.localService) ||
-      voices.find((v) => v.lang.startsWith("en-US")) ||
-      voices.find((v) => v.lang.startsWith("en"));
-    if (enVoice) utterance.voice = enVoice;
-
-    let hasEnded = false;
-    const fallbackTimer = setTimeout(() => {
-      finish();
-    }, 4500);
-
-    const finish = () => {
-      if (!hasEnded) {
-        hasEnded = true;
-        clearTimeout(fallbackTimer);
-        onEnd();
-      }
-    };
-
-    utterance.onend = finish;
-    utterance.onerror = finish;
-    window.speechSynthesis.speak(utterance);
-  } catch {
-    onEnd();
-  }
 }
 
 export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProps = {}) {
@@ -62,7 +22,6 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
   const isPlayingQueueRef = useRef<boolean>(false);
   const isStreamActiveRef = useRef<boolean>(false);
   const currentAudioRef = useRef<HTMLAudioElement | null>(null);
-  const ttsWatchdogRef = useRef<any>(null);
   const isHaltedRef = useRef<boolean>(false);
 
   const onSentenceStartRef = useRef(onSentenceStart);
@@ -82,23 +41,6 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     isPlayingQueueRef.current = false;
     setIsPlaying(false);
 
-    if (ttsWatchdogRef.current) {
-      clearTimeout(ttsWatchdogRef.current);
-      ttsWatchdogRef.current = null;
-    }
-
-    if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      try {
-        window.speechSynthesis.cancel();
-      } catch {}
-    }
-
-    for (const item of audioQueueRef.current) {
-      try {
-        item.audio.pause();
-        item.audio.src = "";
-      } catch {}
-    }
     audioQueueRef.current = [];
 
     if (currentAudioRef.current) {
@@ -106,15 +48,14 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
         currentAudioRef.current.pause();
         currentAudioRef.current.currentTime = 0;
         currentAudioRef.current.src = "";
-        currentAudioRef.current = null;
       } catch {}
+      currentAudioRef.current = null;
     }
   }, []);
 
   const unlockAudio = useCallback(() => {
     if (typeof window === "undefined") return;
     try {
-      // 1. Unlock Web Audio Context
       const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
       if (AudioCtx) {
         const ctx = new AudioCtx();
@@ -122,7 +63,6 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
           ctx.resume().catch(() => {});
         }
       }
-      // 2. Unlock HTML5 Audio
       const silentAudio = new Audio();
       silentAudio.src =
         "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA";
@@ -131,94 +71,68 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     } catch {}
   }, []);
 
-  const playNextInQueue = useCallback(() => {
+  const playNextInQueue = useCallback(async () => {
     if (isHaltedRef.current) return;
 
     if (audioQueueRef.current.length === 0) {
       if (isStreamActiveRef.current) {
-        // Stream is still generating future sentences
+        // Still generating future sentences in SSE stream
         isPlayingQueueRef.current = false;
         return;
       }
 
-      // All sentences finished playing
+      // All sentences finished
       isPlayingQueueRef.current = false;
       setIsPlaying(false);
       currentAudioRef.current = null;
-      if (ttsWatchdogRef.current) {
-        clearTimeout(ttsWatchdogRef.current);
-        ttsWatchdogRef.current = null;
-      }
       onAllEndedRef.current?.();
       return;
     }
 
-    const nextItem = audioQueueRef.current.shift()!;
     isPlayingQueueRef.current = true;
     setIsPlaying(true);
-    currentAudioRef.current = nextItem.audio;
 
-    // Zero-gap playback: aggressively preload next upcoming sentence
-    if (audioQueueRef.current.length > 0) {
-      const upcoming = audioQueueRef.current[0].audio;
-      upcoming.preload = "auto";
-      try {
-        upcoming.load();
-      } catch {}
-    }
-
+    const nextItem = audioQueueRef.current.shift()!;
     setCurrentSubtitle(nextItem.text);
     onSentenceStartRef.current?.(nextItem.text);
 
-    // Watchdog per sentence chunk (max 12s, min 4s)
-    if (ttsWatchdogRef.current) clearTimeout(ttsWatchdogRef.current);
-    const wordCount = nextItem.text.split(/\s+/).filter(Boolean).length;
-    const maxWaitMs = Math.min(12000, Math.max(4000, Math.round((wordCount / 2) * 1000) + 3000));
+    // Wait until audio blob is ready from OmniRoute TTS
+    const audio = await nextItem.audioPromise;
 
-    ttsWatchdogRef.current = setTimeout(() => {
-      if (isHaltedRef.current) return;
-      console.warn("TTS chunk playback watchdog timeout, skipping to next chunk");
-      if (currentAudioRef.current) {
-        try {
-          currentAudioRef.current.pause();
-          currentAudioRef.current.src = "";
-          currentAudioRef.current = null;
-        } catch {}
-      }
+    if (isHaltedRef.current) return;
+
+    if (!audio) {
+      // If network fetch failed, proceed to next chunk without breaking queue
       playNextInQueue();
-    }, maxWaitMs);
+      return;
+    }
 
-    nextItem.audio.onended = () => {
+    currentAudioRef.current = audio;
+
+    audio.onended = () => {
       if (isHaltedRef.current) return;
       playNextInQueue();
     };
 
-    nextItem.audio.onerror = (e) => {
-      console.warn("Audio queue chunk error, falling back to browser SpeechSynthesis for this turn:", e);
+    audio.onerror = () => {
       if (isHaltedRef.current) return;
-      playBrowserSpeechSynthesis(nextItem.text, () => {
-        if (!isHaltedRef.current) playNextInQueue();
-      });
+      playNextInQueue();
     };
 
-    nextItem.audio.play().catch((err) => {
+    try {
+      await audio.play();
+    } catch (err: any) {
       if (err.name === "AbortError" || isHaltedRef.current) return;
-      console.warn("Audio play() interrupted, falling back for this sentence:", err);
-      playBrowserSpeechSynthesis(nextItem.text, () => {
-        if (!isHaltedRef.current) playNextInQueue();
-      });
-    });
+      console.warn("Audio play error, skipping chunk:", err);
+      if (!isHaltedRef.current) playNextInQueue();
+    }
   }, []);
 
   const enqueueSentence = useCallback(
     (sentence: string, index: number) => {
       if (isHaltedRef.current) return;
 
-      const audio = new Audio();
-      audio.preload = "auto";
-
-      // 1. Fetch via POST /api/voice/tts with JSON body
-      fetch(getApiUrl("/api/voice/tts"), {
+      const audioPromise = fetch(getApiUrl("/api/voice/tts"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: sentence }),
@@ -228,21 +142,21 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
           return res.blob();
         })
         .then((blob) => {
-          if (isHaltedRef.current) return;
-          audio.src = URL.createObjectURL(blob);
-          audio.load();
+          if (isHaltedRef.current) return null;
+          const url = URL.createObjectURL(blob);
+          const audio = new Audio(url);
+          audio.preload = "auto";
+          return audio;
         })
-        .catch(() => {
-          if (isHaltedRef.current) return;
-          // Fallback to GET URL if POST failed
-          audio.src = getApiUrl(`/api/voice/tts?text=${encodeURIComponent(sentence)}`);
+        .catch((err) => {
+          console.warn("TTS fetch error for sentence:", sentence, err);
+          return null;
         });
 
-      // 2. Enqueue and guarantee sequential order based on index
       audioQueueRef.current.push({
         index,
         text: sentence,
-        audio,
+        audioPromise,
       });
       audioQueueRef.current.sort((a, b) => a.index - b.index);
 
@@ -265,7 +179,7 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     }
   }, [playNextInQueue]);
 
-  // Fallback: chunk any static string into sentences and play
+  // Chunk static text into sentences and enqueue sequentially
   const speakText = useCallback(
     (text: string) => {
       halt();
