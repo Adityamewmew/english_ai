@@ -1,5 +1,8 @@
 import { curriculumRepository } from "../../repository/curriculum_repository";
 import { NotFoundError } from "../../../common/errors/app-error";
+import { db } from "../../../db";
+import { users } from "../../../db/schema";
+import { eq } from "drizzle-orm";
 
 export async function getModuleDetailUsecase(moduleId: string, userId?: string) {
   const module = await curriculumRepository.findModuleById(moduleId);
@@ -12,7 +15,18 @@ export async function getModuleDetailUsecase(moduleId: string, userId?: string) 
 
   let userProgress = null;
   let progressList: any[] = [];
+  let isAdmin = false;
+
   if (userId) {
+    const [u] = await db
+      .select({ role: users.role, accessType: users.accessType })
+      .from(users)
+      .where(eq(users.id, userId))
+      .limit(1);
+    if (u && (u.role === "admin" || u.accessType === 1)) {
+      isAdmin = true;
+    }
+
     userProgress = await curriculumRepository.findUserModuleProgress(userId, moduleId);
     if (subModulesList.length > 0) {
       progressList = await curriculumRepository.findUserSubModuleProgressList(
@@ -29,7 +43,9 @@ export async function getModuleDetailUsecase(moduleId: string, userId?: string) 
     const existingProg = progressList.find((p: any) => p.subModuleId === sub.id);
 
     let status = "locked";
-    if (existingProg) {
+    if (isAdmin) {
+      status = existingProg?.status === "completed" ? "completed" : "unlocked";
+    } else if (existingProg) {
       status = existingProg.status;
     } else if (idx === 0) {
       status = "unlocked";

@@ -30,7 +30,7 @@ export async function doLogin(formData: FormData) {
       currentCefr: user.currentCefr,
     });
 
-    redirectPath = (accessType === 1 || user.role === "admin") ? "/users" : "/dashboard";
+    redirectPath = "/dashboard";
   } catch (err: any) {
     return { success: false, message: err.message || "Email atau password salah." };
   }

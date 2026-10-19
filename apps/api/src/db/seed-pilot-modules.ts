@@ -30,6 +30,8 @@ export async function seedSingleModuleData(pilotData: any) {
       target: curriculumModules.id,
       set: {
         title: module.title,
+        levelId: module.levelId,
+        group: module.group,
         objective: module.objective,
         complexity: module.complexity || "easy",
         estimatedMinutes: module.estimatedMinutes || 25,
@@ -69,7 +71,7 @@ export async function seedSingleModuleData(pilotData: any) {
   console.log(`  ✅ Finished seeding ${module.id}`);
 }
 
-export async function seedAllPilotModules() {
+export async function seedAllPilotModules(filterPrefix?: string) {
   console.log("🚀 Starting batch seeding of Pilot Modules from data/pilot_modules/...");
 
   const pilotDir = fs.existsSync(path.resolve(process.cwd(), "data/pilot_modules"))
@@ -80,24 +82,33 @@ export async function seedAllPilotModules() {
     throw new Error(`Pilot directory not found at ${pilotDir}`);
   }
 
-  const files = fs
+  let files = fs
     .readdirSync(pilotDir)
-    .filter((f) => f.endsWith(".json") && !f.includes(".original."))
-    .sort();
+    .filter((f) => f.endsWith(".json") && !f.includes(".original."));
 
-  console.log(`📁 Found ${files.length} pilot module file(s): ${files.join(", ")}`);
+  if (filterPrefix) {
+    const prefixes = filterPrefix.split(",").map((p) => p.trim());
+    files = files.filter((f) => prefixes.some((p) => f.startsWith(p) || f.includes(p)));
+  }
 
-  for (const file of files) {
+  files.sort();
+
+  console.log(`📁 Found ${files.length} pilot module file(s) to seed.`);
+
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    console.log(`[${i + 1}/${files.length}] Processing ${file}...`);
     const filePath = path.join(pilotDir, file);
     const pilotData = JSON.parse(fs.readFileSync(filePath, "utf8"));
     await seedSingleModuleData(pilotData);
   }
 
-  console.log("\n🎉 All pilot modules successfully seeded into database!");
+  console.log("\n🎉 Pilot modules successfully seeded into database!");
 }
 
 if (import.meta.main) {
-  seedAllPilotModules()
+  const filterArg = process.argv[2];
+  seedAllPilotModules(filterArg)
     .then(() => process.exit(0))
     .catch((err) => {
       console.error("❌ Seed error:", err);
