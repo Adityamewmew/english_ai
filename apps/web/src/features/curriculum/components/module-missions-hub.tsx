@@ -182,13 +182,15 @@ export function ModuleMissionsHub({
               const isCompleted = sub.userProgress?.status === "completed";
               const isLocked = sub.userProgress?.status === "locked" && index > completedCount;
 
+              const isAssessment = skill === "assessment" || skill === "exam";
+
               return (
                 <div
                   key={sub.id}
                   onClick={(e) => handleCardClick(sub, isLocked, e)}
                   className={`p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex flex-col justify-between gap-3 min-h-[120px] cursor-pointer touch-manipulation active:scale-95 transition-all ${
-                    isLocked ? "opacity-60 cursor-not-allowed" : ""
-                  }`}
+                    isAssessment && subModules.length > 1 ? "col-span-2 border-amber-300 bg-amber-50/20" : ""
+                  } ${isLocked ? "opacity-60 cursor-not-allowed" : ""}`}
                 >
                   <div className="flex items-center justify-between">
                     <div className={`w-9 h-9 rounded-xl ${theme.iconBg} flex items-center justify-center shadow-2xs`}>
@@ -320,11 +322,15 @@ export function ModuleMissionsHub({
             const isLocked = sub.userProgress?.status === "locked" && index > completedCount;
             const progressPercent = isCompleted ? 100 : sub.userProgress?.status === "unlocked" ? 40 : 0;
 
+            const isAssessment = skill === "assessment" || skill === "exam";
+
             return (
               <div
                 key={sub.id}
                 onClick={(e) => handleCardClick(sub, isLocked, e)}
                 className={`p-5 sm:p-6 rounded-[22px] bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 border-b-2 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-md transition-all duration-200 flex flex-col justify-between gap-5 sm:gap-6 group cursor-pointer touch-manipulation min-h-[160px] ${
+                  isAssessment && subModules.length > 1 ? "md:col-span-2 border-amber-400/60 dark:border-amber-700/60 bg-linear-to-r from-amber-500/5 via-white to-amber-500/5 dark:from-amber-950/20 dark:via-slate-900 dark:to-amber-950/10" : ""
+                } ${
                   isLocked ? "opacity-60 cursor-not-allowed" : "hover:-translate-y-0.5 active:scale-[0.99]"
                 }`}
               >
