@@ -6,9 +6,23 @@ export async function getTtsAudioUsecase(text: string) {
     throw new AppError("Missing text parameter", 400);
   }
 
+  // 1. Try cached/buffered speech first (ensures exact Content-Length for HTML5 Audio)
+  const audioBuffer = await AiService.generateSpeech(text);
+  if (audioBuffer) {
+    const isWav = audioBuffer.length > 4 && audioBuffer.toString("utf8", 0, 4) === "RIFF";
+    const contentType = isWav ? "audio/wav" : "audio/mpeg";
+    return {
+      type: "buffer" as const,
+      data: new Uint8Array(audioBuffer),
+      length: audioBuffer.length,
+      contentType,
+    };
+  }
+
+  // 2. Fallback to direct stream if buffer failed
   const streamRes = await AiService.getSpeechStream(text);
   if (streamRes && streamRes.body) {
-    const contentType = streamRes.headers.get("content-type") || "audio/wav";
+    const contentType = streamRes.headers.get("content-type") || "audio/mpeg";
     return {
       type: "stream" as const,
       body: streamRes.body,
@@ -16,18 +30,5 @@ export async function getTtsAudioUsecase(text: string) {
     };
   }
 
-  const audioBuffer = await AiService.generateSpeech(text);
-  if (!audioBuffer) {
-    throw new AppError("Failed to generate audio", 500);
-  }
-
-  const isWav = audioBuffer.length > 4 && audioBuffer.toString("utf8", 0, 4) === "RIFF";
-  const contentType = isWav ? "audio/wav" : "audio/mpeg";
-
-  return {
-    type: "buffer" as const,
-    data: new Uint8Array(audioBuffer),
-    length: audioBuffer.length,
-    contentType,
-  };
+  throw new AppError("Failed to generate audio", 500);
 }

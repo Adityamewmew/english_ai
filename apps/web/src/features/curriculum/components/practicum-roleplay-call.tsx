@@ -13,6 +13,7 @@ import {
   Send,
 } from "lucide-react";
 import { playPopSound, playSnapSound, playMatchSuccessSound } from "@/lib/sound-fx";
+import { getApiUrl } from "@/lib/api-client";
 import type { PracticumQuestion } from "./speaking-practicum-stage";
 
 interface PracticumRoleplayCallProps {
@@ -72,7 +73,7 @@ export function PracticumRoleplayCall({
         audioRef.current.pause();
       }
       setIsSpeakingTutor(true);
-      const audioUrl = `/api/voice/tts?text=${encodeURIComponent(text)}`;
+      const audioUrl = getApiUrl(`/api/voice/tts?text=${encodeURIComponent(text)}`);
       const audio = new Audio(audioUrl);
       audioRef.current = audio;
       audio.onended = () => {
@@ -199,7 +200,7 @@ export function PracticumRoleplayCall({
 
     try {
       setIsSpeakingTutor(true);
-      const res = await fetch("/api/voice/turn-stream", {
+      const res = await fetch(getApiUrl("/api/voice/turn-stream"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

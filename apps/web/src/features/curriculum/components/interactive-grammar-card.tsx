@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Volume2, Layers, RefreshCw, CheckCircle2, AlertCircle } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 import { playPopSound, playMatchSuccessSound, playErrorSound } from "@/lib/sound-fx";
+import { speakTutorText, stopTutorSpeech } from "@/lib/tutor-voice";
 
 export interface SubjectOption {
   label: string;
@@ -66,18 +67,18 @@ export function InteractiveGrammarCard({
   const complement = complements[complementIndex] || complements[0];
   const isAgreementValid = selectedToBe === selectedSubject.correctToBe;
 
+  useEffect(() => {
+    return () => {
+      stopTutorSpeech();
+    };
+  }, []);
+
   const speakText = (text: string) => {
     if (onPlayAudio) {
       onPlayAudio(text);
       return;
     }
-    if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = "en-US";
-      utterance.rate = 0.9;
-      window.speechSynthesis.speak(utterance);
-    }
+    speakTutorText(text);
   };
 
   const handleModeChange = (mode: GrammarMode) => {

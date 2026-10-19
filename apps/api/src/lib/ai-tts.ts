@@ -3,10 +3,13 @@ import { sanitizeRepeatedChars } from "./ai-chat";
 /**
  * Multi-Tier Text-To-Speech Service (Mr. Khoirul - ElevenLabs Voice: CwhRBWXzGAHq8TQ4Fs17)
  */
-// In-memory audio cache for repeated common phrases (max 50 entries, native Map)
+// In-memory audio cache for repeated common phrases (max 100 entries, native Map)
 const ttsMemoryCache = new Map<string, Buffer>();
 
 export class AiTtsService {
+  private static readonly ROGER_VOICE_ID = "CwhRBWXzGAHq8TQ4Fs17";
+  private static readonly DEFAULT_MODEL = "elevenlabs/eleven_multilingual_v2";
+
   /**
    * Text-To-Speech generator with Mr. Khoirul voice
    */
@@ -23,18 +26,12 @@ export class AiTtsService {
 
     if (!baseUrl || !apiKey) return null;
 
-    const ROGER_VOICE_ID = "CwhRBWXzGAHq8TQ4Fs17";
-    const voiceInput = (process.env.AI_AUDIO_VOICE || "").toLowerCase().trim();
-    const mrKhoirulVoice =
-      !voiceInput || voiceInput === "roger" || voiceInput === "aura-orion-en"
-        ? ROGER_VOICE_ID
-        : process.env.AI_AUDIO_VOICE || ROGER_VOICE_ID;
+    const voice = (process.env.AI_AUDIO_VOICE || "").trim() || this.ROGER_VOICE_ID;
+    const audioModel = (process.env.AI_AUDIO_MODEL || "").trim() || this.DEFAULT_MODEL;
 
-    const audioModel = process.env.AI_AUDIO_MODEL || "audio";
     const candidates = [
-      { model: audioModel, voice: mrKhoirulVoice },
-      { model: "audio", voice: ROGER_VOICE_ID },
-      { model: "audio", voice: "alloy" },
+      { model: audioModel, voice },
+      { model: this.DEFAULT_MODEL, voice: this.ROGER_VOICE_ID },
     ];
 
     const endpoint = `${baseUrl.replace(/\/+$/, "")}/audio/speech`;
@@ -59,9 +56,9 @@ export class AiTtsService {
           const arrayBuffer = await res.arrayBuffer();
           const buffer = Buffer.from(arrayBuffer);
 
-          // Cache up to 50 frequent phrases in memory
-          if (cleanText.length < 120) {
-            if (ttsMemoryCache.size >= 50) {
+          // Cache up to 100 frequent phrases in memory
+          if (cleanText.length < 150) {
+            if (ttsMemoryCache.size >= 100) {
               const oldestKey = ttsMemoryCache.keys().next().value;
               if (oldestKey) ttsMemoryCache.delete(oldestKey);
             }
@@ -72,7 +69,7 @@ export class AiTtsService {
         }
 
         const errText = await res.text();
-        console.warn(`TTS Proxy [${candidate.model}/${candidate.voice}] (${res.status}):`, errText);
+        console.warn(`TTS Gateway [${candidate.model}/${candidate.voice}] (${res.status}):`, errText);
 
         if (res.status === 429) break;
       } catch (err: any) {
@@ -93,18 +90,12 @@ export class AiTtsService {
 
     if (!baseUrl || !apiKey || !cleanText || cleanText.trim() === "") return null;
 
-    const ROGER_VOICE_ID = "CwhRBWXzGAHq8TQ4Fs17";
-    const voiceInput = (process.env.AI_AUDIO_VOICE || "").toLowerCase().trim();
-    const mrKhoirulVoice =
-      !voiceInput || voiceInput === "roger" || voiceInput === "aura-orion-en"
-        ? ROGER_VOICE_ID
-        : process.env.AI_AUDIO_VOICE || ROGER_VOICE_ID;
+    const voice = (process.env.AI_AUDIO_VOICE || "").trim() || this.ROGER_VOICE_ID;
+    const audioModel = (process.env.AI_AUDIO_MODEL || "").trim() || this.DEFAULT_MODEL;
 
-    const audioModel = process.env.AI_AUDIO_MODEL || "audio";
     const candidates = [
-      { model: audioModel, voice: mrKhoirulVoice },
-      { model: "audio", voice: ROGER_VOICE_ID },
-      { model: "audio", voice: "alloy" },
+      { model: audioModel, voice },
+      { model: this.DEFAULT_MODEL, voice: this.ROGER_VOICE_ID },
     ];
 
     const endpoint = `${baseUrl.replace(/\/+$/, "")}/audio/speech`;

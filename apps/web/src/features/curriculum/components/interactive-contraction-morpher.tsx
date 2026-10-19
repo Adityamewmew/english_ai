@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Volume2, Minimize2, Maximize2 } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 import { playPopSound, playSnapSound } from "@/lib/sound-fx";
+import { speakTutorText, stopTutorSpeech } from "@/lib/tutor-voice";
 
 export interface ContractionPair {
   subject: string;
@@ -52,14 +53,14 @@ export function InteractiveContractionMorpher({
   const pairs = contractions.length > 0 ? contractions : DEFAULT_GENERIC_CONTRACTIONS;
   const current = pairs[currentIndex] || pairs[0];
 
+  useEffect(() => {
+    return () => {
+      stopTutorSpeech();
+    };
+  }, []);
+
   const speakText = (text: string, rate = 0.9) => {
-    if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = "en-US";
-      utterance.rate = rate;
-      window.speechSynthesis.speak(utterance);
-    }
+    speakTutorText(text, { rate });
   };
 
   const handleSelectWord = (idx: number, e?: React.MouseEvent) => {

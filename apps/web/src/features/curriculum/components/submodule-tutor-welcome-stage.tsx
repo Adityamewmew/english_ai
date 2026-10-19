@@ -15,6 +15,7 @@ import {
 import { ThreejsPixelTutorStage, type TutorPose } from "./threejs-pixel-tutor-stage";
 import { animeButtonPop } from "@/lib/anime-effects";
 import { playPopSound, playMatchSuccessSound } from "@/lib/sound-fx";
+import { speakTutorText, stopTutorSpeech } from "@/lib/tutor-voice";
 
 interface SubmoduleTutorWelcomeStageProps {
   moduleData: any;
@@ -85,9 +86,7 @@ export function SubmoduleTutorWelcomeStage({
 
   // Immediate stop speech handler
   const stopSpeaking = useCallback(() => {
-    if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      window.speechSynthesis.cancel();
-    }
+    stopTutorSpeech();
     if (speechTimerRef.current) {
       clearTimeout(speechTimerRef.current);
       speechTimerRef.current = null;
@@ -102,42 +101,19 @@ export function SubmoduleTutorWelcomeStage({
     setIsSpeaking(true);
     setTutorPose("talking");
 
-    if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      window.speechSynthesis.cancel();
-      if (speechTimerRef.current) {
-        clearTimeout(speechTimerRef.current);
-        speechTimerRef.current = null;
-      }
-
-      const clean = text.replace(/[*_#]/g, "").trim();
-      const utt = new SpeechSynthesisUtterance(clean);
-      // Retain utterance in ref to prevent Chromium garbage collection bug (which drops onend)
-      utteranceRef.current = utt;
-      utt.lang = "en-US";
-      utt.rate = 0.95;
-      utt.pitch = 1.05;
-
-      utt.onend = () => {
-        utteranceRef.current = null;
-        finishSpeaking();
-      };
-
-      utt.onerror = () => {
-        utteranceRef.current = null;
-        finishSpeaking();
-      };
-
-      // Guaranteed fallback: in case onend is delayed or dropped, auto-end speaking
-      const estimatedMs = Math.max((clean.length / 14) * 1000 + 1500, 4500);
-      speechTimerRef.current = setTimeout(() => {
-        utteranceRef.current = null;
-        finishSpeaking();
-      }, estimatedMs);
-
-      window.speechSynthesis.speak(utt);
-    } else {
-      speechTimerRef.current = setTimeout(finishSpeaking, 4000);
+    if (speechTimerRef.current) {
+      clearTimeout(speechTimerRef.current);
+      speechTimerRef.current = null;
     }
+
+    speakTutorText(text, {
+      onEnd: () => {
+        finishSpeaking();
+      },
+      onError: () => {
+        finishSpeaking();
+      },
+    });
   }, [isMuted, finishSpeaking]);
 
   // Choreographed greeting sequence

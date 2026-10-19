@@ -23,7 +23,8 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
           status: 200,
           headers: {
             "Content-Type": result.contentType,
-            "Cache-Control": "public, max-age=3600, s-maxage=3600",
+            "Accept-Ranges": "bytes",
+            "Cache-Control": "public, max-age=86400, s-maxage=86400",
           },
         });
       }
@@ -33,7 +34,8 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
         headers: {
           "Content-Type": result.contentType,
           "Content-Length": result.length.toString(),
-          "Cache-Control": "public, max-age=3600, s-maxage=3600",
+          "Accept-Ranges": "bytes",
+          "Cache-Control": "public, max-age=86400, s-maxage=86400",
         },
       });
     },

@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Volume2, CheckCircle2 } from "lucide-react";
 import { animeButtonPop, animeShake } from "@/lib/anime-effects";
 import { playPopSound, playMatchSuccessSound, playErrorSound } from "@/lib/sound-fx";
+import { speakTutorText, stopTutorSpeech } from "@/lib/tutor-voice";
 
 interface VocabItem {
   word: string;
@@ -87,6 +88,12 @@ export function StageReadingOnboarding({
     }
   };
 
+  useEffect(() => {
+    return () => {
+      stopTutorSpeech();
+    };
+  }, []);
+
   const handleSpeak = (text: string, e?: React.MouseEvent) => {
     if (e) animeButtonPop(e.currentTarget as HTMLElement);
     playPopSound();
@@ -94,13 +101,7 @@ export function StageReadingOnboarding({
       onPlayAudio(text);
       return;
     }
-    if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      window.speechSynthesis.cancel();
-      const utt = new SpeechSynthesisUtterance(text);
-      utt.lang = "en-US";
-      utt.rate = 0.9;
-      window.speechSynthesis.speak(utt);
-    }
+    speakTutorText(text);
   };
 
   const target = linguisticTarget || {

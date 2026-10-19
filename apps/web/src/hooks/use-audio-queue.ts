@@ -64,7 +64,6 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
   const currentAudioRef = useRef<HTMLAudioElement | null>(null);
   const ttsWatchdogRef = useRef<any>(null);
   const isHaltedRef = useRef<boolean>(false);
-  const ttsFailedRef = useRef<boolean>(false);
 
   const onSentenceStartRef = useRef(onSentenceStart);
   const onAllEndedRef = useRef(onAllEnded);
@@ -162,14 +161,6 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     setCurrentSubtitle(nextItem.text);
     onSentenceStartRef.current?.(nextItem.text);
 
-    // If backend TTS already failed, immediately stream via browser SpeechSynthesis without waiting
-    if (ttsFailedRef.current) {
-      playBrowserSpeechSynthesis(nextItem.text, () => {
-        if (!isHaltedRef.current) playNextInQueue();
-      });
-      return;
-    }
-
     // Watchdog per sentence chunk (max 12s, min 4s)
     if (ttsWatchdogRef.current) clearTimeout(ttsWatchdogRef.current);
     const wordCount = nextItem.text.split(/\s+/).filter(Boolean).length;
@@ -194,8 +185,7 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     };
 
     nextItem.audio.onerror = (e) => {
-      console.warn("Audio queue chunk playback error, falling back to browser SpeechSynthesis:", e);
-      ttsFailedRef.current = true;
+      console.warn("Audio queue chunk error, falling back to browser SpeechSynthesis for this turn:", e);
       if (isHaltedRef.current) return;
       playBrowserSpeechSynthesis(nextItem.text, () => {
         if (!isHaltedRef.current) playNextInQueue();
@@ -204,8 +194,7 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
 
     nextItem.audio.play().catch((err) => {
       if (err.name === "AbortError" || isHaltedRef.current) return;
-      console.warn("Audio play() interrupted or rejected, falling back to browser SpeechSynthesis:", err);
-      ttsFailedRef.current = true;
+      console.warn("Audio play() interrupted, falling back for this sentence:", err);
       playBrowserSpeechSynthesis(nextItem.text, () => {
         if (!isHaltedRef.current) playNextInQueue();
       });
