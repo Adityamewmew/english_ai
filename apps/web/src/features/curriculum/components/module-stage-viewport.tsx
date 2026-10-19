@@ -13,6 +13,7 @@ import { StageReadingView } from "./stage-reading-view";
 import { StageListeningView } from "./stage-listening-view";
 import { StageWritingView } from "./stage-writing-view";
 import { StageSpeakingView } from "./stage-speaking-view";
+import { StageGraduationExamView } from "./stage-graduation-exam-view";
 
 interface ModuleStageViewportProps {
   skillType?: string;
@@ -33,6 +34,8 @@ interface ModuleStageViewportProps {
   tutor: any;
   cefr?: string;
   isFinishing?: boolean;
+  moduleData?: any;
+  studentName?: string;
 }
 
 export function ModuleStageViewport({
@@ -54,12 +57,25 @@ export function ModuleStageViewport({
   tutor,
   cefr = "A1.1",
   isFinishing = false,
+  moduleData,
+  studentName,
 }: ModuleStageViewportProps) {
   return (
     <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-[28px] overflow-hidden shadow-sm flex flex-col justify-between">
       {/* 1. Specialized Stage Activity Canvas based on skillType */}
       <div className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6">
-        {skillType === "listening" ? (
+        {skillType === "assessment" || skillType === "exam" ? (
+          <StageGraduationExamView
+            activeStepId={activeStepId}
+            theorySec={theorySec}
+            quizSec={quizSec}
+            moduleData={moduleData}
+            onNextStep={onNextStep}
+            onStepComplete={onStepComplete}
+            onRewardXp={onRewardXp}
+            studentName={studentName}
+          />
+        ) : skillType === "listening" ? (
           <StageListeningView
             activeStepId={activeStepId}
             theorySec={theorySec}

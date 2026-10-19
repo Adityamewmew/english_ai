@@ -11,6 +11,7 @@ import {
   Headphones,
   PenTool,
   Mic,
+  GraduationCap,
 } from "lucide-react";
 import { ThreejsPixelTutorStage, type TutorPose } from "./threejs-pixel-tutor-stage";
 import { animeButtonPop } from "@/lib/anime-effects";
@@ -31,6 +32,8 @@ const SKILL_ICONS: Record<string, React.ReactNode> = {
   listening: <Headphones className="w-4 h-4" />,
   writing: <PenTool className="w-4 h-4" />,
   speaking: <Mic className="w-4 h-4" />,
+  assessment: <GraduationCap className="w-4 h-4" />,
+  exam: <GraduationCap className="w-4 h-4" />,
 };
 
 export function SubmoduleTutorWelcomeStage({
@@ -54,6 +57,17 @@ export function SubmoduleTutorWelcomeStage({
   const speechTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const welcomeSpeech = useMemo(() => {
+    const isAssessment = subModule?.skillType === "assessment" || subModule?.skillType === "exam";
+    if (isAssessment) {
+      return (
+        subModule?.onboardingSpeech ||
+        `Hello ${studentName}! Welcome to the official Graduation Exam for ${moduleData?.title || "this sub-level"}. ` +
+        `I'm Mr. Khoirul, and I will guide you through this comprehensive 55-question evaluation across Reading, Listening, Writing, and Speaking. ` +
+        `Achieve a score of ${moduleData?.passingScore || 75}% or higher to graduate and receive your verified Certificate of Mastery. ` +
+        `Stay calm, trust your preparation, and let's begin!`
+      );
+    }
+
     const theorySec = subModule?.sections?.find((s: any) => s.sectionType === "theory");
     const target = theorySec?.content?.linguisticTarget;
     const grammarTopic = subModule?.grammarFocus || target?.grammarTopic || "Core Sentence Patterns";

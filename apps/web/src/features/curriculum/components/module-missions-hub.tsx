@@ -81,6 +81,22 @@ const SKILL_THEMES: Record<
     progressBar: "#1B4965",
     shortTitle: "Speaking",
   },
+  assessment: {
+    icon: GraduationCap,
+    label: "Graduation Exam",
+    accentColor: "#D97706",
+    iconBg: "bg-amber-600 text-white",
+    progressBar: "#D97706",
+    shortTitle: "Graduation Exam (55 Soal)",
+  },
+  exam: {
+    icon: GraduationCap,
+    label: "Graduation Exam",
+    accentColor: "#D97706",
+    iconBg: "bg-amber-600 text-white",
+    progressBar: "#D97706",
+    shortTitle: "Graduation Exam (55 Soal)",
+  },
 };
 
 export function ModuleMissionsHub({
@@ -158,7 +174,7 @@ export function ModuleMissionsHub({
           <h3 className="text-xs font-bold uppercase tracking-wider text-slate-600 px-1">
             Daftar Materi
           </h3>
-          <div className="grid grid-cols-2 gap-2.5">
+          <div className={subModules.length === 1 ? "grid grid-cols-1" : "grid grid-cols-2 gap-2.5"}>
             {subModules.map((sub, index) => {
               const skill = sub.skillType.toLowerCase();
               const theme = SKILL_THEMES[skill] || SKILL_THEMES.reading;
@@ -293,8 +309,8 @@ export function ModuleMissionsHub({
           </span>
         </div>
 
-        {/* 2-column grid layout with clean white cards + subtle tactile depth */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+        {/* Grid layout (centered if single assessment card, 2-column otherwise) */}
+        <div className={subModules.length === 1 ? "grid grid-cols-1 max-w-2xl" : "grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5"}>
           {subModules.map((sub, index) => {
             const skill = sub.skillType.toLowerCase();
             const theme = SKILL_THEMES[skill] || SKILL_THEMES.reading;

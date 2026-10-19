@@ -93,6 +93,17 @@ export function ModuleStudyView({
 
   // Dynamic playlist steps uniquely customized for each skill type
   const playlistSteps: PlaylistStepItem[] = useMemo(() => {
+    if (skillType === "assessment" || skillType === "exam") {
+      return [
+        { id: 1, title: "1. Panduan & Kriteria Kelulusan", type: "Overview", duration: "3 min", isCompleted: completedSteps.includes(1) },
+        { id: 2, title: "2. Part 1: Reading Comprehension (15 Soal)", type: "Reading", duration: "12 min", isCompleted: completedSteps.includes(2) },
+        { id: 3, title: "3. Part 2: Listening Auditory (15 Soal)", type: "Listening", duration: "12 min", isCompleted: completedSteps.includes(3) },
+        { id: 4, title: "4. Part 3: Written Production (10 Soal)", type: "Writing", duration: "10 min", isCompleted: completedSteps.includes(4) },
+        { id: 5, title: "5. Part 4: Spoken Fluency (15 Soal)", type: "Speaking", duration: "12 min", isCompleted: completedSteps.includes(5) },
+        { id: 6, title: "6. Scorecard & Sertifikat Resmi", type: "Certificate", duration: "3 min", isCompleted: completedSteps.includes(6) },
+      ];
+    }
+
     if (skillType === "listening") {
       return [
         { id: 1, title: "1. Scenario & Briefing", type: "Context", duration: "3 min", isCompleted: completedSteps.includes(1) },
@@ -373,6 +384,8 @@ export function ModuleStudyView({
                     tutor={tutor}
                     cefr={moduleData?.cefr}
                     isFinishing={isFinishing}
+                    moduleData={moduleData}
+                    studentName={studentName}
                   />
                 </div>
 
