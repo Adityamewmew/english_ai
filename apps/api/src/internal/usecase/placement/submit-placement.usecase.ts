@@ -2,7 +2,7 @@ import { db } from "../../../db";
 import { itemBank, placementResults } from "../../../db/schema";
 import { inArray } from "drizzle-orm";
 import { userRepository } from "../../repository/user_repository";
-import { OmniRouteClient } from "../../../db/generator/omniroute-client";
+import { AiChatService } from "../../../lib/ai-chat";
 import { LlmGuardrailService } from "../../../lib/llm-guardrail.service";
 import crypto from "crypto";
 
@@ -117,7 +117,6 @@ export async function submitPlacementUsecase(body: {
       };
     } else {
       try {
-        const client = new OmniRouteClient();
         const writingPrompts = writingEntries
           .map(([id, text], idx) => `Task ${idx + 1} (${itemsMap[id]?.question || "Prompt"}):\nStudent: "${text}"`)
           .join("\n\n");
@@ -133,7 +132,9 @@ Return valid JSON only:
   "strengths": ["string"],
   "improvements": ["string"]
 }`;
-        const evalRes = await client.generateJson<any>(sys, `Evaluate these student writing submissions:\n\n${writingPrompts}`);
+        const responseText = await AiChatService.callAI(sys, `Evaluate these student writing submissions:\n\n${writingPrompts}`);
+        const cleanJson = responseText.replace(/```json\n?|\n?```/g, "").trim();
+        const evalRes = JSON.parse(cleanJson);
         if (evalRes && typeof evalRes.overall_score === "number") {
           writingScore = evalRes.overall_score;
           writingEval = evalRes;
@@ -165,7 +166,6 @@ Return valid JSON only:
       };
     } else {
       try {
-        const client = new OmniRouteClient();
         const speakingTranscripts = speakingEntries
           .map(([id, transcript], idx) => `Task ${idx + 1} (${itemsMap[id]?.question || "Prompt"}):\nSpoken Transcript: "${transcript}"`)
           .join("\n\n");
@@ -180,7 +180,9 @@ Return valid JSON only:
   "strengths": ["string"],
   "improvements": ["string"]
 }`;
-        const evalRes = await client.generateJson<any>(sys, `Evaluate these spoken transcripts:\n\n${speakingTranscripts}`);
+        const responseText = await AiChatService.callAI(sys, `Evaluate these spoken transcripts:\n\n${speakingTranscripts}`);
+        const cleanJson = responseText.replace(/```json\n?|\n?```/g, "").trim();
+        const evalRes = JSON.parse(cleanJson);
         if (evalRes && typeof evalRes.overall_score === "number") {
           speakingScore = evalRes.overall_score;
           speakingEval = evalRes;

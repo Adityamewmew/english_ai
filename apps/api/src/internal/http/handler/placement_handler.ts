@@ -8,7 +8,7 @@ import {
 import { getPlacementSessionUsecase } from "../../usecase/placement/get-placement-session.usecase";
 import { submitPlacementUsecase } from "../../usecase/placement/submit-placement.usecase";
 import { placementRepository } from "../../repository/placement_repository";
-import { GeminiService } from "../../../lib/gemini";
+import { AiService } from "../../../lib/ai";
 import { jsonResponse } from "../../presenter/json";
 
 export const placementHandler = new Elysia({ prefix: "/api/placement" })
@@ -37,7 +37,7 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
   .post(
     "/transcribe-speaking",
     async ({ body, set }) => {
-      const transcript = await GeminiService.transcribeAudioSelfIntro(
+      const transcript = await AiService.transcribeAudioSelfIntro(
         body.audioBase64,
         body.mimeType || "audio/webm"
       );
@@ -53,7 +53,7 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
   .post(
     "/evaluate-writing",
     async ({ body, set }) => {
-      const data = await GeminiService.evaluateWriting(body.text);
+      const data = await AiService.evaluateWriting(body.text);
       return jsonResponse({
         set,
         statusCode: 200,
@@ -66,7 +66,7 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
   .post(
     "/evaluate-speaking",
     async ({ body, set }) => {
-      const data = await GeminiService.evaluateSpeakingSelfIntro(body.transcript);
+      const data = await AiService.evaluateSpeakingSelfIntro(body.transcript);
       return jsonResponse({
         set,
         statusCode: 200,

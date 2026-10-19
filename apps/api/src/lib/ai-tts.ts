@@ -1,4 +1,4 @@
-import { sanitizeRepeatedChars } from "./gemini-chat";
+import { sanitizeRepeatedChars } from "./ai-chat";
 
 /**
  * Multi-Tier Text-To-Speech Service (Mr. Khoirul - ElevenLabs Voice: CwhRBWXzGAHq8TQ4Fs17)
@@ -6,7 +6,7 @@ import { sanitizeRepeatedChars } from "./gemini-chat";
 // In-memory audio cache for repeated common phrases (max 50 entries, native Map)
 const ttsMemoryCache = new Map<string, Buffer>();
 
-export class GeminiTtsService {
+export class AiTtsService {
   /**
    * Text-To-Speech generator with Mr. Khoirul voice
    */
@@ -18,17 +18,10 @@ export class GeminiTtsService {
     const cached = ttsMemoryCache.get(cleanText);
     if (cached) return cached;
 
-    const baseUrl =
-      process.env.AI_TTS_BASE_URL ||
-      process.env.AI_BASE_URL ||
-      "http://localhost:20128/v1";
+    const baseUrl = process.env.AI_TTS_BASE_URL || process.env.AI_BASE_URL;
+    const apiKey = process.env.AI_TTS_API_KEY || process.env.AI_API_KEY || "";
 
-    const apiKey =
-      process.env.AI_TTS_API_KEY ||
-      process.env.AI_API_KEY ||
-      "sk-96f2316f84884524-286a68-e9103247";
-
-    if (!baseUrl) return null;
+    if (!baseUrl || !apiKey) return null;
 
     const ROGER_VOICE_ID = "CwhRBWXzGAHq8TQ4Fs17";
     const voiceInput = (process.env.AI_AUDIO_VOICE || "").toLowerCase().trim();
@@ -94,18 +87,11 @@ export class GeminiTtsService {
    * Text-To-Speech stream with Mr. Khoirul voice
    */
   static async getSpeechStream(text: string): Promise<globalThis.Response | null> {
-    const baseUrl =
-      process.env.AI_TTS_BASE_URL ||
-      process.env.AI_BASE_URL ||
-      "http://localhost:20128/v1";
-
-    const apiKey =
-      process.env.AI_TTS_API_KEY ||
-      process.env.AI_API_KEY ||
-      "sk-96f2316f84884524-286a68-e9103247";
-
+    const baseUrl = process.env.AI_TTS_BASE_URL || process.env.AI_BASE_URL;
+    const apiKey = process.env.AI_TTS_API_KEY || process.env.AI_API_KEY || "";
     const cleanText = sanitizeRepeatedChars(text);
-    if (!baseUrl || !cleanText || cleanText.trim() === "") return null;
+
+    if (!baseUrl || !apiKey || !cleanText || cleanText.trim() === "") return null;
 
     const ROGER_VOICE_ID = "CwhRBWXzGAHq8TQ4Fs17";
     const voiceInput = (process.env.AI_AUDIO_VOICE || "").toLowerCase().trim();

@@ -1,13 +1,13 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import fs from "fs";
 import path from "path";
-import { GeminiChatService } from "./gemini-chat";
+import { AiChatService } from "./ai-chat";
 import { LlmGuardrailService } from "./llm-guardrail.service";
 
 /**
- * Gemini Assessment & Evaluation Service
+ * Universal AI Assessment & Evaluation Service
+ * Evaluates writing, conversation fluency, and speaking performance using CEFR standards.
  */
-export class GeminiEvalService {
+export class AiEvalService {
   private static getSystemPrompt(): string {
     const baseDir = (import.meta as any).dir || process.cwd();
     const promptPath = path.resolve(baseDir, "../../prompts/eval_prompt.txt");
@@ -27,8 +27,8 @@ export class GeminiEvalService {
   }
 
   static async evaluateWriting(text: string): Promise<any> {
-    const prompt = `Grade the following student writing response using CEFR standards:\n\nFew-shot Calibration Anchors:\n${GeminiEvalService.getAnchors()}\n\nStudent Response:\n"${text}"\n\nOutput strictly valid JSON according to schema.`;
-    const responseText = await GeminiChatService.callAI(GeminiEvalService.getSystemPrompt(), prompt);
+    const prompt = `Grade the following student writing response using CEFR standards:\n\nFew-shot Calibration Anchors:\n${AiEvalService.getAnchors()}\n\nStudent Response:\n"${text}"\n\nOutput strictly valid JSON according to schema.`;
+    const responseText = await AiChatService.callAI(AiEvalService.getSystemPrompt(), prompt);
     const cleanJson = responseText.replace(/```json\n?|\n?```/g, "").trim();
     return JSON.parse(cleanJson);
   }
@@ -56,7 +56,7 @@ ${ragContext ? `${ragContext}\n\n` : ""}Analyze the conversation session and ret
 }`;
 
     const prompt = `Topic: "${topic}"\nDuration: ${durationSeconds} seconds\nTranscript/Notes:\n"${transcript}"\n\nProvide the assessment now in valid JSON only.`;
-    const responseText = await GeminiChatService.callAI(systemPrompt, prompt);
+    const responseText = await AiChatService.callAI(systemPrompt, prompt);
     const validated = LlmGuardrailService.validateJson<any>(responseText, ["overallBand", "cefr"]);
     if (validated) return validated;
     throw new Error("Invalid evaluation JSON schema returned by model");
@@ -64,8 +64,8 @@ ${ragContext ? `${ragContext}\n\n` : ""}Analyze the conversation session and ret
 
   static async transcribeAudioSelfIntro(base64Audio: string, mimeType: string = "audio/webm"): Promise<string> {
     const baseUrl = process.env.AI_BASE_URL;
-    const apiKey = process.env.AI_API_KEY || process.env.GEMINI_API_KEY || "";
-    const modelName = process.env.GEMINI_EVAL_MODEL || "gemini/gemini-3-flash-preview";
+    const apiKey = process.env.AI_API_KEY || "";
+    const modelName = process.env.AI_EVAL_MODEL || process.env.AI_CHAT_MODEL || "deepseek-v4-flash:free";
 
     let format = "webm";
     if (mimeType.includes("mp3")) format = "mp3";
@@ -82,90 +82,55 @@ YOUR TASK:
 4. Recognize spoken English words naturally.
 5. Return ONLY the final clean transcribed English sentences. No preamble, no quotes, no markdown.`;
 
-    // Guard: Only send Base64 audio if a dedicated audio-capable model is explicitly configured
     const isAudioCapableModel = (model: string) =>
-      /gemini|whisper|gpt-4o-audio|claude-3-5-sonnet/i.test(model);
+      /whisper|gpt-4o-audio|audio|claude/i.test(model);
 
     if (baseUrl && modelName && isAudioCapableModel(modelName)) {
-      const transcribeModels = [modelName];
-      for (const m of transcribeModels) {
-        try {
-          const endpoint = `${baseUrl.replace(/\/+$/, "")}/chat/completions`;
-          const res = await fetch(endpoint, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${apiKey}`,
-            },
-            body: JSON.stringify({
-              model: m,
-              stream: false,
-              messages: [
-                { role: "system", content: systemPrompt },
-                {
-                  role: "user",
-                  content: [
-                    { type: "text", text: "Transcribe and format this student's English self-introduction audio accurately:" },
-                    {
-                      type: "input_audio",
-                      input_audio: {
-                        data: base64Audio,
-                        format,
-                      },
+      try {
+        const endpoint = `${baseUrl.replace(/\/+$/, "")}/chat/completions`;
+        const res = await fetch(endpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+          },
+          body: JSON.stringify({
+            model: modelName,
+            stream: false,
+            messages: [
+              { role: "system", content: systemPrompt },
+              {
+                role: "user",
+                content: [
+                  { type: "text", text: "Transcribe and format this student's English self-introduction audio accurately:" },
+                  {
+                    type: "input_audio",
+                    input_audio: {
+                      data: base64Audio,
+                      format,
                     },
-                  ],
-                },
-              ],
-            }),
-            signal: AbortSignal.timeout(10000),
-          });
-
-          if (res.ok) {
-            const data = (await res.json()) as any;
-            const rawContent = data.choices?.[0]?.message?.content;
-            let text = "";
-            if (typeof rawContent === "string") {
-              text = rawContent;
-            } else if (Array.isArray(rawContent)) {
-              text = rawContent.map((c: any) => c.text || "").join(" ");
-            }
-            text = text.replace(/```[a-z]*\n?|\n?```/gi, "").trim();
-            if (text.length > 0) return text;
-          }
-        } catch (proxyErr: any) {
-          console.warn(`Proxy transcribe audio [${m}] error:`, proxyErr?.message || proxyErr);
-        }
-      }
-    }
-
-    const directKey = process.env.GEMINI_API_KEY;
-    if (directKey && directKey.trim().length > 10) {
-      const cleanMime = mimeType.split(";")[0].trim();
-      const fallbackModels = ["gemini-3.6-flash", "gemini-3.7-flash"];
-
-      for (const modelId of fallbackModels) {
-        try {
-          const directGenAI = new GoogleGenerativeAI(directKey);
-          const model = directGenAI.getGenerativeModel({
-            model: modelId,
-            systemInstruction: systemPrompt,
-          });
-
-          const result = await model.generateContent([
-            {
-              inlineData: {
-                mimeType: cleanMime,
-                data: base64Audio,
+                  },
+                ],
               },
-            },
-            "Transcribe this English self-introduction audio accurately into clean English sentences.",
-          ]);
+            ],
+          }),
+          signal: AbortSignal.timeout(10000),
+        });
 
-          const text = result.response.text().trim();
-          if (text && text.length > 0) return text;
-        } catch (sdkErr: any) {
-          console.warn(`Direct Google Gemini [${modelId}] transcribe error:`, sdkErr?.message || sdkErr);
+        if (res.ok) {
+          const data = (await res.json()) as any;
+          const rawContent = data.choices?.[0]?.message?.content;
+          let text = "";
+          if (typeof rawContent === "string") {
+            text = rawContent;
+          } else if (Array.isArray(rawContent)) {
+            text = rawContent.map((c: any) => c.text || "").join(" ");
+          }
+          text = text.replace(/```[a-z]*\n?|\n?```/gi, "").trim();
+          if (text.length > 0) return text;
         }
+      } catch (proxyErr: any) {
+        console.warn(`Universal transcribe audio [${modelName}] error:`, proxyErr?.message || proxyErr);
       }
     }
 
@@ -178,8 +143,8 @@ YOUR TASK:
     targetText?: string
   ): Promise<string> {
     const baseUrl = process.env.AI_BASE_URL;
-    const apiKey = process.env.AI_API_KEY || process.env.GEMINI_API_KEY || "";
-    const modelName = process.env.GEMINI_EVAL_MODEL || "gemini/gemini-3-flash-preview";
+    const apiKey = process.env.AI_API_KEY || "";
+    const modelName = process.env.AI_EVAL_MODEL || process.env.AI_CHAT_MODEL || "deepseek-v4-flash:free";
 
     let format = "webm";
     if (mimeType.includes("mp3")) format = "mp3";
@@ -198,93 +163,58 @@ CRITICAL TRANSCRIPTION RULES:
 4. Do NOT hallucinate words that were not spoken.
 5. Return ONLY the clean transcribed English sentence/words. No preamble, no quotation marks, no markdown explanations.`;
 
-    // Guard: Only send Base64 audio if a dedicated audio-capable model is explicitly configured
     const isAudioCapableModel = (model: string) =>
-      /gemini|whisper|gpt-4o-audio|claude-3-5-sonnet/i.test(model);
+      /whisper|gpt-4o-audio|audio|claude/i.test(model);
 
     if (baseUrl && modelName && isAudioCapableModel(modelName)) {
-      const transcribeModels = [modelName];
-      for (const m of transcribeModels) {
-        try {
-          const endpoint = `${baseUrl.replace(/\/+$/, "")}/chat/completions`;
-          const res = await fetch(endpoint, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${apiKey}`,
-            },
-            body: JSON.stringify({
-              model: m,
-              stream: false,
-              messages: [
-                { role: "system", content: systemPrompt },
-                {
-                  role: "user",
-                  content: [
-                    {
-                      type: "text",
-                      text: `Transcribe this Indonesian student's spoken English audio accurately.${targetText ? ` Target was: "${targetText}".` : ""}`,
+      try {
+        const endpoint = `${baseUrl.replace(/\/+$/, "")}/chat/completions`;
+        const res = await fetch(endpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+          },
+          body: JSON.stringify({
+            model: modelName,
+            stream: false,
+            messages: [
+              { role: "system", content: systemPrompt },
+              {
+                role: "user",
+                content: [
+                  {
+                    type: "text",
+                    text: `Transcribe this Indonesian student's spoken English audio accurately.${targetText ? ` Target was: "${targetText}".` : ""}`,
+                  },
+                  {
+                    type: "input_audio",
+                    input_audio: {
+                      data: base64Audio,
+                      format,
                     },
-                    {
-                      type: "input_audio",
-                      input_audio: {
-                        data: base64Audio,
-                        format,
-                      },
-                    },
-                  ],
-                },
-              ],
-            }),
-            signal: AbortSignal.timeout(10000),
-          });
-
-          if (res.ok) {
-            const data = (await res.json()) as any;
-            const rawContent = data.choices?.[0]?.message?.content;
-            let text = "";
-            if (typeof rawContent === "string") {
-              text = rawContent;
-            } else if (Array.isArray(rawContent)) {
-              text = rawContent.map((c: any) => c.text || "").join(" ");
-            }
-            text = text.replace(/```[a-z]*\n?|\n?```/gi, "").replace(/^["']|["']$/g, "").trim();
-            if (text.length > 0) return text;
-          }
-        } catch (proxyErr: any) {
-          console.warn(`Proxy transcribe SpeakingLab audio [${m}] error:`, proxyErr?.message || proxyErr);
-        }
-      }
-    }
-
-    const directKey = process.env.GEMINI_API_KEY;
-    if (directKey && directKey.trim().length > 10) {
-      const cleanMime = mimeType.split(";")[0].trim();
-      const fallbackModels = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"];
-
-      for (const modelId of fallbackModels) {
-        try {
-          const directGenAI = new GoogleGenerativeAI(directKey);
-          const model = directGenAI.getGenerativeModel({
-            model: modelId,
-            systemInstruction: systemPrompt,
-          });
-
-          const result = await model.generateContent([
-            {
-              inlineData: {
-                mimeType: cleanMime,
-                data: base64Audio,
+                  },
+                ],
               },
-            },
-            `Transcribe this spoken English audio accurately.${targetText ? ` Target sentence was: "${targetText}".` : ""}`,
-          ]);
+            ],
+          }),
+          signal: AbortSignal.timeout(10000),
+        });
 
-          let text = result.response.text().replace(/^["']|["']$/g, "").trim();
-          if (text && text.length > 0) return text;
-        } catch (sdkErr: any) {
-          console.warn(`Direct Google Gemini [${modelId}] transcribe SpeakingLab error:`, sdkErr?.message || sdkErr);
+        if (res.ok) {
+          const data = (await res.json()) as any;
+          const rawContent = data.choices?.[0]?.message?.content;
+          let text = "";
+          if (typeof rawContent === "string") {
+            text = rawContent;
+          } else if (Array.isArray(rawContent)) {
+            text = rawContent.map((c: any) => c.text || "").join(" ");
+          }
+          text = text.replace(/```[a-z]*\n?|\n?```/gi, "").replace(/^["']|["']$/g, "").trim();
+          if (text.length > 0) return text;
         }
+      } catch (proxyErr: any) {
+        console.warn(`Universal transcribe SpeakingLab audio [${modelName}] error:`, proxyErr?.message || proxyErr);
       }
     }
 
@@ -328,11 +258,11 @@ Analyze the student's transcript and return valid JSON ONLY with this exact sche
     const prompt = `Student Spoken Self-Introduction Transcript:\n"${transcript}"\n\nEvaluate grammar, vocabulary, fluency, and CEFR level now according to the benchmark. Output JSON only.`;
 
     try {
-      const responseText = await GeminiChatService.callAI(systemPrompt, prompt);
+      const responseText = await AiChatService.callAI(systemPrompt, prompt);
       const cleanJson = responseText.replace(/```json\n?|\n?```/g, "").trim();
       return JSON.parse(cleanJson);
     } catch (err) {
-      console.error("Gemini evaluateSpeakingSelfIntro error:", err);
+      console.error("Universal evaluateSpeakingSelfIntro error:", err);
       return {
         cefr: "A2",
         score_0_100: 50,

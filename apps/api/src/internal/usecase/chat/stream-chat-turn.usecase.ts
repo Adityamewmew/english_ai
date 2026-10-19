@@ -1,5 +1,5 @@
 import { chatRepository } from "../../repository/chat_repository";
-import { GeminiChatService } from "../../../lib/gemini-chat";
+import { AiChatService } from "../../../lib/ai-chat";
 import { LlmGuardrailService } from "../../../lib/llm-guardrail.service";
 import { voiceRagService } from "../voice/voice-rag.service";
 
@@ -81,7 +81,7 @@ ${ragContext ? `\n[INTERNAL BACKGROUND CONTEXT]:\n${ragContext}` : ""}`;
   let fullAccumulator = "";
 
   try {
-    for await (const token of GeminiChatService.callAIStream(systemPrompt, userPrompt, signal, { maxTokens: 500 })) {
+    for await (const token of AiChatService.callAIStream(systemPrompt, userPrompt, signal, { maxTokens: 500 })) {
       if (signal?.aborted) break;
       fullAccumulator += token;
       yield token;

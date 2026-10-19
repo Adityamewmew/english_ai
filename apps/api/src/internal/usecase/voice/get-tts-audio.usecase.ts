@@ -1,4 +1,4 @@
-import { GeminiService } from "../../../lib/gemini";
+import { AiService } from "../../../lib/ai";
 import { AppError } from "../../../common/errors/app-error";
 
 export async function getTtsAudioUsecase(text: string) {
@@ -6,7 +6,7 @@ export async function getTtsAudioUsecase(text: string) {
     throw new AppError("Missing text parameter", 400);
   }
 
-  const streamRes = await GeminiService.getSpeechStream(text);
+  const streamRes = await AiService.getSpeechStream(text);
   if (streamRes && streamRes.body) {
     const contentType = streamRes.headers.get("content-type") || "audio/wav";
     return {
@@ -16,7 +16,7 @@ export async function getTtsAudioUsecase(text: string) {
     };
   }
 
-  const audioBuffer = await GeminiService.generateSpeech(text);
+  const audioBuffer = await AiService.generateSpeech(text);
   if (!audioBuffer) {
     throw new AppError("Failed to generate audio", 500);
   }

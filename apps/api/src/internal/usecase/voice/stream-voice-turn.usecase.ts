@@ -1,4 +1,4 @@
-import { GeminiService } from "../../../lib/gemini";
+import { AiService } from "../../../lib/ai";
 import { voiceRagService } from "./voice-rag.service";
 
 export async function* streamVoiceTurnUsecase(payload: {
@@ -16,7 +16,7 @@ export async function* streamVoiceTurnUsecase(payload: {
       studentCefr: payload.studentCefr,
     });
 
-    for await (const sentence of GeminiService.streamTutorSentences(
+    for await (const sentence of AiService.streamTutorSentences(
       payload.topic,
       payload.history,
       payload.studentMessage,

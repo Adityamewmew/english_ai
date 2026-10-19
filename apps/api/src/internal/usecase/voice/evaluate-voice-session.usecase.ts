@@ -1,4 +1,4 @@
-import { GeminiService } from "../../../lib/gemini";
+import { AiService } from "../../../lib/ai";
 import { voiceRepository } from "../../repository/voice_repository";
 import { voiceRagService } from "./voice-rag.service";
 
@@ -18,7 +18,7 @@ export async function evaluateVoiceSessionUsecase(payload: {
         topic: payload.topic,
       });
 
-      realEvaluation = await GeminiService.evaluateConversation(
+      realEvaluation = await AiService.evaluateConversation(
         payload.topic,
         payload.transcript || "General speaking practice on " + payload.topic,
         payload.durationSeconds,

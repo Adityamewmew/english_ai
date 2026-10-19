@@ -1,4 +1,3 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import { LlmGuardrailService } from "./llm-guardrail.service";
 
 /**
@@ -25,11 +24,12 @@ export function sanitizeRepeatedChars(text: string): string {
 }
 
 /**
- * Gemini Chat & Conversational Streaming Service
+ * Universal AI Chat & Conversational Streaming Service
+ * Connects to OpenAI-compatible AI gateway (DeepSeek, Claude, Llama, etc.)
  */
-export class GeminiChatService {
+export class AiChatService {
   /**
-   * Universal AI caller: prioritizes fast proxy models
+   * Universal AI caller: calls OpenAI-compatible /chat/completions endpoint
    */
   static async callAI(
     systemPrompt: string,
@@ -37,93 +37,50 @@ export class GeminiChatService {
     options?: { maxTokens?: number }
   ): Promise<string> {
     const baseUrl = process.env.AI_BASE_URL;
-    const apiKey = process.env.AI_API_KEY || process.env.GEMINI_API_KEY || "";
-    const primaryModel =
-      process.env.AI_CHAT_MODEL ||
-      "claude";
+    const apiKey = process.env.AI_API_KEY || "";
+    const model = process.env.AI_CHAT_MODEL || "deepseek-v4-flash:free";
 
-    const proxyModels = Array.from(
-      new Set([
-        primaryModel,
-        process.env.AI_CHAT_MODEL,
-        "antigravity/gemini-3.1-flash-lite",
-        "deepseek-v4-flash:free",
-        "claude",
-      ].filter(Boolean) as string[])
-    );
-
-    if (baseUrl) {
-      for (const m of proxyModels) {
-        try {
-          const endpoint = `${baseUrl.replace(/\/+$/, "")}/chat/completions`;
-          const res = await fetch(endpoint, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${apiKey}`,
-            },
-            body: JSON.stringify({
-              model: m,
-              stream: false,
-              max_tokens: options?.maxTokens || 350,
-              temperature: 0.6,
-              frequency_penalty: 0.3,
-              presence_penalty: 0.2,
-              messages: [
-                { role: "system", content: systemPrompt },
-                { role: "user", content: userPrompt },
-              ],
-            }),
-            signal: AbortSignal.timeout(4500),
-          });
-
-          if (res.ok) {
-            const data = (await res.json()) as any;
-            const content = data.choices?.[0]?.message?.content;
-            if (
-              content &&
-              !content.toLowerCase().includes("i'm kiro") &&
-              !content.toLowerCase().includes("i am kiro") &&
-              !content.toLowerCase().includes("cannot roleplay") &&
-              !content.toLowerCase().includes("testing my boundaries") &&
-              !content.toLowerCase().includes("development environment")
-            ) {
-              return content;
-            }
-          } else {
-            const errText = await res.text();
-            console.warn(`AI Proxy [${m}] (${res.status}): ${errText}`);
-          }
-        } catch (proxyErr: any) {
-          console.warn(`AI Proxy [${m}] error:`, proxyErr?.message || proxyErr);
-        }
-      }
+    if (!baseUrl) {
+      throw new Error("AI_BASE_URL is not configured.");
     }
 
-    const directKey = process.env.GEMINI_API_KEY;
-    if (directKey && directKey.trim().length > 10) {
-      const sdkFallbackModels = ["gemini-3.7-flash", "gemini-3.6-flash"];
-      for (const m of sdkFallbackModels) {
-        try {
-          const directGenAI = new GoogleGenerativeAI(directKey);
-          const model = directGenAI.getGenerativeModel({
-            model: m,
-            systemInstruction: systemPrompt,
-          });
-          const result = await model.generateContent(userPrompt);
-          const text = result.response.text();
-          if (text) return text;
-        } catch (err: any) {
-          console.warn(`Direct Google Gemini [${m}] error:`, err?.message || err);
-        }
-      }
+    const endpoint = `${baseUrl.replace(/\/+$/, "")}/chat/completions`;
+    const res = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model,
+        stream: false,
+        max_tokens: options?.maxTokens || 350,
+        temperature: 0.6,
+        frequency_penalty: 0.3,
+        presence_penalty: 0.2,
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: userPrompt },
+        ],
+      }),
+      signal: AbortSignal.timeout(10000),
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error(`AI Gateway [${model}] (${res.status}): ${errText}`);
     }
 
-    throw new Error("All configured AI models failed to respond. Check proxy at " + (baseUrl || "none"));
+    const data = (await res.json()) as any;
+    const content = data.choices?.[0]?.message?.content;
+    if (!content) {
+      throw new Error("Empty response from AI Gateway.");
+    }
+    return content;
   }
 
   /**
-   * Universal AI Stream caller: streams tokens from fast proxy models
+   * Universal AI Stream caller: streams tokens from OpenAI-compatible /chat/completions
    */
   static async *callAIStream(
     systemPrompt: string,
@@ -132,137 +89,80 @@ export class GeminiChatService {
     options?: { maxTokens?: number }
   ): AsyncGenerator<string, void, unknown> {
     const baseUrl = process.env.AI_BASE_URL;
-    const apiKey = process.env.AI_API_KEY || process.env.GEMINI_API_KEY || "";
-    const primaryModel =
-      process.env.AI_CHAT_MODEL ||
-      "claude";
+    const apiKey = process.env.AI_API_KEY || "";
+    const model = process.env.AI_CHAT_MODEL || "deepseek-v4-flash:free";
 
-    const proxyModels = Array.from(
-      new Set([
-        primaryModel,
-        process.env.AI_CHAT_MODEL,
-        "antigravity/gemini-3.1-flash-lite",
-        "deepseek-v4-flash:free",
-        "claude",
-      ].filter(Boolean) as string[])
-    );
-
-    let hasYielded = false;
-
-    if (baseUrl) {
-      for (const m of proxyModels) {
-        let timer: any = null;
-        try {
-          const connectAbort = new AbortController();
-          timer = setTimeout(() => {
-            connectAbort.abort(new Error("TTFT connection timeout"));
-          }, 12000);
-
-          const activeSignal = signal
-            ? AbortSignal.any([signal, connectAbort.signal])
-            : connectAbort.signal;
-
-          const endpoint = `${baseUrl.replace(/\/+$/, "")}/chat/completions`;
-          const res = await fetch(endpoint, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${apiKey}`,
-            },
-            body: JSON.stringify({
-              model: m,
-              stream: true,
-              max_tokens: options?.maxTokens || 350,
-              temperature: 0.5,
-              frequency_penalty: 0.3,
-              presence_penalty: 0.2,
-              stop: ["Student:", "Student :", "\nStudent", "\nUser:", "\nHuman:", "Mr. Khoirul:"],
-              messages: [
-                { role: "system", content: systemPrompt },
-                { role: "user", content: userPrompt },
-              ],
-            }),
-            signal: activeSignal,
-          });
-
-          if (res.ok && res.body) {
-            const reader = res.body.getReader();
-            const decoder = new TextDecoder();
-            let lineBuffer = "";
-
-            while (true) {
-              const { done, value } = await reader.read();
-              if (done) break;
-              if (timer) {
-                clearTimeout(timer);
-                timer = null;
-              }
-              lineBuffer += decoder.decode(value, { stream: true });
-              const lines = lineBuffer.split("\n");
-              lineBuffer = lines.pop() ?? "";
-
-              for (const line of lines) {
-                const trimmed = line.trim();
-                if (!trimmed || !trimmed.startsWith("data:")) continue;
-                const dataStr = trimmed.slice(5).trim();
-                if (dataStr === "[DONE]") return;
-                try {
-                  const parsed = JSON.parse(dataStr);
-                  const token = parsed.choices?.[0]?.delta?.content;
-                  if (token) {
-                    hasYielded = true;
-                    yield token;
-                  }
-                } catch {}
-              }
-            }
-            if (hasYielded) return;
-          }
-        } catch (proxyErr: any) {
-          if (signal?.aborted) return;
-          if (hasYielded) return;
-          console.warn(`AI Stream Proxy [${m}] error:`, proxyErr?.message || proxyErr);
-        } finally {
-          if (timer) {
-            clearTimeout(timer);
-            timer = null;
-          }
-        }
-      }
+    if (!baseUrl) {
+      throw new Error("AI_BASE_URL is not configured.");
     }
 
-    if (!hasYielded && !signal?.aborted) {
-      try {
-        const fullReply = await GeminiChatService.callAI(systemPrompt, userPrompt);
-        if (fullReply && fullReply.trim()) {
-          yield fullReply.trim();
-          return;
-        }
-      } catch {}
-    }
+    const connectAbort = new AbortController();
+    const timer = setTimeout(() => {
+      connectAbort.abort(new Error("TTFT connection timeout"));
+    }, 12000);
 
-    const directKey = process.env.GEMINI_API_KEY;
-    if (directKey && directKey.trim().length > 10) {
-      const sdkFallbackModels = ["gemini-3.7-flash", "gemini-3.6-flash"];
-      for (const m of sdkFallbackModels) {
-        try {
-          const directGenAI = new GoogleGenerativeAI(directKey);
-          const model = directGenAI.getGenerativeModel({
-            model: m,
-            systemInstruction: systemPrompt,
-          });
-          const resultStream = await model.generateContentStream(userPrompt);
-          for await (const chunk of resultStream.stream) {
-            if (signal?.aborted) return;
-            const text = chunk.text();
-            if (text) yield text;
+    const activeSignal = signal
+      ? AbortSignal.any([signal, connectAbort.signal])
+      : connectAbort.signal;
+
+    try {
+      const endpoint = `${baseUrl.replace(/\/+$/, "")}/chat/completions`;
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model,
+          stream: true,
+          max_tokens: options?.maxTokens || 350,
+          temperature: 0.5,
+          frequency_penalty: 0.3,
+          presence_penalty: 0.2,
+          stop: ["Student:", "Student :", "\nStudent", "\nUser:", "\nHuman:", "Mr. Khoirul:"],
+          messages: [
+            { role: "system", content: systemPrompt },
+            { role: "user", content: userPrompt },
+          ],
+        }),
+        signal: activeSignal,
+      });
+
+      clearTimeout(timer);
+
+      if (res.ok && res.body) {
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let lineBuffer = "";
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          lineBuffer += decoder.decode(value, { stream: true });
+          const lines = lineBuffer.split("\n");
+          lineBuffer = lines.pop() ?? "";
+
+          for (const line of lines) {
+            const trimmed = line.trim();
+            if (!trimmed || !trimmed.startsWith("data:")) continue;
+            const dataStr = trimmed.slice(5).trim();
+            if (dataStr === "[DONE]") return;
+            try {
+              const parsed = JSON.parse(dataStr);
+              const token = parsed.choices?.[0]?.delta?.content;
+              if (token) {
+                yield token;
+              }
+            } catch {}
           }
-          return;
-        } catch (err: any) {
-          if (signal?.aborted) return;
-          console.warn(`Direct Google Gemini Stream [${m}] error:`, err?.message || err);
         }
+      } else {
+        const errText = await res.text();
+        console.warn(`AI Stream Gateway [${model}] error (${res.status}):`, errText);
       }
+    } finally {
+      clearTimeout(timer);
     }
   }
 
@@ -276,7 +176,7 @@ export class GeminiChatService {
     ragContext?: string,
     signal?: AbortSignal
   ): AsyncGenerator<string, void, unknown> {
-    // 0. Input Guardrail: Instant check for Injection, Toxicity, Politics/SARA (LLM Guardrails.md)
+    // 0. Input Guardrail: Instant check for Injection, Toxicity, Politics/SARA
     const guard = LlmGuardrailService.checkVoiceInput(studentMessage);
     if (!guard.allowed) {
       yield guard.friendlyFeedback;
@@ -304,8 +204,8 @@ CONVERSATIONAL GUIDELINES:
     const dynamicInstruction = isClosingIntent
       ? "The student wants to end the call. Say a warm, concise goodbye wishing them a great day (e.g., 'It was wonderful chatting with you! Keep practicing and have a fantastic day! Goodbye!'). Do not ask any questions."
       : isFirstUserTurn
-      ? `Warmly greet the student, react to their first message, and naturally invite them to chat about what they did today or anything on their mind.`
-      : `Respond naturally to the student's message with genuine interest, model correct English if needed, and ask an engaging follow-up question.`;
+      ? "Warmly greet the student, react to their first message, and naturally invite them to chat about what they did today or anything on their mind."
+      : "Respond naturally to the student's message with genuine interest, model correct English if needed, and ask an engaging follow-up question.";
 
     const systemPrompt = `${STATIC_PREFIX}\n\nTOPIC: "${topic || "Casual Daily English Chat"}"\nTURN GOAL: ${dynamicInstruction}${ragContext ? `\n\nCURRICULUM CONTEXT:\n${ragContext}` : ""}`;
 
@@ -357,7 +257,7 @@ CONVERSATIONAL GUIDELINES:
       return null;
     };
 
-    for await (const token of GeminiChatService.callAIStream(systemPrompt, prompt, signal)) {
+    for await (const token of AiChatService.callAIStream(systemPrompt, prompt, signal)) {
       if (signal?.aborted) return;
       buffer += token;
 
@@ -485,7 +385,7 @@ GUIDELINES:
         };
       }
     } catch (err) {
-      console.warn("Gemini generateTutorCallReply error:", err);
+      console.warn("AiChatService generateTutorCallReply error:", err);
     }
 
     const isIndo = /\b(apa|aku|saya|kamu|mau|bingung|nggak|tidak|gimana|artinya|maksudnya)\b/i.test(studentMessage);
