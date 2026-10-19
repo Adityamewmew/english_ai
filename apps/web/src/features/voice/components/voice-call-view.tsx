@@ -42,8 +42,11 @@ export function VoiceCallView({
   const [conversationHistory, setConversationHistory] = useState<ChatMessage[]>([]);
   const [callLang, setCallLang] = useState<"en-US" | "id-ID">("en-US");
   const [studentName, setStudentName] = useState<string>(propStudentName);
-  const [textInput, setTextInput] = useState<string>("");
+  const [textInput, setTextInput] = useState<string>("" );
+  const [sessionId, setSessionId] = useState<string | null>(null);
 
+  const sessionIdRef = useRef<string | null>(null);
+  const turnIndexRef = useRef<number>(0);
   const defaultTopic = initialTopic;
 
   const isSendingRef = useRef(false);
@@ -150,9 +153,11 @@ export function VoiceCallView({
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
+            sessionId: sessionIdRef.current,
             topic: defaultTopic,
             history: updatedHistory.slice(-6),
             studentMessage: cleanText,
+            turnIndex: turnIndexRef.current++,
             userId,
           }),
           signal: abortController.signal,
@@ -292,6 +297,21 @@ export function VoiceCallView({
     setDuration(0);
     setLiveTranscript("");
     setCallStatus("connecting");
+    turnIndexRef.current = 0;
+
+    try {
+      const startRes = await voiceApi.startSession({
+        topic: defaultTopic,
+        userId,
+        sttProvider: "web-speech",
+      });
+      if (startRes?.id) {
+        setSessionId(startRes.id);
+        sessionIdRef.current = startRes.id;
+      }
+    } catch (e) {
+      console.warn("Session init fallback:", e);
+    }
 
     const callCount =
       typeof window !== "undefined"
@@ -362,10 +382,12 @@ export function VoiceCallView({
     if (currentHistory.length > 1) {
       voiceApi
         .evaluateSession({
+          sessionId: sessionIdRef.current || undefined,
           userId,
           topic: defaultTopic,
           durationSeconds: duration,
           transcript: fullTranscript,
+          sttProvider: "web-speech",
         })
         .catch((e) => console.warn("Call save error:", e));
     }

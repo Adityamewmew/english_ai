@@ -31,34 +31,51 @@ export function speakTutorText(
     return;
   }
 
-  // 1. Primary: OmniRoute ElevenLabs Roger Voice via backend TTS
+  // 1. Primary: OmniRoute ElevenLabs Roger Voice via backend TTS (POST)
   try {
-    const audioUrl = getApiUrl(`/api/voice/tts?text=${encodeURIComponent(clean.slice(0, 1000))}`);
-    const audio = new Audio(audioUrl);
-    activeAudio = audio;
+    fetch(getApiUrl("/api/voice/tts"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: clean.slice(0, 1000) }),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error(`TTS HTTP ${res.status}`);
+        return res.blob();
+      })
+      .then((blob) => {
+        const audioUrl = URL.createObjectURL(blob);
+        const audio = new Audio(audioUrl);
+        activeAudio = audio;
 
-    let hasStarted = false;
-    audio.onplay = () => {
-      if (!hasStarted) {
-        hasStarted = true;
-        options?.onStart?.();
-      }
-    };
+        let hasStarted = false;
+        audio.onplay = () => {
+          if (!hasStarted) {
+            hasStarted = true;
+            options?.onStart?.();
+          }
+        };
 
-    audio.onended = () => {
-      activeAudio = null;
-      options?.onEnd?.();
-    };
+        audio.onended = () => {
+          activeAudio = null;
+          URL.revokeObjectURL(audioUrl);
+          options?.onEnd?.();
+        };
 
-    audio.onerror = () => {
-      activeAudio = null;
-      fallbackBrowserSpeech(clean, options);
-    };
+        audio.onerror = () => {
+          activeAudio = null;
+          URL.revokeObjectURL(audioUrl);
+          fallbackBrowserSpeech(clean, options);
+        };
 
-    audio.play().catch(() => {
-      activeAudio = null;
-      fallbackBrowserSpeech(clean, options);
-    });
+        audio.play().catch(() => {
+          activeAudio = null;
+          URL.revokeObjectURL(audioUrl);
+          fallbackBrowserSpeech(clean, options);
+        });
+      })
+      .catch(() => {
+        fallbackBrowserSpeech(clean, options);
+      });
   } catch {
     fallbackBrowserSpeech(clean, options);
   }

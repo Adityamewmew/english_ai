@@ -1,6 +1,8 @@
 import { Elysia } from "elysia";
 import {
+  VoiceCreateSessionBody,
   VoiceTtsQuery,
+  VoiceTtsBody,
   VoiceTurnStreamBody,
   VoiceGreetingQuery,
   VoiceEvaluateBody,
@@ -10,13 +12,33 @@ import { getVoiceGreetingUsecase } from "../../usecase/voice/get-voice-greeting.
 import { streamVoiceTurnUsecase } from "../../usecase/voice/stream-voice-turn.usecase";
 import { evaluateVoiceSessionUsecase } from "../../usecase/voice/evaluate-voice-session.usecase";
 import { voiceRepository } from "../../repository/voice_repository";
+import { LlmGuardrailService } from "../../../lib/llm-guardrail.service";
 import { jsonResponse } from "../../presenter/json";
 
 export const voiceHandler = new Elysia({ prefix: "/api/voice" })
+  .post(
+    "/sessions",
+    async ({ body, headers, set }) => {
+      const resolvedUserId = body.userId || headers["x-user-id"] || "anonymous";
+      const session = await voiceRepository.createSession({
+        userId: resolvedUserId,
+        topic: body.topic,
+        moduleId: body.moduleId,
+        sttProvider: body.sttProvider || "web-speech",
+      });
+      return jsonResponse({
+        set,
+        statusCode: 201,
+        message: "Voice call session initialized",
+        data: session,
+      });
+    },
+    { body: VoiceCreateSessionBody }
+  )
   .get(
     "/tts",
     async ({ query }) => {
-      const result = await getTtsAudioUsecase(query.text);
+      const result = await getTtsAudioUsecase(query.text, query.voice);
 
       if (result.type === "stream") {
         return new Response(result.body, {
@@ -42,16 +64,52 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
     { query: VoiceTtsQuery }
   )
   .post(
+    "/tts",
+    async ({ body }) => {
+      const result = await getTtsAudioUsecase(body.text, body.voice);
+
+      if (result.type === "stream") {
+        return new Response(result.body, {
+          status: 200,
+          headers: {
+            "Content-Type": result.contentType,
+            "Accept-Ranges": "bytes",
+            "Cache-Control": "public, max-age=86400, s-maxage=86400",
+          },
+        });
+      }
+
+      return new Response(result.data, {
+        status: 200,
+        headers: {
+          "Content-Type": result.contentType,
+          "Content-Length": result.length.toString(),
+          "Accept-Ranges": "bytes",
+          "Cache-Control": "public, max-age=86400, s-maxage=86400",
+        },
+      });
+    },
+    { body: VoiceTtsBody }
+  )
+  .post(
     "/turn-stream",
     async ({ body, headers }) => {
-      const { topic, history, studentMessage, userId } = body;
+      const { sessionId, topic, history, studentMessage, userId, turnIndex = 0 } = body;
       const resolvedUserId = userId || headers["x-user-id"];
       const encoder = new TextEncoder();
       let sentenceIndex = 0;
       const accumulatedSentences: string[] = [];
+      let heartbeatTimer: any = null;
 
       const stream = new ReadableStream({
         async start(controller) {
+          // Heartbeat comment ping every 15s to keep proxy connections alive
+          heartbeatTimer = setInterval(() => {
+            try {
+              controller.enqueue(encoder.encode(": ping\n\n"));
+            } catch {}
+          }, 15000);
+
           try {
             for await (const sentence of streamVoiceTurnUsecase({
               topic,
@@ -59,21 +117,32 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
               studentMessage,
               userId: resolvedUserId,
             })) {
-              accumulatedSentences.push(sentence);
+              // Output Guardrail per sentence
+              const guard = LlmGuardrailService.checkOutputSentence(sentence);
+              const safeSentence = guard.sanitized || sentence;
+
+              accumulatedSentences.push(safeSentence);
               const data = JSON.stringify({
                 type: "sentence",
                 index: sentenceIndex++,
-                text: sentence,
+                text: safeSentence,
               });
               controller.enqueue(encoder.encode(`data: ${data}\n\n`));
             }
 
+            const fullReply = accumulatedSentences.join(" ");
             const doneData = JSON.stringify({
               type: "done",
-              fullReply: accumulatedSentences.join(" "),
+              fullReply,
               sentenceCount: accumulatedSentences.length,
             });
             controller.enqueue(encoder.encode(`data: ${doneData}\n\n`));
+
+            // Persist turn transcript server-side if session is active
+            if (sessionId) {
+              const turnTranscript = `Turn ${turnIndex + 1}:\nStudent: ${studentMessage}\nMr. Khoirul: ${fullReply}`;
+              await voiceRepository.appendTranscript(sessionId, turnTranscript).catch(() => {});
+            }
           } catch (err: any) {
             console.error("Voice turn-stream error:", err);
             const msg = (studentMessage || "").toLowerCase();
@@ -90,9 +159,20 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
                 `data: ${JSON.stringify({ type: "done", fullReply: fallback, sentenceCount: 1 })}\n\n`
               )
             );
+
+            if (sessionId) {
+              const turnTranscript = `Turn ${turnIndex + 1}:\nStudent: ${studentMessage}\nMr. Khoirul: ${fallback}`;
+              await voiceRepository.appendTranscript(sessionId, turnTranscript).catch(() => {});
+            }
           } finally {
-            controller.close();
+            if (heartbeatTimer) clearInterval(heartbeatTimer);
+            try {
+              controller.close();
+            } catch {}
           }
+        },
+        cancel() {
+          if (heartbeatTimer) clearInterval(heartbeatTimer);
         },
       });
 
@@ -102,6 +182,7 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
           "Content-Type": "text/event-stream; charset=utf-8",
           "Cache-Control": "no-cache, no-transform",
           Connection: "keep-alive",
+          "X-Accel-Buffering": "no",
         },
       });
     },
@@ -123,10 +204,12 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
     "/evaluate",
     async ({ body, set }) => {
       const data = await evaluateVoiceSessionUsecase({
+        sessionId: body.sessionId,
         userId: body.userId || "anonymous",
         topic: body.topic,
         durationSeconds: body.durationSeconds,
         transcript: body.transcript,
+        sttProvider: body.sttProvider,
       });
       return jsonResponse({
         set,

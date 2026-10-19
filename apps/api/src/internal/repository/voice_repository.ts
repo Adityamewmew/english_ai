@@ -1,25 +1,79 @@
 import { db } from "../../db";
 import { callSessions, users, curriculumModules, moduleSections } from "../../db/schema";
-import { eq, desc, and, isNull, or, like } from "drizzle-orm";
+import { eq, desc, and, isNull, or, like, lte } from "drizzle-orm";
 import crypto from "crypto";
 
 export const voiceRepository = {
   createSession: async (data: {
     userId: string;
-    moduleId?: string;
     topic: string;
-    durationSeconds: number;
-    transcript?: string;
-    evaluation?: any;
+    moduleId?: string;
+    sttProvider?: string;
   }) => {
     const [session] = await db
       .insert(callSessions)
       .values({
         id: crypto.randomUUID(),
-        ...data,
+        userId: data.userId,
+        topic: data.topic,
+        moduleId: data.moduleId,
+        sttProvider: data.sttProvider || "web-speech",
+        status: "active",
+        durationSeconds: 0,
       })
       .returning();
     return session;
+  },
+
+  appendTranscript: async (sessionId: string, turnText: string) => {
+    const existing = await voiceRepository.findById(sessionId);
+    const updatedTranscript = existing?.transcript
+      ? `${existing.transcript}\n\n${turnText}`
+      : turnText;
+    const [updated] = await db
+      .update(callSessions)
+      .set({ transcript: updatedTranscript, updatedAt: new Date() })
+      .where(eq(callSessions.id, sessionId))
+      .returning();
+    return updated || null;
+  },
+
+  completeSession: async (
+    sessionId: string,
+    durationSeconds: number,
+    evaluation?: any
+  ) => {
+    const [updated] = await db
+      .update(callSessions)
+      .set({
+        status: "completed",
+        durationSeconds,
+        evaluation,
+        updatedAt: new Date(),
+      })
+      .where(eq(callSessions.id, sessionId))
+      .returning();
+    return updated || null;
+  },
+
+  abandonSession: async (sessionId: string) => {
+    const [updated] = await db
+      .update(callSessions)
+      .set({ status: "abandoned", updatedAt: new Date() })
+      .where(eq(callSessions.id, sessionId))
+      .returning();
+    return updated || null;
+  },
+
+  findAbandonedActiveSessions: async (minutesOld = 5, limit = 5) => {
+    const cutoff = new Date(Date.now() - minutesOld * 60 * 1000 + 1000);
+    return db
+      .select()
+      .from(callSessions)
+      .where(
+        and(eq(callSessions.status, "active"), lte(callSessions.updatedAt, cutoff))
+      )
+      .limit(limit);
   },
 
   findById: async (id: string) => {

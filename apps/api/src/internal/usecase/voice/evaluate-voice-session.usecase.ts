@@ -3,13 +3,25 @@ import { voiceRepository } from "../../repository/voice_repository";
 import { voiceRagService } from "./voice-rag.service";
 
 export async function evaluateVoiceSessionUsecase(payload: {
+  sessionId?: string;
   userId: string;
   moduleId?: string;
   topic: string;
   durationSeconds: number;
   transcript?: string;
+  sttProvider?: string;
   skipEvaluation?: boolean;
 }) {
+  let resolvedTranscript = payload.transcript || "";
+  let existingSession = null;
+
+  if (payload.sessionId) {
+    existingSession = await voiceRepository.findById(payload.sessionId);
+    if (existingSession && !resolvedTranscript && existingSession.transcript) {
+      resolvedTranscript = existingSession.transcript;
+    }
+  }
+
   let realEvaluation = null;
 
   if (!payload.skipEvaluation) {
@@ -20,7 +32,7 @@ export async function evaluateVoiceSessionUsecase(payload: {
 
       realEvaluation = await AiService.evaluateConversation(
         payload.topic,
-        payload.transcript || "General speaking practice on " + payload.topic,
+        resolvedTranscript || "General speaking practice on " + payload.topic,
         payload.durationSeconds,
         ragEvalContext
       );
@@ -39,16 +51,30 @@ export async function evaluateVoiceSessionUsecase(payload: {
     }
   }
 
-  const session = await voiceRepository.createSession({
-    userId: payload.userId,
-    moduleId: payload.moduleId,
-    topic: payload.topic,
-    durationSeconds: payload.durationSeconds,
-    transcript: payload.transcript,
-    evaluation: realEvaluation,
-  });
+  let returnSessionId = payload.sessionId;
 
-  if (payload.userId && realEvaluation) {
+  if (existingSession) {
+    await voiceRepository.completeSession(
+      existingSession.id,
+      payload.durationSeconds,
+      realEvaluation
+    );
+  } else {
+    const session = await voiceRepository.createSession({
+      userId: payload.userId,
+      moduleId: payload.moduleId,
+      topic: payload.topic,
+      sttProvider: payload.sttProvider || "web-speech",
+    });
+    returnSessionId = session.id;
+    await voiceRepository.completeSession(
+      session.id,
+      payload.durationSeconds,
+      realEvaluation
+    );
+  }
+
+  if (payload.userId && realEvaluation && payload.userId !== "anonymous") {
     try {
       const ev = realEvaluation as any;
       const newFacts: string[] = Array.isArray(ev?.student_facts) ? ev.student_facts : [];
@@ -69,7 +95,44 @@ export async function evaluateVoiceSessionUsecase(payload: {
   }
 
   return {
-    sessionId: session.id,
+    sessionId: returnSessionId,
     evaluation: realEvaluation,
   };
+}
+
+/**
+ * Server-side finalizer for calls interrupted by browser close or network disconnect
+ */
+export async function finalizeAbandonedVoiceSessions(minutesOld = 5, limit = 3) {
+  try {
+    const abandoned = await voiceRepository.findAbandonedActiveSessions(minutesOld, limit);
+    for (const session of abandoned) {
+      if (session.transcript && session.transcript.trim()) {
+        const ragEvalContext = await voiceRagService.buildEvaluationContext({
+          topic: session.topic,
+        });
+        const evalResult = await AiService.evaluateConversation(
+          session.topic,
+          session.transcript,
+          session.durationSeconds || 60,
+          ragEvalContext
+        ).catch(() => null);
+
+        await voiceRepository.completeSession(
+          session.id,
+          session.durationSeconds || 60,
+          evalResult || {
+            overallBand: 4.0,
+            cefr: "A1",
+            feedback_id: "Sesi terputus. Tetap semangat berlatih!",
+            feedback_en: "Call disconnected. Keep practicing!",
+          }
+        );
+      } else {
+        await voiceRepository.abandonSession(session.id);
+      }
+    }
+  } catch (err) {
+    console.warn("finalizeAbandonedVoiceSessions error:", err);
+  }
 }

@@ -11,12 +11,16 @@ export const chatSessions = pgTable("chat_sessions", {
 export const chatMessages = pgTable("chat_messages", {
   id: varchar("id", { length: 36 }).primaryKey(),
   sessionId: varchar("session_id", { length: 36 }).notNull(),
+  clientMessageId: varchar("client_message_id", { length: 64 }),
   role: varchar("role", { length: 20 }).notNull(), // "user" | "assistant"
   content: text("content").notNull(),
   metadata: jsonb("metadata").$type<{
     tokens?: number;
     guardrailTriggered?: boolean;
     curriculumContext?: string;
+    isPartial?: boolean;
+    violation?: string;
+    guardrailBlocked?: boolean;
   }>(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });

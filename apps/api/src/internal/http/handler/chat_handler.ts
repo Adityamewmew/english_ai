@@ -73,17 +73,35 @@ export const chatHandler = new Elysia({ prefix: "/api/chat" })
   .post(
     "/sessions/:id/stream",
     async ({ params, body, headers }) => {
-      const { message, userId } = body;
+      const { message, userId, clientMessageId } = body;
       const resolvedUserId = userId || headers["x-user-id"] || "anonymous";
+
+      const session = await getChatSessionDetailUsecase(params.id, resolvedUserId !== "anonymous" ? resolvedUserId : undefined);
+      if (!session) {
+        return new Response(JSON.stringify({ error: "Session not found or access denied" }), {
+          status: 404,
+          headers: { "Content-Type": "application/json" },
+        });
+      }
+
       const encoder = new TextEncoder();
+      let heartbeatTimer: any = null;
 
       const stream = new ReadableStream({
         async start(controller) {
+          // Heartbeat comment ping every 15s to keep proxy connections alive
+          heartbeatTimer = setInterval(() => {
+            try {
+              controller.enqueue(encoder.encode(": ping\n\n"));
+            } catch {}
+          }, 15000);
+
           try {
             for await (const chunk of streamChatTurnUsecase({
               sessionId: params.id,
               studentMessage: message,
               userId: resolvedUserId,
+              clientMessageId,
             })) {
               const data = JSON.stringify({
                 type: "token",
@@ -102,8 +120,14 @@ export const chatHandler = new Elysia({ prefix: "/api/chat" })
             });
             controller.enqueue(encoder.encode(`data: ${errorData}\n\n`));
           } finally {
-            controller.close();
+            if (heartbeatTimer) clearInterval(heartbeatTimer);
+            try {
+              controller.close();
+            } catch {}
           }
+        },
+        cancel() {
+          if (heartbeatTimer) clearInterval(heartbeatTimer);
         },
       });
 

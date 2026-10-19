@@ -7,18 +7,38 @@ export async function* streamChatTurnUsecase(params: {
   sessionId: string;
   studentMessage: string;
   userId?: string;
+  clientMessageId?: string;
   signal?: AbortSignal;
 }): AsyncGenerator<string, void, unknown> {
-  const { sessionId, studentMessage, userId, signal } = params;
+  const { sessionId, studentMessage, userId, clientMessageId, signal } = params;
 
-  // 1. Input Guardrail Check (OWASP LLM01, Injection, Toxicity, Politics/SARA)
+  // 1. Idempotency Check: if clientMessageId already processed, return existing reply
+  if (clientMessageId) {
+    const existingMsg = await chatRepository.findByClientMessageId(sessionId, clientMessageId);
+    if (existingMsg) {
+      const pastMessages = await chatRepository.getRecentMessages(sessionId, 2);
+      const assistantReply = pastMessages.find((m) => m.role === "assistant");
+      if (assistantReply) {
+        yield assistantReply.content;
+        return;
+      }
+    }
+  }
+
+  // 2. Input Guardrail Check (OWASP LLM01, Injection, Toxicity, Politics/SARA)
   const guard = LlmGuardrailService.checkVoiceInput(studentMessage, 3000);
   if (!guard.allowed) {
     const blockedReply = guard.friendlyFeedback;
-    await chatRepository.addMessage(sessionId, "user", studentMessage, {
-      guardrailTriggered: true,
-      violation: guard.violationType,
-    });
+    await chatRepository.addMessage(
+      sessionId,
+      "user",
+      studentMessage,
+      {
+        guardrailTriggered: true,
+        violation: guard.violationType,
+      },
+      clientMessageId
+    );
     await chatRepository.addMessage(sessionId, "assistant", blockedReply, {
       guardrailBlocked: true,
     });
@@ -26,17 +46,24 @@ export async function* streamChatTurnUsecase(params: {
     return;
   }
 
-  // 2. Save student message to database
-  await chatRepository.addMessage(sessionId, "user", studentMessage);
+  // 3. Pre-LLM PII Masking & Persist Student Message
+  const maskedStudentMessage = LlmGuardrailService.maskPii(studentMessage);
+  await chatRepository.addMessage(
+    sessionId,
+    "user",
+    maskedStudentMessage,
+    undefined,
+    clientMessageId
+  );
 
-  // 3. Retrieve conversation history for context (last 8 messages)
+  // 4. Retrieve conversation history for context (last 8 messages)
   const pastMessages = await chatRepository.getRecentMessages(sessionId, 9);
   const historyText = pastMessages
     .slice(0, -1) // Exclude the just-inserted message since it's passed as prompt
     .map((m) => `${m.role === "assistant" ? "Mr. Khoirul" : "Student"}: ${m.content}`)
     .join("\n\n");
 
-  // 4. Retrieve RAG Context (Curriculum patterns + Student memory)
+  // 5. Retrieve RAG Context (Curriculum patterns + Student memory)
   let ragContext = "";
   try {
     ragContext = await voiceRagService.buildTutorCallContext({
@@ -47,7 +74,7 @@ export async function* streamChatTurnUsecase(params: {
     console.warn("Chat RAG context lookup warning:", ragErr);
   }
 
-  // 5. System Prompt Construction
+  // 6. System Prompt Construction
   const systemPrompt = `You are Mr. Khoirul: a friendly, genuine, and encouraging English study companion and tutor chatting directly with an Indonesian learner.
 
 CONVERSATIONAL RULES (STRICT):
@@ -75,10 +102,11 @@ CONVERSATIONAL RULES (STRICT):
    - If political or controversial topics arise, stay neutral and politely pivot back to English practice.
 ${ragContext ? `\n[INTERNAL BACKGROUND CONTEXT]:\n${ragContext}` : ""}`;
 
-  const userPrompt = `${historyText ? `[RECENT CONVERSATION]\n${historyText}\n\n` : ""}[STUDENT MESSAGE]\n${studentMessage}\n\n[MR. KHOIRUL'S RESPONSE]`;
+  const userPrompt = `${historyText ? `[RECENT CONVERSATION]\n${historyText}\n\n` : ""}[STUDENT MESSAGE]\n${maskedStudentMessage}\n\n[MR. KHOIRUL'S RESPONSE]`;
 
-  // 6. Real-time Token Streaming
+  // 7. Real-time Token Streaming
   let fullAccumulator = "";
+  let isStreamFinished = false;
 
   try {
     for await (const token of AiChatService.callAIStream(systemPrompt, userPrompt, signal, { maxTokens: 500 })) {
@@ -86,6 +114,7 @@ ${ragContext ? `\n[INTERNAL BACKGROUND CONTEXT]:\n${ragContext}` : ""}`;
       fullAccumulator += token;
       yield token;
     }
+    isStreamFinished = !signal?.aborted;
   } catch (err: any) {
     console.error("Chat turn stream error:", err);
     if (!fullAccumulator) {
@@ -94,13 +123,21 @@ ${ragContext ? `\n[INTERNAL BACKGROUND CONTEXT]:\n${ragContext}` : ""}`;
       yield fallback;
       fullAccumulator = fallback;
     }
+  } finally {
+    // 8. Output Guardrail & Persist Assistant Response (Final or Partial on Abort)
+    if (fullAccumulator.trim()) {
+      const outputCheck = LlmGuardrailService.checkOutputSentence(fullAccumulator);
+      const sanitizedReply = outputCheck.sanitized || fullAccumulator;
+      await chatRepository.addMessage(
+        sessionId,
+        "assistant",
+        sanitizedReply,
+        isStreamFinished ? undefined : { isPartial: true }
+      );
+    }
   }
 
-  // 7. Output Guardrail (PII Masking) & Persist assistant response
-  const sanitizedReply = LlmGuardrailService.maskPii(fullAccumulator);
-  await chatRepository.addMessage(sessionId, "assistant", sanitizedReply);
-
-  // 8. Auto-generate a clean session title if still default
+  // 9. Auto-generate a clean session title if still default
   try {
     const session = await chatRepository.getSession(sessionId);
     if (session && session.title === "Percakapan Baru") {

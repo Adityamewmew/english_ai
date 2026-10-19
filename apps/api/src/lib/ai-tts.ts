@@ -1,24 +1,28 @@
 import { sanitizeRepeatedChars } from "./ai-chat";
+import crypto from "crypto";
 
 /**
  * Multi-Tier Text-To-Speech Service (Mr. Khoirul - ElevenLabs Voice: CwhRBWXzGAHq8TQ4Fs17)
  */
 // In-memory audio cache for repeated common phrases (max 100 entries, native Map)
-const ttsMemoryCache = new Map<string, Buffer>();
+export const ttsMemoryCache = new Map<string, Buffer>();
 
 export class AiTtsService {
-  private static readonly ROGER_VOICE_ID = "CwhRBWXzGAHq8TQ4Fs17";
-  private static readonly DEFAULT_MODEL = "elevenlabs/eleven_multilingual_v2";
+  public static readonly ROGER_VOICE_ID = "CwhRBWXzGAHq8TQ4Fs17";
+  public static readonly DEFAULT_MODEL = "elevenlabs/eleven_multilingual_v2";
 
   /**
    * Text-To-Speech generator with Mr. Khoirul voice
    */
-  static async generateSpeech(text: string): Promise<Buffer | null> {
+  static async generateSpeech(text: string, voiceOverride?: string): Promise<Buffer | null> {
     const cleanText = sanitizeRepeatedChars(text);
     if (!cleanText || cleanText.trim() === "") return null;
 
+    const voice = (voiceOverride || process.env.AI_AUDIO_VOICE || "").trim() || this.ROGER_VOICE_ID;
+    const cacheKey = crypto.createHash("sha256").update(`${voice}:${cleanText}`).digest("hex");
+
     // 0ms Cache Hit for frequent phrases
-    const cached = ttsMemoryCache.get(cleanText);
+    const cached = ttsMemoryCache.get(cacheKey);
     if (cached) return cached;
 
     const baseUrl = process.env.AI_TTS_BASE_URL || process.env.AI_BASE_URL;
@@ -26,7 +30,6 @@ export class AiTtsService {
 
     if (!baseUrl || !apiKey) return null;
 
-    const voice = (process.env.AI_AUDIO_VOICE || "").trim() || this.ROGER_VOICE_ID;
     const audioModel = (process.env.AI_AUDIO_MODEL || "").trim() || this.DEFAULT_MODEL;
 
     const candidates = [

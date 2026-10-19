@@ -78,11 +78,26 @@ export const chatRepository = {
     return rows.reverse();
   },
 
+  findByClientMessageId: async (sessionId: string, clientMessageId: string) => {
+    const [msg] = await db
+      .select()
+      .from(chatMessages)
+      .where(
+        and(
+          eq(chatMessages.sessionId, sessionId),
+          eq(chatMessages.clientMessageId, clientMessageId)
+        )
+      )
+      .limit(1);
+    return msg || null;
+  },
+
   addMessage: async (
     sessionId: string,
     role: "user" | "assistant",
     content: string,
-    metadata?: any
+    metadata?: any,
+    clientMessageId?: string
   ) => {
     const id = crypto.randomUUID();
     const [msg] = await db
@@ -90,6 +105,7 @@ export const chatRepository = {
       .values({
         id,
         sessionId,
+        clientMessageId,
         role,
         content,
         metadata,

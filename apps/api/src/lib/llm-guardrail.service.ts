@@ -28,7 +28,7 @@ export class LlmGuardrailService {
   // 2. Offensive Language & Toxic Content Patterns (Section 4.1)
   private static readonly OFFENSIVE_PATTERNS: RegExp[] = [
     /\b(anjing|babi|bangsat|kontol|memek|jembut|pantek|itil|ngentot|perek|lonte|bajingan|brengsek)\b/i,
-    /\b(fuck|shit|bitch|asshole|cunt|motherfucker|dick|pussy|bastard)\b/i,
+    /\b(fuck\w*|shit\w*|bitch\w*|asshole\w*|cunt\w*|motherfuck\w*|dick\w*|pussy|bastard\w*)\b/i,
   ];
 
   // 3. Politics, Elections & SARA Sensitive Topic Patterns (Section 4.1)
@@ -150,7 +150,7 @@ export class LlmGuardrailService {
   }
 
   /**
-   * Output Rail: Masks PII (Email, Phone, NIK) from AI outputs before delivering to client.
+   * Output Rail: Masks PII (Email, Phone, NIK) from text before delivering to client or DB.
    */
   static maskPii(text: string): string {
     if (!text) return "";
@@ -159,6 +159,44 @@ export class LlmGuardrailService {
     masked = masked.replace(this.PII_PATTERNS.PHONE_ID, "[PHONE_MASKED]");
     masked = masked.replace(this.PII_PATTERNS.NIK_ID, "[ID_MASKED]");
     return masked;
+  }
+
+  /**
+   * Output Rail: Validates outgoing sentence chunks from LLM before sending via SSE/TTS.
+   * Protects against leaked system instructions, toxic phrases, or unmasked PII.
+   */
+  static checkOutputSentence(sentence: string): { allowed: boolean; sanitized: string } {
+    if (!sentence || !sentence.trim()) {
+      return { allowed: true, sanitized: "" };
+    }
+
+    const trimmed = sentence.trim();
+
+    // 1. Guard against leaking system instructions / role prompt
+    if (
+      /\b(you are mr\.?\s*khoirul|system prompt|developer instructions|hidden rules)\b/i.test(trimmed)
+    ) {
+      return {
+        allowed: false,
+        sanitized: "I am ready! Let's continue our English practice.",
+      };
+    }
+
+    // 2. Guard against offensive/toxic content in AI response
+    for (const pattern of this.OFFENSIVE_PATTERNS) {
+      if (pattern.test(trimmed)) {
+        return {
+          allowed: false,
+          sanitized: "Let's keep our English practice positive and encouraging!",
+        };
+      }
+    }
+
+    // 3. Mask any accidental PII in the sentence
+    return {
+      allowed: true,
+      sanitized: this.maskPii(trimmed),
+    };
   }
 
   /**

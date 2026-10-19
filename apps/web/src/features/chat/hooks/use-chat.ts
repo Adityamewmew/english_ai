@@ -108,9 +108,15 @@ export function useChat(userId?: string) {
       if (!targetSessionId) return;
     }
 
+    // Generate clientMessageId for idempotency
+    const clientMessageId =
+      typeof crypto !== "undefined" && crypto.randomUUID
+        ? crypto.randomUUID()
+        : "cm-" + Date.now() + "-" + Math.random().toString(36).slice(2, 8);
+
     // Optimistically add user message
     const optimisticUserMessage: ChatMessageItem = {
-      id: "usr-" + Date.now(),
+      id: clientMessageId,
       sessionId: targetSessionId,
       role: "user",
       content: trimmed,
@@ -155,12 +161,15 @@ export function useChat(userId?: string) {
       },
       (err: any) => {
         console.error("Chat streaming error in hook:", err);
+        // Rollback optimistic user message on authorization/rate-limit error
+        setMessages((prev) => prev.filter((m) => m.id !== clientMessageId));
         setIsStreaming(false);
         setStreamingText("");
         streamingTextRef.current = "";
         abortControllerRef.current = null;
       },
-      controller.signal
+      controller.signal,
+      clientMessageId
     );
   }, [input, isStreaming, activeSessionId, createNewChat, refreshSessions]);
 

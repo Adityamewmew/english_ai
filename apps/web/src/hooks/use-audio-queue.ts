@@ -114,6 +114,15 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
   const unlockAudio = useCallback(() => {
     if (typeof window === "undefined") return;
     try {
+      // 1. Unlock Web Audio Context
+      const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+      if (AudioCtx) {
+        const ctx = new AudioCtx();
+        if (ctx.state === "suspended") {
+          ctx.resume().catch(() => {});
+        }
+      }
+      // 2. Unlock HTML5 Audio
       const silentAudio = new Audio();
       silentAudio.src =
         "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA";
@@ -205,16 +214,37 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     (sentence: string, index: number) => {
       if (isHaltedRef.current) return;
 
-      const audioUrl = getApiUrl(`/api/voice/tts?text=${encodeURIComponent(sentence)}`);
       const audio = new Audio();
       audio.preload = "auto";
-      audio.src = audioUrl;
 
+      // 1. Fetch via POST /api/voice/tts with JSON body
+      fetch(getApiUrl("/api/voice/tts"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: sentence }),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error("TTS POST error");
+          return res.blob();
+        })
+        .then((blob) => {
+          if (isHaltedRef.current) return;
+          audio.src = URL.createObjectURL(blob);
+          audio.load();
+        })
+        .catch(() => {
+          if (isHaltedRef.current) return;
+          // Fallback to GET URL if POST failed
+          audio.src = getApiUrl(`/api/voice/tts?text=${encodeURIComponent(sentence)}`);
+        });
+
+      // 2. Enqueue and guarantee sequential order based on index
       audioQueueRef.current.push({
         index,
         text: sentence,
         audio,
       });
+      audioQueueRef.current.sort((a, b) => a.index - b.index);
 
       if (!isPlayingQueueRef.current) {
         playNextInQueue();

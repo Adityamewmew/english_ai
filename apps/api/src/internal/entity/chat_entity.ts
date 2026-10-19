@@ -8,6 +8,7 @@ export const CreateChatSessionBody = t.Object({
 export const SendChatMessageBody = t.Object({
   message: t.String({ minLength: 1, maxLength: 4000 }),
   userId: t.Optional(t.String()),
+  clientMessageId: t.Optional(t.String()),
 });
 
 export const ChatSessionParam = t.Object({

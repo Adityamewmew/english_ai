@@ -73,14 +73,15 @@ export const chatApi = {
     onToken: (token: string) => void,
     onDone: () => void,
     onError: (err: any) => void,
-    signal?: AbortSignal
+    signal?: AbortSignal,
+    clientMessageId?: string
   ): Promise<void> => {
     const url = getApiUrl(`/api/chat/sessions/${sessionId}/stream`);
     try {
       const res = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({ message, clientMessageId }),
         credentials: "include",
         signal,
       });

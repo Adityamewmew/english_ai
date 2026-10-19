@@ -12,7 +12,8 @@
     "db:seed": "bun src/db/seed.ts",
     "pilot:generate": "bun src/db/generate-pilot-modules.ts",
     "pilot:seed": "bun src/db/seed-pilot-modules.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "bun test --timeout 30000"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.2.0",

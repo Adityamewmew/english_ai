@@ -1,13 +1,13 @@
 import { AiService } from "../../../lib/ai";
 import { AppError } from "../../../common/errors/app-error";
 
-export async function getTtsAudioUsecase(text: string) {
+export async function getTtsAudioUsecase(text: string, voice?: string) {
   if (!text || text.trim() === "") {
     throw new AppError("Missing text parameter", 400);
   }
 
   // 1. Try cached/buffered speech first (ensures exact Content-Length for HTML5 Audio)
-  const audioBuffer = await AiService.generateSpeech(text);
+  const audioBuffer = await AiService.generateSpeech(text, voice);
   if (audioBuffer) {
     const isWav = audioBuffer.length > 4 && audioBuffer.toString("utf8", 0, 4) === "RIFF";
     const contentType = isWav ? "audio/wav" : "audio/mpeg";

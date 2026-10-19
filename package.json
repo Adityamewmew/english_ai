@@ -13,6 +13,7 @@
     "build": "bun --filter web build",
     "typecheck": "bun run --filter \"*\" typecheck",
     "db:push": "bun --filter api db:push",
-    "db:seed": "bun --filter api db:seed"
+    "db:seed": "bun --filter api db:seed",
+    "test": "bun --filter api test"
   }
 }
