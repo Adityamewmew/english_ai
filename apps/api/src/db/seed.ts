@@ -100,7 +100,10 @@ async function runSeed() {
       .where(eq(users.email, acc.email))
       .limit(1);
 
-    const hashedPassword = await Bun.password.hash(acc.plainPassword);
+    const hashedPassword = await Bun.password.hash(acc.plainPassword, {
+      algorithm: "bcrypt",
+      cost: 10,
+    });
 
     if (!existing) {
       await db.insert(users).values({

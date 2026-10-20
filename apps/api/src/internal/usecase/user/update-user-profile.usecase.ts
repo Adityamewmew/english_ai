@@ -23,7 +23,10 @@ export async function updateUserProfileUsecase(
   };
 
   if (body.password) {
-    updateData.password = await Bun.password.hash(body.password);
+    updateData.password = await Bun.password.hash(body.password, {
+      algorithm: "bcrypt",
+      cost: 10,
+    });
   }
 
   const updated = await userRepository.update(id, updateData);

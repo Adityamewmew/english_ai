@@ -12,7 +12,10 @@ export async function registerUserUsecase(body: {
   const existing = await userRepository.findByEmail(body.email);
   if (existing) throw new ConflictError("Email sudah terdaftar");
 
-  const hashedPassword = await Bun.password.hash(body.password);
+  const hashedPassword = await Bun.password.hash(body.password, {
+    algorithm: "bcrypt",
+    cost: 10,
+  });
 
   const newUser = await userRepository.create({
     id: crypto.randomUUID(),
