@@ -43,36 +43,47 @@ export async function seedSingleModuleData(pilotData: any) {
   await db.delete(moduleSections).where(eq(moduleSections.moduleId, module.id));
   await db.delete(subModules).where(eq(subModules.moduleId, module.id));
 
-  // 3. Insert Sub-modules & sections
-  for (const sub of subList) {
-    console.log(`  ➕ Inserting sub-module: ${sub.title} (${sub.skillType})...`);
-    await db.insert(subModules).values({
-      id: sub.id,
-      moduleId: sub.moduleId,
-      skillType: sub.skillType,
-      title: sub.title,
-      orderIndex: sub.orderIndex,
-      createdAt: new Date(),
-    });
+  // 3. Batch insert sub-modules & sections
+  const subRows = subList.map((sub: any) => ({
+    id: sub.id,
+    moduleId: sub.moduleId,
+    skillType: sub.skillType,
+    title: sub.title,
+    orderIndex: sub.orderIndex,
+    createdAt: new Date(),
+  }));
 
+  if (subRows.length > 0) {
+    await db.insert(subModules).values(subRows);
+  }
+
+  const sectionRows: any[] = [];
+  for (const sub of subList) {
     for (const sec of sub.sections || []) {
-      await db.insert(moduleSections).values({
+      sectionRows.push({
         id: sec.id,
         moduleId: sec.moduleId,
         subModuleId: sec.subModuleId,
         sectionType: sec.sectionType,
-        title: sec.title || (sec.sectionType === "quiz" ? "Assessment Quiz" : `${sec.sectionType.charAt(0).toUpperCase() + sec.sectionType.slice(1)} Section`),
+        title:
+          sec.title ||
+          (sec.sectionType === "quiz"
+            ? "Assessment Quiz"
+            : `${sec.sectionType.charAt(0).toUpperCase() + sec.sectionType.slice(1)} Section`),
         content: sec.content,
         orderIndex: sec.orderIndex,
         createdAt: new Date(),
       });
     }
   }
-  console.log(`  ✅ Finished seeding ${module.id}`);
+
+  if (sectionRows.length > 0) {
+    await db.insert(moduleSections).values(sectionRows);
+  }
 }
 
 export async function seedAllPilotModules(filterPrefix?: string) {
-  console.log("🚀 Starting batch seeding of Pilot Modules from data/pilot_modules/...");
+  console.log("🚀 Starting batch seeding of Pilot Modules to database...");
 
   const pilotDir = fs.existsSync(path.resolve(process.cwd(), "data/pilot_modules"))
     ? path.resolve(process.cwd(), "data/pilot_modules")
@@ -86,7 +97,7 @@ export async function seedAllPilotModules(filterPrefix?: string) {
     .readdirSync(pilotDir)
     .filter((f) => f.endsWith(".json") && !f.includes(".original."));
 
-  if (filterPrefix) {
+  if (filterPrefix && filterPrefix !== "all") {
     const prefixes = filterPrefix.split(",").map((p) => p.trim());
     files = files.filter((f) => prefixes.some((p) => f.startsWith(p) || f.includes(p)));
   }
@@ -95,15 +106,20 @@ export async function seedAllPilotModules(filterPrefix?: string) {
 
   console.log(`📁 Found ${files.length} pilot module file(s) to seed.`);
 
-  for (let i = 0; i < files.length; i++) {
-    const file = files[i];
-    console.log(`[${i + 1}/${files.length}] Processing ${file}...`);
-    const filePath = path.join(pilotDir, file);
-    const pilotData = JSON.parse(fs.readFileSync(filePath, "utf8"));
-    await seedSingleModuleData(pilotData);
+  const batchSize = 5;
+  for (let i = 0; i < files.length; i += batchSize) {
+    const batch = files.slice(i, i + batchSize);
+    await Promise.all(
+      batch.map(async (file) => {
+        const filePath = path.join(pilotDir, file);
+        const pilotData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+        await seedSingleModuleData(pilotData);
+      })
+    );
+    console.log(`  ⚡ Seeded ${Math.min(i + batchSize, files.length)}/${files.length} modules (${Math.round((Math.min(i + batchSize, files.length) / files.length) * 100)}%)`);
   }
 
-  console.log("\n🎉 Pilot modules successfully seeded into database!");
+  console.log("\n🎉 All pilot modules successfully seeded into database!");
 }
 
 if (import.meta.main) {

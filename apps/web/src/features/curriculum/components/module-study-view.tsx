@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { submitSubModuleAction } from "@/app/(student)/modules/modules.actions";
 import { playFanfareSound } from "@/lib/sound-fx";
+import { stopTutorSpeech } from "@/lib/tutor-voice";
 
 interface ModuleStudyViewProps {
   moduleId: string;
@@ -61,6 +62,7 @@ export function ModuleStudyView({
       setIsSidebarOpen(true);
     }
   }, []);
+
   // Default to null so module opens the onboarding missions hub first
   const [activeMissionId, setActiveMissionId] = useState<string | null>(() => {
     if (typeof window !== "undefined") {
@@ -69,6 +71,13 @@ export function ModuleStudyView({
     }
     return null;
   });
+
+  // Stop tutor speech immediately on unmount or when navigating back to missions hub
+  React.useEffect(() => {
+    return () => {
+      stopTutorSpeech();
+    };
+  }, [activeMissionId]);
   const [activeStepId, setActiveStepId] = useState(1);
   const [completedSteps, setCompletedSteps] = useState<number[]>([1]);
   const [isCurrentStepComplete, setIsCurrentStepComplete] = useState(false);
