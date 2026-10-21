@@ -21,6 +21,8 @@ import {
 import { submitSubModuleAction } from "@/app/(student)/modules/modules.actions";
 import { playFanfareSound } from "@/lib/sound-fx";
 import { stopTutorSpeech } from "@/lib/tutor-voice";
+import { useSession } from "@/features/auth/hooks/use-session";
+import { isUserAdmin } from "@/lib/auth-utils";
 
 interface ModuleStudyViewProps {
   moduleId: string;
@@ -28,6 +30,8 @@ interface ModuleStudyViewProps {
   subModules: any[];
   userId: string;
   studentName: string;
+  currentUser?: any;
+  isAdmin?: boolean;
   tutor: any;
   onRefresh?: () => void;
 }
@@ -52,9 +56,18 @@ export function ModuleStudyView({
   subModules = [],
   userId,
   studentName,
+  currentUser,
+  isAdmin: propIsAdmin,
   tutor,
   onRefresh,
 }: ModuleStudyViewProps) {
+  const { data: sessionUser } = useSession();
+  const isAdmin = Boolean(
+    propIsAdmin ||
+    isUserAdmin(currentUser) ||
+    isUserAdmin(sessionUser)
+  );
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   React.useEffect(() => {
@@ -155,7 +168,7 @@ export function ModuleStudyView({
     ];
   }, [skillType, completedSteps]);
 
-  const canProceed = isCurrentStepComplete || completedSteps.includes(activeStepId) || activeStepId === 1;
+  const canProceed = isAdmin || isCurrentStepComplete || completedSteps.includes(activeStepId) || activeStepId === 1;
 
   const handleStepComplete = () => {
     setIsCurrentStepComplete(true);
@@ -165,11 +178,11 @@ export function ModuleStudyView({
   const maxCompletedStep = completedSteps.length > 0 ? Math.max(...completedSteps) : 1;
 
   const handleSelectStep = (stepId: number) => {
-    if (stepId > maxCompletedStep + 1 && !completedSteps.includes(stepId)) {
+    if (!isAdmin && stepId > maxCompletedStep + 1 && !completedSteps.includes(stepId)) {
       return;
     }
     setActiveStepId(stepId);
-    setIsCurrentStepComplete(completedSteps.includes(stepId) || stepId === 1);
+    setIsCurrentStepComplete(isAdmin || completedSteps.includes(stepId) || stepId === 1);
     window.scrollTo({ top: 120, behavior: "smooth" });
   };
 
@@ -182,7 +195,7 @@ export function ModuleStudyView({
     if (activeStepId < playlistSteps.length) {
       const nextId = activeStepId + 1;
       setActiveStepId(nextId);
-      setIsCurrentStepComplete(completedSteps.includes(nextId));
+      setIsCurrentStepComplete(isAdmin || completedSteps.includes(nextId));
       window.scrollTo({ top: 120, behavior: "smooth" });
     } else {
       // Step completed -> Finish mission, mark completed, & return to Floating Cards Hub!
@@ -224,6 +237,7 @@ export function ModuleStudyView({
               moduleData={moduleData}
               subModules={subModules}
               tutor={tutor}
+              isAdmin={isAdmin}
               onSelectMission={(missionId) => {
                 setActiveMissionId(missionId);
                 setIsOnboardingBriefing(true);
@@ -343,7 +357,7 @@ export function ModuleStudyView({
                       {playlistSteps.map((s) => {
                         const isActive = s.id === activeStepId;
                         const isDone = completedSteps.includes(s.id);
-                        const isAccessible = s.id <= maxCompletedStep + 1 || isDone;
+                        const isAccessible = isAdmin || s.id <= maxCompletedStep + 1 || isDone;
 
                         return (
                           <button
@@ -395,6 +409,7 @@ export function ModuleStudyView({
                     isFinishing={isFinishing}
                     moduleData={moduleData}
                     studentName={studentName}
+                    isAdmin={isAdmin}
                   />
                 </div>
 
@@ -404,10 +419,11 @@ export function ModuleStudyView({
                     steps={playlistSteps}
                     activeStepId={activeStepId}
                     onSelectStep={handleSelectStep}
-                    maxAccessibleStepId={maxCompletedStep + 1}
+                    maxAccessibleStepId={isAdmin ? 999 : maxCompletedStep + 1}
                     xpPoints={xpPoints}
                     completedCount={completedSteps.length}
                     totalCount={playlistSteps.length}
+                    isAdmin={isAdmin}
                   />
 
                   {/* Free-roaming mini Mr. Khoirul (Bebas jalan di area sidebar, tidak dikurung dalam box) */}

@@ -36,6 +36,7 @@ interface ModuleMissionsHubProps {
   subModules: SubModuleItem[];
   tutor: any;
   onSelectMission: (subModuleId: string) => void;
+  isAdmin?: boolean;
 }
 
 const SKILL_THEMES: Record<
@@ -104,6 +105,7 @@ export function ModuleMissionsHub({
   subModules = [],
   tutor,
   onSelectMission,
+  isAdmin = false,
 }: ModuleMissionsHubProps) {
   const completedCount = subModules.filter(
     (s) => s.userProgress?.status === "completed"
@@ -113,7 +115,7 @@ export function ModuleMissionsHub({
     subModules[0];
 
   const handleCardClick = (sub: SubModuleItem, isLocked: boolean, e: React.MouseEvent) => {
-    if (isLocked) {
+    if (isLocked && !isAdmin) {
       animeShake(e.currentTarget as HTMLElement);
       return;
     }
@@ -180,7 +182,7 @@ export function ModuleMissionsHub({
               const theme = SKILL_THEMES[skill] || SKILL_THEMES.reading;
               const Icon = theme.icon;
               const isCompleted = sub.userProgress?.status === "completed";
-              const isLocked = sub.userProgress?.status === "locked" && index > completedCount;
+              const isLocked = !isAdmin && sub.userProgress?.status === "locked" && index > completedCount;
 
               const isAssessment = skill === "assessment" || skill === "exam";
 
@@ -319,7 +321,7 @@ export function ModuleMissionsHub({
             const Icon = theme.icon;
 
             const isCompleted = sub.userProgress?.status === "completed";
-            const isLocked = sub.userProgress?.status === "locked" && index > completedCount;
+            const isLocked = !isAdmin && sub.userProgress?.status === "locked" && index > completedCount;
             const progressPercent = isCompleted ? 100 : sub.userProgress?.status === "unlocked" ? 40 : 0;
 
             const isAssessment = skill === "assessment" || skill === "exam";

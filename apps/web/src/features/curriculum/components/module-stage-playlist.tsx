@@ -19,6 +19,7 @@ interface ModuleStagePlaylistProps {
   completedCount: number;
   totalCount: number;
   maxAccessibleStepId?: number;
+  isAdmin?: boolean;
   children?: React.ReactNode;
 }
 
@@ -29,6 +30,7 @@ export function ModuleStagePlaylist({
   completedCount,
   totalCount,
   maxAccessibleStepId,
+  isAdmin = false,
   children,
 }: ModuleStagePlaylistProps) {
   const progressPercent = Math.min(100, Math.round((completedCount / Math.max(1, totalCount)) * 100));
@@ -83,7 +85,7 @@ export function ModuleStagePlaylist({
         {steps.map((s, idx) => {
           const isActive = s.id === activeStepId;
           const isDone = s.isCompleted;
-          const isLocked = maxAccessibleStepId ? s.id > maxAccessibleStepId && !isDone : false;
+          const isLocked = !isAdmin && (maxAccessibleStepId ? s.id > maxAccessibleStepId && !isDone : false);
 
           return (
             <button

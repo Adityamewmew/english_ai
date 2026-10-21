@@ -17,6 +17,8 @@ import {
   normalizeSentence,
   cleanAlphanumeric,
 } from "./listening-practicum-utils";
+import { useSession } from "@/features/auth/hooks/use-session";
+import { isUserAdmin } from "@/lib/auth-utils";
 
 export type { PracticumQuestion };
 
@@ -27,6 +29,7 @@ interface ListeningPracticumStageProps {
   tutor: any;
   onRewardXp: (amount: number) => void;
   onFinish?: () => void;
+  isAdmin?: boolean;
 }
 
 const MAX_AUDIO_PLAYS = 3;
@@ -38,7 +41,11 @@ export function ListeningPracticumStage({
   tutor,
   onRewardXp,
   onFinish,
+  isAdmin: propIsAdmin,
 }: ListeningPracticumStageProps) {
+  const { data: sessionUser } = useSession();
+  const isAdmin = Boolean(propIsAdmin || isUserAdmin(sessionUser));
+
   const [currentIdx, setCurrentIdx] = useState(0);
   const [assembledWords, setAssembledWords] = useState<string[]>([]);
   const [dictationInput, setDictationInput] = useState("");
@@ -490,20 +497,35 @@ export function ListeningPracticumStage({
         )}
 
         {/* 5. Action Row */}
-        <div className="pt-2 flex items-center justify-between gap-3">
+        <div className="pt-2 flex items-center justify-between gap-3 flex-wrap">
           {!isChecked ? (
-            <button
-              type="button"
-              onClick={handleCheckAnswer}
-              disabled={
-                (isArrange && assembledWords.length === 0) ||
-                (isDictation && !dictationInput.trim()) ||
-                (isMC && !selectedOption)
-              }
-              className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-[#0D3B66] hover:bg-[#1B4965] border-b-3 border-b-[#082542] active:border-b-0 active:translate-y-0.5 disabled:opacity-50 disabled:pointer-events-none text-white font-bold text-xs sm:text-sm transition-all cursor-pointer shadow-xs min-h-[46px]"
-            >
-              Periksa Jawaban
-            </button>
+            <div className="flex items-center gap-2 flex-wrap w-full sm:w-auto">
+              <button
+                type="button"
+                onClick={handleCheckAnswer}
+                disabled={
+                  (isArrange && assembledWords.length === 0) ||
+                  (isDictation && !dictationInput.trim()) ||
+                  (isMC && !selectedOption)
+                }
+                className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-[#0D3B66] hover:bg-[#1B4965] border-b-3 border-b-[#082542] active:border-b-0 active:translate-y-0.5 disabled:opacity-50 disabled:pointer-events-none text-white font-bold text-xs sm:text-sm transition-all cursor-pointer shadow-xs min-h-[46px]"
+              >
+                Periksa Jawaban
+              </button>
+
+              {isAdmin && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setCheckedStatus((prev) => ({ ...prev, [currentQ.id]: true }));
+                    setIsCorrectStatus((prev) => ({ ...prev, [currentQ.id]: true }));
+                  }}
+                  className="px-4 py-3 rounded-2xl border border-dashed border-amber-400 text-amber-600 dark:text-amber-400 text-xs font-bold hover:bg-amber-50 dark:hover:bg-amber-950/30 transition-all cursor-pointer min-h-[46px]"
+                >
+                  Lewati Soal (Admin)
+                </button>
+              )}
+            </div>
           ) : (
             <button
               type="button"

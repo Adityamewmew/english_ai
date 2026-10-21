@@ -17,6 +17,8 @@ import {
   playMatchSuccessSound,
   playFanfareSound,
 } from "@/lib/sound-fx";
+import { useSession } from "@/features/auth/hooks/use-session";
+import { isUserAdmin } from "@/lib/auth-utils";
 
 export interface WritingPracticumQuestion {
   id: number;
@@ -39,6 +41,7 @@ interface WritingPracticumStageProps {
   onRewardXp: (amount: number) => void;
   tutor: any;
   onFinish?: () => void;
+  isAdmin?: boolean;
 }
 
 export function WritingPracticumStage({
@@ -46,7 +49,10 @@ export function WritingPracticumStage({
   onRewardXp,
   tutor,
   onFinish,
+  isAdmin: propIsAdmin,
 }: WritingPracticumStageProps) {
+  const { data: sessionUser } = useSession();
+  const isAdmin = Boolean(propIsAdmin || isUserAdmin(sessionUser));
   const rawQuestions =
     (Array.isArray(quizSec?.content?.practicumQuestions) && quizSec.content.practicumQuestions) ||
     (Array.isArray(quizSec?.content?.questions) && quizSec.content.questions) ||
@@ -379,7 +385,18 @@ export function WritingPracticumStage({
             <span>Clear &amp; Retype</span>
           </button>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
+            {isAdmin && !currentEval?.isCorrect && (
+              <button
+                type="button"
+                onClick={handleNext}
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-dashed border-amber-400 text-amber-600 dark:text-amber-400 font-bold text-xs hover:bg-amber-50 dark:hover:bg-amber-950/30 transition-all cursor-pointer"
+              >
+                <span>Lewati Soal (Admin)</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            )}
+
             {currentEval?.isCorrect ? (
               <button
                 type="button"

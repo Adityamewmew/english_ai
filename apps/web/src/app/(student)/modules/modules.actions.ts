@@ -75,6 +75,9 @@ export async function getModuleDetailAction(moduleId: string) {
       user: {
         id: session.userId,
         name: session.name,
+        role: session.role,
+        accessType: session.accessType,
+        email: session.email,
       },
     };
   } catch (err: any) {

@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { CheckCircle2, XCircle, HelpCircle } from "lucide-react";
 import { animeButtonPop, animeShake } from "@/lib/anime-effects";
+import { useSession } from "@/features/auth/hooks/use-session";
+import { isUserAdmin } from "@/lib/auth-utils";
 
 interface ConceptCheckQuestion {
   question: string;
@@ -16,6 +18,7 @@ interface ConceptChecksCardProps {
   conceptChecks: ConceptCheckQuestion[];
   accentColor?: "blue" | "purple" | "amber" | "rose" | "emerald";
   embedded?: boolean;
+  isAdmin?: boolean;
   onCompleted?: () => void;
 }
 
@@ -23,8 +26,11 @@ export function ConceptChecksCard({
   conceptChecks,
   accentColor = "blue",
   embedded = false,
+  isAdmin: propIsAdmin,
   onCompleted,
 }: ConceptChecksCardProps) {
+  const { data: sessionUser } = useSession();
+  const isAdmin = Boolean(propIsAdmin || isUserAdmin(sessionUser));
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
   const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>({});
 
@@ -99,6 +105,15 @@ export function ConceptChecksCard({
             Concept Checkpoint & Understanding Test
           </h4>
         </div>
+        {isAdmin && (
+          <button
+            type="button"
+            onClick={() => onCompleted?.()}
+            className="ml-auto px-3.5 py-1.5 rounded-xl border border-dashed border-amber-400 text-amber-600 dark:text-amber-400 text-xs font-bold hover:bg-amber-50 dark:hover:bg-amber-950/30 transition-all cursor-pointer shadow-2xs"
+          >
+            Lewati Kuis (Admin)
+          </button>
+        )}
       </div>
 
       <div className="space-y-4">

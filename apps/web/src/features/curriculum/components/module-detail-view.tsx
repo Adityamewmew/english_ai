@@ -18,6 +18,7 @@ export function ModuleDetailView({ moduleId }: ModuleDetailViewProps) {
   const [subModules, setSubModules] = useState<any[]>([]);
   const [studentName, setStudentName] = useState("");
   const [userId, setUserId] = useState("");
+  const [currentUser, setCurrentUser] = useState<any>(null);
 
   const tutor = useModuleTutor({
     moduleId,
@@ -60,6 +61,7 @@ export function ModuleDetailView({ moduleId }: ModuleDetailViewProps) {
         if (res.user) {
           setUserId(res.user.id);
           setStudentName(res.user.name);
+          setCurrentUser(res.user);
         }
       }
     } catch (err) {
@@ -111,6 +113,7 @@ export function ModuleDetailView({ moduleId }: ModuleDetailViewProps) {
         subModules={subModules}
         userId={userId}
         studentName={studentName}
+        currentUser={currentUser}
         tutor={tutor}
         onRefresh={loadData}
       />

@@ -17,6 +17,8 @@ import { playPopSound, playSnapSound, playMatchSuccessSound } from "@/lib/sound-
 import { PracticumRoleplayCall } from "./practicum-roleplay-call";
 import { PracticumDrillCard } from "./practicum-drill-card";
 import { PracticumSummary } from "./practicum-summary";
+import { useSession } from "@/features/auth/hooks/use-session";
+import { isUserAdmin } from "@/lib/auth-utils";
 
 export interface PracticumQuestion {
   id: number;
@@ -45,6 +47,7 @@ interface SpeakingPracticumStageProps {
   tutor: any;
   onRewardXp: (amount: number) => void;
   onNextStep?: () => void;
+  isAdmin?: boolean;
 }
 
 export function SpeakingPracticumStage({
@@ -52,7 +55,10 @@ export function SpeakingPracticumStage({
   tutor,
   onRewardXp,
   onNextStep,
+  isAdmin: propIsAdmin,
 }: SpeakingPracticumStageProps) {
+  const { data: sessionUser } = useSession();
+  const isAdmin = Boolean(propIsAdmin || isUserAdmin(sessionUser));
   const rawQuestions: PracticumQuestion[] = quizSec?.content?.practicumQuestions || [];
 
   if (rawQuestions.length === 0) {
@@ -474,6 +480,24 @@ export function SpeakingPracticumStage({
                 >
                   <span>Confirm & Continue to Next Question</span>
                   <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
+                </button>
+              )}
+
+              {isAdmin && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    playMatchSuccessSound();
+                    if (currentIdx < totalQuestions - 1) {
+                      setCurrentIdx((prev) => prev + 1);
+                    } else {
+                      setIsCompletedAll(true);
+                    }
+                  }}
+                  className="px-4 py-2.5 rounded-xl border border-dashed border-amber-400 text-amber-600 dark:text-amber-400 font-bold text-xs hover:bg-amber-50 dark:hover:bg-amber-950/30 transition-all cursor-pointer flex items-center gap-1.5"
+                >
+                  <span>Lewati Soal (Admin)</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               )}
             </div>

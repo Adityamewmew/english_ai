@@ -4,6 +4,8 @@ import React from "react";
 import Link from "next/link";
 import { Lock, ArrowRight, CheckCircle2, BookOpen, GraduationCap } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
+import { useSession } from "@/features/auth/hooks/use-session";
+import { isUserAdmin } from "@/lib/auth-utils";
 
 export interface CurriculumModuleItem {
   id: string;
@@ -30,7 +32,9 @@ const THUMBNAIL_STYLES = [
 ];
 
 export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
-  const isLocked = module.status === "locked";
+  const { data: sessionUser } = useSession();
+  const isAdmin = isUserAdmin(sessionUser);
+  const isLocked = !isAdmin && module.status === "locked";
   const isCompleted = module.status === "completed";
   const isExam = module.id.includes("M13") || Boolean(module.isExam);
   const style = THUMBNAIL_STYLES[index % THUMBNAIL_STYLES.length];

@@ -36,6 +36,7 @@ interface ModuleStageViewportProps {
   isFinishing?: boolean;
   moduleData?: any;
   studentName?: string;
+  isAdmin?: boolean;
 }
 
 export function ModuleStageViewport({
@@ -59,7 +60,9 @@ export function ModuleStageViewport({
   isFinishing = false,
   moduleData,
   studentName,
+  isAdmin = false,
 }: ModuleStageViewportProps) {
+  const effectiveCanProceed = isAdmin || canProceed;
   return (
     <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-[28px] overflow-hidden shadow-sm flex flex-col justify-between">
       {/* 1. Specialized Stage Activity Canvas based on skillType */}
@@ -182,16 +185,16 @@ export function ModuleStageViewport({
 
           <button
             type="button"
-            disabled={!canProceed || isFinishing}
+            disabled={!effectiveCanProceed || isFinishing}
             onClick={(e) => {
-              if (!canProceed || isFinishing) return;
+              if (!effectiveCanProceed || isFinishing) return;
               animeButtonPop(e.currentTarget);
               onNextStep();
             }}
             className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-6 py-2.5 rounded-xl font-bold text-xs shadow-sm transition-all active:scale-95 cursor-pointer min-h-[44px] touch-manipulation ${
               isFinishing
                 ? "bg-slate-400 text-white cursor-wait"
-                : !canProceed
+                : !effectiveCanProceed
                 ? "opacity-50 cursor-not-allowed bg-slate-200 dark:bg-slate-800 text-slate-400 border border-slate-300 dark:border-slate-700"
                 : activeStepId === totalSteps
                 ? "btn-skeuo-yellow text-[#0F172A]"
@@ -203,7 +206,7 @@ export function ModuleStageViewport({
                 <Loader2 className="w-4 h-4 animate-spin" />
                 <span>Menyimpan...</span>
               </>
-            ) : !canProceed ? (
+            ) : !effectiveCanProceed ? (
               <>
                 <Lock className="w-3.5 h-3.5 text-slate-400" />
                 <span>Selesaikan Aktivitas</span>
