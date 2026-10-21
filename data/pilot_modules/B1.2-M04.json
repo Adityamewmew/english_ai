@@ -1540,6 +1540,2753 @@
           }
         }
       ]
+    },
+    {
+      "id": "sub-b1-2-m04-assessment",
+      "moduleId": "B1.2-M04",
+      "skillType": "assessment",
+      "title": "Final Mission: Unit 4 Comprehensive Assessment (55 Soal)",
+      "theme": "Unit 4 All-Skills Mastery Evaluation (MEDIUM)",
+      "orderIndex": 5,
+      "sections": [
+        {
+          "id": "sec-b1-2-m04-theory",
+          "moduleId": "B1.2-M04",
+          "subModuleId": "sub-b1-2-m04-assessment",
+          "sectionType": "theory",
+          "title": "Unit Final Mission Guidelines & Criteria",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Ujian akhir unit resmi untuk Modals of Probability & Deduction: Must, Might, Can't in Everyday Reasoning. Menguji 4 kompetensi terintegrasi (Reading 15 soal, Listening 15 soal, Writing 10 soal, Speaking 15 soal) untuk menghasilkan scorecard nilai resmi per unit.",
+            "totalQuestions": 55,
+            "passingScore": 75,
+            "estimatedMinutes": 40,
+            "difficultyTier": "medium",
+            "parts": [
+              {
+                "part": 1,
+                "name": "Reading Comprehension & Lexicogrammar",
+                "count": 15
+              },
+              {
+                "part": 2,
+                "name": "Listening Auditory Synthesis",
+                "count": 15
+              },
+              {
+                "part": 3,
+                "name": "Written Production & Discourse",
+                "count": 10
+              },
+              {
+                "part": 4,
+                "name": "Spoken Fluency & Oral Interaction",
+                "count": 15
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-2-m04-quiz",
+          "moduleId": "B1.2-M04",
+          "subModuleId": "sub-b1-2-m04-assessment",
+          "sectionType": "quiz",
+          "title": "Unit 4 Mastery Quiz: 55 Items",
+          "orderIndex": 2,
+          "content": {
+            "passingScore": 75,
+            "totalQuestions": 55,
+            "difficultyTier": "medium",
+            "parts": {
+              "reading": [
+                {
+                  "id": "q-b1.2-m04-r-1",
+                  "question": "What day of the week was it when Sarah arrived at the office?",
+                  "options": [
+                    "Sunday morning",
+                    "Monday morning",
+                    "Friday afternoon"
+                  ],
+                  "answer": "Monday morning",
+                  "explanation": "The passage states, 'It was Monday morning at the marketing agency.'",
+                  "part": "reading",
+                  "partIndex": 1,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-r-2",
+                  "question": "What did Sarah notice first about the office when she walked in?",
+                  "options": [
+                    "The lights were off and desks were quiet",
+                    "Everyone was shouting and laughing",
+                    "The front door was wide open"
+                  ],
+                  "answer": "The lights were off and desks were quiet",
+                  "explanation": "The text notes that all the lights were turned off and the desks were completely quiet.",
+                  "part": "reading",
+                  "partIndex": 2,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-r-3",
+                  "question": "Whose desk had a cup of hot coffee steaming on it?",
+                  "options": [
+                    "Sarah's desk",
+                    "Mark's desk",
+                    "The manager's desk"
+                  ],
+                  "answer": "Mark's desk",
+                  "explanation": "The text mentions a cup of hot coffee steaming on Mark's desk.",
+                  "part": "reading",
+                  "partIndex": 3,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-r-4",
+                  "question": "Why did Sarah deduce that Mark must have been there recently?",
+                  "options": [
+                    "Because the coffee was still warm",
+                    "Because she saw him leaving",
+                    "Because his computer was broken"
+                  ],
+                  "answer": "Because the coffee was still warm",
+                  "explanation": "The passage explains that because the coffee was still warm, Mark must have been there a few minutes before.",
+                  "part": "reading",
+                  "partIndex": 4,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-r-5",
+                  "question": "What did Sarah find when she checked her phone inbox?",
+                  "options": [
+                    "A message about an emergency meeting",
+                    "An empty inbox with no messages",
+                    "A text from Mark"
+                  ],
+                  "answer": "An empty inbox with no messages",
+                  "explanation": "The text states that her inbox was empty.",
+                  "part": "reading",
+                  "partIndex": 5,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-r-6",
+                  "question": "Where did Sarah think her colleagues might have gone?",
+                  "options": [
+                    "To the emergency meeting room downstairs or the auditorium",
+                    "Home for the rest of the day",
+                    "To a coffee shop across the street"
+                  ],
+                  "answer": "To the emergency meeting room downstairs or the auditorium",
+                  "explanation": "The passage notes they might have gone to the meeting room or could be testing the projector in the auditorium.",
+                  "part": "reading",
+                  "partIndex": 6,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-r-7",
+                  "question": "Why was it impossible for the team to be in the auditorium?",
+                  "options": [
+                    "Because it was closed for repairs today",
+                    "Because it was locked from the outside",
+                    "Because it was too crowded"
+                  ],
+                  "answer": "Because it was closed for repairs today",
+                  "explanation": "Sarah remembered that the auditorium was closed for repairs today.",
+                  "part": "reading",
+                  "partIndex": 7,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-r-8",
+                  "question": "Which modal verb did Sarah use to conclude they were not in the auditorium?",
+                  "options": [
+                    "can't",
+                    "must",
+                    "might"
+                  ],
+                  "answer": "can't",
+                  "explanation": "The text states, 'That meant they can't be in the auditorium.'",
+                  "part": "reading",
+                  "partIndex": 8,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-r-9",
+                  "question": "What sound finally helped Sarah solve the mystery of where everyone was?",
+                  "options": [
+                    "Laughter coming from the kitchen",
+                    "A phone ringing loudly",
+                    "Someone calling her name"
+                  ],
+                  "answer": "Laughter coming from the kitchen",
+                  "explanation": "The passage concludes with Sarah hearing laughter coming from the kitchen.",
+                  "part": "reading",
+                  "partIndex": 9,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-r-10",
+                  "question": "How did Sarah feel when she heard the sound at the end of the story?",
+                  "options": [
+                    "Angry",
+                    "Worried",
+                    "Smiling"
+                  ],
+                  "answer": "Smiling",
+                  "explanation": "The text states that she heard laughter coming from the kitchen and smiled.",
+                  "part": "reading",
+                  "partIndex": 10,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "question": "Which preposition correctly completes the sentence: 'She is responsible _____ supervising quality assurance.'",
+                  "options": [
+                    "for",
+                    "with",
+                    "to",
+                    "at"
+                  ],
+                  "answer": "for",
+                  "explanation": "The adjective 'responsible' collocates with 'for' when indicating duty or charge.",
+                  "id": "q-b1.2-m04-r-11",
+                  "part": "reading",
+                  "partIndex": 11,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "question": "What distinction exists between 'economic' and 'economical'?",
+                  "options": [
+                    "'Economic' relates to the economy, whereas 'economical' means avoiding waste or saving money.",
+                    "'Economic' means inexpensive, whereas 'economical' relates to government finance.",
+                    "Both terms are completely interchangeable in formal English.",
+                    "'Economical' is only used as a noun, whereas 'economic' is an adverb."
+                  ],
+                  "answer": "'Economic' relates to the economy, whereas 'economical' means avoiding waste or saving money.",
+                  "explanation": "'Economic' refers to national financial systems, while 'economical' refers to frugality or efficiency.",
+                  "id": "q-b1.2-m04-r-12",
+                  "part": "reading",
+                  "partIndex": 12,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "question": "Select the sentence expressing an unfulfilled past obligation using modal perfects:",
+                  "options": [
+                    "We should have verified the vendor's references before signing the agreement.",
+                    "We must verify the vendor's references before signing the agreement.",
+                    "We can verify the vendor's references after signing the agreement.",
+                    "We will have verified the vendor's references by tomorrow afternoon."
+                  ],
+                  "answer": "We should have verified the vendor's references before signing the agreement.",
+                  "explanation": "'Should have + past participle' expresses regret or an unfulfilled past action.",
+                  "id": "q-b1.2-m04-r-13",
+                  "part": "reading",
+                  "partIndex": 13,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "question": "According to the workplace policy, what is the primary consequence of missing a project milestone?",
+                  "options": [
+                    "The project lead must submit a revised timeline and conduct a risk assessment.",
+                    "The entire development team is immediately replaced by external contractors.",
+                    "All project funding is automatically cancelled without further review.",
+                    "Clients are notified only after the product is officially deployed."
+                  ],
+                  "answer": "The project lead must submit a revised timeline and conduct a risk assessment.",
+                  "explanation": "Standard corporate policy dictates remediation through timeline review and risk mitigation.",
+                  "id": "q-b1.2-m04-r-14",
+                  "part": "reading",
+                  "partIndex": 14,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "question": "Which connector indicates a contrast between two independent clauses?",
+                  "options": [
+                    "Nevertheless",
+                    "Furthermore",
+                    "Consequently",
+                    "Similarly"
+                  ],
+                  "answer": "Nevertheless",
+                  "explanation": "'Nevertheless' signals contrast or concession, equivalent to 'however'.",
+                  "id": "q-b1.2-m04-r-15",
+                  "part": "reading",
+                  "partIndex": 15,
+                  "sourceModule": "B1.2-M04"
+                }
+              ],
+              "listening": [
+                {
+                  "id": "q-b1.2-m04-l-1",
+                  "type": "dictation",
+                  "audioText": "Have you seen Mark today?",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Sarah: \"Have you seen Mark _____?\"",
+                  "targetWord": "today",
+                  "explanation": "Full audio: \"Have you seen Mark today?\". The missing word is \"today\".",
+                  "part": "listening",
+                  "partIndex": 1,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-l-2",
+                  "type": "dictation",
+                  "audioText": "He is not at his desk.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Sarah: \"He is not at his _____.\"",
+                  "targetWord": "desk",
+                  "explanation": "Full audio: \"He is not at his desk.\". The missing word is \"desk\".",
+                  "part": "listening",
+                  "partIndex": 2,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-l-3",
+                  "type": "dictation",
+                  "audioText": "No, I haven't seen him.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Tom: \"No, I haven't _____ him.\"",
+                  "targetWord": "seen",
+                  "explanation": "Full audio: \"No, I haven't seen him.\". The missing word is \"seen\".",
+                  "part": "listening",
+                  "partIndex": 3,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-l-4",
+                  "type": "dictation",
+                  "audioText": "He must be sick today.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Tom: \"He must be _____ today.\"",
+                  "targetWord": "sick",
+                  "explanation": "Full audio: \"He must be sick today.\". The missing word is \"sick\".",
+                  "part": "listening",
+                  "partIndex": 4,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-l-5",
+                  "type": "dictation",
+                  "audioText": "That can't be right.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Sarah: \"That can't be _____.\"",
+                  "targetWord": "right",
+                  "explanation": "Full audio: \"That can't be right.\". The missing word is \"right\".",
+                  "part": "listening",
+                  "partIndex": 5,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-l-6",
+                  "type": "arrange",
+                  "audioText": "I saw his gym photo.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "I saw his gym photo",
+                  "words": [
+                    "gym",
+                    "saw",
+                    "I",
+                    "photo",
+                    "his"
+                  ],
+                  "explanation": "Correct sentence order: \"I saw his gym photo.\".",
+                  "part": "listening",
+                  "partIndex": 6,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-l-7",
+                  "type": "arrange",
+                  "audioText": "Then he might be working.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "Then he might be working",
+                  "words": [
+                    "be",
+                    "he",
+                    "working",
+                    "Then",
+                    "might"
+                  ],
+                  "explanation": "Correct sentence order: \"Then he might be working.\".",
+                  "part": "listening",
+                  "partIndex": 7,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-l-8",
+                  "type": "arrange",
+                  "audioText": "Or he could be stuck.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "Or he could be stuck",
+                  "words": [
+                    "stuck",
+                    "be",
+                    "Or",
+                    "he",
+                    "could"
+                  ],
+                  "explanation": "Correct sentence order: \"Or he could be stuck.\".",
+                  "part": "listening",
+                  "partIndex": 8,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-l-9",
+                  "type": "arrange",
+                  "audioText": "Wait, I got his message.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "Wait I got his message",
+                  "words": [
+                    "Wait",
+                    "his",
+                    "got",
+                    "I",
+                    "message"
+                  ],
+                  "explanation": "Correct sentence order: \"Wait, I got his message.\".",
+                  "part": "listening",
+                  "partIndex": 9,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-l-10",
+                  "type": "arrange",
+                  "audioText": "He is at the dentist.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "He is at the dentist",
+                  "words": [
+                    "dentist",
+                    "He",
+                    "at",
+                    "the",
+                    "is"
+                  ],
+                  "explanation": "Correct sentence order: \"He is at the dentist.\".",
+                  "part": "listening",
+                  "partIndex": 10,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "type": "dictation",
+                  "audioText": "The company demonstrated resilience during the economic downturn.",
+                  "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                  "promptSentence": "The company demonstrated _____ during the economic downturn.",
+                  "targetWord": "resilience",
+                  "explanation": "Audio lengkap: 'The company demonstrated resilience during the economic downturn.'. Kata: 'resilience'.",
+                  "id": "q-b1.2-m04-l-11",
+                  "part": "listening",
+                  "partIndex": 11,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "type": "arrange",
+                  "audioText": "Both parties agreed to maintain strict confidentiality regarding the negotiations.",
+                  "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                  "targetSentence": "Both parties agreed to maintain strict confidentiality regarding the negotiations",
+                  "words": [
+                    "confidentiality",
+                    "maintain",
+                    "Both",
+                    "regarding",
+                    "agreed",
+                    "negotiations",
+                    "parties",
+                    "to",
+                    "strict",
+                    "the"
+                  ],
+                  "explanation": "Urutan benar: 'Both parties agreed to maintain strict confidentiality regarding the negotiations.'.",
+                  "id": "q-b1.2-m04-l-12",
+                  "part": "listening",
+                  "partIndex": 12,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "type": "dictation",
+                  "audioText": "Effective delegation empowers team members to make autonomous decisions.",
+                  "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                  "promptSentence": "Effective delegation empowers team members to make _____ decisions.",
+                  "targetWord": "autonomous",
+                  "explanation": "Audio lengkap: 'Effective delegation empowers team members to make autonomous decisions.'. Kata: 'autonomous'.",
+                  "id": "q-b1.2-m04-l-13",
+                  "part": "listening",
+                  "partIndex": 13,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "type": "dictation",
+                  "audioText": "Although quarterly revenue increased, operating costs remained unexpectedly high.",
+                  "instruction": "Dengarkan audio dan ketik kata atau frasa yang hilang:",
+                  "promptSentence": "Although quarterly revenue increased, operating costs remained _____ high.",
+                  "targetWord": "unexpectedly",
+                  "explanation": "Audio lengkap: 'Although quarterly revenue increased, operating costs remained unexpectedly high.'. Kata yang hilang: 'unexpectedly'.",
+                  "id": "q-b1.2-m04-l-14",
+                  "part": "listening",
+                  "partIndex": 14,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "type": "arrange",
+                  "audioText": "We should have conducted a comprehensive feasibility study earlier.",
+                  "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang tepat:",
+                  "targetSentence": "We should have conducted a comprehensive feasibility study earlier",
+                  "words": [
+                    "conducted",
+                    "feasibility",
+                    "have",
+                    "earlier",
+                    "We",
+                    "study",
+                    "comprehensive",
+                    "should",
+                    "a"
+                  ],
+                  "explanation": "Urutan benar: 'We should have conducted a comprehensive feasibility study earlier.'.",
+                  "id": "q-b1.2-m04-l-15",
+                  "part": "listening",
+                  "partIndex": 15,
+                  "sourceModule": "B1.2-M04"
+                }
+              ],
+              "writing": [
+                {
+                  "id": "q-b1.2-m04-w-1",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Rewrite the sentence using 'must' to show high certainty:",
+                  "promptText": "I am certain that pizza is delicious because it smells amazing.",
+                  "hint": "Use 'must be'.",
+                  "targetAnswers": [
+                    "That pizza must be delicious because it smells amazing.",
+                    "The pizza must be delicious because it smells amazing."
+                  ],
+                  "explanation": "Replace 'I am certain that' with the subject followed by 'must be'.",
+                  "part": "writing",
+                  "partIndex": 1,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-w-2",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Rewrite the sentence using 'can't' to show impossibility:",
+                  "promptText": "It is impossible that John is sleeping because I hear him playing the guitar.",
+                  "hint": "Use 'can't be sleeping'.",
+                  "targetAnswers": [
+                    "John can't be sleeping because I hear him playing the guitar."
+                  ],
+                  "explanation": "Replace 'It is impossible that [Subject] is' with '[Subject] can't be'.",
+                  "part": "writing",
+                  "partIndex": 2,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-w-3",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Rewrite the sentence using 'might' to show possibility:",
+                  "promptText": "It is possible that Lisa will join us for dinner later.",
+                  "hint": "Use 'might join'.",
+                  "targetAnswers": [
+                    "Lisa might join us for dinner later."
+                  ],
+                  "explanation": "Replace 'It is possible that [Subject] will' with '[Subject] might'.",
+                  "part": "writing",
+                  "partIndex": 3,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-w-4",
+                  "typeLabel": "Conjunctions & Connectors",
+                  "instruction": "Complete the deduction sentence with the correct modal verb for high certainty: 'The lights are all turned off, so they ___ be home.'",
+                  "promptText": "The lights are all turned off, so they ___ be home.",
+                  "hint": "Use the modal for negative certainty.",
+                  "targetAnswers": [
+                    "can't",
+                    "cannot"
+                  ],
+                  "explanation": "When lights are off, it is almost certain they are not home, so 'can't' is required.",
+                  "part": "writing",
+                  "partIndex": 4,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-w-5",
+                  "typeLabel": "Conjunctions & Connectors",
+                  "instruction": "Complete the sentence with the correct modal for moderate possibility: 'I am not sure where my keys are. They ___ be in the kitchen drawer.'",
+                  "promptText": "I am not sure where my keys are. They ___ be in the kitchen drawer.",
+                  "hint": "Use 'might' or 'could'.",
+                  "targetAnswers": [
+                    "might",
+                    "could"
+                  ],
+                  "explanation": "When uncertain, 'might' or 'could' expresses a moderate possibility.",
+                  "part": "writing",
+                  "partIndex": 5,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-w-6",
+                  "typeLabel": "Mechanics Correction",
+                  "instruction": "Correct the grammar and mechanics in the following sentence:",
+                  "promptText": "he must to know the answer because he studied all night.",
+                  "hint": "Remove the word 'to' after the modal verb.",
+                  "targetAnswers": [
+                    "He must know the answer because he studied all night."
+                  ],
+                  "explanation": "Modal verbs like 'must' take a bare infinitive without 'to'.",
+                  "part": "writing",
+                  "partIndex": 6,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-w-7",
+                  "typeLabel": "Mechanics Correction",
+                  "instruction": "Correct the grammar and mechanics in the following sentence:",
+                  "promptText": "that car cant be cheap, it is a brand new sports car.",
+                  "hint": "Fix capitalization and use the apostrophe in 'can't'.",
+                  "targetAnswers": [
+                    "That car can't be cheap, it is a brand new sports car.",
+                    "That car can't be cheap. It is a brand new sports car."
+                  ],
+                  "explanation": "Start sentences with capital letters and write 'can't' with an apostrophe.",
+                  "part": "writing",
+                  "partIndex": 7,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-w-8",
+                  "typeLabel": "Short Response",
+                  "instruction": "Write a deduction sentence using 'must' based on this clue: 'The street is completely flooded.'",
+                  "promptText": "The street is completely flooded.",
+                  "hint": "Example: It must have rained heavily.",
+                  "targetAnswers": [
+                    "It must have rained heavily.",
+                    "There must have been a heavy storm.",
+                    "It must rain a lot here."
+                  ],
+                  "explanation": "Use 'must' followed by a base verb to deduce the cause of the flood.",
+                  "part": "writing",
+                  "partIndex": 8,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-w-9",
+                  "typeLabel": "Short Response",
+                  "instruction": "Write a deduction sentence using 'might' based on this clue: 'Anna is not answering her phone.'",
+                  "promptText": "Anna is not answering her phone.",
+                  "hint": "Example: She might be busy driving.",
+                  "targetAnswers": [
+                    "She might be busy.",
+                    "She might be sleeping.",
+                    "She might be in a meeting."
+                  ],
+                  "explanation": "Use 'might be' to offer a reasonable explanation for an unanswered phone.",
+                  "part": "writing",
+                  "partIndex": 9,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-w-10",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Transform the statement into a negative deduction using 'can't': 'I am sure Mark is not the thief.'",
+                  "promptText": "I am sure Mark is not the thief.",
+                  "hint": "Use 'Mark can't be'.",
+                  "targetAnswers": [
+                    "Mark can't be the thief."
+                  ],
+                  "explanation": "Replace 'I am sure [Subject] is not' with '[Subject] can't be'.",
+                  "part": "writing",
+                  "partIndex": 10,
+                  "sourceModule": "B1.2-M04"
+                }
+              ],
+              "speaking": [
+                {
+                  "id": "q-b1.2-m04-s-1",
+                  "category": "storytelling",
+                  "typeLabel": "Personal Storytelling",
+                  "instruction": "Speak for at least 20 seconds about a time you had to make a deduction based on clues.",
+                  "audioPrompt": "Tell me about a situation when you found a clue and had to guess what happened.",
+                  "storyPoints": [
+                    "What object or clue you discovered",
+                    "What deduction you made using must or might",
+                    "What the actual truth turned out to be"
+                  ],
+                  "targetSentence": "I found muddy shoes by the door, so I deduced that my brother must have gone hiking.",
+                  "phonetic": "/aɪ faʊnd ˈmʌdi ʃuːz baɪ ðə dɔː/",
+                  "expectedKeywords": [
+                    "clue",
+                    "must",
+                    "deduction",
+                    "truth"
+                  ],
+                  "explanation": "Speak fluently in full sentences while describing past deductions.",
+                  "part": "speaking",
+                  "partIndex": 1,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-s-2",
+                  "category": "storytelling",
+                  "typeLabel": "Personal Storytelling",
+                  "instruction": "Speak for at least 20 seconds about a mysterious noise you heard at night.",
+                  "audioPrompt": "Describe a time you heard a strange sound and what you thought it was.",
+                  "storyPoints": [
+                    "When and where you heard the unusual sound",
+                    "What modal of probability you used to explain it",
+                    "How you felt after finding out the source"
+                  ],
+                  "targetSentence": "I heard a scratch on the window, and I thought it might be a stray cat.",
+                  "phonetic": "/aɪ hɜːd ə skrætʃ ɒn ðə ˈwɪndəʊ/",
+                  "expectedKeywords": [
+                    "sound",
+                    "might",
+                    "mystery",
+                    "source"
+                  ],
+                  "explanation": "Maintain a steady pace and use descriptive language.",
+                  "part": "speaking",
+                  "partIndex": 2,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-s-3",
+                  "category": "roleplay",
+                  "typeLabel": "Interactive Roleplay",
+                  "instruction": "Respond to your friend who cannot find their house keys.",
+                  "scenarioContext": "Your friend is standing outside their locked front house door and panicking.",
+                  "characterRole": "Helpful Friend",
+                  "audioPrompt": "Say where your friend might have left their keys using a modal verb.",
+                  "targetSentence": "You might have left them on the kitchen table before you rushed out.",
+                  "phonetic": "/juː maɪt hæv lɛft ðɛm ɒn ðə ˈkɪtʃɪn ˈteɪbəl/",
+                  "expectedKeywords": [
+                    "might",
+                    "keys",
+                    "table",
+                    "remember"
+                  ],
+                  "explanation": "Respond naturally with appropriate intonation of uncertainty.",
+                  "part": "speaking",
+                  "partIndex": 3,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-s-4",
+                  "category": "roleplay",
+                  "typeLabel": "Interactive Roleplay",
+                  "instruction": "Discuss an unexpected package delivery with a neighbor.",
+                  "scenarioContext": "A large mysterious box was left at your apartment doorstep.",
+                  "characterRole": "Neighbor",
+                  "audioPrompt": "Explain why the package can't belong to you.",
+                  "targetSentence": "That box can't be mine because I did not order anything online this week.",
+                  "phonetic": "/ðæt bɒks kɑːnt biː maɪn bɪˈkɒz aɪ dɪd nɒt ˈɔːdə ˈɛniθɪŋ/",
+                  "expectedKeywords": [
+                    "can't",
+                    "package",
+                    "order",
+                    "neighbor"
+                  ],
+                  "explanation": "Pronounce can't clearly to show strong negative deduction.",
+                  "part": "speaking",
+                  "partIndex": 4,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-s-5",
+                  "category": "roleplay",
+                  "typeLabel": "Interactive Roleplay",
+                  "instruction": "Talk about a colleague who is absent from work today.",
+                  "scenarioContext": "Your coworker Sarah is not at her desk during an important morning meeting.",
+                  "characterRole": "Office Coworker",
+                  "audioPrompt": "State why Sarah must be sick today.",
+                  "targetSentence": "Sarah must be sick today because she coughed a lot yesterday afternoon.",
+                  "phonetic": "/ˈsærə mʌst biː sɪk təˈdeɪ bɪˈkɒz ʃiː kɒft ə lɒt/",
+                  "expectedKeywords": [
+                    "must",
+                    "sick",
+                    "meeting",
+                    "yesterday"
+                  ],
+                  "explanation": "Emphasize must to indicate high certainty based on past evidence.",
+                  "part": "speaking",
+                  "partIndex": 5,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-s-6",
+                  "category": "roleplay",
+                  "typeLabel": "Interactive Roleplay",
+                  "instruction": "Plan an outdoor picnic with your classmate.",
+                  "scenarioContext": "You are looking out the window at cloudy skies and deciding whether to go.",
+                  "characterRole": "Classmate",
+                  "audioPrompt": "Suggest that it might rain later in the afternoon.",
+                  "targetSentence": "It might rain later, so we could postpone our picnic until tomorrow.",
+                  "phonetic": "/ɪt maɪt reɪn ˈleɪtə, səʊ wiː kʊd pəʊˈspəʊn ˈaʊə ˈpɪknɪk/",
+                  "expectedKeywords": [
+                    "might",
+                    "rain",
+                    "picnic",
+                    "postpone"
+                  ],
+                  "explanation": "Use a moderate tone to express conditional probability.",
+                  "part": "speaking",
+                  "partIndex": 6,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-s-7",
+                  "category": "linguistic_drill",
+                  "focus": "vocab",
+                  "typeLabel": "Vocabulary Production",
+                  "instruction": "Use the target vocabulary word 'deduction' in a complete spoken sentence.",
+                  "audioPrompt": "Say a sentence explaining your logical deduction about a puzzle.",
+                  "targetSentence": "My deduction is based on the footprints we found near the garden gate.",
+                  "phonetic": "/maɪ dɪˈdʌk.ʃən ɪz beɪst ɒn ðə ˈfʊt.prɪnts/",
+                  "expectedKeywords": [
+                    "deduction",
+                    "based",
+                    "evidence",
+                    "logic"
+                  ],
+                  "explanation": "Pronounce deduction with correct syllable stress on the second syllable.",
+                  "part": "speaking",
+                  "partIndex": 7,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-s-8",
+                  "category": "linguistic_drill",
+                  "focus": "grammar",
+                  "typeLabel": "Grammar Production",
+                  "instruction": "Form a sentence using the modal structure 'must have' plus past participle.",
+                  "audioPrompt": "Make a sentence about something someone finished in the past with certainty.",
+                  "targetSentence": "She must have finished the report because her computer is turned off.",
+                  "phonetic": "/ʃiː mʌst hæv ˈfɪnɪʃt ðə rɪˈpɔːt/",
+                  "expectedKeywords": [
+                    "must",
+                    "have",
+                    "finished",
+                    "report"
+                  ],
+                  "explanation": "Ensure you blend 'must have' naturally in speech without overemphasizing 'have'.",
+                  "part": "speaking",
+                  "partIndex": 8,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-s-9",
+                  "category": "linguistic_drill",
+                  "focus": "pronunciation_stress",
+                  "typeLabel": "Syllable Stress Practice",
+                  "instruction": "Read aloud the sentence focusing on correct syllable stress for 'probability'.",
+                  "audioPrompt": "Pronounce the word probability clearly within this sentence.",
+                  "targetSentence": "There is a high probability that the train will arrive on time.",
+                  "phonetic": "/ðɛr ɪz ə haɪ ˌprɒb.əˈbɪl.ə.ti ðæt ðə treɪn wɪl əˈraɪv/",
+                  "expectedKeywords": [
+                    "probability",
+                    "high",
+                    "train",
+                    "arrive"
+                  ],
+                  "explanation": "Place primary stress on the third syllable of probability.",
+                  "part": "speaking",
+                  "partIndex": 9,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "id": "q-b1.2-m04-s-10",
+                  "category": "linguistic_drill",
+                  "focus": "pronunciation_intonation",
+                  "typeLabel": "Rising and Falling Intonation",
+                  "instruction": "Read the sentence with a falling intonation to express absolute certainty.",
+                  "audioPrompt": "Say this sentence with a definite falling tone at the end.",
+                  "targetSentence": "It is impossible for him to have solved the riddle so quickly.",
+                  "phonetic": "/ɪt ɪz ɪmˈpɒs.ə.bəl fɔːhɪm tuː hæv sɒlvd ðə ˈrɪd.əl/",
+                  "expectedKeywords": [
+                    "impossible",
+                    "solved",
+                    "riddle",
+                    "quickly"
+                  ],
+                  "explanation": "Lower your pitch at the end of the sentence to show strong conviction.",
+                  "part": "speaking",
+                  "partIndex": 10,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "category": "Change Management",
+                  "instruction": "Ucapkan ajakan adaptasi sistem baru:",
+                  "prompt": "Adopting this new infrastructure requires initial adjustment, but the long-term productivity advantages far outweigh the transitional overhead.",
+                  "sampleAnswer": "Adopting this new infrastructure requires initial adjustment, but the long-term productivity advantages far outweigh the transitional overhead.",
+                  "phonetic": "/əˈdɒptɪŋ ðɪs njuː ˈɪnfrəstrʌktʃə/",
+                  "keywords": [
+                    "infrastructure",
+                    "productivity",
+                    "outweigh",
+                    "overhead"
+                  ],
+                  "id": "q-b1.2-m04-s-11",
+                  "part": "speaking",
+                  "partIndex": 11,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "category": "Incentive Justification",
+                  "instruction": "Ucapkan argumen pembenaran alokasi anggaran:",
+                  "prompt": "Allocating additional resources to cybersecurity is not an optional luxury, but a fundamental prerequisite for enterprise growth.",
+                  "sampleAnswer": "Allocating additional resources to cybersecurity is not an optional luxury, but a fundamental prerequisite for enterprise growth.",
+                  "phonetic": "/ˈæləkeɪtɪŋ əˈdɪʃənl rɪˈzɔːsɪz/",
+                  "keywords": [
+                    "allocating",
+                    "cybersecurity",
+                    "prerequisite",
+                    "growth"
+                  ],
+                  "id": "q-b1.2-m04-s-12",
+                  "part": "speaking",
+                  "partIndex": 12,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "category": "Future Strategy",
+                  "instruction": "Ucapkan visi strategis jangka menengah perusahaan:",
+                  "prompt": "Over the next three quarters, our strategic focus will center on expanding market penetration across emerging regional economies.",
+                  "sampleAnswer": "Over the next three quarters, our strategic focus will center on expanding market penetration across emerging regional economies.",
+                  "phonetic": "/ˈəʊvə ðə nekst θriː ˈkwɔːtəz/",
+                  "keywords": [
+                    "strategic",
+                    "penetration",
+                    "emerging",
+                    "economies"
+                  ],
+                  "id": "q-b1.2-m04-s-13",
+                  "part": "speaking",
+                  "partIndex": 13,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "category": "Professional Presentation",
+                  "instruction": "Ucapkan argumen presentasi kerja dengan artikulasi percaya diri:",
+                  "prompt": "Based on our latest customer feedback, streamlining the onboarding workflow will reduce churn by fifteen percent.",
+                  "sampleAnswer": "Based on our latest customer feedback, streamlining the onboarding workflow will reduce churn by fifteen percent.",
+                  "phonetic": "/beɪst ɒn ˈaʊə ˈleɪtɪst ˈkʌstəmə ˈfiːdbæk/",
+                  "keywords": [
+                    "customer",
+                    "feedback",
+                    "streamlining",
+                    "churn"
+                  ],
+                  "id": "q-b1.2-m04-s-14",
+                  "part": "speaking",
+                  "partIndex": 14,
+                  "sourceModule": "B1.2-M04"
+                },
+                {
+                  "category": "Strategic Negotiation",
+                  "instruction": "Ucapkan respon diplomatis dalam negosiasi bisnis berikut:",
+                  "prompt": "While we appreciate your competitive pricing proposal, our priority remains long-term product reliability and technical support.",
+                  "sampleAnswer": "While we appreciate your competitive pricing proposal, our priority remains long-term product reliability and technical support.",
+                  "phonetic": "/waɪl wiː əˈpriːʃieɪt jɔː kəmˈpetətɪv ˈpraɪsɪŋ/",
+                  "keywords": [
+                    "appreciate",
+                    "proposal",
+                    "reliability",
+                    "support"
+                  ],
+                  "id": "q-b1.2-m04-s-15",
+                  "part": "speaking",
+                  "partIndex": 15,
+                  "sourceModule": "B1.2-M04"
+                }
+              ]
+            },
+            "questions": [
+              {
+                "id": "q-b1.2-m04-r-1",
+                "question": "What day of the week was it when Sarah arrived at the office?",
+                "options": [
+                  "Sunday morning",
+                  "Monday morning",
+                  "Friday afternoon"
+                ],
+                "answer": "Monday morning",
+                "explanation": "The passage states, 'It was Monday morning at the marketing agency.'",
+                "part": "reading",
+                "partIndex": 1,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-2",
+                "question": "What did Sarah notice first about the office when she walked in?",
+                "options": [
+                  "The lights were off and desks were quiet",
+                  "Everyone was shouting and laughing",
+                  "The front door was wide open"
+                ],
+                "answer": "The lights were off and desks were quiet",
+                "explanation": "The text notes that all the lights were turned off and the desks were completely quiet.",
+                "part": "reading",
+                "partIndex": 2,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-3",
+                "question": "Whose desk had a cup of hot coffee steaming on it?",
+                "options": [
+                  "Sarah's desk",
+                  "Mark's desk",
+                  "The manager's desk"
+                ],
+                "answer": "Mark's desk",
+                "explanation": "The text mentions a cup of hot coffee steaming on Mark's desk.",
+                "part": "reading",
+                "partIndex": 3,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-4",
+                "question": "Why did Sarah deduce that Mark must have been there recently?",
+                "options": [
+                  "Because the coffee was still warm",
+                  "Because she saw him leaving",
+                  "Because his computer was broken"
+                ],
+                "answer": "Because the coffee was still warm",
+                "explanation": "The passage explains that because the coffee was still warm, Mark must have been there a few minutes before.",
+                "part": "reading",
+                "partIndex": 4,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-5",
+                "question": "What did Sarah find when she checked her phone inbox?",
+                "options": [
+                  "A message about an emergency meeting",
+                  "An empty inbox with no messages",
+                  "A text from Mark"
+                ],
+                "answer": "An empty inbox with no messages",
+                "explanation": "The text states that her inbox was empty.",
+                "part": "reading",
+                "partIndex": 5,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-6",
+                "question": "Where did Sarah think her colleagues might have gone?",
+                "options": [
+                  "To the emergency meeting room downstairs or the auditorium",
+                  "Home for the rest of the day",
+                  "To a coffee shop across the street"
+                ],
+                "answer": "To the emergency meeting room downstairs or the auditorium",
+                "explanation": "The passage notes they might have gone to the meeting room or could be testing the projector in the auditorium.",
+                "part": "reading",
+                "partIndex": 6,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-7",
+                "question": "Why was it impossible for the team to be in the auditorium?",
+                "options": [
+                  "Because it was closed for repairs today",
+                  "Because it was locked from the outside",
+                  "Because it was too crowded"
+                ],
+                "answer": "Because it was closed for repairs today",
+                "explanation": "Sarah remembered that the auditorium was closed for repairs today.",
+                "part": "reading",
+                "partIndex": 7,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-8",
+                "question": "Which modal verb did Sarah use to conclude they were not in the auditorium?",
+                "options": [
+                  "can't",
+                  "must",
+                  "might"
+                ],
+                "answer": "can't",
+                "explanation": "The text states, 'That meant they can't be in the auditorium.'",
+                "part": "reading",
+                "partIndex": 8,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-9",
+                "question": "What sound finally helped Sarah solve the mystery of where everyone was?",
+                "options": [
+                  "Laughter coming from the kitchen",
+                  "A phone ringing loudly",
+                  "Someone calling her name"
+                ],
+                "answer": "Laughter coming from the kitchen",
+                "explanation": "The passage concludes with Sarah hearing laughter coming from the kitchen.",
+                "part": "reading",
+                "partIndex": 9,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-10",
+                "question": "How did Sarah feel when she heard the sound at the end of the story?",
+                "options": [
+                  "Angry",
+                  "Worried",
+                  "Smiling"
+                ],
+                "answer": "Smiling",
+                "explanation": "The text states that she heard laughter coming from the kitchen and smiled.",
+                "part": "reading",
+                "partIndex": 10,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "question": "Which preposition correctly completes the sentence: 'She is responsible _____ supervising quality assurance.'",
+                "options": [
+                  "for",
+                  "with",
+                  "to",
+                  "at"
+                ],
+                "answer": "for",
+                "explanation": "The adjective 'responsible' collocates with 'for' when indicating duty or charge.",
+                "id": "q-b1.2-m04-r-11",
+                "part": "reading",
+                "partIndex": 11,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "question": "What distinction exists between 'economic' and 'economical'?",
+                "options": [
+                  "'Economic' relates to the economy, whereas 'economical' means avoiding waste or saving money.",
+                  "'Economic' means inexpensive, whereas 'economical' relates to government finance.",
+                  "Both terms are completely interchangeable in formal English.",
+                  "'Economical' is only used as a noun, whereas 'economic' is an adverb."
+                ],
+                "answer": "'Economic' relates to the economy, whereas 'economical' means avoiding waste or saving money.",
+                "explanation": "'Economic' refers to national financial systems, while 'economical' refers to frugality or efficiency.",
+                "id": "q-b1.2-m04-r-12",
+                "part": "reading",
+                "partIndex": 12,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "question": "Select the sentence expressing an unfulfilled past obligation using modal perfects:",
+                "options": [
+                  "We should have verified the vendor's references before signing the agreement.",
+                  "We must verify the vendor's references before signing the agreement.",
+                  "We can verify the vendor's references after signing the agreement.",
+                  "We will have verified the vendor's references by tomorrow afternoon."
+                ],
+                "answer": "We should have verified the vendor's references before signing the agreement.",
+                "explanation": "'Should have + past participle' expresses regret or an unfulfilled past action.",
+                "id": "q-b1.2-m04-r-13",
+                "part": "reading",
+                "partIndex": 13,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "question": "According to the workplace policy, what is the primary consequence of missing a project milestone?",
+                "options": [
+                  "The project lead must submit a revised timeline and conduct a risk assessment.",
+                  "The entire development team is immediately replaced by external contractors.",
+                  "All project funding is automatically cancelled without further review.",
+                  "Clients are notified only after the product is officially deployed."
+                ],
+                "answer": "The project lead must submit a revised timeline and conduct a risk assessment.",
+                "explanation": "Standard corporate policy dictates remediation through timeline review and risk mitigation.",
+                "id": "q-b1.2-m04-r-14",
+                "part": "reading",
+                "partIndex": 14,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "question": "Which connector indicates a contrast between two independent clauses?",
+                "options": [
+                  "Nevertheless",
+                  "Furthermore",
+                  "Consequently",
+                  "Similarly"
+                ],
+                "answer": "Nevertheless",
+                "explanation": "'Nevertheless' signals contrast or concession, equivalent to 'however'.",
+                "id": "q-b1.2-m04-r-15",
+                "part": "reading",
+                "partIndex": 15,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-1",
+                "type": "dictation",
+                "audioText": "Have you seen Mark today?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Have you seen Mark _____?\"",
+                "targetWord": "today",
+                "explanation": "Full audio: \"Have you seen Mark today?\". The missing word is \"today\".",
+                "part": "listening",
+                "partIndex": 1,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-2",
+                "type": "dictation",
+                "audioText": "He is not at his desk.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"He is not at his _____.\"",
+                "targetWord": "desk",
+                "explanation": "Full audio: \"He is not at his desk.\". The missing word is \"desk\".",
+                "part": "listening",
+                "partIndex": 2,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-3",
+                "type": "dictation",
+                "audioText": "No, I haven't seen him.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"No, I haven't _____ him.\"",
+                "targetWord": "seen",
+                "explanation": "Full audio: \"No, I haven't seen him.\". The missing word is \"seen\".",
+                "part": "listening",
+                "partIndex": 3,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-4",
+                "type": "dictation",
+                "audioText": "He must be sick today.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"He must be _____ today.\"",
+                "targetWord": "sick",
+                "explanation": "Full audio: \"He must be sick today.\". The missing word is \"sick\".",
+                "part": "listening",
+                "partIndex": 4,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-5",
+                "type": "dictation",
+                "audioText": "That can't be right.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"That can't be _____.\"",
+                "targetWord": "right",
+                "explanation": "Full audio: \"That can't be right.\". The missing word is \"right\".",
+                "part": "listening",
+                "partIndex": 5,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-6",
+                "type": "arrange",
+                "audioText": "I saw his gym photo.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I saw his gym photo",
+                "words": [
+                  "gym",
+                  "saw",
+                  "I",
+                  "photo",
+                  "his"
+                ],
+                "explanation": "Correct sentence order: \"I saw his gym photo.\".",
+                "part": "listening",
+                "partIndex": 6,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-7",
+                "type": "arrange",
+                "audioText": "Then he might be working.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Then he might be working",
+                "words": [
+                  "be",
+                  "he",
+                  "working",
+                  "Then",
+                  "might"
+                ],
+                "explanation": "Correct sentence order: \"Then he might be working.\".",
+                "part": "listening",
+                "partIndex": 7,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-8",
+                "type": "arrange",
+                "audioText": "Or he could be stuck.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Or he could be stuck",
+                "words": [
+                  "stuck",
+                  "be",
+                  "Or",
+                  "he",
+                  "could"
+                ],
+                "explanation": "Correct sentence order: \"Or he could be stuck.\".",
+                "part": "listening",
+                "partIndex": 8,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-9",
+                "type": "arrange",
+                "audioText": "Wait, I got his message.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Wait I got his message",
+                "words": [
+                  "Wait",
+                  "his",
+                  "got",
+                  "I",
+                  "message"
+                ],
+                "explanation": "Correct sentence order: \"Wait, I got his message.\".",
+                "part": "listening",
+                "partIndex": 9,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-10",
+                "type": "arrange",
+                "audioText": "He is at the dentist.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He is at the dentist",
+                "words": [
+                  "dentist",
+                  "He",
+                  "at",
+                  "the",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"He is at the dentist.\".",
+                "part": "listening",
+                "partIndex": 10,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "type": "dictation",
+                "audioText": "The company demonstrated resilience during the economic downturn.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "The company demonstrated _____ during the economic downturn.",
+                "targetWord": "resilience",
+                "explanation": "Audio lengkap: 'The company demonstrated resilience during the economic downturn.'. Kata: 'resilience'.",
+                "id": "q-b1.2-m04-l-11",
+                "part": "listening",
+                "partIndex": 11,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "type": "arrange",
+                "audioText": "Both parties agreed to maintain strict confidentiality regarding the negotiations.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "Both parties agreed to maintain strict confidentiality regarding the negotiations",
+                "words": [
+                  "confidentiality",
+                  "maintain",
+                  "Both",
+                  "regarding",
+                  "agreed",
+                  "negotiations",
+                  "parties",
+                  "to",
+                  "strict",
+                  "the"
+                ],
+                "explanation": "Urutan benar: 'Both parties agreed to maintain strict confidentiality regarding the negotiations.'.",
+                "id": "q-b1.2-m04-l-12",
+                "part": "listening",
+                "partIndex": 12,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "type": "dictation",
+                "audioText": "Effective delegation empowers team members to make autonomous decisions.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "Effective delegation empowers team members to make _____ decisions.",
+                "targetWord": "autonomous",
+                "explanation": "Audio lengkap: 'Effective delegation empowers team members to make autonomous decisions.'. Kata: 'autonomous'.",
+                "id": "q-b1.2-m04-l-13",
+                "part": "listening",
+                "partIndex": 13,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "type": "dictation",
+                "audioText": "Although quarterly revenue increased, operating costs remained unexpectedly high.",
+                "instruction": "Dengarkan audio dan ketik kata atau frasa yang hilang:",
+                "promptSentence": "Although quarterly revenue increased, operating costs remained _____ high.",
+                "targetWord": "unexpectedly",
+                "explanation": "Audio lengkap: 'Although quarterly revenue increased, operating costs remained unexpectedly high.'. Kata yang hilang: 'unexpectedly'.",
+                "id": "q-b1.2-m04-l-14",
+                "part": "listening",
+                "partIndex": 14,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "type": "arrange",
+                "audioText": "We should have conducted a comprehensive feasibility study earlier.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang tepat:",
+                "targetSentence": "We should have conducted a comprehensive feasibility study earlier",
+                "words": [
+                  "conducted",
+                  "feasibility",
+                  "have",
+                  "earlier",
+                  "We",
+                  "study",
+                  "comprehensive",
+                  "should",
+                  "a"
+                ],
+                "explanation": "Urutan benar: 'We should have conducted a comprehensive feasibility study earlier.'.",
+                "id": "q-b1.2-m04-l-15",
+                "part": "listening",
+                "partIndex": 15,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-1",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using 'must' to show high certainty:",
+                "promptText": "I am certain that pizza is delicious because it smells amazing.",
+                "hint": "Use 'must be'.",
+                "targetAnswers": [
+                  "That pizza must be delicious because it smells amazing.",
+                  "The pizza must be delicious because it smells amazing."
+                ],
+                "explanation": "Replace 'I am certain that' with the subject followed by 'must be'.",
+                "part": "writing",
+                "partIndex": 1,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-2",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using 'can't' to show impossibility:",
+                "promptText": "It is impossible that John is sleeping because I hear him playing the guitar.",
+                "hint": "Use 'can't be sleeping'.",
+                "targetAnswers": [
+                  "John can't be sleeping because I hear him playing the guitar."
+                ],
+                "explanation": "Replace 'It is impossible that [Subject] is' with '[Subject] can't be'.",
+                "part": "writing",
+                "partIndex": 2,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-3",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using 'might' to show possibility:",
+                "promptText": "It is possible that Lisa will join us for dinner later.",
+                "hint": "Use 'might join'.",
+                "targetAnswers": [
+                  "Lisa might join us for dinner later."
+                ],
+                "explanation": "Replace 'It is possible that [Subject] will' with '[Subject] might'.",
+                "part": "writing",
+                "partIndex": 3,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-4",
+                "typeLabel": "Conjunctions & Connectors",
+                "instruction": "Complete the deduction sentence with the correct modal verb for high certainty: 'The lights are all turned off, so they ___ be home.'",
+                "promptText": "The lights are all turned off, so they ___ be home.",
+                "hint": "Use the modal for negative certainty.",
+                "targetAnswers": [
+                  "can't",
+                  "cannot"
+                ],
+                "explanation": "When lights are off, it is almost certain they are not home, so 'can't' is required.",
+                "part": "writing",
+                "partIndex": 4,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-5",
+                "typeLabel": "Conjunctions & Connectors",
+                "instruction": "Complete the sentence with the correct modal for moderate possibility: 'I am not sure where my keys are. They ___ be in the kitchen drawer.'",
+                "promptText": "I am not sure where my keys are. They ___ be in the kitchen drawer.",
+                "hint": "Use 'might' or 'could'.",
+                "targetAnswers": [
+                  "might",
+                  "could"
+                ],
+                "explanation": "When uncertain, 'might' or 'could' expresses a moderate possibility.",
+                "part": "writing",
+                "partIndex": 5,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-6",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the grammar and mechanics in the following sentence:",
+                "promptText": "he must to know the answer because he studied all night.",
+                "hint": "Remove the word 'to' after the modal verb.",
+                "targetAnswers": [
+                  "He must know the answer because he studied all night."
+                ],
+                "explanation": "Modal verbs like 'must' take a bare infinitive without 'to'.",
+                "part": "writing",
+                "partIndex": 6,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-7",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the grammar and mechanics in the following sentence:",
+                "promptText": "that car cant be cheap, it is a brand new sports car.",
+                "hint": "Fix capitalization and use the apostrophe in 'can't'.",
+                "targetAnswers": [
+                  "That car can't be cheap, it is a brand new sports car.",
+                  "That car can't be cheap. It is a brand new sports car."
+                ],
+                "explanation": "Start sentences with capital letters and write 'can't' with an apostrophe.",
+                "part": "writing",
+                "partIndex": 7,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-8",
+                "typeLabel": "Short Response",
+                "instruction": "Write a deduction sentence using 'must' based on this clue: 'The street is completely flooded.'",
+                "promptText": "The street is completely flooded.",
+                "hint": "Example: It must have rained heavily.",
+                "targetAnswers": [
+                  "It must have rained heavily.",
+                  "There must have been a heavy storm.",
+                  "It must rain a lot here."
+                ],
+                "explanation": "Use 'must' followed by a base verb to deduce the cause of the flood.",
+                "part": "writing",
+                "partIndex": 8,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-9",
+                "typeLabel": "Short Response",
+                "instruction": "Write a deduction sentence using 'might' based on this clue: 'Anna is not answering her phone.'",
+                "promptText": "Anna is not answering her phone.",
+                "hint": "Example: She might be busy driving.",
+                "targetAnswers": [
+                  "She might be busy.",
+                  "She might be sleeping.",
+                  "She might be in a meeting."
+                ],
+                "explanation": "Use 'might be' to offer a reasonable explanation for an unanswered phone.",
+                "part": "writing",
+                "partIndex": 9,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-10",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform the statement into a negative deduction using 'can't': 'I am sure Mark is not the thief.'",
+                "promptText": "I am sure Mark is not the thief.",
+                "hint": "Use 'Mark can't be'.",
+                "targetAnswers": [
+                  "Mark can't be the thief."
+                ],
+                "explanation": "Replace 'I am sure [Subject] is not' with '[Subject] can't be'.",
+                "part": "writing",
+                "partIndex": 10,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-1",
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a time you had to make a deduction based on clues.",
+                "audioPrompt": "Tell me about a situation when you found a clue and had to guess what happened.",
+                "storyPoints": [
+                  "What object or clue you discovered",
+                  "What deduction you made using must or might",
+                  "What the actual truth turned out to be"
+                ],
+                "targetSentence": "I found muddy shoes by the door, so I deduced that my brother must have gone hiking.",
+                "phonetic": "/aɪ faʊnd ˈmʌdi ʃuːz baɪ ðə dɔː/",
+                "expectedKeywords": [
+                  "clue",
+                  "must",
+                  "deduction",
+                  "truth"
+                ],
+                "explanation": "Speak fluently in full sentences while describing past deductions.",
+                "part": "speaking",
+                "partIndex": 1,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-2",
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a mysterious noise you heard at night.",
+                "audioPrompt": "Describe a time you heard a strange sound and what you thought it was.",
+                "storyPoints": [
+                  "When and where you heard the unusual sound",
+                  "What modal of probability you used to explain it",
+                  "How you felt after finding out the source"
+                ],
+                "targetSentence": "I heard a scratch on the window, and I thought it might be a stray cat.",
+                "phonetic": "/aɪ hɜːd ə skrætʃ ɒn ðə ˈwɪndəʊ/",
+                "expectedKeywords": [
+                  "sound",
+                  "might",
+                  "mystery",
+                  "source"
+                ],
+                "explanation": "Maintain a steady pace and use descriptive language.",
+                "part": "speaking",
+                "partIndex": 2,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-3",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to your friend who cannot find their house keys.",
+                "scenarioContext": "Your friend is standing outside their locked front house door and panicking.",
+                "characterRole": "Helpful Friend",
+                "audioPrompt": "Say where your friend might have left their keys using a modal verb.",
+                "targetSentence": "You might have left them on the kitchen table before you rushed out.",
+                "phonetic": "/juː maɪt hæv lɛft ðɛm ɒn ðə ˈkɪtʃɪn ˈteɪbəl/",
+                "expectedKeywords": [
+                  "might",
+                  "keys",
+                  "table",
+                  "remember"
+                ],
+                "explanation": "Respond naturally with appropriate intonation of uncertainty.",
+                "part": "speaking",
+                "partIndex": 3,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-4",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Discuss an unexpected package delivery with a neighbor.",
+                "scenarioContext": "A large mysterious box was left at your apartment doorstep.",
+                "characterRole": "Neighbor",
+                "audioPrompt": "Explain why the package can't belong to you.",
+                "targetSentence": "That box can't be mine because I did not order anything online this week.",
+                "phonetic": "/ðæt bɒks kɑːnt biː maɪn bɪˈkɒz aɪ dɪd nɒt ˈɔːdə ˈɛniθɪŋ/",
+                "expectedKeywords": [
+                  "can't",
+                  "package",
+                  "order",
+                  "neighbor"
+                ],
+                "explanation": "Pronounce can't clearly to show strong negative deduction.",
+                "part": "speaking",
+                "partIndex": 4,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-5",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Talk about a colleague who is absent from work today.",
+                "scenarioContext": "Your coworker Sarah is not at her desk during an important morning meeting.",
+                "characterRole": "Office Coworker",
+                "audioPrompt": "State why Sarah must be sick today.",
+                "targetSentence": "Sarah must be sick today because she coughed a lot yesterday afternoon.",
+                "phonetic": "/ˈsærə mʌst biː sɪk təˈdeɪ bɪˈkɒz ʃiː kɒft ə lɒt/",
+                "expectedKeywords": [
+                  "must",
+                  "sick",
+                  "meeting",
+                  "yesterday"
+                ],
+                "explanation": "Emphasize must to indicate high certainty based on past evidence.",
+                "part": "speaking",
+                "partIndex": 5,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-6",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Plan an outdoor picnic with your classmate.",
+                "scenarioContext": "You are looking out the window at cloudy skies and deciding whether to go.",
+                "characterRole": "Classmate",
+                "audioPrompt": "Suggest that it might rain later in the afternoon.",
+                "targetSentence": "It might rain later, so we could postpone our picnic until tomorrow.",
+                "phonetic": "/ɪt maɪt reɪn ˈleɪtə, səʊ wiː kʊd pəʊˈspəʊn ˈaʊə ˈpɪknɪk/",
+                "expectedKeywords": [
+                  "might",
+                  "rain",
+                  "picnic",
+                  "postpone"
+                ],
+                "explanation": "Use a moderate tone to express conditional probability.",
+                "part": "speaking",
+                "partIndex": 6,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-7",
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Vocabulary Production",
+                "instruction": "Use the target vocabulary word 'deduction' in a complete spoken sentence.",
+                "audioPrompt": "Say a sentence explaining your logical deduction about a puzzle.",
+                "targetSentence": "My deduction is based on the footprints we found near the garden gate.",
+                "phonetic": "/maɪ dɪˈdʌk.ʃən ɪz beɪst ɒn ðə ˈfʊt.prɪnts/",
+                "expectedKeywords": [
+                  "deduction",
+                  "based",
+                  "evidence",
+                  "logic"
+                ],
+                "explanation": "Pronounce deduction with correct syllable stress on the second syllable.",
+                "part": "speaking",
+                "partIndex": 7,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-8",
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Grammar Production",
+                "instruction": "Form a sentence using the modal structure 'must have' plus past participle.",
+                "audioPrompt": "Make a sentence about something someone finished in the past with certainty.",
+                "targetSentence": "She must have finished the report because her computer is turned off.",
+                "phonetic": "/ʃiː mʌst hæv ˈfɪnɪʃt ðə rɪˈpɔːt/",
+                "expectedKeywords": [
+                  "must",
+                  "have",
+                  "finished",
+                  "report"
+                ],
+                "explanation": "Ensure you blend 'must have' naturally in speech without overemphasizing 'have'.",
+                "part": "speaking",
+                "partIndex": 8,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-9",
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Syllable Stress Practice",
+                "instruction": "Read aloud the sentence focusing on correct syllable stress for 'probability'.",
+                "audioPrompt": "Pronounce the word probability clearly within this sentence.",
+                "targetSentence": "There is a high probability that the train will arrive on time.",
+                "phonetic": "/ðɛr ɪz ə haɪ ˌprɒb.əˈbɪl.ə.ti ðæt ðə treɪn wɪl əˈraɪv/",
+                "expectedKeywords": [
+                  "probability",
+                  "high",
+                  "train",
+                  "arrive"
+                ],
+                "explanation": "Place primary stress on the third syllable of probability.",
+                "part": "speaking",
+                "partIndex": 9,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-10",
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Rising and Falling Intonation",
+                "instruction": "Read the sentence with a falling intonation to express absolute certainty.",
+                "audioPrompt": "Say this sentence with a definite falling tone at the end.",
+                "targetSentence": "It is impossible for him to have solved the riddle so quickly.",
+                "phonetic": "/ɪt ɪz ɪmˈpɒs.ə.bəl fɔːhɪm tuː hæv sɒlvd ðə ˈrɪd.əl/",
+                "expectedKeywords": [
+                  "impossible",
+                  "solved",
+                  "riddle",
+                  "quickly"
+                ],
+                "explanation": "Lower your pitch at the end of the sentence to show strong conviction.",
+                "part": "speaking",
+                "partIndex": 10,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "category": "Change Management",
+                "instruction": "Ucapkan ajakan adaptasi sistem baru:",
+                "prompt": "Adopting this new infrastructure requires initial adjustment, but the long-term productivity advantages far outweigh the transitional overhead.",
+                "sampleAnswer": "Adopting this new infrastructure requires initial adjustment, but the long-term productivity advantages far outweigh the transitional overhead.",
+                "phonetic": "/əˈdɒptɪŋ ðɪs njuː ˈɪnfrəstrʌktʃə/",
+                "keywords": [
+                  "infrastructure",
+                  "productivity",
+                  "outweigh",
+                  "overhead"
+                ],
+                "id": "q-b1.2-m04-s-11",
+                "part": "speaking",
+                "partIndex": 11,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "category": "Incentive Justification",
+                "instruction": "Ucapkan argumen pembenaran alokasi anggaran:",
+                "prompt": "Allocating additional resources to cybersecurity is not an optional luxury, but a fundamental prerequisite for enterprise growth.",
+                "sampleAnswer": "Allocating additional resources to cybersecurity is not an optional luxury, but a fundamental prerequisite for enterprise growth.",
+                "phonetic": "/ˈæləkeɪtɪŋ əˈdɪʃənl rɪˈzɔːsɪz/",
+                "keywords": [
+                  "allocating",
+                  "cybersecurity",
+                  "prerequisite",
+                  "growth"
+                ],
+                "id": "q-b1.2-m04-s-12",
+                "part": "speaking",
+                "partIndex": 12,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "category": "Future Strategy",
+                "instruction": "Ucapkan visi strategis jangka menengah perusahaan:",
+                "prompt": "Over the next three quarters, our strategic focus will center on expanding market penetration across emerging regional economies.",
+                "sampleAnswer": "Over the next three quarters, our strategic focus will center on expanding market penetration across emerging regional economies.",
+                "phonetic": "/ˈəʊvə ðə nekst θriː ˈkwɔːtəz/",
+                "keywords": [
+                  "strategic",
+                  "penetration",
+                  "emerging",
+                  "economies"
+                ],
+                "id": "q-b1.2-m04-s-13",
+                "part": "speaking",
+                "partIndex": 13,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "category": "Professional Presentation",
+                "instruction": "Ucapkan argumen presentasi kerja dengan artikulasi percaya diri:",
+                "prompt": "Based on our latest customer feedback, streamlining the onboarding workflow will reduce churn by fifteen percent.",
+                "sampleAnswer": "Based on our latest customer feedback, streamlining the onboarding workflow will reduce churn by fifteen percent.",
+                "phonetic": "/beɪst ɒn ˈaʊə ˈleɪtɪst ˈkʌstəmə ˈfiːdbæk/",
+                "keywords": [
+                  "customer",
+                  "feedback",
+                  "streamlining",
+                  "churn"
+                ],
+                "id": "q-b1.2-m04-s-14",
+                "part": "speaking",
+                "partIndex": 14,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "category": "Strategic Negotiation",
+                "instruction": "Ucapkan respon diplomatis dalam negosiasi bisnis berikut:",
+                "prompt": "While we appreciate your competitive pricing proposal, our priority remains long-term product reliability and technical support.",
+                "sampleAnswer": "While we appreciate your competitive pricing proposal, our priority remains long-term product reliability and technical support.",
+                "phonetic": "/waɪl wiː əˈpriːʃieɪt jɔː kəmˈpetətɪv ˈpraɪsɪŋ/",
+                "keywords": [
+                  "appreciate",
+                  "proposal",
+                  "reliability",
+                  "support"
+                ],
+                "id": "q-b1.2-m04-s-15",
+                "part": "speaking",
+                "partIndex": 15,
+                "sourceModule": "B1.2-M04"
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": "q-b1.2-m04-r-1",
+                "question": "What day of the week was it when Sarah arrived at the office?",
+                "options": [
+                  "Sunday morning",
+                  "Monday morning",
+                  "Friday afternoon"
+                ],
+                "answer": "Monday morning",
+                "explanation": "The passage states, 'It was Monday morning at the marketing agency.'",
+                "part": "reading",
+                "partIndex": 1,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-2",
+                "question": "What did Sarah notice first about the office when she walked in?",
+                "options": [
+                  "The lights were off and desks were quiet",
+                  "Everyone was shouting and laughing",
+                  "The front door was wide open"
+                ],
+                "answer": "The lights were off and desks were quiet",
+                "explanation": "The text notes that all the lights were turned off and the desks were completely quiet.",
+                "part": "reading",
+                "partIndex": 2,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-3",
+                "question": "Whose desk had a cup of hot coffee steaming on it?",
+                "options": [
+                  "Sarah's desk",
+                  "Mark's desk",
+                  "The manager's desk"
+                ],
+                "answer": "Mark's desk",
+                "explanation": "The text mentions a cup of hot coffee steaming on Mark's desk.",
+                "part": "reading",
+                "partIndex": 3,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-4",
+                "question": "Why did Sarah deduce that Mark must have been there recently?",
+                "options": [
+                  "Because the coffee was still warm",
+                  "Because she saw him leaving",
+                  "Because his computer was broken"
+                ],
+                "answer": "Because the coffee was still warm",
+                "explanation": "The passage explains that because the coffee was still warm, Mark must have been there a few minutes before.",
+                "part": "reading",
+                "partIndex": 4,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-5",
+                "question": "What did Sarah find when she checked her phone inbox?",
+                "options": [
+                  "A message about an emergency meeting",
+                  "An empty inbox with no messages",
+                  "A text from Mark"
+                ],
+                "answer": "An empty inbox with no messages",
+                "explanation": "The text states that her inbox was empty.",
+                "part": "reading",
+                "partIndex": 5,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-6",
+                "question": "Where did Sarah think her colleagues might have gone?",
+                "options": [
+                  "To the emergency meeting room downstairs or the auditorium",
+                  "Home for the rest of the day",
+                  "To a coffee shop across the street"
+                ],
+                "answer": "To the emergency meeting room downstairs or the auditorium",
+                "explanation": "The passage notes they might have gone to the meeting room or could be testing the projector in the auditorium.",
+                "part": "reading",
+                "partIndex": 6,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-7",
+                "question": "Why was it impossible for the team to be in the auditorium?",
+                "options": [
+                  "Because it was closed for repairs today",
+                  "Because it was locked from the outside",
+                  "Because it was too crowded"
+                ],
+                "answer": "Because it was closed for repairs today",
+                "explanation": "Sarah remembered that the auditorium was closed for repairs today.",
+                "part": "reading",
+                "partIndex": 7,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-8",
+                "question": "Which modal verb did Sarah use to conclude they were not in the auditorium?",
+                "options": [
+                  "can't",
+                  "must",
+                  "might"
+                ],
+                "answer": "can't",
+                "explanation": "The text states, 'That meant they can't be in the auditorium.'",
+                "part": "reading",
+                "partIndex": 8,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-9",
+                "question": "What sound finally helped Sarah solve the mystery of where everyone was?",
+                "options": [
+                  "Laughter coming from the kitchen",
+                  "A phone ringing loudly",
+                  "Someone calling her name"
+                ],
+                "answer": "Laughter coming from the kitchen",
+                "explanation": "The passage concludes with Sarah hearing laughter coming from the kitchen.",
+                "part": "reading",
+                "partIndex": 9,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-r-10",
+                "question": "How did Sarah feel when she heard the sound at the end of the story?",
+                "options": [
+                  "Angry",
+                  "Worried",
+                  "Smiling"
+                ],
+                "answer": "Smiling",
+                "explanation": "The text states that she heard laughter coming from the kitchen and smiled.",
+                "part": "reading",
+                "partIndex": 10,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "question": "Which preposition correctly completes the sentence: 'She is responsible _____ supervising quality assurance.'",
+                "options": [
+                  "for",
+                  "with",
+                  "to",
+                  "at"
+                ],
+                "answer": "for",
+                "explanation": "The adjective 'responsible' collocates with 'for' when indicating duty or charge.",
+                "id": "q-b1.2-m04-r-11",
+                "part": "reading",
+                "partIndex": 11,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "question": "What distinction exists between 'economic' and 'economical'?",
+                "options": [
+                  "'Economic' relates to the economy, whereas 'economical' means avoiding waste or saving money.",
+                  "'Economic' means inexpensive, whereas 'economical' relates to government finance.",
+                  "Both terms are completely interchangeable in formal English.",
+                  "'Economical' is only used as a noun, whereas 'economic' is an adverb."
+                ],
+                "answer": "'Economic' relates to the economy, whereas 'economical' means avoiding waste or saving money.",
+                "explanation": "'Economic' refers to national financial systems, while 'economical' refers to frugality or efficiency.",
+                "id": "q-b1.2-m04-r-12",
+                "part": "reading",
+                "partIndex": 12,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "question": "Select the sentence expressing an unfulfilled past obligation using modal perfects:",
+                "options": [
+                  "We should have verified the vendor's references before signing the agreement.",
+                  "We must verify the vendor's references before signing the agreement.",
+                  "We can verify the vendor's references after signing the agreement.",
+                  "We will have verified the vendor's references by tomorrow afternoon."
+                ],
+                "answer": "We should have verified the vendor's references before signing the agreement.",
+                "explanation": "'Should have + past participle' expresses regret or an unfulfilled past action.",
+                "id": "q-b1.2-m04-r-13",
+                "part": "reading",
+                "partIndex": 13,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "question": "According to the workplace policy, what is the primary consequence of missing a project milestone?",
+                "options": [
+                  "The project lead must submit a revised timeline and conduct a risk assessment.",
+                  "The entire development team is immediately replaced by external contractors.",
+                  "All project funding is automatically cancelled without further review.",
+                  "Clients are notified only after the product is officially deployed."
+                ],
+                "answer": "The project lead must submit a revised timeline and conduct a risk assessment.",
+                "explanation": "Standard corporate policy dictates remediation through timeline review and risk mitigation.",
+                "id": "q-b1.2-m04-r-14",
+                "part": "reading",
+                "partIndex": 14,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "question": "Which connector indicates a contrast between two independent clauses?",
+                "options": [
+                  "Nevertheless",
+                  "Furthermore",
+                  "Consequently",
+                  "Similarly"
+                ],
+                "answer": "Nevertheless",
+                "explanation": "'Nevertheless' signals contrast or concession, equivalent to 'however'.",
+                "id": "q-b1.2-m04-r-15",
+                "part": "reading",
+                "partIndex": 15,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-1",
+                "type": "dictation",
+                "audioText": "Have you seen Mark today?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"Have you seen Mark _____?\"",
+                "targetWord": "today",
+                "explanation": "Full audio: \"Have you seen Mark today?\". The missing word is \"today\".",
+                "part": "listening",
+                "partIndex": 1,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-2",
+                "type": "dictation",
+                "audioText": "He is not at his desk.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"He is not at his _____.\"",
+                "targetWord": "desk",
+                "explanation": "Full audio: \"He is not at his desk.\". The missing word is \"desk\".",
+                "part": "listening",
+                "partIndex": 2,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-3",
+                "type": "dictation",
+                "audioText": "No, I haven't seen him.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"No, I haven't _____ him.\"",
+                "targetWord": "seen",
+                "explanation": "Full audio: \"No, I haven't seen him.\". The missing word is \"seen\".",
+                "part": "listening",
+                "partIndex": 3,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-4",
+                "type": "dictation",
+                "audioText": "He must be sick today.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Tom: \"He must be _____ today.\"",
+                "targetWord": "sick",
+                "explanation": "Full audio: \"He must be sick today.\". The missing word is \"sick\".",
+                "part": "listening",
+                "partIndex": 4,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-5",
+                "type": "dictation",
+                "audioText": "That can't be right.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Sarah: \"That can't be _____.\"",
+                "targetWord": "right",
+                "explanation": "Full audio: \"That can't be right.\". The missing word is \"right\".",
+                "part": "listening",
+                "partIndex": 5,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-6",
+                "type": "arrange",
+                "audioText": "I saw his gym photo.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I saw his gym photo",
+                "words": [
+                  "gym",
+                  "saw",
+                  "I",
+                  "photo",
+                  "his"
+                ],
+                "explanation": "Correct sentence order: \"I saw his gym photo.\".",
+                "part": "listening",
+                "partIndex": 6,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-7",
+                "type": "arrange",
+                "audioText": "Then he might be working.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Then he might be working",
+                "words": [
+                  "be",
+                  "he",
+                  "working",
+                  "Then",
+                  "might"
+                ],
+                "explanation": "Correct sentence order: \"Then he might be working.\".",
+                "part": "listening",
+                "partIndex": 7,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-8",
+                "type": "arrange",
+                "audioText": "Or he could be stuck.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Or he could be stuck",
+                "words": [
+                  "stuck",
+                  "be",
+                  "Or",
+                  "he",
+                  "could"
+                ],
+                "explanation": "Correct sentence order: \"Or he could be stuck.\".",
+                "part": "listening",
+                "partIndex": 8,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-9",
+                "type": "arrange",
+                "audioText": "Wait, I got his message.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Wait I got his message",
+                "words": [
+                  "Wait",
+                  "his",
+                  "got",
+                  "I",
+                  "message"
+                ],
+                "explanation": "Correct sentence order: \"Wait, I got his message.\".",
+                "part": "listening",
+                "partIndex": 9,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-l-10",
+                "type": "arrange",
+                "audioText": "He is at the dentist.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "He is at the dentist",
+                "words": [
+                  "dentist",
+                  "He",
+                  "at",
+                  "the",
+                  "is"
+                ],
+                "explanation": "Correct sentence order: \"He is at the dentist.\".",
+                "part": "listening",
+                "partIndex": 10,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "type": "dictation",
+                "audioText": "The company demonstrated resilience during the economic downturn.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "The company demonstrated _____ during the economic downturn.",
+                "targetWord": "resilience",
+                "explanation": "Audio lengkap: 'The company demonstrated resilience during the economic downturn.'. Kata: 'resilience'.",
+                "id": "q-b1.2-m04-l-11",
+                "part": "listening",
+                "partIndex": 11,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "type": "arrange",
+                "audioText": "Both parties agreed to maintain strict confidentiality regarding the negotiations.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "Both parties agreed to maintain strict confidentiality regarding the negotiations",
+                "words": [
+                  "confidentiality",
+                  "maintain",
+                  "Both",
+                  "regarding",
+                  "agreed",
+                  "negotiations",
+                  "parties",
+                  "to",
+                  "strict",
+                  "the"
+                ],
+                "explanation": "Urutan benar: 'Both parties agreed to maintain strict confidentiality regarding the negotiations.'.",
+                "id": "q-b1.2-m04-l-12",
+                "part": "listening",
+                "partIndex": 12,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "type": "dictation",
+                "audioText": "Effective delegation empowers team members to make autonomous decisions.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "Effective delegation empowers team members to make _____ decisions.",
+                "targetWord": "autonomous",
+                "explanation": "Audio lengkap: 'Effective delegation empowers team members to make autonomous decisions.'. Kata: 'autonomous'.",
+                "id": "q-b1.2-m04-l-13",
+                "part": "listening",
+                "partIndex": 13,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "type": "dictation",
+                "audioText": "Although quarterly revenue increased, operating costs remained unexpectedly high.",
+                "instruction": "Dengarkan audio dan ketik kata atau frasa yang hilang:",
+                "promptSentence": "Although quarterly revenue increased, operating costs remained _____ high.",
+                "targetWord": "unexpectedly",
+                "explanation": "Audio lengkap: 'Although quarterly revenue increased, operating costs remained unexpectedly high.'. Kata yang hilang: 'unexpectedly'.",
+                "id": "q-b1.2-m04-l-14",
+                "part": "listening",
+                "partIndex": 14,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "type": "arrange",
+                "audioText": "We should have conducted a comprehensive feasibility study earlier.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang tepat:",
+                "targetSentence": "We should have conducted a comprehensive feasibility study earlier",
+                "words": [
+                  "conducted",
+                  "feasibility",
+                  "have",
+                  "earlier",
+                  "We",
+                  "study",
+                  "comprehensive",
+                  "should",
+                  "a"
+                ],
+                "explanation": "Urutan benar: 'We should have conducted a comprehensive feasibility study earlier.'.",
+                "id": "q-b1.2-m04-l-15",
+                "part": "listening",
+                "partIndex": 15,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-1",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using 'must' to show high certainty:",
+                "promptText": "I am certain that pizza is delicious because it smells amazing.",
+                "hint": "Use 'must be'.",
+                "targetAnswers": [
+                  "That pizza must be delicious because it smells amazing.",
+                  "The pizza must be delicious because it smells amazing."
+                ],
+                "explanation": "Replace 'I am certain that' with the subject followed by 'must be'.",
+                "part": "writing",
+                "partIndex": 1,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-2",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using 'can't' to show impossibility:",
+                "promptText": "It is impossible that John is sleeping because I hear him playing the guitar.",
+                "hint": "Use 'can't be sleeping'.",
+                "targetAnswers": [
+                  "John can't be sleeping because I hear him playing the guitar."
+                ],
+                "explanation": "Replace 'It is impossible that [Subject] is' with '[Subject] can't be'.",
+                "part": "writing",
+                "partIndex": 2,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-3",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence using 'might' to show possibility:",
+                "promptText": "It is possible that Lisa will join us for dinner later.",
+                "hint": "Use 'might join'.",
+                "targetAnswers": [
+                  "Lisa might join us for dinner later."
+                ],
+                "explanation": "Replace 'It is possible that [Subject] will' with '[Subject] might'.",
+                "part": "writing",
+                "partIndex": 3,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-4",
+                "typeLabel": "Conjunctions & Connectors",
+                "instruction": "Complete the deduction sentence with the correct modal verb for high certainty: 'The lights are all turned off, so they ___ be home.'",
+                "promptText": "The lights are all turned off, so they ___ be home.",
+                "hint": "Use the modal for negative certainty.",
+                "targetAnswers": [
+                  "can't",
+                  "cannot"
+                ],
+                "explanation": "When lights are off, it is almost certain they are not home, so 'can't' is required.",
+                "part": "writing",
+                "partIndex": 4,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-5",
+                "typeLabel": "Conjunctions & Connectors",
+                "instruction": "Complete the sentence with the correct modal for moderate possibility: 'I am not sure where my keys are. They ___ be in the kitchen drawer.'",
+                "promptText": "I am not sure where my keys are. They ___ be in the kitchen drawer.",
+                "hint": "Use 'might' or 'could'.",
+                "targetAnswers": [
+                  "might",
+                  "could"
+                ],
+                "explanation": "When uncertain, 'might' or 'could' expresses a moderate possibility.",
+                "part": "writing",
+                "partIndex": 5,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-6",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the grammar and mechanics in the following sentence:",
+                "promptText": "he must to know the answer because he studied all night.",
+                "hint": "Remove the word 'to' after the modal verb.",
+                "targetAnswers": [
+                  "He must know the answer because he studied all night."
+                ],
+                "explanation": "Modal verbs like 'must' take a bare infinitive without 'to'.",
+                "part": "writing",
+                "partIndex": 6,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-7",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the grammar and mechanics in the following sentence:",
+                "promptText": "that car cant be cheap, it is a brand new sports car.",
+                "hint": "Fix capitalization and use the apostrophe in 'can't'.",
+                "targetAnswers": [
+                  "That car can't be cheap, it is a brand new sports car.",
+                  "That car can't be cheap. It is a brand new sports car."
+                ],
+                "explanation": "Start sentences with capital letters and write 'can't' with an apostrophe.",
+                "part": "writing",
+                "partIndex": 7,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-8",
+                "typeLabel": "Short Response",
+                "instruction": "Write a deduction sentence using 'must' based on this clue: 'The street is completely flooded.'",
+                "promptText": "The street is completely flooded.",
+                "hint": "Example: It must have rained heavily.",
+                "targetAnswers": [
+                  "It must have rained heavily.",
+                  "There must have been a heavy storm.",
+                  "It must rain a lot here."
+                ],
+                "explanation": "Use 'must' followed by a base verb to deduce the cause of the flood.",
+                "part": "writing",
+                "partIndex": 8,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-9",
+                "typeLabel": "Short Response",
+                "instruction": "Write a deduction sentence using 'might' based on this clue: 'Anna is not answering her phone.'",
+                "promptText": "Anna is not answering her phone.",
+                "hint": "Example: She might be busy driving.",
+                "targetAnswers": [
+                  "She might be busy.",
+                  "She might be sleeping.",
+                  "She might be in a meeting."
+                ],
+                "explanation": "Use 'might be' to offer a reasonable explanation for an unanswered phone.",
+                "part": "writing",
+                "partIndex": 9,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-w-10",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform the statement into a negative deduction using 'can't': 'I am sure Mark is not the thief.'",
+                "promptText": "I am sure Mark is not the thief.",
+                "hint": "Use 'Mark can't be'.",
+                "targetAnswers": [
+                  "Mark can't be the thief."
+                ],
+                "explanation": "Replace 'I am sure [Subject] is not' with '[Subject] can't be'.",
+                "part": "writing",
+                "partIndex": 10,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-1",
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a time you had to make a deduction based on clues.",
+                "audioPrompt": "Tell me about a situation when you found a clue and had to guess what happened.",
+                "storyPoints": [
+                  "What object or clue you discovered",
+                  "What deduction you made using must or might",
+                  "What the actual truth turned out to be"
+                ],
+                "targetSentence": "I found muddy shoes by the door, so I deduced that my brother must have gone hiking.",
+                "phonetic": "/aɪ faʊnd ˈmʌdi ʃuːz baɪ ðə dɔː/",
+                "expectedKeywords": [
+                  "clue",
+                  "must",
+                  "deduction",
+                  "truth"
+                ],
+                "explanation": "Speak fluently in full sentences while describing past deductions.",
+                "part": "speaking",
+                "partIndex": 1,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-2",
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 20 seconds about a mysterious noise you heard at night.",
+                "audioPrompt": "Describe a time you heard a strange sound and what you thought it was.",
+                "storyPoints": [
+                  "When and where you heard the unusual sound",
+                  "What modal of probability you used to explain it",
+                  "How you felt after finding out the source"
+                ],
+                "targetSentence": "I heard a scratch on the window, and I thought it might be a stray cat.",
+                "phonetic": "/aɪ hɜːd ə skrætʃ ɒn ðə ˈwɪndəʊ/",
+                "expectedKeywords": [
+                  "sound",
+                  "might",
+                  "mystery",
+                  "source"
+                ],
+                "explanation": "Maintain a steady pace and use descriptive language.",
+                "part": "speaking",
+                "partIndex": 2,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-3",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to your friend who cannot find their house keys.",
+                "scenarioContext": "Your friend is standing outside their locked front house door and panicking.",
+                "characterRole": "Helpful Friend",
+                "audioPrompt": "Say where your friend might have left their keys using a modal verb.",
+                "targetSentence": "You might have left them on the kitchen table before you rushed out.",
+                "phonetic": "/juː maɪt hæv lɛft ðɛm ɒn ðə ˈkɪtʃɪn ˈteɪbəl/",
+                "expectedKeywords": [
+                  "might",
+                  "keys",
+                  "table",
+                  "remember"
+                ],
+                "explanation": "Respond naturally with appropriate intonation of uncertainty.",
+                "part": "speaking",
+                "partIndex": 3,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-4",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Discuss an unexpected package delivery with a neighbor.",
+                "scenarioContext": "A large mysterious box was left at your apartment doorstep.",
+                "characterRole": "Neighbor",
+                "audioPrompt": "Explain why the package can't belong to you.",
+                "targetSentence": "That box can't be mine because I did not order anything online this week.",
+                "phonetic": "/ðæt bɒks kɑːnt biː maɪn bɪˈkɒz aɪ dɪd nɒt ˈɔːdə ˈɛniθɪŋ/",
+                "expectedKeywords": [
+                  "can't",
+                  "package",
+                  "order",
+                  "neighbor"
+                ],
+                "explanation": "Pronounce can't clearly to show strong negative deduction.",
+                "part": "speaking",
+                "partIndex": 4,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-5",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Talk about a colleague who is absent from work today.",
+                "scenarioContext": "Your coworker Sarah is not at her desk during an important morning meeting.",
+                "characterRole": "Office Coworker",
+                "audioPrompt": "State why Sarah must be sick today.",
+                "targetSentence": "Sarah must be sick today because she coughed a lot yesterday afternoon.",
+                "phonetic": "/ˈsærə mʌst biː sɪk təˈdeɪ bɪˈkɒz ʃiː kɒft ə lɒt/",
+                "expectedKeywords": [
+                  "must",
+                  "sick",
+                  "meeting",
+                  "yesterday"
+                ],
+                "explanation": "Emphasize must to indicate high certainty based on past evidence.",
+                "part": "speaking",
+                "partIndex": 5,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-6",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Plan an outdoor picnic with your classmate.",
+                "scenarioContext": "You are looking out the window at cloudy skies and deciding whether to go.",
+                "characterRole": "Classmate",
+                "audioPrompt": "Suggest that it might rain later in the afternoon.",
+                "targetSentence": "It might rain later, so we could postpone our picnic until tomorrow.",
+                "phonetic": "/ɪt maɪt reɪn ˈleɪtə, səʊ wiː kʊd pəʊˈspəʊn ˈaʊə ˈpɪknɪk/",
+                "expectedKeywords": [
+                  "might",
+                  "rain",
+                  "picnic",
+                  "postpone"
+                ],
+                "explanation": "Use a moderate tone to express conditional probability.",
+                "part": "speaking",
+                "partIndex": 6,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-7",
+                "category": "linguistic_drill",
+                "focus": "vocab",
+                "typeLabel": "Vocabulary Production",
+                "instruction": "Use the target vocabulary word 'deduction' in a complete spoken sentence.",
+                "audioPrompt": "Say a sentence explaining your logical deduction about a puzzle.",
+                "targetSentence": "My deduction is based on the footprints we found near the garden gate.",
+                "phonetic": "/maɪ dɪˈdʌk.ʃən ɪz beɪst ɒn ðə ˈfʊt.prɪnts/",
+                "expectedKeywords": [
+                  "deduction",
+                  "based",
+                  "evidence",
+                  "logic"
+                ],
+                "explanation": "Pronounce deduction with correct syllable stress on the second syllable.",
+                "part": "speaking",
+                "partIndex": 7,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-8",
+                "category": "linguistic_drill",
+                "focus": "grammar",
+                "typeLabel": "Grammar Production",
+                "instruction": "Form a sentence using the modal structure 'must have' plus past participle.",
+                "audioPrompt": "Make a sentence about something someone finished in the past with certainty.",
+                "targetSentence": "She must have finished the report because her computer is turned off.",
+                "phonetic": "/ʃiː mʌst hæv ˈfɪnɪʃt ðə rɪˈpɔːt/",
+                "expectedKeywords": [
+                  "must",
+                  "have",
+                  "finished",
+                  "report"
+                ],
+                "explanation": "Ensure you blend 'must have' naturally in speech without overemphasizing 'have'.",
+                "part": "speaking",
+                "partIndex": 8,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-9",
+                "category": "linguistic_drill",
+                "focus": "pronunciation_stress",
+                "typeLabel": "Syllable Stress Practice",
+                "instruction": "Read aloud the sentence focusing on correct syllable stress for 'probability'.",
+                "audioPrompt": "Pronounce the word probability clearly within this sentence.",
+                "targetSentence": "There is a high probability that the train will arrive on time.",
+                "phonetic": "/ðɛr ɪz ə haɪ ˌprɒb.əˈbɪl.ə.ti ðæt ðə treɪn wɪl əˈraɪv/",
+                "expectedKeywords": [
+                  "probability",
+                  "high",
+                  "train",
+                  "arrive"
+                ],
+                "explanation": "Place primary stress on the third syllable of probability.",
+                "part": "speaking",
+                "partIndex": 9,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "id": "q-b1.2-m04-s-10",
+                "category": "linguistic_drill",
+                "focus": "pronunciation_intonation",
+                "typeLabel": "Rising and Falling Intonation",
+                "instruction": "Read the sentence with a falling intonation to express absolute certainty.",
+                "audioPrompt": "Say this sentence with a definite falling tone at the end.",
+                "targetSentence": "It is impossible for him to have solved the riddle so quickly.",
+                "phonetic": "/ɪt ɪz ɪmˈpɒs.ə.bəl fɔːhɪm tuː hæv sɒlvd ðə ˈrɪd.əl/",
+                "expectedKeywords": [
+                  "impossible",
+                  "solved",
+                  "riddle",
+                  "quickly"
+                ],
+                "explanation": "Lower your pitch at the end of the sentence to show strong conviction.",
+                "part": "speaking",
+                "partIndex": 10,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "category": "Change Management",
+                "instruction": "Ucapkan ajakan adaptasi sistem baru:",
+                "prompt": "Adopting this new infrastructure requires initial adjustment, but the long-term productivity advantages far outweigh the transitional overhead.",
+                "sampleAnswer": "Adopting this new infrastructure requires initial adjustment, but the long-term productivity advantages far outweigh the transitional overhead.",
+                "phonetic": "/əˈdɒptɪŋ ðɪs njuː ˈɪnfrəstrʌktʃə/",
+                "keywords": [
+                  "infrastructure",
+                  "productivity",
+                  "outweigh",
+                  "overhead"
+                ],
+                "id": "q-b1.2-m04-s-11",
+                "part": "speaking",
+                "partIndex": 11,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "category": "Incentive Justification",
+                "instruction": "Ucapkan argumen pembenaran alokasi anggaran:",
+                "prompt": "Allocating additional resources to cybersecurity is not an optional luxury, but a fundamental prerequisite for enterprise growth.",
+                "sampleAnswer": "Allocating additional resources to cybersecurity is not an optional luxury, but a fundamental prerequisite for enterprise growth.",
+                "phonetic": "/ˈæləkeɪtɪŋ əˈdɪʃənl rɪˈzɔːsɪz/",
+                "keywords": [
+                  "allocating",
+                  "cybersecurity",
+                  "prerequisite",
+                  "growth"
+                ],
+                "id": "q-b1.2-m04-s-12",
+                "part": "speaking",
+                "partIndex": 12,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "category": "Future Strategy",
+                "instruction": "Ucapkan visi strategis jangka menengah perusahaan:",
+                "prompt": "Over the next three quarters, our strategic focus will center on expanding market penetration across emerging regional economies.",
+                "sampleAnswer": "Over the next three quarters, our strategic focus will center on expanding market penetration across emerging regional economies.",
+                "phonetic": "/ˈəʊvə ðə nekst θriː ˈkwɔːtəz/",
+                "keywords": [
+                  "strategic",
+                  "penetration",
+                  "emerging",
+                  "economies"
+                ],
+                "id": "q-b1.2-m04-s-13",
+                "part": "speaking",
+                "partIndex": 13,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "category": "Professional Presentation",
+                "instruction": "Ucapkan argumen presentasi kerja dengan artikulasi percaya diri:",
+                "prompt": "Based on our latest customer feedback, streamlining the onboarding workflow will reduce churn by fifteen percent.",
+                "sampleAnswer": "Based on our latest customer feedback, streamlining the onboarding workflow will reduce churn by fifteen percent.",
+                "phonetic": "/beɪst ɒn ˈaʊə ˈleɪtɪst ˈkʌstəmə ˈfiːdbæk/",
+                "keywords": [
+                  "customer",
+                  "feedback",
+                  "streamlining",
+                  "churn"
+                ],
+                "id": "q-b1.2-m04-s-14",
+                "part": "speaking",
+                "partIndex": 14,
+                "sourceModule": "B1.2-M04"
+              },
+              {
+                "category": "Strategic Negotiation",
+                "instruction": "Ucapkan respon diplomatis dalam negosiasi bisnis berikut:",
+                "prompt": "While we appreciate your competitive pricing proposal, our priority remains long-term product reliability and technical support.",
+                "sampleAnswer": "While we appreciate your competitive pricing proposal, our priority remains long-term product reliability and technical support.",
+                "phonetic": "/waɪl wiː əˈpriːʃieɪt jɔː kəmˈpetətɪv ˈpraɪsɪŋ/",
+                "keywords": [
+                  "appreciate",
+                  "proposal",
+                  "reliability",
+                  "support"
+                ],
+                "id": "q-b1.2-m04-s-15",
+                "part": "speaking",
+                "partIndex": 15,
+                "sourceModule": "B1.2-M04"
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }

@@ -1700,6 +1700,2822 @@
           }
         }
       ]
+    },
+    {
+      "id": "sub-b2-4-m11-assessment",
+      "moduleId": "B2.4-M11",
+      "skillType": "assessment",
+      "title": "Final Mission: Unit 11 Comprehensive Assessment (55 Soal)",
+      "theme": "Unit 11 All-Skills Mastery Evaluation (MEDIUM)",
+      "orderIndex": 5,
+      "sections": [
+        {
+          "id": "sec-b2-4-m11-theory",
+          "moduleId": "B2.4-M11",
+          "subModuleId": "sub-b2-4-m11-assessment",
+          "sectionType": "theory",
+          "title": "Unit Final Mission Guidelines & Criteria",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Ujian akhir unit resmi untuk Unit 11: Critical Evaluation of Sources & Avoiding Plagiarism. Menguji 4 kompetensi terintegrasi (Reading 15 soal, Listening 15 soal, Writing 10 soal, Speaking 15 soal) untuk menghasilkan scorecard nilai resmi per unit.",
+            "totalQuestions": 55,
+            "passingScore": 75,
+            "estimatedMinutes": 40,
+            "difficultyTier": "medium",
+            "parts": [
+              {
+                "part": 1,
+                "name": "Reading Comprehension & Lexicogrammar",
+                "count": 15
+              },
+              {
+                "part": 2,
+                "name": "Listening Auditory Synthesis",
+                "count": 15
+              },
+              {
+                "part": 3,
+                "name": "Written Production & Discourse",
+                "count": 10
+              },
+              {
+                "part": 4,
+                "name": "Spoken Fluency & Oral Interaction",
+                "count": 15
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-4-m11-quiz",
+          "moduleId": "B2.4-M11",
+          "subModuleId": "sub-b2-4-m11-assessment",
+          "sectionType": "quiz",
+          "title": "Unit 11 Mastery Quiz: 55 Items",
+          "orderIndex": 2,
+          "content": {
+            "passingScore": 75,
+            "totalQuestions": 55,
+            "difficultyTier": "medium",
+            "parts": {
+              "reading": [
+                {
+                  "id": "q-b2.4-m11-r-1",
+                  "question": "What did Maya initially plan to do with sentences she saved from websites?",
+                  "options": [
+                    "Change a few words later.",
+                    "Delete them before writing.",
+                    "Translate them into another language."
+                  ],
+                  "answer": "Change a few words later.",
+                  "explanation": "The first paragraph says Maya saved sentences and planned to change a few words later, which her teacher warned could lead to patchwriting.",
+                  "part": "reading",
+                  "partIndex": 1,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-r-2",
+                  "question": "According to Maya's teacher, what does a strong paraphrase need?",
+                  "options": [
+                    "A fresh sentence structure that keeps the source's central meaning.",
+                    "The same structure with several new adjectives.",
+                    "A quotation without the author's name."
+                  ],
+                  "answer": "A fresh sentence structure that keeps the source's central meaning.",
+                  "explanation": "The teacher explains that a paraphrase needs a new structure as well as accurate meaning.",
+                  "part": "reading",
+                  "partIndex": 2,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-r-3",
+                  "question": "Why did Maya reject one web page as a credible source?",
+                  "options": [
+                    "It gave an opinion without naming an author or linking to research.",
+                    "It included too many references to published studies.",
+                    "It was written by a university research centre."
+                  ],
+                  "answer": "It gave an opinion without naming an author or linking to research.",
+                  "explanation": "The second paragraph says the page named no author and linked to no research, so Maya decided it was not credible.",
+                  "part": "reading",
+                  "partIndex": 3,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-r-4",
+                  "question": "What made the university research centre's material more useful to Maya?",
+                  "options": [
+                    "It described its methods and referred to published studies.",
+                    "It offered a strong opinion without evidence.",
+                    "It avoided explaining how information was collected."
+                  ],
+                  "answer": "It described its methods and referred to published studies.",
+                  "explanation": "The passage identifies the centre's methods and references to published studies as reasons Maya kept it on her reading list.",
+                  "part": "reading",
+                  "partIndex": 4,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-r-5",
+                  "question": "What does Patel (2021) argue about short homework tasks?",
+                  "options": [
+                    "They can help students practise skills.",
+                    "They always increase stress.",
+                    "They should replace every other kind of learning."
+                  ],
+                  "answer": "They can help students practise skills.",
+                  "explanation": "The third paragraph reports Patel's view that short homework tasks can help students practise skills.",
+                  "part": "reading",
+                  "partIndex": 5,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-r-6",
+                  "question": "What does Green (2022) suggest about long assignments?",
+                  "options": [
+                    "They may increase stress without improving results.",
+                    "They are the only way to practise skills.",
+                    "They always improve results for every age group."
+                  ],
+                  "answer": "They may increase stress without improving results.",
+                  "explanation": "The passage uses suggests to report Green's view that long assignments may increase stress without improving results.",
+                  "part": "reading",
+                  "partIndex": 6,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-r-7",
+                  "question": "Why did Maya avoid treating either source as a complete answer?",
+                  "options": [
+                    "The researchers studied different age groups and measured different outcomes.",
+                    "Neither source discussed homework.",
+                    "Both sources made exactly the same claim."
+                  ],
+                  "answer": "The researchers studied different age groups and measured different outcomes.",
+                  "explanation": "Maya noted that the writers had studied different age groups and measured different outcomes, so their claims were not directly identical.",
+                  "part": "reading",
+                  "partIndex": 7,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-r-8",
+                  "question": "What is the main purpose of Maya's sentence beginning, While Patel (2021) emphasises regular practice?",
+                  "options": [
+                    "To connect contrasting ideas and draw a broader conclusion.",
+                    "To copy one source's wording without credit.",
+                    "To show that the two sources reached exactly the same result."
+                  ],
+                  "answer": "To connect contrasting ideas and draw a broader conclusion.",
+                  "explanation": "Maya's sentence places the two perspectives together and concludes that homework design matters, which is synthesis.",
+                  "part": "reading",
+                  "partIndex": 8,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-r-9",
+                  "question": "Which action did Maya take to make sure her paraphrases remained accurate?",
+                  "options": [
+                    "She checked each paraphrase against the original.",
+                    "She removed the names of all the sources.",
+                    "She changed the sources' findings to fit her argument."
+                  ],
+                  "answer": "She checked each paraphrase against the original.",
+                  "explanation": "The final sentence says Maya checked every paraphrase against its original source.",
+                  "part": "reading",
+                  "partIndex": 9,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-r-10",
+                  "question": "What is the passage's main message about using sources?",
+                  "options": [
+                    "Evaluate sources, represent their ideas accurately, and give attribution.",
+                    "Use only the first source you find and avoid comparing it with others.",
+                    "Replace a few words in a source and leave out a reference."
+                  ],
+                  "answer": "Evaluate sources, represent their ideas accurately, and give attribution.",
+                  "explanation": "Maya checks source quality, compares different claims, paraphrases carefully, and acknowledges other writers' ideas.",
+                  "part": "reading",
+                  "partIndex": 10,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "question": "Identify the sentence that correctly utilizes the Third Conditional:",
+                  "options": [
+                    "If we had anticipated the market demand, we would have expanded production sooner.",
+                    "If we anticipate the market demand, we will expand production.",
+                    "If we had anticipated the market demand, we will have expanded production.",
+                    "If we anticipated the market demand, we would expand production sooner."
+                  ],
+                  "answer": "If we had anticipated the market demand, we would have expanded production sooner.",
+                  "explanation": "Third conditional formula: If + past perfect, would have + past participle.",
+                  "id": "q-b2.4-m11-r-11",
+                  "part": "reading",
+                  "partIndex": 11,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "question": "Why did the client request an amendment to the contractual agreement?",
+                  "options": [
+                    "To ensure delivery milestones aligned with their internal quarterly budget cycles.",
+                    "Because they intended to terminate all business relations immediately.",
+                    "To eliminate all warranty protections and technical support clauses.",
+                    "Because the initial contract was drafted without legal counsel."
+                  ],
+                  "answer": "To ensure delivery milestones aligned with their internal quarterly budget cycles.",
+                  "explanation": "Contract amendments in B2 business scenarios typically align scope with financial planning.",
+                  "id": "q-b2.4-m11-r-12",
+                  "part": "reading",
+                  "partIndex": 12,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "question": "Choose the correct passive transformation: 'The engineering team completed the audit yesterday.'",
+                  "options": [
+                    "The audit was completed by the engineering team yesterday.",
+                    "The audit had completed by the engineering team yesterday.",
+                    "The engineering team was completed by the audit yesterday.",
+                    "The audit is completed by the engineering team yesterday."
+                  ],
+                  "answer": "The audit was completed by the engineering team yesterday.",
+                  "explanation": "Past simple passive: object + was/were + past participle + by agent.",
+                  "id": "q-b2.4-m11-r-13",
+                  "part": "reading",
+                  "partIndex": 13,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "question": "What is the primary function of the modal verb in 'You ought to back up your database before the migration'?",
+                  "options": [
+                    "Strong moral or practical recommendation",
+                    "Logical certainty",
+                    "Physical capability",
+                    "Past habit"
+                  ],
+                  "answer": "Strong moral or practical recommendation",
+                  "explanation": "'Ought to' expresses a strong advisory recommendation or obligation.",
+                  "id": "q-b2.4-m11-r-14",
+                  "part": "reading",
+                  "partIndex": 14,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "question": "Which word best replaces 'alleviate' in 'measures were introduced to alleviate employee stress'?",
+                  "options": [
+                    "Reduce",
+                    "Intensify",
+                    "Ignore",
+                    "Prolong"
+                  ],
+                  "answer": "Reduce",
+                  "explanation": "'Alleviate' means to make a problem or burden less severe.",
+                  "id": "q-b2.4-m11-r-15",
+                  "part": "reading",
+                  "partIndex": 15,
+                  "sourceModule": "B2.4-M11"
+                }
+              ],
+              "listening": [
+                {
+                  "id": "q-b2.4-m11-l-1",
+                  "type": "dictation",
+                  "audioText": "I really need help with my essay.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Alex: \"I really need help with my _____.\"",
+                  "targetWord": "essay",
+                  "explanation": "Full audio: \"I really need help with my essay.\". The missing word is \"essay\".",
+                  "part": "listening",
+                  "partIndex": 1,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-l-2",
+                  "type": "dictation",
+                  "audioText": "What seems to be the problem?",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Morgan: \"What seems to be the _____?\"",
+                  "targetWord": "problem",
+                  "explanation": "Full audio: \"What seems to be the problem?\". The missing word is \"problem\".",
+                  "part": "listening",
+                  "partIndex": 2,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-l-3",
+                  "type": "dictation",
+                  "audioText": "I keep using too many direct quotes.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Alex: \"I keep using too many direct _____.\"",
+                  "targetWord": "quotes",
+                  "explanation": "Full audio: \"I keep using too many direct quotes.\". The missing word is \"quotes\".",
+                  "part": "listening",
+                  "partIndex": 3,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-l-4",
+                  "type": "dictation",
+                  "audioText": "You should restructure the whole sentence instead.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Morgan: \"You should restructure the whole sentence _____.\"",
+                  "targetWord": "instead",
+                  "explanation": "Full audio: \"You should restructure the whole sentence instead.\". The missing word is \"instead\".",
+                  "part": "listening",
+                  "partIndex": 4,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-l-5",
+                  "type": "dictation",
+                  "audioText": "Just swapping words is not enough?",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Alex: \"Just swapping words is not _____?\"",
+                  "targetWord": "enough",
+                  "explanation": "Full audio: \"Just swapping words is not enough?\". The missing word is \"enough\".",
+                  "part": "listening",
+                  "partIndex": 5,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-l-6",
+                  "type": "arrange",
+                  "audioText": "No, that still counts as plagiarism.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "No that still counts as plagiarism",
+                  "words": [
+                    "as",
+                    "plagiarism",
+                    "No",
+                    "that",
+                    "still",
+                    "counts"
+                  ],
+                  "explanation": "Correct sentence order: \"No, that still counts as plagiarism.\".",
+                  "part": "listening",
+                  "partIndex": 6,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-l-7",
+                  "type": "arrange",
+                  "audioText": "How do I combine two different sources?",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "How do I combine two different sources",
+                  "words": [
+                    "two",
+                    "I",
+                    "How",
+                    "combine",
+                    "different",
+                    "do",
+                    "sources"
+                  ],
+                  "explanation": "Correct sentence order: \"How do I combine two different sources?\".",
+                  "part": "listening",
+                  "partIndex": 7,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-l-8",
+                  "type": "arrange",
+                  "audioText": "Synthesise their findings into one argument.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "Synthesise their findings into one argument",
+                  "words": [
+                    "argument",
+                    "their",
+                    "one",
+                    "into",
+                    "findings",
+                    "Synthesise"
+                  ],
+                  "explanation": "Correct sentence order: \"Synthesise their findings into one argument.\".",
+                  "part": "listening",
+                  "partIndex": 8,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-l-9",
+                  "type": "arrange",
+                  "audioText": "Do I compare their perspectives together?",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "Do I compare their perspectives together",
+                  "words": [
+                    "compare",
+                    "their",
+                    "together",
+                    "perspectives",
+                    "Do",
+                    "I"
+                  ],
+                  "explanation": "Correct sentence order: \"Do I compare their perspectives together?\".",
+                  "part": "listening",
+                  "partIndex": 9,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-l-10",
+                  "type": "arrange",
+                  "audioText": "Yes, and add your own conclusion.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "Yes and add your own conclusion",
+                  "words": [
+                    "your",
+                    "and",
+                    "own",
+                    "Yes",
+                    "add",
+                    "conclusion"
+                  ],
+                  "explanation": "Correct sentence order: \"Yes, and add your own conclusion.\".",
+                  "part": "listening",
+                  "partIndex": 10,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "type": "arrange",
+                  "audioText": "If we had secured the contract our revenue would have doubled.",
+                  "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                  "targetSentence": "If we had secured the contract our revenue would have doubled",
+                  "words": [
+                    "contract",
+                    "doubled",
+                    "If",
+                    "our",
+                    "had",
+                    "revenue",
+                    "secured",
+                    "the",
+                    "have",
+                    "would",
+                    "we"
+                  ],
+                  "explanation": "Urutan benar: 'If we had secured the contract our revenue would have doubled.'.",
+                  "id": "q-b2.4-m11-l-11",
+                  "part": "listening",
+                  "partIndex": 11,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "type": "dictation",
+                  "audioText": "The committee unanimously approved the implementation strategy.",
+                  "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                  "promptSentence": "The committee _____ approved the implementation strategy.",
+                  "targetWord": "unanimously",
+                  "explanation": "Audio lengkap: 'The committee unanimously approved the implementation strategy.'. Kata yang hilang: 'unanimously'.",
+                  "id": "q-b2.4-m11-l-12",
+                  "part": "listening",
+                  "partIndex": 12,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "type": "arrange",
+                  "audioText": "Employees are encouraged to participate in continuous professional development.",
+                  "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                  "targetSentence": "Employees are encouraged to participate in continuous professional development",
+                  "words": [
+                    "development",
+                    "encouraged",
+                    "in",
+                    "are",
+                    "professional",
+                    "Employees",
+                    "participate",
+                    "continuous",
+                    "to"
+                  ],
+                  "explanation": "Urutan benar: 'Employees are encouraged to participate in continuous professional development.'.",
+                  "id": "q-b2.4-m11-l-13",
+                  "part": "listening",
+                  "partIndex": 13,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "type": "dictation",
+                  "audioText": "Cross-functional collaboration is essential for modern product design.",
+                  "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                  "promptSentence": "Cross-functional _____ is essential for modern product design.",
+                  "targetWord": "collaboration",
+                  "explanation": "Audio lengkap: 'Cross-functional collaboration is essential for modern product design.'. Kata: 'collaboration'.",
+                  "id": "q-b2.4-m11-l-14",
+                  "part": "listening",
+                  "partIndex": 14,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "type": "arrange",
+                  "audioText": "Despite technical difficulties the presentation received overwhelmingly positive reviews.",
+                  "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                  "targetSentence": "Despite technical difficulties the presentation received overwhelmingly positive reviews",
+                  "words": [
+                    "positive",
+                    "technical",
+                    "the",
+                    "presentation",
+                    "Despite",
+                    "reviews",
+                    "overwhelmingly",
+                    "received",
+                    "difficulties"
+                  ],
+                  "explanation": "Urutan benar: 'Despite technical difficulties the presentation received overwhelmingly positive reviews.'.",
+                  "id": "q-b2.4-m11-l-15",
+                  "part": "listening",
+                  "partIndex": 15,
+                  "sourceModule": "B2.4-M11"
+                }
+              ],
+              "writing": [
+                {
+                  "id": "q-b2.4-m11-w-1",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Rewrite the following direct quotation into an indirect paraphrase using the prompt author: Williams (2021).",
+                  "promptText": "\"Students achieve higher grades when they receive weekly structured feedback.\" (Williams, 2021)",
+                  "hint": "Begin with 'Williams (2021) argues that...' or 'According to Williams (2021),...'",
+                  "targetAnswers": [
+                    "Williams (2021) argues that regular feedback leads to improved academic performance.",
+                    "Williams (2021) maintains that students attain better academic outcomes through consistent feedback.",
+                    "According to Williams (2021), regular structured feedback helps students attain higher marks.",
+                    "Williams (2021) suggests that regular evaluation enables students to achieve superior grades."
+                  ],
+                  "explanation": "To paraphrase successfully, recast the original wording using different clause patterns and formal vocabulary while retaining the core claim.",
+                  "part": "writing",
+                  "partIndex": 1,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-w-2",
+                  "typeLabel": "Mechanics Correction",
+                  "instruction": "Correct the punctuation and capitalisation errors in this academic citation sentence:",
+                  "promptText": "according to peterson (2020) critical thinking requires systematic questioning",
+                  "hint": "Capitalise the sentence opener and author's surname, and place a comma after the date bracket.",
+                  "targetAnswers": [
+                    "According to Peterson (2020), critical thinking requires systematic questioning.",
+                    "According to Peterson (2020), critical thinking requires systematic questioning"
+                  ],
+                  "explanation": "Academic conventions require a capital letter for author surnames and a comma directly following introductory attribution phrases.",
+                  "part": "writing",
+                  "partIndex": 2,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-w-3",
+                  "typeLabel": "Conjunctions & Synthesis",
+                  "instruction": "Combine the two opposing research findings into one sentence using 'While' and the participial phrase 'suggesting that':",
+                  "promptText": "Source A: Jensen (2018) focuses on early childhood exposure. Source B: Liu (2020) stresses adolescent social interaction.",
+                  "hint": "Structure: While Jensen (2018) focuses on..., Liu (2020) stresses..., suggesting that...",
+                  "targetAnswers": [
+                    "While Jensen (2018) focuses on early childhood exposure, Liu (2020) stresses adolescent social interaction, suggesting that language development spans multiple critical periods.",
+                    "While Jensen (2018) emphasises early childhood exposure, Liu (2020) highlights adolescent social interaction, suggesting that both phases are essential.",
+                    "While Jensen (2018) focuses on early childhood exposure, Liu (2020) stresses adolescent social interaction, suggesting that both stages influence language acquisition."
+                  ],
+                  "explanation": "A synthesis sentence links two contrasting perspectives using a subordinate concessive clause followed by an evaluative participial conclusion.",
+                  "part": "writing",
+                  "partIndex": 3,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-w-4",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Transform this parenthetical citation into an author-prominent sentence using the reporting verb 'contends':",
+                  "promptText": "Algorithmic bias in admissions processes reinforces existing social disparities (Nakamura, 2022).",
+                  "hint": "Start with 'Nakamura (2022) contends that...'",
+                  "targetAnswers": [
+                    "Nakamura (2022) contends that algorithmic bias in admissions processes reinforces existing social disparities.",
+                    "Nakamura (2022) contends that admissions algorithms perpetuate existing social inequalities."
+                  ],
+                  "explanation": "An author-prominent sentence places the author as the grammatical subject, followed by a reporting verb and a that-clause.",
+                  "part": "writing",
+                  "partIndex": 4,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-w-5",
+                  "typeLabel": "Mechanics Correction",
+                  "instruction": "Identify and correct the faulty subject-verb agreement and punctuation in this reporting sentence:",
+                  "promptText": "Foster (2017) suggest that remote teams experiences higher rates of miscommunication.",
+                  "hint": "Foster is singular, so the reporting verb must agree, as must the plural noun 'remote teams'.",
+                  "targetAnswers": [
+                    "Foster (2017) suggests that remote teams experience higher rates of miscommunication.",
+                    "Foster (2017) suggests that remote teams experience higher rates of miscommunication"
+                  ],
+                  "explanation": "The singular subject 'Foster' takes 'suggests', and the plural subject 'remote teams' inside the that-clause takes 'experience'.",
+                  "part": "writing",
+                  "partIndex": 5,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-w-6",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Paraphrase this statement to avoid patchwriting by converting the active verbal construction into a nominalised subject:",
+                  "promptText": "\"When teachers give prompt feedback, students revise their essays more effectively.\" (O'Connor, 2019)",
+                  "hint": "Begin with 'According to O'Connor (2019), prompt teacher feedback promotes...'",
+                  "targetAnswers": [
+                    "According to O'Connor (2019), prompt feedback significantly enhances essay revision among learners.",
+                    "According to O'Connor (2019), prompt teacher feedback promotes more effective essay revision.",
+                    "O'Connor (2019) maintains that timely feedback leads to more thorough essay revisions."
+                  ],
+                  "explanation": "Nominalising verbs (such as turning 'give prompt feedback' into 'prompt feedback' and 'revise' into 'revision') creates a professional, academic paraphrase.",
+                  "part": "writing",
+                  "partIndex": 6,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-w-7",
+                  "typeLabel": "Conjunctions & Synthesis",
+                  "instruction": "Connect these two authors' views into a single compound-complex sentence using 'whereas' and 'indicating that':",
+                  "promptText": "Kowalski (2019) argues that intrinsic rewards sustain motivation. Adams (2021) asserts that external incentives produce faster immediate results.",
+                  "hint": "Kowalski (2019) argues that..., whereas Adams (2021) asserts that..., indicating that...",
+                  "targetAnswers": [
+                    "Kowalski (2019) argues that intrinsic rewards sustain motivation, whereas Adams (2021) asserts that external incentives produce faster immediate results, indicating that motivation requires a dual approach.",
+                    "Kowalski (2019) argues that intrinsic rewards maintain long-term motivation, whereas Adams (2021) asserts that external incentives produce faster immediate results, indicating that different goals require distinct incentives."
+                  ],
+                  "explanation": "Using 'whereas' sets up direct contrast between the two researchers, while the trailing participial clause provides your own analytical takeaway.",
+                  "part": "writing",
+                  "partIndex": 7,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-w-8",
+                  "typeLabel": "Mechanics Correction",
+                  "instruction": "Fix the punctuation and capitalisation errors in this multi-source synthesis:",
+                  "promptText": "while green (2016) prioritises quantitative data alvarez (2020) values qualitative narratives",
+                  "hint": "Capitalise proper names, add a comma after the dependent clause, and insert a comma or linking device before the main clause.",
+                  "targetAnswers": [
+                    "While Green (2016) prioritises quantitative data, Alvarez (2020) values qualitative narratives.",
+                    "While Green (2016) prioritises quantitative data, Alvarez (2020) values qualitative narratives"
+                  ],
+                  "explanation": "The dependent concessive clause starting with 'While' must be separated from the independent clause with a comma, and both author surnames must be capitalised.",
+                  "part": "writing",
+                  "partIndex": 8,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-w-9",
+                  "typeLabel": "Short Response",
+                  "instruction": "Complete this sentence by providing a balanced conclusion clause introduced by 'suggesting that':",
+                  "promptText": "While Thorne (2018) underscores the necessity of independent study, Garcia (2022) demonstrates the merits of group work,",
+                  "hint": "Finish with a conclusion about combining both independent and collaborative methods.",
+                  "targetAnswers": [
+                    "suggesting that optimal learning occurs through a combination of autonomous and collaborative tasks.",
+                    "suggesting that effective education requires both individual reflection and collaborative interaction.",
+                    "suggesting that balanced pedagogy should incorporate both individual and group methods."
+                  ],
+                  "explanation": "In multi-source synthesis, the concluding non-finite clause synthesises the two opposing views into a unified pedagogical insight.",
+                  "part": "writing",
+                  "partIndex": 9,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-w-10",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Paraphrase the original finding by converting the passive sentence into an active voice sentence led by the cited author:",
+                  "promptText": "Cognitive fatigue is accelerated by prolonged exposure to backlit computer screens, as observed by Martin (2021).",
+                  "hint": "Start with 'Martin (2021) observes that...'",
+                  "targetAnswers": [
+                    "Martin (2021) observes that prolonged exposure to backlit computer screens accelerates cognitive fatigue.",
+                    "Martin (2021) contends that continuous screen use accelerates cognitive fatigue in learners.",
+                    "Martin (2021) notes that extended screen time accelerates cognitive fatigue."
+                  ],
+                  "explanation": "Converting passive structures to active constructions led by author-prominent reporting verbs is an effective technique for clear academic paraphrasing.",
+                  "part": "writing",
+                  "partIndex": 10,
+                  "sourceModule": "B2.4-M11"
+                }
+              ],
+              "speaking": [
+                {
+                  "id": "q-b2.4-m11-s-1",
+                  "category": "storytelling",
+                  "typeLabel": "Academic Monologue: Source Integration",
+                  "instruction": "Speak for at least 30 seconds describing a time you had to evaluate conflicting sources for an essay or presentation.",
+                  "audioPrompt": "Describe an assignment where you encountered opposing viewpoints in your research and explain how you resolved them.",
+                  "storyPoints": [
+                    "The specific assignment topic and the conflicting arguments you discovered",
+                    "How you evaluated which source was more credible",
+                    "The method you used to synthesise both perspectives with accurate attribution"
+                  ],
+                  "targetSentence": "When researching renewable energy policies, I found conflicting data between government reports and corporate studies, so I checked their methodologies to determine which was more credible.",
+                  "phonetic": "/wen rɪˈsɜːtʃɪŋ rɪˈnjuːəbl ˈenədʒi ˈpɒləsiz aɪ faʊnd kənˈflɪktɪŋ ˈdeɪtə bɪˈtwiːn ˈɡʌvnmənt rɪˈpɔːts/",
+                  "expectedKeywords": [
+                    "conflicting",
+                    "credible",
+                    "synthesise",
+                    "attribution",
+                    "methodology"
+                  ],
+                  "explanation": "Deliver a structured three-part answer using past narrative tenses combined with evaluative language.",
+                  "part": "speaking",
+                  "partIndex": 1,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-s-2",
+                  "category": "storytelling",
+                  "typeLabel": "Academic Monologue: Avoiding Plagiarism",
+                  "instruction": "Speak for at least 30 seconds explaining how your approach to taking notes and paraphrasing has changed over time.",
+                  "audioPrompt": "Explain how you learned to avoid accidental plagiarism when summarising research material.",
+                  "storyPoints": [
+                    "Your early bad habit of keeping original text too close while taking notes",
+                    "The moment you realised patchwriting was unacceptable in academic work",
+                    "The step-by-step paraphrasing technique you now follow to write in your own voice"
+                  ],
+                  "targetSentence": "I used to change only a few synonyms, which led to patchwriting, but now I close the original article and write the concept entirely from memory.",
+                  "phonetic": "/aɪ juːst tə tʃeɪndʒ ˈəʊnli ə fjuː ˈsɪnənɪmz wɪtʃ led tə ˈpætʃˌraɪtɪŋ/",
+                  "expectedKeywords": [
+                    "patchwriting",
+                    "paraphrase",
+                    "notes",
+                    "memory",
+                    "original"
+                  ],
+                  "explanation": "Highlight your shift in methodology by contrasting past actions using 'used to' with your present routine.",
+                  "part": "speaking",
+                  "partIndex": 2,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-s-3",
+                  "category": "roleplay",
+                  "typeLabel": "Interactive Seminar Discussion",
+                  "scenarioContext": "You are participating in a university seminar on public health research. The discussion leader asks why you chose an independent research paper over a viral news blog.",
+                  "characterRole": "Seminar Participant defending source credibility",
+                  "instruction": "Explain why the peer-reviewed paper is more credible than popular commentary, referencing publication standards.",
+                  "audioPrompt": "Why did you dismiss that viral blog post when it cited similar statistics to your main article?",
+                  "targetSentence": "The blog post lacked transparent attribution and editorial peer review, so I chose the academic paper because its findings are fully verified.",
+                  "phonetic": "/ðə blɒɡ pəʊst lækt trænsˈpærənt ˌætrɪˈbjuːʃn ænd ˌedɪˈtɔːriəl pɪə rɪˈvjuː/",
+                  "expectedKeywords": [
+                    "attribution",
+                    "credible",
+                    "peer review",
+                    "verified"
+                  ],
+                  "explanation": "Provide a polite, evidence-based academic response that explains source reliability clearly.",
+                  "part": "speaking",
+                  "partIndex": 3,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-s-4",
+                  "category": "roleplay",
+                  "typeLabel": "Tutorial Feedback Session",
+                  "scenarioContext": "Your writing tutor asks you how you intend to fix an over-reliance on direct quotations in your literature review.",
+                  "characterRole": "Student responding to tutorial feedback",
+                  "instruction": "Tell your tutor that you will paraphrase the key findings and group related arguments together.",
+                  "audioPrompt": "You have six direct quotes on page two alone. How will you turn this into your own academic prose?",
+                  "targetSentence": "I plan to paraphrase those quotes and synthesise the arguments so my paper reflects my own analytical voice.",
+                  "phonetic": "/aɪ plæn tə ˈpærəfreɪz ðəʊz kwəʊts ænd ˈsɪnθəsaɪz ðɪ ˈɑːɡjumənts/",
+                  "expectedKeywords": [
+                    "paraphrase",
+                    "synthesise",
+                    "quotes",
+                    "voice"
+                  ],
+                  "explanation": "State your revision strategy firmly using future intention markers and relevant academic vocabulary.",
+                  "part": "speaking",
+                  "partIndex": 4,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-s-5",
+                  "category": "roleplay",
+                  "typeLabel": "Peer Review Partner Discussion",
+                  "scenarioContext": "Your peer review partner thinks two studies you cited reach the exact same conclusion, but you notice a key disagreement.",
+                  "characterRole": "Student clarifying scholarly disagreement",
+                  "instruction": "Politely counter your partner's claim by showing how the second researcher contends something different.",
+                  "audioPrompt": "It looks to me like Davis and Kowalski are saying the exact same thing about automation.",
+                  "targetSentence": "While Davis welcomes automation, Kowalski contends that it creates long-term regional unemployment.",
+                  "phonetic": "/waɪl ˈdeɪvɪs ˈwelkəmz ˌɔːtəˈmeɪʃn kəˈwælski kənˈtendz ðæt ɪt kriˈeɪts lɒŋ tɜːm ˌriːdʒənl ˌʌnɪmˈplɔɪmənt/",
+                  "expectedKeywords": [
+                    "contends",
+                    "while",
+                    "unemployment",
+                    "disagree"
+                  ],
+                  "explanation": "Use a concession clause starting with 'While' to balance the two viewpoints politely.",
+                  "part": "speaking",
+                  "partIndex": 5,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-s-6",
+                  "category": "roleplay",
+                  "typeLabel": "Group Project Meeting",
+                  "scenarioContext": "A teammate pasted three paragraphs from a website straight into your shared presentation slides without citations.",
+                  "characterRole": "Group Leader addressing citation compliance",
+                  "instruction": "Alert your teammate to the danger of plagiarism and explain that proper attribution is mandatory.",
+                  "audioPrompt": "I just pasted these paragraphs directly from that tech website to save time. Is that okay for our slides?",
+                  "targetSentence": "We cannot keep uncredited text because that counts as plagiarism, so we need to add proper attribution immediately.",
+                  "phonetic": "/wiː ˈkænɒt kiːp ʌnˈkredɪtɪd tekst bɪˈkɒz ðæt kaʊnts æz ˈpleɪdʒərɪzəm/",
+                  "expectedKeywords": [
+                    "plagiarism",
+                    "attribution",
+                    "uncredited",
+                    "slides"
+                  ],
+                  "explanation": "Address the ethical risk directly and propose immediate corrective action in a cooperative tone.",
+                  "part": "speaking",
+                  "partIndex": 6,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-s-7",
+                  "category": "linguistic_drill",
+                  "typeLabel": "Vocabulary Precision Drill",
+                  "instruction": "Read the sentence aloud, pronouncing the target word 'patchwriting' clearly without hesitation.",
+                  "audioPrompt": "Read aloud: 'Replacing a few adjectives while keeping the author's sentence frame is known as patchwriting.'",
+                  "targetSentence": "Replacing a few adjectives while keeping the author's sentence frame is known as patchwriting.",
+                  "phonetic": "/rɪˈpleɪsɪŋ ə fjuː ˈædʒɪktɪvz waɪl ˈkiːpɪŋ ði ˈɔːθəz ˈsentəns freɪm ɪz nəʊn æz ˈpætʃˌraɪtɪŋ/",
+                  "expectedKeywords": [
+                    "adjectives",
+                    "sentence",
+                    "frame",
+                    "patchwriting"
+                  ],
+                  "explanation": "Ensure the compound noun 'patchwriting' has strong initial stress on 'patch' and distinct consonant clarity.",
+                  "part": "speaking",
+                  "partIndex": 7,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-s-8",
+                  "category": "linguistic_drill",
+                  "typeLabel": "Grammar Structure Drill: Reporting Verbs",
+                  "instruction": "Read the sentence aloud, focusing on the correct present tense agreement and noun clause connector.",
+                  "audioPrompt": "Read aloud: 'Several leading sociologists contend that income inequality undermines institutional trust.'",
+                  "targetSentence": "Several leading sociologists contend that income inequality undermines institutional trust.",
+                  "phonetic": "/ˈsevrəl ˈliːdɪŋ ˌsəʊsiˈɒlədʒɪsts kənˈtend ðæt ˈɪnkʌm ˌɪnɪˈkwɒləti ˌʌndəˈmaɪnz ˌɪnstɪˈtjuːʃənl trʌst/",
+                  "expectedKeywords": [
+                    "sociologists",
+                    "contend",
+                    "inequality",
+                    "undermines"
+                  ],
+                  "explanation": "Deliver 'contend that' smoothly without pausing between the verb and the complement clause.",
+                  "part": "speaking",
+                  "partIndex": 8,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-s-9",
+                  "category": "linguistic_drill",
+                  "typeLabel": "Syllable Stress Drill: Credibility",
+                  "instruction": "Read the sentence aloud, placing primary stress firmly on the third syllable of 'credibility'.",
+                  "audioPrompt": "Read aloud: 'The credibility of the findings depends upon rigorous methodology and sample diversity.'",
+                  "targetSentence": "The credibility of the findings depends upon rigorous methodology and sample diversity.",
+                  "phonetic": "/ðə ˌkredəˈbɪləti əv ðə ˈfaɪndɪŋz dɪˈpendz əˈpɒn ˈrɪɡərəs ˌmeθəˈdɒlədʒi ənd ˈsɑːmpl daɪˈvɜːsəti/",
+                  "expectedKeywords": [
+                    "credibility",
+                    "findings",
+                    "rigorous",
+                    "diversity"
+                  ],
+                  "explanation": "Check that the primary stress falls precisely on 'BIL' in cred-i-BIL-i-ty.",
+                  "part": "speaking",
+                  "partIndex": 9,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "id": "q-b2.4-m11-s-10",
+                  "category": "linguistic_drill",
+                  "typeLabel": "Intonation Drill: Contrastive Synthesis",
+                  "instruction": "Read the complex sentence aloud using a rising pitch on the subordinate clause and a falling pitch at the end.",
+                  "audioPrompt": "Read aloud: 'Although the initial trial showed promise, later replications failed to confirm the effect.'",
+                  "targetSentence": "Although the initial trial showed promise, later replications failed to confirm the effect.",
+                  "phonetic": "/ɔːlˈðəʊ ði ɪˈnɪʃl ˈtraɪəl ʃəʊd ˈprɒmɪs ˈleɪtə ˌreplɪˈkeɪʃnz feɪld tə kənˈfɜːm ði ɪˈfekt/",
+                  "expectedKeywords": [
+                    "Although",
+                    "promise",
+                    "replications",
+                    "effect"
+                  ],
+                  "explanation": "Raise pitch slightly on 'promise' before the comma pause, then drop your pitch decisively on 'effect'.",
+                  "part": "speaking",
+                  "partIndex": 10,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "category": "Constructive Disagreement",
+                  "instruction": "Sampaikan ketidaksetujuan secara profesional dalam diskusi tim:",
+                  "prompt": "I understand your perspective; however, diverting resources at this stage might jeopardize our deadline for the core platform.",
+                  "sampleAnswer": "I understand your perspective; however, diverting resources at this stage might jeopardize our deadline for the core platform.",
+                  "phonetic": "/aɪ ˌʌndəˈstænd jɔː pəˈspektɪv haʊˈevə/",
+                  "keywords": [
+                    "perspective",
+                    "diverting",
+                    "jeopardize",
+                    "deadline"
+                  ],
+                  "id": "q-b2.4-m11-s-11",
+                  "part": "speaking",
+                  "partIndex": 11,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "category": "Risk Mitigation",
+                  "instruction": "Ucapkan strategi mitigasi risiko berikut:",
+                  "prompt": "To mitigate potential financial exposure, the board recommended establishing a dedicated emergency contingency reserve.",
+                  "sampleAnswer": "To mitigate potential financial exposure, the board recommended establishing a dedicated emergency contingency reserve.",
+                  "phonetic": "/tə ˈmɪtɪɡeɪt pəˈtenʃl faɪˈnænʃl ɪkˈspəʊʒə/",
+                  "keywords": [
+                    "mitigate",
+                    "exposure",
+                    "contingency",
+                    "reserve"
+                  ],
+                  "id": "q-b2.4-m11-s-12",
+                  "part": "speaking",
+                  "partIndex": 12,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "category": "Project Status Briefing",
+                  "instruction": "Ucapkan laporan kemajuan proyek kepada pemangku kepentingan:",
+                  "prompt": "All critical deliverables for Phase Two have been finalized and submitted for rigorous quality assurance verification.",
+                  "sampleAnswer": "All critical deliverables for Phase Two have been finalized and submitted for rigorous quality assurance verification.",
+                  "phonetic": "/ɔːl ˈkrɪtɪkl dɪˈlɪvərəblz fə feɪz tuː/",
+                  "keywords": [
+                    "deliverables",
+                    "finalized",
+                    "quality",
+                    "assurance"
+                  ],
+                  "id": "q-b2.4-m11-s-13",
+                  "part": "speaking",
+                  "partIndex": 13,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "category": "Executive Summary",
+                  "instruction": "Ucapkan kesimpulan strategis berikut:",
+                  "prompt": "In conclusion, investing in cloud automation will simultaneously optimize operating expenditure and enhance organizational resilience.",
+                  "sampleAnswer": "In conclusion, investing in cloud automation will simultaneously optimize operating expenditure and enhance organizational resilience.",
+                  "phonetic": "/ɪn kənˈkluːʒn ɪnˈvestɪŋ ɪn klaʊd/",
+                  "keywords": [
+                    "conclusion",
+                    "automation",
+                    "expenditure",
+                    "resilience"
+                  ],
+                  "id": "q-b2.4-m11-s-14",
+                  "part": "speaking",
+                  "partIndex": 14,
+                  "sourceModule": "B2.4-M11"
+                },
+                {
+                  "category": "Conflict Resolution",
+                  "instruction": "Ucapkan usulan penyelesaian perselisihan kerja berikut:",
+                  "prompt": "Let us establish objective evaluation criteria so both departments can collaborate effectively toward the mutual objective.",
+                  "sampleAnswer": "Let us establish objective evaluation criteria so both departments can collaborate effectively toward the mutual objective.",
+                  "phonetic": "/let əs ɪˈstæblɪʃ əbˈdʒektɪv/",
+                  "keywords": [
+                    "establish",
+                    "criteria",
+                    "collaborate",
+                    "mutual"
+                  ],
+                  "id": "q-b2.4-m11-s-15",
+                  "part": "speaking",
+                  "partIndex": 15,
+                  "sourceModule": "B2.4-M11"
+                }
+              ]
+            },
+            "questions": [
+              {
+                "id": "q-b2.4-m11-r-1",
+                "question": "What did Maya initially plan to do with sentences she saved from websites?",
+                "options": [
+                  "Change a few words later.",
+                  "Delete them before writing.",
+                  "Translate them into another language."
+                ],
+                "answer": "Change a few words later.",
+                "explanation": "The first paragraph says Maya saved sentences and planned to change a few words later, which her teacher warned could lead to patchwriting.",
+                "part": "reading",
+                "partIndex": 1,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-2",
+                "question": "According to Maya's teacher, what does a strong paraphrase need?",
+                "options": [
+                  "A fresh sentence structure that keeps the source's central meaning.",
+                  "The same structure with several new adjectives.",
+                  "A quotation without the author's name."
+                ],
+                "answer": "A fresh sentence structure that keeps the source's central meaning.",
+                "explanation": "The teacher explains that a paraphrase needs a new structure as well as accurate meaning.",
+                "part": "reading",
+                "partIndex": 2,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-3",
+                "question": "Why did Maya reject one web page as a credible source?",
+                "options": [
+                  "It gave an opinion without naming an author or linking to research.",
+                  "It included too many references to published studies.",
+                  "It was written by a university research centre."
+                ],
+                "answer": "It gave an opinion without naming an author or linking to research.",
+                "explanation": "The second paragraph says the page named no author and linked to no research, so Maya decided it was not credible.",
+                "part": "reading",
+                "partIndex": 3,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-4",
+                "question": "What made the university research centre's material more useful to Maya?",
+                "options": [
+                  "It described its methods and referred to published studies.",
+                  "It offered a strong opinion without evidence.",
+                  "It avoided explaining how information was collected."
+                ],
+                "answer": "It described its methods and referred to published studies.",
+                "explanation": "The passage identifies the centre's methods and references to published studies as reasons Maya kept it on her reading list.",
+                "part": "reading",
+                "partIndex": 4,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-5",
+                "question": "What does Patel (2021) argue about short homework tasks?",
+                "options": [
+                  "They can help students practise skills.",
+                  "They always increase stress.",
+                  "They should replace every other kind of learning."
+                ],
+                "answer": "They can help students practise skills.",
+                "explanation": "The third paragraph reports Patel's view that short homework tasks can help students practise skills.",
+                "part": "reading",
+                "partIndex": 5,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-6",
+                "question": "What does Green (2022) suggest about long assignments?",
+                "options": [
+                  "They may increase stress without improving results.",
+                  "They are the only way to practise skills.",
+                  "They always improve results for every age group."
+                ],
+                "answer": "They may increase stress without improving results.",
+                "explanation": "The passage uses suggests to report Green's view that long assignments may increase stress without improving results.",
+                "part": "reading",
+                "partIndex": 6,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-7",
+                "question": "Why did Maya avoid treating either source as a complete answer?",
+                "options": [
+                  "The researchers studied different age groups and measured different outcomes.",
+                  "Neither source discussed homework.",
+                  "Both sources made exactly the same claim."
+                ],
+                "answer": "The researchers studied different age groups and measured different outcomes.",
+                "explanation": "Maya noted that the writers had studied different age groups and measured different outcomes, so their claims were not directly identical.",
+                "part": "reading",
+                "partIndex": 7,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-8",
+                "question": "What is the main purpose of Maya's sentence beginning, While Patel (2021) emphasises regular practice?",
+                "options": [
+                  "To connect contrasting ideas and draw a broader conclusion.",
+                  "To copy one source's wording without credit.",
+                  "To show that the two sources reached exactly the same result."
+                ],
+                "answer": "To connect contrasting ideas and draw a broader conclusion.",
+                "explanation": "Maya's sentence places the two perspectives together and concludes that homework design matters, which is synthesis.",
+                "part": "reading",
+                "partIndex": 8,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-9",
+                "question": "Which action did Maya take to make sure her paraphrases remained accurate?",
+                "options": [
+                  "She checked each paraphrase against the original.",
+                  "She removed the names of all the sources.",
+                  "She changed the sources' findings to fit her argument."
+                ],
+                "answer": "She checked each paraphrase against the original.",
+                "explanation": "The final sentence says Maya checked every paraphrase against its original source.",
+                "part": "reading",
+                "partIndex": 9,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-10",
+                "question": "What is the passage's main message about using sources?",
+                "options": [
+                  "Evaluate sources, represent their ideas accurately, and give attribution.",
+                  "Use only the first source you find and avoid comparing it with others.",
+                  "Replace a few words in a source and leave out a reference."
+                ],
+                "answer": "Evaluate sources, represent their ideas accurately, and give attribution.",
+                "explanation": "Maya checks source quality, compares different claims, paraphrases carefully, and acknowledges other writers' ideas.",
+                "part": "reading",
+                "partIndex": 10,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "question": "Identify the sentence that correctly utilizes the Third Conditional:",
+                "options": [
+                  "If we had anticipated the market demand, we would have expanded production sooner.",
+                  "If we anticipate the market demand, we will expand production.",
+                  "If we had anticipated the market demand, we will have expanded production.",
+                  "If we anticipated the market demand, we would expand production sooner."
+                ],
+                "answer": "If we had anticipated the market demand, we would have expanded production sooner.",
+                "explanation": "Third conditional formula: If + past perfect, would have + past participle.",
+                "id": "q-b2.4-m11-r-11",
+                "part": "reading",
+                "partIndex": 11,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "question": "Why did the client request an amendment to the contractual agreement?",
+                "options": [
+                  "To ensure delivery milestones aligned with their internal quarterly budget cycles.",
+                  "Because they intended to terminate all business relations immediately.",
+                  "To eliminate all warranty protections and technical support clauses.",
+                  "Because the initial contract was drafted without legal counsel."
+                ],
+                "answer": "To ensure delivery milestones aligned with their internal quarterly budget cycles.",
+                "explanation": "Contract amendments in B2 business scenarios typically align scope with financial planning.",
+                "id": "q-b2.4-m11-r-12",
+                "part": "reading",
+                "partIndex": 12,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "question": "Choose the correct passive transformation: 'The engineering team completed the audit yesterday.'",
+                "options": [
+                  "The audit was completed by the engineering team yesterday.",
+                  "The audit had completed by the engineering team yesterday.",
+                  "The engineering team was completed by the audit yesterday.",
+                  "The audit is completed by the engineering team yesterday."
+                ],
+                "answer": "The audit was completed by the engineering team yesterday.",
+                "explanation": "Past simple passive: object + was/were + past participle + by agent.",
+                "id": "q-b2.4-m11-r-13",
+                "part": "reading",
+                "partIndex": 13,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "question": "What is the primary function of the modal verb in 'You ought to back up your database before the migration'?",
+                "options": [
+                  "Strong moral or practical recommendation",
+                  "Logical certainty",
+                  "Physical capability",
+                  "Past habit"
+                ],
+                "answer": "Strong moral or practical recommendation",
+                "explanation": "'Ought to' expresses a strong advisory recommendation or obligation.",
+                "id": "q-b2.4-m11-r-14",
+                "part": "reading",
+                "partIndex": 14,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "question": "Which word best replaces 'alleviate' in 'measures were introduced to alleviate employee stress'?",
+                "options": [
+                  "Reduce",
+                  "Intensify",
+                  "Ignore",
+                  "Prolong"
+                ],
+                "answer": "Reduce",
+                "explanation": "'Alleviate' means to make a problem or burden less severe.",
+                "id": "q-b2.4-m11-r-15",
+                "part": "reading",
+                "partIndex": 15,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-1",
+                "type": "dictation",
+                "audioText": "I really need help with my essay.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"I really need help with my _____.\"",
+                "targetWord": "essay",
+                "explanation": "Full audio: \"I really need help with my essay.\". The missing word is \"essay\".",
+                "part": "listening",
+                "partIndex": 1,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-2",
+                "type": "dictation",
+                "audioText": "What seems to be the problem?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"What seems to be the _____?\"",
+                "targetWord": "problem",
+                "explanation": "Full audio: \"What seems to be the problem?\". The missing word is \"problem\".",
+                "part": "listening",
+                "partIndex": 2,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-3",
+                "type": "dictation",
+                "audioText": "I keep using too many direct quotes.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"I keep using too many direct _____.\"",
+                "targetWord": "quotes",
+                "explanation": "Full audio: \"I keep using too many direct quotes.\". The missing word is \"quotes\".",
+                "part": "listening",
+                "partIndex": 3,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-4",
+                "type": "dictation",
+                "audioText": "You should restructure the whole sentence instead.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"You should restructure the whole sentence _____.\"",
+                "targetWord": "instead",
+                "explanation": "Full audio: \"You should restructure the whole sentence instead.\". The missing word is \"instead\".",
+                "part": "listening",
+                "partIndex": 4,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-5",
+                "type": "dictation",
+                "audioText": "Just swapping words is not enough?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Just swapping words is not _____?\"",
+                "targetWord": "enough",
+                "explanation": "Full audio: \"Just swapping words is not enough?\". The missing word is \"enough\".",
+                "part": "listening",
+                "partIndex": 5,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-6",
+                "type": "arrange",
+                "audioText": "No, that still counts as plagiarism.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "No that still counts as plagiarism",
+                "words": [
+                  "as",
+                  "plagiarism",
+                  "No",
+                  "that",
+                  "still",
+                  "counts"
+                ],
+                "explanation": "Correct sentence order: \"No, that still counts as plagiarism.\".",
+                "part": "listening",
+                "partIndex": 6,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-7",
+                "type": "arrange",
+                "audioText": "How do I combine two different sources?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "How do I combine two different sources",
+                "words": [
+                  "two",
+                  "I",
+                  "How",
+                  "combine",
+                  "different",
+                  "do",
+                  "sources"
+                ],
+                "explanation": "Correct sentence order: \"How do I combine two different sources?\".",
+                "part": "listening",
+                "partIndex": 7,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-8",
+                "type": "arrange",
+                "audioText": "Synthesise their findings into one argument.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Synthesise their findings into one argument",
+                "words": [
+                  "argument",
+                  "their",
+                  "one",
+                  "into",
+                  "findings",
+                  "Synthesise"
+                ],
+                "explanation": "Correct sentence order: \"Synthesise their findings into one argument.\".",
+                "part": "listening",
+                "partIndex": 8,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-9",
+                "type": "arrange",
+                "audioText": "Do I compare their perspectives together?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Do I compare their perspectives together",
+                "words": [
+                  "compare",
+                  "their",
+                  "together",
+                  "perspectives",
+                  "Do",
+                  "I"
+                ],
+                "explanation": "Correct sentence order: \"Do I compare their perspectives together?\".",
+                "part": "listening",
+                "partIndex": 9,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-10",
+                "type": "arrange",
+                "audioText": "Yes, and add your own conclusion.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes and add your own conclusion",
+                "words": [
+                  "your",
+                  "and",
+                  "own",
+                  "Yes",
+                  "add",
+                  "conclusion"
+                ],
+                "explanation": "Correct sentence order: \"Yes, and add your own conclusion.\".",
+                "part": "listening",
+                "partIndex": 10,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "type": "arrange",
+                "audioText": "If we had secured the contract our revenue would have doubled.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "If we had secured the contract our revenue would have doubled",
+                "words": [
+                  "contract",
+                  "doubled",
+                  "If",
+                  "our",
+                  "had",
+                  "revenue",
+                  "secured",
+                  "the",
+                  "have",
+                  "would",
+                  "we"
+                ],
+                "explanation": "Urutan benar: 'If we had secured the contract our revenue would have doubled.'.",
+                "id": "q-b2.4-m11-l-11",
+                "part": "listening",
+                "partIndex": 11,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "type": "dictation",
+                "audioText": "The committee unanimously approved the implementation strategy.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "The committee _____ approved the implementation strategy.",
+                "targetWord": "unanimously",
+                "explanation": "Audio lengkap: 'The committee unanimously approved the implementation strategy.'. Kata yang hilang: 'unanimously'.",
+                "id": "q-b2.4-m11-l-12",
+                "part": "listening",
+                "partIndex": 12,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "type": "arrange",
+                "audioText": "Employees are encouraged to participate in continuous professional development.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "Employees are encouraged to participate in continuous professional development",
+                "words": [
+                  "development",
+                  "encouraged",
+                  "in",
+                  "are",
+                  "professional",
+                  "Employees",
+                  "participate",
+                  "continuous",
+                  "to"
+                ],
+                "explanation": "Urutan benar: 'Employees are encouraged to participate in continuous professional development.'.",
+                "id": "q-b2.4-m11-l-13",
+                "part": "listening",
+                "partIndex": 13,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "type": "dictation",
+                "audioText": "Cross-functional collaboration is essential for modern product design.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "Cross-functional _____ is essential for modern product design.",
+                "targetWord": "collaboration",
+                "explanation": "Audio lengkap: 'Cross-functional collaboration is essential for modern product design.'. Kata: 'collaboration'.",
+                "id": "q-b2.4-m11-l-14",
+                "part": "listening",
+                "partIndex": 14,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "type": "arrange",
+                "audioText": "Despite technical difficulties the presentation received overwhelmingly positive reviews.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "Despite technical difficulties the presentation received overwhelmingly positive reviews",
+                "words": [
+                  "positive",
+                  "technical",
+                  "the",
+                  "presentation",
+                  "Despite",
+                  "reviews",
+                  "overwhelmingly",
+                  "received",
+                  "difficulties"
+                ],
+                "explanation": "Urutan benar: 'Despite technical difficulties the presentation received overwhelmingly positive reviews.'.",
+                "id": "q-b2.4-m11-l-15",
+                "part": "listening",
+                "partIndex": 15,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-1",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the following direct quotation into an indirect paraphrase using the prompt author: Williams (2021).",
+                "promptText": "\"Students achieve higher grades when they receive weekly structured feedback.\" (Williams, 2021)",
+                "hint": "Begin with 'Williams (2021) argues that...' or 'According to Williams (2021),...'",
+                "targetAnswers": [
+                  "Williams (2021) argues that regular feedback leads to improved academic performance.",
+                  "Williams (2021) maintains that students attain better academic outcomes through consistent feedback.",
+                  "According to Williams (2021), regular structured feedback helps students attain higher marks.",
+                  "Williams (2021) suggests that regular evaluation enables students to achieve superior grades."
+                ],
+                "explanation": "To paraphrase successfully, recast the original wording using different clause patterns and formal vocabulary while retaining the core claim.",
+                "part": "writing",
+                "partIndex": 1,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-2",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the punctuation and capitalisation errors in this academic citation sentence:",
+                "promptText": "according to peterson (2020) critical thinking requires systematic questioning",
+                "hint": "Capitalise the sentence opener and author's surname, and place a comma after the date bracket.",
+                "targetAnswers": [
+                  "According to Peterson (2020), critical thinking requires systematic questioning.",
+                  "According to Peterson (2020), critical thinking requires systematic questioning"
+                ],
+                "explanation": "Academic conventions require a capital letter for author surnames and a comma directly following introductory attribution phrases.",
+                "part": "writing",
+                "partIndex": 2,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-3",
+                "typeLabel": "Conjunctions & Synthesis",
+                "instruction": "Combine the two opposing research findings into one sentence using 'While' and the participial phrase 'suggesting that':",
+                "promptText": "Source A: Jensen (2018) focuses on early childhood exposure. Source B: Liu (2020) stresses adolescent social interaction.",
+                "hint": "Structure: While Jensen (2018) focuses on..., Liu (2020) stresses..., suggesting that...",
+                "targetAnswers": [
+                  "While Jensen (2018) focuses on early childhood exposure, Liu (2020) stresses adolescent social interaction, suggesting that language development spans multiple critical periods.",
+                  "While Jensen (2018) emphasises early childhood exposure, Liu (2020) highlights adolescent social interaction, suggesting that both phases are essential.",
+                  "While Jensen (2018) focuses on early childhood exposure, Liu (2020) stresses adolescent social interaction, suggesting that both stages influence language acquisition."
+                ],
+                "explanation": "A synthesis sentence links two contrasting perspectives using a subordinate concessive clause followed by an evaluative participial conclusion.",
+                "part": "writing",
+                "partIndex": 3,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-4",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this parenthetical citation into an author-prominent sentence using the reporting verb 'contends':",
+                "promptText": "Algorithmic bias in admissions processes reinforces existing social disparities (Nakamura, 2022).",
+                "hint": "Start with 'Nakamura (2022) contends that...'",
+                "targetAnswers": [
+                  "Nakamura (2022) contends that algorithmic bias in admissions processes reinforces existing social disparities.",
+                  "Nakamura (2022) contends that admissions algorithms perpetuate existing social inequalities."
+                ],
+                "explanation": "An author-prominent sentence places the author as the grammatical subject, followed by a reporting verb and a that-clause.",
+                "part": "writing",
+                "partIndex": 4,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-5",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Identify and correct the faulty subject-verb agreement and punctuation in this reporting sentence:",
+                "promptText": "Foster (2017) suggest that remote teams experiences higher rates of miscommunication.",
+                "hint": "Foster is singular, so the reporting verb must agree, as must the plural noun 'remote teams'.",
+                "targetAnswers": [
+                  "Foster (2017) suggests that remote teams experience higher rates of miscommunication.",
+                  "Foster (2017) suggests that remote teams experience higher rates of miscommunication"
+                ],
+                "explanation": "The singular subject 'Foster' takes 'suggests', and the plural subject 'remote teams' inside the that-clause takes 'experience'.",
+                "part": "writing",
+                "partIndex": 5,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-6",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Paraphrase this statement to avoid patchwriting by converting the active verbal construction into a nominalised subject:",
+                "promptText": "\"When teachers give prompt feedback, students revise their essays more effectively.\" (O'Connor, 2019)",
+                "hint": "Begin with 'According to O'Connor (2019), prompt teacher feedback promotes...'",
+                "targetAnswers": [
+                  "According to O'Connor (2019), prompt feedback significantly enhances essay revision among learners.",
+                  "According to O'Connor (2019), prompt teacher feedback promotes more effective essay revision.",
+                  "O'Connor (2019) maintains that timely feedback leads to more thorough essay revisions."
+                ],
+                "explanation": "Nominalising verbs (such as turning 'give prompt feedback' into 'prompt feedback' and 'revise' into 'revision') creates a professional, academic paraphrase.",
+                "part": "writing",
+                "partIndex": 6,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-7",
+                "typeLabel": "Conjunctions & Synthesis",
+                "instruction": "Connect these two authors' views into a single compound-complex sentence using 'whereas' and 'indicating that':",
+                "promptText": "Kowalski (2019) argues that intrinsic rewards sustain motivation. Adams (2021) asserts that external incentives produce faster immediate results.",
+                "hint": "Kowalski (2019) argues that..., whereas Adams (2021) asserts that..., indicating that...",
+                "targetAnswers": [
+                  "Kowalski (2019) argues that intrinsic rewards sustain motivation, whereas Adams (2021) asserts that external incentives produce faster immediate results, indicating that motivation requires a dual approach.",
+                  "Kowalski (2019) argues that intrinsic rewards maintain long-term motivation, whereas Adams (2021) asserts that external incentives produce faster immediate results, indicating that different goals require distinct incentives."
+                ],
+                "explanation": "Using 'whereas' sets up direct contrast between the two researchers, while the trailing participial clause provides your own analytical takeaway.",
+                "part": "writing",
+                "partIndex": 7,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-8",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the punctuation and capitalisation errors in this multi-source synthesis:",
+                "promptText": "while green (2016) prioritises quantitative data alvarez (2020) values qualitative narratives",
+                "hint": "Capitalise proper names, add a comma after the dependent clause, and insert a comma or linking device before the main clause.",
+                "targetAnswers": [
+                  "While Green (2016) prioritises quantitative data, Alvarez (2020) values qualitative narratives.",
+                  "While Green (2016) prioritises quantitative data, Alvarez (2020) values qualitative narratives"
+                ],
+                "explanation": "The dependent concessive clause starting with 'While' must be separated from the independent clause with a comma, and both author surnames must be capitalised.",
+                "part": "writing",
+                "partIndex": 8,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-9",
+                "typeLabel": "Short Response",
+                "instruction": "Complete this sentence by providing a balanced conclusion clause introduced by 'suggesting that':",
+                "promptText": "While Thorne (2018) underscores the necessity of independent study, Garcia (2022) demonstrates the merits of group work,",
+                "hint": "Finish with a conclusion about combining both independent and collaborative methods.",
+                "targetAnswers": [
+                  "suggesting that optimal learning occurs through a combination of autonomous and collaborative tasks.",
+                  "suggesting that effective education requires both individual reflection and collaborative interaction.",
+                  "suggesting that balanced pedagogy should incorporate both individual and group methods."
+                ],
+                "explanation": "In multi-source synthesis, the concluding non-finite clause synthesises the two opposing views into a unified pedagogical insight.",
+                "part": "writing",
+                "partIndex": 9,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-10",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Paraphrase the original finding by converting the passive sentence into an active voice sentence led by the cited author:",
+                "promptText": "Cognitive fatigue is accelerated by prolonged exposure to backlit computer screens, as observed by Martin (2021).",
+                "hint": "Start with 'Martin (2021) observes that...'",
+                "targetAnswers": [
+                  "Martin (2021) observes that prolonged exposure to backlit computer screens accelerates cognitive fatigue.",
+                  "Martin (2021) contends that continuous screen use accelerates cognitive fatigue in learners.",
+                  "Martin (2021) notes that extended screen time accelerates cognitive fatigue."
+                ],
+                "explanation": "Converting passive structures to active constructions led by author-prominent reporting verbs is an effective technique for clear academic paraphrasing.",
+                "part": "writing",
+                "partIndex": 10,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-1",
+                "category": "storytelling",
+                "typeLabel": "Academic Monologue: Source Integration",
+                "instruction": "Speak for at least 30 seconds describing a time you had to evaluate conflicting sources for an essay or presentation.",
+                "audioPrompt": "Describe an assignment where you encountered opposing viewpoints in your research and explain how you resolved them.",
+                "storyPoints": [
+                  "The specific assignment topic and the conflicting arguments you discovered",
+                  "How you evaluated which source was more credible",
+                  "The method you used to synthesise both perspectives with accurate attribution"
+                ],
+                "targetSentence": "When researching renewable energy policies, I found conflicting data between government reports and corporate studies, so I checked their methodologies to determine which was more credible.",
+                "phonetic": "/wen rɪˈsɜːtʃɪŋ rɪˈnjuːəbl ˈenədʒi ˈpɒləsiz aɪ faʊnd kənˈflɪktɪŋ ˈdeɪtə bɪˈtwiːn ˈɡʌvnmənt rɪˈpɔːts/",
+                "expectedKeywords": [
+                  "conflicting",
+                  "credible",
+                  "synthesise",
+                  "attribution",
+                  "methodology"
+                ],
+                "explanation": "Deliver a structured three-part answer using past narrative tenses combined with evaluative language.",
+                "part": "speaking",
+                "partIndex": 1,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-2",
+                "category": "storytelling",
+                "typeLabel": "Academic Monologue: Avoiding Plagiarism",
+                "instruction": "Speak for at least 30 seconds explaining how your approach to taking notes and paraphrasing has changed over time.",
+                "audioPrompt": "Explain how you learned to avoid accidental plagiarism when summarising research material.",
+                "storyPoints": [
+                  "Your early bad habit of keeping original text too close while taking notes",
+                  "The moment you realised patchwriting was unacceptable in academic work",
+                  "The step-by-step paraphrasing technique you now follow to write in your own voice"
+                ],
+                "targetSentence": "I used to change only a few synonyms, which led to patchwriting, but now I close the original article and write the concept entirely from memory.",
+                "phonetic": "/aɪ juːst tə tʃeɪndʒ ˈəʊnli ə fjuː ˈsɪnənɪmz wɪtʃ led tə ˈpætʃˌraɪtɪŋ/",
+                "expectedKeywords": [
+                  "patchwriting",
+                  "paraphrase",
+                  "notes",
+                  "memory",
+                  "original"
+                ],
+                "explanation": "Highlight your shift in methodology by contrasting past actions using 'used to' with your present routine.",
+                "part": "speaking",
+                "partIndex": 2,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-3",
+                "category": "roleplay",
+                "typeLabel": "Interactive Seminar Discussion",
+                "scenarioContext": "You are participating in a university seminar on public health research. The discussion leader asks why you chose an independent research paper over a viral news blog.",
+                "characterRole": "Seminar Participant defending source credibility",
+                "instruction": "Explain why the peer-reviewed paper is more credible than popular commentary, referencing publication standards.",
+                "audioPrompt": "Why did you dismiss that viral blog post when it cited similar statistics to your main article?",
+                "targetSentence": "The blog post lacked transparent attribution and editorial peer review, so I chose the academic paper because its findings are fully verified.",
+                "phonetic": "/ðə blɒɡ pəʊst lækt trænsˈpærənt ˌætrɪˈbjuːʃn ænd ˌedɪˈtɔːriəl pɪə rɪˈvjuː/",
+                "expectedKeywords": [
+                  "attribution",
+                  "credible",
+                  "peer review",
+                  "verified"
+                ],
+                "explanation": "Provide a polite, evidence-based academic response that explains source reliability clearly.",
+                "part": "speaking",
+                "partIndex": 3,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-4",
+                "category": "roleplay",
+                "typeLabel": "Tutorial Feedback Session",
+                "scenarioContext": "Your writing tutor asks you how you intend to fix an over-reliance on direct quotations in your literature review.",
+                "characterRole": "Student responding to tutorial feedback",
+                "instruction": "Tell your tutor that you will paraphrase the key findings and group related arguments together.",
+                "audioPrompt": "You have six direct quotes on page two alone. How will you turn this into your own academic prose?",
+                "targetSentence": "I plan to paraphrase those quotes and synthesise the arguments so my paper reflects my own analytical voice.",
+                "phonetic": "/aɪ plæn tə ˈpærəfreɪz ðəʊz kwəʊts ænd ˈsɪnθəsaɪz ðɪ ˈɑːɡjumənts/",
+                "expectedKeywords": [
+                  "paraphrase",
+                  "synthesise",
+                  "quotes",
+                  "voice"
+                ],
+                "explanation": "State your revision strategy firmly using future intention markers and relevant academic vocabulary.",
+                "part": "speaking",
+                "partIndex": 4,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-5",
+                "category": "roleplay",
+                "typeLabel": "Peer Review Partner Discussion",
+                "scenarioContext": "Your peer review partner thinks two studies you cited reach the exact same conclusion, but you notice a key disagreement.",
+                "characterRole": "Student clarifying scholarly disagreement",
+                "instruction": "Politely counter your partner's claim by showing how the second researcher contends something different.",
+                "audioPrompt": "It looks to me like Davis and Kowalski are saying the exact same thing about automation.",
+                "targetSentence": "While Davis welcomes automation, Kowalski contends that it creates long-term regional unemployment.",
+                "phonetic": "/waɪl ˈdeɪvɪs ˈwelkəmz ˌɔːtəˈmeɪʃn kəˈwælski kənˈtendz ðæt ɪt kriˈeɪts lɒŋ tɜːm ˌriːdʒənl ˌʌnɪmˈplɔɪmənt/",
+                "expectedKeywords": [
+                  "contends",
+                  "while",
+                  "unemployment",
+                  "disagree"
+                ],
+                "explanation": "Use a concession clause starting with 'While' to balance the two viewpoints politely.",
+                "part": "speaking",
+                "partIndex": 5,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-6",
+                "category": "roleplay",
+                "typeLabel": "Group Project Meeting",
+                "scenarioContext": "A teammate pasted three paragraphs from a website straight into your shared presentation slides without citations.",
+                "characterRole": "Group Leader addressing citation compliance",
+                "instruction": "Alert your teammate to the danger of plagiarism and explain that proper attribution is mandatory.",
+                "audioPrompt": "I just pasted these paragraphs directly from that tech website to save time. Is that okay for our slides?",
+                "targetSentence": "We cannot keep uncredited text because that counts as plagiarism, so we need to add proper attribution immediately.",
+                "phonetic": "/wiː ˈkænɒt kiːp ʌnˈkredɪtɪd tekst bɪˈkɒz ðæt kaʊnts æz ˈpleɪdʒərɪzəm/",
+                "expectedKeywords": [
+                  "plagiarism",
+                  "attribution",
+                  "uncredited",
+                  "slides"
+                ],
+                "explanation": "Address the ethical risk directly and propose immediate corrective action in a cooperative tone.",
+                "part": "speaking",
+                "partIndex": 6,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-7",
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Precision Drill",
+                "instruction": "Read the sentence aloud, pronouncing the target word 'patchwriting' clearly without hesitation.",
+                "audioPrompt": "Read aloud: 'Replacing a few adjectives while keeping the author's sentence frame is known as patchwriting.'",
+                "targetSentence": "Replacing a few adjectives while keeping the author's sentence frame is known as patchwriting.",
+                "phonetic": "/rɪˈpleɪsɪŋ ə fjuː ˈædʒɪktɪvz waɪl ˈkiːpɪŋ ði ˈɔːθəz ˈsentəns freɪm ɪz nəʊn æz ˈpætʃˌraɪtɪŋ/",
+                "expectedKeywords": [
+                  "adjectives",
+                  "sentence",
+                  "frame",
+                  "patchwriting"
+                ],
+                "explanation": "Ensure the compound noun 'patchwriting' has strong initial stress on 'patch' and distinct consonant clarity.",
+                "part": "speaking",
+                "partIndex": 7,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-8",
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Structure Drill: Reporting Verbs",
+                "instruction": "Read the sentence aloud, focusing on the correct present tense agreement and noun clause connector.",
+                "audioPrompt": "Read aloud: 'Several leading sociologists contend that income inequality undermines institutional trust.'",
+                "targetSentence": "Several leading sociologists contend that income inequality undermines institutional trust.",
+                "phonetic": "/ˈsevrəl ˈliːdɪŋ ˌsəʊsiˈɒlədʒɪsts kənˈtend ðæt ˈɪnkʌm ˌɪnɪˈkwɒləti ˌʌndəˈmaɪnz ˌɪnstɪˈtjuːʃənl trʌst/",
+                "expectedKeywords": [
+                  "sociologists",
+                  "contend",
+                  "inequality",
+                  "undermines"
+                ],
+                "explanation": "Deliver 'contend that' smoothly without pausing between the verb and the complement clause.",
+                "part": "speaking",
+                "partIndex": 8,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-9",
+                "category": "linguistic_drill",
+                "typeLabel": "Syllable Stress Drill: Credibility",
+                "instruction": "Read the sentence aloud, placing primary stress firmly on the third syllable of 'credibility'.",
+                "audioPrompt": "Read aloud: 'The credibility of the findings depends upon rigorous methodology and sample diversity.'",
+                "targetSentence": "The credibility of the findings depends upon rigorous methodology and sample diversity.",
+                "phonetic": "/ðə ˌkredəˈbɪləti əv ðə ˈfaɪndɪŋz dɪˈpendz əˈpɒn ˈrɪɡərəs ˌmeθəˈdɒlədʒi ənd ˈsɑːmpl daɪˈvɜːsəti/",
+                "expectedKeywords": [
+                  "credibility",
+                  "findings",
+                  "rigorous",
+                  "diversity"
+                ],
+                "explanation": "Check that the primary stress falls precisely on 'BIL' in cred-i-BIL-i-ty.",
+                "part": "speaking",
+                "partIndex": 9,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-10",
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Drill: Contrastive Synthesis",
+                "instruction": "Read the complex sentence aloud using a rising pitch on the subordinate clause and a falling pitch at the end.",
+                "audioPrompt": "Read aloud: 'Although the initial trial showed promise, later replications failed to confirm the effect.'",
+                "targetSentence": "Although the initial trial showed promise, later replications failed to confirm the effect.",
+                "phonetic": "/ɔːlˈðəʊ ði ɪˈnɪʃl ˈtraɪəl ʃəʊd ˈprɒmɪs ˈleɪtə ˌreplɪˈkeɪʃnz feɪld tə kənˈfɜːm ði ɪˈfekt/",
+                "expectedKeywords": [
+                  "Although",
+                  "promise",
+                  "replications",
+                  "effect"
+                ],
+                "explanation": "Raise pitch slightly on 'promise' before the comma pause, then drop your pitch decisively on 'effect'.",
+                "part": "speaking",
+                "partIndex": 10,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "category": "Constructive Disagreement",
+                "instruction": "Sampaikan ketidaksetujuan secara profesional dalam diskusi tim:",
+                "prompt": "I understand your perspective; however, diverting resources at this stage might jeopardize our deadline for the core platform.",
+                "sampleAnswer": "I understand your perspective; however, diverting resources at this stage might jeopardize our deadline for the core platform.",
+                "phonetic": "/aɪ ˌʌndəˈstænd jɔː pəˈspektɪv haʊˈevə/",
+                "keywords": [
+                  "perspective",
+                  "diverting",
+                  "jeopardize",
+                  "deadline"
+                ],
+                "id": "q-b2.4-m11-s-11",
+                "part": "speaking",
+                "partIndex": 11,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "category": "Risk Mitigation",
+                "instruction": "Ucapkan strategi mitigasi risiko berikut:",
+                "prompt": "To mitigate potential financial exposure, the board recommended establishing a dedicated emergency contingency reserve.",
+                "sampleAnswer": "To mitigate potential financial exposure, the board recommended establishing a dedicated emergency contingency reserve.",
+                "phonetic": "/tə ˈmɪtɪɡeɪt pəˈtenʃl faɪˈnænʃl ɪkˈspəʊʒə/",
+                "keywords": [
+                  "mitigate",
+                  "exposure",
+                  "contingency",
+                  "reserve"
+                ],
+                "id": "q-b2.4-m11-s-12",
+                "part": "speaking",
+                "partIndex": 12,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "category": "Project Status Briefing",
+                "instruction": "Ucapkan laporan kemajuan proyek kepada pemangku kepentingan:",
+                "prompt": "All critical deliverables for Phase Two have been finalized and submitted for rigorous quality assurance verification.",
+                "sampleAnswer": "All critical deliverables for Phase Two have been finalized and submitted for rigorous quality assurance verification.",
+                "phonetic": "/ɔːl ˈkrɪtɪkl dɪˈlɪvərəblz fə feɪz tuː/",
+                "keywords": [
+                  "deliverables",
+                  "finalized",
+                  "quality",
+                  "assurance"
+                ],
+                "id": "q-b2.4-m11-s-13",
+                "part": "speaking",
+                "partIndex": 13,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "category": "Executive Summary",
+                "instruction": "Ucapkan kesimpulan strategis berikut:",
+                "prompt": "In conclusion, investing in cloud automation will simultaneously optimize operating expenditure and enhance organizational resilience.",
+                "sampleAnswer": "In conclusion, investing in cloud automation will simultaneously optimize operating expenditure and enhance organizational resilience.",
+                "phonetic": "/ɪn kənˈkluːʒn ɪnˈvestɪŋ ɪn klaʊd/",
+                "keywords": [
+                  "conclusion",
+                  "automation",
+                  "expenditure",
+                  "resilience"
+                ],
+                "id": "q-b2.4-m11-s-14",
+                "part": "speaking",
+                "partIndex": 14,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "category": "Conflict Resolution",
+                "instruction": "Ucapkan usulan penyelesaian perselisihan kerja berikut:",
+                "prompt": "Let us establish objective evaluation criteria so both departments can collaborate effectively toward the mutual objective.",
+                "sampleAnswer": "Let us establish objective evaluation criteria so both departments can collaborate effectively toward the mutual objective.",
+                "phonetic": "/let əs ɪˈstæblɪʃ əbˈdʒektɪv/",
+                "keywords": [
+                  "establish",
+                  "criteria",
+                  "collaborate",
+                  "mutual"
+                ],
+                "id": "q-b2.4-m11-s-15",
+                "part": "speaking",
+                "partIndex": 15,
+                "sourceModule": "B2.4-M11"
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": "q-b2.4-m11-r-1",
+                "question": "What did Maya initially plan to do with sentences she saved from websites?",
+                "options": [
+                  "Change a few words later.",
+                  "Delete them before writing.",
+                  "Translate them into another language."
+                ],
+                "answer": "Change a few words later.",
+                "explanation": "The first paragraph says Maya saved sentences and planned to change a few words later, which her teacher warned could lead to patchwriting.",
+                "part": "reading",
+                "partIndex": 1,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-2",
+                "question": "According to Maya's teacher, what does a strong paraphrase need?",
+                "options": [
+                  "A fresh sentence structure that keeps the source's central meaning.",
+                  "The same structure with several new adjectives.",
+                  "A quotation without the author's name."
+                ],
+                "answer": "A fresh sentence structure that keeps the source's central meaning.",
+                "explanation": "The teacher explains that a paraphrase needs a new structure as well as accurate meaning.",
+                "part": "reading",
+                "partIndex": 2,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-3",
+                "question": "Why did Maya reject one web page as a credible source?",
+                "options": [
+                  "It gave an opinion without naming an author or linking to research.",
+                  "It included too many references to published studies.",
+                  "It was written by a university research centre."
+                ],
+                "answer": "It gave an opinion without naming an author or linking to research.",
+                "explanation": "The second paragraph says the page named no author and linked to no research, so Maya decided it was not credible.",
+                "part": "reading",
+                "partIndex": 3,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-4",
+                "question": "What made the university research centre's material more useful to Maya?",
+                "options": [
+                  "It described its methods and referred to published studies.",
+                  "It offered a strong opinion without evidence.",
+                  "It avoided explaining how information was collected."
+                ],
+                "answer": "It described its methods and referred to published studies.",
+                "explanation": "The passage identifies the centre's methods and references to published studies as reasons Maya kept it on her reading list.",
+                "part": "reading",
+                "partIndex": 4,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-5",
+                "question": "What does Patel (2021) argue about short homework tasks?",
+                "options": [
+                  "They can help students practise skills.",
+                  "They always increase stress.",
+                  "They should replace every other kind of learning."
+                ],
+                "answer": "They can help students practise skills.",
+                "explanation": "The third paragraph reports Patel's view that short homework tasks can help students practise skills.",
+                "part": "reading",
+                "partIndex": 5,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-6",
+                "question": "What does Green (2022) suggest about long assignments?",
+                "options": [
+                  "They may increase stress without improving results.",
+                  "They are the only way to practise skills.",
+                  "They always improve results for every age group."
+                ],
+                "answer": "They may increase stress without improving results.",
+                "explanation": "The passage uses suggests to report Green's view that long assignments may increase stress without improving results.",
+                "part": "reading",
+                "partIndex": 6,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-7",
+                "question": "Why did Maya avoid treating either source as a complete answer?",
+                "options": [
+                  "The researchers studied different age groups and measured different outcomes.",
+                  "Neither source discussed homework.",
+                  "Both sources made exactly the same claim."
+                ],
+                "answer": "The researchers studied different age groups and measured different outcomes.",
+                "explanation": "Maya noted that the writers had studied different age groups and measured different outcomes, so their claims were not directly identical.",
+                "part": "reading",
+                "partIndex": 7,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-8",
+                "question": "What is the main purpose of Maya's sentence beginning, While Patel (2021) emphasises regular practice?",
+                "options": [
+                  "To connect contrasting ideas and draw a broader conclusion.",
+                  "To copy one source's wording without credit.",
+                  "To show that the two sources reached exactly the same result."
+                ],
+                "answer": "To connect contrasting ideas and draw a broader conclusion.",
+                "explanation": "Maya's sentence places the two perspectives together and concludes that homework design matters, which is synthesis.",
+                "part": "reading",
+                "partIndex": 8,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-9",
+                "question": "Which action did Maya take to make sure her paraphrases remained accurate?",
+                "options": [
+                  "She checked each paraphrase against the original.",
+                  "She removed the names of all the sources.",
+                  "She changed the sources' findings to fit her argument."
+                ],
+                "answer": "She checked each paraphrase against the original.",
+                "explanation": "The final sentence says Maya checked every paraphrase against its original source.",
+                "part": "reading",
+                "partIndex": 9,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-r-10",
+                "question": "What is the passage's main message about using sources?",
+                "options": [
+                  "Evaluate sources, represent their ideas accurately, and give attribution.",
+                  "Use only the first source you find and avoid comparing it with others.",
+                  "Replace a few words in a source and leave out a reference."
+                ],
+                "answer": "Evaluate sources, represent their ideas accurately, and give attribution.",
+                "explanation": "Maya checks source quality, compares different claims, paraphrases carefully, and acknowledges other writers' ideas.",
+                "part": "reading",
+                "partIndex": 10,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "question": "Identify the sentence that correctly utilizes the Third Conditional:",
+                "options": [
+                  "If we had anticipated the market demand, we would have expanded production sooner.",
+                  "If we anticipate the market demand, we will expand production.",
+                  "If we had anticipated the market demand, we will have expanded production.",
+                  "If we anticipated the market demand, we would expand production sooner."
+                ],
+                "answer": "If we had anticipated the market demand, we would have expanded production sooner.",
+                "explanation": "Third conditional formula: If + past perfect, would have + past participle.",
+                "id": "q-b2.4-m11-r-11",
+                "part": "reading",
+                "partIndex": 11,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "question": "Why did the client request an amendment to the contractual agreement?",
+                "options": [
+                  "To ensure delivery milestones aligned with their internal quarterly budget cycles.",
+                  "Because they intended to terminate all business relations immediately.",
+                  "To eliminate all warranty protections and technical support clauses.",
+                  "Because the initial contract was drafted without legal counsel."
+                ],
+                "answer": "To ensure delivery milestones aligned with their internal quarterly budget cycles.",
+                "explanation": "Contract amendments in B2 business scenarios typically align scope with financial planning.",
+                "id": "q-b2.4-m11-r-12",
+                "part": "reading",
+                "partIndex": 12,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "question": "Choose the correct passive transformation: 'The engineering team completed the audit yesterday.'",
+                "options": [
+                  "The audit was completed by the engineering team yesterday.",
+                  "The audit had completed by the engineering team yesterday.",
+                  "The engineering team was completed by the audit yesterday.",
+                  "The audit is completed by the engineering team yesterday."
+                ],
+                "answer": "The audit was completed by the engineering team yesterday.",
+                "explanation": "Past simple passive: object + was/were + past participle + by agent.",
+                "id": "q-b2.4-m11-r-13",
+                "part": "reading",
+                "partIndex": 13,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "question": "What is the primary function of the modal verb in 'You ought to back up your database before the migration'?",
+                "options": [
+                  "Strong moral or practical recommendation",
+                  "Logical certainty",
+                  "Physical capability",
+                  "Past habit"
+                ],
+                "answer": "Strong moral or practical recommendation",
+                "explanation": "'Ought to' expresses a strong advisory recommendation or obligation.",
+                "id": "q-b2.4-m11-r-14",
+                "part": "reading",
+                "partIndex": 14,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "question": "Which word best replaces 'alleviate' in 'measures were introduced to alleviate employee stress'?",
+                "options": [
+                  "Reduce",
+                  "Intensify",
+                  "Ignore",
+                  "Prolong"
+                ],
+                "answer": "Reduce",
+                "explanation": "'Alleviate' means to make a problem or burden less severe.",
+                "id": "q-b2.4-m11-r-15",
+                "part": "reading",
+                "partIndex": 15,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-1",
+                "type": "dictation",
+                "audioText": "I really need help with my essay.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"I really need help with my _____.\"",
+                "targetWord": "essay",
+                "explanation": "Full audio: \"I really need help with my essay.\". The missing word is \"essay\".",
+                "part": "listening",
+                "partIndex": 1,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-2",
+                "type": "dictation",
+                "audioText": "What seems to be the problem?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"What seems to be the _____?\"",
+                "targetWord": "problem",
+                "explanation": "Full audio: \"What seems to be the problem?\". The missing word is \"problem\".",
+                "part": "listening",
+                "partIndex": 2,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-3",
+                "type": "dictation",
+                "audioText": "I keep using too many direct quotes.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"I keep using too many direct _____.\"",
+                "targetWord": "quotes",
+                "explanation": "Full audio: \"I keep using too many direct quotes.\". The missing word is \"quotes\".",
+                "part": "listening",
+                "partIndex": 3,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-4",
+                "type": "dictation",
+                "audioText": "You should restructure the whole sentence instead.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"You should restructure the whole sentence _____.\"",
+                "targetWord": "instead",
+                "explanation": "Full audio: \"You should restructure the whole sentence instead.\". The missing word is \"instead\".",
+                "part": "listening",
+                "partIndex": 4,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-5",
+                "type": "dictation",
+                "audioText": "Just swapping words is not enough?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"Just swapping words is not _____?\"",
+                "targetWord": "enough",
+                "explanation": "Full audio: \"Just swapping words is not enough?\". The missing word is \"enough\".",
+                "part": "listening",
+                "partIndex": 5,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-6",
+                "type": "arrange",
+                "audioText": "No, that still counts as plagiarism.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "No that still counts as plagiarism",
+                "words": [
+                  "as",
+                  "plagiarism",
+                  "No",
+                  "that",
+                  "still",
+                  "counts"
+                ],
+                "explanation": "Correct sentence order: \"No, that still counts as plagiarism.\".",
+                "part": "listening",
+                "partIndex": 6,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-7",
+                "type": "arrange",
+                "audioText": "How do I combine two different sources?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "How do I combine two different sources",
+                "words": [
+                  "two",
+                  "I",
+                  "How",
+                  "combine",
+                  "different",
+                  "do",
+                  "sources"
+                ],
+                "explanation": "Correct sentence order: \"How do I combine two different sources?\".",
+                "part": "listening",
+                "partIndex": 7,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-8",
+                "type": "arrange",
+                "audioText": "Synthesise their findings into one argument.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Synthesise their findings into one argument",
+                "words": [
+                  "argument",
+                  "their",
+                  "one",
+                  "into",
+                  "findings",
+                  "Synthesise"
+                ],
+                "explanation": "Correct sentence order: \"Synthesise their findings into one argument.\".",
+                "part": "listening",
+                "partIndex": 8,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-9",
+                "type": "arrange",
+                "audioText": "Do I compare their perspectives together?",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Do I compare their perspectives together",
+                "words": [
+                  "compare",
+                  "their",
+                  "together",
+                  "perspectives",
+                  "Do",
+                  "I"
+                ],
+                "explanation": "Correct sentence order: \"Do I compare their perspectives together?\".",
+                "part": "listening",
+                "partIndex": 9,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-l-10",
+                "type": "arrange",
+                "audioText": "Yes, and add your own conclusion.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Yes and add your own conclusion",
+                "words": [
+                  "your",
+                  "and",
+                  "own",
+                  "Yes",
+                  "add",
+                  "conclusion"
+                ],
+                "explanation": "Correct sentence order: \"Yes, and add your own conclusion.\".",
+                "part": "listening",
+                "partIndex": 10,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "type": "arrange",
+                "audioText": "If we had secured the contract our revenue would have doubled.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "If we had secured the contract our revenue would have doubled",
+                "words": [
+                  "contract",
+                  "doubled",
+                  "If",
+                  "our",
+                  "had",
+                  "revenue",
+                  "secured",
+                  "the",
+                  "have",
+                  "would",
+                  "we"
+                ],
+                "explanation": "Urutan benar: 'If we had secured the contract our revenue would have doubled.'.",
+                "id": "q-b2.4-m11-l-11",
+                "part": "listening",
+                "partIndex": 11,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "type": "dictation",
+                "audioText": "The committee unanimously approved the implementation strategy.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "The committee _____ approved the implementation strategy.",
+                "targetWord": "unanimously",
+                "explanation": "Audio lengkap: 'The committee unanimously approved the implementation strategy.'. Kata yang hilang: 'unanimously'.",
+                "id": "q-b2.4-m11-l-12",
+                "part": "listening",
+                "partIndex": 12,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "type": "arrange",
+                "audioText": "Employees are encouraged to participate in continuous professional development.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "Employees are encouraged to participate in continuous professional development",
+                "words": [
+                  "development",
+                  "encouraged",
+                  "in",
+                  "are",
+                  "professional",
+                  "Employees",
+                  "participate",
+                  "continuous",
+                  "to"
+                ],
+                "explanation": "Urutan benar: 'Employees are encouraged to participate in continuous professional development.'.",
+                "id": "q-b2.4-m11-l-13",
+                "part": "listening",
+                "partIndex": 13,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "type": "dictation",
+                "audioText": "Cross-functional collaboration is essential for modern product design.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "Cross-functional _____ is essential for modern product design.",
+                "targetWord": "collaboration",
+                "explanation": "Audio lengkap: 'Cross-functional collaboration is essential for modern product design.'. Kata: 'collaboration'.",
+                "id": "q-b2.4-m11-l-14",
+                "part": "listening",
+                "partIndex": 14,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "type": "arrange",
+                "audioText": "Despite technical difficulties the presentation received overwhelmingly positive reviews.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "Despite technical difficulties the presentation received overwhelmingly positive reviews",
+                "words": [
+                  "positive",
+                  "technical",
+                  "the",
+                  "presentation",
+                  "Despite",
+                  "reviews",
+                  "overwhelmingly",
+                  "received",
+                  "difficulties"
+                ],
+                "explanation": "Urutan benar: 'Despite technical difficulties the presentation received overwhelmingly positive reviews.'.",
+                "id": "q-b2.4-m11-l-15",
+                "part": "listening",
+                "partIndex": 15,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-1",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the following direct quotation into an indirect paraphrase using the prompt author: Williams (2021).",
+                "promptText": "\"Students achieve higher grades when they receive weekly structured feedback.\" (Williams, 2021)",
+                "hint": "Begin with 'Williams (2021) argues that...' or 'According to Williams (2021),...'",
+                "targetAnswers": [
+                  "Williams (2021) argues that regular feedback leads to improved academic performance.",
+                  "Williams (2021) maintains that students attain better academic outcomes through consistent feedback.",
+                  "According to Williams (2021), regular structured feedback helps students attain higher marks.",
+                  "Williams (2021) suggests that regular evaluation enables students to achieve superior grades."
+                ],
+                "explanation": "To paraphrase successfully, recast the original wording using different clause patterns and formal vocabulary while retaining the core claim.",
+                "part": "writing",
+                "partIndex": 1,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-2",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the punctuation and capitalisation errors in this academic citation sentence:",
+                "promptText": "according to peterson (2020) critical thinking requires systematic questioning",
+                "hint": "Capitalise the sentence opener and author's surname, and place a comma after the date bracket.",
+                "targetAnswers": [
+                  "According to Peterson (2020), critical thinking requires systematic questioning.",
+                  "According to Peterson (2020), critical thinking requires systematic questioning"
+                ],
+                "explanation": "Academic conventions require a capital letter for author surnames and a comma directly following introductory attribution phrases.",
+                "part": "writing",
+                "partIndex": 2,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-3",
+                "typeLabel": "Conjunctions & Synthesis",
+                "instruction": "Combine the two opposing research findings into one sentence using 'While' and the participial phrase 'suggesting that':",
+                "promptText": "Source A: Jensen (2018) focuses on early childhood exposure. Source B: Liu (2020) stresses adolescent social interaction.",
+                "hint": "Structure: While Jensen (2018) focuses on..., Liu (2020) stresses..., suggesting that...",
+                "targetAnswers": [
+                  "While Jensen (2018) focuses on early childhood exposure, Liu (2020) stresses adolescent social interaction, suggesting that language development spans multiple critical periods.",
+                  "While Jensen (2018) emphasises early childhood exposure, Liu (2020) highlights adolescent social interaction, suggesting that both phases are essential.",
+                  "While Jensen (2018) focuses on early childhood exposure, Liu (2020) stresses adolescent social interaction, suggesting that both stages influence language acquisition."
+                ],
+                "explanation": "A synthesis sentence links two contrasting perspectives using a subordinate concessive clause followed by an evaluative participial conclusion.",
+                "part": "writing",
+                "partIndex": 3,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-4",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this parenthetical citation into an author-prominent sentence using the reporting verb 'contends':",
+                "promptText": "Algorithmic bias in admissions processes reinforces existing social disparities (Nakamura, 2022).",
+                "hint": "Start with 'Nakamura (2022) contends that...'",
+                "targetAnswers": [
+                  "Nakamura (2022) contends that algorithmic bias in admissions processes reinforces existing social disparities.",
+                  "Nakamura (2022) contends that admissions algorithms perpetuate existing social inequalities."
+                ],
+                "explanation": "An author-prominent sentence places the author as the grammatical subject, followed by a reporting verb and a that-clause.",
+                "part": "writing",
+                "partIndex": 4,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-5",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Identify and correct the faulty subject-verb agreement and punctuation in this reporting sentence:",
+                "promptText": "Foster (2017) suggest that remote teams experiences higher rates of miscommunication.",
+                "hint": "Foster is singular, so the reporting verb must agree, as must the plural noun 'remote teams'.",
+                "targetAnswers": [
+                  "Foster (2017) suggests that remote teams experience higher rates of miscommunication.",
+                  "Foster (2017) suggests that remote teams experience higher rates of miscommunication"
+                ],
+                "explanation": "The singular subject 'Foster' takes 'suggests', and the plural subject 'remote teams' inside the that-clause takes 'experience'.",
+                "part": "writing",
+                "partIndex": 5,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-6",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Paraphrase this statement to avoid patchwriting by converting the active verbal construction into a nominalised subject:",
+                "promptText": "\"When teachers give prompt feedback, students revise their essays more effectively.\" (O'Connor, 2019)",
+                "hint": "Begin with 'According to O'Connor (2019), prompt teacher feedback promotes...'",
+                "targetAnswers": [
+                  "According to O'Connor (2019), prompt feedback significantly enhances essay revision among learners.",
+                  "According to O'Connor (2019), prompt teacher feedback promotes more effective essay revision.",
+                  "O'Connor (2019) maintains that timely feedback leads to more thorough essay revisions."
+                ],
+                "explanation": "Nominalising verbs (such as turning 'give prompt feedback' into 'prompt feedback' and 'revise' into 'revision') creates a professional, academic paraphrase.",
+                "part": "writing",
+                "partIndex": 6,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-7",
+                "typeLabel": "Conjunctions & Synthesis",
+                "instruction": "Connect these two authors' views into a single compound-complex sentence using 'whereas' and 'indicating that':",
+                "promptText": "Kowalski (2019) argues that intrinsic rewards sustain motivation. Adams (2021) asserts that external incentives produce faster immediate results.",
+                "hint": "Kowalski (2019) argues that..., whereas Adams (2021) asserts that..., indicating that...",
+                "targetAnswers": [
+                  "Kowalski (2019) argues that intrinsic rewards sustain motivation, whereas Adams (2021) asserts that external incentives produce faster immediate results, indicating that motivation requires a dual approach.",
+                  "Kowalski (2019) argues that intrinsic rewards maintain long-term motivation, whereas Adams (2021) asserts that external incentives produce faster immediate results, indicating that different goals require distinct incentives."
+                ],
+                "explanation": "Using 'whereas' sets up direct contrast between the two researchers, while the trailing participial clause provides your own analytical takeaway.",
+                "part": "writing",
+                "partIndex": 7,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-8",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the punctuation and capitalisation errors in this multi-source synthesis:",
+                "promptText": "while green (2016) prioritises quantitative data alvarez (2020) values qualitative narratives",
+                "hint": "Capitalise proper names, add a comma after the dependent clause, and insert a comma or linking device before the main clause.",
+                "targetAnswers": [
+                  "While Green (2016) prioritises quantitative data, Alvarez (2020) values qualitative narratives.",
+                  "While Green (2016) prioritises quantitative data, Alvarez (2020) values qualitative narratives"
+                ],
+                "explanation": "The dependent concessive clause starting with 'While' must be separated from the independent clause with a comma, and both author surnames must be capitalised.",
+                "part": "writing",
+                "partIndex": 8,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-9",
+                "typeLabel": "Short Response",
+                "instruction": "Complete this sentence by providing a balanced conclusion clause introduced by 'suggesting that':",
+                "promptText": "While Thorne (2018) underscores the necessity of independent study, Garcia (2022) demonstrates the merits of group work,",
+                "hint": "Finish with a conclusion about combining both independent and collaborative methods.",
+                "targetAnswers": [
+                  "suggesting that optimal learning occurs through a combination of autonomous and collaborative tasks.",
+                  "suggesting that effective education requires both individual reflection and collaborative interaction.",
+                  "suggesting that balanced pedagogy should incorporate both individual and group methods."
+                ],
+                "explanation": "In multi-source synthesis, the concluding non-finite clause synthesises the two opposing views into a unified pedagogical insight.",
+                "part": "writing",
+                "partIndex": 9,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-w-10",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Paraphrase the original finding by converting the passive sentence into an active voice sentence led by the cited author:",
+                "promptText": "Cognitive fatigue is accelerated by prolonged exposure to backlit computer screens, as observed by Martin (2021).",
+                "hint": "Start with 'Martin (2021) observes that...'",
+                "targetAnswers": [
+                  "Martin (2021) observes that prolonged exposure to backlit computer screens accelerates cognitive fatigue.",
+                  "Martin (2021) contends that continuous screen use accelerates cognitive fatigue in learners.",
+                  "Martin (2021) notes that extended screen time accelerates cognitive fatigue."
+                ],
+                "explanation": "Converting passive structures to active constructions led by author-prominent reporting verbs is an effective technique for clear academic paraphrasing.",
+                "part": "writing",
+                "partIndex": 10,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-1",
+                "category": "storytelling",
+                "typeLabel": "Academic Monologue: Source Integration",
+                "instruction": "Speak for at least 30 seconds describing a time you had to evaluate conflicting sources for an essay or presentation.",
+                "audioPrompt": "Describe an assignment where you encountered opposing viewpoints in your research and explain how you resolved them.",
+                "storyPoints": [
+                  "The specific assignment topic and the conflicting arguments you discovered",
+                  "How you evaluated which source was more credible",
+                  "The method you used to synthesise both perspectives with accurate attribution"
+                ],
+                "targetSentence": "When researching renewable energy policies, I found conflicting data between government reports and corporate studies, so I checked their methodologies to determine which was more credible.",
+                "phonetic": "/wen rɪˈsɜːtʃɪŋ rɪˈnjuːəbl ˈenədʒi ˈpɒləsiz aɪ faʊnd kənˈflɪktɪŋ ˈdeɪtə bɪˈtwiːn ˈɡʌvnmənt rɪˈpɔːts/",
+                "expectedKeywords": [
+                  "conflicting",
+                  "credible",
+                  "synthesise",
+                  "attribution",
+                  "methodology"
+                ],
+                "explanation": "Deliver a structured three-part answer using past narrative tenses combined with evaluative language.",
+                "part": "speaking",
+                "partIndex": 1,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-2",
+                "category": "storytelling",
+                "typeLabel": "Academic Monologue: Avoiding Plagiarism",
+                "instruction": "Speak for at least 30 seconds explaining how your approach to taking notes and paraphrasing has changed over time.",
+                "audioPrompt": "Explain how you learned to avoid accidental plagiarism when summarising research material.",
+                "storyPoints": [
+                  "Your early bad habit of keeping original text too close while taking notes",
+                  "The moment you realised patchwriting was unacceptable in academic work",
+                  "The step-by-step paraphrasing technique you now follow to write in your own voice"
+                ],
+                "targetSentence": "I used to change only a few synonyms, which led to patchwriting, but now I close the original article and write the concept entirely from memory.",
+                "phonetic": "/aɪ juːst tə tʃeɪndʒ ˈəʊnli ə fjuː ˈsɪnənɪmz wɪtʃ led tə ˈpætʃˌraɪtɪŋ/",
+                "expectedKeywords": [
+                  "patchwriting",
+                  "paraphrase",
+                  "notes",
+                  "memory",
+                  "original"
+                ],
+                "explanation": "Highlight your shift in methodology by contrasting past actions using 'used to' with your present routine.",
+                "part": "speaking",
+                "partIndex": 2,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-3",
+                "category": "roleplay",
+                "typeLabel": "Interactive Seminar Discussion",
+                "scenarioContext": "You are participating in a university seminar on public health research. The discussion leader asks why you chose an independent research paper over a viral news blog.",
+                "characterRole": "Seminar Participant defending source credibility",
+                "instruction": "Explain why the peer-reviewed paper is more credible than popular commentary, referencing publication standards.",
+                "audioPrompt": "Why did you dismiss that viral blog post when it cited similar statistics to your main article?",
+                "targetSentence": "The blog post lacked transparent attribution and editorial peer review, so I chose the academic paper because its findings are fully verified.",
+                "phonetic": "/ðə blɒɡ pəʊst lækt trænsˈpærənt ˌætrɪˈbjuːʃn ænd ˌedɪˈtɔːriəl pɪə rɪˈvjuː/",
+                "expectedKeywords": [
+                  "attribution",
+                  "credible",
+                  "peer review",
+                  "verified"
+                ],
+                "explanation": "Provide a polite, evidence-based academic response that explains source reliability clearly.",
+                "part": "speaking",
+                "partIndex": 3,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-4",
+                "category": "roleplay",
+                "typeLabel": "Tutorial Feedback Session",
+                "scenarioContext": "Your writing tutor asks you how you intend to fix an over-reliance on direct quotations in your literature review.",
+                "characterRole": "Student responding to tutorial feedback",
+                "instruction": "Tell your tutor that you will paraphrase the key findings and group related arguments together.",
+                "audioPrompt": "You have six direct quotes on page two alone. How will you turn this into your own academic prose?",
+                "targetSentence": "I plan to paraphrase those quotes and synthesise the arguments so my paper reflects my own analytical voice.",
+                "phonetic": "/aɪ plæn tə ˈpærəfreɪz ðəʊz kwəʊts ænd ˈsɪnθəsaɪz ðɪ ˈɑːɡjumənts/",
+                "expectedKeywords": [
+                  "paraphrase",
+                  "synthesise",
+                  "quotes",
+                  "voice"
+                ],
+                "explanation": "State your revision strategy firmly using future intention markers and relevant academic vocabulary.",
+                "part": "speaking",
+                "partIndex": 4,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-5",
+                "category": "roleplay",
+                "typeLabel": "Peer Review Partner Discussion",
+                "scenarioContext": "Your peer review partner thinks two studies you cited reach the exact same conclusion, but you notice a key disagreement.",
+                "characterRole": "Student clarifying scholarly disagreement",
+                "instruction": "Politely counter your partner's claim by showing how the second researcher contends something different.",
+                "audioPrompt": "It looks to me like Davis and Kowalski are saying the exact same thing about automation.",
+                "targetSentence": "While Davis welcomes automation, Kowalski contends that it creates long-term regional unemployment.",
+                "phonetic": "/waɪl ˈdeɪvɪs ˈwelkəmz ˌɔːtəˈmeɪʃn kəˈwælski kənˈtendz ðæt ɪt kriˈeɪts lɒŋ tɜːm ˌriːdʒənl ˌʌnɪmˈplɔɪmənt/",
+                "expectedKeywords": [
+                  "contends",
+                  "while",
+                  "unemployment",
+                  "disagree"
+                ],
+                "explanation": "Use a concession clause starting with 'While' to balance the two viewpoints politely.",
+                "part": "speaking",
+                "partIndex": 5,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-6",
+                "category": "roleplay",
+                "typeLabel": "Group Project Meeting",
+                "scenarioContext": "A teammate pasted three paragraphs from a website straight into your shared presentation slides without citations.",
+                "characterRole": "Group Leader addressing citation compliance",
+                "instruction": "Alert your teammate to the danger of plagiarism and explain that proper attribution is mandatory.",
+                "audioPrompt": "I just pasted these paragraphs directly from that tech website to save time. Is that okay for our slides?",
+                "targetSentence": "We cannot keep uncredited text because that counts as plagiarism, so we need to add proper attribution immediately.",
+                "phonetic": "/wiː ˈkænɒt kiːp ʌnˈkredɪtɪd tekst bɪˈkɒz ðæt kaʊnts æz ˈpleɪdʒərɪzəm/",
+                "expectedKeywords": [
+                  "plagiarism",
+                  "attribution",
+                  "uncredited",
+                  "slides"
+                ],
+                "explanation": "Address the ethical risk directly and propose immediate corrective action in a cooperative tone.",
+                "part": "speaking",
+                "partIndex": 6,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-7",
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Precision Drill",
+                "instruction": "Read the sentence aloud, pronouncing the target word 'patchwriting' clearly without hesitation.",
+                "audioPrompt": "Read aloud: 'Replacing a few adjectives while keeping the author's sentence frame is known as patchwriting.'",
+                "targetSentence": "Replacing a few adjectives while keeping the author's sentence frame is known as patchwriting.",
+                "phonetic": "/rɪˈpleɪsɪŋ ə fjuː ˈædʒɪktɪvz waɪl ˈkiːpɪŋ ði ˈɔːθəz ˈsentəns freɪm ɪz nəʊn æz ˈpætʃˌraɪtɪŋ/",
+                "expectedKeywords": [
+                  "adjectives",
+                  "sentence",
+                  "frame",
+                  "patchwriting"
+                ],
+                "explanation": "Ensure the compound noun 'patchwriting' has strong initial stress on 'patch' and distinct consonant clarity.",
+                "part": "speaking",
+                "partIndex": 7,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-8",
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Structure Drill: Reporting Verbs",
+                "instruction": "Read the sentence aloud, focusing on the correct present tense agreement and noun clause connector.",
+                "audioPrompt": "Read aloud: 'Several leading sociologists contend that income inequality undermines institutional trust.'",
+                "targetSentence": "Several leading sociologists contend that income inequality undermines institutional trust.",
+                "phonetic": "/ˈsevrəl ˈliːdɪŋ ˌsəʊsiˈɒlədʒɪsts kənˈtend ðæt ˈɪnkʌm ˌɪnɪˈkwɒləti ˌʌndəˈmaɪnz ˌɪnstɪˈtjuːʃənl trʌst/",
+                "expectedKeywords": [
+                  "sociologists",
+                  "contend",
+                  "inequality",
+                  "undermines"
+                ],
+                "explanation": "Deliver 'contend that' smoothly without pausing between the verb and the complement clause.",
+                "part": "speaking",
+                "partIndex": 8,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-9",
+                "category": "linguistic_drill",
+                "typeLabel": "Syllable Stress Drill: Credibility",
+                "instruction": "Read the sentence aloud, placing primary stress firmly on the third syllable of 'credibility'.",
+                "audioPrompt": "Read aloud: 'The credibility of the findings depends upon rigorous methodology and sample diversity.'",
+                "targetSentence": "The credibility of the findings depends upon rigorous methodology and sample diversity.",
+                "phonetic": "/ðə ˌkredəˈbɪləti əv ðə ˈfaɪndɪŋz dɪˈpendz əˈpɒn ˈrɪɡərəs ˌmeθəˈdɒlədʒi ənd ˈsɑːmpl daɪˈvɜːsəti/",
+                "expectedKeywords": [
+                  "credibility",
+                  "findings",
+                  "rigorous",
+                  "diversity"
+                ],
+                "explanation": "Check that the primary stress falls precisely on 'BIL' in cred-i-BIL-i-ty.",
+                "part": "speaking",
+                "partIndex": 9,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "id": "q-b2.4-m11-s-10",
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Drill: Contrastive Synthesis",
+                "instruction": "Read the complex sentence aloud using a rising pitch on the subordinate clause and a falling pitch at the end.",
+                "audioPrompt": "Read aloud: 'Although the initial trial showed promise, later replications failed to confirm the effect.'",
+                "targetSentence": "Although the initial trial showed promise, later replications failed to confirm the effect.",
+                "phonetic": "/ɔːlˈðəʊ ði ɪˈnɪʃl ˈtraɪəl ʃəʊd ˈprɒmɪs ˈleɪtə ˌreplɪˈkeɪʃnz feɪld tə kənˈfɜːm ði ɪˈfekt/",
+                "expectedKeywords": [
+                  "Although",
+                  "promise",
+                  "replications",
+                  "effect"
+                ],
+                "explanation": "Raise pitch slightly on 'promise' before the comma pause, then drop your pitch decisively on 'effect'.",
+                "part": "speaking",
+                "partIndex": 10,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "category": "Constructive Disagreement",
+                "instruction": "Sampaikan ketidaksetujuan secara profesional dalam diskusi tim:",
+                "prompt": "I understand your perspective; however, diverting resources at this stage might jeopardize our deadline for the core platform.",
+                "sampleAnswer": "I understand your perspective; however, diverting resources at this stage might jeopardize our deadline for the core platform.",
+                "phonetic": "/aɪ ˌʌndəˈstænd jɔː pəˈspektɪv haʊˈevə/",
+                "keywords": [
+                  "perspective",
+                  "diverting",
+                  "jeopardize",
+                  "deadline"
+                ],
+                "id": "q-b2.4-m11-s-11",
+                "part": "speaking",
+                "partIndex": 11,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "category": "Risk Mitigation",
+                "instruction": "Ucapkan strategi mitigasi risiko berikut:",
+                "prompt": "To mitigate potential financial exposure, the board recommended establishing a dedicated emergency contingency reserve.",
+                "sampleAnswer": "To mitigate potential financial exposure, the board recommended establishing a dedicated emergency contingency reserve.",
+                "phonetic": "/tə ˈmɪtɪɡeɪt pəˈtenʃl faɪˈnænʃl ɪkˈspəʊʒə/",
+                "keywords": [
+                  "mitigate",
+                  "exposure",
+                  "contingency",
+                  "reserve"
+                ],
+                "id": "q-b2.4-m11-s-12",
+                "part": "speaking",
+                "partIndex": 12,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "category": "Project Status Briefing",
+                "instruction": "Ucapkan laporan kemajuan proyek kepada pemangku kepentingan:",
+                "prompt": "All critical deliverables for Phase Two have been finalized and submitted for rigorous quality assurance verification.",
+                "sampleAnswer": "All critical deliverables for Phase Two have been finalized and submitted for rigorous quality assurance verification.",
+                "phonetic": "/ɔːl ˈkrɪtɪkl dɪˈlɪvərəblz fə feɪz tuː/",
+                "keywords": [
+                  "deliverables",
+                  "finalized",
+                  "quality",
+                  "assurance"
+                ],
+                "id": "q-b2.4-m11-s-13",
+                "part": "speaking",
+                "partIndex": 13,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "category": "Executive Summary",
+                "instruction": "Ucapkan kesimpulan strategis berikut:",
+                "prompt": "In conclusion, investing in cloud automation will simultaneously optimize operating expenditure and enhance organizational resilience.",
+                "sampleAnswer": "In conclusion, investing in cloud automation will simultaneously optimize operating expenditure and enhance organizational resilience.",
+                "phonetic": "/ɪn kənˈkluːʒn ɪnˈvestɪŋ ɪn klaʊd/",
+                "keywords": [
+                  "conclusion",
+                  "automation",
+                  "expenditure",
+                  "resilience"
+                ],
+                "id": "q-b2.4-m11-s-14",
+                "part": "speaking",
+                "partIndex": 14,
+                "sourceModule": "B2.4-M11"
+              },
+              {
+                "category": "Conflict Resolution",
+                "instruction": "Ucapkan usulan penyelesaian perselisihan kerja berikut:",
+                "prompt": "Let us establish objective evaluation criteria so both departments can collaborate effectively toward the mutual objective.",
+                "sampleAnswer": "Let us establish objective evaluation criteria so both departments can collaborate effectively toward the mutual objective.",
+                "phonetic": "/let əs ɪˈstæblɪʃ əbˈdʒektɪv/",
+                "keywords": [
+                  "establish",
+                  "criteria",
+                  "collaborate",
+                  "mutual"
+                ],
+                "id": "q-b2.4-m11-s-15",
+                "part": "speaking",
+                "partIndex": 15,
+                "sourceModule": "B2.4-M11"
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }

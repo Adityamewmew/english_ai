@@ -60,6 +60,12 @@ export function useModuleTutor({ moduleId, studentName = "", userId = "" }: UseM
   const playTutorAudio = (text: string) => {
     if (typeof window === "undefined") return;
 
+    const clean = (text || "").replace(/[*_#]/g, "").trim();
+    if (!clean) {
+      setIsSpeaking(false);
+      return;
+    }
+
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current = null;
@@ -67,21 +73,8 @@ export function useModuleTutor({ moduleId, studentName = "", userId = "" }: UseM
 
     setIsSpeaking(true);
 
-    const clean = text.replace(/[*_#]/g, "").trim();
-    const encoded = encodeURIComponent(clean.slice(0, 800));
-    const audio = new Audio(getApiUrl(`/api/voice/tts?text=${encoded}`));
-    audioRef.current = audio;
-
-    audio.onended = () => {
-      setIsSpeaking(false);
-      if (isCalling) {
-        startSpeechRecognition();
-      }
-    };
-
-    audio.onerror = (e) => {
-      console.warn("TTS audio element error, checking speech synthesis fallback:", e);
-      if ("speechSynthesis" in window) {
+    const triggerSpeechFallback = () => {
+      if (typeof window !== "undefined" && "speechSynthesis" in window) {
         window.speechSynthesis.cancel();
         const utt = new SpeechSynthesisUtterance(clean);
         // Autodetect Indonesian vs English content so Indonesian words are not anglicized
@@ -99,9 +92,28 @@ export function useModuleTutor({ moduleId, studentName = "", userId = "" }: UseM
       }
     };
 
-    audio.play().catch(() => {
-      setIsSpeaking(false);
-    });
+    try {
+      const encoded = encodeURIComponent(clean.slice(0, 800));
+      const audio = new Audio(getApiUrl(`/api/voice/tts?text=${encoded}`));
+      audioRef.current = audio;
+
+      audio.onended = () => {
+        setIsSpeaking(false);
+        if (isCalling) {
+          startSpeechRecognition();
+        }
+      };
+
+      audio.onerror = () => {
+        triggerSpeechFallback();
+      };
+
+      audio.play().catch(() => {
+        triggerSpeechFallback();
+      });
+    } catch {
+      triggerSpeechFallback();
+    }
   };
 
   // Speech Recognition (Mic Input)

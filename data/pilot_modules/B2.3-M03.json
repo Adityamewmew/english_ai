@@ -1688,6 +1688,2825 @@
           }
         }
       ]
+    },
+    {
+      "id": "sub-b2-3-m03-assessment",
+      "moduleId": "B2.3-M03",
+      "skillType": "assessment",
+      "title": "Final Mission: Unit 3 Comprehensive Assessment (55 Soal)",
+      "theme": "Unit 3 All-Skills Mastery Evaluation (MEDIUM)",
+      "orderIndex": 5,
+      "sections": [
+        {
+          "id": "sec-b2-3-m03-theory",
+          "moduleId": "B2.3-M03",
+          "subModuleId": "sub-b2-3-m03-assessment",
+          "sectionType": "theory",
+          "title": "Unit Final Mission Guidelines & Criteria",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Ujian akhir unit resmi untuk Behavioral Economics, Cognitive Biases & Consumer Nudging. Menguji 4 kompetensi terintegrasi (Reading 15 soal, Listening 15 soal, Writing 10 soal, Speaking 15 soal) untuk menghasilkan scorecard nilai resmi per unit.",
+            "totalQuestions": 55,
+            "passingScore": 75,
+            "estimatedMinutes": 40,
+            "difficultyTier": "medium",
+            "parts": [
+              {
+                "part": 1,
+                "name": "Reading Comprehension & Lexicogrammar",
+                "count": 15
+              },
+              {
+                "part": 2,
+                "name": "Listening Auditory Synthesis",
+                "count": 15
+              },
+              {
+                "part": 3,
+                "name": "Written Production & Discourse",
+                "count": 10
+              },
+              {
+                "part": 4,
+                "name": "Spoken Fluency & Oral Interaction",
+                "count": 15
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b2-3-m03-quiz",
+          "moduleId": "B2.3-M03",
+          "subModuleId": "sub-b2-3-m03-assessment",
+          "sectionType": "quiz",
+          "title": "Unit 3 Mastery Quiz: 55 Items",
+          "orderIndex": 2,
+          "content": {
+            "passingScore": 75,
+            "totalQuestions": 55,
+            "difficultyTier": "medium",
+            "parts": {
+              "reading": [
+                {
+                  "id": "q-b2.3-m03-r-1",
+                  "question": "What primary assumption of classical economics has been challenged by behavioral economists?",
+                  "options": [
+                    "That consumers make choices purely as rational beings who calculate utility without emotional bias.",
+                    "That markets are incapable of distributing resources efficiently without strict price controls.",
+                    "That individuals avoid purchasing discounted items unless they hold high incomes."
+                  ],
+                  "answer": "That consumers make choices purely as rational beings who calculate utility without emotional bias.",
+                  "explanation": "The text states that standard theory presumed consumers were rational agents weighing costs and benefits, an idea challenged by recent research.",
+                  "part": "reading",
+                  "partIndex": 1,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-r-2",
+                  "question": "According to the passage, why do consumers rely on heuristics?",
+                  "options": [
+                    "They use these mental shortcuts to bypass the effort of collecting complete information.",
+                    "They are forced to follow company guidelines during every purchase.",
+                    "They want to ensure every mathematical computation is entirely accurate."
+                  ],
+                  "answer": "They use these mental shortcuts to bypass the effort of collecting complete information.",
+                  "explanation": "The passage explains that individuals rely on rules of thumb rather than gathering complete data under complex conditions.",
+                  "part": "reading",
+                  "partIndex": 2,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-r-3",
+                  "question": "How does the author explain the mechanism of price anchoring?",
+                  "options": [
+                    "An initial number creates a reference point that skews all subsequent value judgments.",
+                    "Retailers lower all prices simultaneously to confuse budget shoppers.",
+                    "Consumers memorize every past price before choosing a brand."
+                  ],
+                  "answer": "An initial number creates a reference point that skews all subsequent value judgments.",
+                  "explanation": "Paragraph two explains that the first number presented establishes a baseline, making later discounted prices look modest by comparison.",
+                  "part": "reading",
+                  "partIndex": 3,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-r-4",
+                  "question": "What does loss aversion lead investors to do, according to the text?",
+                  "options": [
+                    "Retain poorly performing assets for too long in an attempt to avoid accepting a loss.",
+                    "Sell profitable assets immediately whenever interest rates rise.",
+                    "Refuse to invest any capital in modern financial institutions."
+                  ],
+                  "answer": "Retain poorly performing assets for too long in an attempt to avoid accepting a loss.",
+                  "explanation": "The passage notes that the sting of loss is roughly twice as strong as the joy of gain, causing investors to hold failing assets too long.",
+                  "part": "reading",
+                  "partIndex": 4,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-r-5",
+                  "question": "Which characteristic is essential for an intervention to qualify as a behavioral nudge?",
+                  "options": [
+                    "It must guide choices without removing any options or altering direct financial incentives.",
+                    "It must impose legal fines on anyone who selects unhealthy alternatives.",
+                    "It must provide substantial monetary rewards for every compliant citizen."
+                  ],
+                  "answer": "It must guide choices without removing any options or altering direct financial incentives.",
+                  "explanation": "Paragraph three defines a nudge as an alteration in choice architecture that neither forbids alternatives nor adjusts monetary incentives.",
+                  "part": "reading",
+                  "partIndex": 5,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-r-6",
+                  "question": "What was the result when organ donation was established as the default option?",
+                  "options": [
+                    "Registration rates climbed above ninety percent because citizens had to actively opt out.",
+                    "Public dissatisfaction caused donation numbers to drop significantly.",
+                    "Healthcare systems abandoned the program due to high administrative costs."
+                  ],
+                  "answer": "Registration rates climbed above ninety percent because citizens had to actively opt out.",
+                  "explanation": "The text states that when donation became the default, registration rates routinely exceeded ninety percent.",
+                  "part": "reading",
+                  "partIndex": 6,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-r-7",
+                  "question": "In the third paragraph, what counterfactual scenario does the author present regarding public policy?",
+                  "options": [
+                    "Persuasion campaigns alone would not have accomplished such rapid behavioral shifts.",
+                    "Mandatory legislation would have worked faster than changing the default option.",
+                    "Financial bonuses would have eliminated the need for policy intervention entirely."
+                  ],
+                  "answer": "Persuasion campaigns alone would not have accomplished such rapid behavioral shifts.",
+                  "explanation": "The text states: 'If governments had relied solely on persuasion campaigns, such rapid shifts in behavior would never have been achieved.'",
+                  "part": "reading",
+                  "partIndex": 7,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-r-8",
+                  "question": "Why does the author express concern about commercial applications of framing?",
+                  "options": [
+                    "Businesses can exploit cognitive shortcuts to push consumers into costly loans or unwanted renewals.",
+                    "Corporations generally refuse to invest money into marketing campaigns.",
+                    "Framing techniques prevent companies from earning legitimate commercial profits."
+                  ],
+                  "answer": "Businesses can exploit cognitive shortcuts to push consumers into costly loans or unwanted renewals.",
+                  "explanation": "Paragraph four mentions that when corporations apply framing, these methods can turn into traps leading customers toward high-interest credit or unwanted subscriptions.",
+                  "part": "reading",
+                  "partIndex": 8,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-r-9",
+                  "question": "What condition must public nudges satisfy in order to retain citizen trust?",
+                  "options": [
+                    "They must remain transparent and open to public inspection.",
+                    "They must be designed exclusively by private technology firms.",
+                    "They must be applied covertly without informing the electorate."
+                  ],
+                  "answer": "They must remain transparent and open to public inspection.",
+                  "explanation": "The passage notes that if public institutions want to maintain trust, behavioral interventions must remain transparent.",
+                  "part": "reading",
+                  "partIndex": 9,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-r-10",
+                  "question": "Which statement best summarizes the author's overall stance in the passage?",
+                  "options": [
+                    "Behavioral nudges are valuable tools, yet their impact on personal autonomy requires ongoing public scrutiny.",
+                    "Classical economic models should replace modern behavioral insights completely.",
+                    "Default settings are inherently unethical and should be banned across all industries."
+                  ],
+                  "answer": "Behavioral nudges are valuable tools, yet their impact on personal autonomy requires ongoing public scrutiny.",
+                  "explanation": "The conclusion points out that while nudges have transformed policy, society must determine whether guided decisions protect people or quietly erode their autonomy.",
+                  "part": "reading",
+                  "partIndex": 10,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "question": "Select the sentence with the correct non-defining relative clause punctuation:",
+                  "options": [
+                    "Our senior analyst, who joined the firm last January, presented the financial forecast.",
+                    "Our senior analyst who joined the firm last January presented the financial forecast.",
+                    "Our senior analyst, who joined the firm last January presented the financial forecast.",
+                    "Our senior analyst who joined the firm last January, presented the financial forecast."
+                  ],
+                  "answer": "Our senior analyst, who joined the firm last January, presented the financial forecast.",
+                  "explanation": "Non-defining relative clauses must be enclosed by commas on both sides.",
+                  "id": "q-b2.3-m03-r-11",
+                  "part": "reading",
+                  "partIndex": 11,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "question": "What does the expression 'think outside the box' convey in an entrepreneurial context?",
+                  "options": [
+                    "Approach problems with non-traditional and creative perspectives.",
+                    "Store physical inventory outside the warehouse boundaries.",
+                    "Follow standard operating procedures without deviation.",
+                    "Ignore financial accounting standards during quarterly audits."
+                  ],
+                  "answer": "Approach problems with non-traditional and creative perspectives.",
+                  "explanation": "The idiom 'think outside the box' signifies lateral and innovative thinking.",
+                  "id": "q-b2.3-m03-r-12",
+                  "part": "reading",
+                  "partIndex": 12,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "question": "Choose the correct reported speech: '\"I have submitted the report,\" said David.'",
+                  "options": [
+                    "David said that he had submitted the report.",
+                    "David said that he has submitted the report.",
+                    "David said that he will submit the report.",
+                    "David said that he submits the report."
+                  ],
+                  "answer": "David said that he had submitted the report.",
+                  "explanation": "Present perfect in direct speech backshifts to past perfect in reported speech.",
+                  "id": "q-b2.3-m03-r-13",
+                  "part": "reading",
+                  "partIndex": 13,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "question": "Which preposition correctly completes the sentence: 'She is responsible _____ supervising quality assurance.'",
+                  "options": [
+                    "for",
+                    "with",
+                    "to",
+                    "at"
+                  ],
+                  "answer": "for",
+                  "explanation": "The adjective 'responsible' collocates with 'for' when indicating duty or charge.",
+                  "id": "q-b2.3-m03-r-14",
+                  "part": "reading",
+                  "partIndex": 14,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "question": "What distinction exists between 'economic' and 'economical'?",
+                  "options": [
+                    "'Economic' relates to the economy, whereas 'economical' means avoiding waste or saving money.",
+                    "'Economic' means inexpensive, whereas 'economical' relates to government finance.",
+                    "Both terms are completely interchangeable in formal English.",
+                    "'Economical' is only used as a noun, whereas 'economic' is an adverb."
+                  ],
+                  "answer": "'Economic' relates to the economy, whereas 'economical' means avoiding waste or saving money.",
+                  "explanation": "'Economic' refers to national financial systems, while 'economical' refers to frugality or efficiency.",
+                  "id": "q-b2.3-m03-r-15",
+                  "part": "reading",
+                  "partIndex": 15,
+                  "sourceModule": "B2.3-M03"
+                }
+              ],
+              "listening": [
+                {
+                  "id": "q-b2.3-m03-l-1",
+                  "type": "dictation",
+                  "audioText": "Automatic enrollment increased our participation rates.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Dr. Mitchell: \"Automatic enrollment increased our participation _____.\"",
+                  "targetWord": "rates",
+                  "explanation": "Full audio: \"Automatic enrollment increased our participation rates.\". The missing word is \"rates\".",
+                  "part": "listening",
+                  "partIndex": 1,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-l-2",
+                  "type": "dictation",
+                  "audioText": "Does that violate personal autonomy, Sarah?",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Marcus: \"Does that violate personal autonomy, _____?\"",
+                  "targetWord": "Sarah",
+                  "explanation": "Full audio: \"Does that violate personal autonomy, Sarah?\". The missing word is \"Sarah\".",
+                  "part": "listening",
+                  "partIndex": 2,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-l-3",
+                  "type": "dictation",
+                  "audioText": "People struggle with status quo bias.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Dr. Mitchell: \"People struggle with status quo _____.\"",
+                  "targetWord": "bias",
+                  "explanation": "Full audio: \"People struggle with status quo bias.\". The missing word is \"bias\".",
+                  "part": "listening",
+                  "partIndex": 3,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-l-4",
+                  "type": "dictation",
+                  "audioText": "So we exploit their natural inertia?",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Marcus: \"So we exploit their natural _____?\"",
+                  "targetWord": "inertia",
+                  "explanation": "Full audio: \"So we exploit their natural inertia?\". The missing word is \"inertia\".",
+                  "part": "listening",
+                  "partIndex": 4,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-l-5",
+                  "type": "dictation",
+                  "audioText": "We anchor them to better outcomes.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Dr. Mitchell: \"We anchor them to better _____.\"",
+                  "targetWord": "outcomes",
+                  "explanation": "Full audio: \"We anchor them to better outcomes.\". The missing word is \"outcomes\".",
+                  "part": "listening",
+                  "partIndex": 5,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-l-6",
+                  "type": "arrange",
+                  "audioText": "Loss aversion helps our case too.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "Loss aversion helps our case too",
+                  "words": [
+                    "too",
+                    "our",
+                    "aversion",
+                    "case",
+                    "Loss",
+                    "helps"
+                  ],
+                  "explanation": "Correct sentence order: \"Loss aversion helps our case too.\".",
+                  "part": "listening",
+                  "partIndex": 6,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-l-7",
+                  "type": "arrange",
+                  "audioText": "Information alone rarely changes human behavior.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "Information alone rarely changes human behavior",
+                  "words": [
+                    "alone",
+                    "behavior",
+                    "changes",
+                    "rarely",
+                    "human",
+                    "Information"
+                  ],
+                  "explanation": "Correct sentence order: \"Information alone rarely changes human behavior.\".",
+                  "part": "listening",
+                  "partIndex": 7,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-l-8",
+                  "type": "arrange",
+                  "audioText": "Framing the message matters a lot.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "Framing the message matters a lot",
+                  "words": [
+                    "matters",
+                    "lot",
+                    "the",
+                    "message",
+                    "Framing",
+                    "a"
+                  ],
+                  "explanation": "Correct sentence order: \"Framing the message matters a lot.\".",
+                  "part": "listening",
+                  "partIndex": 8,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-l-9",
+                  "type": "arrange",
+                  "audioText": "Loss-framed messages usually perform best.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "Loss-framed messages usually perform best",
+                  "words": [
+                    "messages",
+                    "best",
+                    "Loss-framed",
+                    "perform",
+                    "usually"
+                  ],
+                  "explanation": "Correct sentence order: \"Loss-framed messages usually perform best.\".",
+                  "part": "listening",
+                  "partIndex": 9,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-l-10",
+                  "type": "arrange",
+                  "audioText": "Let us test both message styles.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "Let us test both message styles",
+                  "words": [
+                    "styles",
+                    "both",
+                    "us",
+                    "Let",
+                    "message",
+                    "test"
+                  ],
+                  "explanation": "Correct sentence order: \"Let us test both message styles.\".",
+                  "part": "listening",
+                  "partIndex": 10,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "type": "arrange",
+                  "audioText": "She explained that the initial forecast had underestimated consumer demand.",
+                  "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                  "targetSentence": "She explained that the initial forecast had underestimated consumer demand",
+                  "words": [
+                    "forecast",
+                    "She",
+                    "that",
+                    "underestimated",
+                    "had",
+                    "demand",
+                    "initial",
+                    "consumer",
+                    "the",
+                    "explained"
+                  ],
+                  "explanation": "Urutan benar: 'She explained that the initial forecast had underestimated consumer demand.'.",
+                  "id": "q-b2.3-m03-l-11",
+                  "part": "listening",
+                  "partIndex": 11,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "type": "dictation",
+                  "audioText": "We must establish clear benchmarks before launching the marketing campaign.",
+                  "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                  "promptSentence": "We must establish clear _____ before launching the marketing campaign.",
+                  "targetWord": "benchmarks",
+                  "explanation": "Audio lengkap: 'We must establish clear benchmarks before launching the marketing campaign.'. Kata: 'benchmarks'.",
+                  "id": "q-b2.3-m03-l-12",
+                  "part": "listening",
+                  "partIndex": 12,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "type": "arrange",
+                  "audioText": "Customer retention improved significantly following the service upgrade.",
+                  "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                  "targetSentence": "Customer retention improved significantly following the service upgrade",
+                  "words": [
+                    "significantly",
+                    "retention",
+                    "upgrade",
+                    "Customer",
+                    "service",
+                    "the",
+                    "following",
+                    "improved"
+                  ],
+                  "explanation": "Urutan benar: 'Customer retention improved significantly following the service upgrade.'.",
+                  "id": "q-b2.3-m03-l-13",
+                  "part": "listening",
+                  "partIndex": 13,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "type": "dictation",
+                  "audioText": "The company demonstrated resilience during the economic downturn.",
+                  "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                  "promptSentence": "The company demonstrated _____ during the economic downturn.",
+                  "targetWord": "resilience",
+                  "explanation": "Audio lengkap: 'The company demonstrated resilience during the economic downturn.'. Kata: 'resilience'.",
+                  "id": "q-b2.3-m03-l-14",
+                  "part": "listening",
+                  "partIndex": 14,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "type": "arrange",
+                  "audioText": "Both parties agreed to maintain strict confidentiality regarding the negotiations.",
+                  "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                  "targetSentence": "Both parties agreed to maintain strict confidentiality regarding the negotiations",
+                  "words": [
+                    "confidentiality",
+                    "maintain",
+                    "Both",
+                    "regarding",
+                    "agreed",
+                    "negotiations",
+                    "parties",
+                    "to",
+                    "strict",
+                    "the"
+                  ],
+                  "explanation": "Urutan benar: 'Both parties agreed to maintain strict confidentiality regarding the negotiations.'.",
+                  "id": "q-b2.3-m03-l-15",
+                  "part": "listening",
+                  "partIndex": 15,
+                  "sourceModule": "B2.3-M03"
+                }
+              ],
+              "writing": [
+                {
+                  "id": "q-b2.3-m03-w-1",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Rewrite the sentence in the passive voice to create an objective academic tone:",
+                  "promptText": "Supermarket managers deliberately place candy near the checkout counter to encourage impulse purchases.",
+                  "hint": "Begin with 'Candy is deliberately placed...'",
+                  "targetAnswers": [
+                    "Candy is deliberately placed near the checkout counter to encourage impulse purchases.",
+                    "Candy is deliberately placed near the checkout counters to encourage impulse purchases."
+                  ],
+                  "explanation": "To shift focus onto the product rather than the managers, change the active verb 'place' into the passive structure 'is deliberately placed'.",
+                  "part": "writing",
+                  "partIndex": 1,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-w-2",
+                  "typeLabel": "Conjunctions & Connectors",
+                  "instruction": "Combine the two statements into one hypothetical sentence using a Type 2 conditional with 'If':",
+                  "promptText": "Consumers are not aware of the sunk cost fallacy. They continue wasting money on bad subscriptions.",
+                  "hint": "Start with 'If consumers were aware...'",
+                  "targetAnswers": [
+                    "If consumers were aware of the sunk cost fallacy, they would not continue wasting money on bad subscriptions.",
+                    "If consumers were aware of the sunk cost fallacy, they wouldn't continue wasting money on bad subscriptions."
+                  ],
+                  "explanation": "Type 2 conditionals use the past simple in the if-clause ('were aware') and 'would + base verb' in the main clause ('would not continue').",
+                  "part": "writing",
+                  "partIndex": 2,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-w-3",
+                  "typeLabel": "Mechanics Correction",
+                  "instruction": "Correct the punctuation and capitalization errors in this sentence:",
+                  "promptText": "if behavioral economists had warned the government earlier inflation expectations would have been managed better",
+                  "hint": "Capitalize the first word and add a comma between the clauses.",
+                  "targetAnswers": [
+                    "If behavioral economists had warned the government earlier, inflation expectations would have been managed better.",
+                    "If behavioral economists had warned the government earlier, inflation expectations would've been managed better."
+                  ],
+                  "explanation": "The first word must be capitalized, and a conditional clause placed at the beginning of a sentence must be followed by a comma.",
+                  "part": "writing",
+                  "partIndex": 3,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-w-4",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Rewrite this sentence using the present perfect tense to emphasize continuing historical influence:",
+                  "promptText": "Loss aversion began altering financial risk models twenty years ago, and it still does today.",
+                  "hint": "Use 'has altered' or 'has shaped'.",
+                  "targetAnswers": [
+                    "Loss aversion has altered financial risk models for twenty years.",
+                    "Loss aversion has shaped financial risk models for twenty years."
+                  ],
+                  "explanation": "The present perfect ('has altered' or 'has shaped') describes an action that started in the past and continues to affect the present.",
+                  "part": "writing",
+                  "partIndex": 4,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-w-5",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Transform this real past event into a Type 3 conditional evaluating an alternative outcome:",
+                  "promptText": "The hospital did not make organ donation the default option, so registration numbers remained low.",
+                  "hint": "Start with 'If the hospital had made...'",
+                  "targetAnswers": [
+                    "If the hospital had made organ donation the default option, registration numbers would have increased.",
+                    "If the hospital had made organ donation the default option, registration numbers would not have remained low.",
+                    "If the hospital had made organ donation the default option, registration numbers wouldn't have remained low."
+                  ],
+                  "explanation": "Type 3 conditionals describe counterfactual past scenarios using 'had + past participle' in the condition and 'would have + past participle' in the result.",
+                  "part": "writing",
+                  "partIndex": 5,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-w-6",
+                  "typeLabel": "Conjunctions & Connectors",
+                  "instruction": "Complete the sentence logically using 'unless' to express a condition for changing public behavior:",
+                  "promptText": "Citizens will not reduce their household energy consumption [...] incentives are presented clearly.",
+                  "hint": "Use the conjunction 'unless'.",
+                  "targetAnswers": [
+                    "Citizens will not reduce their household energy consumption unless incentives are presented clearly.",
+                    "Citizens won't reduce their household energy consumption unless incentives are presented clearly."
+                  ],
+                  "explanation": "'Unless' means 'except if' and introduces the required condition for citizens to change their energy habits.",
+                  "part": "writing",
+                  "partIndex": 6,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-w-7",
+                  "typeLabel": "Mechanics Correction",
+                  "instruction": "Correct the subject-verb agreement and spelling mistakes in this analytical sentence:",
+                  "promptText": "A wide variety of cognitive biasses has been documented by researchers recently.",
+                  "hint": "Check the spelling of 'biases'.",
+                  "targetAnswers": [
+                    "A wide variety of cognitive biases has been documented by researchers recently.",
+                    "A wide variety of cognitive biases have been documented by researchers recently."
+                  ],
+                  "explanation": "The plural of 'bias' is 'biases' (one 's' before 'es').",
+                  "part": "writing",
+                  "partIndex": 7,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-w-8",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Rewrite the sentence in the passive voice without mentioning the unknown actors:",
+                  "promptText": "Companies often frame price discounts as limited-time offers to generate urgency.",
+                  "hint": "Begin with 'Price discounts are often framed...'",
+                  "targetAnswers": [
+                    "Price discounts are often framed as limited-time offers to generate urgency.",
+                    "Price discounts are often framed as limited time offers to generate urgency."
+                  ],
+                  "explanation": "The passive form 'are often framed' shifts attention from the corporations to the pricing tactic itself.",
+                  "part": "writing",
+                  "partIndex": 8,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-w-9",
+                  "typeLabel": "Short Response",
+                  "instruction": "Formulate a single Type 2 conditional sentence explaining what consumers would do if they recognized marketing nudges:",
+                  "promptText": "If consumers recognized marketing nudges in supermarkets, [what would they do?]",
+                  "hint": "Complete with a main clause such as 'they would make more rational purchases.'",
+                  "targetAnswers": [
+                    "If consumers recognized marketing nudges in supermarkets, they would make more rational purchases.",
+                    "If consumers recognized marketing nudges in supermarkets, they would save more money.",
+                    "If consumers recognized marketing nudges in supermarkets, they would avoid unnecessary spending.",
+                    "If consumers recognized marketing nudges in supermarkets, they would make wiser financial decisions."
+                  ],
+                  "explanation": "The second conditional main clause requires 'would + base verb' to express the hypothetical present consequence.",
+                  "part": "writing",
+                  "partIndex": 9,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-w-10",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Combine the ideas into one sentence using the present perfect to show a lasting effect on public policy:",
+                  "promptText": "Nudge theory entered policymaking in 2008. It still guides government campaigns today.",
+                  "hint": "Use 'has guided' or 'has influenced' with 'since 2008'.",
+                  "targetAnswers": [
+                    "Nudge theory has guided government campaigns since 2008.",
+                    "Nudge theory has influenced government campaigns since 2008."
+                  ],
+                  "explanation": "Using 'has guided' or 'has influenced' with 'since 2008' accurately expresses a policy strategy that began in the past and persists in the present.",
+                  "part": "writing",
+                  "partIndex": 10,
+                  "sourceModule": "B2.3-M03"
+                }
+              ],
+              "speaking": [
+                {
+                  "id": "q-b2.3-m03-s-1",
+                  "category": "storytelling",
+                  "typeLabel": "Personal Storytelling",
+                  "instruction": "Speak for at least 25 seconds about a time you bought something because of an anchoring trick or promotional framing.",
+                  "audioPrompt": "Describe a personal shopping experience where clever pricing or discount framing influenced your final purchase decision.",
+                  "storyPoints": [
+                    "What product you were considering and what original anchor price was shown",
+                    "How the discount or framing changed your perception of the item's value",
+                    "Whether you felt satisfied or regretful once you evaluated the purchase rationally"
+                  ],
+                  "targetSentence": "I was shopping for winter boots and saw a pair marked down from two hundred dollars to eighty, which made the deal feel irresistible due to anchoring.",
+                  "phonetic": "/aɪ wɒz ˈʃɒpɪŋ fɔː ˈwɪntə buːts ænd sɔː ə peə mɑːkt daʊn frɒm tuː ˈhʌndrəd ˈdɒləz tuː ˈeɪti wɪtʃ meɪd ðə diːl fiːl ˌɪrɪˈzɪstəbl djuː tuː ˈæŋkərɪŋ/",
+                  "expectedKeywords": [
+                    "anchoring",
+                    "discount",
+                    "framing",
+                    "decision",
+                    "value"
+                  ],
+                  "explanation": "Narrate the event using past narrative tenses, showing clear awareness of the anchoring concept.",
+                  "part": "speaking",
+                  "partIndex": 1,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-s-2",
+                  "category": "storytelling",
+                  "typeLabel": "Personal Storytelling",
+                  "instruction": "Speak for at least 25 seconds about how a default setting on an app or website influenced your daily habits.",
+                  "audioPrompt": "Tell a story about how an automatic default setting, such as pre-selected options or automatic renewals, affected your time or spending.",
+                  "storyPoints": [
+                    "Which application or service you signed up for and what the default choice was",
+                    "How long you kept the default setting before noticing its financial or practical impact",
+                    "What changes you made after recognizing your behavioral inertia"
+                  ],
+                  "targetSentence": "When I registered for the streaming service, the annual subscription was checked as the default, so I accidentally committed for a whole year due to inertia.",
+                  "phonetic": "/wɛn aɪ ˈrɛdʒɪstəd fɔː ðə ˈstriːmɪŋ ˈsɜːvɪs ði ˈænjuəl səbˈskrɪpʃn wɒz tʃɛkt æz ðə dɪˈfɔːlt səʊ aɪ ˌæksɪˈdɛntli kəˈmɪtɪd fɔːr ə həʊl jɪə djuː tuː ɪˈnɜːʃə/",
+                  "expectedKeywords": [
+                    "default",
+                    "subscription",
+                    "inertia",
+                    "habits",
+                    "choice"
+                  ],
+                  "explanation": "Use past sequence markers like 'initially', 'subsequently', and 'eventually' to structure your story clearly.",
+                  "part": "speaking",
+                  "partIndex": 2,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-s-3",
+                  "category": "roleplay",
+                  "typeLabel": "Interactive Roleplay",
+                  "instruction": "Respond to your business partner who wants to set annual subscriptions as an unselected opt-in rather than a pre-checked default.",
+                  "audioPrompt": "Our revenue could drop if we make the annual plan optional. Why shouldn't we keep it as the default choice for new subscribers?",
+                  "scenarioContext": "You are advising a software startup on ethical user acquisition and consumer trust.",
+                  "characterRole": "Senior Growth Strategist",
+                  "targetSentence": "If we make it the default without explicit consent, we risk high chargebacks and customer backlash due to perceived deception.",
+                  "phonetic": "/ɪf wiː meɪk ɪt ðə dɪˈfɔːlt wɪˈðaʊt ɪkˈsplɪsɪt kənˈsɛnt wiː rɪsk haɪ ˈtʃɑːdʒbæks ænd ˈkʌstəmə ˈbæklæʃ djuː tuː pəˈsiːvd dɪˈsɛpʃn/",
+                  "expectedKeywords": [
+                    "default",
+                    "consent",
+                    "backlash",
+                    "transparency",
+                    "trust"
+                  ],
+                  "explanation": "State your counterargument firmly using conditional structures and behavioral terminology.",
+                  "part": "speaking",
+                  "partIndex": 3,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-s-4",
+                  "category": "roleplay",
+                  "typeLabel": "Interactive Roleplay",
+                  "instruction": "Defend a public health initiative that uses gentle nudges instead of strict legal bans to reduce sugary drink consumption.",
+                  "audioPrompt": "Why are you placing soda on lower shelves instead of simply outlawing sugary beverages in school cafeterias?",
+                  "scenarioContext": "You are presenting a municipal health project to an impatient school board committee.",
+                  "characterRole": "Public Health Officer",
+                  "targetSentence": "A gentle nudge preserves personal autonomy while using behavioral heuristics to steer students toward healthier drinks naturally.",
+                  "phonetic": "/ə ˈdʒɛntl nʌdʒ prɪˈzɜːvz ˈpɜːsənl ɔːˈtɒnəmi waɪl ˈjuːzɪŋ bɪˈheɪvjərəl hjʊəˈrɪstɪks tuː stɪə ˈstjuːdənts təˈwɔːd ˈhɛlθiə drɪŋks ˈnætʃrəli/",
+                  "expectedKeywords": [
+                    "nudge",
+                    "autonomy",
+                    "heuristics",
+                    "choice",
+                    "healthier"
+                  ],
+                  "explanation": "Provide a professional defense highlighting the balance between consumer choice and positive outcomes.",
+                  "part": "speaking",
+                  "partIndex": 4,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-s-5",
+                  "category": "roleplay",
+                  "typeLabel": "Interactive Roleplay",
+                  "instruction": "Explain to a rookie investor why holding onto a plunging tech stock stems from irrational loss aversion.",
+                  "audioPrompt": "I refuse to sell this stock right now because that would mean admitting a thirty percent loss. Shouldn't I just wait for it to bounce back?",
+                  "scenarioContext": "You are coaching a private wealth client who is emotionally attached to an unprofitable portfolio asset.",
+                  "characterRole": "Financial Advisory Coach",
+                  "targetSentence": "Holding that declining asset reflects loss aversion, because the emotional pain of realizing a loss outweighs sound financial rationality.",
+                  "phonetic": "/ˈhəʊldɪŋ ðæt dɪˈklaɪnɪŋ ˈæsɛt rɪˈflɛkts lɒs əˈvɜːʃn bɪˈkɒz ði ɪˈməʊʃənl peɪn ɒv ˈrɪəlaɪzɪŋ ə lɒs aʊtˈweɪz saʊnd faɪˈnænʃl ˌræʃəˈnæləti/",
+                  "expectedKeywords": [
+                    "loss aversion",
+                    "rationality",
+                    "realizing",
+                    "emotional",
+                    "asset"
+                  ],
+                  "explanation": "Use empathetic yet objective advisory language to contrast emotional bias with logical capital management.",
+                  "part": "speaking",
+                  "partIndex": 5,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-s-6",
+                  "category": "roleplay",
+                  "typeLabel": "Interactive Roleplay",
+                  "instruction": "Explain how framing meat packaging as ninety percent fat free changes customer perception compared to stating ten percent fat.",
+                  "audioPrompt": "Does positive framing truly alter sales figures, or do consumers calculate the nutritional numbers anyway?",
+                  "scenarioContext": "You are presenting retail analytics to a supermarket chain merchandising team.",
+                  "characterRole": "Consumer Insight Analyst",
+                  "targetSentence": "Positive framing highlights the healthy attribute, so consumers perceive ninety percent fat free as far superior to ten percent fat.",
+                  "phonetic": "/ˈpɒzətɪv ˈfreɪmɪŋ ˈhaɪlaɪts ðə ˈhɛlθi ˈætrɪbjuːt səʊ kənˈsjuːməz pəˈsiːv ˈnaɪnti pəˈsɛnt fæt friː æz fɑː suːˈpɪəriə tuː tɛn pəˈsɛnt fæt/",
+                  "expectedKeywords": [
+                    "framing",
+                    "perceive",
+                    "attribute",
+                    "consumers",
+                    "superior"
+                  ],
+                  "explanation": "Deliver a concise analytical explanation emphasizing cognitive shortcuts and consumer response.",
+                  "part": "speaking",
+                  "partIndex": 6,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-s-7",
+                  "category": "linguistic_drill",
+                  "typeLabel": "Vocabulary Production Drill",
+                  "instruction": "Formulate a sentence using the terms 'heuristic' and 'overconfidence' to explain market volatility.",
+                  "audioPrompt": "Combine 'heuristic' and 'overconfidence' in a clear, formal statement about economic behavior.",
+                  "targetSentence": "Traders often rely on an availability heuristic, which fuels unwarranted overconfidence during asset bubbles.",
+                  "phonetic": "/ˈtreɪdəz ˈɒfn rɪˈlaɪ ɒn ən əˌveɪləˈbɪləti hjʊəˈrɪstɪk wɪtʃ fjuːəlz ʌnˈwɒrəntɪd ˌəʊvəˈkɒnfɪdəns ˈdjʊərɪŋ ˈæsɛt ˈbʌblz/",
+                  "expectedKeywords": [
+                    "heuristic",
+                    "overconfidence",
+                    "unwarranted",
+                    "bubbles",
+                    "rely"
+                  ],
+                  "explanation": "Highlight how fast decision rules interact with unrealistic confidence in complex financial situations.",
+                  "part": "speaking",
+                  "partIndex": 7,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-s-8",
+                  "category": "linguistic_drill",
+                  "typeLabel": "Grammar Structure Drill",
+                  "instruction": "Use a third conditional structure to explain how an altered default setting would have modified public savings.",
+                  "audioPrompt": "Explain what would have happened if the government had introduced automatic pension enrollment five years earlier.",
+                  "targetSentence": "If policymakers had instituted automatic enrollment sooner, citizens would have accumulated considerably larger retirement savings.",
+                  "phonetic": "/ɪf ˈpɒlɪsiˌmeɪkəz hæd ˈɪnstɪtjuːtɪd ˌɔːtəˈmætɪk ɪnˈrəʊlmənt ˈsuːnə ˈsɪtɪznz wʊd hæv əˈkjuːmjəleɪtɪd kənˈsɪdərəbli ˈlɑːdʒə rɪˈtaɪəmənt ˈseɪvɪŋz/",
+                  "expectedKeywords": [
+                    "had instituted",
+                    "would have accumulated",
+                    "enrollment",
+                    "pension",
+                    "savings"
+                  ],
+                  "explanation": "Produce a grammatically accurate third conditional with 'had + past participle' and 'would have + past participle'.",
+                  "part": "speaking",
+                  "partIndex": 8,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-s-9",
+                  "category": "linguistic_drill",
+                  "typeLabel": "Pronunciation Stress Drill",
+                  "instruction": "Pronounce the sentence with correct primary stress on 'aversion' and 'rationality'.",
+                  "audioPrompt": "Read the sentence clearly, ensuring the stressed syllables in 'aversion' and 'rationality' are accurately emphasized.",
+                  "targetSentence": "Deep loss aversion frequently clouds financial rationality when markets fluctuate.",
+                  "phonetic": "/diːp lɒs əˈvɜːʃn ˈfriːkwəntli klaʊdz faɪˈnænʃl ˌræʃəˈnæləti wɛn ˈmɑːkɪts ˈflʌktʃueɪt/",
+                  "expectedKeywords": [
+                    "aversion",
+                    "rationality",
+                    "clouds",
+                    "financial",
+                    "fluctuate"
+                  ],
+                  "explanation": "Stress the second syllable in a-VER-sion and the third syllable in ra-tion-AL-i-ty.",
+                  "part": "speaking",
+                  "partIndex": 9,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "id": "q-b2.3-m03-s-10",
+                  "category": "linguistic_drill",
+                  "typeLabel": "Intonation Drill",
+                  "instruction": "Read the alternative question with rising intonation on the first choice and falling intonation on the final choice.",
+                  "audioPrompt": "Deliver this comparison with rising intonation on 'choice architecture' and falling intonation on 'financial incentives'.",
+                  "targetSentence": "Should we influence consumer behavior through choice architecture, or rely exclusively on financial incentives?",
+                  "phonetic": "/ʃʊd wiː ˈɪnflʊəns kənˈsjuːmə bɪˈheɪvjə θruː tʃɔɪs ˈɑːkɪtɛktʃə ɔː rɪˈlaɪ ɪkˈskluːsɪvli ɒn faɪˈnænʃl ɪnˈsɛntɪvz/",
+                  "expectedKeywords": [
+                    "influence",
+                    "choice architecture",
+                    "rely",
+                    "financial incentives"
+                  ],
+                  "explanation": "Use a rising pitch contour at the end of 'architecture' followed by a definite falling pitch on 'incentives'.",
+                  "part": "speaking",
+                  "partIndex": 10,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "category": "Performance Review",
+                  "instruction": "Ucapkan umpan balik evaluasi kinerja:",
+                  "prompt": "Your consistent dedication to mentorship has significantly bolstered team morale and elevated our overall code delivery standard.",
+                  "sampleAnswer": "Your consistent dedication to mentorship has significantly bolstered team morale and elevated our overall code delivery standard.",
+                  "phonetic": "/jɔː kənˈsɪstənt ˌdedɪˈkeɪʃn tə ˈmentɔːʃɪp/",
+                  "keywords": [
+                    "dedication",
+                    "mentorship",
+                    "morale",
+                    "standard"
+                  ],
+                  "id": "q-b2.3-m03-s-11",
+                  "part": "speaking",
+                  "partIndex": 11,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "category": "Customer Relations",
+                  "instruction": "Ucapkan respon penanganan keluhan klien tingkat tinggi:",
+                  "prompt": "We sincerely apologize for the service interruption and have implemented immediate safeguards to ensure it will not recur.",
+                  "sampleAnswer": "We sincerely apologize for the service interruption and have implemented immediate safeguards to ensure it will not recur.",
+                  "phonetic": "/wiː sɪnˈsɪəli əˈpɒlədʒaɪz fə ðə ˈsɜːvɪs/",
+                  "keywords": [
+                    "apologize",
+                    "interruption",
+                    "safeguards",
+                    "recur"
+                  ],
+                  "id": "q-b2.3-m03-s-12",
+                  "part": "speaking",
+                  "partIndex": 12,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "category": "Data Interpretation",
+                  "instruction": "Ucapkan kesimpulan hasil analisis data:",
+                  "prompt": "The empirical survey data demonstrates an undeniable correlation between proactive communication and high client satisfaction rates.",
+                  "sampleAnswer": "The empirical survey data demonstrates an undeniable correlation between proactive communication and high client satisfaction rates.",
+                  "phonetic": "/ði ɪmˈpɪrɪkl ˈsɜːveɪ ˈdeɪtə/",
+                  "keywords": [
+                    "empirical",
+                    "correlation",
+                    "proactive",
+                    "satisfaction"
+                  ],
+                  "id": "q-b2.3-m03-s-13",
+                  "part": "speaking",
+                  "partIndex": 13,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "category": "Change Management",
+                  "instruction": "Ucapkan ajakan adaptasi sistem baru:",
+                  "prompt": "Adopting this new infrastructure requires initial adjustment, but the long-term productivity advantages far outweigh the transitional overhead.",
+                  "sampleAnswer": "Adopting this new infrastructure requires initial adjustment, but the long-term productivity advantages far outweigh the transitional overhead.",
+                  "phonetic": "/əˈdɒptɪŋ ðɪs njuː ˈɪnfrəstrʌktʃə/",
+                  "keywords": [
+                    "infrastructure",
+                    "productivity",
+                    "outweigh",
+                    "overhead"
+                  ],
+                  "id": "q-b2.3-m03-s-14",
+                  "part": "speaking",
+                  "partIndex": 14,
+                  "sourceModule": "B2.3-M03"
+                },
+                {
+                  "category": "Incentive Justification",
+                  "instruction": "Ucapkan argumen pembenaran alokasi anggaran:",
+                  "prompt": "Allocating additional resources to cybersecurity is not an optional luxury, but a fundamental prerequisite for enterprise growth.",
+                  "sampleAnswer": "Allocating additional resources to cybersecurity is not an optional luxury, but a fundamental prerequisite for enterprise growth.",
+                  "phonetic": "/ˈæləkeɪtɪŋ əˈdɪʃənl rɪˈzɔːsɪz/",
+                  "keywords": [
+                    "allocating",
+                    "cybersecurity",
+                    "prerequisite",
+                    "growth"
+                  ],
+                  "id": "q-b2.3-m03-s-15",
+                  "part": "speaking",
+                  "partIndex": 15,
+                  "sourceModule": "B2.3-M03"
+                }
+              ]
+            },
+            "questions": [
+              {
+                "id": "q-b2.3-m03-r-1",
+                "question": "What primary assumption of classical economics has been challenged by behavioral economists?",
+                "options": [
+                  "That consumers make choices purely as rational beings who calculate utility without emotional bias.",
+                  "That markets are incapable of distributing resources efficiently without strict price controls.",
+                  "That individuals avoid purchasing discounted items unless they hold high incomes."
+                ],
+                "answer": "That consumers make choices purely as rational beings who calculate utility without emotional bias.",
+                "explanation": "The text states that standard theory presumed consumers were rational agents weighing costs and benefits, an idea challenged by recent research.",
+                "part": "reading",
+                "partIndex": 1,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-2",
+                "question": "According to the passage, why do consumers rely on heuristics?",
+                "options": [
+                  "They use these mental shortcuts to bypass the effort of collecting complete information.",
+                  "They are forced to follow company guidelines during every purchase.",
+                  "They want to ensure every mathematical computation is entirely accurate."
+                ],
+                "answer": "They use these mental shortcuts to bypass the effort of collecting complete information.",
+                "explanation": "The passage explains that individuals rely on rules of thumb rather than gathering complete data under complex conditions.",
+                "part": "reading",
+                "partIndex": 2,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-3",
+                "question": "How does the author explain the mechanism of price anchoring?",
+                "options": [
+                  "An initial number creates a reference point that skews all subsequent value judgments.",
+                  "Retailers lower all prices simultaneously to confuse budget shoppers.",
+                  "Consumers memorize every past price before choosing a brand."
+                ],
+                "answer": "An initial number creates a reference point that skews all subsequent value judgments.",
+                "explanation": "Paragraph two explains that the first number presented establishes a baseline, making later discounted prices look modest by comparison.",
+                "part": "reading",
+                "partIndex": 3,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-4",
+                "question": "What does loss aversion lead investors to do, according to the text?",
+                "options": [
+                  "Retain poorly performing assets for too long in an attempt to avoid accepting a loss.",
+                  "Sell profitable assets immediately whenever interest rates rise.",
+                  "Refuse to invest any capital in modern financial institutions."
+                ],
+                "answer": "Retain poorly performing assets for too long in an attempt to avoid accepting a loss.",
+                "explanation": "The passage notes that the sting of loss is roughly twice as strong as the joy of gain, causing investors to hold failing assets too long.",
+                "part": "reading",
+                "partIndex": 4,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-5",
+                "question": "Which characteristic is essential for an intervention to qualify as a behavioral nudge?",
+                "options": [
+                  "It must guide choices without removing any options or altering direct financial incentives.",
+                  "It must impose legal fines on anyone who selects unhealthy alternatives.",
+                  "It must provide substantial monetary rewards for every compliant citizen."
+                ],
+                "answer": "It must guide choices without removing any options or altering direct financial incentives.",
+                "explanation": "Paragraph three defines a nudge as an alteration in choice architecture that neither forbids alternatives nor adjusts monetary incentives.",
+                "part": "reading",
+                "partIndex": 5,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-6",
+                "question": "What was the result when organ donation was established as the default option?",
+                "options": [
+                  "Registration rates climbed above ninety percent because citizens had to actively opt out.",
+                  "Public dissatisfaction caused donation numbers to drop significantly.",
+                  "Healthcare systems abandoned the program due to high administrative costs."
+                ],
+                "answer": "Registration rates climbed above ninety percent because citizens had to actively opt out.",
+                "explanation": "The text states that when donation became the default, registration rates routinely exceeded ninety percent.",
+                "part": "reading",
+                "partIndex": 6,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-7",
+                "question": "In the third paragraph, what counterfactual scenario does the author present regarding public policy?",
+                "options": [
+                  "Persuasion campaigns alone would not have accomplished such rapid behavioral shifts.",
+                  "Mandatory legislation would have worked faster than changing the default option.",
+                  "Financial bonuses would have eliminated the need for policy intervention entirely."
+                ],
+                "answer": "Persuasion campaigns alone would not have accomplished such rapid behavioral shifts.",
+                "explanation": "The text states: 'If governments had relied solely on persuasion campaigns, such rapid shifts in behavior would never have been achieved.'",
+                "part": "reading",
+                "partIndex": 7,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-8",
+                "question": "Why does the author express concern about commercial applications of framing?",
+                "options": [
+                  "Businesses can exploit cognitive shortcuts to push consumers into costly loans or unwanted renewals.",
+                  "Corporations generally refuse to invest money into marketing campaigns.",
+                  "Framing techniques prevent companies from earning legitimate commercial profits."
+                ],
+                "answer": "Businesses can exploit cognitive shortcuts to push consumers into costly loans or unwanted renewals.",
+                "explanation": "Paragraph four mentions that when corporations apply framing, these methods can turn into traps leading customers toward high-interest credit or unwanted subscriptions.",
+                "part": "reading",
+                "partIndex": 8,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-9",
+                "question": "What condition must public nudges satisfy in order to retain citizen trust?",
+                "options": [
+                  "They must remain transparent and open to public inspection.",
+                  "They must be designed exclusively by private technology firms.",
+                  "They must be applied covertly without informing the electorate."
+                ],
+                "answer": "They must remain transparent and open to public inspection.",
+                "explanation": "The passage notes that if public institutions want to maintain trust, behavioral interventions must remain transparent.",
+                "part": "reading",
+                "partIndex": 9,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-10",
+                "question": "Which statement best summarizes the author's overall stance in the passage?",
+                "options": [
+                  "Behavioral nudges are valuable tools, yet their impact on personal autonomy requires ongoing public scrutiny.",
+                  "Classical economic models should replace modern behavioral insights completely.",
+                  "Default settings are inherently unethical and should be banned across all industries."
+                ],
+                "answer": "Behavioral nudges are valuable tools, yet their impact on personal autonomy requires ongoing public scrutiny.",
+                "explanation": "The conclusion points out that while nudges have transformed policy, society must determine whether guided decisions protect people or quietly erode their autonomy.",
+                "part": "reading",
+                "partIndex": 10,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "question": "Select the sentence with the correct non-defining relative clause punctuation:",
+                "options": [
+                  "Our senior analyst, who joined the firm last January, presented the financial forecast.",
+                  "Our senior analyst who joined the firm last January presented the financial forecast.",
+                  "Our senior analyst, who joined the firm last January presented the financial forecast.",
+                  "Our senior analyst who joined the firm last January, presented the financial forecast."
+                ],
+                "answer": "Our senior analyst, who joined the firm last January, presented the financial forecast.",
+                "explanation": "Non-defining relative clauses must be enclosed by commas on both sides.",
+                "id": "q-b2.3-m03-r-11",
+                "part": "reading",
+                "partIndex": 11,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "question": "What does the expression 'think outside the box' convey in an entrepreneurial context?",
+                "options": [
+                  "Approach problems with non-traditional and creative perspectives.",
+                  "Store physical inventory outside the warehouse boundaries.",
+                  "Follow standard operating procedures without deviation.",
+                  "Ignore financial accounting standards during quarterly audits."
+                ],
+                "answer": "Approach problems with non-traditional and creative perspectives.",
+                "explanation": "The idiom 'think outside the box' signifies lateral and innovative thinking.",
+                "id": "q-b2.3-m03-r-12",
+                "part": "reading",
+                "partIndex": 12,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "question": "Choose the correct reported speech: '\"I have submitted the report,\" said David.'",
+                "options": [
+                  "David said that he had submitted the report.",
+                  "David said that he has submitted the report.",
+                  "David said that he will submit the report.",
+                  "David said that he submits the report."
+                ],
+                "answer": "David said that he had submitted the report.",
+                "explanation": "Present perfect in direct speech backshifts to past perfect in reported speech.",
+                "id": "q-b2.3-m03-r-13",
+                "part": "reading",
+                "partIndex": 13,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "question": "Which preposition correctly completes the sentence: 'She is responsible _____ supervising quality assurance.'",
+                "options": [
+                  "for",
+                  "with",
+                  "to",
+                  "at"
+                ],
+                "answer": "for",
+                "explanation": "The adjective 'responsible' collocates with 'for' when indicating duty or charge.",
+                "id": "q-b2.3-m03-r-14",
+                "part": "reading",
+                "partIndex": 14,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "question": "What distinction exists between 'economic' and 'economical'?",
+                "options": [
+                  "'Economic' relates to the economy, whereas 'economical' means avoiding waste or saving money.",
+                  "'Economic' means inexpensive, whereas 'economical' relates to government finance.",
+                  "Both terms are completely interchangeable in formal English.",
+                  "'Economical' is only used as a noun, whereas 'economic' is an adverb."
+                ],
+                "answer": "'Economic' relates to the economy, whereas 'economical' means avoiding waste or saving money.",
+                "explanation": "'Economic' refers to national financial systems, while 'economical' refers to frugality or efficiency.",
+                "id": "q-b2.3-m03-r-15",
+                "part": "reading",
+                "partIndex": 15,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-1",
+                "type": "dictation",
+                "audioText": "Automatic enrollment increased our participation rates.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dr. Mitchell: \"Automatic enrollment increased our participation _____.\"",
+                "targetWord": "rates",
+                "explanation": "Full audio: \"Automatic enrollment increased our participation rates.\". The missing word is \"rates\".",
+                "part": "listening",
+                "partIndex": 1,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-2",
+                "type": "dictation",
+                "audioText": "Does that violate personal autonomy, Sarah?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Marcus: \"Does that violate personal autonomy, _____?\"",
+                "targetWord": "Sarah",
+                "explanation": "Full audio: \"Does that violate personal autonomy, Sarah?\". The missing word is \"Sarah\".",
+                "part": "listening",
+                "partIndex": 2,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-3",
+                "type": "dictation",
+                "audioText": "People struggle with status quo bias.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dr. Mitchell: \"People struggle with status quo _____.\"",
+                "targetWord": "bias",
+                "explanation": "Full audio: \"People struggle with status quo bias.\". The missing word is \"bias\".",
+                "part": "listening",
+                "partIndex": 3,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-4",
+                "type": "dictation",
+                "audioText": "So we exploit their natural inertia?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Marcus: \"So we exploit their natural _____?\"",
+                "targetWord": "inertia",
+                "explanation": "Full audio: \"So we exploit their natural inertia?\". The missing word is \"inertia\".",
+                "part": "listening",
+                "partIndex": 4,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-5",
+                "type": "dictation",
+                "audioText": "We anchor them to better outcomes.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dr. Mitchell: \"We anchor them to better _____.\"",
+                "targetWord": "outcomes",
+                "explanation": "Full audio: \"We anchor them to better outcomes.\". The missing word is \"outcomes\".",
+                "part": "listening",
+                "partIndex": 5,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-6",
+                "type": "arrange",
+                "audioText": "Loss aversion helps our case too.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Loss aversion helps our case too",
+                "words": [
+                  "too",
+                  "our",
+                  "aversion",
+                  "case",
+                  "Loss",
+                  "helps"
+                ],
+                "explanation": "Correct sentence order: \"Loss aversion helps our case too.\".",
+                "part": "listening",
+                "partIndex": 6,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-7",
+                "type": "arrange",
+                "audioText": "Information alone rarely changes human behavior.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Information alone rarely changes human behavior",
+                "words": [
+                  "alone",
+                  "behavior",
+                  "changes",
+                  "rarely",
+                  "human",
+                  "Information"
+                ],
+                "explanation": "Correct sentence order: \"Information alone rarely changes human behavior.\".",
+                "part": "listening",
+                "partIndex": 7,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-8",
+                "type": "arrange",
+                "audioText": "Framing the message matters a lot.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Framing the message matters a lot",
+                "words": [
+                  "matters",
+                  "lot",
+                  "the",
+                  "message",
+                  "Framing",
+                  "a"
+                ],
+                "explanation": "Correct sentence order: \"Framing the message matters a lot.\".",
+                "part": "listening",
+                "partIndex": 8,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-9",
+                "type": "arrange",
+                "audioText": "Loss-framed messages usually perform best.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Loss-framed messages usually perform best",
+                "words": [
+                  "messages",
+                  "best",
+                  "Loss-framed",
+                  "perform",
+                  "usually"
+                ],
+                "explanation": "Correct sentence order: \"Loss-framed messages usually perform best.\".",
+                "part": "listening",
+                "partIndex": 9,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-10",
+                "type": "arrange",
+                "audioText": "Let us test both message styles.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Let us test both message styles",
+                "words": [
+                  "styles",
+                  "both",
+                  "us",
+                  "Let",
+                  "message",
+                  "test"
+                ],
+                "explanation": "Correct sentence order: \"Let us test both message styles.\".",
+                "part": "listening",
+                "partIndex": 10,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "type": "arrange",
+                "audioText": "She explained that the initial forecast had underestimated consumer demand.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "She explained that the initial forecast had underestimated consumer demand",
+                "words": [
+                  "forecast",
+                  "She",
+                  "that",
+                  "underestimated",
+                  "had",
+                  "demand",
+                  "initial",
+                  "consumer",
+                  "the",
+                  "explained"
+                ],
+                "explanation": "Urutan benar: 'She explained that the initial forecast had underestimated consumer demand.'.",
+                "id": "q-b2.3-m03-l-11",
+                "part": "listening",
+                "partIndex": 11,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "type": "dictation",
+                "audioText": "We must establish clear benchmarks before launching the marketing campaign.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "We must establish clear _____ before launching the marketing campaign.",
+                "targetWord": "benchmarks",
+                "explanation": "Audio lengkap: 'We must establish clear benchmarks before launching the marketing campaign.'. Kata: 'benchmarks'.",
+                "id": "q-b2.3-m03-l-12",
+                "part": "listening",
+                "partIndex": 12,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "type": "arrange",
+                "audioText": "Customer retention improved significantly following the service upgrade.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "Customer retention improved significantly following the service upgrade",
+                "words": [
+                  "significantly",
+                  "retention",
+                  "upgrade",
+                  "Customer",
+                  "service",
+                  "the",
+                  "following",
+                  "improved"
+                ],
+                "explanation": "Urutan benar: 'Customer retention improved significantly following the service upgrade.'.",
+                "id": "q-b2.3-m03-l-13",
+                "part": "listening",
+                "partIndex": 13,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "type": "dictation",
+                "audioText": "The company demonstrated resilience during the economic downturn.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "The company demonstrated _____ during the economic downturn.",
+                "targetWord": "resilience",
+                "explanation": "Audio lengkap: 'The company demonstrated resilience during the economic downturn.'. Kata: 'resilience'.",
+                "id": "q-b2.3-m03-l-14",
+                "part": "listening",
+                "partIndex": 14,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "type": "arrange",
+                "audioText": "Both parties agreed to maintain strict confidentiality regarding the negotiations.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "Both parties agreed to maintain strict confidentiality regarding the negotiations",
+                "words": [
+                  "confidentiality",
+                  "maintain",
+                  "Both",
+                  "regarding",
+                  "agreed",
+                  "negotiations",
+                  "parties",
+                  "to",
+                  "strict",
+                  "the"
+                ],
+                "explanation": "Urutan benar: 'Both parties agreed to maintain strict confidentiality regarding the negotiations.'.",
+                "id": "q-b2.3-m03-l-15",
+                "part": "listening",
+                "partIndex": 15,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-1",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence in the passive voice to create an objective academic tone:",
+                "promptText": "Supermarket managers deliberately place candy near the checkout counter to encourage impulse purchases.",
+                "hint": "Begin with 'Candy is deliberately placed...'",
+                "targetAnswers": [
+                  "Candy is deliberately placed near the checkout counter to encourage impulse purchases.",
+                  "Candy is deliberately placed near the checkout counters to encourage impulse purchases."
+                ],
+                "explanation": "To shift focus onto the product rather than the managers, change the active verb 'place' into the passive structure 'is deliberately placed'.",
+                "part": "writing",
+                "partIndex": 1,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-2",
+                "typeLabel": "Conjunctions & Connectors",
+                "instruction": "Combine the two statements into one hypothetical sentence using a Type 2 conditional with 'If':",
+                "promptText": "Consumers are not aware of the sunk cost fallacy. They continue wasting money on bad subscriptions.",
+                "hint": "Start with 'If consumers were aware...'",
+                "targetAnswers": [
+                  "If consumers were aware of the sunk cost fallacy, they would not continue wasting money on bad subscriptions.",
+                  "If consumers were aware of the sunk cost fallacy, they wouldn't continue wasting money on bad subscriptions."
+                ],
+                "explanation": "Type 2 conditionals use the past simple in the if-clause ('were aware') and 'would + base verb' in the main clause ('would not continue').",
+                "part": "writing",
+                "partIndex": 2,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-3",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the punctuation and capitalization errors in this sentence:",
+                "promptText": "if behavioral economists had warned the government earlier inflation expectations would have been managed better",
+                "hint": "Capitalize the first word and add a comma between the clauses.",
+                "targetAnswers": [
+                  "If behavioral economists had warned the government earlier, inflation expectations would have been managed better.",
+                  "If behavioral economists had warned the government earlier, inflation expectations would've been managed better."
+                ],
+                "explanation": "The first word must be capitalized, and a conditional clause placed at the beginning of a sentence must be followed by a comma.",
+                "part": "writing",
+                "partIndex": 3,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-4",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite this sentence using the present perfect tense to emphasize continuing historical influence:",
+                "promptText": "Loss aversion began altering financial risk models twenty years ago, and it still does today.",
+                "hint": "Use 'has altered' or 'has shaped'.",
+                "targetAnswers": [
+                  "Loss aversion has altered financial risk models for twenty years.",
+                  "Loss aversion has shaped financial risk models for twenty years."
+                ],
+                "explanation": "The present perfect ('has altered' or 'has shaped') describes an action that started in the past and continues to affect the present.",
+                "part": "writing",
+                "partIndex": 4,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-5",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this real past event into a Type 3 conditional evaluating an alternative outcome:",
+                "promptText": "The hospital did not make organ donation the default option, so registration numbers remained low.",
+                "hint": "Start with 'If the hospital had made...'",
+                "targetAnswers": [
+                  "If the hospital had made organ donation the default option, registration numbers would have increased.",
+                  "If the hospital had made organ donation the default option, registration numbers would not have remained low.",
+                  "If the hospital had made organ donation the default option, registration numbers wouldn't have remained low."
+                ],
+                "explanation": "Type 3 conditionals describe counterfactual past scenarios using 'had + past participle' in the condition and 'would have + past participle' in the result.",
+                "part": "writing",
+                "partIndex": 5,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-6",
+                "typeLabel": "Conjunctions & Connectors",
+                "instruction": "Complete the sentence logically using 'unless' to express a condition for changing public behavior:",
+                "promptText": "Citizens will not reduce their household energy consumption [...] incentives are presented clearly.",
+                "hint": "Use the conjunction 'unless'.",
+                "targetAnswers": [
+                  "Citizens will not reduce their household energy consumption unless incentives are presented clearly.",
+                  "Citizens won't reduce their household energy consumption unless incentives are presented clearly."
+                ],
+                "explanation": "'Unless' means 'except if' and introduces the required condition for citizens to change their energy habits.",
+                "part": "writing",
+                "partIndex": 6,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-7",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the subject-verb agreement and spelling mistakes in this analytical sentence:",
+                "promptText": "A wide variety of cognitive biasses has been documented by researchers recently.",
+                "hint": "Check the spelling of 'biases'.",
+                "targetAnswers": [
+                  "A wide variety of cognitive biases has been documented by researchers recently.",
+                  "A wide variety of cognitive biases have been documented by researchers recently."
+                ],
+                "explanation": "The plural of 'bias' is 'biases' (one 's' before 'es').",
+                "part": "writing",
+                "partIndex": 7,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-8",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence in the passive voice without mentioning the unknown actors:",
+                "promptText": "Companies often frame price discounts as limited-time offers to generate urgency.",
+                "hint": "Begin with 'Price discounts are often framed...'",
+                "targetAnswers": [
+                  "Price discounts are often framed as limited-time offers to generate urgency.",
+                  "Price discounts are often framed as limited time offers to generate urgency."
+                ],
+                "explanation": "The passive form 'are often framed' shifts attention from the corporations to the pricing tactic itself.",
+                "part": "writing",
+                "partIndex": 8,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-9",
+                "typeLabel": "Short Response",
+                "instruction": "Formulate a single Type 2 conditional sentence explaining what consumers would do if they recognized marketing nudges:",
+                "promptText": "If consumers recognized marketing nudges in supermarkets, [what would they do?]",
+                "hint": "Complete with a main clause such as 'they would make more rational purchases.'",
+                "targetAnswers": [
+                  "If consumers recognized marketing nudges in supermarkets, they would make more rational purchases.",
+                  "If consumers recognized marketing nudges in supermarkets, they would save more money.",
+                  "If consumers recognized marketing nudges in supermarkets, they would avoid unnecessary spending.",
+                  "If consumers recognized marketing nudges in supermarkets, they would make wiser financial decisions."
+                ],
+                "explanation": "The second conditional main clause requires 'would + base verb' to express the hypothetical present consequence.",
+                "part": "writing",
+                "partIndex": 9,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-10",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Combine the ideas into one sentence using the present perfect to show a lasting effect on public policy:",
+                "promptText": "Nudge theory entered policymaking in 2008. It still guides government campaigns today.",
+                "hint": "Use 'has guided' or 'has influenced' with 'since 2008'.",
+                "targetAnswers": [
+                  "Nudge theory has guided government campaigns since 2008.",
+                  "Nudge theory has influenced government campaigns since 2008."
+                ],
+                "explanation": "Using 'has guided' or 'has influenced' with 'since 2008' accurately expresses a policy strategy that began in the past and persists in the present.",
+                "part": "writing",
+                "partIndex": 10,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-1",
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 25 seconds about a time you bought something because of an anchoring trick or promotional framing.",
+                "audioPrompt": "Describe a personal shopping experience where clever pricing or discount framing influenced your final purchase decision.",
+                "storyPoints": [
+                  "What product you were considering and what original anchor price was shown",
+                  "How the discount or framing changed your perception of the item's value",
+                  "Whether you felt satisfied or regretful once you evaluated the purchase rationally"
+                ],
+                "targetSentence": "I was shopping for winter boots and saw a pair marked down from two hundred dollars to eighty, which made the deal feel irresistible due to anchoring.",
+                "phonetic": "/aɪ wɒz ˈʃɒpɪŋ fɔː ˈwɪntə buːts ænd sɔː ə peə mɑːkt daʊn frɒm tuː ˈhʌndrəd ˈdɒləz tuː ˈeɪti wɪtʃ meɪd ðə diːl fiːl ˌɪrɪˈzɪstəbl djuː tuː ˈæŋkərɪŋ/",
+                "expectedKeywords": [
+                  "anchoring",
+                  "discount",
+                  "framing",
+                  "decision",
+                  "value"
+                ],
+                "explanation": "Narrate the event using past narrative tenses, showing clear awareness of the anchoring concept.",
+                "part": "speaking",
+                "partIndex": 1,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-2",
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 25 seconds about how a default setting on an app or website influenced your daily habits.",
+                "audioPrompt": "Tell a story about how an automatic default setting, such as pre-selected options or automatic renewals, affected your time or spending.",
+                "storyPoints": [
+                  "Which application or service you signed up for and what the default choice was",
+                  "How long you kept the default setting before noticing its financial or practical impact",
+                  "What changes you made after recognizing your behavioral inertia"
+                ],
+                "targetSentence": "When I registered for the streaming service, the annual subscription was checked as the default, so I accidentally committed for a whole year due to inertia.",
+                "phonetic": "/wɛn aɪ ˈrɛdʒɪstəd fɔː ðə ˈstriːmɪŋ ˈsɜːvɪs ði ˈænjuəl səbˈskrɪpʃn wɒz tʃɛkt æz ðə dɪˈfɔːlt səʊ aɪ ˌæksɪˈdɛntli kəˈmɪtɪd fɔːr ə həʊl jɪə djuː tuː ɪˈnɜːʃə/",
+                "expectedKeywords": [
+                  "default",
+                  "subscription",
+                  "inertia",
+                  "habits",
+                  "choice"
+                ],
+                "explanation": "Use past sequence markers like 'initially', 'subsequently', and 'eventually' to structure your story clearly.",
+                "part": "speaking",
+                "partIndex": 2,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-3",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to your business partner who wants to set annual subscriptions as an unselected opt-in rather than a pre-checked default.",
+                "audioPrompt": "Our revenue could drop if we make the annual plan optional. Why shouldn't we keep it as the default choice for new subscribers?",
+                "scenarioContext": "You are advising a software startup on ethical user acquisition and consumer trust.",
+                "characterRole": "Senior Growth Strategist",
+                "targetSentence": "If we make it the default without explicit consent, we risk high chargebacks and customer backlash due to perceived deception.",
+                "phonetic": "/ɪf wiː meɪk ɪt ðə dɪˈfɔːlt wɪˈðaʊt ɪkˈsplɪsɪt kənˈsɛnt wiː rɪsk haɪ ˈtʃɑːdʒbæks ænd ˈkʌstəmə ˈbæklæʃ djuː tuː pəˈsiːvd dɪˈsɛpʃn/",
+                "expectedKeywords": [
+                  "default",
+                  "consent",
+                  "backlash",
+                  "transparency",
+                  "trust"
+                ],
+                "explanation": "State your counterargument firmly using conditional structures and behavioral terminology.",
+                "part": "speaking",
+                "partIndex": 3,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-4",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Defend a public health initiative that uses gentle nudges instead of strict legal bans to reduce sugary drink consumption.",
+                "audioPrompt": "Why are you placing soda on lower shelves instead of simply outlawing sugary beverages in school cafeterias?",
+                "scenarioContext": "You are presenting a municipal health project to an impatient school board committee.",
+                "characterRole": "Public Health Officer",
+                "targetSentence": "A gentle nudge preserves personal autonomy while using behavioral heuristics to steer students toward healthier drinks naturally.",
+                "phonetic": "/ə ˈdʒɛntl nʌdʒ prɪˈzɜːvz ˈpɜːsənl ɔːˈtɒnəmi waɪl ˈjuːzɪŋ bɪˈheɪvjərəl hjʊəˈrɪstɪks tuː stɪə ˈstjuːdənts təˈwɔːd ˈhɛlθiə drɪŋks ˈnætʃrəli/",
+                "expectedKeywords": [
+                  "nudge",
+                  "autonomy",
+                  "heuristics",
+                  "choice",
+                  "healthier"
+                ],
+                "explanation": "Provide a professional defense highlighting the balance between consumer choice and positive outcomes.",
+                "part": "speaking",
+                "partIndex": 4,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-5",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Explain to a rookie investor why holding onto a plunging tech stock stems from irrational loss aversion.",
+                "audioPrompt": "I refuse to sell this stock right now because that would mean admitting a thirty percent loss. Shouldn't I just wait for it to bounce back?",
+                "scenarioContext": "You are coaching a private wealth client who is emotionally attached to an unprofitable portfolio asset.",
+                "characterRole": "Financial Advisory Coach",
+                "targetSentence": "Holding that declining asset reflects loss aversion, because the emotional pain of realizing a loss outweighs sound financial rationality.",
+                "phonetic": "/ˈhəʊldɪŋ ðæt dɪˈklaɪnɪŋ ˈæsɛt rɪˈflɛkts lɒs əˈvɜːʃn bɪˈkɒz ði ɪˈməʊʃənl peɪn ɒv ˈrɪəlaɪzɪŋ ə lɒs aʊtˈweɪz saʊnd faɪˈnænʃl ˌræʃəˈnæləti/",
+                "expectedKeywords": [
+                  "loss aversion",
+                  "rationality",
+                  "realizing",
+                  "emotional",
+                  "asset"
+                ],
+                "explanation": "Use empathetic yet objective advisory language to contrast emotional bias with logical capital management.",
+                "part": "speaking",
+                "partIndex": 5,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-6",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Explain how framing meat packaging as ninety percent fat free changes customer perception compared to stating ten percent fat.",
+                "audioPrompt": "Does positive framing truly alter sales figures, or do consumers calculate the nutritional numbers anyway?",
+                "scenarioContext": "You are presenting retail analytics to a supermarket chain merchandising team.",
+                "characterRole": "Consumer Insight Analyst",
+                "targetSentence": "Positive framing highlights the healthy attribute, so consumers perceive ninety percent fat free as far superior to ten percent fat.",
+                "phonetic": "/ˈpɒzətɪv ˈfreɪmɪŋ ˈhaɪlaɪts ðə ˈhɛlθi ˈætrɪbjuːt səʊ kənˈsjuːməz pəˈsiːv ˈnaɪnti pəˈsɛnt fæt friː æz fɑː suːˈpɪəriə tuː tɛn pəˈsɛnt fæt/",
+                "expectedKeywords": [
+                  "framing",
+                  "perceive",
+                  "attribute",
+                  "consumers",
+                  "superior"
+                ],
+                "explanation": "Deliver a concise analytical explanation emphasizing cognitive shortcuts and consumer response.",
+                "part": "speaking",
+                "partIndex": 6,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-7",
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Production Drill",
+                "instruction": "Formulate a sentence using the terms 'heuristic' and 'overconfidence' to explain market volatility.",
+                "audioPrompt": "Combine 'heuristic' and 'overconfidence' in a clear, formal statement about economic behavior.",
+                "targetSentence": "Traders often rely on an availability heuristic, which fuels unwarranted overconfidence during asset bubbles.",
+                "phonetic": "/ˈtreɪdəz ˈɒfn rɪˈlaɪ ɒn ən əˌveɪləˈbɪləti hjʊəˈrɪstɪk wɪtʃ fjuːəlz ʌnˈwɒrəntɪd ˌəʊvəˈkɒnfɪdəns ˈdjʊərɪŋ ˈæsɛt ˈbʌblz/",
+                "expectedKeywords": [
+                  "heuristic",
+                  "overconfidence",
+                  "unwarranted",
+                  "bubbles",
+                  "rely"
+                ],
+                "explanation": "Highlight how fast decision rules interact with unrealistic confidence in complex financial situations.",
+                "part": "speaking",
+                "partIndex": 7,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-8",
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Structure Drill",
+                "instruction": "Use a third conditional structure to explain how an altered default setting would have modified public savings.",
+                "audioPrompt": "Explain what would have happened if the government had introduced automatic pension enrollment five years earlier.",
+                "targetSentence": "If policymakers had instituted automatic enrollment sooner, citizens would have accumulated considerably larger retirement savings.",
+                "phonetic": "/ɪf ˈpɒlɪsiˌmeɪkəz hæd ˈɪnstɪtjuːtɪd ˌɔːtəˈmætɪk ɪnˈrəʊlmənt ˈsuːnə ˈsɪtɪznz wʊd hæv əˈkjuːmjəleɪtɪd kənˈsɪdərəbli ˈlɑːdʒə rɪˈtaɪəmənt ˈseɪvɪŋz/",
+                "expectedKeywords": [
+                  "had instituted",
+                  "would have accumulated",
+                  "enrollment",
+                  "pension",
+                  "savings"
+                ],
+                "explanation": "Produce a grammatically accurate third conditional with 'had + past participle' and 'would have + past participle'.",
+                "part": "speaking",
+                "partIndex": 8,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-9",
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress Drill",
+                "instruction": "Pronounce the sentence with correct primary stress on 'aversion' and 'rationality'.",
+                "audioPrompt": "Read the sentence clearly, ensuring the stressed syllables in 'aversion' and 'rationality' are accurately emphasized.",
+                "targetSentence": "Deep loss aversion frequently clouds financial rationality when markets fluctuate.",
+                "phonetic": "/diːp lɒs əˈvɜːʃn ˈfriːkwəntli klaʊdz faɪˈnænʃl ˌræʃəˈnæləti wɛn ˈmɑːkɪts ˈflʌktʃueɪt/",
+                "expectedKeywords": [
+                  "aversion",
+                  "rationality",
+                  "clouds",
+                  "financial",
+                  "fluctuate"
+                ],
+                "explanation": "Stress the second syllable in a-VER-sion and the third syllable in ra-tion-AL-i-ty.",
+                "part": "speaking",
+                "partIndex": 9,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-10",
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Drill",
+                "instruction": "Read the alternative question with rising intonation on the first choice and falling intonation on the final choice.",
+                "audioPrompt": "Deliver this comparison with rising intonation on 'choice architecture' and falling intonation on 'financial incentives'.",
+                "targetSentence": "Should we influence consumer behavior through choice architecture, or rely exclusively on financial incentives?",
+                "phonetic": "/ʃʊd wiː ˈɪnflʊəns kənˈsjuːmə bɪˈheɪvjə θruː tʃɔɪs ˈɑːkɪtɛktʃə ɔː rɪˈlaɪ ɪkˈskluːsɪvli ɒn faɪˈnænʃl ɪnˈsɛntɪvz/",
+                "expectedKeywords": [
+                  "influence",
+                  "choice architecture",
+                  "rely",
+                  "financial incentives"
+                ],
+                "explanation": "Use a rising pitch contour at the end of 'architecture' followed by a definite falling pitch on 'incentives'.",
+                "part": "speaking",
+                "partIndex": 10,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "category": "Performance Review",
+                "instruction": "Ucapkan umpan balik evaluasi kinerja:",
+                "prompt": "Your consistent dedication to mentorship has significantly bolstered team morale and elevated our overall code delivery standard.",
+                "sampleAnswer": "Your consistent dedication to mentorship has significantly bolstered team morale and elevated our overall code delivery standard.",
+                "phonetic": "/jɔː kənˈsɪstənt ˌdedɪˈkeɪʃn tə ˈmentɔːʃɪp/",
+                "keywords": [
+                  "dedication",
+                  "mentorship",
+                  "morale",
+                  "standard"
+                ],
+                "id": "q-b2.3-m03-s-11",
+                "part": "speaking",
+                "partIndex": 11,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "category": "Customer Relations",
+                "instruction": "Ucapkan respon penanganan keluhan klien tingkat tinggi:",
+                "prompt": "We sincerely apologize for the service interruption and have implemented immediate safeguards to ensure it will not recur.",
+                "sampleAnswer": "We sincerely apologize for the service interruption and have implemented immediate safeguards to ensure it will not recur.",
+                "phonetic": "/wiː sɪnˈsɪəli əˈpɒlədʒaɪz fə ðə ˈsɜːvɪs/",
+                "keywords": [
+                  "apologize",
+                  "interruption",
+                  "safeguards",
+                  "recur"
+                ],
+                "id": "q-b2.3-m03-s-12",
+                "part": "speaking",
+                "partIndex": 12,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "category": "Data Interpretation",
+                "instruction": "Ucapkan kesimpulan hasil analisis data:",
+                "prompt": "The empirical survey data demonstrates an undeniable correlation between proactive communication and high client satisfaction rates.",
+                "sampleAnswer": "The empirical survey data demonstrates an undeniable correlation between proactive communication and high client satisfaction rates.",
+                "phonetic": "/ði ɪmˈpɪrɪkl ˈsɜːveɪ ˈdeɪtə/",
+                "keywords": [
+                  "empirical",
+                  "correlation",
+                  "proactive",
+                  "satisfaction"
+                ],
+                "id": "q-b2.3-m03-s-13",
+                "part": "speaking",
+                "partIndex": 13,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "category": "Change Management",
+                "instruction": "Ucapkan ajakan adaptasi sistem baru:",
+                "prompt": "Adopting this new infrastructure requires initial adjustment, but the long-term productivity advantages far outweigh the transitional overhead.",
+                "sampleAnswer": "Adopting this new infrastructure requires initial adjustment, but the long-term productivity advantages far outweigh the transitional overhead.",
+                "phonetic": "/əˈdɒptɪŋ ðɪs njuː ˈɪnfrəstrʌktʃə/",
+                "keywords": [
+                  "infrastructure",
+                  "productivity",
+                  "outweigh",
+                  "overhead"
+                ],
+                "id": "q-b2.3-m03-s-14",
+                "part": "speaking",
+                "partIndex": 14,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "category": "Incentive Justification",
+                "instruction": "Ucapkan argumen pembenaran alokasi anggaran:",
+                "prompt": "Allocating additional resources to cybersecurity is not an optional luxury, but a fundamental prerequisite for enterprise growth.",
+                "sampleAnswer": "Allocating additional resources to cybersecurity is not an optional luxury, but a fundamental prerequisite for enterprise growth.",
+                "phonetic": "/ˈæləkeɪtɪŋ əˈdɪʃənl rɪˈzɔːsɪz/",
+                "keywords": [
+                  "allocating",
+                  "cybersecurity",
+                  "prerequisite",
+                  "growth"
+                ],
+                "id": "q-b2.3-m03-s-15",
+                "part": "speaking",
+                "partIndex": 15,
+                "sourceModule": "B2.3-M03"
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": "q-b2.3-m03-r-1",
+                "question": "What primary assumption of classical economics has been challenged by behavioral economists?",
+                "options": [
+                  "That consumers make choices purely as rational beings who calculate utility without emotional bias.",
+                  "That markets are incapable of distributing resources efficiently without strict price controls.",
+                  "That individuals avoid purchasing discounted items unless they hold high incomes."
+                ],
+                "answer": "That consumers make choices purely as rational beings who calculate utility without emotional bias.",
+                "explanation": "The text states that standard theory presumed consumers were rational agents weighing costs and benefits, an idea challenged by recent research.",
+                "part": "reading",
+                "partIndex": 1,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-2",
+                "question": "According to the passage, why do consumers rely on heuristics?",
+                "options": [
+                  "They use these mental shortcuts to bypass the effort of collecting complete information.",
+                  "They are forced to follow company guidelines during every purchase.",
+                  "They want to ensure every mathematical computation is entirely accurate."
+                ],
+                "answer": "They use these mental shortcuts to bypass the effort of collecting complete information.",
+                "explanation": "The passage explains that individuals rely on rules of thumb rather than gathering complete data under complex conditions.",
+                "part": "reading",
+                "partIndex": 2,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-3",
+                "question": "How does the author explain the mechanism of price anchoring?",
+                "options": [
+                  "An initial number creates a reference point that skews all subsequent value judgments.",
+                  "Retailers lower all prices simultaneously to confuse budget shoppers.",
+                  "Consumers memorize every past price before choosing a brand."
+                ],
+                "answer": "An initial number creates a reference point that skews all subsequent value judgments.",
+                "explanation": "Paragraph two explains that the first number presented establishes a baseline, making later discounted prices look modest by comparison.",
+                "part": "reading",
+                "partIndex": 3,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-4",
+                "question": "What does loss aversion lead investors to do, according to the text?",
+                "options": [
+                  "Retain poorly performing assets for too long in an attempt to avoid accepting a loss.",
+                  "Sell profitable assets immediately whenever interest rates rise.",
+                  "Refuse to invest any capital in modern financial institutions."
+                ],
+                "answer": "Retain poorly performing assets for too long in an attempt to avoid accepting a loss.",
+                "explanation": "The passage notes that the sting of loss is roughly twice as strong as the joy of gain, causing investors to hold failing assets too long.",
+                "part": "reading",
+                "partIndex": 4,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-5",
+                "question": "Which characteristic is essential for an intervention to qualify as a behavioral nudge?",
+                "options": [
+                  "It must guide choices without removing any options or altering direct financial incentives.",
+                  "It must impose legal fines on anyone who selects unhealthy alternatives.",
+                  "It must provide substantial monetary rewards for every compliant citizen."
+                ],
+                "answer": "It must guide choices without removing any options or altering direct financial incentives.",
+                "explanation": "Paragraph three defines a nudge as an alteration in choice architecture that neither forbids alternatives nor adjusts monetary incentives.",
+                "part": "reading",
+                "partIndex": 5,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-6",
+                "question": "What was the result when organ donation was established as the default option?",
+                "options": [
+                  "Registration rates climbed above ninety percent because citizens had to actively opt out.",
+                  "Public dissatisfaction caused donation numbers to drop significantly.",
+                  "Healthcare systems abandoned the program due to high administrative costs."
+                ],
+                "answer": "Registration rates climbed above ninety percent because citizens had to actively opt out.",
+                "explanation": "The text states that when donation became the default, registration rates routinely exceeded ninety percent.",
+                "part": "reading",
+                "partIndex": 6,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-7",
+                "question": "In the third paragraph, what counterfactual scenario does the author present regarding public policy?",
+                "options": [
+                  "Persuasion campaigns alone would not have accomplished such rapid behavioral shifts.",
+                  "Mandatory legislation would have worked faster than changing the default option.",
+                  "Financial bonuses would have eliminated the need for policy intervention entirely."
+                ],
+                "answer": "Persuasion campaigns alone would not have accomplished such rapid behavioral shifts.",
+                "explanation": "The text states: 'If governments had relied solely on persuasion campaigns, such rapid shifts in behavior would never have been achieved.'",
+                "part": "reading",
+                "partIndex": 7,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-8",
+                "question": "Why does the author express concern about commercial applications of framing?",
+                "options": [
+                  "Businesses can exploit cognitive shortcuts to push consumers into costly loans or unwanted renewals.",
+                  "Corporations generally refuse to invest money into marketing campaigns.",
+                  "Framing techniques prevent companies from earning legitimate commercial profits."
+                ],
+                "answer": "Businesses can exploit cognitive shortcuts to push consumers into costly loans or unwanted renewals.",
+                "explanation": "Paragraph four mentions that when corporations apply framing, these methods can turn into traps leading customers toward high-interest credit or unwanted subscriptions.",
+                "part": "reading",
+                "partIndex": 8,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-9",
+                "question": "What condition must public nudges satisfy in order to retain citizen trust?",
+                "options": [
+                  "They must remain transparent and open to public inspection.",
+                  "They must be designed exclusively by private technology firms.",
+                  "They must be applied covertly without informing the electorate."
+                ],
+                "answer": "They must remain transparent and open to public inspection.",
+                "explanation": "The passage notes that if public institutions want to maintain trust, behavioral interventions must remain transparent.",
+                "part": "reading",
+                "partIndex": 9,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-r-10",
+                "question": "Which statement best summarizes the author's overall stance in the passage?",
+                "options": [
+                  "Behavioral nudges are valuable tools, yet their impact on personal autonomy requires ongoing public scrutiny.",
+                  "Classical economic models should replace modern behavioral insights completely.",
+                  "Default settings are inherently unethical and should be banned across all industries."
+                ],
+                "answer": "Behavioral nudges are valuable tools, yet their impact on personal autonomy requires ongoing public scrutiny.",
+                "explanation": "The conclusion points out that while nudges have transformed policy, society must determine whether guided decisions protect people or quietly erode their autonomy.",
+                "part": "reading",
+                "partIndex": 10,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "question": "Select the sentence with the correct non-defining relative clause punctuation:",
+                "options": [
+                  "Our senior analyst, who joined the firm last January, presented the financial forecast.",
+                  "Our senior analyst who joined the firm last January presented the financial forecast.",
+                  "Our senior analyst, who joined the firm last January presented the financial forecast.",
+                  "Our senior analyst who joined the firm last January, presented the financial forecast."
+                ],
+                "answer": "Our senior analyst, who joined the firm last January, presented the financial forecast.",
+                "explanation": "Non-defining relative clauses must be enclosed by commas on both sides.",
+                "id": "q-b2.3-m03-r-11",
+                "part": "reading",
+                "partIndex": 11,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "question": "What does the expression 'think outside the box' convey in an entrepreneurial context?",
+                "options": [
+                  "Approach problems with non-traditional and creative perspectives.",
+                  "Store physical inventory outside the warehouse boundaries.",
+                  "Follow standard operating procedures without deviation.",
+                  "Ignore financial accounting standards during quarterly audits."
+                ],
+                "answer": "Approach problems with non-traditional and creative perspectives.",
+                "explanation": "The idiom 'think outside the box' signifies lateral and innovative thinking.",
+                "id": "q-b2.3-m03-r-12",
+                "part": "reading",
+                "partIndex": 12,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "question": "Choose the correct reported speech: '\"I have submitted the report,\" said David.'",
+                "options": [
+                  "David said that he had submitted the report.",
+                  "David said that he has submitted the report.",
+                  "David said that he will submit the report.",
+                  "David said that he submits the report."
+                ],
+                "answer": "David said that he had submitted the report.",
+                "explanation": "Present perfect in direct speech backshifts to past perfect in reported speech.",
+                "id": "q-b2.3-m03-r-13",
+                "part": "reading",
+                "partIndex": 13,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "question": "Which preposition correctly completes the sentence: 'She is responsible _____ supervising quality assurance.'",
+                "options": [
+                  "for",
+                  "with",
+                  "to",
+                  "at"
+                ],
+                "answer": "for",
+                "explanation": "The adjective 'responsible' collocates with 'for' when indicating duty or charge.",
+                "id": "q-b2.3-m03-r-14",
+                "part": "reading",
+                "partIndex": 14,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "question": "What distinction exists between 'economic' and 'economical'?",
+                "options": [
+                  "'Economic' relates to the economy, whereas 'economical' means avoiding waste or saving money.",
+                  "'Economic' means inexpensive, whereas 'economical' relates to government finance.",
+                  "Both terms are completely interchangeable in formal English.",
+                  "'Economical' is only used as a noun, whereas 'economic' is an adverb."
+                ],
+                "answer": "'Economic' relates to the economy, whereas 'economical' means avoiding waste or saving money.",
+                "explanation": "'Economic' refers to national financial systems, while 'economical' refers to frugality or efficiency.",
+                "id": "q-b2.3-m03-r-15",
+                "part": "reading",
+                "partIndex": 15,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-1",
+                "type": "dictation",
+                "audioText": "Automatic enrollment increased our participation rates.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dr. Mitchell: \"Automatic enrollment increased our participation _____.\"",
+                "targetWord": "rates",
+                "explanation": "Full audio: \"Automatic enrollment increased our participation rates.\". The missing word is \"rates\".",
+                "part": "listening",
+                "partIndex": 1,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-2",
+                "type": "dictation",
+                "audioText": "Does that violate personal autonomy, Sarah?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Marcus: \"Does that violate personal autonomy, _____?\"",
+                "targetWord": "Sarah",
+                "explanation": "Full audio: \"Does that violate personal autonomy, Sarah?\". The missing word is \"Sarah\".",
+                "part": "listening",
+                "partIndex": 2,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-3",
+                "type": "dictation",
+                "audioText": "People struggle with status quo bias.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dr. Mitchell: \"People struggle with status quo _____.\"",
+                "targetWord": "bias",
+                "explanation": "Full audio: \"People struggle with status quo bias.\". The missing word is \"bias\".",
+                "part": "listening",
+                "partIndex": 3,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-4",
+                "type": "dictation",
+                "audioText": "So we exploit their natural inertia?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Marcus: \"So we exploit their natural _____?\"",
+                "targetWord": "inertia",
+                "explanation": "Full audio: \"So we exploit their natural inertia?\". The missing word is \"inertia\".",
+                "part": "listening",
+                "partIndex": 4,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-5",
+                "type": "dictation",
+                "audioText": "We anchor them to better outcomes.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Dr. Mitchell: \"We anchor them to better _____.\"",
+                "targetWord": "outcomes",
+                "explanation": "Full audio: \"We anchor them to better outcomes.\". The missing word is \"outcomes\".",
+                "part": "listening",
+                "partIndex": 5,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-6",
+                "type": "arrange",
+                "audioText": "Loss aversion helps our case too.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Loss aversion helps our case too",
+                "words": [
+                  "too",
+                  "our",
+                  "aversion",
+                  "case",
+                  "Loss",
+                  "helps"
+                ],
+                "explanation": "Correct sentence order: \"Loss aversion helps our case too.\".",
+                "part": "listening",
+                "partIndex": 6,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-7",
+                "type": "arrange",
+                "audioText": "Information alone rarely changes human behavior.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Information alone rarely changes human behavior",
+                "words": [
+                  "alone",
+                  "behavior",
+                  "changes",
+                  "rarely",
+                  "human",
+                  "Information"
+                ],
+                "explanation": "Correct sentence order: \"Information alone rarely changes human behavior.\".",
+                "part": "listening",
+                "partIndex": 7,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-8",
+                "type": "arrange",
+                "audioText": "Framing the message matters a lot.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Framing the message matters a lot",
+                "words": [
+                  "matters",
+                  "lot",
+                  "the",
+                  "message",
+                  "Framing",
+                  "a"
+                ],
+                "explanation": "Correct sentence order: \"Framing the message matters a lot.\".",
+                "part": "listening",
+                "partIndex": 8,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-9",
+                "type": "arrange",
+                "audioText": "Loss-framed messages usually perform best.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Loss-framed messages usually perform best",
+                "words": [
+                  "messages",
+                  "best",
+                  "Loss-framed",
+                  "perform",
+                  "usually"
+                ],
+                "explanation": "Correct sentence order: \"Loss-framed messages usually perform best.\".",
+                "part": "listening",
+                "partIndex": 9,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-l-10",
+                "type": "arrange",
+                "audioText": "Let us test both message styles.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Let us test both message styles",
+                "words": [
+                  "styles",
+                  "both",
+                  "us",
+                  "Let",
+                  "message",
+                  "test"
+                ],
+                "explanation": "Correct sentence order: \"Let us test both message styles.\".",
+                "part": "listening",
+                "partIndex": 10,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "type": "arrange",
+                "audioText": "She explained that the initial forecast had underestimated consumer demand.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "She explained that the initial forecast had underestimated consumer demand",
+                "words": [
+                  "forecast",
+                  "She",
+                  "that",
+                  "underestimated",
+                  "had",
+                  "demand",
+                  "initial",
+                  "consumer",
+                  "the",
+                  "explained"
+                ],
+                "explanation": "Urutan benar: 'She explained that the initial forecast had underestimated consumer demand.'.",
+                "id": "q-b2.3-m03-l-11",
+                "part": "listening",
+                "partIndex": 11,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "type": "dictation",
+                "audioText": "We must establish clear benchmarks before launching the marketing campaign.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "We must establish clear _____ before launching the marketing campaign.",
+                "targetWord": "benchmarks",
+                "explanation": "Audio lengkap: 'We must establish clear benchmarks before launching the marketing campaign.'. Kata: 'benchmarks'.",
+                "id": "q-b2.3-m03-l-12",
+                "part": "listening",
+                "partIndex": 12,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "type": "arrange",
+                "audioText": "Customer retention improved significantly following the service upgrade.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "Customer retention improved significantly following the service upgrade",
+                "words": [
+                  "significantly",
+                  "retention",
+                  "upgrade",
+                  "Customer",
+                  "service",
+                  "the",
+                  "following",
+                  "improved"
+                ],
+                "explanation": "Urutan benar: 'Customer retention improved significantly following the service upgrade.'.",
+                "id": "q-b2.3-m03-l-13",
+                "part": "listening",
+                "partIndex": 13,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "type": "dictation",
+                "audioText": "The company demonstrated resilience during the economic downturn.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "The company demonstrated _____ during the economic downturn.",
+                "targetWord": "resilience",
+                "explanation": "Audio lengkap: 'The company demonstrated resilience during the economic downturn.'. Kata: 'resilience'.",
+                "id": "q-b2.3-m03-l-14",
+                "part": "listening",
+                "partIndex": 14,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "type": "arrange",
+                "audioText": "Both parties agreed to maintain strict confidentiality regarding the negotiations.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "Both parties agreed to maintain strict confidentiality regarding the negotiations",
+                "words": [
+                  "confidentiality",
+                  "maintain",
+                  "Both",
+                  "regarding",
+                  "agreed",
+                  "negotiations",
+                  "parties",
+                  "to",
+                  "strict",
+                  "the"
+                ],
+                "explanation": "Urutan benar: 'Both parties agreed to maintain strict confidentiality regarding the negotiations.'.",
+                "id": "q-b2.3-m03-l-15",
+                "part": "listening",
+                "partIndex": 15,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-1",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence in the passive voice to create an objective academic tone:",
+                "promptText": "Supermarket managers deliberately place candy near the checkout counter to encourage impulse purchases.",
+                "hint": "Begin with 'Candy is deliberately placed...'",
+                "targetAnswers": [
+                  "Candy is deliberately placed near the checkout counter to encourage impulse purchases.",
+                  "Candy is deliberately placed near the checkout counters to encourage impulse purchases."
+                ],
+                "explanation": "To shift focus onto the product rather than the managers, change the active verb 'place' into the passive structure 'is deliberately placed'.",
+                "part": "writing",
+                "partIndex": 1,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-2",
+                "typeLabel": "Conjunctions & Connectors",
+                "instruction": "Combine the two statements into one hypothetical sentence using a Type 2 conditional with 'If':",
+                "promptText": "Consumers are not aware of the sunk cost fallacy. They continue wasting money on bad subscriptions.",
+                "hint": "Start with 'If consumers were aware...'",
+                "targetAnswers": [
+                  "If consumers were aware of the sunk cost fallacy, they would not continue wasting money on bad subscriptions.",
+                  "If consumers were aware of the sunk cost fallacy, they wouldn't continue wasting money on bad subscriptions."
+                ],
+                "explanation": "Type 2 conditionals use the past simple in the if-clause ('were aware') and 'would + base verb' in the main clause ('would not continue').",
+                "part": "writing",
+                "partIndex": 2,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-3",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the punctuation and capitalization errors in this sentence:",
+                "promptText": "if behavioral economists had warned the government earlier inflation expectations would have been managed better",
+                "hint": "Capitalize the first word and add a comma between the clauses.",
+                "targetAnswers": [
+                  "If behavioral economists had warned the government earlier, inflation expectations would have been managed better.",
+                  "If behavioral economists had warned the government earlier, inflation expectations would've been managed better."
+                ],
+                "explanation": "The first word must be capitalized, and a conditional clause placed at the beginning of a sentence must be followed by a comma.",
+                "part": "writing",
+                "partIndex": 3,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-4",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite this sentence using the present perfect tense to emphasize continuing historical influence:",
+                "promptText": "Loss aversion began altering financial risk models twenty years ago, and it still does today.",
+                "hint": "Use 'has altered' or 'has shaped'.",
+                "targetAnswers": [
+                  "Loss aversion has altered financial risk models for twenty years.",
+                  "Loss aversion has shaped financial risk models for twenty years."
+                ],
+                "explanation": "The present perfect ('has altered' or 'has shaped') describes an action that started in the past and continues to affect the present.",
+                "part": "writing",
+                "partIndex": 4,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-5",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this real past event into a Type 3 conditional evaluating an alternative outcome:",
+                "promptText": "The hospital did not make organ donation the default option, so registration numbers remained low.",
+                "hint": "Start with 'If the hospital had made...'",
+                "targetAnswers": [
+                  "If the hospital had made organ donation the default option, registration numbers would have increased.",
+                  "If the hospital had made organ donation the default option, registration numbers would not have remained low.",
+                  "If the hospital had made organ donation the default option, registration numbers wouldn't have remained low."
+                ],
+                "explanation": "Type 3 conditionals describe counterfactual past scenarios using 'had + past participle' in the condition and 'would have + past participle' in the result.",
+                "part": "writing",
+                "partIndex": 5,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-6",
+                "typeLabel": "Conjunctions & Connectors",
+                "instruction": "Complete the sentence logically using 'unless' to express a condition for changing public behavior:",
+                "promptText": "Citizens will not reduce their household energy consumption [...] incentives are presented clearly.",
+                "hint": "Use the conjunction 'unless'.",
+                "targetAnswers": [
+                  "Citizens will not reduce their household energy consumption unless incentives are presented clearly.",
+                  "Citizens won't reduce their household energy consumption unless incentives are presented clearly."
+                ],
+                "explanation": "'Unless' means 'except if' and introduces the required condition for citizens to change their energy habits.",
+                "part": "writing",
+                "partIndex": 6,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-7",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the subject-verb agreement and spelling mistakes in this analytical sentence:",
+                "promptText": "A wide variety of cognitive biasses has been documented by researchers recently.",
+                "hint": "Check the spelling of 'biases'.",
+                "targetAnswers": [
+                  "A wide variety of cognitive biases has been documented by researchers recently.",
+                  "A wide variety of cognitive biases have been documented by researchers recently."
+                ],
+                "explanation": "The plural of 'bias' is 'biases' (one 's' before 'es').",
+                "part": "writing",
+                "partIndex": 7,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-8",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite the sentence in the passive voice without mentioning the unknown actors:",
+                "promptText": "Companies often frame price discounts as limited-time offers to generate urgency.",
+                "hint": "Begin with 'Price discounts are often framed...'",
+                "targetAnswers": [
+                  "Price discounts are often framed as limited-time offers to generate urgency.",
+                  "Price discounts are often framed as limited time offers to generate urgency."
+                ],
+                "explanation": "The passive form 'are often framed' shifts attention from the corporations to the pricing tactic itself.",
+                "part": "writing",
+                "partIndex": 8,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-9",
+                "typeLabel": "Short Response",
+                "instruction": "Formulate a single Type 2 conditional sentence explaining what consumers would do if they recognized marketing nudges:",
+                "promptText": "If consumers recognized marketing nudges in supermarkets, [what would they do?]",
+                "hint": "Complete with a main clause such as 'they would make more rational purchases.'",
+                "targetAnswers": [
+                  "If consumers recognized marketing nudges in supermarkets, they would make more rational purchases.",
+                  "If consumers recognized marketing nudges in supermarkets, they would save more money.",
+                  "If consumers recognized marketing nudges in supermarkets, they would avoid unnecessary spending.",
+                  "If consumers recognized marketing nudges in supermarkets, they would make wiser financial decisions."
+                ],
+                "explanation": "The second conditional main clause requires 'would + base verb' to express the hypothetical present consequence.",
+                "part": "writing",
+                "partIndex": 9,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-w-10",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Combine the ideas into one sentence using the present perfect to show a lasting effect on public policy:",
+                "promptText": "Nudge theory entered policymaking in 2008. It still guides government campaigns today.",
+                "hint": "Use 'has guided' or 'has influenced' with 'since 2008'.",
+                "targetAnswers": [
+                  "Nudge theory has guided government campaigns since 2008.",
+                  "Nudge theory has influenced government campaigns since 2008."
+                ],
+                "explanation": "Using 'has guided' or 'has influenced' with 'since 2008' accurately expresses a policy strategy that began in the past and persists in the present.",
+                "part": "writing",
+                "partIndex": 10,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-1",
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 25 seconds about a time you bought something because of an anchoring trick or promotional framing.",
+                "audioPrompt": "Describe a personal shopping experience where clever pricing or discount framing influenced your final purchase decision.",
+                "storyPoints": [
+                  "What product you were considering and what original anchor price was shown",
+                  "How the discount or framing changed your perception of the item's value",
+                  "Whether you felt satisfied or regretful once you evaluated the purchase rationally"
+                ],
+                "targetSentence": "I was shopping for winter boots and saw a pair marked down from two hundred dollars to eighty, which made the deal feel irresistible due to anchoring.",
+                "phonetic": "/aɪ wɒz ˈʃɒpɪŋ fɔː ˈwɪntə buːts ænd sɔː ə peə mɑːkt daʊn frɒm tuː ˈhʌndrəd ˈdɒləz tuː ˈeɪti wɪtʃ meɪd ðə diːl fiːl ˌɪrɪˈzɪstəbl djuː tuː ˈæŋkərɪŋ/",
+                "expectedKeywords": [
+                  "anchoring",
+                  "discount",
+                  "framing",
+                  "decision",
+                  "value"
+                ],
+                "explanation": "Narrate the event using past narrative tenses, showing clear awareness of the anchoring concept.",
+                "part": "speaking",
+                "partIndex": 1,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-2",
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 25 seconds about how a default setting on an app or website influenced your daily habits.",
+                "audioPrompt": "Tell a story about how an automatic default setting, such as pre-selected options or automatic renewals, affected your time or spending.",
+                "storyPoints": [
+                  "Which application or service you signed up for and what the default choice was",
+                  "How long you kept the default setting before noticing its financial or practical impact",
+                  "What changes you made after recognizing your behavioral inertia"
+                ],
+                "targetSentence": "When I registered for the streaming service, the annual subscription was checked as the default, so I accidentally committed for a whole year due to inertia.",
+                "phonetic": "/wɛn aɪ ˈrɛdʒɪstəd fɔː ðə ˈstriːmɪŋ ˈsɜːvɪs ði ˈænjuəl səbˈskrɪpʃn wɒz tʃɛkt æz ðə dɪˈfɔːlt səʊ aɪ ˌæksɪˈdɛntli kəˈmɪtɪd fɔːr ə həʊl jɪə djuː tuː ɪˈnɜːʃə/",
+                "expectedKeywords": [
+                  "default",
+                  "subscription",
+                  "inertia",
+                  "habits",
+                  "choice"
+                ],
+                "explanation": "Use past sequence markers like 'initially', 'subsequently', and 'eventually' to structure your story clearly.",
+                "part": "speaking",
+                "partIndex": 2,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-3",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond to your business partner who wants to set annual subscriptions as an unselected opt-in rather than a pre-checked default.",
+                "audioPrompt": "Our revenue could drop if we make the annual plan optional. Why shouldn't we keep it as the default choice for new subscribers?",
+                "scenarioContext": "You are advising a software startup on ethical user acquisition and consumer trust.",
+                "characterRole": "Senior Growth Strategist",
+                "targetSentence": "If we make it the default without explicit consent, we risk high chargebacks and customer backlash due to perceived deception.",
+                "phonetic": "/ɪf wiː meɪk ɪt ðə dɪˈfɔːlt wɪˈðaʊt ɪkˈsplɪsɪt kənˈsɛnt wiː rɪsk haɪ ˈtʃɑːdʒbæks ænd ˈkʌstəmə ˈbæklæʃ djuː tuː pəˈsiːvd dɪˈsɛpʃn/",
+                "expectedKeywords": [
+                  "default",
+                  "consent",
+                  "backlash",
+                  "transparency",
+                  "trust"
+                ],
+                "explanation": "State your counterargument firmly using conditional structures and behavioral terminology.",
+                "part": "speaking",
+                "partIndex": 3,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-4",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Defend a public health initiative that uses gentle nudges instead of strict legal bans to reduce sugary drink consumption.",
+                "audioPrompt": "Why are you placing soda on lower shelves instead of simply outlawing sugary beverages in school cafeterias?",
+                "scenarioContext": "You are presenting a municipal health project to an impatient school board committee.",
+                "characterRole": "Public Health Officer",
+                "targetSentence": "A gentle nudge preserves personal autonomy while using behavioral heuristics to steer students toward healthier drinks naturally.",
+                "phonetic": "/ə ˈdʒɛntl nʌdʒ prɪˈzɜːvz ˈpɜːsənl ɔːˈtɒnəmi waɪl ˈjuːzɪŋ bɪˈheɪvjərəl hjʊəˈrɪstɪks tuː stɪə ˈstjuːdənts təˈwɔːd ˈhɛlθiə drɪŋks ˈnætʃrəli/",
+                "expectedKeywords": [
+                  "nudge",
+                  "autonomy",
+                  "heuristics",
+                  "choice",
+                  "healthier"
+                ],
+                "explanation": "Provide a professional defense highlighting the balance between consumer choice and positive outcomes.",
+                "part": "speaking",
+                "partIndex": 4,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-5",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Explain to a rookie investor why holding onto a plunging tech stock stems from irrational loss aversion.",
+                "audioPrompt": "I refuse to sell this stock right now because that would mean admitting a thirty percent loss. Shouldn't I just wait for it to bounce back?",
+                "scenarioContext": "You are coaching a private wealth client who is emotionally attached to an unprofitable portfolio asset.",
+                "characterRole": "Financial Advisory Coach",
+                "targetSentence": "Holding that declining asset reflects loss aversion, because the emotional pain of realizing a loss outweighs sound financial rationality.",
+                "phonetic": "/ˈhəʊldɪŋ ðæt dɪˈklaɪnɪŋ ˈæsɛt rɪˈflɛkts lɒs əˈvɜːʃn bɪˈkɒz ði ɪˈməʊʃənl peɪn ɒv ˈrɪəlaɪzɪŋ ə lɒs aʊtˈweɪz saʊnd faɪˈnænʃl ˌræʃəˈnæləti/",
+                "expectedKeywords": [
+                  "loss aversion",
+                  "rationality",
+                  "realizing",
+                  "emotional",
+                  "asset"
+                ],
+                "explanation": "Use empathetic yet objective advisory language to contrast emotional bias with logical capital management.",
+                "part": "speaking",
+                "partIndex": 5,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-6",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Explain how framing meat packaging as ninety percent fat free changes customer perception compared to stating ten percent fat.",
+                "audioPrompt": "Does positive framing truly alter sales figures, or do consumers calculate the nutritional numbers anyway?",
+                "scenarioContext": "You are presenting retail analytics to a supermarket chain merchandising team.",
+                "characterRole": "Consumer Insight Analyst",
+                "targetSentence": "Positive framing highlights the healthy attribute, so consumers perceive ninety percent fat free as far superior to ten percent fat.",
+                "phonetic": "/ˈpɒzətɪv ˈfreɪmɪŋ ˈhaɪlaɪts ðə ˈhɛlθi ˈætrɪbjuːt səʊ kənˈsjuːməz pəˈsiːv ˈnaɪnti pəˈsɛnt fæt friː æz fɑː suːˈpɪəriə tuː tɛn pəˈsɛnt fæt/",
+                "expectedKeywords": [
+                  "framing",
+                  "perceive",
+                  "attribute",
+                  "consumers",
+                  "superior"
+                ],
+                "explanation": "Deliver a concise analytical explanation emphasizing cognitive shortcuts and consumer response.",
+                "part": "speaking",
+                "partIndex": 6,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-7",
+                "category": "linguistic_drill",
+                "typeLabel": "Vocabulary Production Drill",
+                "instruction": "Formulate a sentence using the terms 'heuristic' and 'overconfidence' to explain market volatility.",
+                "audioPrompt": "Combine 'heuristic' and 'overconfidence' in a clear, formal statement about economic behavior.",
+                "targetSentence": "Traders often rely on an availability heuristic, which fuels unwarranted overconfidence during asset bubbles.",
+                "phonetic": "/ˈtreɪdəz ˈɒfn rɪˈlaɪ ɒn ən əˌveɪləˈbɪləti hjʊəˈrɪstɪk wɪtʃ fjuːəlz ʌnˈwɒrəntɪd ˌəʊvəˈkɒnfɪdəns ˈdjʊərɪŋ ˈæsɛt ˈbʌblz/",
+                "expectedKeywords": [
+                  "heuristic",
+                  "overconfidence",
+                  "unwarranted",
+                  "bubbles",
+                  "rely"
+                ],
+                "explanation": "Highlight how fast decision rules interact with unrealistic confidence in complex financial situations.",
+                "part": "speaking",
+                "partIndex": 7,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-8",
+                "category": "linguistic_drill",
+                "typeLabel": "Grammar Structure Drill",
+                "instruction": "Use a third conditional structure to explain how an altered default setting would have modified public savings.",
+                "audioPrompt": "Explain what would have happened if the government had introduced automatic pension enrollment five years earlier.",
+                "targetSentence": "If policymakers had instituted automatic enrollment sooner, citizens would have accumulated considerably larger retirement savings.",
+                "phonetic": "/ɪf ˈpɒlɪsiˌmeɪkəz hæd ˈɪnstɪtjuːtɪd ˌɔːtəˈmætɪk ɪnˈrəʊlmənt ˈsuːnə ˈsɪtɪznz wʊd hæv əˈkjuːmjəleɪtɪd kənˈsɪdərəbli ˈlɑːdʒə rɪˈtaɪəmənt ˈseɪvɪŋz/",
+                "expectedKeywords": [
+                  "had instituted",
+                  "would have accumulated",
+                  "enrollment",
+                  "pension",
+                  "savings"
+                ],
+                "explanation": "Produce a grammatically accurate third conditional with 'had + past participle' and 'would have + past participle'.",
+                "part": "speaking",
+                "partIndex": 8,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-9",
+                "category": "linguistic_drill",
+                "typeLabel": "Pronunciation Stress Drill",
+                "instruction": "Pronounce the sentence with correct primary stress on 'aversion' and 'rationality'.",
+                "audioPrompt": "Read the sentence clearly, ensuring the stressed syllables in 'aversion' and 'rationality' are accurately emphasized.",
+                "targetSentence": "Deep loss aversion frequently clouds financial rationality when markets fluctuate.",
+                "phonetic": "/diːp lɒs əˈvɜːʃn ˈfriːkwəntli klaʊdz faɪˈnænʃl ˌræʃəˈnæləti wɛn ˈmɑːkɪts ˈflʌktʃueɪt/",
+                "expectedKeywords": [
+                  "aversion",
+                  "rationality",
+                  "clouds",
+                  "financial",
+                  "fluctuate"
+                ],
+                "explanation": "Stress the second syllable in a-VER-sion and the third syllable in ra-tion-AL-i-ty.",
+                "part": "speaking",
+                "partIndex": 9,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "id": "q-b2.3-m03-s-10",
+                "category": "linguistic_drill",
+                "typeLabel": "Intonation Drill",
+                "instruction": "Read the alternative question with rising intonation on the first choice and falling intonation on the final choice.",
+                "audioPrompt": "Deliver this comparison with rising intonation on 'choice architecture' and falling intonation on 'financial incentives'.",
+                "targetSentence": "Should we influence consumer behavior through choice architecture, or rely exclusively on financial incentives?",
+                "phonetic": "/ʃʊd wiː ˈɪnflʊəns kənˈsjuːmə bɪˈheɪvjə θruː tʃɔɪs ˈɑːkɪtɛktʃə ɔː rɪˈlaɪ ɪkˈskluːsɪvli ɒn faɪˈnænʃl ɪnˈsɛntɪvz/",
+                "expectedKeywords": [
+                  "influence",
+                  "choice architecture",
+                  "rely",
+                  "financial incentives"
+                ],
+                "explanation": "Use a rising pitch contour at the end of 'architecture' followed by a definite falling pitch on 'incentives'.",
+                "part": "speaking",
+                "partIndex": 10,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "category": "Performance Review",
+                "instruction": "Ucapkan umpan balik evaluasi kinerja:",
+                "prompt": "Your consistent dedication to mentorship has significantly bolstered team morale and elevated our overall code delivery standard.",
+                "sampleAnswer": "Your consistent dedication to mentorship has significantly bolstered team morale and elevated our overall code delivery standard.",
+                "phonetic": "/jɔː kənˈsɪstənt ˌdedɪˈkeɪʃn tə ˈmentɔːʃɪp/",
+                "keywords": [
+                  "dedication",
+                  "mentorship",
+                  "morale",
+                  "standard"
+                ],
+                "id": "q-b2.3-m03-s-11",
+                "part": "speaking",
+                "partIndex": 11,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "category": "Customer Relations",
+                "instruction": "Ucapkan respon penanganan keluhan klien tingkat tinggi:",
+                "prompt": "We sincerely apologize for the service interruption and have implemented immediate safeguards to ensure it will not recur.",
+                "sampleAnswer": "We sincerely apologize for the service interruption and have implemented immediate safeguards to ensure it will not recur.",
+                "phonetic": "/wiː sɪnˈsɪəli əˈpɒlədʒaɪz fə ðə ˈsɜːvɪs/",
+                "keywords": [
+                  "apologize",
+                  "interruption",
+                  "safeguards",
+                  "recur"
+                ],
+                "id": "q-b2.3-m03-s-12",
+                "part": "speaking",
+                "partIndex": 12,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "category": "Data Interpretation",
+                "instruction": "Ucapkan kesimpulan hasil analisis data:",
+                "prompt": "The empirical survey data demonstrates an undeniable correlation between proactive communication and high client satisfaction rates.",
+                "sampleAnswer": "The empirical survey data demonstrates an undeniable correlation between proactive communication and high client satisfaction rates.",
+                "phonetic": "/ði ɪmˈpɪrɪkl ˈsɜːveɪ ˈdeɪtə/",
+                "keywords": [
+                  "empirical",
+                  "correlation",
+                  "proactive",
+                  "satisfaction"
+                ],
+                "id": "q-b2.3-m03-s-13",
+                "part": "speaking",
+                "partIndex": 13,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "category": "Change Management",
+                "instruction": "Ucapkan ajakan adaptasi sistem baru:",
+                "prompt": "Adopting this new infrastructure requires initial adjustment, but the long-term productivity advantages far outweigh the transitional overhead.",
+                "sampleAnswer": "Adopting this new infrastructure requires initial adjustment, but the long-term productivity advantages far outweigh the transitional overhead.",
+                "phonetic": "/əˈdɒptɪŋ ðɪs njuː ˈɪnfrəstrʌktʃə/",
+                "keywords": [
+                  "infrastructure",
+                  "productivity",
+                  "outweigh",
+                  "overhead"
+                ],
+                "id": "q-b2.3-m03-s-14",
+                "part": "speaking",
+                "partIndex": 14,
+                "sourceModule": "B2.3-M03"
+              },
+              {
+                "category": "Incentive Justification",
+                "instruction": "Ucapkan argumen pembenaran alokasi anggaran:",
+                "prompt": "Allocating additional resources to cybersecurity is not an optional luxury, but a fundamental prerequisite for enterprise growth.",
+                "sampleAnswer": "Allocating additional resources to cybersecurity is not an optional luxury, but a fundamental prerequisite for enterprise growth.",
+                "phonetic": "/ˈæləkeɪtɪŋ əˈdɪʃənl rɪˈzɔːsɪz/",
+                "keywords": [
+                  "allocating",
+                  "cybersecurity",
+                  "prerequisite",
+                  "growth"
+                ],
+                "id": "q-b2.3-m03-s-15",
+                "part": "speaking",
+                "partIndex": 15,
+                "sourceModule": "B2.3-M03"
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }

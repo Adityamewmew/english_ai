@@ -1812,6 +1812,2786 @@
           }
         }
       ]
+    },
+    {
+      "id": "sub-b1-4-m12-assessment",
+      "moduleId": "B1.4-M12",
+      "skillType": "assessment",
+      "title": "Final Mission: Unit 12 Comprehensive Assessment (55 Soal)",
+      "theme": "Unit 12 All-Skills Mastery Evaluation (MEDIUM)",
+      "orderIndex": 5,
+      "sections": [
+        {
+          "id": "sec-b1-4-m12-theory",
+          "moduleId": "B1.4-M12",
+          "subModuleId": "sub-b1-4-m12-assessment",
+          "sectionType": "theory",
+          "title": "Unit Final Mission Guidelines & Criteria",
+          "orderIndex": 1,
+          "content": {
+            "summary": "Ujian akhir unit resmi untuk Unit 12: Project Retrospectives & Sharing Constructive Feedback. Menguji 4 kompetensi terintegrasi (Reading 15 soal, Listening 15 soal, Writing 10 soal, Speaking 15 soal) untuk menghasilkan scorecard nilai resmi per unit.",
+            "totalQuestions": 55,
+            "passingScore": 75,
+            "estimatedMinutes": 40,
+            "difficultyTier": "medium",
+            "parts": [
+              {
+                "part": 1,
+                "name": "Reading Comprehension & Lexicogrammar",
+                "count": 15
+              },
+              {
+                "part": 2,
+                "name": "Listening Auditory Synthesis",
+                "count": 15
+              },
+              {
+                "part": 3,
+                "name": "Written Production & Discourse",
+                "count": 10
+              },
+              {
+                "part": 4,
+                "name": "Spoken Fluency & Oral Interaction",
+                "count": 15
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-b1-4-m12-quiz",
+          "moduleId": "B1.4-M12",
+          "subModuleId": "sub-b1-4-m12-assessment",
+          "sectionType": "quiz",
+          "title": "Unit 12 Mastery Quiz: 55 Items",
+          "orderIndex": 2,
+          "content": {
+            "passingScore": 75,
+            "totalQuestions": 55,
+            "difficultyTier": "medium",
+            "parts": {
+              "reading": [
+                {
+                  "id": "q-b1.4-m12-r-1",
+                  "question": "What was the main purpose of the meeting described in the passage?",
+                  "options": [
+                    "To interview new candidates for the programming department.",
+                    "To evaluate the launch of the Nova mobile app and discuss improvements.",
+                    "To announce the complete cancellation of the project."
+                  ],
+                  "answer": "To evaluate the launch of the Nova mobile app and discuss improvements.",
+                  "explanation": "The opening sentence explains that the team held a ninety-minute retrospective to evaluate the launch of their new mobile learning app.",
+                  "part": "reading",
+                  "partIndex": 1,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-r-2",
+                  "question": "How long did the project take before reaching the release milestone?",
+                  "options": [
+                    "Ninety days across two offices.",
+                    "Five months of work across three departments.",
+                    "Twelve weeks of customer testing."
+                  ],
+                  "answer": "Five months of work across three departments.",
+                  "explanation": "Paragraph 1 states that reaching this milestone required five months of intense work across three departments.",
+                  "part": "reading",
+                  "partIndex": 2,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-r-3",
+                  "question": "Which indicator shows that the launch was generally successful?",
+                  "options": [
+                    "The app received twelve thousand downloads and eighty-four percent user satisfaction.",
+                    "No users reported any issues or errors during the first weekend.",
+                    "The design team won an international prize immediately after release."
+                  ],
+                  "answer": "The app received twelve thousand downloads and eighty-four percent user satisfaction.",
+                  "explanation": "Paragraph 1 explicitly notes that over twelve thousand users downloaded the app and satisfaction reached eighty-four percent.",
+                  "part": "reading",
+                  "partIndex": 3,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-r-4",
+                  "question": "What positive factor helped avoid misunderstandings during the final two weeks?",
+                  "options": [
+                    "Hiring outside consultants to review the text.",
+                    "Clear communication between the graphic designers and content creators.",
+                    "Canceling all meetings to focus solely on coding."
+                  ],
+                  "answer": "Clear communication between the graphic designers and content creators.",
+                  "explanation": "Paragraph 2 states that clear communication between graphic designers and content creators prevented many misunderstandings.",
+                  "part": "reading",
+                  "partIndex": 4,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-r-5",
+                  "question": "What caused the unexpected bottleneck in server testing?",
+                  "options": [
+                    "A total electrical blackout at the primary office.",
+                    "Last-minute code adjustments made to the app.",
+                    "Too many marketing emails sent to potential users."
+                  ],
+                  "answer": "Last-minute code adjustments made to the app.",
+                  "explanation": "Paragraph 3 notes that the QA lead explained how last-minute code adjustments created an unexpected bottleneck.",
+                  "part": "reading",
+                  "partIndex": 5,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-r-6",
+                  "question": "According to the QA lead, what would have happened if new features had been frozen earlier?",
+                  "options": [
+                    "The team would have detected several small login errors before the launch.",
+                    "The app would have been released two months ahead of schedule.",
+                    "The company would have doubled its total sales revenue."
+                  ],
+                  "answer": "The team would have detected several small login errors before the launch.",
+                  "explanation": "Paragraph 3 specifies that if features had been frozen seven days earlier, they would have caught several small login errors.",
+                  "part": "reading",
+                  "partIndex": 6,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-r-7",
+                  "question": "How did the team behave when discussing project weaknesses?",
+                  "options": [
+                    "They argued loudly and blamed the engineers for every mistake.",
+                    "They spoke diplomatically and focused on shared process improvements.",
+                    "They refused to listen to any negative opinions from the QA lead."
+                  ],
+                  "answer": "They spoke diplomatically and focused on shared process improvements.",
+                  "explanation": "Paragraph 3 explains that the team spoke diplomatically and agreed on solutions instead of pointing fingers.",
+                  "part": "reading",
+                  "partIndex": 7,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-r-8",
+                  "question": "What does the phrase 'room for improvement' mean in paragraph 3?",
+                  "options": [
+                    "An empty meeting room reserved for future presentations.",
+                    "Aspects or areas that can be developed to become better.",
+                    "A total project failure that cannot be rescued."
+                  ],
+                  "answer": "Aspects or areas that can be developed to become better.",
+                  "explanation": "'Room for improvement' is a polite way of saying that certain parts of the project are not yet perfect and can be enhanced.",
+                  "part": "reading",
+                  "partIndex": 8,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-r-9",
+                  "question": "What specific request from users did the team agree to take on board immediately?",
+                  "options": [
+                    "Offline reading support for the learning app.",
+                    "A paid subscription with daily telephone coaching.",
+                    "A complete change of the company brand and logo."
+                  ],
+                  "answer": "Offline reading support for the learning app.",
+                  "explanation": "Paragraph 4 explains that the team agreed to take feedback on board immediately, especially requests for offline reading support.",
+                  "part": "reading",
+                  "partIndex": 9,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-r-10",
+                  "question": "What was the final outcome of conducting this retrospective meeting?",
+                  "options": [
+                    "The team decided to close the app permanently.",
+                    "Team members turned potential arguments into practical solutions.",
+                    "The project lead removed three departments from future updates."
+                  ],
+                  "answer": "Team members turned potential arguments into practical solutions.",
+                  "explanation": "The final sentence summarizes that by talking openly and respectfully, the team turned potential arguments into practical solutions.",
+                  "part": "reading",
+                  "partIndex": 10,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "question": "What is the primary function of the modal verb in 'You ought to back up your database before the migration'?",
+                  "options": [
+                    "Strong moral or practical recommendation",
+                    "Logical certainty",
+                    "Physical capability",
+                    "Past habit"
+                  ],
+                  "answer": "Strong moral or practical recommendation",
+                  "explanation": "'Ought to' expresses a strong advisory recommendation or obligation.",
+                  "id": "q-b1.4-m12-r-11",
+                  "part": "reading",
+                  "partIndex": 11,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "question": "Which word best replaces 'alleviate' in 'measures were introduced to alleviate employee stress'?",
+                  "options": [
+                    "Reduce",
+                    "Intensify",
+                    "Ignore",
+                    "Prolong"
+                  ],
+                  "answer": "Reduce",
+                  "explanation": "'Alleviate' means to make a problem or burden less severe.",
+                  "id": "q-b1.4-m12-r-12",
+                  "part": "reading",
+                  "partIndex": 12,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "question": "In professional correspondence, which salutation and sign-off pair is the most appropriate for a formal inquiry?",
+                  "options": [
+                    "Dear Mr. Harrison / Sincerely yours",
+                    "Hey buddy / Cheers",
+                    "To whom it concerns / Talk soon",
+                    "Good morning friend / Bye for now"
+                  ],
+                  "answer": "Dear Mr. Harrison / Sincerely yours",
+                  "explanation": "Formal business register requires respectful titles and conventional complimentary closes.",
+                  "id": "q-b1.4-m12-r-13",
+                  "part": "reading",
+                  "partIndex": 13,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "question": "Select the sentence with the correct non-defining relative clause punctuation:",
+                  "options": [
+                    "Our senior analyst, who joined the firm last January, presented the financial forecast.",
+                    "Our senior analyst who joined the firm last January presented the financial forecast.",
+                    "Our senior analyst, who joined the firm last January presented the financial forecast.",
+                    "Our senior analyst who joined the firm last January, presented the financial forecast."
+                  ],
+                  "answer": "Our senior analyst, who joined the firm last January, presented the financial forecast.",
+                  "explanation": "Non-defining relative clauses must be enclosed by commas on both sides.",
+                  "id": "q-b1.4-m12-r-14",
+                  "part": "reading",
+                  "partIndex": 14,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "question": "What does the expression 'think outside the box' convey in an entrepreneurial context?",
+                  "options": [
+                    "Approach problems with non-traditional and creative perspectives.",
+                    "Store physical inventory outside the warehouse boundaries.",
+                    "Follow standard operating procedures without deviation.",
+                    "Ignore financial accounting standards during quarterly audits."
+                  ],
+                  "answer": "Approach problems with non-traditional and creative perspectives.",
+                  "explanation": "The idiom 'think outside the box' signifies lateral and innovative thinking.",
+                  "id": "q-b1.4-m12-r-15",
+                  "part": "reading",
+                  "partIndex": 15,
+                  "sourceModule": "B1.4-M12"
+                }
+              ],
+              "listening": [
+                {
+                  "id": "q-b1.4-m12-l-1",
+                  "type": "dictation",
+                  "audioText": "So, the app launch went well.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Alex: \"So, the app launch went _____.\"",
+                  "targetWord": "well",
+                  "explanation": "Full audio: \"So, the app launch went well.\". The missing word is \"well\".",
+                  "part": "listening",
+                  "partIndex": 1,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-l-2",
+                  "type": "dictation",
+                  "audioText": "Yes, the client seems very happy.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Morgan: \"Yes, the client seems very _____.\"",
+                  "targetWord": "happy",
+                  "explanation": "Full audio: \"Yes, the client seems very happy.\". The missing word is \"happy\".",
+                  "part": "listening",
+                  "partIndex": 2,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-l-3",
+                  "type": "dictation",
+                  "audioText": "What should we improve next time?",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Alex: \"What should we improve next _____?\"",
+                  "targetWord": "time",
+                  "explanation": "Full audio: \"What should we improve next time?\". The missing word is \"time\".",
+                  "part": "listening",
+                  "partIndex": 3,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-l-4",
+                  "type": "dictation",
+                  "audioText": "Our internal communication was a bit messy.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Morgan: \"Our internal communication was a bit _____.\"",
+                  "targetWord": "messy",
+                  "explanation": "Full audio: \"Our internal communication was a bit messy.\". The missing word is \"messy\".",
+                  "part": "listening",
+                  "partIndex": 4,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-l-5",
+                  "type": "dictation",
+                  "audioText": "That is a fair point, Morgan.",
+                  "instruction": "Listen to the audio clip and type the missing word:",
+                  "promptSentence": "Alex: \"That is a fair _____, Morgan.\"",
+                  "targetWord": "point",
+                  "explanation": "Full audio: \"That is a fair point, Morgan.\". The missing word is \"point\".",
+                  "part": "listening",
+                  "partIndex": 5,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-l-6",
+                  "type": "arrange",
+                  "audioText": "I was often unsure about responsibilities.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "I was often unsure about responsibilities",
+                  "words": [
+                    "often",
+                    "about",
+                    "I",
+                    "responsibilities",
+                    "was",
+                    "unsure"
+                  ],
+                  "explanation": "Correct sentence order: \"I was often unsure about responsibilities.\".",
+                  "part": "listening",
+                  "partIndex": 6,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-l-7",
+                  "type": "arrange",
+                  "audioText": "We should define roles early on.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "We should define roles early on",
+                  "words": [
+                    "should",
+                    "on",
+                    "early",
+                    "define",
+                    "We",
+                    "roles"
+                  ],
+                  "explanation": "Correct sentence order: \"We should define roles early on.\".",
+                  "part": "listening",
+                  "partIndex": 7,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-l-8",
+                  "type": "arrange",
+                  "audioText": "A clear chart would help everyone.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "A clear chart would help everyone",
+                  "words": [
+                    "clear",
+                    "help",
+                    "everyone",
+                    "would",
+                    "A",
+                    "chart"
+                  ],
+                  "explanation": "Correct sentence order: \"A clear chart would help everyone.\".",
+                  "part": "listening",
+                  "partIndex": 8,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-l-9",
+                  "type": "arrange",
+                  "audioText": "Shorter check-ins could also work better.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "Shorter check-ins could also work better",
+                  "words": [
+                    "also",
+                    "Shorter",
+                    "check-ins",
+                    "better",
+                    "work",
+                    "could"
+                  ],
+                  "explanation": "Correct sentence order: \"Shorter check-ins could also work better.\".",
+                  "part": "listening",
+                  "partIndex": 9,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-l-10",
+                  "type": "arrange",
+                  "audioText": "Daily standups catch bugs much faster.",
+                  "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                  "targetSentence": "Daily standups catch bugs much faster",
+                  "words": [
+                    "bugs",
+                    "much",
+                    "catch",
+                    "Daily",
+                    "faster",
+                    "standups"
+                  ],
+                  "explanation": "Correct sentence order: \"Daily standups catch bugs much faster.\".",
+                  "part": "listening",
+                  "partIndex": 10,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "type": "dictation",
+                  "audioText": "Cross-functional collaboration is essential for modern product design.",
+                  "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                  "promptSentence": "Cross-functional _____ is essential for modern product design.",
+                  "targetWord": "collaboration",
+                  "explanation": "Audio lengkap: 'Cross-functional collaboration is essential for modern product design.'. Kata: 'collaboration'.",
+                  "id": "q-b1.4-m12-l-11",
+                  "part": "listening",
+                  "partIndex": 11,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "type": "arrange",
+                  "audioText": "Despite technical difficulties the presentation received overwhelmingly positive reviews.",
+                  "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                  "targetSentence": "Despite technical difficulties the presentation received overwhelmingly positive reviews",
+                  "words": [
+                    "positive",
+                    "technical",
+                    "the",
+                    "presentation",
+                    "Despite",
+                    "reviews",
+                    "overwhelmingly",
+                    "received",
+                    "difficulties"
+                  ],
+                  "explanation": "Urutan benar: 'Despite technical difficulties the presentation received overwhelmingly positive reviews.'.",
+                  "id": "q-b1.4-m12-l-12",
+                  "part": "listening",
+                  "partIndex": 12,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "type": "dictation",
+                  "audioText": "The manager insisted on reviewing all regulatory compliance documents.",
+                  "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                  "promptSentence": "The manager insisted on reviewing all regulatory _____ documents.",
+                  "targetWord": "compliance",
+                  "explanation": "Audio lengkap: 'The manager insisted on reviewing all regulatory compliance documents.'. Kata: 'compliance'.",
+                  "id": "q-b1.4-m12-l-13",
+                  "part": "listening",
+                  "partIndex": 13,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "type": "arrange",
+                  "audioText": "She explained that the initial forecast had underestimated consumer demand.",
+                  "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                  "targetSentence": "She explained that the initial forecast had underestimated consumer demand",
+                  "words": [
+                    "forecast",
+                    "She",
+                    "that",
+                    "underestimated",
+                    "had",
+                    "demand",
+                    "initial",
+                    "consumer",
+                    "the",
+                    "explained"
+                  ],
+                  "explanation": "Urutan benar: 'She explained that the initial forecast had underestimated consumer demand.'.",
+                  "id": "q-b1.4-m12-l-14",
+                  "part": "listening",
+                  "partIndex": 14,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "type": "dictation",
+                  "audioText": "We must establish clear benchmarks before launching the marketing campaign.",
+                  "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                  "promptSentence": "We must establish clear _____ before launching the marketing campaign.",
+                  "targetWord": "benchmarks",
+                  "explanation": "Audio lengkap: 'We must establish clear benchmarks before launching the marketing campaign.'. Kata: 'benchmarks'.",
+                  "id": "q-b1.4-m12-l-15",
+                  "part": "listening",
+                  "partIndex": 15,
+                  "sourceModule": "B1.4-M12"
+                }
+              ],
+              "writing": [
+                {
+                  "id": "q-b1.4-m12-w-1",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Transform this direct accusation into a polite past reflection using 'could have': 'You did not notify the team about the delay.'",
+                  "promptText": "Direct critique: You did not notify the team about the delay.",
+                  "hint": "Start with 'We could have notified' or 'You could have notified'.",
+                  "targetAnswers": [
+                    "We could have notified the team about the delay earlier.",
+                    "You could have notified the team about the delay.",
+                    "We could have notified the team about the delay."
+                  ],
+                  "explanation": "Using 'could have + past participle' turns a direct accusation into an objective reflection on past possibilities.",
+                  "part": "writing",
+                  "partIndex": 1,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-w-2",
+                  "typeLabel": "Mechanics Correction",
+                  "instruction": "Correct all capitalization, punctuation, and verb form errors in this sentence:",
+                  "promptText": "if the team had checked the data in july we would had avoided the calculation error",
+                  "hint": "Check the month capitalization, the comma after the if-clause, and the modal perfect verb form.",
+                  "targetAnswers": [
+                    "If the team had checked the data in July, we would have avoided the calculation error."
+                  ],
+                  "explanation": "Capitalize 'If' and 'July', place a comma after the dependent condition, and use 'would have avoided' instead of 'would had avoided'.",
+                  "part": "writing",
+                  "partIndex": 2,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-w-3",
+                  "typeLabel": "Diplomatic Rewriting",
+                  "instruction": "Rewrite this blunt order into a polite recommendation using 'I think we should': 'Change the retrospective format immediately.'",
+                  "promptText": "Blunt order: Change the retrospective format immediately.",
+                  "hint": "Start your sentence with 'I think we should change'.",
+                  "targetAnswers": [
+                    "I think we should change the retrospective format for our next meeting.",
+                    "I think that we should change the retrospective format for our next meeting.",
+                    "I think we should change the retrospective format.",
+                    "I think that we should change the retrospective format."
+                  ],
+                  "explanation": "Starting recommendations with 'I think (that) we should' softens the tone and encourages open discussion.",
+                  "part": "writing",
+                  "partIndex": 3,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-w-4",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Combine these two past facts into a third conditional sentence: 'We did not back up the files. We lost two days of work.'",
+                  "promptText": "Facts: We did not back up the files, so we lost two days of work.",
+                  "hint": "Begin with 'If we had backed up the files...'",
+                  "targetAnswers": [
+                    "If we had backed up the files, we would not have lost two days of work.",
+                    "If we had backed up the files, we wouldn't have lost two days of work."
+                  ],
+                  "explanation": "The third conditional formula is: If + subject + had + past participle, subject + would + have + past participle.",
+                  "part": "writing",
+                  "partIndex": 4,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-w-5",
+                  "typeLabel": "Mechanics Correction",
+                  "instruction": "Fix the punctuation and grammar errors in this sentence:",
+                  "promptText": "in my opinion we ought to document every decision more clearly",
+                  "hint": "Add a comma after the introductory phrase and capitalize the first letter.",
+                  "targetAnswers": [
+                    "In my opinion, we ought to document every decision more clearly."
+                  ],
+                  "explanation": "Introductory transitional phrases such as 'In my opinion' must be capitalized and followed by a comma.",
+                  "part": "writing",
+                  "partIndex": 5,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-w-6",
+                  "typeLabel": "Conjunction / Linking Words",
+                  "instruction": "Join these two retrospective observations using 'Although' at the beginning: 'The sprint was demanding. We achieved all core deliverables.'",
+                  "promptText": "Sentences: The sprint was demanding. We achieved all core deliverables.",
+                  "hint": "Place 'Although' at the start and add a comma between the two clauses.",
+                  "targetAnswers": [
+                    "Although the sprint was demanding, we achieved all core deliverables."
+                  ],
+                  "explanation": "'Although' shows concession and connects two contrasting clauses. A comma is required after the first clause.",
+                  "part": "writing",
+                  "partIndex": 6,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-w-7",
+                  "typeLabel": "Diplomatic Rewriting",
+                  "instruction": "Rewrite this harsh comment diplomatically using 'might have': 'The marketing team failed to check the release notes.'",
+                  "promptText": "Harsh comment: The marketing team failed to check the release notes.",
+                  "hint": "Use 'The marketing team might have reviewed' or 'The marketing team might have checked'.",
+                  "targetAnswers": [
+                    "The marketing team might have checked the release notes earlier.",
+                    "The marketing team might have checked the release notes.",
+                    "The marketing team might have reviewed the release notes earlier.",
+                    "The marketing team might have reviewed the release notes."
+                  ],
+                  "explanation": "'Might have + past participle' expresses criticism tactfully without assigning direct failure.",
+                  "part": "writing",
+                  "partIndex": 7,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-w-8",
+                  "typeLabel": "Mechanics Correction",
+                  "instruction": "Correct the verb agreement and capitalization in this conditional sentence:",
+                  "promptText": "we would have resolved the ticket faster if mark had responded on friday",
+                  "hint": "Capitalize the first word and proper nouns, and keep the sentence structure intact.",
+                  "targetAnswers": [
+                    "We would have resolved the ticket faster if Mark had responded on Friday."
+                  ],
+                  "explanation": "Names of people like 'Mark' and days of the week like 'Friday' must always be capitalized.",
+                  "part": "writing",
+                  "partIndex": 8,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-w-9",
+                  "typeLabel": "Sentence Transformation",
+                  "instruction": "Rewrite this recommendation using 'I feel that we ought to': 'We need to set realistic milestones.'",
+                  "promptText": "Direct need: We need to set realistic milestones.",
+                  "hint": "Begin with 'I feel that we ought to...'",
+                  "targetAnswers": [
+                    "I feel that we ought to set realistic milestones.",
+                    "I feel that we ought to set more realistic milestones."
+                  ],
+                  "explanation": "'Ought to' is a polite equivalent of 'should', and 'I feel that' cushions the advice constructively.",
+                  "part": "writing",
+                  "partIndex": 9,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-w-10",
+                  "typeLabel": "Short Response",
+                  "instruction": "Write one complete sentence explaining what your team could have done differently in a past project using 'could have'.",
+                  "promptText": "Prompt: Suggest one improvement for past team communication.",
+                  "hint": "Start with 'We could have...' followed by a past participle.",
+                  "targetAnswers": [
+                    "We could have communicated our progress more clearly.",
+                    "We could have scheduled daily standup meetings.",
+                    "We could have shared our weekly updates earlier.",
+                    "We could have held daily standup meetings to share updates."
+                  ],
+                  "explanation": "A complete sentence using 'could have + past participle' offers a constructive, forward-looking review of past workflows.",
+                  "part": "writing",
+                  "partIndex": 10,
+                  "sourceModule": "B1.4-M12"
+                }
+              ],
+              "speaking": [
+                {
+                  "id": "q-b1.4-m12-s-1",
+                  "category": "storytelling",
+                  "typeLabel": "Personal Storytelling",
+                  "instruction": "Speak for at least 25 seconds about a project or group task you finished recently, evaluating what worked well and what was challenging.",
+                  "audioPrompt": "Describe a recent team project you worked on. What was a key milestone, and what went well?",
+                  "storyPoints": [
+                    "Identify the project and the main milestone your team reached",
+                    "Explain one aspect of the work that was very successful",
+                    "State one challenge you faced and how you felt after completing it"
+                  ],
+                  "targetSentence": "In our last project, we reached our main milestone on time, although coordinating our weekly meetings was quite challenging.",
+                  "phonetic": "/ɪn ˈaʊər lɑːst ˈprɒdʒekt wiː riːtʃt ˈaʊər meɪn ˈmaɪlstəʊn ɒn taɪm/",
+                  "expectedKeywords": [
+                    "project",
+                    "milestone",
+                    "team",
+                    "challenging"
+                  ],
+                  "explanation": "Use past tense forms accurately and include project evaluation vocabulary such as 'milestone' and 'successful'.",
+                  "part": "speaking",
+                  "partIndex": 1,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-s-2",
+                  "category": "storytelling",
+                  "typeLabel": "Personal Storytelling",
+                  "instruction": "Speak for at least 25 seconds about a time someone gave you constructive feedback on your work and how you handled it.",
+                  "audioPrompt": "Tell a story about receiving constructive feedback from a colleague or teacher. How did you react?",
+                  "storyPoints": [
+                    "Describe what the constructive feedback was about",
+                    "Explain how you felt initially and how you took it on board",
+                    "Describe the positive change you made as a result"
+                  ],
+                  "targetSentence": "My manager pointed out room for improvement in my report, so I took the suggestions on board and revised it carefully.",
+                  "phonetic": "/maɪ ˈmænɪdʒər ˈpɔɪntɪd aʊt ruːm fɔːr ɪmˈpruːvmənt ɪn maɪ rɪˈpɔːt/",
+                  "expectedKeywords": [
+                    "constructive feedback",
+                    "room for improvement",
+                    "take on board",
+                    "revised"
+                  ],
+                  "explanation": "Organize your response clearly with time sequencing markers like 'at first', 'after that', and 'as a result'.",
+                  "part": "speaking",
+                  "partIndex": 2,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-s-3",
+                  "category": "roleplay",
+                  "typeLabel": "Interactive Roleplay",
+                  "instruction": "You are discussing a delayed project task with your teammate. Deliver constructive feedback diplomatically without sounding aggressive.",
+                  "audioPrompt": "Your teammate missed the submission deadline for their slides. How do you raise this issue diplomatically during your retrospective?",
+                  "scenarioContext": "You and your teammate Alex are reviewing the project outcome. Alex handed in the slide deck 24 hours late, which caused the client presentation to be rushed.",
+                  "characterRole": "Project Coordinator speaking to Alex, a teammate",
+                  "targetSentence": "You did great work on the slides, but we noticed there might be room for improvement regarding our deadlines.",
+                  "phonetic": "/juː dɪd greɪt wɜːk ɒn ðə slaɪdz bʌt wiː ˈnəʊtɪst ðeər maɪt biː ruːm fɔːr ɪmˈpruːvmənt/",
+                  "expectedKeywords": [
+                    "slides",
+                    "room for improvement",
+                    "deadlines",
+                    "noticed"
+                  ],
+                  "explanation": "Begin with a positive comment before introducing the constructive suggestion using softening phrases like 'there might be'.",
+                  "part": "speaking",
+                  "partIndex": 3,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-s-4",
+                  "category": "roleplay",
+                  "typeLabel": "Interactive Roleplay",
+                  "instruction": "Celebrate a team milestone and open the floor for suggestions during a retrospective meeting.",
+                  "audioPrompt": "Welcome your team to the sprint retrospective, congratulate them on meeting a milestone, and invite open feedback.",
+                  "scenarioContext": "You are leading a retrospective after finishing a company website redesign. The project launched successfully today.",
+                  "characterRole": "Scrum Master addressing the design team",
+                  "targetSentence": "Congratulations on hitting this milestone everyone, so let us open the floor for constructive feedback.",
+                  "phonetic": "/kənˌɡrætʃuˈleɪʃnz ɒn ˈhɪtɪŋ ðɪs ˈmaɪlstəʊn ˈevriwʌn/",
+                  "expectedKeywords": [
+                    "milestone",
+                    "constructive feedback",
+                    "everyone",
+                    "retrospective"
+                  ],
+                  "explanation": "Speak with enthusiastic and inclusive intonation while introducing the agenda for the evaluation session.",
+                  "part": "speaking",
+                  "partIndex": 4,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-s-5",
+                  "category": "roleplay",
+                  "typeLabel": "Interactive Roleplay",
+                  "instruction": "Respond professionally to a coworker who has just pointed out errors in your presentation deck.",
+                  "audioPrompt": "Your colleague says: 'I noticed a few typos on slides four and five.' How do you answer politely?",
+                  "scenarioContext": "Your colleague Maya has provided polite feedback on your draft slides before the big client pitch.",
+                  "characterRole": "Marketing Specialist responding to Maya",
+                  "targetSentence": "Thanks for pointing that out Maya, I will take your feedback on board and fix those errors immediately.",
+                  "phonetic": "/θæŋks fɔːr ˈpɔɪntɪŋ ðæt aʊt ˈmaɪə aɪ wɪl teɪk jɔːr ˈfiːdbæk ɒn bɔːd/",
+                  "expectedKeywords": [
+                    "pointing that out",
+                    "take on board",
+                    "feedback",
+                    "fix"
+                  ],
+                  "explanation": "Acknowledge the feedback gratefully and state an immediate action step using the phrase 'take on board'.",
+                  "part": "speaking",
+                  "partIndex": 5,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-s-6",
+                  "category": "roleplay",
+                  "typeLabel": "Interactive Roleplay",
+                  "instruction": "Suggest a diplomatic solution when two colleagues disagree about the root cause of a project delay.",
+                  "audioPrompt": "Two team members are arguing about who caused a delay. Step in and propose a constructive next step.",
+                  "scenarioContext": "During a retrospective, the developer and the tester are blaming each other for testing delays.",
+                  "characterRole": "Team Facilitator intervening in a meeting",
+                  "targetSentence": "Let us look at this constructively and focus on what we can improve for our next milestone.",
+                  "phonetic": "/let ʌs lʊk æt ðɪs kənˈstrʌktɪvli ænd ˈfəʊkəs ɒn wɒt wiː kæn ɪmˈpruːv/",
+                  "expectedKeywords": [
+                    "constructively",
+                    "focus",
+                    "improve",
+                    "milestone"
+                  ],
+                  "explanation": "Use neutral, non-judgmental language to redirect the conversation toward future improvements.",
+                  "part": "speaking",
+                  "partIndex": 6,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-s-7",
+                  "category": "linguistic_drill",
+                  "typeLabel": "Reflex Drill: Vocabulary",
+                  "focus": "vocab",
+                  "instruction": "Complete the sentence using the exact phrase 'room for improvement' to express a polite evaluation.",
+                  "audioPrompt": "Say the sentence: Although the presentation was clear, there is still room for improvement in the question section.",
+                  "targetSentence": "Although the presentation was clear, there is still room for improvement in the question section.",
+                  "phonetic": "/ɔːlˈðəʊ ðə ˌpreznˈteɪʃn wɒz klɪər ðeər ɪz stɪl ruːm fɔːr ɪmˈpruːvmənt ɪn ðə ˈkwestʃən ˈsekʃn/",
+                  "expectedKeywords": [
+                    "presentation",
+                    "clear",
+                    "room for improvement",
+                    "question"
+                  ],
+                  "explanation": "The idiom 'room for improvement' is an essential B1 phrase for polite constructive critique.",
+                  "part": "speaking",
+                  "partIndex": 7,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-s-8",
+                  "category": "linguistic_drill",
+                  "typeLabel": "Reflex Drill: Grammar",
+                  "focus": "grammar",
+                  "instruction": "Use the modal phrase 'could have been' to soften a critical observation about project communication.",
+                  "audioPrompt": "Deliver this softened statement: Our daily communication could have been slightly more frequent.",
+                  "targetSentence": "Our daily communication could have been slightly more frequent.",
+                  "phonetic": "/ˈaʊər ˈdeɪli kəˌmjuːnɪˈkeɪʃn kʊd həv biːn ˈslaɪtli mɔːr ˈfriːkwənt/",
+                  "expectedKeywords": [
+                    "communication",
+                    "could have been",
+                    "slightly",
+                    "frequent"
+                  ],
+                  "explanation": "The modal structure 'could have been' + modifier 'slightly' allows you to suggest changes without assigning personal blame.",
+                  "part": "speaking",
+                  "partIndex": 8,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-s-9",
+                  "category": "linguistic_drill",
+                  "typeLabel": "Reflex Drill: Syllable Stress",
+                  "focus": "pronunciation_stress",
+                  "instruction": "Repeat the sentence, taking care to place the primary stress on the third syllable of 'retrospective' (re-tro-SPEC-tive).",
+                  "audioPrompt": "Say: We must schedule our project retrospective before Friday afternoon.",
+                  "targetSentence": "We must schedule our project retrospective before Friday afternoon.",
+                  "phonetic": "/wiː mʌst ˈʃedjuːl ˈaʊər ˈprɒdʒekt ˌretrəˈspektɪv bɪˈfɔːr ˈfraɪdeɪ ˌɑːftəˈnuːn/",
+                  "expectedKeywords": [
+                    "schedule",
+                    "project",
+                    "retrospective",
+                    "Friday"
+                  ],
+                  "explanation": "Make sure you do not stress 'retro'; the loudest and highest syllable must be 'SPEC'.",
+                  "part": "speaking",
+                  "partIndex": 9,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "id": "q-b1.4-m12-s-10",
+                  "category": "linguistic_drill",
+                  "typeLabel": "Reflex Drill: Intonation",
+                  "focus": "pronunciation_intonation",
+                  "instruction": "Produce a polite diplomatic suggestion using a gentle rise at the midpoint and a smooth falling intonation at the end.",
+                  "audioPrompt": "Say this polite suggestion with a warm, diplomatic tone: Perhaps we could review the timeline together tomorrow?",
+                  "targetSentence": "Perhaps we could review the timeline together tomorrow?",
+                  "phonetic": "/pəˈhæps wiː kʊd rɪˈvjuː ðə ˈtaɪmlaɪn təˈɡeðər təˈmɒrəʊ/",
+                  "expectedKeywords": [
+                    "perhaps",
+                    "review",
+                    "timeline",
+                    "together",
+                    "tomorrow"
+                  ],
+                  "explanation": "Begin with 'Perhaps' on a gentle rising note, keep the middle smooth, and fall gently on 'tomorrow' so the suggestion sounds collaborative.",
+                  "part": "speaking",
+                  "partIndex": 10,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "category": "Executive Summary",
+                  "instruction": "Ucapkan kesimpulan strategis berikut:",
+                  "prompt": "In conclusion, investing in cloud automation will simultaneously optimize operating expenditure and enhance organizational resilience.",
+                  "sampleAnswer": "In conclusion, investing in cloud automation will simultaneously optimize operating expenditure and enhance organizational resilience.",
+                  "phonetic": "/ɪn kənˈkluːʒn ɪnˈvestɪŋ ɪn klaʊd/",
+                  "keywords": [
+                    "conclusion",
+                    "automation",
+                    "expenditure",
+                    "resilience"
+                  ],
+                  "id": "q-b1.4-m12-s-11",
+                  "part": "speaking",
+                  "partIndex": 11,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "category": "Conflict Resolution",
+                  "instruction": "Ucapkan usulan penyelesaian perselisihan kerja berikut:",
+                  "prompt": "Let us establish objective evaluation criteria so both departments can collaborate effectively toward the mutual objective.",
+                  "sampleAnswer": "Let us establish objective evaluation criteria so both departments can collaborate effectively toward the mutual objective.",
+                  "phonetic": "/let əs ɪˈstæblɪʃ əbˈdʒektɪv/",
+                  "keywords": [
+                    "establish",
+                    "criteria",
+                    "collaborate",
+                    "mutual"
+                  ],
+                  "id": "q-b1.4-m12-s-12",
+                  "part": "speaking",
+                  "partIndex": 12,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "category": "Hypothetical Scenario",
+                  "instruction": "Ucapkan pertimbangan skenario alternatif:",
+                  "prompt": "Had the regulatory framework been updated earlier, domestic startups would have expanded internationally with far greater confidence.",
+                  "sampleAnswer": "Had the regulatory framework been updated earlier, domestic startups would have expanded internationally with far greater confidence.",
+                  "phonetic": "/hæd ðə ˈreɡjələtəri ˈfreɪmwɜːk biːn/",
+                  "keywords": [
+                    "regulatory",
+                    "framework",
+                    "startups",
+                    "confidence"
+                  ],
+                  "id": "q-b1.4-m12-s-13",
+                  "part": "speaking",
+                  "partIndex": 13,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "category": "Performance Review",
+                  "instruction": "Ucapkan umpan balik evaluasi kinerja:",
+                  "prompt": "Your consistent dedication to mentorship has significantly bolstered team morale and elevated our overall code delivery standard.",
+                  "sampleAnswer": "Your consistent dedication to mentorship has significantly bolstered team morale and elevated our overall code delivery standard.",
+                  "phonetic": "/jɔː kənˈsɪstənt ˌdedɪˈkeɪʃn tə ˈmentɔːʃɪp/",
+                  "keywords": [
+                    "dedication",
+                    "mentorship",
+                    "morale",
+                    "standard"
+                  ],
+                  "id": "q-b1.4-m12-s-14",
+                  "part": "speaking",
+                  "partIndex": 14,
+                  "sourceModule": "B1.4-M12"
+                },
+                {
+                  "category": "Customer Relations",
+                  "instruction": "Ucapkan respon penanganan keluhan klien tingkat tinggi:",
+                  "prompt": "We sincerely apologize for the service interruption and have implemented immediate safeguards to ensure it will not recur.",
+                  "sampleAnswer": "We sincerely apologize for the service interruption and have implemented immediate safeguards to ensure it will not recur.",
+                  "phonetic": "/wiː sɪnˈsɪəli əˈpɒlədʒaɪz fə ðə ˈsɜːvɪs/",
+                  "keywords": [
+                    "apologize",
+                    "interruption",
+                    "safeguards",
+                    "recur"
+                  ],
+                  "id": "q-b1.4-m12-s-15",
+                  "part": "speaking",
+                  "partIndex": 15,
+                  "sourceModule": "B1.4-M12"
+                }
+              ]
+            },
+            "questions": [
+              {
+                "id": "q-b1.4-m12-r-1",
+                "question": "What was the main purpose of the meeting described in the passage?",
+                "options": [
+                  "To interview new candidates for the programming department.",
+                  "To evaluate the launch of the Nova mobile app and discuss improvements.",
+                  "To announce the complete cancellation of the project."
+                ],
+                "answer": "To evaluate the launch of the Nova mobile app and discuss improvements.",
+                "explanation": "The opening sentence explains that the team held a ninety-minute retrospective to evaluate the launch of their new mobile learning app.",
+                "part": "reading",
+                "partIndex": 1,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-2",
+                "question": "How long did the project take before reaching the release milestone?",
+                "options": [
+                  "Ninety days across two offices.",
+                  "Five months of work across three departments.",
+                  "Twelve weeks of customer testing."
+                ],
+                "answer": "Five months of work across three departments.",
+                "explanation": "Paragraph 1 states that reaching this milestone required five months of intense work across three departments.",
+                "part": "reading",
+                "partIndex": 2,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-3",
+                "question": "Which indicator shows that the launch was generally successful?",
+                "options": [
+                  "The app received twelve thousand downloads and eighty-four percent user satisfaction.",
+                  "No users reported any issues or errors during the first weekend.",
+                  "The design team won an international prize immediately after release."
+                ],
+                "answer": "The app received twelve thousand downloads and eighty-four percent user satisfaction.",
+                "explanation": "Paragraph 1 explicitly notes that over twelve thousand users downloaded the app and satisfaction reached eighty-four percent.",
+                "part": "reading",
+                "partIndex": 3,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-4",
+                "question": "What positive factor helped avoid misunderstandings during the final two weeks?",
+                "options": [
+                  "Hiring outside consultants to review the text.",
+                  "Clear communication between the graphic designers and content creators.",
+                  "Canceling all meetings to focus solely on coding."
+                ],
+                "answer": "Clear communication between the graphic designers and content creators.",
+                "explanation": "Paragraph 2 states that clear communication between graphic designers and content creators prevented many misunderstandings.",
+                "part": "reading",
+                "partIndex": 4,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-5",
+                "question": "What caused the unexpected bottleneck in server testing?",
+                "options": [
+                  "A total electrical blackout at the primary office.",
+                  "Last-minute code adjustments made to the app.",
+                  "Too many marketing emails sent to potential users."
+                ],
+                "answer": "Last-minute code adjustments made to the app.",
+                "explanation": "Paragraph 3 notes that the QA lead explained how last-minute code adjustments created an unexpected bottleneck.",
+                "part": "reading",
+                "partIndex": 5,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-6",
+                "question": "According to the QA lead, what would have happened if new features had been frozen earlier?",
+                "options": [
+                  "The team would have detected several small login errors before the launch.",
+                  "The app would have been released two months ahead of schedule.",
+                  "The company would have doubled its total sales revenue."
+                ],
+                "answer": "The team would have detected several small login errors before the launch.",
+                "explanation": "Paragraph 3 specifies that if features had been frozen seven days earlier, they would have caught several small login errors.",
+                "part": "reading",
+                "partIndex": 6,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-7",
+                "question": "How did the team behave when discussing project weaknesses?",
+                "options": [
+                  "They argued loudly and blamed the engineers for every mistake.",
+                  "They spoke diplomatically and focused on shared process improvements.",
+                  "They refused to listen to any negative opinions from the QA lead."
+                ],
+                "answer": "They spoke diplomatically and focused on shared process improvements.",
+                "explanation": "Paragraph 3 explains that the team spoke diplomatically and agreed on solutions instead of pointing fingers.",
+                "part": "reading",
+                "partIndex": 7,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-8",
+                "question": "What does the phrase 'room for improvement' mean in paragraph 3?",
+                "options": [
+                  "An empty meeting room reserved for future presentations.",
+                  "Aspects or areas that can be developed to become better.",
+                  "A total project failure that cannot be rescued."
+                ],
+                "answer": "Aspects or areas that can be developed to become better.",
+                "explanation": "'Room for improvement' is a polite way of saying that certain parts of the project are not yet perfect and can be enhanced.",
+                "part": "reading",
+                "partIndex": 8,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-9",
+                "question": "What specific request from users did the team agree to take on board immediately?",
+                "options": [
+                  "Offline reading support for the learning app.",
+                  "A paid subscription with daily telephone coaching.",
+                  "A complete change of the company brand and logo."
+                ],
+                "answer": "Offline reading support for the learning app.",
+                "explanation": "Paragraph 4 explains that the team agreed to take feedback on board immediately, especially requests for offline reading support.",
+                "part": "reading",
+                "partIndex": 9,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-10",
+                "question": "What was the final outcome of conducting this retrospective meeting?",
+                "options": [
+                  "The team decided to close the app permanently.",
+                  "Team members turned potential arguments into practical solutions.",
+                  "The project lead removed three departments from future updates."
+                ],
+                "answer": "Team members turned potential arguments into practical solutions.",
+                "explanation": "The final sentence summarizes that by talking openly and respectfully, the team turned potential arguments into practical solutions.",
+                "part": "reading",
+                "partIndex": 10,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "question": "What is the primary function of the modal verb in 'You ought to back up your database before the migration'?",
+                "options": [
+                  "Strong moral or practical recommendation",
+                  "Logical certainty",
+                  "Physical capability",
+                  "Past habit"
+                ],
+                "answer": "Strong moral or practical recommendation",
+                "explanation": "'Ought to' expresses a strong advisory recommendation or obligation.",
+                "id": "q-b1.4-m12-r-11",
+                "part": "reading",
+                "partIndex": 11,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "question": "Which word best replaces 'alleviate' in 'measures were introduced to alleviate employee stress'?",
+                "options": [
+                  "Reduce",
+                  "Intensify",
+                  "Ignore",
+                  "Prolong"
+                ],
+                "answer": "Reduce",
+                "explanation": "'Alleviate' means to make a problem or burden less severe.",
+                "id": "q-b1.4-m12-r-12",
+                "part": "reading",
+                "partIndex": 12,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "question": "In professional correspondence, which salutation and sign-off pair is the most appropriate for a formal inquiry?",
+                "options": [
+                  "Dear Mr. Harrison / Sincerely yours",
+                  "Hey buddy / Cheers",
+                  "To whom it concerns / Talk soon",
+                  "Good morning friend / Bye for now"
+                ],
+                "answer": "Dear Mr. Harrison / Sincerely yours",
+                "explanation": "Formal business register requires respectful titles and conventional complimentary closes.",
+                "id": "q-b1.4-m12-r-13",
+                "part": "reading",
+                "partIndex": 13,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "question": "Select the sentence with the correct non-defining relative clause punctuation:",
+                "options": [
+                  "Our senior analyst, who joined the firm last January, presented the financial forecast.",
+                  "Our senior analyst who joined the firm last January presented the financial forecast.",
+                  "Our senior analyst, who joined the firm last January presented the financial forecast.",
+                  "Our senior analyst who joined the firm last January, presented the financial forecast."
+                ],
+                "answer": "Our senior analyst, who joined the firm last January, presented the financial forecast.",
+                "explanation": "Non-defining relative clauses must be enclosed by commas on both sides.",
+                "id": "q-b1.4-m12-r-14",
+                "part": "reading",
+                "partIndex": 14,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "question": "What does the expression 'think outside the box' convey in an entrepreneurial context?",
+                "options": [
+                  "Approach problems with non-traditional and creative perspectives.",
+                  "Store physical inventory outside the warehouse boundaries.",
+                  "Follow standard operating procedures without deviation.",
+                  "Ignore financial accounting standards during quarterly audits."
+                ],
+                "answer": "Approach problems with non-traditional and creative perspectives.",
+                "explanation": "The idiom 'think outside the box' signifies lateral and innovative thinking.",
+                "id": "q-b1.4-m12-r-15",
+                "part": "reading",
+                "partIndex": 15,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-1",
+                "type": "dictation",
+                "audioText": "So, the app launch went well.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"So, the app launch went _____.\"",
+                "targetWord": "well",
+                "explanation": "Full audio: \"So, the app launch went well.\". The missing word is \"well\".",
+                "part": "listening",
+                "partIndex": 1,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-2",
+                "type": "dictation",
+                "audioText": "Yes, the client seems very happy.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"Yes, the client seems very _____.\"",
+                "targetWord": "happy",
+                "explanation": "Full audio: \"Yes, the client seems very happy.\". The missing word is \"happy\".",
+                "part": "listening",
+                "partIndex": 2,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-3",
+                "type": "dictation",
+                "audioText": "What should we improve next time?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"What should we improve next _____?\"",
+                "targetWord": "time",
+                "explanation": "Full audio: \"What should we improve next time?\". The missing word is \"time\".",
+                "part": "listening",
+                "partIndex": 3,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-4",
+                "type": "dictation",
+                "audioText": "Our internal communication was a bit messy.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"Our internal communication was a bit _____.\"",
+                "targetWord": "messy",
+                "explanation": "Full audio: \"Our internal communication was a bit messy.\". The missing word is \"messy\".",
+                "part": "listening",
+                "partIndex": 4,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-5",
+                "type": "dictation",
+                "audioText": "That is a fair point, Morgan.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"That is a fair _____, Morgan.\"",
+                "targetWord": "point",
+                "explanation": "Full audio: \"That is a fair point, Morgan.\". The missing word is \"point\".",
+                "part": "listening",
+                "partIndex": 5,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-6",
+                "type": "arrange",
+                "audioText": "I was often unsure about responsibilities.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I was often unsure about responsibilities",
+                "words": [
+                  "often",
+                  "about",
+                  "I",
+                  "responsibilities",
+                  "was",
+                  "unsure"
+                ],
+                "explanation": "Correct sentence order: \"I was often unsure about responsibilities.\".",
+                "part": "listening",
+                "partIndex": 6,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-7",
+                "type": "arrange",
+                "audioText": "We should define roles early on.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "We should define roles early on",
+                "words": [
+                  "should",
+                  "on",
+                  "early",
+                  "define",
+                  "We",
+                  "roles"
+                ],
+                "explanation": "Correct sentence order: \"We should define roles early on.\".",
+                "part": "listening",
+                "partIndex": 7,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-8",
+                "type": "arrange",
+                "audioText": "A clear chart would help everyone.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "A clear chart would help everyone",
+                "words": [
+                  "clear",
+                  "help",
+                  "everyone",
+                  "would",
+                  "A",
+                  "chart"
+                ],
+                "explanation": "Correct sentence order: \"A clear chart would help everyone.\".",
+                "part": "listening",
+                "partIndex": 8,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-9",
+                "type": "arrange",
+                "audioText": "Shorter check-ins could also work better.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Shorter check-ins could also work better",
+                "words": [
+                  "also",
+                  "Shorter",
+                  "check-ins",
+                  "better",
+                  "work",
+                  "could"
+                ],
+                "explanation": "Correct sentence order: \"Shorter check-ins could also work better.\".",
+                "part": "listening",
+                "partIndex": 9,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-10",
+                "type": "arrange",
+                "audioText": "Daily standups catch bugs much faster.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Daily standups catch bugs much faster",
+                "words": [
+                  "bugs",
+                  "much",
+                  "catch",
+                  "Daily",
+                  "faster",
+                  "standups"
+                ],
+                "explanation": "Correct sentence order: \"Daily standups catch bugs much faster.\".",
+                "part": "listening",
+                "partIndex": 10,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "type": "dictation",
+                "audioText": "Cross-functional collaboration is essential for modern product design.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "Cross-functional _____ is essential for modern product design.",
+                "targetWord": "collaboration",
+                "explanation": "Audio lengkap: 'Cross-functional collaboration is essential for modern product design.'. Kata: 'collaboration'.",
+                "id": "q-b1.4-m12-l-11",
+                "part": "listening",
+                "partIndex": 11,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "type": "arrange",
+                "audioText": "Despite technical difficulties the presentation received overwhelmingly positive reviews.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "Despite technical difficulties the presentation received overwhelmingly positive reviews",
+                "words": [
+                  "positive",
+                  "technical",
+                  "the",
+                  "presentation",
+                  "Despite",
+                  "reviews",
+                  "overwhelmingly",
+                  "received",
+                  "difficulties"
+                ],
+                "explanation": "Urutan benar: 'Despite technical difficulties the presentation received overwhelmingly positive reviews.'.",
+                "id": "q-b1.4-m12-l-12",
+                "part": "listening",
+                "partIndex": 12,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "type": "dictation",
+                "audioText": "The manager insisted on reviewing all regulatory compliance documents.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "The manager insisted on reviewing all regulatory _____ documents.",
+                "targetWord": "compliance",
+                "explanation": "Audio lengkap: 'The manager insisted on reviewing all regulatory compliance documents.'. Kata: 'compliance'.",
+                "id": "q-b1.4-m12-l-13",
+                "part": "listening",
+                "partIndex": 13,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "type": "arrange",
+                "audioText": "She explained that the initial forecast had underestimated consumer demand.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "She explained that the initial forecast had underestimated consumer demand",
+                "words": [
+                  "forecast",
+                  "She",
+                  "that",
+                  "underestimated",
+                  "had",
+                  "demand",
+                  "initial",
+                  "consumer",
+                  "the",
+                  "explained"
+                ],
+                "explanation": "Urutan benar: 'She explained that the initial forecast had underestimated consumer demand.'.",
+                "id": "q-b1.4-m12-l-14",
+                "part": "listening",
+                "partIndex": 14,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "type": "dictation",
+                "audioText": "We must establish clear benchmarks before launching the marketing campaign.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "We must establish clear _____ before launching the marketing campaign.",
+                "targetWord": "benchmarks",
+                "explanation": "Audio lengkap: 'We must establish clear benchmarks before launching the marketing campaign.'. Kata: 'benchmarks'.",
+                "id": "q-b1.4-m12-l-15",
+                "part": "listening",
+                "partIndex": 15,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-1",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this direct accusation into a polite past reflection using 'could have': 'You did not notify the team about the delay.'",
+                "promptText": "Direct critique: You did not notify the team about the delay.",
+                "hint": "Start with 'We could have notified' or 'You could have notified'.",
+                "targetAnswers": [
+                  "We could have notified the team about the delay earlier.",
+                  "You could have notified the team about the delay.",
+                  "We could have notified the team about the delay."
+                ],
+                "explanation": "Using 'could have + past participle' turns a direct accusation into an objective reflection on past possibilities.",
+                "part": "writing",
+                "partIndex": 1,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-2",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct all capitalization, punctuation, and verb form errors in this sentence:",
+                "promptText": "if the team had checked the data in july we would had avoided the calculation error",
+                "hint": "Check the month capitalization, the comma after the if-clause, and the modal perfect verb form.",
+                "targetAnswers": [
+                  "If the team had checked the data in July, we would have avoided the calculation error."
+                ],
+                "explanation": "Capitalize 'If' and 'July', place a comma after the dependent condition, and use 'would have avoided' instead of 'would had avoided'.",
+                "part": "writing",
+                "partIndex": 2,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-3",
+                "typeLabel": "Diplomatic Rewriting",
+                "instruction": "Rewrite this blunt order into a polite recommendation using 'I think we should': 'Change the retrospective format immediately.'",
+                "promptText": "Blunt order: Change the retrospective format immediately.",
+                "hint": "Start your sentence with 'I think we should change'.",
+                "targetAnswers": [
+                  "I think we should change the retrospective format for our next meeting.",
+                  "I think that we should change the retrospective format for our next meeting.",
+                  "I think we should change the retrospective format.",
+                  "I think that we should change the retrospective format."
+                ],
+                "explanation": "Starting recommendations with 'I think (that) we should' softens the tone and encourages open discussion.",
+                "part": "writing",
+                "partIndex": 3,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-4",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Combine these two past facts into a third conditional sentence: 'We did not back up the files. We lost two days of work.'",
+                "promptText": "Facts: We did not back up the files, so we lost two days of work.",
+                "hint": "Begin with 'If we had backed up the files...'",
+                "targetAnswers": [
+                  "If we had backed up the files, we would not have lost two days of work.",
+                  "If we had backed up the files, we wouldn't have lost two days of work."
+                ],
+                "explanation": "The third conditional formula is: If + subject + had + past participle, subject + would + have + past participle.",
+                "part": "writing",
+                "partIndex": 4,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-5",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the punctuation and grammar errors in this sentence:",
+                "promptText": "in my opinion we ought to document every decision more clearly",
+                "hint": "Add a comma after the introductory phrase and capitalize the first letter.",
+                "targetAnswers": [
+                  "In my opinion, we ought to document every decision more clearly."
+                ],
+                "explanation": "Introductory transitional phrases such as 'In my opinion' must be capitalized and followed by a comma.",
+                "part": "writing",
+                "partIndex": 5,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-6",
+                "typeLabel": "Conjunction / Linking Words",
+                "instruction": "Join these two retrospective observations using 'Although' at the beginning: 'The sprint was demanding. We achieved all core deliverables.'",
+                "promptText": "Sentences: The sprint was demanding. We achieved all core deliverables.",
+                "hint": "Place 'Although' at the start and add a comma between the two clauses.",
+                "targetAnswers": [
+                  "Although the sprint was demanding, we achieved all core deliverables."
+                ],
+                "explanation": "'Although' shows concession and connects two contrasting clauses. A comma is required after the first clause.",
+                "part": "writing",
+                "partIndex": 6,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-7",
+                "typeLabel": "Diplomatic Rewriting",
+                "instruction": "Rewrite this harsh comment diplomatically using 'might have': 'The marketing team failed to check the release notes.'",
+                "promptText": "Harsh comment: The marketing team failed to check the release notes.",
+                "hint": "Use 'The marketing team might have reviewed' or 'The marketing team might have checked'.",
+                "targetAnswers": [
+                  "The marketing team might have checked the release notes earlier.",
+                  "The marketing team might have checked the release notes.",
+                  "The marketing team might have reviewed the release notes earlier.",
+                  "The marketing team might have reviewed the release notes."
+                ],
+                "explanation": "'Might have + past participle' expresses criticism tactfully without assigning direct failure.",
+                "part": "writing",
+                "partIndex": 7,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-8",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the verb agreement and capitalization in this conditional sentence:",
+                "promptText": "we would have resolved the ticket faster if mark had responded on friday",
+                "hint": "Capitalize the first word and proper nouns, and keep the sentence structure intact.",
+                "targetAnswers": [
+                  "We would have resolved the ticket faster if Mark had responded on Friday."
+                ],
+                "explanation": "Names of people like 'Mark' and days of the week like 'Friday' must always be capitalized.",
+                "part": "writing",
+                "partIndex": 8,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-9",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite this recommendation using 'I feel that we ought to': 'We need to set realistic milestones.'",
+                "promptText": "Direct need: We need to set realistic milestones.",
+                "hint": "Begin with 'I feel that we ought to...'",
+                "targetAnswers": [
+                  "I feel that we ought to set realistic milestones.",
+                  "I feel that we ought to set more realistic milestones."
+                ],
+                "explanation": "'Ought to' is a polite equivalent of 'should', and 'I feel that' cushions the advice constructively.",
+                "part": "writing",
+                "partIndex": 9,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-10",
+                "typeLabel": "Short Response",
+                "instruction": "Write one complete sentence explaining what your team could have done differently in a past project using 'could have'.",
+                "promptText": "Prompt: Suggest one improvement for past team communication.",
+                "hint": "Start with 'We could have...' followed by a past participle.",
+                "targetAnswers": [
+                  "We could have communicated our progress more clearly.",
+                  "We could have scheduled daily standup meetings.",
+                  "We could have shared our weekly updates earlier.",
+                  "We could have held daily standup meetings to share updates."
+                ],
+                "explanation": "A complete sentence using 'could have + past participle' offers a constructive, forward-looking review of past workflows.",
+                "part": "writing",
+                "partIndex": 10,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-1",
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 25 seconds about a project or group task you finished recently, evaluating what worked well and what was challenging.",
+                "audioPrompt": "Describe a recent team project you worked on. What was a key milestone, and what went well?",
+                "storyPoints": [
+                  "Identify the project and the main milestone your team reached",
+                  "Explain one aspect of the work that was very successful",
+                  "State one challenge you faced and how you felt after completing it"
+                ],
+                "targetSentence": "In our last project, we reached our main milestone on time, although coordinating our weekly meetings was quite challenging.",
+                "phonetic": "/ɪn ˈaʊər lɑːst ˈprɒdʒekt wiː riːtʃt ˈaʊər meɪn ˈmaɪlstəʊn ɒn taɪm/",
+                "expectedKeywords": [
+                  "project",
+                  "milestone",
+                  "team",
+                  "challenging"
+                ],
+                "explanation": "Use past tense forms accurately and include project evaluation vocabulary such as 'milestone' and 'successful'.",
+                "part": "speaking",
+                "partIndex": 1,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-2",
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 25 seconds about a time someone gave you constructive feedback on your work and how you handled it.",
+                "audioPrompt": "Tell a story about receiving constructive feedback from a colleague or teacher. How did you react?",
+                "storyPoints": [
+                  "Describe what the constructive feedback was about",
+                  "Explain how you felt initially and how you took it on board",
+                  "Describe the positive change you made as a result"
+                ],
+                "targetSentence": "My manager pointed out room for improvement in my report, so I took the suggestions on board and revised it carefully.",
+                "phonetic": "/maɪ ˈmænɪdʒər ˈpɔɪntɪd aʊt ruːm fɔːr ɪmˈpruːvmənt ɪn maɪ rɪˈpɔːt/",
+                "expectedKeywords": [
+                  "constructive feedback",
+                  "room for improvement",
+                  "take on board",
+                  "revised"
+                ],
+                "explanation": "Organize your response clearly with time sequencing markers like 'at first', 'after that', and 'as a result'.",
+                "part": "speaking",
+                "partIndex": 2,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-3",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "You are discussing a delayed project task with your teammate. Deliver constructive feedback diplomatically without sounding aggressive.",
+                "audioPrompt": "Your teammate missed the submission deadline for their slides. How do you raise this issue diplomatically during your retrospective?",
+                "scenarioContext": "You and your teammate Alex are reviewing the project outcome. Alex handed in the slide deck 24 hours late, which caused the client presentation to be rushed.",
+                "characterRole": "Project Coordinator speaking to Alex, a teammate",
+                "targetSentence": "You did great work on the slides, but we noticed there might be room for improvement regarding our deadlines.",
+                "phonetic": "/juː dɪd greɪt wɜːk ɒn ðə slaɪdz bʌt wiː ˈnəʊtɪst ðeər maɪt biː ruːm fɔːr ɪmˈpruːvmənt/",
+                "expectedKeywords": [
+                  "slides",
+                  "room for improvement",
+                  "deadlines",
+                  "noticed"
+                ],
+                "explanation": "Begin with a positive comment before introducing the constructive suggestion using softening phrases like 'there might be'.",
+                "part": "speaking",
+                "partIndex": 3,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-4",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Celebrate a team milestone and open the floor for suggestions during a retrospective meeting.",
+                "audioPrompt": "Welcome your team to the sprint retrospective, congratulate them on meeting a milestone, and invite open feedback.",
+                "scenarioContext": "You are leading a retrospective after finishing a company website redesign. The project launched successfully today.",
+                "characterRole": "Scrum Master addressing the design team",
+                "targetSentence": "Congratulations on hitting this milestone everyone, so let us open the floor for constructive feedback.",
+                "phonetic": "/kənˌɡrætʃuˈleɪʃnz ɒn ˈhɪtɪŋ ðɪs ˈmaɪlstəʊn ˈevriwʌn/",
+                "expectedKeywords": [
+                  "milestone",
+                  "constructive feedback",
+                  "everyone",
+                  "retrospective"
+                ],
+                "explanation": "Speak with enthusiastic and inclusive intonation while introducing the agenda for the evaluation session.",
+                "part": "speaking",
+                "partIndex": 4,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-5",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond professionally to a coworker who has just pointed out errors in your presentation deck.",
+                "audioPrompt": "Your colleague says: 'I noticed a few typos on slides four and five.' How do you answer politely?",
+                "scenarioContext": "Your colleague Maya has provided polite feedback on your draft slides before the big client pitch.",
+                "characterRole": "Marketing Specialist responding to Maya",
+                "targetSentence": "Thanks for pointing that out Maya, I will take your feedback on board and fix those errors immediately.",
+                "phonetic": "/θæŋks fɔːr ˈpɔɪntɪŋ ðæt aʊt ˈmaɪə aɪ wɪl teɪk jɔːr ˈfiːdbæk ɒn bɔːd/",
+                "expectedKeywords": [
+                  "pointing that out",
+                  "take on board",
+                  "feedback",
+                  "fix"
+                ],
+                "explanation": "Acknowledge the feedback gratefully and state an immediate action step using the phrase 'take on board'.",
+                "part": "speaking",
+                "partIndex": 5,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-6",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Suggest a diplomatic solution when two colleagues disagree about the root cause of a project delay.",
+                "audioPrompt": "Two team members are arguing about who caused a delay. Step in and propose a constructive next step.",
+                "scenarioContext": "During a retrospective, the developer and the tester are blaming each other for testing delays.",
+                "characterRole": "Team Facilitator intervening in a meeting",
+                "targetSentence": "Let us look at this constructively and focus on what we can improve for our next milestone.",
+                "phonetic": "/let ʌs lʊk æt ðɪs kənˈstrʌktɪvli ænd ˈfəʊkəs ɒn wɒt wiː kæn ɪmˈpruːv/",
+                "expectedKeywords": [
+                  "constructively",
+                  "focus",
+                  "improve",
+                  "milestone"
+                ],
+                "explanation": "Use neutral, non-judgmental language to redirect the conversation toward future improvements.",
+                "part": "speaking",
+                "partIndex": 6,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-7",
+                "category": "linguistic_drill",
+                "typeLabel": "Reflex Drill: Vocabulary",
+                "focus": "vocab",
+                "instruction": "Complete the sentence using the exact phrase 'room for improvement' to express a polite evaluation.",
+                "audioPrompt": "Say the sentence: Although the presentation was clear, there is still room for improvement in the question section.",
+                "targetSentence": "Although the presentation was clear, there is still room for improvement in the question section.",
+                "phonetic": "/ɔːlˈðəʊ ðə ˌpreznˈteɪʃn wɒz klɪər ðeər ɪz stɪl ruːm fɔːr ɪmˈpruːvmənt ɪn ðə ˈkwestʃən ˈsekʃn/",
+                "expectedKeywords": [
+                  "presentation",
+                  "clear",
+                  "room for improvement",
+                  "question"
+                ],
+                "explanation": "The idiom 'room for improvement' is an essential B1 phrase for polite constructive critique.",
+                "part": "speaking",
+                "partIndex": 7,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-8",
+                "category": "linguistic_drill",
+                "typeLabel": "Reflex Drill: Grammar",
+                "focus": "grammar",
+                "instruction": "Use the modal phrase 'could have been' to soften a critical observation about project communication.",
+                "audioPrompt": "Deliver this softened statement: Our daily communication could have been slightly more frequent.",
+                "targetSentence": "Our daily communication could have been slightly more frequent.",
+                "phonetic": "/ˈaʊər ˈdeɪli kəˌmjuːnɪˈkeɪʃn kʊd həv biːn ˈslaɪtli mɔːr ˈfriːkwənt/",
+                "expectedKeywords": [
+                  "communication",
+                  "could have been",
+                  "slightly",
+                  "frequent"
+                ],
+                "explanation": "The modal structure 'could have been' + modifier 'slightly' allows you to suggest changes without assigning personal blame.",
+                "part": "speaking",
+                "partIndex": 8,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-9",
+                "category": "linguistic_drill",
+                "typeLabel": "Reflex Drill: Syllable Stress",
+                "focus": "pronunciation_stress",
+                "instruction": "Repeat the sentence, taking care to place the primary stress on the third syllable of 'retrospective' (re-tro-SPEC-tive).",
+                "audioPrompt": "Say: We must schedule our project retrospective before Friday afternoon.",
+                "targetSentence": "We must schedule our project retrospective before Friday afternoon.",
+                "phonetic": "/wiː mʌst ˈʃedjuːl ˈaʊər ˈprɒdʒekt ˌretrəˈspektɪv bɪˈfɔːr ˈfraɪdeɪ ˌɑːftəˈnuːn/",
+                "expectedKeywords": [
+                  "schedule",
+                  "project",
+                  "retrospective",
+                  "Friday"
+                ],
+                "explanation": "Make sure you do not stress 'retro'; the loudest and highest syllable must be 'SPEC'.",
+                "part": "speaking",
+                "partIndex": 9,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-10",
+                "category": "linguistic_drill",
+                "typeLabel": "Reflex Drill: Intonation",
+                "focus": "pronunciation_intonation",
+                "instruction": "Produce a polite diplomatic suggestion using a gentle rise at the midpoint and a smooth falling intonation at the end.",
+                "audioPrompt": "Say this polite suggestion with a warm, diplomatic tone: Perhaps we could review the timeline together tomorrow?",
+                "targetSentence": "Perhaps we could review the timeline together tomorrow?",
+                "phonetic": "/pəˈhæps wiː kʊd rɪˈvjuː ðə ˈtaɪmlaɪn təˈɡeðər təˈmɒrəʊ/",
+                "expectedKeywords": [
+                  "perhaps",
+                  "review",
+                  "timeline",
+                  "together",
+                  "tomorrow"
+                ],
+                "explanation": "Begin with 'Perhaps' on a gentle rising note, keep the middle smooth, and fall gently on 'tomorrow' so the suggestion sounds collaborative.",
+                "part": "speaking",
+                "partIndex": 10,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "category": "Executive Summary",
+                "instruction": "Ucapkan kesimpulan strategis berikut:",
+                "prompt": "In conclusion, investing in cloud automation will simultaneously optimize operating expenditure and enhance organizational resilience.",
+                "sampleAnswer": "In conclusion, investing in cloud automation will simultaneously optimize operating expenditure and enhance organizational resilience.",
+                "phonetic": "/ɪn kənˈkluːʒn ɪnˈvestɪŋ ɪn klaʊd/",
+                "keywords": [
+                  "conclusion",
+                  "automation",
+                  "expenditure",
+                  "resilience"
+                ],
+                "id": "q-b1.4-m12-s-11",
+                "part": "speaking",
+                "partIndex": 11,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "category": "Conflict Resolution",
+                "instruction": "Ucapkan usulan penyelesaian perselisihan kerja berikut:",
+                "prompt": "Let us establish objective evaluation criteria so both departments can collaborate effectively toward the mutual objective.",
+                "sampleAnswer": "Let us establish objective evaluation criteria so both departments can collaborate effectively toward the mutual objective.",
+                "phonetic": "/let əs ɪˈstæblɪʃ əbˈdʒektɪv/",
+                "keywords": [
+                  "establish",
+                  "criteria",
+                  "collaborate",
+                  "mutual"
+                ],
+                "id": "q-b1.4-m12-s-12",
+                "part": "speaking",
+                "partIndex": 12,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "category": "Hypothetical Scenario",
+                "instruction": "Ucapkan pertimbangan skenario alternatif:",
+                "prompt": "Had the regulatory framework been updated earlier, domestic startups would have expanded internationally with far greater confidence.",
+                "sampleAnswer": "Had the regulatory framework been updated earlier, domestic startups would have expanded internationally with far greater confidence.",
+                "phonetic": "/hæd ðə ˈreɡjələtəri ˈfreɪmwɜːk biːn/",
+                "keywords": [
+                  "regulatory",
+                  "framework",
+                  "startups",
+                  "confidence"
+                ],
+                "id": "q-b1.4-m12-s-13",
+                "part": "speaking",
+                "partIndex": 13,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "category": "Performance Review",
+                "instruction": "Ucapkan umpan balik evaluasi kinerja:",
+                "prompt": "Your consistent dedication to mentorship has significantly bolstered team morale and elevated our overall code delivery standard.",
+                "sampleAnswer": "Your consistent dedication to mentorship has significantly bolstered team morale and elevated our overall code delivery standard.",
+                "phonetic": "/jɔː kənˈsɪstənt ˌdedɪˈkeɪʃn tə ˈmentɔːʃɪp/",
+                "keywords": [
+                  "dedication",
+                  "mentorship",
+                  "morale",
+                  "standard"
+                ],
+                "id": "q-b1.4-m12-s-14",
+                "part": "speaking",
+                "partIndex": 14,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "category": "Customer Relations",
+                "instruction": "Ucapkan respon penanganan keluhan klien tingkat tinggi:",
+                "prompt": "We sincerely apologize for the service interruption and have implemented immediate safeguards to ensure it will not recur.",
+                "sampleAnswer": "We sincerely apologize for the service interruption and have implemented immediate safeguards to ensure it will not recur.",
+                "phonetic": "/wiː sɪnˈsɪəli əˈpɒlədʒaɪz fə ðə ˈsɜːvɪs/",
+                "keywords": [
+                  "apologize",
+                  "interruption",
+                  "safeguards",
+                  "recur"
+                ],
+                "id": "q-b1.4-m12-s-15",
+                "part": "speaking",
+                "partIndex": 15,
+                "sourceModule": "B1.4-M12"
+              }
+            ],
+            "practicumQuestions": [
+              {
+                "id": "q-b1.4-m12-r-1",
+                "question": "What was the main purpose of the meeting described in the passage?",
+                "options": [
+                  "To interview new candidates for the programming department.",
+                  "To evaluate the launch of the Nova mobile app and discuss improvements.",
+                  "To announce the complete cancellation of the project."
+                ],
+                "answer": "To evaluate the launch of the Nova mobile app and discuss improvements.",
+                "explanation": "The opening sentence explains that the team held a ninety-minute retrospective to evaluate the launch of their new mobile learning app.",
+                "part": "reading",
+                "partIndex": 1,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-2",
+                "question": "How long did the project take before reaching the release milestone?",
+                "options": [
+                  "Ninety days across two offices.",
+                  "Five months of work across three departments.",
+                  "Twelve weeks of customer testing."
+                ],
+                "answer": "Five months of work across three departments.",
+                "explanation": "Paragraph 1 states that reaching this milestone required five months of intense work across three departments.",
+                "part": "reading",
+                "partIndex": 2,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-3",
+                "question": "Which indicator shows that the launch was generally successful?",
+                "options": [
+                  "The app received twelve thousand downloads and eighty-four percent user satisfaction.",
+                  "No users reported any issues or errors during the first weekend.",
+                  "The design team won an international prize immediately after release."
+                ],
+                "answer": "The app received twelve thousand downloads and eighty-four percent user satisfaction.",
+                "explanation": "Paragraph 1 explicitly notes that over twelve thousand users downloaded the app and satisfaction reached eighty-four percent.",
+                "part": "reading",
+                "partIndex": 3,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-4",
+                "question": "What positive factor helped avoid misunderstandings during the final two weeks?",
+                "options": [
+                  "Hiring outside consultants to review the text.",
+                  "Clear communication between the graphic designers and content creators.",
+                  "Canceling all meetings to focus solely on coding."
+                ],
+                "answer": "Clear communication between the graphic designers and content creators.",
+                "explanation": "Paragraph 2 states that clear communication between graphic designers and content creators prevented many misunderstandings.",
+                "part": "reading",
+                "partIndex": 4,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-5",
+                "question": "What caused the unexpected bottleneck in server testing?",
+                "options": [
+                  "A total electrical blackout at the primary office.",
+                  "Last-minute code adjustments made to the app.",
+                  "Too many marketing emails sent to potential users."
+                ],
+                "answer": "Last-minute code adjustments made to the app.",
+                "explanation": "Paragraph 3 notes that the QA lead explained how last-minute code adjustments created an unexpected bottleneck.",
+                "part": "reading",
+                "partIndex": 5,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-6",
+                "question": "According to the QA lead, what would have happened if new features had been frozen earlier?",
+                "options": [
+                  "The team would have detected several small login errors before the launch.",
+                  "The app would have been released two months ahead of schedule.",
+                  "The company would have doubled its total sales revenue."
+                ],
+                "answer": "The team would have detected several small login errors before the launch.",
+                "explanation": "Paragraph 3 specifies that if features had been frozen seven days earlier, they would have caught several small login errors.",
+                "part": "reading",
+                "partIndex": 6,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-7",
+                "question": "How did the team behave when discussing project weaknesses?",
+                "options": [
+                  "They argued loudly and blamed the engineers for every mistake.",
+                  "They spoke diplomatically and focused on shared process improvements.",
+                  "They refused to listen to any negative opinions from the QA lead."
+                ],
+                "answer": "They spoke diplomatically and focused on shared process improvements.",
+                "explanation": "Paragraph 3 explains that the team spoke diplomatically and agreed on solutions instead of pointing fingers.",
+                "part": "reading",
+                "partIndex": 7,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-8",
+                "question": "What does the phrase 'room for improvement' mean in paragraph 3?",
+                "options": [
+                  "An empty meeting room reserved for future presentations.",
+                  "Aspects or areas that can be developed to become better.",
+                  "A total project failure that cannot be rescued."
+                ],
+                "answer": "Aspects or areas that can be developed to become better.",
+                "explanation": "'Room for improvement' is a polite way of saying that certain parts of the project are not yet perfect and can be enhanced.",
+                "part": "reading",
+                "partIndex": 8,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-9",
+                "question": "What specific request from users did the team agree to take on board immediately?",
+                "options": [
+                  "Offline reading support for the learning app.",
+                  "A paid subscription with daily telephone coaching.",
+                  "A complete change of the company brand and logo."
+                ],
+                "answer": "Offline reading support for the learning app.",
+                "explanation": "Paragraph 4 explains that the team agreed to take feedback on board immediately, especially requests for offline reading support.",
+                "part": "reading",
+                "partIndex": 9,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-r-10",
+                "question": "What was the final outcome of conducting this retrospective meeting?",
+                "options": [
+                  "The team decided to close the app permanently.",
+                  "Team members turned potential arguments into practical solutions.",
+                  "The project lead removed three departments from future updates."
+                ],
+                "answer": "Team members turned potential arguments into practical solutions.",
+                "explanation": "The final sentence summarizes that by talking openly and respectfully, the team turned potential arguments into practical solutions.",
+                "part": "reading",
+                "partIndex": 10,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "question": "What is the primary function of the modal verb in 'You ought to back up your database before the migration'?",
+                "options": [
+                  "Strong moral or practical recommendation",
+                  "Logical certainty",
+                  "Physical capability",
+                  "Past habit"
+                ],
+                "answer": "Strong moral or practical recommendation",
+                "explanation": "'Ought to' expresses a strong advisory recommendation or obligation.",
+                "id": "q-b1.4-m12-r-11",
+                "part": "reading",
+                "partIndex": 11,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "question": "Which word best replaces 'alleviate' in 'measures were introduced to alleviate employee stress'?",
+                "options": [
+                  "Reduce",
+                  "Intensify",
+                  "Ignore",
+                  "Prolong"
+                ],
+                "answer": "Reduce",
+                "explanation": "'Alleviate' means to make a problem or burden less severe.",
+                "id": "q-b1.4-m12-r-12",
+                "part": "reading",
+                "partIndex": 12,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "question": "In professional correspondence, which salutation and sign-off pair is the most appropriate for a formal inquiry?",
+                "options": [
+                  "Dear Mr. Harrison / Sincerely yours",
+                  "Hey buddy / Cheers",
+                  "To whom it concerns / Talk soon",
+                  "Good morning friend / Bye for now"
+                ],
+                "answer": "Dear Mr. Harrison / Sincerely yours",
+                "explanation": "Formal business register requires respectful titles and conventional complimentary closes.",
+                "id": "q-b1.4-m12-r-13",
+                "part": "reading",
+                "partIndex": 13,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "question": "Select the sentence with the correct non-defining relative clause punctuation:",
+                "options": [
+                  "Our senior analyst, who joined the firm last January, presented the financial forecast.",
+                  "Our senior analyst who joined the firm last January presented the financial forecast.",
+                  "Our senior analyst, who joined the firm last January presented the financial forecast.",
+                  "Our senior analyst who joined the firm last January, presented the financial forecast."
+                ],
+                "answer": "Our senior analyst, who joined the firm last January, presented the financial forecast.",
+                "explanation": "Non-defining relative clauses must be enclosed by commas on both sides.",
+                "id": "q-b1.4-m12-r-14",
+                "part": "reading",
+                "partIndex": 14,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "question": "What does the expression 'think outside the box' convey in an entrepreneurial context?",
+                "options": [
+                  "Approach problems with non-traditional and creative perspectives.",
+                  "Store physical inventory outside the warehouse boundaries.",
+                  "Follow standard operating procedures without deviation.",
+                  "Ignore financial accounting standards during quarterly audits."
+                ],
+                "answer": "Approach problems with non-traditional and creative perspectives.",
+                "explanation": "The idiom 'think outside the box' signifies lateral and innovative thinking.",
+                "id": "q-b1.4-m12-r-15",
+                "part": "reading",
+                "partIndex": 15,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-1",
+                "type": "dictation",
+                "audioText": "So, the app launch went well.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"So, the app launch went _____.\"",
+                "targetWord": "well",
+                "explanation": "Full audio: \"So, the app launch went well.\". The missing word is \"well\".",
+                "part": "listening",
+                "partIndex": 1,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-2",
+                "type": "dictation",
+                "audioText": "Yes, the client seems very happy.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"Yes, the client seems very _____.\"",
+                "targetWord": "happy",
+                "explanation": "Full audio: \"Yes, the client seems very happy.\". The missing word is \"happy\".",
+                "part": "listening",
+                "partIndex": 2,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-3",
+                "type": "dictation",
+                "audioText": "What should we improve next time?",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"What should we improve next _____?\"",
+                "targetWord": "time",
+                "explanation": "Full audio: \"What should we improve next time?\". The missing word is \"time\".",
+                "part": "listening",
+                "partIndex": 3,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-4",
+                "type": "dictation",
+                "audioText": "Our internal communication was a bit messy.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Morgan: \"Our internal communication was a bit _____.\"",
+                "targetWord": "messy",
+                "explanation": "Full audio: \"Our internal communication was a bit messy.\". The missing word is \"messy\".",
+                "part": "listening",
+                "partIndex": 4,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-5",
+                "type": "dictation",
+                "audioText": "That is a fair point, Morgan.",
+                "instruction": "Listen to the audio clip and type the missing word:",
+                "promptSentence": "Alex: \"That is a fair _____, Morgan.\"",
+                "targetWord": "point",
+                "explanation": "Full audio: \"That is a fair point, Morgan.\". The missing word is \"point\".",
+                "part": "listening",
+                "partIndex": 5,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-6",
+                "type": "arrange",
+                "audioText": "I was often unsure about responsibilities.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "I was often unsure about responsibilities",
+                "words": [
+                  "often",
+                  "about",
+                  "I",
+                  "responsibilities",
+                  "was",
+                  "unsure"
+                ],
+                "explanation": "Correct sentence order: \"I was often unsure about responsibilities.\".",
+                "part": "listening",
+                "partIndex": 6,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-7",
+                "type": "arrange",
+                "audioText": "We should define roles early on.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "We should define roles early on",
+                "words": [
+                  "should",
+                  "on",
+                  "early",
+                  "define",
+                  "We",
+                  "roles"
+                ],
+                "explanation": "Correct sentence order: \"We should define roles early on.\".",
+                "part": "listening",
+                "partIndex": 7,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-8",
+                "type": "arrange",
+                "audioText": "A clear chart would help everyone.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "A clear chart would help everyone",
+                "words": [
+                  "clear",
+                  "help",
+                  "everyone",
+                  "would",
+                  "A",
+                  "chart"
+                ],
+                "explanation": "Correct sentence order: \"A clear chart would help everyone.\".",
+                "part": "listening",
+                "partIndex": 8,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-9",
+                "type": "arrange",
+                "audioText": "Shorter check-ins could also work better.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Shorter check-ins could also work better",
+                "words": [
+                  "also",
+                  "Shorter",
+                  "check-ins",
+                  "better",
+                  "work",
+                  "could"
+                ],
+                "explanation": "Correct sentence order: \"Shorter check-ins could also work better.\".",
+                "part": "listening",
+                "partIndex": 9,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-l-10",
+                "type": "arrange",
+                "audioText": "Daily standups catch bugs much faster.",
+                "instruction": "Listen to the sentence and arrange the words in the correct order:",
+                "targetSentence": "Daily standups catch bugs much faster",
+                "words": [
+                  "bugs",
+                  "much",
+                  "catch",
+                  "Daily",
+                  "faster",
+                  "standups"
+                ],
+                "explanation": "Correct sentence order: \"Daily standups catch bugs much faster.\".",
+                "part": "listening",
+                "partIndex": 10,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "type": "dictation",
+                "audioText": "Cross-functional collaboration is essential for modern product design.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "Cross-functional _____ is essential for modern product design.",
+                "targetWord": "collaboration",
+                "explanation": "Audio lengkap: 'Cross-functional collaboration is essential for modern product design.'. Kata: 'collaboration'.",
+                "id": "q-b1.4-m12-l-11",
+                "part": "listening",
+                "partIndex": 11,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "type": "arrange",
+                "audioText": "Despite technical difficulties the presentation received overwhelmingly positive reviews.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "Despite technical difficulties the presentation received overwhelmingly positive reviews",
+                "words": [
+                  "positive",
+                  "technical",
+                  "the",
+                  "presentation",
+                  "Despite",
+                  "reviews",
+                  "overwhelmingly",
+                  "received",
+                  "difficulties"
+                ],
+                "explanation": "Urutan benar: 'Despite technical difficulties the presentation received overwhelmingly positive reviews.'.",
+                "id": "q-b1.4-m12-l-12",
+                "part": "listening",
+                "partIndex": 12,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "type": "dictation",
+                "audioText": "The manager insisted on reviewing all regulatory compliance documents.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "The manager insisted on reviewing all regulatory _____ documents.",
+                "targetWord": "compliance",
+                "explanation": "Audio lengkap: 'The manager insisted on reviewing all regulatory compliance documents.'. Kata: 'compliance'.",
+                "id": "q-b1.4-m12-l-13",
+                "part": "listening",
+                "partIndex": 13,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "type": "arrange",
+                "audioText": "She explained that the initial forecast had underestimated consumer demand.",
+                "instruction": "Dengarkan kalimat dan susun kata menjadi urutan yang benar:",
+                "targetSentence": "She explained that the initial forecast had underestimated consumer demand",
+                "words": [
+                  "forecast",
+                  "She",
+                  "that",
+                  "underestimated",
+                  "had",
+                  "demand",
+                  "initial",
+                  "consumer",
+                  "the",
+                  "explained"
+                ],
+                "explanation": "Urutan benar: 'She explained that the initial forecast had underestimated consumer demand.'.",
+                "id": "q-b1.4-m12-l-14",
+                "part": "listening",
+                "partIndex": 14,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "type": "dictation",
+                "audioText": "We must establish clear benchmarks before launching the marketing campaign.",
+                "instruction": "Dengarkan audio dan ketik kata yang hilang:",
+                "promptSentence": "We must establish clear _____ before launching the marketing campaign.",
+                "targetWord": "benchmarks",
+                "explanation": "Audio lengkap: 'We must establish clear benchmarks before launching the marketing campaign.'. Kata: 'benchmarks'.",
+                "id": "q-b1.4-m12-l-15",
+                "part": "listening",
+                "partIndex": 15,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-1",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Transform this direct accusation into a polite past reflection using 'could have': 'You did not notify the team about the delay.'",
+                "promptText": "Direct critique: You did not notify the team about the delay.",
+                "hint": "Start with 'We could have notified' or 'You could have notified'.",
+                "targetAnswers": [
+                  "We could have notified the team about the delay earlier.",
+                  "You could have notified the team about the delay.",
+                  "We could have notified the team about the delay."
+                ],
+                "explanation": "Using 'could have + past participle' turns a direct accusation into an objective reflection on past possibilities.",
+                "part": "writing",
+                "partIndex": 1,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-2",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct all capitalization, punctuation, and verb form errors in this sentence:",
+                "promptText": "if the team had checked the data in july we would had avoided the calculation error",
+                "hint": "Check the month capitalization, the comma after the if-clause, and the modal perfect verb form.",
+                "targetAnswers": [
+                  "If the team had checked the data in July, we would have avoided the calculation error."
+                ],
+                "explanation": "Capitalize 'If' and 'July', place a comma after the dependent condition, and use 'would have avoided' instead of 'would had avoided'.",
+                "part": "writing",
+                "partIndex": 2,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-3",
+                "typeLabel": "Diplomatic Rewriting",
+                "instruction": "Rewrite this blunt order into a polite recommendation using 'I think we should': 'Change the retrospective format immediately.'",
+                "promptText": "Blunt order: Change the retrospective format immediately.",
+                "hint": "Start your sentence with 'I think we should change'.",
+                "targetAnswers": [
+                  "I think we should change the retrospective format for our next meeting.",
+                  "I think that we should change the retrospective format for our next meeting.",
+                  "I think we should change the retrospective format.",
+                  "I think that we should change the retrospective format."
+                ],
+                "explanation": "Starting recommendations with 'I think (that) we should' softens the tone and encourages open discussion.",
+                "part": "writing",
+                "partIndex": 3,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-4",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Combine these two past facts into a third conditional sentence: 'We did not back up the files. We lost two days of work.'",
+                "promptText": "Facts: We did not back up the files, so we lost two days of work.",
+                "hint": "Begin with 'If we had backed up the files...'",
+                "targetAnswers": [
+                  "If we had backed up the files, we would not have lost two days of work.",
+                  "If we had backed up the files, we wouldn't have lost two days of work."
+                ],
+                "explanation": "The third conditional formula is: If + subject + had + past participle, subject + would + have + past participle.",
+                "part": "writing",
+                "partIndex": 4,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-5",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Fix the punctuation and grammar errors in this sentence:",
+                "promptText": "in my opinion we ought to document every decision more clearly",
+                "hint": "Add a comma after the introductory phrase and capitalize the first letter.",
+                "targetAnswers": [
+                  "In my opinion, we ought to document every decision more clearly."
+                ],
+                "explanation": "Introductory transitional phrases such as 'In my opinion' must be capitalized and followed by a comma.",
+                "part": "writing",
+                "partIndex": 5,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-6",
+                "typeLabel": "Conjunction / Linking Words",
+                "instruction": "Join these two retrospective observations using 'Although' at the beginning: 'The sprint was demanding. We achieved all core deliverables.'",
+                "promptText": "Sentences: The sprint was demanding. We achieved all core deliverables.",
+                "hint": "Place 'Although' at the start and add a comma between the two clauses.",
+                "targetAnswers": [
+                  "Although the sprint was demanding, we achieved all core deliverables."
+                ],
+                "explanation": "'Although' shows concession and connects two contrasting clauses. A comma is required after the first clause.",
+                "part": "writing",
+                "partIndex": 6,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-7",
+                "typeLabel": "Diplomatic Rewriting",
+                "instruction": "Rewrite this harsh comment diplomatically using 'might have': 'The marketing team failed to check the release notes.'",
+                "promptText": "Harsh comment: The marketing team failed to check the release notes.",
+                "hint": "Use 'The marketing team might have reviewed' or 'The marketing team might have checked'.",
+                "targetAnswers": [
+                  "The marketing team might have checked the release notes earlier.",
+                  "The marketing team might have checked the release notes.",
+                  "The marketing team might have reviewed the release notes earlier.",
+                  "The marketing team might have reviewed the release notes."
+                ],
+                "explanation": "'Might have + past participle' expresses criticism tactfully without assigning direct failure.",
+                "part": "writing",
+                "partIndex": 7,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-8",
+                "typeLabel": "Mechanics Correction",
+                "instruction": "Correct the verb agreement and capitalization in this conditional sentence:",
+                "promptText": "we would have resolved the ticket faster if mark had responded on friday",
+                "hint": "Capitalize the first word and proper nouns, and keep the sentence structure intact.",
+                "targetAnswers": [
+                  "We would have resolved the ticket faster if Mark had responded on Friday."
+                ],
+                "explanation": "Names of people like 'Mark' and days of the week like 'Friday' must always be capitalized.",
+                "part": "writing",
+                "partIndex": 8,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-9",
+                "typeLabel": "Sentence Transformation",
+                "instruction": "Rewrite this recommendation using 'I feel that we ought to': 'We need to set realistic milestones.'",
+                "promptText": "Direct need: We need to set realistic milestones.",
+                "hint": "Begin with 'I feel that we ought to...'",
+                "targetAnswers": [
+                  "I feel that we ought to set realistic milestones.",
+                  "I feel that we ought to set more realistic milestones."
+                ],
+                "explanation": "'Ought to' is a polite equivalent of 'should', and 'I feel that' cushions the advice constructively.",
+                "part": "writing",
+                "partIndex": 9,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-w-10",
+                "typeLabel": "Short Response",
+                "instruction": "Write one complete sentence explaining what your team could have done differently in a past project using 'could have'.",
+                "promptText": "Prompt: Suggest one improvement for past team communication.",
+                "hint": "Start with 'We could have...' followed by a past participle.",
+                "targetAnswers": [
+                  "We could have communicated our progress more clearly.",
+                  "We could have scheduled daily standup meetings.",
+                  "We could have shared our weekly updates earlier.",
+                  "We could have held daily standup meetings to share updates."
+                ],
+                "explanation": "A complete sentence using 'could have + past participle' offers a constructive, forward-looking review of past workflows.",
+                "part": "writing",
+                "partIndex": 10,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-1",
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 25 seconds about a project or group task you finished recently, evaluating what worked well and what was challenging.",
+                "audioPrompt": "Describe a recent team project you worked on. What was a key milestone, and what went well?",
+                "storyPoints": [
+                  "Identify the project and the main milestone your team reached",
+                  "Explain one aspect of the work that was very successful",
+                  "State one challenge you faced and how you felt after completing it"
+                ],
+                "targetSentence": "In our last project, we reached our main milestone on time, although coordinating our weekly meetings was quite challenging.",
+                "phonetic": "/ɪn ˈaʊər lɑːst ˈprɒdʒekt wiː riːtʃt ˈaʊər meɪn ˈmaɪlstəʊn ɒn taɪm/",
+                "expectedKeywords": [
+                  "project",
+                  "milestone",
+                  "team",
+                  "challenging"
+                ],
+                "explanation": "Use past tense forms accurately and include project evaluation vocabulary such as 'milestone' and 'successful'.",
+                "part": "speaking",
+                "partIndex": 1,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-2",
+                "category": "storytelling",
+                "typeLabel": "Personal Storytelling",
+                "instruction": "Speak for at least 25 seconds about a time someone gave you constructive feedback on your work and how you handled it.",
+                "audioPrompt": "Tell a story about receiving constructive feedback from a colleague or teacher. How did you react?",
+                "storyPoints": [
+                  "Describe what the constructive feedback was about",
+                  "Explain how you felt initially and how you took it on board",
+                  "Describe the positive change you made as a result"
+                ],
+                "targetSentence": "My manager pointed out room for improvement in my report, so I took the suggestions on board and revised it carefully.",
+                "phonetic": "/maɪ ˈmænɪdʒər ˈpɔɪntɪd aʊt ruːm fɔːr ɪmˈpruːvmənt ɪn maɪ rɪˈpɔːt/",
+                "expectedKeywords": [
+                  "constructive feedback",
+                  "room for improvement",
+                  "take on board",
+                  "revised"
+                ],
+                "explanation": "Organize your response clearly with time sequencing markers like 'at first', 'after that', and 'as a result'.",
+                "part": "speaking",
+                "partIndex": 2,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-3",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "You are discussing a delayed project task with your teammate. Deliver constructive feedback diplomatically without sounding aggressive.",
+                "audioPrompt": "Your teammate missed the submission deadline for their slides. How do you raise this issue diplomatically during your retrospective?",
+                "scenarioContext": "You and your teammate Alex are reviewing the project outcome. Alex handed in the slide deck 24 hours late, which caused the client presentation to be rushed.",
+                "characterRole": "Project Coordinator speaking to Alex, a teammate",
+                "targetSentence": "You did great work on the slides, but we noticed there might be room for improvement regarding our deadlines.",
+                "phonetic": "/juː dɪd greɪt wɜːk ɒn ðə slaɪdz bʌt wiː ˈnəʊtɪst ðeər maɪt biː ruːm fɔːr ɪmˈpruːvmənt/",
+                "expectedKeywords": [
+                  "slides",
+                  "room for improvement",
+                  "deadlines",
+                  "noticed"
+                ],
+                "explanation": "Begin with a positive comment before introducing the constructive suggestion using softening phrases like 'there might be'.",
+                "part": "speaking",
+                "partIndex": 3,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-4",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Celebrate a team milestone and open the floor for suggestions during a retrospective meeting.",
+                "audioPrompt": "Welcome your team to the sprint retrospective, congratulate them on meeting a milestone, and invite open feedback.",
+                "scenarioContext": "You are leading a retrospective after finishing a company website redesign. The project launched successfully today.",
+                "characterRole": "Scrum Master addressing the design team",
+                "targetSentence": "Congratulations on hitting this milestone everyone, so let us open the floor for constructive feedback.",
+                "phonetic": "/kənˌɡrætʃuˈleɪʃnz ɒn ˈhɪtɪŋ ðɪs ˈmaɪlstəʊn ˈevriwʌn/",
+                "expectedKeywords": [
+                  "milestone",
+                  "constructive feedback",
+                  "everyone",
+                  "retrospective"
+                ],
+                "explanation": "Speak with enthusiastic and inclusive intonation while introducing the agenda for the evaluation session.",
+                "part": "speaking",
+                "partIndex": 4,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-5",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Respond professionally to a coworker who has just pointed out errors in your presentation deck.",
+                "audioPrompt": "Your colleague says: 'I noticed a few typos on slides four and five.' How do you answer politely?",
+                "scenarioContext": "Your colleague Maya has provided polite feedback on your draft slides before the big client pitch.",
+                "characterRole": "Marketing Specialist responding to Maya",
+                "targetSentence": "Thanks for pointing that out Maya, I will take your feedback on board and fix those errors immediately.",
+                "phonetic": "/θæŋks fɔːr ˈpɔɪntɪŋ ðæt aʊt ˈmaɪə aɪ wɪl teɪk jɔːr ˈfiːdbæk ɒn bɔːd/",
+                "expectedKeywords": [
+                  "pointing that out",
+                  "take on board",
+                  "feedback",
+                  "fix"
+                ],
+                "explanation": "Acknowledge the feedback gratefully and state an immediate action step using the phrase 'take on board'.",
+                "part": "speaking",
+                "partIndex": 5,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-6",
+                "category": "roleplay",
+                "typeLabel": "Interactive Roleplay",
+                "instruction": "Suggest a diplomatic solution when two colleagues disagree about the root cause of a project delay.",
+                "audioPrompt": "Two team members are arguing about who caused a delay. Step in and propose a constructive next step.",
+                "scenarioContext": "During a retrospective, the developer and the tester are blaming each other for testing delays.",
+                "characterRole": "Team Facilitator intervening in a meeting",
+                "targetSentence": "Let us look at this constructively and focus on what we can improve for our next milestone.",
+                "phonetic": "/let ʌs lʊk æt ðɪs kənˈstrʌktɪvli ænd ˈfəʊkəs ɒn wɒt wiː kæn ɪmˈpruːv/",
+                "expectedKeywords": [
+                  "constructively",
+                  "focus",
+                  "improve",
+                  "milestone"
+                ],
+                "explanation": "Use neutral, non-judgmental language to redirect the conversation toward future improvements.",
+                "part": "speaking",
+                "partIndex": 6,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-7",
+                "category": "linguistic_drill",
+                "typeLabel": "Reflex Drill: Vocabulary",
+                "focus": "vocab",
+                "instruction": "Complete the sentence using the exact phrase 'room for improvement' to express a polite evaluation.",
+                "audioPrompt": "Say the sentence: Although the presentation was clear, there is still room for improvement in the question section.",
+                "targetSentence": "Although the presentation was clear, there is still room for improvement in the question section.",
+                "phonetic": "/ɔːlˈðəʊ ðə ˌpreznˈteɪʃn wɒz klɪər ðeər ɪz stɪl ruːm fɔːr ɪmˈpruːvmənt ɪn ðə ˈkwestʃən ˈsekʃn/",
+                "expectedKeywords": [
+                  "presentation",
+                  "clear",
+                  "room for improvement",
+                  "question"
+                ],
+                "explanation": "The idiom 'room for improvement' is an essential B1 phrase for polite constructive critique.",
+                "part": "speaking",
+                "partIndex": 7,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-8",
+                "category": "linguistic_drill",
+                "typeLabel": "Reflex Drill: Grammar",
+                "focus": "grammar",
+                "instruction": "Use the modal phrase 'could have been' to soften a critical observation about project communication.",
+                "audioPrompt": "Deliver this softened statement: Our daily communication could have been slightly more frequent.",
+                "targetSentence": "Our daily communication could have been slightly more frequent.",
+                "phonetic": "/ˈaʊər ˈdeɪli kəˌmjuːnɪˈkeɪʃn kʊd həv biːn ˈslaɪtli mɔːr ˈfriːkwənt/",
+                "expectedKeywords": [
+                  "communication",
+                  "could have been",
+                  "slightly",
+                  "frequent"
+                ],
+                "explanation": "The modal structure 'could have been' + modifier 'slightly' allows you to suggest changes without assigning personal blame.",
+                "part": "speaking",
+                "partIndex": 8,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-9",
+                "category": "linguistic_drill",
+                "typeLabel": "Reflex Drill: Syllable Stress",
+                "focus": "pronunciation_stress",
+                "instruction": "Repeat the sentence, taking care to place the primary stress on the third syllable of 'retrospective' (re-tro-SPEC-tive).",
+                "audioPrompt": "Say: We must schedule our project retrospective before Friday afternoon.",
+                "targetSentence": "We must schedule our project retrospective before Friday afternoon.",
+                "phonetic": "/wiː mʌst ˈʃedjuːl ˈaʊər ˈprɒdʒekt ˌretrəˈspektɪv bɪˈfɔːr ˈfraɪdeɪ ˌɑːftəˈnuːn/",
+                "expectedKeywords": [
+                  "schedule",
+                  "project",
+                  "retrospective",
+                  "Friday"
+                ],
+                "explanation": "Make sure you do not stress 'retro'; the loudest and highest syllable must be 'SPEC'.",
+                "part": "speaking",
+                "partIndex": 9,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "id": "q-b1.4-m12-s-10",
+                "category": "linguistic_drill",
+                "typeLabel": "Reflex Drill: Intonation",
+                "focus": "pronunciation_intonation",
+                "instruction": "Produce a polite diplomatic suggestion using a gentle rise at the midpoint and a smooth falling intonation at the end.",
+                "audioPrompt": "Say this polite suggestion with a warm, diplomatic tone: Perhaps we could review the timeline together tomorrow?",
+                "targetSentence": "Perhaps we could review the timeline together tomorrow?",
+                "phonetic": "/pəˈhæps wiː kʊd rɪˈvjuː ðə ˈtaɪmlaɪn təˈɡeðər təˈmɒrəʊ/",
+                "expectedKeywords": [
+                  "perhaps",
+                  "review",
+                  "timeline",
+                  "together",
+                  "tomorrow"
+                ],
+                "explanation": "Begin with 'Perhaps' on a gentle rising note, keep the middle smooth, and fall gently on 'tomorrow' so the suggestion sounds collaborative.",
+                "part": "speaking",
+                "partIndex": 10,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "category": "Executive Summary",
+                "instruction": "Ucapkan kesimpulan strategis berikut:",
+                "prompt": "In conclusion, investing in cloud automation will simultaneously optimize operating expenditure and enhance organizational resilience.",
+                "sampleAnswer": "In conclusion, investing in cloud automation will simultaneously optimize operating expenditure and enhance organizational resilience.",
+                "phonetic": "/ɪn kənˈkluːʒn ɪnˈvestɪŋ ɪn klaʊd/",
+                "keywords": [
+                  "conclusion",
+                  "automation",
+                  "expenditure",
+                  "resilience"
+                ],
+                "id": "q-b1.4-m12-s-11",
+                "part": "speaking",
+                "partIndex": 11,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "category": "Conflict Resolution",
+                "instruction": "Ucapkan usulan penyelesaian perselisihan kerja berikut:",
+                "prompt": "Let us establish objective evaluation criteria so both departments can collaborate effectively toward the mutual objective.",
+                "sampleAnswer": "Let us establish objective evaluation criteria so both departments can collaborate effectively toward the mutual objective.",
+                "phonetic": "/let əs ɪˈstæblɪʃ əbˈdʒektɪv/",
+                "keywords": [
+                  "establish",
+                  "criteria",
+                  "collaborate",
+                  "mutual"
+                ],
+                "id": "q-b1.4-m12-s-12",
+                "part": "speaking",
+                "partIndex": 12,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "category": "Hypothetical Scenario",
+                "instruction": "Ucapkan pertimbangan skenario alternatif:",
+                "prompt": "Had the regulatory framework been updated earlier, domestic startups would have expanded internationally with far greater confidence.",
+                "sampleAnswer": "Had the regulatory framework been updated earlier, domestic startups would have expanded internationally with far greater confidence.",
+                "phonetic": "/hæd ðə ˈreɡjələtəri ˈfreɪmwɜːk biːn/",
+                "keywords": [
+                  "regulatory",
+                  "framework",
+                  "startups",
+                  "confidence"
+                ],
+                "id": "q-b1.4-m12-s-13",
+                "part": "speaking",
+                "partIndex": 13,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "category": "Performance Review",
+                "instruction": "Ucapkan umpan balik evaluasi kinerja:",
+                "prompt": "Your consistent dedication to mentorship has significantly bolstered team morale and elevated our overall code delivery standard.",
+                "sampleAnswer": "Your consistent dedication to mentorship has significantly bolstered team morale and elevated our overall code delivery standard.",
+                "phonetic": "/jɔː kənˈsɪstənt ˌdedɪˈkeɪʃn tə ˈmentɔːʃɪp/",
+                "keywords": [
+                  "dedication",
+                  "mentorship",
+                  "morale",
+                  "standard"
+                ],
+                "id": "q-b1.4-m12-s-14",
+                "part": "speaking",
+                "partIndex": 14,
+                "sourceModule": "B1.4-M12"
+              },
+              {
+                "category": "Customer Relations",
+                "instruction": "Ucapkan respon penanganan keluhan klien tingkat tinggi:",
+                "prompt": "We sincerely apologize for the service interruption and have implemented immediate safeguards to ensure it will not recur.",
+                "sampleAnswer": "We sincerely apologize for the service interruption and have implemented immediate safeguards to ensure it will not recur.",
+                "phonetic": "/wiː sɪnˈsɪəli əˈpɒlədʒaɪz fə ðə ˈsɜːvɪs/",
+                "keywords": [
+                  "apologize",
+                  "interruption",
+                  "safeguards",
+                  "recur"
+                ],
+                "id": "q-b1.4-m12-s-15",
+                "part": "speaking",
+                "partIndex": 15,
+                "sourceModule": "B1.4-M12"
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }

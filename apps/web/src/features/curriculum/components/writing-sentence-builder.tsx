@@ -112,7 +112,17 @@ export function WritingSentenceBuilder({
   const handleListenTarget = (e: React.MouseEvent) => {
     animeButtonPop(e.currentTarget as HTMLElement);
     playPopSound();
-    tutor?.playTutorAudio?.(currentTarget.fullSentence);
+    const textToSpeak = (
+      currentTarget?.fullSentence ||
+      currentTarget?.tokens?.join(" ") ||
+      ""
+    )
+      .replace(/[\/]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (textToSpeak) {
+      tutor?.playTutorAudio?.(textToSpeak);
+    }
   };
 
   return (

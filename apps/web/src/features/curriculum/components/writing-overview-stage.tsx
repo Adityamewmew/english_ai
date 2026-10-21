@@ -59,7 +59,10 @@ export function WritingOverviewStage({
   const handlePlayAudio = (text: string, e: React.MouseEvent) => {
     animeButtonPop(e.currentTarget as HTMLElement);
     playPopSound();
-    tutor?.playTutorAudio?.(text);
+    const cleanText = (text || "").replace(/[\/]/g, " ").replace(/\s+/g, " ").trim();
+    if (cleanText) {
+      tutor?.playTutorAudio?.(cleanText);
+    }
   };
 
   return (

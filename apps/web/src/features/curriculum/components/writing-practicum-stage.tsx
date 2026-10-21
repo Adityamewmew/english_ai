@@ -20,12 +20,18 @@ import {
 
 export interface WritingPracticumQuestion {
   id: number;
-  typeLabel: string;
-  instruction: string;
-  promptText: string;
+  typeLabel?: string;
+  instruction?: string;
+  promptText?: string;
+  prompt?: string;
+  promptSentence?: string;
+  audioText?: string;
+  targetWord?: string;
+  targetSentence?: string;
+  answer?: string;
+  targetAnswers?: string[];
+  explanation?: string;
   hint?: string;
-  targetAnswers: string[];
-  explanation: string;
 }
 
 interface WritingPracticumStageProps {
@@ -41,8 +47,14 @@ export function WritingPracticumStage({
   tutor,
   onFinish,
 }: WritingPracticumStageProps) {
-  const questions: WritingPracticumQuestion[] =
-    quizSec?.content?.practicumQuestions || [];
+  const rawQuestions =
+    (Array.isArray(quizSec?.content?.practicumQuestions) && quizSec.content.practicumQuestions) ||
+    (Array.isArray(quizSec?.content?.questions) && quizSec.content.questions) ||
+    (Array.isArray(quizSec?.content?.items) && quizSec.content.items) ||
+    (Array.isArray(quizSec?.content) && quizSec.content) ||
+    [];
+
+  const questions: WritingPracticumQuestion[] = rawQuestions;
 
   const [currentIdx, setCurrentIdx] = useState(0);
   const [typedInputs, setTypedInputs] = useState<Record<number, string>>({});
@@ -54,12 +66,41 @@ export function WritingPracticumStage({
 
   const question = questions[currentIdx] || {
     id: 1,
-    typeLabel: "Writing",
-    instruction: "Type the complete sentence...",
+    typeLabel: "Writing Practicum",
+    instruction: "Type the complete sentence according to the prompt:",
     promptText: "",
     targetAnswers: [],
     explanation: "",
   };
+
+  const rawPrompt =
+    question.promptText ||
+    question.prompt ||
+    question.promptSentence ||
+    (question as any).question ||
+    "";
+
+  const displayPrompt =
+    rawPrompt || question.instruction || "Sentence prompt";
+
+  const displayInstruction =
+    rawPrompt && question.instruction
+      ? question.instruction
+      : question.typeLabel
+      ? `Task: ${question.typeLabel}`
+      : "Type the complete sentence according to the prompt:";
+
+  const validTargets: string[] = (
+    (question.targetAnswers && question.targetAnswers.length > 0)
+      ? question.targetAnswers
+      : [
+          question.targetWord,
+          question.targetSentence,
+          question.answer,
+          ...((question as any).answers || []),
+        ]
+  ).filter((ans): ans is string => typeof ans === "string" && ans.trim().length > 0);
+
   const userText = typedInputs[question.id] || "";
   const currentEval = evaluations[question.id];
 
@@ -73,9 +114,18 @@ export function WritingPracticumStage({
 
   const handleCheckAnswer = () => {
     const normalizedUser = normalize(userText);
-    const isMatch = question.targetAnswers.some(
-      (ans) => normalize(ans) === normalizedUser
-    );
+    const isMatch = validTargets.some((ans) => {
+      const nAns = normalize(ans);
+      if (nAns === normalizedUser) return true;
+      if (nAns.toLowerCase() === normalizedUser.toLowerCase()) return true;
+      if (
+        nAns.replace(/[.?!]$/, "").trim().toLowerCase() ===
+        normalizedUser.replace(/[.?!]$/, "").trim().toLowerCase()
+      ) {
+        return true;
+      }
+      return false;
+    });
 
     if (isMatch) {
       playMatchSuccessSound();
@@ -97,7 +147,7 @@ export function WritingPracticumStage({
         [question.id]: {
           isCorrect: false,
           feedback:
-            "Answer doesn't match yet. Check your capitalization, spacing, 'to be' verb, and punctuation mark.",
+            "Answer doesn't match yet. Check your spelling, capitalization, spacing, and punctuation mark.",
         },
       }));
     }
@@ -117,7 +167,21 @@ export function WritingPracticumStage({
   const handleListenPrompt = (e: React.MouseEvent) => {
     animeButtonPop(e.currentTarget as HTMLElement);
     playPopSound();
-    tutor?.playTutorAudio?.(question.promptText);
+    const textToSpeak = (
+      question.audioText ||
+      rawPrompt ||
+      validTargets[0] ||
+      question.instruction ||
+      ""
+    )
+      .replace(/_{2,}/g, "blank")
+      .replace(/[\/]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    if (textToSpeak) {
+      tutor?.playTutorAudio?.(textToSpeak);
+    }
   };
 
   if (isCompletedAll) {
@@ -175,7 +239,7 @@ export function WritingPracticumStage({
             Step 5 · Writing Mastery Practicum ({currentIdx + 1}/{questions.length})
           </span>
           <span className="text-xs font-bold text-slate-500 font-mono">
-            {question.typeLabel}
+            {question.typeLabel || "Writing"}
           </span>
         </div>
         <h3 className="text-lg sm:text-xl font-black text-slate-900 dark:text-white">
@@ -220,12 +284,12 @@ export function WritingPracticumStage({
             Question {currentIdx + 1}:
           </span>
           <p className="text-sm font-semibold text-slate-900 dark:text-white">
-            {question.instruction}
+            {displayInstruction}
           </p>
 
           <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/60 flex items-center justify-between gap-3">
             <span className="text-sm sm:text-base font-mono font-bold text-[#0D3B66] dark:text-[#F4B41A]">
-              {question.promptText}
+              {displayPrompt}
             </span>
             <button
               type="button"
@@ -236,12 +300,6 @@ export function WritingPracticumStage({
               <Volume2 className="w-4 h-4" />
             </button>
           </div>
-
-          {question.hint && (
-            <p className="text-xs text-slate-500 dark:text-slate-400 italic">
-              Hint: {question.hint}
-            </p>
-          )}
         </div>
 
         {/* Typing Input */}
@@ -297,7 +355,7 @@ export function WritingPracticumStage({
             <p className="leading-relaxed">{currentEval.feedback}</p>
             {currentEval.isCorrect && (
               <p className="text-[11px] text-emerald-700 dark:text-emerald-400 font-mono">
-                Explanation: {question.explanation}
+                Explanation: {question.explanation || (validTargets[0] ? `Accepted: "${validTargets[0]}"` : "Completed accurately.")}
               </p>
             )}
           </div>

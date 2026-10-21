@@ -116,7 +116,17 @@ export function WritingMechanicsStage({
   const handleListenTarget = (e: React.MouseEvent) => {
     animeButtonPop(e.currentTarget as HTMLElement);
     playPopSound();
-    tutor?.playTutorAudio?.(currentChallenge.targetSentence);
+    const textToSpeak = (
+      currentChallenge?.targetSentence ||
+      currentChallenge?.faultySentence ||
+      ""
+    )
+      .replace(/[\/]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (textToSpeak) {
+      tutor?.playTutorAudio?.(textToSpeak);
+    }
   };
 
   const completedCount = Object.keys(completedMap).length;
