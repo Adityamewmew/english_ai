@@ -1,4 +1,4 @@
-import { pgTable, varchar, integer, jsonb, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, varchar, integer, jsonb, timestamp, boolean, text } from "drizzle-orm/pg-core";
 
 export interface UserMemory {
   preferredName?: string;
@@ -20,10 +20,12 @@ export interface UserMemory {
 }
 
 export const users = pgTable("users", {
-  id: varchar("id", { length: 36 }).primaryKey(),
+  id: varchar("id", { length: 255 }).primaryKey(),
   name: varchar("name", { length: 100 }).notNull(),
   email: varchar("email", { length: 100 }).notNull().unique(),
-  password: varchar("password", { length: 255 }).notNull(),
+  emailVerified: boolean("email_verified").default(false).notNull(),
+  image: text("image"),
+  password: varchar("password", { length: 255 }),
   role: varchar("role", { length: 20 }).notNull().default("student"),
   accessType: integer("access_type").notNull().default(2), // 1 = Admin, 2 = Student (Siswa)
   currentCefr: varchar("current_cefr", { length: 10 }).notNull().default("A1"),

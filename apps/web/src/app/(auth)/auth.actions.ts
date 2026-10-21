@@ -78,3 +78,33 @@ export async function doLogout() {
   await clearSession();
   redirect("/login");
 }
+
+export async function syncGoogleSession(userData: {
+  id: string;
+  name: string;
+  email: string;
+  role?: string;
+  accessType?: number;
+  currentCefr?: string;
+}) {
+  const emailLower = (userData.email || "").toLowerCase();
+  const isAdmin =
+    emailLower.includes("khoirul") ||
+    emailLower === "mrkhoriul@gmail.com" ||
+    emailLower === "mrkhoirul@gmail.com";
+
+  const role = isAdmin ? "admin" : userData.role || "student";
+  const accessType = isAdmin ? 1 : (userData.accessType ?? (role === "admin" ? 1 : 2));
+  const currentCefr = userData.currentCefr || "A1";
+
+  await setSession({
+    userId: userData.id,
+    name: userData.name || userData.email.split("@")[0],
+    email: userData.email,
+    role,
+    accessType,
+    currentCefr,
+  });
+
+  return { success: true };
+}

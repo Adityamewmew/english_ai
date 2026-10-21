@@ -7,10 +7,12 @@ import { userHandler } from "./internal/http/handler/user_handler";
 import { placementHandler } from "./internal/http/handler/placement_handler";
 import { voiceHandler } from "./internal/http/handler/voice_handler";
 import { chatHandler } from "./internal/http/handler/chat_handler";
+import { authPlugin } from "./lib/auth";
 
 export const app = new Elysia()
   .use(corsPlugin)
   .use(errorHandlerPlugin)
+  .use(authPlugin)
   .use(
     swagger({
       path: "/swagger",

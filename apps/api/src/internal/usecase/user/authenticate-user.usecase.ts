@@ -3,7 +3,7 @@ import { UnauthorizedError } from "../../../common/errors/app-error";
 
 export async function authenticateUserUsecase(body: { email: string; password: string }) {
   const user = await userRepository.findByEmail(body.email);
-  if (!user) throw new UnauthorizedError("Email atau password salah");
+  if (!user || !user.password) throw new UnauthorizedError("Email atau password salah");
 
   let isMatch = false;
   try {
