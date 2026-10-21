@@ -61,9 +61,9 @@ export function StageListeningView({
     practiceSec?.content?.drills && practiceSec.content.drills.length > 0
       ? practiceSec.content.drills
       : dialogueLines.slice(0, 4).map((line: any, idx: number) => {
-          const lineText = line.text || line.en || "";
-          const words = lineText.trim().split(" ");
-          const targetWord = words[words.length - 1].replace(/[.,?!]/g, "");
+          const lineText = (line.text || line.en || "").trim();
+          const words = lineText.split(/\s+/).filter(Boolean);
+          const targetWord = words.length > 0 ? words[words.length - 1].replace(/[.,?!]/g, "") : "word";
           return {
             id: idx + 1,
             prompt: `${line.speaker || "Speaker"}: "${lineText.replace(targetWord, "_____")}"`,
@@ -173,7 +173,10 @@ export function StageListeningView({
                   <div className="flex items-center justify-between gap-2 pt-1 border-t border-slate-100 dark:border-slate-800">
                     <button
                       type="button"
-                      onClick={() => tutor.playTutorAudio(item.slow)}
+                      onClick={() => {
+                        const text = (item.slow || "").trim();
+                        if (text) tutor.playTutorAudio(text);
+                      }}
                       className="flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800 transition-colors cursor-pointer min-h-[44px] touch-manipulation"
                     >
                       <Volume2 className="w-4 h-4 text-slate-400" />
@@ -181,7 +184,10 @@ export function StageListeningView({
                     </button>
                     <button
                       type="button"
-                      onClick={() => tutor.playTutorAudio(item.fast)}
+                      onClick={() => {
+                        const text = (item.fast || "").trim();
+                        if (text) tutor.playTutorAudio(text);
+                      }}
                       className="flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold text-[#0D3B66] dark:text-[#F4B41A] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer min-h-[44px] touch-manipulation"
                     >
                       <Volume2 className="w-4 h-4" />
@@ -231,7 +237,10 @@ export function StageListeningView({
                     </span>
                     <button
                       type="button"
-                      onClick={() => tutor.playTutorAudio(drill.audio)}
+                      onClick={() => {
+                        const text = (drill.audio || drill.prompt || "").replace(/_{2,}/g, "blank").trim();
+                        if (text) tutor.playTutorAudio(text);
+                      }}
                       className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white text-xs font-bold transition-colors cursor-pointer min-h-[44px] touch-manipulation"
                     >
                       <Volume2 className="w-4 h-4 text-[#F4B41A]" />

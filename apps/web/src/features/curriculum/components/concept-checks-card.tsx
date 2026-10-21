@@ -7,7 +7,8 @@ import { animeButtonPop, animeShake } from "@/lib/anime-effects";
 interface ConceptCheckQuestion {
   question: string;
   options: string[];
-  answer: string;
+  answer?: string;
+  correctAnswer?: string;
   explanation?: string;
 }
 
@@ -66,7 +67,9 @@ export function ConceptChecksCard({
       onCompleted?.();
     }
 
-    const isCorrect = option.trim().toLowerCase() === conceptChecks[qIdx]?.answer?.trim().toLowerCase();
+    const check = conceptChecks[qIdx];
+    const expected = (check?.answer || check?.correctAnswer || "").trim().toLowerCase();
+    const isCorrect = option.trim().toLowerCase() === expected;
     if (targetEl) {
       if (isCorrect) {
         animeButtonPop(targetEl);
@@ -102,7 +105,8 @@ export function ConceptChecksCard({
         {conceptChecks.map((check, qIdx) => {
           const selected = selectedAnswers[qIdx];
           const hasAnswered = showFeedback[qIdx];
-          const isCorrect = selected?.trim().toLowerCase() === check.answer?.trim().toLowerCase();
+          const expected = (check.answer || check.correctAnswer || "").trim().toLowerCase();
+          const isCorrect = selected?.trim().toLowerCase() === expected;
 
           return (
             <div
@@ -124,7 +128,7 @@ export function ConceptChecksCard({
                   let btnStyle = "bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 border-b-2 border-b-slate-300 dark:border-b-slate-700 hover:border-[#0D3B66]/40 active:translate-y-[1px]";
 
                   if (hasAnswered) {
-                    if (opt.trim().toLowerCase() === check.answer.trim().toLowerCase()) {
+                    if (opt.trim().toLowerCase() === expected) {
                       btnStyle = "bg-[#0D3B66]/10 dark:bg-slate-800 border-[#0D3B66] text-[#0D3B66] dark:text-[#F4B41A] font-bold border-b-2 border-b-[#082542]";
                     } else if (isThisSelected && !isCorrect) {
                       btnStyle = "bg-[#9E1B1B]/10 dark:bg-[#9E1B1B]/20 border-[#9E1B1B] text-[#9E1B1B] border-b-2 border-b-[#841515] font-bold";
@@ -142,7 +146,7 @@ export function ConceptChecksCard({
                       className={`text-left px-3.5 py-2.5 rounded-xl border text-xs transition-all flex items-center justify-between gap-2 cursor-pointer min-h-[44px] touch-manipulation ${btnStyle}`}
                     >
                       <span>{opt}</span>
-                      {hasAnswered && opt.trim().toLowerCase() === check.answer.trim().toLowerCase() && (
+                      {hasAnswered && opt.trim().toLowerCase() === expected && (
                          <CheckCircle2 className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A] shrink-0" />
                       )}
                       {hasAnswered && isThisSelected && !isCorrect && (

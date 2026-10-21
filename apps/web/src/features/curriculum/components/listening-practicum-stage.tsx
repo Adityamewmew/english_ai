@@ -42,6 +42,7 @@ export function ListeningPracticumStage({
   const [currentIdx, setCurrentIdx] = useState(0);
   const [assembledWords, setAssembledWords] = useState<string[]>([]);
   const [dictationInput, setDictationInput] = useState("");
+  const [selectedOption, setSelectedOption] = useState("");
   const [checkedStatus, setCheckedStatus] = useState<Record<number, boolean>>({});
   const [isCorrectStatus, setIsCorrectStatus] = useState<Record<number, boolean>>({});
   const [audioPlayCounts, setAudioPlayCounts] = useState<Record<number, number>>({});
@@ -73,6 +74,10 @@ export function ListeningPracticumStage({
   const isChecked = Boolean(checkedStatus[currentQ.id]);
   const isCorrect = Boolean(isCorrectStatus[currentQ.id]);
 
+  const isMC = Boolean(currentQ.options && currentQ.options.length > 0);
+  const isArrange = !isMC && (currentQ.type === "arrange" || Boolean(currentQ.words && currentQ.words.length > 0));
+  const isDictation = !isMC && !isArrange;
+
   const currentPlays = audioPlayCounts[currentQ.id] || 0;
   const playsRemaining = Math.max(0, MAX_AUDIO_PLAYS - currentPlays);
 
@@ -84,7 +89,22 @@ export function ListeningPracticumStage({
     }));
     if (e) animeButtonPop(e.currentTarget as HTMLElement);
     playPopSound();
-    tutor.playTutorAudio(currentQ.audioText);
+    const textToSpeak = (
+      currentQ.audioText ||
+      (currentQ as any).audio ||
+      currentQ.targetSentence ||
+      currentQ.promptSentence ||
+      (currentQ as any).question ||
+      ""
+    )
+      .replace(/_{2,}/g, "blank")
+      .replace(/[\/]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    if (textToSpeak) {
+      tutor?.playTutorAudio?.(textToSpeak);
+    }
   };
 
   const handleTapWord = (word: string) => {
@@ -102,14 +122,17 @@ export function ListeningPracticumStage({
   const handleCheckAnswer = () => {
     let correct = false;
 
-    if (currentQ.type === "arrange") {
+    if (isArrange) {
       const sentence = normalizeSentence(assembledWords.join(" "));
       const target = normalizeSentence(currentQ.targetSentence || "");
       correct = cleanAlphanumeric(sentence) === cleanAlphanumeric(target);
-    } else if (currentQ.type === "dictation") {
+    } else if (isMC) {
+      const expected = ((currentQ as any).answer || (currentQ as any).correctAnswer || "").trim().toLowerCase();
+      correct = selectedOption.trim().toLowerCase() === expected;
+    } else {
       const inputClean = cleanAlphanumeric(dictationInput);
-      const targetClean = cleanAlphanumeric(currentQ.targetWord || "");
-      const fullClean = cleanAlphanumeric(currentQ.audioText || "");
+      const targetClean = cleanAlphanumeric(currentQ.targetWord || (currentQ as any).answer || "");
+      const fullClean = cleanAlphanumeric(currentQ.audioText || currentQ.targetSentence || "");
 
       // 1. Direct target word match (e.g. "tshirt" === "t-shirt")
       let match = inputClean === targetClean;
@@ -120,7 +143,7 @@ export function ListeningPracticumStage({
       }
 
       // 3. Suffix match (e.g. "this t-shirt")
-      if (!match && inputClean.endsWith(targetClean)) {
+      if (!match && targetClean && inputClean.endsWith(targetClean)) {
         match = true;
       }
 
@@ -143,6 +166,7 @@ export function ListeningPracticumStage({
       setCurrentIdx((prev) => prev + 1);
       setAssembledWords([]);
       setDictationInput("");
+      setSelectedOption("");
     } else {
       setIsCompletedAll(true);
       playMatchSuccessSound();
@@ -155,6 +179,7 @@ export function ListeningPracticumStage({
     setCurrentIdx(0);
     setAssembledWords([]);
     setDictationInput("");
+    setSelectedOption("");
     setCheckedStatus({});
     setIsCorrectStatus({});
     setAudioPlayCounts({});
@@ -263,11 +288,11 @@ export function ListeningPracticumStage({
             Soal {currentIdx + 1} dari {questions.length}
           </span>
           <span className="text-slate-500 dark:text-slate-400 font-semibold">
-            {currentQ.type === "arrange"
+            {isArrange
               ? "Susun Kalimat"
-              : currentQ.type === "dictation"
+              : isDictation
               ? "Dikte Kosakata"
-              : "Latihan Menyimak"}
+              : "Pilihan Ganda"}
           </span>
         </div>
 
@@ -329,7 +354,7 @@ export function ListeningPracticumStage({
         {/* 3. Interactive Inputs based on Question Type */}
         <div className="pt-2">
           {/* TYPE A: Tap & Arrange */}
-          {currentQ.type === "arrange" && (
+          {isArrange && (
             <div className="space-y-3.5">
               {/* Assembled Word Slot */}
               <div className="p-3.5 sm:p-4 rounded-2xl min-h-[58px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex flex-wrap items-center gap-2 shadow-inner">
@@ -372,7 +397,7 @@ export function ListeningPracticumStage({
           )}
 
           {/* TYPE B: Dictation */}
-          {currentQ.type === "dictation" && (
+          {isDictation && (
             <div className="space-y-3">
               <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-900 dark:text-white leading-relaxed">
                 {renderedPrompt}
@@ -391,6 +416,49 @@ export function ListeningPracticumStage({
                 placeholder="Ketik kata yang hilang di sini..."
                 className="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66] min-h-[48px]"
               />
+            </div>
+          )}
+
+          {/* TYPE C: Multiple Choice */}
+          {isMC && (
+            <div className="space-y-3">
+              {(currentQ as any).question && (
+                <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-900 dark:text-white leading-relaxed">
+                  {(currentQ as any).question}
+                </div>
+              )}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {currentQ.options?.map((opt: string, optIdx: number) => {
+                  const isSelected = selectedOption === opt;
+                  const isAnswer =
+                    isChecked &&
+                    opt.trim().toLowerCase() ===
+                      ((currentQ as any).answer || (currentQ as any).correctAnswer || "").trim().toLowerCase();
+                  const isWrongSelected = isChecked && isSelected && !isAnswer;
+
+                  return (
+                    <button
+                      key={optIdx}
+                      type="button"
+                      disabled={isChecked}
+                      onClick={() => setSelectedOption(opt)}
+                      className={`p-3.5 sm:p-4 rounded-2xl border text-left font-semibold text-xs sm:text-sm transition-all cursor-pointer min-h-[48px] flex items-center justify-between gap-3 ${
+                        isAnswer
+                          ? "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 text-emerald-900 dark:text-emerald-200"
+                          : isWrongSelected
+                          ? "bg-rose-50 dark:bg-rose-950/40 border-rose-500 text-rose-900 dark:text-rose-200"
+                          : isSelected
+                          ? "bg-[#0D3B66]/10 dark:bg-amber-400/10 border-[#0D3B66] dark:border-amber-400 text-[#0D3B66] dark:text-amber-300 font-bold"
+                          : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:border-slate-400"
+                      }`}
+                    >
+                      <span>{opt}</span>
+                      {isChecked && isAnswer && <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />}
+                      {isChecked && isWrongSelected && <HelpCircle className="w-4 h-4 text-rose-600 shrink-0" />}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           )}
         </div>
@@ -428,8 +496,9 @@ export function ListeningPracticumStage({
               type="button"
               onClick={handleCheckAnswer}
               disabled={
-                (currentQ.type === "arrange" && assembledWords.length === 0) ||
-                (currentQ.type === "dictation" && !dictationInput.trim())
+                (isArrange && assembledWords.length === 0) ||
+                (isDictation && !dictationInput.trim()) ||
+                (isMC && !selectedOption)
               }
               className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-[#0D3B66] hover:bg-[#1B4965] border-b-3 border-b-[#082542] active:border-b-0 active:translate-y-0.5 disabled:opacity-50 disabled:pointer-events-none text-white font-bold text-xs sm:text-sm transition-all cursor-pointer shadow-xs min-h-[46px]"
             >

@@ -66,35 +66,45 @@ export function PracticumRoleplayCall({
     };
   }, [question.id]);
 
-  // TTS audio player
+  // TTS audio player with native SpeechSynthesis fallback
   const playTutorAudio = (text: string, isClosingTurn = false) => {
-    try {
-      if (audioRef.current) {
-        audioRef.current.pause();
+    const fallbackSpeak = () => {
+      if (typeof window !== "undefined" && "speechSynthesis" in window) {
+        try {
+          window.speechSynthesis.cancel();
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = "en-US";
+          u.rate = 0.95;
+          u.onend = () => {
+            setIsSpeakingTutor(false);
+            if (isClosingTurn) setTimeout(handleEndCall, 800);
+          };
+          u.onerror = () => {
+            setIsSpeakingTutor(false);
+            if (isClosingTurn) handleEndCall();
+          };
+          window.speechSynthesis.speak(u);
+          return;
+        } catch {}
       }
+      setIsSpeakingTutor(false);
+      if (isClosingTurn) handleEndCall();
+    };
+
+    try {
+      if (audioRef.current) audioRef.current.pause();
       setIsSpeakingTutor(true);
       const audioUrl = getApiUrl(`/api/voice/tts?text=${encodeURIComponent(text)}`);
       const audio = new Audio(audioUrl);
       audioRef.current = audio;
       audio.onended = () => {
         setIsSpeakingTutor(false);
-        if (isClosingTurn) {
-          setTimeout(() => {
-            handleEndCall();
-          }, 800);
-        }
+        if (isClosingTurn) setTimeout(handleEndCall, 800);
       };
-      audio.onerror = () => {
-        setIsSpeakingTutor(false);
-        if (isClosingTurn) handleEndCall();
-      };
-      audio.play().catch(() => {
-        setIsSpeakingTutor(false);
-        if (isClosingTurn) handleEndCall();
-      });
+      audio.onerror = () => fallbackSpeak();
+      audio.play().catch(() => fallbackSpeak());
     } catch {
-      setIsSpeakingTutor(false);
-      if (isClosingTurn) handleEndCall();
+      fallbackSpeak();
     }
   };
 

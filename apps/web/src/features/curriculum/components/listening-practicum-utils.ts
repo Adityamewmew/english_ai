@@ -1,8 +1,14 @@
 export interface PracticumQuestion {
   id: number;
-  type: "arrange" | "dictation" | "true_false";
-  audioText: string;
-  instruction: string;
+  type?: "arrange" | "dictation" | "true_false" | "multiple_choice" | string;
+  typeLabel?: string;
+  audioText?: string;
+  audio?: string;
+  instruction?: string;
+  question?: string;
+  options?: string[];
+  answer?: string;
+  correctAnswer?: string;
   // For arrange:
   targetSentence?: string;
   words?: string[];
