@@ -176,7 +176,6 @@ export function WritingPracticumStage({
     const textToSpeak = (
       question.audioText ||
       rawPrompt ||
-      validTargets[0] ||
       question.instruction ||
       ""
     )
@@ -332,6 +331,7 @@ export function WritingPracticumStage({
               }
             }}
             placeholder="Type complete sentence here..."
+            onPaste={(e) => e.preventDefault()}
             className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66] dark:focus:ring-[#F4B41A]"
           />
         </div>

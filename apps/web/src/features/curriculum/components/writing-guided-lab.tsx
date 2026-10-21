@@ -7,6 +7,9 @@ import {
   Send,
   RotateCcw,
   ArrowRight,
+  Lightbulb,
+  AlertCircle,
+  ShieldAlert,
 } from "lucide-react";
 import { playPopSound, playSnapSound, playMatchSuccessSound } from "@/lib/sound-fx";
 
@@ -40,6 +43,7 @@ export function WritingGuidedLab({
   const [activeIdx, setActiveIdx] = useState(0);
   const [drafts, setDrafts] = useState<Record<string, string>>({});
   const [submittedMap, setSubmittedMap] = useState<Record<string, boolean>>({});
+  const [pasteWarning, setPasteWarning] = useState(false);
 
   const currentChallenge = challenges[activeIdx] || {
     id: "empty",
@@ -58,13 +62,25 @@ export function WritingGuidedLab({
   // Mechanics analysis
   const words = writtenText.trim().split(/\s+/).filter(Boolean);
   const wordCount = words.length;
-  const hasCapitalLetter = /[A-Z]/.test(writtenText);
-  const hasToBeVerb = /\b(am|is|are|'m|'s|'re)\b/i.test(writtenText);
-  const hasTerminalPeriod = /[.!?]/.test(writtenText);
+  const hasCapitalLetter = /^[A-Z]/.test(writtenText.trim()) || /[A-Z]/.test(writtenText);
+  const hasTerminalPunctuation = /[.!?]$/.test(writtenText.trim()) || /[.!?]/.test(writtenText);
   const isWordCountPassed = wordCount >= currentChallenge.minWords;
 
+  // Verbatim copy check: disallow retyping the example verbatim!
+  const cleanNorm = (str: string) =>
+    (str || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const isVerbatimCopy =
+    Boolean(currentChallenge.example) &&
+    cleanNorm(writtenText).length > 15 &&
+    cleanNorm(writtenText) === cleanNorm(currentChallenge.example);
+
+  const isOriginal = !isVerbatimCopy && wordCount > 0;
+
   const allCriteriaPassed =
-    isWordCountPassed && hasCapitalLetter && hasToBeVerb && hasTerminalPeriod;
+    isWordCountPassed &&
+    hasCapitalLetter &&
+    hasTerminalPunctuation &&
+    !isVerbatimCopy;
 
   const handleSubmitChallenge = () => {
     if (!allCriteriaPassed) return;
@@ -147,15 +163,19 @@ export function WritingGuidedLab({
           <p className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white leading-relaxed">
             {currentChallenge.instruction}
           </p>
-          <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-300">
-            <span className="font-bold text-slate-800 dark:text-slate-200">
-              Contoh Kalimat Acuan:{" "}
-            </span>
-            <span className="italic font-mono">{currentChallenge.example}</span>
+          {/* Independent Writing Guidance (No answer leaked) */}
+          <div className="p-3.5 rounded-xl bg-amber-50/80 dark:bg-amber-950/20 border border-amber-200/80 dark:border-amber-900/40 text-xs text-amber-900 dark:text-amber-200 flex items-start gap-2.5">
+            <Lightbulb className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+            <div className="space-y-0.5">
+              <span className="font-bold block">Panduan Menulis Mandiri:</span>
+              <span className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                Gunakan ide dan kalimatmu sendiri sesuai instruksi. Awali dengan huruf kapital, gunakan struktur kalimat yang lengkap, dan akhiri dengan tanda baca titik (.) atau tanya (?).
+              </span>
+            </div>
           </div>
         </div>
 
-        {/* Textarea Input */}
+        {/* Textarea Input with Anti-Paste */}
         <div className="space-y-1.5">
           <label className="text-xs font-bold text-slate-700 dark:text-slate-200 block">
             Lembar Tulis Paragraf:
@@ -167,10 +187,29 @@ export function WritingGuidedLab({
               const val = e.target.value;
               setDrafts((prev) => ({ ...prev, [currentChallenge.id]: val }));
             }}
-            placeholder={currentChallenge.placeholder || "Mulai menulis dalam bahasa Inggris di sini..."}
+            onPaste={(e) => {
+              e.preventDefault();
+              setPasteWarning(true);
+              setTimeout(() => setPasteWarning(false), 3500);
+            }}
+            placeholder="Tuliskan kalimat atau paragraf bahasa Inggrismu sendiri di sini..."
             className="w-full p-3.5 sm:p-4 rounded-2xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs sm:text-sm font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66] dark:focus:ring-[#F4B41A] leading-relaxed shadow-inner"
           />
         </div>
+
+        {/* Anti-Cheat Warning Banners */}
+        {pasteWarning && (
+          <div className="p-3 rounded-xl bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 text-xs text-rose-800 dark:text-rose-300 flex items-center gap-2 animate-in fade-in duration-200">
+            <ShieldAlert className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
+            <span>Fitur tempel (paste) dinonaktifkan. Silakan ketik kalimatmu sendiri secara mandiri.</span>
+          </div>
+        )}
+        {isVerbatimCopy && (
+          <div className="p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300 flex items-center gap-2 animate-in fade-in duration-200">
+            <AlertCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+            <span>Kalimat ini terdeteksi menyalin persis contoh kunci jawaban. Tuliskan variasi atau kalimatmu sendiri!</span>
+          </div>
+        )}
 
         {/* Automated Mechanics Checklist */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
@@ -200,24 +239,24 @@ export function WritingGuidedLab({
 
           <div
             className={`p-2.5 rounded-xl border flex items-center gap-1.5 transition-colors ${
-              hasToBeVerb
+              hasTerminalPunctuation
                 ? "bg-emerald-50 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800 font-bold"
                 : "bg-slate-50 text-slate-500 dark:bg-slate-800/40 dark:text-slate-400 border-slate-200 dark:border-slate-700"
             }`}
           >
             <Check className="w-3.5 h-3.5 shrink-0" />
-            <span>Kata Kerja 'to be'</span>
+            <span>Tanda Titik / Tanya</span>
           </div>
 
           <div
             className={`p-2.5 rounded-xl border flex items-center gap-1.5 transition-colors ${
-              hasTerminalPeriod
+              isOriginal
                 ? "bg-emerald-50 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800 font-bold"
                 : "bg-slate-50 text-slate-500 dark:bg-slate-800/40 dark:text-slate-400 border-slate-200 dark:border-slate-700"
             }`}
           >
             <Check className="w-3.5 h-3.5 shrink-0" />
-            <span>Tanda Titik (.)</span>
+            <span>Tulisan Orisinal</span>
           </div>
         </div>
 

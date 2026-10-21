@@ -117,9 +117,9 @@ export function WritingMechanicsStage({
     animeButtonPop(e.currentTarget as HTMLElement);
     playPopSound();
     const textToSpeak = (
-      currentChallenge?.targetSentence ||
-      currentChallenge?.faultySentence ||
-      ""
+      validation?.isCorrect
+        ? currentChallenge?.targetSentence
+        : currentChallenge?.faultySentence || ""
     )
       .replace(/[\/]/g, " ")
       .replace(/\s+/g, " ")
@@ -228,6 +228,7 @@ export function WritingMechanicsStage({
               }
             }}
             placeholder="Type the sentence with proper capitalization and period..."
+            onPaste={(e) => e.preventDefault()}
             className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66] dark:focus:ring-[#F4B41A]"
           />
         </div>
