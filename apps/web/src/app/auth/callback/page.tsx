@@ -17,6 +17,21 @@ export default function AuthCallbackPage() {
 
     async function handleSync() {
       try {
+        if (typeof window !== "undefined") {
+          const params = new URLSearchParams(window.location.search);
+          const urlError = params.get("error");
+          if (urlError) {
+            if (isMounted) {
+              setError(
+                urlError === "account_not_linked"
+                  ? "Akun Google belum tertaut dengan email yang ada."
+                  : `Gagal autentikasi Google: ${urlError}`
+              );
+            }
+            return;
+          }
+        }
+
         // Poll for session up to 5 times (in case cookie is setting)
         let session = null;
         for (let i = 0; i < 5; i++) {

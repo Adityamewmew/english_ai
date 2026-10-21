@@ -52,7 +52,11 @@ export const auth = betterAuth({
     accountLinking: {
       enabled: true,
       trustedProviders: ["google"],
+      requireLocalEmailVerified: false,
     },
+  },
+  onAPIError: {
+    errorURL: "/login",
   },
   databaseHooks: {
     user: {
