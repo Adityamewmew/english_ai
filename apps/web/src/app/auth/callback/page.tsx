@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import { syncGoogleSession } from "@/app/(auth)/auth.actions";
+import { placementApi } from "@/features/placement/api/placement.api";
 import { Loader2, AlertCircle } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -51,7 +52,7 @@ export default function AuthCallbackPage() {
         }
 
         const user = session.user as any;
-        await syncGoogleSession({
+        const syncResult = await syncGoogleSession({
           id: user.id,
           name: user.name || "",
           email: user.email,
@@ -61,6 +62,20 @@ export default function AuthCallbackPage() {
         });
 
         if (isMounted) {
+          // Jika siswa belum pernah mengikuti placement test, arahkan langsung ke /placement
+          if (syncResult?.role !== "admin") {
+            try {
+              const latest = await placementApi.getLatestByUser(user.id);
+              if (!latest) {
+                router.replace("/placement");
+                return;
+              }
+            } catch {
+              router.replace("/placement");
+              return;
+            }
+          }
+
           router.replace("/dashboard");
         }
       } catch (err: any) {

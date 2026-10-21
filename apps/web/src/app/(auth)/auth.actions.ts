@@ -64,7 +64,7 @@ export async function doRegister(formData: FormData) {
       currentCefr: "A1",
     });
 
-    redirectPath = "/dashboard";
+    redirectPath = "/placement";
   } catch (err: any) {
     return { success: false, message: err.message || "Gagal mendaftar." };
   }
@@ -106,5 +106,5 @@ export async function syncGoogleSession(userData: {
     currentCefr,
   });
 
-  return { success: true };
+  return { success: true, role, accessType };
 }
