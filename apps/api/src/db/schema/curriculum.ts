@@ -21,6 +21,7 @@ export const curriculumModules = pgTable("curriculum_modules", {
   isExam: boolean("is_exam").notNull().default(false),
   passingScore: integer("passing_score").notNull().default(70),
   orderIndex: integer("order_index").notNull().default(1),
+  bannerUrl: text("banner_url"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
   deletedAt: timestamp("deleted_at"),
