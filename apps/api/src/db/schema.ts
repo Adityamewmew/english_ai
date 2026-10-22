@@ -5,3 +5,4 @@ export * from "./schema/voice";
 export * from "./schema/chat";
 export * from "./schema/auth";
 export * from "./schema/certificates";
+export * from "./schema/classes";
