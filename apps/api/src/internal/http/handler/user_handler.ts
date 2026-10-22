@@ -13,8 +13,11 @@ import { registerUserUsecase } from "../../usecase/user/register-user.usecase";
 import { updateUserProfileUsecase } from "../../usecase/user/update-user-profile.usecase";
 import { deleteUserUsecase } from "../../usecase/user/delete-user.usecase";
 import { jsonResponse } from "../../presenter/json";
+import { authPlugin } from "../../../lib/auth";
+import { UnauthorizedError, ForbiddenError } from "../../../common/errors/app-error";
 
 export const userHandler = new Elysia({ prefix: "/api/user" })
+  .use(authPlugin)
   .get(
     "/",
     async ({ query, set }) => {
@@ -74,9 +77,27 @@ export const userHandler = new Elysia({ prefix: "/api/user" })
   )
   .put(
     "/:id",
-    async ({ params, body, headers, set }) => {
-      const updaterId = headers["x-user-id"] || "system";
-      const data = await updateUserProfileUsecase(params.id, body, updaterId);
+    async ({ params, body, headers, user, set }) => {
+      const activeUser = user || (headers["x-user-id"] ? { id: headers["x-user-id"] as string, role: "user", accessType: 2 } : null);
+      if (!activeUser) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk memperbarui profil.");
+      }
+
+      const isAdmin = (activeUser as any).role === "admin" || (activeUser as any).accessType === 1;
+      const isOwner = activeUser.id === params.id;
+
+      if (!isOwner && !isAdmin) {
+        throw new ForbiddenError("Kamu tidak memiliki izin untuk memperbarui data pengguna lain.");
+      }
+
+      // Non-admin users cannot elevate their own role or accessType
+      const safeBody = { ...body };
+      if (!isAdmin) {
+        delete safeBody.role;
+        delete safeBody.accessType;
+      }
+
+      const data = await updateUserProfileUsecase(params.id, safeBody, activeUser.id);
       return jsonResponse({
         set,
         statusCode: 200,
@@ -85,20 +106,36 @@ export const userHandler = new Elysia({ prefix: "/api/user" })
       });
     },
     {
+      auth: true,
       params: UserIdParam,
       body: UpdateUserBody,
     }
   )
   .delete(
     "/:id",
-    async ({ params, headers, set }) => {
-      const deleterId = headers["x-user-id"] || "system";
-      await deleteUserUsecase(params.id, deleterId);
+    async ({ params, headers, user, set }) => {
+      const activeUser = user || (headers["x-user-id"] ? { id: headers["x-user-id"] as string, role: "user", accessType: 2 } : null);
+      if (!activeUser) {
+        throw new UnauthorizedError("Autentikasi diperlukan.");
+      }
+
+      const isAdmin = (activeUser as any).role === "admin" || (activeUser as any).accessType === 1;
+      const isOwner = activeUser.id === params.id;
+
+      if (!isOwner && !isAdmin) {
+        throw new ForbiddenError("Kamu tidak memiliki izin untuk menghapus pengguna ini.");
+      }
+
+      await deleteUserUsecase(params.id, activeUser.id);
       return jsonResponse({
         set,
         statusCode: 200,
         message: "Pengguna berhasil dihapus",
       });
     },
-    { params: UserIdParam }
+    {
+      auth: true,
+      params: UserIdParam,
+    }
   );
+

@@ -62,11 +62,15 @@ export const auth = betterAuth({
     user: {
       create: {
         before: async (user) => {
-          const emailLower = user.email.toLowerCase();
-          const isAdmin =
-            emailLower.includes("khoirul") ||
-            emailLower === "mrkhoriul@gmail.com" ||
-            emailLower === "mrkhoirul@gmail.com";
+          const emailLower = (user.email || "").toLowerCase();
+          const adminEmails = [
+            "mrkhoirul@gmail.com",
+            "mrkhoriul@gmail.com",
+            ...(process.env.ADMIN_EMAILS
+              ? process.env.ADMIN_EMAILS.split(",").map((e) => e.trim().toLowerCase())
+              : []),
+          ];
+          const isAdmin = adminEmails.includes(emailLower);
 
           return {
             data: {

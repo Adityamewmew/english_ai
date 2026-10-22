@@ -15,24 +15,29 @@ import { voiceRepository } from "../../repository/voice_repository";
 import { LlmGuardrailService } from "../../../lib/llm-guardrail.service";
 import { jsonResponse } from "../../presenter/json";
 import { checkAiQuotaUsecase } from "../../usecase/classes/check-ai-quota.usecase";
+import { authPlugin } from "../../../lib/auth";
+import { UnauthorizedError } from "../../../common/errors/app-error";
 
 export const voiceHandler = new Elysia({ prefix: "/api/voice" })
+  .use(authPlugin)
   .post(
     "/sessions",
-    async ({ body, headers, set }) => {
-      const resolvedUserId = body.userId || headers["x-user-id"] || "anonymous";
+    async ({ body, headers, user, set }) => {
+      const resolvedUserId = (user as any)?.id || body.userId || (headers["x-user-id"] as string);
 
-      if (resolvedUserId && resolvedUserId !== "anonymous") {
-        const quota = await checkAiQuotaUsecase(resolvedUserId);
-        if (!quota.canVoice) {
-          set.status = 403;
-          return jsonResponse({
-            set,
-            statusCode: 403,
-            message: `Batas kuota harian panggilan suara kamu sudah tercapai (${quota.voice.limitMinutes} menit). Kuota reset pukul 00:00 WIB atau upgrade paket untuk durasi lebih banyak!`,
-            data: { quotaExceeded: true, quota },
-          });
-        }
+      if (!resolvedUserId || resolvedUserId === "anonymous") {
+        throw new UnauthorizedError("Autentikasi akun diperlukan untuk memulai sesi panggilan suara AI.");
+      }
+
+      const quota = await checkAiQuotaUsecase(resolvedUserId);
+      if (!quota.canVoice) {
+        set.status = 403;
+        return jsonResponse({
+          set,
+          statusCode: 403,
+          message: `Batas kuota harian panggilan suara kamu sudah tercapai (${quota.voice.limitMinutes} menit). Kuota reset pukul 00:00 WIB atau upgrade paket untuk durasi lebih banyak!`,
+          data: { quotaExceeded: true, quota },
+        });
       }
 
       const session = await voiceRepository.createSession({
@@ -48,7 +53,7 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
         data: session,
       });
     },
-    { body: VoiceCreateSessionBody }
+    { auth: true, body: VoiceCreateSessionBody }
   )
   .get(
     "/tts",
@@ -108,9 +113,9 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
   )
   .post(
     "/turn-stream",
-    async ({ body, headers }) => {
+    async ({ body, headers, user }) => {
       const { sessionId, topic, history, studentMessage, userId, turnIndex = 0 } = body;
-      const resolvedUserId = userId || headers["x-user-id"];
+      const resolvedUserId = (user as any)?.id || userId || (headers["x-user-id"] as string);
       const encoder = new TextEncoder();
       let sentenceIndex = 0;
       const accumulatedSentences: string[] = [];
@@ -126,22 +131,36 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
           }, 15000);
 
           try {
-            if (resolvedUserId && resolvedUserId !== "anonymous") {
-              const quota = await checkAiQuotaUsecase(resolvedUserId);
-              if (!quota.canVoice) {
-                const limitNote = `Waktu panggilan latihan suara harian kamu (${quota.voice.limitMinutes} menit) sudah mencapai batas. Kuota reset besok pukul 00:00 WIB!`;
-                controller.enqueue(
-                  encoder.encode(
-                    `data: ${JSON.stringify({ type: "sentence", index: 0, text: limitNote })}\n\n`
-                  )
-                );
-                controller.enqueue(
-                  encoder.encode(
-                    `data: ${JSON.stringify({ type: "done", fullReply: limitNote, sentenceCount: 1 })}\n\n`
-                  )
-                );
-                return;
-              }
+            if (!resolvedUserId || resolvedUserId === "anonymous") {
+              const unauthNote = "Autentikasi akun diperlukan untuk berbicara dalam sesi AI.";
+              controller.enqueue(
+                encoder.encode(
+                  `data: ${JSON.stringify({ type: "sentence", index: 0, text: unauthNote })}\n\n`
+                )
+              );
+              controller.enqueue(
+                encoder.encode(
+                  `data: ${JSON.stringify({ type: "done", fullReply: unauthNote, sentenceCount: 1 })}\n\n`
+                )
+              );
+              controller.close();
+              return;
+            }
+
+            const quota = await checkAiQuotaUsecase(resolvedUserId);
+            if (!quota.canVoice) {
+              const limitNote = `Waktu panggilan latihan suara harian kamu (${quota.voice.limitMinutes} menit) sudah mencapai batas. Kuota reset besok pukul 00:00 WIB!`;
+              controller.enqueue(
+                encoder.encode(
+                  `data: ${JSON.stringify({ type: "sentence", index: 0, text: limitNote })}\n\n`
+                )
+              );
+              controller.enqueue(
+                encoder.encode(
+                  `data: ${JSON.stringify({ type: "done", fullReply: limitNote, sentenceCount: 1 })}\n\n`
+                )
+              );
+              return;
             }
 
             for await (const sentence of streamVoiceTurnUsecase({
@@ -219,7 +238,7 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
         },
       });
     },
-    { body: VoiceTurnStreamBody }
+    { auth: true, body: VoiceTurnStreamBody }
   )
   .get(
     "/initial-greeting",

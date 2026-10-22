@@ -28,10 +28,17 @@ export async function purchaseClassUsecase(
     throw new NotFoundError("Pengguna tidak ditemukan.");
   }
 
+  const adminEmails = [
+    "mrkhoirul@gmail.com",
+    "mrkhoriul@gmail.com",
+    ...(process.env.ADMIN_EMAILS
+      ? process.env.ADMIN_EMAILS.split(",").map((e) => e.trim().toLowerCase())
+      : []),
+  ];
   const isAdmin =
     u.role === "admin" ||
     u.accessType === 1 ||
-    u.email?.toLowerCase().includes("khoirul");
+    adminEmails.includes((u.email || "").toLowerCase());
 
   // Check if already active and upgrading
   const existingAccess = await classRepository.findUserAccessByCefr(

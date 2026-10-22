@@ -10,8 +10,11 @@ import { submitPlacementUsecase } from "../../usecase/placement/submit-placement
 import { placementRepository } from "../../repository/placement_repository";
 import { AiService } from "../../../lib/ai";
 import { jsonResponse } from "../../presenter/json";
+import { authPlugin } from "../../../lib/auth";
+import { UnauthorizedError, ForbiddenError } from "../../../common/errors/app-error";
 
 export const placementHandler = new Elysia({ prefix: "/api/placement" })
+  .use(authPlugin)
   .get("/session", async ({ set }) => {
     const data = await getPlacementSessionUsecase();
     return jsonResponse({
@@ -23,7 +26,16 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
   })
   .get(
     "/latest/:userId",
-    async ({ params, set }) => {
+    async ({ params, user, headers, set }) => {
+      const activeUser = user || (headers["x-user-id"] ? { id: headers["x-user-id"] as string, role: "user", accessType: 2 } : null);
+      if (!activeUser) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk melihat hasil placement test.");
+      }
+      const isAdmin = (activeUser as any).role === "admin" || (activeUser as any).accessType === 1;
+      if (activeUser.id !== params.userId && !isAdmin) {
+        throw new ForbiddenError("Kamu tidak memiliki izin untuk melihat hasil tes siswa lain.");
+      }
+
       const data = await placementRepository.findLatestByUser(params.userId);
       return jsonResponse({
         set,
@@ -32,7 +44,10 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
         data,
       });
     },
-    { params: t.Object({ userId: t.String() }) }
+    {
+      auth: true,
+      params: t.Object({ userId: t.String() }),
+    }
   )
   .post(
     "/transcribe-speaking",
@@ -78,8 +93,12 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
   )
   .post(
     "/submit",
-    async ({ body, set }) => {
-      const data = await submitPlacementUsecase(body);
+    async ({ body, user, headers, set }) => {
+      const activeUserId = (user as any)?.id || body.userId || (headers["x-user-id"] as string);
+      if (!activeUserId) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk mengirim tes penempatan.");
+      }
+      const data = await submitPlacementUsecase({ ...body, userId: activeUserId });
       return jsonResponse({
         set,
         statusCode: 200,
@@ -87,5 +106,8 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
         data,
       });
     },
-    { body: PlacementSubmitBody }
+    {
+      auth: true,
+      body: PlacementSubmitBody,
+    }
   );

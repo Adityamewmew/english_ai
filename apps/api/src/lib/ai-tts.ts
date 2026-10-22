@@ -16,7 +16,7 @@ export class AiTtsService {
    */
   static async generateSpeech(text: string, voiceOverride?: string): Promise<Buffer | null> {
     const cleanText = sanitizeRepeatedChars(text);
-    if (!cleanText || cleanText.trim() === "") return null;
+    if (!cleanText || cleanText.trim() === "" || cleanText.length > 1500) return null;
 
     const voice = (voiceOverride || process.env.AI_AUDIO_VOICE || "").trim() || this.ROGER_VOICE_ID;
     const cacheKey = crypto.createHash("sha256").update(`${voice}:${cleanText}`).digest("hex");
@@ -65,7 +65,7 @@ export class AiTtsService {
               const oldestKey = ttsMemoryCache.keys().next().value;
               if (oldestKey) ttsMemoryCache.delete(oldestKey);
             }
-            ttsMemoryCache.set(cleanText, buffer);
+            ttsMemoryCache.set(cacheKey, buffer);
           }
 
           return buffer;

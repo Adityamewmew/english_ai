@@ -100,11 +100,11 @@ export async function submitPlacementUsecase(body: {
   const listeningScore = lisTotal > 0 ? Math.round((lisCorrect / lisTotal) * 100) : mcqScore;
 
   // 4. Score Writing with AI evaluation (25% weight)
-  let writingScore = body.writingEvaluation?.overall_score || 0;
-  let writingEval = body.writingEvaluation || null;
+  let writingScore = 0;
+  let writingEval: any = null;
   const writingEntries = Object.entries(writingAnswers).filter(([_, text]) => text && text.trim().length > 5);
 
-  if (!writingEval && writingEntries.length > 0) {
+  if (writingEntries.length > 0) {
     const hasWritingViolation = writingEntries.some(([_, text]) => !LlmGuardrailService.checkGeneralInput(text).allowed);
     if (hasWritingViolation) {
       writingScore = 20;
@@ -144,16 +144,16 @@ Return valid JSON only:
         writingScore = Math.max(40, mcqScore);
       }
     }
-  } else if (!writingEval) {
+  } else {
     writingScore = Math.max(40, mcqScore);
   }
 
   // 5. Score Speaking with AI evaluation (20% weight)
-  let speakingScore = body.speakingEvaluation?.overall_score || 0;
-  let speakingEval = body.speakingEvaluation || null;
+  let speakingScore = 0;
+  let speakingEval: any = null;
   const speakingEntries = Object.entries(speakingAnswers).filter(([_, text]) => text && text.trim().length > 3);
 
-  if (!speakingEval && speakingEntries.length > 0) {
+  if (speakingEntries.length > 0) {
     const hasSpeakingViolation = speakingEntries.some(([_, text]) => !LlmGuardrailService.checkGeneralInput(text).allowed);
     if (hasSpeakingViolation) {
       speakingScore = 20;
@@ -192,7 +192,7 @@ Return valid JSON only:
         speakingScore = Math.max(40, mcqScore);
       }
     }
-  } else if (!speakingEval) {
+  } else {
     speakingScore = Math.max(40, mcqScore);
   }
 

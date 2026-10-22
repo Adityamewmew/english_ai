@@ -12,22 +12,33 @@ import {
 } from "../../usecase/chat/manage-chat-session.usecase";
 import { streamChatTurnUsecase } from "../../usecase/chat/stream-chat-turn.usecase";
 import { jsonResponse } from "../../presenter/json";
+import { authPlugin } from "../../../lib/auth";
+import { UnauthorizedError } from "../../../common/errors/app-error";
 
 export const chatHandler = new Elysia({ prefix: "/api/chat" })
-  .get("/sessions", async ({ query, headers, set }) => {
-    const userId = (query as any)?.userId || headers["x-user-id"] || "anonymous";
-    const data = await listChatSessionsUsecase(userId);
+  .use(authPlugin)
+  .get("/sessions", async ({ query, headers, user, set }) => {
+    const activeUserId = (user as any)?.id || (query as any)?.userId || headers["x-user-id"];
+    if (!activeUserId) {
+      return jsonResponse({
+        set,
+        statusCode: 200,
+        message: "No user specified",
+        data: [],
+      });
+    }
+    const data = await listChatSessionsUsecase(activeUserId);
     return jsonResponse({
       set,
       statusCode: 200,
       message: "Chat sessions retrieved",
       data,
     });
-  })
+  }, { auth: true })
   .post(
     "/sessions",
-    async ({ body, headers, set }) => {
-      const resolvedUserId = body.userId || headers["x-user-id"] || "anonymous";
+    async ({ body, headers, user, set }) => {
+      const resolvedUserId = (user as any)?.id || body.userId || headers["x-user-id"] || "anonymous";
       const session = await createChatSessionUsecase(resolvedUserId, body.title);
       return jsonResponse({
         set,
@@ -36,13 +47,16 @@ export const chatHandler = new Elysia({ prefix: "/api/chat" })
         data: session,
       });
     },
-    { body: CreateChatSessionBody }
+    { auth: true, body: CreateChatSessionBody }
   )
   .get(
     "/sessions/:id",
-    async ({ params, headers, set }) => {
-      const userId = headers["x-user-id"];
-      const session = await getChatSessionDetailUsecase(params.id, userId);
+    async ({ params, headers, user, set }) => {
+      const activeUserId = (user as any)?.id || headers["x-user-id"];
+      if (!activeUserId) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk melihat sesi obrolan.");
+      }
+      const session = await getChatSessionDetailUsecase(params.id, activeUserId);
       if (!session) {
         set.status = 404;
         return { success: false, message: "Session not found" };
@@ -54,13 +68,16 @@ export const chatHandler = new Elysia({ prefix: "/api/chat" })
         data: session,
       });
     },
-    { params: ChatSessionParam }
+    { auth: true, params: ChatSessionParam }
   )
   .delete(
     "/sessions/:id",
-    async ({ params, headers, set }) => {
-      const userId = headers["x-user-id"];
-      await deleteChatSessionUsecase(params.id, userId);
+    async ({ params, headers, user, set }) => {
+      const activeUserId = (user as any)?.id || headers["x-user-id"];
+      if (!activeUserId) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk menghapus sesi obrolan.");
+      }
+      await deleteChatSessionUsecase(params.id, activeUserId);
       return jsonResponse({
         set,
         statusCode: 200,
@@ -68,13 +85,13 @@ export const chatHandler = new Elysia({ prefix: "/api/chat" })
         data: { id: params.id },
       });
     },
-    { params: ChatSessionParam }
+    { auth: true, params: ChatSessionParam }
   )
   .post(
     "/sessions/:id/stream",
-    async ({ params, body, headers }) => {
+    async ({ params, body, headers, user }) => {
       const { message, userId, clientMessageId } = body;
-      const resolvedUserId = userId || headers["x-user-id"] || "anonymous";
+      const resolvedUserId = (user as any)?.id || userId || headers["x-user-id"] || "anonymous";
 
       const session = await getChatSessionDetailUsecase(params.id, resolvedUserId !== "anonymous" ? resolvedUserId : undefined);
       if (!session) {
@@ -142,6 +159,7 @@ export const chatHandler = new Elysia({ prefix: "/api/chat" })
       });
     },
     {
+      auth: true,
       params: ChatSessionParam,
       body: SendChatMessageBody,
     }

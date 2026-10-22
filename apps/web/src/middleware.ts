@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { verifySessionToken } from "./lib/session";
 
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const sessionCookie = req.cookies.get("eddy_session");
   const { pathname } = req.nextUrl;
 
@@ -11,13 +12,17 @@ export function middleware(req: NextRequest) {
     pathname.startsWith("/call") ||
     pathname.startsWith("/placement");
 
-  if (!sessionCookie && isProtectedRoute) {
+  const validSession = sessionCookie?.value
+    ? await verifySessionToken(sessionCookie.value)
+    : null;
+
+  if (!validSession && isProtectedRoute) {
     const loginUrl = new URL("/login", req.url);
     loginUrl.searchParams.set("from", pathname);
     return NextResponse.redirect(loginUrl);
   }
 
-  if (sessionCookie && isAuthRoute) {
+  if (validSession && isAuthRoute) {
     return NextResponse.redirect(new URL("/dashboard", req.url));
   }
 

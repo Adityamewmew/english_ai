@@ -5,6 +5,9 @@ export async function getTtsAudioUsecase(text: string, voice?: string) {
   if (!text || text.trim() === "") {
     throw new AppError("Missing text parameter", 400);
   }
+  if (text.length > 1500) {
+    throw new AppError("Text exceeds maximum allowed length of 1500 characters", 400);
+  }
 
   // 1. Try cached/buffered speech first (ensures exact Content-Length for HTML5 Audio)
   const audioBuffer = await AiService.generateSpeech(text, voice);

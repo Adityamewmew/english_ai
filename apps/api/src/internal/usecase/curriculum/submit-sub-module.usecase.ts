@@ -81,10 +81,14 @@ export async function submitSubModuleUsecase(
     } else {
       finalScore = quizScore;
     }
-  } else if (customScore !== undefined) {
-    finalScore = customScore;
-  } else if (speakingScore !== undefined) {
-    finalScore = speakingScore;
+  } else if (!rawQuestions || rawQuestions.length === 0) {
+    if (customScore !== undefined) {
+      finalScore = Math.min(100, Math.max(0, customScore));
+    } else if (speakingScore !== undefined) {
+      finalScore = Math.min(100, Math.max(0, speakingScore));
+    }
+  } else {
+    finalScore = 0;
   }
 
   const passingScore = module.passingScore || 70;
