@@ -12,7 +12,7 @@ export interface CurriculumModuleItem {
   title: string;
   cefr: string;
   description?: string;
-  status: "unlocked" | "completed" | "locked";
+  status: "unlocked" | "completed" | "locked" | "requires_access";
   score?: number | null;
   skillFocus?: string;
   orderIndex?: number;
@@ -22,6 +22,7 @@ export interface CurriculumModuleItem {
 interface ModuleGridCardProps {
   module: CurriculumModuleItem;
   index: number;
+  onUnlockClick?: () => void;
 }
 
 const THUMBNAIL_STYLES = [
@@ -31,10 +32,11 @@ const THUMBNAIL_STYLES = [
   { bg: "#F0F9FF", border: "#BAE6FD", img: "/illustrations/article-guide.svg", badge: "bg-[#1B4965] text-white border-b border-[#113144]" },
 ];
 
-export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
+export function ModuleGridCard({ module, index, onUnlockClick }: ModuleGridCardProps) {
   const { data: sessionUser } = useSession();
   const isAdmin = isUserAdmin(sessionUser);
-  const isLocked = !isAdmin && module.status === "locked";
+  const isRequiresAccess = !isAdmin && module.status === "requires_access";
+  const isLocked = !isAdmin && (module.status === "locked" || isRequiresAccess);
   const isCompleted = module.status === "completed";
   const isExam = module.id.includes("M13") || Boolean(module.isExam);
   const style = THUMBNAIL_STYLES[index % THUMBNAIL_STYLES.length];
@@ -64,6 +66,11 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
                 <CheckCircle2 className="w-3 h-3 text-emerald-600" />
                 <span>Selesai</span>
               </span>
+            ) : isRequiresAccess ? (
+              <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200">
+                <Lock className="w-3 h-3" />
+                <span>Perlu Beli</span>
+              </span>
             ) : isLocked ? (
               <span className="inline-flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-md bg-slate-100 text-slate-500">
                 <Lock className="w-3 h-3" />
@@ -91,7 +98,16 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
 
         {/* Card Action Button */}
         <div>
-          {isLocked ? (
+          {isRequiresAccess ? (
+            <button
+              type="button"
+              onClick={onUnlockClick}
+              className="w-full py-2.5 px-3 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center gap-1.5 border border-indigo-200 transition-colors"
+            >
+              <Lock className="w-3.5 h-3.5 text-indigo-600" />
+              <span>Buka Akses Kelas</span>
+            </button>
+          ) : isLocked ? (
             <button
               type="button"
               disabled
@@ -204,7 +220,16 @@ export function ModuleGridCard({ module, index }: ModuleGridCardProps) {
             </span>
 
             {/* CTA Action Pill */}
-            {isLocked ? (
+            {isRequiresAccess ? (
+              <button
+                type="button"
+                onClick={onUnlockClick}
+                className="px-3.5 py-1.5 rounded-full bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center gap-1 border border-indigo-200 transition-colors cursor-pointer"
+              >
+                <Lock className="w-3 h-3 text-indigo-600" />
+                <span>Buka Kelas</span>
+              </button>
+            ) : isLocked ? (
               <span className="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400 font-bold text-xs flex items-center gap-1 cursor-not-allowed border border-slate-200">
                 <Lock className="w-3 h-3" />
                 <span>Terkunci</span>

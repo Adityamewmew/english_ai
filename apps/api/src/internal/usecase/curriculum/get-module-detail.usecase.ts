@@ -1,5 +1,6 @@
 import { curriculumRepository } from "../../repository/curriculum_repository";
-import { NotFoundError } from "../../../common/errors/app-error";
+import { classRepository } from "../../repository/class_repository";
+import { NotFoundError, ForbiddenError } from "../../../common/errors/app-error";
 import { db } from "../../../db";
 import { users } from "../../../db/schema";
 import { eq } from "drizzle-orm";
@@ -25,6 +26,16 @@ export async function getModuleDetailUsecase(moduleId: string, userId?: string) 
       .limit(1);
     if (u && (u.role === "admin" || u.accessType === 1 || u.email?.toLowerCase().includes("khoirul"))) {
       isAdmin = true;
+    }
+
+    if (!isAdmin) {
+      const baseCefr = (module.levelId || "A1").toUpperCase().slice(0, 2);
+      const access = await classRepository.findUserAccessByCefr(userId, baseCefr);
+      if (!access) {
+        throw new ForbiddenError(
+          `Akses untuk kelas ${baseCefr} belum dibuka. Silakan aktifkan paket kelas terlebih dahulu.`
+        );
+      }
     }
 
     userProgress = await curriculumRepository.findUserModuleProgress(userId, moduleId);

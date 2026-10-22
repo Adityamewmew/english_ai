@@ -9,7 +9,8 @@ import { ModuleGridCard, CurriculumModuleItem } from "./module-grid-card";
 import { useCurriculumLevels } from "../hooks/use-curriculum";
 import { useUserProfile } from "@/features/users/hooks/use-user";
 import type { SessionUser } from "@/lib/session";
-import { BookOpen, ChevronRight, Sparkles } from "lucide-react";
+import { BookOpen, ChevronRight, Sparkles, Lock, ShieldCheck } from "lucide-react";
+import { useClasses, ClassUnlockModal, type CourseClassItem } from "@/features/classes";
 import {
   CEFR_CATEGORIES,
   CefrCategory,
@@ -35,6 +36,10 @@ export function ModulesCatalogView({
 
   const { data: levelsData, isLoading } = useCurriculumLevels(session.userId);
   const { data: userProfile } = useUserProfile(session.userId);
+  const { data: classesData, refetch: refetchClasses } = useClasses(session.userId);
+
+  const [selectedClassForUnlock, setSelectedClassForUnlock] = useState<CourseClassItem | null>(null);
+  const [isUnlockModalOpen, setIsUnlockModalOpen] = useState(false);
 
   const studentName = userProfile?.name || session.name;
   const currentCefr = userProfile?.currentCefr || session.currentCefr || "A1.1";
@@ -230,6 +235,25 @@ export function ModulesCatalogView({
     currentCefr &&
     currentCefr.toUpperCase().startsWith(activeSubLevelItem.id.toUpperCase());
 
+  const activeCategoryClass = useMemo(() => {
+    return (
+      classesData?.find(
+        (c) => c.cefr.toUpperCase() === selectedCategory.toUpperCase()
+      ) || null
+    );
+  }, [classesData, selectedCategory]);
+
+  const hasCategoryAccess = activeCategoryClass
+    ? activeCategoryClass.hasAccess
+    : true;
+
+  const formatRupiah = (num: number) =>
+    new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      maximumFractionDigits: 0,
+    }).format(num);
+
   return (
     <StudentShell studentName={studentName} currentCefr={currentCefr}>
       <div className="p-4 sm:p-6 lg:p-8 w-full max-w-[1600px] mx-auto space-y-6 sm:space-y-8">
@@ -330,6 +354,66 @@ export function ModulesCatalogView({
             </div>
           </div>
 
+          {/* Class Unlock Banner if level not owned */}
+          {!hasCategoryAccess && activeCategoryClass && (
+            <div className="p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-amber-500/5 border-2 border-indigo-200 dark:border-indigo-900 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Lock className="w-6 h-6" />
+                </div>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-600 text-white font-mono">
+                      Akses Belum Aktif
+                    </span>
+                    <span className="text-xs font-bold text-slate-500">
+                      Level {selectedCategory}
+                    </span>
+                  </div>
+                  <h3 className="font-heading text-lg font-black text-slate-900 dark:text-white">
+                    {activeCategoryClass.name}
+                  </h3>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+                    {activeCategoryClass.description ||
+                      `Buka akses permanen ke seluruh modul kurikulum level ${selectedCategory}, materi speaking AI interaktif, kuis kelulusan, dan sertifikat resmi.`}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end justify-between gap-3 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-indigo-200/50">
+                <div className="text-left md:text-right">
+                  <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">
+                    Tarif Buka Akses
+                  </span>
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-heading text-2xl font-black text-indigo-900 dark:text-indigo-400">
+                      {formatRupiah(activeCategoryClass.price)}
+                    </span>
+                    {activeCategoryClass.originalPrice &&
+                      activeCategoryClass.originalPrice >
+                        activeCategoryClass.price && (
+                        <span className="text-xs text-slate-400 line-through">
+                          {formatRupiah(activeCategoryClass.originalPrice)}
+                        </span>
+                      )}
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedClassForUnlock(activeCategoryClass);
+                    setIsUnlockModalOpen(true);
+                  }}
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold text-xs border-b-4 border-b-indigo-800 active:border-b-0 active:translate-y-1 shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <Sparkles className="w-4 h-4" />
+                  <span>Buka Akses Kelas Sekarang</span>
+                </button>
+              </div>
+            </div>
+          )}
+
           {/* Module Cards Grid */}
           <div className="space-y-4">
 
@@ -362,12 +446,32 @@ export function ModulesCatalogView({
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {filteredModules.map((m, idx) => (
-                  <ModuleGridCard key={m.id} module={m} index={idx} />
+                  <ModuleGridCard
+                    key={m.id}
+                    module={m}
+                    index={idx}
+                    onUnlockClick={() => {
+                      if (activeCategoryClass) {
+                        setSelectedClassForUnlock(activeCategoryClass);
+                        setIsUnlockModalOpen(true);
+                      }
+                    }}
+                  />
                 ))}
               </div>
             )}
         </div>
       </div>
+
+      <ClassUnlockModal
+        isOpen={isUnlockModalOpen}
+        onClose={() => setIsUnlockModalOpen(false)}
+        classItem={selectedClassForUnlock}
+        userId={session.userId}
+        onSuccess={() => {
+          refetchClasses();
+        }}
+      />
     </StudentShell>
   );
 }

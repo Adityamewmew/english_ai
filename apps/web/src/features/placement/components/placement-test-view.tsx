@@ -12,8 +12,12 @@ import {
   MessageSquare,
   Loader2,
   AlertCircle,
+  Sparkles,
+  ShieldCheck,
+  Lock,
 } from "lucide-react";
 import { usePlacementSession, useSubmitPlacement } from "../hooks/use-placement";
+import { useClasses, ClassUnlockModal } from "@/features/classes";
 import { StudentShell } from "@/features/dashboard";
 import { PlacementWizardMobile } from "./placement-wizard-mobile";
 import { PlacementDesktopForm } from "./placement-desktop-form";
@@ -33,6 +37,9 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
 
   const [result, setResult] = useState<any>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [isUnlockModalOpen, setIsUnlockModalOpen] = useState(false);
+
+  const { data: classesData, refetch: refetchClasses } = useClasses(userId);
 
   const mcqs = (testData as any)?.mcqs || [];
   const listening = (testData as any)?.listening || [];
@@ -215,25 +222,94 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
             </div>
           )}
 
-          <div className="flex flex-col sm:flex-row gap-3 pt-2">
-            <Link href="/modules" className="flex-1">
-              <button
-                type="button"
-                className="w-full py-3.5 px-6 rounded-2xl bg-primary hover:bg-[#0c2b48] text-white font-bold text-sm border-b-4 border-b-[#07192b] active:border-b-0 active:translate-y-1 shadow-sm transition-all flex items-center justify-center gap-1.5"
-              >
-                Mulai Belajar Level {result.overallCefr}
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </Link>
-            <Link href="/dashboard" className="flex-1">
-              <button
-                type="button"
-                className="w-full py-3.5 px-6 rounded-2xl bg-white hover:bg-slate-50 text-slate-700 font-semibold text-sm border border-slate-300 border-b-4 border-b-slate-400 active:border-b-0 active:translate-y-1 transition-all"
-              >
-                Dashboard
-              </button>
-            </Link>
-          </div>
+          {(() => {
+            const baseCefr = (result.overallCefr || "A1").toUpperCase().slice(0, 2);
+            const targetClass = classesData?.find((c) => c.cefr.toUpperCase() === baseCefr);
+            const hasAccess = targetClass?.hasAccess ?? false;
+
+            const formatRupiah = (num: number) =>
+              new Intl.NumberFormat("id-ID", {
+                style: "currency",
+                currency: "IDR",
+                maximumFractionDigits: 0,
+              }).format(num);
+
+            if (!hasAccess && targetClass) {
+              return (
+                <div className="space-y-4 pt-1">
+                  <div className="p-4 rounded-2xl bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-200 text-left space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-900 border border-indigo-200">
+                        Buka Akses Kelas
+                      </span>
+                      <span className="font-heading text-lg font-black text-indigo-950">
+                        {formatRupiah(targetClass.price)}
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-700 leading-relaxed font-medium">
+                      Untuk mulai mempelajari materi <strong>{result.overallCefr}</strong> dan membuka seluruh modul kurikulum, silakan aktivasi paket kelas di bawah ini.
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setIsUnlockModalOpen(true)}
+                      className="flex-2 py-3.5 px-6 rounded-2xl bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold text-sm border-b-4 border-b-indigo-800 active:border-b-0 active:translate-y-1 shadow-sm transition-all flex items-center justify-center gap-2"
+                    >
+                      <Sparkles className="w-4 h-4" />
+                      Buka Akses Kelas {baseCefr} ({formatRupiah(targetClass.price)})
+                    </button>
+                    <Link href="/dashboard" className="flex-1">
+                      <button
+                        type="button"
+                        className="w-full py-3.5 px-6 rounded-2xl bg-white hover:bg-slate-50 text-slate-700 font-semibold text-sm border border-slate-300 border-b-4 border-b-slate-400 active:border-b-0 active:translate-y-1 transition-all"
+                      >
+                        Dashboard
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                <Link href="/modules" className="flex-1">
+                  <button
+                    type="button"
+                    className="w-full py-3.5 px-6 rounded-2xl bg-primary hover:bg-[#0c2b48] text-white font-bold text-sm border-b-4 border-b-[#07192b] active:border-b-0 active:translate-y-1 shadow-sm transition-all flex items-center justify-center gap-1.5"
+                  >
+                    Mulai Belajar Level {result.overallCefr}
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </Link>
+                <Link href="/dashboard" className="flex-1">
+                  <button
+                    type="button"
+                    className="w-full py-3.5 px-6 rounded-2xl bg-white hover:bg-slate-50 text-slate-700 font-semibold text-sm border border-slate-300 border-b-4 border-b-slate-400 active:border-b-0 active:translate-y-1 transition-all"
+                  >
+                    Dashboard
+                  </button>
+                </Link>
+              </div>
+            );
+          })()}
+
+          {/* Modal Unlock Kelas */}
+          {(() => {
+            const baseCefr = (result.overallCefr || "A1").toUpperCase().slice(0, 2);
+            const targetClass = classesData?.find((c) => c.cefr.toUpperCase() === baseCefr);
+            return (
+              <ClassUnlockModal
+                isOpen={isUnlockModalOpen}
+                onClose={() => setIsUnlockModalOpen(false)}
+                classItem={targetClass || null}
+                userId={userId || ""}
+                onSuccess={() => refetchClasses()}
+              />
+            );
+          })()}
         </div>
       </div>
     );

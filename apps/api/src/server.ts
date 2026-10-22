@@ -8,6 +8,7 @@ import { placementHandler } from "./internal/http/handler/placement_handler";
 import { voiceHandler } from "./internal/http/handler/voice_handler";
 import { chatHandler } from "./internal/http/handler/chat_handler";
 import { certificateHandler } from "./internal/http/handler/certificate_handler";
+import { classHandler } from "./internal/http/handler/class_handler";
 import { authPlugin } from "./lib/auth";
 
 export const app = new Elysia()
@@ -46,6 +47,7 @@ export const app = new Elysia()
   .use(placementHandler)
   .use(voiceHandler)
   .use(chatHandler)
-  .use(certificateHandler);
+  .use(certificateHandler)
+  .use(classHandler);
 
 export type App = typeof app;
