@@ -5,6 +5,8 @@ import { db } from "../../../db";
 import { users } from "../../../db/schema";
 import { eq } from "drizzle-orm";
 
+import { isUserAdmin } from "@english-ai/shared";
+
 export async function getModuleDetailUsecase(moduleId: string, userId?: string) {
   const module = await curriculumRepository.findModuleById(moduleId);
   if (!module) {
@@ -24,7 +26,7 @@ export async function getModuleDetailUsecase(moduleId: string, userId?: string) 
       .from(users)
       .where(eq(users.id, userId))
       .limit(1);
-    if (u && (u.role === "admin" || u.accessType === 1 || u.email?.toLowerCase().includes("khoirul"))) {
+    if (isUserAdmin(u)) {
       isAdmin = true;
     }
 

@@ -1,6 +1,7 @@
 import { classRepository } from "../../repository/class_repository";
 import { aiUsageRepository } from "../../repository/ai_usage_repository";
 import { userRepository } from "../../repository/user_repository";
+import { isUserAdmin } from "@english-ai/shared";
 
 export interface AiQuotaResult {
   tier: "admin" | "ultra" | "pro" | "basic" | "trial";
@@ -29,11 +30,7 @@ export async function checkAiQuotaUsecase(userId: string): Promise<AiQuotaResult
   // Check user role via repository
   const u = await userRepository.findById(userId);
 
-  const isAdmin =
-    u &&
-    (u.role === "admin" ||
-      u.accessType === 1 ||
-      u.email?.toLowerCase().includes("khoirul"));
+  const isAdmin = isUserAdmin(u);
 
   if (isAdmin) {
     const usage = await aiUsageRepository.getDailyUsage(userId, usageDate);

@@ -4,6 +4,7 @@ import { certificateRepository } from "../../repository/certificate_repository";
 import { db } from "../../../db";
 import { users } from "../../../db/schema";
 import { eq } from "drizzle-orm";
+import { isUserAdmin } from "@english-ai/shared";
 
 export async function getCurriculumUsecase(userId?: string, levelId?: string) {
   const levels = await curriculumRepository.findAllLevels();
@@ -38,11 +39,7 @@ export async function getCurriculumUsecase(userId?: string, levelId?: string) {
 
     if (u) {
       if (u.currentCefr) userCefr = u.currentCefr;
-      if (
-        u.role === "admin" ||
-        u.accessType === 1 ||
-        u.email?.toLowerCase().includes("khoirul")
-      ) {
+      if (isUserAdmin(u)) {
         isAdmin = true;
       }
     }

@@ -3,6 +3,7 @@
 import { authApi } from "@/features/auth/api/auth.api";
 import { setSession, clearSession } from "@/lib/session";
 import { loginSchema, registerSchema } from "@/lib/validations/auth";
+import { isUserAdmin } from "@english-ai/shared";
 import { redirect } from "next/navigation";
 
 export async function doLogin(formData: FormData) {
@@ -87,11 +88,7 @@ export async function syncGoogleSession(userData: {
   accessType?: number;
   currentCefr?: string;
 }) {
-  const emailLower = (userData.email || "").toLowerCase();
-  const isAdmin =
-    emailLower.includes("khoirul") ||
-    emailLower === "mrkhoriul@gmail.com" ||
-    emailLower === "mrkhoirul@gmail.com";
+  const isAdmin = isUserAdmin(userData);
 
   const role = isAdmin ? "admin" : userData.role || "student";
   const accessType = isAdmin ? 1 : (userData.accessType ?? (role === "admin" ? 1 : 2));
