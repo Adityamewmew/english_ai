@@ -1,8 +1,6 @@
 import { classRepository } from "../../repository/class_repository";
 import { aiUsageRepository } from "../../repository/ai_usage_repository";
-import { db } from "../../../db";
-import { users } from "../../../db/schema";
-import { eq } from "drizzle-orm";
+import { userRepository } from "../../repository/user_repository";
 
 export interface AiQuotaResult {
   tier: "admin" | "ultra" | "pro" | "basic" | "trial";
@@ -28,17 +26,8 @@ export interface AiQuotaResult {
 export async function checkAiQuotaUsecase(userId: string): Promise<AiQuotaResult> {
   const usageDate = aiUsageRepository.getTodayDateString();
 
-  // Check user role
-  const [u] = await db
-    .select({
-      id: users.id,
-      role: users.role,
-      accessType: users.accessType,
-      email: users.email,
-    })
-    .from(users)
-    .where(eq(users.id, userId))
-    .limit(1);
+  // Check user role via repository
+  const u = await userRepository.findById(userId);
 
   const isAdmin =
     u &&
@@ -95,6 +84,26 @@ export async function checkAiQuotaUsecase(userId: string): Promise<AiQuotaResult
       tierName = "Paket Basic";
       chatLimit = 20;
       voiceLimitMinutes = 5;
+    }
+
+    // Dynamic limits lookup from database tier configuration
+    const activeClasses = await classRepository.findActiveClasses();
+    const highestAccess =
+      accesses.find((a: any) => (a.tier || "").toLowerCase() === activeTier) ||
+      accesses[0];
+
+    const matchedClass = activeClasses.find(
+      (c) => c.cefr.toUpperCase() === highestAccess.cefr.toUpperCase()
+    );
+
+    if (matchedClass?.tierPlans && matchedClass.tierPlans[activeTier]) {
+      const planConfig = matchedClass.tierPlans[activeTier];
+      if (typeof planConfig.dailyChatLimit === "number") {
+        chatLimit = planConfig.dailyChatLimit;
+      }
+      if (typeof planConfig.dailyVoiceMinutes === "number") {
+        voiceLimitMinutes = planConfig.dailyVoiceMinutes;
+      }
     }
   }
 

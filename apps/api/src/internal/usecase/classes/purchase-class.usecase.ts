@@ -1,9 +1,7 @@
 import { classRepository } from "../../repository/class_repository";
 import { certificateRepository } from "../../repository/certificate_repository";
+import { userRepository } from "../../repository/user_repository";
 import { NotFoundError, ValidationError } from "../../../common/errors/app-error";
-import { db } from "../../../db";
-import { users } from "../../../db/schema";
-import { eq } from "drizzle-orm";
 
 export async function purchaseClassUsecase(
   userId: string,
@@ -24,18 +22,7 @@ export async function purchaseClassUsecase(
     );
   }
 
-  const [u] = await db
-    .select({
-      id: users.id,
-      name: users.name,
-      role: users.role,
-      accessType: users.accessType,
-      email: users.email,
-      currentCefr: users.currentCefr,
-    })
-    .from(users)
-    .where(eq(users.id, userId))
-    .limit(1);
+  const u = await userRepository.findById(userId);
 
   if (!u) {
     throw new NotFoundError("Pengguna tidak ditemukan.");
@@ -61,7 +48,14 @@ export async function purchaseClassUsecase(
       };
     }
 
-    // Upgrading or changing tier
+    const tierRank: Record<string, number> = { basic: 1, pro: 2, ultra: 3 };
+    if ((tierRank[normalizedTier] || 1) < (tierRank[currentTier] || 1)) {
+      throw new ValidationError(
+        `Kamu saat ini sudah memiliki paket ${currentTier.toUpperCase()}. Paket aktif tidak dapat diturunkan ke ${normalizedTier.toUpperCase()}.`
+      );
+    }
+
+    // Upgrading tier
     const updated = await classRepository.grantAccess(
       userId,
       normalizedCefr,

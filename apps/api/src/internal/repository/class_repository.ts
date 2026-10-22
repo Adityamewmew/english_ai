@@ -55,42 +55,29 @@ export const classRepository = {
     grantedBy = "student_purchase"
   ) => {
     const normalizedTier = tier.toLowerCase();
-    const existing = await db
-      .select()
-      .from(userClassAccess)
-      .where(
-        and(
-          eq(userClassAccess.userId, userId),
-          eq(userClassAccess.cefr, cefr)
-        )
-      )
-      .limit(1);
+    const id = randomUUID();
 
-    if (existing.length > 0) {
-      const res = await db
-        .update(userClassAccess)
-        .set({
-          status: "active",
-          tier: normalizedTier,
-          grantedBy,
-          updatedAt: new Date(),
-        })
-        .where(eq(userClassAccess.id, existing[0].id))
-        .returning();
-      return res[0];
-    }
-
-    const res = await db
+    const [row] = await db
       .insert(userClassAccess)
       .values({
-        id: randomUUID(),
+        id,
         userId,
         cefr,
         tier: normalizedTier,
         grantedBy,
         status: "active",
       })
+      .onConflictDoUpdate({
+        target: [userClassAccess.userId, userClassAccess.cefr],
+        set: {
+          status: "active",
+          tier: normalizedTier,
+          grantedBy,
+          updatedAt: new Date(),
+        },
+      })
       .returning();
-    return res[0];
+
+    return row;
   },
 };

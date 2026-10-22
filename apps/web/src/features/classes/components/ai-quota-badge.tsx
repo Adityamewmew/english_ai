@@ -60,7 +60,7 @@ export function AiQuotaBadge({
           <Zap className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
         )}
 
-        <span className="uppercase text-[9px] font-extrabold tracking-wider opacity-85">
+        <span className="uppercase text-[10px] font-black tracking-wider">
           {quota.tier}
         </span>
 

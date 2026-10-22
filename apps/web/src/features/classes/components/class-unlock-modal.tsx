@@ -170,95 +170,95 @@ export function ClassUnlockModal({
           </button>
         </div>
 
-        {/* 3-Tier Selector Cards */}
-        <div className="space-y-1.5">
-          <label className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block">
-            Pilih Paket AI Belajar:
-          </label>
-          <div className="grid grid-cols-3 gap-2">
-            {/* Basic Card */}
-            <button
-              type="button"
-              onClick={() => setSelectedTier("basic")}
-              className={`p-2.5 sm:p-3 rounded-2xl border text-left transition-all relative flex flex-col justify-between cursor-pointer ${
-                selectedTier === "basic"
-                  ? "border-slate-800 bg-slate-50 shadow-xs border-b-4"
-                  : "border-slate-200 bg-white hover:border-slate-300"
-              }`}
-            >
-              <div>
-                <p className="text-xs font-black text-slate-900">Basic</p>
-                <p className="text-[10px] text-slate-500 mt-0.5 font-medium leading-tight">
-                  20 chat • 5 mnt
-                </p>
-              </div>
-              <p className="text-xs font-extrabold text-slate-800 mt-2">
-                {formatRupiah(plans.basic.price)}
-              </p>
-            </button>
-
-            {/* Pro Card (Recommended) */}
-            <button
-              type="button"
-              onClick={() => setSelectedTier("pro")}
-              className={`p-2.5 sm:p-3 rounded-2xl border text-left transition-all relative flex flex-col justify-between cursor-pointer ${
-                selectedTier === "pro"
-                  ? "border-indigo-600 bg-indigo-50/60 shadow-xs border-b-4"
-                  : "border-slate-200 bg-white hover:border-indigo-200"
-              }`}
-            >
-              <span className="absolute -top-2 right-2 px-1.5 py-0.2 rounded-md bg-indigo-600 text-white text-[9px] font-black uppercase tracking-wider shadow-2xs">
-                Favorit
-              </span>
-              <div>
-                <div className="flex items-center gap-1">
-                  <Zap className="w-3 h-3 text-indigo-600" />
-                  <p className="text-xs font-black text-indigo-950">Pro</p>
+          {/* 3-Tier Selector Cards */}
+          <div className="space-y-1.5">
+            <label className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block">
+              Pilih Paket AI Belajar:
+            </label>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              {/* Basic Card */}
+              <button
+                type="button"
+                onClick={() => setSelectedTier("basic")}
+                className={`p-3 rounded-2xl border text-left transition-all relative flex sm:flex-col justify-between items-center sm:items-start cursor-pointer ${
+                  selectedTier === "basic"
+                    ? "border-slate-800 bg-slate-50 shadow-xs border-b-4"
+                    : "border-slate-200 bg-white hover:border-slate-300"
+                }`}
+              >
+                <div>
+                  <p className="text-xs font-black text-slate-900">Basic</p>
+                  <p className="text-[10px] text-slate-500 mt-0.5 font-medium leading-tight">
+                    20 chat • 5 mnt
+                  </p>
                 </div>
-                <p className="text-[10px] text-indigo-700/80 mt-0.5 font-medium leading-tight">
-                  100 chat • 30 mnt
+                <p className="text-xs font-extrabold text-slate-800 sm:mt-2">
+                  {formatRupiah(plans.basic.price)}
                 </p>
-              </div>
-              <p className="text-xs font-extrabold text-indigo-900 mt-2">
-                {formatRupiah(plans.pro.price)}
-              </p>
-            </button>
+              </button>
 
-            {/* Ultra Card */}
-            <button
-              type="button"
-              onClick={() => setSelectedTier("ultra")}
-              className={`p-2.5 sm:p-3 rounded-2xl border text-left transition-all relative flex flex-col justify-between cursor-pointer ${
-                selectedTier === "ultra"
-                  ? "border-amber-500 bg-amber-50/70 shadow-xs border-b-4"
-                  : "border-slate-200 bg-white hover:border-amber-200"
-              }`}
-            >
-              <span className="absolute -top-2 right-2 px-1.5 py-0.2 rounded-md bg-amber-500 text-white text-[9px] font-black uppercase tracking-wider shadow-2xs">
-                ★ MAX
-              </span>
-              <div>
-                <div className="flex items-center gap-1">
-                  <Star className="w-3 h-3 text-amber-600 fill-amber-500" />
-                  <p className="text-xs font-black text-amber-950">Ultra</p>
+              {/* Pro Card (Recommended) */}
+              <button
+                type="button"
+                onClick={() => setSelectedTier("pro")}
+                className={`p-3 rounded-2xl border text-left transition-all relative flex sm:flex-col justify-between items-center sm:items-start cursor-pointer ${
+                  selectedTier === "pro"
+                    ? "border-indigo-600 bg-indigo-50/70 shadow-xs border-b-4"
+                    : "border-slate-200 bg-white hover:border-indigo-200"
+                }`}
+              >
+                <span className="absolute -top-2 right-2 px-1.5 py-0.2 rounded-md bg-indigo-600 text-white text-[9px] font-black uppercase tracking-wider shadow-2xs">
+                  Favorit
+                </span>
+                <div>
+                  <div className="flex items-center gap-1">
+                    <Zap className="w-3 h-3 text-indigo-600" />
+                    <p className="text-xs font-black text-indigo-950">Pro</p>
+                  </div>
+                  <p className="text-[10px] text-indigo-700/80 mt-0.5 font-medium leading-tight">
+                    100 chat • 30 mnt
+                  </p>
                 </div>
-                <p className="text-[10px] text-amber-700/80 mt-0.5 font-medium leading-tight">
-                  Unlimited • 120 mnt
+                <p className="text-xs font-extrabold text-indigo-900 sm:mt-2">
+                  {formatRupiah(plans.pro.price)}
                 </p>
-              </div>
-              <p className="text-xs font-extrabold text-amber-900 mt-2">
-                {formatRupiah(plans.ultra.price)}
-              </p>
-            </button>
+              </button>
+
+              {/* Ultra Card */}
+              <button
+                type="button"
+                onClick={() => setSelectedTier("ultra")}
+                className={`p-3 rounded-2xl border text-left transition-all relative flex sm:flex-col justify-between items-center sm:items-start cursor-pointer ${
+                  selectedTier === "ultra"
+                    ? "border-amber-500 bg-amber-50/80 shadow-xs border-b-4"
+                    : "border-slate-200 bg-white hover:border-amber-200"
+                }`}
+              >
+                <span className="absolute -top-2 right-2 px-1.5 py-0.2 rounded-md bg-amber-500 text-white text-[9px] font-black uppercase tracking-wider shadow-2xs">
+                  ★ MAX
+                </span>
+                <div>
+                  <div className="flex items-center gap-1">
+                    <Star className="w-3 h-3 text-amber-600 fill-amber-500" />
+                    <p className="text-xs font-black text-amber-950">Ultra</p>
+                  </div>
+                  <p className="text-[10px] text-amber-700/80 mt-0.5 font-medium leading-tight">
+                    Unlimited • 120 mnt
+                  </p>
+                </div>
+                <p className="text-xs font-extrabold text-amber-900 sm:mt-2">
+                  {formatRupiah(plans.ultra.price)}
+                </p>
+              </button>
+            </div>
           </div>
-        </div>
 
-        {/* Pricing Summary Banner */}
-        <div className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-transparent border border-indigo-100 flex items-center justify-between">
-          <div>
-            <p className="text-[11px] text-slate-500 font-medium">
-              Investasi Belajar Paket {selectedTier.toUpperCase()}
-            </p>
+          {/* Pricing Summary Banner */}
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-[#0D3B66]/5 border border-[#0D3B66]/15 flex items-center justify-between">
+            <div>
+              <p className="text-[11px] text-slate-500 font-medium">
+                Investasi Belajar Paket {selectedTier.toUpperCase()}
+              </p>
             <div className="flex items-baseline gap-2 mt-0.5">
               <span className="font-heading text-xl sm:text-2xl font-black text-slate-900">
                 {formatRupiah(activePlan.price)}

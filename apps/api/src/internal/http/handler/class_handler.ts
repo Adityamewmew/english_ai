@@ -58,7 +58,9 @@ export const classHandler = new Elysia({ prefix: "/api/classes" })
   .post(
     "/purchase",
     async ({ body, user, set }) => {
-      const activeUserId = user?.id || body?.userId;
+      const activeUserId =
+        user?.id ||
+        (process.env.NODE_ENV !== "production" ? body?.userId : undefined);
       if (!activeUserId) {
         throw new UnauthorizedError(
           "Autentikasi diperlukan untuk membuka akses kelas."
