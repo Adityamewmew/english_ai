@@ -87,9 +87,9 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
             }}
           >
             <h2
-              className="font-serif font-black tracking-wide text-[#0D3B66] text-center drop-shadow-xs max-w-2xl leading-none"
+              className="font-serif font-black tracking-wide text-[#0D3B66] text-center max-w-2xl leading-none"
               style={{
-                fontSize: `${fontSize}px`,
+                fontSize: `clamp(16px, 4vw, ${fontSize}px)`,
               }}
             >
               {data.userName}
@@ -277,6 +277,9 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
             object-fit: contain !important;
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
+          }
+          #printable-certificate h2 {
+            font-size: ${fontSize}px !important;
           }
           .no-print {
             display: none !important;

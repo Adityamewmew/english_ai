@@ -74,7 +74,7 @@ export const getCertificateStatusUsecase = async (
     // Auto-issue certificate if all modules completed and not already issued
     if (!existingCert && stats.isEligible) {
       const dateStr = new Date().toISOString().slice(0, 7).replace("-", "");
-      const randomSuffix = Math.random().toString(36).substring(2, 6).toUpperCase();
+      const randomSuffix = crypto.randomUUID().slice(0, 8).toUpperCase();
       const certificateNumber = `EDDY-${cefr}-${dateStr}-${randomSuffix}`;
       const certId = crypto.randomUUID();
 
