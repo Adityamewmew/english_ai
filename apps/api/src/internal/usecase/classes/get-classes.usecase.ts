@@ -8,6 +8,7 @@ export async function getClassesUsecase(userId?: string) {
   const classes = await classRepository.findActiveClasses();
 
   let userAccessMap: Record<string, boolean> = {};
+  let userTierMap: Record<string, string> = {};
   let userCertsMap: Record<string, boolean> = {};
   let userCefr = "A1";
   let isAdmin = false;
@@ -37,7 +38,9 @@ export async function getClassesUsecase(userId?: string) {
 
     const accesses = await classRepository.findUserAccesses(userId);
     for (const a of accesses) {
-      userAccessMap[a.cefr.toUpperCase()] = true;
+      const cefrKey = a.cefr.toUpperCase();
+      userAccessMap[cefrKey] = true;
+      userTierMap[cefrKey] = (a.tier || "basic").toLowerCase();
     }
 
     const certs = await certificateRepository.findUserCertificates(userId);
@@ -53,12 +56,8 @@ export async function getClassesUsecase(userId?: string) {
     const cefr = c.cefr.toUpperCase();
     const rank = cefrOrder.indexOf(cefr);
     const hasAccess = isAdmin || !!userAccessMap[cefr];
+    const userTier = userTierMap[cefr] || (isAdmin ? "ultra" : null);
 
-    // Check prerequisite eligibility:
-    // 1. Admin always eligible
-    // 2. A1 is always eligible
-    // 3. User placement rank >= this rank
-    // 4. User holds certificate for previous CEFR level
     const isEligible =
       isAdmin ||
       hasAccess ||
@@ -71,6 +70,7 @@ export async function getClassesUsecase(userId?: string) {
     return {
       ...c,
       hasAccess,
+      userTier,
       isEligible,
       prerequisiteCefr: prevCefr,
       requiresCertificate: !hasAccess && rank > 0 && !isEligible,

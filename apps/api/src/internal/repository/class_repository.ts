@@ -51,8 +51,10 @@ export const classRepository = {
   grantAccess: async (
     userId: string,
     cefr: string,
+    tier = "basic",
     grantedBy = "student_purchase"
   ) => {
+    const normalizedTier = tier.toLowerCase();
     const existing = await db
       .select()
       .from(userClassAccess)
@@ -69,6 +71,7 @@ export const classRepository = {
         .update(userClassAccess)
         .set({
           status: "active",
+          tier: normalizedTier,
           grantedBy,
           updatedAt: new Date(),
         })
@@ -83,6 +86,7 @@ export const classRepository = {
         id: randomUUID(),
         userId,
         cefr,
+        tier: normalizedTier,
         grantedBy,
         status: "active",
       })

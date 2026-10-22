@@ -14,12 +14,27 @@ import { evaluateVoiceSessionUsecase } from "../../usecase/voice/evaluate-voice-
 import { voiceRepository } from "../../repository/voice_repository";
 import { LlmGuardrailService } from "../../../lib/llm-guardrail.service";
 import { jsonResponse } from "../../presenter/json";
+import { checkAiQuotaUsecase } from "../../usecase/classes/check-ai-quota.usecase";
 
 export const voiceHandler = new Elysia({ prefix: "/api/voice" })
   .post(
     "/sessions",
     async ({ body, headers, set }) => {
       const resolvedUserId = body.userId || headers["x-user-id"] || "anonymous";
+
+      if (resolvedUserId && resolvedUserId !== "anonymous") {
+        const quota = await checkAiQuotaUsecase(resolvedUserId);
+        if (!quota.canVoice) {
+          set.status = 403;
+          return jsonResponse({
+            set,
+            statusCode: 403,
+            message: `Batas kuota harian panggilan suara kamu sudah tercapai (${quota.voice.limitMinutes} menit). Kuota reset pukul 00:00 WIB atau upgrade paket untuk durasi lebih banyak!`,
+            data: { quotaExceeded: true, quota },
+          });
+        }
+      }
+
       const session = await voiceRepository.createSession({
         userId: resolvedUserId,
         topic: body.topic,
@@ -111,6 +126,24 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
           }, 15000);
 
           try {
+            if (resolvedUserId && resolvedUserId !== "anonymous") {
+              const quota = await checkAiQuotaUsecase(resolvedUserId);
+              if (!quota.canVoice) {
+                const limitNote = `Waktu panggilan latihan suara harian kamu (${quota.voice.limitMinutes} menit) sudah mencapai batas. Kuota reset besok pukul 00:00 WIB!`;
+                controller.enqueue(
+                  encoder.encode(
+                    `data: ${JSON.stringify({ type: "sentence", index: 0, text: limitNote })}\n\n`
+                  )
+                );
+                controller.enqueue(
+                  encoder.encode(
+                    `data: ${JSON.stringify({ type: "done", fullReply: limitNote, sentenceCount: 1 })}\n\n`
+                  )
+                );
+                return;
+              }
+            }
+
             for await (const sentence of streamVoiceTurnUsecase({
               topic,
               history: history as any,

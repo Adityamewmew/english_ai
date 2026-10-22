@@ -1,6 +1,7 @@
 import { AiService } from "../../../lib/ai";
 import { voiceRepository } from "../../repository/voice_repository";
 import { voiceRagService } from "./voice-rag.service";
+import { aiUsageRepository } from "../../repository/ai_usage_repository";
 
 export async function evaluateVoiceSessionUsecase(payload: {
   sessionId?: string;
@@ -72,6 +73,11 @@ export async function evaluateVoiceSessionUsecase(payload: {
       payload.durationSeconds,
       realEvaluation
     );
+  }
+
+  // Record daily voice duration in AI usage tracker
+  if (payload.userId && payload.userId !== "anonymous" && payload.durationSeconds > 0) {
+    await aiUsageRepository.recordVoiceDuration(payload.userId, payload.durationSeconds).catch(() => {});
   }
 
   if (payload.userId && realEvaluation && payload.userId !== "anonymous") {

@@ -2,6 +2,8 @@ import { chatRepository } from "../../repository/chat_repository";
 import { AiChatService } from "../../../lib/ai-chat";
 import { LlmGuardrailService } from "../../../lib/llm-guardrail.service";
 import { voiceRagService } from "../voice/voice-rag.service";
+import { checkAiQuotaUsecase } from "../classes/check-ai-quota.usecase";
+import { aiUsageRepository } from "../../repository/ai_usage_repository";
 
 export async function* streamChatTurnUsecase(params: {
   sessionId: string;
@@ -25,7 +27,19 @@ export async function* streamChatTurnUsecase(params: {
     }
   }
 
-  // 2. Input Guardrail Check (OWASP LLM01, Injection, Toxicity, Politics/SARA)
+  // 2. AI Quota Check (Daily Limits for Basic, Pro, Ultra)
+  if (userId) {
+    const quota = await checkAiQuotaUsecase(userId);
+    if (!quota.canChat) {
+      const quotaReply = `Halo! Kuota chat latihan AI harian kamu sudah mencapai batas (${quota.chat.limit} pesan). Kuota akan otomatis reset besok pukul 00:00 WIB, atau silakan upgrade paket kelas untuk kuota lebih banyak!`;
+      await chatRepository.addMessage(sessionId, "user", studentMessage, undefined, clientMessageId);
+      await chatRepository.addMessage(sessionId, "assistant", quotaReply, { quotaExceeded: true });
+      yield quotaReply;
+      return;
+    }
+  }
+
+  // 3. Input Guardrail Check (OWASP LLM01, Injection, Toxicity, Politics/SARA)
   const guard = LlmGuardrailService.checkVoiceInput(studentMessage, 3000);
   if (!guard.allowed) {
     const blockedReply = guard.friendlyFeedback;
@@ -39,6 +53,7 @@ export async function* streamChatTurnUsecase(params: {
       },
       clientMessageId
     );
+
     await chatRepository.addMessage(sessionId, "assistant", blockedReply, {
       guardrailBlocked: true,
     });
@@ -123,7 +138,6 @@ ${ragContext ? `\n[INTERNAL BACKGROUND CONTEXT]:\n${ragContext}` : ""}`;
       yield fallback;
       fullAccumulator = fallback;
     }
-  } finally {
     // 8. Output Guardrail & Persist Assistant Response (Final or Partial on Abort)
     if (fullAccumulator.trim()) {
       const outputCheck = LlmGuardrailService.checkOutputSentence(fullAccumulator);
@@ -134,6 +148,11 @@ ${ragContext ? `\n[INTERNAL BACKGROUND CONTEXT]:\n${ragContext}` : ""}`;
         sanitizedReply,
         isStreamFinished ? undefined : { isPartial: true }
       );
+
+      // Increment daily chat usage counter if turn completed successfully
+      if (userId && isStreamFinished) {
+        await aiUsageRepository.incrementChatCount(userId).catch(() => {});
+      }
     }
   }
 

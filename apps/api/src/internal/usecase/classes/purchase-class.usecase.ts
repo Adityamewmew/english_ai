@@ -5,8 +5,17 @@ import { db } from "../../../db";
 import { users } from "../../../db/schema";
 import { eq } from "drizzle-orm";
 
-export async function purchaseClassUsecase(userId: string, cefr: string) {
+export async function purchaseClassUsecase(
+  userId: string,
+  cefr: string,
+  tier = "basic"
+) {
   const normalizedCefr = cefr.trim().toUpperCase();
+  const normalizedTier = tier.trim().toLowerCase();
+
+  if (!["basic", "pro", "ultra"].includes(normalizedTier)) {
+    throw new ValidationError("Pilihan tier tidak valid. Pilih antara basic, pro, atau ultra.");
+  }
 
   const classData = await classRepository.findClassByCefr(normalizedCefr);
   if (!classData || !classData.isActive) {
@@ -37,16 +46,33 @@ export async function purchaseClassUsecase(userId: string, cefr: string) {
     u.accessType === 1 ||
     u.email?.toLowerCase().includes("khoirul");
 
-  // Check if already active
+  // Check if already active and upgrading
   const existingAccess = await classRepository.findUserAccessByCefr(
     userId,
     normalizedCefr
   );
   if (existingAccess && existingAccess.status === "active") {
+    const currentTier = (existingAccess.tier || "basic").toLowerCase();
+    if (currentTier === normalizedTier) {
+      return {
+        message: `Akses kelas ${normalizedCefr} (${normalizedTier.toUpperCase()}) sudah aktif.`,
+        class: classData,
+        access: existingAccess,
+      };
+    }
+
+    // Upgrading or changing tier
+    const updated = await classRepository.grantAccess(
+      userId,
+      normalizedCefr,
+      normalizedTier,
+      "student_upgrade"
+    );
+
     return {
-      message: `Akses kelas ${normalizedCefr} sudah aktif.`,
+      message: `Berhasil meng-upgrade paket kelas ${normalizedCefr} ke ${normalizedTier.toUpperCase()}!`,
       class: classData,
-      access: existingAccess,
+      access: updated,
     };
   }
 
@@ -74,11 +100,12 @@ export async function purchaseClassUsecase(userId: string, cefr: string) {
   const access = await classRepository.grantAccess(
     userId,
     normalizedCefr,
+    normalizedTier,
     "student_topup"
   );
 
   return {
-    message: `Berhasil membuka akses ${classData.name}!`,
+    message: `Berhasil membuka akses ${classData.name} (${normalizedTier.toUpperCase()})!`,
     class: classData,
     access,
   };
