@@ -9,6 +9,8 @@ export const certificateTemplates = pgTable("certificate_templates", {
   signatureUrl: text("signature_url"),
   backgroundUrl: text("background_url"),
   themeColor: varchar("theme_color", { length: 50 }),
+  nameYPercent: integer("name_y_percent").default(48),
+  nameFontSize: integer("name_font_size").default(36),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });

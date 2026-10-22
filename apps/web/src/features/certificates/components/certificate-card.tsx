@@ -16,6 +16,8 @@ export interface CertificateModalData {
   instructorTitle?: string | null;
   backgroundUrl?: string | null;
   themeColor?: string | null;
+  nameYPercent?: number | null;
+  nameFontSize?: number | null;
 }
 
 interface CertificateCardProps {
@@ -51,6 +53,9 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
   const fullBackgroundUrl = resolveBackgroundUrl(data.backgroundUrl);
   const hasCustomTemplate = Boolean(fullBackgroundUrl);
 
+  const yPos = typeof data.nameYPercent === "number" ? data.nameYPercent : 48;
+  const fontSize = typeof data.nameFontSize === "number" ? data.nameFontSize : 36;
+
   const certificateBody = (
     <div
       ref={printRef}
@@ -69,15 +74,22 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
            Keeps admin artwork clean and automatically overlays student name & credentials
            ========================================================================= */
         <>
-          {/* Centered Student Name Overlay */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none px-8 sm:px-14 z-20">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-black tracking-wide text-[#0D3B66] text-center drop-shadow-xs max-w-2xl leading-tight">
+          {/* Custom Positioned Student Name Overlay */}
+          <div
+            className="absolute left-0 right-0 flex flex-col items-center pointer-events-none px-6 sm:px-12 z-20"
+            style={{
+              top: `${yPos}%`,
+              transform: "translateY(-50%)",
+            }}
+          >
+            <h2
+              className="font-serif font-black tracking-wide text-[#0D3B66] text-center drop-shadow-xs max-w-2xl leading-none"
+              style={{
+                fontSize: `${fontSize}px`,
+              }}
+            >
               {data.userName}
             </h2>
-            <div className="mt-2 inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[10px] sm:text-xs font-bold bg-[#0D3B66]/90 text-[#F4B41A] shadow-xs">
-              <ShieldCheck className="w-3 h-3" />
-              CEFR Level {data.cefrLevel} Certified
-            </div>
           </div>
 
           {/* Credential ID & Date at bottom left */}

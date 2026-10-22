@@ -10,6 +10,8 @@ export interface CefrCertificateStatus {
   signatureUrl: string | null;
   backgroundUrl: string | null;
   themeColor: string | null;
+  nameYPercent?: number | null;
+  nameFontSize?: number | null;
   totalModules: number;
   completedModules: number;
   progressPercent: number;
@@ -102,6 +104,8 @@ export const getCertificateStatusUsecase = async (
       signatureUrl: template.signatureUrl,
       backgroundUrl: template.backgroundUrl,
       themeColor: template.themeColor,
+      nameYPercent: template.nameYPercent ?? 48,
+      nameFontSize: template.nameFontSize ?? 36,
       totalModules: stats.totalModules,
       completedModules: stats.completedModules,
       progressPercent,

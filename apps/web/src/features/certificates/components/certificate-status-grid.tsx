@@ -68,6 +68,8 @@ export function CertificateStatusGrid({
       instructorTitle: levelStatus.instructorTitle,
       backgroundUrl: levelStatus.backgroundUrl,
       themeColor: levelStatus.themeColor,
+      nameYPercent: levelStatus.nameYPercent,
+      nameFontSize: levelStatus.nameFontSize,
     };
 
     return (

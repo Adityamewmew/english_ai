@@ -9,6 +9,8 @@ export interface CefrCertificateStatus {
   signatureUrl: string | null;
   backgroundUrl: string | null;
   themeColor: string | null;
+  nameYPercent?: number | null;
+  nameFontSize?: number | null;
   totalModules: number;
   completedModules: number;
   progressPercent: number;
