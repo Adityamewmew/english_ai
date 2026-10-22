@@ -9,6 +9,7 @@ import {
   PhoneCall,
   MessageSquare,
   Award,
+  GraduationCap,
   LogOut,
   PanelLeftClose,
 } from "lucide-react";
@@ -42,6 +43,7 @@ export function StudentSidebarRail({ isOpen, onToggle }: StudentSidebarRailProps
     { href: "/modules", icon: BookOpen, label: "Curriculum Modules" },
     { href: "/call", icon: PhoneCall, label: "AI Voice Call" },
     { href: "/placement", icon: Award, label: "CEFR Placement Test" },
+    { href: "/certificates", icon: GraduationCap, label: "Sertifikat CEFR" },
   ];
 
   const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;

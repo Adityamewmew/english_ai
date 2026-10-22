@@ -7,6 +7,7 @@ import { userHandler } from "./internal/http/handler/user_handler";
 import { placementHandler } from "./internal/http/handler/placement_handler";
 import { voiceHandler } from "./internal/http/handler/voice_handler";
 import { chatHandler } from "./internal/http/handler/chat_handler";
+import { certificateHandler } from "./internal/http/handler/certificate_handler";
 import { authPlugin } from "./lib/auth";
 
 export const app = new Elysia()
@@ -28,6 +29,7 @@ export const app = new Elysia()
           { name: "Placement", description: "CEFR placement test endpoints" },
           { name: "Voice", description: "Voice conversation and TTS endpoints" },
           { name: "Chat", description: "Chatbot and study companion endpoints" },
+          { name: "Certificates", description: "CEFR certificate endpoints" },
         ],
       },
     })
@@ -43,6 +45,7 @@ export const app = new Elysia()
   .use(userHandler)
   .use(placementHandler)
   .use(voiceHandler)
-  .use(chatHandler);
+  .use(chatHandler)
+  .use(certificateHandler);
 
 export type App = typeof app;
