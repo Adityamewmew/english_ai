@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   X,
   CheckCircle2,
@@ -9,9 +9,11 @@ import {
   Loader2,
   AlertCircle,
   ShieldCheck,
+  Zap,
+  Star,
 } from "lucide-react";
 import { usePurchaseClass } from "../hooks/use-classes";
-import type { CourseClassItem } from "../api/classes.api";
+import type { CourseClassItem, TierPlan } from "../api/classes.api";
 
 interface ClassUnlockModalProps {
   isOpen: boolean;
@@ -21,6 +23,52 @@ interface ClassUnlockModalProps {
   onSuccess?: () => void;
 }
 
+type TierKey = "basic" | "pro" | "ultra";
+
+const DEFAULT_TIERS: Record<TierKey, TierPlan> = {
+  basic: {
+    price: 49000,
+    originalPrice: 99000,
+    dailyChatLimit: 20,
+    dailyVoiceMinutes: 5,
+    features: [
+      "Akses penuh seluruh modul level CEFR",
+      "20 Pesan Chat AI Mr. Khoirul per hari",
+      "5 Menit Panggilan Suara AI per hari",
+      "Kuis formatif & ujian kompetensi",
+      "Sertifikat kelulusan resmi CEFR",
+    ],
+  },
+  pro: {
+    price: 149000,
+    originalPrice: 249000,
+    dailyChatLimit: 100,
+    dailyVoiceMinutes: 30,
+    features: [
+      "Akses penuh seluruh modul level CEFR",
+      "100 Pesan Chat AI Mr. Khoirul per hari",
+      "30 Menit Panggilan Suara AI per hari",
+      "Koreksi tata bahasa & evaluasi AI mendalam",
+      "Kuis formatif & ujian kompetensi",
+      "Sertifikat kelulusan resmi CEFR",
+    ],
+  },
+  ultra: {
+    price: 299000,
+    originalPrice: 499000,
+    dailyChatLimit: -1,
+    dailyVoiceMinutes: 120,
+    features: [
+      "Akses penuh seluruh modul level CEFR",
+      "Unlimited Chat AI Mr. Khoirul tanpa batas",
+      "120 Menit Panggilan Suara AI per hari",
+      "Analisis fonetik & pelafalan kata real-time",
+      "Prioritas latency respon AI super cepat",
+      "Kuis formatif & sertifikat kelulusan resmi",
+    ],
+  },
+};
+
 export function ClassUnlockModal({
   isOpen,
   onClose,
@@ -29,7 +77,19 @@ export function ClassUnlockModal({
   onSuccess,
 }: ClassUnlockModalProps) {
   const purchaseMutation = usePurchaseClass();
+  const [selectedTier, setSelectedTier] = useState<TierKey>("pro");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
+  // Set default tier based on current user tier
+  useEffect(() => {
+    if (classItem?.userTier) {
+      if (classItem.userTier === "basic") setSelectedTier("pro");
+      else if (classItem.userTier === "pro") setSelectedTier("ultra");
+      else setSelectedTier("ultra");
+    } else {
+      setSelectedTier("pro");
+    }
+  }, [classItem]);
 
   if (!isOpen || !classItem) return null;
 
@@ -40,15 +100,23 @@ export function ClassUnlockModal({
       maximumFractionDigits: 0,
     }).format(num);
 
-  const features =
-    classItem.features && Array.isArray(classItem.features)
-      ? classItem.features
-      : [
-          `Akses penuh seluruh modul level ${classItem.cefr}`,
-          "Latihan speaking & percakapan AI interaktif",
-          "Kuis formatif & ujian kompetensi level",
-          `Sertifikat kelulusan resmi CEFR ${classItem.cefr}`,
-        ];
+  const plans = {
+    basic: classItem.tierPlans?.basic || DEFAULT_TIERS.basic,
+    pro: classItem.tierPlans?.pro || DEFAULT_TIERS.pro,
+    ultra: classItem.tierPlans?.ultra || DEFAULT_TIERS.ultra,
+  };
+
+  const activePlan = plans[selectedTier];
+  const isCurrentTier = classItem.hasAccess && classItem.userTier === selectedTier;
+
+  const discountPercent =
+    activePlan.originalPrice && activePlan.originalPrice > activePlan.price
+      ? Math.round(
+          ((activePlan.originalPrice - activePlan.price) /
+            activePlan.originalPrice) *
+            100
+        )
+      : null;
 
   const handleConfirmPurchase = async () => {
     setErrorMsg(null);
@@ -56,6 +124,7 @@ export function ClassUnlockModal({
       await purchaseMutation.mutateAsync({
         userId,
         cefr: classItem.cefr,
+        tier: selectedTier,
       });
       if (onSuccess) onSuccess();
       onClose();
@@ -67,18 +136,9 @@ export function ClassUnlockModal({
     }
   };
 
-  const discountPercent =
-    classItem.originalPrice && classItem.originalPrice > classItem.price
-      ? Math.round(
-          ((classItem.originalPrice - classItem.price) /
-            classItem.originalPrice) *
-            100
-        )
-      : null;
-
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="relative w-full max-w-lg bg-white rounded-3xl border border-slate-200 border-b-6 border-b-slate-300 shadow-2xl p-6 sm:p-7 space-y-5 overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200 overflow-y-auto">
+      <div className="relative w-full max-w-xl bg-white rounded-3xl border border-slate-200 border-b-6 border-b-slate-300 shadow-2xl p-5 sm:p-7 space-y-4 sm:space-y-5 my-8">
         {/* Header */}
         <div className="flex items-start justify-between gap-3">
           <div className="flex items-center gap-3">
@@ -90,9 +150,9 @@ export function ClassUnlockModal({
                 <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-800">
                   Paket Kelas CEFR
                 </span>
-                {discountPercent && (
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-rose-100 text-rose-700">
-                    Hemat {discountPercent}%
+                {classItem.userTier && (
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800">
+                    Aktif: {classItem.userTier.toUpperCase()}
                   </span>
                 )}
               </div>
@@ -104,23 +164,113 @@ export function ClassUnlockModal({
           <button
             type="button"
             onClick={onClose}
-            className="p-1.5 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+            className="p-1.5 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Pricing Banner */}
-        <div className="p-4 rounded-2xl bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-transparent border border-indigo-100 flex items-center justify-between">
-          <div>
-            <p className="text-xs text-slate-500 font-medium">Biaya Investasi Belajar</p>
-            <div className="flex items-baseline gap-2 mt-0.5">
-              <span className="font-heading text-2xl font-black text-slate-900">
-                {formatRupiah(classItem.price)}
+        {/* 3-Tier Selector Cards */}
+        <div className="space-y-1.5">
+          <label className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block">
+            Pilih Paket AI Belajar:
+          </label>
+          <div className="grid grid-cols-3 gap-2">
+            {/* Basic Card */}
+            <button
+              type="button"
+              onClick={() => setSelectedTier("basic")}
+              className={`p-2.5 sm:p-3 rounded-2xl border text-left transition-all relative flex flex-col justify-between cursor-pointer ${
+                selectedTier === "basic"
+                  ? "border-slate-800 bg-slate-50 shadow-xs border-b-4"
+                  : "border-slate-200 bg-white hover:border-slate-300"
+              }`}
+            >
+              <div>
+                <p className="text-xs font-black text-slate-900">Basic</p>
+                <p className="text-[10px] text-slate-500 mt-0.5 font-medium leading-tight">
+                  20 chat • 5 mnt
+                </p>
+              </div>
+              <p className="text-xs font-extrabold text-slate-800 mt-2">
+                {formatRupiah(plans.basic.price)}
+              </p>
+            </button>
+
+            {/* Pro Card (Recommended) */}
+            <button
+              type="button"
+              onClick={() => setSelectedTier("pro")}
+              className={`p-2.5 sm:p-3 rounded-2xl border text-left transition-all relative flex flex-col justify-between cursor-pointer ${
+                selectedTier === "pro"
+                  ? "border-indigo-600 bg-indigo-50/60 shadow-xs border-b-4"
+                  : "border-slate-200 bg-white hover:border-indigo-200"
+              }`}
+            >
+              <span className="absolute -top-2 right-2 px-1.5 py-0.2 rounded-md bg-indigo-600 text-white text-[9px] font-black uppercase tracking-wider shadow-2xs">
+                Favorit
               </span>
-              {classItem.originalPrice && classItem.originalPrice > classItem.price && (
+              <div>
+                <div className="flex items-center gap-1">
+                  <Zap className="w-3 h-3 text-indigo-600" />
+                  <p className="text-xs font-black text-indigo-950">Pro</p>
+                </div>
+                <p className="text-[10px] text-indigo-700/80 mt-0.5 font-medium leading-tight">
+                  100 chat • 30 mnt
+                </p>
+              </div>
+              <p className="text-xs font-extrabold text-indigo-900 mt-2">
+                {formatRupiah(plans.pro.price)}
+              </p>
+            </button>
+
+            {/* Ultra Card */}
+            <button
+              type="button"
+              onClick={() => setSelectedTier("ultra")}
+              className={`p-2.5 sm:p-3 rounded-2xl border text-left transition-all relative flex flex-col justify-between cursor-pointer ${
+                selectedTier === "ultra"
+                  ? "border-amber-500 bg-amber-50/70 shadow-xs border-b-4"
+                  : "border-slate-200 bg-white hover:border-amber-200"
+              }`}
+            >
+              <span className="absolute -top-2 right-2 px-1.5 py-0.2 rounded-md bg-amber-500 text-white text-[9px] font-black uppercase tracking-wider shadow-2xs">
+                ★ MAX
+              </span>
+              <div>
+                <div className="flex items-center gap-1">
+                  <Star className="w-3 h-3 text-amber-600 fill-amber-500" />
+                  <p className="text-xs font-black text-amber-950">Ultra</p>
+                </div>
+                <p className="text-[10px] text-amber-700/80 mt-0.5 font-medium leading-tight">
+                  Unlimited • 120 mnt
+                </p>
+              </div>
+              <p className="text-xs font-extrabold text-amber-900 mt-2">
+                {formatRupiah(plans.ultra.price)}
+              </p>
+            </button>
+          </div>
+        </div>
+
+        {/* Pricing Summary Banner */}
+        <div className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-transparent border border-indigo-100 flex items-center justify-between">
+          <div>
+            <p className="text-[11px] text-slate-500 font-medium">
+              Investasi Belajar Paket {selectedTier.toUpperCase()}
+            </p>
+            <div className="flex items-baseline gap-2 mt-0.5">
+              <span className="font-heading text-xl sm:text-2xl font-black text-slate-900">
+                {formatRupiah(activePlan.price)}
+              </span>
+              {activePlan.originalPrice && activePlan.originalPrice > activePlan.price && (
                 <span className="text-xs text-slate-400 line-through">
-                  {formatRupiah(classItem.originalPrice)}
+                  {formatRupiah(activePlan.originalPrice)}
+                </span>
+              )}
+              {discountPercent && (
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-rose-100 text-rose-700">
+                  Hemat {discountPercent}%
                 </span>
               )}
             </div>
@@ -131,32 +281,24 @@ export function ClassUnlockModal({
           </div>
         </div>
 
-        {/* Description & Feature Benefits */}
-        <div className="space-y-3">
-          {classItem.description && (
-            <p className="text-xs text-slate-600 leading-relaxed">
-              {classItem.description}
-            </p>
-          )}
-
-          <div className="space-y-2 pt-1">
-            <p className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
-              Fasilitas & Manfaat Kelas:
-            </p>
-            <div className="space-y-1.5">
-              {features.map((feat, idx) => (
-                <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>{feat}</span>
-                </div>
-              ))}
-            </div>
+        {/* Feature Benefits List */}
+        <div className="space-y-2 pt-0.5">
+          <p className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
+            Fasilitas Paket {selectedTier.toUpperCase()}:
+          </p>
+          <div className="space-y-1.5">
+            {activePlan.features.map((feat, idx) => (
+              <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <span>{feat}</span>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Error notification if any */}
         {errorMsg && (
-          <div className="p-3.5 rounded-2xl bg-rose-50 border border-rose-200 flex items-start gap-2.5 text-xs text-rose-800">
+          <div className="p-3 rounded-2xl bg-rose-50 border border-rose-200 flex items-start gap-2.5 text-xs text-rose-800">
             <AlertCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
             <p>{errorMsg}</p>
           </div>
@@ -164,7 +306,7 @@ export function ClassUnlockModal({
 
         {/* Requirement warning if student is not eligible */}
         {!classItem.isEligible && classItem.prerequisiteCefr && (
-          <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 flex items-start gap-2.5 text-xs text-amber-900">
+          <div className="p-3 rounded-2xl bg-amber-50 border border-amber-200 flex items-start gap-2.5 text-xs text-amber-900">
             <Lock className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
             <p>
               Prasyarat belum terpenuhi: Kamu perlu lulus dan menerima sertifikat level{" "}
@@ -174,29 +316,47 @@ export function ClassUnlockModal({
         )}
 
         {/* Action Buttons */}
-        <div className="flex items-center gap-3 pt-2">
+        <div className="flex items-center gap-3 pt-1">
           <button
             type="button"
             onClick={onClose}
-            className="flex-1 py-3 px-4 rounded-xl border border-slate-300 border-b-3 border-b-slate-400 text-slate-700 text-xs font-bold hover:bg-slate-50 active:border-b active:translate-y-0.5 transition-all text-center"
+            className="flex-1 py-3 px-4 rounded-xl border border-slate-300 border-b-3 border-b-slate-400 text-slate-700 text-xs font-bold hover:bg-slate-50 active:border-b active:translate-y-0.5 transition-all text-center cursor-pointer"
           >
-            Nanti Saja
+            Batal
           </button>
           <button
             type="button"
             onClick={handleConfirmPurchase}
-            disabled={purchaseMutation.isPending || (!classItem.isEligible && !!classItem.requiresCertificate)}
-            className="flex-2 py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 disabled:opacity-50 disabled:cursor-not-allowed border-b-4 border-b-indigo-800 active:border-b active:translate-y-0.5 text-white text-xs font-extrabold flex items-center justify-center gap-2 shadow-sm transition-all"
+            disabled={
+              purchaseMutation.isPending ||
+              isCurrentTier ||
+              (!classItem.isEligible && !!classItem.requiresCertificate)
+            }
+            className={`flex-2 py-3 px-4 rounded-xl text-white text-xs font-extrabold flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer ${
+              isCurrentTier
+                ? "bg-slate-400 border-b-4 border-b-slate-600 cursor-not-allowed"
+                : "bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 border-b-4 border-b-indigo-800 active:border-b active:translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+            }`}
           >
             {purchaseMutation.isPending ? (
               <>
                 <Loader2 className="w-4 h-4 animate-spin" />
                 Membuka Akses...
               </>
+            ) : isCurrentTier ? (
+              <>
+                <CheckCircle2 className="w-4 h-4" />
+                Paket Aktif Saat Ini
+              </>
+            ) : classItem.hasAccess ? (
+              <>
+                <Sparkles className="w-4 h-4" />
+                Tingkatkan ke {selectedTier.toUpperCase()}
+              </>
             ) : (
               <>
                 <Sparkles className="w-4 h-4" />
-                Buka Akses Kelas Sekarang
+                Buka Paket {selectedTier.toUpperCase()} Sekarang
               </>
             )}
           </button>
@@ -205,3 +365,4 @@ export function ClassUnlockModal({
     </div>
   );
 }
+

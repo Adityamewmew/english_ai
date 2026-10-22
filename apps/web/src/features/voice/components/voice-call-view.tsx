@@ -10,6 +10,7 @@ import { useSpeechRecognition } from "@/hooks/use-speech-recognition";
 import { useAudioQueue } from "@/hooks/use-audio-queue";
 import { getApiUrl } from "@/lib/api-client";
 import { voiceApi } from "../api/voice.api";
+import { AiQuotaBadge, classesApi } from "@/features/classes";
 
 export interface ChatMessage {
   role: "assistant" | "user";
@@ -294,6 +295,21 @@ export function VoiceCallView({
   const handleStartCall = async () => {
     audioQueue.unlockAudio();
     setErrorMsg(null);
+
+    // Pre-flight voice quota check
+    if (userId) {
+      try {
+        const quota = await classesApi.getQuota(userId);
+        if (quota && !quota.canVoice) {
+          setErrorMsg(
+            `Kuota harian latihan suara kamu (${quota.voice.limitMinutes} menit) sudah habis. Kuota reset pukul 00:00 WIB atau upgrade paket untuk durasi lebih banyak!`
+          );
+          setCallStatus("idle");
+          return;
+        }
+      } catch {}
+    }
+
     setDuration(0);
     setLiveTranscript("");
     setCallStatus("connecting");
@@ -309,8 +325,13 @@ export function VoiceCallView({
         setSessionId(startRes.id);
         sessionIdRef.current = startRes.id;
       }
-    } catch (e) {
+    } catch (e: any) {
       console.warn("Session init fallback:", e);
+      if (e?.status === 403 || e?.message?.includes("kuota")) {
+        setErrorMsg("Batas kuota harian panggilan suara kamu sudah tercapai. Silakan upgrade paket kelas!");
+        setCallStatus("idle");
+        return;
+      }
     }
 
     const callCount =
@@ -449,6 +470,12 @@ export function VoiceCallView({
         )}
 
         <div className="w-full flex flex-col items-center justify-center">
+          {callStatus === "idle" && (
+            <div className="mb-3 animate-fadeIn">
+              <AiQuotaBadge userId={userId} variant="voice" />
+            </div>
+          )}
+
           {/* Mr. Khoirul Pure Character & Floating Info Text */}
           <KhoirulScreen
             callStatus={callStatus}

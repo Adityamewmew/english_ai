@@ -8,6 +8,7 @@ import { useChat } from "../hooks/use-chat";
 import { ChatSidebar } from "./chat-sidebar";
 import { ChatMessageBubble } from "./chat-message-item";
 import { ChatInputDock } from "./chat-input-dock";
+import { AiQuotaBadge } from "@/features/classes";
 
 interface ChatViewProps {
   userId?: string;
@@ -99,15 +100,18 @@ export const ChatView: React.FC<ChatViewProps> = ({ userId }) => {
             </div>
           </div>
 
-          {/* Quick New Chat Button on Topbar */}
-          <button
-            type="button"
-            onClick={createNewChat}
-            className="btn-skeuo-navy px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-xs font-bold cursor-pointer"
-          >
-            <Plus className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Percakapan Baru</span>
-          </button>
+          {/* Topbar Right Actions */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <AiQuotaBadge userId={userId} variant="chat" />
+            <button
+              type="button"
+              onClick={createNewChat}
+              className="btn-skeuo-navy px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-xs font-bold cursor-pointer"
+            >
+              <Plus className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Percakapan Baru</span>
+            </button>
+          </div>
         </header>
 
         {/* Message Feed Area */}
