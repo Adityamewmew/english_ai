@@ -39,108 +39,154 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
     }
   };
 
+  const resolveBackgroundUrl = (url?: string | null): string | null => {
+    if (!url) return null;
+    if (url.startsWith("http://") || url.startsWith("https://")) {
+      return url;
+    }
+    const adminBase = process.env.NEXT_PUBLIC_ADMIN_URL || "https://eddys.drimland.my.id";
+    return `${adminBase.replace(/\/$/, "")}/${url.replace(/^\//, "")}`;
+  };
+
+  const fullBackgroundUrl = resolveBackgroundUrl(data.backgroundUrl);
+  const hasCustomTemplate = Boolean(fullBackgroundUrl);
+
   const certificateBody = (
     <div
       ref={printRef}
       id="printable-certificate"
       className="relative w-full max-w-[850px] aspect-[1.414/1] bg-[#FCFBF7] text-[#0D3B66] p-8 sm:p-12 rounded-xl shadow-2xl border-8 border-double border-[#0D3B66]/20 overflow-hidden flex flex-col justify-between select-none"
       style={{
-        backgroundImage: data.backgroundUrl
-          ? `url('${data.backgroundUrl}')`
-          : undefined,
+        backgroundImage: fullBackgroundUrl ? `url('${fullBackgroundUrl}')` : undefined,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Decorative Outer Border Lines */}
-      <div className="absolute inset-3 border-2 border-[#D4AF37]/50 rounded-lg pointer-events-none" />
-      <div className="absolute inset-4 border border-[#0D3B66]/20 rounded-md pointer-events-none" />
-
-      {/* Subtle Background Watermark Seal */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
-        <Award className="w-[450px] h-[450px] text-[#0D3B66]" />
-      </div>
-
-      {/* Header Section */}
-      <div className="relative text-center z-10">
-        <div className="flex items-center justify-center gap-2 mb-2">
-          <div className="w-10 h-10 rounded-full bg-[#0D3B66] flex items-center justify-center text-[#F4B41A] shadow-md">
-            <Award className="w-6 h-6" />
-          </div>
-          <span className="text-sm font-black tracking-[0.25em] text-[#0D3B66] uppercase">
-            EDDY&apos;S AI ENGLISH TUTOR
-          </span>
-        </div>
-        <h1 className="text-2xl sm:text-3xl font-serif font-black tracking-wider text-[#0D3B66] uppercase">
-          Certificate of Competence
-        </h1>
-        <p className="text-xs sm:text-sm text-slate-500 tracking-widest uppercase mt-0.5">
-          International CEFR Standard Assessment
-        </p>
-      </div>
-
-      {/* Main Recipient Details */}
-      <div className="relative text-center z-10 my-auto py-2">
-        <p className="text-xs sm:text-sm italic font-serif text-slate-600 mb-1">
-          This is proudly presented to
-        </p>
-        <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#0D3B66] border-b-2 border-[#D4AF37]/60 inline-block px-8 py-1 mb-3">
-          {data.userName}
-        </h2>
-        <p className="text-xs sm:text-sm text-slate-700 max-w-xl mx-auto leading-relaxed">
-          {data.description ||
-            `For successfully mastering all learning modules and demonstrating professional communicative proficiency in CEFR ${data.cefrLevel}.`}
-        </p>
-
-        {/* Level & Score Badge */}
-        <div className="mt-4 flex items-center justify-center gap-3">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#0D3B66] text-[#F4B41A] shadow-sm">
-            <ShieldCheck className="w-3.5 h-3.5" />
-            CEFR Level {data.cefrLevel} Certified
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300">
-            <CheckCircle2 className="w-3.5 h-3.5" />
-            Mastery Score: {data.score}%
-          </span>
-        </div>
-      </div>
-
-      {/* Footer & Signatures */}
-      <div className="relative flex items-end justify-between z-10 pt-4 border-t border-slate-200">
-        {/* Certificate Credential Info */}
-        <div className="text-left text-[10px] sm:text-xs text-slate-500 font-mono">
-          <p>
-            <span className="font-semibold text-slate-700">Credential ID:</span>{" "}
-            {data.certificateNumber}
-          </p>
-          <p>
-            <span className="font-semibold text-slate-700">Date Issued:</span>{" "}
-            {formattedDate}
-          </p>
-        </div>
-
-        {/* Official Gold Seal Badge */}
-        <div className="hidden sm:flex flex-col items-center">
-          <div className="w-14 h-14 rounded-full border-2 border-dashed border-[#D4AF37] bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center shadow-inner">
-            <div className="w-11 h-11 rounded-full bg-[#0D3B66] text-[#F4B41A] flex flex-col items-center justify-center text-[8px] font-black tracking-tighter">
-              <span>EDDY&apos;S</span>
-              <span className="text-[6px] tracking-normal text-amber-200">VERIFIED</span>
+      {hasCustomTemplate ? (
+        /* =========================================================================
+           CUSTOM UPLOADED TEMPLATE MODE:
+           Keeps admin artwork clean and automatically overlays student name & credentials
+           ========================================================================= */
+        <>
+          {/* Centered Student Name Overlay */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none px-8 sm:px-14 z-20">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-black tracking-wide text-[#0D3B66] text-center drop-shadow-xs max-w-2xl leading-tight">
+              {data.userName}
+            </h2>
+            <div className="mt-2 inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[10px] sm:text-xs font-bold bg-[#0D3B66]/90 text-[#F4B41A] shadow-xs">
+              <ShieldCheck className="w-3 h-3" />
+              CEFR Level {data.cefrLevel} Certified
             </div>
           </div>
-        </div>
 
-        {/* Signatory */}
-        <div className="text-right">
-          <div className="inline-block border-b border-slate-400 pb-1 w-40 text-center">
-            <span className="font-serif font-bold text-xs sm:text-sm text-[#0D3B66]">
-              {data.instructorName || "Mr. Khoirul, M.Pd."}
-            </span>
+          {/* Credential ID & Date at bottom left */}
+          <div className="absolute bottom-3 sm:bottom-6 left-5 sm:left-10 text-left text-[9px] sm:text-[11px] text-slate-700 font-mono z-20 bg-white/80 backdrop-blur-xs px-2.5 py-1 rounded shadow-xs border border-slate-200">
+            <p>
+              <span className="font-semibold text-slate-900">ID:</span> {data.certificateNumber}
+            </p>
+            <p>
+              <span className="font-semibold text-slate-900">Date:</span> {formattedDate}
+            </p>
           </div>
-          <p className="text-[10px] sm:text-xs text-slate-500 font-medium mt-0.5">
-            {data.instructorTitle || "Head of English Academic Affairs"}
-          </p>
-        </div>
-      </div>
+        </>
+      ) : (
+        /* =========================================================================
+           BUILT-IN FALLBACK TEMPLATE MODE:
+           Full HTML decorative design with seal and signatory
+           ========================================================================= */
+        <>
+          {/* Decorative Outer Border Lines */}
+          <div className="absolute inset-3 border-2 border-[#D4AF37]/50 rounded-lg pointer-events-none" />
+          <div className="absolute inset-4 border border-[#0D3B66]/20 rounded-md pointer-events-none" />
+
+          {/* Subtle Background Watermark Seal */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
+            <Award className="w-[450px] h-[450px] text-[#0D3B66]" />
+          </div>
+
+          {/* Header Section */}
+          <div className="relative text-center z-10">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="w-10 h-10 rounded-full bg-[#0D3B66] flex items-center justify-center text-[#F4B41A] shadow-md">
+                <Award className="w-6 h-6" />
+              </div>
+              <span className="text-sm font-black tracking-[0.25em] text-[#0D3B66] uppercase">
+                EDDY&apos;S AI ENGLISH TUTOR
+              </span>
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-serif font-black tracking-wider text-[#0D3B66] uppercase">
+              Certificate of Competence
+            </h1>
+            <p className="text-xs sm:text-sm text-slate-500 tracking-widest uppercase mt-0.5">
+              International CEFR Standard Assessment
+            </p>
+          </div>
+
+          {/* Main Recipient Details */}
+          <div className="relative text-center z-10 my-auto py-2">
+            <p className="text-xs sm:text-sm italic font-serif text-slate-600 mb-1">
+              This is proudly presented to
+            </p>
+            <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#0D3B66] border-b-2 border-[#D4AF37]/60 inline-block px-8 py-1 mb-3">
+              {data.userName}
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-700 max-w-xl mx-auto leading-relaxed">
+              {data.description ||
+                `For successfully mastering all learning modules and demonstrating professional communicative proficiency in CEFR ${data.cefrLevel}.`}
+            </p>
+
+            {/* Level & Score Badge */}
+            <div className="mt-4 flex items-center justify-center gap-3">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#0D3B66] text-[#F4B41A] shadow-sm">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                CEFR Level {data.cefrLevel} Certified
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                Mastery Score: {data.score}%
+              </span>
+            </div>
+          </div>
+
+          {/* Footer & Signatures */}
+          <div className="relative flex items-end justify-between z-10 pt-4 border-t border-slate-200">
+            {/* Certificate Credential Info */}
+            <div className="text-left text-[10px] sm:text-xs text-slate-500 font-mono">
+              <p>
+                <span className="font-semibold text-slate-700">Credential ID:</span>{" "}
+                {data.certificateNumber}
+              </p>
+              <p>
+                <span className="font-semibold text-slate-700">Date Issued:</span>{" "}
+                {formattedDate}
+              </p>
+            </div>
+
+            {/* Official Gold Seal Badge */}
+            <div className="hidden sm:flex flex-col items-center">
+              <div className="w-14 h-14 rounded-full border-2 border-dashed border-[#D4AF37] bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center shadow-inner">
+                <div className="w-11 h-11 rounded-full bg-[#0D3B66] text-[#F4B41A] flex flex-col items-center justify-center text-[8px] font-black tracking-tighter">
+                  <span>EDDY&apos;S</span>
+                  <span className="text-[6px] tracking-normal text-amber-200">VERIFIED</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Signatory */}
+            <div className="text-right">
+              <div className="inline-block border-b border-slate-400 pb-1 w-40 text-center">
+                <span className="font-serif font-bold text-xs sm:text-sm text-[#0D3B66]">
+                  {data.instructorName || "Mr. Khoirul, M.Pd."}
+                </span>
+              </div>
+              <p className="text-[10px] sm:text-xs text-slate-500 font-medium mt-0.5">
+                {data.instructorTitle || "Head of English Academic Affairs"}
+              </p>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 
