@@ -2,10 +2,10 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { certificatesApi } from "../api/certificates.api";
 import { certificateKeys } from "../query-keys";
 
-export function useCertificateStatus(userId?: string) {
+export function useCertificateStatus(userId?: string, cefr?: string) {
   return useQuery({
-    queryKey: certificateKeys.status(userId),
-    queryFn: () => certificatesApi.getStatus(userId),
+    queryKey: certificateKeys.status(userId, cefr),
+    queryFn: () => certificatesApi.getStatus(userId, cefr),
     staleTime: 1000 * 60 * 2,
   });
 }

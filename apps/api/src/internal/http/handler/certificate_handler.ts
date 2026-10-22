@@ -16,7 +16,7 @@ export const certificateHandler = new Elysia({ prefix: "/api/curriculum/certific
         throw new UnauthorizedError("Autentikasi diperlukan untuk melihat status sertifikat.");
       }
 
-      const data = await getCertificateStatusUsecase(activeUserId);
+      const data = await getCertificateStatusUsecase(activeUserId, query?.cefr);
       return jsonResponse({
         set,
         statusCode: 200,
@@ -29,6 +29,7 @@ export const certificateHandler = new Elysia({ prefix: "/api/curriculum/certific
       query: t.Optional(
         t.Object({
           userId: t.Optional(t.String()),
+          cefr: t.Optional(t.String()),
         })
       ),
     }

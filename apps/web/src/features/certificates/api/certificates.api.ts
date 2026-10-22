@@ -12,8 +12,9 @@ export interface CefrCertificateStatus {
   totalModules: number;
   completedModules: number;
   progressPercent: number;
+  templateExists?: boolean;
   averageScore: number;
-  status: "claimed" | "eligible" | "locked";
+  status: "unlocked" | "locked" | "no_template" | "claimed" | "eligible";
   certificate: {
     id: string;
     certificateNumber: string;
@@ -44,9 +45,12 @@ export interface UserCertificateItem {
 }
 
 export const certificatesApi = {
-  getStatus: async (userId?: string) => {
+  getStatus: async (userId?: string, cefr?: string) => {
     const { data, error } = await apiClient.api.curriculum.certificates.status.get({
-      query: userId ? { userId } : undefined,
+      query: {
+        userId: userId || undefined,
+        cefr: cefr || undefined,
+      },
     });
     if (error) throw new Error(String(error.value));
     return (data?.data ?? []) as CefrCertificateStatus[];
