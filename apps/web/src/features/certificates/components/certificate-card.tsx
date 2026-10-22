@@ -62,10 +62,8 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
       id="printable-certificate"
       className="relative w-full max-w-[850px] aspect-[1.414/1] bg-[#FCFBF7] text-[#0D3B66] p-8 sm:p-12 rounded-xl shadow-2xl border-8 border-double border-[#0D3B66]/20 overflow-hidden flex flex-col justify-between select-none"
       style={{
-        backgroundImage: fullBackgroundUrl ? `url('${fullBackgroundUrl}')` : undefined,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        WebkitPrintColorAdjust: "exact",
+        printColorAdjust: "exact",
       }}
     >
       {hasCustomTemplate ? (
@@ -74,6 +72,12 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
            Keeps admin artwork clean and automatically overlays student name & credentials
            ========================================================================= */
         <>
+          {/* HTML <img> tag ensures browser prints background even if "Background Graphics" is unchecked */}
+          <img
+            src={fullBackgroundUrl!}
+            alt="Certificate Template"
+            className="absolute inset-0 w-full h-full object-contain pointer-events-none select-none z-0"
+          />
           {/* Custom Positioned Student Name Overlay */}
           <div
             className="absolute left-0 right-0 flex flex-col items-center pointer-events-none px-6 sm:px-12 z-20"
@@ -258,10 +262,21 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
             width: 100vw !important;
             height: 100vh !important;
             max-width: none !important;
-            border: 8px double #0d3b66 !important;
+            border: none !important;
             box-shadow: none !important;
             margin: 0 !important;
             border-radius: 0 !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          #printable-certificate img {
+            display: block !important;
+            visibility: visible !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
           }
           .no-print {
             display: none !important;
