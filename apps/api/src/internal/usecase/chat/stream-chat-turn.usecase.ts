@@ -138,6 +138,7 @@ ${ragContext ? `\n[INTERNAL BACKGROUND CONTEXT]:\n${ragContext}` : ""}`;
       yield fallback;
       fullAccumulator = fallback;
     }
+  } finally {
     // 8. Output Guardrail & Persist Assistant Response (Final or Partial on Abort)
     if (fullAccumulator.trim()) {
       const outputCheck = LlmGuardrailService.checkOutputSentence(fullAccumulator);

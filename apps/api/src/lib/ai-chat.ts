@@ -99,7 +99,7 @@ export class AiChatService {
     const connectAbort = new AbortController();
     const timer = setTimeout(() => {
       connectAbort.abort(new Error("TTFT connection timeout"));
-    }, 12000);
+    }, 25000);
 
     const activeSignal = signal
       ? AbortSignal.any([signal, connectAbort.signal])
