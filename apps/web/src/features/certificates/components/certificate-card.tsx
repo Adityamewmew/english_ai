@@ -43,7 +43,7 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
 
   const resolveBackgroundUrl = (url?: string | null): string | null => {
     if (!url) return null;
-    if (url.startsWith("http://") || url.startsWith("https://")) {
+    if (url.startsWith("data:") || url.startsWith("http://") || url.startsWith("https://")) {
       return url;
     }
     const adminBase = process.env.NEXT_PUBLIC_ADMIN_URL || "https://eddys.drimland.my.id";
