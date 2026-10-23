@@ -24,7 +24,7 @@ export function StudentShell({
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800 flex flex-col lg:flex-row antialiased">
       {/* Desktop Sidebar (Hidden on Mobile) */}
-      <div className="hidden lg:block shrink-0">
+      <div className="no-print hidden lg:block shrink-0">
         <StudentSidebarRail
           isOpen={isSidebarOpen}
           onToggle={() => setIsSidebarOpen((prev) => !prev)}
@@ -34,13 +34,15 @@ export function StudentShell({
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col min-w-0 min-h-screen">
         {/* Mobile Header (Hidden on Desktop) */}
-        <StudentMobileHeader
-          studentName={studentName}
-          currentCefr={currentCefr}
-        />
+        <div className="no-print">
+          <StudentMobileHeader
+            studentName={studentName}
+            currentCefr={currentCefr}
+          />
+        </div>
 
         {/* Desktop Topbar (Hidden on Mobile) */}
-        <div className="hidden lg:block">
+        <div className="no-print hidden lg:block">
           <StudentTopbar
             studentName={studentName}
             currentCefr={currentCefr}
@@ -56,7 +58,9 @@ export function StudentShell({
         </main>
 
         {/* Mobile Bottom Navigation Bar (Hidden on Desktop) */}
-        <StudentMobileBottomNav />
+        <div className="no-print">
+          <StudentMobileBottomNav />
+        </div>
       </div>
     </div>
   );

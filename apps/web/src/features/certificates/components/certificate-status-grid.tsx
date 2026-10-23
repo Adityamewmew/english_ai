@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useCertificateStatus } from "../hooks/use-certificates";
 import { CertificateCard } from "./certificate-card";
+import { printCertificate } from "../utils/print-certificate";
 
 interface CertificateStatusGridProps {
   userId: string;
@@ -45,7 +46,7 @@ export function CertificateStatusGrid({
     levelStatus?.status === "claimed";
 
   const renderCategoryTabs = () => (
-    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-white dark:bg-slate-900 p-3 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-2xs mb-6">
+    <div className="no-print flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-white dark:bg-slate-900 p-3 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-2xs mb-6">
       <div className="flex items-center gap-1.5 p-1 bg-slate-100 dark:bg-slate-800 rounded-xl overflow-x-auto w-full sm:w-auto">
         {CEFR_CATEGORIES.map((cat) => (
           <button
@@ -145,7 +146,7 @@ export function CertificateStatusGrid({
         {renderCategoryTabs()}
 
         {/* Congratulatory Banner */}
-        <div className="p-5 sm:p-6 rounded-2xl bg-[#0D3B66] text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-lg border border-[#0D3B66]">
+        <div className="no-print p-5 sm:p-6 rounded-2xl bg-[#0D3B66] text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-lg border border-[#0D3B66]">
           <div className="flex items-center gap-3.5">
             <div className="w-12 h-12 rounded-xl bg-[#F4B41A] text-[#0D3B66] flex items-center justify-center shrink-0 shadow-md">
               <Sparkles className="w-6 h-6" />
@@ -170,7 +171,9 @@ export function CertificateStatusGrid({
 
           <Button
             onClick={() => {
-              if (typeof window !== "undefined") window.print();
+              const isSquare = ((levelStatus as any)?.orientation || "").toLowerCase() === "square";
+              const isPortrait = !isSquare && ((levelStatus as any)?.orientation || "portrait").toLowerCase() !== "landscape";
+              printCertificate(isSquare, isPortrait);
             }}
             className="w-full sm:w-auto bg-[#F4B41A] hover:bg-[#d99f14] text-[#0D3B66] font-bold text-xs gap-2 shrink-0 shadow-md cursor-pointer"
           >

@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { Award, Printer, X, ShieldCheck, MapPin, Phone, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { printCertificate } from "../utils/print-certificate";
 
 export interface CertificateModalData {
   certificateNumber: string;
@@ -62,9 +63,7 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
   });
 
   const handlePrint = () => {
-    if (typeof window !== "undefined") {
-      window.print();
-    }
+    printCertificate(isSquare, isPortrait);
   };
 
   const resolveBackgroundUrl = (url?: string | null): string | null => {
@@ -457,8 +456,67 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
     </div>
   );
 
+  const printStyles = (
+    <style jsx global>{`
+      @media print {
+        @page {
+          size: ${isSquare ? "210mm 210mm" : isPortrait ? "A4 portrait" : "A4 landscape"};
+          margin: 0 !important;
+        }
+        *, *::before, *::after {
+          box-sizing: border-box !important;
+        }
+        html, body {
+          margin: 0 !important;
+          padding: 0 !important;
+          width: 100% !important;
+          height: 100% !important;
+          background: #ffffff !important;
+          overflow: hidden !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        body * {
+          visibility: hidden !important;
+        }
+        #printable-certificate,
+        #printable-certificate * {
+          visibility: visible !important;
+        }
+        #printable-certificate {
+          position: fixed !important;
+          left: 0 !important;
+          top: 0 !important;
+          width: 100vw !important;
+          height: 100vh !important;
+          max-width: none !important;
+          max-height: none !important;
+          border: none !important;
+          box-shadow: none !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          border-radius: 0 !important;
+          page-break-inside: avoid !important;
+          page-break-after: avoid !important;
+          page-break-before: avoid !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+          z-index: 999999 !important;
+        }
+        .no-print, header, nav, aside, footer {
+          display: none !important;
+        }
+      }
+    `}</style>
+  );
+
   if (!isModal) {
-    return certificateBody;
+    return (
+      <>
+        {certificateBody}
+        {printStyles}
+      </>
+    );
   }
 
   return (
@@ -473,7 +531,7 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
             <Button
               onClick={handlePrint}
               size="sm"
-              className="bg-[#F4B41A] hover:bg-[#d99f14] text-[#0D3B66] font-bold shadow-md gap-1.5"
+              className="bg-[#F4B41A] hover:bg-[#d99f14] text-[#0D3B66] font-bold shadow-md gap-1.5 cursor-pointer"
             >
               <Printer className="w-4 h-4" />
               Cetak / Simpan PDF
@@ -483,7 +541,7 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
                 variant="outline"
                 size="sm"
                 onClick={onClose}
-                className="bg-white/10 hover:bg-white/20 text-white border-white/20"
+                className="bg-white/10 hover:bg-white/20 text-white border-white/20 cursor-pointer"
               >
                 <X className="w-4 h-4" />
               </Button>
@@ -494,38 +552,7 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
         {certificateBody}
       </div>
 
-      <style jsx global>{`
-        @media print {
-          body * {
-            visibility: hidden !important;
-          }
-          #printable-certificate,
-          #printable-certificate * {
-            visibility: visible !important;
-          }
-          #printable-certificate {
-            position: fixed !important;
-            left: 0 !important;
-            top: 0 !important;
-            width: 100vw !important;
-            height: 100vh !important;
-            max-width: none !important;
-            border: none !important;
-            box-shadow: none !important;
-            margin: 0 !important;
-            border-radius: 0 !important;
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
-          }
-          .no-print {
-            display: none !important;
-          }
-          @page {
-            size: ${isSquare ? "210mm 210mm" : isPortrait ? "A4 portrait" : "A4 landscape"};
-            margin: 0;
-          }
-        }
-      `}</style>
+      {printStyles}
     </div>
   );
 }

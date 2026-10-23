@@ -262,4 +262,14 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(100, 116, 139, 0.7);
 }
 
+@media print {
+  .no-print,
+  nav,
+  header,
+  aside,
+  footer {
+    display: none !important;
+  }
+}
+
 
