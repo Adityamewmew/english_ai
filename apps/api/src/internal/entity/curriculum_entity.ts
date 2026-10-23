@@ -42,3 +42,13 @@ export const SubmitSubModuleBody = t.Object({
 });
 
 export type SubmitSubModuleBody = typeof SubmitSubModuleBody.static;
+
+export const GenerateModuleMaterialsBody = t.Object({
+  moduleTitle: t.String(),
+  cefr: t.String(),
+  objective: t.Optional(t.String()),
+  customInstructions: t.Optional(t.String()),
+  skillType: t.Optional(t.String()),
+});
+
+export type GenerateModuleMaterialsBody = typeof GenerateModuleMaterialsBody.static;
