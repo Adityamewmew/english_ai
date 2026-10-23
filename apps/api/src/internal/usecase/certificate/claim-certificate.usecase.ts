@@ -1,5 +1,6 @@
 import { certificateRepository } from "../../repository/certificate_repository";
 import { AppError, ConflictError, NotFoundError } from "../../../common/errors/app-error";
+import { isUserAdmin } from "@english-ai/shared";
 
 export const claimCertificateUsecase = async (
   userId: string,
@@ -28,12 +29,13 @@ export const claimCertificateUsecase = async (
     throw new NotFoundError("Pengguna tidak ditemukan.");
   }
 
-  // Check eligibility: all modules in this CEFR must be completed
+  // Check eligibility: all modules in this CEFR must be completed (admin bypass)
   const stats = await certificateRepository.getCefrCategoryStats(
     userId,
     normalizedCefr
   );
-  if (!stats.isEligible) {
+  const isAdmin = isUserAdmin(user);
+  if (!stats.isEligible && !isAdmin) {
     throw new AppError(
       `Anda belum menyelesaikan seluruh modul pada level ${normalizedCefr}. Progress: ${stats.completedModules}/${stats.totalModules} modul.`,
       400
@@ -61,7 +63,7 @@ export const claimCertificateUsecase = async (
   const certificateNumber = `EE-RC-${tier}-${normalizedCefr}-${romanMonth}/${year2Digit}-${sequenceNumber}`;
 
   // Hybrid 6-subject breakdown based on average score & official qualification standards
-  const baseScore = Math.min(100, Math.max(60, stats.averageScore || 85));
+  const baseScore = Math.min(100, Math.max(60, stats.averageScore || (isAdmin ? 94 : 85)));
   const calcSubject = (offset: number) => Math.min(100, Math.max(60, baseScore + offset));
 
   const scoresBreakdown = {

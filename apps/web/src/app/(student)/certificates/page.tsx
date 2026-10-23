@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { getSession } from "@/lib/session";
 import { StudentShell } from "@/features/dashboard";
 import { CertificateStatusGrid } from "@/features/certificates";
+import { isUserAdmin } from "@/lib/auth-utils";
 
 export const metadata = {
   title: "Sertifikat Kelulusan Level CEFR | EDDY'S English AI",
@@ -25,6 +26,7 @@ export default async function CertificatesPage() {
           userId={session.userId}
           userName={session.name}
           currentCefr={session.currentCefr}
+          isAdmin={isUserAdmin(session)}
         />
       </div>
     </StudentShell>

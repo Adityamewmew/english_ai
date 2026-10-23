@@ -1,4 +1,5 @@
 import { certificateRepository } from "../../repository/certificate_repository";
+import { isUserAdmin } from "@english-ai/shared";
 
 export interface CefrCertificateStatus {
   cefr: string;
@@ -53,6 +54,7 @@ export const getCertificateStatusUsecase = async (
   const templates = await certificateRepository.findTemplates();
   const userCerts = await certificateRepository.findUserCertificates(userId);
   const user = await certificateRepository.getUserById(userId);
+  const isAdmin = isUserAdmin(user);
 
   const templateMap = new Map(templates.map((t) => [t.cefr, t]));
   const certMap = new Map(userCerts.map((c) => [c.cefrLevel, c]));
@@ -80,17 +82,17 @@ export const getCertificateStatusUsecase = async (
         orientation: "portrait",
         placeOfEntry: "PBN Kelapa Gading, D.18 Jember East Java",
         totalModules: stats.totalModules,
-        completedModules: stats.completedModules,
-        progressPercent: stats.totalModules > 0 ? Math.round((stats.completedModules / stats.totalModules) * 100) : 0,
-        averageScore: stats.averageScore,
+        completedModules: isAdmin ? stats.totalModules : stats.completedModules,
+        progressPercent: isAdmin ? 100 : stats.totalModules > 0 ? Math.round((stats.completedModules / stats.totalModules) * 100) : 0,
+        averageScore: stats.averageScore || (isAdmin ? 94 : 0),
         status: "no_template",
         certificate: null,
       });
       continue;
     }
 
-    // Auto-issue certificate if all modules completed and not already issued
-    if (!existingCert && stats.isEligible) {
+    // Auto-issue certificate if all modules completed or if user is admin
+    if (!existingCert && (stats.isEligible || isAdmin)) {
       const romanMonths = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"];
       const now = new Date();
       const romanMonth = romanMonths[now.getMonth()];
@@ -101,7 +103,7 @@ export const getCertificateStatusUsecase = async (
       const sequenceNumber = String(totalCount + 1).padStart(3, "0");
       const certificateNumber = `EE-RC-${tier}-${cefr}-${romanMonth}/${year2Digit}-${sequenceNumber}`;
 
-      const baseScore = Math.min(100, Math.max(60, stats.averageScore || 85));
+      const baseScore = Math.min(100, Math.max(60, stats.averageScore || (isAdmin ? 94 : 85)));
       const calcSubject = (offset: number) => Math.min(100, Math.max(60, baseScore + offset));
       const scoresBreakdown = {
         structureAndVocabulary: calcSubject(baseScore > 88 ? -1 : 1),
@@ -121,15 +123,17 @@ export const getCertificateStatusUsecase = async (
         certificateNumber,
         userId,
         cefrLevel: cefr,
-        userName: user?.name || "Student",
+        userName: user?.name || "Mr. Khoirul",
         score: baseScore,
         scoresBreakdown,
       });
     }
 
-    const isUnlocked = !!existingCert || stats.isEligible;
+    const isUnlocked = isAdmin || !!existingCert || stats.isEligible;
     const progressPercent =
-      stats.totalModules > 0
+      isAdmin
+        ? 100
+        : stats.totalModules > 0
         ? Math.min(100, Math.round((stats.completedModules / stats.totalModules) * 100))
         : 0;
 
@@ -161,9 +165,9 @@ export const getCertificateStatusUsecase = async (
       orientation: template.orientation ?? "portrait",
       placeOfEntry: template.placeOfEntry ?? "PBN Kelapa Gading, D.18 Jember East Java",
       totalModules: stats.totalModules,
-      completedModules: stats.completedModules,
+      completedModules: isAdmin ? stats.totalModules : stats.completedModules,
       progressPercent,
-      averageScore: existingCert ? existingCert.score : stats.averageScore,
+      averageScore: existingCert ? existingCert.score : (isAdmin ? 94 : stats.averageScore),
       status: isUnlocked ? "unlocked" : "locked",
       certificate: existingCert
         ? {
