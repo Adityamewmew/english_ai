@@ -10,14 +10,19 @@ export interface CefrCertificateStatus {
   signatureUrl: string | null;
   backgroundUrl: string | null;
   themeColor: string | null;
+  nameXPercent?: number | null;
   nameYPercent?: number | null;
   nameFontSize?: number | null;
+  scoresXPercent?: number | null;
   scoresYPercent?: number | null;
   scoresFontSize?: number | null;
+  dateXPercent?: number | null;
   dateYPercent?: number | null;
   dateFontSize?: number | null;
+  placeXPercent?: number | null;
   placeYPercent?: number | null;
   placeFontSize?: number | null;
+  refNoXPercent?: number | null;
   refNoYPercent?: number | null;
   refNoFontSize?: number | null;
   orientation?: string | null;
@@ -138,16 +143,21 @@ export const getCertificateStatusUsecase = async (
       signatureUrl: template.signatureUrl,
       backgroundUrl: template.backgroundUrl,
       themeColor: template.themeColor,
-      nameYPercent: template.nameYPercent ?? 48,
-      nameFontSize: template.nameFontSize ?? 36,
-      scoresYPercent: template.scoresYPercent ?? 50,
-      scoresFontSize: template.scoresFontSize ?? 11,
+      nameXPercent: template.nameXPercent ?? 50,
+      nameYPercent: template.nameYPercent ?? 34,
+      nameFontSize: template.nameFontSize ?? 26,
+      scoresXPercent: template.scoresXPercent ?? 50,
+      scoresYPercent: template.scoresYPercent ?? 52,
+      scoresFontSize: template.scoresFontSize ?? 10,
+      dateXPercent: template.dateXPercent ?? 18,
       dateYPercent: template.dateYPercent ?? 80,
-      dateFontSize: template.dateFontSize ?? 10,
+      dateFontSize: template.dateFontSize ?? 8,
+      placeXPercent: template.placeXPercent ?? 50,
       placeYPercent: template.placeYPercent ?? 80,
-      placeFontSize: template.placeFontSize ?? 10,
+      placeFontSize: template.placeFontSize ?? 8,
+      refNoXPercent: template.refNoXPercent ?? 82,
       refNoYPercent: template.refNoYPercent ?? 80,
-      refNoFontSize: template.refNoFontSize ?? 10,
+      refNoFontSize: template.refNoFontSize ?? 8,
       orientation: template.orientation ?? "portrait",
       placeOfEntry: template.placeOfEntry ?? "PBN Kelapa Gading, D.18 Jember East Java",
       totalModules: stats.totalModules,

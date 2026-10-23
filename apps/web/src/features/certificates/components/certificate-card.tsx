@@ -29,14 +29,19 @@ export interface CertificateModalData {
   themeColor?: string | null;
   orientation?: string | null;
   placeOfEntry?: string | null;
+  nameXPercent?: number | null;
   nameYPercent?: number | null;
   nameFontSize?: number | null;
+  scoresXPercent?: number | null;
   scoresYPercent?: number | null;
   scoresFontSize?: number | null;
+  dateXPercent?: number | null;
   dateYPercent?: number | null;
   dateFontSize?: number | null;
+  placeXPercent?: number | null;
   placeYPercent?: number | null;
   placeFontSize?: number | null;
+  refNoXPercent?: number | null;
   refNoYPercent?: number | null;
   refNoFontSize?: number | null;
 }
@@ -135,14 +140,15 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
         <div className="relative inset-0 w-full h-full z-10 pointer-events-none select-none">
           {/* 1. Student Name Overlay */}
           <div
-            className="absolute left-0 right-0 flex items-center justify-center px-4 z-20"
+            className="absolute z-20 flex items-center justify-center px-2"
             style={{
+              left: `${data.nameXPercent ?? 50}%`,
               top: `${data.nameYPercent ?? 34}%`,
-              transform: "translateY(-50%)",
+              transform: "translate(-50%, -50%)",
             }}
           >
             <span
-              className="font-serif font-black text-[#0D3B66] text-center drop-shadow-xs tracking-wide leading-none"
+              className="font-serif font-black text-[#0D3B66] text-center drop-shadow-xs tracking-wide leading-none whitespace-nowrap"
               style={{
                 fontSize: `${(data.nameFontSize ?? 26) * 0.85}px`,
               }}
@@ -153,15 +159,16 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
 
           {/* 2. Scores Overlay (Breakdown 6 Nilai + Pass Standard) */}
           <div
-            className="absolute left-0 right-0 flex flex-col items-center justify-center px-2 z-10"
+            className="absolute z-10 flex flex-col items-center justify-center px-1"
             style={{
+              left: `${data.scoresXPercent ?? 50}%`,
               top: `${data.scoresYPercent ?? 52}%`,
-              transform: "translateY(-50%)",
+              transform: "translate(-50%, -50%)",
             }}
           >
             <div className="space-y-1 text-center">
               <div
-                className="max-w-[240px] sm:max-w-[280px] mx-auto text-left font-mono font-bold space-y-0.5 text-slate-900 bg-white/85 backdrop-blur-2xs p-2 rounded border border-slate-200/80 shadow-2xs"
+                className="w-[230px] sm:w-[270px] text-left font-mono font-bold space-y-0.5 text-slate-900 bg-white/85 backdrop-blur-2xs p-2 rounded border border-slate-200/80 shadow-2xs"
                 style={{
                   fontSize: `${(data.scoresFontSize ?? 10) * 0.95}px`,
                 }}
@@ -197,60 +204,55 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
             </div>
           </div>
 
-          {/* 3. Date of Examination Overlay */}
+          {/* 3. Date of Examination Overlay (Value Only) */}
           <div
-            className="absolute left-4 sm:left-6 text-left z-10"
+            className="absolute z-10 text-center whitespace-nowrap"
             style={{
+              left: `${data.dateXPercent ?? 18}%`,
               top: `${data.dateYPercent ?? 80}%`,
-              transform: "translateY(-50%)",
-            }}
-          >
-            <div
-              className="bg-white/75 backdrop-blur-2xs p-1 rounded border border-slate-200/60 shadow-2xs"
-              style={{ fontSize: `${data.dateFontSize ?? 8}px` }}
-            >
-              <p className="font-bold text-slate-900 leading-none mb-0.5">Date of Examination</p>
-              <p className="text-slate-600 font-mono leading-none">{formattedDate}</p>
-            </div>
-          </div>
-
-          {/* 4. Place of Entry Overlay */}
-          <div
-            className="absolute text-center z-10 max-w-[140px] sm:max-w-[180px]"
-            style={{
-              top: `${data.placeYPercent ?? 80}%`,
-              left: "50%",
               transform: "translate(-50%, -50%)",
             }}
           >
-            <div
-              className="bg-white/75 backdrop-blur-2xs p-1 rounded border border-slate-200/60 shadow-2xs"
-              style={{ fontSize: `${data.placeFontSize ?? 8}px` }}
+            <span
+              className="text-slate-800 font-mono font-bold leading-none select-none drop-shadow-2xs inline-block"
+              style={{ fontSize: `${data.dateFontSize ?? 8}px` }}
             >
-              <p className="font-bold text-slate-900 leading-none mb-0.5">Place of Entry</p>
-              <p className="text-slate-600 leading-tight">
-                {data.placeOfEntry || "PBN Kelapa Gading, D.18 Jember East Java"}
-              </p>
-            </div>
+              {formattedDate}
+            </span>
           </div>
 
-          {/* 5. Reference No Overlay */}
+          {/* 4. Place of Entry Overlay (Value Only) */}
           <div
-            className="absolute right-4 sm:right-6 text-right z-10"
+            className="absolute z-10 text-center max-w-[140px] sm:max-w-[180px]"
             style={{
-              top: `${data.refNoYPercent ?? 80}%`,
-              transform: "translateY(-50%)",
+              left: `${data.placeXPercent ?? 50}%`,
+              top: `${data.placeYPercent ?? 80}%`,
+              transform: "translate(-50%, -50%)",
             }}
           >
-            <div
-              className="bg-white/75 backdrop-blur-2xs p-1 rounded border border-slate-200/60 shadow-2xs"
+            <span
+              className="text-slate-800 font-bold leading-tight select-none drop-shadow-2xs block"
+              style={{ fontSize: `${data.placeFontSize ?? 8}px` }}
+            >
+              {data.placeOfEntry || "PBN Kelapa Gading, D.18 Jember East Java"}
+            </span>
+          </div>
+
+          {/* 5. Reference No Overlay (Value Only) */}
+          <div
+            className="absolute z-10 text-center whitespace-nowrap"
+            style={{
+              left: `${data.refNoXPercent ?? 82}%`,
+              top: `${data.refNoYPercent ?? 80}%`,
+              transform: "translate(-50%, -50%)",
+            }}
+          >
+            <span
+              className="font-bold text-slate-900 font-mono leading-none select-none drop-shadow-2xs inline-block"
               style={{ fontSize: `${data.refNoFontSize ?? 8}px` }}
             >
-              <p className="font-bold text-slate-900 leading-none mb-0.5">Reference No.</p>
-              <p className="font-bold text-slate-900 font-mono leading-none">
-                {data.certificateNumber}
-              </p>
-            </div>
+              {data.certificateNumber}
+            </span>
           </div>
         </div>
       ) : isPortrait ? (
