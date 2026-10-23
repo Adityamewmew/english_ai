@@ -5,8 +5,6 @@ import {
   curriculumModules,
   userModuleProgress,
   users,
-  subModules,
-  userSubModuleProgress,
 } from "../../db/schema";
 import { eq, and, isNull, inArray, sql } from "drizzle-orm";
 
@@ -53,23 +51,16 @@ export const certificateRepository = {
     cefrLevel: string;
     userName: string;
     score: number;
-    structureScore?: number;
-    readingScore?: number;
-    listeningScore?: number;
-    dictationScore?: number;
-    conversationScore?: number;
-    compositionScore?: number;
-    grade?: string;
+    scoresBreakdown?: any;
   }) => {
     const res = await db.insert(userCertificates).values(data).returning();
     return res[0];
   },
 
-  countCertificatesByCefr: async (cefr: string) => {
+  countCertificates: async () => {
     const res = await db
       .select({ count: sql<number>`count(*)` })
-      .from(userCertificates)
-      .where(eq(userCertificates.cefrLevel, cefr));
+      .from(userCertificates);
     return Number(res[0]?.count ?? 0);
   },
 
@@ -101,15 +92,6 @@ export const certificateRepository = {
         totalModules: 0,
         completedModules: 0,
         averageScore: 0,
-        grade: "FAIR",
-        skills: {
-          structureScore: 85,
-          readingScore: 85,
-          listeningScore: 85,
-          dictationScore: 85,
-          conversationScore: 85,
-          compositionScore: 85,
-        },
         isEligible: false,
       };
     }
@@ -138,80 +120,13 @@ export const certificateRepository = {
         ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
         : 85;
 
-    // 3. Sub-module score breakdown per skill
-    let structureScore = avgScore;
-    let readingScore = avgScore;
-    let listeningScore = avgScore;
-    let dictationScore = avgScore;
-    let conversationScore = avgScore;
-    let compositionScore = avgScore;
-
-    try {
-      const subScores = await db
-        .select({
-          skillType: subModules.skillType,
-          score: userSubModuleProgress.score,
-        })
-        .from(userSubModuleProgress)
-        .innerJoin(subModules, eq(userSubModuleProgress.subModuleId, subModules.id))
-        .where(
-          and(
-            eq(userSubModuleProgress.userId, userId),
-            inArray(subModules.moduleId, moduleIds)
-          )
-        );
-
-      const filterAvg = (type: string) => {
-        const arr = subScores
-          .filter((s) => s.skillType === type && typeof s.score === "number")
-          .map((s) => s.score as number);
-        return arr.length > 0
-          ? Math.round(arr.reduce((a, b) => a + b, 0) / arr.length)
-          : avgScore;
-      };
-
-      readingScore = filterAvg("reading");
-      listeningScore = filterAvg("listening");
-      compositionScore = filterAvg("writing");
-      conversationScore = filterAvg("speaking");
-      structureScore = filterAvg("assessment");
-      dictationScore = Math.min(
-        100,
-        Math.max(60, Math.round(listeningScore * 0.6 + structureScore * 0.4))
-      );
-    } catch {
-      // Fallback to module overall average
-    }
-
-    const finalAvg = Math.round(
-      (structureScore +
-        readingScore +
-        listeningScore +
-        dictationScore +
-        conversationScore +
-        compositionScore) /
-        6
-    );
-
-    const grade =
-      finalAvg >= 89 ? "EXCELLENT" : finalAvg >= 76 ? "GOOD" : "FAIR";
-
     const isEligible = totalModules > 0 && completedCount >= totalModules;
 
     return {
       cefr,
       totalModules,
       completedModules: completedCount,
-      averageScore: finalAvg,
-      grade,
-      skills: {
-        structureScore,
-        readingScore,
-        listeningScore,
-        dictationScore,
-        conversationScore,
-        compositionScore,
-      },
+      averageScore: avgScore,
       isEligible,
     };
   },

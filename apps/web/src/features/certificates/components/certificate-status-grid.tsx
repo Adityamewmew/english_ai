@@ -56,32 +56,22 @@ export function CertificateStatusGrid({
 
   // 1. UNLOCKED STATE: Student completed all modules!
   if (isUnlocked && levelStatus) {
-    const cert = levelStatus.certificate as any;
     const certData = {
-      certificateNumber:
-        cert?.certificateNumber || `EE-RC-A-${studentCategory}-X/26-001`,
+      certificateNumber: levelStatus.certificate?.certificateNumber || `EDDY-${studentCategory}-CERT`,
       userName: userName || "Student",
       cefrLevel: studentCategory,
       title: levelStatus.title,
       description: levelStatus.description,
-      score: cert?.score || levelStatus.averageScore || 85,
-      structureScore: cert?.structureScore ?? 85,
-      readingScore: cert?.readingScore ?? 86,
-      listeningScore: cert?.listeningScore ?? 87,
-      dictationScore: cert?.dictationScore ?? 91,
-      conversationScore: cert?.conversationScore ?? 90,
-      compositionScore: cert?.compositionScore ?? 86,
-      grade:
-        cert?.grade ??
-        ((cert?.score || levelStatus.averageScore || 85) >= 89
-          ? "EXCELLENT"
-          : "GOOD"),
-      issuedAt: cert?.issuedAt || new Date(),
-      examDate: cert?.completedAt || cert?.issuedAt || new Date(),
+      score: levelStatus.averageScore || 85,
+      scoresBreakdown: (levelStatus.certificate as any)?.scoresBreakdown,
+      issuedAt: levelStatus.certificate?.issuedAt || new Date(),
       instructorName: levelStatus.instructorName,
       instructorTitle: levelStatus.instructorTitle,
+      signatureUrl: levelStatus.signatureUrl,
       backgroundUrl: levelStatus.backgroundUrl,
       themeColor: levelStatus.themeColor,
+      orientation: (levelStatus as any).orientation || "portrait",
+      placeOfEntry: (levelStatus as any).placeOfEntry,
       nameYPercent: levelStatus.nameYPercent,
       nameFontSize: levelStatus.nameFontSize,
     };

@@ -66,8 +66,7 @@ export const voiceRepository = {
   },
 
   findAbandonedActiveSessions: async (minutesOld = 5, limit = 5) => {
-    const skew = minutesOld === 0 ? 60 * 1000 : 1000;
-    const cutoff = new Date(Date.now() - minutesOld * 60 * 1000 + skew);
+    const cutoff = new Date(Date.now() - minutesOld * 60 * 1000 + 1000);
     return db
       .select()
       .from(callSessions)

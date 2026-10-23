@@ -1,6 +1,4 @@
 import { curriculumRepository } from "../../repository/curriculum_repository";
-import { certificateRepository } from "../../repository/certificate_repository";
-import { claimCertificateUsecase } from "../certificate/claim-certificate.usecase";
 import { NotFoundError } from "../../../common/errors/app-error";
 
 export async function submitSubModuleUsecase(
@@ -168,21 +166,6 @@ export async function submitSubModuleUsecase(
               status: "unlocked",
             });
           }
-        }
-      }
-
-      // Auto-issue official certificate if exam completed and eligible
-      if (module.isExam || subModule.moduleId.includes("-M13") || module.cefr) {
-        try {
-          const stats = await certificateRepository.getCefrCategoryStats(userId, module.cefr);
-          if (stats.isEligible) {
-            const existing = await certificateRepository.findUserCertificateByCefr(userId, module.cefr);
-            if (!existing) {
-              await claimCertificateUsecase(userId, module.cefr);
-            }
-          }
-        } catch {
-          // Non-blocking auto-issue
         }
       }
     }

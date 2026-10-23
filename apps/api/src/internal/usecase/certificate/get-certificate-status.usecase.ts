@@ -12,6 +12,8 @@ export interface CefrCertificateStatus {
   themeColor: string | null;
   nameYPercent?: number | null;
   nameFontSize?: number | null;
+  orientation?: string | null;
+  placeOfEntry?: string | null;
   totalModules: number;
   completedModules: number;
   progressPercent: number;
@@ -21,13 +23,7 @@ export interface CefrCertificateStatus {
     id: string;
     certificateNumber: string;
     score: number;
-    structureScore?: number | null;
-    readingScore?: number | null;
-    listeningScore?: number | null;
-    dictationScore?: number | null;
-    conversationScore?: number | null;
-    compositionScore?: number | null;
-    grade?: string | null;
+    scoresBreakdown?: any;
     completedAt: Date;
     issuedAt: Date;
   } | null;
@@ -68,6 +64,8 @@ export const getCertificateStatusUsecase = async (
         signatureUrl: null,
         backgroundUrl: null,
         themeColor: "#0D3B66",
+        orientation: "portrait",
+        placeOfEntry: "PBN Kelapa Gading, D.18 Jember East Java",
         totalModules: stats.totalModules,
         completedModules: stats.completedModules,
         progressPercent: stats.totalModules > 0 ? Math.round((stats.completedModules / stats.totalModules) * 100) : 0,
@@ -80,26 +78,29 @@ export const getCertificateStatusUsecase = async (
 
     // Auto-issue certificate if all modules completed and not already issued
     if (!existingCert && stats.isEligible) {
-      const romanMonths = [
-        "I",
-        "II",
-        "III",
-        "IV",
-        "V",
-        "VI",
-        "VII",
-        "VIII",
-        "IX",
-        "X",
-        "XI",
-        "XII",
-      ];
+      const romanMonths = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"];
       const now = new Date();
       const romanMonth = romanMonths[now.getMonth()];
-      const yy = String(now.getFullYear()).slice(-2);
-      const count = await certificateRepository.countCertificatesByCefr(cefr);
-      const runningNo = String(count + 1).padStart(3, "0");
-      const certificateNumber = `EE-RC-A-${cefr}-${romanMonth}/${yy}-${runningNo}`;
+      const year2Digit = String(now.getFullYear()).slice(-2);
+      const tierMap: Record<string, string> = { A1: "E", A2: "E", B1: "I", B2: "I", C1: "A", C2: "A" };
+      const tier = tierMap[cefr] || "E";
+      const totalCount = await certificateRepository.countCertificates();
+      const sequenceNumber = String(totalCount + 1).padStart(3, "0");
+      const certificateNumber = `EE-RC-${tier}-${cefr}-${romanMonth}/${year2Digit}-${sequenceNumber}`;
+
+      const baseScore = Math.min(100, Math.max(60, stats.averageScore || 85));
+      const calcSubject = (offset: number) => Math.min(100, Math.max(60, baseScore + offset));
+      const scoresBreakdown = {
+        structureAndVocabulary: calcSubject(baseScore > 88 ? -1 : 1),
+        readingComprehension: calcSubject(0),
+        listeningComprehension: calcSubject(1),
+        dictation: calcSubject(baseScore >= 88 ? 2 : -1),
+        conversation: calcSubject(baseScore >= 85 ? 1 : 0),
+        composition: calcSubject(-1),
+        averageScore: baseScore,
+        qualification: baseScore >= 89 ? "EXCELLENT" : baseScore >= 76 ? "GOOD" : "FAIR",
+      };
+
       const certId = crypto.randomUUID();
 
       existingCert = await certificateRepository.createUserCertificate({
@@ -108,14 +109,8 @@ export const getCertificateStatusUsecase = async (
         userId,
         cefrLevel: cefr,
         userName: user?.name || "Student",
-        score: stats.averageScore || 85,
-        structureScore: stats.skills?.structureScore ?? 85,
-        readingScore: stats.skills?.readingScore ?? 85,
-        listeningScore: stats.skills?.listeningScore ?? 85,
-        dictationScore: stats.skills?.dictationScore ?? 85,
-        conversationScore: stats.skills?.conversationScore ?? 85,
-        compositionScore: stats.skills?.compositionScore ?? 85,
-        grade: stats.grade || "GOOD",
+        score: baseScore,
+        scoresBreakdown,
       });
     }
 
@@ -137,6 +132,8 @@ export const getCertificateStatusUsecase = async (
       themeColor: template.themeColor,
       nameYPercent: template.nameYPercent ?? 48,
       nameFontSize: template.nameFontSize ?? 36,
+      orientation: template.orientation ?? "portrait",
+      placeOfEntry: template.placeOfEntry ?? "PBN Kelapa Gading, D.18 Jember East Java",
       totalModules: stats.totalModules,
       completedModules: stats.completedModules,
       progressPercent,
@@ -147,31 +144,7 @@ export const getCertificateStatusUsecase = async (
             id: existingCert.id,
             certificateNumber: existingCert.certificateNumber,
             score: existingCert.score,
-            structureScore:
-              existingCert.structureScore ??
-              stats.skills?.structureScore ??
-              existingCert.score,
-            readingScore:
-              existingCert.readingScore ??
-              stats.skills?.readingScore ??
-              existingCert.score,
-            listeningScore:
-              existingCert.listeningScore ??
-              stats.skills?.listeningScore ??
-              existingCert.score,
-            dictationScore:
-              existingCert.dictationScore ??
-              stats.skills?.dictationScore ??
-              existingCert.score,
-            conversationScore:
-              existingCert.conversationScore ??
-              stats.skills?.conversationScore ??
-              existingCert.score,
-            compositionScore:
-              existingCert.compositionScore ??
-              stats.skills?.compositionScore ??
-              existingCert.score,
-            grade: existingCert.grade ?? stats.grade ?? "GOOD",
+            scoresBreakdown: existingCert.scoresBreakdown,
             completedAt: existingCert.completedAt,
             issuedAt: existingCert.issuedAt,
           }

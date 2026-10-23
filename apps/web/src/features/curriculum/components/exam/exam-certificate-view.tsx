@@ -4,7 +4,6 @@ import React from "react";
 import { Award, Clock, Printer, ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CertificateCard } from "@/features/certificates/components/certificate-card";
 
 interface ExamScores {
   rCorrect: number;
@@ -99,63 +98,59 @@ export function ExamCertificateView({
         </Card>
       </div>
 
-      {/* 3. Official EDDY'S Certificate (Rendered on Passing) */}
+      {/* 3. Official Certificate Card (Only if Passed) */}
       {scores.isPassed ? (
-        <div className="flex justify-center py-2">
-          <CertificateCard
-            data={{
-              certificateNumber: `EE-RC-A-${(moduleData?.cefr || "A1").toUpperCase()}-X/26-001`,
-              userName: studentName,
-              cefrLevel: moduleData?.cefr || "A1",
-              score: scores.totalScore,
-              structureScore:
-                scores.rTotal > 0
-                  ? Math.round((scores.rCorrect / scores.rTotal) * 100)
-                  : 85,
-              readingScore:
-                scores.rTotal > 0
-                  ? Math.round((scores.rCorrect / scores.rTotal) * 100)
-                  : 85,
-              listeningScore:
-                scores.lTotal > 0
-                  ? Math.round((scores.lCorrect / scores.lTotal) * 100)
-                  : 85,
-              dictationScore: Math.min(
-                100,
-                Math.max(
-                  60,
-                  Math.round(
-                    ((scores.lTotal > 0
-                      ? scores.lCorrect / scores.lTotal
-                      : 0.85) *
-                      0.6 +
-                      (scores.rTotal > 0
-                        ? scores.rCorrect / scores.rTotal
-                        : 0.85) *
-                        0.4) *
-                      100
-                  )
-                )
-              ),
-              conversationScore:
-                scores.sTotal > 0
-                  ? Math.round((scores.sCompletedCount / scores.sTotal) * 100)
-                  : 85,
-              compositionScore:
-                scores.wTotal > 0
-                  ? Math.round((scores.wAnswered / scores.wTotal) * 100)
-                  : 85,
-              grade:
-                scores.totalScore >= 89
-                  ? "EXCELLENT"
-                  : scores.totalScore >= 76
-                  ? "GOOD"
-                  : "FAIR",
-              issuedAt: new Date(),
-              examDate: new Date(),
-            }}
-            isModal={false}
-          />
+        <div
+          id="graduation-certificate"
+          className="relative p-6 sm:p-10 rounded-3xl bg-amber-50/40 dark:bg-slate-900 border-2 border-amber-600/40 shadow-md space-y-6 text-center print:border-none print:shadow-none print:bg-white print:p-0"
+        >
+          <div className="space-y-1">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-200 text-xs font-bold uppercase tracking-wider border border-amber-300 dark:border-amber-800">
+              <Award className="w-3.5 h-3.5" />
+              <span>Official CEFR Credential</span>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-wide pt-2 font-serif">
+              CERTIFICATE OF SUB-LEVEL MASTERY
+            </h3>
+            <p className="text-xs text-slate-600 dark:text-slate-400 font-serif italic">
+              EDDY&apos;S English AI Academic Board · Autonomous Evaluation Standard
+            </p>
+          </div>
+
+          <div className="space-y-1 py-2">
+            <div className="text-xs text-slate-500 uppercase tracking-widest font-semibold">
+              This is proudly conferred upon
+            </div>
+            <div className="text-2xl sm:text-3xl font-extrabold text-[#0D3B66] dark:text-[#F4B41A] font-serif">
+              {studentName}
+            </div>
+            <div className="text-xs text-slate-700 dark:text-slate-300 max-w-lg mx-auto leading-relaxed pt-1">
+              telah berhasil menuntaskan seluruh 55 evaluasi kompetensi pada tingkat:
+              <br />
+              <strong className="text-slate-900 dark:text-white text-sm">
+                {moduleData?.title} (CEFR {moduleData?.cefr || "A1"})
+              </strong>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-around pt-3 border-t border-amber-600/20 text-xs text-slate-700 dark:text-slate-300 font-mono">
+            <div>
+              <div className="text-[10px] text-slate-500 dark:text-slate-400 uppercase">Nilai Akhir</div>
+              <div className="text-base font-black text-emerald-700 dark:text-emerald-400">
+                {scores.totalScore} / 100
+              </div>
+            </div>
+            <div>
+              <div className="text-[10px] text-slate-500 dark:text-slate-400 uppercase">Tanggal Terbit</div>
+              <div className="font-semibold text-slate-900 dark:text-slate-100">{certDate}</div>
+            </div>
+            <div>
+              <div className="text-[10px] text-slate-500 dark:text-slate-400 uppercase">ID Verifikasi</div>
+              <div className="font-semibold text-slate-900 dark:text-slate-100">
+                EDDY-{moduleData?.id || "M13"}-OK
+              </div>
+            </div>
+          </div>
         </div>
       ) : (
         <Card className="p-6 bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 text-center space-y-3">

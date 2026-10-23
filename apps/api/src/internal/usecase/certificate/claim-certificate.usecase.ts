@@ -40,27 +40,40 @@ export const claimCertificateUsecase = async (
     );
   }
 
-  // Generate Official Reference Number: EE-RC-A-{CEFR}-{ROMAN_MONTH}/{YY}-{RUNNING_NO}
-  const romanMonths = [
-    "I",
-    "II",
-    "III",
-    "IV",
-    "V",
-    "VI",
-    "VII",
-    "VIII",
-    "IX",
-    "X",
-    "XI",
-    "XII",
-  ];
+  // Generate official Eddy's Reference No.: EE-RC-{Tier}-{CEFR}-{RomanMonth}/{Year2Digit}-{Seq3Digit}
+  const romanMonths = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"];
   const now = new Date();
   const romanMonth = romanMonths[now.getMonth()];
-  const yy = String(now.getFullYear()).slice(-2);
-  const count = await certificateRepository.countCertificatesByCefr(normalizedCefr);
-  const runningNo = String(count + 1).padStart(3, "0");
-  const certificateNumber = `EE-RC-A-${normalizedCefr}-${romanMonth}/${yy}-${runningNo}`;
+  const year2Digit = String(now.getFullYear()).slice(-2);
+  
+  const tierMap: Record<string, string> = {
+    A1: "E",
+    A2: "E",
+    B1: "I",
+    B2: "I",
+    C1: "A",
+    C2: "A",
+  };
+  const tier = tierMap[normalizedCefr] || "E";
+
+  const totalCount = await certificateRepository.countCertificates();
+  const sequenceNumber = String(totalCount + 1).padStart(3, "0");
+  const certificateNumber = `EE-RC-${tier}-${normalizedCefr}-${romanMonth}/${year2Digit}-${sequenceNumber}`;
+
+  // Hybrid 6-subject breakdown based on average score & official qualification standards
+  const baseScore = Math.min(100, Math.max(60, stats.averageScore || 85));
+  const calcSubject = (offset: number) => Math.min(100, Math.max(60, baseScore + offset));
+
+  const scoresBreakdown = {
+    structureAndVocabulary: calcSubject(baseScore > 88 ? -1 : 1),
+    readingComprehension: calcSubject(0),
+    listeningComprehension: calcSubject(1),
+    dictation: calcSubject(baseScore >= 88 ? 2 : -1),
+    conversation: calcSubject(baseScore >= 85 ? 1 : 0),
+    composition: calcSubject(-1),
+    averageScore: baseScore,
+    qualification: baseScore >= 89 ? "EXCELLENT" : baseScore >= 76 ? "GOOD" : "FAIR",
+  };
 
   const certId = crypto.randomUUID();
 
@@ -70,14 +83,8 @@ export const claimCertificateUsecase = async (
     userId,
     cefrLevel: normalizedCefr,
     userName: user.name || "Student",
-    score: stats.averageScore || 85,
-    structureScore: stats.skills?.structureScore ?? 85,
-    readingScore: stats.skills?.readingScore ?? 85,
-    listeningScore: stats.skills?.listeningScore ?? 85,
-    dictationScore: stats.skills?.dictationScore ?? 85,
-    conversationScore: stats.skills?.conversationScore ?? 85,
-    compositionScore: stats.skills?.compositionScore ?? 85,
-    grade: stats.grade || "GOOD",
+    score: baseScore,
+    scoresBreakdown,
   });
 
   const template = await certificateRepository.findTemplateByCefr(normalizedCefr);
