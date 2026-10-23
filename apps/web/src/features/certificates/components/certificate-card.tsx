@@ -65,7 +65,8 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
 
   const fullBackgroundUrl = resolveBackgroundUrl(data.backgroundUrl);
   const signatureUrl = resolveBackgroundUrl(data.signatureUrl);
-  const isPortrait = (data.orientation || "portrait").toLowerCase() === "portrait";
+  const isSquare = (data.orientation || "").toLowerCase() === "square";
+  const isPortrait = !isSquare && (data.orientation || "portrait").toLowerCase() !== "landscape";
 
   const tierMap: Record<string, string> = {
     A1: "Elementary",
@@ -93,7 +94,11 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
       ref={printRef}
       id="printable-certificate"
       className={`relative w-full ${
-        isPortrait ? "max-w-[620px] aspect-[1/1.414]" : "max-w-[850px] aspect-[1.414/1]"
+        isSquare
+          ? "max-w-[620px] aspect-square"
+          : isPortrait
+          ? "max-w-[620px] aspect-[1/1.414]"
+          : "max-w-[850px] aspect-[1.414/1]"
       } bg-[#FCFBF7] text-[#0D3B66] rounded-xl shadow-2xl border-4 sm:border-8 border-double border-[#0D3B66]/25 overflow-hidden flex flex-col justify-between select-none print:shadow-none print:border-none`}
       style={{
         WebkitPrintColorAdjust: "exact",
@@ -105,7 +110,7 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
         <img
           src={fullBackgroundUrl}
           alt="Certificate Template"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none z-0 opacity-20"
+          className="absolute inset-0 w-full h-full object-contain pointer-events-none select-none z-0"
         />
       )}
 
@@ -378,7 +383,7 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
             display: none !important;
           }
           @page {
-            size: ${isPortrait ? "A4 portrait" : "A4 landscape"};
+            size: ${isSquare ? "210mm 210mm" : isPortrait ? "A4 portrait" : "A4 landscape"};
             margin: 0;
           }
         }
