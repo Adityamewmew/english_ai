@@ -30,7 +30,7 @@ export async function submitSubModuleUsecase(
   const rawQuestions =
     quizSection?.content?.questions || practiceSection?.content?.questions;
 
-  if (rawQuestions && Array.isArray(rawQuestions) && answers) {
+  if (rawQuestions && Array.isArray(rawQuestions) && answers && Object.keys(answers).length > 0) {
     const questions = rawQuestions;
     totalQuestions = questions.length;
 
@@ -81,12 +81,12 @@ export async function submitSubModuleUsecase(
     } else {
       finalScore = quizScore;
     }
+  } else if (customScore !== undefined) {
+    finalScore = Math.min(100, Math.max(0, customScore));
+  } else if (speakingScore !== undefined) {
+    finalScore = Math.min(100, Math.max(0, speakingScore));
   } else if (!rawQuestions || rawQuestions.length === 0) {
-    if (customScore !== undefined) {
-      finalScore = Math.min(100, Math.max(0, customScore));
-    } else if (speakingScore !== undefined) {
-      finalScore = Math.min(100, Math.max(0, speakingScore));
-    }
+    finalScore = 100;
   } else {
     finalScore = 0;
   }

@@ -114,7 +114,7 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
   .post(
     "/turn-stream",
     async ({ body, headers, user }) => {
-      const { sessionId, topic, history, studentMessage, userId, turnIndex = 0 } = body;
+      const { sessionId, topic, history, studentMessage, userId, turnIndex = 0, moduleId } = body;
       const resolvedUserId = (user as any)?.id || userId || (headers["x-user-id"] as string);
       const encoder = new TextEncoder();
       let sentenceIndex = 0;
@@ -168,6 +168,7 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
               history: history as any,
               studentMessage,
               userId: resolvedUserId,
+              moduleId,
             })) {
               // Output Guardrail per sentence
               const guard = LlmGuardrailService.checkOutputSentence(sentence);
@@ -200,7 +201,11 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
             const msg = (studentMessage || "").toLowerCase();
             const fallback = /\b(bye|goodbye|see you|pamit|dadah)\b/.test(msg)
               ? "It was wonderful speaking with you today! Have a great day ahead!"
-              : "I see! Could you tell me a little bit more about that?";
+              : /^\s*(no|nope|not really|enggak|nggak)\s*$/.test(msg)
+              ? "That's completely fine! What would you like to explore next?"
+              : /\b(book|books|reading|read|baca|link|recommend)\b/.test(msg)
+              ? "For easy reading, I really recommend 'News in Levels' or simple graded readers. Which one sounds more fun?"
+              : "I hear you! What would you like to explore next?";
             controller.enqueue(
               encoder.encode(
                 `data: ${JSON.stringify({ type: "sentence", index: sentenceIndex, text: fallback })}\n\n`

@@ -29,6 +29,7 @@ export const VoiceTurnStreamBody = t.Object({
   studentMessage: t.String(),
   turnIndex: t.Optional(t.Number()),
   userId: t.Optional(t.String()),
+  moduleId: t.Optional(t.String()),
 });
 
 export const VoiceGreetingQuery = t.Optional(

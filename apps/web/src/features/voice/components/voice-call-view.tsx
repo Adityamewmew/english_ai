@@ -21,12 +21,14 @@ export interface VoiceCallViewProps {
   initialTopic?: string;
   userId?: string;
   studentName?: string;
+  moduleId?: string;
 }
 
 export function VoiceCallView({
   initialTopic = "Daily Casual Chat & Introduction",
   userId,
   studentName: propStudentName = "",
+  moduleId,
 }: VoiceCallViewProps) {
   const router = useRouter();
 
@@ -156,10 +158,11 @@ export function VoiceCallView({
           body: JSON.stringify({
             sessionId: sessionIdRef.current,
             topic: defaultTopic,
-            history: updatedHistory.slice(-6),
+            history: conversationHistoryRef.current.slice(-6),
             studentMessage: cleanText,
             turnIndex: turnIndexRef.current++,
             userId,
+            moduleId,
           }),
           signal: abortController.signal,
         });
@@ -319,6 +322,7 @@ export function VoiceCallView({
       const startRes = await voiceApi.startSession({
         topic: defaultTopic,
         userId,
+        moduleId,
         sttProvider: "web-speech",
       });
       if (startRes?.id) {

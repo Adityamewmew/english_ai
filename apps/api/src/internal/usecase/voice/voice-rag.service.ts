@@ -94,12 +94,52 @@ export const voiceRagService = {
     }
   },
 
+  async getCurriculumContextById(moduleId: string): Promise<CurriculumContext | null> {
+    try {
+      const matched = await voiceRepository.findModuleById(moduleId);
+      if (!matched) return null;
+
+      const sections = await voiceRepository.getModuleSections(matched.id);
+      const theorySection = sections.find((s: any) => s.sectionType === "theory");
+      const vocabSection = sections.find((s: any) => s.sectionType === "vocab");
+
+      const targetGrammar: string[] = [];
+      if (theorySection?.content?.rules && Array.isArray(theorySection.content.rules)) {
+        theorySection.content.rules.forEach((r: any) => {
+          if (r?.pattern) targetGrammar.push(r.pattern);
+          else if (typeof r === "string") targetGrammar.push(r);
+        });
+      }
+
+      const targetVocab: string[] = [];
+      if (vocabSection?.content?.items && Array.isArray(vocabSection.content.items)) {
+        vocabSection.content.items.forEach((item: any) => {
+          if (item?.word) targetVocab.push(item.word);
+          else if (typeof item === "string") targetVocab.push(item);
+        });
+      }
+
+      return {
+        moduleId: matched.id,
+        title: matched.title,
+        cefr: matched.cefr,
+        objective: matched.objective,
+        targetGrammar,
+        targetVocab,
+      };
+    } catch (err) {
+      console.warn("voiceRagService.getCurriculumContextById error:", err);
+      return null;
+    }
+  },
+
   async buildTutorCallContext(params: {
     topic: string;
     userId?: string;
     studentCefr?: string;
+    moduleId?: string;
   }): Promise<string> {
-    const cacheKey = `${params.userId ?? "anon"}:${params.topic}`;
+    const cacheKey = `${params.userId ?? "anon"}:${params.moduleId ?? "univ"}:${params.topic}`;
     const cached = sessionContextCache.get(cacheKey);
     if (cached && Date.now() < cached.expiresAt) {
       return cached.context;
@@ -107,18 +147,26 @@ export const voiceRagService = {
 
     const parts: string[] = [];
 
-    const curr = await this.getCurriculumContext(params.topic, params.studentCefr || "A1");
-    if (curr) {
-      parts.push(`[ACTIVE CURRICULUM MODULE]`);
-      parts.push(`Module ID: ${curr.moduleId}`);
-      parts.push(`Title: ${curr.title} (Level ${curr.cefr})`);
-      parts.push(`Objective: ${curr.objective}`);
-      if (curr.targetGrammar.length > 0) {
-        parts.push(`Target Patterns: ${curr.targetGrammar.slice(0, 3).join(", ")}`);
+    // If moduleId is explicitly provided -> In-Module Contextual Call
+    if (params.moduleId) {
+      const curr = await this.getCurriculumContextById(params.moduleId);
+      if (curr) {
+        parts.push(`[ACTIVE CURRICULUM MODULE]`);
+        parts.push(`Module ID: ${curr.moduleId}`);
+        parts.push(`Title: ${curr.title} (Level ${curr.cefr})`);
+        parts.push(`Objective: ${curr.objective}`);
+        if (curr.targetGrammar.length > 0) {
+          parts.push(`Target Patterns to practice: ${curr.targetGrammar.slice(0, 3).join(", ")}`);
+        }
+        if (curr.targetVocab.length > 0) {
+          parts.push(`Target Vocabulary to use: ${curr.targetVocab.slice(0, 5).join(", ")}`);
+        }
       }
-      if (curr.targetVocab.length > 0) {
-        parts.push(`Target Vocabulary: ${curr.targetVocab.slice(0, 5).join(", ")}`);
-      }
+    } else {
+      // Universal Call (Outside module) -> Free, open conversational flow across all CEFR levels
+      parts.push(`[CONVERSATIONAL MODE: UNIVERSAL OPEN ENGLISH PRACTICE]`);
+      parts.push(`Scope: Open conversation. You have complete pedagogical mastery across all CEFR curriculum levels (A1 to C2). Do NOT force or steer the student into any single module or grammar lesson unless the student explicitly asks for it.`);
+      parts.push(`Direct Recommendation Guidance: When the student asks for advice, book/website recommendations, or learning tips, provide 1-2 real and specific recommendations immediately.`);
     }
 
     if (params.userId) {

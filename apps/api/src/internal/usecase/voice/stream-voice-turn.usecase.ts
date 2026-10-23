@@ -7,6 +7,7 @@ export async function* streamVoiceTurnUsecase(payload: {
   studentMessage: string;
   userId?: string;
   studentCefr?: string;
+  moduleId?: string;
   signal?: AbortSignal;
 }): AsyncGenerator<string, void, unknown> {
   try {
@@ -14,6 +15,7 @@ export async function* streamVoiceTurnUsecase(payload: {
       topic: payload.topic,
       userId: payload.userId,
       studentCefr: payload.studentCefr,
+      moduleId: payload.moduleId,
     });
 
     for await (const sentence of AiService.streamTutorSentences(

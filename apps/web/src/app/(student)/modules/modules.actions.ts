@@ -126,7 +126,8 @@ export async function submitSubModuleAction(
     answers?: Record<string, any>;
     score?: number;
     speakingScore?: number;
-  }
+  },
+  moduleId?: string
 ) {
   try {
     const session = await getSession();
@@ -148,6 +149,9 @@ export async function submitSubModuleAction(
     if (json.success) {
       revalidatePath("/modules");
       revalidatePath("/dashboard");
+      if (moduleId) {
+        revalidatePath(`/modules/${moduleId}`);
+      }
       return { success: true, data: json.data };
     }
     return { success: false, error: json.error || "Gagal menyimpan progres sub-modul" };

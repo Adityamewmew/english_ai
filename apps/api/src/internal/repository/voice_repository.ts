@@ -154,6 +154,15 @@ export const voiceRepository = {
     return byLevel || null;
   },
 
+  findModuleById: async (moduleId: string) => {
+    const [matched] = await db
+      .select()
+      .from(curriculumModules)
+      .where(and(isNull(curriculumModules.deletedAt), eq(curriculumModules.id, moduleId)))
+      .limit(1);
+    return matched || null;
+  },
+
   getModuleSections: async (moduleId: string) => {
     return db
       .select()

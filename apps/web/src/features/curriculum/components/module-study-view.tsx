@@ -202,7 +202,7 @@ export function ModuleStudyView({
       try {
         setIsFinishing(true);
         if (currentSub?.id) {
-          await submitSubModuleAction(currentSub.id, { score: 100 });
+          await submitSubModuleAction(currentSub.id, { score: 100 }, moduleId);
           playFanfareSound();
           onRefresh?.();
         }

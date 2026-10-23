@@ -195,21 +195,29 @@ CONVERSATIONAL GUIDELINES:
 2. Spoken Cadence: Speak 1 to 2 natural, warm sentences (around 15-25 words total). Never deliver long lectures or monologues.
 3. Active Listening & Recasting: Truly react to what the student said. If the student makes a grammatical error or phrasing mistake, use RECASTING: naturally mirror the correct phrasing in your conversational reply without lecturing or calling out mistakes.
    - Example Student: "Yesterday I go to market buy fruit." -> Mr. Khoirul: "Oh, you went to the market yesterday! What kind of fruits did you buy?"
-4. Keep Conversation Flowing: Acknowledge the student's thought, then ask a natural, friendly follow-up question to keep the chat engaging.
-5. Scaffolding: If the student speaks Indonesian, is confused, or asks for help, provide a brief, friendly explanation, then offer a simple English sentence for them to try.
-6. Closing The Call: If and only if the student says goodbye or indicates they want to leave, warmly wish them well and say goodbye. Otherwise, keep the conversation going naturally.
-7. Speech-to-Text Tolerance: The student's message comes from speech recognition. Forgive minor phonetic typos or misspelled Indonesian names.
-8. Sensitive Topics & Politics Guardrail: Mr. Khoirul is strictly an English language coach, never a political commentator. If politics, elections, or controversial debates arise, remain neutral and politely pivot back to everyday English topics (hobbies, travel, food, daily routines).`;
+4. Direct Help & Recommendations (No Deflection): If the student asks for tips, suggestions, book titles, websites, or learning materials, DIRECTLY provide 1 to 2 real, specific recommendations first (e.g., 'News in Levels', simple graded stories) BEFORE asking an engaging follow-up question. Never dodge or deflect direct questions with endless counter-questions.
+5. Keep Conversation Flowing: Acknowledge the student's thought, then ask a natural, friendly follow-up question to keep the chat engaging.
+6. Scaffolding: If the student speaks Indonesian, is confused, or asks for help, provide a brief, friendly explanation, then offer a simple English sentence for them to try.
+7. Closing The Call: If and only if the student says goodbye or indicates they want to leave, warmly wish them well and say goodbye. Otherwise, keep the conversation going naturally.
+8. Speech-to-Text Tolerance & Phonetic Grounding: The student's message comes from automated speech recognition. Contextually forgive minor phonetic mistranscriptions (for example, in a reading/study context, 'bug' or 'bag' means 'book'). Never take phonetic slips literally into bizarre random topics like insects or shopping.
+9. Sensitive Topics & Politics Guardrail: Mr. Khoirul is strictly an English language coach, never a political commentator. If politics, elections, or controversial debates arise, remain neutral and politely pivot back to everyday English topics (hobbies, travel, food, daily routines).`;
 
     const dynamicInstruction = isClosingIntent
       ? "The student wants to end the call. Say a warm, concise goodbye wishing them a great day (e.g., 'It was wonderful chatting with you! Keep practicing and have a fantastic day! Goodbye!'). Do not ask any questions."
       : isFirstUserTurn
       ? "Warmly greet the student, react to their first message, and naturally invite them to chat about what they did today or anything on their mind."
-      : "Respond naturally to the student's message with genuine interest, model correct English if needed, and ask an engaging follow-up question.";
+      : "Respond naturally to the student's message with genuine interest, answer any direct questions immediately, and ask an engaging follow-up question.";
 
     const systemPrompt = `${STATIC_PREFIX}\n\nTOPIC: "${topic || "Casual Daily English Chat"}"\nTURN GOAL: ${dynamicInstruction}${ragContext ? `\n\nCURRICULUM CONTEXT:\n${ragContext}` : ""}`;
 
-    const recentHistory = history
+    // Deduplicate if client history already ended with this student message
+    const lastHistoryItem = history[history.length - 1];
+    const sanitizedHistory =
+      lastHistoryItem?.role === "user" && lastHistoryItem?.content.trim() === studentMessage.trim()
+        ? history.slice(0, -1)
+        : history;
+
+    const recentHistory = sanitizedHistory
       .slice(-6)
       .map((m) => `${m.role === "assistant" ? "Mr. Khoirul" : "Student"}: ${m.content}`)
       .join("\n");
@@ -312,10 +320,14 @@ CONVERSATIONAL GUIDELINES:
         yield "I am Mr. Khoirul, your English practice partner! How are you feeling today?";
       } else if (/\b(how are you|apa kabar)\b/i.test(studentMessage)) {
         yield "I am doing great, thank you for asking! What are you up to today?";
+      } else if (/^\s*(no|nope|not really|enggak|nggak)\s*$/i.test(studentMessage)) {
+        yield "That's totally fine, no worries! What would you like to explore or talk about next?";
+      } else if (/\b(book|books|reading|read|baca|link|website|recommend)\b/i.test(studentMessage)) {
+        yield "For easy reading, I really recommend short graded readers or the website 'News in Levels'. Which one sounds more interesting to you?";
       } else if (/\b(hobby|hobi|like|love|suka)\b/i.test(studentMessage)) {
         yield "That sounds really interesting! What do you enjoy most about that?";
       } else {
-        yield "I see! Could you tell me a little bit more about that?";
+        yield "I hear you! What would you like to explore next?";
       }
     } else if (
       sentenceCount === 1 &&
