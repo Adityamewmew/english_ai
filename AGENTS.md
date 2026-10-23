@@ -219,4 +219,18 @@ bun run build                # Production build check
 1. **Batas Baris File**: Pastikan tidak ada file yang melebihi **600 baris**.
 2. **Typecheck Kontrak**: Jalankan `bun run typecheck`. Jika ada perubahan pada endpoint BE, pastikan typecheck di FE otomatis mendeteksi dan lulus uji.
 3. **Build Check**: Jalankan `bun run build` pada `apps/web` dan `apps/api`.
+
+---
+
+## Codebase Memory Protocol (Strict Memory-First)
+
+AI **WAJIB** menggunakan MCP `codebase-memory` sebagai gerbang utama sebelum menganalisis/membaca file manual:
+1. **Dilarang** membaca folder/file satu per satu atau brute-force grep untuk memahami struktur atau alur kode.
+2. **Workflow Memory-First**:
+   - **Arsitektur & Modul**: `get_architecture` (project: `english-ai`)
+   - **Pencarian Simbol / Model / Usecase**: `search_graph`
+   - **Relasi & Alur Panggilan**: `trace_path`
+   - **Multi-Hop Graph Query**: `query_graph`
+   - **Ambil Snippet Kode**: `get_code_snippet`
+3. **Fallback**: Gunakan `grep_search` atau `view_file` hanya jika simbol tidak terindeks atau saat hendak melakukan pengeditan baris kode secara presisi.
 </project-architecture-guidelines>

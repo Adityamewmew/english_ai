@@ -164,6 +164,7 @@ export const curriculumHandler = new Elysia({ prefix: "/api/curriculum" })
     "/modules/ai-generate",
     async ({ body, set }) => {
       const data = await generateModuleMaterialsUsecase({
+        moduleId: body.moduleId,
         moduleTitle: body.moduleTitle,
         cefr: body.cefr,
         objective: body.objective,
