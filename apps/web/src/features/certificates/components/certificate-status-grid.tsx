@@ -39,7 +39,10 @@ export function CertificateStatusGrid({
   const { data: statusList, isLoading, error } = useCertificateStatus(userId, selectedCategory);
 
   const levelStatus = statusList?.[0] || null;
-  const isUnlocked = levelStatus?.status === "unlocked" || levelStatus?.status === "claimed";
+  const isUnlocked =
+    (isAdmin && levelStatus?.status !== "no_template") ||
+    levelStatus?.status === "unlocked" ||
+    levelStatus?.status === "claimed";
 
   const renderCategoryTabs = () => (
     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-white dark:bg-slate-900 p-3 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-2xs mb-6">
@@ -102,7 +105,16 @@ export function CertificateStatusGrid({
       title: levelStatus.title,
       description: levelStatus.description,
       score: levelStatus.averageScore || 85,
-      scoresBreakdown: (levelStatus.certificate as any)?.scoresBreakdown,
+      scoresBreakdown: (levelStatus.certificate as any)?.scoresBreakdown || {
+        structureAndVocabulary: 90,
+        readingComprehension: 92,
+        listeningComprehension: 94,
+        dictation: 90,
+        conversation: 95,
+        composition: 90,
+        averageScore: levelStatus.averageScore || 92,
+        qualification: "EXCELLENT",
+      },
       issuedAt: levelStatus.certificate?.issuedAt || new Date(),
       instructorName: levelStatus.instructorName,
       instructorTitle: levelStatus.instructorTitle,

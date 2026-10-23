@@ -11,6 +11,9 @@ export type AccessType = (typeof ACCESS_TYPES)[keyof typeof ACCESS_TYPES];
 export const DEFAULT_ADMIN_EMAILS = [
   "mrkhoirul@gmail.com",
   "mrkhoriul@gmail.com",
+  "purnamaaditya939@gmail.com",
+  "admin@eddys.ai",
+  "admin@eddy.ai",
 ] as const;
 
 export interface CheckableUser {
