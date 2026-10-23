@@ -74,6 +74,14 @@ export function CertificateStatusGrid({
       placeOfEntry: (levelStatus as any).placeOfEntry,
       nameYPercent: levelStatus.nameYPercent,
       nameFontSize: levelStatus.nameFontSize,
+      scoresYPercent: (levelStatus as any).scoresYPercent,
+      scoresFontSize: (levelStatus as any).scoresFontSize,
+      dateYPercent: (levelStatus as any).dateYPercent,
+      dateFontSize: (levelStatus as any).dateFontSize,
+      placeYPercent: (levelStatus as any).placeYPercent,
+      placeFontSize: (levelStatus as any).placeFontSize,
+      refNoYPercent: (levelStatus as any).refNoYPercent,
+      refNoFontSize: (levelStatus as any).refNoFontSize,
     };
 
     return (

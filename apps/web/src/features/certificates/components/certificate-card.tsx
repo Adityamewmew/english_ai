@@ -31,6 +31,14 @@ export interface CertificateModalData {
   placeOfEntry?: string | null;
   nameYPercent?: number | null;
   nameFontSize?: number | null;
+  scoresYPercent?: number | null;
+  scoresFontSize?: number | null;
+  dateYPercent?: number | null;
+  dateFontSize?: number | null;
+  placeYPercent?: number | null;
+  placeFontSize?: number | null;
+  refNoYPercent?: number | null;
+  refNoFontSize?: number | null;
 }
 
 interface CertificateCardProps {
@@ -114,10 +122,138 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
         />
       )}
 
-      {/* Decorative Gold Top Accent Bar */}
-      <div className="absolute top-0 left-0 w-24 sm:w-32 h-2.5 sm:h-3.5 bg-gradient-to-r from-[#F4B41A] to-[#D4AF37] z-10" />
+      {/* Decorative Gold Top Accent Bar (for generated template) */}
+      {!fullBackgroundUrl && (
+        <div className="absolute top-0 left-0 w-24 sm:w-32 h-2.5 sm:h-3.5 bg-gradient-to-r from-[#F4B41A] to-[#D4AF37] z-10" />
+      )}
 
-      {isPortrait ? (
+      {fullBackgroundUrl ? (
+        /* =========================================================================
+           OFFICIAL TEMPLATE BACKGROUND OVERLAY MODE
+           Positions match exact coordinates configured in admin portal
+           ========================================================================= */
+        <div className="relative inset-0 w-full h-full z-10 pointer-events-none select-none">
+          {/* 1. Student Name Overlay */}
+          <div
+            className="absolute left-0 right-0 flex items-center justify-center px-4 z-20"
+            style={{
+              top: `${data.nameYPercent ?? 34}%`,
+              transform: "translateY(-50%)",
+            }}
+          >
+            <span
+              className="font-serif font-black text-[#0D3B66] text-center drop-shadow-xs tracking-wide leading-none"
+              style={{
+                fontSize: `${(data.nameFontSize ?? 26) * 0.85}px`,
+              }}
+            >
+              {data.userName}
+            </span>
+          </div>
+
+          {/* 2. Scores Overlay (Breakdown 6 Nilai + Pass Standard) */}
+          <div
+            className="absolute left-0 right-0 flex flex-col items-center justify-center px-2 z-10"
+            style={{
+              top: `${data.scoresYPercent ?? 52}%`,
+              transform: "translateY(-50%)",
+            }}
+          >
+            <div className="space-y-1 text-center">
+              <div
+                className="max-w-[240px] sm:max-w-[280px] mx-auto text-left font-mono font-bold space-y-0.5 text-slate-900 bg-white/85 backdrop-blur-2xs p-2 rounded border border-slate-200/80 shadow-2xs"
+                style={{
+                  fontSize: `${(data.scoresFontSize ?? 10) * 0.95}px`,
+                }}
+              >
+                <div className="flex justify-between">
+                  <span>STRUCTURE &amp; VOCABULARY</span>
+                  <span>: {scores.structureAndVocabulary ?? 85}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>READING COMPREHENSION</span>
+                  <span>: {scores.readingComprehension ?? 86}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>LISTENING COMPREHENSION</span>
+                  <span>: {scores.listeningComprehension ?? 87}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>DICTATION</span>
+                  <span>: {scores.dictation ?? 91}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>CONVERSATION</span>
+                  <span>: {scores.conversation ?? 90}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>COMPOSITION</span>
+                  <span>: {scores.composition ?? 86}</span>
+                </div>
+              </div>
+              <div className="inline-block border border-slate-700/60 rounded-xl px-2.5 py-0.5 bg-[#FCFBF7]/90 text-[7px] sm:text-[8px] shadow-2xs font-mono text-slate-800">
+                <p className="font-bold">89-100 = EXCELLENT · 76-88 = GOOD · 60-75 = FAIR</p>
+              </div>
+            </div>
+          </div>
+
+          {/* 3. Date of Examination Overlay */}
+          <div
+            className="absolute left-4 sm:left-6 text-left z-10"
+            style={{
+              top: `${data.dateYPercent ?? 80}%`,
+              transform: "translateY(-50%)",
+            }}
+          >
+            <div
+              className="bg-white/75 backdrop-blur-2xs p-1 rounded border border-slate-200/60 shadow-2xs"
+              style={{ fontSize: `${data.dateFontSize ?? 8}px` }}
+            >
+              <p className="font-bold text-slate-900 leading-none mb-0.5">Date of Examination</p>
+              <p className="text-slate-600 font-mono leading-none">{formattedDate}</p>
+            </div>
+          </div>
+
+          {/* 4. Place of Entry Overlay */}
+          <div
+            className="absolute text-center z-10 max-w-[140px] sm:max-w-[180px]"
+            style={{
+              top: `${data.placeYPercent ?? 80}%`,
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
+          >
+            <div
+              className="bg-white/75 backdrop-blur-2xs p-1 rounded border border-slate-200/60 shadow-2xs"
+              style={{ fontSize: `${data.placeFontSize ?? 8}px` }}
+            >
+              <p className="font-bold text-slate-900 leading-none mb-0.5">Place of Entry</p>
+              <p className="text-slate-600 leading-tight">
+                {data.placeOfEntry || "PBN Kelapa Gading, D.18 Jember East Java"}
+              </p>
+            </div>
+          </div>
+
+          {/* 5. Reference No Overlay */}
+          <div
+            className="absolute right-4 sm:right-6 text-right z-10"
+            style={{
+              top: `${data.refNoYPercent ?? 80}%`,
+              transform: "translateY(-50%)",
+            }}
+          >
+            <div
+              className="bg-white/75 backdrop-blur-2xs p-1 rounded border border-slate-200/60 shadow-2xs"
+              style={{ fontSize: `${data.refNoFontSize ?? 8}px` }}
+            >
+              <p className="font-bold text-slate-900 leading-none mb-0.5">Reference No.</p>
+              <p className="font-bold text-slate-900 font-mono leading-none">
+                {data.certificateNumber}
+              </p>
+            </div>
+          </div>
+        </div>
+      ) : isPortrait ? (
         /* =========================================================================
            PORTRAIT OFFICIAL EDDY'S LOCAL EXAMINATION CERTIFICATE
            ========================================================================= */

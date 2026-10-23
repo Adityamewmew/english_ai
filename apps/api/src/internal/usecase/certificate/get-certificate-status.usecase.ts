@@ -12,6 +12,14 @@ export interface CefrCertificateStatus {
   themeColor: string | null;
   nameYPercent?: number | null;
   nameFontSize?: number | null;
+  scoresYPercent?: number | null;
+  scoresFontSize?: number | null;
+  dateYPercent?: number | null;
+  dateFontSize?: number | null;
+  placeYPercent?: number | null;
+  placeFontSize?: number | null;
+  refNoYPercent?: number | null;
+  refNoFontSize?: number | null;
   orientation?: string | null;
   placeOfEntry?: string | null;
   totalModules: number;
@@ -132,6 +140,14 @@ export const getCertificateStatusUsecase = async (
       themeColor: template.themeColor,
       nameYPercent: template.nameYPercent ?? 48,
       nameFontSize: template.nameFontSize ?? 36,
+      scoresYPercent: template.scoresYPercent ?? 50,
+      scoresFontSize: template.scoresFontSize ?? 11,
+      dateYPercent: template.dateYPercent ?? 80,
+      dateFontSize: template.dateFontSize ?? 10,
+      placeYPercent: template.placeYPercent ?? 80,
+      placeFontSize: template.placeFontSize ?? 10,
+      refNoYPercent: template.refNoYPercent ?? 80,
+      refNoFontSize: template.refNoFontSize ?? 10,
       orientation: template.orientation ?? "portrait",
       placeOfEntry: template.placeOfEntry ?? "PBN Kelapa Gading, D.18 Jember East Java",
       totalModules: stats.totalModules,
