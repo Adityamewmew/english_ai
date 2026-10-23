@@ -56,14 +56,28 @@ export function CertificateStatusGrid({
 
   // 1. UNLOCKED STATE: Student completed all modules!
   if (isUnlocked && levelStatus) {
+    const cert = levelStatus.certificate as any;
     const certData = {
-      certificateNumber: levelStatus.certificate?.certificateNumber || `EDDY-${studentCategory}-CERT`,
+      certificateNumber:
+        cert?.certificateNumber || `EE-RC-A-${studentCategory}-X/26-001`,
       userName: userName || "Student",
       cefrLevel: studentCategory,
       title: levelStatus.title,
       description: levelStatus.description,
-      score: levelStatus.averageScore || 85,
-      issuedAt: levelStatus.certificate?.issuedAt || new Date(),
+      score: cert?.score || levelStatus.averageScore || 85,
+      structureScore: cert?.structureScore ?? 85,
+      readingScore: cert?.readingScore ?? 86,
+      listeningScore: cert?.listeningScore ?? 87,
+      dictationScore: cert?.dictationScore ?? 91,
+      conversationScore: cert?.conversationScore ?? 90,
+      compositionScore: cert?.compositionScore ?? 86,
+      grade:
+        cert?.grade ??
+        ((cert?.score || levelStatus.averageScore || 85) >= 89
+          ? "EXCELLENT"
+          : "GOOD"),
+      issuedAt: cert?.issuedAt || new Date(),
+      examDate: cert?.completedAt || cert?.issuedAt || new Date(),
       instructorName: levelStatus.instructorName,
       instructorTitle: levelStatus.instructorTitle,
       backgroundUrl: levelStatus.backgroundUrl,

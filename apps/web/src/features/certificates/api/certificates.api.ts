@@ -33,6 +33,13 @@ export interface UserCertificateItem {
   userName: string;
   cefrLevel: string;
   score: number;
+  structureScore?: number | null;
+  readingScore?: number | null;
+  listeningScore?: number | null;
+  dictationScore?: number | null;
+  conversationScore?: number | null;
+  compositionScore?: number | null;
+  grade?: string | null;
   completedAt: string | Date;
   issuedAt: string | Date;
   template: {

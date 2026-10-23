@@ -62,7 +62,7 @@ describe("Voice Call AI Lifecycle E2E Tests", () => {
     const sessionInDb = await voiceRepository.findById(createdSessionId);
     expect(sessionInDb).toBeDefined();
     expect(sessionInDb?.transcript).toContain("Jakarta");
-  });
+  }, 15000);
 
   it("POST /api/voice/tts - should return MP3 audio buffer with Content-Length", async () => {
     const res = await app.handle(

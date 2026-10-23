@@ -40,13 +40,29 @@ export const claimCertificateUsecase = async (
     );
   }
 
-  // Generate unique Certificate Number
-  const dateStr = new Date().toISOString().slice(0, 7).replace("-", ""); // e.g. 202610
-  const randomSuffix = Math.random().toString(36).substring(2, 6).toUpperCase();
-  const certificateNumber = `EDDY-${normalizedCefr}-${dateStr}-${randomSuffix}`;
+  // Generate Official Reference Number: EE-RC-A-{CEFR}-{ROMAN_MONTH}/{YY}-{RUNNING_NO}
+  const romanMonths = [
+    "I",
+    "II",
+    "III",
+    "IV",
+    "V",
+    "VI",
+    "VII",
+    "VIII",
+    "IX",
+    "X",
+    "XI",
+    "XII",
+  ];
+  const now = new Date();
+  const romanMonth = romanMonths[now.getMonth()];
+  const yy = String(now.getFullYear()).slice(-2);
+  const count = await certificateRepository.countCertificatesByCefr(normalizedCefr);
+  const runningNo = String(count + 1).padStart(3, "0");
+  const certificateNumber = `EE-RC-A-${normalizedCefr}-${romanMonth}/${yy}-${runningNo}`;
 
   const certId = crypto.randomUUID();
-  const now = new Date();
 
   const cert = await certificateRepository.createUserCertificate({
     id: certId,
@@ -55,6 +71,13 @@ export const claimCertificateUsecase = async (
     cefrLevel: normalizedCefr,
     userName: user.name || "Student",
     score: stats.averageScore || 85,
+    structureScore: stats.skills?.structureScore ?? 85,
+    readingScore: stats.skills?.readingScore ?? 85,
+    listeningScore: stats.skills?.listeningScore ?? 85,
+    dictationScore: stats.skills?.dictationScore ?? 85,
+    conversationScore: stats.skills?.conversationScore ?? 85,
+    compositionScore: stats.skills?.compositionScore ?? 85,
+    grade: stats.grade || "GOOD",
   });
 
   const template = await certificateRepository.findTemplateByCefr(normalizedCefr);

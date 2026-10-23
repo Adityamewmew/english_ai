@@ -21,6 +21,13 @@ export interface CefrCertificateStatus {
     id: string;
     certificateNumber: string;
     score: number;
+    structureScore?: number | null;
+    readingScore?: number | null;
+    listeningScore?: number | null;
+    dictationScore?: number | null;
+    conversationScore?: number | null;
+    compositionScore?: number | null;
+    grade?: string | null;
     completedAt: Date;
     issuedAt: Date;
   } | null;
@@ -73,9 +80,26 @@ export const getCertificateStatusUsecase = async (
 
     // Auto-issue certificate if all modules completed and not already issued
     if (!existingCert && stats.isEligible) {
-      const dateStr = new Date().toISOString().slice(0, 7).replace("-", "");
-      const randomSuffix = crypto.randomUUID().slice(0, 8).toUpperCase();
-      const certificateNumber = `EDDY-${cefr}-${dateStr}-${randomSuffix}`;
+      const romanMonths = [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX",
+        "X",
+        "XI",
+        "XII",
+      ];
+      const now = new Date();
+      const romanMonth = romanMonths[now.getMonth()];
+      const yy = String(now.getFullYear()).slice(-2);
+      const count = await certificateRepository.countCertificatesByCefr(cefr);
+      const runningNo = String(count + 1).padStart(3, "0");
+      const certificateNumber = `EE-RC-A-${cefr}-${romanMonth}/${yy}-${runningNo}`;
       const certId = crypto.randomUUID();
 
       existingCert = await certificateRepository.createUserCertificate({
@@ -85,6 +109,13 @@ export const getCertificateStatusUsecase = async (
         cefrLevel: cefr,
         userName: user?.name || "Student",
         score: stats.averageScore || 85,
+        structureScore: stats.skills?.structureScore ?? 85,
+        readingScore: stats.skills?.readingScore ?? 85,
+        listeningScore: stats.skills?.listeningScore ?? 85,
+        dictationScore: stats.skills?.dictationScore ?? 85,
+        conversationScore: stats.skills?.conversationScore ?? 85,
+        compositionScore: stats.skills?.compositionScore ?? 85,
+        grade: stats.grade || "GOOD",
       });
     }
 
@@ -116,6 +147,31 @@ export const getCertificateStatusUsecase = async (
             id: existingCert.id,
             certificateNumber: existingCert.certificateNumber,
             score: existingCert.score,
+            structureScore:
+              existingCert.structureScore ??
+              stats.skills?.structureScore ??
+              existingCert.score,
+            readingScore:
+              existingCert.readingScore ??
+              stats.skills?.readingScore ??
+              existingCert.score,
+            listeningScore:
+              existingCert.listeningScore ??
+              stats.skills?.listeningScore ??
+              existingCert.score,
+            dictationScore:
+              existingCert.dictationScore ??
+              stats.skills?.dictationScore ??
+              existingCert.score,
+            conversationScore:
+              existingCert.conversationScore ??
+              stats.skills?.conversationScore ??
+              existingCert.score,
+            compositionScore:
+              existingCert.compositionScore ??
+              stats.skills?.compositionScore ??
+              existingCert.score,
+            grade: existingCert.grade ?? stats.grade ?? "GOOD",
             completedAt: existingCert.completedAt,
             issuedAt: existingCert.issuedAt,
           }

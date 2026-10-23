@@ -14,6 +14,15 @@ export const getMyCertificatesUsecase = async (userId: string) => {
       userName: cert.userName,
       cefrLevel: cert.cefrLevel,
       score: cert.score,
+      structureScore: cert.structureScore ?? cert.score,
+      readingScore: cert.readingScore ?? cert.score,
+      listeningScore: cert.listeningScore ?? cert.score,
+      dictationScore: cert.dictationScore ?? cert.score,
+      conversationScore: cert.conversationScore ?? cert.score,
+      compositionScore: cert.compositionScore ?? cert.score,
+      grade:
+        cert.grade ??
+        (cert.score >= 89 ? "EXCELLENT" : cert.score >= 76 ? "GOOD" : "FAIR"),
       completedAt: cert.completedAt,
       issuedAt: cert.issuedAt,
       template: template

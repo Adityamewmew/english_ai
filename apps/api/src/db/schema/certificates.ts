@@ -22,6 +22,13 @@ export const userCertificates = pgTable("user_certificates", {
   cefrLevel: varchar("cefr_level", { length: 20 }).notNull(),
   userName: varchar("user_name", { length: 150 }).notNull(),
   score: integer("score").notNull().default(85),
+  structureScore: integer("structure_score").default(85),
+  readingScore: integer("reading_score").default(85),
+  listeningScore: integer("listening_score").default(85),
+  dictationScore: integer("dictation_score").default(85),
+  conversationScore: integer("conversation_score").default(85),
+  compositionScore: integer("composition_score").default(85),
+  grade: varchar("grade", { length: 20 }).default("GOOD"),
   completedAt: timestamp("completed_at").defaultNow().notNull(),
   issuedAt: timestamp("issued_at").defaultNow().notNull(),
 });
