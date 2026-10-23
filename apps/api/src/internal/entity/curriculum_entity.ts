@@ -49,6 +49,9 @@ export const GenerateModuleMaterialsBody = t.Object({
   objective: t.Optional(t.String()),
   customInstructions: t.Optional(t.String()),
   skillType: t.Optional(t.String()),
+  documentBase64: t.Optional(t.String()),
+  documentMimeType: t.Optional(t.String()),
+  documentText: t.Optional(t.String()),
 });
 
 export type GenerateModuleMaterialsBody = typeof GenerateModuleMaterialsBody.static;

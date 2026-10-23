@@ -169,6 +169,9 @@ export const curriculumHandler = new Elysia({ prefix: "/api/curriculum" })
         objective: body.objective,
         customInstructions: body.customInstructions,
         skillType: body.skillType as any,
+        documentBase64: body.documentBase64,
+        documentMimeType: body.documentMimeType,
+        documentText: body.documentText,
       });
       return jsonResponse({
         set,

@@ -6,6 +6,9 @@ export interface GenerateModuleMaterialsInput {
   objective?: string;
   customInstructions?: string;
   skillType?: "reading" | "listening" | "writing" | "speaking" | "assessment" | "all";
+  documentBase64?: string;
+  documentMimeType?: string;
+  documentText?: string;
 }
 
 export interface GeneratedSectionItem {
@@ -27,7 +30,16 @@ const OMNI_MODEL = "antigravity/gemini-3.8-flash-tiered";
 export async function generateModuleMaterialsUsecase(
   input: GenerateModuleMaterialsInput
 ): Promise<GeneratedModuleResponse> {
-  const { moduleTitle, cefr, objective, customInstructions, skillType = "all" } = input;
+  const {
+    moduleTitle,
+    cefr,
+    objective,
+    customInstructions,
+    skillType = "all",
+    documentBase64,
+    documentMimeType,
+    documentText,
+  } = input;
 
   if (!moduleTitle) {
     throw new AppError("Judul modul wajib diisi", 400);
@@ -156,6 +168,24 @@ Each key must contain an array of section objects matching the section types def
 }`;
   }
 
+  if (documentText) {
+    userPrompt += `\n\n[DOCUMENT REFERENCE TEXT / TRANSCRIPT]:\n"""\n${documentText.slice(0, 45000)}\n"""\nInstructions: The user provided the reference document above. Carefully analyze and distill its content to extract the core vocabulary, grammar points, contextual dialogue scenarios, and assessment questions directly aligned with this text, formatted to CEFR ${cefr.toUpperCase()} standard.`;
+  }
+
+  let userMessageContent: any = userPrompt;
+  if (documentBase64 && documentMimeType) {
+    const docPrompt = `${userPrompt}\n\nInstructions: The user attached a document (PDF or Image). Thoroughly scan, read, and distill the visual and textual content of this document. Extract the core language skills, key vocabulary, grammar points, realistic dialogues, and comprehension quiz based directly on this document, adhering strictly to CEFR ${cefr.toUpperCase()} level.`;
+    userMessageContent = [
+      { type: "text", text: docPrompt },
+      {
+        type: "image_url",
+        image_url: {
+          url: `data:${documentMimeType};base64,${documentBase64}`,
+        },
+      },
+    ];
+  }
+
   try {
     const res = await fetch(`${OMNI_API_URL}/chat/completions`, {
       method: "POST",
@@ -167,7 +197,7 @@ Each key must contain an array of section objects matching the section types def
         model: OMNI_MODEL,
         messages: [
           { role: "system", content: systemPrompt },
-          { role: "user", content: userPrompt },
+          { role: "user", content: userMessageContent },
         ],
         temperature: 0.7,
       }),
