@@ -10,15 +10,15 @@ import {
 } from "./prompts";
 
 export interface GenerateModuleMaterialsInput {
-  moduleId?: string;
+  moduleId?: string | null;
   moduleTitle: string;
   cefr: string; // "A1" | "A2" | "B1" | "B2" | "C1" | "C2"
-  objective?: string;
-  customInstructions?: string;
-  skillType?: "reading" | "listening" | "writing" | "speaking" | "assessment" | "all";
-  documentBase64?: string;
-  documentMimeType?: string;
-  documentText?: string;
+  objective?: string | null;
+  customInstructions?: string | null;
+  skillType?: "reading" | "listening" | "writing" | "speaking" | "assessment" | "all" | string | null;
+  documentBase64?: string | null;
+  documentMimeType?: string | null;
+  documentText?: string | null;
 }
 
 export interface GeneratedModuleResponse {
@@ -42,10 +42,10 @@ function buildSkillPrompt(
 function prepareUserContent(
   baseUserPrompt: string,
   options: {
-    customInstructions?: string;
-    documentText?: string;
-    documentBase64?: string;
-    documentMimeType?: string;
+    customInstructions?: string | null;
+    documentText?: string | null;
+    documentBase64?: string | null;
+    documentMimeType?: string | null;
     cefr: string;
   }
 ): string | any[] {
@@ -53,12 +53,43 @@ function prepareUserContent(
   if (options.customInstructions) {
     text += `\n\n[ADMIN CUSTOM INSTRUCTIONS]:\n${options.customInstructions}`;
   }
-  if (options.documentText) {
-    text += `\n\n[DOCUMENT REFERENCE TEXT / TRANSCRIPT]:\n"""\n${options.documentText.slice(0, 45000)}\n"""\nInstructions: Carefully analyze and distill the attached reference document. Extract core vocabulary, grammar points, contextual dialogue scenarios, and assessment questions directly aligned with this text, formatted to CEFR ${options.cefr.toUpperCase()} standard.`;
+
+  let docText = options.documentText || "";
+  if (!docText && options.documentBase64 && options.documentMimeType === "application/pdf") {
+    try {
+      const buf = Buffer.from(options.documentBase64, "base64");
+      const raw = buf.toString("latin1");
+      const matches: string[] = [];
+      const tjRegex = /\(([^)]+)\)\s*Tj/g;
+      let m: RegExpExecArray | null;
+      while ((m = tjRegex.exec(raw)) !== null) {
+        matches.push(m[1]);
+      }
+      if (matches.length > 5) {
+        docText = matches.join(" ");
+      } else {
+        const wordRegex = /[a-zA-Z0-9.,;:!?'"\-\s]{4,}/g;
+        const words: string[] = [];
+        while ((m = wordRegex.exec(raw)) !== null && words.length < 2000) {
+          words.push(m[0].trim());
+        }
+        docText = words.filter((w) => w.length > 3).join(" ");
+      }
+    } catch (e) {
+      console.warn("Failed to extract text from PDF buffer:", e);
+    }
   }
 
-  if (options.documentBase64 && options.documentMimeType) {
-    const docPrompt = `${text}\n\nInstructions: The user attached a document/image. Thoroughly scan, read, and distill its visual and textual content. Extract the core language skills, key vocabulary, grammar points, and comprehension quiz based directly on this document, adhering strictly to CEFR ${options.cefr.toUpperCase()} level.`;
+  if (docText) {
+    text += `\n\n[DOCUMENT REFERENCE TEXT / TRANSCRIPT]:\n"""\n${docText.slice(0, 45000)}\n"""\nInstructions: Carefully analyze and distill the attached reference document. Extract core vocabulary, grammar points, contextual dialogue scenarios, and assessment questions directly aligned with this text, formatted to CEFR ${options.cefr.toUpperCase()} standard.`;
+  }
+
+  if (
+    options.documentBase64 &&
+    options.documentMimeType &&
+    options.documentMimeType.startsWith("image/")
+  ) {
+    const docPrompt = `${text}\n\nInstructions: The user attached an image. Thoroughly scan, read, and distill its visual and textual content. Extract the core language skills, key vocabulary, grammar points, and comprehension quiz based directly on this document, adhering strictly to CEFR ${options.cefr.toUpperCase()} level.`;
     return [
       { type: "text", text: docPrompt },
       {
@@ -93,12 +124,12 @@ export async function generateModuleMaterialsUsecase(
   }
 
   const unitData: UnitBaseData = {
-    id: moduleId,
+    id: moduleId || "custom-module",
     levelId: cefr,
     title: moduleTitle,
     cefr: cefr.toUpperCase(),
     group: `${cefr.toUpperCase()} Curriculum`,
-    objective: objective || `Master ${moduleTitle} at ${cefr.toUpperCase()} level`,
+    objective: (objective && objective.trim()) || `Master ${moduleTitle} at ${cefr.toUpperCase()} level`,
     orderIndex: 1,
   };
 
@@ -150,7 +181,7 @@ export async function generateModuleMaterialsUsecase(
     }
 
     // Single skill generation
-    const targetSkill = skillType === "assessment" ? "writing" : skillType;
+    const targetSkill = (skillType === "assessment" || !skillType) ? "writing" : skillType;
     const p = buildSkillPrompt(targetSkill, unitData);
     const userContent = prepareUserContent(p.user, {
       customInstructions,
