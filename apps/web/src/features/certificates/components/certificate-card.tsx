@@ -137,7 +137,7 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
            OFFICIAL TEMPLATE BACKGROUND OVERLAY MODE
            Positions match exact coordinates configured in admin portal
            ========================================================================= */
-        <div className="relative inset-0 w-full h-full z-10 pointer-events-none select-none">
+        <div className="absolute inset-0 w-full h-full z-10 pointer-events-none select-none">
           {/* 1. Student Name Overlay */}
           <div
             className="absolute z-20 flex items-center justify-center px-2"
