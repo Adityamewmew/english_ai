@@ -130,11 +130,11 @@ export function ModuleMissionsHub({
         {/* Mobile Breadcrumb */}
         <div className="flex items-center gap-1.5 text-[11px] font-medium text-slate-500">
           <Link href="/dashboard" className="hover:text-[#0D3B66]">
-            Beranda
+            Dashboard
           </Link>
           <ChevronRight className="w-3 h-3 text-slate-400" />
           <Link href="/modules" className="hover:text-[#0D3B66]">
-            Modul
+            Modules
           </Link>
           <ChevronRight className="w-3 h-3 text-slate-400" />
           <span className="text-[#0D3B66] font-mono font-bold">
