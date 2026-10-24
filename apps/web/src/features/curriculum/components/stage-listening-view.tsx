@@ -218,7 +218,10 @@ export function StageListeningView({
 
       {/* LANGKAH 4: Audio Dictation Mini-Drill */}
       {activeStepId === 4 && (
-        <div className="space-y-6 animate-in fade-in duration-300">
+        <div
+          onClick={() => onStepComplete?.()}
+          className="space-y-6 animate-in fade-in duration-300"
+        >
           <div className="space-y-1.5 pb-3 border-b border-slate-100 dark:border-slate-800">
             <span className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] uppercase tracking-wider block font-mono">
               Step 4 · Audio Dictation Mini-Drill

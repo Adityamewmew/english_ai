@@ -34,6 +34,12 @@ export function ConceptChecksCard({
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
   const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>({});
 
+  React.useEffect(() => {
+    if (!conceptChecks || conceptChecks.length === 0) {
+      onCompleted?.();
+    }
+  }, [conceptChecks, onCompleted]);
+
   if (!conceptChecks || conceptChecks.length === 0) return null;
 
   const colorStyles = {

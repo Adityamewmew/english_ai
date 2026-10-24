@@ -152,17 +152,46 @@ export async function submitSubModuleUsecase(
         completedAt: new Date(),
       });
 
-      // Unlock next module if available
-      const allModules = await curriculumRepository.findModules();
-      const modIdx = allModules.findIndex((m: any) => m.id === subModule.moduleId);
-      if (modIdx !== -1 && modIdx + 1 < allModules.length) {
-        const nextModId = allModules[modIdx + 1]?.id;
-        if (nextModId) {
-          const existingNextMod = await curriculumRepository.findUserModuleProgress(userId, nextModId);
-          if (!existingNextMod || existingNextMod.status === "locked") {
-            await curriculumRepository.upsertProgress({
+      // Unlock next module within the same CEFR level
+      const levelModules = await curriculumRepository.findModules(module.levelId);
+      const modIdx = levelModules.findIndex((m: any) => m.id === subModule.moduleId);
+
+      let targetNextModId: string | null = null;
+
+      if (modIdx !== -1 && modIdx + 1 < levelModules.length) {
+        targetNextModId = levelModules[modIdx + 1]?.id ?? null;
+      } else {
+        // Current level completed! Find and unlock first module of next CEFR level
+        const allLevels = await curriculumRepository.findAllLevels();
+        const currentLvlIdx = allLevels.findIndex((l: any) => l.id === module.levelId);
+        if (currentLvlIdx !== -1 && currentLvlIdx + 1 < allLevels.length) {
+          const nextLevel = allLevels[currentLvlIdx + 1];
+          const nextLevelMods = await curriculumRepository.findModules(nextLevel.id);
+          if (nextLevelMods.length > 0) {
+            targetNextModId = nextLevelMods[0].id;
+          }
+        }
+      }
+
+      if (targetNextModId) {
+        const existingNextMod = await curriculumRepository.findUserModuleProgress(userId, targetNextModId);
+        if (!existingNextMod || existingNextMod.status === "locked") {
+          await curriculumRepository.upsertProgress({
+            userId,
+            moduleId: targetNextModId,
+            status: "unlocked",
+          });
+        }
+
+        // Auto-unlock first sub-module of next module
+        const nextModSubs = await curriculumRepository.findSubModulesByModuleId(targetNextModId);
+        if (nextModSubs.length > 0) {
+          const firstSubId = nextModSubs[0].id;
+          const existingFirstSub = await curriculumRepository.findUserSubModuleProgress(userId, firstSubId);
+          if (!existingFirstSub || existingFirstSub.status === "locked") {
+            await curriculumRepository.upsertSubModuleProgress({
               userId,
-              moduleId: nextModId,
+              subModuleId: firstSubId,
               status: "unlocked",
             });
           }

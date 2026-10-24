@@ -105,6 +105,19 @@ export function SpeakingRoleplayStage({
             )}
           </div>
         )}
+
+        {/* Fallback Skip Call if mic not available */}
+        {!isCompleted && onNextStep && (
+          <div className="pt-2 flex justify-end">
+            <button
+              type="button"
+              onClick={onNextStep}
+              className="text-xs font-semibold text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors py-1 px-2"
+            >
+              Skip Voice Call &amp; Continue &rarr;
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
