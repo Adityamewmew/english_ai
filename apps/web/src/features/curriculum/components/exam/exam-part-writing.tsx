@@ -55,14 +55,19 @@ export function ExamPartWriting({
                   <div className="text-sm font-semibold text-slate-800 dark:text-slate-200 leading-relaxed">
                     {item.instruction || "Complete or construct the sentence according to the instructions below:"}
                   </div>
-                  {(item.promptText || item.prompt || item.sentence) && (
-                    <div className="p-3.5 rounded-xl bg-rose-50/70 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/60 text-sm font-bold text-slate-900 dark:text-white font-mono leading-relaxed shadow-2xs">
-                      <span className="text-[10px] uppercase tracking-wider font-sans font-bold text-rose-700 dark:text-rose-400 block mb-1">
-                        Target Sentence / Prompt:
-                      </span>
-                      {item.promptText || item.sentence || item.prompt}
-                    </div>
-                  )}
+                  {(() => {
+                    const rawPrompt = item.promptText || item.sentence || item.prompt;
+                    if (!rawPrompt) return null;
+                    const promptStr = typeof rawPrompt === "string" ? rawPrompt : rawPrompt?.text || rawPrompt?.prompt || rawPrompt?.sentence || String(rawPrompt ?? "");
+                    return (
+                      <div className="p-3.5 rounded-xl bg-rose-50/70 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/60 text-sm font-bold text-slate-900 dark:text-white font-mono leading-relaxed shadow-2xs">
+                        <span className="text-[10px] uppercase tracking-wider font-sans font-bold text-rose-700 dark:text-rose-400 block mb-1">
+                          Target Sentence / Prompt:
+                        </span>
+                        {promptStr}
+                      </div>
+                    );
+                  })()}
                   {item.hint && (
                     <div className="text-xs text-slate-500 dark:text-slate-400 italic">
                       Hint: {item.hint}

@@ -445,11 +445,12 @@ export function ListeningPracticumStage({
                 </div>
               )}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {currentQ.options?.map((opt: string, optIdx: number) => {
-                  const isSelected = selectedOption === opt;
+                {currentQ.options?.map((opt: any, optIdx: number) => {
+                  const optText = typeof opt === "string" ? opt : (opt as any)?.text || (opt as any)?.label || String(opt ?? "");
+                  const isSelected = selectedOption === optText;
                   const isAnswer =
                     isChecked &&
-                    opt.trim().toLowerCase() ===
+                    optText.trim().toLowerCase() ===
                       ((currentQ as any).answer || (currentQ as any).correctAnswer || "").trim().toLowerCase();
                   const isWrongSelected = isChecked && isSelected && !isAnswer;
 
@@ -458,7 +459,7 @@ export function ListeningPracticumStage({
                       key={optIdx}
                       type="button"
                       disabled={isChecked}
-                      onClick={() => setSelectedOption(opt)}
+                      onClick={() => setSelectedOption(optText)}
                       className={`p-3.5 sm:p-4 rounded-2xl border text-left font-semibold text-xs sm:text-sm transition-all cursor-pointer min-h-[48px] flex items-center justify-between gap-3 ${
                         isAnswer
                           ? "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 text-emerald-900 dark:text-emerald-200"
@@ -469,7 +470,7 @@ export function ListeningPracticumStage({
                           : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:border-slate-400"
                       }`}
                     >
-                      <span>{opt}</span>
+                      <span>{optText}</span>
                       {isChecked && isAnswer && <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />}
                       {isChecked && isWrongSelected && <HelpCircle className="w-4 h-4 text-rose-600 shrink-0" />}
                     </button>

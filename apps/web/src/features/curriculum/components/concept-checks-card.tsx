@@ -117,7 +117,7 @@ export function ConceptChecksCard({
             onClick={() => onCompleted?.()}
             className="ml-auto px-3.5 py-1.5 rounded-xl border border-dashed border-amber-400 text-amber-600 dark:text-amber-400 text-xs font-bold hover:bg-amber-50 dark:hover:bg-amber-950/30 transition-all cursor-pointer shadow-2xs"
           >
-            Lewati Kuis (Admin)
+            Skip Quiz (Admin)
           </button>
         )}
       </div>
@@ -145,11 +145,12 @@ export function ConceptChecksCard({
 
               <div className="grid gap-2 sm:grid-cols-2 pt-1">
                 {check.options?.map((opt, optIdx) => {
-                  const isThisSelected = selected === opt;
+                  const optText = typeof opt === "string" ? opt : (opt as any)?.text || (opt as any)?.label || String(opt ?? "");
+                  const isThisSelected = selected === optText;
                   let btnStyle = "bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 border-b-2 border-b-slate-300 dark:border-b-slate-700 hover:border-[#0D3B66]/40 active:translate-y-[1px]";
 
                   if (hasAnswered) {
-                    if (opt.trim().toLowerCase() === expected) {
+                    if (optText.trim().toLowerCase() === expected) {
                       btnStyle = "bg-[#0D3B66]/10 dark:bg-slate-800 border-[#0D3B66] text-[#0D3B66] dark:text-[#F4B41A] font-bold border-b-2 border-b-[#082542]";
                     } else if (isThisSelected && !isCorrect) {
                       btnStyle = "bg-[#9E1B1B]/10 dark:bg-[#9E1B1B]/20 border-[#9E1B1B] text-[#9E1B1B] border-b-2 border-b-[#841515] font-bold";
@@ -163,11 +164,11 @@ export function ConceptChecksCard({
                       key={optIdx}
                       type="button"
                       disabled={hasAnswered}
-                      onClick={(e) => handleSelect(qIdx, opt, e.currentTarget)}
+                      onClick={(e) => handleSelect(qIdx, optText, e.currentTarget)}
                       className={`text-left px-3.5 py-2.5 rounded-xl border text-xs transition-all flex items-center justify-between gap-2 cursor-pointer min-h-[44px] touch-manipulation ${btnStyle}`}
                     >
-                      <span>{opt}</span>
-                      {hasAnswered && opt.trim().toLowerCase() === expected && (
+                      <span>{optText}</span>
+                      {hasAnswered && optText.trim().toLowerCase() === expected && (
                          <CheckCircle2 className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A] shrink-0" />
                       )}
                       {hasAnswered && isThisSelected && !isCorrect && (

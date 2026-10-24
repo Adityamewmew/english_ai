@@ -67,7 +67,7 @@ export async function getCurriculumUsecase(userId?: string, levelId?: string) {
   const cefrOrder = ["A1", "A2", "B1", "B2", "C1", "C2"];
   const userRank = cefrOrder.indexOf(userCefr.toUpperCase().slice(0, 2));
 
-  const result = levels.map((lvl) => {
+  const result = levels.map((lvl, lvlIdx) => {
     const lvlModules = modules
       .filter((m: any) => m.levelId === lvl.id)
       .sort(
@@ -101,7 +101,16 @@ export async function getCurriculumUsecase(userId?: string, levelId?: string) {
       } else if (prog?.status === "completed") {
         status = "completed";
       } else if (idx === 0) {
-        status = "unlocked";
+        if (lvlIdx === 0) {
+          status = "unlocked"; // A1.1-M01 is always unlocked
+        } else {
+          // Check if previous sublevel's graduation exam (M13) is completed
+          const prevLevel = levels[lvlIdx - 1];
+          const prevLvlMods = modules.filter((mod: any) => mod.levelId === prevLevel.id);
+          const prevLastMod = prevLvlMods[prevLvlMods.length - 1];
+          const prevExamProg = prevLastMod ? userProgressMap[prevLastMod.id] : null;
+          status = prevExamProg?.status === "completed" ? "unlocked" : "locked";
+        }
       } else if (idx > 0) {
         const prevProg = userProgressMap[lvlModules[idx - 1].id];
         if (prevProg?.status === "completed") {

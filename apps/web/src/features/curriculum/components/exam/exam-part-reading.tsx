@@ -54,13 +54,14 @@ export function ExamPartReading({
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
-                {(q.options || []).map((opt: string, optIdx: number) => {
-                  const isSelected = selected === opt;
+                {(q.options || []).map((opt: any, optIdx: number) => {
+                  const optText = typeof opt === "string" ? opt : opt?.text || opt?.label || String(opt ?? "");
+                  const isSelected = selected === optText;
                   return (
                     <button
                       key={optIdx}
                       type="button"
-                      onClick={() => onSelectAnswer(qIdx, opt)}
+                      onClick={() => onSelectAnswer(qIdx, optText)}
                       className={`min-h-[44px] p-3 rounded-xl text-left text-xs font-medium border transition-colors cursor-pointer flex items-center gap-2.5 focus:outline-hidden focus:ring-2 focus:ring-[#0D3B66] ${
                         isSelected
                           ? "bg-[#0D3B66] text-white border-[#0D3B66] font-semibold"
@@ -76,7 +77,7 @@ export function ExamPartReading({
                       >
                         {String.fromCharCode(65 + optIdx)}
                       </span>
-                      <span className="flex-1 leading-snug">{opt}</span>
+                      <span className="flex-1 leading-snug">{optText}</span>
                     </button>
                   );
                 })}
