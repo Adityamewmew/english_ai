@@ -123,9 +123,7 @@ Return ONLY a valid JSON object matching this exact schema:
           "Paragraph 1 in natural CEFR ${cefr} English (around 50-70 words)...",
           "Paragraph 2 in natural CEFR ${cefr} English (around 50-70 words)..."
         ],
-        "timestamps": [
-          { "start": 0, "end": 4.5, "text": "Sentence 1 text...", "paragraphIndex": 0 }
-        ]
+        "timestamps": []
       }
     },
     {
@@ -174,7 +172,7 @@ Return ONLY a valid JSON object matching this exact schema:
   ]
 }
 
-No markdown code fences. Provide exactly 8-10 vocabulary items in sec-${slug}-r-vocab, 1 drill with 5-6 matching pairs (drawn directly from the vocabulary bank) in sec-${slug}-r-practice, and 10 reading comprehension questions in sec-${slug}-r-quiz.`;
+No markdown code fences. Provide exactly 8-10 vocabulary items in sec-${slug}-r-vocab, 1 drill with 5-6 matching pairs (drawn directly from the vocabulary bank) in sec-${slug}-r-practice, and 5 focused reading comprehension questions in sec-${slug}-r-quiz.`;
 
   const user = `Generate the Reading submodule for:
 Unit ID: ${unit.id}
