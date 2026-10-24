@@ -32,11 +32,11 @@ const DEFAULT_TIERS: Record<TierKey, TierPlan> = {
     dailyChatLimit: 20,
     dailyVoiceMinutes: 5,
     features: [
-      "Akses penuh seluruh modul level CEFR",
-      "20 Pesan Chat AI Mr. Khoirul per hari",
-      "5 Menit Panggilan Suara AI per hari",
-      "Kuis formatif & ujian kompetensi",
-      "Sertifikat kelulusan resmi CEFR",
+      "Full access to all CEFR level modules",
+      "20 AI Mr. Khoirul chat messages per day",
+      "5 minutes of AI voice call practice per day",
+      "Formative quizzes & competency exams",
+      "Official CEFR certificate of completion",
     ],
   },
   pro: {
@@ -45,12 +45,12 @@ const DEFAULT_TIERS: Record<TierKey, TierPlan> = {
     dailyChatLimit: 100,
     dailyVoiceMinutes: 30,
     features: [
-      "Akses penuh seluruh modul level CEFR",
-      "100 Pesan Chat AI Mr. Khoirul per hari",
-      "30 Menit Panggilan Suara AI per hari",
-      "Koreksi tata bahasa & evaluasi AI mendalam",
-      "Kuis formatif & ujian kompetensi",
-      "Sertifikat kelulusan resmi CEFR",
+      "Full access to all CEFR level modules",
+      "100 AI Mr. Khoirul chat messages per day",
+      "30 minutes of AI voice call practice per day",
+      "In-depth grammar correction & AI feedback",
+      "Formative quizzes & competency exams",
+      "Official CEFR certificate of completion",
     ],
   },
   ultra: {
@@ -59,12 +59,12 @@ const DEFAULT_TIERS: Record<TierKey, TierPlan> = {
     dailyChatLimit: -1,
     dailyVoiceMinutes: 120,
     features: [
-      "Akses penuh seluruh modul level CEFR",
-      "Unlimited Chat AI Mr. Khoirul tanpa batas",
-      "120 Menit Panggilan Suara AI per hari",
-      "Analisis fonetik & pelafalan kata real-time",
-      "Prioritas latency respon AI super cepat",
-      "Kuis formatif & sertifikat kelulusan resmi",
+      "Full access to all CEFR level modules",
+      "Unlimited AI Mr. Khoirul chat messages",
+      "120 minutes of AI voice call practice per day",
+      "Real-time phonetic & pronunciation analysis",
+      "Ultra-low latency instant AI voice response",
+      "Official CEFR certificate of completion",
     ],
   },
 };
@@ -131,7 +131,7 @@ export function ClassUnlockModal({
     } catch (err: any) {
       setErrorMsg(
         err?.message ||
-          "Gagal membuka akses kelas. Pastikan prasyarat terpenuhi atau hubungi admin."
+          "Failed to activate class access. Please verify prerequisites or contact administration."
       );
     }
   };
@@ -148,11 +148,11 @@ export function ClassUnlockModal({
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-800">
-                  Paket Kelas CEFR
+                  CEFR Class Package
                 </span>
                 {classItem.userTier && (
                   <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800">
-                    Aktif: {classItem.userTier.toUpperCase()}
+                    Active: {classItem.userTier.toUpperCase()}
                   </span>
                 )}
               </div>
@@ -173,7 +173,7 @@ export function ClassUnlockModal({
           {/* 3-Tier Selector Cards */}
           <div className="space-y-1.5">
             <label className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block">
-              Pilih Paket AI Belajar:
+              Choose AI Coaching Plan:
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
               {/* Basic Card */}
@@ -189,7 +189,7 @@ export function ClassUnlockModal({
                 <div>
                   <p className="text-xs font-black text-slate-900">Basic</p>
                   <p className="text-[10px] text-slate-500 mt-0.5 font-medium leading-tight">
-                    20 chat • 5 mnt
+                    20 chats • 5 mins
                   </p>
                 </div>
                 <p className="text-xs font-extrabold text-slate-800 sm:mt-2">
@@ -208,7 +208,7 @@ export function ClassUnlockModal({
                 }`}
               >
                 <span className="absolute -top-2 right-2 px-1.5 py-0.2 rounded-md bg-indigo-600 text-white text-[9px] font-black uppercase tracking-wider shadow-2xs">
-                  Favorit
+                  Popular
                 </span>
                 <div>
                   <div className="flex items-center gap-1">
@@ -216,7 +216,7 @@ export function ClassUnlockModal({
                     <p className="text-xs font-black text-indigo-950">Pro</p>
                   </div>
                   <p className="text-[10px] text-indigo-700/80 mt-0.5 font-medium leading-tight">
-                    100 chat • 30 mnt
+                    100 chats • 30 mins
                   </p>
                 </div>
                 <p className="text-xs font-extrabold text-indigo-900 sm:mt-2">
@@ -243,7 +243,7 @@ export function ClassUnlockModal({
                     <p className="text-xs font-black text-amber-950">Ultra</p>
                   </div>
                   <p className="text-[10px] text-amber-700/80 mt-0.5 font-medium leading-tight">
-                    Unlimited • 120 mnt
+                    Unlimited • 120 mins
                   </p>
                 </div>
                 <p className="text-xs font-extrabold text-amber-900 sm:mt-2">
@@ -257,7 +257,7 @@ export function ClassUnlockModal({
           <div className="p-3.5 sm:p-4 rounded-2xl bg-[#0D3B66]/5 border border-[#0D3B66]/15 flex items-center justify-between">
             <div>
               <p className="text-[11px] text-slate-500 font-medium">
-                Investasi Belajar Paket {selectedTier.toUpperCase()}
+                Enrollment for {selectedTier.toUpperCase()} Plan
               </p>
             <div className="flex items-baseline gap-2 mt-0.5">
               <span className="font-heading text-xl sm:text-2xl font-black text-slate-900">
@@ -270,21 +270,21 @@ export function ClassUnlockModal({
               )}
               {discountPercent && (
                 <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-rose-100 text-rose-700">
-                  Hemat {discountPercent}%
+                  Save {discountPercent}%
                 </span>
               )}
             </div>
           </div>
           <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-emerald-700 font-heading text-xs font-bold shadow-2xs">
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
-            Akses Permanen
+            Lifetime Access
           </div>
         </div>
 
         {/* Feature Benefits List */}
         <div className="space-y-2 pt-0.5">
           <p className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
-            Fasilitas Paket {selectedTier.toUpperCase()}:
+            Included Benefits for {selectedTier.toUpperCase()}:
           </p>
           <div className="space-y-1.5">
             {activePlan.features.map((feat, idx) => (
@@ -309,8 +309,8 @@ export function ClassUnlockModal({
           <div className="p-3 rounded-2xl bg-amber-50 border border-amber-200 flex items-start gap-2.5 text-xs text-amber-900">
             <Lock className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
             <p>
-              Prasyarat belum terpenuhi: Kamu perlu lulus dan menerima sertifikat level{" "}
-              <strong>{classItem.prerequisiteCefr}</strong> sebelum dapat membuka kelas ini.
+              Prerequisite required: You need to pass and earn the certificate for CEFR level{" "}
+              <strong>{classItem.prerequisiteCefr}</strong> before unlocking this class.
             </p>
           </div>
         )}
@@ -322,7 +322,7 @@ export function ClassUnlockModal({
             onClick={onClose}
             className="flex-1 py-3 px-4 rounded-xl border border-slate-300 border-b-3 border-b-slate-400 text-slate-700 text-xs font-bold hover:bg-slate-50 active:border-b active:translate-y-0.5 transition-all text-center cursor-pointer"
           >
-            Batal
+            Cancel
           </button>
           <button
             type="button"
@@ -341,22 +341,22 @@ export function ClassUnlockModal({
             {purchaseMutation.isPending ? (
               <>
                 <Loader2 className="w-4 h-4 animate-spin" />
-                Membuka Akses...
+                Activating Access...
               </>
             ) : isCurrentTier ? (
               <>
                 <CheckCircle2 className="w-4 h-4" />
-                Paket Aktif Saat Ini
+                Current Active Plan
               </>
             ) : classItem.hasAccess ? (
               <>
                 <Sparkles className="w-4 h-4" />
-                Tingkatkan ke {selectedTier.toUpperCase()}
+                Upgrade to {selectedTier.toUpperCase()}
               </>
             ) : (
               <>
                 <Sparkles className="w-4 h-4" />
-                Buka Paket {selectedTier.toUpperCase()} Sekarang
+                Unlock {selectedTier.toUpperCase()} Now
               </>
             )}
           </button>

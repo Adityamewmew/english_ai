@@ -29,16 +29,16 @@ export function CallFooter({
           type="button"
           onClick={onStartCall}
           className="group px-8 py-3.5 rounded-full btn-skeuo-yellow flex items-center gap-3 transition-all active:scale-95 shadow-lg shadow-amber-500/25"
-          title="Mulai Panggilan dengan Mr. Khoirul"
+          title="Start Voice Call with Mr. Khoirul"
         >
           <div className="w-9 h-9 rounded-full bg-slate-950/10 flex items-center justify-center">
             <PhoneCall className="w-5 h-5 text-slate-950 group-hover:scale-110 transition-transform" />
           </div>
           <div className="text-left">
             <p className="text-xs font-black text-slate-950 uppercase tracking-wide">
-              Mulai Panggilan
+              Start Voice Call
             </p>
-            <p className="text-[11px] text-slate-800 font-semibold">Tutor AI Mr. Khoirul</p>
+            <p className="text-[11px] text-slate-800 font-semibold">AI Tutor Mr. Khoirul</p>
           </div>
         </button>
       ) : (
@@ -53,7 +53,7 @@ export function CallFooter({
                   ? "bg-amber-100 hover:bg-amber-200 border-amber-300 text-amber-900"
                   : "bg-white hover:bg-slate-100 border-slate-300 text-slate-700"
               }`}
-              title={isMuted ? "Aktifkan Mikrofon" : "Bisukan Mikrofon"}
+              title={isMuted ? "Unmute Microphone" : "Mute Microphone"}
             >
               {isMuted ? <MicOff className="w-5 h-5 text-amber-800" /> : <Mic className="w-5 h-5" />}
             </button>
@@ -64,13 +64,13 @@ export function CallFooter({
             type="button"
             onClick={onEndCall}
             className="px-6 py-3 rounded-full btn-skeuo-red flex items-center gap-2.5 transition-all active:scale-95 shadow-lg shadow-red-900/30 group"
-            title="Akhiri Panggilan dan Kembali ke Dashboard"
+            title="End Call and Return to Dashboard"
           >
             <div className="w-8 h-8 rounded-full bg-black/20 flex items-center justify-center">
               <PhoneOff className="w-4 h-4 text-white group-hover:rotate-12 transition-transform" />
             </div>
             <span className="text-xs font-black uppercase tracking-wider text-white">
-              Akhiri Panggilan
+              End Call
             </span>
           </button>
         </div>

@@ -306,16 +306,16 @@ export function GamifiedMatchPairs({
             <span className="sm:hidden inline">Tap to Match</span>
           </div>
           <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">
-            Drag or click pins to connect English words with their Indonesian meanings
+            Drag or click pins to connect English words with their definitions
           </span>
           <span className="text-xs text-slate-500 dark:text-slate-400 sm:hidden inline">
-            Sentuh kata kiri lalu artinya di kanan
+            Tap word on the left, then its definition on the right
           </span>
         </div>
 
         <div className="flex items-center gap-2">
           <span className="text-xs font-bold px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 border-b-2 border-b-slate-300 dark:border-b-slate-700 shadow-2xs font-mono">
-            {matchedIds.size} / {shuffledWords.length} Cocok
+            {matchedIds.size} / {shuffledWords.length} Matched
           </span>
           <button
             type="button"
@@ -408,7 +408,7 @@ export function GamifiedMatchPairs({
 
           <div className="space-y-3">
             <div className="text-[11px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider px-1">
-              Indonesian Meaning
+              Meaning & Definition
             </div>
             <div className="space-y-2.5">
               {shuffledMeanings.map((m) => renderCard(m, "right"))}

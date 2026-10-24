@@ -12,7 +12,7 @@ interface StudentHeroBannerProps {
 }
 
 export function StudentHeroBanner({
-  studentName = "Siswa",
+  studentName = "Student",
   currentCefr = "A1.1",
   activeModuleCode = "A1.1-M01",
 }: StudentHeroBannerProps) {
@@ -33,11 +33,11 @@ export function StudentHeroBanner({
         </div>
 
         <h2 className="text-2xl sm:text-3xl font-black text-white leading-tight">
-          Selamat datang kembali, {studentName}! 👋
+          Welcome back, {studentName}! 👋
         </h2>
 
         <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
-          Siap meningkatkan kefasihan bahasa Inggrismu hari ini? Lanjutkan modul pembelajaran terstruktur atau latih speaking secara langsung bersama AI Coach.
+          Ready to advance your English fluency today? Continue your structured curriculum modules or practice real-time speaking with Mr. Khoirul.
         </p>
 
         <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center md:justify-start gap-3">
@@ -46,7 +46,7 @@ export function StudentHeroBanner({
             onClick={(e) => animeButtonPop(e.currentTarget)}
             className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full btn-skeuo-yellow text-xs sm:text-sm shadow-md transition-all active:scale-95 cursor-pointer min-h-[44px] touch-manipulation font-bold"
           >
-            <span>Lanjut Belajar</span>
+            <span>Continue Learning</span>
             <ArrowRight className="w-4 h-4 ml-0.5" />
           </Link>
 
@@ -55,7 +55,7 @@ export function StudentHeroBanner({
             onClick={(e) => animeButtonPop(e.currentTarget)}
             className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 text-xs sm:text-sm shadow-xs transition-all active:scale-95 cursor-pointer min-h-[44px] touch-manipulation font-bold backdrop-blur-xs"
           >
-            <span>Latihan Speaking</span>
+            <span>Speaking Practice</span>
           </Link>
         </div>
       </div>

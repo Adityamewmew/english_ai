@@ -182,7 +182,7 @@ export function PlacementWizardMobile({
               {current.sectionBadge}
             </span>
             <span className="text-xs font-bold text-slate-700">
-              Soal {currentIndex + 1} / {totalQuestions}
+              Question {currentIndex + 1} of {totalQuestions}
             </span>
           </div>
 
@@ -194,10 +194,10 @@ export function PlacementWizardMobile({
               setShowJumpSheet(true);
             }}
             className="flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 border border-slate-200 active:scale-95 transition-all"
-            title="Daftar seluruh soal"
+            title="Question navigator"
           >
             <LayoutGrid className="w-3.5 h-3.5 text-slate-600" />
-            <span>Pilih Soal</span>
+            <span>Navigator</span>
           </button>
         </div>
 
@@ -205,7 +205,7 @@ export function PlacementWizardMobile({
         <div className="space-y-1">
           <div className="flex justify-between items-center text-[11px] font-semibold text-slate-500">
             <span>
-              {answeredCount} dari {totalQuestions} terjawab
+              {answeredCount} of {totalQuestions} answered
             </span>
             <span className="font-bold text-primary">{progressPercent}%</span>
           </div>
@@ -228,11 +228,11 @@ export function PlacementWizardMobile({
           {isCurrentAnswered ? (
             <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
               <Check className="w-3 h-3" />
-              Sudah Dijawab
+              Answered
             </span>
           ) : (
             <span className="text-[11px] font-semibold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full">
-              Belum Dijawab
+              Unanswered
             </span>
           )}
         </div>
@@ -290,7 +290,7 @@ export function PlacementWizardMobile({
             <AudioPlayer
               audioUrl={current.audioUrl}
               audioScript={current.audioScript}
-              title={`Audio Soal #${currentIndex + 1}`}
+              title={`Audio Question #${currentIndex + 1}`}
               hideTranscript={true}
             />
 
@@ -338,9 +338,9 @@ export function PlacementWizardMobile({
         {current.section === "writing" && (
           <div className="space-y-2 pt-1">
             <div className="flex items-center justify-between text-slate-500 text-[11px]">
-              <span>Tuliskan jawaban dalam bahasa Inggris:</span>
+              <span>Type your response in English:</span>
               <span className="font-semibold">
-                {(writingAnswers[current.id] || "").split(/\s+/).filter(Boolean).length} kata
+                {(writingAnswers[current.id] || "").split(/\s+/).filter(Boolean).length} words
               </span>
             </div>
             <textarea
@@ -357,7 +357,7 @@ export function PlacementWizardMobile({
         {current.section === "speaking" && (
           <div className="space-y-2 pt-1">
             <p className="text-[11px] text-slate-500">
-              Tekan rekam dan ucapkan jawabanmu dalam bahasa Inggris dengan jelas:
+              Press record and speak your answer clearly in English:
             </p>
             <SpeakingRecorder
               key={current.id}
@@ -385,7 +385,7 @@ export function PlacementWizardMobile({
             className="flex items-center justify-center gap-1.5 py-3 px-4 rounded-2xl bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold border border-slate-200 border-b-3 border-b-slate-300 active:border-b active:translate-y-0.5 transition-all disabled:opacity-40 disabled:pointer-events-none min-h-[48px]"
           >
             <ChevronLeft className="w-4 h-4" />
-            <span>Sebelumnya</span>
+            <span>Previous</span>
           </button>
 
           {isLastQuestion ? (
@@ -398,10 +398,10 @@ export function PlacementWizardMobile({
               {isSubmitting ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin text-white" />
-                  <span>Menilai...</span>
+                  <span>Evaluating...</span>
                 </>
               ) : (
-                <span>Kirim Tes</span>
+                <span>Submit Assessment</span>
               )}
             </button>
           ) : (
@@ -410,7 +410,7 @@ export function PlacementWizardMobile({
               onClick={handleNext}
               className="flex items-center justify-center gap-1.5 py-3 px-4 rounded-2xl bg-primary hover:bg-[#0c2b48] text-white text-xs font-bold border-b-3 border-b-[#07192b] active:border-b-0 active:translate-y-1 shadow-xs transition-all min-h-[48px]"
             >
-              <span>Lanjut</span>
+              <span>Next</span>
               <ChevronRight className="w-4 h-4" />
             </button>
           )}
@@ -425,7 +425,7 @@ export function PlacementWizardMobile({
               disabled={isSubmitting || answeredCount === 0}
               className="text-xs font-semibold text-slate-500 hover:text-slate-800 underline active:opacity-75 transition-colors disabled:opacity-30 disabled:no-underline"
             >
-              Selesai lebih awal? Kirim jawaban sekarang ({answeredCount}/{totalQuestions})
+              Finish early? Submit answers now ({answeredCount}/{totalQuestions})
             </button>
           </div>
         )}
@@ -438,10 +438,10 @@ export function PlacementWizardMobile({
             <div className="flex items-center justify-between pb-2 border-b border-slate-100">
               <div>
                 <h4 className="font-heading font-extrabold text-sm text-slate-900">
-                  Daftar Soal ({totalQuestions})
+                  Question Navigator ({totalQuestions})
                 </h4>
                 <p className="text-[11px] text-slate-500">
-                  {answeredCount} dari {totalQuestions} telah dijawab
+                  {answeredCount} of {totalQuestions} answered
                 </p>
               </div>
               <button
@@ -485,7 +485,7 @@ export function PlacementWizardMobile({
               onClick={() => setShowJumpSheet(false)}
               className="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-200 transition-all"
             >
-              Tutup
+              Close
             </button>
           </div>
         </div>

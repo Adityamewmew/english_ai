@@ -27,14 +27,14 @@ export function ExamPartListening({
       <div className="flex items-center justify-between border-b pb-3 border-slate-200 dark:border-slate-800">
         <div>
           <span className="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
-            Bagian 2 dari 4
+            Part 2 of 4
           </span>
           <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-            Listening Auditory Synthesis (Dikte & Susun Kata)
+            Auditory Listening Synthesis (Dictation & Sentence Building)
           </h3>
         </div>
         <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-          {answeredCount} / {listeningList.length} Selesai
+          {answeredCount} / {listeningList.length} Completed
         </span>
       </div>
 
@@ -54,10 +54,10 @@ export function ExamPartListening({
                   </span>
                   <div className="space-y-1 flex-1">
                     <div className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">
-                      {item.type === "arrange" ? "Susun Kalimat" : "Dikte Audio"}
+                      {item.type === "arrange" ? "Sentence Assembly" : "Audio Dictation"}
                     </div>
                     <div className="text-sm font-semibold text-slate-900 dark:text-slate-100 mt-0.5">
-                      {item.instruction || "Dengarkan audio dan ketik kalimat yang kamu dengar:"}
+                      {item.instruction || "Listen to the audio clip and type the sentence you hear:"}
                     </div>
                     {item.promptSentence ? (
                       <div className="p-3 rounded-xl bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-sm font-bold text-slate-900 dark:text-slate-100 font-mono mt-1.5 leading-relaxed">
@@ -66,12 +66,12 @@ export function ExamPartListening({
                     ) : item.type === "arrange" ? (
                       <div className="p-2.5 rounded-xl bg-amber-50/60 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-800/60 text-xs font-semibold text-amber-900 dark:text-amber-200 flex items-center gap-2 mt-1.5">
                         <Headphones className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
-                        <span>Tekan tombol <strong>Dengarkan</strong> di kanan untuk mendengar rekaman audio, lalu susun kata-kata di bawah:</span>
+                        <span>Tap the <strong>Listen</strong> button on the right to hear the audio, then arrange the words below:</span>
                       </div>
                     ) : (
                       <div className="p-2.5 rounded-xl bg-amber-50/60 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-800/60 text-xs font-semibold text-amber-900 dark:text-amber-200 flex items-center gap-2 mt-1.5">
                         <Headphones className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
-                        <span>Dengarkan rekaman audio di samping dan ketik kalimat lengkap yang kamu dengar:</span>
+                        <span>Listen to the audio recording on the right and type the complete sentence you hear:</span>
                       </div>
                     )}
                   </div>
@@ -81,10 +81,10 @@ export function ExamPartListening({
                   type="button"
                   onClick={() => playAudio(audioText)}
                   className="min-h-[44px] px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs inline-flex items-center gap-1.5 transition-colors cursor-pointer shrink-0 focus:outline-hidden focus:ring-2 focus:ring-amber-500"
-                  title="Putar Audio"
+                  title="Play Audio"
                 >
                   <Volume2 className="w-4 h-4" />
-                  <span>Dengarkan</span>
+                  <span>Listen</span>
                 </button>
               </div>
 
@@ -120,8 +120,8 @@ export function ExamPartListening({
                 onChange={(e) => onChangeAnswer(qIdx, e.target.value)}
                 placeholder={
                   item.promptSentence
-                    ? "Ketik kata yang hilang untuk melengkapi kalimat di atas..."
-                    : "Ketik kalimat hasil pendengaran di sini..."
+                    ? "Type the missing word to complete the sentence above..."
+                    : "Type the sentence you hear here..."
                 }
                 className="w-full min-h-[44px] px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-medium text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-hidden focus:ring-2 focus:ring-amber-500"
               />
@@ -132,13 +132,13 @@ export function ExamPartListening({
 
       <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4">
         <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
-          Part 2 selesai? Silakan lanjut ke penulisan.
+          Part 2 complete. Proceed to written production.
         </span>
         <Button
           onClick={onNext}
           className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs inline-flex items-center justify-center gap-2 cursor-pointer"
         >
-          <span>Lanjut ke Part 3 (Writing)</span>
+          <span>Continue to Part 3 (Writing)</span>
           <ChevronRight className="w-4 h-4" />
         </Button>
       </div>

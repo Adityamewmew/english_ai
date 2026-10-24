@@ -31,7 +31,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
         <div
           role="button"
           tabIndex={0}
-          aria-label="Tutup menu sidebar"
+          aria-label="Close sidebar"
           onClick={onClose}
           onKeyDown={(e) => {
             if (e.key === "Escape") onClose();
@@ -54,12 +54,12 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
               className="flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-[#0D3B66] transition-colors"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Kembali ke Portal</span>
+              <span>Back to Dashboard</span>
             </Link>
             <button
               onClick={onClose}
               className="lg:hidden p-1 text-slate-400 hover:text-slate-600 rounded-md cursor-pointer"
-              aria-label="Tutup sidebar"
+              aria-label="Close sidebar"
             >
               <X className="w-4 h-4" />
             </button>
@@ -75,19 +75,19 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
             className="w-full btn-skeuo-yellow px-4 py-2.5 rounded-xl flex items-center justify-center gap-2 text-sm font-bold shadow-xs cursor-pointer"
           >
             <Plus className="w-4 h-4" />
-            <span>Chat Baru</span>
+            <span>New Chat</span>
           </button>
         </div>
 
         {/* Sessions List */}
         <div className="flex-1 overflow-y-auto px-3 py-3 space-y-1 custom-scrollbar">
           <div className="px-2 pb-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-400">
-            Riwayat Percakapan
+            Conversation History
           </div>
 
           {sessions.length === 0 ? (
             <div className="px-3 py-8 text-center text-xs text-slate-400 leading-relaxed">
-              Belum ada riwayat percakapan. Mulai tanya Mr. Khoirul sekarang!
+              No conversation history yet. Start chatting with Mr. Khoirul now!
             </div>
           ) : (
             sessions.map((s) => {
@@ -111,7 +111,7 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
                         isActive ? "text-[#0D3B66]" : "text-slate-400 group-hover:text-slate-600"
                       }`}
                     />
-                    <span className="truncate">{s.title || "Percakapan"}</span>
+                    <span className="truncate">{s.title || "Conversation"}</span>
                   </div>
 
                   {/* Delete Action */}
@@ -119,11 +119,11 @@ export const ChatSidebar: React.FC<ChatSidebarProps> = ({
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
-                      if (confirm("Hapus sesi percakapan ini?")) {
+                      if (confirm("Delete this conversation session?")) {
                         onDeleteSession(s.id);
                       }
                     }}
-                    title="Hapus percakapan"
+                    title="Delete conversation"
                     className="opacity-0 group-hover:opacity-100 p-1 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded transition-all cursor-pointer shrink-0"
                   >
                     <Trash2 className="w-3.5 h-3.5" />

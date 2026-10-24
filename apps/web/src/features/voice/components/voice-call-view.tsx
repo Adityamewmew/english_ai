@@ -305,7 +305,7 @@ export function VoiceCallView({
         const quota = await classesApi.getQuota(userId);
         if (quota && !quota.canVoice) {
           setErrorMsg(
-            `Kuota harian latihan suara kamu (${quota.voice.limitMinutes} menit) sudah habis. Kuota reset pukul 00:00 WIB atau upgrade paket untuk durasi lebih banyak!`
+            `Your daily voice practice quota (${quota.voice.limitMinutes} mins) has been reached. Quota resets at 00:00 or upgrade your plan for unlimited voice practice!`
           );
           setCallStatus("idle");
           return;
@@ -332,7 +332,7 @@ export function VoiceCallView({
     } catch (e: any) {
       console.warn("Session init fallback:", e);
       if (e?.status === 403 || e?.message?.includes("kuota")) {
-        setErrorMsg("Batas kuota harian panggilan suara kamu sudah tercapai. Silakan upgrade paket kelas!");
+        setErrorMsg("Your daily voice call quota has been reached. Please upgrade your plan for more practice time!");
         setCallStatus("idle");
         return;
       }
@@ -498,7 +498,7 @@ export function VoiceCallView({
                 type="text"
                 value={textInput}
                 onChange={(e) => setTextInput(e.target.value)}
-                placeholder="Ketik balasan jika mic bising..."
+                placeholder="Type a response if microphone is noisy..."
                 className="flex-1 bg-slate-50 border border-slate-200 focus:border-[#0D3B66] focus:bg-white rounded-full px-4 py-2 text-xs text-slate-800 placeholder:text-slate-400 outline-none transition-all shadow-inner"
               />
               <button
@@ -506,7 +506,7 @@ export function VoiceCallView({
                 disabled={!textInput.trim() || isSendingRef.current}
                 className="px-4 py-2 btn-skeuo-yellow disabled:opacity-40 text-slate-950 rounded-full text-xs font-bold transition-all active:scale-95 flex items-center gap-1 shadow-sm"
               >
-                <span>Kirim</span>
+                <span>Send</span>
                 <Send className="w-3 h-3 ml-0.5" />
               </button>
             </form>

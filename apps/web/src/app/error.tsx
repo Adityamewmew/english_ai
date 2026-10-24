@@ -37,12 +37,12 @@ export default function GlobalError({
 
         <div className="space-y-1.5">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
-            {isChunkError ? "Pembaruan Sistem Terdeteksi" : "Terjadi Kendala Memuat Modul"}
+            {isChunkError ? "System Update Detected" : "Unable to Load Learning Module"}
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
             {isChunkError
-              ? "Aplikasi baru saja diperbarui ke versi terbaru. Silakan muat ulang halaman untuk menyinkronkan data modul."
-              : "Terjadi kesalahan saat memuat tampilan pembelajaran. Silakan coba lagi atau kembali ke dashboard."}
+              ? "The application was just updated to the latest version. Please reload to sync your learning workspace."
+              : "An error occurred while loading this learning stage. Please try again or return to dashboard."}
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export default function GlobalError({
             className="w-full sm:w-auto px-5 py-2.5 rounded-xl btn-skeuo-navy text-xs font-bold flex items-center justify-center gap-2 cursor-pointer transition-all active:scale-95"
           >
             <RefreshCw className="w-3.5 h-3.5" />
-            <span>Coba Lagi</span>
+            <span>Try Again</span>
           </button>
 
           <button
@@ -72,7 +72,7 @@ export default function GlobalError({
             className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold flex items-center justify-center gap-2 border border-slate-200/60 dark:border-slate-700/60 transition-all active:scale-95 cursor-pointer"
           >
             <RotateCcw className="w-3.5 h-3.5" />
-            <span>Muat Ulang</span>
+            <span>Reload Page</span>
           </button>
 
           <Link

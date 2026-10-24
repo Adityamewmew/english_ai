@@ -150,15 +150,15 @@ export function StageGraduationExamView({
           <div className="flex items-center justify-center gap-2">
             <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-800">
               {theorySec?.content?.difficultyTier === "hard"
-                ? "Tingkat Kesulitan: Hard (C1-C2)"
+                ? "Difficulty Tier: Advanced (C1-C2)"
                 : theorySec?.content?.difficultyTier === "medium"
-                ? "Tingkat Kesulitan: Medium (B1-B2)"
-                : "Tingkat Kesulitan: Easy (A1-A2)"}
+                ? "Difficulty Tier: Intermediate (B1-B2)"
+                : "Difficulty Tier: Elementary (A1-A2)"}
             </span>
           </div>
           <p className="text-sm text-slate-700 dark:text-slate-300 max-w-xl mx-auto leading-relaxed">
             {theorySec?.content?.summary ||
-              "Ujian resmi evaluasi komprehensif 4 keterampilan terpadu. Tuntaskan 55 evaluasi untuk meraih nilai kelulusan dan menerbitkan sertifikat resmi."}
+              "Official integrated 4-skill comprehensive graduation exam. Complete all 55 evaluations to achieve passing marks and generate your verified certificate."}
           </p>
         </div>
 
@@ -166,22 +166,22 @@ export function StageGraduationExamView({
           <Card className="p-4 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-center space-y-1">
             <BookOpen className="w-5 h-5 mx-auto text-[#0D3B66] dark:text-blue-400" />
             <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">Part 1: Reading</div>
-            <div className="text-lg font-black text-slate-900 dark:text-white">15 Soal</div>
+            <div className="text-lg font-black text-slate-900 dark:text-white">15 Questions</div>
           </Card>
           <Card className="p-4 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-center space-y-1">
             <Headphones className="w-5 h-5 mx-auto text-amber-600 dark:text-amber-400" />
             <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">Part 2: Listening</div>
-            <div className="text-lg font-black text-slate-900 dark:text-white">15 Soal</div>
+            <div className="text-lg font-black text-slate-900 dark:text-white">15 Questions</div>
           </Card>
           <Card className="p-4 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-center space-y-1">
             <PenTool className="w-5 h-5 mx-auto text-rose-600 dark:text-rose-400" />
             <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">Part 3: Writing</div>
-            <div className="text-lg font-black text-slate-900 dark:text-white">10 Soal</div>
+            <div className="text-lg font-black text-slate-900 dark:text-white">10 Questions</div>
           </Card>
           <Card className="p-4 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-center space-y-1">
             <Mic className="w-5 h-5 mx-auto text-sky-600 dark:text-sky-400" />
             <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">Part 4: Speaking</div>
-            <div className="text-lg font-black text-slate-900 dark:text-white">15 Soal</div>
+            <div className="text-lg font-black text-slate-900 dark:text-white">15 Questions</div>
           </Card>
         </div>
 
@@ -190,10 +190,10 @@ export function StageGraduationExamView({
             <Award className="w-8 h-8 text-amber-700 dark:text-amber-400 shrink-0" />
             <div>
               <div className="text-xs font-bold uppercase tracking-wider text-amber-900 dark:text-amber-300">
-                Ambang Batas Kelulusan Sertifikat
+                Graduation Certificate Passing Requirement
               </div>
               <div className="text-sm font-medium text-slate-800 dark:text-slate-200">
-                Nilai minimal <span className="font-bold text-amber-800 dark:text-amber-300">{passingScore}%</span> untuk resmi lulus dan menerbitkan sertifikat.
+                Minimum score of <span className="font-bold text-amber-800 dark:text-amber-300">{passingScore}%</span> required to graduate and earn your verified certificate.
               </div>
             </div>
           </div>
@@ -212,7 +212,7 @@ export function StageGraduationExamView({
             }}
             className="w-full sm:w-auto px-8 py-6 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-base shadow-sm inline-flex items-center justify-center gap-2 cursor-pointer min-h-[44px]"
           >
-            <span>Mulai Ujian Kelulusan Sekarang</span>
+            <span>Begin Graduation Assessment Now</span>
             <ArrowRight className="w-5 h-5" />
           </Button>
         </div>

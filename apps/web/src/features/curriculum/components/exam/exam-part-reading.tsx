@@ -25,14 +25,14 @@ export function ExamPartReading({
       <div className="flex items-center justify-between border-b pb-3 border-slate-200 dark:border-slate-800">
         <div>
           <span className="text-xs font-bold text-[#0D3B66] dark:text-blue-400 uppercase tracking-wider">
-            Bagian 1 dari 4
+            Part 1 of 4
           </span>
           <h3 className="text-xl font-bold text-slate-900 dark:text-white">
             Reading Comprehension & Lexicogrammar
           </h3>
         </div>
         <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-          {answeredCount} / {readingList.length} Terjawab
+          {answeredCount} / {readingList.length} Answered
         </span>
       </div>
 
@@ -88,13 +88,13 @@ export function ExamPartReading({
 
       <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4">
         <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
-          Pastikan semua 15 butir soal reading telah dijawab.
+          Ensure all reading questions are completed before proceeding.
         </span>
         <Button
           onClick={onNext}
           className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#082542] text-white font-bold text-xs inline-flex items-center justify-center gap-2 cursor-pointer"
         >
-          <span>Lanjut ke Part 2 (Listening)</span>
+          <span>Continue to Part 2 (Listening)</span>
           <ChevronRight className="w-4 h-4" />
         </Button>
       </div>

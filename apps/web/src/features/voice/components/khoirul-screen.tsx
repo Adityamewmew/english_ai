@@ -39,7 +39,7 @@ export function KhoirulScreen({
       {callStatus === "connecting" && (
         <div className="mb-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-slate-700 text-xs font-bold shadow-sm animate-pulse">
           <Loader2 className="w-3.5 h-3.5 animate-spin text-[#0D3B66]" />
-          <span>Menghubungkan...</span>
+          <span>Connecting...</span>
         </div>
       )}
 
@@ -48,21 +48,21 @@ export function KhoirulScreen({
           {aiSpeechState === "speaking" && (
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0D3B66] text-white border border-[#082542] text-xs font-bold shadow-md shadow-[#0D3B66]/20 transition-all duration-300">
               <Volume2 className="w-3.5 h-3.5 text-[#F4B41A] animate-bounce" />
-              <span className="tracking-wide">Berbicara</span>
+              <span className="tracking-wide">Speaking</span>
             </div>
           )}
 
           {aiSpeechState === "listening" && (
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-600 text-white border border-emerald-700 text-xs font-bold shadow-md shadow-emerald-600/20 transition-all duration-300">
               <Mic className="w-3.5 h-3.5 text-white animate-pulse" />
-              <span className="tracking-wide">{isMuted ? "Mikrofon Dibisukan" : "Mendengarkan"}</span>
+              <span className="tracking-wide">{isMuted ? "Microphone Muted" : "Listening"}</span>
             </div>
           )}
 
           {aiSpeechState === "thinking" && (
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F4B41A] text-slate-950 border border-[#DDA012] text-xs font-bold shadow-md shadow-amber-400/20 transition-all duration-300">
               <Sparkles className="w-3.5 h-3.5 text-slate-950 animate-spin" />
-              <span className="tracking-wide">Berpikir</span>
+              <span className="tracking-wide">Thinking</span>
             </div>
           )}
         </div>
@@ -82,9 +82,9 @@ export function KhoirulScreen({
         className="relative group cursor-pointer flex flex-col items-center justify-center focus:outline-none transition-transform duration-200 active:scale-95"
         title={
           callStatus === "idle"
-            ? "Ketuk untuk memulai panggilan"
+            ? "Tap to start voice call"
             : aiSpeechState === "speaking"
-            ? "Ketuk untuk memotong bicara"
+            ? "Tap to interrupt"
             : "Mr. Khoirul"
         }
       >

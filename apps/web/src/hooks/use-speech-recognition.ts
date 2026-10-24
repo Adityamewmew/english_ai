@@ -17,7 +17,7 @@ interface UseSpeechRecognitionProps {
 export function useSpeechRecognition({
   canListen,
   studentName = "",
-  lang = "id-ID",
+  lang = "en-US",
   onUtteranceReady,
 }: UseSpeechRecognitionProps) {
   const [liveTranscript, setLiveTranscript] = useState<string>("");
@@ -156,7 +156,7 @@ export function useSpeechRecognition({
 
       recognition.onerror = (event: any) => {
         if (event.error === "not-allowed" || event.error === "audio-capture") {
-          setErrorMsg("Izin mikrofon diperlukan untuk melakukan panggilan suara.");
+          setErrorMsg("Microphone permission is required to start a voice call.");
         } else if (event.error === "no-speech") {
           // Normal silence, will auto-restart in onend
         }

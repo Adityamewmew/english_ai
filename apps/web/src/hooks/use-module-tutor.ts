@@ -128,7 +128,7 @@ export function useModuleTutor({ moduleId, studentName = "", userId = "" }: UseM
       }
 
       const rec = new SpeechRec();
-      rec.lang = "id-ID";
+      rec.lang = "en-US";
       rec.continuous = false;
       rec.interimResults = false;
 

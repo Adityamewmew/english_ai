@@ -36,59 +36,59 @@ export function StudentRecentActivitySection({
     const mins = Math.max(1, Math.round((call.durationSeconds || 60) / 60));
     const fluency = call.evaluation?.fluency ? `${call.evaluation.fluency}% Fluency` : undefined;
     const dateFormatted = call.createdAt
-      ? new Date(call.createdAt).toLocaleDateString("id-ID", { day: "numeric", month: "short" })
-      : "Baru saja";
+      ? new Date(call.createdAt).toLocaleDateString("en-US", { day: "numeric", month: "short" })
+      : "Just now";
 
     activities.push({
       id: "voice-" + call.id,
       type: "voice",
-      title: call.topic || "Latihan Percakapan Harian",
-      subtitle: call.evaluation?.feedback_id || `Sesi latihan bicara selama ${mins} menit bersama Mr. Khoirul.`,
+      title: call.topic || "Daily Conversation Practice",
+      subtitle: call.evaluation?.feedback_id || `${mins}-minute speaking session with Mr. Khoirul.`,
       badgeText: "Voice Call",
       badgeColor: "bg-[#F4B41A]/20 text-[#854D0E] border-[#F4B41A]/40",
       dateText: dateFormatted,
       scoreText: fluency,
       href: "/call",
-      actionText: "Telepon Lagi",
+      actionText: "Call Again",
     });
   });
 
   // 2. Map recent chat sessions
   chatSessions.slice(0, 3).forEach((chat) => {
     const dateFormatted = chat.updatedAt
-      ? new Date(chat.updatedAt).toLocaleDateString("id-ID", { day: "numeric", month: "short" })
-      : "Baru saja";
+      ? new Date(chat.updatedAt).toLocaleDateString("en-US", { day: "numeric", month: "short" })
+      : "Just now";
 
     activities.push({
       id: "chat-" + chat.id,
       type: "chat",
-      title: chat.title || "Tanya Jawab Bahasa Inggris",
-      subtitle: "Diskusi tata bahasa dan kosakata dengan Mr. Khoirul.",
+      title: chat.title || "English Q&A",
+      subtitle: "Grammar and vocabulary discussion with Mr. Khoirul.",
       badgeText: "Study Chat",
       badgeColor: "bg-[#0D3B66]/10 text-[#0D3B66] border-[#0D3B66]/20",
       dateText: dateFormatted,
       href: "/chat",
-      actionText: "Buka Chat",
+      actionText: "Open Chat",
     });
   });
 
   // 3. Map completed modules
   completedModules.slice(0, 3).forEach((mod) => {
     const dateFormatted = mod.completedAt
-      ? new Date(mod.completedAt).toLocaleDateString("id-ID", { day: "numeric", month: "short" })
-      : "Selesai";
+      ? new Date(mod.completedAt).toLocaleDateString("en-US", { day: "numeric", month: "short" })
+      : "Completed";
 
     activities.push({
       id: "mod-" + mod.id,
       type: "module",
       title: mod.title,
-      subtitle: `Modul materi level ${mod.cefr || "A1"} berhasil diselesaikan.`,
-      badgeText: "Modul Selesai",
+      subtitle: `CEFR Level ${mod.cefr || "A1"} module completed.`,
+      badgeText: "Module Completed",
       badgeColor: "bg-emerald-50 text-emerald-800 border-emerald-200",
       dateText: dateFormatted,
-      scoreText: mod.score !== null && mod.score !== undefined ? `Skor: ${mod.score}%` : "Lulus",
+      scoreText: mod.score !== null && mod.score !== undefined ? `Score: ${mod.score}%` : "Passed",
       href: `/modules/${mod.id}`,
-      actionText: "Review Modul",
+      actionText: "Review Module",
     });
   });
 
@@ -98,7 +98,7 @@ export function StudentRecentActivitySection({
     <div className="space-y-3.5">
       <div className="flex items-center justify-between px-1">
         <h3 className="text-lg sm:text-xl font-black text-[#0D3B66] dark:text-white uppercase tracking-tight">
-          Aktivitas Belajar Terakhir
+          Recent Learning Activities
         </h3>
       </div>
 
@@ -110,10 +110,10 @@ export function StudentRecentActivitySection({
           </div>
           <div className="max-w-md mx-auto space-y-1">
             <h4 className="font-extrabold text-base text-slate-900 dark:text-white">
-              Belum ada riwayat aktivitas
+              No recent activities yet
             </h4>
             <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
-              Selesaikan modul pertamamu atau mulai ngobrol santai bersama Mr. Khoirul untuk mencatat perkembangan belajarmu di sini.
+              Complete your first module or start a conversation with Mr. Khoirul to track your learning progress here.
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
@@ -122,7 +122,7 @@ export function StudentRecentActivitySection({
               onClick={(e) => animeButtonPop(e.currentTarget)}
               className="px-5 py-2.5 rounded-full btn-skeuo-navy text-xs font-bold shadow-xs cursor-pointer inline-flex items-center gap-1.5"
             >
-              <span>Jelajahi Modul</span>
+              <span>Explore Modules</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
             <Link
@@ -131,7 +131,7 @@ export function StudentRecentActivitySection({
               className="px-5 py-2.5 rounded-full btn-skeuo-yellow text-xs font-bold shadow-xs cursor-pointer inline-flex items-center gap-1.5"
             >
               <PhoneCall className="w-3.5 h-3.5" />
-              <span>Coba Voice Call</span>
+              <span>Try Voice Call</span>
             </Link>
           </div>
         </div>

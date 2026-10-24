@@ -180,11 +180,11 @@ export function PlacementDesktopForm({
                       rows={3}
                       value={writingAnswers[w.id] || ""}
                       onChange={(e) => onWritingChange(w.id, e.target.value)}
-                      placeholder="Tulis jawaban dalam bahasa Inggris di sini..."
+                      placeholder="Write your response in English here..."
                       className="w-full p-3.5 rounded-xl border border-slate-200 border-b-2 border-b-slate-300 bg-[#FBFBFE] focus:bg-white text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-emerald-600 transition-all font-normal shadow-inner"
                     />
                     <div className="text-right text-[10px] text-slate-400">
-                      {words} kata
+                      {words} words
                     </div>
                   </div>
                 </div>
@@ -246,10 +246,10 @@ export function PlacementDesktopForm({
           {isSubmitting ? (
             <span className="flex items-center justify-center gap-2">
               <Loader2 className="w-4 h-4 animate-spin text-white" />
-              Mengevaluasi...
+              Evaluating...
             </span>
           ) : (
-            "Kirim Jawaban & Selesaikan Tes"
+            "Submit Answers & Complete Assessment"
           )}
         </button>
       </div>

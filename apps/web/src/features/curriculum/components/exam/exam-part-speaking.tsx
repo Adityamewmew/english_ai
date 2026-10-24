@@ -130,14 +130,14 @@ export function ExamPartSpeaking({
       <div className="flex items-center justify-between border-b pb-3 border-slate-200 dark:border-slate-800">
         <div>
           <span className="text-xs font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">
-            Bagian 4 dari 4
+            Part 4 of 4
           </span>
           <h3 className="text-xl font-bold text-slate-900 dark:text-white">
             Spoken Fluency & Oral Interaction
           </h3>
         </div>
         <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-          {completedCount} / {speakingList.length} Selesai
+          {completedCount} / {speakingList.length} Completed
         </span>
       </div>
 
@@ -168,7 +168,7 @@ export function ExamPartSpeaking({
                   </span>
                   <div className="space-y-1.5 flex-1">
                     <div className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">
-                      {item.typeLabel || "Prompt Lisan"}
+                      {item.typeLabel || "Oral Prompt"}
                     </div>
                     <div className="text-sm font-semibold text-slate-900 dark:text-white leading-relaxed">
                       {promptText}
@@ -188,7 +188,7 @@ export function ExamPartSpeaking({
                   type="button"
                   onClick={() => playAudio(promptText)}
                   className="min-h-[44px] min-w-[44px] p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-sky-600 hover:bg-slate-200 transition-colors shrink-0 flex items-center justify-center cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-sky-500"
-                  title="Dengar Model Ucapan (TTS)"
+                  title="Listen to Model Pronunciation (TTS)"
                 >
                   <Volume2 className="w-4 h-4" />
                 </button>
@@ -205,7 +205,7 @@ export function ExamPartSpeaking({
                       className="min-h-[40px] px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold inline-flex items-center gap-2 animate-pulse cursor-pointer shadow-xs"
                     >
                       <Square className="w-3.5 h-3.5 fill-current" />
-                      <span>Stop Rekam ({recordSeconds}s)</span>
+                      <span>Stop Recording ({recordSeconds}s)</span>
                     </button>
                   ) : (
                     <button
@@ -218,7 +218,7 @@ export function ExamPartSpeaking({
                       }`}
                     >
                       <Mic className="w-3.5 h-3.5" />
-                      <span>{hasRecording ? "Rekam Ulang Suara" : "Mulai Rekam Suara"}</span>
+                      <span>{hasRecording ? "Re-record Audio" : "Start Voice Recording"}</span>
                     </button>
                   )}
 
@@ -230,7 +230,7 @@ export function ExamPartSpeaking({
                       className="min-h-[40px] px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:text-sky-600 text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer border border-slate-200/80 dark:border-slate-700"
                     >
                       {isPlaying ? <Square className="w-3 h-3 fill-current" /> : <Play className="w-3 h-3 fill-current" />}
-                      <span>{isPlaying ? "Jeda" : "Dengar Rekamanmu"}</span>
+                      <span>{isPlaying ? "Pause" : "Play Your Recording"}</span>
                     </button>
                   )}
                 </div>
@@ -245,10 +245,10 @@ export function ExamPartSpeaking({
                         ? "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800"
                         : "bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-800 border border-slate-200 dark:border-slate-700"
                     }`}
-                    title="Klik untuk ubah status verifikasi"
+                    title="Click to toggle verification status"
                   >
                     <CheckCircle2 className="w-3.5 h-3.5" />
-                    <span>{isDone ? "Suara Tersimpan & Terverifikasi" : "Belum Direkam"}</span>
+                    <span>{isDone ? "Audio Saved & Verified" : "Not Recorded"}</span>
                   </button>
                 </div>
               </div>
@@ -259,13 +259,13 @@ export function ExamPartSpeaking({
 
       <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4">
         <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
-          Semua bagian selesai. Selesaikan ujian untuk menghitung skor kelulusan.
+          All sections finished. Submit the exam to calculate your final score.
         </span>
         <Button
           onClick={onFinish}
           className="w-full sm:w-auto px-7 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs inline-flex items-center justify-center gap-2 cursor-pointer shadow-sm"
         >
-          <span>Kalkulasi Skor & Lihat Sertifikat</span>
+          <span>Calculate Score & View Certificate</span>
           <CheckCircle2 className="w-4 h-4" />
         </Button>
       </div>

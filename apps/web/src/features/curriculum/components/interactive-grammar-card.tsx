@@ -30,12 +30,12 @@ interface InteractiveGrammarCardProps {
 type GrammarMode = "affirmative" | "negative" | "question";
 
 const DEFAULT_SUBJECTS: SubjectOption[] = [
-  { label: "I", pronoun: "I", correctToBe: "am", role: "First Person (Saya)" },
-  { label: "He", pronoun: "He", correctToBe: "is", role: "Third Person (Dia lk)" },
-  { label: "She", pronoun: "She", correctToBe: "is", role: "Third Person (Dia pr)" },
-  { label: "We", pronoun: "We", correctToBe: "are", role: "Plural (Kita / Kami)" },
-  { label: "They", pronoun: "They", correctToBe: "are", role: "Plural (Mereka)" },
-  { label: "You", pronoun: "You", correctToBe: "are", role: "Second Person (Kamu)" },
+  { label: "I", pronoun: "I", correctToBe: "am", role: "First Person Singular (I)" },
+  { label: "He", pronoun: "He", correctToBe: "is", role: "Third Person Singular (He)" },
+  { label: "She", pronoun: "She", correctToBe: "is", role: "Third Person Singular (She)" },
+  { label: "We", pronoun: "We", correctToBe: "are", role: "First Person Plural (We)" },
+  { label: "They", pronoun: "They", correctToBe: "are", role: "Third Person Plural (They)" },
+  { label: "You", pronoun: "You", correctToBe: "are", role: "Second Person (You)" },
 ];
 
 const DEFAULT_GENERIC_COMPLEMENTS = [
@@ -169,7 +169,7 @@ export function InteractiveGrammarCard({
                 : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
             }`}
           >
-            + Positif
+            + Affirmative
           </button>
           <button
             type="button"
@@ -180,7 +180,7 @@ export function InteractiveGrammarCard({
                 : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
             }`}
           >
-            − Negatif
+            − Negative
           </button>
           <button
             type="button"
@@ -191,7 +191,7 @@ export function InteractiveGrammarCard({
                 : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
             }`}
           >
-            ? Tanya
+            ? Question
           </button>
         </div>
       </div>
@@ -240,7 +240,7 @@ export function InteractiveGrammarCard({
           ) : (
             <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xs space-y-2">
               <span className="text-[10px] font-black uppercase text-indigo-600 dark:text-indigo-400 block font-mono">
-                Slot 1 · Subjek ({selectedSubject?.role ? selectedSubject.role.split(" ")[0] : "Subjek"})
+                Slot 1 · Subject ({selectedSubject?.role ? selectedSubject.role.split(" ")[0] : "Subject"})
               </span>
               <div className="flex items-center gap-1.5 flex-wrap">
                 {subjects.map((sub, sIdx) => (
@@ -265,7 +265,7 @@ export function InteractiveGrammarCard({
           {activeMode === "question" ? (
             <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xs space-y-2">
               <span className="text-[10px] font-black uppercase text-indigo-600 dark:text-indigo-400 block font-mono">
-                Slot 2 · Subjek
+                Slot 2 · Subject
               </span>
               <div className="flex items-center gap-1.5 flex-wrap">
                 {subjects.map((sub) => (
@@ -294,11 +294,11 @@ export function InteractiveGrammarCard({
                 </span>
                 {isAgreementValid ? (
                   <span className="text-[10px] font-bold text-emerald-600 flex items-center gap-0.5">
-                    <CheckCircle2 className="w-3 h-3" /> Cocok
+                    <CheckCircle2 className="w-3 h-3" /> Matches
                   </span>
                 ) : (
                   <span className="text-[10px] font-bold text-rose-600 flex items-center gap-0.5">
-                    <AlertCircle className="w-3 h-3" /> Belum Cocok
+                    <AlertCircle className="w-3 h-3" /> Mismatch
                   </span>
                 )}
               </div>
@@ -325,7 +325,7 @@ export function InteractiveGrammarCard({
           <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xs space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-[10px] font-black uppercase text-slate-400 block font-mono">
-                Slot 3 · Pelengkap ({complementIndex + 1}/{complements.length})
+                Slot 3 · Complement ({complementIndex + 1}/{complements.length})
               </span>
               {complementType && (
                 <span className="text-[9px] font-bold px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 font-mono">
@@ -350,14 +350,14 @@ export function InteractiveGrammarCard({
         <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 shadow-xs">
           <div className="space-y-1 min-w-0">
             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block font-mono">
-              Hasil Susunan Kalimat:
+              Assembled Sentence:
             </span>
             <p className="text-lg sm:text-xl font-black text-slate-900 dark:text-white leading-tight">
               {getAssembledSentence()}
             </p>
             {!isAgreementValid && (
               <p className="text-xs text-rose-600 font-semibold">
-                ⚠️ Catatan: Pasangan to be untuk subjek "{selectedSubject.pronoun}" adalah "{selectedSubject.correctToBe}".
+                ⚠️ Grammar Note: The correct verb 'to be' for "{selectedSubject.pronoun}" is "{selectedSubject.correctToBe}".
               </p>
             )}
           </div>
@@ -368,7 +368,7 @@ export function InteractiveGrammarCard({
             className="px-4 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white text-xs font-bold flex items-center justify-center gap-2 cursor-pointer shrink-0 w-full sm:w-auto min-h-[44px] touch-manipulation active:scale-95"
           >
             <Volume2 className="w-4 h-4 text-amber-300" />
-            <span>Dengarkan Kalimat</span>
+            <span>Listen to Sentence</span>
           </button>
         </div>
       </div>

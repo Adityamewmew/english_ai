@@ -82,7 +82,7 @@ export function ModuleDetailView({ moduleId }: ModuleDetailViewProps) {
       <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-950">
         <div className="text-center space-y-2">
           <div className="w-8 h-8 border-2 border-[#0D3B66] border-t-transparent rounded-full animate-spin mx-auto" />
-          <p className="text-xs text-slate-500 font-medium">Menyiapkan workspace modul...</p>
+          <p className="text-xs text-slate-500 font-medium">Preparing module workspace...</p>
         </div>
       </div>
     );
@@ -93,13 +93,13 @@ export function ModuleDetailView({ moduleId }: ModuleDetailViewProps) {
       <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 dark:bg-slate-950 px-4">
         <BookOpen className="w-10 h-10 text-slate-400 mb-2" />
         <h2 className="text-base font-bold text-slate-800 dark:text-white mb-2">
-          Modul Tidak Ditemukan
+          Module Not Found
         </h2>
         <Link
           href="/modules"
           className="text-xs text-blue-600 dark:text-blue-400 font-semibold hover:underline"
         >
-          Kembali ke Daftar Modul
+          Back to Modules
         </Link>
       </div>
     );

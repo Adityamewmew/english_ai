@@ -80,17 +80,17 @@ export function StudentDashboardMobile({
 
   voiceSessions.slice(0, 2).forEach((call) => {
     const mins = Math.max(1, Math.round((call.durationSeconds || 60) / 60));
-    const fluency = call.evaluation?.fluency ? `${call.evaluation.fluency}% Kelancaran` : undefined;
+    const fluency = call.evaluation?.fluency ? `${call.evaluation.fluency}% Fluency` : undefined;
     const dateFormatted = call.createdAt
-      ? new Date(call.createdAt).toLocaleDateString("id-ID", { day: "numeric", month: "short" })
-      : "Baru saja";
+      ? new Date(call.createdAt).toLocaleDateString("en-US", { day: "numeric", month: "short" })
+      : "Just now";
 
     activities.push({
       id: "voice-" + call.id,
       type: "voice",
-      title: call.topic || "Percakapan Harian",
-      subtitle: `${mins} menit bersama Mr. Khoirul`,
-      badgeText: "Bicara",
+      title: call.topic || "Daily Conversation",
+      subtitle: `${mins} mins with Mr. Khoirul`,
+      badgeText: "Speaking",
       badgeStyle: "bg-amber-100 text-amber-900 border-amber-200",
       dateText: dateFormatted,
       scoreText: fluency,
@@ -100,15 +100,15 @@ export function StudentDashboardMobile({
 
   chatSessions.slice(0, 2).forEach((chat) => {
     const dateFormatted = chat.updatedAt
-      ? new Date(chat.updatedAt).toLocaleDateString("id-ID", { day: "numeric", month: "short" })
-      : "Baru saja";
+      ? new Date(chat.updatedAt).toLocaleDateString("en-US", { day: "numeric", month: "short" })
+      : "Just now";
 
     activities.push({
       id: "chat-" + chat.id,
       type: "chat",
-      title: chat.title || "Tanya Jawab Materi",
-      subtitle: "Diskusi tata bahasa dan latihan kalimat",
-      badgeText: "Diskusi",
+      title: chat.title || "Study Q&A",
+      subtitle: "Grammar discussion and sentence practice",
+      badgeText: "Discussion",
       badgeStyle: "bg-sky-100 text-sky-900 border-sky-200",
       dateText: dateFormatted,
       href: "/chat",
@@ -117,18 +117,18 @@ export function StudentDashboardMobile({
 
   completedModules.slice(0, 2).forEach((mod) => {
     const dateFormatted = mod.completedAt
-      ? new Date(mod.completedAt).toLocaleDateString("id-ID", { day: "numeric", month: "short" })
-      : "Selesai";
+      ? new Date(mod.completedAt).toLocaleDateString("en-US", { day: "numeric", month: "short" })
+      : "Completed";
 
     activities.push({
       id: "mod-" + mod.id,
       type: "module",
       title: mod.title,
-      subtitle: `Unit level ${mod.cefr || currentCefr} selesai`,
-      badgeText: "Modul",
+      subtitle: `CEFR ${mod.cefr || currentCefr} unit completed`,
+      badgeText: "Module",
       badgeStyle: "bg-emerald-100 text-emerald-900 border-emerald-200",
       dateText: dateFormatted,
-      scoreText: mod.score !== null && mod.score !== undefined ? `${mod.score}%` : "Lulus",
+      scoreText: mod.score !== null && mod.score !== undefined ? `${mod.score}%` : "Passed",
       href: `/modules/${mod.id}`,
     });
   });
@@ -141,7 +141,7 @@ export function StudentDashboardMobile({
       <div className="bg-white border border-slate-200/90 rounded-2xl p-4 shadow-2xs space-y-1">
         <div className="flex items-center justify-between">
           <h2 className="text-base font-extrabold text-slate-900 tracking-tight">
-            Selamat datang, {studentName}.
+            Welcome, {studentName}.
           </h2>
           <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-[#0D3B66] text-white">
             CEFR {currentCefr}
@@ -149,8 +149,8 @@ export function StudentDashboardMobile({
         </div>
         <p className="text-xs text-slate-500 font-medium leading-relaxed">
           {totalCompletedModules > 0
-            ? `Kamu telah menuntaskan ${totalCompletedModules} dari ${totalModules} modul kurikulum.`
-            : "Lanjutkan unit pembelajaran aktif atau latih respons bicara bersama tutor."}
+            ? `You have completed ${totalCompletedModules} of ${totalModules} curriculum modules.`
+            : "Continue your active unit or practice spontaneous speaking with Mr. Khoirul."}
         </p>
       </div>
 
@@ -170,7 +170,7 @@ export function StudentDashboardMobile({
               {totalCompletedModules}/{totalModules}
             </p>
             <p className="text-[10px] font-semibold text-slate-500 mt-1 leading-none">
-              Modul ({moduleProgressPercent}%)
+              Modules ({moduleProgressPercent}%)
             </p>
           </div>
         </Link>
@@ -189,7 +189,7 @@ export function StudentDashboardMobile({
               {voiceTotalMinutes}m
             </p>
             <p className="text-[10px] font-semibold text-slate-500 mt-1 leading-none">
-              {voiceCallsCount} Sesi Bicara
+              {voiceCallsCount} Voice Sessions
             </p>
           </div>
         </Link>
@@ -205,10 +205,10 @@ export function StudentDashboardMobile({
           </div>
           <div className="pt-2">
             <p className="text-xs font-black text-slate-900 font-mono leading-none truncate">
-              {placementCefr || (placementScore !== undefined && placementScore !== null ? `${placementScore}%` : "Tes")}
+              {placementCefr || (placementScore !== undefined && placementScore !== null ? `${placementScore}%` : "Test")}
             </p>
             <p className="text-[10px] font-semibold text-slate-500 mt-1 leading-none truncate">
-              {placementScore !== undefined && placementScore !== null ? "Skor Teruji" : "Diagnostik"}
+              {placementScore !== undefined && placementScore !== null ? "Tested Score" : "Diagnostic"}
             </p>
           </div>
         </Link>
@@ -218,7 +218,7 @@ export function StudentDashboardMobile({
       <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-2xs space-y-3">
         <div className="flex items-center justify-between">
           <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-[#0D3B66]/10 text-[#0D3B66]">
-            Target Modul
+            Target Module
           </span>
           <span className="text-[10px] font-mono font-bold text-slate-400">
             {nextModule.id}
@@ -230,7 +230,7 @@ export function StudentDashboardMobile({
             {nextModule.title}
           </h3>
           <p className="text-xs text-slate-500 line-clamp-2 mt-1 font-medium leading-relaxed">
-            {nextModule.objective || "Materi mencakup tata bahasa terstruktur, latihan membaca, dan latihan respons lisan."}
+            {nextModule.objective || "Coursework covers structured grammar, reading comprehension, and spoken fluency."}
           </p>
         </div>
 
@@ -239,7 +239,7 @@ export function StudentDashboardMobile({
           onClick={(e) => animeButtonPop(e.currentTarget)}
           className="w-full py-2.5 px-4 rounded-xl btn-skeuo-navy text-xs font-bold shadow-xs cursor-pointer flex items-center justify-center gap-2 min-h-[44px] touch-manipulation active:scale-95 transition-all"
         >
-          <span>Lanjut Belajar</span>
+          <span>Continue Learning</span>
           <ArrowRight className="w-4 h-4 ml-0.5" />
         </Link>
       </div>
@@ -252,10 +252,10 @@ export function StudentDashboardMobile({
           </div>
           <div className="min-w-0">
             <p className="text-xs font-bold text-slate-900 truncate">
-              Percakapan Langsung
+              Live Voice Practice
             </p>
             <p className="text-[11px] text-slate-500 font-medium truncate">
-              Latih respons spontan bersama Mr. Khoirul
+              Practice spontaneous responses with Mr. Khoirul
             </p>
           </div>
         </div>
@@ -264,7 +264,7 @@ export function StudentDashboardMobile({
           onClick={(e) => animeButtonPop(e.currentTarget)}
           className="py-2 px-3.5 rounded-xl btn-skeuo-yellow text-xs font-bold shadow-2xs shrink-0 min-h-[40px] flex items-center active:scale-95 transition-all"
         >
-          <span>Mulai Telepon</span>
+          <span>Start Voice Call</span>
         </Link>
       </div>
 
@@ -272,23 +272,23 @@ export function StudentDashboardMobile({
       <div className="space-y-2 pt-1">
         <div className="flex items-center justify-between px-1">
           <h3 className="text-xs font-bold uppercase tracking-wider text-slate-600">
-            Riwayat Terakhir
+            Recent Activities
           </h3>
           <Link
             href="/modules"
             className="text-[11px] font-bold text-[#0D3B66] hover:underline"
           >
-            Buka Kurikulum
+            Open Curriculum
           </Link>
         </div>
 
         {displayActivities.length === 0 ? (
           <div className="bg-white border border-slate-200/90 rounded-2xl p-4 text-center space-y-1.5 shadow-2xs">
             <p className="text-xs font-bold text-slate-800">
-              Belum ada riwayat tercatat
+              No recorded activity yet
             </p>
             <p className="text-[11px] text-slate-500 font-medium">
-              Selesaikan modul pertama atau mulai percakapan untuk mencatat progres belajarmu di sini.
+              Complete your first module or start a conversation to log your learning progress here.
             </p>
           </div>
         ) : (

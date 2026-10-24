@@ -86,7 +86,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
       setResult(data);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (err: any) {
-      setErrorMsg(err?.message || "Gagal mengirim tes penempatan.");
+      setErrorMsg(err?.message || "Failed to submit placement test.");
     }
   };
 
@@ -99,10 +99,10 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
           </div>
           <div>
             <p className="font-heading text-base font-bold text-primary">
-              Menyiapkan Lembar Tes...
+              Preparing Placement Assessment...
             </p>
             <p className="text-xs text-slate-500 mt-0.5">
-              Mengacak 22 soal diagnostik.
+              Generating 22 diagnostic questions across 4 core skills.
             </p>
           </div>
         </div>
@@ -119,7 +119,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
           </div>
           <div>
             <h3 className="font-heading font-bold text-base text-rose-950">
-              Gagal Memuat Tes
+              Failed to Load Assessment
             </h3>
             <p className="text-xs text-rose-700 mt-1">
               {String(loadError?.message || loadError)}
@@ -130,7 +130,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
             onClick={() => refetch()}
             className="px-4 py-2 bg-white hover:bg-slate-50 text-slate-800 text-xs font-bold rounded-xl border border-slate-300 border-b-3 border-b-slate-400 active:border-b active:translate-y-0.5 transition-all"
           >
-            Muat Ulang
+            Reload
           </button>
         </div>
       </div>
@@ -149,13 +149,13 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
 
           <div className="space-y-1">
             <span className="inline-block text-[11px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-200">
-              Hasil Tes Penempatan
+              Placement Assessment Results
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-primary pt-2">
-              Level Kamu: <span className="text-secondary">{result.overallCefr}</span>
+              Assessed CEFR Level: <span className="text-secondary">{result.overallCefr}</span>
             </h2>
             <p className="text-xs text-slate-500">
-              Skor Akhir: <span className="font-bold text-primary">{result.scorePercent}%</span>
+              Final Score: <span className="font-bold text-primary">{result.scorePercent}%</span>
             </p>
           </div>
 
@@ -240,14 +240,14 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
                   <div className="p-4 rounded-2xl bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-200 text-left space-y-2.5">
                     <div className="flex items-center justify-between">
                       <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-900 border border-indigo-200">
-                        Buka Akses Kelas
+                        Unlock Class Access
                       </span>
                       <span className="font-heading text-lg font-black text-indigo-950">
                         {formatRupiah(targetClass.price)}
                       </span>
                     </div>
                     <p className="text-xs text-slate-700 leading-relaxed font-medium">
-                      Untuk mulai mempelajari materi <strong>{result.overallCefr}</strong> dan membuka seluruh modul kurikulum, silakan aktivasi paket kelas di bawah ini.
+                      To begin learning <strong>{result.overallCefr}</strong> coursework and unlock full curriculum modules, please activate your class package below.
                     </p>
                   </div>
 
@@ -258,7 +258,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
                       className="flex-2 py-3.5 px-6 rounded-2xl bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold text-sm border-b-4 border-b-indigo-800 active:border-b-0 active:translate-y-1 shadow-sm transition-all flex items-center justify-center gap-2"
                     >
                       <Sparkles className="w-4 h-4" />
-                      Buka Akses Kelas {baseCefr} ({formatRupiah(targetClass.price)})
+                      Unlock Class {baseCefr} ({formatRupiah(targetClass.price)})
                     </button>
                     <Link href="/dashboard" className="flex-1">
                       <button
@@ -280,7 +280,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
                     type="button"
                     className="w-full py-3.5 px-6 rounded-2xl bg-primary hover:bg-[#0c2b48] text-white font-bold text-sm border-b-4 border-b-[#07192b] active:border-b-0 active:translate-y-1 shadow-sm transition-all flex items-center justify-center gap-1.5"
                   >
-                    Mulai Belajar Level {result.overallCefr}
+                    Start Learning Level {result.overallCefr}
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </Link>
@@ -322,10 +322,10 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
         <div className="block sm:hidden">
           <div className="mb-4">
             <h1 className="font-heading text-xl font-extrabold text-primary">
-              Tes Penempatan CEFR
+              CEFR Placement Assessment
             </h1>
             <p className="text-xs text-slate-500 mt-0.5">
-              Jawab pertanyaan sesuai kemampuanmu saat ini.
+              Answer the questions based on your current English proficiency.
             </p>
           </div>
           <PlacementWizardMobile
@@ -351,18 +351,18 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
           {/* Test Paper Header */}
           <div className="mb-6 space-y-1.5">
             <h1 className="font-heading text-2xl sm:text-3xl font-extrabold text-primary">
-              Tes Penempatan Bahasa Inggris
+              English Placement Assessment
             </h1>
             <p className="text-xs sm:text-sm text-slate-600">
-              Jawab pertanyaan di bawah sesuai kemampuanmu saat ini.
+              Answer the questions below based on your current English proficiency.
             </p>
 
             {/* Tactile Progress Indicator */}
             <div className="pt-2">
               <div className="flex justify-between items-center text-xs font-semibold text-slate-600 mb-1">
-                <span>Progres:</span>
+                <span>Progress:</span>
                 <span className="font-bold text-primary">
-                  {answeredCount} / {totalQuestions} selesai
+                  {answeredCount} / {totalQuestions} Completed
                 </span>
               </div>
               <div className="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden p-0.5 border border-slate-300/60 shadow-inner">

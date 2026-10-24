@@ -84,7 +84,7 @@ export function StageReadingView({
               Master Key Vocabulary Before Reading
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-300">
-              Tap each card to flip for Indonesian meaning and listen to native English pronunciation:
+              Tap each card to flip for the English definition and listen to native English pronunciation:
             </p>
           </div>
 
@@ -138,7 +138,7 @@ export function StageReadingView({
               Match Words with Their Correct Meanings
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-300">
-              Connect the English word pin on the left with its matching Indonesian meaning on the right:
+              Connect the English word pin on the left with its matching definition on the right:
             </p>
           </div>
           <GamifiedMatchPairs

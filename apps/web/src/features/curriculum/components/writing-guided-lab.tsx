@@ -106,17 +106,17 @@ export function WritingGuidedLab({
       <div className="space-y-1.5">
         <div className="flex items-center justify-between">
           <span className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] uppercase tracking-wider block font-mono">
-            Langkah 4 · Studio Menulis Terbimbing ({completedCount}/{challenges.length} Selesai)
+            Step 4 · Guided Writing Studio ({completedCount}/{challenges.length} Completed)
           </span>
           <span className="text-xs font-bold text-slate-500 font-mono">
-            {challenges.length} Tantangan Menulis
+            {challenges.length} Writing Challenges
           </span>
         </div>
         <h3 className="text-lg sm:text-xl font-black text-slate-900 dark:text-white">
-          Studio Latihan Menulis Paragraf
+          Paragraph Writing Studio
         </h3>
         <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-          Tuliskan paragraf bahasa Inggris sesuai skenario instruksi dengan memperhatikan kaidah tata bahasa dan struktur kalimat.
+          Write an English paragraph based on the prompt, paying close attention to grammar rules and sentence structure.
         </p>
       </div>
 
@@ -157,7 +157,7 @@ export function WritingGuidedLab({
               {currentChallenge.title}
             </span>
             <span className="text-xs font-bold text-slate-500 font-mono">
-              Hadiah: +{currentChallenge.xpReward} XP
+              Reward: +{currentChallenge.xpReward} XP
             </span>
           </div>
           <p className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white leading-relaxed">
@@ -167,9 +167,9 @@ export function WritingGuidedLab({
           <div className="p-3.5 rounded-xl bg-amber-50/80 dark:bg-amber-950/20 border border-amber-200/80 dark:border-amber-900/40 text-xs text-amber-900 dark:text-amber-200 flex items-start gap-2.5">
             <Lightbulb className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
             <div className="space-y-0.5">
-              <span className="font-bold block">Panduan Menulis Mandiri:</span>
+              <span className="font-bold block">Independent Writing Guide:</span>
               <span className="text-slate-600 dark:text-slate-300 leading-relaxed">
-                Gunakan ide dan kalimatmu sendiri sesuai instruksi. Awali dengan huruf kapital, gunakan struktur kalimat yang lengkap, dan akhiri dengan tanda baca titik (.) atau tanya (?).
+                Express your thoughts in your own words. Begin sentences with a capital letter, use complete sentence structures, and end with terminal punctuation (. or ?).
               </span>
             </div>
           </div>
@@ -178,7 +178,7 @@ export function WritingGuidedLab({
         {/* Textarea Input with Anti-Paste */}
         <div className="space-y-1.5">
           <label className="text-xs font-bold text-slate-700 dark:text-slate-200 block">
-            Lembar Tulis Paragraf:
+            Writing Workspace:
           </label>
           <textarea
             rows={4}
@@ -192,7 +192,7 @@ export function WritingGuidedLab({
               setPasteWarning(true);
               setTimeout(() => setPasteWarning(false), 3500);
             }}
-            placeholder="Tuliskan kalimat atau paragraf bahasa Inggrismu sendiri di sini..."
+            placeholder="Type your own English sentence or paragraph here..."
             className="w-full p-3.5 sm:p-4 rounded-2xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs sm:text-sm font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66] dark:focus:ring-[#F4B41A] leading-relaxed shadow-inner"
           />
         </div>
@@ -201,13 +201,13 @@ export function WritingGuidedLab({
         {pasteWarning && (
           <div className="p-3 rounded-xl bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 text-xs text-rose-800 dark:text-rose-300 flex items-center gap-2 animate-in fade-in duration-200">
             <ShieldAlert className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
-            <span>Fitur tempel (paste) dinonaktifkan. Silakan ketik kalimatmu sendiri secara mandiri.</span>
+            <span>Pasting is disabled. Please type your sentences independently.</span>
           </div>
         )}
         {isVerbatimCopy && (
           <div className="p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300 flex items-center gap-2 animate-in fade-in duration-200">
             <AlertCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
-            <span>Kalimat ini terdeteksi menyalin persis contoh kunci jawaban. Tuliskan variasi atau kalimatmu sendiri!</span>
+            <span>Exact match to model answer detected. Please compose your own original sentence!</span>
           </div>
         )}
 
@@ -222,7 +222,7 @@ export function WritingGuidedLab({
           >
             <Check className="w-3.5 h-3.5 shrink-0" />
             <span>
-              {wordCount} Kata (Min {currentChallenge.minWords})
+              {wordCount} Words (Min {currentChallenge.minWords})
             </span>
           </div>
 
@@ -234,7 +234,7 @@ export function WritingGuidedLab({
             }`}
           >
             <Check className="w-3.5 h-3.5 shrink-0" />
-            <span>Huruf Kapital (A-Z)</span>
+            <span>Capital Letter (A-Z)</span>
           </div>
 
           <div
@@ -245,7 +245,7 @@ export function WritingGuidedLab({
             }`}
           >
             <Check className="w-3.5 h-3.5 shrink-0" />
-            <span>Tanda Titik / Tanya</span>
+            <span>Punctuation (. / ?)</span>
           </div>
 
           <div
@@ -256,7 +256,7 @@ export function WritingGuidedLab({
             }`}
           >
             <Check className="w-3.5 h-3.5 shrink-0" />
-            <span>Tulisan Orisinal</span>
+            <span>Original Writing</span>
           </div>
         </div>
 
@@ -265,10 +265,10 @@ export function WritingGuidedLab({
           <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 text-xs text-emerald-900 dark:text-emerald-200 space-y-1">
             <span className="font-bold flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              <span>Tantangan Selesai! (+{currentChallenge.xpReward} XP)</span>
+              <span>Challenge Completed! (+{currentChallenge.xpReward} XP)</span>
             </span>
             <p>
-              Paragraf yang kamu tulis telah memenuhi semua kriteria tata bahasa dasar level CEFR.
+              Your written paragraph satisfies all core CEFR grammatical requirements.
             </p>
           </div>
         )}
@@ -284,7 +284,7 @@ export function WritingGuidedLab({
             className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-colors cursor-pointer min-h-[44px] touch-manipulation w-full sm:w-auto"
           >
             <RotateCcw className="w-3.5 h-3.5" />
-            <span>Hapus Teks</span>
+            <span>Clear Text</span>
           </button>
 
           <div className="flex items-center gap-2 w-full sm:w-auto">
@@ -294,7 +294,7 @@ export function WritingGuidedLab({
                 onClick={handleNextChallenge}
                 className="inline-flex items-center justify-center gap-1.5 px-6 py-3 rounded-2xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs sm:text-sm transition-all active:scale-95 cursor-pointer shadow-xs min-h-[46px] touch-manipulation w-full sm:w-auto border-b-3 border-b-[#082542]"
               >
-                <span>Tantangan Berikutnya</span>
+                <span>Next Challenge</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             ) : (
@@ -309,7 +309,7 @@ export function WritingGuidedLab({
                 }`}
               >
                 <Send className="w-4 h-4" />
-                <span>Kirim &amp; Periksa Paragraf</span>
+                <span>Submit &amp; Evaluate Paragraph</span>
               </button>
             )}
           </div>

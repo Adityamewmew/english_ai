@@ -29,7 +29,7 @@ export function CallHeader({
             type="button"
             onClick={onExit}
             className="w-10 h-10 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 hover:text-slate-900 flex items-center justify-center transition-all active:scale-95 shadow-sm"
-            title="Kembali ke Dashboard"
+            title="Back to Dashboard"
           >
             <ArrowLeft className="w-5 h-5" />
           </button>
@@ -37,7 +37,7 @@ export function CallHeader({
           <Link
             href="/dashboard"
             className="w-10 h-10 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 hover:text-slate-900 flex items-center justify-center transition-all active:scale-95 shadow-sm"
-            title="Kembali ke Dashboard"
+            title="Back to Dashboard"
           >
             <ArrowLeft className="w-5 h-5" />
           </Link>
@@ -58,7 +58,7 @@ export function CallHeader({
             type="button"
             onClick={onToggleLang}
             className="px-3.5 py-1.5 rounded-full bg-white hover:bg-slate-50 border border-slate-200 text-xs font-bold text-slate-700 hover:text-slate-900 transition-all shadow-sm active:scale-95"
-            title={`Mode mic: ${lang === "id-ID" ? "Indonesia" : "English"}. Klik untuk beralih.`}
+            title={`Recognition language: ${lang === "id-ID" ? "Indonesian" : "English"}. Click to toggle.`}
           >
             {lang === "id-ID" ? "🇮🇩 ID" : "🇬🇧 EN"}
           </button>

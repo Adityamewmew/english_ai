@@ -122,14 +122,14 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
                 } else {
                   setIsAligned(false);
                   setTranscriptionError(
-                    "Audio tersimpan. Silakan periksa atau ketik teks jawabanmu langsung di bawah."
+                    "Audio saved. Please review or type your answer text below."
                   );
                 }
               } catch (err) {
                 console.warn("AI transcription error:", err);
                 setIsAligned(false);
                 setTranscriptionError(
-                  "Audio tersimpan. Silakan periksa atau ketik teks jawabanmu langsung di bawah."
+                  "Audio saved. Please review or type your answer text below."
                 );
               } finally {
                 setIsTranscribing(false);
@@ -141,7 +141,7 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
         })
         .catch((err) => {
           console.warn("Microphone stream error:", err);
-          alert("Izin mikrofon diperlukan untuk merekam suara. Kamu juga bisa mengetikkan kalimatmu secara langsung.");
+          alert("Microphone permission is required to record audio. You can also type your answer directly.");
           setIsRecording(false);
         });
     }
@@ -248,7 +248,7 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
               className="px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-extrabold border-b-3 border-b-rose-900 active:border-b-0 active:translate-y-0.5 shadow-sm transition-all flex items-center gap-2"
             >
               <Mic className="w-4 h-4" />
-              <span>{hasRecorded ? "Rekam Ulang" : "Mulai Rekam (Mic)"}</span>
+              <span>{hasRecorded ? "Re-record" : "Start Recording (Mic)"}</span>
             </button>
           ) : (
             <button
@@ -257,7 +257,7 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
               className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-900 text-rose-400 text-xs font-extrabold border-2 border-rose-500 border-b-3 border-b-rose-700 active:border-b-0 active:translate-y-0.5 shadow-inner transition-all flex items-center gap-2 animate-pulse"
             >
               <Square className="w-4 h-4 fill-current" />
-              <span>Selesai Rekam</span>
+              <span>Stop Recording</span>
             </button>
           )}
 
@@ -266,7 +266,7 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
               type="button"
               onClick={handleReset}
               className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs border border-slate-700 border-b-2 border-b-slate-900 active:border-b-0 active:translate-y-0.5 transition-all"
-              title="Reset Rekaman"
+              title="Reset Recording"
             >
               <RotateCcw className="w-4 h-4" />
             </button>
@@ -275,7 +275,7 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
           {isTranscribing && (
             <span className="text-[11px] text-amber-300 flex items-center gap-1.5 font-mono ml-auto">
               <Loader2 className="w-3.5 h-3.5 animate-spin" />
-              Menyelaraskan transkrip...
+              Aligning transcript...
             </span>
           )}
         </div>
@@ -287,9 +287,9 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
           <div className="flex items-center justify-between text-[11px] font-semibold text-slate-700">
             <span className="flex items-center gap-1.5">
               <Volume2 className="w-3.5 h-3.5 text-secondary" />
-              Rekaman Suaramu:
+              Your Voice Recording:
             </span>
-            <span className="text-[10px] text-slate-500">Tersimpan</span>
+            <span className="text-[10px] text-slate-500">Saved</span>
           </div>
           <audio controls src={audioUrl} className="w-full h-8 rounded-lg" />
         </div>
@@ -300,11 +300,11 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
         <div className="flex items-center justify-between text-xs">
           <label className="font-bold text-slate-700 flex items-center gap-1.5">
             <FileText className="w-3.5 h-3.5 text-secondary" />
-            Transkrip Jawaban:
+            Answer Transcript:
           </label>
           <div className="flex items-center gap-2">
             <span className="text-[10px] text-slate-400">
-              (Dapat diedit atau diketik langsung)
+              (Editable / Direct Input)
             </span>
             {transcript && (
               <button
@@ -312,7 +312,7 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
                 onClick={() => setTranscript("")}
                 className="text-[11px] text-rose-600 hover:text-rose-800 font-semibold transition-all"
               >
-                Hapus
+                Clear
               </button>
             )}
           </div>
@@ -323,14 +323,14 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
           value={transcript}
           disabled={isRecording || isTranscribing}
           onChange={(e) => setTranscript(e.target.value)}
-          placeholder="Ucapanmu akan otomatis ditranskripsikan ke sini. Kamu juga dapat mengetik atau mengedit langsung..."
+          placeholder="Your speech will be transcribed here automatically. You can also type or edit directly..."
           className="w-full p-3.5 rounded-xl border border-slate-200 border-b-2 border-b-slate-300 bg-[#FBFBFE] focus:bg-white text-xs text-slate-800 focus:outline-none focus:border-secondary transition-all font-normal shadow-inner disabled:bg-slate-50 disabled:text-slate-500"
         />
 
         {isAligned && transcript ? (
           <p className="text-[11px] text-emerald-600 flex items-center gap-1 font-medium">
             <CheckCircle className="w-3.5 h-3.5" />
-            Transkrip berhasil diselaraskan ({transcript.split(/\s+/).filter(Boolean).length} kata).
+            Transcript aligned successfully ({transcript.split(/\s+/).filter(Boolean).length} words).
           </p>
         ) : transcriptionError ? (
           <div className="flex items-start gap-1.5 p-2 bg-amber-50 rounded-lg border border-amber-200 text-[11px] text-amber-800">
@@ -339,7 +339,7 @@ export function SpeakingRecorder({ onTranscriptChange }: SpeakingRecorderProps) 
           </div>
         ) : transcript ? (
           <p className="text-[10px] text-slate-400 text-right">
-            {transcript.split(/\s+/).filter(Boolean).length} kata terisi
+            {transcript.split(/\s+/).filter(Boolean).length} words entered
           </p>
         ) : null}
       </div>

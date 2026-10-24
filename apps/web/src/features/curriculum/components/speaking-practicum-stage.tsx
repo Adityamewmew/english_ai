@@ -290,13 +290,13 @@ export function SpeakingPracticumStage({
       {/* Header */}
       <div className="space-y-1.5">
         <span className="text-xs font-bold text-[#1B4965] dark:text-[#F4B41A] uppercase tracking-wider block font-mono">
-          Step 5 · Speaking Practicum (2 Storytelling, 4 Roleplay Call, 4 Drill Linguistik)
+          Step 5 · Speaking Practicum (2 Storytelling, 4 Roleplay Calls, 4 Linguistic Drills)
         </span>
         <h3 className="text-xl font-black text-slate-900 dark:text-white">
-          Praktikum Berbicara Mandiri (10 Soal Terstruktur)
+          Independent Speaking Practicum (10 Structured Challenges)
         </h3>
         <p className="text-sm text-slate-600 dark:text-slate-300">
-          Uji kemampuan berbicaramu: 2 cerita bebas bertema, 4 panggilan suara langsung dengan Mr. Khoirul, dan 4 drill tata bahasa/pelafalan.
+          Build spoken fluency: 2 themed storytelling prompts, 4 live interactive voice calls with Mr. Khoirul, and 4 grammar & pronunciation drills.
         </p>
       </div>
 
@@ -506,7 +506,7 @@ export function SpeakingPracticumStage({
                   }}
                   className="px-4 py-2.5 rounded-xl border border-dashed border-amber-400 text-amber-600 dark:text-amber-400 font-bold text-xs hover:bg-amber-50 dark:hover:bg-amber-950/30 transition-all cursor-pointer flex items-center gap-1.5"
                 >
-                  <span>Lewati Soal (Admin)</span>
+                  <span>Skip Question (Admin)</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               )}

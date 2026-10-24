@@ -33,7 +33,7 @@ export function StudentLevelMasteryCard({
     <div className="space-y-3.5">
       <div className="flex items-center justify-between px-1">
         <h3 className="text-lg sm:text-xl font-black text-[#0D3B66] dark:text-white uppercase tracking-tight">
-          Target Level Aktif
+          Active CEFR Target
         </h3>
       </div>
 
@@ -56,10 +56,10 @@ export function StudentLevelMasteryCard({
           {/* Description */}
           <div className="space-y-1">
             <h4 className="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white leading-snug">
-              Pondasi Komunikasi Sehari-hari
+              Core Daily Communication Track
             </h4>
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
-              Fokus pada pembentukan kalimat dasar, kosakata esensial, dan respon spontan saat berbicara.
+              Focus on core sentence construction, essential vocabulary, and spontaneous spoken interaction.
             </p>
           </div>
 
@@ -67,7 +67,7 @@ export function StudentLevelMasteryCard({
           <div className="space-y-2 pt-1">
             <div className="flex items-center justify-between text-xs font-bold">
               <span className="text-slate-600 dark:text-slate-400">
-                {completedInLevel} dari {totalInLevel} Unit Selesai
+                {completedInLevel} of {totalInLevel} Units Completed
               </span>
               <span className="font-mono text-[#0D3B66] dark:text-[#F4B41A]">
                 {progressPercent}%
@@ -86,7 +86,7 @@ export function StudentLevelMasteryCard({
         <div className="p-5 rounded-[22px] bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 border-b-2 shadow-[0_1px_3px_rgba(0,0,0,0.04)] space-y-3.5">
           <div className="flex items-center gap-1.5">
             <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#F4B41A]/20 text-[#854D0E] border border-[#F4B41A]/40">
-              Unit Selanjutnya
+              Next Target Unit
             </span>
             <span className="text-[10px] font-mono font-bold text-slate-400">
               {nextModule.id}
@@ -98,7 +98,7 @@ export function StudentLevelMasteryCard({
               {nextModule.title}
             </h4>
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-medium line-clamp-2">
-              {nextModule.objective || "Materi interaktif mencakup tata bahasa, pemahaman teks, dan latihan speaking."}
+              {nextModule.objective || "Interactive coursework covering grammar, reading comprehension, and oral fluency drills."}
             </p>
           </div>
 
@@ -108,7 +108,7 @@ export function StudentLevelMasteryCard({
               onClick={(e) => animeButtonPop(e.currentTarget)}
               className="w-full py-2.5 px-4 rounded-full btn-skeuo-navy text-xs font-bold shadow-xs cursor-pointer flex items-center justify-center gap-1.5 min-h-[42px] touch-manipulation"
             >
-              <span>Lanjut Belajar</span>
+              <span>Continue Course</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
@@ -122,10 +122,10 @@ export function StudentLevelMasteryCard({
             </div>
             <div>
               <p className="text-xs font-black text-[#0D3B66] dark:text-[#F4B41A]">
-                Latihan Speaking Bebas
+                Open Speaking Session
               </p>
               <p className="text-[11px] text-slate-500 font-medium">
-                Punya 5 menit luang? Ngobrol santai dengan Mr. Khoirul.
+                Have 5 minutes? Practice spontaneous conversation with Mr. Khoirul.
               </p>
             </div>
           </div>
@@ -134,7 +134,7 @@ export function StudentLevelMasteryCard({
             onClick={(e) => animeButtonPop(e.currentTarget)}
             className="w-full py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-[#F4B41A]/20 border border-[#F4B41A]/40 text-[#854D0E] dark:text-[#F4B41A] text-xs font-bold transition-all text-center block cursor-pointer"
           >
-            Mulai Percakapan Sekarang
+            Start Voice Call Now
           </Link>
         </div>
       </div>

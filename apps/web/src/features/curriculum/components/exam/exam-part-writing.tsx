@@ -25,14 +25,14 @@ export function ExamPartWriting({
       <div className="flex items-center justify-between border-b pb-3 border-slate-200 dark:border-slate-800">
         <div>
           <span className="text-xs font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">
-            Bagian 3 dari 4
+            Part 3 of 4
           </span>
           <h3 className="text-xl font-bold text-slate-900 dark:text-white">
             Written Production & Syntax Construction
           </h3>
         </div>
         <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-          {answeredCount} / {writingList.length} Terisi
+          {answeredCount} / {writingList.length} Completed
         </span>
       </div>
 
@@ -53,19 +53,19 @@ export function ExamPartWriting({
                     {item.typeLabel || item.type || "Sentence Transformation"}
                   </div>
                   <div className="text-sm font-semibold text-slate-800 dark:text-slate-200 leading-relaxed">
-                    {item.instruction || "Lengkapi atau susun kalimat sesuai instruksi di bawah ini:"}
+                    {item.instruction || "Complete or construct the sentence according to the instructions below:"}
                   </div>
                   {(item.promptText || item.prompt || item.sentence) && (
                     <div className="p-3.5 rounded-xl bg-rose-50/70 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/60 text-sm font-bold text-slate-900 dark:text-white font-mono leading-relaxed shadow-2xs">
                       <span className="text-[10px] uppercase tracking-wider font-sans font-bold text-rose-700 dark:text-rose-400 block mb-1">
-                        Kalimat Target / Bahan:
+                        Target Sentence / Prompt:
                       </span>
                       {item.promptText || item.sentence || item.prompt}
                     </div>
                   )}
                   {item.hint && (
                     <div className="text-xs text-slate-500 dark:text-slate-400 italic">
-                      Petunjuk: {item.hint}
+                      Hint: {item.hint}
                     </div>
                   )}
                 </div>
@@ -75,7 +75,7 @@ export function ExamPartWriting({
                 rows={2}
                 value={ans}
                 onChange={(e) => onChangeAnswer(qIdx, e.target.value)}
-                placeholder="Tuliskan konstruksi kalimat perbaikan atau jawabanmu di sini..."
+                placeholder="Type your revised sentence construction or answer here..."
                 className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-medium text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-hidden focus:ring-2 focus:ring-rose-500 leading-relaxed"
               />
             </Card>
@@ -85,13 +85,13 @@ export function ExamPartWriting({
 
       <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4">
         <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
-          Tuntaskan 10 soal penulisan sebelum masuk ke ujian speaking lisan.
+          Complete all writing questions before proceeding to the oral speaking exam.
         </span>
         <Button
           onClick={onNext}
           className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs inline-flex items-center justify-center gap-2 cursor-pointer"
         >
-          <span>Lanjut ke Part 4 (Speaking)</span>
+          <span>Continue to Part 4 (Speaking)</span>
           <ChevronRight className="w-4 h-4" />
         </Button>
       </div>

@@ -48,7 +48,7 @@ ${ragContext ? `${ragContext}\n\n` : ""}Analyze the conversation session and ret
   "pronunciation": 1.0-9.0,
   "overallBand": 1.0-9.0,
   "cefr": "A1" | "A2" | "B1" | "B2" | "C1" | "C2",
-  "feedback_id": "Catatan evaluasi ramah dalam Bahasa Indonesia oleh Mr. Khoirul (2-3 kalimat memberi motivasi dan saran perbaikan)",
+  "feedback_id": "Encouraging evaluation in English by Mr. Khoirul (2-3 sentences offering motivation and specific tips)",
   "feedback_en": "Constructive feedback in English (2 sentences)",
   "student_facts": [
     "List of any personal facts, activities, food/meals, pets, family, hobbies, jobs, opinions, or life stories the student mentioned in this call. Return empty array [] if none."
@@ -242,16 +242,16 @@ Analyze the student's transcript and return valid JSON ONLY with this exact sche
     "coherence": 1.0-5.0
   },
   "grammar_analysis": {
-    "strengths": ["contoh struktur kalimat yang sudah benar digunakan siswa"],
+    "strengths": ["Example sentence structures used correctly by the student"],
     "corrections": [
       {
-        "said": "kalimat asli yang diucapkan siswa",
-        "better": "saran perbaikan grammar yang lebih tepat dan natural",
-        "explanation": "penjelasan singkat dan mudah dipahami dalam Bahasa Indonesia"
+        "said": "Original sentence said by the student",
+        "better": "Natural, accurate grammar correction",
+        "explanation": "Clear, concise explanation in English"
       }
     ]
   },
-  "feedback_id": "Ulasan ramah dalam Bahasa Indonesia oleh Mr. Khoirul (2-3 kalimat)",
+  "feedback_id": "Warm, encouraging evaluation in English by Mr. Khoirul (2-3 sentences)",
   "feedback_en": "Encouraging feedback in English (2 sentences)"
 }`;
 

@@ -422,10 +422,10 @@ export function ModulesCatalogView({
               <div className="p-3.5 rounded-2xl bg-indigo-50/60 dark:bg-slate-800/60 border border-indigo-100 dark:border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-2xs">
                 <div className="flex items-center gap-2.5">
                   <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-indigo-100 text-indigo-800 dark:bg-indigo-900/60 dark:text-indigo-300 font-mono">
-                    Paket {activeCategoryClass.userTier.toUpperCase()}
+                    {activeCategoryClass.userTier.toUpperCase()} Plan
                   </span>
                   <span className="text-xs text-slate-600 dark:text-slate-400">
-                    Ingin kuota harian chat &amp; durasi panggilan suara AI lebih banyak?
+                    Need higher daily chat limits &amp; AI voice call practice duration?
                   </span>
                 </div>
                 <button
@@ -436,7 +436,7 @@ export function ModulesCatalogView({
                   }}
                   className="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-700 hover:bg-slate-50 border border-slate-200 dark:border-slate-600 text-indigo-700 dark:text-indigo-300 text-xs font-bold transition-all shadow-2xs shrink-0 cursor-pointer self-start sm:self-auto"
                 >
-                  Tingkatkan Paket AI
+                  Upgrade AI Plan
                 </button>
               </div>
             )}
@@ -452,10 +452,10 @@ export function ModulesCatalogView({
                 </h4>
                 <p className="text-xs text-slate-500 max-w-sm mx-auto">
                   {totalInSubLevel === 0
-                    ? `Modul untuk sub-level ${activeSubLevelItem.id} sedang dalam tahap pengembangan dan kurasi standar kurikulum terbaru.`
+                    ? `Modules for sublevel ${activeSubLevelItem.id} are being curated to latest CEFR standards.`
                     : searchQuery
-                    ? `Tidak ada modul yang cocok dengan "${searchQuery}" di ${activeSubLevelItem.id}. Coba kata kunci lain.`
-                    : "Tidak ada modul yang sesuai dengan filter status yang dipilih."}
+                    ? `No modules match "${searchQuery}" in ${activeSubLevelItem.id}. Try different search terms.`
+                    : "No modules match the selected filter criteria."}
                 </p>
                 {totalInSubLevel > 0 && (searchQuery || statusFilter !== "all") && (
                   <button

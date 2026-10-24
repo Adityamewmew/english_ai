@@ -15,11 +15,11 @@ export function StudentMobileBottomNav() {
   const pathname = usePathname();
 
   const navItems = [
-    { href: "/dashboard", icon: LayoutGrid, label: "Beranda" },
-    { href: "/modules", icon: BookOpen, label: "Modul" },
+    { href: "/dashboard", icon: LayoutGrid, label: "Home" },
+    { href: "/modules", icon: BookOpen, label: "Modules" },
     { href: "/chat", icon: MessageSquare, label: "Chat" },
-    { href: "/call", icon: PhoneCall, label: "Telepon" },
-    { href: "/placement", icon: Award, label: "Tes CEFR" },
+    { href: "/call", icon: PhoneCall, label: "Call" },
+    { href: "/placement", icon: Award, label: "CEFR Test" },
   ];
 
   return (
