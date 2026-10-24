@@ -1,6 +1,6 @@
-import { TIER_EASY_BANK } from "../../../../db/generator/exam-tiers/tier-easy";
-import { TIER_MEDIUM_BANK } from "../../../../db/generator/exam-tiers/tier-medium";
-import { TIER_HARD_BANK } from "../../../../db/generator/exam-tiers/tier-hard";
+import { TIER_EASY_BANK } from "./exam-tiers/tier-easy";
+import { TIER_MEDIUM_BANK } from "./exam-tiers/tier-medium";
+import { TIER_HARD_BANK } from "./exam-tiers/tier-hard";
 
 export interface BuildAssessmentParams {
   unitId: string;
