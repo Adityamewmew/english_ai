@@ -11,12 +11,16 @@ interface SyllableToken {
 
 interface StressPair {
   id: string;
-  country: string;
-  countryAudio: string;
-  countrySyllables: SyllableToken[];
-  nationality: string;
-  natAudio: string;
-  natSyllables: SyllableToken[];
+  country?: string;
+  countryAudio?: string;
+  countrySyllables?: SyllableToken[];
+  nationality?: string;
+  natAudio?: string;
+  natSyllables?: SyllableToken[];
+  word?: string;
+  audio?: string;
+  phonetic?: string;
+  syllables?: SyllableToken[];
   shiftExplanation: string;
 }
 
@@ -149,109 +153,122 @@ export function SpeakingSyllableStage({
                 </span>
               </div>
 
-              {/* A. COUNTRY ROW */}
-              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-slate-400">
-                    Word 1 ({pair.countryAudio || pair.country})
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      playMetronomeFlow(pair.id, "country", pair.countrySyllables, pair.countryAudio)
-                    }
-                    className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] transition-all cursor-pointer shadow-xs active:scale-95"
-                  >
-                    <Play className="w-3 h-3 fill-current" />
-                    <span>Play Rhythm</span>
-                  </button>
-                </div>
+              {/* A. WORD 1 / SINGLE WORD ROW */}
+              {(() => {
+                const firstSyllables = pair.countrySyllables || pair.syllables || [];
+                const firstAudio = pair.countryAudio || pair.audio || pair.word || pair.country || "";
+                const firstLabel = pair.country || pair.word || "Word 1";
+                const hasSecondWord = Array.isArray(pair.natSyllables) && pair.natSyllables.length > 0;
 
-                {/* Syllable Pads */}
-                <div className="flex flex-wrap items-center gap-2 pt-1">
-                  {pair.countrySyllables.map((syl, sIdx) => {
-                    const beatKey = `${pair.id}-country-${sIdx}`;
-                    const isActive = activeBeatId === beatKey;
+                return (
+                  <>
+                    <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-slate-400">
+                          {hasSecondWord ? `Word 1 (${firstLabel})` : `Target Word (${firstLabel})`}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            playMetronomeFlow(pair.id, "country", firstSyllables, firstAudio)
+                          }
+                          className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] transition-all cursor-pointer shadow-xs active:scale-95"
+                        >
+                          <Play className="w-3 h-3 fill-current" />
+                          <span>Play Rhythm</span>
+                        </button>
+                      </div>
 
-                    return (
-                      <button
-                        key={sIdx}
-                        type="button"
-                        onClick={() =>
-                          handleSyllableTap(pair.id, "country", sIdx, syl, pair.countryAudio)
-                        }
-                        className={`px-3 py-1.5 rounded-xl font-bold font-mono text-sm transition-all duration-200 cursor-pointer active:scale-90 flex items-center gap-1.5 shadow-xs ${
-                          isActive
-                            ? "bg-[#F4B41A] text-[#0D3B66] ring-4 ring-[#F4B41A]/30 scale-105"
-                            : syl.isStressed
-                            ? "bg-amber-100 dark:bg-amber-950/40 text-amber-900 dark:text-amber-200 border-2 border-amber-300 dark:border-amber-700"
-                            : "bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600"
-                        }`}
-                      >
-                        {syl.isStressed && <span className="w-2 h-2 rounded-full bg-amber-500 inline-block" />}
-                        <span>{syl.text}</span>
-                        {syl.isStressed && (
-                          <span className="text-[9px] uppercase tracking-tight text-amber-700 dark:text-amber-300 font-sans font-black">
-                            STRESS
+                      {/* Syllable Pads */}
+                      <div className="flex flex-wrap items-center gap-2 pt-1">
+                        {firstSyllables.map((syl, sIdx) => {
+                          const beatKey = `${pair.id}-country-${sIdx}`;
+                          const isActive = activeBeatId === beatKey;
+
+                          return (
+                            <button
+                              key={sIdx}
+                              type="button"
+                              onClick={() =>
+                                handleSyllableTap(pair.id, "country", sIdx, syl, firstAudio)
+                              }
+                              className={`px-3 py-1.5 rounded-xl font-bold font-mono text-sm transition-all duration-200 cursor-pointer active:scale-90 flex items-center gap-1.5 shadow-xs ${
+                                isActive
+                                  ? "bg-[#F4B41A] text-[#0D3B66] ring-4 ring-[#F4B41A]/30 scale-105"
+                                  : syl.isStressed
+                                  ? "bg-amber-100 dark:bg-amber-950/40 text-amber-900 dark:text-amber-200 border-2 border-amber-300 dark:border-amber-700"
+                                  : "bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600"
+                              }`}
+                            >
+                              {syl.isStressed && <span className="w-2 h-2 rounded-full bg-amber-500 inline-block" />}
+                              <span>{syl.text}</span>
+                              {syl.isStressed && (
+                                <span className="text-[9px] uppercase tracking-tight text-amber-700 dark:text-amber-300 font-sans font-black">
+                                  STRESS
+                                </span>
+                              )}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    {/* B. WORD 2 ROW (If available) */}
+                    {hasSecondWord && pair.natSyllables && (
+                      <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 space-y-2">
+                        <div className="flex items-center justify-between">
+                          <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-slate-400">
+                            Word 2 ({pair.natAudio || pair.nationality})
                           </span>
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              playMetronomeFlow(pair.id, "nationality", pair.natSyllables!, pair.natAudio || "")
+                            }
+                            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] transition-all cursor-pointer shadow-xs active:scale-95"
+                          >
+                            <Play className="w-3 h-3 fill-current" />
+                            <span>Play Rhythm</span>
+                          </button>
+                        </div>
 
-              {/* B. NATIONALITY ROW */}
-              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-slate-400">
-                    Word 2 ({pair.natAudio || pair.nationality})
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      playMetronomeFlow(pair.id, "nationality", pair.natSyllables, pair.natAudio)
-                    }
-                    className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 border border-slate-200 dark:border-slate-600 text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] transition-all cursor-pointer shadow-xs active:scale-95"
-                  >
-                    <Play className="w-3 h-3 fill-current" />
-                    <span>Play Rhythm</span>
-                  </button>
-                </div>
+                        {/* Syllable Pads */}
+                        <div className="flex flex-wrap items-center gap-2 pt-1">
+                          {pair.natSyllables.map((syl, sIdx) => {
+                            const beatKey = `${pair.id}-nationality-${sIdx}`;
+                            const isActive = activeBeatId === beatKey;
 
-                {/* Syllable Pads */}
-                <div className="flex flex-wrap items-center gap-2 pt-1">
-                  {pair.natSyllables.map((syl, sIdx) => {
-                    const beatKey = `${pair.id}-nationality-${sIdx}`;
-                    const isActive = activeBeatId === beatKey;
-
-                    return (
-                      <button
-                        key={sIdx}
-                        type="button"
-                        onClick={() =>
-                          handleSyllableTap(pair.id, "nationality", sIdx, syl, pair.natAudio)
-                        }
-                        className={`px-3 py-1.5 rounded-xl font-bold font-mono text-sm transition-all duration-200 cursor-pointer active:scale-90 flex items-center gap-1.5 shadow-xs ${
-                          isActive
-                            ? "bg-[#F4B41A] text-[#0D3B66] ring-4 ring-[#F4B41A]/30 scale-105"
-                            : syl.isStressed
-                            ? "bg-amber-100 dark:bg-amber-950/40 text-amber-900 dark:text-amber-200 border-2 border-amber-300 dark:border-amber-700"
-                            : "bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600"
-                        }`}
-                      >
-                        {syl.isStressed && <span className="w-2 h-2 rounded-full bg-amber-500 inline-block" />}
-                        <span>{syl.text}</span>
-                        {syl.isStressed && (
-                          <span className="text-[9px] uppercase tracking-tight text-amber-700 dark:text-amber-300 font-sans font-black">
-                            STRESS
-                          </span>
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
+                            return (
+                              <button
+                                key={sIdx}
+                                type="button"
+                                onClick={() =>
+                                  handleSyllableTap(pair.id, "nationality", sIdx, syl, pair.natAudio || "")
+                                }
+                                className={`px-3 py-1.5 rounded-xl font-bold font-mono text-sm transition-all duration-200 cursor-pointer active:scale-90 flex items-center gap-1.5 shadow-xs ${
+                                  isActive
+                                    ? "bg-[#F4B41A] text-[#0D3B66] ring-4 ring-[#F4B41A]/30 scale-105"
+                                    : syl.isStressed
+                                    ? "bg-amber-100 dark:bg-amber-950/40 text-amber-900 dark:text-amber-200 border-2 border-amber-300 dark:border-amber-700"
+                                    : "bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600"
+                                }`}
+                              >
+                                {syl.isStressed && <span className="w-2 h-2 rounded-full bg-amber-500 inline-block" />}
+                                <span>{syl.text}</span>
+                                {syl.isStressed && (
+                                  <span className="text-[9px] uppercase tracking-tight text-amber-700 dark:text-amber-300 font-sans font-black">
+                                    STRESS
+                                  </span>
+                                )}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
 
               {/* Explanation Note */}
               <p className="text-xs text-slate-500 dark:text-slate-400 italic">

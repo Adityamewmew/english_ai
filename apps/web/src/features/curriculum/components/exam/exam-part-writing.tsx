@@ -53,10 +53,13 @@ export function ExamPartWriting({
                     {item.typeLabel || item.type || "Sentence Transformation"}
                   </div>
                   <div className="text-sm font-semibold text-slate-800 dark:text-slate-200 leading-relaxed">
-                    {item.instruction || item.prompt}
+                    {item.instruction || "Lengkapi atau susun kalimat sesuai instruksi di bawah ini:"}
                   </div>
-                  {(item.promptText || (item.prompt && item.instruction && item.prompt !== item.instruction) || item.sentence) && (
-                    <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-900 dark:text-white font-mono leading-relaxed">
+                  {(item.promptText || item.prompt || item.sentence) && (
+                    <div className="p-3.5 rounded-xl bg-rose-50/70 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/60 text-sm font-bold text-slate-900 dark:text-white font-mono leading-relaxed shadow-2xs">
+                      <span className="text-[10px] uppercase tracking-wider font-sans font-bold text-rose-700 dark:text-rose-400 block mb-1">
+                        Kalimat Target / Bahan:
+                      </span>
                       {item.promptText || item.sentence || item.prompt}
                     </div>
                   )}

@@ -59,9 +59,19 @@ export function ExamPartListening({
                     <div className="text-sm font-semibold text-slate-900 dark:text-slate-100 mt-0.5">
                       {item.instruction || "Dengarkan audio dan ketik kalimat yang kamu dengar:"}
                     </div>
-                    {item.promptSentence && (
+                    {item.promptSentence ? (
                       <div className="p-3 rounded-xl bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-sm font-bold text-slate-900 dark:text-slate-100 font-mono mt-1.5 leading-relaxed">
                         {item.promptSentence}
+                      </div>
+                    ) : item.type === "arrange" ? (
+                      <div className="p-2.5 rounded-xl bg-amber-50/60 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-800/60 text-xs font-semibold text-amber-900 dark:text-amber-200 flex items-center gap-2 mt-1.5">
+                        <Headphones className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                        <span>Tekan tombol <strong>Dengarkan</strong> di kanan untuk mendengar rekaman audio, lalu susun kata-kata di bawah:</span>
+                      </div>
+                    ) : (
+                      <div className="p-2.5 rounded-xl bg-amber-50/60 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-800/60 text-xs font-semibold text-amber-900 dark:text-amber-200 flex items-center gap-2 mt-1.5">
+                        <Headphones className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                        <span>Dengarkan rekaman audio di samping dan ketik kalimat lengkap yang kamu dengar:</span>
                       </div>
                     )}
                   </div>
