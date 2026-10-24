@@ -8,10 +8,10 @@ export interface OmniRouteChatOptions {
 }
 
 export const OMNIROUTE_REASONING_CHAIN = [
+  "antigravity/gemini-3.8-flash-tiered",
+  "antigravity/gemini-3-flash",
   "codex/gpt-6-luna",
   "codex/gpt-6-luna-max",
-  "antigravity/gemini-3-flash",
-  "antigravity/gemini-3.8-flash-tiered",
   "codex/gpt-5.6-luna",
 ];
 
@@ -48,12 +48,17 @@ export class OmniRouteClient {
 
     this.apiKey = resolvedApiKey;
 
+    const configuredModel =
+      options?.defaultModel ||
+      process.env.AI_MODEL ||
+      process.env.OMNIROUTE_MODEL;
+
     if (options?.models && options.models.length > 0) {
       this.models = options.models;
-    } else if (options?.defaultModel) {
+    } else if (configuredModel) {
       this.models = [
-        options.defaultModel,
-        ...OMNIROUTE_REASONING_CHAIN.filter((m) => m !== options.defaultModel),
+        configuredModel,
+        ...OMNIROUTE_REASONING_CHAIN.filter((m) => m !== configuredModel),
       ];
     } else {
       this.models = [...OMNIROUTE_REASONING_CHAIN];
