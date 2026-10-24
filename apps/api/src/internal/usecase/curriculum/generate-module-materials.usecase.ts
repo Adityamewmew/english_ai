@@ -1,5 +1,8 @@
+import { eq } from "drizzle-orm";
 import { AppError } from "../../../common/errors/app-error";
 import { OmniRouteClient } from "../../../lib/omniroute-client";
+import { db } from "../../../db";
+import { moduleSections } from "../../../db/schema/curriculum";
 import {
   UnitBaseData,
   buildReadingPrompt,
@@ -7,6 +10,7 @@ import {
   buildWritingPrompt,
   buildSpeakingPrompt,
   generateListeningQuestionsForModule,
+  buildAssessmentSubmodule,
 } from "./prompts";
 
 export interface GenerateModuleMaterialsInput {
@@ -25,6 +29,14 @@ export interface GeneratedModuleResponse {
   moduleTitle: string;
   cefr: string;
   submodule?: any;
+  skills?: {
+    reading?: any[];
+    listening?: any[];
+    writing?: any[];
+    speaking?: any[];
+    assessment?: any[];
+    [key: string]: any;
+  };
   materials: any[];
 }
 
@@ -123,8 +135,9 @@ export async function generateModuleMaterialsUsecase(
     throw new AppError("Judul modul wajib diisi", 400);
   }
 
+  const safeModuleId = moduleId || "custom-module";
   const unitData: UnitBaseData = {
-    id: moduleId || "custom-module",
+    id: safeModuleId,
     levelId: cefr,
     title: moduleTitle,
     cefr: cefr.toUpperCase(),
@@ -136,10 +149,12 @@ export async function generateModuleMaterialsUsecase(
   const client = new OmniRouteClient();
 
   try {
+    // 1. ALL SKILLS GENERATION (Reading, Listening, Writing, Speaking, Assessment)
     if (skillType === "all") {
       const skills = ["reading", "listening", "writing", "speaking"];
       const allSubmodules: any[] = [];
       const allSections: any[] = [];
+      const skillsMap: Record<string, any[]> = {};
 
       for (const s of skills) {
         const p = buildSkillPrompt(s, unitData);
@@ -167,21 +182,88 @@ export async function generateModuleMaterialsUsecase(
         }
 
         allSubmodules.push(sub);
-        if (Array.isArray(sub?.sections)) {
-          allSections.push(...sub.sections);
-        }
+        const secList = Array.isArray(sub?.sections) ? sub.sections : [];
+        skillsMap[s] = secList;
+        allSections.push(...secList);
       }
+
+      // Generate Sub-module 5: Assessment (55 Questions synthesized from skills 1-4 + tier bank)
+      const assessmentSub = buildAssessmentSubmodule({
+        unitId: safeModuleId,
+        title: moduleTitle,
+        cefr: cefr.toUpperCase(),
+        existingSubmodules: allSubmodules,
+      });
+
+      allSubmodules.push(assessmentSub);
+      const assessmentSecs = assessmentSub.sections || [];
+      skillsMap["assessment"] = assessmentSecs;
+      allSections.push(...assessmentSecs);
 
       return {
         moduleTitle,
         cefr,
         submodule: allSubmodules,
+        skills: skillsMap,
         materials: allSections,
       };
     }
 
-    // Single skill generation
-    const targetSkill = (skillType === "assessment" || !skillType) ? "writing" : skillType;
+    // 2. SINGLE SKILL: ASSESSMENT
+    if (skillType === "assessment") {
+      let dbQuestions: any = undefined;
+      if (moduleId) {
+        try {
+          const existingSections = await db
+            .select()
+            .from(moduleSections)
+            .where(eq(moduleSections.moduleId, moduleId));
+
+          const reading: any[] = [];
+          const listening: any[] = [];
+          const writing: any[] = [];
+          const speaking: any[] = [];
+
+          for (const sec of existingSections) {
+            if (sec.sectionType === "quiz" && sec.content) {
+              const c = sec.content as any;
+              const subId = (sec.subModuleId || "").toLowerCase();
+              if (subId.includes("read") || subId.includes("-r-")) {
+                reading.push(...(c.questions || []));
+              } else if (subId.includes("listen") || subId.includes("-l-")) {
+                listening.push(...(c.practicumQuestions || c.questions || []));
+              } else if (subId.includes("write") || subId.includes("-w-")) {
+                writing.push(...(c.practicumQuestions || c.questions || []));
+              } else if (subId.includes("speak") || subId.includes("-s-")) {
+                speaking.push(...(c.practicumQuestions || c.questions || []));
+              }
+            }
+          }
+          dbQuestions = { reading, listening, writing, speaking };
+        } catch (e) {
+          console.warn("Could not query DB questions for assessment synthesis:", e);
+        }
+      }
+
+      const assessmentSub = buildAssessmentSubmodule({
+        unitId: safeModuleId,
+        title: moduleTitle,
+        cefr: cefr.toUpperCase(),
+        dbQuestions,
+      });
+
+      const sections = assessmentSub.sections || [];
+      return {
+        moduleTitle,
+        cefr,
+        submodule: assessmentSub,
+        skills: { assessment: sections },
+        materials: sections,
+      };
+    }
+
+    // 3. SINGLE SKILL: READING, LISTENING, WRITING, SPEAKING
+    const targetSkill = skillType || "reading";
     const p = buildSkillPrompt(targetSkill, unitData);
     const userContent = prepareUserContent(p.user, {
       customInstructions,
@@ -213,6 +295,7 @@ export async function generateModuleMaterialsUsecase(
       moduleTitle,
       cefr,
       submodule,
+      skills: { [targetSkill]: sections },
       materials: sections,
     };
   } catch (err: any) {
