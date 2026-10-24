@@ -6,14 +6,12 @@ import {
   StepProgressBody,
   SubModuleIdParam,
   SubmitSubModuleBody,
-  GenerateModuleMaterialsBody,
 } from "../../entity/curriculum_entity";
 import { getCurriculumUsecase } from "../../usecase/curriculum/get-curriculum.usecase";
 import { getModuleDetailUsecase } from "../../usecase/curriculum/get-module-detail.usecase";
 import { submitQuizUsecase } from "../../usecase/curriculum/submit-quiz.usecase";
 import { saveStepProgressUsecase } from "../../usecase/curriculum/save-step-progress.usecase";
 import { submitSubModuleUsecase } from "../../usecase/curriculum/submit-sub-module.usecase";
-import { generateModuleMaterialsUsecase } from "../../usecase/curriculum/generate-module-materials.usecase";
 import { jsonResponse } from "../../presenter/json";
 import { authPlugin } from "../../../lib/auth";
 import { UnauthorizedError } from "../../../common/errors/app-error";
@@ -158,30 +156,5 @@ export const curriculumHandler = new Elysia({ prefix: "/api/curriculum" })
       auth: true,
       params: SubModuleIdParam,
       body: SubmitSubModuleBody,
-    }
-  )
-  .post(
-    "/modules/ai-generate",
-    async ({ body, set }) => {
-      const data = await generateModuleMaterialsUsecase({
-        moduleId: body.moduleId,
-        moduleTitle: body.moduleTitle,
-        cefr: body.cefr,
-        objective: body.objective,
-        customInstructions: body.customInstructions,
-        skillType: body.skillType as any,
-        documentBase64: body.documentBase64,
-        documentMimeType: body.documentMimeType,
-        documentText: body.documentText,
-      });
-      return jsonResponse({
-        set,
-        statusCode: 200,
-        message: "Module materials generated successfully",
-        data,
-      });
-    },
-    {
-      body: GenerateModuleMaterialsBody,
     }
   );

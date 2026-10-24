@@ -42,17 +42,3 @@ export const SubmitSubModuleBody = t.Object({
 });
 
 export type SubmitSubModuleBody = typeof SubmitSubModuleBody.static;
-
-export const GenerateModuleMaterialsBody = t.Object({
-  moduleId: t.Optional(t.Union([t.String(), t.Null()])),
-  moduleTitle: t.String(),
-  cefr: t.String(),
-  objective: t.Optional(t.Union([t.String(), t.Null()])),
-  customInstructions: t.Optional(t.Union([t.String(), t.Null()])),
-  skillType: t.Optional(t.Union([t.String(), t.Null()])),
-  documentBase64: t.Optional(t.Union([t.String(), t.Null()])),
-  documentMimeType: t.Optional(t.Union([t.String(), t.Null()])),
-  documentText: t.Optional(t.Union([t.String(), t.Null()])),
-});
-
-export type GenerateModuleMaterialsBody = typeof GenerateModuleMaterialsBody.static;
