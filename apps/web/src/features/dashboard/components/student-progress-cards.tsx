@@ -54,8 +54,8 @@ export function StudentProgressCards({
       title: "AI Speaking Reflexes",
       subtitle:
         voiceCallsCount > 0
-          ? `${voiceCallsCount} Sesi Selesai • ${voiceTotalMinutes}m Latihan`
-          : "Belum Ada Sesi • Coba Sekarang",
+          ? `${voiceCallsCount} Sessions Completed • ${voiceTotalMinutes}m Practice`
+          : "No Sessions Yet • Start Now",
       progress: voiceCallsCount > 0 ? Math.min(100, voiceCallsCount * 25) : 0,
       href: "/call",
     },
@@ -68,7 +68,7 @@ export function StudentProgressCards({
       progressBar: "#9E1B1B",
       icon: Award,
       title: "Placement Assessment",
-      subtitle: placementCefr ? `Level Teruji: CEFR ${placementCefr}` : "Belum Mengikuti Tes Diagnostik",
+      subtitle: placementCefr ? `Assessed Level: CEFR ${placementCefr}` : "Diagnostic Test Not Taken",
       progress: placementScore ?? 0,
       href: "/placement",
     },

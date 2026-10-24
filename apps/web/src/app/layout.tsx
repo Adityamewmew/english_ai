@@ -4,7 +4,7 @@ import { QueryProvider } from "@/providers/query-provider";
 
 export const metadata: Metadata = {
   title: "EDDY'S AI: Your Personal AI English Tutor",
-  description: "Belajar Bahasa Inggris interaktif dengan Mr. Khoirul. Real-time voice call, tes penempatan CEFR, dan kurikulum standar IELTS/TOEIC.",
+  description: "Interactive English learning with Mr. Khoirul. Real-time voice calls, CEFR placement assessments, and IELTS/TOEIC standardized curriculum.",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
+    <html lang="en">
       <body className="antialiased font-sans bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 selection:bg-blue-100">
         <QueryProvider>
           {children}

@@ -64,21 +64,21 @@ export function ModuleGridCard({ module, index, onUnlockClick }: ModuleGridCardP
             {isCompleted ? (
               <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200">
                 <CheckCircle2 className="w-3 h-3 text-emerald-600" />
-                <span>Selesai</span>
+                <span>Completed</span>
               </span>
             ) : isRequiresAccess ? (
               <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200">
                 <Lock className="w-3 h-3" />
-                <span>Perlu Beli</span>
+                <span>Locked</span>
               </span>
             ) : isLocked ? (
               <span className="inline-flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-md bg-slate-100 text-slate-500">
                 <Lock className="w-3 h-3" />
-                <span>Terkunci</span>
+                <span>Locked</span>
               </span>
             ) : (
               <span className={`text-[10px] font-bold ${isExam ? "text-amber-600 dark:text-amber-400" : "text-[#0D3B66] dark:text-[#F4B41A]"}`}>
-                {isExam ? "55 Soal Ujian" : "10 Latihan"}
+                {isExam ? "55 Exam Items" : "10 Exercises"}
               </span>
             )}
           </div>
@@ -105,7 +105,7 @@ export function ModuleGridCard({ module, index, onUnlockClick }: ModuleGridCardP
               className="w-full py-2.5 px-3 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center gap-1.5 border border-indigo-200 transition-colors"
             >
               <Lock className="w-3.5 h-3.5 text-indigo-600" />
-              <span>Buka Akses Kelas</span>
+              <span>Unlock Class</span>
             </button>
           ) : isLocked ? (
             <button
@@ -114,7 +114,7 @@ export function ModuleGridCard({ module, index, onUnlockClick }: ModuleGridCardP
               className="w-full py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-400 font-bold text-xs flex items-center justify-center gap-1.5 cursor-not-allowed border border-slate-200"
             >
               <Lock className="w-3.5 h-3.5" />
-              <span>Materi Terkunci</span>
+              <span>Unit Locked</span>
             </button>
           ) : (
             <Link
@@ -128,7 +128,7 @@ export function ModuleGridCard({ module, index, onUnlockClick }: ModuleGridCardP
                   : "btn-skeuo-navy"
               }`}
             >
-              <span>{isCompleted ? (isExam ? "Ulas Ujian" : "Ulas Materi") : (isExam ? "Mulai Ujian" : "Mulai Belajar")}</span>
+              <span>{isCompleted ? (isExam ? "Review Exam" : "Review Unit") : (isExam ? "Start Exam" : "Start Unit")}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           )}
@@ -189,12 +189,12 @@ export function ModuleGridCard({ module, index, onUnlockClick }: ModuleGridCardP
                 {isExam ? (
                   <>
                     <GraduationCap className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
-                    <span>55 Soal Ujian</span>
+                    <span>55 Exam Items</span>
                   </>
                 ) : (
                   <>
                     <BookOpen className="w-3 h-3 text-[#0D3B66]" />
-                    <span>10 Latihan</span>
+                    <span>10 Exercises</span>
                   </>
                 )}
               </span>
@@ -227,12 +227,12 @@ export function ModuleGridCard({ module, index, onUnlockClick }: ModuleGridCardP
                 className="px-3.5 py-1.5 rounded-full bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center gap-1 border border-indigo-200 transition-colors cursor-pointer"
               >
                 <Lock className="w-3 h-3 text-indigo-600" />
-                <span>Buka Kelas</span>
+                <span>Unlock</span>
               </button>
             ) : isLocked ? (
               <span className="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400 font-bold text-xs flex items-center gap-1 cursor-not-allowed border border-slate-200">
                 <Lock className="w-3 h-3" />
-                <span>Terkunci</span>
+                <span>Locked</span>
               </span>
             ) : (
               <Link
@@ -246,7 +246,7 @@ export function ModuleGridCard({ module, index, onUnlockClick }: ModuleGridCardP
                     : "btn-skeuo-navy"
                 }`}
               >
-                <span>{isCompleted ? (isExam ? "Ulas Ujian" : "Ulas") : (isExam ? "Ikuti Ujian" : "Mulai")}</span>
+                <span>{isCompleted ? (isExam ? "Review Exam" : "Review") : (isExam ? "Start Exam" : "Start")}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             )}

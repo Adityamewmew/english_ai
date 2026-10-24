@@ -146,10 +146,10 @@ export function ModuleStageViewport({
           </div>
           <div className="leading-tight">
             <span className="text-xs font-semibold text-slate-800 dark:text-white block">
-              Langkah {activeStepId} dari {totalSteps}
+              Step {activeStepId} of {totalSteps}
             </span>
             <span className="text-[11px] text-slate-400 font-normal">
-              Aktivitas Interaktif
+              Interactive Activity
             </span>
           </div>
         </div>
@@ -183,7 +183,7 @@ export function ModuleStageViewport({
             }`}
           >
             <ChevronLeft className="w-4 h-4" />
-            <span>Sebelumnya</span>
+            <span>Previous</span>
           </button>
 
           <button
@@ -207,21 +207,21 @@ export function ModuleStageViewport({
             {isFinishing ? (
               <>
                 <Loader2 className="w-4 h-4 animate-spin" />
-                <span>Menyimpan...</span>
+                <span>Saving...</span>
               </>
             ) : !effectiveCanProceed ? (
               <>
                 <Lock className="w-3.5 h-3.5 text-slate-400" />
-                <span>Selesaikan Aktivitas</span>
+                <span>Complete Activity</span>
               </>
             ) : activeStepId === totalSteps ? (
               <>
                 <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
-                <span>Selesaikan Misi</span>
+                <span>Finish Mission</span>
               </>
             ) : (
               <>
-                <span>Lanjut</span>
+                <span>Continue</span>
                 <ChevronRight className="w-4 h-4" />
               </>
             )}

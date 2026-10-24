@@ -67,7 +67,7 @@ export function CertificateStatusGrid({
       {isAdmin && (
         <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500/10 text-amber-900 dark:text-amber-300 border border-amber-300/60 text-xs font-bold">
           <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-          <span>Akses Admin: Full Unlock Tanpa Syarat Modul</span>
+          <span>Admin Access: Full Unlock Override</span>
         </div>
       )}
     </div>
@@ -79,7 +79,7 @@ export function CertificateStatusGrid({
         {renderCategoryTabs()}
         <div className="flex flex-col items-center justify-center min-h-[350px] text-slate-500">
           <Loader2 className="w-8 h-8 animate-spin text-[#0D3B66] mb-3" />
-          <p className="text-sm font-medium">Memeriksa status sertifikat kelulusan CEFR {selectedCategory} Anda...</p>
+          <p className="text-sm font-medium">Checking your CEFR {selectedCategory} graduation certificate status...</p>
         </div>
       </div>
     );
@@ -91,7 +91,7 @@ export function CertificateStatusGrid({
         {renderCategoryTabs()}
         <div className="p-6 rounded-2xl bg-rose-50 border border-rose-200 text-rose-800 text-sm flex items-center gap-3">
           <AlertCircle className="w-5 h-5 shrink-0 text-rose-600" />
-          <p>Gagal memuat status sertifikat: {String(error)}</p>
+          <p>Failed to load certificate status: {String(error)}</p>
         </div>
       </div>
     );
@@ -154,17 +154,17 @@ export function CertificateStatusGrid({
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-[11px] font-bold tracking-widest text-[#F4B41A] uppercase">
-                  SERTIFIKAT RESMI TERBIT
+                  OFFICIAL CERTIFICATE ISSUED
                 </span>
                 <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-500 text-white">
-                  LULUS
+                  PASSED
                 </span>
               </div>
               <h1 className="text-lg sm:text-xl font-bold tracking-tight text-white mt-0.5">
-                Selamat! Anda Telah Menyelesaikan Level {selectedCategory}
+                Congratulations! You Have Completed Level {selectedCategory}
               </h1>
               <p className="text-xs text-slate-200 mt-0.5">
-                Sertifikat resmi kompetensi bahasa Inggris Anda telah diterbitkan dan siap diunduh atau dicetak.
+                Your official English competency certificate has been issued and is ready to download or print.
               </p>
             </div>
           </div>
@@ -178,7 +178,7 @@ export function CertificateStatusGrid({
             className="w-full sm:w-auto bg-[#F4B41A] hover:bg-[#d99f14] text-[#0D3B66] font-bold text-xs gap-2 shrink-0 shadow-md cursor-pointer"
           >
             <Printer className="w-4 h-4" />
-            Cetak / Simpan PDF
+            Print / Save PDF
           </Button>
         </div>
 
@@ -203,10 +203,10 @@ export function CertificateStatusGrid({
           </div>
           <div>
             <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
-              Sertifikat Kelulusan Level {selectedCategory}
+              Level {selectedCategory} Graduation Certificate
             </h1>
             <p className="text-xs text-slate-500 dark:text-slate-400">
-              Standar Kompetensi Bahasa Inggris CEFR (Common European Framework of Reference)
+              CEFR English Proficiency Standards (Common European Framework of Reference)
             </p>
           </div>
         </div>
@@ -219,12 +219,12 @@ export function CertificateStatusGrid({
         </div>
 
         <h2 className="text-lg font-bold text-slate-800 dark:text-slate-200 mb-1">
-          {levelStatus?.status === "no_template" ? "Template Sertifikat Belum Dibuat" : "Sertifikat Belum Tersedia"}
+          {levelStatus?.status === "no_template" ? "Certificate Template Not Created" : "Certificate Not Yet Available"}
         </h2>
         <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-md mx-auto leading-relaxed mb-6">
           {levelStatus?.status === "no_template"
-            ? `Admin belum membuat template sertifikat resmi untuk CEFR ${selectedCategory}. Buat template di menu Admin Portal > Sertifikat.`
-            : `Sertifikat kelulusan resmi CEFR ${selectedCategory} akan otomatis terbit dan tampil di halaman ini setelah Anda menuntaskan seluruh modul pembelajaran pada kategori ini.`}
+            ? `Admin has not created an official certificate template for CEFR ${selectedCategory} yet. Configure it in Admin Portal > Certificates.`
+            : `The official CEFR ${selectedCategory} certificate will automatically be issued and appear here once you complete all learning modules in this category.`}
         </p>
 
         {/* Progress Strip */}
@@ -232,10 +232,10 @@ export function CertificateStatusGrid({
           <div className="flex items-center justify-between text-xs mb-2">
             <span className="font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
               <BookOpen className="w-4 h-4 text-[#0D3B66] dark:text-sky-400" />
-              Progres Modul Level {selectedCategory}
+              Level {selectedCategory} Module Progress
             </span>
             <span className="font-bold text-[#0D3B66] dark:text-sky-400">
-              {levelStatus?.completedModules ?? 0} / {levelStatus?.totalModules ?? 0} Modul Selesai
+              {levelStatus?.completedModules ?? 0} / {levelStatus?.totalModules ?? 0} Modules Completed
             </span>
           </div>
           <div className="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
@@ -245,7 +245,7 @@ export function CertificateStatusGrid({
             />
           </div>
           <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-2">
-            Selesaikan {(levelStatus?.totalModules ?? 0) - (levelStatus?.completedModules ?? 0)} modul lagi untuk membuka sertifikat Anda.
+            Complete {(levelStatus?.totalModules ?? 0) - (levelStatus?.completedModules ?? 0)} more module(s) to unlock your certificate.
           </p>
         </div>
 
@@ -254,7 +254,7 @@ export function CertificateStatusGrid({
           className="bg-[#0D3B66] hover:bg-[#082542] text-white font-medium text-xs px-6 py-2.5 shadow-xs cursor-pointer"
         >
           <Link href="/modules">
-            Lanjutkan Belajar Modul
+            Continue Module Learning
           </Link>
         </Button>
       </Card>

@@ -4,7 +4,7 @@ import { ChatView } from "@/features/chat";
 
 export const metadata = {
   title: "AI Study Chat | EDDY'S ENGLISH",
-  description: "Chatbot interaktif belajar bahasa Inggris dengan Mr. Khoirul, didukung RAG dan LLM Guardrails.",
+  description: "Interactive English learning chat with Mr. Khoirul, powered by pedagogical RAG and LLM Guardrails.",
 };
 
 export default async function ChatPage() {

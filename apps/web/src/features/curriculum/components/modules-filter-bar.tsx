@@ -85,10 +85,10 @@ export function ModulesFilterBar({
               onChange={(e) => onSelectStatus(e.target.value)}
               className="w-full appearance-none pl-3 pr-7 py-2 sm:py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#0D3B66]/20 cursor-pointer shadow-2xs min-h-[38px] sm:min-h-auto touch-manipulation"
             >
-              <option value="all">Semua Status</option>
-              <option value="unlocked">Tersedia / Terbuka</option>
-              <option value="completed">Selesai</option>
-              <option value="locked">Terkunci</option>
+              <option value="all">All Statuses</option>
+              <option value="unlocked">Available / Unlocked</option>
+              <option value="completed">Completed</option>
+              <option value="locked">Locked</option>
             </select>
             <ChevronDown className="w-3.5 h-3.5 absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
           </div>
@@ -99,7 +99,7 @@ export function ModulesFilterBar({
               type="text"
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              placeholder={`Cari modul ${selectedSubLevel}...`}
+              placeholder={`Search ${selectedSubLevel} modules...`}
               className="w-full pl-8 pr-3 py-2 sm:py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs text-slate-800 dark:text-slate-200 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0D3B66]/20 shadow-2xs min-h-[38px] sm:min-h-auto"
             />
           </div>

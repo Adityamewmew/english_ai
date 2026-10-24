@@ -302,14 +302,14 @@ export function ListeningPracticumStage({
       <div className="space-y-3 pb-3 border-b border-slate-100 dark:border-slate-800">
         <div className="flex items-center justify-between text-xs font-bold">
           <span className="text-[#0D3B66] dark:text-[#F4B41A] font-mono uppercase tracking-wider">
-            Soal {currentIdx + 1} dari {questions.length}
+            Question {currentIdx + 1} of {questions.length}
           </span>
           <span className="text-slate-500 dark:text-slate-400 font-semibold">
             {isArrange
-              ? "Susun Kalimat"
+              ? "Sentence Assembly"
               : isDictation
-              ? "Dikte Kosakata"
-              : "Pilihan Ganda"}
+              ? "Audio Dictation"
+              : "Multiple Choice"}
           </span>
         </div>
 
@@ -336,7 +336,7 @@ export function ListeningPracticumStage({
       <div className="p-4 sm:p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/90 dark:border-slate-800 space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <p className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-relaxed">
-            {currentQ.instruction || "Dengarkan audio dan lengkapi latihan di bawah ini:"}
+            {currentQ.instruction || "Listen to the audio and complete the exercise below:"}
           </p>
 
           {/* Audio Button with Visual Replay Limit Counter (Max 3) */}
@@ -353,7 +353,7 @@ export function ListeningPracticumStage({
             <Volume2
               className={`w-4 h-4 ${playsRemaining === 0 ? "text-slate-400" : "text-[#F4B41A]"}`}
             />
-            <span>{playsRemaining === 0 ? "Batas Putar Habis" : "Putar Audio Soal"}</span>
+            <span>{playsRemaining === 0 ? "Replay Limit Reached" : "Play Question Audio"}</span>
             <span
               className={`ml-1 px-2 py-0.5 rounded-full text-[10px] font-mono tracking-tight font-black ${
                 playsRemaining === 0
@@ -363,7 +363,7 @@ export function ListeningPracticumStage({
                   : "bg-white/20 text-white"
               }`}
             >
-              Sisa {playsRemaining}/3
+              {playsRemaining}/3 plays left
             </span>
           </button>
         </div>
@@ -377,7 +377,7 @@ export function ListeningPracticumStage({
               <div className="p-3.5 sm:p-4 rounded-2xl min-h-[58px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex flex-wrap items-center gap-2 shadow-inner">
                 {assembledWords.length === 0 ? (
                   <span className="text-xs text-slate-400 italic">
-                    Ketuk kata-kata di bank kata bawah untuk menyusun kalimat...
+                    Tap words from the bank below to assemble the sentence...
                   </span>
                 ) : (
                   assembledWords.map((w, wIdx) => (
@@ -387,7 +387,7 @@ export function ListeningPracticumStage({
                       disabled={isChecked}
                       onClick={() => handleRemoveWord(wIdx)}
                       className="px-3.5 py-2 rounded-xl bg-[#0D3B66] text-white text-xs font-bold transition-all hover:bg-rose-600 cursor-pointer border-b-2 border-b-[#082542] active:scale-95 select-none min-h-[38px] flex items-center gap-1"
-                      title="Ketuk untuk membatalkan kata"
+                      title="Tap to remove word"
                     >
                       <span>{w}</span>
                       <span className="text-[10px] opacity-70 ml-0.5">✕</span>
@@ -430,7 +430,7 @@ export function ListeningPracticumStage({
                     handleCheckAnswer();
                   }
                 }}
-                placeholder="Ketik kata yang hilang di sini..."
+                placeholder="Type the missing word here..."
                 className="w-full px-4 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0D3B66] min-h-[48px]"
               />
             </div>
@@ -493,12 +493,12 @@ export function ListeningPracticumStage({
               {isCorrect ? (
                 <>
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <span>Jawaban Tepat! (+15 XP)</span>
+                  <span>Correct Answer! (+15 XP)</span>
                 </>
               ) : (
                 <>
                   <HelpCircle className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  <span>Kurang Tepat</span>
+                  <span>Needs Review</span>
                 </>
               )}
             </div>
@@ -520,7 +520,7 @@ export function ListeningPracticumStage({
                 }
                 className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-[#0D3B66] hover:bg-[#1B4965] border-b-3 border-b-[#082542] active:border-b-0 active:translate-y-0.5 disabled:opacity-50 disabled:pointer-events-none text-white font-bold text-xs sm:text-sm transition-all cursor-pointer shadow-xs min-h-[46px]"
               >
-                Periksa Jawaban
+                Check Answer
               </button>
 
               {isAdmin && (
@@ -532,7 +532,7 @@ export function ListeningPracticumStage({
                   }}
                   className="px-4 py-3 rounded-2xl border border-dashed border-amber-400 text-amber-600 dark:text-amber-400 text-xs font-bold hover:bg-amber-50 dark:hover:bg-amber-950/30 transition-all cursor-pointer min-h-[46px]"
                 >
-                  Lewati Soal (Admin)
+                  Skip Question (Admin)
                 </button>
               )}
             </div>
@@ -543,7 +543,7 @@ export function ListeningPracticumStage({
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl btn-skeuo-yellow text-slate-950 font-bold text-xs sm:text-sm transition-all cursor-pointer shadow-xs ml-auto min-h-[46px]"
             >
               <span>
-                {currentIdx < questions.length - 1 ? "Soal Berikutnya" : "Lihat Hasil Latihan"}
+                {currentIdx < questions.length - 1 ? "Next Question" : "View Practicum Results"}
               </span>
               <ArrowRight className="w-4 h-4" />
             </button>

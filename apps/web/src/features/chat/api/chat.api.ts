@@ -32,7 +32,7 @@ export const chatApi = {
     const res = await fetch(url, {
       credentials: "include",
     });
-    if (!res.ok) throw new Error("Gagal mengambil daftar percakapan");
+    if (!res.ok) throw new Error("Failed to fetch conversations list");
     const json = await res.json();
     return json.data || [];
   },
@@ -45,7 +45,7 @@ export const chatApi = {
       body: JSON.stringify({ title, userId }),
       credentials: "include",
     });
-    if (!res.ok) throw new Error("Gagal membuat percakapan baru");
+    if (!res.ok) throw new Error("Failed to create new conversation");
     const json = await res.json();
     return json.data;
   },
@@ -53,7 +53,7 @@ export const chatApi = {
   getSessionDetail: async (sessionId: string): Promise<ChatSessionDetail> => {
     const url = getApiUrl(`/api/chat/sessions/${sessionId}`);
     const res = await fetch(url, { credentials: "include" });
-    if (!res.ok) throw new Error("Gagal memuat detail percakapan");
+    if (!res.ok) throw new Error("Failed to load conversation details");
     const json = await res.json();
     return json.data;
   },
@@ -64,7 +64,7 @@ export const chatApi = {
       method: "DELETE",
       credentials: "include",
     });
-    if (!res.ok) throw new Error("Gagal menghapus percakapan");
+    if (!res.ok) throw new Error("Failed to delete conversation");
   },
 
   streamMessage: async (

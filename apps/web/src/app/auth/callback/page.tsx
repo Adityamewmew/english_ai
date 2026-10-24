@@ -100,10 +100,10 @@ export default function AuthCallbackPage() {
             <div className="w-12 h-12 rounded-full bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 mx-auto flex items-center justify-center">
               <AlertCircle className="w-6 h-6" />
             </div>
-            <h2 className="text-lg font-bold text-slate-900 dark:text-white">Gagal Masuk</h2>
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white">Sign In Failed</h2>
             <p className="text-sm text-slate-500 dark:text-slate-400">{error}</p>
             <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white mt-4">
-              <Link href="/login">Kembali ke Halaman Login</Link>
+              <Link href="/login">Back to Sign In</Link>
             </Button>
           </div>
         ) : (
@@ -113,9 +113,9 @@ export default function AuthCallbackPage() {
             </div>
             <div className="flex items-center justify-center gap-2 text-slate-600 dark:text-slate-300">
               <Loader2 className="w-5 h-5 animate-spin text-blue-600" />
-              <span className="font-medium text-sm">Menghubungkan akun Google...</span>
+              <span className="font-medium text-sm">Connecting Google account...</span>
             </div>
-            <p className="text-xs text-slate-400">Mohon tunggu sebentar, kami sedang menyiapkan sesi belajarmu.</p>
+            <p className="text-xs text-slate-400">Please wait a moment while we set up your learning session.</p>
           </div>
         )}
       </div>

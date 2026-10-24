@@ -47,7 +47,7 @@ export function ModulesAnalyticsBento({
               {subLevelId}
             </span>
             <span className="text-xs font-bold text-white truncate">
-              {completedInSubLevel}/{totalInSubLevel} Selesai ({percentCompleted}%)
+              {completedInSubLevel}/{totalInSubLevel} Completed ({percentCompleted}%)
             </span>
           </div>
           <p className="text-[11px] text-slate-200 truncate font-medium">
@@ -59,7 +59,7 @@ export function ModulesAnalyticsBento({
           onClick={(e) => animeButtonPop(e.currentTarget)}
           className="px-3.5 py-2 rounded-xl btn-skeuo-yellow text-xs font-bold shrink-0 min-h-[40px] flex items-center gap-1 shadow-2xs active:scale-95 transition-all relative z-10"
         >
-          <span>Lanjut</span>
+          <span>Continue</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </Link>
       </div>

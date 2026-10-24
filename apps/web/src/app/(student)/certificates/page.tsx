@@ -6,8 +6,8 @@ import { CertificateStatusGrid } from "@/features/certificates";
 import { isUserAdmin } from "@/lib/auth-utils";
 
 export const metadata = {
-  title: "Sertifikat Kelulusan Level CEFR | EDDY'S English AI",
-  description: "Lihat status kelulusan level CEFR dan klaim sertifikat resmi bahasa Inggris Anda.",
+  title: "CEFR Graduation Certificates | EDDY'S English AI",
+  description: "Track your CEFR level completion and claim your official English proficiency certificate.",
 };
 
 export default async function CertificatesPage() {

@@ -94,7 +94,7 @@ export function InteractiveContractionMorpher({
       {/* 1. Word Pair Selector Chips */}
       <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
         <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 mr-1 block sm:inline w-full sm:w-auto">
-          Pilih Pola:
+          Select Pattern:
         </span>
         {pairs.map((item, idx) => {
           const isSelected = currentIndex === idx;
@@ -129,10 +129,10 @@ export function InteractiveContractionMorpher({
         {/* Stage Status */}
         <div className="flex items-center justify-between text-xs">
           <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-            {isContracted ? "Bentuk Singkat (Percakapan)" : "Bentuk Lengkap (Tulisan Resmi)"}
+            {isContracted ? "Contracted Form (Conversational)" : "Full Form (Formal Writing)"}
           </span>
           <span className="text-xs font-medium text-slate-400">
-            {isContracted ? "Status: Melebur" : "Status: Terpisah"}
+            {isContracted ? "Status: Contracted" : "Status: Separate"}
           </span>
         </div>
 
@@ -178,8 +178,8 @@ export function InteractiveContractionMorpher({
 
           <p className="mt-4 text-xs text-slate-500 dark:text-slate-400 text-center max-w-md">
             {isContracted
-              ? `Huruf vokal '${current.vowelDropped}' dihilangkan dan diganti apostrof (') agar ritme bicara lebih natural.`
-              : `Tekan tombol di bawah untuk menggabungkan '${current.subject} ${current.verb}' menjadi bentuk singkatan.`}
+              ? `The vowel '${current.vowelDropped}' is dropped and replaced with an apostrophe (') for a natural spoken rhythm.`
+              : `Tap the button below to combine '${current.subject} ${current.verb}' into contracted form.`}
           </p>
         </div>
 
@@ -197,12 +197,12 @@ export function InteractiveContractionMorpher({
             {isContracted ? (
               <>
                 <Maximize2 className="w-4 h-4 text-slate-600 dark:text-slate-300" />
-                <span>Kembalikan ke Bentuk Panjang</span>
+                <span>Restore to Full Form</span>
               </>
             ) : (
               <>
                 <Minimize2 className="w-4 h-4 text-amber-300" />
-                <span>Leburkan Kata (Kontraksi)</span>
+                <span>Contract Words</span>
               </>
             )}
           </button>

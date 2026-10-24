@@ -18,16 +18,16 @@ interface InteractiveReadingPassageProps {
 }
 
 const CORE_GRAMMAR_SPOTLIGHT: Record<string, { type: "grammar" | "vocab"; label: string; desc: string }> = {
-  "am": { type: "grammar", label: "To Be (1st Person)", desc: "Pasangan subjek 'I' (Saya)" },
-  "i'm": { type: "grammar", label: "Kontraksi To Be", desc: "Singkatan dari 'I am' (Saya)" },
-  "is": { type: "grammar", label: "To Be (Tunggal)", desc: "Pasangan subjek tunggal 'He / She / It'" },
-  "he's": { type: "grammar", label: "Kontraksi To Be", desc: "Singkatan dari 'He is' (Dia lk)" },
-  "she's": { type: "grammar", label: "Kontraksi To Be", desc: "Singkatan dari 'She is' (Dia pr)" },
-  "are": { type: "grammar", label: "To Be (Jamak)", desc: "Pasangan subjek jamak 'We / They' atau 'You'" },
-  "we're": { type: "grammar", label: "Kontraksi To Be", desc: "Singkatan dari 'We are' (Kami / Kita)" },
-  "they're": { type: "grammar", label: "Kontraksi To Be", desc: "Singkatan dari 'They are' (Mereka)" },
-  "isn't": { type: "grammar", label: "Kontraksi Negatif", desc: "Singkatan dari 'is not'" },
-  "aren't": { type: "grammar", label: "Kontraksi Negatif", desc: "Singkatan dari 'are not'" },
+  "am": { type: "grammar", label: "To Be (1st Person)", desc: "Subject complement for 'I'" },
+  "i'm": { type: "grammar", label: "Contraction", desc: "Short for 'I am'" },
+  "is": { type: "grammar", label: "To Be (Singular)", desc: "Subject complement for 'He / She / It'" },
+  "he's": { type: "grammar", label: "Contraction", desc: "Short for 'He is'" },
+  "she's": { type: "grammar", label: "Contraction", desc: "Short for 'She is'" },
+  "are": { type: "grammar", label: "To Be (Plural)", desc: "Subject complement for 'We / They' or 'You'" },
+  "we're": { type: "grammar", label: "Contraction", desc: "Short for 'We are'" },
+  "they're": { type: "grammar", label: "Contraction", desc: "Short for 'They are'" },
+  "isn't": { type: "grammar", label: "Negative Contraction", desc: "Short for 'is not'" },
+  "aren't": { type: "grammar", label: "Negative Contraction", desc: "Short for 'are not'" },
 };
 
 export function InteractiveReadingPassage({
@@ -57,16 +57,16 @@ export function InteractiveReadingPassage({
       if (word) {
         dict[word] = {
           type: "vocab",
-          label: v.type || "Kosakata Kunci",
-          desc: v.meaning || v.transformed || v.desc || "Kosakata target",
+          label: v.type || "Key Vocabulary",
+          desc: v.meaning || v.transformed || v.desc || "Target vocabulary",
         };
       }
       const transformed = (v.transformed || "").trim().toLowerCase();
       if (transformed && !transformed.includes("/") && !transformed.includes(" ")) {
         dict[transformed] = {
           type: "vocab",
-          label: v.type || "Kosakata Kunci",
-          desc: v.meaning || v.desc || `Bentuk kata kunci: ${word}`,
+          label: v.type || "Key Vocabulary",
+          desc: v.meaning || v.desc || `Key word form: ${word}`,
         };
       }
     });
@@ -195,14 +195,14 @@ export function InteractiveReadingPassage({
             }`}
           >
             {isPlayingFull ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 fill-current" />}
-            <span>{isPlayingFull ? "Memutar Audio..." : "Putar Audio Seluruh Cerita"}</span>
+            <span>{isPlayingFull ? "Playing Audio..." : "Play Entire Passage"}</span>
           </button>
         )}
       </div>
 
       <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs text-slate-600 dark:text-slate-400 px-1 gap-2">
         <div className="flex items-center gap-1.5 text-slate-500">
-          <span>Ketuk kalimat untuk dengarkan audio. Ketuk kata berwarna untuk penjelasan.</span>
+          <span>Tap any sentence to listen. Tap highlighted words for explanations.</span>
         </div>
         <div className="flex items-center justify-between sm:justify-end gap-2 shrink-0">
           <button
@@ -215,7 +215,7 @@ export function InteractiveReadingPassage({
             }`}
           >
             <Eye className="w-3.5 h-3.5" />
-            <span>{spotlightEnabled ? "Highlight Kata: Aktif" : "Highlight Kata: Nonaktif"}</span>
+            <span>{spotlightEnabled ? "Word Highlight: On" : "Word Highlight: Off"}</span>
           </button>
           {activeSentenceIndex !== null && (
             <span className="font-semibold text-slate-700 dark:text-slate-300 font-mono text-xs">
@@ -237,7 +237,7 @@ export function InteractiveReadingPassage({
                 onPlayAudio?.(activeTokenHint.word);
               }}
               className="w-10 h-10 rounded-xl bg-white/15 hover:bg-white/25 text-[#F4B41A] flex items-center justify-center shrink-0 cursor-pointer transition-all active:scale-95 border border-white/10"
-              title={`Dengarkan pengucapan "${activeTokenHint.word}"`}
+              title={`Listen to pronunciation of "${activeTokenHint.word}"`}
             >
               <Volume2 className="w-5 h-5" />
             </button>
@@ -260,7 +260,7 @@ export function InteractiveReadingPassage({
             onClick={() => setActiveTokenHint(null)}
             className="text-xs px-3 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold cursor-pointer shrink-0 transition-colors touch-manipulation active:scale-95"
           >
-            Tutup
+            Close
           </button>
         </div>
       )}

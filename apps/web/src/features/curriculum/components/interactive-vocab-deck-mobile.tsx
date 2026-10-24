@@ -125,7 +125,7 @@ export function InteractiveVocabDeckMobile({
                 type="button"
                 onClick={(e) => handleAudio(e, currentItem.word)}
                 className="w-12 h-12 rounded-xl btn-skeuo-navy text-white flex items-center justify-center shrink-0 cursor-pointer shadow-xs active:scale-95"
-                title={`Dengarkan pengucapan "${currentItem.word}"`}
+                title={`Listen to pronunciation of "${currentItem.word}"`}
               >
                 <Volume2 className="w-5 h-5 text-[#F4B41A]" />
               </button>
@@ -133,11 +133,11 @@ export function InteractiveVocabDeckMobile({
 
             <div className="flex items-center justify-between text-xs pt-3 border-t border-slate-100 dark:border-slate-800">
               <span className="text-[11px] font-medium text-slate-500">
-                Lihat terjemahan & arti
+                View definition &amp; examples
               </span>
               <div className="flex items-center gap-1.5 text-[#0D3B66] dark:text-[#F4B41A] font-bold text-xs">
                 <RotateCw className="w-3.5 h-3.5" />
-                <span>Balik Kartu</span>
+                <span>Flip Card</span>
               </div>
             </div>
           </div>
@@ -154,13 +154,13 @@ export function InteractiveVocabDeckMobile({
             <div className="space-y-2.5">
               <div className="flex items-center justify-between">
                 <span className="text-[10px] font-mono font-black uppercase text-[#0D3B66] dark:text-[#F4B41A] tracking-wider">
-                  Arti & Contoh
+                  Meaning &amp; Example
                 </span>
                 <button
                   type="button"
                   onClick={(e) => handleAudio(e, currentItem.collocation || currentItem.meaning)}
                   className="p-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-[#0D3B66] dark:text-[#F4B41A] shrink-0 cursor-pointer"
-                  title="Dengarkan contoh kalimat"
+                  title="Listen to example sentence"
                 >
                   <Volume2 className="w-4 h-4" />
                 </button>
@@ -173,7 +173,7 @@ export function InteractiveVocabDeckMobile({
               {currentItem.collocation && (
                 <div className="p-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
                   <span className="font-bold block text-[#0D3B66] dark:text-[#F4B41A] text-[10px] uppercase mb-0.5">
-                    Contoh Penggunaan:
+                    Example Usage:
                   </span>
                   &ldquo;{currentItem.collocation}&rdquo;
                 </div>
@@ -185,7 +185,7 @@ export function InteractiveVocabDeckMobile({
                 {currentItem.word}
               </span>
               <span className="text-[11px] font-semibold text-slate-500">
-                Ketuk untuk kembali
+                Tap to flip back
               </span>
             </div>
           </div>
@@ -200,7 +200,7 @@ export function InteractiveVocabDeckMobile({
           className="flex-1 py-3 px-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 border-b-2 border-b-slate-300 dark:border-b-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold flex items-center justify-center gap-1.5 active:scale-98 transition-all min-h-[44px] touch-manipulation cursor-pointer shadow-2xs"
         >
           <ChevronLeft className="w-4 h-4" />
-          <span>Sebelumnya</span>
+          <span>Previous</span>
         </button>
 
         <button
@@ -208,7 +208,7 @@ export function InteractiveVocabDeckMobile({
           onClick={handleNext}
           className="flex-1 py-3 px-4 rounded-xl btn-skeuo-navy text-white text-xs font-bold flex items-center justify-center gap-1.5 active:scale-98 transition-all min-h-[44px] touch-manipulation cursor-pointer shadow-2xs"
         >
-          <span>Berikutnya</span>
+          <span>Next</span>
           <ChevronRight className="w-4 h-4" />
         </button>
       </div>

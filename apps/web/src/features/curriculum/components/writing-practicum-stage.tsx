@@ -392,7 +392,7 @@ export function WritingPracticumStage({
                 onClick={handleNext}
                 className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-dashed border-amber-400 text-amber-600 dark:text-amber-400 font-bold text-xs hover:bg-amber-50 dark:hover:bg-amber-950/30 transition-all cursor-pointer"
               >
-                <span>Lewati Soal (Admin)</span>
+                <span>Skip Question (Admin)</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             )}

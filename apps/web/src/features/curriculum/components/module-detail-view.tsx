@@ -65,7 +65,7 @@ export function ModuleDetailView({ moduleId }: ModuleDetailViewProps) {
         }
       }
     } catch (err) {
-      console.error("Gagal memuat detail modul:", err);
+      console.error("Failed to load module details:", err);
     } finally {
       setLoading(false);
     }

@@ -61,11 +61,11 @@ export function RegisterForm() {
         callbackURL,
       });
       if (res?.error) {
-        setError(res.error.message || "Gagal mendaftar dengan Google.");
+        setError(res.error.message || "Failed to sign up with Google.");
         setGoogleLoading(false);
       }
     } catch (err: any) {
-      setError(err?.message || "Gagal menghubungkan ke layanan Google.");
+      setError(err?.message || "Failed to connect to Google service.");
       setGoogleLoading(false);
     }
   };
@@ -77,8 +77,8 @@ export function RegisterForm() {
           <span className="w-12 h-12 rounded-2xl bg-blue-600 inline-flex items-center justify-center text-white font-bold text-xl mb-3 shadow-sm">
             E
           </span>
-          <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Daftar Akun EDDY&apos;S AI</h1>
-          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Mulai perjalanan belajar Bahasa Inggrismu</p>
+          <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Create an EDDY&apos;S AI Account</h1>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Start your English speaking journey</p>
         </div>
 
         {error && (
@@ -97,12 +97,12 @@ export function RegisterForm() {
           {googleLoading ? (
             <span className="flex items-center gap-2">
               <Loader2 className="w-4 h-4 animate-spin text-blue-600" />
-              Menghubungkan Google...
+              Connecting Google...
             </span>
           ) : (
             <>
               <GoogleIcon />
-              <span>Daftar dengan Google</span>
+              <span>Sign up with Google</span>
             </>
           )}
         </Button>
@@ -112,19 +112,19 @@ export function RegisterForm() {
             <span className="w-full border-t border-slate-200 dark:border-slate-800" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-white dark:bg-slate-900 px-3 text-slate-400 font-medium">atau daftar email</span>
+            <span className="bg-white dark:bg-slate-900 px-3 text-slate-400 font-medium">or register with email</span>
           </div>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Nama Lengkap</label>
+            <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Full Name</label>
             <Input
               name="name"
               type="text"
               required
               autoComplete="name"
-              placeholder="Contoh: Budi Santoso"
+              placeholder="e.g. Alex Johnson"
               className="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-blue-600"
             />
           </div>
@@ -136,7 +136,7 @@ export function RegisterForm() {
               type="email"
               required
               autoComplete="email"
-              placeholder="nama@email.com"
+              placeholder="name@email.com"
               className="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-blue-600"
             />
           </div>
@@ -149,7 +149,7 @@ export function RegisterForm() {
               required
               minLength={6}
               autoComplete="new-password"
-              placeholder="Minimal 6 karakter"
+              placeholder="Minimum 6 characters"
               className="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-blue-600"
             />
           </div>
@@ -159,14 +159,14 @@ export function RegisterForm() {
             disabled={loading}
             className="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-sm"
           >
-            {loading ? "Mendaftarkan..." : "Daftar & Mulai Belajar"}
+            {loading ? "Registering..." : "Sign Up & Start Learning"}
           </Button>
         </form>
 
         <div className="mt-6 text-center text-xs text-slate-500 dark:text-slate-400">
-          Sudah punya akun?{" "}
+          Already have an account?{" "}
           <Link href="/login" className="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
-            Masuk di sini
+            Sign in here
           </Link>
         </div>
       </Card>

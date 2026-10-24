@@ -16,7 +16,7 @@ export const authApi = {
   login: async (credentials: { email: string; password: string }) => {
     const { data, error } = await apiClient.api.user.login.post(credentials);
     if (error) {
-      throw new Error(extractErrorMessage(error.value, "Email atau password salah"));
+      throw new Error(extractErrorMessage(error.value, "Invalid email or password"));
     }
     return data?.data;
   },
@@ -24,7 +24,7 @@ export const authApi = {
   register: async (payload: { name: string; email: string; password: string }) => {
     const { data, error } = await apiClient.api.user.register.post(payload);
     if (error) {
-      throw new Error(extractErrorMessage(error.value, "Gagal mendaftar"));
+      throw new Error(extractErrorMessage(error.value, "Registration failed"));
     }
     return data?.data;
   },

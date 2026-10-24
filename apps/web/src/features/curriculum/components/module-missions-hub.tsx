@@ -88,7 +88,7 @@ const SKILL_THEMES: Record<
     accentColor: "#D97706",
     iconBg: "bg-amber-600 text-white",
     progressBar: "#D97706",
-    shortTitle: "Graduation Exam (55 Soal)",
+    shortTitle: "Graduation Exam (55 Questions)",
   },
   exam: {
     icon: GraduationCap,
@@ -96,7 +96,7 @@ const SKILL_THEMES: Record<
     accentColor: "#D97706",
     iconBg: "bg-amber-600 text-white",
     progressBar: "#D97706",
-    shortTitle: "Graduation Exam (55 Soal)",
+    shortTitle: "Graduation Exam (55 Questions)",
   },
 };
 
@@ -149,13 +149,13 @@ export function ModuleMissionsHub({
               CEFR {moduleData?.cefr || "A1.1"}
             </span>
             <span className="text-[11px] font-semibold text-slate-500">
-              {completedCount} dari {subModules.length || 4} Selesai
+              {completedCount} of {subModules.length || 4} Completed
             </span>
           </div>
 
           <div>
             <h2 className="text-base font-extrabold text-slate-900 leading-snug">
-              {moduleData?.title || "Unit Pembelajaran"}
+              {moduleData?.title || "Learning Unit"}
             </h2>
           </div>
 
@@ -165,7 +165,7 @@ export function ModuleMissionsHub({
               onClick={() => onSelectMission(firstActiveSub.id)}
               className="w-full py-2.5 px-4 rounded-xl btn-skeuo-navy text-xs font-bold shadow-xs cursor-pointer flex items-center justify-center gap-2 min-h-[44px] touch-manipulation active:scale-95 transition-all"
             >
-              <span>{completedCount > 0 ? "Lanjut Belajar" : "Mulai Belajar"}</span>
+              <span>{completedCount > 0 ? "Continue Learning" : "Start Learning"}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           )}
@@ -174,7 +174,7 @@ export function ModuleMissionsHub({
         {/* Mobile Submodules Card Grid (2x2) */}
         <div className="space-y-2">
           <h3 className="text-xs font-bold uppercase tracking-wider text-slate-600 px-1">
-            Daftar Materi
+            Syllabus Units
           </h3>
           <div className={subModules.length === 1 ? "grid grid-cols-1" : "grid grid-cols-2 gap-2.5"}>
             {subModules.map((sub, index) => {
@@ -201,7 +201,7 @@ export function ModuleMissionsHub({
                     {isCompleted ? (
                       <span className="inline-flex items-center gap-0.5 text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200">
                         <CheckCircle2 className="w-3 h-3 text-emerald-600" />
-                        <span>Selesai</span>
+                        <span>Completed</span>
                       </span>
                     ) : isLocked ? (
                       <span className="inline-flex items-center gap-0.5 text-[10px] font-medium px-1.5 py-0.5 rounded bg-slate-100 text-slate-400">
@@ -209,7 +209,7 @@ export function ModuleMissionsHub({
                       </span>
                     ) : (
                       <span className="text-[10px] font-bold text-[#0D3B66]">
-                        Aktif
+                        Active
                       </span>
                     )}
                   </div>

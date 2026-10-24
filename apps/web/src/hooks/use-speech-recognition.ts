@@ -81,7 +81,7 @@ export function useSpeechRecognition({
       (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
     if (!SpeechRecognition) {
-      setErrorMsg("Fitur mikrofon suara tidak didukung di browser ini.");
+      setErrorMsg("Microphone speech recognition is not supported in this browser.");
       return;
     }
 

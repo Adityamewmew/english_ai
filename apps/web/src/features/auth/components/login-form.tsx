@@ -44,10 +44,10 @@ export function LoginForm() {
       if (err) {
         if (err === "account_not_linked") {
           setError(
-            "Akun Google belum tertaut dengan email yang ada. Kami telah mengaktifkan penautan otomatis, silakan coba klik 'Lanjutkan dengan Google' kembali."
+            "This Google account is not yet linked to an existing email. Auto-linking has been enabled; please try clicking 'Continue with Google' again."
           );
         } else {
-          setError(`Gagal autentikasi Google: ${err}`);
+          setError(`Google authentication failed: ${err}`);
         }
       }
     }
@@ -77,11 +77,11 @@ export function LoginForm() {
         callbackURL,
       });
       if (res?.error) {
-        setError(res.error.message || "Gagal masuk dengan Google.");
+        setError(res.error.message || "Failed to sign in with Google.");
         setGoogleLoading(false);
       }
     } catch (err: any) {
-      setError(err?.message || "Gagal menghubungkan ke layanan Google.");
+      setError(err?.message || "Failed to connect to Google service.");
       setGoogleLoading(false);
     }
   };
@@ -93,8 +93,8 @@ export function LoginForm() {
           <span className="w-12 h-12 rounded-2xl bg-blue-600 inline-flex items-center justify-center text-white font-bold text-xl mb-3 shadow-sm">
             E
           </span>
-          <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Masuk ke EDDY&apos;S AI</h1>
-          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Lanjutkan sesi belajarmu bersama Mr. Khoirul</p>
+          <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Sign In to EDDY&apos;S AI</h1>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Continue your English learning with Mr. Khoirul</p>
         </div>
 
         {error && (
@@ -113,12 +113,12 @@ export function LoginForm() {
           {googleLoading ? (
             <span className="flex items-center gap-2">
               <Loader2 className="w-4 h-4 animate-spin text-blue-600" />
-              Menghubungkan Google...
+              Connecting Google...
             </span>
           ) : (
             <>
               <GoogleIcon />
-              <span>Lanjutkan dengan Google</span>
+              <span>Continue with Google</span>
             </>
           )}
         </Button>
@@ -128,7 +128,7 @@ export function LoginForm() {
             <span className="w-full border-t border-slate-200 dark:border-slate-800" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-white dark:bg-slate-900 px-3 text-slate-400 font-medium">atau email</span>
+            <span className="bg-white dark:bg-slate-900 px-3 text-slate-400 font-medium">or email</span>
           </div>
         </div>
 
@@ -140,7 +140,7 @@ export function LoginForm() {
               type="email"
               required
               autoComplete="email"
-              placeholder="nama@email.com"
+              placeholder="name@email.com"
               className="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-blue-600"
             />
           </div>
@@ -152,7 +152,7 @@ export function LoginForm() {
               type="password"
               required
               autoComplete="current-password"
-              placeholder="Masukkan password"
+              placeholder="Enter password"
               className="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-blue-600"
             />
           </div>
@@ -162,14 +162,14 @@ export function LoginForm() {
             disabled={loading || googleLoading}
             className="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-sm"
           >
-            {loading ? "Memproses..." : "Masuk Sekarang"}
+            {loading ? "Signing in..." : "Sign In Now"}
           </Button>
         </form>
 
         <div className="mt-6 text-center text-xs text-slate-500 dark:text-slate-400">
-          Belum punya akun?{" "}
+          Don&apos;t have an account?{" "}
           <Link href="/register" className="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
-            Daftar Akun Baru
+            Create an Account
           </Link>
         </div>
       </Card>

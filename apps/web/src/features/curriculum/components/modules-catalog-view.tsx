@@ -261,14 +261,14 @@ export function ModulesCatalogView({
           <div className="sm:hidden space-y-1">
             <div className="flex items-center justify-between">
               <h1 className="text-xl font-extrabold text-[#0D3B66] dark:text-white tracking-tight">
-                Katalog Modul
+                Curriculum Catalog
               </h1>
               <span className="text-xs font-bold text-slate-500 font-mono">
-                {completedInSubLevel}/{totalInSubLevel} Selesai
+                {completedInSubLevel}/{totalInSubLevel} Completed
               </span>
             </div>
             <p className="text-xs text-slate-500">
-              Kurikulum CEFR berjenjang A1–C2 untuk membangun refleks bicara.
+              Structured CEFR A1–C2 curriculum designed to build automatic English speech reflexes.
             </p>
           </div>
 
@@ -283,14 +283,14 @@ export function ModulesCatalogView({
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
               <span className="text-[#0D3B66] dark:text-[#F4B41A]">
-                Katalog Modul
+                Courses Catalog
               </span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-black text-[#0D3B66] dark:text-white tracking-tight uppercase">
-              Kurikulum &amp; Modul Pembelajaran
+              Curriculum &amp; Learning Modules
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
-              Kurikulum standar CEFR A1 hingga C2 dengan latihan interaktif dan AI voice tutor.
+              Standard CEFR curriculum from A1 to C2 with interactive exercises and AI voice tutor.
             </p>
           </div>
 
@@ -332,7 +332,7 @@ export function ModulesCatalogView({
                 {isCurrentTrack && (
                   <span className="hidden sm:inline-flex px-2 py-0.5 rounded-full bg-[#F4B41A]/20 text-[#B8860B] dark:text-[#F4B41A] text-[10px] font-black tracking-tight uppercase items-center gap-1">
                     <Sparkles className="w-2.5 h-2.5" />
-                    <span>Track Aktif</span>
+                    <span>Active Track</span>
                   </span>
                 )}
               </div>
@@ -345,11 +345,11 @@ export function ModulesCatalogView({
 
             <div className="flex items-center gap-2 text-xs font-bold text-slate-500 shrink-0">
               <span className="font-mono text-slate-700 dark:text-slate-300">
-                {completedInSubLevel}/{totalInSubLevel} Selesai
+                {completedInSubLevel}/{totalInSubLevel} Completed
               </span>
               <span className="text-slate-300 dark:text-slate-700">·</span>
               <span className="font-mono text-[11px] text-[#0D3B66] dark:text-[#F4B41A]">
-                {filteredModules.length} Modul
+                {filteredModules.length} Modules
               </span>
             </div>
           </div>
@@ -364,7 +364,7 @@ export function ModulesCatalogView({
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-600 text-white font-mono">
-                      Akses Belum Aktif
+                      Access Locked
                     </span>
                     <span className="text-xs font-bold text-slate-500">
                       Level {selectedCategory}
@@ -375,7 +375,7 @@ export function ModulesCatalogView({
                   </h3>
                   <p className="text-xs text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
                     {activeCategoryClass.description ||
-                      `Buka akses permanen ke seluruh modul kurikulum level ${selectedCategory}, materi speaking AI interaktif, kuis kelulusan, dan sertifikat resmi.`}
+                      `Unlock lifetime access to all level ${selectedCategory} curriculum modules, interactive AI speaking materials, graduation exams, and official certificates.`}
                   </p>
                 </div>
               </div>
@@ -383,7 +383,7 @@ export function ModulesCatalogView({
               <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end justify-between gap-3 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-indigo-200/50">
                 <div className="text-left md:text-right">
                   <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">
-                    Tarif Buka Akses
+                    Unlock Price
                   </span>
                   <div className="flex items-baseline gap-2">
                     <span className="font-heading text-2xl font-black text-indigo-900 dark:text-indigo-400">
@@ -408,7 +408,7 @@ export function ModulesCatalogView({
                   className="w-full sm:w-auto px-5 py-2.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold text-xs border-b-4 border-b-indigo-800 active:border-b-0 active:translate-y-1 shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
-                  <span>Buka Akses Kelas Sekarang</span>
+                  <span>Unlock Course Access Now</span>
                 </button>
               </div>
             </div>

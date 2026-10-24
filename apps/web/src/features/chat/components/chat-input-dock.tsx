@@ -49,7 +49,7 @@ export const ChatInputDock: React.FC<ChatInputDockProps> = ({
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Tulis pesan atau pertanyaan..."
+            placeholder="Type a message or question..."
             rows={1}
             disabled={disabled}
             className="flex-1 max-h-40 resize-none bg-transparent px-3 py-2 text-sm sm:text-base text-slate-800 placeholder-slate-400 focus:outline-hidden leading-relaxed custom-scrollbar"
@@ -60,18 +60,18 @@ export const ChatInputDock: React.FC<ChatInputDockProps> = ({
             <button
               type="button"
               onClick={onStop}
-              title="Hentikan respon"
+              title="Stop response"
               className="btn-skeuo-red px-3.5 py-2.5 rounded-xl flex items-center gap-1.5 text-xs sm:text-sm font-semibold shrink-0 cursor-pointer"
             >
               <Square className="w-4 h-4 fill-current" />
-              <span className="hidden sm:inline">Hentikan</span>
+              <span className="hidden sm:inline">Stop</span>
             </button>
           ) : (
             <button
               type="button"
               onClick={onSend}
               disabled={!input.trim() || disabled}
-              title="Kirim pesan"
+              title="Send message"
               className={`px-4 py-2.5 rounded-xl flex items-center justify-center gap-1.5 text-sm font-bold shrink-0 cursor-pointer transition-all ${
                 input.trim() && !disabled
                   ? "btn-skeuo-yellow text-slate-900 shadow-md"
@@ -79,7 +79,7 @@ export const ChatInputDock: React.FC<ChatInputDockProps> = ({
               }`}
             >
               <Send className="w-4 h-4" />
-              <span className="hidden sm:inline">Kirim</span>
+              <span className="hidden sm:inline">Send</span>
             </button>
           )}
         </div>

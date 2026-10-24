@@ -23,10 +23,10 @@ export default function HomePage() {
 
           <div className="flex items-center gap-2 sm:gap-3">
             <Button asChild variant="ghost" size="sm">
-              <Link href="/login">Masuk</Link>
+              <Link href="/login">Sign In</Link>
             </Button>
             <Button asChild variant="default" size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
-              <Link href="/placement">Tes Penempatan</Link>
+              <Link href="/placement">Placement Test</Link>
             </Button>
           </div>
         </div>
@@ -39,32 +39,32 @@ export default function HomePage() {
           className="gap-2 bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800 mb-6 py-1 px-3.5"
         >
           <Award className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-          <span>Platform Praktik Refleks Bahasa Inggris Terstruktur</span>
+          <span>Structured English Speaking Reflex Platform</span>
         </Badge>
 
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight tracking-tight max-w-4xl mx-auto">
-          Jangan Hanya Belajar.{" "}
+          Don&apos;t Just Study.{" "}
           <span className="text-blue-600 dark:text-blue-400 underline decoration-blue-400/40 underline-offset-8">
-            Bangun Refleks Bicara
+            Build Instant Speaking Reflexes
           </span>{" "}
-          Bahasa Inggrismu.
+          in Real English.
         </h1>
 
         <p className="mt-6 text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          Latihan percakapan telepon langsung tanpa rasa cemas. Didukung kurikulum komprehensif 180 modul CEFR A1 hingga C2 serta evaluasi standar IELTS dan TOEIC.
+          Practice real-time spoken conversations without anxiety. Powered by a comprehensive 180-module CEFR curriculum from A1 to C2 and international CEFR/IELTS evaluation rubrics.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto sm:max-w-none">
           <Button asChild size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white h-12 px-6 rounded-xl shadow-md">
             <Link href="/placement">
-              <span>Ikuti Tes Penempatan (15 Menit)</span>
+              <span>Take Placement Test (15 Mins)</span>
               <ArrowRight className="w-4 h-4 ml-1.5" />
             </Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="w-full sm:w-auto h-12 px-6 rounded-xl border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900">
             <Link href="/call">
               <Mic className="w-4 h-4 mr-1.5 text-blue-600 dark:text-blue-400" />
-              <span>Coba Voice Call Mr. Khoirul</span>
+              <span>Try Voice Call with Mr. Khoirul</span>
             </Link>
           </Button>
         </div>
@@ -78,26 +78,26 @@ export default function HomePage() {
             <div className="space-y-4 max-w-xl">
               <Badge variant="outline" className="gap-1.5 bg-blue-500/20 text-blue-300 border-blue-400/30">
                 <Mic className="w-3.5 h-3.5 text-blue-400" />
-                <span>Fitur Unggulan Utama</span>
+                <span>Flagship Learning Experience</span>
               </Badge>
               <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-                Simulasi Telepon Suara Real-Time dengan Mr. Khoirul
+                Real-Time Voice Call Simulation with Mr. Khoirul
               </h2>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Bicara langsung secara alami. Mr. Khoirul mengerti konteks saat kamu kesulitan mencari kosakata, memberikan bimbingan pelafalan yang ramah, dan membantu membangun keberanian berbicara.
+                Speak naturally in real time. Mr. Khoirul understands context whenever you search for words, offers warm pronunciation guidance, and builds your spoken confidence.
               </p>
               <div className="flex flex-wrap gap-4 pt-2 text-xs text-slate-300">
                 <div className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                  <span>Tanpa Rasa Minder</span>
+                  <span>Zero Anxiety</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                  <span>Koreksi Lembut Ramah Pemula</span>
+                  <span>Gentle, Encouraging Recasting</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                  <span>Kapan Saja &amp; Di Mana Saja</span>
+                  <span>Anytime, Anywhere</span>
                 </div>
               </div>
             </div>
@@ -106,11 +106,11 @@ export default function HomePage() {
             <div className="w-full lg:w-96 bg-black/40 border border-white/10 backdrop-blur-md rounded-2xl p-4 space-y-3 shrink-0">
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-300 pb-2 border-b border-white/10">
                 <MessageSquare className="w-3.5 h-3.5 text-blue-400" />
-                <span>Contoh Interaksi Langsung</span>
+                <span>Live Interaction Sample</span>
               </div>
               <div className="space-y-2 text-xs">
                 <div className="p-2.5 rounded-xl bg-blue-600/30 border border-blue-500/30 text-blue-100">
-                  <strong className="block text-[10px] text-blue-300 mb-0.5">Siswa:</strong>
+                  <strong className="block text-[10px] text-blue-300 mb-0.5">Student:</strong>
                   &ldquo;I want to describe my daily routine in the morning.&rdquo;
                 </div>
                 <div className="p-2.5 rounded-xl bg-white/10 text-slate-200">
@@ -129,10 +129,10 @@ export default function HomePage() {
                   <BookOpen className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white">
-                  180 Modul Terstruktur (CEFR A1 - C2)
+                  180 Structured Modules (CEFR A1 - C2)
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Tersedia 30 modul berjenjang di setiap tingkatan CEFR (A1.1 hingga C2.2). Materi tata bahasa kontekstual, kosakata tematik, hingga Speaking Lab siap pakai.
+                  30 scaffolded units across each CEFR tier from A1.1 to C2.2. Contextual grammar, thematic vocabulary, and guided Speaking Labs.
                 </p>
               </div>
             </Card>
@@ -143,10 +143,10 @@ export default function HomePage() {
                   <Award className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white">
-                  Standar Evaluasi CEFR &amp; IELTS
+                  CEFR &amp; IELTS Evaluation Standards
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Penilaian kelancaran, tata bahasa, dan kosakata berbasis rubrik internasional resmi, memberikan umpan balik konstruktif untuk setiap latihan bicara.
+                  Fluency, grammar, and vocabulary assessments powered by international rubrics, providing constructive feedback on every spoken session.
                 </p>
               </div>
             </Card>
@@ -156,7 +156,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 py-8 text-center text-xs">
-        <p>&copy; {new Date().getFullYear()} EDDY&apos;S AI: Bagian dari EDDY&apos;S ENGLISH. Hak cipta dilindungi.</p>
+        <p>&copy; {new Date().getFullYear()} EDDY&apos;S AI: Part of EDDY&apos;S ENGLISH. All rights reserved.</p>
       </footer>
     </main>
   );
