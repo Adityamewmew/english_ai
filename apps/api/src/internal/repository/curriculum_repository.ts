@@ -18,15 +18,18 @@ export const curriculumRepository = {
       .orderBy(asc(curriculumLevels.orderIndex));
   },
 
-  findModules: async (levelId?: string) => {
+  findModules: async (levelId?: string, onlyActive = true) => {
+    const conditions = [isNull(curriculumModules.deletedAt)];
+    if (onlyActive) {
+      conditions.push(eq(curriculumModules.isActive, true));
+    }
+    if (levelId) {
+      conditions.push(eq(curriculumModules.levelId, levelId));
+    }
     return db
       .select()
       .from(curriculumModules)
-      .where(
-        levelId
-          ? and(isNull(curriculumModules.deletedAt), eq(curriculumModules.levelId, levelId))
-          : isNull(curriculumModules.deletedAt)
-      )
+      .where(and(...conditions))
       .orderBy(asc(curriculumModules.orderIndex), asc(curriculumModules.id));
   },
 
