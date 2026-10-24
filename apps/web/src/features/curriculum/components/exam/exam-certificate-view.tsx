@@ -23,6 +23,8 @@ interface ExamCertificateViewProps {
   moduleData: any;
   studentName: string;
   passingScore: number;
+  isSubmitting?: boolean;
+  isSubmitted?: boolean;
 }
 
 export function ExamCertificateView({
@@ -30,6 +32,8 @@ export function ExamCertificateView({
   moduleData,
   studentName,
   passingScore,
+  isSubmitting = false,
+  isSubmitted = false,
 }: ExamCertificateViewProps) {
   const certDate = new Date().toLocaleDateString("id-ID", {
     day: "numeric",
@@ -162,6 +166,18 @@ export function ExamCertificateView({
           </p>
         </Card>
       )}
+
+      {/* Progress saving status notification */}
+      {isSubmitting ? (
+        <div className="p-3.5 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-xs font-semibold text-amber-800 dark:text-amber-200 flex items-center justify-center gap-2 print:hidden">
+          <span className="w-3.5 h-3.5 border-2 border-amber-600 border-t-transparent rounded-full animate-spin shrink-0" />
+          <span>Menyimpan skor kelulusan dan membuka modul berikutnya di akun Anda...</span>
+        </div>
+      ) : isSubmitted ? (
+        <div className="p-3.5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-xs font-bold text-emerald-800 dark:text-emerald-200 flex items-center justify-center gap-2 print:hidden">
+          <span>✓ Progres kelulusan tersimpan di server! Modul 2 telah terbuka otomatis.</span>
+        </div>
+      ) : null}
 
       {/* 4. Action Buttons (Hidden when printing) */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 print:hidden">

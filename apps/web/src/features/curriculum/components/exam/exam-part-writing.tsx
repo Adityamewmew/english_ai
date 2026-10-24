@@ -48,13 +48,23 @@ export function ExamPartWriting({
                 <span className="w-6 h-6 rounded-lg bg-rose-500/10 text-rose-800 dark:text-rose-300 text-xs font-bold flex items-center justify-center shrink-0">
                   {qIdx + 1}
                 </span>
-                <div className="space-y-1">
-                  <div className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">
-                    {item.type || "Sentence Transformation"}
+                <div className="space-y-1.5 flex-1">
+                  <div className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                    {item.typeLabel || item.type || "Sentence Transformation"}
                   </div>
-                  <div className="text-sm font-semibold text-slate-900 dark:text-white leading-relaxed">
-                    {item.prompt || item.instruction}
+                  <div className="text-sm font-semibold text-slate-800 dark:text-slate-200 leading-relaxed">
+                    {item.instruction || item.prompt}
                   </div>
+                  {(item.promptText || (item.prompt && item.instruction && item.prompt !== item.instruction) || item.sentence) && (
+                    <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-900 dark:text-white font-mono leading-relaxed">
+                      {item.promptText || item.sentence || item.prompt}
+                    </div>
+                  )}
+                  {item.hint && (
+                    <div className="text-xs text-slate-500 dark:text-slate-400 italic">
+                      Petunjuk: {item.hint}
+                    </div>
+                  )}
                 </div>
               </div>
 

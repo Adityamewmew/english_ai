@@ -52,13 +52,18 @@ export function ExamPartListening({
                   <span className="w-6 h-6 rounded-lg bg-amber-500/10 text-amber-800 dark:text-amber-300 text-xs font-bold flex items-center justify-center shrink-0">
                     {qIdx + 1}
                   </span>
-                  <div>
+                  <div className="space-y-1 flex-1">
                     <div className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">
                       {item.type === "arrange" ? "Susun Kalimat" : "Dikte Audio"}
                     </div>
                     <div className="text-sm font-semibold text-slate-900 dark:text-slate-100 mt-0.5">
                       {item.instruction || "Dengarkan audio dan ketik kalimat yang kamu dengar:"}
                     </div>
+                    {item.promptSentence && (
+                      <div className="p-3 rounded-xl bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-sm font-bold text-slate-900 dark:text-slate-100 font-mono mt-1.5 leading-relaxed">
+                        {item.promptSentence}
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -103,7 +108,11 @@ export function ExamPartListening({
                 type="text"
                 value={currentAns}
                 onChange={(e) => onChangeAnswer(qIdx, e.target.value)}
-                placeholder="Ketik kalimat hasil pendengaran di sini..."
+                placeholder={
+                  item.promptSentence
+                    ? "Ketik kata yang hilang untuk melengkapi kalimat di atas..."
+                    : "Ketik kalimat hasil pendengaran di sini..."
+                }
                 className="w-full min-h-[44px] px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-medium text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-hidden focus:ring-2 focus:ring-amber-500"
               />
             </Card>

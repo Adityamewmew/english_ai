@@ -77,12 +77,17 @@ export function StageListeningView({
     <div className="space-y-6">
       {/* LANGKAH 1: Overview & Persiapan Menyimak */}
       {activeStepId === 1 && (
-        <ListeningOverviewStage
-          dialogueSec={dialogueSec}
-          theorySec={theorySec}
-          tutor={tutor}
-          onGoToDialogue={() => onNextStep?.()}
-        />
+        <div onClick={() => onStepComplete?.()}>
+          <ListeningOverviewStage
+            dialogueSec={dialogueSec}
+            theorySec={theorySec}
+            tutor={tutor}
+            onGoToDialogue={() => {
+              onStepComplete?.();
+              onNextStep?.();
+            }}
+          />
+        </div>
       )}
 
       {/* LANGKAH 2: Percakapan Multi-Speaker (Speaker 1 Kiri, Speaker 2 Kanan) */}
@@ -94,7 +99,10 @@ export function StageListeningView({
 
       {/* LANGKAH 3: Spoken Contractions Ear Trainer */}
       {activeStepId === 3 && (
-        <div className="space-y-6 animate-in fade-in duration-300">
+        <div
+          onClick={() => onStepComplete?.()}
+          className="space-y-6 animate-in fade-in duration-300"
+        >
           <div className="space-y-1.5 pb-3 border-b border-slate-100 dark:border-slate-800">
             <span className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] uppercase tracking-wider block font-mono">
               Step 3 · Ear Training Drill
@@ -143,6 +151,7 @@ export function StageListeningView({
                   <div
                     onClick={() => {
                       playPopSound();
+                      onStepComplete?.();
                       setContractionMode((prev) => ({
                         ...prev,
                         [item.id]: !isContracted,
@@ -174,6 +183,7 @@ export function StageListeningView({
                     <button
                       type="button"
                       onClick={() => {
+                        onStepComplete?.();
                         const text = (item.slow || "").trim();
                         if (text) tutor.playTutorAudio(text);
                       }}
@@ -185,6 +195,7 @@ export function StageListeningView({
                     <button
                       type="button"
                       onClick={() => {
+                        onStepComplete?.();
                         const text = (item.fast || "").trim();
                         if (text) tutor.playTutorAudio(text);
                       }}

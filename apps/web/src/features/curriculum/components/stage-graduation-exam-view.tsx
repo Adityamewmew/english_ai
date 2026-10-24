@@ -27,6 +27,7 @@ interface StageGraduationExamViewProps {
   onStepComplete?: () => void;
   onRewardXp: (amount: number) => void;
   studentName?: string;
+  onSubmitExam?: (finalScore: number) => Promise<void>;
 }
 
 export function StageGraduationExamView({
@@ -38,6 +39,7 @@ export function StageGraduationExamView({
   onStepComplete,
   onRewardXp,
   studentName = "Student",
+  onSubmitExam,
 }: StageGraduationExamViewProps) {
   const parts = quizSec?.content?.parts || {};
   const readingList: any[] = parts.reading || [];
@@ -52,6 +54,10 @@ export function StageGraduationExamView({
   const [listeningAnswers, setListeningAnswers] = useState<Record<number, string>>({});
   const [writingAnswers, setWritingAnswers] = useState<Record<number, string>>({});
   const [speakingCompleted, setSpeakingCompleted] = useState<Record<number, boolean>>({});
+
+  const [isSubmittingExam, setIsSubmittingExam] = useState(false);
+  const [isExamSubmitted, setIsExamSubmitted] = useState(false);
+  const hasSubmittedRef = React.useRef(false);
 
   // Audio helper (Web Speech API)
   const playAudio = (text: string) => {
@@ -289,12 +295,65 @@ export function StageGraduationExamView({
   }
 
   // Step 6: Final Scorecard & Official Sub-Level Certificate
+  // Auto-submit score to backend to unlock next module and save progress
+  return (
+    <ExamCertificateViewWithAutoSubmit
+      scores={scores}
+      moduleData={moduleData}
+      studentName={studentName}
+      passingScore={passingScore}
+      onSubmitExam={onSubmitExam}
+      isSubmittingExam={isSubmittingExam}
+      isExamSubmitted={isExamSubmitted}
+      setIsSubmittingExam={setIsSubmittingExam}
+      setIsExamSubmitted={setIsExamSubmitted}
+      hasSubmittedRef={hasSubmittedRef}
+    />
+  );
+}
+
+function ExamCertificateViewWithAutoSubmit({
+  scores,
+  moduleData,
+  studentName,
+  passingScore,
+  onSubmitExam,
+  isSubmittingExam,
+  isExamSubmitted,
+  setIsSubmittingExam,
+  setIsExamSubmitted,
+  hasSubmittedRef,
+}: {
+  scores: any;
+  moduleData: any;
+  studentName: string;
+  passingScore: number;
+  onSubmitExam?: (score: number) => Promise<void>;
+  isSubmittingExam: boolean;
+  isExamSubmitted: boolean;
+  setIsSubmittingExam: (val: boolean) => void;
+  setIsExamSubmitted: (val: boolean) => void;
+  hasSubmittedRef: React.MutableRefObject<boolean>;
+}) {
+  React.useEffect(() => {
+    if (!hasSubmittedRef.current && onSubmitExam) {
+      hasSubmittedRef.current = true;
+      setIsSubmittingExam(true);
+      onSubmitExam(scores.totalScore)
+        .then(() => setIsExamSubmitted(true))
+        .catch((err) => console.error("Auto submit exam failed:", err))
+        .finally(() => setIsSubmittingExam(false));
+    }
+  }, [onSubmitExam, scores.totalScore, hasSubmittedRef, setIsSubmittingExam, setIsExamSubmitted]);
+
   return (
     <ExamCertificateView
       scores={scores}
       moduleData={moduleData}
       studentName={studentName}
       passingScore={passingScore}
+      isSubmitting={isSubmittingExam}
+      isSubmitted={isExamSubmitted}
     />
   );
 }

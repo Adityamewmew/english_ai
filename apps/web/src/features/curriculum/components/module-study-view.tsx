@@ -216,6 +216,26 @@ export function ModuleStudyView({
     }
   };
 
+  const handleExamSubmit = async (finalScore: number) => {
+    if (!currentSub?.id) return;
+    try {
+      setIsFinishing(true);
+      const res = await submitSubModuleAction(
+        currentSub.id,
+        { score: finalScore },
+        moduleId
+      );
+      if (res.success) {
+        playFanfareSound();
+        onRefresh?.();
+      }
+    } catch (err) {
+      console.error("Failed to submit exam:", err);
+    } finally {
+      setIsFinishing(false);
+    }
+  };
+
   const handlePrevStep = () => {
     if (activeStepId > 1) {
       const prevId = activeStepId - 1;
@@ -410,6 +430,7 @@ export function ModuleStudyView({
                     moduleData={moduleData}
                     studentName={studentName}
                     isAdmin={isAdmin}
+                    onSubmitExam={handleExamSubmit}
                   />
                 </div>
 

@@ -37,6 +37,7 @@ interface ModuleStageViewportProps {
   moduleData?: any;
   studentName?: string;
   isAdmin?: boolean;
+  onSubmitExam?: (finalScore: number) => Promise<void>;
 }
 
 export function ModuleStageViewport({
@@ -61,6 +62,7 @@ export function ModuleStageViewport({
   moduleData,
   studentName,
   isAdmin = false,
+  onSubmitExam,
 }: ModuleStageViewportProps) {
   const effectiveCanProceed = isAdmin || canProceed;
   return (
@@ -77,6 +79,7 @@ export function ModuleStageViewport({
             onStepComplete={onStepComplete}
             onRewardXp={onRewardXp}
             studentName={studentName}
+            onSubmitExam={onSubmitExam}
           />
         ) : skillType === "listening" ? (
           <StageListeningView
