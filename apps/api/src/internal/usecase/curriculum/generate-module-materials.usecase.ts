@@ -116,6 +116,38 @@ function prepareUserContent(
   return text;
 }
 
+function ensureReadingPracticeDrills(submodule: any): void {
+  if (!submodule?.sections || !Array.isArray(submodule.sections)) return;
+  const practiceSec = submodule.sections.find((s: any) => s.sectionType === "practice");
+  const vocabSec = submodule.sections.find((s: any) => s.sectionType === "vocab");
+  const vocabItems = vocabSec?.content?.items || vocabSec?.content?.words || [];
+
+  if (practiceSec) {
+    const existingDrills = practiceSec.content?.drills;
+    const hasPairs =
+      Array.isArray(existingDrills) &&
+      existingDrills.length > 0 &&
+      Array.isArray(existingDrills[0]?.pairs) &&
+      existingDrills[0].pairs.length > 0;
+
+    if (!hasPairs && vocabItems.length > 0) {
+      practiceSec.content = {
+        drills: [
+          {
+            id: "drill-cable-1",
+            instruction:
+              "Connect each vocabulary term on the left with its accurate meaning on the right.",
+            pairs: vocabItems.slice(0, 5).map((it: any) => ({
+              left: it.word || it.item || "",
+              right: it.meaning || it.meaningId || it.definition || "",
+            })),
+          },
+        ],
+      };
+    }
+  }
+}
+
 export async function generateModuleMaterialsUsecase(
   input: GenerateModuleMaterialsInput
 ): Promise<GeneratedModuleResponse> {
@@ -167,6 +199,10 @@ export async function generateModuleMaterialsUsecase(
         });
 
         const sub = await client.generateJson<any>(p.system, userContent);
+        if (s === "reading" && sub?.sections) {
+          ensureReadingPracticeDrills(sub);
+        }
+
         if (s === "listening" && sub?.sections) {
           const lQuestions = generateListeningQuestionsForModule({ subModules: [sub] });
           if (lQuestions && lQuestions.length > 0) {
@@ -274,6 +310,10 @@ export async function generateModuleMaterialsUsecase(
     });
 
     const submodule = await client.generateJson<any>(p.system, userContent);
+
+    if (targetSkill === "reading" && submodule?.sections) {
+      ensureReadingPracticeDrills(submodule);
+    }
 
     if (targetSkill === "listening" && submodule?.sections) {
       const lQuestions = generateListeningQuestionsForModule({ subModules: [submodule] });

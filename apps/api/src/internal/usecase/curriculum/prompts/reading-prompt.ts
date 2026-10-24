@@ -136,7 +136,19 @@ Return ONLY a valid JSON object matching this exact schema:
       "title": "Interactive Cable Connection (Vocab Match)",
       "orderIndex": 4,
       "content": {
-        "drills": []
+        "drills": [
+          {
+            "id": "drill-cable-1",
+            "instruction": "Connect each vocabulary term on the left with its accurate meaning on the right.",
+            "pairs": [
+              { "left": "collect", "right": "mengumpulkan" },
+              { "left": "explore", "right": "menjelajahi" },
+              { "left": "hobby", "right": "kegemaran" },
+              { "left": "practice", "right": "berlatih" },
+              { "left": "skill", "right": "keterampilan" }
+            ]
+          }
+        ]
       }
     },
     {
@@ -162,7 +174,7 @@ Return ONLY a valid JSON object matching this exact schema:
   ]
 }
 
-No markdown code fences. Provide exactly 8-10 vocabulary items and 10 reading comprehension questions in sec-${slug}-r-quiz.`;
+No markdown code fences. Provide exactly 8-10 vocabulary items in sec-${slug}-r-vocab, 1 drill with 5-6 matching pairs (drawn directly from the vocabulary bank) in sec-${slug}-r-practice, and 10 reading comprehension questions in sec-${slug}-r-quiz.`;
 
   const user = `Generate the Reading submodule for:
 Unit ID: ${unit.id}
