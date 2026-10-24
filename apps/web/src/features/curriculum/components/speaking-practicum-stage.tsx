@@ -94,6 +94,7 @@ export function SpeakingPracticumStage({
   const [isPlayingModel, setIsPlayingModel] = useState(false);
   const [isPlayingSelf, setIsPlayingSelf] = useState(false);
   const [isCompletedAll, setIsCompletedAll] = useState(false);
+  const [micError, setMicError] = useState(false);
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
@@ -135,6 +136,7 @@ export function SpeakingPracticumStage({
   const handleStartRecord = async () => {
     playPopSound();
     setLiveTranscript("");
+    setMicError(false);
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       audioChunksRef.current = [];
@@ -183,7 +185,7 @@ export function SpeakingPracticumStage({
         } catch {}
       }
     } catch {
-      alert("Izin mikrofon diperlukan untuk merekam ceritamu.");
+      setMicError(true);
     }
   };
 
@@ -491,6 +493,32 @@ export function SpeakingPracticumStage({
                   <span>Confirm & Continue to Next Question</span>
                   <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
                 </button>
+              )}
+
+              {micError && !recordings[currentIdx] && !isRecording && (
+                <div className="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-xs">
+                  <span className="text-amber-900 dark:text-amber-200">
+                    Microphone access unavailable or denied. You can read aloud independently and proceed:
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      playMatchSuccessSound();
+                      setCompletedItems((prev) => ({ ...prev, [currentIdx]: true }));
+                      setItemScores((prev) => ({ ...prev, [currentIdx]: 85 }));
+                      onRewardXp(10);
+                      if (currentIdx < totalQuestions - 1) {
+                        setCurrentIdx((prev) => prev + 1);
+                      } else {
+                        setIsCompletedAll(true);
+                      }
+                    }}
+                    className="shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs shadow-xs transition-all cursor-pointer"
+                  >
+                    <span>Practice Aloud &amp; Continue</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
               )}
 
               {isAdmin && (

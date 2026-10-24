@@ -11,6 +11,7 @@ interface ConceptCheckQuestion {
   options: string[];
   answer?: string;
   correctAnswer?: string;
+  correctIndex?: number;
   explanation?: string;
 }
 
@@ -21,6 +22,14 @@ interface ConceptChecksCardProps {
   isAdmin?: boolean;
   onCompleted?: () => void;
 }
+
+const getExpectedAnswer = (check: ConceptCheckQuestion) => {
+  if (typeof (check as any).correctIndex === "number" && Array.isArray(check.options)) {
+    const opt = check.options[(check as any).correctIndex];
+    return (typeof opt === "string" ? opt : (opt as any)?.text || (opt as any)?.label || "").trim().toLowerCase();
+  }
+  return (check?.answer || check?.correctAnswer || "").trim().toLowerCase();
+};
 
 export function ConceptChecksCard({
   conceptChecks,
@@ -80,8 +89,10 @@ export function ConceptChecksCard({
     }
 
     const check = conceptChecks[qIdx];
-    const expected = (check?.answer || check?.correctAnswer || "").trim().toLowerCase();
-    const isCorrect = option.trim().toLowerCase() === expected;
+    const expected = getExpectedAnswer(check);
+    const isCorrect =
+      option.trim().toLowerCase() === expected ||
+      (expected.length === 1 && option.trim().toLowerCase().startsWith(expected));
     if (targetEl) {
       if (isCorrect) {
         animeButtonPop(targetEl);
@@ -126,8 +137,10 @@ export function ConceptChecksCard({
         {conceptChecks.map((check, qIdx) => {
           const selected = selectedAnswers[qIdx];
           const hasAnswered = showFeedback[qIdx];
-          const expected = (check.answer || check.correctAnswer || "").trim().toLowerCase();
-          const isCorrect = selected?.trim().toLowerCase() === expected;
+          const expected = getExpectedAnswer(check);
+          const isCorrect =
+            selected?.trim().toLowerCase() === expected ||
+            (expected.length === 1 && selected?.trim().toLowerCase().startsWith(expected));
 
           return (
             <div

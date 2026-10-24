@@ -41,11 +41,56 @@ export function StageGraduationExamView({
   studentName = "Student",
   onSubmitExam,
 }: StageGraduationExamViewProps) {
-  const parts = quizSec?.content?.parts || {};
-  const readingList: any[] = parts.reading || [];
-  const listeningList: any[] = parts.listening || [];
-  const writingList: any[] = parts.writing || [];
-  const speakingList: any[] = parts.speaking || [];
+  const rawParts = quizSec?.content?.parts;
+  const rawQuestions: any[] = useMemo(() => {
+    return (
+      (Array.isArray(quizSec?.content?.questions) && quizSec.content.questions) ||
+      (Array.isArray(quizSec?.content) && quizSec.content) ||
+      []
+    );
+  }, [quizSec]);
+
+  const readingList: any[] = useMemo(() => {
+    if (rawParts?.reading && rawParts.reading.length > 0) return rawParts.reading;
+    const filtered = rawQuestions.filter(
+      (q) => q.skill === "reading" || /\[reading/i.test(q.question || "")
+    );
+    if (filtered.length > 0) return filtered;
+    return rawQuestions.length >= 4 ? rawQuestions.slice(0, Math.ceil(rawQuestions.length / 4)) : rawQuestions;
+  }, [rawParts, rawQuestions]);
+
+  const listeningList: any[] = useMemo(() => {
+    if (rawParts?.listening && rawParts.listening.length > 0) return rawParts.listening;
+    const filtered = rawQuestions.filter(
+      (q) => q.skill === "listening" || /\[listening/i.test(q.question || "") || q.audioText || q.targetSentence
+    );
+    if (filtered.length > 0) return filtered;
+    return rawQuestions.length >= 4
+      ? rawQuestions.slice(Math.ceil(rawQuestions.length / 4), Math.ceil(rawQuestions.length / 2))
+      : [];
+  }, [rawParts, rawQuestions]);
+
+  const writingList: any[] = useMemo(() => {
+    if (rawParts?.writing && rawParts.writing.length > 0) return rawParts.writing;
+    const filtered = rawQuestions.filter(
+      (q) => q.skill === "writing" || /\[writing/i.test(q.question || "") || q.promptText || q.sentence
+    );
+    if (filtered.length > 0) return filtered;
+    return rawQuestions.length >= 4
+      ? rawQuestions.slice(Math.ceil(rawQuestions.length / 2), Math.ceil((rawQuestions.length * 3) / 4))
+      : [];
+  }, [rawParts, rawQuestions]);
+
+  const speakingList: any[] = useMemo(() => {
+    if (rawParts?.speaking && rawParts.speaking.length > 0) return rawParts.speaking;
+    const filtered = rawQuestions.filter(
+      (q) => q.skill === "speaking" || /\[speaking/i.test(q.question || "") || q.scenario || q.prompt
+    );
+    if (filtered.length > 0) return filtered;
+    return rawQuestions.length >= 4
+      ? rawQuestions.slice(Math.ceil((rawQuestions.length * 3) / 4))
+      : [];
+  }, [rawParts, rawQuestions]);
 
   const passingScore = moduleData?.passingScore || 75;
 
@@ -71,15 +116,39 @@ export function StageGraduationExamView({
 
   // Scores computation
   const scores = useMemo(() => {
-    // 1. Reading (15 questions)
+    const totalExamQuestions =
+      readingList.length + listeningList.length + writingList.length + speakingList.length;
+
+    if (totalExamQuestions === 0) {
+      return {
+        rCorrect: 0,
+        rTotal: 0,
+        lCorrect: 0,
+        lTotal: 0,
+        wAnswered: 0,
+        wTotal: 0,
+        sCompletedCount: 0,
+        sTotal: 0,
+        totalScore: 0,
+        isPassed: false,
+      };
+    }
+
+    // 1. Reading
     let rCorrect = 0;
     readingList.forEach((q, idx) => {
-      if (readingAnswers[idx] && readingAnswers[idx] === q.answer) {
+      const user = (readingAnswers[idx] || "").trim().toLowerCase();
+      let expected = (q.answer || q.correctAnswer || "").trim().toLowerCase();
+      if (!expected && typeof q.correctIndex === "number" && Array.isArray(q.options)) {
+        const opt = q.options[q.correctIndex];
+        expected = (typeof opt === "string" ? opt : opt?.text || "").trim().toLowerCase();
+      }
+      if (user && (user === expected || (expected.length === 1 && user.startsWith(expected)))) {
         rCorrect++;
       }
     });
 
-    // 2. Listening (15 questions)
+    // 2. Listening
     let lCorrect = 0;
     listeningList.forEach((q, idx) => {
       const userAns = (listeningAnswers[idx] || "").trim().toLowerCase();
@@ -89,15 +158,15 @@ export function StageGraduationExamView({
       }
     });
 
-    // 3. Writing (10 questions)
+    // 3. Writing
     let wAnswered = 0;
     writingList.forEach((_, idx) => {
-      if ((writingAnswers[idx] || "").trim().length > 10) {
+      if ((writingAnswers[idx] || "").trim().length > 6) {
         wAnswered++;
       }
     });
 
-    // 4. Speaking (15 questions)
+    // 4. Speaking
     let sCompletedCount = 0;
     speakingList.forEach((_, idx) => {
       if (speakingCompleted[idx]) {
@@ -105,22 +174,22 @@ export function StageGraduationExamView({
       }
     });
 
-    const rScore = readingList.length > 0 ? (rCorrect / readingList.length) * 25 : 25;
-    const lScore = listeningList.length > 0 ? (lCorrect / listeningList.length) * 25 : 25;
-    const wScore = writingList.length > 0 ? (wAnswered / writingList.length) * 25 : 25;
-    const sScore = speakingList.length > 0 ? (sCompletedCount / speakingList.length) * 25 : 25;
+    const rScore = readingList.length > 0 ? (rCorrect / readingList.length) * 25 : 0;
+    const lScore = listeningList.length > 0 ? (lCorrect / listeningList.length) * 25 : 0;
+    const wScore = writingList.length > 0 ? (wAnswered / writingList.length) * 25 : 0;
+    const sScore = speakingList.length > 0 ? (sCompletedCount / speakingList.length) * 25 : 0;
 
     const total = Math.round(rScore + lScore + wScore + sScore);
 
     return {
       rCorrect,
-      rTotal: readingList.length || 15,
+      rTotal: readingList.length,
       lCorrect,
-      lTotal: listeningList.length || 15,
+      lTotal: listeningList.length,
       wAnswered,
-      wTotal: writingList.length || 10,
+      wTotal: writingList.length,
       sCompletedCount,
-      sTotal: speakingList.length || 15,
+      sTotal: speakingList.length,
       totalScore: Math.min(100, Math.max(0, total)),
       isPassed: total >= passingScore,
     };
@@ -166,22 +235,22 @@ export function StageGraduationExamView({
           <Card className="p-4 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-center space-y-1">
             <BookOpen className="w-5 h-5 mx-auto text-[#0D3B66] dark:text-blue-400" />
             <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">Part 1: Reading</div>
-            <div className="text-lg font-black text-slate-900 dark:text-white">15 Questions</div>
+            <div className="text-lg font-black text-slate-900 dark:text-white">{readingList.length} Questions</div>
           </Card>
           <Card className="p-4 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-center space-y-1">
             <Headphones className="w-5 h-5 mx-auto text-amber-600 dark:text-amber-400" />
             <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">Part 2: Listening</div>
-            <div className="text-lg font-black text-slate-900 dark:text-white">15 Questions</div>
+            <div className="text-lg font-black text-slate-900 dark:text-white">{listeningList.length} Questions</div>
           </Card>
           <Card className="p-4 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-center space-y-1">
             <PenTool className="w-5 h-5 mx-auto text-rose-600 dark:text-rose-400" />
             <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">Part 3: Writing</div>
-            <div className="text-lg font-black text-slate-900 dark:text-white">10 Questions</div>
+            <div className="text-lg font-black text-slate-900 dark:text-white">{writingList.length} Questions</div>
           </Card>
           <Card className="p-4 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-center space-y-1">
             <Mic className="w-5 h-5 mx-auto text-sky-600 dark:text-sky-400" />
             <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">Part 4: Speaking</div>
-            <div className="text-lg font-black text-slate-900 dark:text-white">15 Questions</div>
+            <div className="text-lg font-black text-slate-900 dark:text-white">{speakingList.length} Questions</div>
           </Card>
         </div>
 

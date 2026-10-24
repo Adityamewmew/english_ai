@@ -339,13 +339,17 @@ export function WritingMechanicsStage({
           </button>
 
           <div className="flex items-center gap-3">
-            {validation?.isCorrect && activeIdx + 1 < challenges.length ? (
+            {validation?.isCorrect ? (
               <button
                 type="button"
                 onClick={handleNextChallenge}
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs transition-all active:scale-95 cursor-pointer shadow-xs"
               >
-                <span>Next Challenge</span>
+                <span>
+                  {activeIdx + 1 < challenges.length
+                    ? "Next Challenge"
+                    : "Complete Stage & Continue"}
+                </span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             ) : (

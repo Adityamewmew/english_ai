@@ -274,14 +274,17 @@ export function WritingSentenceBuilder({
               </span>
             )}
 
-            {builderStatus === "correct" &&
-            currentTargetIdx + 1 < targets.length ? (
+            {builderStatus === "correct" ? (
               <button
                 type="button"
                 onClick={handleNextTarget}
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs transition-all active:scale-95 cursor-pointer shadow-xs"
               >
-                <span>Next Sentence</span>
+                <span>
+                  {currentTargetIdx + 1 < targets.length
+                    ? "Next Sentence"
+                    : "Complete Stage & Continue"}
+                </span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             ) : (

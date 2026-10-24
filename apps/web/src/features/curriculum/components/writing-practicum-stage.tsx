@@ -21,7 +21,7 @@ import { useSession } from "@/features/auth/hooks/use-session";
 import { isUserAdmin } from "@/lib/auth-utils";
 
 export interface WritingPracticumQuestion {
-  id: number;
+  id: number | string;
   typeLabel?: string;
   instruction?: string;
   promptText?: string;
@@ -32,6 +32,8 @@ export interface WritingPracticumQuestion {
   targetSentence?: string;
   answer?: string;
   targetAnswers?: string[];
+  sampleGoodAnswer?: string;
+  criteria?: string;
   explanation?: string;
   hint?: string;
 }
@@ -63,9 +65,9 @@ export function WritingPracticumStage({
   const questions: WritingPracticumQuestion[] = rawQuestions;
 
   const [currentIdx, setCurrentIdx] = useState(0);
-  const [typedInputs, setTypedInputs] = useState<Record<number, string>>({});
+  const [typedInputs, setTypedInputs] = useState<Record<string | number, string>>({});
   const [evaluations, setEvaluations] = useState<
-    Record<number, { isCorrect: boolean; feedback: string }>
+    Record<string | number, { isCorrect: boolean; feedback: string }>
   >({});
   const [correctCount, setCorrectCount] = useState(0);
   const [isCompletedAll, setIsCompletedAll] = useState(false);
@@ -96,6 +98,7 @@ export function WritingPracticumStage({
       ? `Task: ${question.typeLabel}`
       : "Type the complete sentence according to the prompt:";
 
+  const sampleGood = (question as any).sampleGoodAnswer || (question as any).sampleAnswer;
   const validTargets: string[] = (
     (question.targetAnswers && question.targetAnswers.length > 0)
       ? question.targetAnswers
@@ -103,6 +106,7 @@ export function WritingPracticumStage({
           question.targetWord,
           question.targetSentence,
           question.answer,
+          sampleGood,
           ...((question as any).answers || []),
         ]
   ).filter((ans): ans is string => typeof ans === "string" && ans.trim().length > 0);
@@ -119,8 +123,23 @@ export function WritingPracticumStage({
   };
 
   const handleCheckAnswer = () => {
-    const normalizedUser = normalize(userText);
-    const isMatch = validTargets.some((ans) => {
+    const trimmed = userText.trim();
+    if (!trimmed) return;
+
+    const normalizedUser = normalize(trimmed);
+    const words = trimmed.split(/\s+/).filter(Boolean);
+    const hasCapital = /^[A-Z]/.test(trimmed);
+    const hasPunctuation = /[.?!]$/.test(trimmed);
+    const isOpenEndedPrompt = Boolean(
+      (question as any).criteria ||
+      sampleGood ||
+      /answer this question|complete sentences|write|how do you feel|paragraph|conversation/i.test(
+        rawPrompt || question.instruction || ""
+      )
+    );
+
+    // 1. Check exact / near-exact target match
+    let isMatch = validTargets.some((ans) => {
       const nAns = normalize(ans);
       if (nAns === normalizedUser) return true;
       if (nAns.toLowerCase() === normalizedUser.toLowerCase()) return true;
@@ -133,7 +152,25 @@ export function WritingPracticumStage({
       return false;
     });
 
-    if (isMatch) {
+    // 2. Open-ended Rubric Check fallback (e.g. A1 essay / personal response prompts)
+    let rubricPassed = false;
+    let rubricFeedback = "";
+
+    if (!isMatch && isOpenEndedPrompt) {
+      if (words.length < 3) {
+        rubricFeedback = "Write a complete response with more detail (at least a full sentence).";
+      } else if (!hasCapital) {
+        rubricFeedback = "Remember to capitalize the first letter of your sentence.";
+      } else if (!hasPunctuation) {
+        rubricFeedback = "Please end your sentence with appropriate punctuation (period, question mark, or exclamation).";
+      } else {
+        rubricPassed = true;
+      }
+    }
+
+    const isPassed = isMatch || rubricPassed;
+
+    if (isPassed) {
       playMatchSuccessSound();
       if (!evaluations[question.id]?.isCorrect) {
         setCorrectCount((prev) => prev + 1);
@@ -143,7 +180,7 @@ export function WritingPracticumStage({
         ...prev,
         [question.id]: {
           isCorrect: true,
-          feedback: "Spot on! Your sentence construction and mechanics are accurate.",
+          feedback: "Great job! Your sentence construction and mechanics satisfy the prompt criteria.",
         },
       }));
     } else {
@@ -153,6 +190,7 @@ export function WritingPracticumStage({
         [question.id]: {
           isCorrect: false,
           feedback:
+            rubricFeedback ||
             "Answer doesn't match yet. Check your spelling, capitalization, spacing, and punctuation mark.",
         },
       }));
@@ -359,10 +397,16 @@ export function WritingPracticumStage({
               )}
             </div>
             <p className="leading-relaxed">{currentEval.feedback}</p>
-            {currentEval.isCorrect && (
+            {currentEval.isCorrect ? (
               <p className="text-[11px] text-emerald-700 dark:text-emerald-400 font-mono">
                 Explanation: {question.explanation || (validTargets[0] ? `Accepted: "${validTargets[0]}"` : "Completed accurately.")}
               </p>
+            ) : (
+              sampleGood && (
+                <div className="pt-1.5 border-t border-amber-200/60 dark:border-amber-800/60 text-[11px] font-mono text-amber-900 dark:text-amber-200">
+                  <span className="font-bold">Model Answer / Example:</span> {sampleGood}
+                </div>
+              )
             )}
           </div>
         )}
@@ -397,19 +441,50 @@ export function WritingPracticumStage({
               </button>
             )}
 
-            {currentEval?.isCorrect ? (
-              <button
-                type="button"
-                onClick={handleNext}
-                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs transition-all active:scale-95 cursor-pointer shadow-xs"
-              >
-                <span>
-                  {currentIdx + 1 < questions.length
-                    ? "Next Question"
-                    : "View Summary Results"}
-                </span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
+            {currentEval ? (
+              currentEval.isCorrect ? (
+                <button
+                  type="button"
+                  onClick={handleNext}
+                  className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs transition-all active:scale-95 cursor-pointer shadow-xs"
+                >
+                  <span>
+                    {currentIdx + 1 < questions.length
+                      ? "Next Question"
+                      : "View Summary Results"}
+                  </span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              ) : (
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={handleCheckAnswer}
+                    disabled={!userText.trim()}
+                    className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-[#0D3B66] text-[#0D3B66] dark:text-[#F4B41A] font-bold text-xs hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95 cursor-pointer shadow-2xs"
+                  >
+                    <Send className="w-3.5 h-3.5" />
+                    <span>Check Again</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (!evaluations[question.id]?.isCorrect) {
+                        onRewardXp(5);
+                      }
+                      handleNext();
+                    }}
+                    className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs transition-all active:scale-95 cursor-pointer shadow-xs"
+                  >
+                    <span>
+                      {currentIdx + 1 < questions.length
+                        ? "Continue to Next Question"
+                        : "View Summary Results"}
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              )
             ) : (
               <button
                 type="button"
