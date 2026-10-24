@@ -59,13 +59,22 @@ export function InteractiveGrammarCard({
       : DEFAULT_GENERIC_COMPLEMENTS;
 
   const [activeMode, setActiveMode] = useState<GrammarMode>("affirmative");
-  const [selectedSubject, setSelectedSubject] = useState<SubjectOption>(subjects[0]);
+  const [selectedSubject, setSelectedSubject] = useState<SubjectOption>(subjects[0] || DEFAULT_SUBJECTS[0]);
   const [selectedToBe, setSelectedToBe] = useState<"am" | "is" | "are">(subjects[0]?.correctToBe || "am");
   const [complementIndex, setComplementIndex] = useState(0);
   const [useContraction, setUseContraction] = useState(false);
 
-  const complement = complements[complementIndex] || complements[0];
-  const isAgreementValid = selectedToBe === selectedSubject.correctToBe;
+  const rawComplement = complements[complementIndex] || complements[0] || "";
+  const complementText =
+    typeof rawComplement === "object" && rawComplement !== null
+      ? (rawComplement as any).text || (rawComplement as any).label || ""
+      : String(rawComplement || "");
+  const complementType =
+    typeof rawComplement === "object" && rawComplement !== null
+      ? (rawComplement as any).type || ""
+      : "";
+
+  const isAgreementValid = selectedToBe === selectedSubject?.correctToBe;
 
   useEffect(() => {
     return () => {
@@ -104,8 +113,8 @@ export function InteractiveGrammarCard({
   };
 
   const getAssembledSentence = () => {
-    const sub = selectedSubject.pronoun;
-    const comp = complement;
+    const sub = selectedSubject?.pronoun || selectedSubject?.label || "They";
+    const comp = complementText;
 
     if (activeMode === "affirmative") {
       if (useContraction && isAgreementValid) {
@@ -231,21 +240,21 @@ export function InteractiveGrammarCard({
           ) : (
             <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xs space-y-2">
               <span className="text-[10px] font-black uppercase text-indigo-600 dark:text-indigo-400 block font-mono">
-                Slot 1 · Subjek ({selectedSubject.role.split(" ")[0]})
+                Slot 1 · Subjek ({selectedSubject?.role ? selectedSubject.role.split(" ")[0] : "Subjek"})
               </span>
               <div className="flex items-center gap-1.5 flex-wrap">
-                {subjects.map((sub) => (
+                {subjects.map((sub, sIdx) => (
                   <button
-                    key={sub.pronoun}
+                    key={sub.pronoun || sub.label || sIdx}
                     type="button"
                     onClick={(e) => handleSelectSubject(sub, e)}
                     className={`px-3 py-2 rounded-xl text-xs font-bold transition-all border cursor-pointer min-h-[40px] touch-manipulation active:scale-95 ${
-                      selectedSubject.pronoun === sub.pronoun
+                      selectedSubject?.pronoun === sub.pronoun
                         ? "bg-indigo-600 text-white border-indigo-600 shadow-xs dark:bg-indigo-500"
                         : "bg-slate-50 dark:bg-slate-800 border-slate-200 text-slate-700 dark:text-slate-200 hover:border-slate-300"
                     }`}
                   >
-                    {sub.pronoun}
+                    {sub.pronoun || sub.label}
                   </button>
                 ))}
               </div>
@@ -314,16 +323,23 @@ export function InteractiveGrammarCard({
 
           {/* SLOT C: Complement */}
           <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xs space-y-2">
-            <span className="text-[10px] font-black uppercase text-slate-400 block font-mono">
-              Slot 3 · Pelengkap ({complementIndex + 1}/{complements.length})
-            </span>
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-black uppercase text-slate-400 block font-mono">
+                Slot 3 · Pelengkap ({complementIndex + 1}/{complements.length})
+              </span>
+              {complementType && (
+                <span className="text-[9px] font-bold px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 font-mono">
+                  {complementType}
+                </span>
+              )}
+            </div>
             <div className="flex items-center gap-1.5">
               <button
                 type="button"
                 onClick={() => setComplementIndex((prev) => (prev + 1) % complements.length)}
                 className="w-full py-2.5 px-3.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-200 flex items-center justify-between cursor-pointer hover:border-indigo-500 min-h-[44px] touch-manipulation"
               >
-                <span className="truncate">{complement}</span>
+                <span className="truncate">{complementText}</span>
                 <RefreshCw className="w-3.5 h-3.5 text-slate-400 shrink-0 ml-1" />
               </button>
             </div>
