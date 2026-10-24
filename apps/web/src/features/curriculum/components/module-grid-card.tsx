@@ -11,6 +11,7 @@ export interface CurriculumModuleItem {
   id: string;
   title: string;
   cefr: string;
+  levelId?: string;
   description?: string;
   status: "unlocked" | "completed" | "locked" | "requires_access";
   score?: number | null;

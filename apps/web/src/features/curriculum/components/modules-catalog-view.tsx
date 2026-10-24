@@ -105,11 +105,12 @@ export function ModulesCatalogView({
 
       mods.forEach((m: any) => {
         const cefrVal = m.cefr || lvl.cefr || subId;
-        const levelIdVal = m.levelId || subId;
+        const levelIdVal = (m.levelId || lvl.id || subId).toUpperCase();
         const item: CurriculumModuleItem = {
           id: m.id,
           title: m.title,
           cefr: cefrVal,
+          levelId: levelIdVal,
           description: m.description || m.objective,
           status: m.status || "unlocked",
           score: m.score,
@@ -187,7 +188,9 @@ export function ModulesCatalogView({
     return allModules.filter((m) => {
       const mId = m.id.toUpperCase();
       const mCefr = m.cefr.toUpperCase();
+      const mLevel = (m.levelId || "").toUpperCase();
       return (
+        mLevel === activeSubUpper ||
         mId.startsWith(activeSubUpper + "-") ||
         mId.startsWith(activeSubUpper) ||
         mCefr === activeSubUpper
