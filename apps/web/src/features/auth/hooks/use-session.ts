@@ -13,12 +13,19 @@ export function useSession() {
     queryKey: sessionKeys.current,
     queryFn: async () => {
       try {
-        const res = await fetch(getApiUrl("/api/auth/session"), {
+        const res = await fetch("/api/auth/session", {
           credentials: "include",
         });
-        if (!res.ok) return null;
-        const data = await res.json();
-        return data?.user || null;
+        if (res.ok) {
+          const data = await res.json();
+          if (data?.user) return data.user;
+        }
+        const apiRes = await fetch(getApiUrl("/api/auth/session"), {
+          credentials: "include",
+        });
+        if (!apiRes.ok) return null;
+        const apiData = await apiRes.json();
+        return apiData?.user || null;
       } catch {
         return null;
       }

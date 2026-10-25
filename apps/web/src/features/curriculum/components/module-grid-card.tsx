@@ -24,6 +24,7 @@ interface ModuleGridCardProps {
   module: CurriculumModuleItem;
   index: number;
   onUnlockClick?: () => void;
+  isAdmin?: boolean;
 }
 
 const THUMBNAIL_STYLES = [
@@ -33,9 +34,9 @@ const THUMBNAIL_STYLES = [
   { bg: "#F0F9FF", border: "#BAE6FD", img: "/illustrations/article-guide.svg", badge: "bg-[#1B4965] text-white border-b border-[#113144]" },
 ];
 
-export function ModuleGridCard({ module, index, onUnlockClick }: ModuleGridCardProps) {
+export function ModuleGridCard({ module, index, onUnlockClick, isAdmin: propIsAdmin }: ModuleGridCardProps) {
   const { data: sessionUser } = useSession();
-  const isAdmin = isUserAdmin(sessionUser);
+  const isAdmin = Boolean(propIsAdmin || isUserAdmin(sessionUser));
   const isRequiresAccess = !isAdmin && module.status === "requires_access";
   const isLocked = !isAdmin && (module.status === "locked" || isRequiresAccess);
   const isCompleted = module.status === "completed";

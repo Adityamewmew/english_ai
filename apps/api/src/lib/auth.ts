@@ -3,6 +3,7 @@ import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { Elysia } from "elysia";
 import { db } from "../db";
 import * as schema from "../db/schema";
+import { DEFAULT_ADMIN_EMAILS } from "@english-ai/shared";
 
 export const auth = betterAuth({
   baseURL: process.env.BETTER_AUTH_URL || "https://eddys.drimland.my.id",
@@ -64,8 +65,7 @@ export const auth = betterAuth({
         before: async (user) => {
           const emailLower = (user.email || "").toLowerCase();
           const adminEmails = [
-            "mrkhoirul@gmail.com",
-            "mrkhoriul@gmail.com",
+            ...(DEFAULT_ADMIN_EMAILS as readonly string[]),
             ...(process.env.ADMIN_EMAILS
               ? process.env.ADMIN_EMAILS.split(",").map((e) => e.trim().toLowerCase())
               : []),
@@ -94,6 +94,10 @@ export const auth = betterAuth({
 });
 
 export const authPlugin = new Elysia({ name: "better-auth" })
+  .get("/api/auth/session", async ({ request }) => {
+    const s = await auth.api.getSession({ headers: request.headers });
+    return { user: s?.user || null };
+  })
   .all("/api/auth/*", ({ request }) => auth.handler(request))
   .macro({
     auth: {

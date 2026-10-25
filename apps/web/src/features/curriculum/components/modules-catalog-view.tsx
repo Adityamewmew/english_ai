@@ -11,6 +11,7 @@ import { useUserProfile } from "@/features/users/hooks/use-user";
 import type { SessionUser } from "@/lib/session";
 import { BookOpen, ChevronRight, Sparkles, Lock, ShieldCheck } from "lucide-react";
 import { useClasses, ClassUnlockModal, type CourseClassItem } from "@/features/classes";
+import { isUserAdmin } from "@/lib/auth-utils";
 import {
   CEFR_CATEGORIES,
   CefrCategory,
@@ -246,9 +247,8 @@ export function ModulesCatalogView({
     );
   }, [classesData, selectedCategory]);
 
-  const hasCategoryAccess = activeCategoryClass
-    ? activeCategoryClass.hasAccess
-    : true;
+  const isAdmin = isUserAdmin(session);
+  const hasCategoryAccess = isAdmin || (activeCategoryClass ? activeCategoryClass.hasAccess : true);
 
   const formatRupiah = (num: number) =>
     new Intl.NumberFormat("id-ID", {
@@ -480,6 +480,7 @@ export function ModulesCatalogView({
                     key={m.id}
                     module={m}
                     index={idx}
+                    isAdmin={isAdmin}
                     onUnlockClick={() => {
                       if (activeCategoryClass) {
                         setSelectedClassForUnlock(activeCategoryClass);
