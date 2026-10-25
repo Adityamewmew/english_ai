@@ -6,3 +6,4 @@ export * from "./schema/chat";
 export * from "./schema/auth";
 export * from "./schema/certificates";
 export * from "./schema/classes";
+export * from "./schema/payments";
