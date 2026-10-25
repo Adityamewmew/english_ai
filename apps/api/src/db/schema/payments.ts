@@ -7,6 +7,7 @@ import {
   serial,
   smallint,
   jsonb,
+  index,
 } from "drizzle-orm/pg-core";
 
 // Payment Methods Table (Transfer Bank Manual)
@@ -61,4 +62,7 @@ export const paymentTransactions = pgTable("payment_transactions", {
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
   deletedAt: timestamp("deleted_at"),
-});
+}, (table) => [
+  index("idx_payment_tx_created_status").on(table.createdAt, table.status),
+  index("idx_payment_tx_user_id").on(table.userId),
+]);

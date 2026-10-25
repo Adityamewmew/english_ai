@@ -47,5 +47,6 @@ export const users = pgTable(
   },
   (table) => [
     index("idx_users_access_cefr").on(table.accessType, table.currentCefr),
+    index("idx_users_created_at").on(table.createdAt),
   ]
 );

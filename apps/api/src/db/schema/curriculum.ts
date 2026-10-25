@@ -89,6 +89,7 @@ export const userModuleProgress = pgTable(
   (table) => [
     uniqueIndex("idx_user_module_progress_user_mod").on(table.userId, table.moduleId),
     index("idx_user_module_progress_user_status").on(table.userId, table.status),
+    index("idx_user_mod_prog_status_score").on(table.status, table.score),
   ]
 );
 
@@ -106,5 +107,6 @@ export const userSubModuleProgress = pgTable(
   },
   (table) => [
     uniqueIndex("user_sub_module_idx").on(table.userId, table.subModuleId),
+    index("idx_user_sub_mod_prog_user_status").on(table.userId, table.status),
   ]
 );
