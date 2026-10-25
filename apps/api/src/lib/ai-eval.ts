@@ -65,7 +65,7 @@ ${ragContext ? `${ragContext}\n\n` : ""}Analyze the conversation session and ret
   static async transcribeAudioSelfIntro(base64Audio: string, mimeType: string = "audio/webm"): Promise<string> {
     const baseUrl = process.env.AI_BASE_URL;
     const apiKey = process.env.AI_API_KEY || "";
-    const modelName = process.env.AI_EVAL_MODEL || process.env.AI_CHAT_MODEL || "deepseek-v4-flash:free";
+    const modelName = process.env.AI_EVAL_MODEL || process.env.AI_CHAT_MODEL || "deepseek-v4.1-flash:free";
 
     let format = "webm";
     if (mimeType.includes("mp3")) format = "mp3";
@@ -144,7 +144,7 @@ YOUR TASK:
   ): Promise<string> {
     const baseUrl = process.env.AI_BASE_URL;
     const apiKey = process.env.AI_API_KEY || "";
-    const modelName = process.env.AI_EVAL_MODEL || process.env.AI_CHAT_MODEL || "deepseek-v4-flash:free";
+    const modelName = process.env.AI_EVAL_MODEL || process.env.AI_CHAT_MODEL || "deepseek-v4.1-flash:free";
 
     let format = "webm";
     if (mimeType.includes("mp3")) format = "mp3";

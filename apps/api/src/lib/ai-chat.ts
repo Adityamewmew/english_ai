@@ -38,7 +38,7 @@ export class AiChatService {
   ): Promise<string> {
     const baseUrl = process.env.AI_BASE_URL;
     const apiKey = process.env.AI_API_KEY || "";
-    const model = process.env.AI_CHAT_MODEL || "deepseek-v4-flash:free";
+    const model = process.env.AI_CHAT_MODEL || "deepseek-v4.1-flash:free";
 
     if (!baseUrl) {
       throw new Error("AI_BASE_URL is not configured.");
@@ -90,7 +90,7 @@ export class AiChatService {
   ): AsyncGenerator<string, void, unknown> {
     const baseUrl = process.env.AI_BASE_URL;
     const apiKey = process.env.AI_API_KEY || "";
-    const model = process.env.AI_CHAT_MODEL || "deepseek-v4-flash:free";
+    const model = process.env.AI_CHAT_MODEL || "deepseek-v4.1-flash:free";
 
     if (!baseUrl) {
       throw new Error("AI_BASE_URL is not configured.");
@@ -160,6 +160,7 @@ export class AiChatService {
       } else {
         const errText = await res.text();
         console.warn(`AI Stream Gateway [${model}] error (${res.status}):`, errText);
+        throw new Error(`AI Stream Gateway [${model}] error (${res.status}): ${errText}`);
       }
     } finally {
       clearTimeout(timer);
