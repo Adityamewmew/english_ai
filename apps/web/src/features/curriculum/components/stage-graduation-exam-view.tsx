@@ -17,6 +17,7 @@ import { ExamPartListening } from "./exam/exam-part-listening";
 import { ExamPartWriting } from "./exam/exam-part-writing";
 import { ExamPartSpeaking } from "./exam/exam-part-speaking";
 import { ExamCertificateView } from "./exam/exam-certificate-view";
+import { isOptionCorrect } from "./concept-checks-card";
 
 interface StageGraduationExamViewProps {
   activeStepId: number;
@@ -137,13 +138,13 @@ export function StageGraduationExamView({
     // 1. Reading
     let rCorrect = 0;
     readingList.forEach((q, idx) => {
-      const user = (readingAnswers[idx] || "").trim().toLowerCase();
-      let expected = (q.answer || q.correctAnswer || "").trim().toLowerCase();
-      if (!expected && typeof q.correctIndex === "number" && Array.isArray(q.options)) {
-        const opt = q.options[q.correctIndex];
-        expected = (typeof opt === "string" ? opt : opt?.text || "").trim().toLowerCase();
-      }
-      if (user && (user === expected || (expected.length === 1 && user.startsWith(expected)))) {
+      const user = readingAnswers[idx];
+      if (!user) return;
+      const optIdx = (q.options || []).findIndex((opt: any) => {
+        const text = typeof opt === "string" ? opt : opt?.text || opt?.label || "";
+        return text === user;
+      });
+      if (optIdx >= 0 && isOptionCorrect(user, optIdx, q)) {
         rCorrect++;
       }
     });

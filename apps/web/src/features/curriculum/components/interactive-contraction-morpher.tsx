@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Volume2, Minimize2, Maximize2 } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 import { playPopSound, playSnapSound } from "@/lib/sound-fx";
@@ -38,7 +38,7 @@ const DEFAULT_GENERIC_CONTRACTIONS: ContractionPair[] = [
 ];
 
 interface InteractiveContractionMorpherProps {
-  contractions?: ContractionPair[];
+  contractions?: any[];
   onRewardXp?: (amount: number) => void;
   embedded?: boolean;
 }
@@ -50,8 +50,46 @@ export function InteractiveContractionMorpher({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isContracted, setIsContracted] = useState(false);
 
-  const pairs = contractions.length > 0 ? contractions : DEFAULT_GENERIC_CONTRACTIONS;
-  const current = pairs[currentIndex] || pairs[0];
+  const pairs: ContractionPair[] = useMemo(() => {
+    if (!Array.isArray(contractions) || contractions.length === 0) {
+      return DEFAULT_GENERIC_CONTRACTIONS;
+    }
+
+    const valid: ContractionPair[] = [];
+    for (const item of contractions) {
+      if (!item || typeof item !== "object") continue;
+
+      const subject = String(item.subject || item.pronoun || "").trim();
+      const verb = String(item.verb || item.auxiliary || "").trim();
+      const contracted = String(item.contracted || "").trim();
+
+      if (!subject || !contracted) continue;
+
+      let vowelDropped = item.vowelDropped ? String(item.vowelDropped) : "";
+      let remainder = item.remainder ? String(item.remainder) : "";
+
+      if (!vowelDropped && verb) {
+        vowelDropped = verb.charAt(0);
+      }
+      if (!remainder && verb) {
+        remainder = verb.slice(1);
+      }
+
+      valid.push({
+        subject,
+        verb: verb || contracted,
+        vowelDropped,
+        remainder,
+        contracted,
+        exampleFull: item.exampleFull || `${subject} ${verb || contracted}.`,
+        exampleContracted: item.exampleContracted || `${contracted}.`,
+      });
+    }
+
+    return valid.length > 0 ? valid : DEFAULT_GENERIC_CONTRACTIONS;
+  }, [contractions]);
+
+  const current = pairs[currentIndex] || pairs[0] || DEFAULT_GENERIC_CONTRACTIONS[0];
 
   useEffect(() => {
     return () => {
@@ -139,46 +177,56 @@ export function InteractiveContractionMorpher({
         {/* Morphing Word Box */}
         <div className="relative py-8 sm:py-10 px-4 sm:px-6 flex flex-col items-center justify-center min-h-[140px] bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xs overflow-hidden">
           <div className="flex items-center text-4xl sm:text-5xl md:text-6xl font-black font-mono tracking-tight select-none">
-            {/* Subject Pronoun */}
-            <span
-              className="text-indigo-600 dark:text-indigo-400 transition-transform duration-300 ease-out"
-              style={{
-                transform: isContracted ? "translateX(4px)" : "translateX(0px)",
-              }}
-            >
-              {current.subject}
-            </span>
+            {current.remainder ? (
+              <>
+                {/* Subject Pronoun */}
+                <span
+                  className="text-indigo-600 dark:text-indigo-400 transition-transform duration-300 ease-out"
+                  style={{
+                    transform: isContracted ? "translateX(4px)" : "translateX(0px)",
+                  }}
+                >
+                  {current.subject}
+                </span>
 
-            {/* Spacer or Apostrophe */}
-            {isContracted ? (
-              <span className="text-amber-500 dark:text-amber-400 transition-all duration-300 animate-in zoom-in mx-0.5">
-                '
-              </span>
+                {/* Spacer or Apostrophe */}
+                {isContracted ? (
+                  <span className="text-amber-500 dark:text-amber-400 transition-all duration-300 animate-in zoom-in mx-0.5">
+                    '
+                  </span>
+                ) : (
+                  <span className="inline-block w-4 transition-all duration-300" />
+                )}
+
+                {/* Dropped Vowel */}
+                {!isContracted && current.vowelDropped && (
+                  <span className="text-rose-500 dark:text-rose-400 transition-all duration-300 inline-block">
+                    {current.vowelDropped}
+                  </span>
+                )}
+
+                {/* Remainder Verb Letters */}
+                <span
+                  className="text-slate-800 dark:text-slate-100 transition-transform duration-300 ease-out"
+                  style={{
+                    transform: isContracted ? "translateX(-4px)" : "translateX(0px)",
+                  }}
+                >
+                  {current.remainder}
+                </span>
+              </>
             ) : (
-              <span className="inline-block w-4 transition-all duration-300" />
-            )}
-
-            {/* Dropped Vowel */}
-            {!isContracted && (
-              <span className="text-rose-500 dark:text-rose-400 transition-all duration-300 inline-block">
-                {current.vowelDropped}
+              <span className="text-indigo-600 dark:text-indigo-400 transition-all duration-300">
+                {isContracted ? current.contracted : `${current.subject} ${current.verb}`}
               </span>
             )}
-
-            {/* Remainder Verb Letters */}
-            <span
-              className="text-slate-800 dark:text-slate-100 transition-transform duration-300 ease-out"
-              style={{
-                transform: isContracted ? "translateX(-4px)" : "translateX(0px)",
-              }}
-            >
-              {current.remainder}
-            </span>
           </div>
 
           <p className="mt-4 text-xs text-slate-500 dark:text-slate-400 text-center max-w-md">
             {isContracted
-              ? `The vowel '${current.vowelDropped}' is dropped and replaced with an apostrophe (') for a natural spoken rhythm.`
+              ? current.vowelDropped
+                ? `The letter '${current.vowelDropped}' is dropped and replaced with an apostrophe (') for a natural spoken rhythm.`
+                : `Combined into contracted form '${current.contracted}' for a natural spoken rhythm.`
               : `Tap the button below to combine '${current.subject} ${current.verb}' into contracted form.`}
           </p>
         </div>

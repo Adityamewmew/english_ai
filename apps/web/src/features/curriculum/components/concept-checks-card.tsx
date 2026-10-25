@@ -23,13 +23,50 @@ interface ConceptChecksCardProps {
   onCompleted?: () => void;
 }
 
-const getExpectedAnswer = (check: ConceptCheckQuestion) => {
-  if (typeof (check as any).correctIndex === "number" && Array.isArray(check.options)) {
-    const opt = check.options[(check as any).correctIndex];
-    return (typeof opt === "string" ? opt : (opt as any)?.text || (opt as any)?.label || "").trim().toLowerCase();
+export function isOptionCorrect(
+  optText: string,
+  optIdx: number,
+  check: ConceptCheckQuestion
+): boolean {
+  if (typeof (check as any).correctIndex === "number" && (check as any).correctIndex === optIdx) {
+    return true;
   }
-  return (check?.answer || check?.correctAnswer || "").trim().toLowerCase();
-};
+
+  const rawAns = check.answer ?? check.correctAnswer;
+  if (rawAns === undefined || rawAns === null) return false;
+
+  const ansStr = String(rawAns).trim();
+  // 1. Single letter option index (A, B, C, D)
+  if (/^[a-dA-D]$/.test(ansStr)) {
+    const targetIdx = ansStr.toUpperCase().charCodeAt(0) - 65;
+    return optIdx === targetIdx;
+  }
+
+  const clean = (s: string) =>
+    (s || "").toLowerCase().replace(/[^a-z0-9\s]/g, "").replace(/\s+/g, " ").trim();
+  const cOpt = clean(optText);
+  const cAns = clean(ansStr);
+
+  if (cOpt === cAns) return true;
+
+  // 2. Substring overlap (e.g. quote from text vs paraphrase)
+  if (cOpt.length > 5 && cAns.length > 5) {
+    if (cAns.includes(cOpt) || cOpt.includes(cAns)) return true;
+  }
+
+  // 3. Word stem overlap (robust against verb tense / plural variations / minor word shifts)
+  const stem = (w: string) => (w.length > 4 ? w.slice(0, 4) : w);
+  const wordsOpt = cOpt.split(" ").filter((w) => w.length > 2);
+  const wordsAns = cAns.split(" ").filter((w) => w.length > 2);
+  if (wordsOpt.length > 0 && wordsAns.length > 0) {
+    const stemsAns = wordsAns.map(stem);
+    const commonStems = wordsOpt.filter((w) => stemsAns.includes(stem(w)));
+    const overlapRatio = commonStems.length / wordsOpt.length;
+    if (overlapRatio >= 0.6) return true;
+  }
+
+  return false;
+}
 
 export function ConceptChecksCard({
   conceptChecks,
@@ -79,7 +116,7 @@ export function ConceptChecksCard({
     },
   }[accentColor];
 
-  const handleSelect = (qIdx: number, option: string, targetEl?: HTMLElement) => {
+  const handleSelect = (qIdx: number, option: string, optIdx: number, targetEl?: HTMLElement) => {
     const updated = { ...selectedAnswers, [qIdx]: option };
     setSelectedAnswers(updated);
     setShowFeedback((prev) => ({ ...prev, [qIdx]: true }));
@@ -89,10 +126,7 @@ export function ConceptChecksCard({
     }
 
     const check = conceptChecks[qIdx];
-    const expected = getExpectedAnswer(check);
-    const isCorrect =
-      option.trim().toLowerCase() === expected ||
-      (expected.length === 1 && option.trim().toLowerCase().startsWith(expected));
+    const isCorrect = isOptionCorrect(option, optIdx, check);
     if (targetEl) {
       if (isCorrect) {
         animeButtonPop(targetEl);
@@ -137,10 +171,16 @@ export function ConceptChecksCard({
         {conceptChecks.map((check, qIdx) => {
           const selected = selectedAnswers[qIdx];
           const hasAnswered = showFeedback[qIdx];
-          const expected = getExpectedAnswer(check);
-          const isCorrect =
-            selected?.trim().toLowerCase() === expected ||
-            (expected.length === 1 && selected?.trim().toLowerCase().startsWith(expected));
+
+          const selectedOptIdx = check.options?.findIndex((opt) => {
+            const optText = typeof opt === "string" ? opt : (opt as any)?.text || (opt as any)?.label || String(opt ?? "");
+            return optText === selected;
+          }) ?? -1;
+
+          const isUserChoiceCorrect =
+            selected !== undefined && selectedOptIdx >= 0
+              ? isOptionCorrect(selected, selectedOptIdx, check)
+              : false;
 
           return (
             <div
@@ -160,12 +200,13 @@ export function ConceptChecksCard({
                 {check.options?.map((opt, optIdx) => {
                   const optText = typeof opt === "string" ? opt : (opt as any)?.text || (opt as any)?.label || String(opt ?? "");
                   const isThisSelected = selected === optText;
+                  const isThisOptCorrect = isOptionCorrect(optText, optIdx, check);
                   let btnStyle = "bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 border-b-2 border-b-slate-300 dark:border-b-slate-700 hover:border-[#0D3B66]/40 active:translate-y-[1px]";
 
                   if (hasAnswered) {
-                    if (optText.trim().toLowerCase() === expected) {
+                    if (isThisOptCorrect) {
                       btnStyle = "bg-[#0D3B66]/10 dark:bg-slate-800 border-[#0D3B66] text-[#0D3B66] dark:text-[#F4B41A] font-bold border-b-2 border-b-[#082542]";
-                    } else if (isThisSelected && !isCorrect) {
+                    } else if (isThisSelected && !isUserChoiceCorrect) {
                       btnStyle = "bg-[#9E1B1B]/10 dark:bg-[#9E1B1B]/20 border-[#9E1B1B] text-[#9E1B1B] border-b-2 border-b-[#841515] font-bold";
                     } else {
                       btnStyle = "opacity-50 border-slate-200 dark:border-slate-700 text-slate-500 border-b-2 border-b-slate-300 dark:border-b-slate-700";
@@ -177,14 +218,14 @@ export function ConceptChecksCard({
                       key={optIdx}
                       type="button"
                       disabled={hasAnswered}
-                      onClick={(e) => handleSelect(qIdx, optText, e.currentTarget)}
+                      onClick={(e) => handleSelect(qIdx, optText, optIdx, e.currentTarget)}
                       className={`text-left px-3.5 py-2.5 rounded-xl border text-xs transition-all flex items-center justify-between gap-2 cursor-pointer min-h-[44px] touch-manipulation ${btnStyle}`}
                     >
                       <span>{optText}</span>
-                      {hasAnswered && optText.trim().toLowerCase() === expected && (
+                      {hasAnswered && isThisOptCorrect && (
                          <CheckCircle2 className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A] shrink-0" />
                       )}
-                      {hasAnswered && isThisSelected && !isCorrect && (
+                      {hasAnswered && isThisSelected && !isUserChoiceCorrect && (
                         <XCircle className="w-4 h-4 text-[#9E1B1B] shrink-0" />
                       )}
                     </button>
@@ -195,14 +236,14 @@ export function ConceptChecksCard({
               {hasAnswered && check.explanation && (
                 <div
                   className={`p-3 rounded-xl text-[11px] leading-relaxed flex items-start gap-2 ${
-                    isCorrect
+                    isUserChoiceCorrect
                       ? "bg-[#0D3B66]/10 text-[#0D3B66] dark:bg-slate-800 dark:text-slate-200 border border-[#0D3B66]/20 border-b-2 border-b-[#0D3B66]/20"
                       : "bg-[#F4B41A]/15 text-[#855e05] dark:bg-slate-800 dark:text-[#F4B41A] border border-[#F4B41A]/30 border-b-2 border-b-[#DDA012]/30"
                   }`}
                 >
                   <HelpCircle className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[#F4B41A]" />
                   <div>
-                    <span className="font-bold">{isCorrect ? "Correct! " : "Note: "}</span>
+                    <span className="font-bold">{isUserChoiceCorrect ? "Correct! " : "Note: "}</span>
                     {check.explanation}
                   </div>
                 </div>
