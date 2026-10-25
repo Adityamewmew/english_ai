@@ -359,43 +359,43 @@ export function ModulesCatalogView({
 
           {/* Class Unlock Banner if level not owned */}
           {!hasCategoryAccess && activeCategoryClass && (
-            <div className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 card-skeuo">
+            <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-[#F4F6FF] via-[#EEF2FF] to-[#F8F9FE] dark:from-slate-900 dark:via-slate-850 dark:to-slate-900 border border-[#D5E0FA] dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-5 card-skeuo">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-[#0D3B66] text-white flex items-center justify-center shrink-0 shadow-xs">
-                  <Lock className="w-6 h-6" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#10375C] via-[#1B4965] to-[#10375C] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#10375C]/15 border border-white/20">
+                  <Lock className="w-6 h-6 text-white" />
                 </div>
-                <div className="space-y-1">
+                <div className="space-y-1.5">
                   <div className="flex items-center gap-2">
-                    <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#0D3B66] text-white font-mono">
+                    <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#10375C] text-white font-mono shadow-2xs">
                       Access Locked
                     </span>
                     <span className="text-xs font-bold text-slate-500">
                       Level {selectedCategory}
                     </span>
                   </div>
-                  <h3 className="font-heading text-lg font-black text-slate-900 dark:text-white">
+                  <h3 className="font-heading text-lg sm:text-xl font-black text-slate-900 dark:text-white leading-snug">
                     {activeCategoryClass.name}
                   </h3>
                   <p className="text-xs text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
                     {activeCategoryClass.description ||
-                      `Unlock lifetime access to all level ${selectedCategory} curriculum modules, interactive AI speaking materials, graduation exams, and official certificates.`}
+                      `Tingkatkan kefasihan profesional dan pemikiran kritis dalam bahasa Inggris dengan kurikulum CEFR Level ${selectedCategory}, materi speaking AI interaktif, dan sertifikat resmi.`}
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end justify-between gap-3 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-slate-100 dark:border-slate-800">
+              <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end justify-between gap-3 shrink-0 pt-3 md:pt-0 border-t md:border-t-0 border-slate-200/60 dark:border-slate-800">
                 <div className="text-left md:text-right">
                   <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">
                     Unlock Price
                   </span>
                   <div className="flex items-baseline gap-2">
-                    <span className="font-heading text-2xl font-black text-[#0D3B66] dark:text-[#F4B41A]">
+                    <span className="font-heading text-2xl sm:text-3xl font-black text-[#10375C] dark:text-[#F4B41A]">
                       {formatRupiah(activeCategoryClass.price)}
                     </span>
                     {activeCategoryClass.originalPrice &&
                       activeCategoryClass.originalPrice >
                         activeCategoryClass.price && (
-                        <span className="text-xs text-slate-400 line-through">
+                        <span className="text-xs text-slate-400 line-through font-medium">
                           {formatRupiah(activeCategoryClass.originalPrice)}
                         </span>
                       )}
@@ -408,7 +408,7 @@ export function ModulesCatalogView({
                     setSelectedClassForUnlock(activeCategoryClass);
                     setIsUnlockModalOpen(true);
                   }}
-                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#082542] active:bg-[#092C4D] text-white font-bold text-xs btn-skeuo-navy flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-gradient-to-r from-[#10375C] via-[#1B4965] to-[#10375C] hover:opacity-95 active:scale-[0.98] text-white font-extrabold text-xs shadow-md shadow-[#10375C]/20 flex items-center justify-center gap-2 cursor-pointer transition"
                 >
                   <span>Unlock Course Access Now</span>
                   <ArrowRight className="w-4 h-4" />
