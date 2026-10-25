@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useMemo } from "react";
-import { Search, ChevronDown, Sparkles } from "lucide-react";
+import { Search, ChevronDown } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 import { CEFR_CATEGORIES } from "../constants/cefr-categories";
 

@@ -9,7 +9,7 @@ import { ModuleGridCard, CurriculumModuleItem } from "./module-grid-card";
 import { useCurriculumLevels } from "../hooks/use-curriculum";
 import { useUserProfile } from "@/features/users/hooks/use-user";
 import type { SessionUser } from "@/lib/session";
-import { BookOpen, ChevronRight, Sparkles, Lock, ShieldCheck } from "lucide-react";
+import { BookOpen, ChevronRight, Lock, ShieldCheck, ArrowRight } from "lucide-react";
 import { useClasses, ClassUnlockModal, type CourseClassItem } from "@/features/classes";
 import { isUserAdmin } from "@/lib/auth-utils";
 import {
@@ -333,8 +333,8 @@ export function ModulesCatalogView({
                   {activeSubLevelItem.title}
                 </h2>
                 {isCurrentTrack && (
-                  <span className="hidden sm:inline-flex px-2 py-0.5 rounded-full bg-[#F4B41A]/20 text-[#B8860B] dark:text-[#F4B41A] text-[10px] font-black tracking-tight uppercase items-center gap-1">
-                    <Sparkles className="w-2.5 h-2.5" />
+                  <span className="hidden sm:inline-flex px-2 py-0.5 rounded-full bg-[#F4B41A]/20 text-[#B8860B] dark:text-[#F4B41A] text-[10px] font-black tracking-tight uppercase items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-current" />
                     <span>Active Track</span>
                   </span>
                 )}
@@ -359,14 +359,14 @@ export function ModulesCatalogView({
 
           {/* Class Unlock Banner if level not owned */}
           {!hasCategoryAccess && activeCategoryClass && (
-            <div className="p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-amber-500/5 border-2 border-indigo-200 dark:border-indigo-900 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 card-skeuo">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center shrink-0 shadow-xs">
+                <div className="w-12 h-12 rounded-2xl bg-[#0D3B66] text-white flex items-center justify-center shrink-0 shadow-xs">
                   <Lock className="w-6 h-6" />
                 </div>
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-600 text-white font-mono">
+                    <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#0D3B66] text-white font-mono">
                       Access Locked
                     </span>
                     <span className="text-xs font-bold text-slate-500">
@@ -383,13 +383,13 @@ export function ModulesCatalogView({
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end justify-between gap-3 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-indigo-200/50">
+              <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end justify-between gap-3 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-slate-100 dark:border-slate-800">
                 <div className="text-left md:text-right">
                   <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">
                     Unlock Price
                   </span>
                   <div className="flex items-baseline gap-2">
-                    <span className="font-heading text-2xl font-black text-indigo-900 dark:text-indigo-400">
+                    <span className="font-heading text-2xl font-black text-[#0D3B66] dark:text-[#F4B41A]">
                       {formatRupiah(activeCategoryClass.price)}
                     </span>
                     {activeCategoryClass.originalPrice &&
@@ -408,10 +408,10 @@ export function ModulesCatalogView({
                     setSelectedClassForUnlock(activeCategoryClass);
                     setIsUnlockModalOpen(true);
                   }}
-                  className="w-full sm:w-auto px-5 py-2.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold text-xs border-b-4 border-b-indigo-800 active:border-b-0 active:translate-y-1 shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#082542] active:bg-[#092C4D] text-white font-bold text-xs btn-skeuo-navy flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <Sparkles className="w-4 h-4" />
                   <span>Unlock Course Access Now</span>
+                  <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>

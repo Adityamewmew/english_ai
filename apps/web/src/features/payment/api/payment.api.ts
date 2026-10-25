@@ -33,6 +33,8 @@ export interface PaymentMethodsData {
   isSandbox: boolean;
 }
 
+export type PaymentMethods = PaymentMethodsData;
+
 export interface PaymentOrderDetail {
   id: string;
   orderId: string;

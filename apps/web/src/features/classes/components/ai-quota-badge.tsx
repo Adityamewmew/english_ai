@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Zap, AlertTriangle, Sparkles, Clock, MessageSquare } from "lucide-react";
+import { AlertTriangle, Clock, MessageSquare, Bot } from "lucide-react";
 import { useAiQuota } from "../hooks/use-classes";
 
 interface AiQuotaBadgeProps {
@@ -54,10 +54,8 @@ export function AiQuotaBadge({
       >
         {isExceeded ? (
           <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0" />
-        ) : quota.tier === "ultra" || quota.tier === "admin" ? (
-          <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
         ) : (
-          <Zap className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
+          <Bot className="w-3.5 h-3.5 text-slate-700 shrink-0" />
         )}
 
         <span className="uppercase text-[10px] font-black tracking-wider">
