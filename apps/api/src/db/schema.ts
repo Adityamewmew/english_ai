@@ -7,3 +7,5 @@ export * from "./schema/auth";
 export * from "./schema/certificates";
 export * from "./schema/classes";
 export * from "./schema/payments";
+export * from "./schema/wallet";
+
