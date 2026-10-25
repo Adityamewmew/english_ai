@@ -29,6 +29,38 @@ interface PaymentConfirmationViewProps {
   orderId: string;
 }
 
+function compressImage(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = (e) => {
+      const img = new Image();
+      img.src = e.target?.result as string;
+      img.onload = () => {
+        let { width, height } = img;
+        const max = 1200;
+        if (width > max || height > max) {
+          if (width > height) {
+            height = Math.round((height * max) / width);
+            width = max;
+          } else {
+            width = Math.round((width * max) / height);
+            height = max;
+          }
+        }
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext("2d");
+        ctx?.drawImage(img, 0, 0, width, height);
+        resolve(canvas.toDataURL("image/jpeg", 0.8));
+      };
+      img.onerror = reject;
+    };
+    reader.onerror = reject;
+  });
+}
+
 export function PaymentConfirmationView({ orderId }: PaymentConfirmationViewProps) {
   const { data: order, isLoading, error, refetch, isRefetching } = usePaymentOrder(orderId);
   const simulateMutation = useSimulateSandbox();
@@ -37,7 +69,9 @@ export function PaymentConfirmationView({ orderId }: PaymentConfirmationViewProp
   const [copiedVa, setCopiedVa] = useState(false);
   const [copiedAmount, setCopiedAmount] = useState(false);
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
-  const [proofInput, setProofInput] = useState("");
+  const [proofFile, setProofFile] = useState<File | null>(null);
+  const [proofPreview, setProofPreview] = useState<string | null>(null);
+  const [isCompressing, setIsCompressing] = useState(false);
   const [proofSubmitted, setProofSubmitted] = useState(false);
 
   // Countdown timer state
@@ -80,14 +114,29 @@ export function PaymentConfirmationView({ orderId }: PaymentConfirmationViewProp
     await simulateMutation.mutateAsync(orderId);
   };
 
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setProofFile(file);
+      setProofPreview(URL.createObjectURL(file));
+    }
+  };
+
   const handleSubmitProof = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!proofInput.trim()) return;
-    await uploadProofMutation.mutateAsync({
-      orderId,
-      proofUrl: proofInput.trim(),
-    });
-    setProofSubmitted(true);
+    if (!proofFile) return;
+    setIsCompressing(true);
+    try {
+      const base64 = await compressImage(proofFile);
+      await uploadProofMutation.mutateAsync({
+        orderId,
+        proofUrl: base64,
+      });
+      setProofSubmitted(true);
+      setProofFile(null);
+    } finally {
+      setIsCompressing(false);
+    }
   };
 
   const formatRupiah = (num: number) =>
@@ -370,27 +419,57 @@ export function PaymentConfirmationView({ orderId }: PaymentConfirmationViewProp
                       <FileCheck className="w-4 h-4 text-indigo-600" />
                       <span>Unggah Bukti Transfer</span>
                     </div>
+
+                    {(order.transferProofUrl || proofPreview) && (
+                      <div className="p-2.5 rounded-xl bg-white border border-indigo-100 flex flex-col items-center gap-2">
+                        <img
+                          src={proofPreview || order.transferProofUrl || ""}
+                          alt="Bukti Transfer"
+                          className="max-h-48 w-auto rounded-lg object-contain shadow-2xs border border-slate-100"
+                        />
+                        {proofFile && (
+                          <span className="text-[10px] text-slate-500 font-medium">
+                            {proofFile.name} ({(proofFile.size / 1024).toFixed(0)} KB)
+                          </span>
+                        )}
+                      </div>
+                    )}
+
                     <form onSubmit={handleSubmitProof} className="space-y-2.5">
-                      <input
-                        type="text"
-                        value={proofInput}
-                        onChange={(e) => setProofInput(e.target.value)}
-                        placeholder="Tempel URL bukti transfer (link gambar/drive/cloud)"
-                        className="w-full text-xs py-2 px-3 rounded-xl border border-slate-300 bg-white text-slate-800 focus:outline-indigo-600"
-                        required
-                      />
-                      <button
-                        type="submit"
-                        disabled={uploadProofMutation.isPending || !proofInput.trim()}
-                        className="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
-                      >
-                        <Upload className="w-3.5 h-3.5" />
-                        {uploadProofMutation.isPending ? "Mengirim Bukti..." : "Kirim Bukti Pembayaran"}
-                      </button>
+                      <label className="flex flex-col items-center justify-center p-3.5 border-2 border-dashed border-indigo-200 rounded-xl bg-white hover:bg-indigo-50/50 transition cursor-pointer text-center group">
+                        <Upload className="w-5 h-5 text-indigo-500 group-hover:scale-110 transition-transform mb-1" />
+                        <span className="text-xs font-bold text-indigo-900">
+                          {proofFile ? "Ganti Gambar Bukti" : "Pilih Foto Bukti Transfer"}
+                        </span>
+                        <span className="text-[10px] text-slate-400 mt-0.5">
+                          Format JPG, PNG, atau WebP
+                        </span>
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={handleFileChange}
+                          className="hidden"
+                        />
+                      </label>
+
+                      {proofFile && (
+                        <button
+                          type="submit"
+                          disabled={uploadProofMutation.isPending || isCompressing}
+                          className="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                        >
+                          <Upload className="w-3.5 h-3.5" />
+                          {uploadProofMutation.isPending || isCompressing
+                            ? "Mengirim Bukti..."
+                            : "Kirim Bukti Pembayaran"}
+                        </button>
+                      )}
                     </form>
-                    {isWaitingApproval && (
-                      <p className="text-[11px] text-amber-700 flex items-center gap-1 font-medium">
-                        <Check className="w-3 h-3" /> Bukti transfer telah tersimpan. Menunggu verifikasi admin.
+
+                    {(isWaitingApproval || order.transferProofUrl || proofSubmitted) && (
+                      <p className="text-[11px] text-amber-700 flex items-center gap-1 font-medium bg-amber-50 p-2.5 rounded-xl border border-amber-200">
+                        <Check className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                        Bukti transfer tersimpan. Menunggu verifikasi admin untuk aktivasi kelas.
                       </p>
                     )}
                   </div>
