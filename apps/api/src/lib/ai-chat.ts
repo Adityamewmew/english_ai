@@ -120,7 +120,7 @@ export class AiChatService {
           temperature: 0.5,
           frequency_penalty: 0.3,
           presence_penalty: 0.2,
-          stop: ["Student:", "Student :", "\nStudent", "\nUser:", "\nHuman:", "Mr. Khoirul:"],
+          stop: ["Student:", "\nStudent", "\nUser:", "Mr. Khoirul:"],
           messages: [
             { role: "system", content: systemPrompt },
             { role: "user", content: userPrompt },

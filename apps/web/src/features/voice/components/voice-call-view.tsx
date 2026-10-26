@@ -155,6 +155,7 @@ export function VoiceCallView({
         const res = await fetch(getApiUrl("/api/voice/turn-stream"), {
           method: "POST",
           headers: { "Content-Type": "application/json" },
+          credentials: "include",
           body: JSON.stringify({
             sessionId: sessionIdRef.current,
             topic: defaultTopic,

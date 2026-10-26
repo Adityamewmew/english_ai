@@ -43,6 +43,12 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
 
     audioQueueRef.current = [];
 
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      try {
+        window.speechSynthesis.cancel();
+      } catch {}
+    }
+
     if (currentAudioRef.current) {
       try {
         currentAudioRef.current.pause();
@@ -69,6 +75,40 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
       silentAudio.volume = 0.01;
       silentAudio.play().catch(() => {});
     } catch {}
+  }, []);
+
+  const playWithBrowserSpeech = useCallback((text: string) => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+      if (!isHaltedRef.current) playNextInQueue();
+      return;
+    }
+    try {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "en-US";
+      utterance.rate = 0.95;
+      const voices = window.speechSynthesis.getVoices();
+      const naturalVoice =
+        voices.find(
+          (v) =>
+            (v.lang === "en-US" || v.lang === "en-GB") &&
+            (v.name.includes("Natural") ||
+              v.name.includes("Google") ||
+              v.name.includes("Daniel") ||
+              v.name.includes("Roger"))
+        ) || voices.find((v) => v.lang.startsWith("en"));
+      if (naturalVoice) utterance.voice = naturalVoice;
+
+      utterance.onend = () => {
+        if (!isHaltedRef.current) playNextInQueue();
+      };
+      utterance.onerror = () => {
+        if (!isHaltedRef.current) playNextInQueue();
+      };
+      window.speechSynthesis.speak(utterance);
+    } catch {
+      if (!isHaltedRef.current) playNextInQueue();
+    }
   }, []);
 
   const playNextInQueue = useCallback(async () => {
@@ -102,8 +142,8 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     if (isHaltedRef.current) return;
 
     if (!audio) {
-      // If network fetch failed, proceed to next chunk without breaking queue
-      playNextInQueue();
+      // Fallback to browser SpeechSynthesis when backend TTS has 0 credits or fails
+      playWithBrowserSpeech(nextItem.text);
       return;
     }
 
@@ -116,17 +156,17 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
 
     audio.onerror = () => {
       if (isHaltedRef.current) return;
-      playNextInQueue();
+      playWithBrowserSpeech(nextItem.text);
     };
 
     try {
       await audio.play();
     } catch (err: any) {
       if (err.name === "AbortError" || isHaltedRef.current) return;
-      console.warn("Audio play error, skipping chunk:", err);
-      if (!isHaltedRef.current) playNextInQueue();
+      console.warn("Audio play error, falling back to browser speech:", err);
+      if (!isHaltedRef.current) playWithBrowserSpeech(nextItem.text);
     }
-  }, []);
+  }, [playWithBrowserSpeech]);
 
   const enqueueSentence = useCallback(
     (sentence: string, index: number) => {
@@ -135,6 +175,7 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
       const audioPromise = fetch(getApiUrl("/api/voice/tts"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify({ text: sentence }),
       })
         .then((res) => {
