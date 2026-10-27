@@ -88,16 +88,19 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
       utterance.lang = "en-US";
       utterance.rate = 0.95;
       const voices = window.speechSynthesis.getVoices();
-      const naturalVoice =
+      const maleVoice =
+        voices.find(
+          (v) =>
+            v.lang.startsWith("en") &&
+            /\b(male|david|daniel|guy|george|roger|mark|ryan|oliver|andrew)\b/i.test(v.name)
+        ) ||
         voices.find(
           (v) =>
             (v.lang === "en-US" || v.lang === "en-GB") &&
-            (v.name.includes("Natural") ||
-              v.name.includes("Google") ||
-              v.name.includes("Daniel") ||
-              v.name.includes("Roger"))
-        ) || voices.find((v) => v.lang.startsWith("en"));
-      if (naturalVoice) utterance.voice = naturalVoice;
+            !/\b(female|zira|samantha|karen|victoria|hazel|susan|google\s+us\s+english)\b/i.test(v.name)
+        ) ||
+        voices.find((v) => v.lang.startsWith("en"));
+      if (maleVoice) utterance.voice = maleVoice;
 
       utterance.onend = () => {
         if (!isHaltedRef.current) playNextInQueue();
