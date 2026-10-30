@@ -1,6 +1,7 @@
 import { apiClient } from "@/lib/api-client";
 
 export interface TierPlan {
+  name?: string;
   price: number;
   originalPrice?: number | null;
   dailyChatLimit: number;

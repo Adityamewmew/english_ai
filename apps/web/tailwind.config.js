@@ -25,8 +25,9 @@ module.exports = {
         surface: "#F4F6FF",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
+        sans: ["var(--font-dm-sans)", "var(--font-inter)", "sans-serif"],
         heading: ["var(--font-plus-jakarta)", "sans-serif"],
+        serifItalic: ['"Playfair Display"', "serif"],
       },
     },
   },

@@ -1,28 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-dm-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-plus-jakarta: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* EDDY'S English Brand Tokens (design.md) */
-  --brand-navy: #0D3B66;
-  --brand-navy-dark: #082542;
-  --brand-navy-hover: #092C4D;
-  --brand-yellow: #F4B41A;
-  --brand-yellow-hover: #DDA012;
-  --brand-red: #9E1B1B;
-  --brand-red-hover: #841515;
-  --brand-secondary: #1B4965;
-  --brand-bg: #F8FAFC;
-  --brand-card: #FFFFFF;
+  /* EDDY'S AI Official Brand Tokens (design.md) */
+  --brand-primary: #10375C;
+  --brand-primary-dark: #092238;
+  --brand-primary-hover: #0d2e4d;
+  --brand-secondary: #EB8317;
+  --brand-secondary-dark: #C56807;
+  --brand-secondary-hover: #d77410;
+  --brand-accent: #F3C623;
+  --brand-surface: #F4F6FF;
+  --brand-bg: #FFFFFF;
 }
 
 body {
-  font-family: var(--font-inter);
-  background-color: #F8FAFC;
-  color: #0F172A;
+  font-family: var(--font-dm-sans);
+  background-color: #FFFFFF;
+  color: #10375C;
   min-height: 100vh;
   letter-spacing: -0.011em;
   -webkit-font-smoothing: antialiased;
@@ -33,7 +35,212 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
 }
 
-/* Subtle Skeuomorphic Affordances (skeumorphism.md) */
+/* =========================================================================
+   CUSTOM STYLES DARI INDEX.HTML (3D Perspective, Skeuomorphism, Marquee)
+   ========================================================================= */
+
+/* Latar belakang gradient lembut Hero Section: perpaduan bersih Premier (#10375C), Surface (#F4F6FF) dan Putih */
+.hero-aura {
+  background:
+    radial-gradient(ellipse at 50% -20%, rgba(16, 55, 92, 0.08) 0%, rgba(244, 246, 255, 0.6) 45%, rgba(255, 255, 255, 0) 80%),
+    radial-gradient(circle at 85% 30%, rgba(16, 55, 92, 0.03) 0%, transparent 50%),
+    linear-gradient(180deg, #F4F6FF 0%, #FAFBFD 50%, #FFFFFF 100%);
+}
+
+/* Garis gelombang topografi halus */
+.wave-lines {
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+
+/* Perspektif 3D Container untuk Tablet & HP */
+.stage-perspective {
+  perspective: 1800px;
+  transform-style: preserve-3d;
+}
+
+/* Transformasi 3D Dashboard */
+.dashboard-3d-frame {
+  transform: rotateX(14deg) rotateY(-11deg) rotateZ(2.5deg);
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s ease;
+  background: linear-gradient(145deg, #ffffff 0%, #e4e9f7 100%);
+  box-shadow:
+    -12px 28px 55px -10px rgba(16, 55, 92, 0.25),
+    0 10px 25px -5px rgba(16, 55, 92, 0.12),
+    inset 0 2px 3px rgba(255, 255, 255, 0.95),
+    inset -2px -3px 6px rgba(16, 55, 92, 0.12);
+}
+
+/* Transformasi 3D Smartphone */
+.phone-3d-frame {
+  transform: rotateX(11deg) rotateY(15deg) rotateZ(-4deg) translateZ(60px);
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s ease;
+  background: linear-gradient(135deg, #27384c 0%, #0d1b2a 50%, #10375C 100%);
+  box-shadow:
+    20px 32px 60px -8px rgba(16, 55, 92, 0.38),
+    4px 12px 20px -4px rgba(16, 55, 92, 0.22),
+    inset 0 2px 2px rgba(255, 255, 255, 0.35),
+    inset -3px -3px 6px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 1024px) {
+  .stage-perspective:hover .dashboard-3d-frame {
+    transform: rotateX(9deg) rotateY(-7deg) rotateZ(1.2deg) translateY(-4px);
+  }
+  .stage-perspective:hover .phone-3d-frame {
+    transform: rotateX(7deg) rotateY(10deg) rotateZ(-2deg) translateZ(75px) translateY(-8px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .dashboard-3d-frame {
+    transform: rotateX(6deg) rotateY(-3deg) rotateZ(0.5deg);
+  }
+  .phone-3d-frame {
+    transform: rotateX(4deg) rotateY(4deg) rotateZ(-1deg);
+  }
+}
+
+/* Skeuomorphic Primary Button (Tactile 3D Pressable Feel sesuai skeumorphism.md & design.md) */
+.btn-skeuo-primary {
+  background: linear-gradient(180deg, #164673 0%, #10375C 100%);
+  color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow:
+    0 6px 0 #092138,
+    0 12px 20px -4px rgba(16, 55, 92, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-skeuo-primary:hover {
+  background: linear-gradient(180deg, #1b5285 0%, #123e68 100%);
+  transform: translateY(-1px);
+  box-shadow:
+    0 7px 0 #092138,
+    0 14px 24px -4px rgba(16, 55, 92, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+.btn-skeuo-primary:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 #092138,
+    0 4px 8px -2px rgba(16, 55, 92, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Skeuomorphic Secondary Button (Warm Orange Tactile Button) */
+.btn-skeuo-secondary {
+  background: linear-gradient(180deg, #F59329 0%, #EB8317 100%);
+  color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 0 #B35E08,
+    0 10px 20px -4px rgba(235, 131, 23, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-skeuo-secondary:hover {
+  background: linear-gradient(180deg, #FA9E39 0%, #F0891D 100%);
+  transform: translateY(-1px);
+  box-shadow:
+    0 5px 0 #B35E08,
+    0 14px 24px -4px rgba(235, 131, 23, 0.55),
+    inset 0 1px 1px rgba(255, 255, 255, 0.55);
+}
+
+.btn-skeuo-secondary:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 1px 0 #B35E08,
+    0 4px 8px -2px rgba(235, 131, 23, 0.35),
+    inset 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Skeuomorphic Gold Achievement Badge / Koin Medali */
+.badge-skeuo-gold {
+  background: linear-gradient(180deg, #FFE169 0%, #F3C623 65%, #DFAC09 100%);
+  color: #10375C;
+  border-radius: 28px;
+  border: 1px solid #F9DC6B;
+  box-shadow:
+    0 3px 0 #C29200,
+    0 6px 14px rgba(243, 198, 35, 0.35),
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.85);
+}
+
+/* Pixel Art crisp rendering untuk karakter Mr. Khoirul */
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 3.4s ease-in-out infinite;
+}
+
+/* Logo Marquee Mask */
+.logo-marquee-mask {
+  mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marqueeLeft 42s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marqueeRight 46s linear infinite;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}
+
+/* Pill metrik minimalis dengan sentuhan tactile halus */
+.stat-pill-subtle {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F4F6FF 100%);
+  border: 1px solid #E5E9F5;
+  box-shadow: 0 2px 5px rgba(16, 55, 92, 0.04), inset 0 1px 0 #FFFFFF;
+}
 .btn-skeuo-navy {
   background-color: #0D3B66;
   color: #FFFFFF;
