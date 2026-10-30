@@ -10,7 +10,7 @@ import { isUserAdmin } from "@english-ai/shared";
 export async function getModuleDetailUsecase(moduleId: string, userId?: string) {
   const module = await curriculumRepository.findModuleById(moduleId);
   if (!module) {
-    throw new NotFoundError(`Modul kurikulum '${moduleId}' tidak ditemukan`);
+    throw new NotFoundError(`Curriculum module '${moduleId}' not found`);
   }
 
   const rawSections = await curriculumRepository.findSectionsByModuleId(moduleId);
@@ -35,7 +35,13 @@ export async function getModuleDetailUsecase(moduleId: string, userId?: string) 
       const access = await classRepository.findUserAccessByCefr(userId, baseCefr);
       if (!access) {
         throw new ForbiddenError(
-          `Akses untuk kelas ${baseCefr} belum dibuka. Silakan aktifkan paket kelas terlebih dahulu.`
+          `Access to ${baseCefr} class is locked. Please unlock the class package first.`
+        );
+      }
+      const validity = await classRepository.checkAccessValidity(access, userId);
+      if (!validity.hasAccess) {
+        throw new ForbiddenError(
+          `Your 1-month class access for ${baseCefr} has expired. Please renew your class package to continue learning.`
         );
       }
     }
@@ -99,36 +105,29 @@ function enrichPracticeSections(sections: any[]) {
     if (sec.sectionType !== "practice") return sec;
 
     const content = sec.content || {};
-    const drills = Array.isArray(content.drills) ? content.drills : [];
-    const roleplay = content.roleplay || { context: "", roles: ["Mr. Khoirul", "You"], turns: [] };
+    const exercises = Array.isArray(content.exercises) ? [...content.exercises] : [];
 
-    let enrichedDrills = [...drills];
+    if (exercises.length === 0 && vocabSec?.content?.words) {
+      const words = vocabSec.content.words;
+      const vocabExercises = words.map((w: any, i: number) => ({
+        id: `auto-vocab-${i + 1}`,
+        type: "pronunciation",
+        prompt: `Practice saying: "${w.word}"`,
+        targetText: w.word,
+        phonetic: w.phonetic || "",
+        meaning: w.meaning || "",
+        example: w.example || "",
+      }));
 
-    if (enrichedDrills.length === 0) {
-      const vocabItems = vocabSec?.content?.items || [];
-      if (Array.isArray(vocabItems) && vocabItems.length > 0) {
-        enrichedDrills = vocabItems.slice(0, 3).map((v: any, idx: number) => {
-          const rawCollocation = v.collocation || `I am ${v.word}.`;
-          const cleanText = rawCollocation.includes(" / ")
-            ? rawCollocation.split(" / ")[0].trim()
-            : rawCollocation.trim();
-          return {
-            id: `drill-vocab-${idx + 1}`,
-            targetText: cleanText,
-            focus: `Pelafalan: "${v.word}" (${v.meaning || ""})`,
-            hint: v.ipa ? `Panduan fonetik: ${v.ipa}` : `Fokus pada intonasi natural`,
-          };
-        });
-      }
+      return {
+        ...sec,
+        content: {
+          ...content,
+          exercises: vocabExercises,
+        },
+      };
     }
 
-    return {
-      ...sec,
-      content: {
-        ...content,
-        drills: enrichedDrills,
-        roleplay,
-      },
-    };
+    return sec;
   });
 }

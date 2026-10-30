@@ -12,20 +12,20 @@ export async function purchaseClassUsecase(
   const normalizedTier = tier.trim().toLowerCase();
 
   if (!["basic", "pro", "ultra"].includes(normalizedTier)) {
-    throw new ValidationError("Pilihan tier tidak valid. Pilih antara basic, pro, atau ultra.");
+    throw new ValidationError("Invalid tier selection. Choose between basic, pro, or ultra.");
   }
 
   const classData = await classRepository.findClassByCefr(normalizedCefr);
   if (!classData || !classData.isActive) {
     throw new NotFoundError(
-      `Kelas untuk level '${normalizedCefr}' tidak ditemukan atau sedang tidak aktif.`
+      `Class for level '${normalizedCefr}' was not found or is currently inactive.`
     );
   }
 
   const u = await userRepository.findById(userId);
 
   if (!u) {
-    throw new NotFoundError("Pengguna tidak ditemukan.");
+    throw new NotFoundError("User not found.");
   }
 
   const adminEmails = [
@@ -40,16 +40,34 @@ export async function purchaseClassUsecase(
     u.accessType === 1 ||
     adminEmails.includes((u.email || "").toLowerCase());
 
-  // Check if already active and upgrading
+  // Check if already active, expired (renewal), or upgrading
   const existingAccess = await classRepository.findUserAccessByCefr(
     userId,
     normalizedCefr
   );
   if (existingAccess && existingAccess.status === "active") {
+    const validity = await classRepository.checkAccessValidity(existingAccess, userId);
     const currentTier = (existingAccess.tier || "basic").toLowerCase();
+
+    // If access has expired and student has not completed modules, allow renewal
+    if (validity.isExpired) {
+      const renewed = await classRepository.grantAccess(
+        userId,
+        normalizedCefr,
+        normalizedTier,
+        "student_renewal"
+      );
+
+      return {
+        message: `Successfully renewed class access for ${classData.name} (${normalizedTier.toUpperCase()}) for another 30 days!`,
+        class: classData,
+        access: renewed,
+      };
+    }
+
     if (currentTier === normalizedTier) {
       return {
-        message: `Akses kelas ${normalizedCefr} (${normalizedTier.toUpperCase()}) sudah aktif.`,
+        message: `Class access for ${normalizedCefr} (${normalizedTier.toUpperCase()}) is already active.`,
         class: classData,
         access: existingAccess,
       };
@@ -58,7 +76,7 @@ export async function purchaseClassUsecase(
     const tierRank: Record<string, number> = { basic: 1, pro: 2, ultra: 3 };
     if ((tierRank[normalizedTier] || 1) < (tierRank[currentTier] || 1)) {
       throw new ValidationError(
-        `Kamu saat ini sudah memiliki paket ${currentTier.toUpperCase()}. Paket aktif tidak dapat diturunkan ke ${normalizedTier.toUpperCase()}.`
+        `You currently have an active ${currentTier.toUpperCase()} plan. Active plans cannot be downgraded to ${normalizedTier.toUpperCase()}.`
       );
     }
 
@@ -71,7 +89,7 @@ export async function purchaseClassUsecase(
     );
 
     return {
-      message: `Berhasil meng-upgrade paket kelas ${normalizedCefr} ke ${normalizedTier.toUpperCase()}!`,
+      message: `Successfully upgraded class ${normalizedCefr} to ${normalizedTier.toUpperCase()}!`,
       class: classData,
       access: updated,
     };
@@ -93,7 +111,7 @@ export async function purchaseClassUsecase(
 
     if (!isPlacedAtOrAbove && !prevCert) {
       throw new ValidationError(
-        `Untuk membuka kelas ${normalizedCefr}, kamu harus menyelesaikan kelas ${prevCefr} dan memperoleh sertifikat kelulusan terlebih dahulu.`
+        `To unlock class ${normalizedCefr}, you must complete class ${prevCefr} and obtain the graduation certificate first.`
       );
     }
   }
@@ -106,7 +124,7 @@ export async function purchaseClassUsecase(
   );
 
   return {
-    message: `Berhasil membuka akses ${classData.name} (${normalizedTier.toUpperCase()})!`,
+    message: `Successfully unlocked access to ${classData.name} (${normalizedTier.toUpperCase()})!`,
     class: classData,
     access,
   };

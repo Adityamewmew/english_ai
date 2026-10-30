@@ -12,6 +12,7 @@ import {
   ArrowLeft,
   ArrowRight,
   MessageCircle,
+  Clock,
 } from "lucide-react";
 import { usePaymentMethods, useCreatePaymentOrder } from "@/features/payment";
 import { Button } from "@/components/ui/button";
@@ -35,11 +36,11 @@ const DEFAULT_TIERS: Record<TierKey, TierPlan> = {
     dailyChatLimit: 20,
     dailyVoiceMinutes: 5,
     features: [
-      "Akses penuh seluruh modul kurikulum CEFR",
-      "20 pesan Chat AI Tutor per hari",
-      "5 menit AI Voice Call percakapan per hari",
-      "Kuis formatif & ujian kelulusan resmi",
-      "Sertifikat kelulusan terverifikasi CEFR",
+      "Full access to all CEFR curriculum modules",
+      "20 AI Tutor Chat messages per day",
+      "5 mins AI Voice Call speaking practice per day",
+      "Official quizzes & graduation assessment",
+      "Verified CEFR graduation certificate upon completion",
     ],
   },
   pro: {
@@ -48,12 +49,12 @@ const DEFAULT_TIERS: Record<TierKey, TierPlan> = {
     dailyChatLimit: 100,
     dailyVoiceMinutes: 30,
     features: [
-      "Akses penuh seluruh modul kurikulum CEFR",
-      "100 pesan Chat AI Tutor per hari",
-      "30 menit AI Voice Call percakapan per hari",
-      "Feedback koreksi grammar & pelafalan mendalam",
-      "Prioritas respon AI tutor",
-      "Sertifikat kelulusan resmi CEFR",
+      "Full access to all CEFR curriculum modules",
+      "100 AI Tutor Chat messages per day",
+      "30 mins AI Voice Call speaking practice per day",
+      "In-depth grammar & pronunciation feedback",
+      "Priority AI tutor response speed",
+      "Official CEFR graduation certificate upon completion",
     ],
   },
   ultra: {
@@ -62,12 +63,12 @@ const DEFAULT_TIERS: Record<TierKey, TierPlan> = {
     dailyChatLimit: -1,
     dailyVoiceMinutes: 120,
     features: [
-      "Akses penuh seluruh modul kurikulum CEFR",
-      "Pesan Chat AI Tutor tanpa batas (Unlimited)",
-      "120 menit AI Voice Call percakapan per hari",
-      "Analisis fonetik & pelafalan real-time",
-      "Respon suara instan dengan latensi ultra rendah",
-      "Sertifikat kelulusan resmi CEFR",
+      "Full access to all CEFR curriculum modules",
+      "Unlimited AI Tutor Chat messages",
+      "120 mins AI Voice Call speaking practice per day",
+      "Real-time phonetic & pronunciation analysis",
+      "Instant low-latency voice responses",
+      "Official CEFR graduation certificate upon completion",
     ],
   },
 };
@@ -130,7 +131,7 @@ export function ClassUnlockModal({
     if (activePaymentTab === "whatsapp") {
       const waNumber = paymentMethods?.whatsapp?.number || "6281234567890";
       const waMsg = encodeURIComponent(
-        `Halo Admin EDDY'S AI, saya ingin mendaftar kelas ${classItem.name} (${classItem.cefr}) paket ${selectedTier.toUpperCase()} seharga ${formatRupiah(activePlan.price)}.`
+        `Hello Admin EDDY'S AI, I would like to enroll in class ${classItem.name} (${classItem.cefr}) ${selectedTier.toUpperCase()} package for ${formatRupiah(activePlan.price)}.`
       );
       window.open(`https://wa.me/${waNumber}?text=${waMsg}`, "_blank");
       onClose();
@@ -150,7 +151,7 @@ export function ClassUnlockModal({
       onClose();
       router.push(result.redirectUrl);
     } catch (err: any) {
-      setErrorMsg(err?.message || "Gagal membuat invoice pembayaran. Silakan coba kembali.");
+      setErrorMsg(err?.message || "Failed to generate payment order. Please try again.");
     }
   };
 
@@ -166,11 +167,16 @@ export function ClassUnlockModal({
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-[#0D3B66]/10 text-[#0D3B66]">
-                  {step === 1 ? "Langkah 1: Pilih Paket" : "Langkah 2: Metode Pembayaran"}
+                  {step === 1 ? "Step 1: Choose Plan" : "Step 2: Payment Method"}
                 </span>
-                {classItem.userTier && (
+                {classItem.hasAccess && classItem.userTier && (
                   <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800">
-                    Aktif: {classItem.userTier.toUpperCase()}
+                    Active: {classItem.userTier.toUpperCase()}
+                  </span>
+                )}
+                {classItem.isExpired && (
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-amber-100 text-amber-800">
+                    Expired (Renewal Required)
                   </span>
                 )}
               </div>
@@ -183,18 +189,31 @@ export function ClassUnlockModal({
             type="button"
             onClick={onClose}
             className="p-1.5 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition cursor-pointer"
-            aria-label="Tutup"
+            aria-label="Close"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        {/* STEP 1: Pilih Paket Belajar */}
+        {/* STEP 1: Choose Plan */}
         {step === 1 ? (
           <div className="space-y-4">
+            {/* Expiration Notice if expired */}
+            {classItem.isExpired && (
+              <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-start gap-2.5 text-xs text-amber-900 shadow-2xs">
+                <Clock className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-extrabold text-amber-950">1-Month Access Period Expired</p>
+                  <p className="text-[11px] text-amber-800 mt-0.5 leading-relaxed">
+                    Your 30-day class package has ended. Because module completion is still pending, please renew to regain full access and continue your learning progress.
+                  </p>
+                </div>
+              </div>
+            )}
+
             <div className="space-y-1.5">
               <label className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block">
-                Pilih Paket AI Coaching:
+                Select AI Coaching Plan:
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                 {/* Basic Card */}
@@ -218,7 +237,7 @@ export function ClassUnlockModal({
                   </p>
                 </button>
 
-                {/* Pro Card (Recommended) */}
+                {/* Pro Card (Popular) */}
                 <button
                   type="button"
                   onClick={() => setSelectedTier("pro")}
@@ -253,7 +272,7 @@ export function ClassUnlockModal({
                   }`}
                 >
                   <span className="absolute -top-2 right-2 px-1.5 py-0.5 rounded-md bg-[#0D3B66] text-[#F4B41A] text-[9px] font-black uppercase tracking-wider shadow-2xs">
-                    Terlengkap
+                    Best Value
                   </span>
                   <div>
                     <p className="text-xs font-black text-slate-900">Ultra</p>
@@ -272,7 +291,7 @@ export function ClassUnlockModal({
             <div className="p-4 rounded-2xl bg-[#0D3B66]/5 border border-[#0D3B66]/15 flex items-center justify-between">
               <div>
                 <p className="text-[11px] text-slate-500 font-medium">
-                  Paket {selectedTier.toUpperCase()}
+                  {selectedTier.toUpperCase()} Plan
                 </p>
                 <div className="flex items-baseline gap-2 mt-0.5">
                   <span className="font-heading text-xl font-black text-slate-900">
@@ -285,21 +304,21 @@ export function ClassUnlockModal({
                   )}
                   {discountPercent && (
                     <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-rose-100 text-rose-700">
-                      Hemat {discountPercent}%
+                      Save {discountPercent}%
                     </span>
                   )}
                 </div>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-emerald-700 font-heading text-xs font-bold shadow-2xs">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                Akses Selamanya
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-heading text-xs font-bold shadow-2xs">
+                <ShieldCheck className="w-4 h-4 text-[#0D3B66]" />
+                <span>30 Days Access</span>
               </div>
             </div>
 
             {/* Feature Benefits List */}
             <div className="space-y-1.5 pt-0.5">
               <p className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
-                Fasilitas Paket {selectedTier.toUpperCase()}:
+                {selectedTier.toUpperCase()} Plan Includes:
               </p>
               <div className="space-y-1">
                 {activePlan.features.map((feat, idx) => (
@@ -319,7 +338,7 @@ export function ClassUnlockModal({
                 onClick={onClose}
                 className="flex-1 rounded-xl text-xs font-bold h-11"
               >
-                Batal
+                Cancel
               </Button>
               <Button
                 type="button"
@@ -329,18 +348,22 @@ export function ClassUnlockModal({
               >
                 {isCurrentTier ? (
                   <>
-                    <Check className="w-4 h-4" /> Paket Sedang Aktif
+                    <Check className="w-4 h-4" /> Plan Already Active
+                  </>
+                ) : classItem.isExpired ? (
+                  <>
+                    Renew Access ({selectedTier.toUpperCase()}) <ArrowRight className="w-4 h-4" />
                   </>
                 ) : (
                   <>
-                    Pilih Metode Pembayaran <ArrowRight className="w-4 h-4" />
+                    Choose Payment Method <ArrowRight className="w-4 h-4" />
                   </>
                 )}
               </Button>
             </div>
           </div>
         ) : (
-          /* STEP 2: Metode Pembayaran */
+          /* STEP 2: Payment Method */
           <div className="space-y-4">
             <ClassPaymentSelector
               activeTab={activePaymentTab}
@@ -358,10 +381,10 @@ export function ClassUnlockModal({
               </div>
             )}
 
-            {/* Total Rincian & Action Buttons Step 2 */}
+            {/* Total Summary & Action Buttons Step 2 */}
             <div className="pt-2 border-t border-slate-100 space-y-3">
               <div className="flex items-center justify-between text-xs">
-                <span className="text-slate-500">Total Tagihan:</span>
+                <span className="text-slate-500">Total Payment:</span>
                 <span className="font-extrabold text-base text-slate-900 font-heading">
                   {formatRupiah(activePlan.price)}
                 </span>
@@ -374,7 +397,7 @@ export function ClassUnlockModal({
                   onClick={() => setStep(1)}
                   className="flex-1 rounded-xl text-xs font-bold h-11"
                 >
-                  <ArrowLeft className="w-3.5 h-3.5" /> Kembali
+                  <ArrowLeft className="w-3.5 h-3.5" /> Back
                 </Button>
                 <Button
                   type="button"
@@ -384,15 +407,15 @@ export function ClassUnlockModal({
                 >
                   {createOrderMutation.isPending ? (
                     <>
-                      <Loader2 className="w-4 h-4 animate-spin" /> Membuat Pesanan...
+                      <Loader2 className="w-4 h-4 animate-spin" /> Processing Order...
                     </>
                   ) : activePaymentTab === "whatsapp" ? (
                     <>
-                      <MessageCircle className="w-4 h-4" /> Hubungi via WhatsApp
+                      <MessageCircle className="w-4 h-4" /> Contact via WhatsApp
                     </>
                   ) : (
                     <>
-                      Lanjut ke Konfirmasi Pembayaran <ArrowRight className="w-4 h-4" />
+                      Proceed to Payment Confirmation <ArrowRight className="w-4 h-4" />
                     </>
                   )}
                 </Button>

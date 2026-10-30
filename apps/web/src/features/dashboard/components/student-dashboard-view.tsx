@@ -1,6 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { Loader2 } from "lucide-react";
 import { StudentShell } from "./student-shell";
 import { StudentHeroBanner } from "./student-hero-banner";
 import { StudentProgressCards } from "./student-progress-cards";
@@ -30,7 +32,15 @@ interface StudentDashboardViewProps {
 export function StudentDashboardView({ session }: StudentDashboardViewProps) {
   const { data: levelsData } = useCurriculumLevels(session.userId);
   const { data: userProfile } = useUserProfile(session.userId);
-  const { data: latestTest } = useLatestPlacement(session.userId);
+  const router = useRouter();
+  const { data: latestTest, isLoading: isPlacementLoading } = useLatestPlacement(session.userId);
+
+  useEffect(() => {
+    // Siswa baru yang belum menyelesaikan placement test wajib diarahkan ke /placement
+    if (!isPlacementLoading && latestTest === null && session.role !== "admin") {
+      router.replace("/placement");
+    }
+  }, [latestTest, isPlacementLoading, session.role, router]);
   const { data: voiceSessionsData } = useVoiceSessions(session.userId);
 
   const { data: chatSessionsData } = useQuery({
@@ -58,7 +68,7 @@ export function StudentDashboardView({ session }: StudentDashboardViewProps) {
     }
   });
 
-  const studentName = userProfile?.name || session.name || "Siswa";
+  const studentName = userProfile?.name || session.name || "Student";
   const currentCefr = userProfile?.currentCefr || session.currentCefr || "A1.1";
 
   // Current active level modules
@@ -89,6 +99,19 @@ export function StudentDashboardView({ session }: StudentDashboardViewProps) {
   );
 
   const chatSessions = Array.isArray(chatSessionsData) ? chatSessionsData : [];
+
+  if (!isPlacementLoading && latestTest === null && session.role !== "admin") {
+    return (
+      <div className="min-h-screen flex items-center justify-center p-4 bg-[#F4F6FF]">
+        <div className="text-center space-y-3">
+          <Loader2 className="w-8 h-8 animate-spin text-primary mx-auto" />
+          <p className="text-sm font-semibold text-slate-600">
+            Redirecting to mandatory Placement Assessment...
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <StudentShell studentName={studentName} currentCefr={currentCefr}>

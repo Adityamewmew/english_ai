@@ -249,7 +249,7 @@ export function PlacementDesktopForm({
               Evaluating...
             </span>
           ) : (
-            "Submit Answers & Complete Assessment"
+            "Submit Assessment"
           )}
         </button>
       </div>

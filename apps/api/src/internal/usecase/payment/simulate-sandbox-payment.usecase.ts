@@ -29,7 +29,7 @@ export async function simulateSandboxPaymentUsecase(orderId: string) {
   );
 
   return {
-    message: `Pembayaran pesanan #${tx.orderId} berhasil disimulasikan! Akses kelas ${tx.cefr} (${tx.tier.toUpperCase()}) telah aktif.`,
+    message: `Payment for order #${tx.orderId} successfully simulated! Class access for ${tx.cefr} (${tx.tier.toUpperCase()}) is now active.`,
     transaction: updatedTx,
   };
 }

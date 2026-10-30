@@ -48,6 +48,7 @@ export const userClassAccess = pgTable(
     tier: varchar("tier", { length: 20 }).notNull().default("basic"),
     grantedBy: varchar("granted_by", { length: 50 }).notNull().default("admin"),
     status: varchar("status", { length: 20 }).notNull().default("active"),
+    expiresAt: timestamp("expires_at"),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at").defaultNow().notNull(),
   },

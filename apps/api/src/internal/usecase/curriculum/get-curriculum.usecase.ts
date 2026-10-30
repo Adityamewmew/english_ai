@@ -55,7 +55,8 @@ export async function getCurriculumUsecase(userId?: string, levelId?: string) {
 
     const accesses = await classRepository.findUserAccesses(userId);
     for (const a of accesses) {
-      userAccessMap[a.cefr.toUpperCase()] = true;
+      const validity = await classRepository.checkAccessValidity(a, userId);
+      userAccessMap[a.cefr.toUpperCase()] = validity.hasAccess;
     }
 
     const certs = await certificateRepository.findUserCertificates(userId);

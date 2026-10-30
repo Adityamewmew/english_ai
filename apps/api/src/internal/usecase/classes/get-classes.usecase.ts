@@ -9,6 +9,9 @@ export async function getClassesUsecase(userId?: string) {
   const classes = await classRepository.findActiveClasses();
 
   let userAccessMap: Record<string, boolean> = {};
+  let userExpiredMap: Record<string, boolean> = {};
+  let userExpiresAtMap: Record<string, string | null> = {};
+  let userDaysRemainingMap: Record<string, number | null> = {};
   let userTierMap: Record<string, string> = {};
   let userCertsMap: Record<string, boolean> = {};
   let userCefr = "A1";
@@ -36,7 +39,11 @@ export async function getClassesUsecase(userId?: string) {
     const accesses = await classRepository.findUserAccesses(userId);
     for (const a of accesses) {
       const cefrKey = a.cefr.toUpperCase();
-      userAccessMap[cefrKey] = true;
+      const validity = await classRepository.checkAccessValidity(a, userId);
+      userAccessMap[cefrKey] = validity.hasAccess;
+      userExpiredMap[cefrKey] = validity.isExpired;
+      userExpiresAtMap[cefrKey] = validity.expiresAt?.toISOString() ?? null;
+      userDaysRemainingMap[cefrKey] = validity.daysRemaining;
       userTierMap[cefrKey] = (a.tier || "basic").toLowerCase();
     }
 
@@ -53,6 +60,9 @@ export async function getClassesUsecase(userId?: string) {
     const cefr = c.cefr.toUpperCase();
     const rank = cefrOrder.indexOf(cefr);
     const hasAccess = isAdmin || !!userAccessMap[cefr];
+    const isExpired = !isAdmin && !!userExpiredMap[cefr];
+    const expiresAt = userExpiresAtMap[cefr] ?? null;
+    const daysRemaining = userDaysRemainingMap[cefr] ?? null;
     const userTier = userTierMap[cefr] || (isAdmin ? "ultra" : null);
 
     const isEligible =
@@ -67,6 +77,9 @@ export async function getClassesUsecase(userId?: string) {
     return {
       ...c,
       hasAccess,
+      isExpired,
+      expiresAt,
+      daysRemaining,
       userTier,
       isEligible,
       prerequisiteCefr: prevCefr,

@@ -56,11 +56,18 @@ export async function checkAiQuotaUsecase(userId: string): Promise<AiQuotaResult
     };
   }
 
-  // Find user's active class accesses
-  const accesses = await classRepository.findUserAccesses(userId);
+  // Find user's active class accesses and only consider non-expired / completed accesses
+  const allAccesses = await classRepository.findUserAccesses(userId);
+  const accesses: typeof allAccesses = [];
+  for (const a of allAccesses) {
+    const validity = await classRepository.checkAccessValidity(a, userId);
+    if (validity.hasAccess) {
+      accesses.push(a);
+    }
+  }
 
   let activeTier: "ultra" | "pro" | "basic" | "trial" = "trial";
-  let tierName = "Trial Gratis";
+  let tierName = "Free Trial";
   let chatLimit = 5;
   let voiceLimitMinutes = 1;
 
@@ -68,17 +75,17 @@ export async function checkAiQuotaUsecase(userId: string): Promise<AiQuotaResult
     const tiers = accesses.map((a: any) => (a.tier || "basic").toLowerCase());
     if (tiers.includes("ultra")) {
       activeTier = "ultra";
-      tierName = "Paket Ultra";
+      tierName = "Ultra Plan";
       chatLimit = -1; // Unlimited
       voiceLimitMinutes = 120;
     } else if (tiers.includes("pro")) {
       activeTier = "pro";
-      tierName = "Paket Pro";
+      tierName = "Pro Plan";
       chatLimit = 100;
       voiceLimitMinutes = 30;
     } else {
       activeTier = "basic";
-      tierName = "Paket Basic";
+      tierName = "Basic Plan";
       chatLimit = 20;
       voiceLimitMinutes = 5;
     }

@@ -2,6 +2,8 @@
 
 import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useLatestPlacement } from "@/features/placement/hooks/use-placement";
 import { StudentShell } from "@/features/dashboard";
 import { ModulesAnalyticsBento } from "./modules-analytics-bento";
 import { ModulesFilterBar } from "./modules-filter-bar";
@@ -34,6 +36,15 @@ export function ModulesCatalogView({
       setIsSidebarOpen(true);
     }
   }, []);
+
+  const router = useRouter();
+  const { data: latestTest, isLoading: isPlacementLoading } = useLatestPlacement(session.userId);
+
+  useEffect(() => {
+    if (!isPlacementLoading && latestTest === null && session.role !== "admin") {
+      router.replace("/placement");
+    }
+  }, [latestTest, isPlacementLoading, session.role, router]);
 
   const { data: levelsData, isLoading } = useCurriculumLevels(session.userId);
   const { data: userProfile } = useUserProfile(session.userId);
@@ -367,7 +378,7 @@ export function ModulesCatalogView({
                 <div className="space-y-1.5">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#10375C] text-white font-mono shadow-2xs">
-                      Access Locked
+                      {activeCategoryClass.isExpired ? "Access Expired (1 Month Ended)" : "Access Locked"}
                     </span>
                     <span className="text-xs font-bold text-slate-500">
                       Level {selectedCategory}
@@ -378,7 +389,9 @@ export function ModulesCatalogView({
                   </h3>
                   <p className="text-xs text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
                     {activeCategoryClass.description ||
-                      `Tingkatkan kefasihan profesional dan pemikiran kritis dalam bahasa Inggris dengan kurikulum CEFR Level ${selectedCategory}, materi speaking AI interaktif, dan sertifikat resmi.`}
+                      (activeCategoryClass.isExpired
+                        ? `Your 1-month access has ended. Complete your modules or renew your package to continue practicing.`
+                        : `Enhance your professional fluency and active speaking in English with CEFR Level ${selectedCategory} curriculum, interactive AI voice coaching, and official certification.`)}
                   </p>
                 </div>
               </div>
@@ -386,7 +399,7 @@ export function ModulesCatalogView({
               <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end justify-between gap-3 shrink-0 pt-3 md:pt-0 border-t md:border-t-0 border-slate-200/60 dark:border-slate-800">
                 <div className="text-left md:text-right">
                   <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">
-                    Unlock Price
+                    {activeCategoryClass.isExpired ? "Renewal Price" : "Unlock Price"}
                   </span>
                   <div className="flex items-baseline gap-2">
                     <span className="font-heading text-2xl sm:text-3xl font-black text-[#10375C] dark:text-[#F4B41A]">
@@ -410,7 +423,7 @@ export function ModulesCatalogView({
                   }}
                   className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-gradient-to-r from-[#10375C] via-[#1B4965] to-[#10375C] hover:opacity-95 active:scale-[0.98] text-white font-extrabold text-xs shadow-md shadow-[#10375C]/20 flex items-center justify-center gap-2 cursor-pointer transition"
                 >
-                  <span>Unlock Course Access Now</span>
+                  <span>{activeCategoryClass.isExpired ? "Renew Class Access Now" : "Unlock Course Access Now"}</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

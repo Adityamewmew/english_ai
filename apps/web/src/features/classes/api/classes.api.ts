@@ -27,6 +27,9 @@ export interface CourseClassItem {
   isActive: boolean;
   orderIndex: number;
   hasAccess: boolean;
+  isExpired?: boolean;
+  expiresAt?: string | null;
+  daysRemaining?: number | null;
   userTier?: "basic" | "pro" | "ultra" | "admin" | null;
   isEligible: boolean;
   prerequisiteCefr?: string | null;

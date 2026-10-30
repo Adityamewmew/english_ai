@@ -15,10 +15,12 @@ import {
   Sparkles,
   ShieldCheck,
   Lock,
+  LogOut,
 } from "lucide-react";
 import { usePlacementSession, useSubmitPlacement } from "../hooks/use-placement";
 import { useClasses, ClassUnlockModal } from "@/features/classes";
-import { StudentShell } from "@/features/dashboard";
+import Image from "next/image";
+import { doLogout } from "@/app/(auth)/auth.actions";
 import { PlacementWizardMobile } from "./placement-wizard-mobile";
 import { PlacementDesktopForm } from "./placement-desktop-form";
 
@@ -207,7 +209,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
             <div className="text-left p-4 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2">
               <p className="text-xs font-bold text-primary flex items-center gap-1.5">
                 <MessageSquare className="w-4 h-4 text-secondary" />
-                Catatan Evaluasi:
+                Evaluation Feedback:
               </p>
               {result.writingEvaluation?.feedback_id && (
                 <p className="text-xs text-slate-700 leading-relaxed">
@@ -316,8 +318,45 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
   }
 
   return (
-    <StudentShell>
-      <div className="max-w-3xl mx-auto px-4 py-4 sm:py-10">
+    <div className="min-h-screen bg-[#F4F6FF] text-slate-800 antialiased flex flex-col">
+      {/* Top Focused Exam Bar (No Sidebar, No Navigation to Dashboard) */}
+      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-2xs">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/images/logo-academy.webp"
+              alt="EDDY'S AI Academy"
+              width={130}
+              height={36}
+              className="h-8 w-auto object-contain"
+              priority
+            />
+            <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-[11px] font-bold">
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-600" />
+              Mandatory Placement Assessment
+            </span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span className="text-xs font-semibold text-slate-500">
+              {answeredCount}/{totalQuestions} Answered
+            </span>
+            <form action={doLogout}>
+              <button
+                type="submit"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-rose-600 px-3 py-1.5 rounded-xl border border-slate-200 hover:border-rose-200 hover:bg-rose-50/50 transition-colors cursor-pointer"
+                title="Sign out of account"
+              >
+                <LogOut className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Sign Out</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Form Content */}
+      <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-6 sm:py-10">
         {/* Mobile View: 1-Question-at-a-time Wizard */}
         <div className="block sm:hidden">
           <div className="mb-4">
@@ -391,7 +430,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
             errorMsg={errorMsg}
           />
         </div>
-      </div>
-    </StudentShell>
+      </main>
+    </div>
   );
 }
