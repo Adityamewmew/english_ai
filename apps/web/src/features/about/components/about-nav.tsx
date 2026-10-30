@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { authClient } from "@/lib/auth-client";
 
 export function AboutNav() {
@@ -11,7 +12,7 @@ export function AboutNav() {
     { id: "services", label: "Services", href: "/#services" },
     { id: "about", label: "About", href: "/about" },
     { id: "price", label: "Price", href: "/#biaya" },
-    { id: "contact", label: "Contact", href: "/#kontak" },
+    { id: "contact", label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -21,26 +22,17 @@ export function AboutNav() {
         <div className="pointer-events-auto">
           <Link
             href="/#beranda"
-            className="flex items-center gap-2.5 group focus:outline-none"
-            title="Kembali ke Beranda EDDY'S AI"
+            className="flex items-center gap-2 group focus:outline-none"
+            title="Kembali ke Beranda EDDY'S"
           >
-            <div
-              className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shadow-xs border border-primary/90 relative overflow-hidden group-hover:scale-105 transition-transform shrink-0"
-              style={{
-                boxShadow: "0 2px 0 #081d33, inset 0 1px 1px rgba(255,255,255,0.25)",
-              }}
-            >
-              <span className="font-heading font-black text-base text-accent">E</span>
-            </div>
-            <div className="hidden sm:flex flex-col text-left">
-              <div className="flex items-center gap-1 font-heading font-black text-sm sm:text-base tracking-tight leading-none text-primary">
-                <span>EDDY&apos;S</span>
-                <span className="text-secondary">AI</span>
-              </div>
-              <span className="text-[9px] font-bold tracking-widest uppercase text-slate-400 mt-0.5">
-                English Companion
-              </span>
-            </div>
+            <Image
+              src="/images/logo-academy.webp"
+              alt="EDDY'S AI Academy"
+              width={140}
+              height={38}
+              className="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-102"
+              priority
+            />
           </Link>
         </div>
 

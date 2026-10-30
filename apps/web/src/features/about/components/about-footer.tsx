@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function AboutFooter() {
   return (
@@ -9,20 +10,16 @@ export function AboutFooter() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
           {/* Logo & Brand */}
-          <div className="flex items-center gap-3">
-            <div
-              className="w-8 h-8 rounded-md bg-primary flex items-center justify-center border border-primary/60"
-              style={{
-                boxShadow: "0 2px 0 #081d33",
-              }}
-            >
-              <span className="font-heading font-extrabold text-sm text-accent">
-                E
-              </span>
+          <div className="flex items-center gap-2.5">
+            <div className="bg-white/95 px-2.5 py-1 rounded-xl shadow-xs border border-white/20">
+              <Image
+                src="/images/logo-academy.webp"
+                alt="EDDY'S AI Academy"
+                width={120}
+                height={32}
+                className="h-6 w-auto object-contain"
+              />
             </div>
-            <span className="font-heading font-extrabold text-white text-sm tracking-tight">
-              EDDY&apos;S AI
-            </span>
             <span className="text-xs text-slate-500">
               &bull; Yayasan Eddys Edukasi Mandiri
             </span>

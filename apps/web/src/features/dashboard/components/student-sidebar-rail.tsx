@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   LayoutGrid,
@@ -89,18 +90,15 @@ export function StudentSidebarRail({ isOpen, onToggle }: StudentSidebarRailProps
           <div className="space-y-6">
             {/* Brand Header */}
             <div className="flex items-center justify-between px-1">
-              <Link href="/dashboard" onClick={handleNavClick} className="flex items-center gap-2.5">
-                <div className="w-10 h-10 rounded-2xl bg-[#0D3B66] border-b-2 border-[#082542] shadow-[0_1px_2px_rgba(13,59,102,0.3),inset_0_1px_0_rgba(255,255,255,0.2)] flex items-center justify-center shrink-0">
-                  <span className="text-[#F4B41A] font-black text-base tracking-tighter">E</span>
-                </div>
-                <div className="leading-none">
-                  <span className="font-black text-[#0D3B66] dark:text-white text-sm tracking-tight block">
-                    EDDY&apos;S <span className="text-[#F4B41A]">ENGLISH</span>
-                  </span>
-                  <span className="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider block mt-1">
-                    Student Portal
-                  </span>
-                </div>
+              <Link href="/dashboard" onClick={handleNavClick} className="flex items-center gap-2">
+                <Image
+                  src="/images/logo-academy.webp"
+                  alt="EDDY'S AI Academy"
+                  width={130}
+                  height={36}
+                  className="h-8 w-auto object-contain"
+                  priority
+                />
               </Link>
 
               {/* Collapse Button with Anime.js */}

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ShieldCheck } from "lucide-react";
 
 export function LandingFooter() {
@@ -11,13 +12,14 @@ export function LandingFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-slate-200/80">
           {/* ================= COL 1: BRAND & YAYASAN (5 COLS) ================= */}
           <div className="lg:col-span-5 space-y-3.5">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-primary text-accent flex items-center justify-center font-heading font-black text-base shadow-xs">
-                E
-              </div>
-              <span className="font-heading font-extrabold text-lg sm:text-xl text-primary tracking-tight">
-                EDDY&apos;S AI
-              </span>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/images/logo-academy.webp"
+                alt="EDDY'S AI Academy"
+                width={140}
+                height={38}
+                className="h-8 sm:h-9 w-auto object-contain"
+              />
             </div>
 
             <p className="text-slate-600 leading-relaxed max-w-sm">
@@ -25,8 +27,8 @@ export function LandingFooter() {
               Di bawah naungan yayasan pendidikan berpengalaman 40+ tahun.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs text-xs font-semibold text-primary">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white border border-slate-200 border-b-2 border-b-slate-300/80 shadow-2xs text-xs font-semibold text-primary">
+              <ShieldCheck className="w-4 h-4 text-emerald-600 stroke-[2.2]" />
               <span>Terakreditasi Resmi BAN PAUD &amp; PNF</span>
             </div>
           </div>
@@ -94,6 +96,11 @@ export function LandingFooter() {
               <li>
                 <Link href="/about" className="hover:text-primary transition-colors font-medium text-secondary">
                   Tentang Kami
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-primary transition-colors">
+                  Kontak &amp; Cabang
                 </Link>
               </li>
             </ul>

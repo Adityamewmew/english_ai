@@ -273,18 +273,12 @@ export function CertificateCard({ data, onClose, isModal = true }: CertificateCa
             </div>
 
             <div className="text-right">
-              <div className="flex items-center justify-end gap-1.5">
-                <div className="w-6 h-6 rounded bg-[#0D3B66] text-[#F4B41A] flex items-center justify-center font-black text-[10px]">
-                  E
-                </div>
-                <span className="font-serif font-black tracking-wider text-sm sm:text-base text-[#0D3B66]">
-                  EDDY&apos;S
-                </span>
-              </div>
-              <p className="text-[7.5px] sm:text-[9px] text-rose-600 font-bold uppercase tracking-wider">
-                Great Communicators
-              </p>
-              <p className="text-[7px] text-slate-400 font-mono">SINCE 1990</p>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/logo-academy.png"
+                alt="EDDY'S AI Academy"
+                className="h-8 sm:h-10 w-auto object-contain ml-auto"
+              />
             </div>
           </div>
 

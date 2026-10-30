@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { LogOut } from "lucide-react";
 import { doLogout } from "@/app/(auth)/auth.actions";
 
@@ -20,17 +21,17 @@ export function StudentMobileHeader({
     <header className="lg:hidden sticky top-0 z-30 h-14 bg-white/95 backdrop-blur-md border-b border-slate-200/90 px-4 flex items-center justify-between shadow-2xs">
       {/* Brand Logo */}
       <Link href="/dashboard" className="flex items-center gap-2">
-        <div className="w-8 h-8 rounded-xl bg-[#0D3B66] border-b-2 border-[#082542] shadow-[0_1px_2px_rgba(13,59,102,0.3),inset_0_1px_0_rgba(255,255,255,0.2)] flex items-center justify-center shrink-0">
-          <span className="text-[#F4B41A] font-black text-xs">E</span>
-        </div>
-        <div className="leading-tight">
-          <span className="font-black text-[#0D3B66] text-xs tracking-tight block">
-            EDDY&apos;S <span className="text-[#F4B41A]">ENGLISH</span>
-          </span>
-          <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">
-            Level {currentCefr}
-          </span>
-        </div>
+        <Image
+          src="/images/logo-academy.webp"
+          alt="EDDY'S AI Academy"
+          width={115}
+          height={32}
+          className="h-7 w-auto object-contain"
+          priority
+        />
+        <span className="text-[10px] font-bold text-slate-500 bg-surface px-1.5 py-0.5 rounded border border-slate-200">
+          {currentCefr}
+        </span>
       </Link>
 
       {/* Right: Student Avatar & Logout */}
