@@ -5,9 +5,19 @@ import { db } from "../db";
 import * as schema from "../db/schema";
 import { DEFAULT_ADMIN_EMAILS } from "@english-ai/shared";
 
+if (process.env.NODE_ENV === "production" && !process.env.BETTER_AUTH_SECRET) {
+  throw new Error("FATAL SECURITY CONFIGURATION: BETTER_AUTH_SECRET must be configured in production environment!");
+}
+
+const authSecret =
+  process.env.BETTER_AUTH_SECRET ||
+  (process.env.NODE_ENV !== "production"
+    ? "eddy_english_ai_dev_secret_insecure_do_not_use_in_prod"
+    : "");
+
 export const auth = betterAuth({
   baseURL: process.env.BETTER_AUTH_URL || "https://eddys.drimland.my.id",
-  secret: process.env.BETTER_AUTH_SECRET || "eddy_english_ai_secret_key_change_me_in_prod",
+  secret: authSecret,
   trustedOrigins: [
     "https://eddys.drimland.my.id",
     "http://eddys.drimland.my.id",

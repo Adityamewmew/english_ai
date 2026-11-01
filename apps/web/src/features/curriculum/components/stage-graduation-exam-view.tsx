@@ -28,7 +28,7 @@ interface StageGraduationExamViewProps {
   onStepComplete?: () => void;
   onRewardXp: (amount: number) => void;
   studentName?: string;
-  onSubmitExam?: (finalScore: number) => Promise<void>;
+  onSubmitExam?: (finalScore: number, examAnswers?: Record<string, any>) => Promise<void>;
 }
 
 export function StageGraduationExamView({
@@ -365,7 +365,24 @@ export function StageGraduationExamView({
   }
 
   // Step 6: Final Scorecard & Official Sub-Level Certificate
-  // Auto-submit score to backend to unlock next module and save progress
+  // Auto-submit score and verified answers to backend to unlock next module and save progress
+  const examAnswers = useMemo(() => {
+    const ans: Record<string, any> = {};
+    readingList.forEach((q, idx) => {
+      if (readingAnswers[idx]) ans[q.id || `r-${idx}`] = readingAnswers[idx];
+    });
+    listeningList.forEach((q, idx) => {
+      if (listeningAnswers[idx]) ans[q.id || `l-${idx}`] = listeningAnswers[idx];
+    });
+    writingList.forEach((q, idx) => {
+      if (writingAnswers[idx]) ans[q.id || `w-${idx}`] = writingAnswers[idx];
+    });
+    speakingList.forEach((q, idx) => {
+      if (speakingCompleted[idx]) ans[q.id || `s-${idx}`] = "completed";
+    });
+    return ans;
+  }, [readingAnswers, listeningAnswers, writingAnswers, speakingCompleted, readingList, listeningList, writingList, speakingList]);
+
   return (
     <ExamCertificateViewWithAutoSubmit
       scores={scores}
@@ -373,6 +390,7 @@ export function StageGraduationExamView({
       studentName={studentName}
       passingScore={passingScore}
       onSubmitExam={onSubmitExam}
+      examAnswers={examAnswers}
       isSubmittingExam={isSubmittingExam}
       isExamSubmitted={isExamSubmitted}
       setIsSubmittingExam={setIsSubmittingExam}
@@ -388,6 +406,7 @@ function ExamCertificateViewWithAutoSubmit({
   studentName,
   passingScore,
   onSubmitExam,
+  examAnswers,
   isSubmittingExam,
   isExamSubmitted,
   setIsSubmittingExam,
@@ -398,7 +417,8 @@ function ExamCertificateViewWithAutoSubmit({
   moduleData: any;
   studentName: string;
   passingScore: number;
-  onSubmitExam?: (score: number) => Promise<void>;
+  onSubmitExam?: (score: number, examAnswers?: Record<string, any>) => Promise<void>;
+  examAnswers: Record<string, any>;
   isSubmittingExam: boolean;
   isExamSubmitted: boolean;
   setIsSubmittingExam: (val: boolean) => void;
@@ -409,12 +429,12 @@ function ExamCertificateViewWithAutoSubmit({
     if (!hasSubmittedRef.current && onSubmitExam) {
       hasSubmittedRef.current = true;
       setIsSubmittingExam(true);
-      onSubmitExam(scores.totalScore)
+      onSubmitExam(scores.totalScore, examAnswers)
         .then(() => setIsExamSubmitted(true))
         .catch((err) => console.error("Auto submit exam failed:", err))
         .finally(() => setIsSubmittingExam(false));
     }
-  }, [onSubmitExam, scores.totalScore, hasSubmittedRef, setIsSubmittingExam, setIsExamSubmitted]);
+  }, [onSubmitExam, scores.totalScore, examAnswers, hasSubmittedRef, setIsSubmittingExam, setIsExamSubmitted]);
 
   return (
     <ExamCertificateView

@@ -1,11 +1,27 @@
 import { paymentRepository } from "../../repository/payment.repository";
 import { classRepository } from "../../repository/class_repository";
-import { NotFoundError, ValidationError } from "../../../common/errors/app-error";
+import { NotFoundError, ForbiddenError } from "../../../common/errors/app-error";
+import { isUserAdmin } from "@english-ai/shared";
 
-export async function simulateSandboxPaymentUsecase(orderId: string) {
+export async function simulateSandboxPaymentUsecase(
+  orderId: string,
+  user?: { id: string; role?: string | null; email?: string | null; accessType?: number | null } | null
+) {
+  const isProduction =
+    process.env.NODE_ENV === "production" ||
+    (process.env.SINGAPAY_ENVIRONMENT || "").toLowerCase() === "production";
+  if (isProduction) {
+    throw new ForbiddenError("Simulasi pembayaran dinonaktifkan di lingkungan produksi.");
+  }
+
   const tx = await paymentRepository.findByOrderId(orderId);
   if (!tx) {
     throw new NotFoundError("Pesanan pembayaran tidak ditemukan.");
+  }
+
+  // Validate ownership: only order creator or admin can simulate
+  if (user && tx.userId !== user.id && !isUserAdmin(user)) {
+    throw new ForbiddenError("Anda tidak memiliki izin untuk mensimulasikan pesanan ini.");
   }
 
   if (tx.status === "paid") {

@@ -23,6 +23,7 @@ interface StageReadingViewProps {
   cefr?: string;
   onNextStep?: () => void;
   onStepComplete?: () => void;
+  onAnswersChange?: (answers: Record<string, any>) => void;
 }
 
 export function StageReadingView({
@@ -39,6 +40,7 @@ export function StageReadingView({
   cefr = "A1.1",
   onNextStep,
   onStepComplete,
+  onAnswersChange,
 }: StageReadingViewProps) {
   const vocabItems = vocabSec?.content?.items || theorySec?.content?.items || [];
   const readingPassage = dialogueSec?.content || theorySec?.content?.readingPassage || theorySec?.content;
@@ -212,6 +214,7 @@ export function StageReadingView({
             accentColor="blue"
             embedded={true}
             onCompleted={onStepComplete}
+            onAnswersChange={onAnswersChange}
           />
         </div>
       )}

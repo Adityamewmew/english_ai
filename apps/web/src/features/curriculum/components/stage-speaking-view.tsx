@@ -17,6 +17,7 @@ interface StageSpeakingViewProps {
   onNextStep?: () => void;
   onStepComplete?: () => void;
   cefr?: string;
+  onAnswersChange?: (answers: Record<string, any>, speakingScore?: number) => void;
 }
 
 export function StageSpeakingView({
@@ -29,6 +30,7 @@ export function StageSpeakingView({
   onNextStep,
   onStepComplete,
   cefr = "A1.1",
+  onAnswersChange,
 }: StageSpeakingViewProps) {
   return (
     <div className="space-y-6">
@@ -86,6 +88,7 @@ export function StageSpeakingView({
           quizSec={quizSec}
           tutor={tutor}
           onRewardXp={onRewardXp}
+          onAnswersChange={onAnswersChange}
           onNextStep={() => {
             onStepComplete?.();
             onNextStep?.();

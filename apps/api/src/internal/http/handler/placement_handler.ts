@@ -12,6 +12,7 @@ import { AiService } from "../../../lib/ai";
 import { jsonResponse } from "../../presenter/json";
 import { authPlugin } from "../../../lib/auth";
 import { UnauthorizedError, ForbiddenError } from "../../../common/errors/app-error";
+import { isUserAdmin } from "@english-ai/shared";
 
 export const placementHandler = new Elysia({ prefix: "/api/placement" })
   .use(authPlugin)
@@ -26,13 +27,12 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
   })
   .get(
     "/latest/:userId",
-    async ({ params, user, headers, set }) => {
-      const activeUser = user || (headers["x-user-id"] ? { id: headers["x-user-id"] as string, role: "user", accessType: 2 } : null);
-      if (!activeUser) {
+    async ({ params, user, set }) => {
+      if (!user) {
         throw new UnauthorizedError("Autentikasi diperlukan untuk melihat hasil placement test.");
       }
-      const isAdmin = (activeUser as any).role === "admin" || (activeUser as any).accessType === 1;
-      if (activeUser.id !== params.userId && !isAdmin) {
+      const isAdmin = isUserAdmin(user);
+      if (user.id !== params.userId && !isAdmin) {
         throw new ForbiddenError("Kamu tidak memiliki izin untuk melihat hasil tes siswa lain.");
       }
 
@@ -93,8 +93,8 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
   )
   .post(
     "/submit",
-    async ({ body, user, headers, set }) => {
-      const activeUserId = (user as any)?.id || body.userId || (headers["x-user-id"] as string);
+    async ({ body, user, set }) => {
+      const activeUserId = user?.id;
       if (!activeUserId) {
         throw new UnauthorizedError("Autentikasi diperlukan untuk mengirim tes penempatan.");
       }

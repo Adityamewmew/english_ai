@@ -17,15 +17,10 @@ import { UnauthorizedError } from "../../../common/errors/app-error";
 
 export const chatHandler = new Elysia({ prefix: "/api/chat" })
   .use(authPlugin)
-  .get("/sessions", async ({ query, headers, user, set }) => {
-    const activeUserId = (user as any)?.id || (query as any)?.userId || headers["x-user-id"];
+  .get("/sessions", async ({ user, set }) => {
+    const activeUserId = user?.id;
     if (!activeUserId) {
-      return jsonResponse({
-        set,
-        statusCode: 200,
-        message: "No user specified",
-        data: [],
-      });
+      throw new UnauthorizedError("Autentikasi diperlukan untuk melihat sesi obrolan.");
     }
     const data = await listChatSessionsUsecase(activeUserId);
     return jsonResponse({
@@ -37,9 +32,12 @@ export const chatHandler = new Elysia({ prefix: "/api/chat" })
   }, { auth: true })
   .post(
     "/sessions",
-    async ({ body, headers, user, set }) => {
-      const resolvedUserId = (user as any)?.id || body.userId || headers["x-user-id"] || "anonymous";
-      const session = await createChatSessionUsecase(resolvedUserId, body.title);
+    async ({ body, user, set }) => {
+      const activeUserId = user?.id;
+      if (!activeUserId) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk membuat sesi obrolan.");
+      }
+      const session = await createChatSessionUsecase(activeUserId, body.title);
       return jsonResponse({
         set,
         statusCode: 201,
@@ -51,8 +49,8 @@ export const chatHandler = new Elysia({ prefix: "/api/chat" })
   )
   .get(
     "/sessions/:id",
-    async ({ params, headers, user, set }) => {
-      const activeUserId = (user as any)?.id || headers["x-user-id"];
+    async ({ params, user, set }) => {
+      const activeUserId = user?.id;
       if (!activeUserId) {
         throw new UnauthorizedError("Autentikasi diperlukan untuk melihat sesi obrolan.");
       }
@@ -72,8 +70,8 @@ export const chatHandler = new Elysia({ prefix: "/api/chat" })
   )
   .delete(
     "/sessions/:id",
-    async ({ params, headers, user, set }) => {
-      const activeUserId = (user as any)?.id || headers["x-user-id"];
+    async ({ params, user, set }) => {
+      const activeUserId = user?.id;
       if (!activeUserId) {
         throw new UnauthorizedError("Autentikasi diperlukan untuk menghapus sesi obrolan.");
       }
@@ -89,11 +87,17 @@ export const chatHandler = new Elysia({ prefix: "/api/chat" })
   )
   .post(
     "/sessions/:id/stream",
-    async ({ params, body, headers, user }) => {
-      const { message, userId, clientMessageId } = body;
-      const resolvedUserId = (user as any)?.id || userId || headers["x-user-id"] || "anonymous";
+    async ({ params, body, user }) => {
+      const activeUserId = user?.id;
+      if (!activeUserId) {
+        return new Response(JSON.stringify({ error: "Unauthorized" }), {
+          status: 401,
+          headers: { "Content-Type": "application/json" },
+        });
+      }
 
-      const session = await getChatSessionDetailUsecase(params.id, resolvedUserId !== "anonymous" ? resolvedUserId : undefined);
+      const { message, clientMessageId } = body;
+      const session = await getChatSessionDetailUsecase(params.id, activeUserId);
       if (!session) {
         return new Response(JSON.stringify({ error: "Session not found or access denied" }), {
           status: 404,
@@ -117,7 +121,7 @@ export const chatHandler = new Elysia({ prefix: "/api/chat" })
             for await (const chunk of streamChatTurnUsecase({
               sessionId: params.id,
               studentMessage: message,
-              userId: resolvedUserId,
+              userId: activeUserId,
               clientMessageId,
             })) {
               const data = JSON.stringify({

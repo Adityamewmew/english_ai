@@ -166,10 +166,7 @@ export function PracticumDrillCard({
     });
 
     const ratio = targetWords.length > 0 ? matchCount / targetWords.length : 1;
-    let score = Math.round(ratio * 100);
-    if (score >= 60) score = Math.max(score, 80);
-    else if (score > 0) score = Math.max(score, 70);
-    else score = 75; // Graceful baseline for beginner participation
+    const score = Math.round(ratio * 100);
 
     setAccuracyScore(score);
   };

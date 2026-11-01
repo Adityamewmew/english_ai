@@ -147,8 +147,8 @@ export function PracticumRoleplayCall({
     setIsRecordingStudent(false);
     setIsPendingSend(false);
 
-    // Calculate score based on conversational turns
-    const earnedScore = turnsCount >= 2 ? 100 : turnsCount === 1 ? 85 : 75;
+    // Calculate score based on conversational turns (0 turns = 0 score)
+    const earnedScore = turnsCount >= 2 ? 100 : turnsCount === 1 ? 85 : 0;
     playMatchSuccessSound();
     onComplete(earnedScore);
   };

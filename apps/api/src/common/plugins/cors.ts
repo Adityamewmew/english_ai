@@ -22,5 +22,5 @@ export const corsPlugin: ReturnType<typeof elysiaCors> = elysiaCors({
   },
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"],
   credentials: true,
-  allowedHeaders: ["Content-Type", "Authorization", "Cookie", "x-user-id"],
+  allowedHeaders: ["Content-Type", "Authorization", "Cookie"],
 });

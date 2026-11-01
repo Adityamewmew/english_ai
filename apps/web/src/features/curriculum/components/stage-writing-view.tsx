@@ -17,6 +17,7 @@ interface StageWritingViewProps {
   onNextStep?: () => void;
   onStepComplete?: () => void;
   cefr?: string;
+  onAnswersChange?: (answers: Record<string, any>) => void;
 }
 
 export function StageWritingView({
@@ -28,6 +29,7 @@ export function StageWritingView({
   onRewardXp,
   onNextStep,
   onStepComplete,
+  onAnswersChange,
 }: StageWritingViewProps) {
   return (
     <div className="space-y-6">
@@ -93,6 +95,7 @@ export function StageWritingView({
           quizSec={quizSec}
           onRewardXp={onRewardXp}
           tutor={tutor}
+          onAnswersChange={onAnswersChange}
           onFinish={() => {
             onStepComplete?.();
             onNextStep?.();

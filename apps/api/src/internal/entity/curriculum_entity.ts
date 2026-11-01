@@ -36,7 +36,7 @@ export const SubModuleIdParam = t.Object({
 
 export const SubmitSubModuleBody = t.Object({
   userId: t.Optional(t.String()),
-  answers: t.Optional(t.Record(t.String(), t.Union([t.Number(), t.String()]))),
+  answers: t.Optional(t.Record(t.String(), t.Any())),
   score: t.Optional(t.Number()),
   speakingScore: t.Optional(t.Number()),
 });

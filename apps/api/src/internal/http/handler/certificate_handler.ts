@@ -11,7 +11,7 @@ export const certificateHandler = new Elysia({ prefix: "/api/curriculum/certific
   .get(
     "/status",
     async ({ query, user, set }) => {
-      const activeUserId = user?.id || query?.userId;
+      const activeUserId = user?.id;
       if (!activeUserId) {
         throw new UnauthorizedError("Autentikasi diperlukan untuk melihat status sertifikat.");
       }
@@ -37,7 +37,7 @@ export const certificateHandler = new Elysia({ prefix: "/api/curriculum/certific
   .post(
     "/claim",
     async ({ body, user, set }) => {
-      const activeUserId = user?.id || body?.userId;
+      const activeUserId = user?.id;
       if (!activeUserId) {
         throw new UnauthorizedError("Autentikasi diperlukan untuk mengklaim sertifikat.");
       }
@@ -60,8 +60,8 @@ export const certificateHandler = new Elysia({ prefix: "/api/curriculum/certific
   )
   .get(
     "/my",
-    async ({ query, user, set }) => {
-      const activeUserId = user?.id || query?.userId;
+    async ({ user, set }) => {
+      const activeUserId = user?.id;
       if (!activeUserId) {
         throw new UnauthorizedError("Autentikasi diperlukan untuk melihat sertifikat Anda.");
       }

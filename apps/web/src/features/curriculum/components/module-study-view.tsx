@@ -98,6 +98,14 @@ export function ModuleStudyView({
   const [xpPoints, setXpPoints] = useState(35);
   const [combo, setCombo] = useState(1);
   const [isFinishing, setIsFinishing] = useState(false);
+  const [stageAnswers, setStageAnswers] = useState<Record<string, any>>({});
+  const [stageSpeakingScore, setStageSpeakingScore] = useState<number | undefined>(undefined);
+
+  // Reset stage answers when switching submodules
+  React.useEffect(() => {
+    setStageAnswers({});
+    setStageSpeakingScore(undefined);
+  }, [activeMissionId]);
 
   const selectedSubIndex = useMemo(() => {
     const idx = subModules.findIndex((s) => s.id === activeMissionId);
@@ -202,9 +210,18 @@ export function ModuleStudyView({
       try {
         setIsFinishing(true);
         if (currentSub?.id) {
-          await submitSubModuleAction(currentSub.id, { score: 100 }, moduleId);
-          playFanfareSound();
-          onRefresh?.();
+          const res = await submitSubModuleAction(
+            currentSub.id,
+            {
+              answers: stageAnswers,
+              speakingScore: stageSpeakingScore,
+            },
+            moduleId
+          );
+          if (res?.data?.passed) {
+            playFanfareSound();
+            onRefresh?.();
+          }
         }
       } catch (err) {
         console.error("Failed to submit submodule:", err);
@@ -216,16 +233,19 @@ export function ModuleStudyView({
     }
   };
 
-  const handleExamSubmit = async (finalScore: number) => {
+  const handleExamSubmit = async (finalScore: number, examAnswers?: Record<string, any>) => {
     if (!currentSub?.id) return;
     try {
       setIsFinishing(true);
       const res = await submitSubModuleAction(
         currentSub.id,
-        { score: finalScore },
+        {
+          score: finalScore,
+          answers: examAnswers || {},
+        },
         moduleId
       );
-      if (res.success) {
+      if (res.success && res.data?.passed) {
         playFanfareSound();
         onRefresh?.();
       }
@@ -431,6 +451,10 @@ export function ModuleStudyView({
                     studentName={studentName}
                     isAdmin={isAdmin}
                     onSubmitExam={handleExamSubmit}
+                    onAnswersChange={(ans, spk) => {
+                      setStageAnswers(ans);
+                      if (spk !== undefined) setStageSpeakingScore(spk);
+                    }}
                   />
                 </div>
 

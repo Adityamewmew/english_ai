@@ -21,6 +21,7 @@ interface ConceptChecksCardProps {
   embedded?: boolean;
   isAdmin?: boolean;
   onCompleted?: () => void;
+  onAnswersChange?: (answers: Record<string, any>) => void;
 }
 
 export function isOptionCorrect(
@@ -74,6 +75,7 @@ export function ConceptChecksCard({
   embedded = false,
   isAdmin: propIsAdmin,
   onCompleted,
+  onAnswersChange,
 }: ConceptChecksCardProps) {
   const { data: sessionUser } = useSession();
   const isAdmin = Boolean(propIsAdmin || isUserAdmin(sessionUser));
@@ -120,6 +122,7 @@ export function ConceptChecksCard({
     const updated = { ...selectedAnswers, [qIdx]: option };
     setSelectedAnswers(updated);
     setShowFeedback((prev) => ({ ...prev, [qIdx]: true }));
+    onAnswersChange?.(updated);
 
     if (Object.keys(updated).length >= conceptChecks.length) {
       onCompleted?.();

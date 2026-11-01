@@ -392,7 +392,7 @@ export function PlacementWizardMobile({
             <button
               type="button"
               onClick={onSubmit}
-              disabled={isSubmitting}
+              disabled={isSubmitting || answeredCount < 5}
               className="flex items-center justify-center gap-1.5 py-3 px-4 rounded-2xl bg-secondary hover:bg-[#d4720e] text-white text-xs font-extrabold border-b-3 border-b-[#a85507] active:border-b-0 active:translate-y-1 shadow-sm transition-all disabled:opacity-50 min-h-[48px]"
             >
               {isSubmitting ? (
@@ -400,6 +400,8 @@ export function PlacementWizardMobile({
                   <Loader2 className="w-4 h-4 animate-spin text-white" />
                   <span>Evaluating...</span>
                 </>
+              ) : answeredCount < 5 ? (
+                <span>Answer min. 5 ({answeredCount}/5)</span>
               ) : (
                 <span>Submit Assessment</span>
               )}
@@ -422,10 +424,10 @@ export function PlacementWizardMobile({
             <button
               type="button"
               onClick={onSubmit}
-              disabled={isSubmitting || answeredCount === 0}
+              disabled={isSubmitting || answeredCount < 5}
               className="text-xs font-semibold text-slate-500 hover:text-slate-800 underline active:opacity-75 transition-colors disabled:opacity-30 disabled:no-underline"
             >
-              Finish early? Submit answers now ({answeredCount}/{totalQuestions})
+              Finish early? Submit answers now ({answeredCount >= 5 ? `${answeredCount}/${totalQuestions}` : `min. 5 needed, current: ${answeredCount}`})
             </button>
           </div>
         )}

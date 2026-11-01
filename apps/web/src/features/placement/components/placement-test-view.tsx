@@ -77,6 +77,11 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
     e.preventDefault();
     setErrorMsg(null);
 
+    if (answeredCount < 5) {
+      setErrorMsg("Mohon jawab minimal 5 pertanyaan sebelum mengirim tes penilaian.");
+      return;
+    }
+
     try {
       const data = await submitMutation.mutateAsync({
         userId: userId || "anonymous",

@@ -37,7 +37,8 @@ interface ModuleStageViewportProps {
   moduleData?: any;
   studentName?: string;
   isAdmin?: boolean;
-  onSubmitExam?: (finalScore: number) => Promise<void>;
+  onSubmitExam?: (finalScore: number, examAnswers?: Record<string, any>) => Promise<void>;
+  onAnswersChange?: (answers: Record<string, any>, speakingScore?: number) => void;
 }
 
 export function ModuleStageViewport({
@@ -63,6 +64,7 @@ export function ModuleStageViewport({
   studentName,
   isAdmin = false,
   onSubmitExam,
+  onAnswersChange,
 }: ModuleStageViewportProps) {
   const effectiveCanProceed = isAdmin || canProceed;
   return (
@@ -92,6 +94,7 @@ export function ModuleStageViewport({
             onRewardXp={onRewardXp}
             onNextStep={onNextStep}
             onStepComplete={onStepComplete}
+            onAnswersChange={onAnswersChange}
             cefr={cefr}
           />
         ) : skillType === "writing" ? (
@@ -104,6 +107,7 @@ export function ModuleStageViewport({
             onRewardXp={onRewardXp}
             onNextStep={onNextStep}
             onStepComplete={onStepComplete}
+            onAnswersChange={onAnswersChange}
             cefr={cefr}
           />
         ) : skillType === "speaking" ? (
@@ -116,6 +120,7 @@ export function ModuleStageViewport({
             onRewardXp={onRewardXp}
             onNextStep={onNextStep}
             onStepComplete={onStepComplete}
+            onAnswersChange={onAnswersChange}
             cefr={cefr}
           />
         ) : (
@@ -133,6 +138,7 @@ export function ModuleStageViewport({
             cefr={cefr}
             onNextStep={onNextStep}
             onStepComplete={onStepComplete}
+            onAnswersChange={onAnswersChange}
           />
         )}
       </div>

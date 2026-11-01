@@ -49,20 +49,22 @@ export async function processSingapayWebhookUsecase(params: {
   headers: Record<string, string | undefined>;
   endpoint: string;
 }) {
-  // Validate signature if configured
+  // Validate signature (fail-closed for security)
   const clientSecret = process.env.SINGAPAY_CLIENT_SECRET || process.env.SINGAPAY_HMAC_KEY;
-  const isSandbox = (process.env.SINGAPAY_ENVIRONMENT || "sandbox").toLowerCase() === "sandbox";
 
-  if (clientSecret) {
-    const isValid = verifyWebhookSignature(
-      params.rawBody,
-      params.headers,
-      clientSecret,
-      params.endpoint
-    );
-    if (!isValid && !isSandbox) {
-      return { success: false, statusCode: 401, message: "Invalid webhook signature" };
-    }
+  if (!clientSecret) {
+    console.error("FATAL: SINGAPAY_CLIENT_SECRET is missing. Rejecting webhook request.");
+    return { success: false, statusCode: 500, message: "Webhook verification configuration error" };
+  }
+
+  const isValid = verifyWebhookSignature(
+    params.rawBody,
+    params.headers,
+    clientSecret,
+    params.endpoint
+  );
+  if (!isValid) {
+    return { success: false, statusCode: 401, message: "Invalid webhook signature" };
   }
 
   let body: any;

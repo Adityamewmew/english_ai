@@ -10,10 +10,17 @@ export interface SessionUser {
 }
 
 const SESSION_COOKIE_NAME = "eddy_session";
+
+if (process.env.NODE_ENV === "production" && !process.env.BETTER_AUTH_SECRET && !process.env.NEXTAUTH_SECRET) {
+  throw new Error("FATAL SECURITY CONFIGURATION: BETTER_AUTH_SECRET must be configured in production environment!");
+}
+
 const SESSION_SECRET =
   process.env.BETTER_AUTH_SECRET ||
   process.env.NEXTAUTH_SECRET ||
-  "eddy_english_ai_secret_key_change_me_in_prod";
+  (process.env.NODE_ENV !== "production"
+    ? "eddy_english_ai_dev_secret_insecure_do_not_use_in_prod"
+    : "");
 
 /**
  * Sign session payload using native Web Crypto HMAC-SHA256 (Constant-time verification)

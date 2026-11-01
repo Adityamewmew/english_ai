@@ -20,18 +20,14 @@ export const usersApi = {
     return data?.data;
   },
 
-  updateProfile: async (id: string, payload: any, updaterId?: string) => {
-    const { data, error } = await apiClient.api.user({ id }).put(payload, {
-      headers: updaterId ? { "x-user-id": updaterId } : undefined,
-    });
+  updateProfile: async (id: string, payload: any) => {
+    const { data, error } = await apiClient.api.user({ id }).put(payload);
     if (error) throw new Error(String(error.value));
     return data?.data;
   },
 
-  deleteUser: async (id: string, deleterId?: string) => {
-    const { data, error } = await apiClient.api.user({ id }).delete(undefined, {
-      headers: deleterId ? { "x-user-id": deleterId } : undefined,
-    });
+  deleteUser: async (id: string) => {
+    const { data, error } = await apiClient.api.user({ id }).delete();
     if (error) throw new Error(String(error.value));
     return data;
   },

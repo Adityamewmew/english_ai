@@ -44,6 +44,7 @@ interface WritingPracticumStageProps {
   tutor: any;
   onFinish?: () => void;
   isAdmin?: boolean;
+  onAnswersChange?: (answers: Record<string, any>) => void;
 }
 
 export function WritingPracticumStage({
@@ -52,6 +53,7 @@ export function WritingPracticumStage({
   tutor,
   onFinish,
   isAdmin: propIsAdmin,
+  onAnswersChange,
 }: WritingPracticumStageProps) {
   const { data: sessionUser } = useSession();
   const isAdmin = Boolean(propIsAdmin || isUserAdmin(sessionUser));
@@ -204,6 +206,7 @@ export function WritingPracticumStage({
     } else {
       playFanfareSound();
       setIsCompletedAll(true);
+      onAnswersChange?.(typedInputs);
       onFinish?.();
     }
   };
@@ -355,7 +358,11 @@ export function WritingPracticumStage({
             value={userText}
             onChange={(e) => {
               const val = e.target.value;
-              setTypedInputs((prev) => ({ ...prev, [question.id]: val }));
+              setTypedInputs((prev) => {
+                const updated = { ...prev, [question.id]: val };
+                onAnswersChange?.(updated);
+                return updated;
+              });
               if (currentEval) {
                 setEvaluations((prev) => ({
                   ...prev,

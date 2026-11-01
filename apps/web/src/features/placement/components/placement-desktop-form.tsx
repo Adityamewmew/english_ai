@@ -38,6 +38,12 @@ export function PlacementDesktopForm({
   isSubmitting,
   errorMsg,
 }: PlacementDesktopFormProps) {
+  const answeredCount =
+    Object.keys(mcqAnswers).length +
+    Object.keys(listeningAnswers).length +
+    Object.values(writingAnswers).filter((t) => t && t.trim().length > 3).length +
+    Object.values(speakingAnswers).filter((t) => t && t.trim().length > 2).length;
+
   return (
     <form onSubmit={onSubmit} className="space-y-6">
       {/* Section 1: Grammar & Vocabulary (10 MCQ) */}
@@ -240,7 +246,7 @@ export function PlacementDesktopForm({
 
         <button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting || answeredCount < 5}
           className="w-full sm:w-auto min-w-[280px] min-h-[52px] px-8 py-3.5 bg-secondary hover:bg-[#d4720e] text-white rounded-2xl text-sm font-extrabold border-b-4 border-b-[#a85507] active:border-b-0 active:translate-y-1 shadow-md transition-all disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
         >
           {isSubmitting ? (
@@ -248,6 +254,8 @@ export function PlacementDesktopForm({
               <Loader2 className="w-4 h-4 animate-spin text-white" />
               Evaluating...
             </span>
+          ) : answeredCount < 5 ? (
+            `Answer at least 5 questions (${answeredCount}/5)`
           ) : (
             "Submit Assessment"
           )}

@@ -22,10 +22,10 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
   .use(authPlugin)
   .post(
     "/sessions",
-    async ({ body, headers, user, set }) => {
-      const resolvedUserId = (user as any)?.id || body.userId || (headers["x-user-id"] as string);
+    async ({ body, user, set }) => {
+      const resolvedUserId = user?.id;
 
-      if (!resolvedUserId || resolvedUserId === "anonymous") {
+      if (!resolvedUserId) {
         throw new UnauthorizedError("Autentikasi akun diperlukan untuk memulai sesi panggilan suara AI.");
       }
 
@@ -113,9 +113,9 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
   )
   .post(
     "/turn-stream",
-    async ({ body, headers, user }) => {
-      const { sessionId, topic, history, studentMessage, userId, turnIndex = 0, moduleId } = body;
-      const resolvedUserId = (user as any)?.id || userId || (headers["x-user-id"] as string);
+    async ({ body, user }) => {
+      const { sessionId, topic, history, studentMessage, turnIndex = 0, moduleId } = body;
+      const resolvedUserId = user?.id;
       const encoder = new TextEncoder();
       let sentenceIndex = 0;
       const accumulatedSentences: string[] = [];
@@ -131,7 +131,7 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
           }, 15000);
 
           try {
-            if (!resolvedUserId || resolvedUserId === "anonymous") {
+            if (!resolvedUserId) {
               const unauthNote = "Autentikasi akun diperlukan untuk berbicara dalam sesi AI.";
               controller.enqueue(
                 encoder.encode(
@@ -259,10 +259,14 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
   )
   .post(
     "/evaluate",
-    async ({ body, set }) => {
+    async ({ body, user, set }) => {
+      const resolvedUserId = user?.id;
+      if (!resolvedUserId) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk evaluasi sesi.");
+      }
       const data = await evaluateVoiceSessionUsecase({
         sessionId: body.sessionId,
-        userId: body.userId || "anonymous",
+        userId: resolvedUserId,
         topic: body.topic,
         durationSeconds: body.durationSeconds,
         transcript: body.transcript,
@@ -275,17 +279,12 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
         data,
       });
     },
-    { body: VoiceEvaluateBody }
+    { auth: true, body: VoiceEvaluateBody }
   )
-  .get("/sessions", async ({ query, headers, set }) => {
-    const resolvedUserId = (query as any)?.userId || headers["x-user-id"];
+  .get("/sessions", async ({ user, set }) => {
+    const resolvedUserId = user?.id;
     if (!resolvedUserId) {
-      return jsonResponse({
-        set,
-        statusCode: 200,
-        message: "No user specified",
-        data: [],
-      });
+      throw new UnauthorizedError("Autentikasi diperlukan untuk melihat riwayat panggilan suara.");
     }
     const data = await voiceRepository.findByUserId(resolvedUserId, 10);
     return jsonResponse({
@@ -294,4 +293,4 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
       message: "Voice call sessions retrieved",
       data,
     });
-  });
+  }, { auth: true });

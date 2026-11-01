@@ -15,12 +15,20 @@ import { deleteUserUsecase } from "../../usecase/user/delete-user.usecase";
 import { jsonResponse } from "../../presenter/json";
 import { authPlugin } from "../../../lib/auth";
 import { UnauthorizedError, ForbiddenError } from "../../../common/errors/app-error";
+import { isUserAdmin } from "@english-ai/shared";
 
 export const userHandler = new Elysia({ prefix: "/api/user" })
   .use(authPlugin)
   .get(
     "/",
-    async ({ query, set }) => {
+    async ({ query, user, set }) => {
+      if (!user) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk melihat daftar pengguna.");
+      }
+      if (!isUserAdmin(user)) {
+        throw new ForbiddenError("Hanya administrator yang diizinkan melihat direktori pengguna.");
+      }
+
       const data = await listUsersUsecase({
         keywords: query?.keywords,
         role: query?.role,
@@ -34,11 +42,20 @@ export const userHandler = new Elysia({ prefix: "/api/user" })
         data,
       });
     },
-    { query: ListUsersQuery }
+    { auth: true, query: ListUsersQuery }
   )
   .get(
     "/:id",
-    async ({ params, set }) => {
+    async ({ params, user, set }) => {
+      if (!user) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk melihat data pengguna.");
+      }
+      const isOwner = user.id === params.id;
+      const isAdmin = isUserAdmin(user);
+      if (!isOwner && !isAdmin) {
+        throw new ForbiddenError("Kamu tidak memiliki izin untuk melihat profil pengguna lain.");
+      }
+
       const data = await getUserProfileUsecase(params.id);
       return jsonResponse({
         set,
@@ -47,7 +64,7 @@ export const userHandler = new Elysia({ prefix: "/api/user" })
         data,
       });
     },
-    { params: UserIdParam }
+    { auth: true, params: UserIdParam }
   )
   .post(
     "/login",
@@ -77,14 +94,13 @@ export const userHandler = new Elysia({ prefix: "/api/user" })
   )
   .put(
     "/:id",
-    async ({ params, body, headers, user, set }) => {
-      const activeUser = user || (headers["x-user-id"] ? { id: headers["x-user-id"] as string, role: "user", accessType: 2 } : null);
-      if (!activeUser) {
+    async ({ params, body, user, set }) => {
+      if (!user) {
         throw new UnauthorizedError("Autentikasi diperlukan untuk memperbarui profil.");
       }
 
-      const isAdmin = (activeUser as any).role === "admin" || (activeUser as any).accessType === 1;
-      const isOwner = activeUser.id === params.id;
+      const isAdmin = isUserAdmin(user);
+      const isOwner = user.id === params.id;
 
       if (!isOwner && !isAdmin) {
         throw new ForbiddenError("Kamu tidak memiliki izin untuk memperbarui data pengguna lain.");
@@ -97,7 +113,7 @@ export const userHandler = new Elysia({ prefix: "/api/user" })
         delete safeBody.accessType;
       }
 
-      const data = await updateUserProfileUsecase(params.id, safeBody, activeUser.id);
+      const data = await updateUserProfileUsecase(params.id, safeBody, user.id);
       return jsonResponse({
         set,
         statusCode: 200,
@@ -113,20 +129,19 @@ export const userHandler = new Elysia({ prefix: "/api/user" })
   )
   .delete(
     "/:id",
-    async ({ params, headers, user, set }) => {
-      const activeUser = user || (headers["x-user-id"] ? { id: headers["x-user-id"] as string, role: "user", accessType: 2 } : null);
-      if (!activeUser) {
+    async ({ params, user, set }) => {
+      if (!user) {
         throw new UnauthorizedError("Autentikasi diperlukan.");
       }
 
-      const isAdmin = (activeUser as any).role === "admin" || (activeUser as any).accessType === 1;
-      const isOwner = activeUser.id === params.id;
+      const isAdmin = isUserAdmin(user);
+      const isOwner = user.id === params.id;
 
       if (!isOwner && !isAdmin) {
         throw new ForbiddenError("Kamu tidak memiliki izin untuk menghapus pengguna ini.");
       }
 
-      await deleteUserUsecase(params.id, activeUser.id);
+      await deleteUserUsecase(params.id, user.id);
       return jsonResponse({
         set,
         statusCode: 200,

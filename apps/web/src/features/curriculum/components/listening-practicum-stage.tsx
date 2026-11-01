@@ -30,6 +30,7 @@ interface ListeningPracticumStageProps {
   onRewardXp: (amount: number) => void;
   onFinish?: () => void;
   isAdmin?: boolean;
+  onAnswersChange?: (answers: Record<string, any>) => void;
 }
 
 const MAX_AUDIO_PLAYS = 3;
@@ -42,6 +43,7 @@ export function ListeningPracticumStage({
   onRewardXp,
   onFinish,
   isAdmin: propIsAdmin,
+  onAnswersChange,
 }: ListeningPracticumStageProps) {
   const { data: sessionUser } = useSession();
   const isAdmin = Boolean(propIsAdmin || isUserAdmin(sessionUser));
@@ -53,6 +55,7 @@ export function ListeningPracticumStage({
   const [checkedStatus, setCheckedStatus] = useState<Record<number, boolean>>({});
   const [isCorrectStatus, setIsCorrectStatus] = useState<Record<number, boolean>>({});
   const [audioPlayCounts, setAudioPlayCounts] = useState<Record<number, number>>({});
+  const [collectedAnswers, setCollectedAnswers] = useState<Record<string, any>>({});
   const [isCompletedAll, setIsCompletedAll] = useState(false);
 
   // Load questions strictly from module JSON (via quizSec or practiceSec)
@@ -176,6 +179,12 @@ export function ListeningPracticumStage({
 
     setCheckedStatus((prev) => ({ ...prev, [currentQ.id]: true }));
     setIsCorrectStatus((prev) => ({ ...prev, [currentQ.id]: correct }));
+
+    const answerVal = isArrange ? assembledWords.join(" ") : isMC ? selectedOption : dictationInput;
+    const qKey = currentQ.id !== undefined && currentQ.id !== null ? currentQ.id.toString() : currentIdx.toString();
+    const updated = { ...collectedAnswers, [qKey]: answerVal };
+    setCollectedAnswers(updated);
+    onAnswersChange?.(updated);
   };
 
   const handleNextQuestion = () => {

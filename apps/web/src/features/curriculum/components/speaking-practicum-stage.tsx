@@ -48,6 +48,7 @@ interface SpeakingPracticumStageProps {
   onRewardXp: (amount: number) => void;
   onNextStep?: () => void;
   isAdmin?: boolean;
+  onAnswersChange?: (answers: Record<string, any>, speakingScore?: number) => void;
 }
 
 export function SpeakingPracticumStage({
@@ -56,6 +57,7 @@ export function SpeakingPracticumStage({
   onRewardXp,
   onNextStep,
   isAdmin: propIsAdmin,
+  onAnswersChange,
 }: SpeakingPracticumStageProps) {
   const { data: sessionUser } = useSession();
   const isAdmin = Boolean(propIsAdmin || isUserAdmin(sessionUser));
@@ -242,17 +244,24 @@ export function SpeakingPracticumStage({
   };
 
   const handleRoleplayComplete = (score: number) => {
-    setItemScores((prev) => ({ ...prev, [currentIdx]: score }));
+    const updatedScores = { ...itemScores, [currentIdx]: score };
+    setItemScores(updatedScores);
     setCompletedItems((prev) => ({ ...prev, [currentIdx]: true }));
     onRewardXp(20);
+    const avgScore = Math.round(Object.values(updatedScores).reduce((a, b) => a + b, 0) / (totalQuestions || 1));
+    onAnswersChange?.(speechTranscripts, avgScore);
   };
 
   const handleDrillSave = (audioUrl: string, transcript: string, score: number) => {
+    const updatedTranscripts = { ...speechTranscripts, [currentIdx]: transcript };
+    const updatedScores = { ...itemScores, [currentIdx]: score };
     setRecordings((prev) => ({ ...prev, [currentIdx]: audioUrl }));
-    setSpeechTranscripts((prev) => ({ ...prev, [currentIdx]: transcript }));
-    setItemScores((prev) => ({ ...prev, [currentIdx]: score }));
+    setSpeechTranscripts(updatedTranscripts);
+    setItemScores(updatedScores);
     setCompletedItems((prev) => ({ ...prev, [currentIdx]: true }));
     onRewardXp(10);
+    const avgScore = Math.round(Object.values(updatedScores).reduce((a, b) => a + b, 0) / (totalQuestions || 1));
+    onAnswersChange?.(updatedTranscripts, avgScore);
   };
 
   const handleDrillAdvance = () => {
