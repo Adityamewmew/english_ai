@@ -38,10 +38,10 @@ export function StudentMobileBottomNav() {
             <Link
               key={item.href}
               href={item.href}
-              className={`flex flex-col items-center justify-center min-h-[44px] min-w-[44px] py-1 px-1 rounded-xl transition-all select-none active:scale-95 ${
+              className={`flex flex-col items-center justify-center min-h-[44px] min-w-[44px] py-1 px-1 rounded-xl transition-all duration-100 ease-out select-none active:scale-[0.88] active:translate-y-0.5 ${
                 isActive
                   ? "text-[#0D3B66]"
-                  : "text-slate-500 hover:text-slate-700"
+                  : "text-slate-500 hover:text-slate-700 active:text-[#0D3B66]"
               }`}
             >
               {/* Skeuomorphic Icon Pill */}

@@ -8,6 +8,7 @@ import { StudentShell } from "@/features/dashboard";
 import { ModulesAnalyticsBento } from "./modules-analytics-bento";
 import { ModulesFilterBar } from "./modules-filter-bar";
 import { ModuleGridCard, CurriculumModuleItem } from "./module-grid-card";
+import { ModulesGridSkeleton } from "./modules-grid-skeleton";
 import { useCurriculumLevels } from "../hooks/use-curriculum";
 import { useUserProfile } from "@/features/users/hooks/use-user";
 import type { SessionUser } from "@/lib/session";
@@ -479,8 +480,9 @@ export function ModulesCatalogView({
 
           {/* Module Cards Grid */}
           <div className="space-y-4">
-
-            {filteredModules.length === 0 ? (
+            {isLoading ? (
+              <ModulesGridSkeleton count={8} />
+            ) : filteredModules.length === 0 ? (
               <div className="py-16 text-center rounded-[28px] border border-dashed border-slate-300 dark:border-slate-800 space-y-3">
                 <BookOpen className="w-10 h-10 text-slate-400 mx-auto" />
                 <h4 className="font-bold text-base text-slate-800 dark:text-slate-200">

@@ -7,3 +7,4 @@ export * from "./components/student-topbar";
 export * from "./components/student-recent-activity";
 export * from "./components/student-level-mastery";
 export * from "./components/student-dashboard-mobile";
+export * from "./components/student-dashboard-skeleton";

@@ -10,6 +10,7 @@ import { StudentRecentActivitySection } from "./student-recent-activity";
 import { StudentCalendarStrip } from "./student-calendar-strip";
 import { StudentLevelMasteryCard } from "./student-level-mastery";
 import { StudentDashboardMobile } from "./student-dashboard-mobile";
+import { StudentDashboardSkeleton } from "./student-dashboard-skeleton";
 import { useCurriculumLevels } from "@/features/curriculum/hooks/use-curriculum";
 import { useUserProfile } from "@/features/users/hooks/use-user";
 import { useLatestPlacement } from "@/features/placement/hooks/use-placement";
@@ -30,7 +31,7 @@ interface StudentDashboardViewProps {
 }
 
 export function StudentDashboardView({ session }: StudentDashboardViewProps) {
-  const { data: levelsData } = useCurriculumLevels(session.userId);
+  const { data: levelsData, isLoading: isCurriculumLoading } = useCurriculumLevels(session.userId);
   const { data: userProfile } = useUserProfile(session.userId);
   const { data: latestTest, isLoading: isPlacementLoading } = useLatestPlacement(session.userId);
   const { data: voiceSessionsData } = useVoiceSessions(session.userId);
@@ -92,6 +93,14 @@ export function StudentDashboardView({ session }: StudentDashboardViewProps) {
 
   const chatSessions = Array.isArray(chatSessionsData) ? chatSessionsData : [];
   const needsPlacement = !isPlacementLoading && latestTest === null && session.role !== "admin";
+
+  if (isCurriculumLoading && !levelsData) {
+    return (
+      <StudentShell studentName={studentName} currentCefr={currentCefr}>
+        <StudentDashboardSkeleton />
+      </StudentShell>
+    );
+  }
 
   return (
     <StudentShell studentName={studentName} currentCefr={currentCefr}>
