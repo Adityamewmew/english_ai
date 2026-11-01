@@ -8,6 +8,7 @@ import { CallHeader } from "@/components/call/CallHeader";
 import { CallFooter } from "@/components/call/CallFooter";
 import { useSpeechRecognition } from "@/hooks/use-speech-recognition";
 import { useAudioQueue } from "@/hooks/use-audio-queue";
+import { usePushToTalk, TalkMode } from "../hooks/use-push-to-talk";
 import { getApiUrl } from "@/lib/api-client";
 import { voiceApi } from "../api/voice.api";
 import { AiQuotaBadge, classesApi } from "@/features/classes";
@@ -79,6 +80,8 @@ export function VoiceCallView({
   }, [callStatus]);
 
   const abortSpeechRef = useRef<() => void>(() => {});
+  const commitImmediateRef = useRef<() => void>(() => {});
+  const talkModeRef = useRef<TalkMode>("auto");
 
   // Audio queue for sequential streaming TTS with 0-gap preloading
   const audioQueue = useAudioQueue({
@@ -88,7 +91,7 @@ export function VoiceCallView({
     onAllEnded: () => {
       isSendingRef.current = false;
       if (callStatusRef.current === "active" && !isMuted) {
-        setAiSpeechState("listening");
+        setAiSpeechState(talkModeRef.current === "ptt" ? "idle" : "listening");
       }
     },
   });
@@ -101,7 +104,7 @@ export function VoiceCallView({
         if (!audioQueue.isPlaying) {
           isSendingRef.current = false;
           if (callStatusRef.current === "active" && !isMuted) {
-            setAiSpeechState("listening");
+            setAiSpeechState(talkModeRef.current === "ptt" ? "idle" : "listening");
           }
         }
       }, 7000);
@@ -111,12 +114,47 @@ export function VoiceCallView({
     };
   }, [callStatus, aiSpeechState, isMuted, audioQueue.isPlaying]);
 
+  // Cut off tutor speech (interruption)
+  const handleInterruptToSpeak = useCallback(() => {
+    audioQueue.halt();
+    if (streamAbortRef.current) {
+      try {
+        streamAbortRef.current.abort();
+      } catch {}
+      streamAbortRef.current = null;
+    }
+    isSendingRef.current = false;
+    setAiSpeechState("listening");
+  }, [audioQueue]);
+
+  // Push to Talk state & keyboard Spacebar hook
+  const { talkMode, setTalkMode, isPressing, startTalk, endTalk } = usePushToTalk({
+    callStatus,
+    isMuted,
+    onTalkStart: () => {
+      if (aiSpeechState === "speaking" || audioQueue.isPlaying) {
+        handleInterruptToSpeak();
+      } else {
+        setAiSpeechState("listening");
+      }
+    },
+    onTalkEnd: () => {
+      commitImmediateRef.current();
+    },
+  });
+
+  useEffect(() => {
+    talkModeRef.current = talkMode;
+  }, [talkMode]);
+
   // Half-duplex auto-gating: mic is ONLY open when student's turn to speak
+  // Auto mode: open when tutor is listening
+  // PTT mode: open ONLY when isPressing is true
   const canListen =
     callStatus === "active" &&
-    aiSpeechState === "listening" &&
     !isMuted &&
-    !isSendingRef.current;
+    !isSendingRef.current &&
+    (talkMode === "auto" ? aiSpeechState === "listening" : isPressing);
 
   // Send student turn to streaming AI backend
   const handleSendStudentMessage = useCallback(
@@ -262,15 +300,21 @@ export function VoiceCallView({
     setLiveTranscript,
     errorMsg: micError,
     abort: abortSpeech,
+    commitImmediate,
   } = useSpeechRecognition({
     canListen,
     studentName,
     lang: callLang,
+    mode: talkMode,
     onUtteranceReady: (spoken) => {
       setLiveTranscript("");
       handleSendStudentMessage(spoken);
     },
   });
+
+  useEffect(() => {
+    commitImmediateRef.current = commitImmediate;
+  }, [commitImmediate]);
 
   useEffect(() => {
     if (micError) {
@@ -281,19 +325,6 @@ export function VoiceCallView({
   useEffect(() => {
     abortSpeechRef.current = abortSpeech;
   }, [abortSpeech]);
-
-  // Cut off tutor speech (interruption)
-  const handleInterruptToSpeak = useCallback(() => {
-    audioQueue.halt();
-    if (streamAbortRef.current) {
-      try {
-        streamAbortRef.current.abort();
-      } catch {}
-      streamAbortRef.current = null;
-    }
-    isSendingRef.current = false;
-    setAiSpeechState("listening");
-  }, [audioQueue]);
 
   // Start call handler
   const handleStartCall = async () => {
@@ -515,13 +546,18 @@ export function VoiceCallView({
         </div>
       </main>
 
-      {/* Tactile Call Control Footer */}
+      {/* Tactile Call Control Footer with Push-to-Talk Support */}
       <CallFooter
         callStatus={callStatus}
         isMuted={isMuted}
         onToggleMute={() => setIsMuted((prev) => !prev)}
         onStartCall={handleStartCall}
         onEndCall={handleEndCall}
+        talkMode={talkMode}
+        onToggleTalkMode={setTalkMode}
+        isPressingTalk={isPressing}
+        onTalkStart={startTalk}
+        onTalkEnd={endTalk}
       />
     </div>
   );

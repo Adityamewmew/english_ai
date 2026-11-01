@@ -11,6 +11,7 @@ interface UseSpeechRecognitionProps {
   canListen: boolean;
   studentName?: string;
   lang?: string;
+  mode?: "auto" | "ptt";
   onUtteranceReady: (text: string) => void;
 }
 
@@ -18,6 +19,7 @@ export function useSpeechRecognition({
   canListen,
   studentName = "",
   lang = "en-US",
+  mode = "auto",
   onUtteranceReady,
 }: UseSpeechRecognitionProps) {
   const [liveTranscript, setLiveTranscript] = useState<string>("");
@@ -25,8 +27,10 @@ export function useSpeechRecognition({
 
   const recognitionRef = useRef<any>(null);
   const silenceTimerRef = useRef<any>(null);
+  const latestSpokenRef = useRef<string>("");
   const canListenRef = useRef(canListen);
   const studentNameRef = useRef(studentName);
+  const modeRef = useRef(mode);
   const onUtteranceReadyRef = useRef(onUtteranceReady);
 
   useEffect(() => {
@@ -38,10 +42,15 @@ export function useSpeechRecognition({
   }, [studentName]);
 
   useEffect(() => {
+    modeRef.current = mode;
+  }, [mode]);
+
+  useEffect(() => {
     onUtteranceReadyRef.current = onUtteranceReady;
   }, [onUtteranceReady]);
 
   const abort = useCallback(() => {
+    latestSpokenRef.current = "";
     if (silenceTimerRef.current) {
       clearTimeout(silenceTimerRef.current);
       silenceTimerRef.current = null;
@@ -56,6 +65,21 @@ export function useSpeechRecognition({
       recognitionRef.current = null;
     }
   }, []);
+
+  const commitImmediate = useCallback(() => {
+    if (silenceTimerRef.current) {
+      clearTimeout(silenceTimerRef.current);
+      silenceTimerRef.current = null;
+    }
+    const spoken = latestSpokenRef.current.trim();
+    latestSpokenRef.current = "";
+    setLiveTranscript("");
+    abort();
+
+    if (spoken && spoken.length >= 2 && isValidStudentUtterance(spoken)) {
+      onUtteranceReadyRef.current(spoken);
+    }
+  }, [abort]);
 
   const stop = useCallback(() => {
     if (silenceTimerRef.current) {
@@ -124,10 +148,16 @@ export function useSpeechRecognition({
 
         // Reconcile user profile name
         spoken = reconcileUniversalName(spoken, studentNameRef.current);
+        latestSpokenRef.current = spoken;
         setLiveTranscript(spoken);
 
         // Reject phantom noises or single filler transients
         if (!isValidStudentUtterance(spoken)) {
+          return;
+        }
+
+        // In PTT mode, do not auto-send on silence; release of button triggers commitImmediate
+        if (modeRef.current === "ptt") {
           return;
         }
 
@@ -205,5 +235,6 @@ export function useSpeechRecognition({
     start,
     stop,
     abort,
+    commitImmediate,
   };
 }
