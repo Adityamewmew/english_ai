@@ -33,10 +33,19 @@ const nextConfig: NextConfig = {
     ];
   },
   async rewrites() {
-    const rawApiUrl = process.env.NEXT_PUBLIC_API_URL || process.env.API_URL;
-    const apiUrl = rawApiUrl
-      ? rawApiUrl.replace(/\/$/, "")
-      : `http://localhost:${process.env.PORT_API || "3003"}`;
+    // CRITICAL: Server-side rewrite MUST ALWAYS target local Elysia port (127.0.0.1:3003)
+    // NEVER use NEXT_PUBLIC_API_URL here: if set to the public domain (e.g. https://eddys.drimland.my.id),
+    // Next.js will self-proxy in an infinite recursive HTTP loop, pegging CPU to 100%!
+    let internalUrl =
+      process.env.INTERNAL_API_URL ||
+      process.env.API_URL ||
+      `http://127.0.0.1:${process.env.PORT_API || "3003"}`;
+
+    if (internalUrl.includes("eddys.drimland.my.id") || internalUrl.startsWith("https://")) {
+      internalUrl = `http://127.0.0.1:${process.env.PORT_API || "3003"}`;
+    }
+
+    const apiUrl = internalUrl.replace(/\/$/, "");
     return [
       {
         source: "/api/:path*",

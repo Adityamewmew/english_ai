@@ -33,13 +33,22 @@ export default function AuthCallbackPage() {
           }
         }
 
-        // Poll for session up to 5 times (in case cookie is setting)
+        // Poll for session up to 5 times (in case cookie is setting) with 5s timeout guard
         let session = null;
         for (let i = 0; i < 5; i++) {
-          const res = await authClient.getSession();
-          if (res?.data?.user) {
-            session = res.data;
-            break;
+          try {
+            const res = await Promise.race([
+              authClient.getSession(),
+              new Promise<any>((_, reject) =>
+                setTimeout(() => reject(new Error("Timeout verifikasi sesi")), 5000)
+              ),
+            ]);
+            if (res?.data?.user) {
+              session = res.data;
+              break;
+            }
+          } catch {
+            // Retry on timeout or network hiccup
           }
           await new Promise((resolve) => setTimeout(resolve, 500));
         }
