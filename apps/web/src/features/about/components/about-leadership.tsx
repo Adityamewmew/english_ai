@@ -14,9 +14,9 @@ export function AboutLeadership() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-[#F4F6FF]/30 via-white to-[#F4F6FF]/50 border-t border-slate-200/60">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-[#F4F6FF]/30 via-white to-[#F4F6FF]/50 border-t border-slate-200/60">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
           {/* Photo Column - Tanpa Border & Rata Tengah with Fade */}
           <FadeIn delay={0} duration={600} className="lg:col-span-5 flex justify-center items-center">
             <div className="relative w-full max-w-sm sm:max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-primary/15">

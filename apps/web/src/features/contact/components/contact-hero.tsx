@@ -20,7 +20,7 @@ export function ContactHero() {
   };
 
   return (
-    <section className="relative hero-aura pt-24 sm:pt-28 md:pt-32 pb-14 md:pb-18 overflow-hidden">
+    <section className="relative hero-aura pt-20 sm:pt-28 md:pt-32 pb-12 sm:pb-14 md:pb-18 overflow-hidden">
       {/* Background Subtle Gradient Glow */}
       <div className="absolute top-0 inset-x-0 h-64 bg-[radial-gradient(ellipse_at_top,rgba(16,55,92,0.06)_0%,transparent_70%)] pointer-events-none" />
 
@@ -139,7 +139,7 @@ export function ContactHero() {
                       href={channel.actionHref}
                       target={channel.actionHref.startsWith("http") ? "_blank" : undefined}
                       rel={channel.actionHref.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-heading font-bold text-xs sm:text-sm transition-all cursor-pointer ${
+                      className={`w-full inline-flex items-center justify-center gap-2 min-h-[44px] px-4 py-3 rounded-xl font-heading font-bold text-xs sm:text-sm transition-all cursor-pointer ${
                         isPrimary
                           ? "text-[#10375C] bg-gradient-to-b from-white to-slate-100 hover:to-slate-200 border border-slate-200 border-b-3 border-b-slate-400 active:translate-y-0.5 shadow-sm"
                           : "text-primary bg-slate-50 hover:bg-slate-100 border border-slate-200/90 border-b-3 border-b-slate-300 active:translate-y-0.5 shadow-2xs"

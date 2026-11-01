@@ -28,10 +28,10 @@ export function AboutVisionMission() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-[#F4F6FF]/50 via-white to-[#F4F6FF]/40 border-t border-slate-200/80">
+    <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-[#F4F6FF]/50 via-white to-[#F4F6FF]/40 border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-5 sm:px-6">
         {/* Section Header with Fade */}
-        <FadeIn delay={0} duration={600} className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <FadeIn delay={0} duration={600} className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 text-primary text-[11px] font-heading font-bold uppercase tracking-wider border border-primary/10">
             Arah &amp; Kepatuhan
           </div>
@@ -45,10 +45,10 @@ export function AboutVisionMission() {
         </FadeIn>
 
         {/* Vision & Mission Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch mb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8 items-stretch mb-8 sm:mb-10">
           {/* Vision Card with Fade */}
           <FadeIn delay={80} duration={600} className="lg:col-span-5 h-full">
-            <div className="h-full bg-gradient-to-b from-[#184A78] via-[#10375C] to-[#0A243D] text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden border border-[#1e588f] border-b-6 border-b-[#061726] shadow-[0_20px_40px_-12px_rgba(16,55,92,0.45),inset_0_1.5px_1px_rgba(255,255,255,0.25)] hover:shadow-2xl transition-all duration-300">
+            <div className="h-full bg-gradient-to-b from-[#184A78] via-[#10375C] to-[#0A243D] text-white rounded-3xl p-5 sm:p-7 md:p-8 flex flex-col justify-between relative overflow-hidden border border-[#1e588f] border-b-6 border-b-[#061726] shadow-[0_20px_40px_-12px_rgba(16,55,92,0.45),inset_0_1.5px_1px_rgba(255,255,255,0.25)] hover:shadow-2xl transition-all duration-300">
               <div className="relative z-10 space-y-4">
                 <span className="inline-block px-3 py-1 rounded-full bg-amber-300 text-[#10375C] text-xs font-heading font-black uppercase tracking-wider shadow-2xs">
                   Visi Lembaga
@@ -65,7 +65,7 @@ export function AboutVisionMission() {
 
           {/* Mission Card with Fade */}
           <FadeIn delay={160} duration={600} className="lg:col-span-7 h-full">
-            <div className="h-full bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 border-b-4 border-b-slate-300/80 shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+            <div className="h-full bg-white rounded-3xl p-5 sm:p-7 md:p-8 border border-slate-200/90 border-b-4 border-b-slate-300/80 shadow-md flex flex-col justify-between hover:shadow-lg transition-all duration-300">
               <div>
                 <span className="inline-block px-3 py-1 rounded-full bg-primary/5 text-primary text-[11px] font-heading font-bold uppercase tracking-wider border border-primary/10 mb-4">
                   Misi Strategis
@@ -91,7 +91,7 @@ export function AboutVisionMission() {
         </div>
 
         {/* Certifications & Accreditation Cards with Fade */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           {certifications.map((item, idx) => {
             const Icon = item.icon;
             return (
@@ -101,7 +101,7 @@ export function AboutVisionMission() {
                 duration={500}
                 className="h-full"
               >
-                <div className="h-full group bg-white rounded-2xl p-6 border border-slate-200/90 border-b-4 border-b-slate-300/80 shadow-[0_4px_16px_rgba(16,55,92,0.04)] hover:shadow-xl hover:shadow-slate-300/40 hover:-translate-y-1.5 transition-all duration-300 ease-[cubic-bezier(0.2,0,0,1)] relative overflow-hidden">
+                <div className="h-full group bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 border-b-4 border-b-slate-300/80 shadow-[0_4px_16px_rgba(16,55,92,0.04)] hover:shadow-xl hover:shadow-slate-300/40 hover:-translate-y-1.5 transition-all duration-300 ease-[cubic-bezier(0.2,0,0,1)] relative overflow-hidden">
                   <div className="w-10 h-10 rounded-xl bg-primary/8 border border-primary/15 text-primary flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-200">
                     <Icon className="w-5 h-5 transition-colors" />
                   </div>

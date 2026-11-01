@@ -162,7 +162,7 @@ export function ExamPrepSection() {
                       href={exam.ctaUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-full inline-flex items-center justify-center py-2.5 px-4 rounded-xl font-heading font-extrabold text-xs sm:text-[13px] transition-all active:translate-y-0.5 cursor-pointer ${
+                      className={`w-full inline-flex items-center justify-center min-h-[44px] py-3 sm:py-2.5 px-4 rounded-xl font-heading font-extrabold text-xs sm:text-[13px] transition-all active:translate-y-0.5 cursor-pointer ${
                         isPopular
                           ? "hover:bg-slate-100"
                           : "bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 border-b-3 border-b-slate-400 active:border-b-1 shadow-2xs"

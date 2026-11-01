@@ -50,7 +50,7 @@ export function AboutHero() {
         </FadeIn>
 
         {/* Tactile Metrics Cards with Staggered Fade */}
-        <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="mt-8 sm:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
           {ABOUT_METRICS.map((metric, idx) => (
             <FadeIn
               key={metric.label}
@@ -58,16 +58,16 @@ export function AboutHero() {
               duration={500}
               className="h-full"
             >
-              <div className="group h-full bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 border-b-4 border-b-slate-300/80 shadow-[0_4px_16px_rgba(16,55,92,0.04)] hover:shadow-xl hover:shadow-slate-300/40 hover:-translate-y-1.5 transition-all duration-300 ease-[cubic-bezier(0.2,0,0,1)] relative overflow-hidden flex flex-col justify-between">
+              <div className="group h-full bg-white rounded-2xl p-4 sm:p-5 md:p-6 border border-slate-200/90 border-b-4 border-b-slate-300/80 shadow-[0_4px_16px_rgba(16,55,92,0.04)] hover:shadow-xl hover:shadow-slate-300/40 hover:-translate-y-1.5 transition-all duration-300 ease-[cubic-bezier(0.2,0,0,1)] relative overflow-hidden flex flex-col justify-between">
                 <div>
                   <div className="text-2xl sm:text-3xl md:text-4xl font-heading font-black text-primary tracking-tight group-hover:text-secondary transition-colors duration-200">
                     {metric.value}
                   </div>
-                  <div className="text-xs sm:text-sm font-heading font-bold text-slate-800 mt-1.5">
+                  <div className="text-xs sm:text-sm font-heading font-bold text-slate-800 mt-1">
                     {metric.label}
                   </div>
                 </div>
-                <div className="text-xs text-slate-500 mt-2 leading-relaxed font-body">
+                <div className="text-[11px] sm:text-xs text-slate-500 mt-2 leading-relaxed font-body">
                   {metric.sublabel}
                 </div>
               </div>

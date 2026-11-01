@@ -6,9 +6,9 @@ import { FadeIn } from "./fade-in";
 
 export function AboutStory() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white via-[#FAFBFD] to-[#F4F6FF]/40 border-t border-slate-200/60">
+    <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white via-[#FAFBFD] to-[#F4F6FF]/40 border-t border-slate-200/60">
       <div className="max-w-7xl mx-auto px-5 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 items-start">
           {/* Left Column: Founder Legacy & Narrative with Fade */}
           <FadeIn delay={0} duration={600} className="lg:col-span-5 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 text-primary text-[11px] font-heading font-bold uppercase tracking-wider border border-primary/10">

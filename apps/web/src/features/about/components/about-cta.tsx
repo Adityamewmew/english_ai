@@ -7,11 +7,11 @@ import { FadeIn } from "./fade-in";
 
 export function AboutCta() {
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-[#F4F6FF]/40 to-white border-t border-slate-200/60">
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-[#F4F6FF]/40 to-white border-t border-slate-200/60">
       <div className="max-w-5xl mx-auto px-5 sm:px-6">
         <FadeIn delay={0} duration={600}>
           <div
-            className="rounded-3xl p-8 sm:p-12 text-center bg-gradient-to-b from-[#184A78] via-[#10375C] to-[#0A243D] text-white relative overflow-hidden border border-[#1e588f] border-b-6 border-b-[#061726] shadow-[0_20px_40px_-12px_rgba(16,55,92,0.45),inset_0_1.5px_1px_rgba(255,255,255,0.25)] hover:shadow-2xl transition-all duration-300"
+            className="rounded-3xl p-6 sm:p-10 md:p-12 text-center bg-gradient-to-b from-[#184A78] via-[#10375C] to-[#0A243D] text-white relative overflow-hidden border border-[#1e588f] border-b-6 border-b-[#061726] shadow-[0_20px_40px_-12px_rgba(16,55,92,0.45),inset_0_1.5px_1px_rgba(255,255,255,0.25)] hover:shadow-2xl transition-all duration-300"
           >
             {/* Subtle Topographic Ambient Accent */}
             <svg

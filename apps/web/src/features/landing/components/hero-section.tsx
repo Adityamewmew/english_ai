@@ -13,6 +13,7 @@ import { ExamPrepSection } from "./exam-prep-section";
 import { FAQSection } from "./faq-section";
 import { LandingFooter } from "./landing-footer";
 import { PreviewModal } from "./preview-modal";
+import { MobileStickyCta } from "./mobile-sticky-cta";
 import {
   DATA_MAP_HIGHLIGHTS,
   TUTOR_PROMPTS,
@@ -237,6 +238,9 @@ export function HeroSection() {
 
       {/* ================= FOOTER RESMI YAYASAN & CAMBRIDGE ================= */}
       <LandingFooter />
+
+      {/* ================= MOBILE FLOATING STICKY CTA ================= */}
+      <MobileStickyCta />
 
       {/* ================= MODAL INTERAKTIF ================= */}
       <PreviewModal

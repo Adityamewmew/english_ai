@@ -24,7 +24,7 @@ export function AboutGallery() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-[#F4F6FF]/40 via-white to-[#F4F6FF]/30 border-t border-slate-200/80">
+    <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-[#F4F6FF]/40 via-white to-[#F4F6FF]/30 border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-5 sm:px-6">
         {/* Section Header with Fade */}
         <FadeIn delay={0} duration={600}>
@@ -82,8 +82,8 @@ export function AboutGallery() {
                   className="object-cover transition-all duration-500 ease-out group-hover:scale-102"
                   sizes="(max-width: 1024px) 100vw, 66vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
+                <div className="hidden sm:block absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none" />
+                <div className="hidden sm:block absolute bottom-4 left-4 right-4 text-white">
                   <span className="inline-block px-2.5 py-1 rounded-md bg-black/50 backdrop-blur-xs text-[11px] font-heading font-bold uppercase tracking-wider text-amber-300 border border-white/10">
                     {activePhoto.category}
                   </span>
@@ -101,7 +101,7 @@ export function AboutGallery() {
                     <span>{activePhoto.category}</span>
                   </div>
 
-                  <h4 className="font-heading font-extrabold text-xl text-primary leading-snug">
+                  <h4 className="font-heading font-extrabold text-lg sm:text-xl text-primary leading-snug">
                     {activePhoto.title}
                   </h4>
 
@@ -120,13 +120,14 @@ export function AboutGallery() {
                   <div className="text-xs font-heading font-bold text-slate-700 mb-2.5">
                     Pilih Dokumentasi:
                   </div>
-                  <div className="grid grid-cols-4 gap-2.5">
+                  <div className="grid grid-cols-4 gap-2 sm:gap-2.5">
                     {ABOUT_DOCUMENTATION_PHOTOS.map((photo, idx) => (
                       <button
                         key={photo.id}
                         type="button"
                         onClick={() => setActiveIndex(idx)}
-                        className={`relative aspect-square rounded-xl overflow-hidden border-2 transition-all duration-200 cursor-pointer ${
+                        aria-label={`Lihat foto ${photo.title}`}
+                        className={`relative aspect-square min-h-[44px] min-w-[44px] rounded-xl overflow-hidden border-2 transition-all duration-200 cursor-pointer ${
                           activeIndex === idx
                             ? "border-primary ring-2 ring-primary/25 scale-104 shadow-sm"
                             : "border-slate-200 opacity-60 hover:opacity-100 hover:scale-102"

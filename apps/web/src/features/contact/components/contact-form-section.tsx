@@ -48,10 +48,10 @@ Terima kasih.`;
   };
 
   return (
-    <section id="konsultasi" className="py-16 md:py-24 px-5 sm:px-6 relative bg-white">
+    <section id="konsultasi" className="py-12 sm:py-16 md:py-24 px-5 sm:px-6 relative bg-white">
       <div className="max-w-4xl mx-auto">
         <FadeIn delay={0} duration={600}>
-          <div className="bg-white rounded-3xl border border-slate-200/90 border-b-5 border-b-slate-300/80 shadow-[0_20px_45px_-12px_rgba(16,55,92,0.1)] p-6 sm:p-10 md:p-12 relative overflow-hidden">
+          <div className="bg-white rounded-3xl border border-slate-200/90 border-b-5 border-b-slate-300/80 shadow-[0_20px_45px_-12px_rgba(16,55,92,0.1)] p-5 sm:p-10 md:p-12 relative overflow-hidden">
             {/* Subtle Top-Right Accent */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
 
@@ -83,7 +83,7 @@ Terima kasih.`;
                     <button
                       type="button"
                       onClick={() => setSubmitted(false)}
-                      className="text-xs font-heading font-bold text-primary hover:underline cursor-pointer"
+                      className="min-h-[44px] px-4 py-2 inline-flex items-center justify-center text-xs font-heading font-bold text-primary hover:underline cursor-pointer"
                     >
                       &larr; Kirim formulir pertanyaan lain
                     </button>
@@ -104,7 +104,7 @@ Terima kasih.`;
                         placeholder="Contoh: Dimas Prasetyo"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200/90 text-xs sm:text-sm text-slate-900 bg-slate-50/80 hover:bg-slate-50 focus:bg-white placeholder:text-slate-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 shadow-[inset_0_1.5px_3px_rgba(0,0,0,0.04)] font-body transition-all"
+                        className="w-full min-h-[44px] px-4 py-2.5 rounded-xl border border-slate-200/90 text-xs sm:text-sm text-slate-900 bg-slate-50/80 hover:bg-slate-50 focus:bg-white placeholder:text-slate-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 shadow-[inset_0_1.5px_3px_rgba(0,0,0,0.04)] font-body transition-all"
                       />
                     </div>
 
@@ -120,7 +120,7 @@ Terima kasih.`;
                         placeholder="Contoh: 081234567890"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200/90 text-xs sm:text-sm text-slate-900 bg-slate-50/80 hover:bg-slate-50 focus:bg-white placeholder:text-slate-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 shadow-[inset_0_1.5px_3px_rgba(0,0,0,0.04)] font-mono transition-all"
+                        className="w-full min-h-[44px] px-4 py-2.5 rounded-xl border border-slate-200/90 text-xs sm:text-sm text-slate-900 bg-slate-50/80 hover:bg-slate-50 focus:bg-white placeholder:text-slate-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 shadow-[inset_0_1.5px_3px_rgba(0,0,0,0.04)] font-mono transition-all"
                       />
                     </div>
                   </div>
@@ -135,7 +135,7 @@ Terima kasih.`;
                       <select
                         value={formData.branch}
                         onChange={(e) => setFormData({ ...formData, branch: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200/90 text-xs sm:text-sm text-slate-900 bg-slate-50/80 hover:bg-slate-50 focus:bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 shadow-[inset_0_1.5px_3px_rgba(0,0,0,0.04)] font-body transition-all"
+                        className="w-full min-h-[44px] px-3.5 py-2.5 rounded-xl border border-slate-200/90 text-xs sm:text-sm text-slate-900 bg-slate-50/80 hover:bg-slate-50 focus:bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 shadow-[inset_0_1.5px_3px_rgba(0,0,0,0.04)] font-body transition-all"
                       >
                         <option value="tawangmangu">Kelas Offline — Gedung Jl. Tawang Mangu No. 190</option>
                         <option value="online">Kelas Online — Platform Tutor EDDY&apos;S AI 24/7</option>
@@ -151,7 +151,7 @@ Terima kasih.`;
                       <select
                         value={formData.program}
                         onChange={(e) => setFormData({ ...formData, program: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200/90 text-xs sm:text-sm text-slate-900 bg-slate-50/80 hover:bg-slate-50 focus:bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 shadow-[inset_0_1.5px_3px_rgba(0,0,0,0.04)] font-body transition-all"
+                        className="w-full min-h-[44px] px-3.5 py-2.5 rounded-xl border border-slate-200/90 text-xs sm:text-sm text-slate-900 bg-slate-50/80 hover:bg-slate-50 focus:bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 shadow-[inset_0_1.5px_3px_rgba(0,0,0,0.04)] font-body transition-all"
                       >
                         <option value="speaking-ai">Latihan Speaking 24/7 (EDDY&apos;S AI)</option>
                         <option value="general">General English (Anak / Remaja / Dewasa)</option>
@@ -179,7 +179,7 @@ Terima kasih.`;
                   <div className="pt-2">
                     <button
                       type="submit"
-                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-heading font-extrabold text-xs sm:text-sm text-white bg-gradient-to-b from-[#184A78] to-[#10375C] hover:from-[#1d5c94] hover:to-[#13426e] active:translate-y-0.5 border border-[#1e588f] border-b-3 border-b-[#061726] shadow-sm transition-all cursor-pointer"
+                      className="w-full min-h-[44px] inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-heading font-extrabold text-xs sm:text-sm text-white bg-gradient-to-b from-[#184A78] to-[#10375C] hover:from-[#1d5c94] hover:to-[#13426e] active:translate-y-0.5 border border-[#1e588f] border-b-3 border-b-[#061726] shadow-sm transition-all cursor-pointer"
                     >
                       <MessageSquare className="w-4 h-4 text-accent" />
                       <span>Kirim &amp; Hubungi via WhatsApp Resmi</span>

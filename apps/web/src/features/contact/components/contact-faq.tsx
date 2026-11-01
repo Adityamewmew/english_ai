@@ -13,7 +13,7 @@ export function ContactFaq() {
   };
 
   return (
-    <section className="py-16 md:py-24 px-5 sm:px-6 bg-gradient-to-b from-[#F4F6FF]/50 to-white border-t border-slate-200/80">
+    <section className="py-12 sm:py-16 md:py-24 px-5 sm:px-6 bg-gradient-to-b from-[#F4F6FF]/50 to-white border-t border-slate-200/80">
       <div className="max-w-3xl mx-auto space-y-8">
         {/* Header with Fade */}
         <FadeIn delay={0} duration={600} className="text-center space-y-3">
@@ -39,7 +39,7 @@ export function ContactFaq() {
                   <button
                     type="button"
                     onClick={() => toggle(idx)}
-                    className="w-full p-4 sm:p-5 flex items-center justify-between gap-4 text-left font-heading font-bold text-xs sm:text-sm md:text-base text-primary hover:bg-slate-50/70 transition-colors cursor-pointer"
+                    className="w-full min-h-[48px] p-4 sm:p-5 flex items-center justify-between gap-4 text-left font-heading font-bold text-xs sm:text-sm md:text-base text-primary hover:bg-slate-50/70 transition-colors cursor-pointer"
                   >
                     <span>{faq.question}</span>
                     <ChevronDown
