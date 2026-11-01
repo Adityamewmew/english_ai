@@ -11,16 +11,19 @@ export interface SessionUser {
 
 const SESSION_COOKIE_NAME = "eddy_session";
 
-if (process.env.NODE_ENV === "production" && !process.env.BETTER_AUTH_SECRET && !process.env.NEXTAUTH_SECRET) {
-  throw new Error("FATAL SECURITY CONFIGURATION: BETTER_AUTH_SECRET must be configured in production environment!");
+function getSessionSecret(): string {
+  const secret = process.env.BETTER_AUTH_SECRET || process.env.NEXTAUTH_SECRET;
+  if (!secret) {
+    if (process.env.NEXT_PHASE === "phase-production-build") {
+      return "eddy_build_placeholder_secret";
+    }
+    if (process.env.NODE_ENV === "production") {
+      throw new Error("FATAL SECURITY CONFIGURATION: BETTER_AUTH_SECRET must be configured in production environment!");
+    }
+    return "eddy_english_ai_dev_secret_insecure_do_not_use_in_prod";
+  }
+  return secret;
 }
-
-const SESSION_SECRET =
-  process.env.BETTER_AUTH_SECRET ||
-  process.env.NEXTAUTH_SECRET ||
-  (process.env.NODE_ENV !== "production"
-    ? "eddy_english_ai_dev_secret_insecure_do_not_use_in_prod"
-    : "");
 
 /**
  * Sign session payload using native Web Crypto HMAC-SHA256 (Constant-time verification)
@@ -30,7 +33,7 @@ export async function signSessionToken(user: SessionUser): Promise<string> {
   const encoder = new TextEncoder();
   const key = await crypto.subtle.importKey(
     "raw",
-    encoder.encode(SESSION_SECRET),
+    encoder.encode(getSessionSecret()),
     { name: "HMAC", hash: "SHA-256" },
     false,
     ["sign"]
@@ -60,7 +63,7 @@ export async function verifySessionToken(token: string): Promise<SessionUser | n
     const encoder = new TextEncoder();
     const key = await crypto.subtle.importKey(
       "raw",
-      encoder.encode(SESSION_SECRET),
+      encoder.encode(getSessionSecret()),
       { name: "HMAC", hash: "SHA-256" },
       false,
       ["verify"]
