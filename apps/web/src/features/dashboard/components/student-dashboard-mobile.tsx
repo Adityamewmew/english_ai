@@ -137,6 +137,26 @@ export function StudentDashboardMobile({
 
   return (
     <div className="w-full px-3.5 py-4 space-y-3.5 max-w-md mx-auto">
+      {/* Placement Callout if pending */}
+      {!placementCefr && placementScore === undefined && (
+        <div className="bg-amber-50 border border-amber-300 rounded-2xl p-3.5 shadow-2xs flex items-center justify-between gap-3">
+          <div className="space-y-0.5 min-w-0">
+            <p className="text-xs font-bold text-amber-900 flex items-center gap-1.5">
+              <span>🎯</span> Placement Test Belum Selesai
+            </p>
+            <p className="text-[11px] text-amber-800/80 leading-tight">
+              Selesaikan tes 10 menit untuk membuka modul belajar Anda.
+            </p>
+          </div>
+          <Link
+            href="/placement"
+            className="px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold shrink-0 shadow-xs active:scale-95 transition-transform"
+          >
+            Mulai
+          </Link>
+        </div>
+      )}
+
       {/* 1. Header Ringkas & Terarah */}
       <div className="bg-white border border-slate-200/90 rounded-2xl p-4 shadow-2xs space-y-1">
         <div className="flex items-center justify-between">

@@ -3,8 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
-import { syncGoogleSession } from "@/app/(auth)/auth.actions";
-import { placementApi } from "@/features/placement/api/placement.api";
+import { processGoogleCallbackAction } from "@/app/(auth)/auth.actions";
 import { Loader2, AlertCircle } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -33,24 +32,23 @@ export default function AuthCallbackPage() {
           }
         }
 
-        // Poll for session up to 5 times (in case cookie is setting) with 5s timeout guard
+        // Get session quickly (single check + quick fallback)
         let session = null;
-        for (let i = 0; i < 5; i++) {
-          try {
-            const res = await Promise.race([
-              authClient.getSession(),
-              new Promise<any>((_, reject) =>
-                setTimeout(() => reject(new Error("Timeout verifikasi sesi")), 5000)
-              ),
-            ]);
-            if (res?.data?.user) {
-              session = res.data;
-              break;
-            }
-          } catch {
-            // Retry on timeout or network hiccup
+        try {
+          const res = await authClient.getSession();
+          if (res?.data?.user) {
+            session = res.data;
           }
-          await new Promise((resolve) => setTimeout(resolve, 500));
+        } catch {
+          // ignore
+        }
+
+        if (!session?.user) {
+          await new Promise((resolve) => setTimeout(resolve, 300));
+          const retryRes = await authClient.getSession().catch(() => null);
+          if (retryRes?.data?.user) {
+            session = retryRes.data;
+          }
         }
 
         if (!session?.user) {
@@ -61,7 +59,7 @@ export default function AuthCallbackPage() {
         }
 
         const user = session.user as any;
-        const syncResult = await syncGoogleSession({
+        const result = await processGoogleCallbackAction({
           id: user.id,
           name: user.name || "",
           email: user.email,
@@ -71,21 +69,7 @@ export default function AuthCallbackPage() {
         });
 
         if (isMounted) {
-          // Jika siswa belum pernah mengikuti placement test, arahkan langsung ke /placement
-          if (syncResult?.role !== "admin") {
-            try {
-              const latest = await placementApi.getLatestByUser(user.id);
-              if (!latest) {
-                router.replace("/placement");
-                return;
-              }
-            } catch {
-              router.replace("/placement");
-              return;
-            }
-          }
-
-          router.replace("/dashboard");
+          router.replace(result.targetPath || "/dashboard");
         }
       } catch (err: any) {
         if (isMounted) {

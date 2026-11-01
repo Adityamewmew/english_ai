@@ -9,6 +9,7 @@ export function useCurriculumOverview(params?: {
   return useQuery({
     queryKey: curriculumKeys.list(params || {}),
     queryFn: () => curriculumApi.getOverview(params),
+    staleTime: 5 * 60 * 1000,
   });
 }
 
@@ -16,5 +17,6 @@ export function useCurriculumLevels(userId?: string) {
   return useQuery({
     queryKey: curriculumKeys.levels(userId),
     queryFn: () => curriculumApi.getLevels({ userId }),
+    staleTime: 5 * 60 * 1000,
   });
 }

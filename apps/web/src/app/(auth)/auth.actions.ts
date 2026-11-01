@@ -105,3 +105,57 @@ export async function syncGoogleSession(userData: {
 
   return { success: true, role, accessType };
 }
+
+export async function processGoogleCallbackAction(userData: {
+  id: string;
+  name: string;
+  email: string;
+  role?: string;
+  accessType?: number;
+  currentCefr?: string;
+}) {
+  const isAdmin = isUserAdmin(userData);
+  const role = isAdmin ? "admin" : userData.role || "student";
+  const accessType = isAdmin ? 1 : (userData.accessType ?? (role === "admin" ? 1 : 2));
+  const currentCefr = userData.currentCefr || "A1";
+
+  await setSession({
+    userId: userData.id,
+    name: userData.name || userData.email.split("@")[0],
+    email: userData.email,
+    role,
+    accessType,
+    currentCefr,
+  });
+
+  let targetPath = "/dashboard";
+  if (!isAdmin) {
+    try {
+      const internalUrl =
+        process.env.INTERNAL_API_URL ||
+        process.env.API_URL ||
+        `http://127.0.0.1:${process.env.PORT_API || "3003"}`;
+      const apiUrl = (internalUrl.includes("eddys.drimland.my.id") || internalUrl.startsWith("https://"))
+        ? `http://127.0.0.1:${process.env.PORT_API || "3003"}`
+        : internalUrl.replace(/\/$/, "");
+
+      const res = await fetch(`${apiUrl}/api/placement/latest/${userData.id}`, {
+        headers: { "Content-Type": "application/json" },
+        cache: "no-store",
+      });
+
+      if (res.ok) {
+        const json = await res.json();
+        if (!json.data) {
+          targetPath = "/placement";
+        }
+      } else {
+        targetPath = "/placement";
+      }
+    } catch {
+      targetPath = "/placement";
+    }
+  }
+
+  return { success: true, targetPath, role };
+}

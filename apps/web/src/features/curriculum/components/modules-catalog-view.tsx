@@ -37,14 +37,8 @@ export function ModulesCatalogView({
     }
   }, []);
 
-  const router = useRouter();
   const { data: latestTest, isLoading: isPlacementLoading } = useLatestPlacement(session.userId);
-
-  useEffect(() => {
-    if (!isPlacementLoading && latestTest === null && session.role !== "admin") {
-      router.replace("/placement");
-    }
-  }, [latestTest, isPlacementLoading, session.role, router]);
+  const needsPlacement = !isPlacementLoading && latestTest === null && session.role !== "admin";
 
   const { data: levelsData, isLoading } = useCurriculumLevels(session.userId);
   const { data: userProfile } = useUserProfile(session.userId);
@@ -307,6 +301,32 @@ export function ModulesCatalogView({
               Standard CEFR curriculum from A1 to C2 with interactive exercises and AI voice tutor.
             </p>
           </div>
+
+          {/* Placement Test Alert Banner if student hasn't taken it yet */}
+          {needsPlacement && (
+            <div className="bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700/60 p-5 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xs">
+              <div className="flex items-start gap-3.5">
+                <div className="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0 font-bold text-lg shadow-xs">
+                  🎯
+                </div>
+                <div>
+                  <h4 className="font-bold text-base text-amber-950 dark:text-amber-200">
+                    Placement Test Wajib Belum Selesai
+                  </h4>
+                  <p className="text-xs text-amber-800/90 dark:text-amber-300/80 mt-0.5 leading-relaxed">
+                    Selesaikan tes penempatan adaptif 10 menit terlebih dahulu agar kurikulum disesuaikan dengan tingkat kemahiran Anda.
+                  </p>
+                </div>
+              </div>
+              <Link
+                href="/placement"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow-xs shrink-0 self-stretch sm:self-auto transition-transform active:scale-95"
+              >
+                <span>Mulai Placement Test</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          )}
 
           {/* 3 Top Bento Analytics Cards */}
           <ModulesAnalyticsBento

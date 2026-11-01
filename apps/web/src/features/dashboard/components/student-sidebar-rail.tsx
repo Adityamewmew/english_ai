@@ -49,8 +49,7 @@ export function StudentSidebarRail({ isOpen, onToggle }: StudentSidebarRailProps
 
   const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    animeButtonPop(e.currentTarget);
+  const handleNavClick = () => {
     if (typeof window !== "undefined" && window.innerWidth < 1024) {
       onToggle();
     }

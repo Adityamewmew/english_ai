@@ -68,7 +68,16 @@ export async function getCurriculumUsecase(userId?: string, levelId?: string) {
   const cefrOrder = ["A1", "A2", "B1", "B2", "C1", "C2"];
   const userRank = cefrOrder.indexOf(userCefr.toUpperCase().slice(0, 2));
 
-  const result = levels.map((lvl, lvlIdx) => {
+  const targetLevels = levelId
+    ? levels.filter(
+        (l) =>
+          l.id.toUpperCase() === levelId.toUpperCase() ||
+          l.cefr.toUpperCase() === levelId.toUpperCase()
+      )
+    : levels;
+
+  const result = targetLevels.map((lvl) => {
+    const lvlIdx = levels.findIndex((l) => l.id === lvl.id);
     const lvlModules = modules
       .filter((m: any) => m.levelId === lvl.id)
       .sort(

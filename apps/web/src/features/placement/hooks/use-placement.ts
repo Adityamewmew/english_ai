@@ -17,6 +17,7 @@ export function useLatestPlacement(userId: string) {
     queryKey: placementKeys.latest(userId),
     queryFn: () => placementApi.getLatestByUser(userId),
     enabled: !!userId,
+    staleTime: 60 * 1000,
   });
 }
 
