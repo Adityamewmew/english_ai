@@ -14,6 +14,7 @@ export { HowItWorksEngineDiagram } from "./components/how-it-works-engine-diagra
 export { HowItWorksTabs } from "./components/how-it-works-tabs";
 export { HowItWorksMockup } from "./components/how-it-works-mockup";
 export { PricingSection } from "./components/pricing-section";
+export { ExamPrepSection } from "./components/exam-prep-section";
 export { FAQSection } from "./components/faq-section";
 export { LandingFooter } from "./components/landing-footer";
 export * from "./data/landing-data";

@@ -24,9 +24,9 @@ export class AiTtsService {
     if (!cleanText || cleanText.trim() === "" || cleanText.length > 1500) return null;
 
     const minimaxKey = process.env.MINIMAX_API_KEY;
-    const minimaxUrl = process.env.MINIMAX_API_URL || this.MINIMAX_URL;
-    const voice = (voiceOverride || process.env.MINIMAX_VOICE_ID || this.MINIMAX_VOICE_ID).trim();
-    const model = (process.env.MINIMAX_MODEL || this.MINIMAX_MODEL).trim();
+    const minimaxUrl = process.env.MINIMAX_API_URL || AiTtsService.MINIMAX_URL;
+    const voice = (voiceOverride || process.env.MINIMAX_VOICE_ID || AiTtsService.MINIMAX_VOICE_ID).trim();
+    const model = (process.env.MINIMAX_MODEL || AiTtsService.MINIMAX_MODEL).trim();
 
     const cacheKey = crypto.createHash("sha256").update(`minimax:${voice}:${cleanText}`).digest("hex");
 

@@ -87,6 +87,7 @@ function createDefaultTierPlans(basePrice: number, baseOriginalPrice: number, ce
         "20 pesan Chat AI Tutor per hari",
         "5 menit AI Voice Call percakapan per hari",
         "Kuis & ujian kompetensi level",
+        "Akses audio listening & materi mandiri",
         `Sertifikat kelulusan resmi CEFR ${cefr}`,
       ],
     },

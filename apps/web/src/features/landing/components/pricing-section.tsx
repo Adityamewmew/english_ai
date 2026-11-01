@@ -122,20 +122,13 @@ export function PricingSection() {
     <section ref={containerRef} id="biaya" className="py-14 md:py-20 relative overflow-hidden scroll-mt-24 bg-gradient-to-b from-white via-[#F4F6FF]/40 to-white border-t border-slate-200/50">
       <div className="max-w-5xl mx-auto px-5 sm:px-6 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
-          <div>
-            <h2 className="font-heading font-bold text-primary text-2xl sm:text-3xl tracking-tight">
-              Pilihan Paket Belajar
-            </h2>
-            <p className="font-body text-slate-500 text-xs sm:text-sm mt-1">
-              Akses materi berjenjang, latihan percakapan, dan koreksi tutor AI 24/7.
-            </p>
-          </div>
-
-          <div className="px-3.5 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-primary text-xs font-semibold self-start sm:self-auto flex items-center gap-1.5 shadow-2xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            <span>Bundling Hemat hingga 47%</span>
-          </div>
+        <div className="mb-8">
+          <h2 className="font-heading font-bold text-primary text-2xl sm:text-3xl tracking-tight">
+            Pilihan Paket Belajar
+          </h2>
+          <p className="font-body text-slate-500 text-xs sm:text-sm mt-1">
+            Akses materi berjenjang, latihan percakapan, dan koreksi tutor AI 24/7.
+          </p>
         </div>
 
         {/* 3 Skeuomorphic Pricing Cards */}
@@ -151,6 +144,9 @@ export function PricingSection() {
             const features = rawFeatures.map((f) =>
               f.replace(/\s*(CEFR\s*)?A1\b/gi, "").trim()
             );
+            if (tier.id === "basic" && features.length === 5) {
+              features.splice(4, 0, "Akses audio listening & materi mandiri");
+            }
 
             return (
               <div
@@ -203,39 +199,44 @@ export function PricingSection() {
                   </div>
 
                   {/* Price */}
-                  <div className="mt-3.5 flex items-baseline gap-2">
-                    <span
-                      className={`font-heading font-black text-2xl sm:text-3xl tracking-tight ${
-                        isPopular ? "text-white drop-shadow-xs" : "text-primary"
-                      }`}
-                    >
-                      {formatRupiah(price)}
-                    </span>
-                    <span
-                      className={`text-xs font-bold ${
-                        isPopular ? "text-blue-100" : "text-slate-500"
-                      }`}
-                    >
-                      /bulan
-                    </span>
-                    {originalPrice && (
+                  <div className="mt-3.5">
+                    <div className="flex items-baseline gap-1.5 flex-wrap">
                       <span
-                        className={`text-xs line-through ${
-                          isPopular ? "text-blue-200/80 font-medium" : "text-slate-400"
+                        className={`font-heading font-black text-2xl sm:text-3xl tracking-tight ${
+                          isPopular ? "text-white drop-shadow-xs" : "text-primary"
                         }`}
                       >
-                        {formatRupiah(originalPrice)}
+                        {formatRupiah(price)}
                       </span>
+                      <span
+                        className={`text-xs font-bold ${
+                          isPopular ? "text-blue-100" : "text-slate-500"
+                        }`}
+                      >
+                        /bulan
+                      </span>
+                    </div>
+
+                    {originalPrice && (
+                      <div className="flex items-center gap-2 mt-1">
+                        <span
+                          className={`text-xs line-through ${
+                            isPopular ? "text-blue-200/80 font-medium" : "text-slate-400"
+                          }`}
+                        >
+                          {formatRupiah(originalPrice)}
+                        </span>
+                        <span
+                          className={`text-[10px] font-black px-1.5 py-0.5 rounded border ${
+                            isPopular
+                              ? "text-amber-300 bg-white/10 border-white/20"
+                              : "text-emerald-700 bg-emerald-50 border-emerald-200/60"
+                          }`}
+                        >
+                          -{tier.savingsPercentage || 40}%
+                        </span>
+                      </div>
                     )}
-                    <span
-                      className={`text-[10px] font-black px-1.5 py-0.5 rounded border ${
-                        isPopular
-                          ? "text-white bg-white/15 border-white/25 backdrop-blur-xs"
-                          : "text-emerald-700 bg-emerald-50 border-emerald-200/60"
-                      }`}
-                    >
-                      -{tier.savingsPercentage || 47}%
-                    </span>
                   </div>
 
                   <p

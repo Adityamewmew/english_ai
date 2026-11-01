@@ -25,6 +25,7 @@ export const PRICING_TIERS: PricingTier[] = [
       "20 pesan chat AI per hari",
       "5 menit voice call per hari",
       "Kuis latihan & evaluasi progres",
+      "Akses audio listening & materi mandiri",
       "Sertifikat resmi kelulusan",
     ],
   },

@@ -12,10 +12,12 @@ import type {
 import { useSpeechRecognition } from "@/hooks/use-speech-recognition";
 import { speakTutorText, stopTutorSpeech } from "@/lib/tutor-voice";
 import { getApiUrl } from "@/lib/api-client";
+import { authClient } from "@/lib/auth-client";
 import { playPopSound } from "@/lib/sound-fx";
 import { Mic, Loader2 } from "lucide-react";
 
 export function SidebarArcadeCompanion() {
+  const { data: session } = authClient.useSession();
   const anchorRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState<boolean>(false);
   const [rect, setRect] = useState<{ left: number; width: number } | null>(null);
@@ -109,10 +111,12 @@ export function SidebarArcadeCompanion() {
         const res = await fetch(getApiUrl("/api/voice/turn-stream"), {
           method: "POST",
           headers: { "Content-Type": "application/json" },
+          credentials: "include",
           body: JSON.stringify({
             topic: "Study Section Coach",
             history: conversationHistoryRef.current.slice(-4),
             studentMessage: userMessage,
+            userId: session?.user?.id || undefined,
           }),
           signal: controller.signal,
         });

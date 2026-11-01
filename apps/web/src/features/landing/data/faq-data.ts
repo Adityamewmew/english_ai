@@ -13,9 +13,9 @@ export const FAQ_ITEMS: FAQItem[] = [
   },
   {
     id: "certificate",
-    question: "Bagaimana keabsahan sertifikat Cambridge-nya?",
+    question: "Bagaimana dengan keabsahan sertifikat di EDDY'S ENGLISH?",
     answer:
-      "Sertifikat berstandar resmi Cambridge terakreditasi BAN PAUD & PNF di bawah naungan yayasan pendidikan 40+ tahun.",
+      "Sertifikat Eddy's diakui nasional karena sudah berijin resmi berbadan hukum, BAN PNF, serta ijin Dinas Pendidikan penyelenggara kursus Resmi. Untuk sertifikat TOEFL ITP, dan TOEIC diterbitkan oleh ETS (Educational Testing Service) Amerika.",
   },
   {
     id: "device",

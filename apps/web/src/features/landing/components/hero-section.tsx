@@ -9,6 +9,7 @@ import { TrustCarouselSection } from "./trust-carousel-section";
 import { FeatureSection } from "./feature-section";
 import { HowItWorksSection } from "./how-it-works-section";
 import { PricingSection } from "./pricing-section";
+import { ExamPrepSection } from "./exam-prep-section";
 import { FAQSection } from "./faq-section";
 import { LandingFooter } from "./landing-footer";
 import { PreviewModal } from "./preview-modal";
@@ -226,6 +227,9 @@ export function HeroSection() {
 
         {/* ================= SECTION 5: PAKET HARGA & BUNDLING (NEURAXIS STYLE) ================= */}
         <PricingSection />
+
+        {/* ================= SECTION 5B: KELAS KHUSUS UJIAN (TOEFL, IELTS, TOEIC) ================= */}
+        <ExamPrepSection />
 
         {/* ================= SECTION 6: TANYA JAWAB (FAQ INTERAKTIF) ================= */}
         <FAQSection />

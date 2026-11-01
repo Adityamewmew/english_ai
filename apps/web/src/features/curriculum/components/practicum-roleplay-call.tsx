@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { playPopSound, playSnapSound, playMatchSuccessSound } from "@/lib/sound-fx";
 import { getApiUrl } from "@/lib/api-client";
+import { authClient } from "@/lib/auth-client";
 import type { PracticumQuestion } from "./speaking-practicum-stage";
 
 interface PracticumRoleplayCallProps {
@@ -29,6 +30,7 @@ export function PracticumRoleplayCall({
   isCompleted,
   savedScore,
 }: PracticumRoleplayCallProps) {
+  const { data: session } = authClient.useSession();
   const [isCallActive, setIsCallActive] = useState(false);
   const [isSpeakingTutor, setIsSpeakingTutor] = useState(false);
   const [isRecordingStudent, setIsRecordingStudent] = useState(false);
@@ -213,12 +215,14 @@ export function PracticumRoleplayCall({
       const res = await fetch(getApiUrl("/api/voice/turn-stream"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify({
           topic: `${question.scenarioContext || "Roleplay"} with ${
             question.characterRole || "Mr. Khoirul"
           }`,
           history: updatedHistory.map((h) => ({ role: h.role, content: h.text })),
           studentMessage: studentText,
+          userId: session?.user?.id || undefined,
         }),
       });
 
