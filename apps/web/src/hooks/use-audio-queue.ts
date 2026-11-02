@@ -77,43 +77,6 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     } catch {}
   }, []);
 
-  const playWithBrowserSpeech = useCallback((text: string) => {
-    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
-      if (!isHaltedRef.current) playNextInQueue();
-      return;
-    }
-    try {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = "en-US";
-      utterance.rate = 0.95;
-      const voices = window.speechSynthesis.getVoices();
-      const maleVoice =
-        voices.find(
-          (v) =>
-            v.lang.startsWith("en") &&
-            /\b(male|david|daniel|guy|george|roger|mark|ryan|oliver|andrew)\b/i.test(v.name)
-        ) ||
-        voices.find(
-          (v) =>
-            (v.lang === "en-US" || v.lang === "en-GB") &&
-            !/\b(female|zira|samantha|karen|victoria|hazel|susan|google\s+us\s+english)\b/i.test(v.name)
-        ) ||
-        voices.find((v) => v.lang.startsWith("en"));
-      if (maleVoice) utterance.voice = maleVoice;
-
-      utterance.onend = () => {
-        if (!isHaltedRef.current) playNextInQueue();
-      };
-      utterance.onerror = () => {
-        if (!isHaltedRef.current) playNextInQueue();
-      };
-      window.speechSynthesis.speak(utterance);
-    } catch {
-      if (!isHaltedRef.current) playNextInQueue();
-    }
-  }, []);
-
   const playNextInQueue = useCallback(async () => {
     if (isHaltedRef.current) return;
 
@@ -145,8 +108,11 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     if (isHaltedRef.current) return;
 
     if (!audio) {
-      // Fallback to browser SpeechSynthesis when backend TTS has 0 credits or fails
-      playWithBrowserSpeech(nextItem.text);
+      // NEVER fall back to robotic browser SpeechSynthesis (prevents switching to default female voice).
+      // Give a brief reading pause so the subtitle is visible, then advance queue seamlessly.
+      setTimeout(() => {
+        if (!isHaltedRef.current) playNextInQueue();
+      }, 700);
       return;
     }
 
@@ -159,43 +125,57 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
 
     audio.onerror = () => {
       if (isHaltedRef.current) return;
-      playWithBrowserSpeech(nextItem.text);
+      playNextInQueue();
     };
 
     try {
       await audio.play();
     } catch (err: any) {
       if (err.name === "AbortError" || isHaltedRef.current) return;
-      console.warn("Audio play error, falling back to browser speech:", err);
-      if (!isHaltedRef.current) playWithBrowserSpeech(nextItem.text);
+      console.warn("Audio play error, skipping sentence cleanly:", err);
+      if (!isHaltedRef.current) playNextInQueue();
     }
-  }, [playWithBrowserSpeech]);
+  }, []);
 
   const enqueueSentence = useCallback(
     (sentence: string, index: number) => {
       if (isHaltedRef.current) return;
 
-      const audioPromise = fetch(getApiUrl("/api/voice/tts"), {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ text: sentence }),
-      })
-        .then((res) => {
-          if (!res.ok) throw new Error("TTS POST error");
-          return res.blob();
-        })
-        .then((blob) => {
+      const fetchWithRetry = async (attempt = 1): Promise<HTMLAudioElement | null> => {
+        try {
+          const res = await fetch(getApiUrl("/api/voice/tts"), {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            credentials: "include",
+            body: JSON.stringify({ text: sentence }),
+          });
+
+          if (!res.ok) {
+            if (attempt < 2 && !isHaltedRef.current) {
+              await new Promise((r) => setTimeout(r, 250));
+              return fetchWithRetry(attempt + 1);
+            }
+            throw new Error(`TTS POST error ${res.status}`);
+          }
+
+          const blob = await res.blob();
           if (isHaltedRef.current) return null;
+
           const url = URL.createObjectURL(blob);
           const audio = new Audio(url);
           audio.preload = "auto";
           return audio;
-        })
-        .catch((err) => {
+        } catch (err) {
+          if (attempt < 2 && !isHaltedRef.current) {
+            await new Promise((r) => setTimeout(r, 250));
+            return fetchWithRetry(attempt + 1);
+          }
           console.warn("TTS fetch error for sentence:", sentence, err);
           return null;
-        });
+        }
+      };
+
+      const audioPromise = fetchWithRetry();
 
       audioQueueRef.current.push({
         index,

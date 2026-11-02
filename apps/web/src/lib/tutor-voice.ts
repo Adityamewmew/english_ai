@@ -86,7 +86,8 @@ export function speakTutorText(
         if (activeAudio === audio) activeAudio = null;
         URL.revokeObjectURL(audioUrl);
         if (speechId === currentSpeechId) {
-          fallbackBrowserSpeech(clean, speechId, options);
+          options?.onError?.();
+          options?.onEnd?.();
         }
       };
 
@@ -99,7 +100,8 @@ export function speakTutorText(
         if (activeAudio === audio) activeAudio = null;
         URL.revokeObjectURL(audioUrl);
         if (speechId === currentSpeechId) {
-          fallbackBrowserSpeech(clean, speechId, options);
+          options?.onError?.();
+          options?.onEnd?.();
         }
       });
     })
@@ -108,7 +110,8 @@ export function speakTutorText(
       if (err?.name === "AbortError" || speechId !== currentSpeechId) {
         return;
       }
-      fallbackBrowserSpeech(clean, speechId, options);
+      options?.onError?.();
+      options?.onEnd?.();
     });
 }
 

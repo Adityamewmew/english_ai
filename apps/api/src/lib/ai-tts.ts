@@ -9,7 +9,8 @@ import crypto from "crypto";
 export const ttsMemoryCache = new Map<string, Buffer>();
 
 export class AiTtsService {
-  public static readonly ROGER_VOICE_ID = "CwhRBWXzGAHq8TQ4Fs17";
+  public static readonly ADAM_VOICE_ID = "pNInz6obpgDQGcFmaJgB"; // ElevenLabs Adam (Dynamic, Warm, Conversational)
+  public static readonly ROGER_VOICE_ID = "CwhRBWXzGAHq8TQ4Fs17"; // ElevenLabs Roger (Legacy Narrator)
   public static readonly DEFAULT_MODEL = "elevenlabs/eleven_multilingual_v2";
   public static readonly TURBO_MODEL = "elevenlabs/eleven_turbo_v2_5";
 
@@ -25,7 +26,7 @@ export class AiTtsService {
 
     if (!baseUrl || !apiKey) return null;
 
-    const voice = (voiceOverride || process.env.AI_AUDIO_VOICE || "").trim() || this.ROGER_VOICE_ID;
+    const voice = (voiceOverride || process.env.AI_AUDIO_VOICE || "").trim() || this.ADAM_VOICE_ID;
     const audioModel = (process.env.AI_AUDIO_MODEL || "").trim() || this.DEFAULT_MODEL;
 
     const cacheKey = crypto.createHash("sha256").update(`eleven:${voice}:${cleanText}`).digest("hex");
@@ -36,8 +37,8 @@ export class AiTtsService {
 
     const candidates = [
       { model: audioModel, voice },
-      { model: this.DEFAULT_MODEL, voice: this.ROGER_VOICE_ID },
-      { model: this.TURBO_MODEL, voice: this.ROGER_VOICE_ID },
+      { model: this.DEFAULT_MODEL, voice: this.ADAM_VOICE_ID },
+      { model: this.TURBO_MODEL, voice: this.ADAM_VOICE_ID },
     ];
 
     const endpoint = `${baseUrl.replace(/\/+$/, "")}/audio/speech`;
@@ -95,13 +96,13 @@ export class AiTtsService {
 
     if (!baseUrl || !apiKey || !cleanText || cleanText.trim() === "") return null;
 
-    const voice = (process.env.AI_AUDIO_VOICE || "").trim() || this.ROGER_VOICE_ID;
+    const voice = (process.env.AI_AUDIO_VOICE || "").trim() || this.ADAM_VOICE_ID;
     const audioModel = (process.env.AI_AUDIO_MODEL || "").trim() || this.DEFAULT_MODEL;
 
     const candidates = [
       { model: audioModel, voice },
-      { model: this.DEFAULT_MODEL, voice: this.ROGER_VOICE_ID },
-      { model: this.TURBO_MODEL, voice: this.ROGER_VOICE_ID },
+      { model: this.DEFAULT_MODEL, voice: this.ADAM_VOICE_ID },
+      { model: this.TURBO_MODEL, voice: this.ADAM_VOICE_ID },
     ];
 
     const endpoint = `${baseUrl.replace(/\/+$/, "")}/audio/speech`;

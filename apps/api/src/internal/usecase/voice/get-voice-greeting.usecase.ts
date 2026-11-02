@@ -41,17 +41,17 @@ export async function getVoiceGreetingUsecase(params: {
   if (hasPreviousSession) {
     const returningGreetings = [
       studentName
-        ? `Hey ${studentName}, welcome back! Good to hear from you again. How are things with you today?`
-        : `Hey, welcome back! Good to hear from you again. How are things with you today?`,
+        ? `Yo ${studentName}! Good to hear from you again. What's new with you today?`
+        : `Yo! Good to hear from you again. What's new with you today?`,
       studentName
-        ? `Hi ${studentName}, welcome back! Great to connect again. How has your day been going so far?`
-        : `Hi, welcome back! Great to connect again. How has your day been going so far?`,
+        ? `Hey ${studentName}! Welcome back. What are you up to right now?`
+        : `Hey! Welcome back. What are you up to right now?`,
       studentName
-        ? `Hey ${studentName}! Good to hear your voice again. Ready to practice some English today?`
-        : `Hey there! Good to hear your voice again. Ready to practice some English today?`,
+        ? `Hey ${studentName}! Great to hear your voice again. How's your day treating you?`
+        : `Hey there! Great to hear your voice again. How's your day treating you?`,
       studentName
-        ? `Good to chat with you again, ${studentName}! What have you been up to today?`
-        : `Good to chat with you again! What have you been up to today?`,
+        ? `Haha, hey ${studentName}! Always great catching up with you.`
+        : `Haha, hey there! Always great catching up with you.`,
     ];
     const idx = Math.floor(Math.random() * returningGreetings.length);
     return {
@@ -60,9 +60,18 @@ export async function getVoiceGreetingUsecase(params: {
     };
   }
 
-  const defaultGreeting = studentName
-    ? `Hello ${studentName}! I am Mr. Khoirul, your English tutor. It is wonderful to meet you today! How are you doing?`
-    : "Hello! I am Mr. Khoirul, your English tutor. It is wonderful to meet you today! How are you doing?";
+  const defaultGreetings = [
+    studentName
+      ? `Yo ${studentName}! What's up! Mr. Khoirul here. Great to finally talk with you!`
+      : "Yo! What's up! Mr. Khoirul here. Great to finally talk with you!",
+    studentName
+      ? `Hey ${studentName}! Awesome to connect with you. How's everything going today?`
+      : "Hey there! Awesome to connect with you. How's everything going today?",
+    studentName
+      ? `Hey ${studentName}! Mr. Khoirul here. So glad you called in today!`
+      : "Hey! Mr. Khoirul here. So glad you called in today!",
+  ];
+  const defaultGreeting = defaultGreetings[Math.floor(Math.random() * defaultGreetings.length)];
 
   return {
     greeting: defaultGreeting,
