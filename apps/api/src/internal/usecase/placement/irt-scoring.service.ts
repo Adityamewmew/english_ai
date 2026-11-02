@@ -116,19 +116,45 @@ export class IrtScoringService {
     const listeningScore = lisTotal > 0 ? Math.round((lisCorrect / lisTotal) * 100) : 0;
 
     // 6. Objective Heuristic for Writing & Speaking Tasks
-    // Validates completion and lexical engagement without fragile external AI calls
-    const writingWordCount = (writingText || "").trim().split(/\s+/).filter(Boolean).length;
-    let writingScore = 0;
-    if (writingWordCount >= 60) writingScore = 90;
-    else if (writingWordCount >= 40) writingScore = 75;
-    else if (writingWordCount >= 20) writingScore = 60;
-    else if (writingWordCount >= 5) writingScore = 40;
+    // Validates completion, lexical engagement, and filters out repetitive gibberish
+    const isQualityText = (text?: string): boolean => {
+      if (!text) return false;
+      const raw = text.trim();
+      const words = raw.split(/\s+/).filter(Boolean);
+      if (words.length < 5) return false;
 
-    const speakingWordCount = (speakingTranscript || "").trim().split(/\s+/).filter(Boolean).length;
+      const uniqueWords = new Set(words.map((w) => w.toLowerCase()));
+      const lexicalDiversity = uniqueWords.size / words.length;
+
+      // Repetitive spam/gibberish check (e.g. "asdf asdf asdf" or "abc abc abc")
+      if (words.length >= 5 && lexicalDiversity < 0.5) return false;
+
+      // Average word length check (e.g. "a a a a a a")
+      const totalChars = words.reduce((sum, w) => sum + w.length, 0);
+      const avgWordLength = totalChars / words.length;
+      if (avgWordLength < 2.5) return false;
+
+      return true;
+    };
+
+    const writingWords = (writingText || "").trim().split(/\s+/).filter(Boolean);
+    const isValidWriting = isQualityText(writingText);
+    let writingScore = 0;
+    if (isValidWriting) {
+      if (writingWords.length >= 60) writingScore = 90;
+      else if (writingWords.length >= 40) writingScore = 75;
+      else if (writingWords.length >= 20) writingScore = 60;
+      else if (writingWords.length >= 5) writingScore = 40;
+    }
+
+    const speakingWords = (speakingTranscript || "").trim().split(/\s+/).filter(Boolean);
+    const isValidSpeaking = isQualityText(speakingTranscript);
     let speakingScore = 0;
-    if (speakingWordCount >= 30) speakingScore = 90;
-    else if (speakingWordCount >= 15) speakingScore = 75;
-    else if (speakingWordCount >= 5) speakingScore = 55;
+    if (isValidSpeaking) {
+      if (speakingWords.length >= 30) speakingScore = 90;
+      else if (speakingWords.length >= 15) speakingScore = 75;
+      else if (speakingWords.length >= 5) speakingScore = 55;
+    }
 
     // 7. Calculate Psychometric Weighted Percentage (0-100)
     const scorePercent = maxWeighted > 0
@@ -136,7 +162,7 @@ export class IrtScoringService {
       : 0;
 
     // 8. Mastery Ceiling Determination (Top-Down Progressive Assessment)
-    // Prevents advanced C1/C2 learners from being penalized into A1 due to minor slips on basic questions
+    // Gated by foundational CEFR requirements and active skill participation
     let determinedCefr = "A1";
 
     const c2Acc = levelBreakdown.C2.accuracy;
@@ -144,17 +170,47 @@ export class IrtScoringService {
     const b2Acc = levelBreakdown.B2.accuracy;
     const b1Acc = levelBreakdown.B1.accuracy;
     const a2Acc = levelBreakdown.A2.accuracy;
+    const a1Acc = levelBreakdown.A1.accuracy;
 
-    if (c2Acc >= 0.5 && (c1Acc >= 0.5 || b2Acc >= 0.5 || scorePercent >= 70)) {
-      determinedCefr = "C2";
-    } else if (c1Acc >= 0.5 && (b2Acc >= 0.5 || scorePercent >= 60)) {
-      determinedCefr = "C1";
-    } else if (b2Acc >= 0.5 && (b1Acc >= 0.5 || scorePercent >= 48)) {
-      determinedCefr = "B2";
-    } else if (b1Acc >= 0.5 && (a2Acc >= 0.5 || scorePercent >= 38)) {
-      determinedCefr = "B1";
-    } else if (a2Acc >= 0.5 || scorePercent >= 28) {
-      determinedCefr = "A2";
+    const hasBasicProductiveSkill = writingScore >= 40 || speakingScore >= 55;
+    const hasA1Foundation = a1Acc >= 0.5;
+
+    // A learner CANNOT pass into A2+ if they fail A1 basics or submit empty/gibberish productive tasks
+    if (hasA1Foundation && hasBasicProductiveSkill) {
+      if (
+        c2Acc >= 0.5 &&
+        (c1Acc >= 0.5 || scorePercent >= 88) &&
+        writingScore >= 75 &&
+        speakingScore >= 75
+      ) {
+        determinedCefr = "C2";
+      } else if (
+        c1Acc >= 0.5 &&
+        (b2Acc >= 0.5 || scorePercent >= 78) &&
+        writingScore >= 60 &&
+        speakingScore >= 60
+      ) {
+        determinedCefr = "C1";
+      } else if (
+        b2Acc >= 0.5 &&
+        (b1Acc >= 0.5 || scorePercent >= 65) &&
+        (writingScore >= 60 || speakingScore >= 60)
+      ) {
+        determinedCefr = "B2";
+      } else if (
+        b1Acc >= 0.5 &&
+        (a2Acc >= 0.5 || scorePercent >= 52) &&
+        (writingScore >= 40 || speakingScore >= 55)
+      ) {
+        determinedCefr = "B1";
+      } else if (
+        (a2Acc >= 0.5 || scorePercent >= 42) &&
+        scorePercent >= 40
+      ) {
+        determinedCefr = "A2";
+      } else {
+        determinedCefr = "A1";
+      }
     } else {
       determinedCefr = "A1";
     }
