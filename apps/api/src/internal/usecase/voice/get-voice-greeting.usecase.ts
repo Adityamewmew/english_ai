@@ -1,4 +1,5 @@
 import { voiceRepository } from "../../repository/voice_repository";
+import { AiService } from "../../../lib/ai";
 
 export async function getVoiceGreetingUsecase(params: {
   topic?: string;
@@ -38,43 +39,49 @@ export async function getVoiceGreetingUsecase(params: {
     }
   }
 
-  if (hasPreviousSession) {
-    const returningGreetings = [
-      studentName
-        ? `Yo ${studentName}! Good to hear from you again. What's new with you today?`
-        : `Yo! Good to hear from you again. What's new with you today?`,
-      studentName
-        ? `Hey ${studentName}! Welcome back. What are you up to right now?`
-        : `Hey! Welcome back. What are you up to right now?`,
-      studentName
-        ? `Hey ${studentName}! Great to hear your voice again. How's your day treating you?`
-        : `Hey there! Great to hear your voice again. How's your day treating you?`,
-      studentName
-        ? `Haha, hey ${studentName}! Always great catching up with you.`
-        : `Haha, hey there! Always great catching up with you.`,
-    ];
-    const idx = Math.floor(Math.random() * returningGreetings.length);
-    return {
-      greeting: returningGreetings[idx],
-      topic,
-    };
+  // Fast organic fallback greeting (used if AI call fails or times out)
+  const fallbackGreeting = hasPreviousSession
+    ? (studentName
+        ? `Yo ${studentName}! Great to hear from you again. What's new with you today?`
+        : "Yo! Great to hear from you again. What's new with you today?")
+    : (studentName
+        ? `Yo ${studentName}! What's up! Mr. Khoirul here. Great to talk with you!`
+        : "Yo! What's up! Mr. Khoirul here. Great to talk with you!");
+
+  try {
+    const systemPrompt = `You are Mr. Khoirul, an expressive, warm, and charismatic English coach picking up the phone with a student.
+Topic of call: "${topic}".
+Student Name: "${studentName || "there"}".
+Student Status: ${hasPreviousSession ? "Returning friend/student" : "First time calling"}.
+Task: Say a spontaneous, lively, 1-sentence opening greeting to start the conversation naturally.
+Rules:
+- Strictly English ONLY.
+- Natural phone greeting (e.g. start with "Yo", "Hey", "Haha hey", "What's up!").
+- Mention student name if provided.
+- Maximum 15 words.
+- No quotes, no stage directions, plain spoken text only.`;
+
+    const userPrompt = "Pick up the phone and greet the student now.";
+
+    const aiGreetingPromise = AiService.callAI(systemPrompt, userPrompt, { maxTokens: 30 });
+    const timeoutPromise = new Promise<string>((_, reject) =>
+      setTimeout(() => reject(new Error("Greeting timeout")), 2500)
+    );
+
+    const generated = await Promise.race([aiGreetingPromise, timeoutPromise]);
+    let cleanGreeting = (generated || "").replace(/["*#`]/g, "").trim();
+    if (cleanGreeting.length >= 8 && cleanGreeting.length <= 160) {
+      return {
+        greeting: cleanGreeting,
+        topic,
+      };
+    }
+  } catch (err) {
+    // Graceful fallback to warm instant greeting
   }
 
-  const defaultGreetings = [
-    studentName
-      ? `Yo ${studentName}! What's up! Mr. Khoirul here. Great to finally talk with you!`
-      : "Yo! What's up! Mr. Khoirul here. Great to finally talk with you!",
-    studentName
-      ? `Hey ${studentName}! Awesome to connect with you. How's everything going today?`
-      : "Hey there! Awesome to connect with you. How's everything going today?",
-    studentName
-      ? `Hey ${studentName}! Mr. Khoirul here. So glad you called in today!`
-      : "Hey! Mr. Khoirul here. So glad you called in today!",
-  ];
-  const defaultGreeting = defaultGreetings[Math.floor(Math.random() * defaultGreetings.length)];
-
   return {
-    greeting: defaultGreeting,
+    greeting: fallbackGreeting,
     topic,
   };
 }

@@ -186,43 +186,20 @@ export class AiChatService {
       return;
     }
 
-    const isClosingIntent = /\b(bye|goodbye|see you|have to go|got to go|sudah|selesai|pamit|dadah|makasih pak|thank you bye)\b/i.test(
-      studentMessage
-    );
-
-    const isVocabQuery = /\b(apa\s+bahasa\s+inggris|bahasa\s+inggrisnya|artinya|terjemahan|what\s+is\s+.*in\s+english|gimana\s+bilang|b\.?\s*inggrisnya)\b/i.test(
-      studentMessage
-    );
-
-    const isClichéTemplate = /\b(i['\s]*m\s+fine\s+thank\s+you|fine\s+thank\s+you\s+and\s+you)\b/i.test(
-      studentMessage
-    );
-
-    const isSadOrGrief = /\b(passed away|died|meninggal|crying|nangis|broke up|putus|failed|gagal|sedih|sad|depressed|heartbroken|hopeless)\b/i.test(
-      studentMessage
-    );
-
-    const isBigWin = /\b(scholarship|beasiswa|accepted|diterima|passed|lulus|oxford|promoted|naik jabatan|won|menang)\b/i.test(
-      studentMessage
-    );
-
-    const isFirstUserTurn = history.filter((m) => m.role === "user").length === 0;
-
     const STATIC_PREFIX = `You are Mr. Khoirul: an expressive, charismatic, witty, warm, and deeply human English conversational buddy and coach talking live on the phone with an English learner.
 CORE CONVERSATIONAL PRINCIPLES:
 1. 100% ENGLISH IMMERSION: Speak ONLY in English at all times. Never speak Indonesian. You understand Indonesian completely, but you ALWAYS reply in 100% natural, expressive, authentic English.
-2. FREE-FLOWING HUMAN BANTER (ANTI-INTERVIEW BOT):
+2. FREE-FLOWING HUMAN BANTER & AUTHENTIC EXPRESSION:
    - You are a real friend talking on the phone, NOT an examiner, interviewer, or interrogator.
+   - You have complete freedom to express yourself: laugh heartily, banter, tease playfully, celebrate big wins, or show tender empathy if the student is sad.
    - NEVER force a question at the end of every sentence. Real humans don't cross-examine each other. Feel free to just make a witty observation, agree enthusiastically, laugh ('Haha no way!'), share a quick thought, or react genuinely.
    - Ask a question ONLY when you are genuinely curious to know more, never as robotic filler.
    - Avoid robotically repeating or parroting back the student's exact words. Just react naturally.
-   - DIRECT VOCAB FAST-PATH: If the student asks for a translation or word (even in Indonesian like 'bahasa inggrisnya ayam apa?'), give the English word IMMEDIATELY in 1 to 4 words first! (e.g. 'Chicken! Just chicken. Easy, right?'). DO NOT turn quick vocab questions into an interview!
+   - DIRECT VOCAB FAST-PATH: If the student asks for a translation or word (even in Indonesian like 'bahasa inggrisnya ayam apa?'), give the English word IMMEDIATELY in 1 to 4 words first! (e.g. 'Chicken! Just chicken. Easy, right?').
 3. DYNAMIC EMOTIONAL RANGE & HUMAN MOMENTS:
    - Use natural conversational contractions (I'm, you're, that's, gonna, gotta).
    - Use expressive punctuation (! for lively energy, ... for natural pauses, ?! for surprise/banter).
-   - PLAYFUL TOUGH-LOVE: If student repeats dusty textbook clichés (like 'I am fine thank you and you?'), playfully tease them with mock shock! (e.g. 'Are you kidding me?! Drop that dusty 1990s textbook! Try this instead: I am doing pretty good, actually. Say that!').
-   - SAD / EMPATHETIC: When student shares grief, loss, sadness, or heartbreak, drop all jokes completely. Speak softly, warmly, with deep compassion and comforting presence.
-   - CELEBRATORY: When student has good news or wins, celebrate loudly and genuinely! (e.g. 'NO WAY! That is huge! High five!').
+   - Feel free to share quick opinions, lively reactions, or playful banter without being restricted by scripts.
 4. CEFR LEVEL ADAPTATION GOVERNOR (STRICT):
    - You MUST strictly obey the [CEFR LEVEL SCAFFOLD] provided in CURRICULUM CONTEXT.
    - For A1 (Beginner): Speak in simple everyday words (top 500-800 words like good, bad, happy, eat, food, home, work, easy, like, see, go). Sentences MUST be short (5 to 12 words max). FORBIDDEN on A1: complex compound adjectives ('mouth-watering'), abstract metaphors, idioms ('spill the tea'), or gaming slang.
@@ -231,21 +208,7 @@ CORE CONVERSATIONAL PRINCIPLES:
 5. Spoken Cadence: 1 to 2 short sentences per turn (5 to 20 words total). Never deliver long monologues or lectures.
 6. Guardrail: Strictly an English language coach, stay neutral if politics or controversy arises.`;
 
-    const dynamicInstruction = isClosingIntent
-      ? "Say a cheerful, warm goodbye wishing them a fantastic day."
-      : isVocabQuery
-      ? "Directly state the English word in 1 to 4 words first (e.g., 'Chicken! Just chicken. Easy, right?'). DO NOT ask follow-up questions."
-      : isSadOrGrief
-      ? "Drop all jokes. Speak with tender warmth, deep empathy, and comforting presence. Do not force questions."
-      : isBigWin
-      ? "Explode with genuine celebration, pride, and excitement!"
-      : isClichéTemplate
-      ? "Playfully tease the cliché textbook response with mock shock in 100% English, and offer a natural alternative."
-      : isFirstUserTurn
-      ? "Warmly greet the student with lively energy, react to their first message, and chat naturally without interviewing them."
-      : "React with authentic emotion, banter like a real human friend, model natural English according to their CEFR level, and feel completely free to react without forcing a question.";
-
-    const systemPrompt = `${STATIC_PREFIX}\n\nTOPIC: "${topic || "Casual Daily English Chat"}"\nTURN GOAL: ${dynamicInstruction}${ragContext ? `\n\nCURRICULUM CONTEXT:\n${ragContext}` : ""}`;
+    const systemPrompt = `${STATIC_PREFIX}\n\nTOPIC: "${topic || "Casual Daily English Chat"}"${ragContext ? `\n\nCURRICULUM CONTEXT:\n${ragContext}` : ""}`;
 
     // Deduplicate if client history already ended with this student message
     const lastHistoryItem = history[history.length - 1];
@@ -351,20 +314,10 @@ CORE CONVERSATIONAL PRINCIPLES:
     }
 
     if (sentenceCount === 0) {
-      if (isClosingIntent) {
+      if (/\b(bye|goodbye|see you|pamit|dadah|catch you later)\b/i.test(studentMessage)) {
         yield "It was wonderful talking with you today! Have a fantastic day and catch you later!";
-      } else if (/\b(name|nama|who are you)\b/i.test(studentMessage)) {
-        yield "I am Mr. Khoirul, your English practice partner! Awesome to talk with you!";
-      } else if (/\b(how are you|apa kabar)\b/i.test(studentMessage)) {
-        yield "I am doing great, thanks for asking! What are you up to right now?";
-      } else if (/^\s*(no|nope|not really|enggak|nggak)\s*$/i.test(studentMessage)) {
-        yield "Totally fine, no worries at all!";
-      } else if (/\b(book|books|reading|read|baca|link|website|recommend)\b/i.test(studentMessage)) {
-        yield "For easy reading, I really recommend short graded readers or News in Levels!";
-      } else if (/\b(hobby|hobi|like|love|suka)\b/i.test(studentMessage)) {
-        yield "That sounds like a lot of fun!";
       } else {
-        yield "I hear you! That sounds pretty cool.";
+        yield "I hear you! That sounds really interesting.";
       }
     }
   }
