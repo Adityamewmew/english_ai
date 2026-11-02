@@ -93,7 +93,7 @@ export function AiQuotaBadge({
 
       {showUpgradeLink && quota.tier !== "ultra" && quota.tier !== "admin" && (
         <Link
-          href="/curriculum"
+          href="/modules"
           className="text-[10px] font-extrabold text-indigo-600 hover:text-indigo-800 underline underline-offset-2 shrink-0 hidden sm:inline"
         >
           {isExceeded ? "Upgrade Paket" : "Upgrade"}

@@ -156,7 +156,7 @@ export function PaymentConfirmationView({ orderId }: PaymentConfirmationViewProp
             Link pembayaran ini tidak valid atau telah dihapus dari sistem.
           </p>
           <Button asChild className="btn-skeuo-navy bg-[#10375C] text-white">
-            <Link href="/curriculum">Kembali ke Kurikulum</Link>
+            <Link href="/modules">Kembali ke Kurikulum</Link>
           </Button>
         </div>
       </div>
@@ -219,7 +219,7 @@ export function PaymentConfirmationView({ orderId }: PaymentConfirmationViewProp
               </p>
               <div className="pt-2">
                 <Button asChild className="btn-skeuo-navy bg-[#10375C] hover:bg-[#0D2D4B] text-white px-8 py-3 rounded-xl">
-                  <Link href="/curriculum" className="inline-flex items-center gap-2">
+                  <Link href="/modules" className="inline-flex items-center gap-2">
                     Masuk ke Kelas Sekarang <ArrowRight className="w-4 h-4" />
                   </Link>
                 </Button>
@@ -237,7 +237,7 @@ export function PaymentConfirmationView({ orderId }: PaymentConfirmationViewProp
                 Invoice pembayaran ini telah kedaluwarsa. Silakan lakukan pemesanan ulang dari katalog modul kurikulum.
               </p>
               <Button asChild variant="outline" className="rounded-xl font-bold text-xs px-6 py-2.5">
-                <Link href="/curriculum">Pilih Kelas Baru</Link>
+                <Link href="/modules">Pilih Kelas Baru</Link>
               </Button>
             </div>
           ) : (

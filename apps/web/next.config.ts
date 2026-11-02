@@ -32,6 +32,15 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/curriculum",
+        destination: "/modules",
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     // CRITICAL: Server-side rewrite MUST ALWAYS target local Elysia port (127.0.0.1:3003)
     // NEVER use NEXT_PUBLIC_API_URL here: if set to the public domain (e.g. https://eddys.drimland.my.id),
