@@ -2,29 +2,36 @@ import { sanitizeRepeatedChars } from "./ai-chat";
 import crypto from "crypto";
 
 /**
- * Text-To-Speech Service (Mr. Khoirul - ElevenLabs Voice: CwhRBWXzGAHq8TQ4Fs17)
- * Connected via OmniRoute OpenAI-compatible /audio/speech endpoint
+ * Text-To-Speech Service (Mr. Khoirul - Powered strictly by Vibi.pro)
  */
-// In-memory audio cache for repeated common phrases (max 100 entries, native Map)
 export const ttsMemoryCache = new Map<string, Buffer>();
 
 export class AiTtsService {
-  public static readonly LIAM_VOICE_ID = "TX3LPaxmHKxFdv7VOQHJ"; // ElevenLabs Liam (Energetic, Young, Casual - Recommended)
-  public static readonly WILL_VOICE_ID = "bIHbv24MWmeRgasZH58o"; // ElevenLabs Will (Relaxed, Optimist, Chill)
-  public static readonly ADAM_VOICE_ID = "pNInz6obpgDQGcFmaJgB"; // ElevenLabs Adam (Firm, Dynamic)
-  public static readonly ROGER_VOICE_ID = "CwhRBWXzGAHq8TQ4Fs17"; // ElevenLabs Roger (Legacy Narrator)
-  public static readonly DEFAULT_MODEL = "elevenlabs/eleven_multilingual_v2";
-  public static readonly TURBO_MODEL = "elevenlabs/eleven_turbo_v2_5";
+  public static readonly VOICE_ID = "4N8zjn9tVNuDEBFWVHAq"; // ElevenLabs Jesse (Elearning, Casual Friendly Male)
+  public static readonly JESSE_VOICE_ID = AiTtsService.VOICE_ID;
 
   /**
-   * Helper to generate speech using Vibi Task Queue API
+   * Text-To-Speech generator with ElevenLabs via Vibi.pro
    */
-  private static async generateVibiSpeech(
-    cleanText: string,
-    voice: string,
-    apiKey: string,
-    baseUrl: string
-  ): Promise<Buffer | null> {
+  static async generateSpeech(text: string, voiceOverride?: string): Promise<Buffer | null> {
+    const cleanText = sanitizeRepeatedChars(text);
+    if (!cleanText || cleanText.trim() === "" || cleanText.length > 1500) return null;
+
+    const baseUrl = process.env.AI_TTS_BASE_URL || "https://api.vibi.pro";
+    const apiKey = process.env.AI_TTS_API_KEY || "";
+
+    if (!apiKey) {
+      console.warn("AI_TTS_API_KEY is not configured for Vibi");
+      return null;
+    }
+
+    const voice = (voiceOverride || process.env.AI_AUDIO_VOICE || "").trim() || AiTtsService.VOICE_ID;
+    const cacheKey = crypto.createHash("sha256").update(`vibi:${voice}:${cleanText}`).digest("hex");
+
+    // 0ms Cache Hit for frequent phrases
+    const cached = ttsMemoryCache.get(cacheKey);
+    if (cached) return cached;
+
     try {
       const endpoint = `${baseUrl.replace(/\/+$/, "")}/v1/text-to-speech/${voice}`;
       const res = await fetch(endpoint, {
@@ -77,7 +84,16 @@ export class AiTtsService {
           const audioRes = await fetch(audioUrl, { signal: AbortSignal.timeout(10000) });
           if (!audioRes.ok) return null;
           const arrayBuffer = await audioRes.arrayBuffer();
-          return Buffer.from(arrayBuffer);
+          const buffer = Buffer.from(arrayBuffer);
+
+          if (cleanText.length < 200) {
+            if (ttsMemoryCache.size >= 100) {
+              const oldestKey = ttsMemoryCache.keys().next().value;
+              if (oldestKey) ttsMemoryCache.delete(oldestKey);
+            }
+            ttsMemoryCache.set(cacheKey, buffer);
+          }
+          return buffer;
         }
 
         if (hData.status === "failed") {
@@ -92,157 +108,20 @@ export class AiTtsService {
   }
 
   /**
-   * Text-To-Speech generator with ElevenLabs via Vibi or OpenAI-compatible gateway
-   */
-  static async generateSpeech(text: string, voiceOverride?: string): Promise<Buffer | null> {
-    const cleanText = sanitizeRepeatedChars(text);
-    if (!cleanText || cleanText.trim() === "" || cleanText.length > 1500) return null;
-
-    const baseUrl = process.env.AI_TTS_BASE_URL || process.env.AI_BASE_URL;
-    const apiKey = process.env.AI_TTS_API_KEY || process.env.AI_API_KEY || "";
-
-    if (!baseUrl || !apiKey) return null;
-
-    const voice = (voiceOverride || process.env.AI_AUDIO_VOICE || "").trim() || this.LIAM_VOICE_ID;
-    const audioModel = (process.env.AI_AUDIO_MODEL || "").trim() || this.DEFAULT_MODEL;
-
-    const cacheKey = crypto.createHash("sha256").update(`eleven:${voice}:${cleanText}`).digest("hex");
-
-    // 0ms Cache Hit for frequent phrases
-    const cached = ttsMemoryCache.get(cacheKey);
-    if (cached) return cached;
-
-    // 1. Vibi Task Queue Integration
-    if (baseUrl.includes("vibi.pro")) {
-      const buffer = await this.generateVibiSpeech(cleanText, voice, apiKey, baseUrl);
-      if (buffer) {
-        if (cleanText.length < 200) {
-          if (ttsMemoryCache.size >= 100) {
-            const oldestKey = ttsMemoryCache.keys().next().value;
-            if (oldestKey) ttsMemoryCache.delete(oldestKey);
-          }
-          ttsMemoryCache.set(cacheKey, buffer);
-        }
-        return buffer;
-      }
-      return null;
-    }
-
-    // 2. OpenAI-Compatible Gateway (OmniRoute / Standard)
-    const candidates = [
-      { model: audioModel, voice },
-      { model: this.DEFAULT_MODEL, voice: this.LIAM_VOICE_ID },
-      { model: this.TURBO_MODEL, voice: this.LIAM_VOICE_ID },
-    ];
-
-    const endpoint = `${baseUrl.replace(/\/+$/, "")}/audio/speech`;
-
-    for (const candidate of candidates) {
-      try {
-        const res = await fetch(endpoint, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${apiKey}`,
-          },
-          body: JSON.stringify({
-            model: candidate.model,
-            input: cleanText,
-            voice: candidate.voice,
-          }),
-          signal: AbortSignal.timeout(15000),
-        });
-
-        if (res.ok) {
-          const arrayBuffer = await res.arrayBuffer();
-          const buffer = Buffer.from(arrayBuffer);
-
-          if (cleanText.length < 150) {
-            if (ttsMemoryCache.size >= 100) {
-              const oldestKey = ttsMemoryCache.keys().next().value;
-              if (oldestKey) ttsMemoryCache.delete(oldestKey);
-            }
-            ttsMemoryCache.set(cacheKey, buffer);
-          }
-
-          return buffer;
-        }
-
-        const errText = await res.text();
-        console.warn(`TTS Gateway [${candidate.model}/${candidate.voice}] (${res.status}):`, errText);
-
-        if (res.status === 429) break;
-      } catch (err: any) {
-        console.warn(`TTS candidate [${candidate.model}/${candidate.voice}] error:`, err?.message || err);
-      }
-    }
-
-    return null;
-  }
-
-  /**
    * Text-To-Speech stream with Mr. Khoirul voice
    */
   static async getSpeechStream(text: string): Promise<globalThis.Response | null> {
-    const baseUrl = process.env.AI_TTS_BASE_URL || process.env.AI_BASE_URL;
-    const apiKey = process.env.AI_TTS_API_KEY || process.env.AI_API_KEY || "";
-    const cleanText = sanitizeRepeatedChars(text);
-
-    if (!baseUrl || !apiKey || !cleanText || cleanText.trim() === "") return null;
-
-    const voice = (process.env.AI_AUDIO_VOICE || "").trim() || this.LIAM_VOICE_ID;
-    const audioModel = (process.env.AI_AUDIO_MODEL || "").trim() || this.DEFAULT_MODEL;
-
-    // Vibi returns full audio buffer, wrap in Response
-    if (baseUrl.includes("vibi.pro")) {
-      const buffer = await this.generateSpeech(cleanText, voice);
-      if (buffer) {
-        return new Response(new Uint8Array(buffer), {
-          status: 200,
-          headers: {
-            "Content-Type": "audio/mpeg",
-            "Content-Length": buffer.length.toString(),
-            "Accept-Ranges": "bytes",
-          },
-        });
-      }
-      return null;
+    const buffer = await AiTtsService.generateSpeech(text);
+    if (buffer) {
+      return new Response(new Uint8Array(buffer), {
+        status: 200,
+        headers: {
+          "Content-Type": "audio/mpeg",
+          "Content-Length": buffer.length.toString(),
+          "Accept-Ranges": "bytes",
+        },
+      });
     }
-
-    const candidates = [
-      { model: audioModel, voice },
-      { model: this.DEFAULT_MODEL, voice: this.LIAM_VOICE_ID },
-      { model: this.TURBO_MODEL, voice: this.LIAM_VOICE_ID },
-    ];
-
-    const endpoint = `${baseUrl.replace(/\/+$/, "")}/audio/speech`;
-
-    for (const candidate of candidates) {
-      try {
-        const res = await fetch(endpoint, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${apiKey}`,
-          },
-          body: JSON.stringify({
-            model: candidate.model,
-            input: cleanText,
-            voice: candidate.voice,
-          }),
-          signal: AbortSignal.timeout(15000),
-        });
-
-        if (res.ok) {
-          return res;
-        }
-
-        if (res.status === 429) break;
-      } catch {
-        // try next candidate
-      }
-    }
-
     return null;
   }
 }

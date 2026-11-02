@@ -20,8 +20,8 @@ export class AiService {
   static evaluateSpeakingSelfIntro = AiEvalService.evaluateSpeakingSelfIntro;
 
   // Text-To-Speech
-  static generateSpeech = AiTtsService.generateSpeech;
-  static getSpeechStream = AiTtsService.getSpeechStream;
+  static generateSpeech = (text: string, voice?: string) => AiTtsService.generateSpeech(text, voice);
+  static getSpeechStream = (text: string) => AiTtsService.getSpeechStream(text);
 }
 
 export { AiChatService, AiEvalService, AiTtsService };
