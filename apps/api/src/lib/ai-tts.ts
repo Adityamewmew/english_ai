@@ -86,8 +86,8 @@ export class AiTtsService {
           const arrayBuffer = await audioRes.arrayBuffer();
           const buffer = Buffer.from(arrayBuffer);
 
-          if (cleanText.length < 200) {
-            if (ttsMemoryCache.size >= 100) {
+          if (cleanText.length < 250) {
+            if (ttsMemoryCache.size >= 500) {
               const oldestKey = ttsMemoryCache.keys().next().value;
               if (oldestKey) ttsMemoryCache.delete(oldestKey);
             }

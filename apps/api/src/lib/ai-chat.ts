@@ -255,7 +255,7 @@ CORE CONVERSATIONAL PRINCIPLES:
         : history;
 
     const recentHistory = sanitizedHistory
-      .slice(-6)
+      .slice(-4)
       .map((m) => `${m.role === "assistant" ? "Mr. Khoirul" : "Student"}: ${m.content}`)
       .join("\n");
 
@@ -302,7 +302,7 @@ CORE CONVERSATIONAL PRINCIPLES:
       return null;
     };
 
-    for await (const token of AiChatService.callAIStream(systemPrompt, prompt, signal)) {
+    for await (const token of AiChatService.callAIStream(systemPrompt, prompt, signal, { maxTokens: 80 })) {
       if (signal?.aborted) return;
       buffer += token;
 

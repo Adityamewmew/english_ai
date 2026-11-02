@@ -44,29 +44,43 @@ export async function evaluateVoiceSessionUsecase(payload: {
   let realEvaluation = null;
 
   if (!payload.skipEvaluation) {
-    try {
-      const ragEvalContext = await voiceRagService.buildEvaluationContext({
-        topic: payload.topic,
-      });
-
-      realEvaluation = await AiService.evaluateConversation(
-        payload.topic,
-        resolvedTranscript || "General speaking practice on " + payload.topic,
-        trustedDuration,
-        ragEvalContext
-      );
-    } catch (aiErr) {
-      console.warn("AI Conversation Evaluation fallback:", aiErr);
+    // Short-circuit: skip LLM evaluation if call is trivial (<10s or empty transcript) to save tokens (SEC-04 / Ponytail)
+    if (trustedDuration < 10 || !resolvedTranscript || resolvedTranscript.trim().length < 15) {
       realEvaluation = {
-        fluency: 4.5,
+        fluency: 4.0,
         lexical: 4.0,
         grammar: 4.0,
-        pronunciation: 4.5,
-        overallBand: 4.5,
+        pronunciation: 4.0,
+        overallBand: 4.0,
         cefr: "A2",
-        feedback_id: "Percakapan sudah baik dan berani! Terus latih kelancaran dan pengucapan.",
-        feedback_en: "Good effort in expressing your thoughts! Keep practicing to speak with more ease.",
+        feedback_id: "Sesi latihan singkat telah selesai. Terus berlatih berbicara bahasa Inggris ya!",
+        feedback_en: "Short practice session completed. Keep practicing your spoken English!",
       };
+    } else {
+      try {
+        const ragEvalContext = await voiceRagService.buildEvaluationContext({
+          topic: payload.topic,
+        });
+
+        realEvaluation = await AiService.evaluateConversation(
+          payload.topic,
+          resolvedTranscript,
+          trustedDuration,
+          ragEvalContext
+        );
+      } catch (aiErr) {
+        console.warn("AI Conversation Evaluation fallback:", aiErr);
+        realEvaluation = {
+          fluency: 4.5,
+          lexical: 4.0,
+          grammar: 4.0,
+          pronunciation: 4.5,
+          overallBand: 4.5,
+          cefr: "A2",
+          feedback_id: "Percakapan sudah baik dan berani! Terus latih kelancaran dan pengucapan.",
+          feedback_en: "Good effort in expressing your thoughts! Keep practicing to speak with more ease.",
+        };
+      }
     }
   }
 

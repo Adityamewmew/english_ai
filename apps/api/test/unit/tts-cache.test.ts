@@ -9,13 +9,22 @@ describe("TTS Hash Cache Unit Tests", () => {
 
   it("should generate deterministic SHA-256 cache keys", () => {
     const text = "Hello, welcome to English class!";
-    const voice = AiTtsService.ROGER_VOICE_ID;
+    const voice = AiTtsService.JESSE_VOICE_ID;
 
     const key1 = crypto.createHash("sha256").update(`${voice}:${text}`).digest("hex");
     const key2 = crypto.createHash("sha256").update(`${voice}:${text}`).digest("hex");
 
     expect(key1).toBe(key2);
     expect(key1.length).toBe(64);
+  });
+
+  it("should support caching up to 500 entries for credit optimization", () => {
+    for (let i = 0; i < 500; i++) {
+      ttsMemoryCache.set(`key-${i}`, Buffer.from([i % 256]));
+    }
+    expect(ttsMemoryCache.size).toBe(500);
+    expect(ttsMemoryCache.has("key-0")).toBe(true);
+    expect(ttsMemoryCache.has("key-499")).toBe(true);
   });
 
   it("should produce different cache keys for different voices", () => {
