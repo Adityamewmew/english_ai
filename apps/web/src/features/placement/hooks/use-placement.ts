@@ -21,6 +21,25 @@ export function useLatestPlacement(userId: string) {
   });
 }
 
+export function usePlacementStatus(userId?: string) {
+  return useQuery({
+    queryKey: placementKeys.status(userId || "anon"),
+    queryFn: () => (userId ? placementApi.getStatus(userId) : null),
+    enabled: !!userId,
+    staleTime: 30 * 1000,
+  });
+}
+
+export function useSkipBeginner() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: placementApi.skipBeginner,
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: placementKeys.all });
+    },
+  });
+}
+
 export function useSubmitPlacement() {
   const qc = useQueryClient();
   return useMutation({

@@ -18,6 +18,37 @@ export const placementRepository = {
     return result || null;
   },
 
+  checkUserCooldown: async (userId: string, cooldownDays = 14) => {
+    const latest = await placementRepository.findLatestByUser(userId);
+    if (!latest) {
+      return {
+        canTakeTest: true,
+        isInCooldown: false,
+        daysRemaining: 0,
+        lastResult: null,
+        nextAvailableAt: null,
+      };
+    }
+
+    const lastTime = new Date(latest.createdAt).getTime();
+    const cooldownMs = cooldownDays * 24 * 60 * 60 * 1000;
+    const nextAvailableTime = lastTime + cooldownMs;
+    const now = Date.now();
+
+    const isInCooldown = now < nextAvailableTime;
+    const daysRemaining = isInCooldown
+      ? Math.max(1, Math.ceil((nextAvailableTime - now) / (24 * 60 * 60 * 1000)))
+      : 0;
+
+    return {
+      canTakeTest: !isInCooldown,
+      isInCooldown,
+      daysRemaining,
+      lastResult: latest,
+      nextAvailableAt: new Date(nextAvailableTime).toISOString(),
+    };
+  },
+
   createResult: async (data: {
     userId: string;
     overallCefr: string;

@@ -8,6 +8,7 @@ import {
 import { getPlacementSessionUsecase } from "../../usecase/placement/get-placement-session.usecase";
 import { submitPlacementUsecase } from "../../usecase/placement/submit-placement.usecase";
 import { placementRepository } from "../../repository/placement_repository";
+import { userRepository } from "../../repository/user_repository";
 import { AiService } from "../../../lib/ai";
 import { jsonResponse } from "../../presenter/json";
 import { authPlugin } from "../../../lib/auth";
@@ -25,6 +26,76 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
       data,
     });
   })
+  .get(
+    "/status/:userId",
+    async ({ params, user, set }) => {
+      if (!user) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk melihat status tes penempatan.");
+      }
+      const isAdmin = isUserAdmin(user);
+      if (user.id !== params.userId && !isAdmin) {
+        throw new ForbiddenError("Kamu tidak memiliki izin untuk melihat status siswa lain.");
+      }
+
+      const cooldown = await placementRepository.checkUserCooldown(params.userId);
+      return jsonResponse({
+        set,
+        statusCode: 200,
+        message: "Placement status retrieved successfully",
+        data: {
+          ...cooldown,
+          isAdmin,
+        },
+      });
+    },
+    {
+      auth: true,
+      params: t.Object({ userId: t.String() }),
+    }
+  )
+  .post(
+    "/skip-beginner",
+    async ({ user, set }) => {
+      const activeUserId = user?.id;
+      if (!activeUserId) {
+        throw new UnauthorizedError("Autentikasi diperlukan.");
+      }
+
+      // Check if user is already in cooldown (anti-spam)
+      if (!isUserAdmin(user)) {
+        const cooldown = await placementRepository.checkUserCooldown(activeUserId);
+        if (cooldown.isInCooldown) {
+          throw new ForbiddenError("Kamu sudah memiliki level penilaian aktif.");
+        }
+      }
+
+      // 1. Update user currentCefr to A1
+      await userRepository.update(activeUserId, { currentCefr: "A1" });
+
+      // 2. Insert beginner self-assessed record
+      const record = await placementRepository.createResult({
+        userId: activeUserId,
+        overallCefr: "A1",
+        mcqScore: 0,
+        writingScore: 0,
+        speakingScore: 0,
+        scorePercent: 0,
+        details: {
+          mode: "self_assessed_beginner",
+          note: "Siswa memilih langsung mulai dari level pemula A1 tanpa tes diagnostik.",
+          completedAt: new Date().toISOString(),
+        },
+      });
+
+      return jsonResponse({
+        set,
+        statusCode: 200,
+        message: "Berhasil memilih mulai dari level pemula A1.",
+        data: record,
+      });
+    },
+    { auth: true }
+  )
   .get(
     "/latest/:userId",
     async ({ params, user, set }) => {
@@ -98,6 +169,19 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
       if (!activeUserId) {
         throw new UnauthorizedError("Autentikasi diperlukan untuk mengirim tes penempatan.");
       }
+
+      // Server-side Cooldown Enforcement (Anti-Spam & Cost-Protection SEC-01)
+      if (!isUserAdmin(user)) {
+        const cooldown = await placementRepository.checkUserCooldown(activeUserId);
+        if (cooldown.isInCooldown) {
+          throw new ForbiddenError(
+            `Masa cooldown tes penempatan kamu masih aktif. Kamu dapat mengambil tes ulang pada ${new Date(
+              cooldown.nextAvailableAt!
+            ).toLocaleDateString("id-ID")}.`
+          );
+        }
+      }
+
       const data = await submitPlacementUsecase({ ...body, userId: activeUserId });
       return jsonResponse({
         set,

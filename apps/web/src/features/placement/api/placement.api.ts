@@ -23,6 +23,18 @@ export const placementApi = {
     return data?.data;
   },
 
+  getStatus: async (userId: string) => {
+    const { data, error } = await (apiClient.api.placement as any).status({ userId }).get();
+    if (error) throw new Error(extractErrorMessage(error));
+    return data?.data;
+  },
+
+  skipBeginner: async () => {
+    const { data, error } = await (apiClient.api.placement as any)["skip-beginner"].post({});
+    if (error) throw new Error(extractErrorMessage(error));
+    return data?.data;
+  },
+
   submit: async (payload: any) => {
     const { data, error } = await apiClient.api.placement.submit.post(payload);
     if (error) throw new Error(extractErrorMessage(error));

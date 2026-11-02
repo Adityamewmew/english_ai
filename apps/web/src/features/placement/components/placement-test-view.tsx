@@ -17,7 +17,9 @@ import {
   Lock,
   LogOut,
 } from "lucide-react";
-import { usePlacementSession, useSubmitPlacement } from "../hooks/use-placement";
+import { usePlacementSession, useSubmitPlacement, usePlacementStatus, useSkipBeginner } from "../hooks/use-placement";
+import { useRouter } from "next/navigation";
+import { PlacementCooldownView } from "./placement-cooldown-view";
 import { useClasses, ClassUnlockModal } from "@/features/classes";
 import Image from "next/image";
 import { doLogout } from "@/app/(auth)/auth.actions";
@@ -29,6 +31,9 @@ interface PlacementTestViewProps {
 }
 
 export function PlacementTestView({ userId }: PlacementTestViewProps) {
+  const router = useRouter();
+  const { data: statusData, isLoading: isStatusLoading } = usePlacementStatus(userId);
+  const skipBeginnerMutation = useSkipBeginner();
   const { data: testData, isLoading, error: loadError, refetch } = usePlacementSession();
   const submitMutation = useSubmitPlacement();
 
@@ -96,6 +101,29 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
       setErrorMsg(err?.message || "Failed to submit placement test.");
     }
   };
+
+  const handleSkipBeginner = async () => {
+    try {
+      await skipBeginnerMutation.mutateAsync();
+      router.push("/dashboard");
+    } catch (err: any) {
+      setErrorMsg(err?.message || "Gagal memilih level A1.");
+    }
+  };
+
+  if (isStatusLoading) {
+    return (
+      <div className="min-h-[70vh] flex items-center justify-center p-4">
+        <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 border-b-4 border-b-slate-300 shadow-sm flex items-center justify-center mx-auto text-primary">
+          <Loader2 className="w-6 h-6 animate-spin text-primary" />
+        </div>
+      </div>
+    );
+  }
+
+  if (statusData?.isInCooldown && !statusData?.isAdmin) {
+    return <PlacementCooldownView status={statusData} />;
+  }
 
   if (isLoading) {
     return (
@@ -362,6 +390,27 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
 
       {/* Main Form Content */}
       <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-6 sm:py-10">
+        {/* Fast-Track Option for Absolute Beginners */}
+        {!statusData?.lastResult && (
+          <div className="mb-6 p-4 rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
+            <div className="space-y-1">
+              <span className="inline-block text-[10px] font-extrabold uppercase tracking-wider text-blue-900 bg-blue-100 px-2 py-0.5 rounded-md border border-blue-200">
+                Jalur Cepat Pemula
+              </span>
+              <p className="text-xs text-slate-700 font-medium">
+                Belum pernah belajar bahasa Inggris sama sekali? Kamu bisa lewati tes diagnostik ini dan langsung mulai dari level dasar.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={handleSkipBeginner}
+              disabled={skipBeginnerMutation.isPending}
+              className="py-2.5 px-4 rounded-xl bg-white hover:bg-blue-50 text-blue-700 font-bold text-xs border border-blue-300 border-b-3 border-b-blue-400 active:border-b active:translate-y-0.5 transition-all shadow-xs shrink-0 cursor-pointer text-center"
+            >
+              {skipBeginnerMutation.isPending ? "Menyiapkan A1..." : "Mulai dari Nol (Level A1)"}
+            </button>
+          </div>
+        )}
         {/* Mobile View: 1-Question-at-a-time Wizard */}
         <div className="block sm:hidden">
           <div className="mb-4">
