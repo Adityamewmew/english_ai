@@ -2,6 +2,7 @@ import { AiService } from "../../../lib/ai";
 import { voiceRepository } from "../../repository/voice_repository";
 import { voiceRagService } from "./voice-rag.service";
 import { aiUsageRepository } from "../../repository/ai_usage_repository";
+import { ForbiddenError } from "../../../common/errors/app-error";
 
 export async function evaluateVoiceSessionUsecase(payload: {
   sessionId?: string;
@@ -13,14 +14,31 @@ export async function evaluateVoiceSessionUsecase(payload: {
   sttProvider?: string;
   skipEvaluation?: boolean;
 }) {
-  let resolvedTranscript = payload.transcript || "";
   let existingSession = null;
-
   if (payload.sessionId) {
     existingSession = await voiceRepository.findById(payload.sessionId);
-    if (existingSession && !resolvedTranscript && existingSession.transcript) {
-      resolvedTranscript = existingSession.transcript;
+    if (existingSession && existingSession.userId !== payload.userId) {
+      throw new ForbiddenError("Akses sesi ditolak. Sesi panggilan ini bukan milik akun Anda.");
     }
+  }
+
+  // Calculate server-verified duration to prevent client-side duration spoofing (SEC-01)
+  let trustedDuration = Math.max(0, payload.durationSeconds);
+  if (existingSession && existingSession.createdAt) {
+    const serverElapsed = Math.floor((Date.now() - new Date(existingSession.createdAt).getTime()) / 1000);
+    if (serverElapsed >= 5 && trustedDuration < serverElapsed - 15) {
+      trustedDuration = serverElapsed;
+    }
+  }
+
+  // Lock daily voice duration immediately in PostgreSQL before running 4-8s AI evaluation
+  if (payload.userId && payload.userId !== "anonymous" && trustedDuration > 0) {
+    await aiUsageRepository.recordVoiceDuration(payload.userId, trustedDuration).catch(() => {});
+  }
+
+  let resolvedTranscript = payload.transcript || "";
+  if (existingSession && !resolvedTranscript && existingSession.transcript) {
+    resolvedTranscript = existingSession.transcript;
   }
 
   let realEvaluation = null;
@@ -34,7 +52,7 @@ export async function evaluateVoiceSessionUsecase(payload: {
       realEvaluation = await AiService.evaluateConversation(
         payload.topic,
         resolvedTranscript || "General speaking practice on " + payload.topic,
-        payload.durationSeconds,
+        trustedDuration,
         ragEvalContext
       );
     } catch (aiErr) {
@@ -57,7 +75,7 @@ export async function evaluateVoiceSessionUsecase(payload: {
   if (existingSession) {
     await voiceRepository.completeSession(
       existingSession.id,
-      payload.durationSeconds,
+      trustedDuration,
       realEvaluation
     );
   } else {
@@ -70,14 +88,9 @@ export async function evaluateVoiceSessionUsecase(payload: {
     returnSessionId = session.id;
     await voiceRepository.completeSession(
       session.id,
-      payload.durationSeconds,
+      trustedDuration,
       realEvaluation
     );
-  }
-
-  // Record daily voice duration in AI usage tracker
-  if (payload.userId && payload.userId !== "anonymous" && payload.durationSeconds > 0) {
-    await aiUsageRepository.recordVoiceDuration(payload.userId, payload.durationSeconds).catch(() => {});
   }
 
   if (payload.userId && realEvaluation && payload.userId !== "anonymous") {

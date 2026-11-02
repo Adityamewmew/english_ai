@@ -45,6 +45,7 @@ export function speakTutorText(
   fetch(getApiUrl("/api/voice/tts"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
+    credentials: "include",
     body: JSON.stringify({ text: clean.slice(0, 1000) }),
     signal: controller.signal,
   })

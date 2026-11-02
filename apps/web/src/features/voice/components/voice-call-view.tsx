@@ -12,6 +12,7 @@ import { usePushToTalk, TalkMode } from "../hooks/use-push-to-talk";
 import { getApiUrl } from "@/lib/api-client";
 import { voiceApi } from "../api/voice.api";
 import { AiQuotaBadge, classesApi } from "@/features/classes";
+import { useCallQuotaWatchdog } from "../hooks/use-call-quota-watchdog";
 
 export interface ChatMessage {
   role: "assistant" | "user";
@@ -78,6 +79,18 @@ export function VoiceCallView({
     }
     return () => clearInterval(interval);
   }, [callStatus]);
+
+  const maxAllowedSecondsRef = useRef<number | null>(null);
+
+  // In-call real-time quota watchdog: automatically ends call when duration reaches limit
+  useCallQuotaWatchdog({
+    callStatus,
+    duration,
+    maxAllowedSeconds: maxAllowedSecondsRef.current,
+    onQuotaExceeded: () => {
+      handleEndCall(true);
+    },
+  });
 
   const abortSpeechRef = useRef<() => void>(() => {});
   const commitImmediateRef = useRef<() => void>(() => {});
@@ -335,12 +348,20 @@ export function VoiceCallView({
     if (userId) {
       try {
         const quota = await classesApi.getQuota(userId);
-        if (quota && !quota.canVoice) {
-          setErrorMsg(
-            `Your daily voice practice quota (${quota.voice.limitMinutes} mins) has been reached. Quota resets at 00:00 or upgrade your plan for unlimited voice practice!`
-          );
-          setCallStatus("idle");
-          return;
+        if (quota) {
+          if (!quota.canVoice) {
+            setErrorMsg(
+              `Batas kuota harian panggilan suara kamu (${quota.voice.limitMinutes} menit) sudah tercapai. Kuota reset pukul 00:00 WIB!`
+            );
+            setCallStatus("idle");
+            return;
+          }
+          maxAllowedSecondsRef.current =
+            typeof quota.voice.remainingSeconds === "number"
+              ? quota.voice.remainingSeconds
+              : quota.voice.limitMinutes === -1
+              ? -1
+              : quota.voice.limitMinutes * 60;
         }
       } catch {}
     }
@@ -363,8 +384,15 @@ export function VoiceCallView({
       }
     } catch (e: any) {
       console.warn("Session init fallback:", e);
-      if (e?.status === 403 || e?.message?.includes("kuota")) {
-        setErrorMsg("Your daily voice call quota has been reached. Please upgrade your plan for more practice time!");
+      if (
+        e?.status === 403 ||
+        e?.message?.toLowerCase().includes("kuota") ||
+        e?.message?.toLowerCase().includes("quota")
+      ) {
+        setErrorMsg(
+          e?.message ||
+            "Batas kuota harian panggilan suara kamu sudah tercapai. Silakan upgrade paket untuk waktu lebih banyak!"
+        );
         setCallStatus("idle");
         return;
       }
@@ -382,11 +410,10 @@ export function VoiceCallView({
         name: studentName,
       });
 
-      const initialGreeting =
-        res?.greeting ||
-        (callCount > 0
-          ? "Hey, welcome back! Good to hear from you again. What are you up to today?"
-          : "Hey there! Great to meet you. What would you like to talk about today?");
+      const fallbackGreeting = callCount > 0
+        ? "Hey, welcome back! Good to hear from you again. What are you up to today?"
+        : "Hey there! Great to meet you. What would you like to talk about today?";
+      const initialGreeting = res?.greeting || fallbackGreeting;
 
       if (typeof window !== "undefined") {
         localStorage.setItem("mr_khoirul_call_count", (callCount + 1).toString());
@@ -397,15 +424,9 @@ export function VoiceCallView({
       setConversationHistory([{ role: "assistant", content: initialGreeting }]);
       audioQueue.speakText(initialGreeting);
     } catch {
-      const fallbackGreeting =
-        callCount > 0
-          ? "Hey, welcome back! Good to hear from you again. What are you up to today?"
-          : "Hey there! Great to meet you. What would you like to talk about today?";
-
-      if (typeof window !== "undefined") {
-        localStorage.setItem("mr_khoirul_call_count", (callCount + 1).toString());
-      }
-
+      const fallbackGreeting = callCount > 0
+        ? "Hey, welcome back! Good to hear from you again. What are you up to today?"
+        : "Hey there! Great to meet you. What would you like to talk about today?";
       setCallStatus("active");
       setAiSpeechState("speaking");
       setConversationHistory([{ role: "assistant", content: fallbackGreeting }]);
@@ -414,7 +435,7 @@ export function VoiceCallView({
   };
 
   // End call handler: cleanly shutdown and redirect to /dashboard
-  const handleEndCall = async () => {
+  const handleEndCall = async (dueToQuota = false) => {
     abortSpeech();
     audioQueue.halt();
     if (streamAbortRef.current) {
@@ -429,11 +450,16 @@ export function VoiceCallView({
       .map((m) => `${m.role === "assistant" ? "Mr. Khoirul" : "Student"}: ${m.content}`)
       .join("\n");
 
-    setCallStatus("ended");
+    const savedDuration = duration;
+    setCallStatus(dueToQuota ? "idle" : "ended");
     setDuration(0);
     setConversationHistory([]);
     setLiveTranscript("");
     setAiSpeechState("idle");
+
+    if (dueToQuota) {
+      setErrorMsg("Waktu panggilan latihan harian kamu telah habis. Kuota reset besok pukul 00:00 WIB!");
+    }
 
     // Save session in background without blocking navigation
     if (currentHistory.length > 1) {
@@ -442,15 +468,16 @@ export function VoiceCallView({
           sessionId: sessionIdRef.current || undefined,
           userId,
           topic: defaultTopic,
-          durationSeconds: duration,
+          durationSeconds: savedDuration,
           transcript: fullTranscript,
           sttProvider: "web-speech",
         })
         .catch((e) => console.warn("Call save error:", e));
     }
 
-    // Direct redirect back to student dashboard as confirmed
-    router.push("/dashboard");
+    if (!dueToQuota) {
+      router.push("/dashboard");
+    }
   };
 
   // Character click handler
@@ -493,7 +520,7 @@ export function VoiceCallView({
         duration={duration}
         lang={callLang}
         onToggleLang={() => setCallLang((prev) => (prev === "en-US" ? "id-ID" : "en-US"))}
-        onExit={handleEndCall}
+        onExit={() => handleEndCall(false)}
       />
 
       {/* Main Screen Area with Pure Mr. Khoirul Character */}
@@ -552,7 +579,7 @@ export function VoiceCallView({
         isMuted={isMuted}
         onToggleMute={() => setIsMuted((prev) => !prev)}
         onStartCall={handleStartCall}
-        onEndCall={handleEndCall}
+        onEndCall={() => handleEndCall(false)}
         talkMode={talkMode}
         onToggleTalkMode={setTalkMode}
         isPressingTalk={isPressing}

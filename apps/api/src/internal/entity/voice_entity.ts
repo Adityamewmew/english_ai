@@ -45,7 +45,7 @@ export const VoiceEvaluateBody = t.Object({
   sessionId: t.Optional(t.String()),
   userId: t.Optional(t.String()),
   topic: t.String(),
-  durationSeconds: t.Number(),
+  durationSeconds: t.Integer({ minimum: 0, maximum: 7200 }),
   transcript: t.Optional(t.String()),
   sttProvider: t.Optional(t.String()),
 });

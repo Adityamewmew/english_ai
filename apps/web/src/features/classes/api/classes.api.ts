@@ -51,10 +51,22 @@ export interface AiQuotaResult {
     usedMinutes: number;
     limitMinutes: number;
     remainingMinutes: number;
+    remainingSeconds?: number;
     isExceeded: boolean;
   };
   canChat: boolean;
   canVoice: boolean;
+}
+
+function extractEdenError(error: any): Error {
+  const val = error?.value;
+  const message =
+    typeof val === "object"
+      ? val?.message || JSON.stringify(val)
+      : String(val || error?.status || "API Error");
+  const err = new Error(message);
+  (err as any).status = error?.status || (typeof val === "object" ? val?.statusCode : undefined);
+  return err;
 }
 
 export const classesApi = {
@@ -62,7 +74,7 @@ export const classesApi = {
     const { data, error } = await (apiClient.api.classes as any).get({
       query: { userId },
     });
-    if (error) throw new Error(String(error.value));
+    if (error) throw extractEdenError(error);
     return data?.data as CourseClassItem[];
   },
 
@@ -74,7 +86,7 @@ export const classesApi = {
     const { data, error } = await (apiClient.api.classes as any).purchase.post(
       payload
     );
-    if (error) throw new Error(String(error.value));
+    if (error) throw extractEdenError(error);
     return data?.data;
   },
 
@@ -82,7 +94,7 @@ export const classesApi = {
     const { data, error } = await (apiClient.api.classes as any).quota.get({
       query: { userId },
     });
-    if (error) throw new Error(String(error.value));
+    if (error) throw extractEdenError(error);
     return data?.data as AiQuotaResult;
   },
 };

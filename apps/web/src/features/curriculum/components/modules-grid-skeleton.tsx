@@ -34,3 +34,4 @@ export function ModulesGridSkeleton({ count = 8 }: { count?: number }) {
     </div>
   );
 }
+

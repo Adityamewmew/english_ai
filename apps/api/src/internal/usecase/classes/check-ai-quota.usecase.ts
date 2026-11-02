@@ -18,6 +18,7 @@ export interface AiQuotaResult {
     usedMinutes: number;
     limitMinutes: number; // -1 for unlimited
     remainingMinutes: number; // -1 for unlimited
+    remainingSeconds: number; // -1 for unlimited
     isExceeded: boolean;
   };
   canChat: boolean;
@@ -49,6 +50,7 @@ export async function checkAiQuotaUsecase(userId: string): Promise<AiQuotaResult
         usedMinutes: Math.round(usage.voiceSeconds / 60),
         limitMinutes: -1,
         remainingMinutes: -1,
+        remainingSeconds: -1,
         isExceeded: false,
       },
       canChat: true,
@@ -114,16 +116,17 @@ export async function checkAiQuotaUsecase(userId: string): Promise<AiQuotaResult
   const usage = await aiUsageRepository.getDailyUsage(userId, usageDate);
   const usedMinutes = Math.floor(usage.voiceSeconds / 60);
 
+  const limitSeconds = voiceLimitMinutes === -1 ? -1 : voiceLimitMinutes * 60;
   const isChatExceeded = chatLimit !== -1 && usage.chatCount >= chatLimit;
   const isVoiceExceeded =
-    voiceLimitMinutes !== -1 && usedMinutes >= voiceLimitMinutes;
+    limitSeconds !== -1 && usage.voiceSeconds >= limitSeconds;
 
   const chatRemaining =
     chatLimit === -1 ? -1 : Math.max(0, chatLimit - usage.chatCount);
+  const voiceRemainingSeconds =
+    limitSeconds === -1 ? -1 : Math.max(0, limitSeconds - usage.voiceSeconds);
   const voiceRemainingMinutes =
-    voiceLimitMinutes === -1
-      ? -1
-      : Math.max(0, voiceLimitMinutes - usedMinutes);
+    limitSeconds === -1 ? -1 : Math.ceil(voiceRemainingSeconds / 60);
 
   return {
     tier: activeTier,
@@ -140,6 +143,7 @@ export async function checkAiQuotaUsecase(userId: string): Promise<AiQuotaResult
       usedMinutes,
       limitMinutes: voiceLimitMinutes,
       remainingMinutes: voiceRemainingMinutes,
+      remainingSeconds: voiceRemainingSeconds,
       isExceeded: isVoiceExceeded,
     },
     canChat: !isChatExceeded,

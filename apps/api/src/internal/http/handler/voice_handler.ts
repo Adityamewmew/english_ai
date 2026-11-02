@@ -12,6 +12,7 @@ import { getVoiceGreetingUsecase } from "../../usecase/voice/get-voice-greeting.
 import { streamVoiceTurnUsecase } from "../../usecase/voice/stream-voice-turn.usecase";
 import { evaluateVoiceSessionUsecase } from "../../usecase/voice/evaluate-voice-session.usecase";
 import { voiceRepository } from "../../repository/voice_repository";
+import { aiUsageRepository } from "../../repository/ai_usage_repository";
 import { LlmGuardrailService } from "../../../lib/llm-guardrail.service";
 import { jsonResponse } from "../../presenter/json";
 import { checkAiQuotaUsecase } from "../../usecase/classes/check-ai-quota.usecase";
@@ -27,6 +28,15 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
 
       if (!resolvedUserId) {
         throw new UnauthorizedError("Autentikasi akun diperlukan untuk memulai sesi panggilan suara AI.");
+      }
+
+      // Auto-finalize any dangling active session for this user (SEC-02, SEC-06)
+      const existingActive = await voiceRepository.findActiveSessionByUserId(resolvedUserId);
+      if (existingActive) {
+        const elapsed = Math.floor((Date.now() - new Date(existingActive.createdAt).getTime()) / 1000);
+        const autoDuration = Math.max(5, Math.min(elapsed, 7200));
+        await aiUsageRepository.recordVoiceDuration(resolvedUserId, autoDuration).catch(() => {});
+        await voiceRepository.abandonSession(existingActive.id).catch(() => {});
       }
 
       const quota = await checkAiQuotaUsecase(resolvedUserId);
@@ -81,7 +91,7 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
         },
       });
     },
-    { query: VoiceTtsQuery }
+    { auth: true, query: VoiceTtsQuery }
   )
   .post(
     "/tts",
@@ -109,7 +119,7 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
         },
       });
     },
-    { body: VoiceTtsBody }
+    { auth: true, body: VoiceTtsBody }
   )
   .post(
     "/turn-stream",
@@ -163,6 +173,23 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
               return;
             }
 
+            // Input Guardrail to block prompt injections, toxic words, and politics (SEC-04)
+            const inputGuard = LlmGuardrailService.checkVoiceInput(studentMessage);
+            if (!inputGuard.allowed) {
+              const warningNote = inputGuard.friendlyFeedback || "Mari gunakan bahasa yang santun dalam percakapan.";
+              controller.enqueue(
+                encoder.encode(
+                  `data: ${JSON.stringify({ type: "sentence", index: 0, text: warningNote })}\n\n`
+                )
+              );
+              controller.enqueue(
+                encoder.encode(
+                  `data: ${JSON.stringify({ type: "done", fullReply: warningNote, sentenceCount: 1 })}\n\n`
+                )
+              );
+              return;
+            }
+
             for await (const sentence of streamVoiceTurnUsecase({
               topic,
               history: history as any,
@@ -191,10 +218,13 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
             });
             controller.enqueue(encoder.encode(`data: ${doneData}\n\n`));
 
-            // Persist turn transcript server-side if session is active
+            // Persist turn transcript server-side if session is active and owned by caller (SEC-03)
             if (sessionId) {
-              const turnTranscript = `Turn ${turnIndex + 1}:\nStudent: ${studentMessage}\nMr. Khoirul: ${fullReply}`;
-              await voiceRepository.appendTranscript(sessionId, turnTranscript).catch(() => {});
+              const activeSession = await voiceRepository.findById(sessionId);
+              if (activeSession && activeSession.userId === resolvedUserId) {
+                const turnTranscript = `Turn ${turnIndex + 1}:\nStudent: ${studentMessage}\nMr. Khoirul: ${fullReply}`;
+                await voiceRepository.appendTranscript(sessionId, turnTranscript).catch(() => {});
+              }
             }
           } catch (err: any) {
             console.error("Voice turn-stream error:", err);
@@ -218,8 +248,11 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
             );
 
             if (sessionId) {
-              const turnTranscript = `Turn ${turnIndex + 1}:\nStudent: ${studentMessage}\nMr. Khoirul: ${fallback}`;
-              await voiceRepository.appendTranscript(sessionId, turnTranscript).catch(() => {});
+              const activeSession = await voiceRepository.findById(sessionId);
+              if (activeSession && activeSession.userId === resolvedUserId) {
+                const turnTranscript = `Turn ${turnIndex + 1}:\nStudent: ${studentMessage}\nMr. Khoirul: ${fallback}`;
+                await voiceRepository.appendTranscript(sessionId, turnTranscript).catch(() => {});
+              }
             }
           } finally {
             if (heartbeatTimer) clearInterval(heartbeatTimer);

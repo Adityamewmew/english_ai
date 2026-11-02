@@ -1,5 +1,16 @@
 import { apiClient } from "@/lib/api-client";
 
+function extractEdenError(error: any): Error {
+  const val = error?.value;
+  const message =
+    typeof val === "object"
+      ? val?.message || JSON.stringify(val)
+      : String(val || error?.status || "API Error");
+  const err = new Error(message);
+  (err as any).status = error?.status || (typeof val === "object" ? val?.statusCode : undefined);
+  return err;
+}
+
 export const voiceApi = {
   startSession: async (payload: {
     topic: string;
@@ -8,7 +19,7 @@ export const voiceApi = {
     sttProvider?: string;
   }) => {
     const { data, error } = await apiClient.api.voice.sessions.post(payload);
-    if (error) throw new Error(String(error.value));
+    if (error) throw extractEdenError(error);
     return (data as any)?.data || data;
   },
 
@@ -16,7 +27,7 @@ export const voiceApi = {
     const { data, error } = await apiClient.api.voice["initial-greeting"].get({
       query: params,
     });
-    if (error) throw new Error(String(error.value));
+    if (error) throw extractEdenError(error);
     return data;
   },
 
@@ -29,7 +40,7 @@ export const voiceApi = {
     sttProvider?: string;
   }) => {
     const { data, error } = await apiClient.api.voice.evaluate.post(payload);
-    if (error) throw new Error(String(error.value));
+    if (error) throw extractEdenError(error);
     return data;
   },
 
@@ -38,7 +49,7 @@ export const voiceApi = {
     const { data, error } = await apiClient.api.voice.sessions.get({
       query: { userId },
     });
-    if (error) throw new Error(String(error.value));
+    if (error) throw extractEdenError(error);
     return (data as any)?.data || [];
   },
 };

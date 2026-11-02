@@ -94,6 +94,16 @@ export const voiceRepository = {
       .limit(limit);
   },
 
+  findActiveSessionByUserId: async (userId: string) => {
+    const [active] = await db
+      .select()
+      .from(callSessions)
+      .where(and(eq(callSessions.userId, userId), eq(callSessions.status, "active")))
+      .orderBy(desc(callSessions.createdAt))
+      .limit(1);
+    return active || null;
+  },
+
   hasPastSessions: async (userId: string) => {
     const past = await db
       .select({ id: callSessions.id })

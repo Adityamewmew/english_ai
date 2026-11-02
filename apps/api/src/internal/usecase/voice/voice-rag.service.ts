@@ -19,6 +19,35 @@ export interface StudentMemoryContext {
   totalCalls: number;
 }
 
+export function getCefrScaffold(cefr: string = "A1"): string {
+  const normCefr = (cefr || "A1").toUpperCase().trim();
+  if (normCefr.startsWith("A1")) {
+    return `[CEFR LEVEL SCAFFOLD: A1 (BEGINNER)]
+- VOCABULARY BAND: Strictly top 500-800 elementary everyday words (good, bad, happy, eat, food, home, work, easy, like, say, help, see, go).
+- STRICTLY PROHIBITED: NEVER use B2/C1 complex adjectives, abstract idioms, or gaming/internet jargon (FORBIDDEN for A1: 'mouth-watering', 'fuel for the day', 'mindset', 'spill the tea', 'blessing in disguise', 'turret diving', 'astronomical').
+- SENTENCE LENGTH & STRUCTURE: Keep sentences to 5-12 words. Simple Subject-Verb-Object only. Never use dense compound-complex clauses.
+- DRILL PATTERNS: When modeling English or telling the student to repeat, use ultra-simple 2-4 word phrases (e.g., 'Say: It is very good!').`;
+  }
+  if (normCefr.startsWith("A2")) {
+    return `[CEFR LEVEL SCAFFOLD: A2 (ELEMENTARY)]
+- VOCABULARY BAND: Everyday familiar situations, routine daily tasks, simple past and future tenses.
+- SENTENCE LENGTH: 8-15 words per sentence. Use simple connectors (and, but, so, because).
+- DRILL PATTERNS: 3-5 word natural daily expressions. Avoid rare idioms.`;
+  }
+  if (normCefr.startsWith("B1")) {
+    return `[CEFR LEVEL SCAFFOLD: B1 (INTERMEDIATE)]
+- VOCABULARY BAND: Everyday conversational fluency, expressing opinions, plans, experiences.
+- SENTENCE LENGTH: 10-18 words per sentence. Common idioms are allowed.`;
+  }
+  if (normCefr.startsWith("B2")) {
+    return `[CEFR LEVEL SCAFFOLD: B2 (UPPER INTERMEDIATE)]
+- VOCABULARY BAND: Broad vocabulary, abstract topics, idiomatic expressions, nuanced emotions.
+- SENTENCE LENGTH: 12-22 words per sentence. Natural conversational flow.`;
+  }
+  return `[CEFR LEVEL SCAFFOLD: C1-C2 (ADVANCED)]
+- VOCABULARY BAND: Full native nuances, witty banter, high-level idioms, and rapid spoken rhythm.`;
+}
+
 // ponytail: single-instance in-memory cache (TTL 20m); upgrade to Redis only when deploying multi-replica
 interface CachedSessionContext {
   context: string;
@@ -146,11 +175,13 @@ export const voiceRagService = {
     }
 
     const parts: string[] = [];
+    let targetCefr = params.studentCefr || "A1";
 
     // If moduleId is explicitly provided -> In-Module Contextual Call
     if (params.moduleId) {
       const curr = await this.getCurriculumContextById(params.moduleId);
       if (curr) {
+        targetCefr = curr.cefr || targetCefr;
         parts.push(`[ACTIVE CURRICULUM MODULE]`);
         parts.push(`Module ID: ${curr.moduleId}`);
         parts.push(`Title: ${curr.title} (Level ${curr.cefr})`);
@@ -172,6 +203,7 @@ export const voiceRagService = {
     if (params.userId) {
       const student = await this.getStudentMemory(params.userId);
       if (student) {
+        targetCefr = student.cefr || targetCefr;
         parts.push(`[STUDENT LONG-TERM PROFILE]`);
         if (student.preferredName) parts.push(`Preferred Name: ${student.preferredName}`);
         parts.push(`Current Level: CEFR ${student.cefr}`);
@@ -183,6 +215,9 @@ export const voiceRagService = {
         }
       }
     }
+
+    // Always append explicit CEFR linguistic boundaries
+    parts.push(getCefrScaffold(targetCefr));
 
     const context = parts.length > 0 ? parts.join("\n") : "";
     sessionContextCache.set(cacheKey, {

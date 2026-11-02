@@ -37,6 +37,13 @@ export class AiTtsService {
     // 1. MiniMax Speech 2.8 Turbo
     if (minimaxKey) {
       try {
+        let emotion = "neutral";
+        if (/\b(boom|great|awesome|perfect|love it|amazing|natural|confident|bagus|keren|mantap)\b/i.test(cleanText) || cleanText.includes("!")) {
+          emotion = "happy";
+        } else if (/\b(whoa|come on|cliche|textbook|dusty|bego|haduh|aduh|gila)\b/i.test(cleanText) || cleanText.includes("?!")) {
+          emotion = "angry";
+        }
+
         const res = await fetch(minimaxUrl, {
           method: "POST",
           headers: {
@@ -53,6 +60,7 @@ export class AiTtsService {
               speed: 1.0,
               vol: 1.0,
               pitch: 0,
+              emotion,
             },
             audio_setting: {
               sample_rate: 32000,
