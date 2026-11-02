@@ -100,7 +100,14 @@ export const paymentApi = {
 
   simulateSandbox: async (orderId: string) => {
     const res = await (apiClient.api.payment as any).order({ orderId }).simulate.post();
-    if (res.error) throw new Error(String(res.error.value));
+    if (res.error) {
+      const errVal = res.error.value as any;
+      const message =
+        typeof errVal === "string"
+          ? errVal
+          : errVal?.message || errVal?.error || "Gagal memproses simulasi pembayaran";
+      throw new Error(message);
+    }
     return res.data;
   },
 };

@@ -7,11 +7,13 @@ export async function simulateSandboxPaymentUsecase(
   orderId: string,
   user?: { id: string; role?: string | null; email?: string | null; accessType?: number | null } | null
 ) {
-  const isProduction =
-    process.env.NODE_ENV === "production" ||
-    (process.env.SINGAPAY_ENVIRONMENT || "").toLowerCase() === "production";
-  if (isProduction) {
-    throw new ForbiddenError("Simulasi pembayaran dinonaktifkan di lingkungan produksi.");
+  const isSingapayProduction =
+    (process.env.SINGAPAY_ENVIRONMENT || "sandbox").toLowerCase() === "production";
+  const isSimulationAllowed =
+    !isSingapayProduction || process.env.ALLOW_PAYMENT_SIMULATION === "true";
+
+  if (!isSimulationAllowed) {
+    throw new ForbiddenError("Simulasi pembayaran dinonaktifkan di lingkungan produksi SingaPay.");
   }
 
   const tx = await paymentRepository.findByOrderId(orderId);

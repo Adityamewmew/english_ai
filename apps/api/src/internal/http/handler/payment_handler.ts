@@ -7,7 +7,7 @@ import { processSingapayWebhookUsecase } from "../../usecase/payment/process-sin
 import { paymentRepository } from "../../repository/payment.repository";
 import { jsonResponse } from "../../presenter/json";
 import { UnauthorizedError } from "../../../common/errors/app-error";
-import { authPlugin } from "../../../lib/auth";
+import { auth, authPlugin } from "../../../lib/auth";
 import { isUserAdmin } from "@english-ai/shared";
 
 export const paymentHandler = new Elysia({ prefix: "/api/payment" })
@@ -125,19 +125,21 @@ export const paymentHandler = new Elysia({ prefix: "/api/payment" })
   // 5. Simulasi Sukses di Mode Sandbox
   .post(
     "/order/:orderId/simulate",
-    async ({ params, set, user }) => {
-      if (!user) {
-        throw new UnauthorizedError("Autentikasi diperlukan untuk mensimulasikan pembayaran.");
-      }
-      const data = await simulateSandboxPaymentUsecase(params.orderId, user);
+    async ({ params, set, request }) => {
+      let activeUser: any = null;
+      try {
+        const session = await auth.api.getSession({ headers: request.headers });
+        activeUser = session?.user || null;
+      } catch {}
+
+      const data = await simulateSandboxPaymentUsecase(params.orderId, activeUser);
       return jsonResponse({
         set,
         statusCode: 200,
         message: data.message,
         data: data.transaction,
       });
-    },
-    { auth: true }
+    }
   )
 
   // 6. Webhook Resmi SingaPay

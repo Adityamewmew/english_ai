@@ -62,6 +62,7 @@ export function PaymentConfirmationView({ orderId }: PaymentConfirmationViewProp
 
   const [copiedVa, setCopiedVa] = useState(false);
   const [copiedAmount, setCopiedAmount] = useState(false);
+  const [simulateError, setSimulateError] = useState<string | null>(null);
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
   const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
 
@@ -99,7 +100,14 @@ export function PaymentConfirmationView({ orderId }: PaymentConfirmationViewProp
 
   const handleSimulateSuccess = async () => {
     if (simulateMutation.isPending) return;
-    await simulateMutation.mutateAsync(orderId);
+    setSimulateError(null);
+    try {
+      await simulateMutation.mutateAsync(orderId);
+      await refetch();
+    } catch (err: any) {
+      console.error("Simulation error:", err);
+      setSimulateError(err?.message || "Gagal memproses simulasi pembayaran.");
+    }
   };
 
   const formatRupiah = (num: number) =>
@@ -166,7 +174,7 @@ export function PaymentConfirmationView({ orderId }: PaymentConfirmationViewProp
       <div className="w-full max-w-4xl space-y-4">
         {/* 1. Mode Uji Coba (Sandbox) Yellow Banner */}
         {!isPaid && !isExpired && (
-          <div className="bg-amber-50/90 border border-amber-200/80 rounded-2xl p-4 flex items-center justify-between gap-3 shadow-2xs">
+          <div className="bg-amber-50/90 border border-amber-200/80 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-2xs">
             <div className="flex items-start gap-2.5">
               <div className="w-7 h-7 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0 mt-0.5">
                 <FlaskConical className="w-4 h-4" />
@@ -176,6 +184,11 @@ export function PaymentConfirmationView({ orderId }: PaymentConfirmationViewProp
                 <p className="text-[11px] text-amber-800 leading-tight">
                   Gunakan tombol simulasi untuk menyelesaikan pembayaran secara instan tanpa aplikasi perbankan.
                 </p>
+                {simulateError && (
+                  <p className="text-[11px] font-bold text-rose-600 mt-1">
+                    ⚠️ {simulateError}
+                  </p>
+                )}
               </div>
             </div>
             <Button
