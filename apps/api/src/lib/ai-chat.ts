@@ -50,6 +50,8 @@ export class AiChatService {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${apiKey}`,
+        "HTTP-Referer": "https://eddys.drimland.my.id",
+        "X-Title": "English AI",
       },
       body: JSON.stringify({
         model,
@@ -110,6 +112,8 @@ export class AiChatService {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${apiKey}`,
+          "HTTP-Referer": "https://eddys.drimland.my.id",
+          "X-Title": "English AI",
         },
         body: JSON.stringify({
           model,
