@@ -86,7 +86,7 @@ export class AiChatService {
     systemPrompt: string,
     userPrompt: string,
     signal?: AbortSignal,
-    options?: { maxTokens?: number }
+    options?: { maxTokens?: number; stop?: string[] }
   ): AsyncGenerator<string, void, unknown> {
     const baseUrl = process.env.AI_BASE_URL;
     const apiKey = process.env.AI_API_KEY || "";
@@ -122,7 +122,8 @@ export class AiChatService {
           temperature: 0.7,
           frequency_penalty: 0.3,
           presence_penalty: 0.2,
-          stop: ["Student:", "\nStudent", "\nUser:", "Mr. Khoirul:"],
+          reasoning: { effort: "none" },
+          stop: options?.stop || ["\nStudent:", "\nUser:", "\nHuman:"],
           messages: [
             { role: "system", content: systemPrompt },
             { role: "user", content: userPrompt },
@@ -222,7 +223,7 @@ CORE CONVERSATIONAL PRINCIPLES:
       .map((m) => `${m.role === "assistant" ? "Mr. Khoirul" : "Student"}: ${m.content}`)
       .join("\n");
 
-    const prompt = `${recentHistory ? recentHistory + "\n" : ""}Student: ${studentMessage}\nMr. Khoirul:`;
+    const prompt = `${recentHistory ? recentHistory + "\n" : ""}Student: ${studentMessage}`;
 
     let buffer = "";
     let isFirstChunk = true;
@@ -265,7 +266,7 @@ CORE CONVERSATIONAL PRINCIPLES:
       return null;
     };
 
-    for await (const token of AiChatService.callAIStream(systemPrompt, prompt, signal, { maxTokens: 80 })) {
+    for await (const token of AiChatService.callAIStream(systemPrompt, prompt, signal, { maxTokens: 250 })) {
       if (signal?.aborted) return;
       buffer += token;
 
