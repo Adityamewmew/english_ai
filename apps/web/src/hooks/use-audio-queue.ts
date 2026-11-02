@@ -203,26 +203,19 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     }
   }, [playNextInQueue]);
 
-  // Chunk static text into sentences and enqueue sequentially
+  // Enqueue speech text cleanly as a unified sentence to avoid task queue congestion
   const speakText = useCallback(
     (text: string) => {
       halt();
       isHaltedRef.current = false;
-
-      const sentenceMatches = text.match(/[^.!?]+[.!?]+(?:\s+|$)|[^.!?]+$/g);
-      const sentences = sentenceMatches
-        ? sentenceMatches.map((s) => s.trim()).filter(Boolean)
-        : [text];
-
-      if (sentences.length === 0 || !text.trim()) {
+      const clean = text.trim();
+      if (!clean) {
         onAllEndedRef.current?.();
         return;
       }
 
       isStreamActiveRef.current = false;
-      for (let i = 0; i < sentences.length; i++) {
-        enqueueSentence(sentences[i], i);
-      }
+      enqueueSentence(clean, 0);
     },
     [halt, enqueueSentence]
   );

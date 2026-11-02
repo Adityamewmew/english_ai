@@ -62,13 +62,13 @@ export class AiTtsService {
       const task = (await res.json()) as { id?: string; status?: string };
       if (!task.id) return null;
 
-      // Poll task status (max 12 checks * 500ms = 6s)
+      // Poll task status (max 25 checks * 700ms = 17.5s)
       const historyEndpoint = `${baseUrl.replace(/\/+$/, "")}/v1/history/${task.id}`;
-      for (let i = 0; i < 12; i++) {
-        await new Promise((r) => setTimeout(r, 500));
+      for (let i = 0; i < 25; i++) {
+        await new Promise((r) => setTimeout(r, 700));
         const hRes = await fetch(historyEndpoint, {
           headers: { "xi-api-key": apiKey },
-          signal: AbortSignal.timeout(5000),
+          signal: AbortSignal.timeout(6000),
         });
 
         if (!hRes.ok) continue;
