@@ -369,9 +369,23 @@ export function PlacementWizardMobile({
 
       {/* 3. Error Banner if Submission Fails */}
       {errorMsg && (
-        <div className="p-3.5 bg-rose-50 border border-rose-200 text-rose-700 rounded-2xl text-xs font-semibold flex items-center gap-2">
-          <AlertCircle className="w-4 h-4 shrink-0 text-rose-600" />
-          <span>{errorMsg}</span>
+        <div className="p-3.5 bg-rose-50 border border-rose-200 text-rose-700 rounded-2xl text-xs font-semibold space-y-2">
+          <div className="flex items-center gap-2">
+            <AlertCircle className="w-4 h-4 shrink-0 text-rose-600" />
+            <span>{errorMsg}</span>
+          </div>
+          {errorMsg.toLowerCase().includes("login") && (
+            <div className="pt-1">
+              <a
+                href="/login"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-600 text-white text-xs font-bold shadow-xs active:scale-95"
+              >
+                <span>Buka Halaman Login (Tab Baru)</span>
+              </a>
+            </div>
+          )}
         </div>
       )}
 

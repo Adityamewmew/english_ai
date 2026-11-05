@@ -22,6 +22,7 @@ interface ConceptChecksCardProps {
   isAdmin?: boolean;
   onCompleted?: () => void;
   onAnswersChange?: (answers: Record<string, any>) => void;
+  initialAnswers?: Record<string | number, string>;
 }
 
 export function isOptionCorrect(
@@ -76,11 +77,48 @@ export function ConceptChecksCard({
   isAdmin: propIsAdmin,
   onCompleted,
   onAnswersChange,
+  initialAnswers,
 }: ConceptChecksCardProps) {
   const { data: sessionUser } = useSession();
   const isAdmin = Boolean(propIsAdmin || isUserAdmin(sessionUser));
-  const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
-  const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>({});
+  const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>(() => {
+    if (!initialAnswers) return {};
+    const parsed: Record<number, string> = {};
+    Object.entries(initialAnswers).forEach(([k, v]) => {
+      const numKey = Number(k);
+      if (!isNaN(numKey) && typeof v === "string") {
+        parsed[numKey] = v;
+      }
+    });
+    return parsed;
+  });
+  const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>(() => {
+    if (!initialAnswers) return {};
+    const feedback: Record<number, boolean> = {};
+    Object.keys(initialAnswers).forEach((k) => {
+      const numKey = Number(k);
+      if (!isNaN(numKey)) {
+        feedback[numKey] = true;
+      }
+    });
+    return feedback;
+  });
+
+  React.useEffect(() => {
+    if (initialAnswers && Object.keys(initialAnswers).length > 0) {
+      const parsed: Record<number, string> = {};
+      const feedback: Record<number, boolean> = {};
+      Object.entries(initialAnswers).forEach(([k, v]) => {
+        const numKey = Number(k);
+        if (!isNaN(numKey) && typeof v === "string") {
+          parsed[numKey] = v;
+          feedback[numKey] = true;
+        }
+      });
+      setSelectedAnswers((prev) => ({ ...parsed, ...prev }));
+      setShowFeedback((prev) => ({ ...feedback, ...prev }));
+    }
+  }, [initialAnswers]);
 
   React.useEffect(() => {
     if (!conceptChecks || conceptChecks.length === 0) {

@@ -18,6 +18,7 @@ interface StageListeningViewProps {
   onNextStep?: () => void;
   onStepComplete?: () => void;
   cefr?: string;
+  initialAnswers?: Record<string, any>;
   onAnswersChange?: (answers: Record<string, any>) => void;
 }
 
@@ -31,6 +32,7 @@ export function StageListeningView({
   onRewardXp,
   onNextStep,
   onStepComplete,
+  initialAnswers,
   onAnswersChange,
 }: StageListeningViewProps) {
   const dialogueLines = dialogueSec?.content?.lines || [];
@@ -327,6 +329,7 @@ export function StageListeningView({
           practiceSec={practiceSec}
           tutor={tutor}
           onRewardXp={onRewardXp}
+          initialAnswers={initialAnswers}
           onAnswersChange={onAnswersChange}
           onFinish={() => {
             onStepComplete?.();

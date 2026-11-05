@@ -93,7 +93,7 @@ export function VoiceCallView({
   });
 
   const abortSpeechRef = useRef<() => void>(() => {});
-  const commitImmediateRef = useRef<() => void>(() => {});
+  const commitImmediateRef = useRef<() => boolean>(() => false);
   const talkModeRef = useRef<TalkMode>("auto");
 
   // Audio queue for sequential streaming TTS with 0-gap preloading
@@ -152,7 +152,10 @@ export function VoiceCallView({
       }
     },
     onTalkEnd: () => {
-      commitImmediateRef.current();
+      const sent = commitImmediateRef.current?.();
+      if (!sent && talkModeRef.current === "ptt") {
+        setAiSpeechState("idle");
+      }
     },
   });
 
@@ -160,14 +163,15 @@ export function VoiceCallView({
     talkModeRef.current = talkMode;
   }, [talkMode]);
 
-  // Half-duplex auto-gating: mic is ONLY open when student's turn to speak
-  // Auto mode: open when tutor is listening
-  // PTT mode: open ONLY when isPressing is true
+  // In Auto mode: open when tutor is listening OR speaking (enables hands-free voice barge-in)
+  // In PTT mode: open ONLY when user is pressing
   const canListen =
     callStatus === "active" &&
     !isMuted &&
     !isSendingRef.current &&
-    (talkMode === "auto" ? aiSpeechState === "listening" : isPressing);
+    (talkMode === "auto"
+      ? aiSpeechState === "listening" || aiSpeechState === "speaking"
+      : isPressing);
 
   // Send student turn to streaming AI backend
   const handleSendStudentMessage = useCallback(
@@ -208,7 +212,7 @@ export function VoiceCallView({
           headers: { "Content-Type": "application/json" },
           credentials: "include",
           body: JSON.stringify({
-            sessionId: sessionIdRef.current,
+            sessionId: sessionIdRef.current || undefined,
             topic: defaultTopic,
             history: conversationHistoryRef.current.slice(-6),
             studentMessage: cleanText,
@@ -319,6 +323,12 @@ export function VoiceCallView({
     studentName,
     lang: callLang,
     mode: talkMode,
+    onSpeechStart: () => {
+      // Hands-free barge-in: cut off AI immediately when user starts speaking
+      if (talkModeRef.current === "auto" && (aiSpeechState === "speaking" || audioQueue.isPlaying)) {
+        handleInterruptToSpeak();
+      }
+    },
     onUtteranceReady: (spoken) => {
       setLiveTranscript("");
       handleSendStudentMessage(spoken);
@@ -403,6 +413,10 @@ export function VoiceCallView({
         ? parseInt(localStorage.getItem("mr_khoirul_call_count") || "0", 10)
         : 0;
 
+    const fallbackGreeting = callCount > 0
+      ? "Hey, welcome back! Good to hear from you again. What are you up to today?"
+      : "Hey there! Great to meet you. What would you like to talk about today?";
+
     try {
       const res = await voiceApi.getInitialGreeting({
         topic: defaultTopic,
@@ -410,9 +424,6 @@ export function VoiceCallView({
         name: studentName,
       });
 
-      const fallbackGreeting = callCount > 0
-        ? "Hey, welcome back! Good to hear from you again. What are you up to today?"
-        : "Hey there! Great to meet you. What would you like to talk about today?";
       const initialGreeting = res?.greeting || fallbackGreeting;
 
       if (typeof window !== "undefined") {
@@ -424,9 +435,6 @@ export function VoiceCallView({
       setConversationHistory([{ role: "assistant", content: initialGreeting }]);
       audioQueue.speakText(initialGreeting);
     } catch {
-      const fallbackGreeting = callCount > 0
-        ? "Hey, welcome back! Good to hear from you again. What are you up to today?"
-        : "Hey there! Great to meet you. What would you like to talk about today?";
       setCallStatus("active");
       setAiSpeechState("speaking");
       setConversationHistory([{ role: "assistant", content: fallbackGreeting }]);
@@ -513,7 +521,7 @@ export function VoiceCallView({
   };
 
   return (
-    <div className="min-h-[100dvh] h-[100dvh] bg-white text-slate-900 flex flex-col justify-between overflow-hidden relative select-none">
+    <div className="min-h-[100dvh] h-[100dvh] bg-white text-slate-900 flex flex-col justify-between overflow-y-auto overflow-x-hidden relative select-none">
       {/* Clean Header Bar */}
       <CallHeader
         callStatus={callStatus}
@@ -524,7 +532,7 @@ export function VoiceCallView({
       />
 
       {/* Main Screen Area with Pure Mr. Khoirul Character */}
-      <main className="flex-1 flex flex-col items-center justify-center relative px-4 z-10 w-full max-w-xl mx-auto">
+      <main className="flex-1 min-h-0 flex flex-col items-center justify-center relative px-4 z-10 w-full max-w-xl mx-auto py-1 sm:py-2">
         {errorMsg && (
           <div className="absolute top-2 max-w-sm w-full p-3 bg-red-50 border border-red-200 rounded-2xl text-xs text-red-700 flex items-center gap-2 justify-center animate-fadeIn z-30 shadow-sm">
             <Info className="w-4 h-4 text-red-500 shrink-0" />
@@ -532,7 +540,7 @@ export function VoiceCallView({
           </div>
         )}
 
-        <div className="w-full flex flex-col items-center justify-center">
+        <div className="w-full flex-1 min-h-0 flex flex-col items-center justify-center">
           {callStatus === "idle" && (
             <div className="mb-3 animate-fadeIn">
               <AiQuotaBadge userId={userId} variant="voice" />
@@ -551,7 +559,7 @@ export function VoiceCallView({
           {callStatus === "active" && (
             <form
               onSubmit={handleSendText}
-              className="w-full max-w-xs sm:max-w-sm flex items-center gap-2 mt-4 animate-fadeIn"
+              className="w-full max-w-xs sm:max-w-sm flex items-center gap-2 mt-2 sm:mt-3 animate-fadeIn"
             >
               <input
                 type="text"

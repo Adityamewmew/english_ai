@@ -36,20 +36,6 @@ interface ModuleStudyViewProps {
   onRefresh?: () => void;
 }
 
-const SKILL_ICONS: Record<string, React.ReactNode> = {
-  reading: <BookOpen className="w-3.5 h-3.5" />,
-  listening: <Headphones className="w-3.5 h-3.5" />,
-  writing: <PenTool className="w-3.5 h-3.5" />,
-  speaking: <Mic className="w-3.5 h-3.5" />,
-};
-
-const SKILL_LABELS: Record<string, string> = {
-  reading: "Reading Mission",
-  listening: "Listening Mission",
-  writing: "Writing Mission",
-  speaking: "Speaking Lab",
-};
-
 export function ModuleStudyView({
   moduleId,
   moduleData,
@@ -76,21 +62,19 @@ export function ModuleStudyView({
     }
   }, []);
 
-  // Default to null so module opens the onboarding missions hub first
+  // Validate that missionId from URL actually belongs to this module (Security IDOR / Tampering Guard)
   const [activeMissionId, setActiveMissionId] = useState<string | null>(() => {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
-      return params.get("mission") || params.get("subModule") || null;
+      const paramId = params.get("mission") || params.get("subModule") || null;
+      if (paramId && Array.isArray(subModules) && subModules.length > 0) {
+        return subModules.some((s) => s.id === paramId) ? paramId : null;
+      }
+      return paramId;
     }
     return null;
   });
 
-  // Stop tutor speech immediately on unmount or when navigating back to missions hub
-  React.useEffect(() => {
-    return () => {
-      stopTutorSpeech();
-    };
-  }, [activeMissionId]);
   const [activeStepId, setActiveStepId] = useState(1);
   const [completedSteps, setCompletedSteps] = useState<number[]>([1]);
   const [isCurrentStepComplete, setIsCurrentStepComplete] = useState(false);
@@ -100,12 +84,98 @@ export function ModuleStudyView({
   const [isFinishing, setIsFinishing] = useState(false);
   const [stageAnswers, setStageAnswers] = useState<Record<string, any>>({});
   const [stageSpeakingScore, setStageSpeakingScore] = useState<number | undefined>(undefined);
+  const [lastSavedTime, setLastSavedTime] = useState<string | null>(null);
 
-  // Reset stage answers when switching submodules
+  // Two-way URL synchronization: keep browser URL in sync with active sub-module without page reload
   React.useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const currentUrl = new URL(window.location.href);
+      if (activeMissionId) {
+        currentUrl.searchParams.set("subModule", activeMissionId);
+        currentUrl.searchParams.delete("mission");
+        window.history.replaceState(null, "", currentUrl.toString());
+      } else {
+        currentUrl.searchParams.delete("subModule");
+        currentUrl.searchParams.delete("mission");
+        window.history.replaceState(null, "", currentUrl.pathname);
+      }
+    } catch {}
+  }, [activeMissionId]);
+
+  // Warn user if leaving/refreshing while answering questions
+  React.useEffect(() => {
+    if (typeof window === "undefined" || !activeMissionId) return;
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (Object.keys(stageAnswers).length > 0 && !isFinishing) {
+        e.preventDefault();
+        e.returnValue = "";
+      }
+    };
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, [activeMissionId, stageAnswers, isFinishing]);
+
+  // Stop tutor speech immediately on unmount or when navigating back to missions hub
+  React.useEffect(() => {
+    return () => {
+      stopTutorSpeech();
+    };
+  }, [activeMissionId]);
+
+  // Restore draft or reset when activeMissionId changes
+  React.useEffect(() => {
+    if (!activeMissionId || typeof window === "undefined") {
+      setStageAnswers({});
+      setStageSpeakingScore(undefined);
+      return;
+    }
+
+    try {
+      const saved = localStorage.getItem(`eddys_draft_${activeMissionId}`);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed && typeof parsed === "object") {
+          if (typeof parsed.activeStepId === "number") setActiveStepId(parsed.activeStepId);
+          if (Array.isArray(parsed.completedSteps)) setCompletedSteps(parsed.completedSteps);
+          if (parsed.stageAnswers && typeof parsed.stageAnswers === "object") setStageAnswers(parsed.stageAnswers);
+          if (typeof parsed.stageSpeakingScore === "number") setStageSpeakingScore(parsed.stageSpeakingScore);
+          setIsCurrentStepComplete(true);
+          const t = new Date(parsed.timestamp || Date.now());
+          setLastSavedTime(
+            `${t.getHours().toString().padStart(2, "0")}:${t.getMinutes().toString().padStart(2, "0")}`
+          );
+          return;
+        }
+      }
+    } catch {}
+
     setStageAnswers({});
     setStageSpeakingScore(undefined);
   }, [activeMissionId]);
+
+  // Debounced auto-save draft to localStorage whenever in-mission progress updates
+  React.useEffect(() => {
+    if (!activeMissionId || typeof window === "undefined") return;
+    const timer = setTimeout(() => {
+      try {
+        const draft = {
+          activeStepId,
+          completedSteps,
+          stageAnswers,
+          stageSpeakingScore,
+          timestamp: Date.now(),
+        };
+        localStorage.setItem(`eddys_draft_${activeMissionId}`, JSON.stringify(draft));
+        const now = new Date();
+        setLastSavedTime(
+          `${now.getHours().toString().padStart(2, "0")}:${now.getMinutes().toString().padStart(2, "0")}`
+        );
+      } catch {}
+    }, 400);
+
+    return () => clearTimeout(timer);
+  }, [activeMissionId, activeStepId, completedSteps, stageAnswers, stageSpeakingScore]);
 
   const selectedSubIndex = useMemo(() => {
     const idx = subModules.findIndex((s) => s.id === activeMissionId);
@@ -220,6 +290,11 @@ export function ModuleStudyView({
           );
           if (res?.data?.passed) {
             playFanfareSound();
+            if (typeof window !== "undefined" && currentSub?.id) {
+              try {
+                localStorage.removeItem(`eddys_draft_${currentSub.id}`);
+              } catch {}
+            }
             onRefresh?.();
           }
         }
@@ -269,6 +344,7 @@ export function ModuleStudyView({
     <StudentShell
       studentName={studentName}
       currentCefr={moduleData?.cefr || "A1.1"}
+      hideBottomNav={Boolean(activeMissionId && !isOnboardingBriefing)}
     >
       <div className="px-3 py-2.5 sm:px-6 sm:py-3.5 w-full max-w-[1520px] mx-auto space-y-3.5 pb-8 sm:pb-0">
           {/* VIEW A: Floating Skill Cards Hub (Before Entering Sub-Module) */}
@@ -280,10 +356,26 @@ export function ModuleStudyView({
               isAdmin={isAdmin}
               onSelectMission={(missionId) => {
                 setActiveMissionId(missionId);
-                setIsOnboardingBriefing(true);
-                setActiveStepId(1);
-                setCompletedSteps([1]);
-                setIsCurrentStepComplete(false);
+                let hasDraft = false;
+                if (typeof window !== "undefined" && missionId) {
+                  try {
+                    const saved = localStorage.getItem(`eddys_draft_${missionId}`);
+                    if (saved) {
+                      const parsed = JSON.parse(saved);
+                      if (parsed && typeof parsed.activeStepId === "number") {
+                        hasDraft = true;
+                      }
+                    }
+                  } catch {}
+                }
+                if (!hasDraft) {
+                  setIsOnboardingBriefing(true);
+                  setActiveStepId(1);
+                  setCompletedSteps([1]);
+                  setIsCurrentStepComplete(false);
+                } else {
+                  setIsOnboardingBriefing(false);
+                }
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             />
@@ -320,6 +412,13 @@ export function ModuleStudyView({
                       <ArrowLeft className="w-3.5 h-3.5 text-slate-600 dark:text-slate-400" />
                       <span>Back</span>
                     </button>
+
+                    {lastSavedTime && (
+                      <div className="flex items-center gap-1.5 text-[11px] font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-full border border-emerald-200/60 dark:border-emerald-800/50">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                        <span>Tersimpan ({lastSavedTime})</span>
+                      </div>
+                    )}
 
                     <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
                       <Link href="/modules" className="hover:text-slate-800 dark:hover:text-white transition-colors">
@@ -382,18 +481,25 @@ export function ModuleStudyView({
               <div className="flex flex-col lg:flex-row gap-6 xl:gap-8 items-start">
                 {/* Left Column (Wide): Primary Interactive Learning Stage */}
                 <div className="w-full lg:flex-1 space-y-4 sm:space-y-6 min-w-0">
-                  {/* Mobile-Only Horizontal Step Stepper (<lg) */}
-                  <div className="lg:hidden p-2.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs space-y-1.5">
-                    <div className="flex items-center justify-between px-1 text-[11px] font-bold text-slate-500">
-                      <span>Langkah {activeStepId} dari {playlistSteps.length}</span>
-                      <span className="text-[#0D3B66] font-mono truncate max-w-[200px]">
+                  {/* Mobile-Only Horizontal Stepper (<lg) */}
+                  <div className="lg:hidden p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-2xs space-y-2">
+                    <div className="flex items-center justify-between text-xs font-bold">
+                      <span className="text-slate-600 dark:text-slate-400 font-mono">
+                        Langkah {activeStepId} dari {playlistSteps.length}
+                      </span>
+                      <span className="text-[#0D3B66] dark:text-[#F4B41A] font-semibold truncate max-w-[180px] text-right">
                         {playlistSteps.find((s) => s.id === activeStepId)?.title.replace(/^\d+\.\s*/, "")}
                       </span>
                     </div>
-                    <div
-                      className="grid gap-1.5"
-                      style={{ gridTemplateColumns: `repeat(${playlistSteps.length}, minmax(0, 1fr))` }}
-                    >
+                    {/* Modern Continuous Progress Bar */}
+                    <div className="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                      <div
+                        className="h-full bg-gradient-to-r from-[#0D3B66] to-[#1B4965] dark:from-[#F4B41A] dark:to-[#E5A817] transition-all duration-300 rounded-full"
+                        style={{ width: `${Math.round((activeStepId / Math.max(1, playlistSteps.length)) * 100)}%` }}
+                      />
+                    </div>
+                    {/* Horizontal scrollable step pills so they are not crammed */}
+                    <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-0.5">
                       {playlistSteps.map((s) => {
                         const isActive = s.id === activeStepId;
                         const isDone = completedSteps.includes(s.id);
@@ -405,20 +511,18 @@ export function ModuleStudyView({
                             type="button"
                             disabled={!isAccessible}
                             onClick={() => handleSelectStep(s.id)}
-                            className={`py-2 px-1 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1 min-h-[42px] touch-manipulation active:scale-95 ${
+                            className={`flex-1 min-w-[36px] py-1.5 px-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1 min-h-[38px] touch-manipulation active:scale-95 ${
                               isActive
                                 ? "bg-[#0D3B66] text-white shadow-xs font-black ring-2 ring-[#0D3B66]/30 dark:ring-[#F4B41A]/50"
                                 : isDone
-                                ? "bg-emerald-50 text-emerald-800 border border-emerald-200 cursor-pointer"
+                                ? "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 cursor-pointer"
                                 : isAccessible
-                                ? "bg-slate-100 text-slate-600 hover:bg-slate-200 cursor-pointer"
-                                : "bg-slate-50 text-slate-300 border border-slate-100 cursor-not-allowed opacity-40"
+                                ? "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 cursor-pointer"
+                                : "bg-slate-50 dark:bg-slate-800/40 text-slate-300 dark:text-slate-600 border border-slate-100 dark:border-slate-800 cursor-not-allowed opacity-40"
                             }`}
                           >
                             {isDone && !isActive ? (
                               <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
-                            ) : !isAccessible ? (
-                              <Lock className="w-2.5 h-2.5 text-slate-300 shrink-0" />
                             ) : null}
                             <span className="font-mono text-xs">{s.id}</span>
                           </button>
@@ -451,6 +555,7 @@ export function ModuleStudyView({
                     studentName={studentName}
                     isAdmin={isAdmin}
                     onSubmitExam={handleExamSubmit}
+                    initialAnswers={stageAnswers}
                     onAnswersChange={(ans, spk) => {
                       setStageAnswers(ans);
                       if (spk !== undefined) setStageSpeakingScore(spk);

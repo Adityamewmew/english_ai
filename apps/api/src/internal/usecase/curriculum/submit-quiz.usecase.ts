@@ -45,7 +45,7 @@ export async function submitQuizUsecase(
     finalScore = Math.round(quizScore * 0.5 + speakingScore * 0.5);
   }
 
-  const passed = finalScore >= (module.passingScore || 70);
+  const passed = finalScore >= (module.passingScore || 75);
 
   let nextModuleToUnlock = null;
   if (passed) {
@@ -80,7 +80,7 @@ export async function submitQuizUsecase(
     score: finalScore,
     quizScore,
     speakingScore: speakingScore ?? null,
-    passingScore: module.passingScore || 70,
+    passingScore: module.passingScore || 75,
     correctCount,
     totalQuestions: questions.length,
     questionResults,

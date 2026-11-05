@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   CheckCircle2,
   AlertCircle,
@@ -44,6 +44,7 @@ interface WritingPracticumStageProps {
   tutor: any;
   onFinish?: () => void;
   isAdmin?: boolean;
+  initialAnswers?: Record<string | number, string>;
   onAnswersChange?: (answers: Record<string, any>) => void;
 }
 
@@ -53,6 +54,7 @@ export function WritingPracticumStage({
   tutor,
   onFinish,
   isAdmin: propIsAdmin,
+  initialAnswers,
   onAnswersChange,
 }: WritingPracticumStageProps) {
   const { data: sessionUser } = useSession();
@@ -67,12 +69,20 @@ export function WritingPracticumStage({
   const questions: WritingPracticumQuestion[] = rawQuestions;
 
   const [currentIdx, setCurrentIdx] = useState(0);
-  const [typedInputs, setTypedInputs] = useState<Record<string | number, string>>({});
+  const [typedInputs, setTypedInputs] = useState<Record<string | number, string>>(
+    () => initialAnswers || {}
+  );
   const [evaluations, setEvaluations] = useState<
     Record<string | number, { isCorrect: boolean; feedback: string }>
   >({});
   const [correctCount, setCorrectCount] = useState(0);
   const [isCompletedAll, setIsCompletedAll] = useState(false);
+
+  useEffect(() => {
+    if (initialAnswers && Object.keys(initialAnswers).length > 0) {
+      setTypedInputs((prev) => ({ ...initialAnswers, ...prev }));
+    }
+  }, [initialAnswers]);
 
   const question = questions[currentIdx] || {
     id: 1,
@@ -358,11 +368,9 @@ export function WritingPracticumStage({
             value={userText}
             onChange={(e) => {
               const val = e.target.value;
-              setTypedInputs((prev) => {
-                const updated = { ...prev, [question.id]: val };
-                onAnswersChange?.(updated);
-                return updated;
-              });
+              const updated = { ...typedInputs, [question.id]: val };
+              setTypedInputs(updated);
+              onAnswersChange?.(updated);
               if (currentEval) {
                 setEvaluations((prev) => ({
                   ...prev,

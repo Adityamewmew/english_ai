@@ -30,6 +30,7 @@ interface ListeningPracticumStageProps {
   onRewardXp: (amount: number) => void;
   onFinish?: () => void;
   isAdmin?: boolean;
+  initialAnswers?: Record<string, any>;
   onAnswersChange?: (answers: Record<string, any>) => void;
 }
 
@@ -43,6 +44,7 @@ export function ListeningPracticumStage({
   onRewardXp,
   onFinish,
   isAdmin: propIsAdmin,
+  initialAnswers,
   onAnswersChange,
 }: ListeningPracticumStageProps) {
   const { data: sessionUser } = useSession();
@@ -55,8 +57,16 @@ export function ListeningPracticumStage({
   const [checkedStatus, setCheckedStatus] = useState<Record<number, boolean>>({});
   const [isCorrectStatus, setIsCorrectStatus] = useState<Record<number, boolean>>({});
   const [audioPlayCounts, setAudioPlayCounts] = useState<Record<number, number>>({});
-  const [collectedAnswers, setCollectedAnswers] = useState<Record<string, any>>({});
+  const [collectedAnswers, setCollectedAnswers] = useState<Record<string, any>>(
+    () => initialAnswers || {}
+  );
   const [isCompletedAll, setIsCompletedAll] = useState(false);
+
+  React.useEffect(() => {
+    if (initialAnswers && Object.keys(initialAnswers).length > 0) {
+      setCollectedAnswers((prev) => ({ ...initialAnswers, ...prev }));
+    }
+  }, [initialAnswers]);
 
   // Load questions strictly from module JSON (via quizSec or practiceSec)
   const questions: PracticumQuestion[] = useMemo(() => {

@@ -38,6 +38,7 @@ interface ModuleStageViewportProps {
   studentName?: string;
   isAdmin?: boolean;
   onSubmitExam?: (finalScore: number, examAnswers?: Record<string, any>) => Promise<void>;
+  initialAnswers?: Record<string, any>;
   onAnswersChange?: (answers: Record<string, any>, speakingScore?: number) => void;
 }
 
@@ -64,6 +65,7 @@ export function ModuleStageViewport({
   studentName,
   isAdmin = false,
   onSubmitExam,
+  initialAnswers,
   onAnswersChange,
 }: ModuleStageViewportProps) {
   const effectiveCanProceed = isAdmin || canProceed;
@@ -94,6 +96,7 @@ export function ModuleStageViewport({
             onRewardXp={onRewardXp}
             onNextStep={onNextStep}
             onStepComplete={onStepComplete}
+            initialAnswers={initialAnswers}
             onAnswersChange={onAnswersChange}
             cefr={cefr}
           />
@@ -107,6 +110,7 @@ export function ModuleStageViewport({
             onRewardXp={onRewardXp}
             onNextStep={onNextStep}
             onStepComplete={onStepComplete}
+            initialAnswers={initialAnswers}
             onAnswersChange={onAnswersChange}
             cefr={cefr}
           />
@@ -120,6 +124,7 @@ export function ModuleStageViewport({
             onRewardXp={onRewardXp}
             onNextStep={onNextStep}
             onStepComplete={onStepComplete}
+            initialAnswers={initialAnswers}
             onAnswersChange={onAnswersChange}
             cefr={cefr}
           />
@@ -138,6 +143,7 @@ export function ModuleStageViewport({
             cefr={cefr}
             onNextStep={onNextStep}
             onStepComplete={onStepComplete}
+            initialAnswers={initialAnswers}
             onAnswersChange={onAnswersChange}
           />
         )}
@@ -218,7 +224,9 @@ export function ModuleStageViewport({
             ) : !effectiveCanProceed ? (
               <>
                 <Lock className="w-3.5 h-3.5 text-slate-400" />
-                <span>Complete Activity</span>
+                <span>
+                  {activeStepId === totalSteps ? "Lengkapi Latihan di Atas" : "Selesaikan Tahap Ini"}
+                </span>
               </>
             ) : activeStepId === totalSteps ? (
               <>

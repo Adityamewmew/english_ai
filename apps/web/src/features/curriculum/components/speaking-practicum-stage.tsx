@@ -1,18 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import {
-  Volume2,
-  Mic,
-  Square,
-  Headphones,
-  ArrowRight,
-  BookOpen,
-  MapPin,
-  TrendingUp,
-  Check,
-  Clock,
-} from "lucide-react";
+import { Volume2, Mic, Square, Headphones, ArrowRight, BookOpen, MapPin, TrendingUp, Check, Clock } from "lucide-react";
 import { playPopSound, playSnapSound, playMatchSuccessSound } from "@/lib/sound-fx";
 import { PracticumRoleplayCall } from "./practicum-roleplay-call";
 import { PracticumDrillCard } from "./practicum-drill-card";
@@ -25,21 +14,11 @@ export interface PracticumQuestion {
   category: "storytelling" | "roleplay" | "linguistic_drill" | string;
   typeLabel: string;
   instruction: string;
-  audioPrompt?: string;
-  themeTitle?: string;
-  inspirationPoints?: string[];
-  sampleStarter?: string;
-  scenarioContext?: string;
-  characterRole?: string;
-  callTopic?: string;
-  initialGreeting?: string;
-  focus?: "vocab" | "grammar" | "pronunciation_stress" | "pronunciation_intonation" | string;
-  targetSentence?: string;
-  phonetic?: string;
-  expectedKeywords?: string[];
-  hint?: string;
-  explanation?: string;
-  minSeconds?: number;
+  audioPrompt?: string; themeTitle?: string; inspirationPoints?: string[];
+  sampleStarter?: string; scenarioContext?: string; characterRole?: string;
+  callTopic?: string; initialGreeting?: string; focus?: string;
+  targetSentence?: string; phonetic?: string; expectedKeywords?: string[];
+  hint?: string; explanation?: string; minSeconds?: number;
 }
 
 interface SpeakingPracticumStageProps {
@@ -48,8 +27,21 @@ interface SpeakingPracticumStageProps {
   onRewardXp: (amount: number) => void;
   onNextStep?: () => void;
   isAdmin?: boolean;
+  initialAnswers?: Record<string, any>;
   onAnswersChange?: (answers: Record<string, any>, speakingScore?: number) => void;
 }
+
+const parseInitial = (raw?: Record<string, any>) => {
+  const trans: Record<number, string> = {}, done: Record<number, boolean> = {};
+  if (raw) Object.entries(raw).forEach(([k, v]) => {
+    const num = Number(k);
+    if (!isNaN(num) && typeof v === "string") {
+      trans[num] = v;
+      if (v.trim()) done[num] = true;
+    }
+  });
+  return { trans, done };
+};
 
 export function SpeakingPracticumStage({
   quizSec,
@@ -57,6 +49,7 @@ export function SpeakingPracticumStage({
   onRewardXp,
   onNextStep,
   isAdmin: propIsAdmin,
+  initialAnswers,
   onAnswersChange,
 }: SpeakingPracticumStageProps) {
   const { data: sessionUser } = useSession();
@@ -85,11 +78,19 @@ export function SpeakingPracticumStage({
 
   const [currentIdx, setCurrentIdx] = useState(0);
   const [recordings, setRecordings] = useState<Record<number, string>>({});
-  const [completedItems, setCompletedItems] = useState<Record<number, boolean>>({});
+  const [completedItems, setCompletedItems] = useState<Record<number, boolean>>(() => parseInitial(initialAnswers).done);
   const [itemScores, setItemScores] = useState<Record<number, number>>({});
   const [selectedInspirations, setSelectedInspirations] = useState<Record<number, number>>({});
-  const [speechTranscripts, setSpeechTranscripts] = useState<Record<number, string>>({});
+  const [speechTranscripts, setSpeechTranscripts] = useState<Record<number, string>>(() => parseInitial(initialAnswers).trans);
   const [liveTranscript, setLiveTranscript] = useState("");
+
+  useEffect(() => {
+    if (initialAnswers && Object.keys(initialAnswers).length > 0) {
+      const { trans, done } = parseInitial(initialAnswers);
+      setSpeechTranscripts((prev) => ({ ...trans, ...prev }));
+      setCompletedItems((prev) => ({ ...done, ...prev }));
+    }
+  }, [initialAnswers]);
 
   const [isRecording, setIsRecording] = useState(false);
   const [recordSeconds, setRecordSeconds] = useState(0);
@@ -142,7 +143,17 @@ export function SpeakingPracticumStage({
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       audioChunksRef.current = [];
-      const recorder = new MediaRecorder(stream);
+      let options: MediaRecorderOptions | undefined = undefined;
+      if (typeof MediaRecorder !== "undefined" && typeof MediaRecorder.isTypeSupported === "function") {
+        if (MediaRecorder.isTypeSupported("audio/webm;codecs=opus")) {
+          options = { mimeType: "audio/webm;codecs=opus" };
+        } else if (MediaRecorder.isTypeSupported("audio/mp4")) {
+          options = { mimeType: "audio/mp4" };
+        } else if (MediaRecorder.isTypeSupported("audio/aac")) {
+          options = { mimeType: "audio/aac" };
+        }
+      }
+      const recorder = options ? new MediaRecorder(stream, options) : new MediaRecorder(stream);
       mediaRecorderRef.current = recorder;
 
       recorder.ondataavailable = (event) => {
@@ -152,7 +163,8 @@ export function SpeakingPracticumStage({
       };
 
       recorder.onstop = () => {
-        const audioBlob = new Blob(audioChunksRef.current, { type: "audio/webm" });
+        const mimeType = recorder.mimeType || "audio/webm";
+        const audioBlob = new Blob(audioChunksRef.current, { type: mimeType });
         const audioUrl = URL.createObjectURL(audioBlob);
         setRecordings((prev) => ({ ...prev, [currentIdx]: audioUrl }));
         stream.getTracks().forEach((track) => track.stop());
@@ -233,13 +245,28 @@ export function SpeakingPracticumStage({
 
   const handleConfirmAndNext = () => {
     playMatchSuccessSound();
+    const updatedTranscripts = {
+      ...speechTranscripts,
+      [currentIdx]: speechTranscripts[currentIdx] || liveTranscript || "Spoken response recorded",
+    };
+    setSpeechTranscripts(updatedTranscripts);
+    const updatedScores = {
+      ...itemScores,
+      [currentIdx]: itemScores[currentIdx] || 85,
+    };
+    setItemScores(updatedScores);
     setCompletedItems((prev) => ({ ...prev, [currentIdx]: true }));
     onRewardXp(15);
 
     if (currentIdx < totalQuestions - 1) {
       setCurrentIdx((prev) => prev + 1);
+      setLiveTranscript("");
     } else {
       setIsCompletedAll(true);
+      const avgScore = Math.round(
+        Object.values(updatedScores).reduce((a, b) => a + b, 0) / (totalQuestions || 1)
+      );
+      onAnswersChange?.(updatedTranscripts, avgScore);
     }
   };
 
@@ -264,7 +291,13 @@ export function SpeakingPracticumStage({
     onAnswersChange?.(updatedTranscripts, avgScore);
   };
 
-  const handleDrillAdvance = () => {
+  const advanceQuestion = (rewardScore?: number) => {
+    playMatchSuccessSound();
+    if (rewardScore) {
+      setCompletedItems((prev) => ({ ...prev, [currentIdx]: true }));
+      setItemScores((prev) => ({ ...prev, [currentIdx]: rewardScore }));
+      onRewardXp(10);
+    }
     if (currentIdx < totalQuestions - 1) {
       setCurrentIdx((prev) => prev + 1);
     } else {
@@ -283,17 +316,12 @@ export function SpeakingPracticumStage({
     setIsCompletedAll(false);
   };
 
-  const renderCategoryIcon = (category: string) => {
-    switch (category) {
-      case "storytelling":
-        return <BookOpen className="w-3.5 h-3.5 text-[#0D3B66] dark:text-[#F4B41A]" />;
-      case "roleplay":
-        return <MapPin className="w-3.5 h-3.5 text-[#0D3B66] dark:text-[#F4B41A]" />;
-      case "linguistic_drill":
-        return <TrendingUp className="w-3.5 h-3.5 text-[#0D3B66] dark:text-[#F4B41A]" />;
-      default:
-        return <Mic className="w-3.5 h-3.5 text-[#0D3B66] dark:text-[#F4B41A]" />;
-    }
+  const renderCategoryIcon = (cat: string) => {
+    const cls = "w-3.5 h-3.5 text-[#0D3B66] dark:text-[#F4B41A]";
+    if (cat === "storytelling") return <BookOpen className={cls} />;
+    if (cat === "roleplay") return <MapPin className={cls} />;
+    if (cat === "linguistic_drill") return <TrendingUp className={cls} />;
+    return <Mic className={cls} />;
   };
 
   return (
@@ -343,13 +371,7 @@ export function SpeakingPracticumStage({
                 </span>
                 {currentQ.focus && (
                   <span className="text-[10px] font-bold font-mono px-2 py-0.5 rounded-md bg-slate-200/50 dark:bg-slate-700 text-slate-700 dark:text-slate-300">
-                    {currentQ.focus === "vocab"
-                      ? "Focus: Vocabulary"
-                      : currentQ.focus === "grammar"
-                      ? "Focus: Grammar"
-                      : currentQ.focus === "pronunciation_stress"
-                      ? "Focus: Syllable Stress"
-                      : "Focus: Intonation"}
+                    Focus: {currentQ.focus.replace(/_/g, " ")}
                   </span>
                 )}
               </div>
@@ -448,7 +470,7 @@ export function SpeakingPracticumStage({
                 savedAudioUrl={recordings[currentIdx]}
                 savedScore={itemScores[currentIdx]}
                 onSaveResult={handleDrillSave}
-                onAdvance={handleDrillAdvance}
+                onAdvance={advanceQuestion}
                 isLastQuestion={currentIdx === totalQuestions - 1}
                 tutor={tutor}
               />
@@ -493,13 +515,17 @@ export function SpeakingPracticumStage({
                 </button>
               )}
 
-              {recordings[currentIdx] && !isRecording && (
+              {(recordings[currentIdx] || speechTranscripts[currentIdx] || liveTranscript) && !isRecording && (
                 <button
                   type="button"
                   onClick={handleConfirmAndNext}
                   className="ml-auto flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer"
                 >
-                  <span>Confirm & Continue to Next Question</span>
+                  <span>
+                    {currentIdx < totalQuestions - 1
+                      ? "Confirm & Continue to Next Question"
+                      : "Confirm & View Speaking Summary"}
+                  </span>
                   <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
                 </button>
               )}
@@ -511,17 +537,7 @@ export function SpeakingPracticumStage({
                   </span>
                   <button
                     type="button"
-                    onClick={() => {
-                      playMatchSuccessSound();
-                      setCompletedItems((prev) => ({ ...prev, [currentIdx]: true }));
-                      setItemScores((prev) => ({ ...prev, [currentIdx]: 85 }));
-                      onRewardXp(10);
-                      if (currentIdx < totalQuestions - 1) {
-                        setCurrentIdx((prev) => prev + 1);
-                      } else {
-                        setIsCompletedAll(true);
-                      }
-                    }}
+                    onClick={() => advanceQuestion(85)}
                     className="shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs shadow-xs transition-all cursor-pointer"
                   >
                     <span>Practice Aloud &amp; Continue</span>
@@ -533,14 +549,7 @@ export function SpeakingPracticumStage({
               {isAdmin && (
                 <button
                   type="button"
-                  onClick={() => {
-                    playMatchSuccessSound();
-                    if (currentIdx < totalQuestions - 1) {
-                      setCurrentIdx((prev) => prev + 1);
-                    } else {
-                      setIsCompletedAll(true);
-                    }
-                  }}
+                  onClick={() => advanceQuestion()}
                   className="px-4 py-2.5 rounded-xl border border-dashed border-amber-400 text-amber-600 dark:text-amber-400 font-bold text-xs hover:bg-amber-50 dark:hover:bg-amber-950/30 transition-all cursor-pointer flex items-center gap-1.5"
                 >
                   <span>Skip Question (Admin)</span>
@@ -555,14 +564,7 @@ export function SpeakingPracticumStage({
             <div className="pt-2 flex justify-end">
               <button
                 type="button"
-                onClick={() => {
-                  playMatchSuccessSound();
-                  if (currentIdx < totalQuestions - 1) {
-                    setCurrentIdx((prev) => prev + 1);
-                  } else {
-                    setIsCompletedAll(true);
-                  }
-                }}
+                onClick={() => advanceQuestion()}
                 className="flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer"
               >
                 <span>

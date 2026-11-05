@@ -125,7 +125,7 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
     "/turn-stream",
     async ({ body, user }) => {
       const { sessionId, topic, history, studentMessage, turnIndex = 0, moduleId } = body;
-      const resolvedUserId = user?.id;
+      const resolvedUserId = user?.id || body.userId;
       const encoder = new TextEncoder();
       let sentenceIndex = 0;
       const accumulatedSentences: string[] = [];
@@ -195,7 +195,7 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
               history: history as any,
               studentMessage,
               userId: resolvedUserId,
-              moduleId,
+              moduleId: moduleId || undefined,
             })) {
               // Output Guardrail per sentence
               const guard = LlmGuardrailService.checkOutputSentence(sentence);

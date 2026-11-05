@@ -12,6 +12,7 @@ interface UseSpeechRecognitionProps {
   studentName?: string;
   lang?: string;
   mode?: "auto" | "ptt";
+  onSpeechStart?: () => void;
   onUtteranceReady: (text: string) => void;
 }
 
@@ -20,6 +21,7 @@ export function useSpeechRecognition({
   studentName = "",
   lang = "en-US",
   mode = "auto",
+  onSpeechStart,
   onUtteranceReady,
 }: UseSpeechRecognitionProps) {
   const [liveTranscript, setLiveTranscript] = useState<string>("");
@@ -31,6 +33,7 @@ export function useSpeechRecognition({
   const canListenRef = useRef(canListen);
   const studentNameRef = useRef(studentName);
   const modeRef = useRef(mode);
+  const onSpeechStartRef = useRef(onSpeechStart);
   const onUtteranceReadyRef = useRef(onUtteranceReady);
 
   useEffect(() => {
@@ -44,6 +47,10 @@ export function useSpeechRecognition({
   useEffect(() => {
     modeRef.current = mode;
   }, [mode]);
+
+  useEffect(() => {
+    onSpeechStartRef.current = onSpeechStart;
+  }, [onSpeechStart]);
 
   useEffect(() => {
     onUtteranceReadyRef.current = onUtteranceReady;
@@ -66,7 +73,7 @@ export function useSpeechRecognition({
     }
   }, []);
 
-  const commitImmediate = useCallback(() => {
+  const commitImmediate = useCallback((): boolean => {
     if (silenceTimerRef.current) {
       clearTimeout(silenceTimerRef.current);
       silenceTimerRef.current = null;
@@ -78,7 +85,9 @@ export function useSpeechRecognition({
 
     if (spoken && spoken.length >= 2 && isValidStudentUtterance(spoken)) {
       onUtteranceReadyRef.current(spoken);
+      return true;
     }
+    return false;
   }, [abort]);
 
   const stop = useCallback(() => {
@@ -155,6 +164,9 @@ export function useSpeechRecognition({
         if (!isValidStudentUtterance(spoken)) {
           return;
         }
+
+        // Fire speech detected callback (triggers barge-in interruption in hands-free mode)
+        onSpeechStartRef.current?.();
 
         // In PTT mode, do not auto-send on silence; release of button triggers commitImmediate
         if (modeRef.current === "ptt") {

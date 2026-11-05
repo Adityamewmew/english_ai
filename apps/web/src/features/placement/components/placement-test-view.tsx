@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   CheckCircle2,
@@ -44,6 +44,35 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
 
   const [result, setResult] = useState<any>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
+  // Restore placement draft from localStorage if present
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const saved = localStorage.getItem("eddys_placement_draft");
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.mcqAnswers) setMcqAnswers(parsed.mcqAnswers);
+        if (parsed.listeningAnswers) setListeningAnswers(parsed.listeningAnswers);
+        if (parsed.writingAnswers) setWritingAnswers(parsed.writingAnswers);
+        if (parsed.speakingAnswers) setSpeakingAnswers(parsed.speakingAnswers);
+      }
+    } catch {}
+  }, []);
+
+  // Debounced auto-save placement draft whenever answers change
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const timer = setTimeout(() => {
+      try {
+        localStorage.setItem(
+          "eddys_placement_draft",
+          JSON.stringify({ mcqAnswers, listeningAnswers, writingAnswers, speakingAnswers })
+        );
+      } catch {}
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [mcqAnswers, listeningAnswers, writingAnswers, speakingAnswers]);
   const [isUnlockModalOpen, setIsUnlockModalOpen] = useState(false);
 
   const { data: classesData, refetch: refetchClasses } = useClasses(userId);
@@ -97,8 +126,20 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
       });
       setResult(data);
       window.scrollTo({ top: 0, behavior: "smooth" });
+      if (typeof window !== "undefined") {
+        try {
+          localStorage.removeItem("eddys_placement_draft");
+        } catch {}
+      }
     } catch (err: any) {
-      setErrorMsg(err?.message || "Failed to submit placement test.");
+      const isAuthError =
+        err?.message?.toLowerCase().includes("autentikasi") ||
+        err?.message?.includes("401");
+      setErrorMsg(
+        isAuthError
+          ? "Sesi autentikasi Anda telah berakhir. Jawaban Anda tetap tersimpan otomatis! Silakan login kembali di tab baru lalu kirim ulang penilaian ini."
+          : err?.message || "Failed to submit placement test."
+      );
     }
   };
 

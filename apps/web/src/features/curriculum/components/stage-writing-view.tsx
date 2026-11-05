@@ -17,6 +17,7 @@ interface StageWritingViewProps {
   onNextStep?: () => void;
   onStepComplete?: () => void;
   cefr?: string;
+  initialAnswers?: Record<string, any>;
   onAnswersChange?: (answers: Record<string, any>) => void;
 }
 
@@ -29,6 +30,7 @@ export function StageWritingView({
   onRewardXp,
   onNextStep,
   onStepComplete,
+  initialAnswers,
   onAnswersChange,
 }: StageWritingViewProps) {
   return (
@@ -95,6 +97,7 @@ export function StageWritingView({
           quizSec={quizSec}
           onRewardXp={onRewardXp}
           tutor={tutor}
+          initialAnswers={initialAnswers}
           onAnswersChange={onAnswersChange}
           onFinish={() => {
             onStepComplete?.();

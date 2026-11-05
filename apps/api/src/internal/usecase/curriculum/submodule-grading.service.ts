@@ -128,11 +128,45 @@ export class SubModuleGradingService {
     if (typeof q.targetSentence === "string") possibleTargets.push(q.targetSentence);
     if (typeof q.targetWord === "string") possibleTargets.push(q.targetWord);
     if (typeof q.audioText === "string") possibleTargets.push(q.audioText);
+    if (typeof q.sampleGoodAnswer === "string") possibleTargets.push(q.sampleGoodAnswer);
+    if (typeof q.sampleAnswer === "string") possibleTargets.push(q.sampleAnswer);
 
     for (const target of possibleTargets) {
       const cleanTarget = this.cleanText(target);
       if (cleanTarget && cleanUser === cleanTarget) {
         return { isCorrect: true, canonicalAnswer: target };
+      }
+    }
+
+    // 2b. Semantic/Stem token overlap against target or sample good answer
+    const userWords = cleanUser.split(" ").filter((w) => w.length > 2);
+    for (const target of possibleTargets) {
+      const targetWords = this.cleanText(target).split(" ").filter((w) => w.length > 2);
+      if (targetWords.length > 0 && userWords.length > 0) {
+        const overlap = userWords.filter((w) => targetWords.includes(w)).length;
+        if (overlap / Math.min(userWords.length, targetWords.length) >= 0.5) {
+          return { isCorrect: true, canonicalAnswer: target };
+        }
+      }
+    }
+
+    // 2c. Open-ended Rubric check for writing practicum prompts
+    const isOpenEnded = Boolean(
+      q.criteria ||
+      q.sampleGoodAnswer ||
+      q.sampleAnswer ||
+      /answer this question|complete sentence|paragraph|conversation|how do you feel|describe/i.test(
+        q.prompt || q.promptText || q.instruction || ""
+      )
+    );
+
+    if (isOpenEnded) {
+      const rawWords = userString.trim().split(/\s+/).filter(Boolean);
+      if (rawWords.length >= 3) {
+        return {
+          isCorrect: true,
+          canonicalAnswer: q.sampleGoodAnswer || q.sampleAnswer || possibleTargets[0] || "Open-ended answer accepted",
+        };
       }
     }
 
@@ -158,6 +192,8 @@ export class SubModuleGradingService {
     if (q.targetAnswer) return q.targetAnswer;
     if (q.targetSentence) return q.targetSentence;
     if (q.targetWord) return q.targetWord;
+    if (q.sampleGoodAnswer) return q.sampleGoodAnswer;
+    if (q.sampleAnswer) return q.sampleAnswer;
     if (q.answer !== undefined) return q.answer;
     if (q.correctIndex !== undefined && Array.isArray(q.options)) return q.options[q.correctIndex];
     return null;

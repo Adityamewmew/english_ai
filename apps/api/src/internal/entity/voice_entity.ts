@@ -18,7 +18,7 @@ export const VoiceTtsBody = t.Object({
 });
 
 export const VoiceTurnStreamBody = t.Object({
-  sessionId: t.Optional(t.String()),
+  sessionId: t.Optional(t.Nullable(t.String())),
   topic: t.String(),
   history: t.Array(
     t.Object({
@@ -28,8 +28,8 @@ export const VoiceTurnStreamBody = t.Object({
   ),
   studentMessage: t.String(),
   turnIndex: t.Optional(t.Number()),
-  userId: t.Optional(t.String()),
-  moduleId: t.Optional(t.String()),
+  userId: t.Optional(t.Nullable(t.String())),
+  moduleId: t.Optional(t.Nullable(t.String())),
 });
 
 export const VoiceGreetingQuery = t.Optional(

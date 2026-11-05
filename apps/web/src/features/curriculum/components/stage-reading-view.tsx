@@ -23,6 +23,7 @@ interface StageReadingViewProps {
   cefr?: string;
   onNextStep?: () => void;
   onStepComplete?: () => void;
+  initialAnswers?: Record<string, any>;
   onAnswersChange?: (answers: Record<string, any>) => void;
 }
 
@@ -40,6 +41,7 @@ export function StageReadingView({
   cefr = "A1.1",
   onNextStep,
   onStepComplete,
+  initialAnswers,
   onAnswersChange,
 }: StageReadingViewProps) {
   const vocabItems = vocabSec?.content?.items || theorySec?.content?.items || [];
@@ -118,6 +120,23 @@ export function StageReadingView({
               Follow along with the passage while listening to word-by-word synchronized audio:
             </p>
           </div>
+
+          {/* Grammar in Use Banner (Feedback Pak Khoirul Anwar) */}
+          {theorySec?.content?.linguisticTarget?.grammar && (
+            <div className="p-3 sm:p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/60 flex items-center justify-between gap-3 text-xs">
+              <div className="flex items-center gap-2">
+                <span className="font-mono text-[10px] uppercase font-black px-2 py-0.5 rounded-md bg-[#F4B41A] text-slate-900 shrink-0">
+                  Grammar in Use
+                </span>
+                <span className="text-slate-800 dark:text-slate-200 font-semibold">
+                  {theorySec.content.linguisticTarget.grammar}
+                </span>
+              </div>
+              <span className="text-amber-800 dark:text-amber-300 text-[11px] hidden sm:inline">
+                Ketuk kata yang disorot untuk melihat penjelasan
+              </span>
+            </div>
+          )}
           {readingPassage && (
             <InteractiveReadingPassage
               passage={readingPassage}
@@ -214,6 +233,7 @@ export function StageReadingView({
             accentColor="blue"
             embedded={true}
             onCompleted={onStepComplete}
+            initialAnswers={initialAnswers}
             onAnswersChange={onAnswersChange}
           />
         </div>

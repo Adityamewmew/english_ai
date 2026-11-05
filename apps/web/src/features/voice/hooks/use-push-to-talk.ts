@@ -17,7 +17,7 @@ export function usePushToTalk({
   onTalkStart,
   onTalkEnd,
 }: UsePushToTalkProps) {
-  const [talkMode, setTalkMode] = useState<TalkMode>("auto");
+  const [talkMode, setTalkMode] = useState<TalkMode>("ptt");
   const [isPressing, setIsPressing] = useState(false);
 
   const isPressingRef = useRef(false);
@@ -42,8 +42,11 @@ export function usePushToTalk({
   const endTalk = useCallback(() => {
     if (!isPressingRef.current) return;
     isPressingRef.current = false;
-    setIsPressing(false);
     onTalkEndRef.current();
+    // Allow small grace window for browser speech recognition to capture trailing word before cutting mic
+    setTimeout(() => {
+      setIsPressing(false);
+    }, 150);
   }, []);
 
   // Keyboard Spacebar listener for desktop PTT

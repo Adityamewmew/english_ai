@@ -11,6 +11,7 @@ interface StudentShellProps {
   studentName?: string;
   currentCefr?: string;
   showSearch?: boolean;
+  hideBottomNav?: boolean;
 }
 
 export function StudentShell({
@@ -18,6 +19,7 @@ export function StudentShell({
   studentName = "",
   currentCefr = "A1.1",
   showSearch = false,
+  hideBottomNav = false,
 }: StudentShellProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
@@ -52,15 +54,17 @@ export function StudentShell({
           />
         </div>
 
-        {/* Page Main Content: Generous bottom padding on mobile (pb-40 / 160px) so content and bottom buttons are never covered by fixed bottom nav + browser chrome */}
-        <main className="flex-1 pb-40 sm:pb-32 lg:pb-8">
+        {/* Page Main Content: Generous bottom padding on mobile if bottom nav present */}
+        <main className={`flex-1 ${hideBottomNav ? "pb-12 sm:pb-8 lg:pb-8" : "pb-40 sm:pb-32 lg:pb-8"}`}>
           {children}
         </main>
 
-        {/* Mobile Bottom Navigation Bar (Hidden on Desktop) */}
-        <div className="no-print">
-          <StudentMobileBottomNav />
-        </div>
+        {/* Mobile Bottom Navigation Bar (Hidden on Desktop & when hideBottomNav is true) */}
+        {!hideBottomNav && (
+          <div className="no-print">
+            <StudentMobileBottomNav />
+          </div>
+        )}
       </div>
     </div>
   );

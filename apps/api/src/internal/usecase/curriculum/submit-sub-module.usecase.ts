@@ -32,7 +32,8 @@ export async function submitSubModuleUsecase(
     speakingScore,
   });
 
-  const passingScore = module.passingScore || 70;
+  // Academic standard: Semua KKM sub-modul ditetapkan di 75
+  const passingScore = 75;
   const passed = grading.finalScore >= passingScore;
 
   // 1. Upsert sub-module progress (record real score)

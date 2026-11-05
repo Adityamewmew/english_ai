@@ -34,17 +34,17 @@ export function KhoirulScreen({
   const currentImage = getImageSource();
 
   return (
-    <div className="relative w-full flex flex-col items-center justify-center select-none py-4">
+    <div className="relative w-full flex-1 min-h-0 flex flex-col items-center justify-center select-none py-1">
       {/* Floating Info Pill Text (Status indicator when call is active/connecting) */}
       {callStatus === "connecting" && (
-        <div className="mb-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-slate-700 text-xs font-bold shadow-sm animate-pulse">
+        <div className="mb-2 sm:mb-3 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-slate-700 text-xs font-bold shadow-sm animate-pulse">
           <Loader2 className="w-3.5 h-3.5 animate-spin text-[#0D3B66]" />
           <span>Connecting...</span>
         </div>
       )}
 
       {callStatus === "active" && (
-        <div className="mb-4 animate-fadeIn">
+        <div className="mb-2 sm:mb-3 animate-fadeIn">
           {aiSpeechState === "speaking" && (
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0D3B66] text-white border border-[#082542] text-xs font-bold shadow-md shadow-[#0D3B66]/20 transition-all duration-300">
               <Volume2 className="w-3.5 h-3.5 text-[#F4B41A] animate-bounce" />
@@ -93,7 +93,7 @@ export function KhoirulScreen({
         <img
           src={currentImage}
           alt="Mr. Khoirul AI English Coach"
-          className={`relative z-10 w-auto h-64 sm:h-80 md:h-96 object-contain transition-all duration-300 drop-shadow-lg ${
+          className={`relative z-10 w-auto h-32 sm:h-40 md:h-48 max-h-[25vh] object-contain transition-all duration-300 drop-shadow-lg ${
             aiSpeechState === "speaking"
               ? "animate-[orb-breathe_2.5s_ease-in-out_infinite] scale-[1.03]"
               : "scale-100"
@@ -101,7 +101,7 @@ export function KhoirulScreen({
         />
 
         {/* Soft Contact Ground Shadow */}
-        <div className="w-44 sm:w-56 h-5 rounded-full bg-slate-300/60 blur-md -mt-3 z-0 transition-all duration-300 group-hover:scale-105" />
+        <div className="w-40 sm:w-52 h-4 sm:h-5 rounded-full bg-slate-300/60 blur-md -mt-2.5 z-0 transition-all duration-300 group-hover:scale-105" />
       </div>
     </div>
   );
