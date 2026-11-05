@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  transpilePackages: ["@english-ai/shared"],
   poweredByHeader: false,
   output: process.platform === "win32" ? undefined : "standalone",
   async headers() {
