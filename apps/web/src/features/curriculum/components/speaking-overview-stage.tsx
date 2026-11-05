@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Volume2, TrendingUp, Music2, Mic } from "lucide-react";
+import { Volume2, TrendingUp, Music2, Mic, ArrowRight } from "lucide-react";
 import { TutorAudioStage } from "./tutor-audio-stage";
 import { playPopSound } from "@/lib/sound-fx";
 
@@ -23,6 +23,7 @@ export function SpeakingOverviewStage({
   theorySec,
   tutor,
   onRewardXp,
+  onNextStep,
 }: SpeakingOverviewStageProps) {
   const content = theorySec?.content || {};
   const [activeAudioPillar, setActiveAudioPillar] = useState<string | null>(null);
@@ -143,6 +144,23 @@ export function SpeakingOverviewStage({
             );
           })}
         </div>
+
+        {onNextStep && (
+          <div className="pt-4 flex justify-end border-t border-slate-100 dark:border-slate-800">
+            <button
+              type="button"
+              onClick={() => {
+                playPopSound();
+                onRewardXp(15);
+                onNextStep();
+              }}
+              className="flex items-center gap-2 px-6 py-3 rounded-2xl btn-skeuo-yellow text-[#0F172A] text-sm font-black shadow-md transition-all active:scale-95 cursor-pointer font-heading"
+            >
+              <span>Proceed to Step 2 (Syllable Stress)</span>
+              <ArrowRight className="w-4 h-4 text-[#0D3B66]" />
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

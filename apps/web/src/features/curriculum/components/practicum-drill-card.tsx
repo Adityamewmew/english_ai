@@ -8,6 +8,7 @@ import {
   Headphones,
   ArrowRight,
   TrendingUp,
+  RotateCcw,
 } from "lucide-react";
 import { playPopSound, playSnapSound, playMatchSuccessSound } from "@/lib/sound-fx";
 import type { PracticumQuestion } from "./speaking-practicum-stage";
@@ -93,7 +94,14 @@ export function PracticumDrillCard({
       recorder.onstop = () => {
         const audioBlob = new Blob(audioChunksRef.current, { type: "audio/webm" });
         const audioUrl = URL.createObjectURL(audioBlob);
-        setRecordedAudioUrl(audioUrl);
+        setRecordedAudioUrl((prev) => {
+          if (prev) {
+            try {
+              URL.revokeObjectURL(prev);
+            } catch {}
+          }
+          return audioUrl;
+        });
         stream.getTracks().forEach((track) => track.stop());
       };
 
@@ -268,37 +276,58 @@ export function PracticumDrillCard({
             <Square className="w-3.5 h-3.5 fill-current" />
             <span>Stop Speaking (00:0{recordSeconds})</span>
           </button>
+        ) : recordedAudioUrl ? (
+          <>
+            {/* Primary Continue Button */}
+            <button
+              type="button"
+              onClick={handleConfirm}
+              className="flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer font-heading"
+            >
+              <span>{isLastQuestion ? "Complete Practicum" : "Confirm & Continue"}</span>
+              <ArrowRight className="w-4 h-4 text-[#0D3B66]" />
+            </button>
+
+            {/* Playback Student Audio */}
+            <button
+              type="button"
+              onClick={handlePlaySelfAudio}
+              className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold shadow-xs transition-all hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer active:scale-95"
+            >
+              <Headphones className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A]" />
+              <span>{isPlayingSelf ? "Playing..." : "Play Recording"}</span>
+            </button>
+
+            {/* Subtle Re-record outline button */}
+            <button
+              type="button"
+              onClick={handleStartRecord}
+              className="flex items-center gap-1.5 px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-semibold transition-all cursor-pointer"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              <span>Re-record</span>
+            </button>
+          </>
         ) : (
-          <button
-            type="button"
-            onClick={handleStartRecord}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-xs transition-all active:scale-95 cursor-pointer"
-          >
-            <Mic className="w-4 h-4 text-[#0D3B66]" />
-            <span>{recordedAudioUrl ? "Re-record Speech" : "Tap & Speak Sentence"}</span>
-          </button>
-        )}
+          <>
+            <button
+              type="button"
+              onClick={handleStartRecord}
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-xs transition-all active:scale-95 cursor-pointer font-heading"
+            >
+              <Mic className="w-4 h-4 text-[#0D3B66]" />
+              <span>Tap &amp; Speak Sentence</span>
+            </button>
 
-        {recordedAudioUrl && !isRecording && (
-          <button
-            type="button"
-            onClick={handlePlaySelfAudio}
-            className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold shadow-xs transition-all hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer active:scale-95"
-          >
-            <Headphones className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A]" />
-            <span>{isPlayingSelf ? "Playing..." : "Play Your Recording"}</span>
-          </button>
-        )}
-
-        {recordedAudioUrl && !isRecording && (
-          <button
-            type="button"
-            onClick={handleConfirm}
-            className="ml-auto flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer"
-          >
-            <span>{isLastQuestion ? "Complete Practicum" : "Confirm & Continue"}</span>
-            <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
-          </button>
+            {/* Practice Aloud fallback */}
+            <button
+              type="button"
+              onClick={onAdvance}
+              className="ml-auto text-xs font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 flex items-center gap-1.5 py-1.5 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer"
+            >
+              <span>Practice Aloud &amp; Continue &rarr;</span>
+            </button>
+          </>
         )}
       </div>
     </div>

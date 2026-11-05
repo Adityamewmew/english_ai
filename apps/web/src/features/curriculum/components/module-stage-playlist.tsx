@@ -36,7 +36,7 @@ export function ModuleStagePlaylist({
   const progressPercent = Math.min(100, Math.round((completedCount / Math.max(1, totalCount)) * 100));
 
   return (
-    <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl p-4 shadow-sm space-y-4 select-none">
+    <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl p-4 shadow-sm space-y-4 select-none">
       {/* 1. Header with Circular Progress Ring */}
       <div className="flex items-center justify-between gap-3 pb-3 border-b border-slate-100 dark:border-slate-800">
         <div className="flex items-center gap-3">
@@ -66,7 +66,7 @@ export function ModuleStagePlaylist({
           </div>
 
           <div className="space-y-0.5">
-            <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+            <h4 className="text-xs font-heading font-black text-slate-900 dark:text-white uppercase tracking-wider">
               Learning Flow
             </h4>
             <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-tight">

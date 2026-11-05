@@ -8,6 +8,8 @@ import {
   Play,
   CheckCircle2,
   Headphones,
+  ArrowRight,
+  RotateCcw,
 } from "lucide-react";
 import { playPopSound, playSnapSound, playMatchSuccessSound } from "@/lib/sound-fx";
 
@@ -23,21 +25,33 @@ interface SpeakingReflexDrillsProps {
   practiceSec: any;
   tutor: any;
   onRewardXp: (amount: number) => void;
+  onNextStep?: () => void;
 }
 
 export function SpeakingReflexDrills({
   practiceSec,
   tutor,
   onRewardXp,
+  onNextStep,
 }: SpeakingReflexDrillsProps) {
   const drills: DrillItem[] = practiceSec?.content?.drills || [];
 
   if (drills.length === 0) {
     return (
-      <div className="p-8 rounded-[24px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-3">
+      <div className="p-8 rounded-[24px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-4">
         <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">
           No spoken sentence drills available for this session yet.
         </p>
+        {onNextStep && (
+          <button
+            type="button"
+            onClick={onNextStep}
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-bold cursor-pointer transition-all"
+          >
+            <span>Proceed to Next Step</span>
+            <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
+          </button>
+        )}
       </div>
     );
   }
@@ -93,7 +107,14 @@ export function SpeakingReflexDrills({
       recorder.onstop = () => {
         const audioBlob = new Blob(audioChunksRef.current, { type: "audio/webm" });
         const audioUrl = URL.createObjectURL(audioBlob);
-        setRecordings((prev) => ({ ...prev, [idx]: audioUrl }));
+        setRecordings((prev) => {
+          if (prev[idx]) {
+            try {
+              URL.revokeObjectURL(prev[idx]);
+            } catch {}
+          }
+          return { ...prev, [idx]: audioUrl };
+        });
         stream.getTracks().forEach((track) => track.stop());
       };
 
@@ -233,7 +254,7 @@ export function SpeakingReflexDrills({
                   <span>{isModelPlaying ? "Playing Model..." : "Listen to Model"}</span>
                 </button>
 
-                {/* 2. Record Student Voice */}
+                {/* 2. Record & Confirmation Controls */}
                 {isRecording ? (
                   <button
                     type="button"
@@ -243,45 +264,73 @@ export function SpeakingReflexDrills({
                     <Square className="w-3.5 h-3.5 fill-current" />
                     <span>Stop Recording (00:0{recordSeconds})</span>
                   </button>
-                ) : (
+                ) : !studentRecording ? (
                   <button
                     type="button"
                     onClick={() => handleStartRecord(idx)}
-                    className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-xs transition-all active:scale-95 cursor-pointer"
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-xs transition-all active:scale-95 cursor-pointer"
                   >
                     <Mic className="w-4 h-4 text-[#0D3B66]" />
-                    <span>{studentRecording ? "Re-record Voice" : "Record Your Voice"}</span>
+                    <span>Record Your Voice</span>
                   </button>
-                )}
+                ) : (
+                  <>
+                    {/* Playback Student Audio */}
+                    <button
+                      type="button"
+                      onClick={() => handlePlayStudentAudio(idx)}
+                      className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold shadow-xs transition-all hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer active:scale-95"
+                    >
+                      <Headphones className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A]" />
+                      <span>{isPlayingSelf ? "Playing..." : "Play Recording"}</span>
+                    </button>
 
-                {/* 3. Playback Student Audio if recorded */}
-                {studentRecording && !isRecording && (
-                  <button
-                    type="button"
-                    onClick={() => handlePlayStudentAudio(idx)}
-                    className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold shadow-xs transition-all hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer active:scale-95"
-                  >
-                    <Headphones className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A]" />
-                    <span>{isPlayingSelf ? "Playing..." : "Play Your Recording"}</span>
-                  </button>
-                )}
+                    {/* Re-record secondary outline button */}
+                    <button
+                      type="button"
+                      onClick={() => handleStartRecord(idx)}
+                      className="flex items-center gap-1.5 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-semibold transition-all cursor-pointer"
+                    >
+                      <RotateCcw className="w-3.5 h-3.5" />
+                      <span>Re-record</span>
+                    </button>
 
-                {/* 4. Complete button */}
-                {studentRecording && !isDone && !isRecording && (
-                  <button
-                    type="button"
-                    onClick={() => handleConfirmDone(idx)}
-                    className="ml-auto flex items-center gap-1.5 px-4 py-2 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer"
-                  >
-                    <CheckCircle2 className="w-4 h-4 text-[#F4B41A]" />
-                    <span>Complete Drill (+15 XP)</span>
-                  </button>
+                    {/* Complete button as prominent action if not yet done */}
+                    {!isDone && (
+                      <button
+                        type="button"
+                        onClick={() => handleConfirmDone(idx)}
+                        className="ml-auto flex items-center gap-1.5 px-4 py-2 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer"
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-[#0D3B66]" />
+                        <span>Confirm Drill (+15 XP)</span>
+                      </button>
+                    )}
+                  </>
                 )}
               </div>
             </div>
           );
         })}
       </div>
+
+      {/* Bottom Step Navigation */}
+      {onNextStep && (
+        <div className="pt-4 flex justify-end">
+          <button
+            type="button"
+            onClick={() => {
+              playMatchSuccessSound();
+              onRewardXp(25);
+              onNextStep();
+            }}
+            className="flex items-center gap-2 px-6 py-3 rounded-2xl btn-skeuo-yellow text-[#0F172A] text-sm font-black shadow-md transition-all active:scale-95 cursor-pointer font-heading"
+          >
+            <span>Proceed to Step 4 (AI Voice Roleplay)</span>
+            <ArrowRight className="w-4 h-4 text-[#0D3B66]" />
+          </button>
+        </div>
+      )}
     </div>
   );
 }

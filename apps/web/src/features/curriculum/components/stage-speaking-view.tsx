@@ -51,24 +51,28 @@ export function StageSpeakingView({
 
       {/* STEP 2: Syllable Stress Shift Drills (Backend TTS & 6 Pairs) */}
       {activeStepId === 2 && (
-        <div onClick={() => onStepComplete?.()}>
-          <SpeakingSyllableStage
-            practiceSec={practiceSec}
-            tutor={tutor}
-            onRewardXp={onRewardXp}
-          />
-        </div>
+        <SpeakingSyllableStage
+          practiceSec={practiceSec}
+          tutor={tutor}
+          onRewardXp={onRewardXp}
+          onNextStep={() => {
+            onStepComplete?.();
+            onNextStep?.();
+          }}
+        />
       )}
 
       {/* STEP 3: Oral Reflex Drills (Listen, Repeat & Compare Audio) */}
       {activeStepId === 3 && (
-        <div onClick={() => onStepComplete?.()}>
-          <SpeakingReflexDrills
-            practiceSec={practiceSec}
-            tutor={tutor}
-            onRewardXp={onRewardXp}
-          />
-        </div>
+        <SpeakingReflexDrills
+          practiceSec={practiceSec}
+          tutor={tutor}
+          onRewardXp={onRewardXp}
+          onNextStep={() => {
+            onStepComplete?.();
+            onNextStep?.();
+          }}
+        />
       )}
 
       {/* STEP 4: Live AI Roleplay Call with Mr. Khoirul */}

@@ -142,9 +142,7 @@ export function ModuleStudyView({
           if (typeof parsed.stageSpeakingScore === "number") setStageSpeakingScore(parsed.stageSpeakingScore);
           setIsCurrentStepComplete(true);
           const t = new Date(parsed.timestamp || Date.now());
-          setLastSavedTime(
-            `${t.getHours().toString().padStart(2, "0")}:${t.getMinutes().toString().padStart(2, "0")}`
-          );
+          setLastSavedTime(t.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
           return;
         }
       }
@@ -159,18 +157,9 @@ export function ModuleStudyView({
     if (!activeMissionId || typeof window === "undefined") return;
     const timer = setTimeout(() => {
       try {
-        const draft = {
-          activeStepId,
-          completedSteps,
-          stageAnswers,
-          stageSpeakingScore,
-          timestamp: Date.now(),
-        };
+        const draft = { activeStepId, completedSteps, stageAnswers, stageSpeakingScore, timestamp: Date.now() };
         localStorage.setItem(`eddys_draft_${activeMissionId}`, JSON.stringify(draft));
-        const now = new Date();
-        setLastSavedTime(
-          `${now.getHours().toString().padStart(2, "0")}:${now.getMinutes().toString().padStart(2, "0")}`
-        );
+        setLastSavedTime(new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
       } catch {}
     }, 400);
 
@@ -396,7 +385,7 @@ export function ModuleStudyView({
             />
           ) : (
             /* VIEW C: Active Mission Stage Player (2-Column LMS Layout) */
-            <div className="space-y-3.5 animate-in fade-in duration-300">
+            <div className="space-y-3.5 pb-28 lg:pb-6 animate-in fade-in duration-300">
               {/* Demia Header (Breadcrumb, Title, Metadata & Mission Switcher) */}
               <div className="space-y-2 border-b border-slate-200/80 dark:border-slate-800 pb-2.5">
                 {/* 1. Breadcrumb & Actions Row with Left Back Button */}
@@ -444,7 +433,7 @@ export function ModuleStudyView({
                 {/* 2. Title & Metadata Row (Gambar 1 style) */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="space-y-1.5">
-                    <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
+                    <h1 className="text-2xl sm:text-3xl font-heading font-black text-slate-900 dark:text-white tracking-tight">
                       {currentSub?.title}
                     </h1>
                     <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 font-normal flex-wrap">
@@ -482,12 +471,12 @@ export function ModuleStudyView({
                 {/* Left Column (Wide): Primary Interactive Learning Stage */}
                 <div className="w-full lg:flex-1 space-y-4 sm:space-y-6 min-w-0">
                   {/* Mobile-Only Horizontal Stepper (<lg) */}
-                  <div className="lg:hidden p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-2xs space-y-2">
+                  <div className="lg:hidden p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-2xs space-y-2.5">
                     <div className="flex items-center justify-between text-xs font-bold">
-                      <span className="text-slate-600 dark:text-slate-400 font-mono">
+                      <span className="text-slate-600 dark:text-slate-400 font-mono text-[11px]">
                         Langkah {activeStepId} dari {playlistSteps.length}
                       </span>
-                      <span className="text-[#0D3B66] dark:text-[#F4B41A] font-semibold truncate max-w-[180px] text-right">
+                      <span className="text-[#0D3B66] dark:text-[#F4B41A] font-heading font-black truncate max-w-[200px] text-right">
                         {playlistSteps.find((s) => s.id === activeStepId)?.title.replace(/^\d+\.\s*/, "")}
                       </span>
                     </div>
@@ -498,8 +487,8 @@ export function ModuleStudyView({
                         style={{ width: `${Math.round((activeStepId / Math.max(1, playlistSteps.length)) * 100)}%` }}
                       />
                     </div>
-                    {/* Horizontal scrollable step pills so they are not crammed */}
-                    <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-0.5">
+                    {/* Horizontal scrollable step pills: min-w-[44px] min-h-[44px] touch targets */}
+                    <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pt-0.5">
                       {playlistSteps.map((s) => {
                         const isActive = s.id === activeStepId;
                         const isDone = completedSteps.includes(s.id);
@@ -511,9 +500,9 @@ export function ModuleStudyView({
                             type="button"
                             disabled={!isAccessible}
                             onClick={() => handleSelectStep(s.id)}
-                            className={`flex-1 min-w-[36px] py-1.5 px-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1 min-h-[38px] touch-manipulation active:scale-95 ${
+                            className={`flex-1 min-w-[44px] min-h-[44px] py-2 px-2.5 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 touch-manipulation active:scale-95 ${
                               isActive
-                                ? "bg-[#0D3B66] text-white shadow-xs font-black ring-2 ring-[#0D3B66]/30 dark:ring-[#F4B41A]/50"
+                                ? "bg-[#0D3B66] text-white shadow-sm font-black ring-2 ring-[#0D3B66]/30 dark:ring-[#F4B41A]/50"
                                 : isDone
                                 ? "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 cursor-pointer"
                                 : isAccessible
@@ -522,9 +511,9 @@ export function ModuleStudyView({
                             }`}
                           >
                             {isDone && !isActive ? (
-                              <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
+                              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                             ) : null}
-                            <span className="font-mono text-xs">{s.id}</span>
+                            <span className="font-mono text-xs font-black">{s.id}</span>
                           </button>
                         );
                       })}

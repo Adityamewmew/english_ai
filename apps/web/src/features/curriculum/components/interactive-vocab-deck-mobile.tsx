@@ -61,10 +61,10 @@ export function InteractiveVocabDeckMobile({
       {/* 1. Header Progress Strip */}
       <div className="flex items-center justify-between px-1">
         <span className="text-xs font-bold text-slate-700 dark:text-slate-300">
-          Kartu {currentIndex + 1} dari {items.length}
+          Card {currentIndex + 1} of {items.length}
         </span>
         <span className="text-[11px] font-semibold text-slate-400">
-          Ketuk kartu untuk membalik
+          Tap card to flip
         </span>
       </div>
 

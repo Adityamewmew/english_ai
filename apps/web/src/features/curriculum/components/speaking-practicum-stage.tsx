@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { Volume2, Mic, Square, Headphones, ArrowRight, BookOpen, MapPin, TrendingUp, Check, Clock } from "lucide-react";
+import { Volume2, Mic, Square, Headphones, ArrowRight, BookOpen, MapPin, TrendingUp, Check, Clock, RotateCcw } from "lucide-react";
 import { playPopSound, playSnapSound, playMatchSuccessSound } from "@/lib/sound-fx";
 import { PracticumRoleplayCall } from "./practicum-roleplay-call";
 import { PracticumDrillCard } from "./practicum-drill-card";
@@ -143,17 +143,10 @@ export function SpeakingPracticumStage({
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       audioChunksRef.current = [];
-      let options: MediaRecorderOptions | undefined = undefined;
-      if (typeof MediaRecorder !== "undefined" && typeof MediaRecorder.isTypeSupported === "function") {
-        if (MediaRecorder.isTypeSupported("audio/webm;codecs=opus")) {
-          options = { mimeType: "audio/webm;codecs=opus" };
-        } else if (MediaRecorder.isTypeSupported("audio/mp4")) {
-          options = { mimeType: "audio/mp4" };
-        } else if (MediaRecorder.isTypeSupported("audio/aac")) {
-          options = { mimeType: "audio/aac" };
-        }
-      }
-      const recorder = options ? new MediaRecorder(stream, options) : new MediaRecorder(stream);
+      const supportedMime = ["audio/webm;codecs=opus", "audio/mp4", "audio/aac"].find(
+        (m) => typeof MediaRecorder !== "undefined" && MediaRecorder.isTypeSupported?.(m)
+      );
+      const recorder = supportedMime ? new MediaRecorder(stream, { mimeType: supportedMime }) : new MediaRecorder(stream);
       mediaRecorderRef.current = recorder;
 
       recorder.ondataavailable = (event) => {
@@ -166,7 +159,14 @@ export function SpeakingPracticumStage({
         const mimeType = recorder.mimeType || "audio/webm";
         const audioBlob = new Blob(audioChunksRef.current, { type: mimeType });
         const audioUrl = URL.createObjectURL(audioBlob);
-        setRecordings((prev) => ({ ...prev, [currentIdx]: audioUrl }));
+        setRecordings((prev) => {
+          if (prev[currentIdx]) {
+            try {
+              URL.revokeObjectURL(prev[currentIdx]);
+            } catch {}
+          }
+          return { ...prev, [currentIdx]: audioUrl };
+        });
         stream.getTracks().forEach((track) => track.stop());
       };
 
@@ -243,52 +243,36 @@ export function SpeakingPracticumStage({
     audio.play().catch(() => setIsPlayingSelf(false));
   };
 
-  const handleConfirmAndNext = () => {
-    playMatchSuccessSound();
-    const updatedTranscripts = {
-      ...speechTranscripts,
-      [currentIdx]: speechTranscripts[currentIdx] || liveTranscript || "Spoken response recorded",
-    };
+  const commitItemResult = (transcript: string, score: number, xp = 15, audioUrl?: string) => {
+    if (audioUrl) setRecordings((prev) => ({ ...prev, [currentIdx]: audioUrl }));
+    const updatedTranscripts = { ...speechTranscripts, [currentIdx]: transcript };
+    const updatedScores = { ...itemScores, [currentIdx]: score };
     setSpeechTranscripts(updatedTranscripts);
-    const updatedScores = {
-      ...itemScores,
-      [currentIdx]: itemScores[currentIdx] || 85,
-    };
     setItemScores(updatedScores);
     setCompletedItems((prev) => ({ ...prev, [currentIdx]: true }));
-    onRewardXp(15);
+    if (xp > 0) onRewardXp(xp);
+    const avg = Math.round(Object.values(updatedScores).reduce((a, b) => a + b, 0) / (totalQuestions || 1));
+    onAnswersChange?.(updatedTranscripts, avg);
+  };
 
+  const handleConfirmAndNext = () => {
+    playMatchSuccessSound();
+    const resp = speechTranscripts[currentIdx] || liveTranscript || "Spoken response recorded";
+    commitItemResult(resp, itemScores[currentIdx] || 85, 15);
     if (currentIdx < totalQuestions - 1) {
       setCurrentIdx((prev) => prev + 1);
       setLiveTranscript("");
     } else {
       setIsCompletedAll(true);
-      const avgScore = Math.round(
-        Object.values(updatedScores).reduce((a, b) => a + b, 0) / (totalQuestions || 1)
-      );
-      onAnswersChange?.(updatedTranscripts, avgScore);
     }
   };
 
   const handleRoleplayComplete = (score: number) => {
-    const updatedScores = { ...itemScores, [currentIdx]: score };
-    setItemScores(updatedScores);
-    setCompletedItems((prev) => ({ ...prev, [currentIdx]: true }));
-    onRewardXp(20);
-    const avgScore = Math.round(Object.values(updatedScores).reduce((a, b) => a + b, 0) / (totalQuestions || 1));
-    onAnswersChange?.(speechTranscripts, avgScore);
+    commitItemResult(speechTranscripts[currentIdx] || "Completed AI roleplay", score, 20);
   };
 
   const handleDrillSave = (audioUrl: string, transcript: string, score: number) => {
-    const updatedTranscripts = { ...speechTranscripts, [currentIdx]: transcript };
-    const updatedScores = { ...itemScores, [currentIdx]: score };
-    setRecordings((prev) => ({ ...prev, [currentIdx]: audioUrl }));
-    setSpeechTranscripts(updatedTranscripts);
-    setItemScores(updatedScores);
-    setCompletedItems((prev) => ({ ...prev, [currentIdx]: true }));
-    onRewardXp(10);
-    const avgScore = Math.round(Object.values(updatedScores).reduce((a, b) => a + b, 0) / (totalQuestions || 1));
-    onAnswersChange?.(updatedTranscripts, avgScore);
+    commitItemResult(transcript, score, 10, audioUrl);
   };
 
   const advanceQuestion = (rewardScore?: number) => {
@@ -491,89 +475,103 @@ export function SpeakingPracticumStage({
                     Stop Story (00:{recordSeconds < 10 ? `0${recordSeconds}` : recordSeconds})
                   </span>
                 </button>
+              ) : recordings[currentIdx] ? (
+                <>
+                  {/* Primary Continue Button */}
+                  <button
+                    type="button"
+                    onClick={handleConfirmAndNext}
+                    className="flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer font-heading"
+                  >
+                    <span>
+                      {currentIdx < totalQuestions - 1
+                        ? "Confirm & Continue to Next Question"
+                        : "Confirm & View Speaking Summary"}
+                    </span>
+                    <ArrowRight className="w-4 h-4 text-[#0D3B66]" />
+                  </button>
+
+                  {/* Playback Student Audio */}
+                  <button
+                    type="button"
+                    onClick={handlePlayStudentAudio}
+                    className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold shadow-xs transition-all hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer active:scale-95"
+                  >
+                    <Headphones className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A]" />
+                    <span>{isPlayingSelf ? "Playing..." : "Play Recording"}</span>
+                  </button>
+
+                  {/* Distinct Re-record outline button */}
+                  <button
+                    type="button"
+                    onClick={handleStartRecord}
+                    className="flex items-center gap-1.5 px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-semibold transition-all cursor-pointer"
+                  >
+                    <RotateCcw className="w-3.5 h-3.5" />
+                    <span>Re-record</span>
+                  </button>
+                </>
               ) : (
-                <button
-                  type="button"
-                  onClick={handleStartRecord}
-                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-xs transition-all active:scale-95 cursor-pointer"
-                >
-                  <Mic className="w-4 h-4 text-[#0D3B66]" />
-                  <span>
-                    {recordings[currentIdx] ? "Re-record Story" : "Tap & Start Speaking Freely"}
-                  </span>
-                </button>
-              )}
+                <>
+                  {/* Start Recording Primary CTA */}
+                  <button
+                    type="button"
+                    onClick={handleStartRecord}
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-xs transition-all active:scale-95 cursor-pointer font-heading"
+                  >
+                    <Mic className="w-4 h-4 text-[#0D3B66]" />
+                    <span>Tap &amp; Start Speaking Freely</span>
+                  </button>
 
-              {recordings[currentIdx] && !isRecording && (
-                <button
-                  type="button"
-                  onClick={handlePlayStudentAudio}
-                  className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold shadow-xs transition-all hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer active:scale-95"
-                >
-                  <Headphones className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A]" />
-                  <span>{isPlayingSelf ? "Playing Your Recording..." : "Play Your Recording"}</span>
-                </button>
-              )}
-
-              {(recordings[currentIdx] || speechTranscripts[currentIdx] || liveTranscript) && !isRecording && (
-                <button
-                  type="button"
-                  onClick={handleConfirmAndNext}
-                  className="ml-auto flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer"
-                >
-                  <span>
-                    {currentIdx < totalQuestions - 1
-                      ? "Confirm & Continue to Next Question"
-                      : "Confirm & View Speaking Summary"}
-                  </span>
-                  <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
-                </button>
-              )}
-
-              {micError && !recordings[currentIdx] && !isRecording && (
-                <div className="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-xs">
-                  <span className="text-amber-900 dark:text-amber-200">
-                    Microphone access unavailable or denied. You can read aloud independently and proceed:
-                  </span>
+                  {/* Practice Aloud / Independent fallback */}
                   <button
                     type="button"
                     onClick={() => advanceQuestion(85)}
-                    className="shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs shadow-xs transition-all cursor-pointer"
+                    className="ml-auto text-xs font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 flex items-center gap-1.5 py-1.5 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer"
                   >
-                    <span>Practice Aloud &amp; Continue</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <span>Practice Aloud &amp; Continue &rarr;</span>
                   </button>
-                </div>
+                </>
               )}
 
               {isAdmin && (
                 <button
                   type="button"
                   onClick={() => advanceQuestion()}
-                  className="px-4 py-2.5 rounded-xl border border-dashed border-amber-400 text-amber-600 dark:text-amber-400 font-bold text-xs hover:bg-amber-50 dark:hover:bg-amber-950/30 transition-all cursor-pointer flex items-center gap-1.5"
+                  className="px-3.5 py-2 rounded-xl border border-dashed border-amber-400 text-amber-600 dark:text-amber-400 font-bold text-xs hover:bg-amber-50 dark:hover:bg-amber-950/30 transition-all cursor-pointer flex items-center gap-1.5 ml-auto"
                 >
-                  <span>Skip Question (Admin)</span>
+                  <span>Skip (Admin)</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               )}
             </div>
           )}
 
-          {/* Navigation for Roleplay if completed */}
-          {currentQ.category === "roleplay" && completedItems[currentIdx] && (
-            <div className="pt-2 flex justify-end">
-              <button
-                type="button"
-                onClick={() => advanceQuestion()}
-                className="flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer"
-              >
-                <span>
-                  {currentIdx < totalQuestions - 1
-                    ? "Continue to Next Question"
-                    : "Complete Practicum"}
-                </span>
-                <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
-              </button>
+          {/* Navigation for Roleplay */}
+          {currentQ.category === "roleplay" && (
+            <div className="pt-2 flex items-center justify-between">
+              {completedItems[currentIdx] ? (
+                <button
+                  type="button"
+                  onClick={() => advanceQuestion()}
+                  className="ml-auto flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer font-heading"
+                >
+                  <span>
+                    {currentIdx < totalQuestions - 1
+                      ? "Continue to Next Question"
+                      : "Complete Practicum"}
+                  </span>
+                  <ArrowRight className="w-4 h-4 text-[#0D3B66]" />
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => advanceQuestion(85)}
+                  className="text-xs font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 ml-auto flex items-center gap-1.5 py-1.5 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer"
+                >
+                  <span>Practice Aloud &amp; Continue &rarr;</span>
+                </button>
+              )}
             </div>
           )}
         </div>

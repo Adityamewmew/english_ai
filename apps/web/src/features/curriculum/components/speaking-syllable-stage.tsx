@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Play, CheckCircle2, Activity } from "lucide-react";
+import { Play, CheckCircle2, Activity, ArrowRight } from "lucide-react";
 import { playPopSound, playSnapSound, playMatchSuccessSound } from "@/lib/sound-fx";
 
 interface SyllableToken {
@@ -28,21 +28,33 @@ interface SpeakingSyllableStageProps {
   practiceSec: any;
   tutor: any;
   onRewardXp: (amount: number) => void;
+  onNextStep?: () => void;
 }
 
 export function SpeakingSyllableStage({
   practiceSec,
   tutor,
   onRewardXp,
+  onNextStep,
 }: SpeakingSyllableStageProps) {
   const pairs: StressPair[] = practiceSec?.content?.stressPairs || [];
 
   if (pairs.length === 0) {
     return (
-      <div className="p-8 rounded-[24px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-3">
+      <div className="p-8 rounded-[24px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-4">
         <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">
           No syllable rhythm exercises available for this session yet.
         </p>
+        {onNextStep && (
+          <button
+            type="button"
+            onClick={onNextStep}
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-bold cursor-pointer transition-all"
+          >
+            <span>Proceed to Next Step</span>
+            <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
+          </button>
+        )}
       </div>
     );
   }
@@ -278,6 +290,24 @@ export function SpeakingSyllableStage({
           );
         })}
       </div>
+
+      {/* Next Step Action Button */}
+      {onNextStep && (
+        <div className="pt-4 flex justify-end">
+          <button
+            type="button"
+            onClick={() => {
+              playMatchSuccessSound();
+              onRewardXp(20);
+              onNextStep();
+            }}
+            className="flex items-center gap-2 px-6 py-3 rounded-2xl btn-skeuo-yellow text-[#0F172A] text-sm font-black shadow-md transition-all active:scale-95 cursor-pointer font-heading"
+          >
+            <span>Proceed to Step 3 (Spoken Reflex Drills)</span>
+            <ArrowRight className="w-4 h-4 text-[#0D3B66]" />
+          </button>
+        </div>
+      )}
     </div>
   );
 }

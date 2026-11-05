@@ -32,50 +32,53 @@ export function ListeningOverviewStage({
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
       {/* 1. Mission Context Card */}
-      <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/90 dark:border-slate-800 space-y-3">
-        <div className="flex items-center gap-2 text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A]">
-          <BookOpen className="w-4 h-4" />
-          <span className="uppercase tracking-wider font-mono">
-            Conversation Context
+      <div className="p-6 sm:p-8 rounded-3xl bg-[#10375C] text-white space-y-3.5 shadow-sm">
+        <div className="flex items-center gap-2 text-xs font-heading font-bold text-white/80">
+          <BookOpen className="w-4 h-4 text-[#F3C623]" />
+          <span className="uppercase tracking-wider">
+            Listening Mission · Conversation Context
           </span>
         </div>
-        <p className="text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
+        <p className="font-sans text-base sm:text-lg font-medium text-white/95 leading-relaxed">
           {context}
         </p>
-        <p className="text-xs text-slate-500 dark:text-slate-400">
-          Listen to how the speakers interact, express ideas, and chat at a relaxed natural pace.
+        <p className="font-sans text-xs sm:text-sm text-slate-200 leading-relaxed">
+          Listen to how the speakers interact, express ideas, and chat at a natural rhythm.
         </p>
       </div>
 
       {/* 2. Key Phrases Ear Prep */}
-      <div className="space-y-3">
+      <div className="space-y-4 pt-1">
         <div>
-          <h4 className="text-sm font-bold text-slate-900 dark:text-white">
+          <span className="text-xs font-heading font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
+            Step 1 · Ear Preparation
+          </span>
+          <h4 className="text-xl sm:text-2xl font-heading font-black text-slate-900 dark:text-white tracking-tight mt-0.5">
             Key Phrases to Listen For
           </h4>
-          <p className="text-xs text-slate-500 dark:text-slate-400">
-            Listen to the pronunciation of these essential phrases before playing the full conversation:
+          <p className="text-xs sm:text-sm font-sans text-slate-500 dark:text-slate-400 mt-0.5">
+            Tap each phrase to preview its native English pronunciation before playing the full conversation:
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {keyPhrases.map((item: any, idx: number) => (
             <div
               key={idx}
-              className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-3 shadow-2xs"
+              className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 flex items-center justify-between gap-4 shadow-xs hover:border-[#10375C]/40 transition-all"
             >
-              <div className="space-y-0.5">
-                <span className="text-sm font-bold text-[#0D3B66] dark:text-[#F4B41A] block">
+              <div className="space-y-1">
+                <span className="font-heading text-base font-bold text-[#10375C] dark:text-[#F3C623] block">
                   &ldquo;{item.phrase}&rdquo;
                 </span>
-                <span className="text-xs text-slate-500 dark:text-slate-400 block">
+                <span className="font-sans text-xs sm:text-sm text-slate-600 dark:text-slate-400 block leading-normal">
                   {item.meaning}
                 </span>
               </div>
               <button
                 type="button"
                 onClick={(e) => handlePlayPhrase(item.phrase, e)}
-                className="p-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-[#0D3B66] dark:text-[#F4B41A] transition-colors cursor-pointer shrink-0"
+                className="w-11 h-11 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-[#10375C] dark:text-[#F3C623] transition-colors cursor-pointer shrink-0 flex items-center justify-center min-w-[44px] min-h-[44px] touch-manipulation shadow-2xs"
                 title="Listen to pronunciation"
               >
                 <Volume2 className="w-4 h-4" />
@@ -84,7 +87,6 @@ export function ListeningOverviewStage({
           ))}
         </div>
       </div>
-
     </div>
   );
 }

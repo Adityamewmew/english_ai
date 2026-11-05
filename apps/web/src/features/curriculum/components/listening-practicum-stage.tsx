@@ -82,7 +82,7 @@ export function ListeningPracticumStage({
 
   if (!questions || questions.length === 0) {
     return (
-      <div className="p-8 rounded-[24px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-4">
+      <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-4 shadow-sm font-sans">
         <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">
           No listening practicum questions available for this module yet.
         </p>
@@ -90,7 +90,7 @@ export function ListeningPracticumStage({
           <button
             type="button"
             onClick={onFinish}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs sm:text-sm cursor-pointer shadow-xs transition-all"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-2xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs sm:text-sm cursor-pointer shadow-xs transition-all"
           >
             <span>Complete Mission</span>
             <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
@@ -266,18 +266,18 @@ export function ListeningPracticumStage({
 
   if (isCompletedAll) {
     return (
-      <div className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-5 animate-in fade-in duration-300">
-        <div className="w-16 h-16 rounded-2xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 mx-auto flex items-center justify-center">
+      <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-6 animate-in fade-in duration-300 shadow-sm font-sans">
+        <div className="w-16 h-16 rounded-2xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 mx-auto flex items-center justify-center shadow-xs">
           <Trophy className="w-8 h-8" />
         </div>
-        <div className="space-y-1">
-          <h3 className="text-2xl font-black text-slate-900 dark:text-white">
+        <div className="space-y-2">
+          <h3 className="text-2xl sm:text-3xl font-black font-heading text-slate-900 dark:text-white tracking-tight">
             Listening Practicum Complete!
           </h3>
-          <p className="text-sm text-slate-600 dark:text-slate-300">
+          <p className="text-sm font-medium text-slate-600 dark:text-slate-300">
             You completed all 10 interactive listening tasks:
           </p>
-          <div className="text-3xl font-black text-[#0D3B66] dark:text-[#F4B41A] pt-2">
+          <div className="text-3xl sm:text-4xl font-black font-heading text-[#0D3B66] dark:text-[#F4B41A] pt-2">
             {correctCount} / {questions.length} Correct
           </div>
         </div>
@@ -286,7 +286,7 @@ export function ListeningPracticumStage({
           <button
             type="button"
             onClick={handleRestart}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold text-xs sm:text-sm cursor-pointer shadow-xs transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold text-xs sm:text-sm cursor-pointer shadow-xs transition-all min-h-[46px]"
           >
             <RotateCcw className="w-4 h-4" />
             <span>Retake Practicum</span>
@@ -295,7 +295,7 @@ export function ListeningPracticumStage({
             <button
               type="button"
               onClick={onFinish}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs sm:text-sm cursor-pointer shadow-xs transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs sm:text-sm cursor-pointer shadow-xs transition-all min-h-[46px]"
             >
               <span>Complete Mission</span>
               <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
@@ -316,14 +316,14 @@ export function ListeningPracticumStage({
   });
 
   return (
-    <div className="space-y-6 animate-in fade-in duration-300">
+    <div className="space-y-6 animate-in fade-in duration-300 font-sans">
       {/* 1. Header & Progress Bar */}
       <div className="space-y-3 pb-3 border-b border-slate-100 dark:border-slate-800">
         <div className="flex items-center justify-between text-xs font-bold">
-          <span className="text-[#0D3B66] dark:text-[#F4B41A] font-mono uppercase tracking-wider">
+          <span className="text-[#0D3B66] dark:text-[#F4B41A] font-mono font-black uppercase tracking-wider">
             Question {currentIdx + 1} of {questions.length}
           </span>
-          <span className="text-slate-500 dark:text-slate-400 font-semibold">
+          <span className="text-slate-500 dark:text-slate-400 font-semibold font-heading">
             {isArrange
               ? "Sentence Assembly"
               : isDictation
@@ -333,7 +333,7 @@ export function ListeningPracticumStage({
         </div>
 
         {/* 10-Step Progress Track */}
-        <div className="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden flex gap-0.5">
+        <div className="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden flex gap-0.5">
           {questions.map((_: any, i: number) => (
             <div
               key={i}
@@ -352,7 +352,7 @@ export function ListeningPracticumStage({
       </div>
 
       {/* 2. Question Prompt & Audio Player Card with 3-Play Limiter */}
-      <div className="p-4 sm:p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/90 dark:border-slate-800 space-y-4">
+      <div className="p-5 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <p className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-relaxed">
             {currentQ.instruction || "Listen to the audio and complete the exercise below:"}

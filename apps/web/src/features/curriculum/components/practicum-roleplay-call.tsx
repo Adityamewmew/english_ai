@@ -147,8 +147,8 @@ export function PracticumRoleplayCall({
     setIsRecordingStudent(false);
     setIsPendingSend(false);
 
-    // Calculate score based on conversational turns (0 turns = 0 score)
-    const earnedScore = turnsCount >= 2 ? 100 : turnsCount === 1 ? 85 : 0;
+    // Calculate score based on conversational turns (min 70 for attempting call)
+    const earnedScore = turnsCount >= 2 ? 100 : turnsCount === 1 ? 85 : 70;
     playMatchSuccessSound();
     onComplete(earnedScore);
   };
@@ -255,20 +255,15 @@ export function PracticumRoleplayCall({
             : "That is great! Where are you from?");
         setHistory((prev) => [...prev, { role: "assistant", text: finalReply }]);
         playTutorAudio(finalReply, isFinalTurn);
-      } else {
-        const fallback = isFinalTurn
-          ? "Great job speaking today! Have a wonderful day!"
-          : "Nice to meet you! Where are you from?";
-        setHistory((prev) => [...prev, { role: "assistant", text: fallback }]);
-        playTutorAudio(fallback, isFinalTurn);
+        return;
       }
-    } catch {
-      const fallback = isFinalTurn
-          ? "Great job speaking today! Have a wonderful day!"
-          : "Nice to meet you! Where are you from?";
-      setHistory((prev) => [...prev, { role: "assistant", text: fallback }]);
-      playTutorAudio(fallback, isFinalTurn);
-    }
+    } catch {}
+
+    const fallback = isFinalTurn
+      ? "Great job speaking today! Have a wonderful day!"
+      : "Nice to meet you! Where are you from?";
+    setHistory((prev) => [...prev, { role: "assistant", text: fallback }]);
+    playTutorAudio(fallback, isFinalTurn);
   };
 
   const handleCancelAndRerecord = () => {

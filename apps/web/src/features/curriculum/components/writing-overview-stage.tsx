@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { BookOpen, Volume2 } from "lucide-react";
+import { BookOpen, Volume2, ArrowRight } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 import { playPopSound } from "@/lib/sound-fx";
 
@@ -14,6 +14,7 @@ interface WritingOverviewStageProps {
 export function WritingOverviewStage({
   theorySec,
   tutor,
+  onGoToNext,
 }: WritingOverviewStageProps) {
   const content = theorySec?.content || {};
 
@@ -66,16 +67,16 @@ export function WritingOverviewStage({
   };
 
   return (
-    <div className="space-y-6 animate-in fade-in duration-300">
+    <div className="space-y-6 animate-in fade-in duration-300 font-sans">
       {/* 1. Mission Briefing Banner */}
-      <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/90 dark:border-slate-800 space-y-3">
-        <div className="flex items-center gap-2 text-xs font-bold text-indigo-600 dark:text-indigo-400">
+      <div className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-3">
+        <div className="flex items-center gap-2 text-xs font-black text-[#0D3B66] dark:text-[#F4B41A]">
           <BookOpen className="w-4 h-4" />
           <span className="uppercase tracking-wider font-mono">
             Writing Mission Objective
           </span>
         </div>
-        <p className="text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
+        <p className="text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 leading-relaxed font-heading">
           {summary}
         </p>
       </div>
@@ -84,7 +85,7 @@ export function WritingOverviewStage({
       {blueprintItems.length > 0 && (
         <div className="space-y-3">
           <div>
-            <h4 className="text-sm font-bold text-slate-900 dark:text-white">
+            <h4 className="text-base sm:text-lg font-black font-heading text-slate-900 dark:text-white">
               Sentence Construction Blueprint
             </h4>
             <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -96,13 +97,13 @@ export function WritingOverviewStage({
             {blueprintItems.map((item: any, idx: number) => (
               <div
                 key={idx}
-                className={`p-4 rounded-xl border ${item.color} space-y-2.5 transition-all`}
+                className={`p-5 rounded-2xl border ${item.color} space-y-2.5 transition-all shadow-xs`}
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold font-mono uppercase tracking-wider">
+                  <span className="text-xs font-black font-mono uppercase tracking-wider">
                     {item.part}
                   </span>
-                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white/70 dark:bg-slate-900/60">
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/70 dark:bg-slate-900/60">
                     Step {idx + 1}
                   </span>
                 </div>
@@ -112,7 +113,7 @@ export function WritingOverviewStage({
                     {item.examples.map((ex: string, exIdx: number) => (
                       <span
                         key={exIdx}
-                        className={`text-[11px] font-mono font-medium px-2 py-0.5 rounded-md ${item.tagColor}`}
+                        className={`text-[11px] font-mono font-bold px-2 py-0.5 rounded-md ${item.tagColor}`}
                       >
                         {ex}
                       </span>
@@ -129,7 +130,7 @@ export function WritingOverviewStage({
       {mechanicsRules.length > 0 && (
         <div className="space-y-3">
           <div>
-            <h4 className="text-sm font-bold text-slate-900 dark:text-white">
+            <h4 className="text-base sm:text-lg font-black font-heading text-slate-900 dark:text-white">
               Core Writing Mechanics &amp; Punctuation Rules
             </h4>
             <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -141,16 +142,16 @@ export function WritingOverviewStage({
             {mechanicsRules.map((r: any, idx: number) => (
               <div
                 key={idx}
-                className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2 shadow-2xs"
+                className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2 shadow-xs"
               >
-                <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 block">
+                <span className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] block font-heading">
                   {r.title}
                 </span>
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                   {r.rule}
                 </p>
                 {r.example && (
-                  <div className="pt-1 border-t border-slate-100 dark:border-slate-800 text-[11px] font-mono text-slate-500 dark:text-slate-400">
+                  <div className="pt-2 border-t border-slate-100 dark:border-slate-800 text-[11px] font-mono text-slate-500 dark:text-slate-400">
                     Example: <span className="font-semibold text-slate-800 dark:text-slate-200">{r.example}</span>
                   </div>
                 )}
@@ -164,7 +165,7 @@ export function WritingOverviewStage({
       {sampleSentences.length > 0 && (
         <div className="space-y-3">
           <div>
-            <h4 className="text-sm font-bold text-slate-900 dark:text-white">
+            <h4 className="text-base sm:text-lg font-black font-heading text-slate-900 dark:text-white">
               Sample Sentence Models
             </h4>
             <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -176,10 +177,10 @@ export function WritingOverviewStage({
             {sampleSentences.map((s: any, idx: number) => (
               <div
                 key={idx}
-                className="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 shadow-2xs"
+                className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-3 shadow-xs"
               >
                 <div className="min-w-0 pr-2">
-                  <span className="text-xs font-semibold text-slate-800 dark:text-slate-200 leading-snug block">
+                  <span className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-snug block">
                     &ldquo;{s.text}&rdquo;
                   </span>
                   {s.translation && (
@@ -191,7 +192,7 @@ export function WritingOverviewStage({
                 <button
                   type="button"
                   onClick={(e) => handlePlayAudio(s.audio, e)}
-                  className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-indigo-600 dark:text-indigo-400 transition-colors cursor-pointer shrink-0"
+                  className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-[#0D3B66] dark:text-[#F4B41A] transition-colors cursor-pointer shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center"
                   title="Listen to pronunciation"
                 >
                   <Volume2 className="w-4 h-4" />
@@ -199,6 +200,20 @@ export function WritingOverviewStage({
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+      {/* 5. Navigation Footer */}
+      {onGoToNext && (
+        <div className="pt-2 flex justify-end">
+          <button
+            type="button"
+            onClick={onGoToNext}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl btn-skeuo-yellow text-slate-950 font-bold text-xs sm:text-sm cursor-pointer shadow-xs active:scale-95 transition-all min-h-[46px]"
+          >
+            <span>Proceed to Step 2 (Mechanics)</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
         </div>
       )}
     </div>

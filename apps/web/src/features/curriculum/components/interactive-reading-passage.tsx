@@ -80,11 +80,28 @@ export function InteractiveReadingPassage({
     ? [(passage as any).text]
     : [];
 
-  // Split all paragraphs into individual sentences
-  const sentences = safeParagraphs
-    .flatMap((p) => p.match(/[^.!?]+[.!?]+(\s+|$)/g) || [p])
-    .map((s) => s.trim())
-    .filter(Boolean);
+  // Group sentences by paragraph for natural editorial flow while maintaining global indexing
+  const paragraphSentences: Array<Array<{ sentence: string; index: number }>> = useMemo(() => {
+    let globalIndex = 0;
+    return safeParagraphs.map((paragraphText: string) => {
+      const pStr = typeof paragraphText === "string" ? paragraphText : String(paragraphText ?? "");
+      const matches = pStr.match(/[^.!?]+[.!?]+(\s+|$)/g);
+      const pSentences = (matches || [pStr])
+        .map((s: string) => s.trim())
+        .filter(Boolean);
+      return pSentences.map((sentence: string) => {
+        const item = { sentence, index: globalIndex };
+        globalIndex++;
+        return item;
+      });
+    });
+  }, [safeParagraphs]);
+
+  // Flattened array of all sentences for playback queue
+  const sentences = useMemo(
+    () => paragraphSentences.flat().map((item) => item.sentence),
+    [paragraphSentences]
+  );
 
   useEffect(() => {
     return () => {
@@ -159,75 +176,58 @@ export function InteractiveReadingPassage({
     <div
       className={
         embedded
-          ? "space-y-5"
-          : "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 border-b-2 rounded-[22px] p-6 sm:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] space-y-5"
+          ? "space-y-6"
+          : "bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 sm:p-10 shadow-sm space-y-6 max-w-3xl mx-auto"
       }
     >
-      {/* Header with Title and Full Audio Button */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-3 sm:pb-4">
-        <div className="flex items-center gap-2.5 sm:gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-[#0D3B66] text-[#F4B41A] flex items-center justify-center shrink-0 border-b-2 border-[#082542] shadow-2xs">
-            <BookOpen className="w-5 h-5" />
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] font-black uppercase text-[#0D3B66] dark:text-[#F4B41A] tracking-wider font-mono">
-                Step 3 · Guided Reading
-              </span>
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#F4B41A]/20 text-[#0D3B66] dark:text-[#F4B41A] border border-[#F4B41A]/40">
-                Karaoke Audio
-              </span>
-            </div>
-            <h3 className="text-base sm:text-lg font-black text-slate-900 dark:text-white mt-0.5">
-              {passage.title || (passage as any).passageTitle || "Reading Passage"}
-            </h3>
-          </div>
-        </div>
+      {/* Clean Editorial Audio & Control Toolbar */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100 dark:border-slate-800/80">
+        <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+          {passage.audioText && (
+            <button
+              type="button"
+              onClick={handlePlayFull}
+              className={`flex items-center justify-center gap-2 px-4 py-2 rounded-full text-xs font-heading font-bold transition-all shadow-xs cursor-pointer min-h-[40px] touch-manipulation ${
+                isPlayingFull
+                  ? "btn-skeuo-navy text-white animate-pulse"
+                  : "btn-skeuo-yellow text-[#0F172A]"
+              }`}
+            >
+              {isPlayingFull ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5 fill-current" />}
+              <span>{isPlayingFull ? "Playing Audio..." : "Play Entire Passage"}</span>
+            </button>
+          )}
 
-        {passage.audioText && (
-          <button
-            type="button"
-            onClick={handlePlayFull}
-            className={`flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all shadow-xs shrink-0 cursor-pointer min-h-[44px] touch-manipulation w-full sm:w-auto ${
-              isPlayingFull
-                ? "btn-skeuo-navy text-white animate-pulse"
-                : "btn-skeuo-yellow text-[#0F172A]"
-            }`}
-          >
-            {isPlayingFull ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 fill-current" />}
-            <span>{isPlayingFull ? "Playing Audio..." : "Play Entire Passage"}</span>
-          </button>
-        )}
-      </div>
-
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs text-slate-600 dark:text-slate-400 px-1 gap-2">
-        <div className="flex items-center gap-1.5 text-slate-500">
-          <span>Tap any sentence to listen. Tap highlighted words for explanations.</span>
-        </div>
-        <div className="flex items-center justify-between sm:justify-end gap-2 shrink-0">
-          <button
-            type="button"
-            onClick={() => setSpotlightEnabled(!spotlightEnabled)}
-            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 border cursor-pointer min-h-[38px] touch-manipulation ${
-              spotlightEnabled
-                ? "bg-amber-50 dark:bg-amber-950/50 text-amber-900 dark:text-amber-200 border-amber-300 dark:border-amber-700"
-                : "bg-slate-100 dark:bg-slate-800 text-slate-500 border-slate-200 dark:border-slate-700"
-            }`}
-          >
-            <Eye className="w-3.5 h-3.5" />
-            <span>{spotlightEnabled ? "Word Highlight: On" : "Word Highlight: Off"}</span>
-          </button>
           {activeSentenceIndex !== null && (
-            <span className="font-semibold text-slate-700 dark:text-slate-300 font-mono text-xs">
-              {activeSentenceIndex + 1}/{sentences.length}
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-heading font-semibold text-xs border border-slate-200 dark:border-slate-700">
+              <Volume2 className="w-3.5 h-3.5 text-[#10375C] dark:text-[#F4B41A]" />
+              <span>
+                Sentence {activeSentenceIndex + 1} of {sentences.length}
+              </span>
             </span>
           )}
         </div>
+
+        <div className="flex items-center gap-2 self-start sm:self-auto">
+          <button
+            type="button"
+            onClick={() => setSpotlightEnabled(!spotlightEnabled)}
+            className={`px-3 py-1.5 rounded-full text-xs font-heading font-semibold transition-all flex items-center gap-1.5 border cursor-pointer min-h-[36px] touch-manipulation ${
+              spotlightEnabled
+                ? "bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border-slate-300 dark:border-slate-600 shadow-2xs"
+                : "bg-white dark:bg-slate-900 text-slate-500 border-slate-200 dark:border-slate-800"
+            }`}
+            title="Toggle vocabulary and grammar underlines"
+          >
+            <Eye className="w-3.5 h-3.5" />
+            <span>{spotlightEnabled ? "Underlines: On" : "Underlines: Off"}</span>
+          </button>
+        </div>
       </div>
 
-      {/* Floating active token hint: Tactile bottom card on mobile, static on desktop */}
+      {/* Floating active token hint: Tactile bottom card on mobile, neat bar on desktop */}
       {activeTokenHint && (
-        <div className="fixed bottom-24 sm:bottom-auto inset-x-3 sm:inset-x-auto sm:static z-50 p-3.5 sm:p-4 rounded-2xl bg-[#0D3B66] text-white flex items-center justify-between gap-3 shadow-2xl sm:shadow-xs border border-white/20 sm:border-[#082542] animate-in slide-in-from-bottom-3 sm:fade-in duration-200">
+        <div className="fixed bottom-24 sm:bottom-auto inset-x-3 sm:inset-x-auto sm:static z-50 p-4 rounded-2xl bg-[#10375C] text-white flex items-center justify-between gap-3 shadow-xl sm:shadow-sm border border-white/20 sm:border-[#092238] animate-in slide-in-from-bottom-3 sm:fade-in duration-200">
           <div className="flex items-center gap-3 min-w-0">
             <button
               type="button"
@@ -236,21 +236,21 @@ export function InteractiveReadingPassage({
                 animeButtonPop(e.currentTarget);
                 onPlayAudio?.(activeTokenHint.word);
               }}
-              className="w-10 h-10 rounded-xl bg-white/15 hover:bg-white/25 text-[#F4B41A] flex items-center justify-center shrink-0 cursor-pointer transition-all active:scale-95 border border-white/10"
+              className="w-10 h-10 rounded-xl bg-white/15 hover:bg-white/25 text-[#F3C623] flex items-center justify-center shrink-0 cursor-pointer transition-all active:scale-95 border border-white/10"
               title={`Listen to pronunciation of "${activeTokenHint.word}"`}
             >
               <Volume2 className="w-5 h-5" />
             </button>
             <div className="text-xs min-w-0 space-y-0.5">
-              <div className="flex items-center gap-1.5 flex-wrap">
-                <span className="font-mono text-[10px] font-black uppercase px-2 py-0.5 rounded-md bg-[#F4B41A] text-slate-950">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="font-heading text-[10px] font-black uppercase px-2 py-0.5 rounded-md bg-[#F3C623] text-slate-950">
                   {activeTokenHint.label}
                 </span>
-                <span className="font-bold text-sm text-white">
+                <span className="font-heading font-bold text-sm text-white">
                   &ldquo;{activeTokenHint.word}&rdquo;
                 </span>
               </div>
-              <p className="text-slate-200 text-xs leading-relaxed">
+              <p className="font-sans text-slate-200 text-xs leading-relaxed">
                 {activeTokenHint.desc}
               </p>
             </div>
@@ -258,88 +258,84 @@ export function InteractiveReadingPassage({
           <button
             type="button"
             onClick={() => setActiveTokenHint(null)}
-            className="text-xs px-3 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold cursor-pointer shrink-0 transition-colors touch-manipulation active:scale-95"
+            className="text-xs px-3.5 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white font-heading font-bold cursor-pointer shrink-0 transition-colors touch-manipulation active:scale-95"
           >
             Close
           </button>
         </div>
       )}
 
-      {/* Interactive Sentence-by-Sentence Board */}
-      <div className="space-y-2 sm:space-y-2.5 bg-slate-50 dark:bg-slate-800/40 p-3.5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700/80">
-        {sentences.map((sentence, sIdx) => {
-          const isActive = activeSentenceIndex === sIdx;
-
-          // Tokenize sentence for soft spotlight
-          const words = sentence.split(/(\s+|[.,!?;:()]+)/);
-
-          return (
-            <div
-              key={sIdx}
-              onClick={(e) => handlePlaySentence(sIdx, sentence, e)}
-              className={`p-3 sm:p-3.5 rounded-xl transition-all flex items-start gap-2.5 sm:gap-3 cursor-pointer select-none border border-b-2 min-h-[48px] touch-manipulation ${
-                isActive
-                  ? "bg-[#0D3B66]/10 dark:bg-[#0D3B66]/30 border-[#0D3B66] dark:border-[#F4B41A] shadow-xs"
-                  : "bg-white dark:bg-slate-900/60 hover:bg-white dark:hover:bg-slate-900 border-slate-200/70 dark:border-slate-700/60"
-              }`}
+      {/* Natural Editorial Book / Story Passage Canvas */}
+      <div className="bg-white dark:bg-slate-900/60 rounded-3xl p-6 sm:p-10 border border-slate-200/70 dark:border-slate-800 shadow-xs max-w-2xl mx-auto">
+        <div className="space-y-6 sm:space-y-7">
+          {paragraphSentences.map((pItems, pIdx) => (
+            <p
+              key={pIdx}
+              className="font-sans text-[17px] sm:text-[19px] leading-[2.0] text-slate-800 dark:text-slate-100 font-normal tracking-normal"
             >
-              <button
-                type="button"
-                className={`p-1.5 rounded-lg transition-colors shrink-0 mt-0.5 border-b-2 ${
-                  isActive
-                    ? "bg-[#0D3B66] text-[#F4B41A] border-[#082542]"
-                    : "bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-[#0D3B66]"
-                }`}
-              >
-                <Volume2 className="w-3.5 h-3.5" />
-              </button>
+              {pItems.map(({ sentence, index: sIdx }: { sentence: string; index: number }) => {
+                const isActive = activeSentenceIndex === sIdx;
+                const words = sentence.split(/(\s+|[.,!?;:()]+)/);
 
-              <span
-                className={`text-sm leading-relaxed ${
-                  isActive
-                    ? "text-[#0D3B66] dark:text-[#F4B41A] font-medium"
-                    : "text-slate-700 dark:text-slate-300 font-medium"
-                }`}
-              >
-                {!spotlightEnabled
-                  ? sentence
-                  : words.map((token: string, wIdx: number) => {
-                      const cleanWord = token.trim().toLowerCase().replace(/[.,!?;:()]/g, "");
-                      const match = spotlightDict[cleanWord];
+                return (
+                  <span
+                    key={sIdx}
+                    onClick={(e) => handlePlaySentence(sIdx, sentence, e)}
+                    className={`inline cursor-pointer transition-all duration-200 rounded-lg px-1.5 py-0.5 mr-1 ${
+                      isActive
+                        ? "bg-amber-100/90 dark:bg-amber-950/60 text-slate-950 dark:text-amber-100 ring-2 ring-amber-300/70 shadow-xs"
+                        : "hover:bg-slate-100/80 dark:hover:bg-slate-800/60 text-slate-800 dark:text-slate-200"
+                    }`}
+                    title="Tap sentence to listen"
+                  >
+                    {!spotlightEnabled
+                      ? sentence
+                      : words.map((token: string, wIdx: number) => {
+                          const cleanWord = token.trim().toLowerCase().replace(/[.,!?;:()]/g, "");
+                          const match = spotlightDict[cleanWord];
 
-                      if (!match) {
-                        return <React.Fragment key={wIdx}>{token}</React.Fragment>;
-                      }
+                          if (!match) {
+                            return <React.Fragment key={wIdx}>{token}</React.Fragment>;
+                          }
 
-                      const isGrammar = match.type === "grammar";
+                          const isGrammar = match.type === "grammar";
 
-                      return (
-                        <span
-                          key={wIdx}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            animeButtonPop(e.currentTarget as HTMLElement);
-                            setActiveTokenHint({
-                              word: token,
-                              label: match.label,
-                              desc: match.desc,
-                            });
-                          }}
-                          title={`${match.label}: ${match.desc}`}
-                          className={`inline-block px-1 py-0.5 rounded-md cursor-pointer transition-all ${
-                            isGrammar
-                              ? "bg-[#0D3B66]/15 dark:bg-[#0D3B66]/35 text-[#0D3B66] dark:text-[#F4B41A] font-bold border-b border-[#0D3B66]/40 dark:border-[#F4B41A]/50 hover:bg-[#0D3B66]/25"
-                              : "bg-emerald-500/15 dark:bg-emerald-500/30 text-emerald-800 dark:text-emerald-300 font-bold border-b border-emerald-500/40 hover:bg-emerald-500/25"
-                          }`}
-                        >
-                          {token}
-                        </span>
-                      );
-                    })}
-              </span>
-            </div>
-          );
-        })}
+                          return (
+                            <span
+                              key={wIdx}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                animeButtonPop(e.currentTarget as HTMLElement);
+                                setActiveTokenHint({
+                                  word: token,
+                                  label: match.label,
+                                  desc: match.desc,
+                                });
+                              }}
+                              title={`${match.label}: ${match.desc}`}
+                              className={`inline cursor-pointer transition-colors border-b-2 border-dotted ${
+                                isGrammar
+                                  ? "border-sky-600/80 dark:border-sky-400 text-sky-950 dark:text-sky-200 font-medium hover:border-solid hover:border-sky-800"
+                                  : "border-emerald-600/80 dark:border-emerald-400 text-emerald-950 dark:text-emerald-200 font-medium hover:border-solid hover:border-emerald-800"
+                              }`}
+                            >
+                              {token}
+                            </span>
+                          );
+                        })}
+                  </span>
+                );
+              })}
+            </p>
+          ))}
+        </div>
+
+        {/* Quiet footer hint */}
+        <div className="pt-6 mt-8 border-t border-slate-100 dark:border-slate-800 text-center">
+          <p className="text-xs text-slate-600 dark:text-slate-400 font-sans">
+            Tap any sentence to listen · Tap underlined words for grammar &amp; vocabulary explanations
+          </p>
+        </div>
       </div>
     </div>
   );
