@@ -6,7 +6,7 @@ import { getApiUrl } from "@/lib/api-client";
 export interface QueuedSentence {
   index: number;
   text: string;
-  audioPromise: Promise<HTMLAudioElement | null>;
+  bufferPromise: Promise<AudioBuffer | null>;
 }
 
 interface UseAudioQueueProps {
@@ -21,7 +21,8 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
   const audioQueueRef = useRef<QueuedSentence[]>([]);
   const isPlayingQueueRef = useRef<boolean>(false);
   const isStreamActiveRef = useRef<boolean>(false);
-  const currentAudioRef = useRef<HTMLAudioElement | null>(null);
+  const currentSourceRef = useRef<AudioBufferSourceNode | null>(null);
+  const audioCtxRef = useRef<AudioContext | null>(null);
   const isHaltedRef = useRef<boolean>(false);
 
   const onSentenceStartRef = useRef(onSentenceStart);
@@ -35,6 +36,18 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     onAllEndedRef.current = onAllEnded;
   }, [onAllEnded]);
 
+  // Persistent AudioContext accessor (singleton per hook lifecycle)
+  const getAudioContext = useCallback((): AudioContext | null => {
+    if (typeof window === "undefined") return null;
+    if (!audioCtxRef.current || audioCtxRef.current.state === "closed") {
+      const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+      if (AudioCtx) {
+        audioCtxRef.current = new AudioCtx();
+      }
+    }
+    return audioCtxRef.current;
+  }, []);
+
   const halt = useCallback(() => {
     isHaltedRef.current = true;
     isStreamActiveRef.current = false;
@@ -43,46 +56,38 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
 
     audioQueueRef.current = [];
 
-    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+    if (currentSourceRef.current) {
       try {
-        window.speechSynthesis.cancel();
+        currentSourceRef.current.stop(0);
+        currentSourceRef.current.disconnect();
       } catch {}
-    }
-
-    if (currentAudioRef.current) {
-      try {
-        currentAudioRef.current.pause();
-        currentAudioRef.current.currentTime = 0;
-        currentAudioRef.current.src = "";
-      } catch {}
-      currentAudioRef.current = null;
+      currentSourceRef.current = null;
     }
   }, []);
 
+  // Wakes up hardware audio pipeline and satisfies mobile Safari/Chrome autoplay policy
   const unlockAudio = useCallback(() => {
     if (typeof window === "undefined") return;
     try {
-      const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
-      if (AudioCtx) {
-        const ctx = new AudioCtx();
-        if (ctx.state === "suspended") {
-          ctx.resume().catch(() => {});
-        }
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      if (ctx.state === "suspended") {
+        ctx.resume().catch(() => {});
       }
-      const silentAudio = new Audio();
-      silentAudio.src =
-        "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA";
-      silentAudio.volume = 0.01;
-      silentAudio.play().catch(() => {});
+      const buffer = ctx.createBuffer(1, 1, 22050);
+      const source = ctx.createBufferSource();
+      source.buffer = buffer;
+      source.connect(ctx.destination);
+      source.start(0);
     } catch {}
-  }, []);
+  }, [getAudioContext]);
 
   const playNextInQueue = useCallback(async () => {
     if (isHaltedRef.current) return;
 
     if (audioQueueRef.current.length === 0) {
       if (isStreamActiveRef.current) {
-        // Still generating future sentences in SSE stream
+        // Still waiting for upcoming sentences from SSE stream
         isPlayingQueueRef.current = false;
         return;
       }
@@ -90,58 +95,72 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
       // All sentences finished
       isPlayingQueueRef.current = false;
       setIsPlaying(false);
-      currentAudioRef.current = null;
+      currentSourceRef.current = null;
       onAllEndedRef.current?.();
       return;
     }
 
     isPlayingQueueRef.current = true;
-    setIsPlaying(true);
 
     const nextItem = audioQueueRef.current.shift()!;
     setCurrentSubtitle(nextItem.text);
-    onSentenceStartRef.current?.(nextItem.text);
 
-    // Wait until audio blob is ready from OmniRoute TTS
-    const audio = await nextItem.audioPromise;
+    // Wait until audio buffer is ready from TTS
+    const audioBuffer = await nextItem.bufferPromise;
 
     if (isHaltedRef.current) return;
 
-    if (!audio) {
-      // NEVER fall back to robotic browser SpeechSynthesis (prevents switching to default female voice).
-      // Give a brief reading pause so the subtitle is visible, then advance queue seamlessly.
+    if (!audioBuffer) {
+      // If TTS buffer failed, brief reading pause so subtitle is visible, then advance
       setTimeout(() => {
         if (!isHaltedRef.current) playNextInQueue();
       }, 700);
       return;
     }
 
-    currentAudioRef.current = audio;
+    const ctx = getAudioContext();
+    if (!ctx || ctx.state === "closed") {
+      if (!isHaltedRef.current) playNextInQueue();
+      return;
+    }
 
-    audio.onended = () => {
-      if (isHaltedRef.current) return;
-      playNextInQueue();
-    };
-
-    audio.onerror = () => {
-      if (isHaltedRef.current) return;
-      playNextInQueue();
-    };
+    if (ctx.state === "suspended") {
+      try {
+        await ctx.resume();
+      } catch {}
+    }
 
     try {
-      await audio.play();
+      const source = ctx.createBufferSource();
+      source.buffer = audioBuffer;
+      source.connect(ctx.destination);
+      currentSourceRef.current = source;
+
+      // Accurately switch to speaking state when sound actually emits
+      setIsPlaying(true);
+      onSentenceStartRef.current?.(nextItem.text);
+
+      source.onended = () => {
+        if (currentSourceRef.current === source) {
+          currentSourceRef.current = null;
+        }
+        if (isHaltedRef.current) return;
+        playNextInQueue();
+      };
+
+      source.start(0);
     } catch (err: any) {
       if (err.name === "AbortError" || isHaltedRef.current) return;
-      console.warn("Audio play error, skipping sentence cleanly:", err);
+      console.warn("Audio buffer playback error, skipping sentence cleanly:", err);
       if (!isHaltedRef.current) playNextInQueue();
     }
-  }, []);
+  }, [getAudioContext]);
 
   const enqueueSentence = useCallback(
     (sentence: string, index: number) => {
       if (isHaltedRef.current) return;
 
-      const fetchWithRetry = async (attempt = 1): Promise<HTMLAudioElement | null> => {
+      const fetchWithRetry = async (attempt = 1): Promise<AudioBuffer | null> => {
         try {
           const res = await fetch(getApiUrl("/api/voice/tts"), {
             method: "POST",
@@ -158,29 +177,31 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
             throw new Error(`TTS POST error ${res.status}`);
           }
 
-          const blob = await res.blob();
+          const arrayBuffer = await res.arrayBuffer();
           if (isHaltedRef.current) return null;
 
-          const url = URL.createObjectURL(blob);
-          const audio = new Audio(url);
-          audio.preload = "auto";
-          return audio;
+          const ctx = getAudioContext();
+          if (!ctx) return null;
+
+          // Safe slice prevents buffer detachment issues in strict WebKit engines
+          const audioBuffer = await ctx.decodeAudioData(arrayBuffer.slice(0));
+          return audioBuffer;
         } catch (err) {
           if (attempt < 2 && !isHaltedRef.current) {
             await new Promise((r) => setTimeout(r, 250));
             return fetchWithRetry(attempt + 1);
           }
-          console.warn("TTS fetch error for sentence:", sentence, err);
+          console.warn("TTS fetch/decode error for sentence:", sentence, err);
           return null;
         }
       };
 
-      const audioPromise = fetchWithRetry();
+      const bufferPromise = fetchWithRetry();
 
       audioQueueRef.current.push({
         index,
         text: sentence,
-        audioPromise,
+        bufferPromise,
       });
       audioQueueRef.current.sort((a, b) => a.index - b.index);
 
@@ -188,7 +209,7 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
         playNextInQueue();
       }
     },
-    [playNextInQueue]
+    [getAudioContext, playNextInQueue]
   );
 
   const resetForNewTurn = useCallback(() => {
@@ -203,7 +224,7 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     }
   }, [playNextInQueue]);
 
-  // Enqueue speech text cleanly as a unified sentence to avoid task queue congestion
+  // Enqueue speech text cleanly as a unified sentence to avoid queue congestion
   const speakText = useCallback(
     (text: string) => {
       halt();
@@ -220,9 +241,16 @@ export function useAudioQueue({ onSentenceStart, onAllEnded }: UseAudioQueueProp
     [halt, enqueueSentence]
   );
 
+  // Resource cleanup on unmount
   useEffect(() => {
     return () => {
       halt();
+      if (audioCtxRef.current && audioCtxRef.current.state !== "closed") {
+        try {
+          audioCtxRef.current.close().catch(() => {});
+        } catch {}
+        audioCtxRef.current = null;
+      }
     };
   }, [halt]);
 
