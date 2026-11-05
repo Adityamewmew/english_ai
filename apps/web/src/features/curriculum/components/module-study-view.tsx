@@ -235,7 +235,8 @@ export function ModuleStudyView({
     ];
   }, [skillType, completedSteps]);
 
-  const canProceed = isAdmin || isCurrentStepComplete || completedSteps.includes(activeStepId) || activeStepId === 1;
+  const isExamEnd = (skillType === "assessment" || skillType === "exam") && activeStepId === playlistSteps.length;
+  const canProceed = isAdmin || isCurrentStepComplete || completedSteps.includes(activeStepId) || activeStepId === 1 || isExamEnd;
 
   const handleStepComplete = () => {
     setIsCurrentStepComplete(true);
@@ -249,7 +250,12 @@ export function ModuleStudyView({
       return;
     }
     setActiveStepId(stepId);
-    setIsCurrentStepComplete(isAdmin || completedSteps.includes(stepId) || stepId === 1);
+    setIsCurrentStepComplete(
+      isAdmin ||
+      completedSteps.includes(stepId) ||
+      stepId === 1 ||
+      ((skillType === "assessment" || skillType === "exam") && stepId === playlistSteps.length)
+    );
     window.scrollTo({ top: 120, behavior: "smooth" });
   };
 
@@ -262,9 +268,18 @@ export function ModuleStudyView({
     if (activeStepId < playlistSteps.length) {
       const nextId = activeStepId + 1;
       setActiveStepId(nextId);
-      setIsCurrentStepComplete(isAdmin || completedSteps.includes(nextId));
+      setIsCurrentStepComplete(
+        isAdmin ||
+        completedSteps.includes(nextId) ||
+        ((skillType === "assessment" || skillType === "exam") && nextId === playlistSteps.length)
+      );
       window.scrollTo({ top: 120, behavior: "smooth" });
     } else {
+      if (skillType === "assessment" || skillType === "exam") {
+        setActiveMissionId(null);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
       // Step completed -> Finish mission, mark completed, & return to Floating Cards Hub!
       try {
         setIsFinishing(true);
@@ -549,6 +564,7 @@ export function ModuleStudyView({
                       setStageAnswers(ans);
                       if (spk !== undefined) setStageSpeakingScore(spk);
                     }}
+                    onSelectStep={handleSelectStep}
                   />
                 </div>
 

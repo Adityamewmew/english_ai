@@ -40,6 +40,7 @@ interface ModuleStageViewportProps {
   onSubmitExam?: (finalScore: number, examAnswers?: Record<string, any>) => Promise<void>;
   initialAnswers?: Record<string, any>;
   onAnswersChange?: (answers: Record<string, any>, speakingScore?: number) => void;
+  onSelectStep?: (stepId: number) => void;
 }
 
 export function ModuleStageViewport({
@@ -67,8 +68,10 @@ export function ModuleStageViewport({
   onSubmitExam,
   initialAnswers,
   onAnswersChange,
+  onSelectStep,
 }: ModuleStageViewportProps) {
-  const effectiveCanProceed = isAdmin || canProceed;
+  const isExamEnd = (skillType === "assessment" || skillType === "exam") && activeStepId === totalSteps;
+  const effectiveCanProceed = isAdmin || canProceed || isExamEnd;
   return (
     <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between">
       {/* 1. Specialized Stage Activity Canvas based on skillType */}
@@ -84,6 +87,7 @@ export function ModuleStageViewport({
             onRewardXp={onRewardXp}
             studentName={studentName}
             onSubmitExam={onSubmitExam}
+            onSelectStep={onSelectStep}
           />
         ) : skillType === "listening" ? (
           <StageListeningView

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Award, Clock, Printer, ArrowRight } from "lucide-react";
+import { Award, Clock, Printer, ArrowRight, RotateCcw } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -25,6 +25,7 @@ interface ExamCertificateViewProps {
   passingScore: number;
   isSubmitting?: boolean;
   isSubmitted?: boolean;
+  onRetake?: () => void;
 }
 
 export function ExamCertificateView({
@@ -34,6 +35,7 @@ export function ExamCertificateView({
   passingScore,
   isSubmitting = false,
   isSubmitted = false,
+  onRetake,
 }: ExamCertificateViewProps) {
   const certDate = new Date().toLocaleDateString("en-US", {
     day: "numeric",
@@ -181,6 +183,16 @@ export function ExamCertificateView({
 
       {/* 4. Action Buttons (Hidden when printing) */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 print:hidden">
+        {!scores.isPassed && onRetake && (
+          <Button
+            type="button"
+            onClick={onRetake}
+            className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs inline-flex items-center justify-center gap-2 cursor-pointer shadow-sm min-h-[44px]"
+          >
+            <RotateCcw className="w-4 h-4" />
+            <span>Retake Assessment / Kerjakan Ulang</span>
+          </Button>
+        )}
         {scores.isPassed && (
           <Button
             type="button"

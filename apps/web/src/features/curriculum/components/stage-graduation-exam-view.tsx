@@ -29,6 +29,7 @@ interface StageGraduationExamViewProps {
   onRewardXp: (amount: number) => void;
   studentName?: string;
   onSubmitExam?: (finalScore: number, examAnswers?: Record<string, any>) => Promise<void>;
+  onSelectStep?: (stepId: number) => void;
 }
 
 export function StageGraduationExamView({
@@ -41,6 +42,7 @@ export function StageGraduationExamView({
   onRewardXp,
   studentName = "Student",
   onSubmitExam,
+  onSelectStep,
 }: StageGraduationExamViewProps) {
   const rawParts = quizSec?.content?.parts;
   const rawQuestions: any[] = useMemo(() => {
@@ -95,11 +97,71 @@ export function StageGraduationExamView({
 
   const passingScore = moduleData?.passingScore || 75;
 
-  // Student answer state per part
-  const [readingAnswers, setReadingAnswers] = useState<Record<number, string>>({});
-  const [listeningAnswers, setListeningAnswers] = useState<Record<number, string>>({});
-  const [writingAnswers, setWritingAnswers] = useState<Record<number, string>>({});
-  const [speakingCompleted, setSpeakingCompleted] = useState<Record<number, boolean>>({});
+  // Local storage persistence key for this specific exam submodule
+  const storageKey = `eddys_exam_${theorySec?.subModuleId || quizSec?.subModuleId || moduleData?.id || "draft"}`;
+
+  // Student answer state per part (auto-restored from localStorage so page reloads never wipe answers)
+  const [readingAnswers, setReadingAnswers] = useState<Record<number, string>>(() => {
+    if (typeof window === "undefined") return {};
+    try {
+      const saved = localStorage.getItem(storageKey);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        return parsed?.readingAnswers || {};
+      }
+    } catch {}
+    return {};
+  });
+
+  const [listeningAnswers, setListeningAnswers] = useState<Record<number, string>>(() => {
+    if (typeof window === "undefined") return {};
+    try {
+      const saved = localStorage.getItem(storageKey);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        return parsed?.listeningAnswers || {};
+      }
+    } catch {}
+    return {};
+  });
+
+  const [writingAnswers, setWritingAnswers] = useState<Record<number, string>>(() => {
+    if (typeof window === "undefined") return {};
+    try {
+      const saved = localStorage.getItem(storageKey);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        return parsed?.writingAnswers || {};
+      }
+    } catch {}
+    return {};
+  });
+
+  const [speakingCompleted, setSpeakingCompleted] = useState<Record<number, boolean>>(() => {
+    if (typeof window === "undefined") return {};
+    try {
+      const saved = localStorage.getItem(storageKey);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        return parsed?.speakingCompleted || {};
+      }
+    } catch {}
+    return {};
+  });
+
+  // Debounced auto-save all exam answers to localStorage
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const payload = {
+        readingAnswers,
+        listeningAnswers,
+        writingAnswers,
+        speakingCompleted,
+      };
+      localStorage.setItem(storageKey, JSON.stringify(payload));
+    } catch {}
+  }, [storageKey, readingAnswers, listeningAnswers, writingAnswers, speakingCompleted]);
 
   const [isSubmittingExam, setIsSubmittingExam] = useState(false);
   const [isExamSubmitted, setIsExamSubmitted] = useState(false);
@@ -149,12 +211,19 @@ export function StageGraduationExamView({
       }
     });
 
-    // 2. Listening
+    // 2. Listening (Checks targetWord, targetSentence, audioText, answer)
     let lCorrect = 0;
     listeningList.forEach((q, idx) => {
       const userAns = (listeningAnswers[idx] || "").trim().toLowerCase();
-      const target = (q.targetSentence || q.audioText || q.answer || "").trim().toLowerCase();
-      if (userAns && (userAns === target || target.includes(userAns))) {
+      const targetWord = (q.targetWord || "").trim().toLowerCase();
+      const targetSentence = (q.targetSentence || q.audioText || q.answer || "").trim().toLowerCase();
+      if (
+        userAns &&
+        (userAns === targetWord ||
+          userAns === targetSentence ||
+          targetSentence.includes(userAns) ||
+          (targetWord && targetWord.includes(userAns)))
+      ) {
         lCorrect++;
       }
     });
@@ -391,6 +460,34 @@ export function StageGraduationExamView({
     );
   }
 
+  // Auto-clean draft if user officially passed exam
+  React.useEffect(() => {
+    if (scores.isPassed && typeof window !== "undefined") {
+      try {
+        localStorage.removeItem(storageKey);
+      } catch {}
+    }
+  }, [scores.isPassed, storageKey]);
+
+  const handleRetake = () => {
+    if (typeof window !== "undefined") {
+      try {
+        localStorage.removeItem(storageKey);
+      } catch {}
+    }
+    setReadingAnswers({});
+    setListeningAnswers({});
+    setWritingAnswers({});
+    setSpeakingCompleted({});
+    hasSubmittedRef.current = false;
+    setIsExamSubmitted(false);
+    if (onSelectStep) {
+      onSelectStep(1);
+    } else {
+      window.location.reload();
+    }
+  };
+
   // Step 6: Final Scorecard & Official Sub-Level Certificate
   // Auto-submit score and verified answers to backend to unlock next module and save progress
   return (
@@ -406,6 +503,7 @@ export function StageGraduationExamView({
       setIsSubmittingExam={setIsSubmittingExam}
       setIsExamSubmitted={setIsExamSubmitted}
       hasSubmittedRef={hasSubmittedRef}
+      onRetake={handleRetake}
     />
   );
 }
@@ -422,6 +520,7 @@ function ExamCertificateViewWithAutoSubmit({
   setIsSubmittingExam,
   setIsExamSubmitted,
   hasSubmittedRef,
+  onRetake,
 }: {
   scores: any;
   moduleData: any;
@@ -434,6 +533,7 @@ function ExamCertificateViewWithAutoSubmit({
   setIsSubmittingExam: (val: boolean) => void;
   setIsExamSubmitted: (val: boolean) => void;
   hasSubmittedRef: React.MutableRefObject<boolean>;
+  onRetake?: () => void;
 }) {
   React.useEffect(() => {
     if (!hasSubmittedRef.current && onSubmitExam) {
@@ -457,6 +557,7 @@ function ExamCertificateViewWithAutoSubmit({
       passingScore={passingScore}
       isSubmitting={isSubmittingExam}
       isSubmitted={isExamSubmitted}
+      onRetake={onRetake}
     />
   );
 }
