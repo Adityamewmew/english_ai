@@ -206,6 +206,33 @@ export function StageGraduationExamView({
     passingScore,
   ]);
 
+  // Verified exam answers mapped for server submission (must be declared at top before any early return to satisfy Rules of Hooks)
+  const examAnswers = useMemo(() => {
+    const ans: Record<string, any> = {};
+    readingList.forEach((q, idx) => {
+      if (readingAnswers[idx]) ans[q.id || `r-${idx}`] = readingAnswers[idx];
+    });
+    listeningList.forEach((q, idx) => {
+      if (listeningAnswers[idx]) ans[q.id || `l-${idx}`] = listeningAnswers[idx];
+    });
+    writingList.forEach((q, idx) => {
+      if (writingAnswers[idx]) ans[q.id || `w-${idx}`] = writingAnswers[idx];
+    });
+    speakingList.forEach((q, idx) => {
+      if (speakingCompleted[idx]) ans[q.id || `s-${idx}`] = "completed";
+    });
+    return ans;
+  }, [
+    readingAnswers,
+    listeningAnswers,
+    writingAnswers,
+    speakingCompleted,
+    readingList,
+    listeningList,
+    writingList,
+    speakingList,
+  ]);
+
   // Step 1: Briefing & Guidelines
   if (activeStepId === 1) {
     return (
@@ -366,23 +393,6 @@ export function StageGraduationExamView({
 
   // Step 6: Final Scorecard & Official Sub-Level Certificate
   // Auto-submit score and verified answers to backend to unlock next module and save progress
-  const examAnswers = useMemo(() => {
-    const ans: Record<string, any> = {};
-    readingList.forEach((q, idx) => {
-      if (readingAnswers[idx]) ans[q.id || `r-${idx}`] = readingAnswers[idx];
-    });
-    listeningList.forEach((q, idx) => {
-      if (listeningAnswers[idx]) ans[q.id || `l-${idx}`] = listeningAnswers[idx];
-    });
-    writingList.forEach((q, idx) => {
-      if (writingAnswers[idx]) ans[q.id || `w-${idx}`] = writingAnswers[idx];
-    });
-    speakingList.forEach((q, idx) => {
-      if (speakingCompleted[idx]) ans[q.id || `s-${idx}`] = "completed";
-    });
-    return ans;
-  }, [readingAnswers, listeningAnswers, writingAnswers, speakingCompleted, readingList, listeningList, writingList, speakingList]);
-
   return (
     <ExamCertificateViewWithAutoSubmit
       scores={scores}
@@ -431,7 +441,10 @@ function ExamCertificateViewWithAutoSubmit({
       setIsSubmittingExam(true);
       onSubmitExam(scores.totalScore, examAnswers)
         .then(() => setIsExamSubmitted(true))
-        .catch((err) => console.error("Auto submit exam failed:", err))
+        .catch((err) => {
+          console.error("Auto submit exam failed:", err);
+          hasSubmittedRef.current = false;
+        })
         .finally(() => setIsSubmittingExam(false));
     }
   }, [onSubmitExam, scores.totalScore, examAnswers, hasSubmittedRef, setIsSubmittingExam, setIsExamSubmitted]);

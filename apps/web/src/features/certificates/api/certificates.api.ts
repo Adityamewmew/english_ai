@@ -54,7 +54,11 @@ export const certificatesApi = {
         cefr: cefr || undefined,
       },
     });
-    if (error) throw new Error(String(error.value));
+    if (error) {
+      const errVal = error.value as any;
+      const msg = errVal?.message || errVal?.error || String(error.value);
+      throw new Error(msg);
+    }
     return (data?.data ?? []) as CefrCertificateStatus[];
   },
 
@@ -65,7 +69,7 @@ export const certificatesApi = {
     });
     if (error) {
       const errVal = error.value as any;
-      const msg = errVal?.message || String(error.value);
+      const msg = errVal?.message || errVal?.error || String(error.value);
       throw new Error(msg);
     }
     return data?.data;
@@ -75,7 +79,11 @@ export const certificatesApi = {
     const { data, error } = await apiClient.api.curriculum.certificates.my.get({
       query: userId ? { userId } : undefined,
     });
-    if (error) throw new Error(String(error.value));
+    if (error) {
+      const errVal = error.value as any;
+      const msg = errVal?.message || errVal?.error || String(error.value);
+      throw new Error(msg);
+    }
     return (data?.data ?? []) as UserCertificateItem[];
   },
 };
