@@ -129,3 +129,41 @@ export function formatCallDuration(secs: number): string {
   const s = (secs % 60).toString().padStart(2, "0");
   return `${m}:${s}`;
 }
+
+// Unified Web Speech API event processor with interim/final separation & multi-pass deduplication
+export function processSpeechRecognitionEvent(event: any): string {
+  if (!event?.results) return "";
+
+  let fullFinal = "";
+  let fullInterim = "";
+
+  for (let i = 0; i < event.results.length; ++i) {
+    const res = event.results[i];
+    const text = (res[0]?.transcript || "").trim();
+    if (!text) continue;
+
+    if (res.isFinal) {
+      if (fullFinal.trim() && text.toLowerCase().startsWith(fullFinal.trim().toLowerCase())) {
+        fullFinal = text + " ";
+      } else {
+        fullFinal += text + " ";
+      }
+    } else {
+      fullInterim = text;
+    }
+  }
+
+  let rawSpoken = "";
+  const trimmedFinal = fullFinal.trim();
+  const trimmedInterim = fullInterim.trim();
+
+  if (trimmedInterim.toLowerCase().startsWith(trimmedFinal.toLowerCase())) {
+    rawSpoken = trimmedInterim;
+  } else if (trimmedFinal.toLowerCase().endsWith(trimmedInterim.toLowerCase())) {
+    rawSpoken = trimmedFinal;
+  } else {
+    rawSpoken = `${trimmedFinal} ${trimmedInterim}`.trim();
+  }
+
+  return deduplicateSpeechTranscript(rawSpoken);
+}

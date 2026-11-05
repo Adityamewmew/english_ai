@@ -177,13 +177,13 @@ export function PracticumSummary({
           <span>Retake Practicum</span>
         </button>
 
-        {isPassed && onNextStep && (
+        {onNextStep && (
           <button
             type="button"
             onClick={onNextStep}
             className="flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-navy text-white text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer"
           >
-            <span>Continue to Next Stage</span>
+            <span>{isPassed ? "Continue to Next Stage" : "Finish Practicum & Continue"}</span>
             <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
           </button>
         )}

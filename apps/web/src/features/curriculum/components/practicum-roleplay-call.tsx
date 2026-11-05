@@ -15,6 +15,7 @@ import {
 import { playPopSound, playSnapSound, playMatchSuccessSound } from "@/lib/sound-fx";
 import { getApiUrl } from "@/lib/api-client";
 import { authClient } from "@/lib/auth-client";
+import { processSpeechRecognitionEvent } from "@/lib/call-utils";
 import type { PracticumQuestion } from "./speaking-practicum-stage";
 
 interface PracticumRoleplayCallProps {
@@ -174,11 +175,8 @@ export function PracticumRoleplayCall({
       recognition.interimResults = true;
 
       recognition.onresult = (event: any) => {
-        let text = "";
-        for (let i = 0; i < event.results.length; i++) {
-          text += event.results[i][0].transcript;
-        }
-        setCurrentTranscript(text);
+        const text = processSpeechRecognitionEvent(event);
+        if (text) setCurrentTranscript(text);
       };
 
       try {

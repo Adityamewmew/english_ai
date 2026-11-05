@@ -8,6 +8,7 @@ import { PracticumDrillCard } from "./practicum-drill-card";
 import { PracticumSummary } from "./practicum-summary";
 import { useSession } from "@/features/auth/hooks/use-session";
 import { isUserAdmin } from "@/lib/auth-utils";
+import { processSpeechRecognitionEvent } from "@/lib/call-utils";
 
 export interface PracticumQuestion {
   id: number;
@@ -26,6 +27,7 @@ interface SpeakingPracticumStageProps {
   tutor: any;
   onRewardXp: (amount: number) => void;
   onNextStep?: () => void;
+  onStepComplete?: () => void;
   isAdmin?: boolean;
   initialAnswers?: Record<string, any>;
   onAnswersChange?: (answers: Record<string, any>, speakingScore?: number) => void;
@@ -48,6 +50,7 @@ export function SpeakingPracticumStage({
   tutor,
   onRewardXp,
   onNextStep,
+  onStepComplete,
   isAdmin: propIsAdmin,
   initialAnswers,
   onAnswersChange,
@@ -98,6 +101,12 @@ export function SpeakingPracticumStage({
   const [isPlayingSelf, setIsPlayingSelf] = useState(false);
   const [isCompletedAll, setIsCompletedAll] = useState(false);
   const [micError, setMicError] = useState(false);
+
+  useEffect(() => {
+    if (isCompletedAll) {
+      onStepComplete?.();
+    }
+  }, [isCompletedAll, onStepComplete]);
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
@@ -186,12 +195,11 @@ export function SpeakingPracticumStage({
         rec.continuous = true;
         rec.interimResults = true;
         rec.onresult = (e: any) => {
-          let text = "";
-          for (let i = 0; i < e.results.length; i++) {
-            text += e.results[i][0].transcript;
+          const text = processSpeechRecognitionEvent(e);
+          if (text) {
+            setLiveTranscript(text);
+            setSpeechTranscripts((prev) => ({ ...prev, [currentIdx]: text }));
           }
-          setLiveTranscript(text);
-          setSpeechTranscripts((prev) => ({ ...prev, [currentIdx]: text }));
         };
         try {
           rec.start();
@@ -264,6 +272,7 @@ export function SpeakingPracticumStage({
       setLiveTranscript("");
     } else {
       setIsCompletedAll(true);
+      onStepComplete?.();
     }
   };
 
@@ -286,6 +295,7 @@ export function SpeakingPracticumStage({
       setCurrentIdx((prev) => prev + 1);
     } else {
       setIsCompletedAll(true);
+      onStepComplete?.();
     }
   };
 
@@ -302,10 +312,7 @@ export function SpeakingPracticumStage({
 
   const renderCategoryIcon = (cat: string) => {
     const cls = "w-3.5 h-3.5 text-[#0D3B66] dark:text-[#F4B41A]";
-    if (cat === "storytelling") return <BookOpen className={cls} />;
-    if (cat === "roleplay") return <MapPin className={cls} />;
-    if (cat === "linguistic_drill") return <TrendingUp className={cls} />;
-    return <Mic className={cls} />;
+    return cat === "storytelling" ? <BookOpen className={cls} /> : cat === "roleplay" ? <MapPin className={cls} /> : cat === "linguistic_drill" ? <TrendingUp className={cls} /> : <Mic className={cls} />;
   };
 
   return (
@@ -556,11 +563,7 @@ export function SpeakingPracticumStage({
                   onClick={() => advanceQuestion()}
                   className="ml-auto flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer font-heading"
                 >
-                  <span>
-                    {currentIdx < totalQuestions - 1
-                      ? "Continue to Next Question"
-                      : "Complete Practicum"}
-                  </span>
+                  <span>{currentIdx < totalQuestions - 1 ? "Continue to Next Question" : "Complete Practicum"}</span>
                   <ArrowRight className="w-4 h-4 text-[#0D3B66]" />
                 </button>
               ) : (
@@ -581,7 +584,10 @@ export function SpeakingPracticumStage({
           questions={rawQuestions}
           scores={itemScores}
           onReset={handleResetPracticum}
-          onNextStep={onNextStep}
+          onNextStep={() => {
+            onStepComplete?.();
+            onNextStep?.();
+          }}
         />
       )}
     </div>

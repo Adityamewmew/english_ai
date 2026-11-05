@@ -96,6 +96,7 @@ export function StageSpeakingView({
           onRewardXp={onRewardXp}
           initialAnswers={initialAnswers}
           onAnswersChange={onAnswersChange}
+          onStepComplete={onStepComplete}
           onNextStep={() => {
             onStepComplete?.();
             onNextStep?.();
