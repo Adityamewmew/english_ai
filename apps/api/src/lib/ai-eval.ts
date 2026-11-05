@@ -52,6 +52,12 @@ ${ragContext ? `${ragContext}\n\n` : ""}Analyze the conversation session and ret
   "feedback_en": "Constructive feedback in English (2 sentences)",
   "student_facts": [
     "List of any personal facts, activities, food/meals, pets, family, hobbies, jobs, opinions, or life stories the student mentioned in this call. Return empty array [] if none."
+  ],
+  "student_interests": [
+    "List of hobbies, interests, or subjects the student enjoyed talking about. Return empty array [] if none."
+  ],
+  "student_weaknesses": [
+    "Specific language or grammar points the student struggled with (e.g. 'past tense verbs', 'omitting articles'). Return empty array [] if none."
   ]
 }`;
 

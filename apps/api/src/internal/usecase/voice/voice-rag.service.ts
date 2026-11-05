@@ -210,6 +210,9 @@ export const voiceRagService = {
         if (student.facts.length > 0) {
           parts.push(`Known Student Facts: ${student.facts.slice(0, 4).join("; ")}`);
         }
+        if (student.interests.length > 0) {
+          parts.push(`Known Student Interests: ${student.interests.slice(0, 4).join(", ")}`);
+        }
         if (student.weaknesses.length > 0) {
           parts.push(`Areas to Nudge: ${student.weaknesses.slice(0, 3).join(", ")}`);
         }
@@ -238,6 +241,7 @@ export const voiceRagService = {
     userId: string,
     update: {
       newFacts?: string[];
+      newInterests?: string[];
       newWeaknesses?: string[];
       incrementCalls?: boolean;
     }
@@ -254,6 +258,11 @@ export const voiceRagService = {
         if (f && f.trim().length > 3) factsSet.add(f.trim());
       });
 
+      const interestsSet = new Set(mem.interests || []);
+      (update.newInterests || []).forEach((i) => {
+        if (i && i.trim().length > 2) interestsSet.add(i.trim());
+      });
+
       const weaknessesSet = new Set(mem.weaknesses || []);
       (update.newWeaknesses || []).forEach((w) => {
         if (w && w.trim().length > 2) weaknessesSet.add(w.trim());
@@ -262,6 +271,7 @@ export const voiceRagService = {
       const updatedMemory = {
         ...mem,
         facts: Array.from(factsSet).slice(-10),
+        interests: Array.from(interestsSet).slice(-8),
         weaknesses: Array.from(weaknessesSet).slice(-8),
         totalCalls: (mem.totalCalls || 0) + (update.incrementCalls ? 1 : 0),
         lastSpokenAt: new Date().toISOString(),

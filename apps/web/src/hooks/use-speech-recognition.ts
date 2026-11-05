@@ -5,6 +5,7 @@ import {
   reconcileUniversalName,
   isThoughtIncomplete,
   isValidStudentUtterance,
+  deduplicateSpeechTranscript,
 } from "@/lib/call-utils";
 
 interface UseSpeechRecognitionProps {
@@ -145,14 +146,34 @@ export function useSpeechRecognition({
 
         for (let i = 0; i < event.results.length; ++i) {
           const res = event.results[i];
+          const text = (res[0]?.transcript || "").trim();
+          if (!text) continue;
+
           if (res.isFinal) {
-            fullFinal += res[0].transcript + " ";
+            // If current chunk already contains the accumulated fullFinal prefix (mobile Chrome cumulative hypothesis), replace it
+            if (fullFinal.trim() && text.toLowerCase().startsWith(fullFinal.trim().toLowerCase())) {
+              fullFinal = text + " ";
+            } else {
+              fullFinal += text + " ";
+            }
           } else {
-            fullInterim += res[0].transcript;
+            fullInterim = text;
           }
         }
 
-        let spoken = (fullFinal + fullInterim).trim();
+        let rawSpoken = "";
+        const trimmedFinal = fullFinal.trim();
+        const trimmedInterim = fullInterim.trim();
+
+        if (trimmedInterim.toLowerCase().startsWith(trimmedFinal.toLowerCase())) {
+          rawSpoken = trimmedInterim;
+        } else if (trimmedFinal.toLowerCase().endsWith(trimmedInterim.toLowerCase())) {
+          rawSpoken = trimmedFinal;
+        } else {
+          rawSpoken = `${trimmedFinal} ${trimmedInterim}`.trim();
+        }
+
+        let spoken = deduplicateSpeechTranscript(rawSpoken);
         if (!spoken || spoken.length < 2) return;
 
         // Reconcile user profile name

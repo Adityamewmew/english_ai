@@ -111,7 +111,11 @@ export async function evaluateVoiceSessionUsecase(payload: {
     try {
       const ev = realEvaluation as any;
       const newFacts: string[] = Array.isArray(ev?.student_facts) ? ev.student_facts : [];
+      const newInterests: string[] = Array.isArray(ev?.student_interests) ? ev.student_interests : [];
       const newWeaknesses: string[] = [];
+      if (Array.isArray(ev?.student_weaknesses)) {
+        newWeaknesses.push(...ev.student_weaknesses);
+      }
       if (ev?.cefr) newWeaknesses.push(`CEFR ${ev.cefr}`);
       if (ev?.grammar && ev.grammar < 5.5) newWeaknesses.push("grammar");
       if (ev?.fluency && ev.fluency < 5.5) newWeaknesses.push("fluency");
@@ -119,6 +123,7 @@ export async function evaluateVoiceSessionUsecase(payload: {
 
       await voiceRagService.updateStudentMemory(payload.userId, {
         newFacts,
+        newInterests,
         newWeaknesses,
         incrementCalls: true,
       });

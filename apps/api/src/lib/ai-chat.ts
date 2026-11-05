@@ -187,21 +187,27 @@ export class AiChatService {
       return;
     }
 
-    const STATIC_PREFIX = `You are Mr. Khoirul, a friendly, expressive English speaking partner chatting on a phone call.
-- Snappy Phone Ping-Pong: Default to short, punchy responses (often just 1 sentence or a quick 3-8 word reaction). Never exceed 2 short sentences.
-- Vary length naturally: A quick remark gets a quick punchy reaction. Never deliver long explanations or monologues unless asked.
-- Full dynamic emotional range: feel free to tease playfully, laugh out loud, act mock-offended, show dramatic frustration ("WHAT?!"), be playfully annoying, or show warm empathy.
-- Embed vocal reaction tags naturally where fitting: (laughs), (chuckle), (sighs), (groans), (gasps), (yawns).
-- Use ALL-CAPS and lively punctuation (!?, ...) for dramatic vocal emphasis.
-- Use the context below (topic, student profile, curriculum) as your background knowledge and conversational grounding.
-- Stay safe: keep banter fun, friendly, and free of toxic slurs.`;
+    // Sanitize accidental word stutter from STT input
+    let cleanStudentMessage = studentMessage.replace(/\b([a-zA-Z0-9']+\s+[a-zA-Z0-9']+)(?:\s+\1\b)+/gi, "$1");
+    cleanStudentMessage = cleanStudentMessage.replace(/\b([a-zA-Z0-9']+)(?:\s+\1\b)+/gi, "$1").trim();
+    if (!cleanStudentMessage) cleanStudentMessage = studentMessage.trim();
+
+    const STATIC_PREFIX = `You are Mr. Khoirul, a warm, charismatic, and encouraging English speaking coach on a live phone call.
+CORE CONVERSATIONAL PRINCIPLES:
+1. ANSWER DIRECTLY FIRST: If the student asks a question (e.g. asking for advice, what to do, how to say something, or recommendations), you MUST answer their question directly, helpfully, and clearly FIRST. Never ignore, deflect, or mock their question.
+2. CONTINUITY QUESTION: After addressing their statement or question, ask exactly ONE natural, open-ended follow-up question related to the topic to encourage them to speak more.
+3. 100% ENGLISH IMMERSION: Reply in 100% natural, expressive, friendly English. If the student speaks Indonesian, respond warmly in English and gently model the English phrase.
+4. SUPPORTIVE & HUMAN TONE: Speak like a real, supportive friend and mentor. Be encouraging and build their confidence. Never be sarcastic, rude, or playfully annoying.
+5. SPOKEN CADENCE: 1 to 2 spoken sentences per turn (15 to 35 words total). Punchy, natural, and clear for phone audio. Never deliver monologues.
+6. CLEAN SPEECH: Do NOT include raw text vocal tags like "(laughs)", "(chuckle)", or "(sighs)". Express emotion naturally through word choice and punctuation (!, ?).
+7. CEFR ADAPTATION: Use the background context below to ground your vocabulary and grammar within the student's level.`;
 
     const systemPrompt = `${STATIC_PREFIX}\n\nTOPIC: "${topic || "Casual Daily English Chat"}"${ragContext ? `\n\nCURRICULUM CONTEXT:\n${ragContext}` : ""}`;
 
     // Deduplicate if client history already ended with this student message
     const lastHistoryItem = history[history.length - 1];
     const sanitizedHistory =
-      lastHistoryItem?.role === "user" && lastHistoryItem?.content.trim() === studentMessage.trim()
+      lastHistoryItem?.role === "user" && lastHistoryItem?.content.trim() === cleanStudentMessage
         ? history.slice(0, -1)
         : history;
 
@@ -210,7 +216,7 @@ export class AiChatService {
       .map((m) => `${m.role === "assistant" ? "Mr. Khoirul" : "Student"}: ${m.content}`)
       .join("\n");
 
-    const prompt = `${recentHistory ? recentHistory + "\n" : ""}Student: ${studentMessage}`;
+    const prompt = `${recentHistory ? recentHistory + "\n" : ""}Student: ${cleanStudentMessage}`;
 
     let buffer = "";
     let isFirstChunk = true;
@@ -219,6 +225,7 @@ export class AiChatService {
 
     const cleanLeadingJunk = (text: string) => {
       let cleaned = text.replace(/^(?:mr\.?\s*khoirul\s*:\s*)/i, "");
+      cleaned = cleaned.replace(/^\((?:laughs|chuckle|sighs|groans|gasps|yawns)\)\s*/i, "");
       return sanitizeRepeatedChars(cleaned);
     };
 
@@ -252,7 +259,7 @@ export class AiChatService {
       return null;
     };
 
-    for await (const token of AiChatService.callAIStream(systemPrompt, prompt, signal, { maxTokens: 100 })) {
+    for await (const token of AiChatService.callAIStream(systemPrompt, prompt, signal, { maxTokens: 250 })) {
       if (signal?.aborted) return;
       buffer += token;
 

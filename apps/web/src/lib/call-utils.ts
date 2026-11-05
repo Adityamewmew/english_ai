@@ -70,6 +70,31 @@ export function isThoughtIncomplete(text: string): boolean {
   return false;
 }
 
+// Clean repetitive word/phrase stutters from Web Speech API cumulative hypotheses
+export function deduplicateSpeechTranscript(text: string): string {
+  if (!text) return "";
+  let cleaned = text.trim();
+
+  // Multi-pass phrase collapse (handles 4, 3, 2, and 1 word consecutive repeats)
+  for (let pass = 0; pass < 2; pass++) {
+    cleaned = cleaned.replace(/\b([a-zA-Z0-9']+\s+[a-zA-Z0-9']+\s+[a-zA-Z0-9']+\s+[a-zA-Z0-9']+)(?:\s+\1\b)+/gi, "$1");
+    cleaned = cleaned.replace(/\b([a-zA-Z0-9']+\s+[a-zA-Z0-9']+\s+[a-zA-Z0-9']+)(?:\s+\1\b)+/gi, "$1");
+    cleaned = cleaned.replace(/\b([a-zA-Z0-9']+\s+[a-zA-Z0-9']+)(?:\s+\1\b)+/gi, "$1");
+    cleaned = cleaned.replace(/\b([a-zA-Z0-9']+)(?:\s+\1\b)+/gi, "$1");
+  }
+
+  // Handle adjacent duplicate words
+  const words = cleaned.split(/\s+/);
+  const dedupedWords: string[] = [];
+  for (let i = 0; i < words.length; i++) {
+    if (i === 0 || words[i].toLowerCase() !== words[i - 1].toLowerCase()) {
+      dedupedWords.push(words[i]);
+    }
+  }
+
+  return dedupedWords.join(" ").replace(/\s+/g, " ").trim();
+}
+
 // Strict signal validation: filters out phantom mic pops, breathing, and non-speech sounds
 export function isValidStudentUtterance(text: string): boolean {
   const cleaned = text.replace(/[^a-zA-Z0-9\s]/g, "").trim();
