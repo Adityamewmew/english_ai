@@ -17,6 +17,7 @@ import {
   normalizeSentence,
   cleanAlphanumeric,
 } from "./listening-practicum-utils";
+import { fuzzyWordMatch } from "@english-ai/shared";
 import { useSession } from "@/features/auth/hooks/use-session";
 import { isUserAdmin } from "@/lib/auth-utils";
 
@@ -164,8 +165,8 @@ export function ListeningPracticumStage({
       const targetClean = cleanAlphanumeric(currentQ.targetWord || (currentQ as any).answer || "");
       const fullClean = cleanAlphanumeric(currentQ.audioText || currentQ.targetSentence || "");
 
-      // 1. Direct target word match (e.g. "tshirt" === "t-shirt")
-      let match = inputClean === targetClean;
+      // 1. Direct target word match (e.g. "tshirt" === "t-shirt") or fuzzy typo tolerance
+      let match = inputClean === targetClean || (targetClean.length >= 4 && fuzzyWordMatch(inputClean, targetClean));
 
       // 2. Full sentence match (if learner typed full sentence)
       if (!match && fullClean && (inputClean === fullClean || inputClean.includes(targetClean))) {

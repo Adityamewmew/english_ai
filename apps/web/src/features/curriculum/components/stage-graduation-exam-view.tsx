@@ -18,6 +18,7 @@ import { ExamPartWriting } from "./exam/exam-part-writing";
 import { ExamPartSpeaking } from "./exam/exam-part-speaking";
 import { ExamCertificateView } from "./exam/exam-certificate-view";
 import { isOptionCorrect } from "./concept-checks-card";
+import { normalizeSpokenText, fuzzyWordMatch } from "@english-ai/shared";
 
 interface StageGraduationExamViewProps {
   activeStepId: number;
@@ -151,12 +152,22 @@ export function StageGraduationExamView({
       }
     });
 
-    // 2. Listening
+    // 2. Listening with normalization & fuzzy match tolerance
     let lCorrect = 0;
     listeningList.forEach((q, idx) => {
       const userAns = (listeningAnswers[idx] || "").trim().toLowerCase();
       const target = (q.targetSentence || q.audioText || q.answer || "").trim().toLowerCase();
-      if (userAns && (userAns === target || target.includes(userAns))) {
+      const normUser = normalizeSpokenText(userAns);
+      const normTarget = normalizeSpokenText(target);
+
+      if (
+        userAns &&
+        (userAns === target ||
+          normUser === normTarget ||
+          target.includes(userAns) ||
+          normTarget.includes(normUser) ||
+          (normTarget.length >= 4 && fuzzyWordMatch(normUser, normTarget)))
+      ) {
         lCorrect++;
       }
     });

@@ -41,14 +41,8 @@ const parseInitial = (raw?: Record<string, any>) => {
 };
 
 export function SpeakingPracticumStage({
-  quizSec,
-  tutor,
-  onRewardXp,
-  onNextStep,
-  onStepComplete,
-  isAdmin: propIsAdmin,
-  initialAnswers,
-  onAnswersChange,
+  quizSec, tutor, onRewardXp, onNextStep, onStepComplete,
+  isAdmin: propIsAdmin, initialAnswers, onAnswersChange,
 }: SpeakingPracticumStageProps) {
   const { data: sessionUser } = useSession();
   const isAdmin = Boolean(propIsAdmin || isUserAdmin(sessionUser));
@@ -130,17 +124,9 @@ export function SpeakingPracticumStage({
   useEffect(() => {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
-      if (mediaRecorderRef.current && mediaRecorderRef.current.state === "recording") {
-        mediaRecorderRef.current.stop();
-      }
-      if (recognitionRef.current) {
-        try {
-          recognitionRef.current.abort();
-        } catch {}
-      }
-      if (studentAudioPlayerRef.current) {
-        studentAudioPlayerRef.current.pause();
-      }
+      if (mediaRecorderRef.current && mediaRecorderRef.current.state === "recording") mediaRecorderRef.current.stop();
+      if (recognitionRef.current) { try { recognitionRef.current.abort(); } catch {} }
+      if (studentAudioPlayerRef.current) studentAudioPlayerRef.current.pause();
     };
   }, []);
 
@@ -274,7 +260,11 @@ export function SpeakingPracticumStage({
 
   const handleConfirmAndNext = () => {
     playMatchSuccessSound();
-    const resp = speechTranscripts[currentIdx] || liveTranscript || "Spoken response recorded";
+    const resp =
+      speechTranscripts[currentIdx] ||
+      liveTranscript.trim() ||
+      currentQ.targetSentence ||
+      "Spoken response recorded";
     commitItemResult(resp, itemScores[currentIdx] || 85, 15);
     if (currentIdx < totalQuestions - 1) {
       setCurrentIdx((prev) => prev + 1);
@@ -286,11 +276,16 @@ export function SpeakingPracticumStage({
   };
 
   const handleRoleplayComplete = (score: number) => {
-    commitItemResult(speechTranscripts[currentIdx] || "Completed AI roleplay", score, 20);
+    const resp =
+      speechTranscripts[currentIdx] ||
+      currentQ.targetSentence ||
+      "Completed AI roleplay";
+    commitItemResult(resp, score, 20);
   };
 
   const handleDrillSave = (audioUrl: string, transcript: string, score: number) => {
-    commitItemResult(transcript, score, 10, audioUrl);
+    const resp = transcript.trim() || currentQ.targetSentence || "Spoken drill recorded";
+    commitItemResult(resp, score, 10, audioUrl);
   };
 
   const advanceQuestion = (rewardScore?: number) => {

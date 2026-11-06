@@ -4,6 +4,12 @@
  * Independent of database connections for maximum testability.
  */
 
+import {
+  normalizeSpokenText,
+  fuzzyWordMatch,
+  evaluateSpokenAccuracy,
+} from "@english-ai/shared";
+
 export interface QuestionGradingResult {
   questionId: string | number;
   question: string;
@@ -131,19 +137,26 @@ export class SubModuleGradingService {
     if (typeof q.sampleGoodAnswer === "string") possibleTargets.push(q.sampleGoodAnswer);
     if (typeof q.sampleAnswer === "string") possibleTargets.push(q.sampleAnswer);
 
+    const normUser = normalizeSpokenText(userString);
     for (const target of possibleTargets) {
       const cleanTarget = this.cleanText(target);
       if (cleanTarget && cleanUser === cleanTarget) {
         return { isCorrect: true, canonicalAnswer: target };
       }
+      const normTarget = normalizeSpokenText(target);
+      if (normTarget && normUser === normTarget) {
+        return { isCorrect: true, canonicalAnswer: target };
+      }
     }
 
-    // 2b. Semantic/Stem token overlap against target or sample good answer
+    // 2b. Semantic/Stem token overlap against target or sample good answer with fuzzy tolerance
     const userWords = cleanUser.split(" ").filter((w) => w.length > 2);
     for (const target of possibleTargets) {
       const targetWords = this.cleanText(target).split(" ").filter((w) => w.length > 2);
       if (targetWords.length > 0 && userWords.length > 0) {
-        const overlap = userWords.filter((w) => targetWords.includes(w)).length;
+        const overlap = userWords.filter((w) =>
+          targetWords.some((tw) => fuzzyWordMatch(w, tw))
+        ).length;
         if (overlap / Math.min(userWords.length, targetWords.length) >= 0.5) {
           return { isCorrect: true, canonicalAnswer: target };
         }
@@ -185,11 +198,26 @@ export class SubModuleGradingService {
       }
     }
 
-    // 3. Oral / Speaking Expected Keywords Match
+    // 3. Oral / Speaking Expected Keywords Match with Fuzzy & Accent Tolerance
     if (Array.isArray(q.expectedKeywords) && q.expectedKeywords.length > 0) {
-      const matchedCount = q.expectedKeywords.filter((kw: string) =>
-        cleanUser.includes(this.cleanText(kw))
-      ).length;
+      const targetSentence = q.targetSentence || q.targetAnswer || possibleTargets[0] || "";
+      const spokenEval = evaluateSpokenAccuracy(userString, targetSentence, q.expectedKeywords);
+      if (spokenEval.isPassed) {
+        return {
+          isCorrect: true,
+          canonicalAnswer: q.expectedKeywords.join(", "),
+        };
+      }
+
+      const matchedCount = q.expectedKeywords.filter((kw: string) => {
+        const cleanKw = this.cleanText(kw);
+        const normKw = normalizeSpokenText(kw);
+        return (
+          cleanUser.includes(cleanKw) ||
+          normUser.includes(normKw) ||
+          userWords.some((uw) => fuzzyWordMatch(uw, cleanKw))
+        );
+      }).length;
       const matchRatio = matchedCount / q.expectedKeywords.length;
       if (matchRatio >= 0.35) {
         return {
@@ -297,8 +325,8 @@ export class SubModuleGradingService {
 
     let finalScore = quizScore;
     if (params.speakingScore !== undefined && params.speakingScore >= 0) {
-      const weighted = Math.round(quizScore * 0.4 + params.speakingScore * 0.6);
-      finalScore = Math.max(quizScore, weighted);
+      // Protect oral fluency score from being dragged down by transcription anomalies
+      finalScore = Math.max(quizScore, params.speakingScore);
     }
 
     return {

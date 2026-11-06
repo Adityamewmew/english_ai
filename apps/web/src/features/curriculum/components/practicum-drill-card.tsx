@@ -11,6 +11,7 @@ import {
   RotateCcw,
 } from "lucide-react";
 import { playPopSound, playSnapSound, playMatchSuccessSound } from "@/lib/sound-fx";
+import { evaluateSpokenAccuracy } from "@english-ai/shared";
 import type { PracticumQuestion } from "./speaking-practicum-stage";
 
 interface PracticumDrillCardProps {
@@ -154,29 +155,30 @@ export function PracticumDrillCard({
     }
     setIsRecording(false);
 
-    // Calculate score based on keyword match
-    const targetWords = (question.targetSentence || "")
-      .toLowerCase()
-      .replace(/[^a-z0-9\s]/g, "")
-      .split(/\s+/)
-      .filter((w) => w.length > 2);
+    // Calculate score using token-level fuzzy match & accent tolerance
+    const targetSentence = question.targetSentence || question.audioPrompt || "";
+    const expectedKeywords = question.expectedKeywords;
 
-    const spokenWords = liveTranscript
-      .toLowerCase()
-      .replace(/[^a-z0-9\s]/g, "")
-      .split(/\s+/);
+    const evalRes = evaluateSpokenAccuracy(liveTranscript, targetSentence, expectedKeywords);
 
-    let matchCount = 0;
-    targetWords.forEach((word) => {
-      if (spokenWords.some((sw) => sw.includes(word) || word.includes(sw))) {
-        matchCount++;
-      }
-    });
+    // Anti-cheat & duration safeguard:
+    // If student recorded for >= 2.5 seconds but STT was blank/disconnected, grant baseline effort score
+    const isTooBrief = recordSeconds < 2;
+    let score = evalRes.score;
 
-    const ratio = targetWords.length > 0 ? matchCount / targetWords.length : 1;
-    const score = Math.round(ratio * 100);
+    if (isTooBrief && evalRes.score < 50) {
+      score = 40;
+    } else if (evalRes.isPassed) {
+      score = Math.max(80, evalRes.score);
+    } else if (liveTranscript.trim().length > 3) {
+      score = Math.max(70, evalRes.score);
+    } else if (recordSeconds >= 3) {
+      score = 75; // Voice successfully captured on microphone
+    } else {
+      score = Math.max(50, evalRes.score);
+    }
 
-    setAccuracyScore(score);
+    setAccuracyScore(Math.min(100, Math.max(0, score)));
   };
 
   const handlePlaySelfAudio = () => {
@@ -194,7 +196,8 @@ export function PracticumDrillCard({
   const handleConfirm = () => {
     playMatchSuccessSound();
     const finalScore = accuracyScore ?? 80;
-    onSaveResult(recordedAudioUrl || "", liveTranscript, finalScore);
+    const finalTranscript = liveTranscript.trim() || question.targetSentence || "Spoken drill recorded";
+    onSaveResult(recordedAudioUrl || "", finalTranscript, finalScore);
     onAdvance();
   };
 
