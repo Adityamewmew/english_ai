@@ -150,12 +150,27 @@ export class SubModuleGradingService {
       }
     }
 
-    // 2c. Open-ended Rubric check for writing practicum prompts
+    // 2c. Category-specific Speaking & Roleplay Handling
+    if (q.category === "roleplay") {
+      const isRoleplayDone = cleanUser.includes("completed ai roleplay") || userWords.length >= 2;
+      if (isRoleplayDone) {
+        return { isCorrect: true, canonicalAnswer: q.targetSentence || "AI Roleplay completed" };
+      }
+    }
+
+    if (q.category === "storytelling") {
+      if (userWords.length >= 4) {
+        return { isCorrect: true, canonicalAnswer: q.targetSentence || "Storytelling response accepted" };
+      }
+    }
+
+    // 2d. Open-ended Rubric check for writing/speaking practicum prompts
     const isOpenEnded = Boolean(
       q.criteria ||
       q.sampleGoodAnswer ||
       q.sampleAnswer ||
-      /answer this question|complete sentence|paragraph|conversation|how do you feel|describe/i.test(
+      q.category === "storytelling" ||
+      /answer this question|complete sentence|paragraph|conversation|how do you feel|describe|speak|storytelling|voice|tell me/i.test(
         q.prompt || q.promptText || q.instruction || ""
       )
     );
@@ -176,7 +191,7 @@ export class SubModuleGradingService {
         cleanUser.includes(this.cleanText(kw))
       ).length;
       const matchRatio = matchedCount / q.expectedKeywords.length;
-      if (matchRatio >= 0.5) {
+      if (matchRatio >= 0.35) {
         return {
           isCorrect: true,
           canonicalAnswer: q.expectedKeywords.join(", "),
@@ -282,7 +297,8 @@ export class SubModuleGradingService {
 
     let finalScore = quizScore;
     if (params.speakingScore !== undefined && params.speakingScore >= 0) {
-      finalScore = Math.round(quizScore * 0.5 + params.speakingScore * 0.5);
+      const weighted = Math.round(quizScore * 0.4 + params.speakingScore * 0.6);
+      finalScore = Math.max(quizScore, weighted);
     }
 
     return {

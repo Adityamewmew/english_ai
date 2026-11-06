@@ -23,14 +23,9 @@ export interface PracticumQuestion {
 }
 
 interface SpeakingPracticumStageProps {
-  quizSec: any;
-  tutor: any;
-  onRewardXp: (amount: number) => void;
-  onNextStep?: () => void;
-  onStepComplete?: () => void;
-  isAdmin?: boolean;
-  initialAnswers?: Record<string, any>;
-  onAnswersChange?: (answers: Record<string, any>, speakingScore?: number) => void;
+  quizSec: any; tutor: any; onRewardXp: (amount: number) => void;
+  onNextStep?: () => void; onStepComplete?: () => void; isAdmin?: boolean;
+  initialAnswers?: Record<string, any>; onAnswersChange?: (answers: Record<string, any>, speakingScore?: number) => void;
 }
 
 const parseInitial = (raw?: Record<string, any>) => {
@@ -62,15 +57,9 @@ export function SpeakingPracticumStage({
   if (rawQuestions.length === 0) {
     return (
       <div className="p-8 rounded-[24px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-4">
-        <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">
-          No practicum questions available for this session yet.
-        </p>
+        <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">No practicum questions available for this session yet.</p>
         {onNextStep && (
-          <button
-            type="button"
-            onClick={onNextStep}
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs sm:text-sm cursor-pointer shadow-xs transition-all"
-          >
+          <button type="button" onClick={onNextStep} className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white font-bold text-xs sm:text-sm cursor-pointer shadow-xs transition-all">
             <span>Complete Mission</span>
             <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
           </button>
@@ -79,27 +68,47 @@ export function SpeakingPracticumStage({
     );
   }
 
-  const [currentIdx, setCurrentIdx] = useState(0);
+  const initialData = parseInitial(initialAnswers);
+  const [currentIdx, setCurrentIdx] = useState(() => {
+    const firstUnfinished = rawQuestions.findIndex((_, idx) => !initialData.done[idx]);
+    return firstUnfinished !== -1 ? firstUnfinished : 0;
+  });
   const [recordings, setRecordings] = useState<Record<number, string>>({});
-  const [completedItems, setCompletedItems] = useState<Record<number, boolean>>(() => parseInitial(initialAnswers).done);
+  const [completedItems, setCompletedItems] = useState<Record<number, boolean>>(() => initialData.done);
   const [itemScores, setItemScores] = useState<Record<number, number>>({});
   const [selectedInspirations, setSelectedInspirations] = useState<Record<number, number>>({});
-  const [speechTranscripts, setSpeechTranscripts] = useState<Record<number, string>>(() => parseInitial(initialAnswers).trans);
+  const [speechTranscripts, setSpeechTranscripts] = useState<Record<number, string>>(() => initialData.trans);
   const [liveTranscript, setLiveTranscript] = useState("");
+
+  const [isCompletedAll, setIsCompletedAll] = useState(() => {
+    return rawQuestions.length > 0 && Object.keys(initialData.done).length >= rawQuestions.length;
+  });
 
   useEffect(() => {
     if (initialAnswers && Object.keys(initialAnswers).length > 0) {
       const { trans, done } = parseInitial(initialAnswers);
       setSpeechTranscripts((prev) => ({ ...trans, ...prev }));
-      setCompletedItems((prev) => ({ ...done, ...prev }));
+      setCompletedItems((prev) => {
+        const nextDone = { ...done, ...prev };
+        if (rawQuestions.length > 0 && Object.keys(nextDone).length >= rawQuestions.length) {
+          setIsCompletedAll(true);
+        }
+        return nextDone;
+      });
+      setCurrentIdx((curr) => {
+        if (curr === 0) {
+          const firstUnfinished = rawQuestions.findIndex((_, idx) => !done[idx]);
+          return firstUnfinished !== -1 ? firstUnfinished : curr;
+        }
+        return curr;
+      });
     }
-  }, [initialAnswers]);
+  }, [initialAnswers, rawQuestions]);
 
   const [isRecording, setIsRecording] = useState(false);
   const [recordSeconds, setRecordSeconds] = useState(0);
   const [isPlayingModel, setIsPlayingModel] = useState(false);
   const [isPlayingSelf, setIsPlayingSelf] = useState(false);
-  const [isCompletedAll, setIsCompletedAll] = useState(false);
   const [micError, setMicError] = useState(false);
 
   useEffect(() => {
@@ -301,13 +310,8 @@ export function SpeakingPracticumStage({
 
   const handleResetPracticum = () => {
     playPopSound();
-    setCurrentIdx(0);
-    setRecordings({});
-    setCompletedItems({});
-    setItemScores({});
-    setSelectedInspirations({});
-    setSpeechTranscripts({});
-    setIsCompletedAll(false);
+    setCurrentIdx(0); setRecordings({}); setCompletedItems({});
+    setItemScores({}); setSelectedInspirations({}); setSpeechTranscripts({}); setIsCompletedAll(false);
   };
 
   const renderCategoryIcon = (cat: string) => {
@@ -482,33 +486,26 @@ export function SpeakingPracticumStage({
                     Stop Story (00:{recordSeconds < 10 ? `0${recordSeconds}` : recordSeconds})
                   </span>
                 </button>
-              ) : recordings[currentIdx] ? (
+              ) : (recordings[currentIdx] || speechTranscripts[currentIdx] || completedItems[currentIdx]) ? (
                 <>
-                  {/* Primary Continue Button */}
                   <button
                     type="button"
                     onClick={handleConfirmAndNext}
                     className="flex items-center gap-2 px-6 py-2.5 rounded-xl btn-skeuo-yellow text-[#0F172A] text-xs font-black shadow-md transition-all active:scale-95 cursor-pointer font-heading"
                   >
-                    <span>
-                      {currentIdx < totalQuestions - 1
-                        ? "Confirm & Continue to Next Question"
-                        : "Confirm & View Speaking Summary"}
-                    </span>
+                    <span>{currentIdx < totalQuestions - 1 ? "Confirm & Continue to Next Question" : "Confirm & View Speaking Summary"}</span>
                     <ArrowRight className="w-4 h-4 text-[#0D3B66]" />
                   </button>
-
-                  {/* Playback Student Audio */}
-                  <button
-                    type="button"
-                    onClick={handlePlayStudentAudio}
-                    className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold shadow-xs transition-all hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer active:scale-95"
-                  >
-                    <Headphones className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A]" />
-                    <span>{isPlayingSelf ? "Playing..." : "Play Recording"}</span>
-                  </button>
-
-                  {/* Distinct Re-record outline button */}
+                  {recordings[currentIdx] && (
+                    <button
+                      type="button"
+                      onClick={handlePlayStudentAudio}
+                      className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold shadow-xs transition-all hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer active:scale-95"
+                    >
+                      <Headphones className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A]" />
+                      <span>{isPlayingSelf ? "Playing..." : "Play Recording"}</span>
+                    </button>
+                  )}
                   <button
                     type="button"
                     onClick={handleStartRecord}
@@ -520,7 +517,6 @@ export function SpeakingPracticumStage({
                 </>
               ) : (
                 <>
-                  {/* Start Recording Primary CTA */}
                   <button
                     type="button"
                     onClick={handleStartRecord}
@@ -529,8 +525,6 @@ export function SpeakingPracticumStage({
                     <Mic className="w-4 h-4 text-[#0D3B66]" />
                     <span>Tap &amp; Start Speaking Freely</span>
                   </button>
-
-                  {/* Practice Aloud / Independent fallback */}
                   <button
                     type="button"
                     onClick={() => advanceQuestion(85)}

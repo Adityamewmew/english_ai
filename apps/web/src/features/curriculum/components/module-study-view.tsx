@@ -286,20 +286,17 @@ export function ModuleStudyView({
         if (currentSub?.id) {
           const res = await submitSubModuleAction(
             currentSub.id,
-            {
-              answers: stageAnswers,
-              speakingScore: stageSpeakingScore,
-            },
+            { answers: stageAnswers, speakingScore: stageSpeakingScore },
             moduleId
           );
           if (res?.data?.passed) {
             playFanfareSound();
             if (typeof window !== "undefined" && currentSub?.id) {
-              try {
-                localStorage.removeItem(`eddys_draft_${currentSub.id}`);
-              } catch {}
+              try { localStorage.removeItem(`eddys_draft_${currentSub.id}`); } catch {}
             }
             onRefresh?.();
+          } else if (res?.data && !res.data.passed) {
+            alert(`Skor Anda: ${res.data.score ?? 0}/100 (KKM: 75). Silakan lengkapi atau ulangi latihan untuk lulus.`);
           }
         }
       } catch (err) {
