@@ -70,8 +70,10 @@ export function ModuleStageViewport({
   onAnswersChange,
   onSelectStep,
 }: ModuleStageViewportProps) {
-  const isExamEnd = (skillType === "assessment" || skillType === "exam") && activeStepId === totalSteps;
-  const effectiveCanProceed = isAdmin || canProceed || isExamEnd;
+  const isExam = skillType === "assessment" || skillType === "exam";
+  const isExamEnd = isExam && activeStepId === totalSteps;
+  const isExamPreSubmit = isExam && activeStepId === totalSteps - 1;
+  const effectiveCanProceed = isAdmin || canProceed || isExamEnd || isExamPreSubmit;
   return (
     <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between">
       {/* 1. Specialized Stage Activity Canvas based on skillType */}
@@ -90,6 +92,7 @@ export function ModuleStageViewport({
             onSelectStep={onSelectStep}
             initialAnswers={initialAnswers}
             onAnswersChange={onAnswersChange}
+            isAdmin={isAdmin}
           />
         ) : skillType === "listening" ? (
           <StageListeningView
@@ -239,6 +242,11 @@ export function ModuleStageViewport({
                 <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
                 <span>Finish Mission</span>
               </>
+            ) : isExamPreSubmit ? (
+              <>
+                <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
+                <span>Kumpulkan Ujian</span>
+              </>
             ) : (
               <>
                 <span>Continue</span>
@@ -313,6 +321,11 @@ export function ModuleStageViewport({
             <>
               <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
               <span>Selesai</span>
+            </>
+          ) : isExamPreSubmit ? (
+            <>
+              <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
+              <span>Kumpulkan Ujian</span>
             </>
           ) : (
             <>

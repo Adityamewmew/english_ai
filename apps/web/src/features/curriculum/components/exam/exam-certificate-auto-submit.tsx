@@ -18,6 +18,7 @@ interface ExamCertificateViewWithAutoSubmitProps {
   setIsExamSubmitted: (val: boolean) => void;
   hasSubmittedRef: React.MutableRefObject<boolean>;
   onSelectStep?: (stepId: number) => void;
+  isAdmin?: boolean;
 }
 
 export function ExamCertificateViewWithAutoSubmit({
@@ -33,6 +34,7 @@ export function ExamCertificateViewWithAutoSubmit({
   setIsExamSubmitted,
   hasSubmittedRef,
   onSelectStep,
+  isAdmin = false,
 }: ExamCertificateViewWithAutoSubmitProps) {
   const answeredCount = React.useMemo(() => {
     return Object.keys(examAnswers || {}).filter(
@@ -41,9 +43,9 @@ export function ExamCertificateViewWithAutoSubmit({
   }, [examAnswers]);
 
   React.useEffect(() => {
-    // SECURITY SAFEGUARD: Never auto-submit if no questions were answered
+    // SECURITY SAFEGUARD: Never auto-submit if no questions were answered (unless admin testing)
     // Prevents refreshed pages or empty sessions from zeroing out user progress
-    if (answeredCount === 0) return;
+    if (answeredCount === 0 && !isAdmin) return;
 
     if (!hasSubmittedRef.current && onSubmitExam) {
       hasSubmittedRef.current = true;
@@ -56,9 +58,9 @@ export function ExamCertificateViewWithAutoSubmit({
         })
         .finally(() => setIsSubmittingExam(false));
     }
-  }, [onSubmitExam, scores.totalScore, examAnswers, hasSubmittedRef, setIsSubmittingExam, setIsExamSubmitted, answeredCount]);
+  }, [onSubmitExam, scores.totalScore, examAnswers, hasSubmittedRef, setIsSubmittingExam, setIsExamSubmitted, answeredCount, isAdmin]);
 
-  if (answeredCount === 0 && !scores.isPassed && !isExamSubmitted) {
+  if (answeredCount === 0 && !scores.isPassed && !isExamSubmitted && !isAdmin) {
     return (
       <div className="space-y-6 max-w-2xl mx-auto py-8 text-center">
         <div className="w-16 h-16 rounded-3xl bg-amber-500/10 text-amber-600 inline-flex items-center justify-center">

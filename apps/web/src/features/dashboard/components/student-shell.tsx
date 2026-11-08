@@ -5,6 +5,8 @@ import { StudentSidebarRail } from "./student-sidebar-rail";
 import { StudentTopbar } from "./student-topbar";
 import { StudentMobileHeader } from "./student-mobile-header";
 import { StudentMobileBottomNav } from "./student-mobile-bottom-nav";
+import { SessionIdleTimeoutModal } from "./session-idle-timeout-modal";
+import { useIdleTimeout } from "../hooks/use-idle-timeout";
 
 interface StudentShellProps {
   children: React.ReactNode;
@@ -22,6 +24,7 @@ export function StudentShell({
   hideBottomNav = false,
 }: StudentShellProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const { isWarningOpen, remainingSeconds, resetTimer, logout } = useIdleTimeout();
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800 flex flex-col lg:flex-row antialiased">
@@ -65,6 +68,14 @@ export function StudentShell({
             <StudentMobileBottomNav />
           </div>
         )}
+
+        {/* Global Idle Timeout Warning Guard */}
+        <SessionIdleTimeoutModal
+          isOpen={isWarningOpen}
+          remainingSeconds={remainingSeconds}
+          onContinue={resetTimer}
+          onLogout={logout}
+        />
       </div>
     </div>
   );

@@ -23,6 +23,8 @@ import { playFanfareSound } from "@/lib/sound-fx";
 import { stopTutorSpeech } from "@/lib/tutor-voice";
 import { useSession } from "@/features/auth/hooks/use-session";
 import { isUserAdmin } from "@/lib/auth-utils";
+import { getPlaylistSteps, countExamAnswers } from "../utils/module-study-utils";
+import { ExamSubmitConfirmModal } from "./exam/exam-submit-confirm-modal";
 
 interface ModuleStudyViewProps {
   moduleId: string;
@@ -85,6 +87,7 @@ export function ModuleStudyView({
   const [stageAnswers, setStageAnswers] = useState<Record<string, any>>({});
   const [stageSpeakingScore, setStageSpeakingScore] = useState<number | undefined>(undefined);
   const [lastSavedTime, setLastSavedTime] = useState<string | null>(null);
+  const [isExamConfirmOpen, setIsExamConfirmOpen] = useState(false);
 
   // Two-way URL synchronization: keep browser URL in sync with active sub-module without page reload
   React.useEffect(() => {
@@ -180,62 +183,14 @@ export function ModuleStudyView({
   const practiceSec = currentSub?.sections?.find((s: any) => s.sectionType === "practice");
   const quizSec = currentSub?.sections?.find((s: any) => s.sectionType === "quiz");
 
+  const isExam = skillType === "assessment" || skillType === "exam";
+
   // Dynamic playlist steps uniquely customized for each skill type
   const playlistSteps: PlaylistStepItem[] = useMemo(() => {
-    if (skillType === "assessment" || skillType === "exam") {
-      return [
-        { id: 1, title: "1. Assessment Guide & Criteria", type: "Overview", duration: "3 min", isCompleted: completedSteps.includes(1) },
-        { id: 2, title: "2. Part 1: Reading Comprehension (15 Questions)", type: "Reading", duration: "12 min", isCompleted: completedSteps.includes(2) },
-        { id: 3, title: "3. Part 2: Auditory Listening (15 Questions)", type: "Listening", duration: "12 min", isCompleted: completedSteps.includes(3) },
-        { id: 4, title: "4. Part 3: Written Production (10 Questions)", type: "Writing", duration: "10 min", isCompleted: completedSteps.includes(4) },
-        { id: 5, title: "5. Part 4: Spoken Fluency (15 Questions)", type: "Speaking", duration: "12 min", isCompleted: completedSteps.includes(5) },
-        { id: 6, title: "6. Scorecard & Official Certificate", type: "Certificate", duration: "3 min", isCompleted: completedSteps.includes(6) },
-      ];
-    }
-
-    if (skillType === "listening") {
-      return [
-        { id: 1, title: "1. Scenario & Briefing", type: "Context", duration: "3 min", isCompleted: completedSteps.includes(1) },
-        { id: 2, title: "2. Multi-Speaker Audio Player", type: "Dialogue", duration: "6 min", isCompleted: completedSteps.includes(2) },
-        { id: 3, title: "3. Spoken Contraction Trainer", type: "Ear Trainer", duration: "4 min", isCompleted: completedSteps.includes(3) },
-        { id: 4, title: "4. Audio Dictation & Echo", type: "Practice", duration: "5 min", isCompleted: completedSteps.includes(4) },
-        { id: 5, title: "5. Listening Practicum (10 Tasks)", type: "Practicum", duration: "6 min", isCompleted: completedSteps.includes(5) },
-      ];
-    }
-
-    if (skillType === "writing") {
-      return [
-        { id: 1, title: "1. Sentence Anatomy Formula", type: "Mechanics", duration: "3 min", isCompleted: completedSteps.includes(1) },
-        { id: 2, title: "2. Spot & Fix Writing Mechanics", type: "Interactive", duration: "4 min", isCompleted: completedSteps.includes(2) },
-        { id: 3, title: "3. Word Chip Sentence Builder", type: "Mini-Game", duration: "5 min", isCompleted: completedSteps.includes(3) },
-        { id: 4, title: "4. Profile Writing Lab", type: "Writing Lab", duration: "6 min", isCompleted: completedSteps.includes(4) },
-        { id: 5, title: "5. Writing Syntax Evaluation", type: "Evaluation", duration: "5 min", isCompleted: completedSteps.includes(5) },
-      ];
-    }
-
-    if (skillType === "speaking") {
-      return [
-        { id: 1, title: "1. Intonation & Pitch Guide", type: "Phonetics", duration: "3 min", isCompleted: completedSteps.includes(1) },
-        { id: 2, title: "2. Syllable Stress Rhythm Drills", type: "Rhythm Pads", duration: "4 min", isCompleted: completedSteps.includes(2) },
-        { id: 3, title: "3. Oral Reflex Sentence Drills", type: "Listen & Repeat", duration: "5 min", isCompleted: completedSteps.includes(3) },
-        { id: 4, title: "4. Live AI Tutor Roleplay", type: "Voice Call", duration: "6 min", isCompleted: completedSteps.includes(4) },
-        { id: 5, title: "5. Speaking Mastery Evaluation", type: "Assessment", duration: "4 min", isCompleted: completedSteps.includes(5) },
-      ];
-    }
-
-    // Default: reading (Natural Pedagogical Flow: Vocab -> Story -> Puzzle -> Grammar -> Quiz)
-    return [
-      { id: 1, title: "1. Mission Briefing & Story Context", type: "Overview", duration: "3 min", isCompleted: completedSteps.includes(1) },
-      { id: 2, title: "2. 3D Key Vocab Flashcards", type: "Interactive", duration: "4 min", isCompleted: completedSteps.includes(2) },
-      { id: 3, title: "3. Guided Karaoke Reading", type: "Audio Read", duration: "6 min", isCompleted: completedSteps.includes(3) },
-      { id: 4, title: "4. Match Madness Game", type: "Mini-Game", duration: "5 min", isCompleted: completedSteps.includes(4) },
-      { id: 5, title: "5. Contraction Morpher Machine", type: "Grammar Lab", duration: "4 min", isCompleted: completedSteps.includes(5) },
-      { id: 6, title: "6. Grammar Rules & Formulas", type: "Theory", duration: "5 min", isCompleted: completedSteps.includes(6) },
-      { id: 7, title: "7. Reading Comprehension Quiz", type: "Evaluation", duration: "5 min", isCompleted: completedSteps.includes(7) },
-    ];
+    return getPlaylistSteps(skillType, completedSteps);
   }, [skillType, completedSteps]);
 
-  const isExamEnd = (skillType === "assessment" || skillType === "exam") && activeStepId === playlistSteps.length;
+  const isExamEnd = isExam && activeStepId === playlistSteps.length;
   const canProceed = isAdmin || isCurrentStepComplete || completedSteps.includes(activeStepId) || activeStepId === 1 || isExamEnd;
 
   const handleStepComplete = () => {
@@ -245,8 +200,21 @@ export function ModuleStudyView({
 
   const maxCompletedStep = completedSteps.length > 0 ? Math.max(...completedSteps) : 1;
 
+  const handleConfirmExamSubmit = () => {
+    setIsExamConfirmOpen(false);
+    setCompletedSteps((prev) => Array.from(new Set([...prev, 5])));
+    setActiveStepId(6);
+    setIsCurrentStepComplete(true);
+    window.scrollTo({ top: 120, behavior: "smooth" });
+  };
+
   const handleSelectStep = (stepId: number) => {
     if (!isAdmin && stepId > maxCompletedStep + 1 && !completedSteps.includes(stepId)) {
+      return;
+    }
+    // Intercept transition to Step 6 (Scorecard) for exams
+    if (isExam && stepId === 6) {
+      setIsExamConfirmOpen(true);
       return;
     }
     setActiveStepId(stepId);
@@ -254,13 +222,19 @@ export function ModuleStudyView({
       isAdmin ||
       completedSteps.includes(stepId) ||
       stepId === 1 ||
-      ((skillType === "assessment" || skillType === "exam") && stepId === playlistSteps.length)
+      (isExam && stepId === playlistSteps.length)
     );
     window.scrollTo({ top: 120, behavior: "smooth" });
   };
 
   const handleNextStep = async () => {
     if (!canProceed) return;
+
+    // Intercept submit on Step 5 of exam before transitioning to Step 6
+    if (isExam && activeStepId === 5) {
+      setIsExamConfirmOpen(true);
+      return;
+    }
 
     setCompletedSteps((prev) => Array.from(new Set([...prev, activeStepId])));
     setXpPoints((prev) => prev + 15);
@@ -271,11 +245,11 @@ export function ModuleStudyView({
       setIsCurrentStepComplete(
         isAdmin ||
         completedSteps.includes(nextId) ||
-        ((skillType === "assessment" || skillType === "exam") && nextId === playlistSteps.length)
+        (isExam && nextId === playlistSteps.length)
       );
       window.scrollTo({ top: 120, behavior: "smooth" });
     } else {
-      if (skillType === "assessment" || skillType === "exam") {
+      if (isExam) {
         setActiveMissionId(null);
         window.scrollTo({ top: 0, behavior: "smooth" });
         return;
@@ -592,6 +566,16 @@ export function ModuleStudyView({
             </div>
           )}
         </div>
+
+        {/* Global Intercept Modal: Confirms exam submission from bottom dock or sidebar */}
+        <ExamSubmitConfirmModal
+          isOpen={isExamConfirmOpen}
+          onClose={() => setIsExamConfirmOpen(false)}
+          onConfirm={handleConfirmExamSubmit}
+          totalAnswered={countExamAnswers(stageAnswers)}
+          grandTotal={55}
+          isAdmin={isAdmin}
+        />
     </StudentShell>
   );
 }

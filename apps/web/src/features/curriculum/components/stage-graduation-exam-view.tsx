@@ -35,6 +35,7 @@ interface StageGraduationExamViewProps {
   onSelectStep?: (stepId: number) => void;
   initialAnswers?: Record<string, any>;
   onAnswersChange?: (answers: Record<string, any>, speakingScore?: number) => void;
+  isAdmin?: boolean;
 }
 
 export function StageGraduationExamView({
@@ -50,6 +51,7 @@ export function StageGraduationExamView({
   onSelectStep,
   initialAnswers,
   onAnswersChange,
+  isAdmin = false,
 }: StageGraduationExamViewProps) {
   const rawParts = quizSec?.content?.parts;
   const rawQuestions: any[] = useMemo(() => {
@@ -515,6 +517,7 @@ export function StageGraduationExamView({
           grandTotal={grandTotal}
           readingAnswered={Object.keys(readingAnswers).length}
           listeningAnswered={Object.keys(listeningAnswers).length}
+          isAdmin={isAdmin}
         />
       </div>
     );
@@ -536,6 +539,7 @@ export function StageGraduationExamView({
       setIsExamSubmitted={setIsExamSubmitted}
       hasSubmittedRef={hasSubmittedRef}
       onSelectStep={onSelectStep}
+      isAdmin={isAdmin}
     />
   );
 }
