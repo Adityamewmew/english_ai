@@ -12,7 +12,6 @@ import {
   MessageSquare,
   Loader2,
   AlertCircle,
-  Sparkles,
   ShieldCheck,
   Lock,
   LogOut,
@@ -333,7 +332,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
                       onClick={() => setIsUnlockModalOpen(true)}
                       className="flex-2 py-3.5 px-6 rounded-2xl bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold text-sm border-b-4 border-b-indigo-800 active:border-b-0 active:translate-y-1 shadow-sm transition-all flex items-center justify-center gap-2"
                     >
-                      <Sparkles className="w-4 h-4" />
+                      <ShieldCheck className="w-4 h-4" />
                       Unlock Class {baseCefr} ({formatRupiah(targetClass.price)})
                     </button>
                     <Link href="/dashboard" className="flex-1">

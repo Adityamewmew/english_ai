@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import {
@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { doLogout } from "@/app/(auth)/auth.actions";
 import { useUpdateProfile, useUserProfile } from "@/features/users/hooks/use-user";
-import { useSkipBeginner } from "@/features/placement/hooks/use-placement";
+import { useSkipBeginner, useLatestPlacement } from "@/features/placement/hooks/use-placement";
 import { OnboardingStepProfile, OnboardingProfileData } from "./onboarding-step-profile";
 import { OnboardingStepDevice } from "./onboarding-step-device";
 import { OnboardingStepBriefing } from "./onboarding-step-briefing";
@@ -32,8 +32,18 @@ interface OnboardingWizardViewProps {
 export function OnboardingWizardView({ session }: OnboardingWizardViewProps) {
   const router = useRouter();
   const { data: userProfile } = useUserProfile(session.userId);
+  const { data: latestPlacement } = useLatestPlacement(session.userId);
   const updateProfileMutation = useUpdateProfile(session.userId);
   const skipBeginnerMutation = useSkipBeginner();
+
+  // Client-side guard: redirect students who already finished placement or onboarding
+  useEffect(() => {
+    if (latestPlacement) {
+      router.replace("/dashboard");
+    } else if (userProfile?.memory?.onboardingCompleted) {
+      router.replace("/placement");
+    }
+  }, [latestPlacement, userProfile, router]);
 
   const [currentStep, setCurrentStep] = useState<1 | 2 | 3>(1);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);

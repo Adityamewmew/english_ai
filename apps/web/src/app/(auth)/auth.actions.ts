@@ -5,6 +5,7 @@ import { setSession, clearSession } from "@/lib/session";
 import { loginSchema, registerSchema } from "@/lib/validations/auth";
 import { isUserAdmin } from "@english-ai/shared";
 import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 
 export async function doLogin(formData: FormData) {
   const raw = Object.fromEntries(formData);
@@ -32,8 +33,14 @@ export async function doLogin(formData: FormData) {
     });
 
     const isStudent = user.role !== "admin" && accessType === 2;
-    if (isStudent && !(user as any)?.memory?.onboardingCompleted) {
-      redirectPath = "/onboarding";
+    if (isStudent) {
+      const userMemory = (user as any)?.memory;
+      const userCefr = user.currentCefr;
+      if (!userMemory?.onboardingCompleted && (!userCefr || userCefr === "A1")) {
+        redirectPath = "/onboarding";
+      } else {
+        redirectPath = "/dashboard";
+      }
     } else {
       redirectPath = "/dashboard";
     }
@@ -136,34 +143,65 @@ export async function processGoogleCallbackAction(userData: {
   let targetPath = "/dashboard";
   if (!isAdmin) {
     try {
-      const memory = (userData as any).memory;
-      if (!memory?.onboardingCompleted) {
-        targetPath = "/onboarding";
-      } else {
-        const internalUrl =
-          process.env.INTERNAL_API_URL ||
-          process.env.API_URL ||
-          `http://127.0.0.1:${process.env.PORT_API || "3003"}`;
-        const apiUrl = (internalUrl.includes("eddys.drimland.my.id") || internalUrl.startsWith("https://"))
-          ? `http://127.0.0.1:${process.env.PORT_API || "3003"}`
-          : internalUrl.replace(/\/$/, "");
+      const cookieStore = await cookies();
+      const cookieHeader = cookieStore.toString();
 
-        const res = await fetch(`${apiUrl}/api/placement/latest/${userData.id}`, {
-          headers: { "Content-Type": "application/json" },
-          cache: "no-store",
-        });
+      const internalUrl =
+        process.env.INTERNAL_API_URL ||
+        process.env.API_URL ||
+        `http://127.0.0.1:${process.env.PORT_API || "3003"}`;
+      const apiUrl = (internalUrl.includes("eddys.drimland.my.id") || internalUrl.startsWith("https://"))
+        ? `http://127.0.0.1:${process.env.PORT_API || "3003"}`
+        : internalUrl.replace(/\/$/, "");
 
-        if (res.ok) {
-          const json = await res.json();
-          if (!json.data) {
-            targetPath = "/placement";
-          }
-        } else {
-          targetPath = "/placement";
+      const headers = {
+        "Content-Type": "application/json",
+        Cookie: cookieHeader,
+      };
+
+      // 1. Fetch user profile from API to inspect persistent memory and currentCefr
+      let userMemory: any = null;
+      let userCefr = currentCefr;
+
+      const userRes = await fetch(`${apiUrl}/api/user/${userData.id}`, {
+        headers,
+        cache: "no-store",
+      });
+
+      if (userRes.ok) {
+        const userJson = await userRes.json();
+        userMemory = userJson?.data?.memory;
+        if (userJson?.data?.currentCefr) {
+          userCefr = userJson.data.currentCefr;
         }
       }
+
+      // 2. Fetch latest placement result
+      let hasPlacement = false;
+      const placementRes = await fetch(`${apiUrl}/api/placement/latest/${userData.id}`, {
+        headers,
+        cache: "no-store",
+      });
+
+      if (placementRes.ok) {
+        const placementJson = await placementRes.json();
+        hasPlacement = !!placementJson?.data;
+      }
+
+      // Decision matrix:
+      // A. If placement result exists OR CEFR is already advanced beyond default A1 -> /dashboard
+      if (hasPlacement || (userCefr && userCefr !== "A1")) {
+        targetPath = "/dashboard";
+      } else if (userMemory?.onboardingCompleted) {
+        // B. Onboarding complete, waiting for placement test -> /placement
+        targetPath = "/placement";
+      } else {
+        // C. Truly fresh student who hasn't completed onboarding -> /onboarding
+        targetPath = "/onboarding";
+      }
     } catch {
-      targetPath = "/onboarding";
+      // Default to /dashboard rather than trapping an authenticated student
+      targetPath = "/dashboard";
     }
   }
 
