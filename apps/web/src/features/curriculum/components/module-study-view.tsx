@@ -9,15 +9,7 @@ import { ModuleStageViewport } from "./module-stage-viewport";
 import { ModuleMissionsHub } from "./module-missions-hub";
 import { SubmoduleTutorWelcomeStage } from "./submodule-tutor-welcome-stage";
 import {
-  BookOpen,
-  Headphones,
-  PenTool,
-  Mic,
-  ChevronRight,
-  ArrowLeft,
-  CheckCircle2,
-  Lock,
-  RotateCcw,
+  BookOpen, Headphones, PenTool, Mic, ChevronRight, ArrowLeft, CheckCircle2, Lock, RotateCcw,
 } from "lucide-react";
 import { submitSubModuleAction } from "@/app/(student)/modules/modules.actions";
 import { playFanfareSound } from "@/lib/sound-fx";
@@ -91,6 +83,7 @@ export function ModuleStudyView({
     score: number;
     passed: boolean;
     passingScore: number;
+    questionResults?: any[];
   } | null>(null);
 
   // Two-way URL synchronization: keep browser URL in sync with active sub-module without page reload
@@ -193,19 +186,28 @@ export function ModuleStudyView({
 
   const maxCompletedStep = completedSteps.length > 0 ? Math.max(...completedSteps) : 1;
 
-  const handleRetakeMission = useCallback(() => {
+  const handleRetakeMission = useCallback((resetToStep1 = false) => {
     if (typeof window !== "undefined" && currentSub?.id) {
-      try { localStorage.removeItem(`eddys_draft_${currentSub.id}`); } catch {}
+      try {
+        if (resetToStep1) {
+          localStorage.removeItem(`eddys_draft_${currentSub.id}`);
+        } else {
+          const draft = { activeStepId, completedSteps, stageAnswers: {}, stageSpeakingScore: undefined, timestamp: Date.now() };
+          localStorage.setItem(`eddys_draft_${currentSub.id}`, JSON.stringify(draft));
+        }
+      } catch {}
     }
-    setActiveStepId(1);
-    setCompletedSteps([1]);
+    if (resetToStep1) {
+      setActiveStepId(1);
+      setCompletedSteps([1]);
+    }
     setIsCurrentStepComplete(false);
     setStageAnswers({});
     setStageSpeakingScore(undefined);
     setLastSavedTime(null);
     setResultModalState(null);
     window.scrollTo({ top: 120, behavior: "smooth" });
-  }, [currentSub?.id]);
+  }, [currentSub?.id, activeStepId, completedSteps]);
 
   const handleCloseResultModal = useCallback(() => {
     if (typeof window !== "undefined" && currentSub?.id) {
@@ -278,7 +280,13 @@ export function ModuleStudyView({
               try { localStorage.removeItem(`eddys_draft_${currentSub.id}`); } catch {}
             }
           }
-          setResultModalState({ isOpen: true, score: res.data?.score ?? 0, passed: Boolean(res?.data?.passed), passingScore: 75 });
+          setResultModalState({
+            isOpen: true,
+            score: res.data?.score ?? 0,
+            passed: Boolean(res?.data?.passed),
+            passingScore: res.data?.passingScore ?? 75,
+            questionResults: res.data?.questionResults || [],
+          });
           onRefresh?.();
         }
       } catch (err) {
@@ -369,7 +377,7 @@ export function ModuleStudyView({
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
               onResetMission={() => {
-                handleRetakeMission();
+                handleRetakeMission(true);
                 setIsOnboardingBriefing(false);
               }}
               onBackToMissions={() => {
@@ -406,7 +414,7 @@ export function ModuleStudyView({
                     {!isExam && (
                       <button
                         type="button"
-                        onClick={() => window.confirm("Ulangi latihan dari awal? Progres langkah ini akan direset.") && handleRetakeMission()}
+                        onClick={() => window.confirm("Ulangi latihan dari awal? Progres langkah ini akan direset.") && handleRetakeMission(true)}
                         className="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl text-[11px] font-semibold text-rose-700 hover:text-rose-800 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/30 border border-rose-200/60 dark:border-rose-800/40 cursor-pointer"
                         title="Reset latihan ke Langkah 1"
                       >
@@ -529,23 +537,11 @@ export function ModuleStudyView({
                     onRewardXp={(amt) => setXpPoints((p) => p + amt)}
                     onIncrementCombo={() => setCombo((c) => c + 1)}
                     onResetCombo={() => setCombo(1)}
-                    theorySec={theorySec}
-                    vocabSec={vocabSec}
-                    dialogueSec={dialogueSec}
-                    practiceSec={practiceSec}
-                    quizSec={quizSec}
-                    tutor={tutor}
-                    cefr={moduleData?.cefr}
-                    isFinishing={isFinishing}
-                    moduleData={moduleData}
-                    studentName={studentName}
-                    isAdmin={isAdmin}
-                    onSubmitExam={handleExamSubmit}
-                    initialAnswers={stageAnswers}
-                    onAnswersChange={(ans, spk) => {
-                      setStageAnswers(ans);
-                      if (spk !== undefined) setStageSpeakingScore(spk);
-                    }}
+                    theorySec={theorySec} vocabSec={vocabSec} dialogueSec={dialogueSec}
+                    practiceSec={practiceSec} quizSec={quizSec} tutor={tutor} cefr={moduleData?.cefr}
+                    isFinishing={isFinishing} moduleData={moduleData} studentName={studentName} isAdmin={isAdmin}
+                    onSubmitExam={handleExamSubmit} initialAnswers={stageAnswers}
+                    onAnswersChange={(ans, spk) => { setStageAnswers(ans); if (spk !== undefined) setStageSpeakingScore(spk); }}
                     onSelectStep={handleSelectStep}
                   />
                 </div>
@@ -587,7 +583,8 @@ export function ModuleStudyView({
           score={resultModalState?.score ?? 0}
           passingScore={resultModalState?.passingScore ?? 75}
           subModuleTitle={currentSub?.title}
-          onRetake={handleRetakeMission}
+          questionResults={resultModalState?.questionResults}
+          onRetake={() => handleRetakeMission(false)}
           onCloseToHub={handleCloseResultModal}
         />
     </StudentShell>

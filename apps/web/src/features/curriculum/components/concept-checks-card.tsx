@@ -92,34 +92,19 @@ export function ConceptChecksCard({
     });
     return parsed;
   });
-  const [showFeedback, setShowFeedback] = useState<Record<number, boolean>>(() => {
-    if (!initialAnswers) return {};
-    const feedback: Record<number, boolean> = {};
-    Object.keys(initialAnswers).forEach((k) => {
-      const numKey = Number(k);
-      if (!isNaN(numKey)) {
-        feedback[numKey] = true;
-      }
-    });
-    return feedback;
-  });
 
   React.useEffect(() => {
     if (initialAnswers && Object.keys(initialAnswers).length > 0) {
       const parsed: Record<number, string> = {};
-      const feedback: Record<number, boolean> = {};
       Object.entries(initialAnswers).forEach(([k, v]) => {
         const numKey = Number(k);
         if (!isNaN(numKey) && typeof v === "string") {
           parsed[numKey] = v;
-          feedback[numKey] = true;
         }
       });
       setSelectedAnswers(parsed);
-      setShowFeedback(feedback);
     } else {
       setSelectedAnswers({});
-      setShowFeedback({});
     }
   }, [initialAnswers]);
 
@@ -162,24 +147,16 @@ export function ConceptChecksCard({
     },
   }[accentColor];
 
-  const handleSelect = (qIdx: number, option: string, optIdx: number, targetEl?: HTMLElement) => {
+  const handleSelect = (qIdx: number, option: string, targetEl?: HTMLElement) => {
     const updated = { ...selectedAnswers, [qIdx]: option };
     setSelectedAnswers(updated);
-    setShowFeedback((prev) => ({ ...prev, [qIdx]: true }));
     onAnswersChange?.(updated);
 
     if (Object.keys(updated).length >= conceptChecks.length) {
       onCompleted?.();
     }
-
-    const check = conceptChecks[qIdx];
-    const isCorrect = isOptionCorrect(option, optIdx, check);
     if (targetEl) {
-      if (isCorrect) {
-        animeButtonPop(targetEl);
-      } else {
-        animeShake(targetEl);
-      }
+      animeButtonPop(targetEl);
     }
   };
 
@@ -234,17 +211,7 @@ export function ConceptChecksCard({
       <div className="space-y-4">
         {conceptChecks.map((check, qIdx) => {
           const selected = selectedAnswers[qIdx];
-          const hasAnswered = showFeedback[qIdx];
-
-          const selectedOptIdx = check.options?.findIndex((opt) => {
-            const optText = typeof opt === "string" ? opt : (opt as any)?.text || (opt as any)?.label || String(opt ?? "");
-            return optText === selected;
-          }) ?? -1;
-
-          const isUserChoiceCorrect =
-            selected !== undefined && selectedOptIdx >= 0
-              ? isOptionCorrect(selected, selectedOptIdx, check)
-              : false;
+          const hasSelected = selected !== undefined;
 
           return (
             <div
@@ -260,7 +227,7 @@ export function ConceptChecksCard({
                     {check.question}
                   </p>
                 </div>
-                {answeredCount > 0 && !hasAnswered && (
+                {answeredCount > 0 && !hasSelected && (
                   <span className="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
                     Belum Dijawab
                   </span>
@@ -271,54 +238,25 @@ export function ConceptChecksCard({
                 {check.options?.map((opt, optIdx) => {
                   const optText = typeof opt === "string" ? opt : (opt as any)?.text || (opt as any)?.label || String(opt ?? "");
                   const isThisSelected = selected === optText;
-                  const isThisOptCorrect = isOptionCorrect(optText, optIdx, check);
-                  let btnStyle = "bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 border-b-2 border-b-slate-300 dark:border-b-slate-700 hover:border-[#0D3B66]/40 active:translate-y-[1px]";
-
-                  if (hasAnswered) {
-                    if (isThisOptCorrect) {
-                      btnStyle = "bg-[#0D3B66]/10 dark:bg-slate-800 border-[#0D3B66] text-[#0D3B66] dark:text-[#F4B41A] font-bold border-b-2 border-b-[#082542]";
-                    } else if (isThisSelected && !isUserChoiceCorrect) {
-                      btnStyle = "bg-[#9E1B1B]/10 dark:bg-[#9E1B1B]/20 border-[#9E1B1B] text-[#9E1B1B] border-b-2 border-b-[#841515] font-bold";
-                    } else {
-                      btnStyle = "opacity-50 border-slate-200 dark:border-slate-700 text-slate-500 border-b-2 border-b-slate-300 dark:border-b-slate-700";
-                    }
-                  }
+                  const btnStyle = isThisSelected
+                    ? "bg-[#0D3B66]/10 dark:bg-slate-800 border-[#0D3B66] text-[#0D3B66] dark:text-[#F4B41A] font-bold border-b-2 border-b-[#082542] ring-1 ring-[#0D3B66]/20"
+                    : "bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 border-b-2 border-b-slate-300 dark:border-b-slate-700 hover:border-[#0D3B66]/40 active:translate-y-[1px]";
 
                   return (
                     <button
                       key={optIdx}
                       type="button"
-                      disabled={hasAnswered}
-                      onClick={(e) => handleSelect(qIdx, optText, optIdx, e.currentTarget)}
+                      onClick={(e) => handleSelect(qIdx, optText, e.currentTarget)}
                       className={`text-left px-3.5 py-2.5 rounded-xl border text-xs transition-all flex items-center justify-between gap-2 cursor-pointer min-h-[44px] touch-manipulation ${btnStyle}`}
                     >
                       <span>{optText}</span>
-                      {hasAnswered && isThisOptCorrect && (
-                         <CheckCircle2 className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A] shrink-0" />
-                      )}
-                      {hasAnswered && isThisSelected && !isUserChoiceCorrect && (
-                        <XCircle className="w-4 h-4 text-[#9E1B1B] shrink-0" />
+                      {isThisSelected && (
+                        <div className="w-2.5 h-2.5 rounded-full bg-[#0D3B66] dark:bg-[#F4B41A] shrink-0" />
                       )}
                     </button>
                   );
                 })}
               </div>
-
-              {hasAnswered && check.explanation && (
-                <div
-                  className={`p-3 rounded-xl text-[11px] leading-relaxed flex items-start gap-2 ${
-                    isUserChoiceCorrect
-                      ? "bg-[#0D3B66]/10 text-[#0D3B66] dark:bg-slate-800 dark:text-slate-200 border border-[#0D3B66]/20 border-b-2 border-b-[#0D3B66]/20"
-                      : "bg-[#F4B41A]/15 text-[#855e05] dark:bg-slate-800 dark:text-[#F4B41A] border border-[#F4B41A]/30 border-b-2 border-b-[#DDA012]/30"
-                  }`}
-                >
-                  <HelpCircle className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[#F4B41A]" />
-                  <div>
-                    <span className="font-bold">{isUserChoiceCorrect ? "Correct! " : "Note: "}</span>
-                    {check.explanation}
-                  </div>
-                </div>
-              )}
             </div>
           );
         })}
