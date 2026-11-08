@@ -110,9 +110,13 @@ export async function getCurriculumUsecase(userId?: string, levelId?: string) {
         status = "requires_access";
       } else if (prog?.status === "completed") {
         status = "completed";
+      } else if (prog?.status === "unlocked") {
+        status = "unlocked";
       } else if (idx === 0) {
-        if (lvlIdx === 0) {
-          status = "unlocked"; // A1.1-M01 is always unlocked
+        const isTierEntrySublevel = lvl.id === `${baseCefr}.1`;
+
+        if (lvlIdx === 0 || (hasAccess && isTierEntrySublevel)) {
+          status = "unlocked"; // A1.1-M01 or entry module of accessible tier is unlocked
         } else {
           // Check if previous sublevel's graduation exam (M13) is completed
           const prevLevel = levels[lvlIdx - 1];
