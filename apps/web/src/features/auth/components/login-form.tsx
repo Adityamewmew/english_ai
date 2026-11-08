@@ -1,13 +1,20 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
 import { doLogin } from "@/app/(auth)/auth.actions";
 import { authClient } from "@/lib/auth-client";
-import { Loader2 } from "lucide-react";
+import {
+  Mail,
+  Lock,
+  Eye,
+  EyeOff,
+  ArrowRight,
+  ArrowLeft,
+  Loader2,
+  AlertCircle,
+} from "lucide-react";
 
 function GoogleIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -36,6 +43,7 @@ export function LoginForm() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -44,10 +52,10 @@ export function LoginForm() {
       if (err) {
         if (err === "account_not_linked") {
           setError(
-            "This Google account is not yet linked to an existing email. Auto-linking has been enabled; please try clicking 'Continue with Google' again."
+            "Akun Google ini belum terhubung dengan akun yang ada. Silakan klik 'Lanjutkan dengan Google' sekali lagi untuk menghubungkannya secara otomatis."
           );
         } else {
-          setError(`Google authentication failed: ${err}`);
+          setError(`Gagal autentikasi Google: ${err}`);
         }
       }
     }
@@ -77,102 +85,184 @@ export function LoginForm() {
         callbackURL,
       });
       if (res?.error) {
-        setError(res.error.message || "Failed to sign in with Google.");
+        setError(res.error.message || "Gagal masuk menggunakan Google.");
         setGoogleLoading(false);
       }
     } catch (err: any) {
-      setError(err?.message || "Failed to connect to Google service.");
+      setError(err?.message || "Gagal menghubungi layanan Google.");
       setGoogleLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
-      <Card className="w-full max-w-md bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800">
-        <div className="text-center mb-8">
-          <span className="w-12 h-12 rounded-2xl bg-blue-600 inline-flex items-center justify-center text-white font-bold text-xl mb-3 shadow-sm">
-            E
-          </span>
-          <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Sign In to EDDY&apos;S AI</h1>
-          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Continue your English learning with Mr. Khoirul</p>
+    <div className="min-h-dvh flex flex-col items-center justify-center p-4 sm:p-6 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 relative overflow-hidden select-none">
+      {/* Ambient Brand Accents */}
+      <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-[#0D3B66]/10 dark:bg-[#0D3B66]/25 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-[#F4B41A]/10 dark:bg-[#F4B41A]/20 blur-3xl pointer-events-none" />
+
+      {/* Back to Home Button */}
+      <div className="w-full max-w-[420px] mb-4 relative z-10">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white transition group py-1.5 px-2 rounded-lg hover:bg-white/60 dark:hover:bg-slate-900/60"
+        >
+          <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-0.5" />
+          <span>Kembali ke Beranda</span>
+        </Link>
+      </div>
+
+      {/* Main Card */}
+      <div className="w-full max-w-[420px] bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 relative z-10 animate-fadeIn">
+        {/* Header */}
+        <div className="text-center mb-6">
+          <Link href="/" className="inline-block mb-3.5">
+            <Image
+              src="/images/logo.png"
+              alt="EDDY'S AI Logo"
+              width={48}
+              height={48}
+              className="rounded-2xl shadow-xs mx-auto"
+              priority
+            />
+          </Link>
+          <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+            Masuk ke EDDY&apos;S AI
+          </h1>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+            Lanjutkan latihan berbicara bahasa Inggris bersama Mr. Khoirul
+          </p>
         </div>
 
+        {/* Error Alert */}
         {error && (
-          <div className="mb-4 p-3 rounded-xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-300 text-xs font-medium">
-            {error}
+          <div className="mb-5 p-3.5 rounded-xl bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800/80 text-rose-700 dark:text-rose-300 text-xs font-medium flex items-start gap-2.5 animate-fadeIn">
+            <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-rose-600 dark:text-rose-400" />
+            <p className="leading-relaxed">{error}</p>
           </div>
         )}
 
-        <Button
+        {/* Google Social Button */}
+        <button
           type="button"
-          variant="outline"
           disabled={loading || googleLoading}
           onClick={handleGoogleSignIn}
-          className="w-full flex items-center justify-center gap-2.5 py-5 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold shadow-xs transition-colors"
+          className="w-full h-12 flex items-center justify-center gap-2.5 px-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white hover:bg-slate-50 dark:bg-slate-800/70 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs sm:text-sm font-bold shadow-2xs transition-all active:scale-[0.98] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {googleLoading ? (
             <span className="flex items-center gap-2">
-              <Loader2 className="w-4 h-4 animate-spin text-blue-600" />
-              Connecting Google...
+              <Loader2 className="w-4 h-4 animate-spin text-[#0D3B66] dark:text-[#F4B41A]" />
+              <span>Menghubungkan Google...</span>
             </span>
           ) : (
             <>
               <GoogleIcon />
-              <span>Continue with Google</span>
+              <span>Lanjutkan dengan Google</span>
             </>
           )}
-        </Button>
+        </button>
 
+        {/* Divider */}
         <div className="relative my-6">
           <div className="absolute inset-0 flex items-center">
             <span className="w-full border-t border-slate-200 dark:border-slate-800" />
           </div>
-          <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-white dark:bg-slate-900 px-3 text-slate-400 font-medium">or email</span>
+          <div className="relative flex justify-center text-[11px] uppercase tracking-wider">
+            <span className="bg-white dark:bg-slate-900 px-3 text-slate-400 font-semibold">
+              atau dengan email
+            </span>
           </div>
         </div>
 
+        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Email</label>
-            <Input
-              name="email"
-              type="email"
-              required
-              autoComplete="email"
-              placeholder="name@email.com"
-              className="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-blue-600"
-            />
+          {/* Email Field */}
+          <div className="space-y-1.5">
+            <label
+              htmlFor="emailInput"
+              className="block text-xs font-bold text-slate-700 dark:text-slate-300"
+            >
+              Email Siswa
+            </label>
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                <Mail className="w-4 h-4" />
+              </div>
+              <input
+                id="emailInput"
+                name="email"
+                type="email"
+                required
+                autoComplete="email"
+                placeholder="nama@email.com"
+                className="w-full h-12 pl-10 pr-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 text-xs sm:text-sm focus:outline-hidden focus:ring-2 focus:ring-[#0D3B66] dark:focus:ring-[#F4B41A] transition shadow-2xs font-medium"
+              />
+            </div>
           </div>
 
-          <div>
-            <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Password</label>
-            <Input
-              name="password"
-              type="password"
-              required
-              autoComplete="current-password"
-              placeholder="Enter password"
-              className="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-blue-600"
-            />
+          {/* Password Field */}
+          <div className="space-y-1.5">
+            <label
+              htmlFor="passwordInput"
+              className="block text-xs font-bold text-slate-700 dark:text-slate-300"
+            >
+              Kata Sandi
+            </label>
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                <Lock className="w-4 h-4" />
+              </div>
+              <input
+                id="passwordInput"
+                name="password"
+                type={showPassword ? "text" : "password"}
+                required
+                autoComplete="current-password"
+                placeholder="Masukkan kata sandi"
+                className="w-full h-12 pl-10 pr-11 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 text-xs sm:text-sm focus:outline-hidden focus:ring-2 focus:ring-[#0D3B66] dark:focus:ring-[#F4B41A] transition shadow-2xs font-medium"
+              />
+              <button
+                type="button"
+                tabIndex={-1}
+                onClick={() => setShowPassword((prev) => !prev)}
+                className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition cursor-pointer min-w-[40px] justify-end"
+                aria-label={showPassword ? "Sembunyikan kata sandi" : "Tampilkan kata sandi"}
+              >
+                {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+              </button>
+            </div>
           </div>
 
-          <Button
+          {/* Submit Button */}
+          <button
             type="submit"
             disabled={loading || googleLoading}
-            className="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-sm"
+            className="w-full h-12 mt-2 bg-[#0D3B66] hover:bg-[#082b4b] text-white rounded-xl font-bold text-xs sm:text-sm shadow-xs flex items-center justify-center gap-2 transition-all active:scale-[0.98] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {loading ? "Signing in..." : "Sign In Now"}
-          </Button>
+            {loading ? (
+              <span className="flex items-center gap-2">
+                <Loader2 className="w-4 h-4 animate-spin text-white" />
+                <span>Memproses Masuk...</span>
+              </span>
+            ) : (
+              <span className="flex items-center gap-1.5">
+                <span>Masuk Sekarang</span>
+                <ArrowRight className="w-4 h-4" />
+              </span>
+            )}
+          </button>
         </form>
 
+        {/* Footer Link */}
         <div className="mt-6 text-center text-xs text-slate-500 dark:text-slate-400">
-          Don&apos;t have an account?{" "}
-          <Link href="/register" className="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
-            Create an Account
+          Belum memiliki akun?{" "}
+          <Link
+            href="/register"
+            className="text-[#0D3B66] dark:text-[#F4B41A] font-bold hover:underline underline-offset-2 ml-0.5"
+          >
+            Daftar Sekarang
           </Link>
         </div>
-      </Card>
+      </div>
     </div>
   );
 }
