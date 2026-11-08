@@ -5,13 +5,14 @@ import { jsonError } from "../../internal/presenter/json";
 export const errorHandlerPlugin = new Elysia({ name: "error-handler" }).onError(
   { as: "global" },
   ({ code, error, set }) => {
-    // 1. Custom AppError instances
-    if (error instanceof AppError) {
+    // 1. Custom AppError instances (support both instanceof and duck-typed statusCode)
+    if (error instanceof AppError || typeof (error as any)?.statusCode === "number") {
+      const statusCode = (error as any).statusCode || (error as any).status || 400;
       return jsonError({
         set,
-        statusCode: error.statusCode,
+        statusCode,
         message: error.message,
-        error: error.details,
+        error: (error as any).details,
       });
     }
 
