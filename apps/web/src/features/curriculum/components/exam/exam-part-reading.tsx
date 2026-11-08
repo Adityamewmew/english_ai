@@ -4,6 +4,7 @@ import React from "react";
 import { BookOpen, ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { deterministicShuffle } from "@english-ai/shared";
 
 interface ExamPartReadingProps {
   readingList: any[];
@@ -44,6 +45,7 @@ export function ExamPartReading({
       <div className="space-y-4">
         {readingList.map((q, qIdx) => {
           const selected = readingAnswers[qIdx];
+          const options = deterministicShuffle(q.options || [], q.id || `exam-r-${qIdx}`);
           return (
             <Card
               key={q.id || qIdx}
@@ -59,7 +61,7 @@ export function ExamPartReading({
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
-                {(q.options || []).map((opt: any, optIdx: number) => {
+                {options.map((opt: any, optIdx: number) => {
                   const optText = typeof opt === "string" ? opt : opt?.text || opt?.label || String(opt ?? "");
                   const isSelected = selected === optText;
                   return (

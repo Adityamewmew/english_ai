@@ -5,6 +5,7 @@ import { CheckCircle2, XCircle, HelpCircle } from "lucide-react";
 import { animeButtonPop, animeShake } from "@/lib/anime-effects";
 import { useSession } from "@/features/auth/hooks/use-session";
 import { isUserAdmin } from "@/lib/auth-utils";
+import { deterministicShuffle } from "@english-ai/shared";
 
 interface ConceptCheckQuestion {
   question: string;
@@ -235,7 +236,7 @@ export function ConceptChecksCard({
               </div>
 
               <div className="grid gap-2 sm:grid-cols-2 pt-1">
-                {check.options?.map((opt, optIdx) => {
+                {deterministicShuffle(check.options || [], (check as any)?.id || check.question || String(qIdx)).map((opt, optIdx) => {
                   const optText = typeof opt === "string" ? opt : (opt as any)?.text || (opt as any)?.label || String(opt ?? "");
                   const isThisSelected = selected === optText;
                   const btnStyle = isThisSelected
