@@ -20,7 +20,7 @@ export const SubmitQuizBody = t.Object({
 export type SubmitQuizBody = typeof SubmitQuizBody.static;
 
 export const StepProgressBody = t.Object({
-  userId: t.String(),
+  userId: t.Optional(t.String()),
   currentStep: t.Number(),
   unlockedStep: t.Number(),
   completedSteps: t.Array(t.Number()),
