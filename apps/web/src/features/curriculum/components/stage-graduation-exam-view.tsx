@@ -31,6 +31,8 @@ interface StageGraduationExamViewProps {
   studentName?: string;
   onSubmitExam?: (finalScore: number, examAnswers?: Record<string, any>) => Promise<void>;
   onSelectStep?: (stepId: number) => void;
+  initialAnswers?: Record<string, any>;
+  onAnswersChange?: (answers: Record<string, any>, speakingScore?: number) => void;
 }
 
 export function StageGraduationExamView({
@@ -44,6 +46,8 @@ export function StageGraduationExamView({
   studentName = "Student",
   onSubmitExam,
   onSelectStep,
+  initialAnswers,
+  onAnswersChange,
 }: StageGraduationExamViewProps) {
   const rawParts = quizSec?.content?.parts;
   const rawQuestions: any[] = useMemo(() => {
@@ -98,11 +102,46 @@ export function StageGraduationExamView({
 
   const passingScore = moduleData?.passingScore || 75;
 
-  // Student answer state per part
-  const [readingAnswers, setReadingAnswers] = useState<Record<number, string>>({});
-  const [listeningAnswers, setListeningAnswers] = useState<Record<number, string>>({});
-  const [writingAnswers, setWritingAnswers] = useState<Record<number, string>>({});
-  const [speakingCompleted, setSpeakingCompleted] = useState<Record<number, boolean>>({});
+  // Student answer state per part (restored from initialAnswers / draft if present)
+  const [readingAnswers, setReadingAnswers] = useState<Record<number, string>>(() => {
+    if (initialAnswers?.__examDraft?.reading) return initialAnswers.__examDraft.reading;
+    const res: Record<number, string> = {};
+    readingList.forEach((q, idx) => {
+      const val = initialAnswers?.[q.id] ?? initialAnswers?.[`r-${idx}`];
+      if (val !== undefined && val !== null) res[idx] = String(val);
+    });
+    return res;
+  });
+
+  const [listeningAnswers, setListeningAnswers] = useState<Record<number, string>>(() => {
+    if (initialAnswers?.__examDraft?.listening) return initialAnswers.__examDraft.listening;
+    const res: Record<number, string> = {};
+    listeningList.forEach((q, idx) => {
+      const val = initialAnswers?.[q.id] ?? initialAnswers?.[`l-${idx}`];
+      if (val !== undefined && val !== null) res[idx] = String(val);
+    });
+    return res;
+  });
+
+  const [writingAnswers, setWritingAnswers] = useState<Record<number, string>>(() => {
+    if (initialAnswers?.__examDraft?.writing) return initialAnswers.__examDraft.writing;
+    const res: Record<number, string> = {};
+    writingList.forEach((q, idx) => {
+      const val = initialAnswers?.[q.id] ?? initialAnswers?.[`w-${idx}`];
+      if (val !== undefined && val !== null) res[idx] = String(val);
+    });
+    return res;
+  });
+
+  const [speakingCompleted, setSpeakingCompleted] = useState<Record<number, boolean>>(() => {
+    if (initialAnswers?.__examDraft?.speaking) return initialAnswers.__examDraft.speaking;
+    const res: Record<number, boolean> = {};
+    speakingList.forEach((q, idx) => {
+      const val = initialAnswers?.[q.id] ?? initialAnswers?.[`s-${idx}`];
+      if (val === true || val === "completed") res[idx] = true;
+    });
+    return res;
+  });
 
   const [isSubmittingExam, setIsSubmittingExam] = useState(false);
   const [isExamSubmitted, setIsExamSubmitted] = useState(false);
@@ -156,7 +195,7 @@ export function StageGraduationExamView({
     let lCorrect = 0;
     listeningList.forEach((q, idx) => {
       const userAns = (listeningAnswers[idx] || "").trim().toLowerCase();
-      const target = (q.targetSentence || q.audioText || q.answer || "").trim().toLowerCase();
+      const target = (q.targetWord || q.targetSentence || q.audioText || q.answer || "").trim().toLowerCase();
       const normUser = normalizeSpokenText(userAns);
       const normTarget = normalizeSpokenText(target);
 
@@ -245,6 +284,26 @@ export function StageGraduationExamView({
     writingList,
     speakingList,
   ]);
+
+  // Sync exam answers to parent / localStorage draft
+  React.useEffect(() => {
+    if (!onAnswersChange) return;
+    const hasAny =
+      Object.keys(readingAnswers).length > 0 ||
+      Object.keys(listeningAnswers).length > 0 ||
+      Object.keys(writingAnswers).length > 0 ||
+      Object.keys(speakingCompleted).length > 0;
+    if (!hasAny) return;
+
+    const payload: Record<string, any> = { ...examAnswers };
+    payload.__examDraft = {
+      reading: readingAnswers,
+      listening: listeningAnswers,
+      writing: writingAnswers,
+      speaking: speakingCompleted,
+    };
+    onAnswersChange(payload, scores.totalScore);
+  }, [examAnswers, readingAnswers, listeningAnswers, writingAnswers, speakingCompleted, scores.totalScore, onAnswersChange]);
 
   // Step 1: Briefing & Guidelines
   if (activeStepId === 1) {
@@ -419,6 +478,7 @@ export function StageGraduationExamView({
       setIsSubmittingExam={setIsSubmittingExam}
       setIsExamSubmitted={setIsExamSubmitted}
       hasSubmittedRef={hasSubmittedRef}
+      onSelectStep={onSelectStep}
     />
   );
 }
@@ -435,6 +495,7 @@ function ExamCertificateViewWithAutoSubmit({
   setIsSubmittingExam,
   setIsExamSubmitted,
   hasSubmittedRef,
+  onSelectStep,
 }: {
   scores: any;
   moduleData: any;
@@ -447,8 +508,19 @@ function ExamCertificateViewWithAutoSubmit({
   setIsSubmittingExam: (val: boolean) => void;
   setIsExamSubmitted: (val: boolean) => void;
   hasSubmittedRef: React.MutableRefObject<boolean>;
+  onSelectStep?: (stepId: number) => void;
 }) {
+  const answeredCount = React.useMemo(() => {
+    return Object.keys(examAnswers || {}).filter(
+      (k) => !k.startsWith("__") && examAnswers[k] !== undefined && examAnswers[k] !== ""
+    ).length;
+  }, [examAnswers]);
+
   React.useEffect(() => {
+    // SECURITY SAFEGUARD: Never auto-submit if no questions were answered
+    // Prevents refreshed pages or empty sessions from zeroing out user progress
+    if (answeredCount === 0) return;
+
     if (!hasSubmittedRef.current && onSubmitExam) {
       hasSubmittedRef.current = true;
       setIsSubmittingExam(true);
@@ -460,7 +532,35 @@ function ExamCertificateViewWithAutoSubmit({
         })
         .finally(() => setIsSubmittingExam(false));
     }
-  }, [onSubmitExam, scores.totalScore, examAnswers, hasSubmittedRef, setIsSubmittingExam, setIsExamSubmitted]);
+  }, [onSubmitExam, scores.totalScore, examAnswers, hasSubmittedRef, setIsSubmittingExam, setIsExamSubmitted, answeredCount]);
+
+  if (answeredCount === 0 && !scores.isPassed && !isExamSubmitted) {
+    return (
+      <div className="space-y-6 max-w-2xl mx-auto py-8 text-center">
+        <div className="w-16 h-16 rounded-3xl bg-amber-500/10 text-amber-600 inline-flex items-center justify-center">
+          <BookOpen className="w-8 h-8" />
+        </div>
+        <div className="space-y-2">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+            Sesi Ujian Belum Dikerjakan
+          </h3>
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto leading-relaxed">
+            Jawaban ujian belum ditemukan di sesi ini. Silakan mulai pengerjaan dari Part 1 agar seluruh kompetensi dievaluasi dan sertifikat kelulusan dapat diterbitkan.
+          </p>
+        </div>
+        <div className="pt-2">
+          <Button
+            type="button"
+            onClick={() => (onSelectStep ? onSelectStep(2) : undefined)}
+            className="px-6 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#082542] text-white font-bold text-xs inline-flex items-center gap-2 cursor-pointer min-h-[44px]"
+          >
+            <span>Mulai dari Part 1 (Reading)</span>
+            <ArrowRight className="w-4 h-4" />
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <ExamCertificateView
@@ -470,6 +570,7 @@ function ExamCertificateViewWithAutoSubmit({
       passingScore={passingScore}
       isSubmitting={isSubmittingExam}
       isSubmitted={isExamSubmitted}
+      onRetake={() => (onSelectStep ? onSelectStep(2) : undefined)}
     />
   );
 }

@@ -88,6 +88,8 @@ export function ModuleStageViewport({
             studentName={studentName}
             onSubmitExam={onSubmitExam}
             onSelectStep={onSelectStep}
+            initialAnswers={initialAnswers}
+            onAnswersChange={onAnswersChange}
           />
         ) : skillType === "listening" ? (
           <StageListeningView
