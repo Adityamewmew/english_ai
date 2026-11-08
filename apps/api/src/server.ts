@@ -16,6 +16,20 @@ export const app = new Elysia()
   .use(corsPlugin)
   .use(errorHandlerPlugin)
   .use(authPlugin)
+  .onRequest(({ set }) => {
+    // SK11: Strict security headers
+    set.headers["X-Content-Type-Options"] = "nosniff";
+    set.headers["X-Frame-Options"] = "DENY";
+    set.headers["Referrer-Policy"] = "strict-origin-when-cross-origin";
+    set.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains";
+  })
+  .onBeforeHandle(({ path, set }) => {
+    // SK09: Disable Swagger documentation in production
+    if (process.env.NODE_ENV === "production" && path.startsWith("/swagger")) {
+      set.status = 404;
+      return "Endpoint route not found";
+    }
+  })
   .use(
     swagger({
       path: "/swagger",

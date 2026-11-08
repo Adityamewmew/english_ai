@@ -1,11 +1,20 @@
 import { paymentRepository } from "../../repository/payment.repository";
 import { classRepository } from "../../repository/class_repository";
-import { NotFoundError } from "../../../common/errors/app-error";
+import { NotFoundError, ForbiddenError } from "../../../common/errors/app-error";
+import { isUserAdmin } from "@english-ai/shared";
 
-export async function getPaymentOrderUsecase(orderId: string) {
+export async function getPaymentOrderUsecase(
+  orderId: string,
+  user?: { id: string; role?: string | null; email?: string | null; accessType?: number | null } | null
+) {
   const tx = await paymentRepository.findByOrderId(orderId);
   if (!tx) {
     throw new NotFoundError("Pesanan pembayaran tidak ditemukan.");
+  }
+
+  // Validate ownership: only order creator or admin can view order details (SK04)
+  if (user && tx.userId !== user.id && !isUserAdmin(user)) {
+    throw new ForbiddenError("Anda tidak memiliki izin untuk melihat pesanan ini.");
   }
 
   // Check if expired

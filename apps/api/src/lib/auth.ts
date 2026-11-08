@@ -20,7 +20,6 @@ export const auth = betterAuth({
   secret: authSecret,
   trustedOrigins: [
     "https://eddys.drimland.my.id",
-    "http://eddys.drimland.my.id",
     "http://localhost:3005",
     "http://localhost:3000",
     "http://localhost:3003",

@@ -9,11 +9,7 @@ export async function authenticateUserUsecase(body: { email: string; password: s
   try {
     isMatch = await Bun.password.verify(body.password, user.password);
   } catch {
-    isMatch = body.password === user.password;
-  }
-
-  if (!isMatch && body.password === user.password) {
-    isMatch = true;
+    isMatch = false;
   }
 
   if (!isMatch) throw new UnauthorizedError("Email atau password salah");

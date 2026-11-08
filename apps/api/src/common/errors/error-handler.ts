@@ -41,13 +41,16 @@ export const errorHandlerPlugin = new Elysia({ name: "error-handler" }).onError(
       });
     }
 
-    // 4. Default Internal Server Error
+    // 4. Default Internal Server Error (SK09 - Mask internal stack trace and SQL details in production)
     console.error("[Server Error]:", error);
     return jsonError({
       set,
       statusCode: 500,
       message: "Internal server error occurred",
-      error: (error as any)?.message ?? String(error),
+      error:
+        process.env.NODE_ENV === "production"
+          ? "An unexpected internal server error occurred."
+          : (error as any)?.message ?? String(error),
     });
   }
 );

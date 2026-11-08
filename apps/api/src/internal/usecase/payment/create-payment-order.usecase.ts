@@ -193,10 +193,10 @@ export async function createPaymentOrderUsecase(dto: CreatePaymentOrderDTO) {
   const expiredHours = parseInt(settings.payment_expired_hours || "24", 10) || 24;
   const expiresAt = new Date(Date.now() + expiredHours * 3600 * 1000);
 
-  // Generate unique order ID
+  // Generate unique order ID with cryptographic entropy (SK04)
   const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, "");
-  const randSuffix = Math.floor(1000 + Math.random() * 9000);
-  const orderId = `INV-${dateStr}-${randSuffix}`;
+  const randEntropy = randomUUID().replace(/-/g, "").slice(0, 8).toUpperCase();
+  const orderId = `INV-${dateStr}-${randEntropy}`;
   const txId = randomUUID();
 
   let vaNumber: string | undefined = undefined;

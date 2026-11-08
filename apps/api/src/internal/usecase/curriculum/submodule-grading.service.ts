@@ -267,7 +267,7 @@ export class SubModuleGradingService {
       };
     }
 
-    // Capstone 4-part Exam evaluation: require verified answers
+    // Capstone 4-part Exam evaluation: require verified answers (SK06 - Academic Integrity)
     const isCapstoneExam = Boolean(params.quizSection?.content?.parts);
     if (isCapstoneExam) {
       const totalAnswered = Object.keys(answers).filter((k) => answers[k] !== undefined && answers[k] !== null).length;

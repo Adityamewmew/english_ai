@@ -6,7 +6,6 @@ export async function registerUserUsecase(body: {
   name: string;
   email: string;
   password: string;
-  role?: string;
   currentCefr?: string;
 }) {
   const existing = await userRepository.findByEmail(body.email);
@@ -22,9 +21,9 @@ export async function registerUserUsecase(body: {
     name: body.name,
     email: body.email,
     password: hashedPassword,
-    role: body.role || "student",
+    role: "student",
     currentCefr: body.currentCefr || "A1",
-    accessType: body.role === "admin" ? 1 : 2,
+    accessType: 2,
     memory: {
       facts: [],
       interests: [],

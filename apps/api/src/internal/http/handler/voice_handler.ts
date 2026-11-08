@@ -18,6 +18,7 @@ import { jsonResponse } from "../../presenter/json";
 import { checkAiQuotaUsecase } from "../../usecase/classes/check-ai-quota.usecase";
 import { authPlugin } from "../../../lib/auth";
 import { UnauthorizedError } from "../../../common/errors/app-error";
+import { isUserAdmin } from "@english-ai/shared";
 
 export const voiceHandler = new Elysia({ prefix: "/api/voice" })
   .use(authPlugin)
@@ -67,7 +68,10 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
   )
   .get(
     "/tts",
-    async ({ query }) => {
+    async ({ query, user }) => {
+      if (!user) {
+        throw new UnauthorizedError("Autentikasi akun diperlukan untuk mengakses audio TTS.");
+      }
       const result = await getTtsAudioUsecase(query.text, query.voice);
 
       if (result.type === "stream") {
@@ -95,7 +99,10 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
   )
   .post(
     "/tts",
-    async ({ body }) => {
+    async ({ body, user }) => {
+      if (!user) {
+        throw new UnauthorizedError("Autentikasi akun diperlukan untuk mengakses audio TTS.");
+      }
       const result = await getTtsAudioUsecase(body.text, body.voice);
 
       if (result.type === "stream") {
@@ -125,7 +132,7 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
     "/turn-stream",
     async ({ body, user }) => {
       const { sessionId, topic, history, studentMessage, turnIndex = 0, moduleId } = body;
-      const resolvedUserId = user?.id || body.userId;
+      const resolvedUserId = isUserAdmin(user) && body.userId ? body.userId : user?.id;
       const encoder = new TextEncoder();
       let sentenceIndex = 0;
       const accumulatedSentences: string[] = [];

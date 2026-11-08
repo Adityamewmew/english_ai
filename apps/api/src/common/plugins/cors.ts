@@ -2,7 +2,6 @@ import { cors as elysiaCors } from "@elysiajs/cors";
 
 const allowedOrigins = [
   "https://eddys.drimland.my.id",
-  "http://eddys.drimland.my.id",
   "http://localhost:3000",
   "http://localhost:3001",
   "http://localhost:3003",

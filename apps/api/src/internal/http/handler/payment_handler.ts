@@ -92,22 +92,32 @@ export const paymentHandler = new Elysia({ prefix: "/api/payment" })
     }
   )
 
-  // 3. Ambil Detail Order Pembayaran
-  .get("/order/:orderId", async ({ params, set }) => {
-    const data = await getPaymentOrderUsecase(params.orderId);
-    return jsonResponse({
-      set,
-      statusCode: 200,
-      message: "Detail pesanan pembayaran berhasil diambil",
-      data,
-    });
-  })
+  // 3. Ambil Detail Order Pembayaran (SK04)
+  .get(
+    "/order/:orderId",
+    async ({ params, user, set }) => {
+      if (!user) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk melihat detail pesanan.");
+      }
+      const data = await getPaymentOrderUsecase(params.orderId, user);
+      return jsonResponse({
+        set,
+        statusCode: 200,
+        message: "Detail pesanan pembayaran berhasil diambil",
+        data,
+      });
+    },
+    { auth: true }
+  )
 
-  // 4. Upload Bukti Transfer Manual
+  // 4. Upload Bukti Transfer Manual (SK04)
   .post(
     "/order/:orderId/proof",
-    async ({ params, body, set }) => {
-      const data = await uploadTransferProofUsecase(params.orderId, body.proofUrl);
+    async ({ params, body, user, set }) => {
+      if (!user) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk mengunggah bukti transfer.");
+      }
+      const data = await uploadTransferProofUsecase(params.orderId, body.proofUrl, user);
       return jsonResponse({
         set,
         statusCode: 200,
@@ -116,30 +126,30 @@ export const paymentHandler = new Elysia({ prefix: "/api/payment" })
       });
     },
     {
+      auth: true,
       body: t.Object({
         proofUrl: t.String(),
       }),
     }
   )
 
-  // 5. Simulasi Sukses di Mode Sandbox
+  // 5. Simulasi Sukses di Mode Sandbox (SK03)
   .post(
     "/order/:orderId/simulate",
-    async ({ params, set, request }) => {
-      let activeUser: any = null;
-      try {
-        const session = await auth.api.getSession({ headers: request.headers });
-        activeUser = session?.user || null;
-      } catch {}
+    async ({ params, user, set }) => {
+      if (!user) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk simulasi pembayaran.");
+      }
 
-      const data = await simulateSandboxPaymentUsecase(params.orderId, activeUser);
+      const data = await simulateSandboxPaymentUsecase(params.orderId, user);
       return jsonResponse({
         set,
         statusCode: 200,
         message: data.message,
         data: data.transaction,
       });
-    }
+    },
+    { auth: true }
   )
 
   // 6. Webhook Resmi SingaPay

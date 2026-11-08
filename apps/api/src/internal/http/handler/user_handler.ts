@@ -17,6 +17,27 @@ import { authPlugin } from "../../../lib/auth";
 import { UnauthorizedError, ForbiddenError } from "../../../common/errors/app-error";
 import { isUserAdmin } from "@english-ai/shared";
 
+// SK12: In-memory brute-force rate limiter (5 attempts per 15 minutes)
+const loginAttempts = new Map<string, { count: number; resetAt: number }>();
+
+function checkLoginRateLimit(key: string): boolean {
+  const now = Date.now();
+  const record = loginAttempts.get(key);
+  if (!record || record.resetAt < now) {
+    loginAttempts.set(key, { count: 1, resetAt: now + 15 * 60 * 1000 });
+    return true;
+  }
+  if (record.count >= 5) {
+    return false;
+  }
+  record.count += 1;
+  return true;
+}
+
+function clearLoginRateLimit(key: string) {
+  loginAttempts.delete(key);
+}
+
 export const userHandler = new Elysia({ prefix: "/api/user" })
   .use(authPlugin)
   .get(
@@ -68,14 +89,28 @@ export const userHandler = new Elysia({ prefix: "/api/user" })
   )
   .post(
     "/login",
-    async ({ body, set }) => {
-      const data = await authenticateUserUsecase(body);
-      return jsonResponse({
-        set,
-        statusCode: 200,
-        message: "Login successful",
-        data,
-      });
+    async ({ body, set, request }) => {
+      const clientIp = request.headers.get("x-forwarded-for") || "local";
+      const rateLimitKey = `${clientIp}:${body.email.toLowerCase()}`;
+
+      if (!checkLoginRateLimit(rateLimitKey)) {
+        throw new ForbiddenError(
+          "Terlalu banyak percobaan login yang gagal. Silakan coba lagi setelah 15 menit."
+        );
+      }
+
+      try {
+        const data = await authenticateUserUsecase(body);
+        clearLoginRateLimit(rateLimitKey);
+        return jsonResponse({
+          set,
+          statusCode: 200,
+          message: "Login successful",
+          data,
+        });
+      } catch (err) {
+        throw err;
+      }
     },
     { body: LoginUserBody }
   )

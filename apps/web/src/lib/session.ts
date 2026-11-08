@@ -7,6 +7,8 @@ export interface SessionUser {
   role: string;
   accessType: number; // 1 = Admin, 2 = Student (Siswa)
   currentCefr: string;
+  exp?: number;
+  iat?: number;
 }
 
 const SESSION_COOKIE_NAME = "eddy_session";
@@ -29,7 +31,14 @@ function getSessionSecret(): string {
  * Sign session payload using native Web Crypto HMAC-SHA256 (Constant-time verification)
  */
 export async function signSessionToken(user: SessionUser): Promise<string> {
-  const payloadString = JSON.stringify(user);
+  const now = Math.floor(Date.now() / 1000);
+  const exp = now + 7 * 86400; // 7 days cryptographic expiration (SK10)
+  const payloadWithExpiry: SessionUser = {
+    ...user,
+    iat: user.iat || now,
+    exp: user.exp || exp,
+  };
+  const payloadString = JSON.stringify(payloadWithExpiry);
   const encoder = new TextEncoder();
   const key = await crypto.subtle.importKey(
     "raw",
@@ -78,7 +87,15 @@ export async function verifySessionToken(token: string): Promise<SessionUser | n
     );
 
     if (!isValid) return null;
-    return JSON.parse(payloadString) as SessionUser;
+    const session = JSON.parse(payloadString) as SessionUser;
+
+    // SK10: Enforce expiration check (prevent indefinitely valid stateless tokens)
+    const now = Math.floor(Date.now() / 1000);
+    if (session.exp && session.exp < now) {
+      return null;
+    }
+
+    return session;
   } catch {
     return null;
   }

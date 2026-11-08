@@ -146,7 +146,10 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
   )
   .post(
     "/transcribe-speaking",
-    async ({ body, set }) => {
+    async ({ body, user, set }) => {
+      if (!user) {
+        throw new UnauthorizedError("Autentikasi akun diperlukan untuk transkripsi audio AI.");
+      }
       const transcript = await AiService.transcribeAudioSelfIntro(
         body.audioBase64,
         body.mimeType || "audio/webm"
@@ -158,11 +161,14 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
         data: { transcript },
       });
     },
-    { body: TranscribeBody }
+    { auth: true, body: TranscribeBody }
   )
   .post(
     "/evaluate-writing",
-    async ({ body, set }) => {
+    async ({ body, user, set }) => {
+      if (!user) {
+        throw new UnauthorizedError("Autentikasi akun diperlukan untuk evaluasi tulisan AI.");
+      }
       const data = await AiService.evaluateWriting(body.text);
       return jsonResponse({
         set,
@@ -171,11 +177,14 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
         data,
       });
     },
-    { body: EvaluateWritingBody }
+    { auth: true, body: EvaluateWritingBody }
   )
   .post(
     "/evaluate-speaking",
-    async ({ body, set }) => {
+    async ({ body, user, set }) => {
+      if (!user) {
+        throw new UnauthorizedError("Autentikasi akun diperlukan untuk evaluasi percakapan AI.");
+      }
       const data = await AiService.evaluateSpeakingSelfIntro(body.transcript);
       return jsonResponse({
         set,
@@ -184,7 +193,7 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
         data,
       });
     },
-    { body: EvaluateSpeakingBody }
+    { auth: true, body: EvaluateSpeakingBody }
   )
   .post(
     "/submit",

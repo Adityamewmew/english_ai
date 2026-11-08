@@ -3,15 +3,16 @@ import { getClassesUsecase } from "../../usecase/classes/get-classes.usecase";
 import { purchaseClassUsecase } from "../../usecase/classes/purchase-class.usecase";
 import { checkAiQuotaUsecase } from "../../usecase/classes/check-ai-quota.usecase";
 import { jsonResponse } from "../../presenter/json";
-import { UnauthorizedError } from "../../../common/errors/app-error";
+import { UnauthorizedError, ForbiddenError } from "../../../common/errors/app-error";
 import { authPlugin } from "../../../lib/auth";
+import { isUserAdmin } from "@english-ai/shared";
 
 export const classHandler = new Elysia({ prefix: "/api/classes" })
   .use(authPlugin)
   .get(
     "/",
     async ({ query, user, set }) => {
-      const activeUserId = user?.id || query?.userId;
+      const activeUserId = isUserAdmin(user) && query?.userId ? query.userId : user?.id;
       const data = await getClassesUsecase(activeUserId);
       return jsonResponse({
         set,
@@ -32,7 +33,7 @@ export const classHandler = new Elysia({ prefix: "/api/classes" })
   .get(
     "/quota",
     async ({ query, user, set }) => {
-      const activeUserId = user?.id || query?.userId;
+      const activeUserId = isUserAdmin(user) && query?.userId ? query.userId : user?.id;
       if (!activeUserId) {
         throw new UnauthorizedError(
           "Autentikasi diperlukan untuk memeriksa kuota AI."
@@ -58,14 +59,16 @@ export const classHandler = new Elysia({ prefix: "/api/classes" })
   .post(
     "/purchase",
     async ({ body, user, set }) => {
-      const activeUserId =
-        user?.id ||
-        (process.env.NODE_ENV !== "production" ? body?.userId : undefined);
-      if (!activeUserId) {
-        throw new UnauthorizedError(
-          "Autentikasi diperlukan untuk membuka akses kelas."
+      if (!user) {
+        throw new UnauthorizedError("Autentikasi diperlukan untuk membuka akses kelas.");
+      }
+      if (!isUserAdmin(user)) {
+        throw new ForbiddenError(
+          "Akses kelas mandiri hanya dapat diaktifkan melalui alur pembayaran resmi (SingaPay)."
         );
       }
+
+      const activeUserId = body?.userId || user.id;
 
       const data = await purchaseClassUsecase(
         activeUserId,

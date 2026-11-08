@@ -15,13 +15,14 @@ import { submitSubModuleUsecase } from "../../usecase/curriculum/submit-sub-modu
 import { jsonResponse } from "../../presenter/json";
 import { authPlugin } from "../../../lib/auth";
 import { UnauthorizedError } from "../../../common/errors/app-error";
+import { isUserAdmin } from "@english-ai/shared";
 
 export const curriculumHandler = new Elysia({ prefix: "/api/curriculum" })
   .use(authPlugin)
   .get(
     "/",
     async ({ query, user, set }) => {
-      const activeUserId = (user as any)?.id || query?.userId;
+      const activeUserId = isUserAdmin(user) && query?.userId ? query.userId : user?.id;
       const data = await getCurriculumUsecase(activeUserId, query?.levelId);
       return jsonResponse({
         set,
@@ -35,7 +36,7 @@ export const curriculumHandler = new Elysia({ prefix: "/api/curriculum" })
   .get(
     "/modules",
     async ({ query, user, set }) => {
-      const activeUserId = (user as any)?.id || query?.userId;
+      const activeUserId = isUserAdmin(user) && query?.userId ? query.userId : user?.id;
       const data = await getCurriculumUsecase(activeUserId, query?.levelId);
       return jsonResponse({
         set,
@@ -49,7 +50,7 @@ export const curriculumHandler = new Elysia({ prefix: "/api/curriculum" })
   .get(
     "/levels",
     async ({ query, user, set }) => {
-      const activeUserId = (user as any)?.id || query?.userId;
+      const activeUserId = isUserAdmin(user) && query?.userId ? query.userId : user?.id;
       const data = await getCurriculumUsecase(activeUserId, query?.levelId);
       return jsonResponse({
         set,
@@ -63,7 +64,7 @@ export const curriculumHandler = new Elysia({ prefix: "/api/curriculum" })
   .get(
     "/modules/:id",
     async ({ params, query, user, set }) => {
-      const activeUserId = (user as any)?.id || query?.userId;
+      const activeUserId = isUserAdmin(user) && query?.userId ? query.userId : user?.id;
       const data = await getModuleDetailUsecase(params.id, activeUserId);
       return jsonResponse({
         set,
@@ -81,7 +82,7 @@ export const curriculumHandler = new Elysia({ prefix: "/api/curriculum" })
   .post(
     "/modules/:id/submit",
     async ({ params, body, user, set }) => {
-      const activeUserId = (user as any)?.id || body.userId;
+      const activeUserId = isUserAdmin(user) && body.userId ? body.userId : user?.id;
       if (!activeUserId) {
         throw new UnauthorizedError("Autentikasi diperlukan untuk mengirim kuis modul.");
       }
@@ -107,7 +108,7 @@ export const curriculumHandler = new Elysia({ prefix: "/api/curriculum" })
   .post(
     "/modules/:id/step-progress",
     async ({ params, body, user, set }) => {
-      const activeUserId = (user as any)?.id || body.userId;
+      const activeUserId = isUserAdmin(user) && body.userId ? body.userId : user?.id;
       if (!activeUserId) {
         throw new UnauthorizedError("Autentikasi diperlukan untuk menyimpan progres modul.");
       }
@@ -134,7 +135,7 @@ export const curriculumHandler = new Elysia({ prefix: "/api/curriculum" })
   .post(
     "/sub-modules/:id/submit",
     async ({ params, body, user, set }) => {
-      const activeUserId = (user as any)?.id || body.userId;
+      const activeUserId = isUserAdmin(user) && body.userId ? body.userId : user?.id;
       if (!activeUserId) {
         throw new UnauthorizedError("Autentikasi diperlukan untuk mengirim kuis sub-modul.");
       }
@@ -142,7 +143,7 @@ export const curriculumHandler = new Elysia({ prefix: "/api/curriculum" })
         activeUserId,
         params.id,
         body.answers,
-        body.score,
+        undefined, // SK06: Never pass unverified client-controlled customScore
         body.speakingScore
       );
       return jsonResponse({

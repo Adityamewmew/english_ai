@@ -14,16 +14,15 @@ export const ListUsersQuery = t.Optional(
 );
 
 export const LoginUserBody = t.Object({
-  email: t.String(),
-  password: t.String(),
+  email: t.String({ format: "email" }),
+  password: t.String({ minLength: 8 }),
 });
 export type LoginUserBody = typeof LoginUserBody.static;
 
 export const RegisterUserBody = t.Object({
   name: t.String({ minLength: 2 }),
   email: t.String({ format: "email" }),
-  password: t.String({ minLength: 6 }),
-  role: t.Optional(t.String()),
+  password: t.String({ minLength: 8 }),
   currentCefr: t.Optional(t.String()),
 });
 export type RegisterUserBody = typeof RegisterUserBody.static;
