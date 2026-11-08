@@ -10,6 +10,8 @@ interface ExamPartWritingProps {
   writingAnswers: Record<number, string>;
   onChangeAnswer: (qIdx: number, val: string) => void;
   onNext: () => void;
+  isCompleted?: boolean;
+  isAdmin?: boolean;
 }
 
 export function ExamPartWriting({
@@ -17,8 +19,11 @@ export function ExamPartWriting({
   writingAnswers,
   onChangeAnswer,
   onNext,
+  isCompleted = false,
+  isAdmin = false,
 }: ExamPartWritingProps) {
-  const answeredCount = Object.keys(writingAnswers).length;
+  const answeredCount = writingList.filter((_, idx) => (writingAnswers[idx] || "").trim().length > 0).length;
+  const canProceed = isCompleted || isAdmin;
 
   return (
     <div className="space-y-6 max-w-3xl mx-auto py-2">
@@ -88,13 +93,26 @@ export function ExamPartWriting({
         })}
       </div>
 
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4">
-        <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
-          Complete all writing questions before proceeding to the oral speaking exam.
-        </span>
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4 border-t border-slate-200/80 dark:border-slate-800">
+        <div className="text-xs">
+          {!canProceed ? (
+            <span className="font-semibold text-rose-700 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/40 px-3 py-1.5 rounded-xl border border-rose-200 dark:border-rose-800 inline-block">
+              Selesaikan seluruh {writingList.length} soal writing ({writingList.length - answeredCount} soal belum dijawab).
+            </span>
+          ) : (
+            <span className="font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-3 py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800 inline-block">
+              ✓ Seluruh {writingList.length} soal writing telah selesai ditulis!
+            </span>
+          )}
+        </div>
         <Button
+          disabled={!canProceed}
           onClick={onNext}
-          className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs inline-flex items-center justify-center gap-2 cursor-pointer"
+          className={`w-full sm:w-auto px-6 py-2.5 rounded-xl text-white font-bold text-xs inline-flex items-center justify-center gap-2 ${
+            !canProceed
+              ? "opacity-50 cursor-not-allowed bg-slate-300 dark:bg-slate-700 text-slate-500"
+              : "bg-rose-600 hover:bg-rose-700 cursor-pointer"
+          }`}
         >
           <span>Continue to Part 4 (Speaking)</span>
           <ChevronRight className="w-4 h-4" />

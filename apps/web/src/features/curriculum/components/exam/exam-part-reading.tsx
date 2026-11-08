@@ -10,6 +10,8 @@ interface ExamPartReadingProps {
   readingAnswers: Record<number, string>;
   onSelectAnswer: (qIdx: number, option: string) => void;
   onNext: () => void;
+  isCompleted?: boolean;
+  isAdmin?: boolean;
 }
 
 export function ExamPartReading({
@@ -17,8 +19,11 @@ export function ExamPartReading({
   readingAnswers,
   onSelectAnswer,
   onNext,
+  isCompleted = false,
+  isAdmin = false,
 }: ExamPartReadingProps) {
   const answeredCount = Object.keys(readingAnswers).length;
+  const canProceed = isCompleted || isAdmin;
 
   return (
     <div className="space-y-6 max-w-3xl mx-auto py-2">
@@ -87,13 +92,26 @@ export function ExamPartReading({
         })}
       </div>
 
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4">
-        <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
-          Ensure all reading questions are completed before proceeding.
-        </span>
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4 border-t border-slate-200/80 dark:border-slate-800">
+        <div className="text-xs">
+          {!canProceed ? (
+            <span className="font-semibold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/40 px-3 py-1.5 rounded-xl border border-amber-200 dark:border-amber-800 inline-block">
+              Selesaikan seluruh {readingList.length} soal sebelum lanjut ({readingList.length - answeredCount} soal belum dijawab).
+            </span>
+          ) : (
+            <span className="font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-3 py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800 inline-block">
+              ✓ Seluruh {readingList.length} soal reading telah dijawab!
+            </span>
+          )}
+        </div>
         <Button
+          disabled={!canProceed}
           onClick={onNext}
-          className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#082542] text-white font-bold text-xs inline-flex items-center justify-center gap-2 cursor-pointer"
+          className={`w-full sm:w-auto px-6 py-2.5 rounded-xl text-white font-bold text-xs inline-flex items-center justify-center gap-2 ${
+            !canProceed
+              ? "opacity-50 cursor-not-allowed bg-slate-300 dark:bg-slate-700 text-slate-500"
+              : "bg-[#0D3B66] hover:bg-[#082542] cursor-pointer"
+          }`}
         >
           <span>Continue to Part 2 (Listening)</span>
           <ChevronRight className="w-4 h-4" />

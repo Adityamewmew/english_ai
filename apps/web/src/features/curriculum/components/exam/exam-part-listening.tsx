@@ -11,6 +11,8 @@ interface ExamPartListeningProps {
   onChangeAnswer: (qIdx: number, val: string) => void;
   playAudio: (text: string) => void;
   onNext: () => void;
+  isCompleted?: boolean;
+  isAdmin?: boolean;
 }
 
 export function ExamPartListening({
@@ -19,8 +21,11 @@ export function ExamPartListening({
   onChangeAnswer,
   playAudio,
   onNext,
+  isCompleted = false,
+  isAdmin = false,
 }: ExamPartListeningProps) {
-  const answeredCount = Object.keys(listeningAnswers).length;
+  const answeredCount = listeningList.filter((_, idx) => (listeningAnswers[idx] || "").trim().length > 0).length;
+  const canProceed = isCompleted || isAdmin;
 
   return (
     <div className="space-y-6 max-w-3xl mx-auto py-2">
@@ -130,13 +135,26 @@ export function ExamPartListening({
         })}
       </div>
 
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4">
-        <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
-          Part 2 complete. Proceed to written production.
-        </span>
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4 border-t border-slate-200/80 dark:border-slate-800">
+        <div className="text-xs">
+          {!canProceed ? (
+            <span className="font-semibold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/40 px-3 py-1.5 rounded-xl border border-amber-200 dark:border-amber-800 inline-block">
+              Selesaikan seluruh {listeningList.length} soal listening ({listeningList.length - answeredCount} soal belum dijawab).
+            </span>
+          ) : (
+            <span className="font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-3 py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800 inline-block">
+              ✓ Seluruh {listeningList.length} soal listening telah selesai diisi!
+            </span>
+          )}
+        </div>
         <Button
+          disabled={!canProceed}
           onClick={onNext}
-          className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs inline-flex items-center justify-center gap-2 cursor-pointer"
+          className={`w-full sm:w-auto px-6 py-2.5 rounded-xl text-white font-bold text-xs inline-flex items-center justify-center gap-2 ${
+            !canProceed
+              ? "opacity-50 cursor-not-allowed bg-slate-300 dark:bg-slate-700 text-slate-500"
+              : "bg-amber-600 hover:bg-amber-700 cursor-pointer"
+          }`}
         >
           <span>Continue to Part 3 (Writing)</span>
           <ChevronRight className="w-4 h-4" />

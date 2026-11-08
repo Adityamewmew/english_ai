@@ -11,6 +11,8 @@ interface ExamPartSpeakingProps {
   onToggleCompleted: (qIdx: number) => void;
   playAudio: (text: string) => void;
   onFinish: () => void;
+  isCompleted?: boolean;
+  isAdmin?: boolean;
 }
 
 export function ExamPartSpeaking({
@@ -19,10 +21,13 @@ export function ExamPartSpeaking({
   onToggleCompleted,
   playAudio,
   onFinish,
+  isCompleted = false,
+  isAdmin = false,
 }: ExamPartSpeakingProps) {
   const completedCount = Object.keys(speakingCompleted).filter(
     (k) => speakingCompleted[Number(k)]
   ).length;
+  const canProceed = isCompleted || isAdmin;
 
   const [recordingIdx, setRecordingIdx] = useState<number | null>(null);
   const [recordSeconds, setRecordSeconds] = useState(0);
@@ -257,13 +262,26 @@ export function ExamPartSpeaking({
         })}
       </div>
 
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4">
-        <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
-          All sections finished. Submit the exam to calculate your final score.
-        </span>
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4 border-t border-slate-200/80 dark:border-slate-800">
+        <div className="text-xs">
+          {!canProceed ? (
+            <span className="font-semibold text-sky-700 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/40 px-3 py-1.5 rounded-xl border border-sky-200 dark:border-sky-800 inline-block">
+              Lengkapi seluruh {speakingList.length} rekaman speaking ({speakingList.length - completedCount} prompt belum direkam).
+            </span>
+          ) : (
+            <span className="font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-3 py-1.5 rounded-xl border border-emerald-200 dark:border-emerald-800 inline-block">
+              ✓ Seluruh {speakingList.length} prompt speaking telah diverifikasi!
+            </span>
+          )}
+        </div>
         <Button
+          disabled={!canProceed}
           onClick={onFinish}
-          className="w-full sm:w-auto px-7 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs inline-flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+          className={`w-full sm:w-auto px-7 py-3 rounded-xl text-white font-bold text-xs inline-flex items-center justify-center gap-2 shadow-sm ${
+            !canProceed
+              ? "opacity-50 cursor-not-allowed bg-slate-300 dark:bg-slate-700 text-slate-500"
+              : "bg-emerald-600 hover:bg-emerald-700 cursor-pointer"
+          }`}
         >
           <span>Calculate Score & View Certificate</span>
           <CheckCircle2 className="w-4 h-4" />

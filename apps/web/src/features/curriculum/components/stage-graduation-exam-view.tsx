@@ -63,89 +63,120 @@ export function StageGraduationExamView({
   }, [quizSec]);
 
   const readingList: any[] = useMemo(() => {
-    if (rawParts?.reading && rawParts.reading.length > 0) return rawParts.reading;
-    const filtered = rawQuestions.filter(
-      (q) => q.skill === "reading" || /\[reading/i.test(q.question || "")
-    );
-    if (filtered.length > 0) return filtered;
-    return rawQuestions.length >= 4 ? rawQuestions.slice(0, Math.ceil(rawQuestions.length / 4)) : rawQuestions;
+    if (rawParts?.reading?.length) return rawParts.reading;
+    const f = rawQuestions.filter((q) => q.skill === "reading" || /\[reading/i.test(q.question || ""));
+    return f.length ? f : (rawQuestions.length >= 4 ? rawQuestions.slice(0, Math.ceil(rawQuestions.length / 4)) : rawQuestions);
   }, [rawParts, rawQuestions]);
 
   const listeningList: any[] = useMemo(() => {
-    if (rawParts?.listening && rawParts.listening.length > 0) return rawParts.listening;
-    const filtered = rawQuestions.filter(
-      (q) => q.skill === "listening" || /\[listening/i.test(q.question || "") || q.audioText || q.targetSentence
-    );
-    if (filtered.length > 0) return filtered;
-    return rawQuestions.length >= 4
-      ? rawQuestions.slice(Math.ceil(rawQuestions.length / 4), Math.ceil(rawQuestions.length / 2))
-      : [];
+    if (rawParts?.listening?.length) return rawParts.listening;
+    const f = rawQuestions.filter((q) => q.skill === "listening" || /\[listening/i.test(q.question || "") || q.audioText || q.targetSentence);
+    return f.length ? f : (rawQuestions.length >= 4 ? rawQuestions.slice(Math.ceil(rawQuestions.length / 4), Math.ceil(rawQuestions.length / 2)) : []);
   }, [rawParts, rawQuestions]);
 
   const writingList: any[] = useMemo(() => {
-    if (rawParts?.writing && rawParts.writing.length > 0) return rawParts.writing;
-    const filtered = rawQuestions.filter(
-      (q) => q.skill === "writing" || /\[writing/i.test(q.question || "") || q.promptText || q.sentence
-    );
-    if (filtered.length > 0) return filtered;
-    return rawQuestions.length >= 4
-      ? rawQuestions.slice(Math.ceil(rawQuestions.length / 2), Math.ceil((rawQuestions.length * 3) / 4))
-      : [];
+    if (rawParts?.writing?.length) return rawParts.writing;
+    const f = rawQuestions.filter((q) => q.skill === "writing" || /\[writing/i.test(q.question || "") || q.promptText || q.sentence);
+    return f.length ? f : (rawQuestions.length >= 4 ? rawQuestions.slice(Math.ceil(rawQuestions.length / 2), Math.ceil((rawQuestions.length * 3) / 4)) : []);
   }, [rawParts, rawQuestions]);
 
   const speakingList: any[] = useMemo(() => {
-    if (rawParts?.speaking && rawParts.speaking.length > 0) return rawParts.speaking;
-    const filtered = rawQuestions.filter(
-      (q) => q.skill === "speaking" || /\[speaking/i.test(q.question || "") || q.scenario || q.prompt
-    );
-    if (filtered.length > 0) return filtered;
-    return rawQuestions.length >= 4
-      ? rawQuestions.slice(Math.ceil((rawQuestions.length * 3) / 4))
-      : [];
+    if (rawParts?.speaking?.length) return rawParts.speaking;
+    const f = rawQuestions.filter((q) => q.skill === "speaking" || /\[speaking/i.test(q.question || "") || q.scenario || q.prompt);
+    return f.length ? f : (rawQuestions.length >= 4 ? rawQuestions.slice(Math.ceil((rawQuestions.length * 3) / 4)) : []);
   }, [rawParts, rawQuestions]);
 
   const passingScore = moduleData?.passingScore || 75;
+  const subId = quizSec?.subModuleId || theorySec?.subModuleId || moduleData?.id;
 
-  // Student answer state per part (restored from initialAnswers / draft if present)
+  // Instant hydration fallback from localStorage for reliable refresh persistence
+  const getSavedExamDraft = () => {
+    if (initialAnswers?.__examDraft) return initialAnswers.__examDraft;
+    if (typeof window !== "undefined" && subId) {
+      try {
+        const saved = localStorage.getItem(`eddys_draft_${subId}`);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (parsed?.stageAnswers?.__examDraft) return parsed.stageAnswers.__examDraft;
+          if (parsed?.stageAnswers) return parsed.stageAnswers;
+        }
+      } catch {}
+    }
+    return null;
+  };
+
+  // Student answer state per part (restored immediately from initialAnswers or localStorage draft)
   const [readingAnswers, setReadingAnswers] = useState<Record<number, string>>(() => {
-    if (initialAnswers?.__examDraft?.reading) return initialAnswers.__examDraft.reading;
+    const draft = getSavedExamDraft();
+    if (draft?.reading) return draft.reading;
     const res: Record<number, string> = {};
     readingList.forEach((q, idx) => {
-      const val = initialAnswers?.[q.id] ?? initialAnswers?.[`r-${idx}`];
+      const val = initialAnswers?.[q.id] ?? initialAnswers?.[`r-${idx}`] ?? draft?.[q.id] ?? draft?.[`r-${idx}`];
       if (val !== undefined && val !== null) res[idx] = String(val);
     });
     return res;
   });
 
   const [listeningAnswers, setListeningAnswers] = useState<Record<number, string>>(() => {
-    if (initialAnswers?.__examDraft?.listening) return initialAnswers.__examDraft.listening;
+    const draft = getSavedExamDraft();
+    if (draft?.listening) return draft.listening;
     const res: Record<number, string> = {};
     listeningList.forEach((q, idx) => {
-      const val = initialAnswers?.[q.id] ?? initialAnswers?.[`l-${idx}`];
+      const val = initialAnswers?.[q.id] ?? initialAnswers?.[`l-${idx}`] ?? draft?.[q.id] ?? draft?.[`l-${idx}`];
       if (val !== undefined && val !== null) res[idx] = String(val);
     });
     return res;
   });
 
   const [writingAnswers, setWritingAnswers] = useState<Record<number, string>>(() => {
-    if (initialAnswers?.__examDraft?.writing) return initialAnswers.__examDraft.writing;
+    const draft = getSavedExamDraft();
+    if (draft?.writing) return draft.writing;
     const res: Record<number, string> = {};
     writingList.forEach((q, idx) => {
-      const val = initialAnswers?.[q.id] ?? initialAnswers?.[`w-${idx}`];
+      const val = initialAnswers?.[q.id] ?? initialAnswers?.[`w-${idx}`] ?? draft?.[q.id] ?? draft?.[`w-${idx}`];
       if (val !== undefined && val !== null) res[idx] = String(val);
     });
     return res;
   });
 
   const [speakingCompleted, setSpeakingCompleted] = useState<Record<number, boolean>>(() => {
-    if (initialAnswers?.__examDraft?.speaking) return initialAnswers.__examDraft.speaking;
+    const draft = getSavedExamDraft();
+    if (draft?.speaking) return draft.speaking;
     const res: Record<number, boolean> = {};
     speakingList.forEach((q, idx) => {
-      const val = initialAnswers?.[q.id] ?? initialAnswers?.[`s-${idx}`];
+      const val = initialAnswers?.[q.id] ?? initialAnswers?.[`s-${idx}`] ?? draft?.[q.id] ?? draft?.[`s-${idx}`];
       if (val === true || val === "completed") res[idx] = true;
     });
     return res;
   });
+
+  // Synchronize incoming initialAnswers if parent restores draft after initial render
+  React.useEffect(() => {
+    if (initialAnswers?.__examDraft) {
+      const draft = initialAnswers.__examDraft;
+      if (draft.reading && Object.keys(draft.reading).length > 0) setReadingAnswers((prev) => ({ ...draft.reading, ...prev }));
+      if (draft.listening && Object.keys(draft.listening).length > 0) setListeningAnswers((prev) => ({ ...draft.listening, ...prev }));
+      if (draft.writing && Object.keys(draft.writing).length > 0) setWritingAnswers((prev) => ({ ...draft.writing, ...prev }));
+      if (draft.speaking && Object.keys(draft.speaking).length > 0) setSpeakingCompleted((prev) => ({ ...draft.speaking, ...prev }));
+    }
+  }, [initialAnswers]);
+
+  // Section completion gate guards (must 100% finish active part before advancing)
+  const isReadingComplete = readingList.length > 0 && readingList.every((_, idx) => Boolean(readingAnswers[idx]));
+  const isListeningComplete = listeningList.length > 0 && listeningList.every((_, idx) => (listeningAnswers[idx] || "").trim().length > 0);
+  const isWritingComplete = writingList.length > 0 && writingList.every((_, idx) => (writingAnswers[idx] || "").trim().length > 0);
+  const isSpeakingComplete = speakingList.length > 0 && speakingList.every((_, idx) => Boolean(speakingCompleted[idx]));
+
+  const isCurrentPartComplete =
+    activeStepId === 1 ? true :
+    activeStepId === 2 ? isReadingComplete :
+    activeStepId === 3 ? isListeningComplete :
+    activeStepId === 4 ? isWritingComplete :
+    activeStepId === 5 ? isSpeakingComplete : true;
+
+  React.useEffect(() => {
+    if (isCurrentPartComplete && onStepComplete) onStepComplete();
+  }, [isCurrentPartComplete, onStepComplete]);
 
   const [isSubmittingExam, setIsSubmittingExam] = useState(false);
   const [isExamSubmitted, setIsExamSubmitted] = useState(false);
@@ -337,26 +368,18 @@ export function StageGraduationExamView({
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <Card className="p-4 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-center space-y-1">
-            <BookOpen className="w-5 h-5 mx-auto text-[#0D3B66] dark:text-blue-400" />
-            <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">Part 1: Reading</div>
-            <div className="text-lg font-black text-slate-900 dark:text-white">{readingList.length} Questions</div>
-          </Card>
-          <Card className="p-4 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-center space-y-1">
-            <Headphones className="w-5 h-5 mx-auto text-amber-600 dark:text-amber-400" />
-            <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">Part 2: Listening</div>
-            <div className="text-lg font-black text-slate-900 dark:text-white">{listeningList.length} Questions</div>
-          </Card>
-          <Card className="p-4 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-center space-y-1">
-            <PenTool className="w-5 h-5 mx-auto text-rose-600 dark:text-rose-400" />
-            <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">Part 3: Writing</div>
-            <div className="text-lg font-black text-slate-900 dark:text-white">{writingList.length} Questions</div>
-          </Card>
-          <Card className="p-4 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-center space-y-1">
-            <Mic className="w-5 h-5 mx-auto text-sky-600 dark:text-sky-400" />
-            <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">Part 4: Speaking</div>
-            <div className="text-lg font-black text-slate-900 dark:text-white">{speakingList.length} Questions</div>
-          </Card>
+          {[
+            { icon: BookOpen, title: "Part 1: Reading", count: readingList.length, color: "text-[#0D3B66] dark:text-blue-400" },
+            { icon: Headphones, title: "Part 2: Listening", count: listeningList.length, color: "text-amber-600 dark:text-amber-400" },
+            { icon: PenTool, title: "Part 3: Writing", count: writingList.length, color: "text-rose-600 dark:text-rose-400" },
+            { icon: Mic, title: "Part 4: Speaking", count: speakingList.length, color: "text-sky-600 dark:text-sky-400" },
+          ].map((c, i) => (
+            <Card key={i} className="p-4 bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-center space-y-1">
+              <c.icon className={`w-5 h-5 mx-auto ${c.color}`} />
+              <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">{c.title}</div>
+              <div className="text-lg font-black text-slate-900 dark:text-white">{c.count} Questions</div>
+            </Card>
+          ))}
         </div>
 
         <Card className="p-5 bg-amber-50/70 dark:bg-amber-950/30 border border-amber-300 dark:border-amber-800/60 rounded-2xl flex items-center justify-between gap-4">
@@ -397,6 +420,11 @@ export function StageGraduationExamView({
   const grandTotal = readingList.length + listeningList.length + writingList.length + speakingList.length || 55;
   const totalAnsweredCount = Object.keys(examAnswers).filter((k) => !k.startsWith("__") && examAnswers[k]).length;
 
+  const handleTimeExpired = () => {
+    alert("Waktu ujian (50 menit) telah habis. Ujian akan dikumpulkan secara otomatis.");
+    onSubmitExam?.(scores.totalScore, examAnswers);
+  };
+
   // Step 2: Part 1 Reading (15 MCQ)
   if (activeStepId === 2) {
     return (
@@ -408,18 +436,21 @@ export function StageGraduationExamView({
           partTotal={readingList.length}
           totalAnswered={totalAnsweredCount}
           grandTotal={grandTotal}
+          timerId={moduleData?.id || subId}
+          onTimeExpired={handleTimeExpired}
         />
         <ExamPartReading
           readingList={readingList}
           readingAnswers={readingAnswers}
-          onSelectAnswer={(qIdx, opt) =>
-            setReadingAnswers((prev) => ({ ...prev, [qIdx]: opt }))
-          }
+          onSelectAnswer={(qIdx, opt) => setReadingAnswers((prev) => ({ ...prev, [qIdx]: opt }))}
           onNext={() => {
+            if (!isReadingComplete && !isAdmin) return;
             onRewardXp(25);
             if (onStepComplete) onStepComplete();
             onNextStep();
           }}
+          isCompleted={isReadingComplete}
+          isAdmin={isAdmin}
         />
       </div>
     );
@@ -436,19 +467,22 @@ export function StageGraduationExamView({
           partTotal={listeningList.length}
           totalAnswered={totalAnsweredCount}
           grandTotal={grandTotal}
+          timerId={moduleData?.id || subId}
+          onTimeExpired={handleTimeExpired}
         />
         <ExamPartListening
           listeningList={listeningList}
           listeningAnswers={listeningAnswers}
-          onChangeAnswer={(qIdx, val) =>
-            setListeningAnswers((prev) => ({ ...prev, [qIdx]: val }))
-          }
+          onChangeAnswer={(qIdx, val) => setListeningAnswers((prev) => ({ ...prev, [qIdx]: val }))}
           playAudio={playAudio}
           onNext={() => {
+            if (!isListeningComplete && !isAdmin) return;
             onRewardXp(25);
             if (onStepComplete) onStepComplete();
             onNextStep();
           }}
+          isCompleted={isListeningComplete}
+          isAdmin={isAdmin}
         />
       </div>
     );
@@ -465,18 +499,21 @@ export function StageGraduationExamView({
           partTotal={writingList.length}
           totalAnswered={totalAnsweredCount}
           grandTotal={grandTotal}
+          timerId={moduleData?.id || subId}
+          onTimeExpired={handleTimeExpired}
         />
         <ExamPartWriting
           writingList={writingList}
           writingAnswers={writingAnswers}
-          onChangeAnswer={(qIdx, val) =>
-            setWritingAnswers((prev) => ({ ...prev, [qIdx]: val }))
-          }
+          onChangeAnswer={(qIdx, val) => setWritingAnswers((prev) => ({ ...prev, [qIdx]: val }))}
           onNext={() => {
+            if (!isWritingComplete && !isAdmin) return;
             onRewardXp(25);
             if (onStepComplete) onStepComplete();
             onNextStep();
           }}
+          isCompleted={isWritingComplete}
+          isAdmin={isAdmin}
         />
       </div>
     );
@@ -493,15 +530,20 @@ export function StageGraduationExamView({
           partTotal={speakingList.length}
           totalAnswered={totalAnsweredCount}
           grandTotal={grandTotal}
+          timerId={moduleData?.id || subId}
+          onTimeExpired={handleTimeExpired}
         />
         <ExamPartSpeaking
           speakingList={speakingList}
           speakingCompleted={speakingCompleted}
-          onToggleCompleted={(qIdx) =>
-            setSpeakingCompleted((prev) => ({ ...prev, [qIdx]: !prev[qIdx] }))
-          }
+          onToggleCompleted={(qIdx) => setSpeakingCompleted((prev) => ({ ...prev, [qIdx]: !prev[qIdx] }))}
           playAudio={playAudio}
-          onFinish={() => setIsConfirmModalOpen(true)}
+          onFinish={() => {
+            if (!isSpeakingComplete && !isAdmin) return;
+            setIsConfirmModalOpen(true);
+          }}
+          isCompleted={isSpeakingComplete}
+          isAdmin={isAdmin}
         />
         <ExamSubmitConfirmModal
           isOpen={isConfirmModalOpen}

@@ -177,7 +177,7 @@ export function ModuleStudyView({
   }, [skillType, completedSteps]);
 
   const isExamEnd = isExam && activeStepId === playlistSteps.length;
-  const canProceed = isAdmin || isCurrentStepComplete || completedSteps.includes(activeStepId) || activeStepId === 1 || isExamEnd;
+  const canProceed = isAdmin || isCurrentStepComplete || (isExam ? false : completedSteps.includes(activeStepId)) || activeStepId === 1 || isExamEnd;
 
   const handleStepComplete = () => {
     setIsCurrentStepComplete(true);
@@ -191,33 +191,29 @@ export function ModuleStudyView({
       try {
         if (resetToStep1) {
           localStorage.removeItem(`eddys_draft_${currentSub.id}`);
+          localStorage.removeItem(`eddys_exam_timer_${currentSub.id}`);
+          if (moduleId) localStorage.removeItem(`eddys_exam_timer_${moduleId}`);
         } else {
-          const draft = { activeStepId, completedSteps, stageAnswers: {}, stageSpeakingScore: undefined, timestamp: Date.now() };
-          localStorage.setItem(`eddys_draft_${currentSub.id}`, JSON.stringify(draft));
+          localStorage.setItem(`eddys_draft_${currentSub.id}`, JSON.stringify({ activeStepId, completedSteps, stageAnswers: {}, stageSpeakingScore: undefined, timestamp: Date.now() }));
         }
       } catch {}
     }
-    if (resetToStep1) {
-      setActiveStepId(1);
-      setCompletedSteps([1]);
-    }
-    setIsCurrentStepComplete(false);
-    setStageAnswers({});
-    setStageSpeakingScore(undefined);
-    setLastSavedTime(null);
-    setResultModalState(null);
+    if (resetToStep1) { setActiveStepId(1); setCompletedSteps([1]); }
+    setIsCurrentStepComplete(false); setStageAnswers({}); setStageSpeakingScore(undefined); setLastSavedTime(null); setResultModalState(null);
     window.scrollTo({ top: 120, behavior: "smooth" });
-  }, [currentSub?.id, activeStepId, completedSteps]);
+  }, [currentSub?.id, activeStepId, completedSteps, moduleId]);
 
   const handleCloseResultModal = useCallback(() => {
     if (typeof window !== "undefined" && currentSub?.id) {
-      try { localStorage.removeItem(`eddys_draft_${currentSub.id}`); } catch {}
+      try {
+        localStorage.removeItem(`eddys_draft_${currentSub.id}`);
+        localStorage.removeItem(`eddys_exam_timer_${currentSub.id}`);
+        if (moduleId) localStorage.removeItem(`eddys_exam_timer_${moduleId}`);
+      } catch {}
     }
-    setResultModalState(null);
-    onRefresh?.();
-    setActiveMissionId(null);
+    setResultModalState(null); onRefresh?.(); setActiveMissionId(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [currentSub?.id, onRefresh]);
+  }, [currentSub?.id, onRefresh, moduleId]);
 
   const handleConfirmExamSubmit = () => {
     setIsExamConfirmOpen(false);
@@ -234,7 +230,7 @@ export function ModuleStudyView({
       return;
     }
     setActiveStepId(stepId);
-    setIsCurrentStepComplete(isAdmin || completedSteps.includes(stepId) || stepId === 1 || (isExam && stepId === playlistSteps.length));
+    setIsCurrentStepComplete(isAdmin || (isExam ? false : completedSteps.includes(stepId)) || stepId === 1 || (isExam && stepId === playlistSteps.length));
     window.scrollTo({ top: 120, behavior: "smooth" });
   };
 
@@ -265,11 +261,7 @@ export function ModuleStudyView({
       try {
         setIsFinishing(true);
         if (currentSub?.id) {
-          const res = await submitSubModuleAction(
-            currentSub.id,
-            { answers: stageAnswers, speakingScore: stageSpeakingScore },
-            moduleId
-          );
+          const res = await submitSubModuleAction(currentSub.id, { answers: stageAnswers, speakingScore: stageSpeakingScore }, moduleId);
           if (!res?.success) {
             alert(res?.error || "Gagal menyimpan progres. Jawaban Anda tetap tersimpan di perangkat ini. Silakan periksa koneksi atau login kembali.");
             return;
@@ -281,10 +273,8 @@ export function ModuleStudyView({
             }
           }
           setResultModalState({
-            isOpen: true,
-            score: res.data?.score ?? 0,
-            passed: Boolean(res?.data?.passed),
-            passingScore: res.data?.passingScore ?? 75,
+            isOpen: true, score: res.data?.score ?? 0,
+            passed: Boolean(res?.data?.passed), passingScore: res.data?.passingScore ?? 75,
             questionResults: res.data?.questionResults || [],
           });
           onRefresh?.();
@@ -302,17 +292,17 @@ export function ModuleStudyView({
     if (!currentSub?.id) return;
     try {
       setIsFinishing(true);
-      const res = await submitSubModuleAction(
-        currentSub.id,
-        {
-          score: finalScore,
-          answers: examAnswers || {},
-        },
-        moduleId
-      );
+      const res = await submitSubModuleAction(currentSub.id, { score: finalScore, answers: examAnswers || {} }, moduleId);
       if (res?.success) {
         if (res.data?.passed) {
           playFanfareSound();
+          if (typeof window !== "undefined" && currentSub?.id) {
+            try {
+              localStorage.removeItem(`eddys_draft_${currentSub.id}`);
+              localStorage.removeItem(`eddys_exam_timer_${currentSub.id}`);
+              if (moduleId) localStorage.removeItem(`eddys_exam_timer_${moduleId}`);
+            } catch {}
+          }
         }
         onRefresh?.();
       }

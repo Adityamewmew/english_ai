@@ -73,7 +73,7 @@ export function ModuleStageViewport({
   const isExam = skillType === "assessment" || skillType === "exam";
   const isExamEnd = isExam && activeStepId === totalSteps;
   const isExamPreSubmit = isExam && activeStepId === totalSteps - 1;
-  const effectiveCanProceed = isAdmin || canProceed || isExamEnd || isExamPreSubmit;
+  const effectiveCanProceed = isAdmin || canProceed || isExamEnd;
   return (
     <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between">
       {/* 1. Specialized Stage Activity Canvas based on skillType */}
