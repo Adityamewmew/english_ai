@@ -212,9 +212,10 @@ export function ModuleStudyView({
       try { localStorage.removeItem(`eddys_draft_${currentSub.id}`); } catch {}
     }
     setResultModalState(null);
+    onRefresh?.();
     setActiveMissionId(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [currentSub?.id]);
+  }, [currentSub?.id, onRefresh]);
 
   const handleConfirmExamSubmit = () => {
     setIsExamConfirmOpen(false);
@@ -277,13 +278,8 @@ export function ModuleStudyView({
               try { localStorage.removeItem(`eddys_draft_${currentSub.id}`); } catch {}
             }
           }
+          setResultModalState({ isOpen: true, score: res.data?.score ?? 0, passed: Boolean(res?.data?.passed), passingScore: 75 });
           onRefresh?.();
-          setResultModalState({
-            isOpen: true,
-            score: res.data?.score ?? 0,
-            passed: Boolean(res?.data?.passed),
-            passingScore: 75,
-          });
         }
       } catch (err) {
         console.error("Failed to submit submodule:", err);

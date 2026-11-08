@@ -26,9 +26,11 @@ export function ModuleDetailView({ moduleId }: ModuleDetailViewProps) {
     userId,
   });
 
-  const loadData = async () => {
+  const loadData = async (isInitial = false) => {
     try {
-      setLoading(true);
+      if (isInitial || !moduleData) {
+        setLoading(true);
+      }
       let res: any = null;
       try {
         res = await getModuleDetailAction(moduleId);
@@ -73,7 +75,7 @@ export function ModuleDetailView({ moduleId }: ModuleDetailViewProps) {
 
   useEffect(() => {
     if (moduleId) {
-      loadData();
+      loadData(true);
     }
   }, [moduleId]);
 
