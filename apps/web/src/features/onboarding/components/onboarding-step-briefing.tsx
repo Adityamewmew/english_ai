@@ -10,7 +10,6 @@ import {
   ShieldCheck,
   AlertTriangle,
   ArrowRight,
-  Sparkles,
   Loader2,
 } from "lucide-react";
 

@@ -10,7 +10,7 @@ import {
   AlertCircle,
   Play,
   Square,
-  Sparkles,
+  Info,
   ShieldCheck,
   RotateCcw,
 } from "lucide-react";
@@ -221,7 +221,7 @@ export function OnboardingStepDevice({
 
           <div className="mt-5 space-y-3">
             <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-300 flex items-start gap-2.5">
-              <Sparkles className="w-4 h-4 text-[#F4B41A] shrink-0 mt-0.5" />
+              <Info className="w-4 h-4 text-[#0D3B66] dark:text-[#F4B41A] shrink-0 mt-0.5" />
               <p className="leading-relaxed">
                 Tekan tombol di bawah untuk mendengarkan sambutan suara dari AI Tutor.
               </p>

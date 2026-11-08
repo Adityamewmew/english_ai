@@ -5,7 +5,7 @@ import {
   GraduationCap,
   BookOpen,
   Briefcase,
-  Sparkles,
+  Compass,
   Award,
   MessageCircle,
   Globe,
@@ -49,7 +49,7 @@ const PROFESSIONS = [
     id: "Umum",
     label: "Umum",
     desc: "Belajar mandiri untuk pengembangan diri",
-    icon: Sparkles,
+    icon: Compass,
   },
 ];
 

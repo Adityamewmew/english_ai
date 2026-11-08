@@ -172,50 +172,81 @@ export function OnboardingWizardView({ session }: OnboardingWizardViewProps) {
       <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-10">
         {/* Step Progress Bar */}
         <div className="mb-8">
-          <div className="flex items-center justify-between relative mb-2">
-            {/* Background line connecting steps */}
-            <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 h-1 bg-slate-200 dark:bg-slate-800 z-0" />
-            <div
-              className="absolute top-1/2 left-0 -translate-y-1/2 h-1 bg-[#0D3B66] dark:bg-[#F4B41A] transition-all duration-300 z-0"
-              style={{
-                width: currentStep === 1 ? "0%" : currentStep === 2 ? "50%" : "100%",
-              }}
-            />
-
-            {stepIndicators.map((step) => {
+          {/* Connector Row: Circle -> Line -> Circle -> Line -> Circle */}
+          <div className="flex items-center">
+            {stepIndicators.map((step, idx) => {
               const Icon = step.icon;
               const isPast = currentStep > step.num;
               const isCurrent = currentStep === step.num;
+              const isLast = idx === stepIndicators.length - 1;
+
               return (
-                <div key={step.num} className="relative z-10 flex flex-col items-center">
-                  <div
-                    className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm transition-all ${
-                      isPast
-                        ? "bg-[#0D3B66] dark:bg-[#F4B41A] text-white dark:text-slate-950 shadow-xs"
-                        : isCurrent
-                        ? "bg-[#0D3B66] dark:bg-[#F4B41A] text-white dark:text-slate-950 ring-4 ring-[#0D3B66]/20 dark:ring-[#F4B41A]/30 shadow-xs"
-                        : "bg-white dark:bg-slate-900 border-2 border-slate-300 dark:border-slate-700 text-slate-400"
-                    }`}
-                  >
-                    <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                <React.Fragment key={step.num}>
+                  {/* Step Circle Indicator */}
+                  <div className="flex flex-col items-center shrink-0">
+                    <div
+                      className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm transition-all select-none ${
+                        isPast
+                          ? "bg-[#0D3B66] dark:bg-[#F4B41A] text-white dark:text-slate-950 shadow-xs"
+                          : isCurrent
+                          ? "bg-[#0D3B66] dark:bg-[#F4B41A] text-white dark:text-slate-950 ring-4 ring-[#0D3B66]/20 dark:ring-[#F4B41A]/30 shadow-xs"
+                          : "bg-white dark:bg-slate-900 border-2 border-slate-300 dark:border-slate-700 text-slate-400"
+                      }`}
+                    >
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                    </div>
                   </div>
-                  <span
-                    className={`text-[11px] font-bold mt-2 hidden sm:block ${
-                      isCurrent
-                        ? "text-slate-900 dark:text-white"
-                        : "text-slate-400 dark:text-slate-500"
-                    }`}
-                  >
-                    {step.label}
-                  </span>
-                </div>
+
+                  {/* Clean Segmented Connecting Line */}
+                  {!isLast && (
+                    <div className="flex-1 h-1 mx-2 sm:mx-4 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                      <div
+                        className={`h-full bg-[#0D3B66] dark:bg-[#F4B41A] transition-all duration-300 ${
+                          currentStep > step.num ? "w-full" : "w-0"
+                        }`}
+                      />
+                    </div>
+                  )}
+                </React.Fragment>
               );
             })}
           </div>
-          <div className="text-center sm:hidden mt-2">
-            <span className="text-xs font-bold text-slate-600 dark:text-slate-400">
-              Langkah {currentStep} dari 3: {stepIndicators[currentStep - 1]?.label}
-            </span>
+
+          {/* Step Labels Row */}
+          <div className="flex justify-between items-start mt-2.5">
+            <div className="w-24 text-left">
+              <span
+                className={`text-[11px] font-bold block ${
+                  currentStep === 1
+                    ? "text-slate-900 dark:text-white"
+                    : "text-slate-400 dark:text-slate-500"
+                }`}
+              >
+                Profil & Target
+              </span>
+            </div>
+            <div className="w-24 text-center">
+              <span
+                className={`text-[11px] font-bold block ${
+                  currentStep === 2
+                    ? "text-slate-900 dark:text-white"
+                    : "text-slate-400 dark:text-slate-500"
+                }`}
+              >
+                Kesiapan Alat
+              </span>
+            </div>
+            <div className="w-24 text-right">
+              <span
+                className={`text-[11px] font-bold block ${
+                  currentStep === 3
+                    ? "text-slate-900 dark:text-white"
+                    : "text-slate-400 dark:text-slate-500"
+                }`}
+              >
+                Placement Test
+              </span>
+            </div>
           </div>
         </div>
 

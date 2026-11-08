@@ -15,7 +15,6 @@ import {
   ArrowLeft,
   Loader2,
   AlertCircle,
-  Sparkles,
 } from "lucide-react";
 
 function GoogleIcon(props: React.SVGProps<SVGSVGElement>) {
