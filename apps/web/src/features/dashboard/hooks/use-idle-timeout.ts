@@ -12,11 +12,16 @@ export function useIdleTimeout({
   idleMinutes = 25,
   warningMinutes = 5,
 }: UseIdleTimeoutOptions = {}) {
-  const idleMs = idleMinutes * 60 * 1000;
-  const warningDurationSec = warningMinutes * 60;
+  // Support ?idle_test=1 URL query parameter for QA rapid verification (10s idle, 15s countdown)
+  const isDebugIdle =
+    typeof window !== "undefined" &&
+    new URLSearchParams(window.location.search).get("idle_test") === "1";
+
+  const effectiveIdleMs = isDebugIdle ? 10 * 1000 : idleMinutes * 60 * 1000;
+  const effectiveWarningSec = isDebugIdle ? 15 : warningMinutes * 60;
 
   const [isWarningOpen, setIsWarningOpen] = useState(false);
-  const [remainingSeconds, setRemainingSeconds] = useState(warningDurationSec);
+  const [remainingSeconds, setRemainingSeconds] = useState(effectiveWarningSec);
 
   const lastActivityRef = useRef<number>(Date.now());
   const countdownIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -24,7 +29,7 @@ export function useIdleTimeout({
   const resetTimer = useCallback(() => {
     lastActivityRef.current = Date.now();
     setIsWarningOpen(false);
-    setRemainingSeconds(warningDurationSec);
+    setRemainingSeconds(effectiveWarningSec);
     if (countdownIntervalRef.current) {
       clearInterval(countdownIntervalRef.current);
       countdownIntervalRef.current = null;
@@ -33,7 +38,7 @@ export function useIdleTimeout({
     try {
       authClient.getSession().catch(() => {});
     } catch {}
-  }, [warningDurationSec]);
+  }, [effectiveWarningSec]);
 
   const handleLogout = useCallback(async () => {
     try {
@@ -49,6 +54,8 @@ export function useIdleTimeout({
     if (typeof window === "undefined") return;
 
     let throttleTimeout: NodeJS.Timeout | null = null;
+    const throttleDelay = isDebugIdle ? 500 : 3000;
+
     const handleUserActivity = () => {
       // If warning modal is already open, do not reset automatically (require explicit click to confirm student is still there)
       if (isWarningOpen) return;
@@ -57,29 +64,30 @@ export function useIdleTimeout({
         lastActivityRef.current = Date.now();
         throttleTimeout = setTimeout(() => {
           throttleTimeout = null;
-        }, 3000); // Throttle activity updates to once every 3s
+        }, throttleDelay);
       }
     };
 
     const events = ["mousemove", "keydown", "scroll", "touchstart", "click"];
     events.forEach((ev) => window.addEventListener(ev, handleUserActivity, { passive: true }));
 
-    // Periodic check every 10 seconds to detect idle threshold
+    // Periodic check to detect idle threshold (1s in debug mode, 10s in production)
+    const checkIntervalMs = isDebugIdle ? 1000 : 10000;
     const checkInterval = setInterval(() => {
       if (isWarningOpen) return;
       const elapsed = Date.now() - lastActivityRef.current;
-      if (elapsed >= idleMs) {
+      if (elapsed >= effectiveIdleMs) {
         setIsWarningOpen(true);
-        setRemainingSeconds(warningDurationSec);
+        setRemainingSeconds(effectiveWarningSec);
       }
-    }, 10000);
+    }, checkIntervalMs);
 
     return () => {
       events.forEach((ev) => window.removeEventListener(ev, handleUserActivity));
       clearInterval(checkInterval);
       if (throttleTimeout) clearTimeout(throttleTimeout);
     };
-  }, [idleMs, isWarningOpen, warningDurationSec]);
+  }, [effectiveIdleMs, effectiveWarningSec, isDebugIdle, isWarningOpen]);
 
   // Countdown when warning is active
   useEffect(() => {

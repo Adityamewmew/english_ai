@@ -16,6 +16,7 @@ import {
   PhoneCall,
 } from "lucide-react";
 import { animeButtonPop, animeShake } from "@/lib/anime-effects";
+import { getPlaylistSteps } from "../utils/module-study-utils";
 
 interface SubModuleItem {
   id: string;
@@ -108,7 +109,8 @@ function getSubModuleProgressPercent(sub: any, isCompleted: boolean): number {
       const rawDraft = localStorage.getItem(`eddys_draft_${sub.id}`);
       if (rawDraft) {
         const parsed = JSON.parse(rawDraft);
-        const totalSteps = sub.sections?.length || 5;
+        const playlistSteps = getPlaylistSteps(sub.skillType, []);
+        const totalSteps = playlistSteps.length || sub.sections?.length || 5;
         const completedSteps = Array.isArray(parsed.completedSteps)
           ? parsed.completedSteps.length
           : typeof parsed.activeStepId === "number"

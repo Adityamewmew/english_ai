@@ -53,6 +53,23 @@ export function SubmoduleTutorWelcomeStage({
   const [greetingPhase, setGreetingPhase] = useState<
     "entering" | "waving" | "speaking" | "done"
   >("entering");
+  const [draftStep, setDraftStep] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !subModule?.id) return;
+    try {
+      const raw = localStorage.getItem(`eddys_draft_${subModule.id}`);
+      if (raw) {
+        const p = JSON.parse(raw);
+        const hasCompleted = Array.isArray(p.completedSteps) && p.completedSteps.length > 0;
+        const activeNum = typeof p.activeStepId === "number" ? p.activeStepId : null;
+        if (hasCompleted || (activeNum && activeNum > 1)) {
+          const stepNum = activeNum && activeNum > 1 ? activeNum : (p.completedSteps?.length || 0) + 1;
+          setDraftStep(stepNum);
+        }
+      }
+    } catch {}
+  }, [subModule?.id]);
 
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
   const speechTimerRef = useRef<NodeJS.Timeout | null>(null);
@@ -378,12 +395,16 @@ export function SubmoduleTutorWelcomeStage({
           </div>
 
           <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-            {subModule?.userProgress?.status === "completed" && (
+            {subModule?.userProgress?.status === "completed" ? (
               <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-200 border border-emerald-200 dark:border-emerald-800 text-xs font-bold order-3 sm:order-1">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                 <span>Mission Completed {subModule?.userProgress?.score !== null && subModule?.userProgress?.score !== undefined ? `(${subModule.userProgress.score}%)` : ""}</span>
               </div>
-            )}
+            ) : draftStep ? (
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950/40 text-blue-800 dark:text-blue-200 border border-blue-200 dark:border-blue-800 text-xs font-bold order-3 sm:order-1">
+                <span>Sedang Berjalan (Langkah {draftStep})</span>
+              </div>
+            ) : null}
 
             <button
               type="button"
@@ -398,7 +419,13 @@ export function SubmoduleTutorWelcomeStage({
               onClick={handleStart}
               className="w-full sm:w-auto px-7 py-3 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95 cursor-pointer order-1 sm:order-3 min-h-[48px] touch-manipulation font-heading"
             >
-              <span>{subModule?.userProgress?.status === "completed" ? "Review Completed Mission" : "Start Mission"}</span>
+              <span>
+                {subModule?.userProgress?.status === "completed"
+                  ? "Review Completed Mission"
+                  : draftStep
+                  ? `Continue Mission (Langkah ${draftStep})`
+                  : "Start Mission"}
+              </span>
               <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
             </button>
           </div>
