@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { BookOpen, PhoneCall, Award, MoreHorizontal } from "lucide-react";
+import { BookOpen, PhoneCall, MoreHorizontal } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 
 interface StudentProgressCardsProps {
@@ -16,11 +16,9 @@ interface StudentProgressCardsProps {
 }
 
 export function StudentProgressCards({
-  currentCefr = "A1.1",
+  currentCefr = "A1",
   totalCompletedModules = 0,
   totalModules = 0,
-  placementScore,
-  placementCefr,
   voiceCallsCount = 0,
   voiceTotalMinutes = 0,
 }: StudentProgressCardsProps) {
@@ -59,19 +57,6 @@ export function StudentProgressCards({
       progress: voiceCallsCount > 0 ? Math.min(100, voiceCallsCount * 25) : 0,
       href: "/call",
     },
-    {
-      id: "placement",
-      accentColor: "#9E1B1B",
-      accentBg: "bg-[#9E1B1B]/10",
-      accentText: "text-[#9E1B1B]",
-      iconBg: "bg-[#9E1B1B] text-white",
-      progressBar: "#9E1B1B",
-      icon: Award,
-      title: "Placement Assessment",
-      subtitle: placementCefr ? `Assessed Level: CEFR ${placementCefr}` : "Diagnostic Test Not Taken",
-      progress: placementScore ?? 0,
-      href: "/placement",
-    },
   ];
 
   return (
@@ -82,7 +67,7 @@ export function StudentProgressCards({
         </h3>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {cards.map((card) => {
           const Icon = card.icon;
 

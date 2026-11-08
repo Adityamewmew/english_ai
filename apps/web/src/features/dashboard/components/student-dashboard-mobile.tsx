@@ -174,8 +174,8 @@ export function StudentDashboardMobile({
         </p>
       </div>
 
-      {/* 2. Ringkasan Metrik (3 Kolom) */}
-      <div className="grid grid-cols-3 gap-2">
+      {/* 2. Ringkasan Metrik (2 Kolom) */}
+      <div className="grid grid-cols-2 gap-2.5">
         {/* Modul */}
         <Link
           href="/modules"
@@ -210,25 +210,6 @@ export function StudentDashboardMobile({
             </p>
             <p className="text-[10px] font-semibold text-slate-500 mt-1 leading-none">
               {voiceCallsCount} Voice Sessions
-            </p>
-          </div>
-        </Link>
-
-        {/* Evaluasi CEFR */}
-        <Link
-          href="/placement"
-          onClick={(e) => animeButtonPop(e.currentTarget)}
-          className="p-3 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex flex-col justify-between text-left min-h-[88px] active:scale-95 transition-all cursor-pointer group"
-        >
-          <div className="w-7 h-7 rounded-lg bg-[#9E1B1B]/10 text-[#9E1B1B] flex items-center justify-center">
-            <Award className="w-3.5 h-3.5" />
-          </div>
-          <div className="pt-2">
-            <p className="text-xs font-black text-slate-900 font-mono leading-none truncate">
-              {placementCefr || (placementScore !== undefined && placementScore !== null ? `${placementScore}%` : "Test")}
-            </p>
-            <p className="text-[10px] font-semibold text-slate-500 mt-1 leading-none truncate">
-              {placementScore !== undefined && placementScore !== null ? "Tested Score" : "Diagnostic"}
             </p>
           </div>
         </Link>

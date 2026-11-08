@@ -63,18 +63,32 @@ export function StudentDashboardView({ session }: StudentDashboardViewProps) {
 
   const studentName = (userProfile?.memory as any)?.preferredName || userProfile?.name || session.name || "Student";
   const currentCefr = userProfile?.currentCefr || session.currentCefr || "A1.1";
+  const categoryCefr = (currentCefr || "A1").split(".")[0].toUpperCase();
 
-  // Current active level modules
-  const currentLevelObj =
-    levels.find(
+  // Aggregate all sub-levels belonging to the active CEFR category (e.g. A1.1 + A1.2 + A1.3 for A1)
+  const categoryLevels = levels.filter(
+    (l: any) =>
+      l.level?.cefr?.toUpperCase() === categoryCefr ||
+      l.level?.id?.toUpperCase().startsWith(categoryCefr)
+  );
+
+  const categoryModules: any[] =
+    categoryLevels.length > 0
+      ? categoryLevels.flatMap((l: any) => l.modules || [])
+      : allModules;
+
+  const levelTotalModules = categoryModules.length || 39;
+  const levelCompletedModules = categoryModules.filter((m: any) => m.status === "completed").length;
+
+  // Active sub-level modules for the right-column target spotlight
+  const currentSubLevelObj =
+    categoryLevels.find(
       (l: any) =>
-        l.level?.cefr?.toUpperCase() === currentCefr.toUpperCase() ||
-        l.level?.id?.toUpperCase() === currentCefr.toUpperCase()
-    ) || levels[0];
+        l.level?.id?.toUpperCase() === currentCefr.toUpperCase() ||
+        l.level?.cefr?.toUpperCase() === currentCefr.toUpperCase()
+    ) || categoryLevels[0] || levels[0];
 
-  const levelModules: any[] = currentLevelObj?.modules || allModules;
-  const levelTotalModules = levelModules.length;
-  const levelCompletedModules = levelModules.filter((m: any) => m.status === "completed").length;
+  const levelModules: any[] = currentSubLevelObj?.modules || categoryModules;
 
   // Real active module from database: first unlocked module
   const activeModule =
@@ -161,7 +175,7 @@ export function StudentDashboardView({ session }: StudentDashboardViewProps) {
           />
 
           <StudentProgressCards
-            currentCefr={currentCefr}
+            currentCefr={categoryCefr}
             totalCompletedModules={levelCompletedModules}
             totalModules={levelTotalModules}
             placementScore={latestTest?.scorePercent}

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useLatestPlacement } from "@/features/placement/hooks/use-placement";
 import { StudentShell } from "@/features/dashboard";
-import { ModulesAnalyticsBento } from "./modules-analytics-bento";
 import { ModulesFilterBar } from "./modules-filter-bar";
 import { ModuleGridCard, CurriculumModuleItem } from "./module-grid-card";
 import { ModulesGridSkeleton } from "./modules-grid-skeleton";
@@ -329,16 +328,6 @@ export function ModulesCatalogView({
             </div>
           )}
 
-          {/* 3 Top Bento Analytics Cards */}
-          <ModulesAnalyticsBento
-            categoryLabel={activeCategory.label}
-            categoryName={activeCategory.name}
-            subLevelId={activeSubLevelItem.id}
-            subLevelTitle={activeSubLevelItem.title}
-            totalInSubLevel={totalInSubLevel}
-            completedInSubLevel={completedInSubLevel}
-            activeModule={activeModule}
-          />
 
           {/* Filter Bar: Two-Tier Navigation + Status + Search */}
           <ModulesFilterBar
