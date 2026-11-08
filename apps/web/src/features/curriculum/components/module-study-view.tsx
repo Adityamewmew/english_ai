@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
 import { StudentShell } from "@/features/dashboard";
 import { ModuleStagePlaylist, PlaylistStepItem } from "./module-stage-playlist";
@@ -17,6 +17,7 @@ import {
   ArrowLeft,
   CheckCircle2,
   Lock,
+  RotateCcw,
 } from "lucide-react";
 import { submitSubModuleAction } from "@/app/(student)/modules/modules.actions";
 import { playFanfareSound } from "@/lib/sound-fx";
@@ -25,6 +26,7 @@ import { useSession } from "@/features/auth/hooks/use-session";
 import { isUserAdmin } from "@/lib/auth-utils";
 import { getPlaylistSteps, countExamAnswers } from "../utils/module-study-utils";
 import { ExamSubmitConfirmModal } from "./exam/exam-submit-confirm-modal";
+import { SubmoduleResultModal } from "./submodule-result-modal";
 
 interface ModuleStudyViewProps {
   moduleId: string;
@@ -50,11 +52,7 @@ export function ModuleStudyView({
   onRefresh,
 }: ModuleStudyViewProps) {
   const { data: sessionUser } = useSession();
-  const isAdmin = Boolean(
-    propIsAdmin ||
-    isUserAdmin(currentUser) ||
-    isUserAdmin(sessionUser)
-  );
+  const isAdmin = Boolean(propIsAdmin || isUserAdmin(currentUser) || isUserAdmin(sessionUser));
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -88,21 +86,22 @@ export function ModuleStudyView({
   const [stageSpeakingScore, setStageSpeakingScore] = useState<number | undefined>(undefined);
   const [lastSavedTime, setLastSavedTime] = useState<string | null>(null);
   const [isExamConfirmOpen, setIsExamConfirmOpen] = useState(false);
+  const [resultModalState, setResultModalState] = useState<{
+    isOpen: boolean;
+    score: number;
+    passed: boolean;
+    passingScore: number;
+  } | null>(null);
 
   // Two-way URL synchronization: keep browser URL in sync with active sub-module without page reload
   React.useEffect(() => {
     if (typeof window === "undefined") return;
     try {
-      const currentUrl = new URL(window.location.href);
-      if (activeMissionId) {
-        currentUrl.searchParams.set("subModule", activeMissionId);
-        currentUrl.searchParams.delete("mission");
-        window.history.replaceState(null, "", currentUrl.toString());
-      } else {
-        currentUrl.searchParams.delete("subModule");
-        currentUrl.searchParams.delete("mission");
-        window.history.replaceState(null, "", currentUrl.pathname);
-      }
+      const u = new URL(window.location.href);
+      if (activeMissionId) u.searchParams.set("subModule", activeMissionId);
+      else u.searchParams.delete("subModule");
+      u.searchParams.delete("mission");
+      window.history.replaceState(null, "", activeMissionId ? u.toString() : u.pathname);
     } catch {}
   }, [activeMissionId]);
 
@@ -120,11 +119,7 @@ export function ModuleStudyView({
   }, [activeMissionId, stageAnswers, isFinishing]);
 
   // Stop tutor speech immediately on unmount or when navigating back to missions hub
-  React.useEffect(() => {
-    return () => {
-      stopTutorSpeech();
-    };
-  }, [activeMissionId]);
+  React.useEffect(() => () => stopTutorSpeech(), [activeMissionId]);
 
   // Restore draft or reset when activeMissionId changes
   React.useEffect(() => {
@@ -137,14 +132,14 @@ export function ModuleStudyView({
     try {
       const saved = localStorage.getItem(`eddys_draft_${activeMissionId}`);
       if (saved) {
-        const parsed = JSON.parse(saved);
-        if (parsed && typeof parsed === "object") {
-          if (typeof parsed.activeStepId === "number") setActiveStepId(parsed.activeStepId);
-          if (Array.isArray(parsed.completedSteps)) setCompletedSteps(parsed.completedSteps);
-          if (parsed.stageAnswers && typeof parsed.stageAnswers === "object") setStageAnswers(parsed.stageAnswers);
-          if (typeof parsed.stageSpeakingScore === "number") setStageSpeakingScore(parsed.stageSpeakingScore);
+        const p = JSON.parse(saved);
+        if (p && typeof p === "object") {
+          if (typeof p.activeStepId === "number") setActiveStepId(p.activeStepId);
+          if (Array.isArray(p.completedSteps)) setCompletedSteps(p.completedSteps);
+          if (p.stageAnswers) setStageAnswers(p.stageAnswers);
+          if (typeof p.stageSpeakingScore === "number") setStageSpeakingScore(p.stageSpeakingScore);
           setIsCurrentStepComplete(true);
-          const t = new Date(parsed.timestamp || Date.now());
+          const t = new Date(p.timestamp || Date.now());
           setLastSavedTime(t.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
           return;
         }
@@ -169,19 +164,17 @@ export function ModuleStudyView({
     return () => clearTimeout(timer);
   }, [activeMissionId, activeStepId, completedSteps, stageAnswers, stageSpeakingScore]);
 
-  const selectedSubIndex = useMemo(() => {
-    const idx = subModules.findIndex((s) => s.id === activeMissionId);
-    return idx >= 0 ? idx : 0;
+  const currentSub = useMemo(() => {
+    return subModules.find((s) => s.id === activeMissionId) || subModules[0];
   }, [subModules, activeMissionId]);
-
-  const currentSub = subModules[selectedSubIndex] || subModules[0];
   const skillType = currentSub?.skillType || "reading";
 
-  const theorySec = currentSub?.sections?.find((s: any) => s.sectionType === "theory");
-  const vocabSec = currentSub?.sections?.find((s: any) => s.sectionType === "vocab");
-  const dialogueSec = currentSub?.sections?.find((s: any) => s.sectionType === "dialogue");
-  const practiceSec = currentSub?.sections?.find((s: any) => s.sectionType === "practice");
-  const quizSec = currentSub?.sections?.find((s: any) => s.sectionType === "quiz");
+  const sec = currentSub?.sections || [];
+  const theorySec = sec.find((s: any) => s.sectionType === "theory");
+  const vocabSec = sec.find((s: any) => s.sectionType === "vocab");
+  const dialogueSec = sec.find((s: any) => s.sectionType === "dialogue");
+  const practiceSec = sec.find((s: any) => s.sectionType === "practice");
+  const quizSec = sec.find((s: any) => s.sectionType === "quiz");
 
   const isExam = skillType === "assessment" || skillType === "exam";
 
@@ -200,6 +193,29 @@ export function ModuleStudyView({
 
   const maxCompletedStep = completedSteps.length > 0 ? Math.max(...completedSteps) : 1;
 
+  const handleRetakeMission = useCallback(() => {
+    if (typeof window !== "undefined" && currentSub?.id) {
+      try { localStorage.removeItem(`eddys_draft_${currentSub.id}`); } catch {}
+    }
+    setActiveStepId(1);
+    setCompletedSteps([1]);
+    setIsCurrentStepComplete(false);
+    setStageAnswers({});
+    setStageSpeakingScore(undefined);
+    setLastSavedTime(null);
+    setResultModalState(null);
+    window.scrollTo({ top: 120, behavior: "smooth" });
+  }, [currentSub?.id]);
+
+  const handleCloseResultModal = useCallback(() => {
+    if (typeof window !== "undefined" && currentSub?.id) {
+      try { localStorage.removeItem(`eddys_draft_${currentSub.id}`); } catch {}
+    }
+    setResultModalState(null);
+    setActiveMissionId(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentSub?.id]);
+
   const handleConfirmExamSubmit = () => {
     setIsExamConfirmOpen(false);
     setCompletedSteps((prev) => Array.from(new Set([...prev, 5])));
@@ -209,21 +225,13 @@ export function ModuleStudyView({
   };
 
   const handleSelectStep = (stepId: number) => {
-    if (!isAdmin && stepId > maxCompletedStep + 1 && !completedSteps.includes(stepId)) {
-      return;
-    }
-    // Intercept transition to Step 6 (Scorecard) for exams
+    if (!isAdmin && stepId > maxCompletedStep + 1 && !completedSteps.includes(stepId)) return;
     if (isExam && stepId === 6) {
       setIsExamConfirmOpen(true);
       return;
     }
     setActiveStepId(stepId);
-    setIsCurrentStepComplete(
-      isAdmin ||
-      completedSteps.includes(stepId) ||
-      stepId === 1 ||
-      (isExam && stepId === playlistSteps.length)
-    );
+    setIsCurrentStepComplete(isAdmin || completedSteps.includes(stepId) || stepId === 1 || (isExam && stepId === playlistSteps.length));
     window.scrollTo({ top: 120, behavior: "smooth" });
   };
 
@@ -242,11 +250,7 @@ export function ModuleStudyView({
     if (activeStepId < playlistSteps.length) {
       const nextId = activeStepId + 1;
       setActiveStepId(nextId);
-      setIsCurrentStepComplete(
-        isAdmin ||
-        completedSteps.includes(nextId) ||
-        (isExam && nextId === playlistSteps.length)
-      );
+      setIsCurrentStepComplete(isAdmin || completedSteps.includes(nextId) || (isExam && nextId === playlistSteps.length));
       window.scrollTo({ top: 120, behavior: "smooth" });
     } else {
       if (isExam) {
@@ -272,12 +276,14 @@ export function ModuleStudyView({
             if (typeof window !== "undefined" && currentSub?.id) {
               try { localStorage.removeItem(`eddys_draft_${currentSub.id}`); } catch {}
             }
-          } else {
-            alert(`Skor Anda: ${res.data?.score ?? 0}/100 (KKM: 75). Silakan ulangi latihan untuk lulus.`);
           }
           onRefresh?.();
-          setActiveMissionId(null);
-          window.scrollTo({ top: 0, behavior: "smooth" });
+          setResultModalState({
+            isOpen: true,
+            score: res.data?.score ?? 0,
+            passed: Boolean(res?.data?.passed),
+            passingScore: 75,
+          });
         }
       } catch (err) {
         console.error("Failed to submit submodule:", err);
@@ -342,12 +348,7 @@ export function ModuleStudyView({
                 if (typeof window !== "undefined" && missionId) {
                   try {
                     const saved = localStorage.getItem(`eddys_draft_${missionId}`);
-                    if (saved) {
-                      const parsed = JSON.parse(saved);
-                      if (parsed && typeof parsed.activeStepId === "number") {
-                        hasDraft = true;
-                      }
-                    }
+                    hasDraft = Boolean(saved && typeof JSON.parse(saved)?.activeStepId === "number");
                   } catch {}
                 }
                 if (!hasDraft) {
@@ -370,6 +371,10 @@ export function ModuleStudyView({
               onStartMission={() => {
                 setIsOnboardingBriefing(false);
                 window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              onResetMission={() => {
+                handleRetakeMission();
+                setIsOnboardingBriefing(false);
               }}
               onBackToMissions={() => {
                 setActiveMissionId(null);
@@ -402,17 +407,22 @@ export function ModuleStudyView({
                       </div>
                     )}
 
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
-                      <Link href="/modules" className="hover:text-slate-800 dark:hover:text-white transition-colors">
-                        Courses
-                      </Link>
-                      <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+                    {!isExam && (
                       <button
                         type="button"
-                        onClick={() => setActiveMissionId(null)}
-                        className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
-                        title="Back to Sub-Modules"
+                        onClick={() => window.confirm("Ulangi latihan dari awal? Progres langkah ini akan direset.") && handleRetakeMission()}
+                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl text-[11px] font-semibold text-rose-700 hover:text-rose-800 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/30 border border-rose-200/60 dark:border-rose-800/40 cursor-pointer"
+                        title="Reset latihan ke Langkah 1"
                       >
+                        <RotateCcw className="w-3 h-3 text-rose-500" />
+                        <span>Ulangi</span>
+                      </button>
+                    )}
+
+                    <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
+                      <Link href="/modules" className="hover:text-slate-800 dark:hover:text-white transition-colors">Courses</Link>
+                      <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+                      <button type="button" onClick={() => setActiveMissionId(null)} className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
                         {moduleData?.title || `Module ${moduleData?.orderIndex || 1}`}
                       </button>
                       <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
@@ -430,9 +440,7 @@ export function ModuleStudyView({
                       {currentSub?.title}
                     </h1>
                     <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 font-normal flex-wrap">
-                      <span className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">
-                        CEFR {moduleData?.cefr || "A1.1"}
-                      </span>
+                      <span className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">CEFR {moduleData?.cefr || "A1.1"}</span>
                       <span>{playlistSteps.length} Learning Steps</span>
                       <span>Est. 25 Minutes</span>
                     </div>
@@ -575,6 +583,16 @@ export function ModuleStudyView({
           totalAnswered={countExamAnswers(stageAnswers)}
           grandTotal={55}
           isAdmin={isAdmin}
+        />
+
+        {/* Sub-Module Score Evaluation & Retake Modal */}
+        <SubmoduleResultModal
+          isOpen={Boolean(resultModalState?.isOpen)}
+          score={resultModalState?.score ?? 0}
+          passingScore={resultModalState?.passingScore ?? 75}
+          subModuleTitle={currentSub?.title}
+          onRetake={handleRetakeMission}
+          onCloseToHub={handleCloseResultModal}
         />
     </StudentShell>
   );

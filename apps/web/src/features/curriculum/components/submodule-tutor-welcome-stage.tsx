@@ -26,6 +26,7 @@ interface SubmoduleTutorWelcomeStageProps {
   onStartMission: () => void;
   onBackToMissions: () => void;
   onPlayAudio?: (text: string) => void;
+  onResetMission?: () => void;
 }
 
 const SKILL_ICONS: Record<string, React.ReactNode> = {
@@ -44,6 +45,7 @@ export function SubmoduleTutorWelcomeStage({
   onStartMission,
   onBackToMissions,
   onPlayAudio,
+  onResetMission,
 }: SubmoduleTutorWelcomeStageProps) {
   const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
@@ -406,13 +408,24 @@ export function SubmoduleTutorWelcomeStage({
               </div>
             ) : null}
 
-            <button
-              type="button"
-              onClick={handleStart}
-              className="text-xs text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 font-medium underline cursor-pointer order-2 min-h-[44px] flex items-center justify-center px-4 touch-manipulation"
-            >
-              Skip intro
-            </button>
+            <div className="flex items-center gap-3 order-2">
+              {draftStep && onResetMission && (
+                <button
+                  type="button"
+                  onClick={onResetMission}
+                  className="text-xs text-rose-600 hover:text-rose-700 dark:text-rose-400 font-semibold underline cursor-pointer min-h-[44px] flex items-center justify-center px-2 touch-manipulation"
+                >
+                  Ulangi dari Langkah 1
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={handleStart}
+                className="text-xs text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 font-medium underline cursor-pointer min-h-[44px] flex items-center justify-center px-2 touch-manipulation"
+              >
+                Skip intro
+              </button>
+            </div>
 
             <button
               type="button"

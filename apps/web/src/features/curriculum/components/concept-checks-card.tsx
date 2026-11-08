@@ -115,8 +115,11 @@ export function ConceptChecksCard({
           feedback[numKey] = true;
         }
       });
-      setSelectedAnswers((prev) => ({ ...parsed, ...prev }));
-      setShowFeedback((prev) => ({ ...feedback, ...prev }));
+      setSelectedAnswers(parsed);
+      setShowFeedback(feedback);
+    } else {
+      setSelectedAnswers({});
+      setShowFeedback({});
     }
   }, [initialAnswers]);
 
