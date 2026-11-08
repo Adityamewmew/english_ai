@@ -128,7 +128,7 @@ export const paymentHandler = new Elysia({ prefix: "/api/payment" })
     {
       auth: true,
       body: t.Object({
-        proofUrl: t.String(),
+        proofUrl: t.String({ maxLength: 5 * 1024 * 1024 }),
       }),
     }
   )

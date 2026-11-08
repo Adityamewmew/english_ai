@@ -141,11 +141,13 @@ export const userHandler = new Elysia({ prefix: "/api/user" })
         throw new ForbiddenError("Kamu tidak memiliki izin untuk memperbarui data pengguna lain.");
       }
 
-      // Non-admin users cannot elevate their own role or accessType
+      // Non-admin users cannot elevate their own role, accessType, currentCefr, or raw memory (SK01, SK14)
       const safeBody = { ...body };
       if (!isAdmin) {
         delete safeBody.role;
         delete safeBody.accessType;
+        delete safeBody.currentCefr;
+        delete safeBody.memory;
       }
 
       const data = await updateUserProfileUsecase(params.id, safeBody, user.id);

@@ -3,7 +3,7 @@
 import { authApi } from "@/features/auth/api/auth.api";
 import { setSession, clearSession } from "@/lib/session";
 import { loginSchema, registerSchema } from "@/lib/validations/auth";
-import { isUserAdmin } from "@english-ai/shared";
+import { isUserAdmin, DEFAULT_ADMIN_EMAILS } from "@english-ai/shared";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
@@ -92,60 +92,33 @@ export async function doLogout() {
   redirect("/login");
 }
 
-export async function syncGoogleSession(userData: {
-  id: string;
-  name: string;
-  email: string;
-  role?: string;
-  accessType?: number;
-  currentCefr?: string;
-}) {
-  const isAdmin = isUserAdmin(userData);
-
-  const role = isAdmin ? "admin" : userData.role || "student";
-  const accessType = isAdmin ? 1 : (userData.accessType ?? (role === "admin" ? 1 : 2));
-  const currentCefr = userData.currentCefr || "A1";
-
-  await setSession({
-    userId: userData.id,
-    name: userData.name || userData.email.split("@")[0],
-    email: userData.email,
-    role,
-    accessType,
-    currentCefr,
-  });
-
-  return { success: true, role, accessType };
-}
-
 export async function processGoogleCallbackAction(userData: {
   id: string;
-  name: string;
+  name?: string;
   email: string;
   role?: string;
   accessType?: number;
   currentCefr?: string;
 }) {
-  const isAdmin = isUserAdmin(userData);
-  const role = isAdmin ? "admin" : userData.role || "student";
-  const accessType = isAdmin ? 1 : (userData.accessType ?? (role === "admin" ? 1 : 2));
-  const currentCefr = userData.currentCefr || "A1";
+  const emailLower = (userData.email || "").toLowerCase().trim();
+  const adminEmails = [
+    ...(DEFAULT_ADMIN_EMAILS as readonly string[]),
+    ...(process.env.ADMIN_EMAILS
+      ? process.env.ADMIN_EMAILS.split(",").map((e) => e.trim().toLowerCase())
+      : []),
+  ];
 
-  await setSession({
-    userId: userData.id,
-    name: userData.name || userData.email.split("@")[0],
-    email: userData.email,
-    role,
-    accessType,
-    currentCefr,
-  });
+  // SK13: Strict server-side authority check. Never trust client-supplied role or accessType!
+  const isAdmin = adminEmails.includes(emailLower);
+  const role = isAdmin ? "admin" : "student";
+  const accessType = isAdmin ? 1 : 2;
 
   let targetPath = "/dashboard";
+  let userCefr = "A1";
+  let userMemory: any = null;
+
   if (!isAdmin) {
     try {
-      const cookieStore = await cookies();
-      const cookieHeader = cookieStore.toString();
-
       const internalUrl =
         process.env.INTERNAL_API_URL ||
         process.env.API_URL ||
@@ -154,21 +127,12 @@ export async function processGoogleCallbackAction(userData: {
         ? `http://127.0.0.1:${process.env.PORT_API || "3003"}`
         : internalUrl.replace(/\/$/, "");
 
-      const headers = {
-        "Content-Type": "application/json",
-        Cookie: cookieHeader,
-      };
-
-      // 1. Fetch user profile from API to inspect persistent memory and currentCefr
-      let userMemory: any = null;
-      let userCefr = currentCefr;
-
+      // 1. Fetch authentic user profile from API to inspect persistent memory and verified currentCefr
       const userRes = await fetch(`${apiUrl}/api/user/${userData.id}`, {
-        headers,
         cache: "no-store",
-      });
+      }).catch(() => null);
 
-      if (userRes.ok) {
+      if (userRes && userRes.ok) {
         const userJson = await userRes.json();
         userMemory = userJson?.data?.memory;
         if (userJson?.data?.currentCefr) {
@@ -179,31 +143,35 @@ export async function processGoogleCallbackAction(userData: {
       // 2. Fetch latest placement result
       let hasPlacement = false;
       const placementRes = await fetch(`${apiUrl}/api/placement/latest/${userData.id}`, {
-        headers,
         cache: "no-store",
-      });
+      }).catch(() => null);
 
-      if (placementRes.ok) {
+      if (placementRes && placementRes.ok) {
         const placementJson = await placementRes.json();
         hasPlacement = !!placementJson?.data;
       }
 
       // Decision matrix:
-      // A. If placement result exists OR CEFR is already advanced beyond default A1 -> /dashboard
       if (hasPlacement || (userCefr && userCefr !== "A1")) {
         targetPath = "/dashboard";
       } else if (userMemory?.onboardingCompleted) {
-        // B. Onboarding complete, waiting for placement test -> /placement
         targetPath = "/placement";
       } else {
-        // C. Truly fresh student who hasn't completed onboarding -> /onboarding
         targetPath = "/onboarding";
       }
     } catch {
-      // Default to /dashboard rather than trapping an authenticated student
       targetPath = "/dashboard";
     }
   }
+
+  await setSession({
+    userId: userData.id,
+    name: userData.name || userData.email.split("@")[0],
+    email: userData.email,
+    role,
+    accessType,
+    currentCefr: userCefr,
+  });
 
   return { success: true, targetPath, role };
 }

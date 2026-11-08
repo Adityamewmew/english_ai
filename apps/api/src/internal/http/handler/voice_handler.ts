@@ -287,15 +287,18 @@ export const voiceHandler = new Elysia({ prefix: "/api/voice" })
   )
   .get(
     "/initial-greeting",
-    async ({ query }) => {
+    async ({ query, user }) => {
+      if (!user) {
+        throw new UnauthorizedError("Autentikasi akun diperlukan untuk mengakses greeting suara.");
+      }
       return getVoiceGreetingUsecase({
         topic: query?.topic,
-        userId: query?.userId,
+        userId: user.id,
         fallbackName: query?.name,
         forceReturning: query?.hasCalledBefore === "true",
       });
     },
-    { query: VoiceGreetingQuery }
+    { auth: true, query: VoiceGreetingQuery }
   )
   .post(
     "/evaluate",

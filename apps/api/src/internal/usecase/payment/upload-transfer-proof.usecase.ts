@@ -20,6 +20,20 @@ export async function uploadTransferProofUsecase(
     throw new ValidationError("Bukti transfer wajib diunggah.");
   }
 
+  const trimmedProof = proofUrl.trim();
+  // SK19: Enforce strict format validation (valid image data URI or trusted HTTPS URL)
+  const isImageDataUri = /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(trimmedProof);
+  const isHttpsUrl = /^https:\/\/[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\/.*$/.test(trimmedProof);
+  if (!isImageDataUri && !isHttpsUrl) {
+    throw new ValidationError(
+      "Format bukti transfer tidak valid. Harap unggah gambar bukti transfer dalam format JPEG, PNG, atau WEBP."
+    );
+  }
+
+  if (trimmedProof.length > 5 * 1024 * 1024) {
+    throw new ValidationError("Ukuran file bukti transfer melebihi batas maksimal 5MB.");
+  }
+
   const tx = await paymentRepository.findByOrderId(orderId);
   if (!tx) {
     throw new NotFoundError("Pesanan pembayaran tidak ditemukan.");

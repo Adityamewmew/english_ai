@@ -11,7 +11,7 @@ export const errorHandlerPlugin = new Elysia({ name: "error-handler" }).onError(
       return jsonError({
         set,
         statusCode,
-        message: error.message,
+        message: (error as any)?.message || "Terjadi kesalahan",
         error: (error as any).details,
       });
     }

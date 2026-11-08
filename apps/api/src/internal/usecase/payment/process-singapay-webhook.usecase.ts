@@ -13,7 +13,14 @@ function verifyWebhookSignature(
   const authHeader = headers["authorization"] || headers["Authorization"] || "";
   const accessToken = authHeader.replace(/^Bearer\s+/i, "");
 
-  if (!receivedSig) return false;
+  if (!receivedSig || !timestamp) return false;
+
+  // SK18: Strict timestamp freshness check to eliminate replay attacks (5 minutes tolerance window)
+  const reqTime = Number(timestamp);
+  const reqTimeMs = reqTime < 10000000000 ? reqTime * 1000 : reqTime;
+  if (isNaN(reqTimeMs) || Math.abs(Date.now() - reqTimeMs) > 5 * 60 * 1000) {
+    return false;
+  }
 
   try {
     const bodyObj = JSON.parse(rawBody);

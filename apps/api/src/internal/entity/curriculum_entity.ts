@@ -12,7 +12,7 @@ export const CurriculumOverviewQuery = t.Optional(
 );
 
 export const SubmitQuizBody = t.Object({
-  userId: t.String(),
+  userId: t.Optional(t.String()),
   answers: t.Record(t.String(), t.Number()),
   speakingScore: t.Optional(t.Number()),
 });

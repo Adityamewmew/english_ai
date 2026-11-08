@@ -40,10 +40,8 @@ export async function submitQuizUsecase(
   }
 
   const quizScore = Math.round((correctCount / questions.length) * 100);
-  let finalScore = quizScore;
-  if (speakingScore !== undefined && speakingScore >= 0) {
-    finalScore = Math.round(quizScore * 0.5 + speakingScore * 0.5);
-  }
+  // SK15: Strict deterministic grading. Never allow arbitrary client-controlled speakingScore to tamper with final score or pass threshold.
+  const finalScore = quizScore;
 
   const passed = finalScore >= (module.passingScore || 75);
 
