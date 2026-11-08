@@ -61,7 +61,7 @@ export function StudentDashboardView({ session }: StudentDashboardViewProps) {
     }
   });
 
-  const studentName = userProfile?.name || session.name || "Student";
+  const studentName = (userProfile?.memory as any)?.preferredName || userProfile?.name || session.name || "Student";
   const currentCefr = userProfile?.currentCefr || session.currentCefr || "A1.1";
 
   // Current active level modules

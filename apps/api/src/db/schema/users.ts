@@ -2,6 +2,10 @@ import { pgTable, varchar, integer, jsonb, timestamp, boolean, text, index } fro
 
 export interface UserMemory {
   preferredName?: string;
+  profession?: string;
+  learningGoal?: string;
+  dailyCommitment?: number;
+  onboardingCompleted?: boolean;
   facts: string[];
   interests: string[];
   weaknesses: string[];

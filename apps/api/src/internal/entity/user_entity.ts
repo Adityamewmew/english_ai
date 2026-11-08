@@ -36,5 +36,6 @@ export const UpdateUserBody = t.Object({
   accessType: t.Optional(t.Numeric()),
   currentCefr: t.Optional(t.String()),
   avatarUrl: t.Optional(t.String()),
+  memory: t.Optional(t.Any()),
 });
 export type UpdateUserBody = typeof UpdateUserBody.static;

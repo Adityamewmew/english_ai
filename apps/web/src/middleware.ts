@@ -10,7 +10,8 @@ export async function middleware(req: NextRequest) {
     pathname.startsWith("/dashboard") ||
     pathname.startsWith("/modules") ||
     pathname.startsWith("/call") ||
-    pathname.startsWith("/placement");
+    pathname.startsWith("/placement") ||
+    pathname.startsWith("/onboarding");
 
   const validSession = sessionCookie?.value
     ? await verifySessionToken(sessionCookie.value)
@@ -35,6 +36,7 @@ export const config = {
     "/modules/:path*",
     "/call/:path*",
     "/placement/:path*",
+    "/onboarding/:path*",
     "/login",
     "/register",
   ],

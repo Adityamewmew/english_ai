@@ -31,7 +31,12 @@ export async function doLogin(formData: FormData) {
       currentCefr: user.currentCefr,
     });
 
-    redirectPath = "/dashboard";
+    const isStudent = user.role !== "admin" && accessType === 2;
+    if (isStudent && !(user as any)?.memory?.onboardingCompleted) {
+      redirectPath = "/onboarding";
+    } else {
+      redirectPath = "/dashboard";
+    }
   } catch (err: any) {
     return { success: false, message: err.message || "Email atau password salah." };
   }
@@ -65,7 +70,7 @@ export async function doRegister(formData: FormData) {
       currentCefr: "A1",
     });
 
-    redirectPath = "/placement";
+    redirectPath = "/onboarding";
   } catch (err: any) {
     return { success: false, message: err.message || "Gagal mendaftar." };
   }
@@ -131,29 +136,34 @@ export async function processGoogleCallbackAction(userData: {
   let targetPath = "/dashboard";
   if (!isAdmin) {
     try {
-      const internalUrl =
-        process.env.INTERNAL_API_URL ||
-        process.env.API_URL ||
-        `http://127.0.0.1:${process.env.PORT_API || "3003"}`;
-      const apiUrl = (internalUrl.includes("eddys.drimland.my.id") || internalUrl.startsWith("https://"))
-        ? `http://127.0.0.1:${process.env.PORT_API || "3003"}`
-        : internalUrl.replace(/\/$/, "");
+      const memory = (userData as any).memory;
+      if (!memory?.onboardingCompleted) {
+        targetPath = "/onboarding";
+      } else {
+        const internalUrl =
+          process.env.INTERNAL_API_URL ||
+          process.env.API_URL ||
+          `http://127.0.0.1:${process.env.PORT_API || "3003"}`;
+        const apiUrl = (internalUrl.includes("eddys.drimland.my.id") || internalUrl.startsWith("https://"))
+          ? `http://127.0.0.1:${process.env.PORT_API || "3003"}`
+          : internalUrl.replace(/\/$/, "");
 
-      const res = await fetch(`${apiUrl}/api/placement/latest/${userData.id}`, {
-        headers: { "Content-Type": "application/json" },
-        cache: "no-store",
-      });
+        const res = await fetch(`${apiUrl}/api/placement/latest/${userData.id}`, {
+          headers: { "Content-Type": "application/json" },
+          cache: "no-store",
+        });
 
-      if (res.ok) {
-        const json = await res.json();
-        if (!json.data) {
+        if (res.ok) {
+          const json = await res.json();
+          if (!json.data) {
+            targetPath = "/placement";
+          }
+        } else {
           targetPath = "/placement";
         }
-      } else {
-        targetPath = "/placement";
       }
     } catch {
-      targetPath = "/placement";
+      targetPath = "/onboarding";
     }
   }
 

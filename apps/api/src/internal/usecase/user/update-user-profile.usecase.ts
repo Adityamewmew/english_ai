@@ -11,6 +11,7 @@ export async function updateUserProfileUsecase(
     accessType?: number;
     currentCefr?: string;
     avatarUrl?: string;
+    memory?: any;
   },
   updaterId?: string
 ) {
@@ -21,6 +22,23 @@ export async function updateUserProfileUsecase(
     ...body,
     updatedBy: updaterId,
   };
+
+  if (body.memory) {
+    const existingMemory = (existing.memory as any) || {
+      facts: [],
+      interests: [],
+      weaknesses: [],
+      totalCalls: 0,
+    };
+    updateData.memory = {
+      ...existingMemory,
+      ...body.memory,
+      // If facts or interests are provided in body.memory, ensure they are arrays
+      facts: body.memory.facts ?? existingMemory.facts ?? [],
+      interests: body.memory.interests ?? existingMemory.interests ?? [],
+      weaknesses: body.memory.weaknesses ?? existingMemory.weaknesses ?? [],
+    };
+  }
 
   if (body.password) {
     updateData.password = await Bun.password.hash(body.password, {
