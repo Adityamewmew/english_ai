@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { BookOpen, PhoneCall, ArrowRight, Award, Sparkles } from "lucide-react";
+import { BookOpen, PhoneCall, ArrowRight, Award } from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 
 interface StudentLevelMasteryProps {

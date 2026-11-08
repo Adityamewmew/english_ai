@@ -1,8 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { PhoneCall, MessageSquare, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import {
+  PhoneCall,
+  MessageSquare,
+  CheckCircle2,
+  ArrowRight,
+  Activity,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import { animeButtonPop } from "@/lib/anime-effects";
 
 export interface ActivityItem {
@@ -13,6 +21,7 @@ export interface ActivityItem {
   badgeText: string;
   badgeColor: string;
   dateText: string;
+  timestamp: number;
   scoreText?: string;
   href: string;
   actionText: string;
@@ -29,15 +38,19 @@ export function StudentRecentActivitySection({
   chatSessions = [],
   completedModules = [],
 }: StudentRecentActivityProps) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const PAGE_SIZE = 4;
+
   const activities: ActivityItem[] = [];
 
-  // 1. Map recent voice calls
-  voiceSessions.slice(0, 3).forEach((call) => {
+  // 1. Map all voice calls
+  voiceSessions.forEach((call) => {
     const mins = Math.max(1, Math.round((call.durationSeconds || 60) / 60));
     const fluency = call.evaluation?.fluency ? `${call.evaluation.fluency}% Fluency` : undefined;
+    const time = call.createdAt ? new Date(call.createdAt).getTime() : 0;
     const dateFormatted = call.createdAt
-      ? new Date(call.createdAt).toLocaleDateString("en-US", { day: "numeric", month: "short" })
-      : "Just now";
+      ? new Date(call.createdAt).toLocaleDateString("id-ID", { day: "numeric", month: "short" })
+      : "Baru saja";
 
     activities.push({
       id: "voice-" + call.id,
@@ -47,17 +60,19 @@ export function StudentRecentActivitySection({
       badgeText: "Voice Call",
       badgeColor: "bg-[#F4B41A]/20 text-[#854D0E] border-[#F4B41A]/40",
       dateText: dateFormatted,
+      timestamp: time,
       scoreText: fluency,
       href: "/call",
       actionText: "Call Again",
     });
   });
 
-  // 2. Map recent chat sessions
-  chatSessions.slice(0, 3).forEach((chat) => {
+  // 2. Map all chat sessions
+  chatSessions.forEach((chat) => {
+    const time = chat.updatedAt ? new Date(chat.updatedAt).getTime() : 0;
     const dateFormatted = chat.updatedAt
-      ? new Date(chat.updatedAt).toLocaleDateString("en-US", { day: "numeric", month: "short" })
-      : "Just now";
+      ? new Date(chat.updatedAt).toLocaleDateString("id-ID", { day: "numeric", month: "short" })
+      : "Baru saja";
 
     activities.push({
       id: "chat-" + chat.id,
@@ -67,15 +82,17 @@ export function StudentRecentActivitySection({
       badgeText: "Study Chat",
       badgeColor: "bg-[#0D3B66]/10 text-[#0D3B66] border-[#0D3B66]/20",
       dateText: dateFormatted,
+      timestamp: time,
       href: "/chat",
       actionText: "Open Chat",
     });
   });
 
-  // 3. Map completed modules
-  completedModules.slice(0, 3).forEach((mod) => {
+  // 3. Map all completed modules
+  completedModules.forEach((mod) => {
+    const time = mod.completedAt ? new Date(mod.completedAt).getTime() : 0;
     const dateFormatted = mod.completedAt
-      ? new Date(mod.completedAt).toLocaleDateString("en-US", { day: "numeric", month: "short" })
+      ? new Date(mod.completedAt).toLocaleDateString("id-ID", { day: "numeric", month: "short" })
       : "Completed";
 
     activities.push({
@@ -86,27 +103,64 @@ export function StudentRecentActivitySection({
       badgeText: "Module Completed",
       badgeColor: "bg-emerald-50 text-emerald-800 border-emerald-200",
       dateText: dateFormatted,
+      timestamp: time,
       scoreText: mod.score !== null && mod.score !== undefined ? `Score: ${mod.score}%` : "Passed",
       href: `/modules/${mod.id}`,
       actionText: "Review Module",
     });
   });
 
-  const displayList = activities.slice(0, 4);
+  // Sort activities newest first
+  activities.sort((a, b) => b.timestamp - a.timestamp);
+
+  const totalPages = Math.max(1, Math.ceil(activities.length / PAGE_SIZE));
+  const safeCurrentPage = Math.min(currentPage, totalPages);
+  const paginatedList = activities.slice(
+    (safeCurrentPage - 1) * PAGE_SIZE,
+    safeCurrentPage * PAGE_SIZE
+  );
 
   return (
     <div className="space-y-3.5">
-      <div className="flex items-center justify-between px-1">
+      <div className="flex items-center justify-between px-1 gap-2">
         <h3 className="text-lg sm:text-xl font-black text-[#0D3B66] dark:text-white uppercase tracking-tight">
           Recent Learning Activities
         </h3>
+
+        {totalPages > 1 && (
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-slate-500 font-bold hidden sm:inline">
+              Hal {safeCurrentPage} dari {totalPages}
+            </span>
+            <div className="flex items-center gap-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-0.5 shadow-2xs">
+              <button
+                type="button"
+                disabled={safeCurrentPage <= 1}
+                onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
+                aria-label="Halaman sebelumnya"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                type="button"
+                disabled={safeCurrentPage >= totalPages}
+                onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
+                aria-label="Halaman berikutnya"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        )}
       </div>
 
-      {displayList.length === 0 ? (
+      {paginatedList.length === 0 ? (
         /* Empty State with Mr. Khoirul Guidance */
         <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-[22px] p-6 sm:p-8 text-center space-y-4 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-          <div className="w-12 h-12 rounded-2xl bg-amber-50 border-2 border-[#F4B41A]/50 flex items-center justify-center mx-auto text-[#0D3B66]">
-            <Sparkles className="w-6 h-6 text-[#F4B41A]" />
+          <div className="w-12 h-12 rounded-2xl bg-[#0D3B66]/10 dark:bg-slate-800 border border-[#0D3B66]/20 dark:border-slate-700 flex items-center justify-center mx-auto text-[#0D3B66] dark:text-[#F4B41A]">
+            <Activity className="w-6 h-6" />
           </div>
           <div className="max-w-md mx-auto space-y-1">
             <h4 className="font-extrabold text-base text-slate-900 dark:text-white">
@@ -136,65 +190,94 @@ export function StudentRecentActivitySection({
           </div>
         </div>
       ) : (
-        /* Dynamic Activity Feed */
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {displayList.map((item) => {
-            const Icon =
-              item.type === "voice"
-                ? PhoneCall
-                : item.type === "chat"
-                ? MessageSquare
-                : CheckCircle2;
+        /* Dynamic Activity Feed with Pagination */
+        <div className="space-y-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {paginatedList.map((item) => {
+              const Icon =
+                item.type === "voice"
+                  ? PhoneCall
+                  : item.type === "chat"
+                  ? MessageSquare
+                  : CheckCircle2;
 
-            return (
-              <Link
-                key={item.id}
-                href={item.href}
-                onClick={(e) => animeButtonPop(e.currentTarget)}
-                className="group bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 border-b-2 rounded-[22px] p-4 sm:p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-md transition-all duration-200 flex flex-col justify-between gap-4 cursor-pointer"
-              >
-                {/* Header row: Badge, Score, Date */}
-                <div className="flex items-center justify-between gap-2">
-                  <span
-                    className={`text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${item.badgeColor}`}
-                  >
-                    {item.badgeText}
-                  </span>
-                  <div className="flex items-center gap-2 text-xs font-bold text-slate-500">
-                    {item.scoreText && (
-                      <span className="text-emerald-800 dark:text-emerald-400 font-mono text-[11px] bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded-md border border-emerald-200 dark:border-emerald-800/50">
-                        {item.scoreText}
-                      </span>
-                    )}
-                    <span className="text-slate-400 text-[11px] font-medium">{item.dateText}</span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="space-y-1">
-                  <div className="flex items-start gap-2.5">
-                    <div className="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0 mt-0.5 text-[#0D3B66] dark:text-[#F4B41A]">
-                      <Icon className="w-4 h-4" />
-                    </div>
-                    <div className="min-w-0">
-                      <h4 className="font-extrabold text-sm text-slate-900 dark:text-white line-clamp-1 group-hover:text-[#0D3B66] dark:group-hover:text-[#F4B41A] transition-colors">
-                        {item.title}
-                      </h4>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed font-medium mt-0.5">
-                        {item.subtitle}
-                      </p>
+              return (
+                <Link
+                  key={item.id}
+                  href={item.href}
+                  onClick={(e) => animeButtonPop(e.currentTarget)}
+                  className="group bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 border-b-2 rounded-[22px] p-4 sm:p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-md transition-all duration-200 flex flex-col justify-between gap-4 cursor-pointer"
+                >
+                  {/* Header row: Badge, Score, Date */}
+                  <div className="flex items-center justify-between gap-2">
+                    <span
+                      className={`text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${item.badgeColor}`}
+                    >
+                      {item.badgeText}
+                    </span>
+                    <div className="flex items-center gap-2 text-xs font-bold text-slate-500">
+                      {item.scoreText && (
+                        <span className="text-emerald-800 dark:text-emerald-400 font-mono text-[11px] bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded-md border border-emerald-200 dark:border-emerald-800/50">
+                          {item.scoreText}
+                        </span>
+                      )}
+                      <span className="text-slate-400 text-[11px] font-medium">{item.dateText}</span>
                     </div>
                   </div>
-                </div>
 
-                {/* Footer action link */}
-                <div className="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-300 group-hover:text-[#0D3B66] dark:group-hover:text-[#F4B41A] transition-colors">
-                  <span>{item.actionText}</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                </div>
-              </Link>
-            );
-          })}
+                  {/* Content */}
+                  <div className="space-y-1">
+                    <div className="flex items-start gap-2.5">
+                      <div className="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0 mt-0.5 text-[#0D3B66] dark:text-[#F4B41A]">
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <div className="min-w-0">
+                        <h4 className="font-extrabold text-sm text-slate-900 dark:text-white line-clamp-1 group-hover:text-[#0D3B66] dark:group-hover:text-[#F4B41A] transition-colors">
+                          {item.title}
+                        </h4>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed font-medium mt-0.5">
+                          {item.subtitle}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Footer action link */}
+                  <div className="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-300 group-hover:text-[#0D3B66] dark:group-hover:text-[#F4B41A] transition-colors">
+                    <span>{item.actionText}</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+
+          {/* Bottom pagination info for mobile */}
+          {totalPages > 1 && (
+            <div className="flex sm:hidden items-center justify-between pt-1 px-1">
+              <span className="text-xs text-slate-500 font-medium">
+                Halaman {safeCurrentPage} dari {totalPages} ({activities.length} aktivitas)
+              </span>
+              <div className="flex items-center gap-1">
+                <button
+                  type="button"
+                  disabled={safeCurrentPage <= 1}
+                  onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                  className="px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-600 dark:text-slate-300 disabled:opacity-30 disabled:cursor-not-allowed"
+                >
+                  Sebelumnya
+                </button>
+                <button
+                  type="button"
+                  disabled={safeCurrentPage >= totalPages}
+                  onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                  className="px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-600 dark:text-slate-300 disabled:opacity-30 disabled:cursor-not-allowed"
+                >
+                  Berikutnya
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>

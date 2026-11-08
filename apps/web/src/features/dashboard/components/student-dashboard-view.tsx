@@ -73,6 +73,8 @@ export function StudentDashboardView({ session }: StudentDashboardViewProps) {
     ) || levels[0];
 
   const levelModules: any[] = currentLevelObj?.modules || allModules;
+  const levelTotalModules = levelModules.length;
+  const levelCompletedModules = levelModules.filter((m: any) => m.status === "completed").length;
 
   // Real active module from database: first unlocked module
   const activeModule =
@@ -111,8 +113,8 @@ export function StudentDashboardView({ session }: StudentDashboardViewProps) {
           currentCefr={currentCefr}
           activeModule={activeModule}
           levelModules={levelModules}
-          totalCompletedModules={totalCompletedModules}
-          totalModules={totalModules}
+          totalCompletedModules={levelCompletedModules}
+          totalModules={levelTotalModules}
           placementScore={latestTest?.scorePercent}
           placementCefr={latestTest?.overallCefr}
           voiceCallsCount={voiceCallsCount}
@@ -160,8 +162,8 @@ export function StudentDashboardView({ session }: StudentDashboardViewProps) {
 
           <StudentProgressCards
             currentCefr={currentCefr}
-            totalCompletedModules={totalCompletedModules}
-            totalModules={totalModules}
+            totalCompletedModules={levelCompletedModules}
+            totalModules={levelTotalModules}
             placementScore={latestTest?.scorePercent}
             placementCefr={latestTest?.overallCefr}
             voiceCallsCount={voiceCallsCount}
