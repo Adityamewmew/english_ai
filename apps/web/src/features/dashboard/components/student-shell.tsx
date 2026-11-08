@@ -12,6 +12,7 @@ interface StudentShellProps {
   children: React.ReactNode;
   studentName?: string;
   currentCefr?: string;
+  userId?: string;
   showSearch?: boolean;
   hideBottomNav?: boolean;
 }
@@ -20,6 +21,7 @@ export function StudentShell({
   children,
   studentName = "",
   currentCefr = "A1.1",
+  userId,
   showSearch = false,
   hideBottomNav = false,
 }: StudentShellProps) {
@@ -33,6 +35,8 @@ export function StudentShell({
         <StudentSidebarRail
           isOpen={isSidebarOpen}
           onToggle={() => setIsSidebarOpen((prev) => !prev)}
+          userId={userId}
+          currentCefr={currentCefr}
         />
       </div>
 
@@ -65,7 +69,7 @@ export function StudentShell({
         {/* Mobile Bottom Navigation Bar (Hidden on Desktop & when hideBottomNav is true) */}
         {!hideBottomNav && (
           <div className="no-print">
-            <StudentMobileBottomNav />
+            <StudentMobileBottomNav userId={userId} currentCefr={currentCefr} />
           </div>
         )}
 

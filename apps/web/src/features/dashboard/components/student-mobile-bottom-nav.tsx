@@ -9,10 +9,22 @@ import {
   MessageSquare,
   PhoneCall,
   Award,
+  Lock,
 } from "lucide-react";
+import { authClient } from "@/lib/auth-client";
+import { usePlacementAdvancementGate } from "@/features/placement/hooks/use-placement-advancement-gate";
 
-export function StudentMobileBottomNav() {
+interface StudentMobileBottomNavProps {
+  userId?: string;
+  currentCefr?: string;
+}
+
+export function StudentMobileBottomNav({ userId, currentCefr }: StudentMobileBottomNavProps = {}) {
   const pathname = usePathname();
+  const { data: sessionData } = authClient.useSession();
+  const activeUserId = userId || sessionData?.user?.id;
+  const activeCefr = currentCefr || (sessionData?.user as any)?.currentCefr || "A1";
+  const { isLocked: isPlacementLocked } = usePlacementAdvancementGate(activeUserId, activeCefr);
 
   const navItems = [
     { href: "/dashboard", icon: LayoutGrid, label: "Home" },
@@ -52,7 +64,14 @@ export function StudentMobileBottomNav() {
                     : "bg-transparent text-slate-500"
                 }`}
               >
-                <Icon className="w-4 h-4" />
+                <div className="relative flex items-center justify-center">
+                  <Icon className="w-4 h-4" />
+                  {item.href === "/placement" && isPlacementLocked && (
+                    <span className="absolute -top-1.5 -right-2.5 w-3 h-3 rounded-full bg-amber-500 text-white flex items-center justify-center shadow-xs">
+                      <Lock className="w-2 h-2" />
+                    </span>
+                  )}
+                </div>
               </div>
 
               {/* Label */}

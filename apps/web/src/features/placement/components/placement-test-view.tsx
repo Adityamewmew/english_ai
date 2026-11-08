@@ -17,8 +17,10 @@ import {
   LogOut,
 } from "lucide-react";
 import { usePlacementSession, useSubmitPlacement, usePlacementStatus, useSkipBeginner } from "../hooks/use-placement";
+import { usePlacementAdvancementGate } from "../hooks/use-placement-advancement-gate";
 import { useRouter } from "next/navigation";
 import { PlacementCooldownView } from "./placement-cooldown-view";
+import { PlacementLockedGateView } from "./placement-locked-gate-view";
 import { useClasses, ClassUnlockModal } from "@/features/classes";
 import Image from "next/image";
 import { doLogout } from "@/app/(auth)/auth.actions";
@@ -35,6 +37,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
   const skipBeginnerMutation = useSkipBeginner();
   const { data: testData, isLoading, error: loadError, refetch } = usePlacementSession();
   const submitMutation = useSubmitPlacement();
+  const gateInfo = usePlacementAdvancementGate(userId, statusData?.lastResult?.overallCefr || "A1");
 
   const [mcqAnswers, setMcqAnswers] = useState<Record<string, string>>({});
   const [listeningAnswers, setListeningAnswers] = useState<Record<string, string>>({});
@@ -151,7 +154,7 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
     }
   };
 
-  if (isStatusLoading) {
+  if (isStatusLoading || gateInfo.isLoading) {
     return (
       <div className="min-h-[70vh] flex items-center justify-center p-4">
         <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 border-b-4 border-b-slate-300 shadow-sm flex items-center justify-center mx-auto text-primary">
@@ -159,6 +162,11 @@ export function PlacementTestView({ userId }: PlacementTestViewProps) {
         </div>
       </div>
     );
+  }
+
+  // Active student advancement lock gate (Admins bypass)
+  if (gateInfo.isLocked && !statusData?.isAdmin) {
+    return <PlacementLockedGateView gateInfo={gateInfo} />;
   }
 
   if (statusData?.isInCooldown && !statusData?.isAdmin) {

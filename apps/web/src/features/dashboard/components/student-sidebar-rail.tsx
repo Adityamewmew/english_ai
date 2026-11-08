@@ -14,20 +14,35 @@ import {
   LogOut,
   PanelLeftClose,
   Loader2,
+  Lock,
 } from "lucide-react";
 import { doLogout } from "@/app/(auth)/auth.actions";
 import { animeButtonPop, animeSidebarSlide } from "@/lib/anime-effects";
+import { authClient } from "@/lib/auth-client";
+import { usePlacementAdvancementGate } from "@/features/placement/hooks/use-placement-advancement-gate";
 
 interface StudentSidebarRailProps {
   isOpen: boolean;
   onToggle: () => void;
+  userId?: string;
+  currentCefr?: string;
 }
 
-export function StudentSidebarRail({ isOpen, onToggle }: StudentSidebarRailProps) {
+export function StudentSidebarRail({
+  isOpen,
+  onToggle,
+  userId,
+  currentCefr,
+}: StudentSidebarRailProps) {
   const pathname = usePathname();
   const asideRef = useRef<HTMLElement>(null);
   const isFirstRender = useRef(true);
   const [pendingHref, setPendingHref] = useState<string | null>(null);
+
+  const { data: sessionData } = authClient.useSession();
+  const activeUserId = userId || sessionData?.user?.id;
+  const activeCefr = currentCefr || (sessionData?.user as any)?.currentCefr || "A1";
+  const { isLocked: isPlacementLocked } = usePlacementAdvancementGate(activeUserId, activeCefr);
 
   // Clear pending state when navigation completes
   useEffect(() => {
@@ -157,6 +172,12 @@ export function StudentSidebarRail({ isOpen, onToggle }: StudentSidebarRailProps
                       }`}
                     />
                     <span className="truncate">{item.label}</span>
+                    {item.href === "/placement" && isPlacementLocked && (
+                      <span className="ml-auto inline-flex items-center gap-1 text-[10px] font-bold px-1.5 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 shrink-0">
+                        <Lock className="w-2.5 h-2.5" />
+                        <span>Kunci</span>
+                      </span>
+                    )}
                     {isPending && (
                       <Loader2 className="w-3.5 h-3.5 animate-spin text-[#0D3B66] dark:text-[#F4B41A] ml-auto shrink-0" />
                     )}

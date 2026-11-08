@@ -9,6 +9,7 @@ import { getPlacementSessionUsecase } from "../../usecase/placement/get-placemen
 import { submitPlacementUsecase } from "../../usecase/placement/submit-placement.usecase";
 import { placementRepository } from "../../repository/placement_repository";
 import { userRepository } from "../../repository/user_repository";
+import { certificateRepository } from "../../repository/certificate_repository";
 import { AiService } from "../../../lib/ai";
 import { jsonResponse } from "../../presenter/json";
 import { authPlugin } from "../../../lib/auth";
@@ -17,7 +18,28 @@ import { isUserAdmin } from "@english-ai/shared";
 
 export const placementHandler = new Elysia({ prefix: "/api/placement" })
   .use(authPlugin)
-  .get("/session", async ({ set }) => {
+  .get("/session", async ({ user, set }) => {
+    // Advancement Gate: Active students must complete all current CEFR modules and claim certificate
+    if (user && !isUserAdmin(user)) {
+      const latestResult = await placementRepository.findLatestByUser(user.id);
+      if (latestResult) {
+        const userCefr = (user.currentCefr || "A1").slice(0, 2).toUpperCase();
+        const stats = await certificateRepository.getCefrCategoryStats(user.id, userCefr);
+        const cert = await certificateRepository.findUserCertificateByCefr(user.id, userCefr);
+
+        if (stats.totalModules > 0 && stats.completedModules < stats.totalModules) {
+          throw new ForbiddenError(
+            `Tes kenaikan level terkunci. Selesaikan seluruh modul CEFR ${userCefr} (${stats.completedModules}/${stats.totalModules}) terlebih dahulu.`
+          );
+        }
+        if (!cert) {
+          throw new ForbiddenError(
+            `Tes kenaikan level terkunci. Buka sertifikat kelulusan CEFR ${userCefr} terlebih dahulu.`
+          );
+        }
+      }
+    }
+
     const data = await getPlacementSessionUsecase();
     return jsonResponse({
       set,
@@ -25,7 +47,9 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
       message: "Placement session created successfully",
       data,
     });
-  })
+  },
+  { auth: true }
+  )
   .get(
     "/status/:userId",
     async ({ params, user, set }) => {
@@ -179,6 +203,25 @@ export const placementHandler = new Elysia({ prefix: "/api/placement" })
               cooldown.nextAvailableAt!
             ).toLocaleDateString("id-ID")}.`
           );
+        }
+
+        // Advancement Gate: Active students must complete all current CEFR modules and claim certificate
+        const latestResult = await placementRepository.findLatestByUser(activeUserId);
+        if (latestResult) {
+          const userCefr = (user.currentCefr || "A1").slice(0, 2).toUpperCase();
+          const stats = await certificateRepository.getCefrCategoryStats(activeUserId, userCefr);
+          const cert = await certificateRepository.findUserCertificateByCefr(activeUserId, userCefr);
+
+          if (stats.totalModules > 0 && stats.completedModules < stats.totalModules) {
+            throw new ForbiddenError(
+              `Tes kenaikan level terkunci. Selesaikan seluruh modul CEFR ${userCefr} (${stats.completedModules}/${stats.totalModules}) terlebih dahulu.`
+            );
+          }
+          if (!cert) {
+            throw new ForbiddenError(
+              `Tes kenaikan level terkunci. Buka sertifikat kelulusan CEFR ${userCefr} terlebih dahulu.`
+            );
+          }
         }
       }
 
