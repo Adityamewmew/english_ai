@@ -20,7 +20,7 @@ interface PracticumDrillCardProps {
   savedAudioUrl?: string;
   savedScore?: number;
   onSaveResult: (audioUrl: string, transcript: string, score: number) => void;
-  onAdvance: () => void;
+  onAdvance: (rewardScore?: number) => void;
   isLastQuestion: boolean;
   tutor: any;
 }
@@ -325,7 +325,7 @@ export function PracticumDrillCard({
             {/* Practice Aloud fallback */}
             <button
               type="button"
-              onClick={onAdvance}
+              onClick={() => onAdvance(85)}
               className="ml-auto text-xs font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 flex items-center gap-1.5 py-1.5 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer"
             >
               <span>Practice Aloud &amp; Continue &rarr;</span>

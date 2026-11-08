@@ -9,36 +9,20 @@ import { PracticumSummary } from "./practicum-summary";
 import { useSession } from "@/features/auth/hooks/use-session";
 import { isUserAdmin } from "@/lib/auth-utils";
 import { processSpeechRecognitionEvent } from "@/lib/call-utils";
+import { PracticumQuestion, parseInitial } from "./speaking-practicum-utils";
 
-export interface PracticumQuestion {
-  id: number;
-  category: "storytelling" | "roleplay" | "linguistic_drill" | string;
-  typeLabel: string;
-  instruction: string;
-  audioPrompt?: string; themeTitle?: string; inspirationPoints?: string[];
-  sampleStarter?: string; scenarioContext?: string; characterRole?: string;
-  callTopic?: string; initialGreeting?: string; focus?: string;
-  targetSentence?: string; phonetic?: string; expectedKeywords?: string[];
-  hint?: string; explanation?: string; minSeconds?: number;
-}
+export type { PracticumQuestion };
 
 interface SpeakingPracticumStageProps {
-  quizSec: any; tutor: any; onRewardXp: (amount: number) => void;
-  onNextStep?: () => void; onStepComplete?: () => void; isAdmin?: boolean;
-  initialAnswers?: Record<string, any>; onAnswersChange?: (answers: Record<string, any>, speakingScore?: number) => void;
+  quizSec: any;
+  tutor: any;
+  onRewardXp: (amount: number) => void;
+  onNextStep?: () => void;
+  onStepComplete?: () => void;
+  isAdmin?: boolean;
+  initialAnswers?: Record<string, any>;
+  onAnswersChange?: (answers: Record<string, any>, speakingScore?: number) => void;
 }
-
-const parseInitial = (raw?: Record<string, any>) => {
-  const trans: Record<number, string> = {}, done: Record<number, boolean> = {};
-  if (raw) Object.entries(raw).forEach(([k, v]) => {
-    const num = Number(k);
-    if (!isNaN(num) && typeof v === "string") {
-      trans[num] = v;
-      if (v.trim()) done[num] = true;
-    }
-  });
-  return { trans, done };
-};
 
 export function SpeakingPracticumStage({
   quizSec, tutor, onRewardXp, onNextStep, onStepComplete,
@@ -348,6 +332,19 @@ export function SpeakingPracticumStage({
               />
             </div>
           </div>
+
+          {micError && (
+            <div className="p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-xs text-amber-900 dark:text-amber-200 flex items-center justify-between gap-3">
+              <span>Mikrofon tidak terdeteksi atau izin ditolak. Anda tetap dapat melanjutkan menggunakan tombol <strong>&ldquo;Practice Aloud &amp; Continue&rdquo;</strong> di bawah.</span>
+              <button
+                type="button"
+                onClick={() => setMicError(false)}
+                className="text-[11px] font-bold underline shrink-0 cursor-pointer"
+              >
+                Tutup
+              </button>
+            </div>
+          )}
 
           {/* QUESTION HEADER CARD */}
           <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-4">

@@ -176,9 +176,15 @@ export function ExamCertificateView({
           <span>Saving your graduation score and unlocking the next module in your account...</span>
         </div>
       ) : isSubmitted ? (
-        <div className="p-3.5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-xs font-bold text-emerald-800 dark:text-emerald-200 flex items-center justify-center gap-2 print:hidden">
-          <span>✓ Graduation progress saved to server! The next module is now unlocked.</span>
-        </div>
+        scores.isPassed ? (
+          <div className="p-3.5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-xs font-bold text-emerald-800 dark:text-emerald-200 flex items-center justify-center gap-2 print:hidden">
+            <span>✓ Graduation progress saved to server! The next module is now unlocked.</span>
+          </div>
+        ) : (
+          <div className="p-3.5 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-xs font-bold text-amber-800 dark:text-amber-200 flex items-center justify-center gap-2 print:hidden">
+            <span>✓ Skor ujian telah tercatat ({scores.totalScore}%). Silakan kerjakan ulang untuk mencapai KKM ({passingScore}%).</span>
+          </div>
+        )
       ) : null}
 
       {/* 4. Action Buttons (Hidden when printing) */}

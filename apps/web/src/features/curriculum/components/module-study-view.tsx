@@ -289,22 +289,27 @@ export function ModuleStudyView({
             { answers: stageAnswers, speakingScore: stageSpeakingScore },
             moduleId
           );
+          if (!res?.success) {
+            alert(res?.error || "Gagal menyimpan progres. Jawaban Anda tetap tersimpan di perangkat ini. Silakan periksa koneksi atau login kembali.");
+            return;
+          }
           if (res?.data?.passed) {
             playFanfareSound();
             if (typeof window !== "undefined" && currentSub?.id) {
               try { localStorage.removeItem(`eddys_draft_${currentSub.id}`); } catch {}
             }
-            onRefresh?.();
-          } else if (res?.data && !res.data.passed) {
-            alert(`Skor Anda: ${res.data.score ?? 0}/100 (KKM: 75). Silakan lengkapi atau ulangi latihan untuk lulus.`);
+          } else {
+            alert(`Skor Anda: ${res.data?.score ?? 0}/100 (KKM: 75). Silakan ulangi latihan untuk lulus.`);
           }
+          onRefresh?.();
+          setActiveMissionId(null);
+          window.scrollTo({ top: 0, behavior: "smooth" });
         }
       } catch (err) {
         console.error("Failed to submit submodule:", err);
+        alert("Terjadi kendala koneksi saat menyimpan progres. Jawaban tetap tersimpan di perangkat.");
       } finally {
         setIsFinishing(false);
-        setActiveMissionId(null);
-        window.scrollTo({ top: 0, behavior: "smooth" });
       }
     }
   };
@@ -321,8 +326,10 @@ export function ModuleStudyView({
         },
         moduleId
       );
-      if (res.success && res.data?.passed) {
-        playFanfareSound();
+      if (res?.success) {
+        if (res.data?.passed) {
+          playFanfareSound();
+        }
         onRefresh?.();
       }
     } catch (err) {

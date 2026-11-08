@@ -64,9 +64,9 @@ export function ModuleGridCard({ module, index, onUnlockClick, isAdmin: propIsAd
 
           <div>
             {isCompleted ? (
-              <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200">
+              <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200 font-mono">
                 <CheckCircle2 className="w-3 h-3 text-emerald-600" />
-                <span>Completed</span>
+                <span>Completed{module.score !== null && module.score !== undefined ? ` • ${module.score}%` : ""}</span>
               </span>
             ) : isRequiresAccess ? (
               <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200">
@@ -161,8 +161,11 @@ export function ModuleGridCard({ module, index, onUnlockClick, isAdmin: propIsAd
 
           {/* Status Indicator */}
           {isCompleted && (
-            <div className="absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-[#0D3B66] text-[#F4B41A] flex items-center justify-center shadow-xs border border-white/20">
-              <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
+            <div className="absolute top-2.5 right-2.5 z-10 px-2 py-0.5 rounded-full bg-[#0D3B66] text-[#F4B41A] flex items-center justify-center gap-1 shadow-xs border border-white/20 font-mono text-[10px] font-bold">
+              <CheckCircle2 className="w-3.5 h-3.5 stroke-[2.5]" />
+              {module.score !== null && module.score !== undefined ? (
+                <span>{module.score}%</span>
+              ) : null}
             </div>
           )}
           {isLocked && (

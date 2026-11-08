@@ -12,6 +12,7 @@ import {
   PenTool,
   Mic,
   GraduationCap,
+  CheckCircle2,
 } from "lucide-react";
 import { ThreejsPixelTutorStage, type TutorPose } from "./threejs-pixel-tutor-stage";
 import { animeButtonPop } from "@/lib/anime-effects";
@@ -377,10 +378,17 @@ export function SubmoduleTutorWelcomeStage({
           </div>
 
           <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+            {subModule?.userProgress?.status === "completed" && (
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-200 border border-emerald-200 dark:border-emerald-800 text-xs font-bold order-3 sm:order-1">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                <span>Mission Completed {subModule?.userProgress?.score !== null && subModule?.userProgress?.score !== undefined ? `(${subModule.userProgress.score}%)` : ""}</span>
+              </div>
+            )}
+
             <button
               type="button"
               onClick={handleStart}
-              className="text-xs text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 font-medium underline cursor-pointer order-2 sm:order-1 min-h-[44px] flex items-center justify-center px-4 touch-manipulation"
+              className="text-xs text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 font-medium underline cursor-pointer order-2 min-h-[44px] flex items-center justify-center px-4 touch-manipulation"
             >
               Skip intro
             </button>
@@ -388,9 +396,9 @@ export function SubmoduleTutorWelcomeStage({
             <button
               type="button"
               onClick={handleStart}
-              className="w-full sm:w-auto px-7 py-3 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95 cursor-pointer order-1 sm:order-2 min-h-[48px] touch-manipulation"
+              className="w-full sm:w-auto px-7 py-3 rounded-xl bg-[#0D3B66] hover:bg-[#1B4965] text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95 cursor-pointer order-1 sm:order-3 min-h-[48px] touch-manipulation font-heading"
             >
-              <span>Start Mission</span>
+              <span>{subModule?.userProgress?.status === "completed" ? "Review Completed Mission" : "Start Mission"}</span>
               <ArrowRight className="w-4 h-4 text-[#F4B41A]" />
             </button>
           </div>

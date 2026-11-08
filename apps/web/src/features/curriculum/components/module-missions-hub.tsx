@@ -100,6 +100,27 @@ const SKILL_THEMES: Record<
   },
 };
 
+function getSubModuleProgressPercent(sub: any, isCompleted: boolean): number {
+  if (isCompleted) return 100;
+  if (sub.userProgress?.score !== null && sub.userProgress?.score !== undefined) return 100;
+  if (typeof window !== "undefined") {
+    try {
+      const rawDraft = localStorage.getItem(`eddys_draft_${sub.id}`);
+      if (rawDraft) {
+        const parsed = JSON.parse(rawDraft);
+        const totalSteps = sub.sections?.length || 5;
+        const completedSteps = Array.isArray(parsed.completedSteps)
+          ? parsed.completedSteps.length
+          : typeof parsed.activeStepId === "number"
+          ? parsed.activeStepId - 1
+          : 0;
+        return Math.min(95, Math.max(10, Math.round((completedSteps / Math.max(1, totalSteps)) * 100)));
+      }
+    } catch {}
+  }
+  return 0;
+}
+
 export function ModuleMissionsHub({
   moduleData,
   subModules = [],
@@ -185,6 +206,7 @@ export function ModuleMissionsHub({
               const isLocked = !isAdmin && sub.userProgress?.status === "locked" && index > completedCount;
 
               const isAssessment = skill === "assessment" || skill === "exam";
+              const progressPercent = getSubModuleProgressPercent(sub, isCompleted);
 
               return (
                 <div
@@ -199,17 +221,21 @@ export function ModuleMissionsHub({
                       <Icon className="w-4 h-4" />
                     </div>
                     {isCompleted ? (
-                      <span className="inline-flex items-center gap-0.5 text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200">
+                      <span className="inline-flex items-center gap-0.5 text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-mono">
                         <CheckCircle2 className="w-3 h-3 text-emerald-600" />
-                        <span>Completed</span>
+                        <span>Done{sub.userProgress?.score !== null && sub.userProgress?.score !== undefined ? ` • ${sub.userProgress.score}%` : ""}</span>
+                      </span>
+                    ) : sub.userProgress?.score !== null && sub.userProgress?.score !== undefined ? (
+                      <span className="inline-flex items-center gap-0.5 text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 font-mono">
+                        <span>Score: {sub.userProgress.score}%</span>
                       </span>
                     ) : isLocked ? (
                       <span className="inline-flex items-center gap-0.5 text-[10px] font-medium px-1.5 py-0.5 rounded bg-slate-100 text-slate-400">
                         <Lock className="w-3 h-3" />
                       </span>
                     ) : (
-                      <span className="text-[10px] font-bold text-[#0D3B66]">
-                        Active
+                      <span className="text-[10px] font-bold text-[#0D3B66] font-mono">
+                        {progressPercent > 0 ? `${progressPercent}%` : "Active"}
                       </span>
                     )}
                   </div>
@@ -322,7 +348,8 @@ export function ModuleMissionsHub({
 
             const isCompleted = sub.userProgress?.status === "completed";
             const isLocked = !isAdmin && sub.userProgress?.status === "locked" && index > completedCount;
-            const progressPercent = isCompleted ? 100 : sub.userProgress?.status === "unlocked" ? 40 : 0;
+
+            const progressPercent = getSubModuleProgressPercent(sub, isCompleted);
 
             const isAssessment = skill === "assessment" || skill === "exam";
 
@@ -344,23 +371,23 @@ export function ModuleMissionsHub({
 
                   <div className="flex items-center gap-1.5">
                     {isCompleted ? (
-                      <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 shadow-2xs">
+                      <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 shadow-2xs font-mono">
                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                        <span>Done</span>
+                        <span>Done{sub.userProgress?.score !== null && sub.userProgress?.score !== undefined ? ` • ${sub.userProgress.score}%` : ""}</span>
+                      </span>
+                    ) : sub.userProgress?.score !== null && sub.userProgress?.score !== undefined ? (
+                      <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 shadow-2xs font-mono">
+                        <span>Score: {sub.userProgress.score}% (Remedial)</span>
                       </span>
                     ) : isLocked ? (
-                      <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-500 border border-slate-200">
+                      <span className="inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 border border-slate-200 dark:border-slate-700">
                         <Lock className="w-3.5 h-3.5" />
                         <span>Locked</span>
                       </span>
                     ) : (
-                      <button
-                        type="button"
-                        aria-label="Options"
-                        className="w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-slate-400 hover:text-[#0D3B66] transition-colors touch-manipulation"
-                      >
-                        <MoreHorizontal className="w-4 h-4" />
-                      </button>
+                      <span className="text-xs font-bold text-[#0D3B66] dark:text-[#F4B41A] font-mono px-2 py-0.5 rounded-md bg-blue-50 dark:bg-slate-800">
+                        {progressPercent > 0 ? `${progressPercent}% in progress` : "Active"}
+                      </span>
                     )}
                   </div>
                 </div>

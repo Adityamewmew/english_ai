@@ -16,7 +16,9 @@ import { ExamPartReading } from "./exam/exam-part-reading";
 import { ExamPartListening } from "./exam/exam-part-listening";
 import { ExamPartWriting } from "./exam/exam-part-writing";
 import { ExamPartSpeaking } from "./exam/exam-part-speaking";
-import { ExamCertificateView } from "./exam/exam-certificate-view";
+import { ExamCertificateViewWithAutoSubmit } from "./exam/exam-certificate-auto-submit";
+import { ExamProgressHeader } from "./exam/exam-progress-header";
+import { ExamSubmitConfirmModal } from "./exam/exam-submit-confirm-modal";
 import { isOptionCorrect } from "./concept-checks-card";
 import { normalizeSpokenText, fuzzyWordMatch } from "@english-ai/shared";
 
@@ -145,6 +147,7 @@ export function StageGraduationExamView({
 
   const [isSubmittingExam, setIsSubmittingExam] = useState(false);
   const [isExamSubmitted, setIsExamSubmitted] = useState(false);
+  const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
   const hasSubmittedRef = React.useRef(false);
 
   // Audio helper (Web Speech API)
@@ -389,77 +392,131 @@ export function StageGraduationExamView({
     );
   }
 
+  const grandTotal = readingList.length + listeningList.length + writingList.length + speakingList.length || 55;
+  const totalAnsweredCount = Object.keys(examAnswers).filter((k) => !k.startsWith("__") && examAnswers[k]).length;
+
   // Step 2: Part 1 Reading (15 MCQ)
   if (activeStepId === 2) {
     return (
-      <ExamPartReading
-        readingList={readingList}
-        readingAnswers={readingAnswers}
-        onSelectAnswer={(qIdx, opt) =>
-          setReadingAnswers((prev) => ({ ...prev, [qIdx]: opt }))
-        }
-        onNext={() => {
-          onRewardXp(25);
-          if (onStepComplete) onStepComplete();
-          onNextStep();
-        }}
-      />
+      <div className="space-y-4 max-w-3xl mx-auto py-2">
+        <ExamProgressHeader
+          currentPart={1}
+          partTitle="Reading Comprehension"
+          partAnswered={Object.keys(readingAnswers).length}
+          partTotal={readingList.length}
+          totalAnswered={totalAnsweredCount}
+          grandTotal={grandTotal}
+        />
+        <ExamPartReading
+          readingList={readingList}
+          readingAnswers={readingAnswers}
+          onSelectAnswer={(qIdx, opt) =>
+            setReadingAnswers((prev) => ({ ...prev, [qIdx]: opt }))
+          }
+          onNext={() => {
+            onRewardXp(25);
+            if (onStepComplete) onStepComplete();
+            onNextStep();
+          }}
+        />
+      </div>
     );
   }
 
   // Step 3: Part 2 Listening (15 Audio Tasks)
   if (activeStepId === 3) {
     return (
-      <ExamPartListening
-        listeningList={listeningList}
-        listeningAnswers={listeningAnswers}
-        onChangeAnswer={(qIdx, val) =>
-          setListeningAnswers((prev) => ({ ...prev, [qIdx]: val }))
-        }
-        playAudio={playAudio}
-        onNext={() => {
-          onRewardXp(25);
-          if (onStepComplete) onStepComplete();
-          onNextStep();
-        }}
-      />
+      <div className="space-y-4 max-w-3xl mx-auto py-2">
+        <ExamProgressHeader
+          currentPart={2}
+          partTitle="Auditory Listening"
+          partAnswered={Object.keys(listeningAnswers).length}
+          partTotal={listeningList.length}
+          totalAnswered={totalAnsweredCount}
+          grandTotal={grandTotal}
+        />
+        <ExamPartListening
+          listeningList={listeningList}
+          listeningAnswers={listeningAnswers}
+          onChangeAnswer={(qIdx, val) =>
+            setListeningAnswers((prev) => ({ ...prev, [qIdx]: val }))
+          }
+          playAudio={playAudio}
+          onNext={() => {
+            onRewardXp(25);
+            if (onStepComplete) onStepComplete();
+            onNextStep();
+          }}
+        />
+      </div>
     );
   }
 
   // Step 4: Part 3 Writing (10 Tasks)
   if (activeStepId === 4) {
     return (
-      <ExamPartWriting
-        writingList={writingList}
-        writingAnswers={writingAnswers}
-        onChangeAnswer={(qIdx, val) =>
-          setWritingAnswers((prev) => ({ ...prev, [qIdx]: val }))
-        }
-        onNext={() => {
-          onRewardXp(25);
-          if (onStepComplete) onStepComplete();
-          onNextStep();
-        }}
-      />
+      <div className="space-y-4 max-w-3xl mx-auto py-2">
+        <ExamProgressHeader
+          currentPart={3}
+          partTitle="Written Production"
+          partAnswered={Object.keys(writingAnswers).length}
+          partTotal={writingList.length}
+          totalAnswered={totalAnsweredCount}
+          grandTotal={grandTotal}
+        />
+        <ExamPartWriting
+          writingList={writingList}
+          writingAnswers={writingAnswers}
+          onChangeAnswer={(qIdx, val) =>
+            setWritingAnswers((prev) => ({ ...prev, [qIdx]: val }))
+          }
+          onNext={() => {
+            onRewardXp(25);
+            if (onStepComplete) onStepComplete();
+            onNextStep();
+          }}
+        />
+      </div>
     );
   }
 
   // Step 5: Part 4 Speaking (15 Prompts)
   if (activeStepId === 5) {
     return (
-      <ExamPartSpeaking
-        speakingList={speakingList}
-        speakingCompleted={speakingCompleted}
-        onToggleCompleted={(qIdx) =>
-          setSpeakingCompleted((prev) => ({ ...prev, [qIdx]: !prev[qIdx] }))
-        }
-        playAudio={playAudio}
-        onFinish={() => {
-          onRewardXp(25);
-          if (onStepComplete) onStepComplete();
-          onNextStep();
-        }}
-      />
+      <div className="space-y-4 max-w-3xl mx-auto py-2">
+        <ExamProgressHeader
+          currentPart={4}
+          partTitle="Spoken Fluency"
+          partAnswered={Object.keys(speakingCompleted).filter((k) => speakingCompleted[Number(k)]).length}
+          partTotal={speakingList.length}
+          totalAnswered={totalAnsweredCount}
+          grandTotal={grandTotal}
+        />
+        <ExamPartSpeaking
+          speakingList={speakingList}
+          speakingCompleted={speakingCompleted}
+          onToggleCompleted={(qIdx) =>
+            setSpeakingCompleted((prev) => ({ ...prev, [qIdx]: !prev[qIdx] }))
+          }
+          playAudio={playAudio}
+          onFinish={() => setIsConfirmModalOpen(true)}
+        />
+        <ExamSubmitConfirmModal
+          isOpen={isConfirmModalOpen}
+          onClose={() => setIsConfirmModalOpen(false)}
+          onConfirm={() => {
+            setIsConfirmModalOpen(false);
+            onRewardXp(25);
+            if (onStepComplete) onStepComplete();
+            onNextStep();
+          }}
+          scores={scores}
+          totalAnswered={totalAnsweredCount}
+          grandTotal={grandTotal}
+          readingAnswered={Object.keys(readingAnswers).length}
+          listeningAnswered={Object.keys(listeningAnswers).length}
+        />
+      </div>
     );
   }
 
@@ -479,98 +536,6 @@ export function StageGraduationExamView({
       setIsExamSubmitted={setIsExamSubmitted}
       hasSubmittedRef={hasSubmittedRef}
       onSelectStep={onSelectStep}
-    />
-  );
-}
-
-function ExamCertificateViewWithAutoSubmit({
-  scores,
-  moduleData,
-  studentName,
-  passingScore,
-  onSubmitExam,
-  examAnswers,
-  isSubmittingExam,
-  isExamSubmitted,
-  setIsSubmittingExam,
-  setIsExamSubmitted,
-  hasSubmittedRef,
-  onSelectStep,
-}: {
-  scores: any;
-  moduleData: any;
-  studentName: string;
-  passingScore: number;
-  onSubmitExam?: (score: number, examAnswers?: Record<string, any>) => Promise<void>;
-  examAnswers: Record<string, any>;
-  isSubmittingExam: boolean;
-  isExamSubmitted: boolean;
-  setIsSubmittingExam: (val: boolean) => void;
-  setIsExamSubmitted: (val: boolean) => void;
-  hasSubmittedRef: React.MutableRefObject<boolean>;
-  onSelectStep?: (stepId: number) => void;
-}) {
-  const answeredCount = React.useMemo(() => {
-    return Object.keys(examAnswers || {}).filter(
-      (k) => !k.startsWith("__") && examAnswers[k] !== undefined && examAnswers[k] !== ""
-    ).length;
-  }, [examAnswers]);
-
-  React.useEffect(() => {
-    // SECURITY SAFEGUARD: Never auto-submit if no questions were answered
-    // Prevents refreshed pages or empty sessions from zeroing out user progress
-    if (answeredCount === 0) return;
-
-    if (!hasSubmittedRef.current && onSubmitExam) {
-      hasSubmittedRef.current = true;
-      setIsSubmittingExam(true);
-      onSubmitExam(scores.totalScore, examAnswers)
-        .then(() => setIsExamSubmitted(true))
-        .catch((err) => {
-          console.error("Auto submit exam failed:", err);
-          hasSubmittedRef.current = false;
-        })
-        .finally(() => setIsSubmittingExam(false));
-    }
-  }, [onSubmitExam, scores.totalScore, examAnswers, hasSubmittedRef, setIsSubmittingExam, setIsExamSubmitted, answeredCount]);
-
-  if (answeredCount === 0 && !scores.isPassed && !isExamSubmitted) {
-    return (
-      <div className="space-y-6 max-w-2xl mx-auto py-8 text-center">
-        <div className="w-16 h-16 rounded-3xl bg-amber-500/10 text-amber-600 inline-flex items-center justify-center">
-          <BookOpen className="w-8 h-8" />
-        </div>
-        <div className="space-y-2">
-          <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-            Sesi Ujian Belum Dikerjakan
-          </h3>
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto leading-relaxed">
-            Jawaban ujian belum ditemukan di sesi ini. Silakan mulai pengerjaan dari Part 1 agar seluruh kompetensi dievaluasi dan sertifikat kelulusan dapat diterbitkan.
-          </p>
-        </div>
-        <div className="pt-2">
-          <Button
-            type="button"
-            onClick={() => (onSelectStep ? onSelectStep(2) : undefined)}
-            className="px-6 py-2.5 rounded-xl bg-[#0D3B66] hover:bg-[#082542] text-white font-bold text-xs inline-flex items-center gap-2 cursor-pointer min-h-[44px]"
-          >
-            <span>Mulai dari Part 1 (Reading)</span>
-            <ArrowRight className="w-4 h-4" />
-          </Button>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <ExamCertificateView
-      scores={scores}
-      moduleData={moduleData}
-      studentName={studentName}
-      passingScore={passingScore}
-      isSubmitting={isSubmittingExam}
-      isSubmitted={isExamSubmitted}
-      onRetake={() => (onSelectStep ? onSelectStep(2) : undefined)}
     />
   );
 }
